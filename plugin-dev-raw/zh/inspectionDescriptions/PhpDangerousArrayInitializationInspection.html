@@ -2,7 +2,7 @@
 <body>
 報告危險的數組初始化（如 <code>$arr[] = value</code>）。
 <p>
-  不建議采取這種做法，因為如果 <code>$arr</code> 已包含某些值（例如來自請求變量的字符串），此值將保留，並且 <code>[]</code> 實際上可能代表字符串訪問運算符。 最好始終通過直接賦值來初始化變量。
+  不建議採取這種做法，因為如果 <code>$arr</code> 已包含某些值（例如來自請求變量的字符串），此值將保留，並且 <code>[]</code> 實際上可能代表字符串訪問運算符。 最好始終通過直接賦值來初始化變量。
 </p>
 <p>有關詳細信息，請參閱 <a href="https://www.php.net/manual/en/language.types.array.php#language.types.array.syntax.modifying">Creating/modifying with square bracket syntax (php.net)</a>。
 </p>

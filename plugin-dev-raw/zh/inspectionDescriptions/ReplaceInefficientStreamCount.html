@@ -5,13 +5,13 @@
   以下調用鏈替換為此檢查：
 </p>
 <ul>
-  <li><code>Collection.stream().count()</code> &rarr; <code>Collection.size()</code>. 在 Java 8 中，<code>Collection.stream().count()</code> 實際上是通過迭代集合元素來進行計數，而 <code>Collection.size()</code> 對于大多數集合來說速度要快得多。</li>
+  <li><code>Collection.stream().count()</code> &rarr; <code>Collection.size()</code>. 在 Java 8 中，<code>Collection.stream().count()</code> 實際上是通過迭代集合元素來進行計數，而 <code>Collection.size()</code> 對於大多數集合來說速度要快得多。</li>
   <li><code>Stream.flatMap(Collection::stream).count()</code> &rarr; <code>Stream.mapToLong(Collection::size).sum()</code>. 同樣，不需要遍歷所有嵌套集合。 相反，它們的大小可以相加。</li>
-  <li><code>Stream.filter(o -> ...).count() > 0</code> &rarr; <code>Stream.anyMatch(o -> ...)</code>. 與初始調用不同，一旦找到匹配元素后 <code>anyMatch()</code> 就可以立即停止計算。</li>
+  <li><code>Stream.filter(o -> ...).count() > 0</code> &rarr; <code>Stream.anyMatch(o -> ...)</code>. 與初始調用不同，一旦找到匹配元素後 <code>anyMatch()</code> 就可以立即停止計算。</li>
   <li><code>Stream.filter(o -> ...).count() == 0</code> &rarr; <code>Stream.noneMatch(o -> ...)</code>. 與以上相似。</li>
 </ul>
 <p>
-  請注意，如果替換涉及 <code>anyMatch()</code> 等短路操作，那么中間流操作產生副作用時，可能會出現明顯的行為變化。 在 Stream API 調用中通常應避免副作用。
+  請注意，如果替換涉及 <code>anyMatch()</code> 等短路操作，那麼中間流操作產生副作用時，可能會出現明顯的行為變化。 在 Stream API 調用中通常應避免副作用。
 </p>
 <!-- tooltip end -->
 </body>

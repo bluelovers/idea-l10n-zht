@@ -1,7 +1,7 @@
 <html>
 <body>
 報告布爾 'and' 和 'or' 的非短路形式（<code>&amp;</code> 和 <code>|</code>）的用法。
-盡管非短路版本偶爾有用，但在大多數情況下，本應使用短路形式（<code>&amp;&amp;</code> 和 <code>||</code>），此類無意的用法可能會導致難以捉摸的錯誤。
+儘管非短路版本偶爾有用，但在大多數情況下，本應使用短路形式（<code>&amp;&amp;</code> 和 <code>||</code>），此類無意的用法可能會導致難以捉摸的錯誤。
 <p>
   建議通過快速修復來使用短路版本。
 </p>
@@ -11,7 +11,7 @@
     if (x | y) { /**/ }
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   void foo(boolean x, boolean y) {
     if (x || y) { /**/ }

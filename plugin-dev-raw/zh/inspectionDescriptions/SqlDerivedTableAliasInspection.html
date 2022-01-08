@@ -10,7 +10,7 @@ FROM (SELECT table1.id, name, cats, age
 FROM table1
 JOIN table2 ON table1.id = table2.id);</code></pre>
 <p>根據 <a href="https://dev.mysql.com/doc/refman/8.0/en/derived-tables.html">dev.mysql.com 上的 Derived Tables</a> 頁面，別名是強制的。 您可以使用<b>引入別名</b>快速修復來添加別名。</p>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>SELECT id AS ID, name, cats, age
 FROM (SELECT table1.id, name, cats, age
 FROM table1

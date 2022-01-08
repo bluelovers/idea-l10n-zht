@@ -1,8 +1,8 @@
 <html>
 <body>
 報告在 <code>java.lang.Class</code> 實例上調用的 <code>getClass()</code> 方法。
-<p>這通常是一個錯誤，因為結果總是等同于 <code>Class.class</code>。
-如果是錯誤，那么最好移除 <code>getClass()</code> 調用並直接使用限定符。
+<p>這通常是一個錯誤，因為結果總是等同於 <code>Class.class</code>。
+如果是錯誤，那麼最好移除 <code>getClass()</code> 調用並直接使用限定符。
   如果行為是故意的，最好顯式編寫 <code>Class.class</code> 以避免混淆。</p>
 <p>示例：</p>
 <pre><code>
@@ -10,7 +10,7 @@
     String name = clazz.getClass().getName();
   }
 </code></pre>
-<p>在應用可能的快速修復之一后：</p>
+<p>在應用可能的快速修復之一後：</p>
 <pre><code>
   void test(Class&lt;?&gt; clazz) {
     String name = clazz.getName();

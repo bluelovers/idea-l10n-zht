@@ -2,7 +2,7 @@
 <body>
 <p>
   報告非 public 字段和方法上的 <code>com.google.inject.Inject</code> 注解。
-  雖然 Guice 可以處理此類注入，但由于安全限制，它在部署過程中可能無法正常工作。
+  雖然 Guice 可以處理此類注入，但由於安全限制，它在部署過程中可能無法正常工作。
   一般來說，最好通過將注入的字段和方法設為 public，或者創建一個 public setter 並使用 <code> @Inject </code> 注解來避免此類注入。
 </p>
 </body>

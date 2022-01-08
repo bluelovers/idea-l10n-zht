@@ -1,8 +1,8 @@
 <html>
 <body>
-報告冗余屬性 setter。
+報告冗餘屬性 setter。
 <p>
-在以下情況之一中，setter 被認為是冗余的：
+在以下情況之一中，setter 被認為是冗餘的：
 </p>
 <ol>
     <li>
@@ -25,7 +25,7 @@
         setter 主體是一個具有單語句的塊，其將形參分配給支持字段。
         <pre><code>
   var prop: Int = 0
-      set(value) { // 冗余
+      set(value) { // 冗餘
           field = value
       }
        </code></pre>

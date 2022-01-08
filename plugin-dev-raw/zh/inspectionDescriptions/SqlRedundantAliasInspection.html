@@ -1,6 +1,6 @@
 <html>
 <body>
-報告可能與表中的列名重疊並且可能是冗余的別名表達式。
+報告可能與表中的列名重疊並且可能是冗餘的別名表達式。
 <p>示例（PostgreSQL）：</p>
 <pre><code>CREATE TABLE foo(a INT, b INT);
 
@@ -8,6 +8,6 @@ SELECT * FROM foo foo(a, b);
 SELECT * FROM foo foo(a);
 SELECT * FROM foo foo(x);
 SELECT * FROM foo foo(x, y);</code></pre>
-<p>前兩個別名使用與 <code>foo</code> 表中相同的列名。 這些被認為是冗余的，因為列具有相同的名稱。</p>
+<p>前兩個別名使用與 <code>foo</code> 表中相同的列名。 這些被認為是冗餘的，因為列具有相同的名稱。</p>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <body>
 報告可以被序列化或反序列化的類。
 <p>
-  如果一個類支持 <code>Serializable</code> 接口，並且它的 <code>readObject()</code> 和 <code>writeObject()</code> 方法未被定義為總是拋出異常，那么就可以被序列化。 在供安全使用的代碼中，可序列化的類可能比較危險。
+  如果一個類支持 <code>Serializable</code> 接口，並且它的 <code>readObject()</code> 和 <code>writeObject()</code> 方法未被定義為總是拋出異常，那麼就可以被序列化。 在供安全使用的代碼中，可序列化的類可能比較危險。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
@@ -14,7 +14,7 @@
     }
 }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   class DeserializableClass implements Serializable {
     private int sensitive = 736326;
@@ -35,7 +35,7 @@
 <ul>
   <li>
     列出此檢查不應報告其繼承者的類。
-    這適用于從超類繼承 <code>Serializable</code> 但不用于序列化的類。
+    這適用於從超類繼承 <code>Serializable</code> 但不用於序列化的類。
     請注意，與其忽略這些類，添加始終拋出異常的 <code>readObject()</code> 和 <code>writeObject()</code> 方法可能更安全。
   </li>
   <li>

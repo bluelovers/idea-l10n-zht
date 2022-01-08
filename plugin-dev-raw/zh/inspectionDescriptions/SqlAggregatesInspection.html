@@ -10,13 +10,13 @@ SELECT * FROM foo GROUP BY a ORDER BY b;</code></pre>
     <p>當按主鍵進行分組時，此規則不適用。</p>
     <pre><code>SELECT * FROM foo GROUP BY id ORDER BY b;</code></pre>
   </li>
-  <li><p>在錯誤的上下文中聚合函數。 通常，您可以在以下上下文中使用聚合函數： SELECT 中的表達式列表； 在 HAVING 和 ORDER BY 部分； 和其他特定于方言的案例。 以下查詢將顯示錯誤。</p>
+  <li><p>在錯誤的上下文中聚合函數。 通常，您可以在以下上下文中使用聚合函數： SELECT 中的表達式列表； 在 HAVING 和 ORDER BY 部分； 和其他特定於方言的案例。 以下查詢將顯示錯誤。</p>
     <pre><code>SELECT a FROM foo WHERE MAX(b) > 0;
 SELECT a FROM foo GROUP BY MAX(a);</code></pre>
   </li>
   <li><p>聚合函數的嵌套調用。</p>
     <pre><code>SELECT MAX(SUM(a)) FROM foo GROUP BY a;</code></pre>
-    <p>此規則不適用于解析函數。 以下查詢有效且正確。</p>
+    <p>此規則不適用於解析函數。 以下查詢有效且正確。</p>
     <pre><code>SELECT MAX(SUM(a) OVER ()) FROM foo;</code></pre>
   </li>
   <li><p>沒有聚合函數的 HAVING 的用法。 在這種情況下，請考慮使用 WHERE 部分重寫您的代碼。</p>

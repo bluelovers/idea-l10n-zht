@@ -8,7 +8,7 @@
 
 if (str == null) System.out.println("str is null");
 System.out.println(str.trim());
-// 最后一個語句可能會拋出 NPE
+// 最後一個語句可能會拋出 NPE
 
 @NotNull
 Integer square(@Nullable Integer input) {
@@ -21,14 +21,14 @@ Integer square(@Nullable Integer input) {
 <!-- tooltip end -->
 <p>配置檢查：</p>
 <ul>
-  <li>使用<b>對可 null 值的方法/字段/形參建議使用 @Nullable 注解</b>選項可以在以下情況下发出警告：null 值作為實參傳遞給具有非注解形參的方法時，存儲到非注解字段時，或從非注解方法返回時。 在這種情況下，該檢查將建議傳播 <code>@Nullable</code> 注解。 您還可以使用<b>配置注解</b>按鈕配置可 null 性注解。</li>
+  <li>使用<b>對可 null 值的方法/字段/形參建議使用 @Nullable 注解</b>選項可以在以下情況下發出警告：null 值作為實參傳遞給具有非注解形參的方法時，存儲到非注解字段時，或從非注解方法返回時。 在這種情況下，該檢查將建議傳播 <code>@Nullable</code> 注解。 您還可以使用<b>配置注解</b>按鈕配置可 null 性注解。</li>
   <li>使用<b>將未注解的成員和形參視為 @Nullable</b> 選項可假設非注解成員可以為 null，因此不得在非 null 上下文中使用。</li>
   <li>使用<b>報告使用 null 文字實參用法的非 null 必需形參</b>>選項可以報告不能為 null（例如在方法體中立即取消引用），但存在傳遞 <code>null</code> 文字的調用點的方法形參。</li>
   <li>使用<b>報告始終返回非 null 值的可 null 方法</b>選項，可報告注解為 <code>@Nullable</code> 但始終返回非 null 值的方法。 在這種情況下，建議您將注解更改為 <code>@NotNull</code>。</li>
   <li>使用<b>不報告條件靜態證明始終為 true 的斷言</b>選項可避免報告靜態證明始終為 true 的斷言。 這還包括 <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code> 等條件。</li>
   <li>使用<b>忽略 assert 語句</b>選項可控制檢查如何處理 <code>assert</code> 語句。 默認情況下，該選項被禁用，這意味著斷言視為被執行（-ea 模式）。 如果啟用該選項，斷言將被完全忽略（-da 模式）。</li>
-  <li>使用<b>讀取保證為常量的值時发出警告</b>選項可在讀取包含某些常量值（如<code>true</code>、<code>false</code> 或 <code>null</code>）的變量時添加警告。</li>
-  <li>使用<b>報告僅在某些代碼路徑上发生的問題</b>選項可控制是否報告僅在某些代碼路徑上发生的問題。 如果禁用此選項，則不會報告 <i>exception is possible</i> 等警告。 該檢查只會報告類似 <i>exception will definitely occur</i> 的警告。 這種模式可以大大減少誤報的數量，特別是如果代碼沒有一致地使用可 null 性和約定注解進行注解。 這就是為什么它對于查找傳統代碼庫中最重要的問題很有用。
+  <li>使用<b>讀取保證為常量的值時發出警告</b>選項可在讀取包含某些常量值（如<code>true</code>、<code>false</code> 或 <code>null</code>）的變量時添加警告。</li>
+  <li>使用<b>報告僅在某些代碼路徑上發生的問題</b>選項可控制是否報告僅在某些代碼路徑上發生的問題。 如果禁用此選項，則不會報告 <i>exception is possible</i> 等警告。 該檢查只會報告類似 <i>exception will definitely occur</i> 的警告。 這種模式可以大大減少誤報的數量，特別是如果代碼沒有一致地使用可 null 性和約定注解進行注解。 這就是為什麼它對於查找傳統代碼庫中最重要的問題很有用。
   </li>
 </ul>
 

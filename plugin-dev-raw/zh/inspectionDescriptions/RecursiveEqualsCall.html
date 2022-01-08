@@ -2,11 +2,11 @@
 <body>
 <p>報告遞歸 <code>equals</code>(<code>==</code>) 調用。</p>
 <p>
-    在 Kotlin 中，<code>==</code> 會通過在后台調用 <code>equals</code> 方法來比較對象值。
+    在 Kotlin 中，<code>==</code> 會通過在後台調用 <code>equals</code> 方法來比較對象值。
     另一方面，<code>===</code> 則通過引用來比較對象。
 </p>
 <p>
-    <code>===</code> 通常用于 <code>equals</code> 方法實現。
+    <code>===</code> 通常用於 <code>equals</code> 方法實現。
     但 <code>===</code> 可能會錯誤地與 <code>==</code> 混淆，從而導致無限遞歸。
 </p>
 <p><b>示例：</b></p>
@@ -18,7 +18,7 @@
       }
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   class X {
       override fun equals(other: Any?): Boolean {

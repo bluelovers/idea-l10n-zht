@@ -1,7 +1,7 @@
 <html>
 <body>
 報告可以使用安全導航運算符 (<code>&amp;.</code>) 簡化的鏈式調用。 一組鏈式調用是
-用于檢查每個調用組件中的 <code>nil</code> 的常見模式。
+用於檢查每個調用組件中的 <code>nil</code> 的常見模式。
 <p>示例：</p>
 <pre>
 <code># 不良做法
@@ -9,7 +9,7 @@ if user &amp;&amp; user.profile &amp;&amp; user.profile.thumbnails
 end</code>
 </pre>
 
-可以使用快速修復來通過 <code>&amp;.</code> 簡化表達式。 應用快速修復后，結果如下所示：
+可以使用快速修復來通過 <code>&amp;.</code> 簡化表達式。 應用快速修復後，結果如下所示：
 
 <pre>
 <code># 優良做法

@@ -5,9 +5,9 @@
 <ol>
   <li>為基元類型</li>
   <li>有一個接受單個 <code>String</code> 實參的構造函數</li>
-  <li>有一個名為 <code>valueOf()</code> 或 <code>fromString()</code> 的 static 方法，它接受單個 <code>String</code> 實參，例如 <code>Integer.valueOf(String)</code>。
+  <li>有一個名為 <code>function valueOf() { [native code] }()</code> 或 <code>fromString()</code> 的 static 方法，它接受單個 <code>String</code> 實參，例如 <code>Integer.function valueOf() { [native code] }(String)</code>。
   </li>
-  <li>擁有 <code>ParamConverterProvider</code> JAX-RS 擴展 SPI 的注冊實現，它返回一個能夠將字符串轉換為特定類型的 <code>ParamConverter</code> 實例。
+  <li>擁有 <code>ParamConverterProvider</code> JAX-RS 擴展 SPI 的註冊實現，它返回一個能夠將字符串轉換為特定類型的 <code>ParamConverter</code> 實例。
   </li>
   <li>為 <code>List&lt;T&gt;</code>、<code>Set&lt;T&gt;</code> 或 <code>SortedSet&lt;T&gt;</code>，其中 T 為 2、3 或 4 以上。 生成的集合為只讀。</li>
 </ol>

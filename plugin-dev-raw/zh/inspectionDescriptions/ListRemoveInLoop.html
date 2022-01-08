@@ -1,7 +1,7 @@
 <html>
 <body>
 報告在循環中調用的可以替換為 <code>List.subList().clear()</code> 的 <code>List.remove(index)</code>。
-<p>在刪除多個元素的情況下，此替換對于大多數  <code>List</code> 實現更有效。</p>
+<p>在刪除多個元素的情況下，此替換對於大多數  <code>List</code> 實現更有效。</p>
 <p>示例：</p>
 <pre><code>
   void removeRange(List&lt;String&gt; list, int from, int to) {
@@ -10,7 +10,7 @@
     }
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   void removeRange(List&lt;String&gt; list, int from, int to) {
     if (to &gt; from) {
@@ -19,7 +19,7 @@
   }
 </code></pre>
 <p>
-  該快速修復會自動添加范圍檢查，以防止在最小值大于最大值時可能出現的 <code>IndexOutOfBoundsException</code>。 如果代碼中不可能出現這種情況，則可將其移除。
+  該快速修復會自動添加範圍檢查，以防止在最小值大於最大值時可能出現的 <code>IndexOutOfBoundsException</code>。 如果代碼中不可能出現這種情況，則可將其移除。
 </p>
 <!-- tooltip end -->
 <p><small>2018.2 最新變化</small></p>

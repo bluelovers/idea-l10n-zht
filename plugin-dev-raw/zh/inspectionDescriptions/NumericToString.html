@@ -1,11 +1,11 @@
 <html>
 <body>
-報告對擴展 <code>Number</code> 的類的對象的 <code>toString()</code> 調用。
-此類調用在國際化環境中通常是不正確的，應該使用一些特定于區域設置的格式。
+報告對擴展 <code>Number</code> 的類的對象的 <code>function toString() { [native code] }()</code> 調用。
+此類調用在國際化環境中通常是不正確的，應該使用一些特定於區域設置的格式。
 <p><b>示例：</b></p>
 <pre><code>
   void print(Double d) {
-    System.out.println(d.toString());
+    System.out.println(d.function toString() { [native code] }());
   }
 </code></pre>
 解決此問題的一種可能方式是：
@@ -14,7 +14,7 @@
     System.out.printf("%f%n", d);
   }
 </code></pre>
-這將使用默認區域設置來格式化數字，該默認區域設置在 JVM 啟動期間進行設置，並且基于主機環境。
+這將使用默認區域設置來格式化數字，該默認區域設置在 JVM 啟動期間進行設置，並且基於主機環境。
 <!-- tooltip end -->
 </body>
 </html>

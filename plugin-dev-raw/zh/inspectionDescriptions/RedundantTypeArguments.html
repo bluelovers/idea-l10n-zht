@@ -2,13 +2,13 @@
 <body>
 報告對形參化方法的所有調用，其中的顯式實參類型可以忽略，因為編譯器將明確推斷出這些實參類型。
 <p>
-  使用冗余類型實參會使代碼變得多余，因而可讀性較差。
+  使用冗餘類型實參會使代碼變得多餘，因而可讀性較差。
 </p>
 <p>示例：</p>
 <pre><code>
   List&lt;String&gt; list = Arrays.&lt;String&gt;asList("Hello", "World");
 </code></pre>
-<p>通過快速修復可以移除冗余類型實參：</p>
+<p>通過快速修復可以移除冗餘類型實參：</p>
 <pre><code>
   List&lt;String&gt; list = Arrays.asList("Hello", "World");
 </code></pre>

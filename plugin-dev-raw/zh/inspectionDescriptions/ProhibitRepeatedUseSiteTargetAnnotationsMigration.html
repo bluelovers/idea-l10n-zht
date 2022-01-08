@@ -1,11 +1,11 @@
 <html>
 <body>
-<p>報告在屬性訪問器上重復使用非 <code>@Repeatable</code> 注解的情況。</p>
+<p>報告在屬性訪問器上重複使用非 <code>@Repeatable</code> 注解的情況。</p>
 <p>
-    由于多次使用非 <code>@Repeatable</code> 注解，這兩種注解的使用都會出現在字節碼中，從而導致反射調用中的歧義。
+    由於多次使用非 <code>@Repeatable</code> 注解，這兩種注解的使用都會出現在字節碼中，從而導致反射調用中的歧義。
 </p>
 <p>
-    從 Kotlin 1.4 開始，必須將注解標記為 <code>@Repeatable</code> 或不重復注解，否則會導致編譯錯誤。
+    從 Kotlin 1.4 開始，必須將注解標記為 <code>@Repeatable</code> 或不重複注解，否則會導致編譯錯誤。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
@@ -13,7 +13,7 @@
 
   @get:<b>Foo</b>(10)
   val a: String
-      @<b>Foo</b>(20) get() = "foo" // 注解重復兩次，但未被標記為 @Repeatable
+      @<b>Foo</b>(20) get() = "foo" // 注解重複兩次，但未被標記為 @Repeatable
 </code></pre>
 <!-- tooltip end -->
 <p>僅當項目或模塊的 Kotlin 語言級別為 1.4 或更高時，此檢查才會報告。</p>

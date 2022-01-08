@@ -1,14 +1,14 @@
 <html>
 <body>
-報告可轉換為范圍檢查的兩個連續比較。
-<p>通過移除測試主體重復，針對范圍進行檢查使代碼更簡單。</p>
+報告可轉換為範圍檢查的兩個連續比較。
+<p>通過移除測試主體重複，針對範圍進行檢查使代碼更簡單。</p>
 <p><b>示例：</b></p>
 <pre><code>
   fun checkMonth(month: Int): Boolean {
       return month >= 1 && month &lt;= 12
   }
 </code></pre>
-<p>快速修復可將基于比較的檢查替換為針對范圍的檢查：</p>
+<p>快速修復可將基於比較的檢查替換為針對範圍的檢查：</p>
 <pre><code>
   fun checkMonth(month: Int): Boolean {
       return month in 1..12

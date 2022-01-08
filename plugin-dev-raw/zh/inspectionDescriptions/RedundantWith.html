@@ -1,6 +1,6 @@
 <html>
 <body>
-報告不從接收器訪問任何內容的冗余 <code>with</code> 函數調用。
+報告不從接收器訪問任何內容的冗餘 <code>with</code> 函數調用。
 <p><b>示例：</b></p>
 <pre><code>
   class MyClass {
@@ -8,7 +8,7 @@
   }
 
   fun testRedundant() {
-      with(c) { // &lt;== 'with' 冗余，因為 'c' 未使用
+      with(c) { // &lt;== 'with' 冗餘，因為 'c' 未使用
           println("1")
       }
   }

@@ -1,21 +1,21 @@
 <html>
 <body>
-報告從不符合所聲明方法返回范圍的方法返回的數值。
-您可以使用許多注解聲明方法的返回范圍：
+報告從不符合所聲明方法返回範圍的方法返回的數值。
+您可以使用許多注解聲明方法的返回範圍：
 <ul>
   <li>JetBrains 注解軟件包中的 <code>org.jetbrains.annotations.Range</code>（指定 'from' 和 'to'）</li>
   <li>Checker Framework 注解軟件包中的 <code>org.checkerframework.common.value.qual.IntRange</code>（指定 'from' 和 'to'）</li>
-  <li>Checker Framework 注解軟件包中的 <code>org.checkerframework.checker.index.qual.GTENegativeOne</code>（范圍為 '>= -1'）</li>
-  <li>Checker Framework 注解軟件包中的 <code>org.checkerframework.checker.index.qual.NonNegative</code>（范圍為 '>= 0'）</li>
-  <li>Checker Framework 注解軟件包中的 <code>org.checkerframework.checker.index.qual.Positive</code>（范圍為 '> 0'）</li>
-  <li>JSR 305 注解軟件包中的 <code>javax.annotation.Nonnegative</code>（范圍為 '>= 0'）</li>
+  <li>Checker Framework 注解軟件包中的 <code>org.checkerframework.checker.index.qual.GTENegativeOne</code>（範圍為 '>= -1'）</li>
+  <li>Checker Framework 注解軟件包中的 <code>org.checkerframework.checker.index.qual.NonNegative</code>（範圍為 '>= 0'）</li>
+  <li>Checker Framework 注解軟件包中的 <code>org.checkerframework.checker.index.qual.Positive</code>（範圍為 '> 0'）</li>
+  <li>JSR 305 注解軟件包中的 <code>javax.annotation.Nonnegative</code>（範圍為 '>= 0'）</li>
   <li><code>javax.validation.constraints.Min</code>（指定最小值）</li>
   <li><code>javax.validation.constraints.Max</code>（指定最大值）</li>
 </ul>
 <p>示例：</p>
 <pre><code>
   @Range(from = 0, to = Integer.MAX_VALUE) int getValue() {
-    // 警告：-1 超出聲明的范圍
+    // 警告：-1 超出聲明的範圍
     return -1;
   }
 </code></pre>

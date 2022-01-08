@@ -1,6 +1,6 @@
 <html>
 <body>
-報告迭代器實例上調用 <code>Iterator.next()</code> 或 <code>ListIterator.previous()</code> 的 <code>Iterator.hasNext()</code> 或 <code>ListIterator.hasPrevious()</code> 的實現。 此類調用几乎肯定是錯誤，因為 <code>hasNext()</code> 之類的方法不應修改迭代器狀態，而 <code>next()</code> 應修改迭代器狀態。
+報告迭代器實例上調用 <code>Iterator.next()</code> 或 <code>ListIterator.previous()</code> 的 <code>Iterator.hasNext()</code> 或 <code>ListIterator.hasPrevious()</code> 的實現。 此類調用幾乎肯定是錯誤，因為 <code>hasNext()</code> 之類的方法不應修改迭代器狀態，而 <code>next()</code> 應修改迭代器狀態。
 <p><b>示例：</b></p>
 <pre><code>
   class MyIterator implements Iterator&lt;Integer&gt; {

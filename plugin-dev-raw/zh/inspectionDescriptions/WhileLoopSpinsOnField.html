@@ -10,7 +10,7 @@
     boolean ready = false;
 
     void run() {
-      while (!ready) { // 即使在從另一個線程調用 markAsReady 之后，
+      while (!ready) { // 即使在從另一個線程調用 markAsReady 之後，
                        // 該循環也可能永不完成
       }
       // 執行某些工作

@@ -1,16 +1,16 @@
 <html>
 <body>
-    報告可以安全移除的冗余分號 (<code>;</code>)。
+    報告可以安全移除的冗餘分號 (<code>;</code>)。
 <p>
     Kotlin 不要求在每個語句或表達式的末尾使用分號。
-    建議使用快速修復移除冗余的分號。
+    建議使用快速修復移除冗餘的分號。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
   val myMap = mapOf("one" to 1, "two" to 2);
   myMap.forEach { (key, value) ->  print("$key -> $value")};
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   val myMap = mapOf("one" to 1, "two" to 2)
   myMap.forEach { (key, value) ->  print("$key -> $value")}
@@ -19,13 +19,13 @@
 <p>有兩種情況需要使用分號：</p>
 <ol>
     <li>
-        放在一個行里的多個語句需要用分號隔開：
+        放在一個行裡的多個語句需要用分號隔開：
 <pre><code>
   map.forEach { val (key, value) = it; println("$key -> $value") }
 </code></pre>
     </li>
     <li>
-        同時聲明了屬性或函數的 <code>enum</code> 類要求在枚舉常量列表后加一個分號：
+        同時聲明了屬性或函數的 <code>enum</code> 類要求在枚舉常量列表後加一個分號：
         <pre><code>
   enum class Mode {
       SILENT, VERBOSE;

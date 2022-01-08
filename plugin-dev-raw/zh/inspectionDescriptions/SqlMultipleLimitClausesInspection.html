@@ -6,7 +6,7 @@
 <pre><code>create table foo(a int);
 select top 1 * from foo order by a offset 10 rows fetch next 20 rows only;</code></pre>
 
-<p>SELECT TOP 子句用于指定必須只返回 1 條記錄。 FETCH 子句指定在處理完 OFFSET 子句后要返回的行數。 但是因為我們已經有了 SELECT TOP 限制子句，所以 FETCH 子句可能是冗余的。
+<p>SELECT TOP 子句用於指定必須只返回 1 條記錄。 FETCH 子句指定在處理完 OFFSET 子句後要返回的行數。 但是因為我們已經有了 SELECT TOP 限制子句，所以 FETCH 子句可能是冗餘的。
 </p>
 </body>
 </html>

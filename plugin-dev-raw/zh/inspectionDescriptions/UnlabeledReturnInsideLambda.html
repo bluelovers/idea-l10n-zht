@@ -1,19 +1,19 @@
 <html>
 <body>
 報告內聯 lambda 內未標記的 <code>return</code> 表達式。
-<p>此類表達式可能令人困惑，因為可能不清楚哪個范圍屬于 <code>return</code>。</p>
-<p><b>更改為 return@…</b> 快速修復可用于自動修正代碼。</p>
+<p>此類表達式可能令人困惑，因為可能不清楚哪個範圍屬於 <code>return</code>。</p>
+<p><b>更改為 return@…</b> 快速修復可用於自動修正代碼。</p>
 <p>示例：</p>
 <pre><code>
   fun test(list: List&lt;Int&gt;) {
       list.forEach {
           // 此返回表達式從函數測試返回
-          // 可以將其更改為 return@forEach 以更改范圍
+          // 可以將其更改為 return@forEach 以更改範圍
           if (it == 10) return
       }
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   fun test(list: List&lt;Int&gt;) {
       list.forEach {

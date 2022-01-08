@@ -1,13 +1,13 @@
 <html>
 <body>
-如果將變量類型范圍縮小到轉換類型，則報告可以移除的類型轉換。
+如果將變量類型範圍縮小到轉換類型，則報告可以移除的類型轉換。
 <p>示例：</p>
 <pre><code>
   Object x = "  string  ";
   System.out.println(((String)x).trim());
 </code></pre>
 <p>
-在這里，將 <code>x</code> 的類型更改為 <code>String</code> 使轉換變得冗余。 建議的快速修復會更新變量類型並移除該變量上的所有冗余轉換：
+在這裡，將 <code>x</code> 的類型更改為 <code>String</code> 使轉換變得冗餘。 建議的快速修復會更新變量類型並移除該變量上的所有冗餘轉換：
 </p>
 <pre><code>
   String x = "  string  ";

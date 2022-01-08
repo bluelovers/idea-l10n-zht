@@ -1,6 +1,6 @@
 <html>
 <body>
-報告帶有太少 <code>case</code> 標簽的 <code>switch</code> 語句和表達式，並建議將它們重寫為 <code>if</code> 和 <code>else if</code> 語句。
+報告帶有太少 <code>case</code> 標籤的 <code>switch</code> 語句和表達式，並建議將它們重寫為 <code>if</code> 和 <code>else if</code> 語句。
 <p>示例 (minimum branches == 3)：</p>
 <pre><code>
   switch (expression) {
@@ -8,7 +8,7 @@
     case "bar" -&gt; bar();
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   if ("foo".equals(expression)) {
     foo();
@@ -18,6 +18,6 @@
 </code></pre>
 <!-- tooltip end -->
 <p>配置檢查：</p>
-<p>使用<b>最小分支數</b> 字段指定 <code>case</code> 標簽的最小預期數量。</p>
+<p>使用<b>最小分支數</b> 字段指定 <code>case</code> 標籤的最小預期數量。</p>
 </body>
 </html>

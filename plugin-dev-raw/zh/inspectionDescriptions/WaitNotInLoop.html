@@ -2,8 +2,8 @@
 <body>
 報告不是在循環中進行的 <code>wait()</code> 調用。
 <p>
-  <code>wait()</code> 通常用于掛起線程，直到某個條件變為 true 為止。
-  線程可能出于不同的原因而被喚醒，因此在 <code>wait()</code> 調用返回后應檢查條件。
+  <code>wait()</code> 通常用於掛起線程，直到某個條件變為 true 為止。
+  線程可能出於不同的原因而被喚醒，因此在 <code>wait()</code> 調用返回後應檢查條件。
   使用循環很容易做到這一點。
 </p>
 <p><b>示例：</b></p>
@@ -16,7 +16,7 @@
     }
   }
 </code></pre>
-<p>優良的代碼應類似于：</p>
+<p>優良的代碼應類似於：</p>
 <pre><code>
   class BoundedCounter {
     private int count;

@@ -1,14 +1,14 @@
 <html>
 <body>
-報告任何可以移動到更小范圍的變量聲明。
-<p>這種檢查對于方法開頭的 <i>Pascal 樣式</i>聲明特別有用。 此外，范圍太廣的變量在重構后也經常保留。</p>
+報告任何可以移動到更小範圍的變量聲明。
+<p>這種檢查對於方法開頭的 <i>Pascal 樣式</i>聲明特別有用。 此外，範圍太廣的變量在重構後也經常保留。</p>
 <p><code>sb</code> 移動的示例：</p>
 <pre><code>
   StringBuilder sb = new StringBuilder();
   System.out.println();
   sb.append(1);
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   System.out.println();
   StringBuilder sb = new StringBuilder();

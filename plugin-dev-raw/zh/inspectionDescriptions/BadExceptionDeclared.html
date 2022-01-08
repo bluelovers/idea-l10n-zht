@@ -1,7 +1,7 @@
 <html>
 <body>
 報告在其 <code>throws</code> 子句中聲明不適當異常的方法。
-例如，異常可能因為過于通用而不適當，例如 <code>java.lang.Exception</code> 或 <code>java.lang.Throwable</code>。
+例如，異常可能因為過於通用而不適當，例如 <code>java.lang.Exception</code> 或 <code>java.lang.Throwable</code>。
 <p><b>示例：</b></p>
 <pre><code>
   void describeModule(String module) throws Exception {} // 警告：聲明了禁止的異常 'Exception'

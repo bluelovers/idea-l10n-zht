@@ -1,6 +1,6 @@
 <html>
 <body>
-報告冗余的 <code>import</code> 語句。
+報告冗餘的 <code>import</code> 語句。
 
 <p>可以安全地移除默認和未使用的導入。</p>
 
@@ -14,11 +14,11 @@
   import kotlin.sequences.*
   import kotlin.text.*
 
-  // 特定于 jvm
+  // 特定於 jvm
   import java.lang.*
   import kotlin.jvm.*
 
-  // 特定于 js
+  // 特定於 js
   import kotlin.js.*
 
   import java.io.* // 此導入未使用，可以移除

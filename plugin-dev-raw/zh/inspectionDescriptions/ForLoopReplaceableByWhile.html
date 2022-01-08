@@ -1,19 +1,19 @@
 <html>
 <body>
-報告不包含初始化和更新組件的 <code>for</code> 循環，並建議將它們轉換為 <code>while</code> 循環。 這使代碼更易于閱讀。
+報告不包含初始化和更新組件的 <code>for</code> 循環，並建議將它們轉換為 <code>while</code> 循環。 這使代碼更易於閱讀。
 <p>示例：</p>
 <pre><code>
   for(; exitCondition(); ) {
     process();
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   while(exitCondition()) {
     process();
   }
 </code></pre>
-<p>快速修復也可用于其他 <code>for</code> 循環，因此您可以用 <code>while</code> 循環替換任何 <code>for</code> 循環。</p>
+<p>快速修復也可用於其他 <code>for</code> 循環，因此您可以用 <code>while</code> 循環替換任何 <code>for</code> 循環。</p>
 <!-- tooltip end -->
 <p>如果您想忽略具有不重要或不存在條件的 <code>for</code> 循環，使用 <b>忽略無條件的 'infinite' for 循環</b> 選項。
 <p>

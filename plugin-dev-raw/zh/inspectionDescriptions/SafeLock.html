@@ -3,7 +3,7 @@
 報告沒有在 <code>try</code> 塊前面獲取，或者沒有在相應的 <code>finally</code> 塊中解鎖的 <code>java.util.concurrent.locks.Lock</code> 資源。 如果在資源關閉之前拋出異常，此類資源可能會被無意泄漏。
 <p><b>示例：</b></p>
 <pre><code>
-  lock.lock(); // 由于缺少 'finally' 塊，因此會報告
+  lock.lock(); // 由於缺少 'finally' 塊，因此會報告
   try {
     doSmthWithLock();
   } catch (IOException e) {

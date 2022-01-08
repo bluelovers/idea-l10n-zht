@@ -9,6 +9,7 @@ import { outputFile, pathExists, readFile, unlink } from 'fs-extra';
 import { join } from 'upath2';
 import { console } from 'debug-color2';
 import { cli_logger } from '../lib/cli-progress';
+import { processText } from 'novel-segment-cli';
 
 cli_logger(FastGlob([
 	'**/*',
@@ -24,7 +25,9 @@ cli_logger(FastGlob([
 			let fullpath = join(__plugin_downloaded_dir_unzip, file);
 
 			const content_old = await readFile(fullpath).then(content => content.toString());
-			let content_new = cn2tw_min(content_old);
+			let content_new = await processText(content_old, {
+				convertToZhTw: true,
+			});
 
 			if (/META-INF\/plugin\.xml$/i.test(file))
 			{

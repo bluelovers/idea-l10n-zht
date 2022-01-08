@@ -1,7 +1,7 @@
 <html>
 <body>
 報告在聲明外被賦值給 <code>null</code> 的變量。
-<p>Java 中 <code>null</code> 的主要用途是表示未初始化的引用變量。 在極少數情況下，將變量顯式賦值給 <code>null</code> 有助于垃圾回收。 但是，使用 <code>null</code> 來表示缺失、未指定、無效值或找不到的元素被認為是一種不好的做法，可能會使您的代碼更容易出現 <code>NullPointerExceptions</code>。
+<p>Java 中 <code>null</code> 的主要用途是表示未初始化的引用變量。 在極少數情況下，將變量顯式賦值給 <code>null</code> 有助於垃圾回收。 但是，使用 <code>null</code> 來表示缺失、未指定、無效值或找不到的元素被認為是一種不好的做法，可能會使您的代碼更容易出現 <code>NullPointerExceptions</code>。
   請改為考慮定義具有預期語義的 sentinel 對象或使用像 <code>Optional</code> 這樣的庫類型來表示沒有值。</p>
 <p><b>示例：</b></p>
 <pre><code>
@@ -10,7 +10,7 @@
     try {
       value = Integer.parseInt(s);
     } catch (NumberFormatException e) {
-      // 警告：null 用于表示“無效值”
+      // 警告：null 用於表示“無效值”
       value = null;
     }
     return value;

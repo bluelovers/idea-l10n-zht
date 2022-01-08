@@ -1,7 +1,7 @@
 <html>
 <body>
 報告替換次數為 <code>0</code> 而不是 <code>-1</code> 的 <code> strings.Replace </code> 的調用。
-<p>指示替換字符串次數的計數實參不能為 <code>0</code>，因為它不會進行任何替換從而使函數調用是冗余的。 請改用 <code>-1</code>。</p>
+<p>指示替換字符串次數的計數實參不能為 <code>0</code>，因為它不會進行任何替換從而使函數調用是冗餘的。 請改用 <code>-1</code>。</p>
 <p>示例：</p>
 <pre><code>a := strings.Replace("SSS", "S", "H", 0) // 沒有替換任何東西
 b := strings.Replace("SSS", "S", "H", -1) // 用 “H” 替換所有出現的 “S”</code></pre>

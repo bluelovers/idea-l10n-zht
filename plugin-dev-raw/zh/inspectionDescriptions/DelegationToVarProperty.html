@@ -1,7 +1,7 @@
 <html>
 <body>
-報告至 <code>var</code> 屬性的接口委托
-<p>僅使用屬性的初始值進行委托，任何后續的賦值都不會影響它。</p>
+報告至 <code>var</code> 屬性的接口委託
+<p>僅使用屬性的初始值進行委託，任何後續的賦值都不會影響它。</p>
 <p><b>示例：</b></p>
 <pre><code>
   class Example(var text: CharSequence): CharSequence by text
@@ -10,7 +10,7 @@
 <pre><code>
   class Example(val text: CharSequence): CharSequence by text
 </code></pre>
-<p>如果您出于某種原因依賴可變性，則可使用另一種方法：</p>
+<p>如果您出於某種原因依賴可變性，則可使用另一種方法：</p>
 <pre><code>
   class Example(text: CharSequence): CharSequence by text {
       var text = text

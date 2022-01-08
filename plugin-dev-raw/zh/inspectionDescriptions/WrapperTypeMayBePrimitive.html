@@ -2,7 +2,7 @@
 <body>
 報告主要用作基元類型的包裝器類型的局部變量。
 <p>在某些情況下，裝箱可能會導致嚴重的性能損失，尤其是在循環中。</p>
-<p>采用啟发估計裝箱操作次數。 例如，循環內的轉換數量視為更多。</p>
+<p>採用啟發估計裝箱操作次數。 例如，循環內的轉換數量視為更多。</p>
 
 <p><b>示例：</b></p>
 <pre><code>  public void example() {
@@ -17,7 +17,7 @@
   void needPrimitive(int value) {}
   void needBox(Integer value) {}
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>  public void example() {
     int value = 12;
     needBox(value);

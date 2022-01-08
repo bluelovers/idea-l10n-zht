@@ -1,6 +1,6 @@
 <html>
 <body>
-報告對 <code>java.util.Map</code> 實例的 <code>keySet()</code> 的迭代，其中迭代的鍵用于從映射中檢索值。
+報告對 <code>java.util.Map</code> 實例的 <code>keySet()</code> 的迭代，其中迭代的鍵用於從映射中檢索值。
 <p>
   替換為 <code>entrySet()</code> 或 <code>values()</code> 的迭代時，此類迭代可能會更有效（如果實際上沒有使用鍵）。
 </p>
@@ -13,7 +13,7 @@
    Object val = map.get(key);
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   for (Object val : map.values()) {}
 </code></pre>

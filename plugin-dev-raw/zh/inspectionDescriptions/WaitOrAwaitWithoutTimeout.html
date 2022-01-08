@@ -2,7 +2,7 @@
 <body>
 報告對未指定超時的 <code>Object.wait()</code> 或 <code>Condition.await()</code> 的調用。
 <p>
-  在高可用性程序中，此類調用可能很危險，因為如果從未調用 <code>notify()</code>/<code>notifyAll()</code> 或 <code>signal()</code>/<code>signalAll()</code>，那么一個組件中的故障可能會導致等待的組件发生阻塞。
+  在高可用性程序中，此類調用可能很危險，因為如果從未調用 <code>notify()</code>/<code>notifyAll()</code> 或 <code>signal()</code>/<code>signalAll()</code>，那麼一個組件中的故障可能會導致等待的組件發生阻塞。
 </p>
 <p><b>示例：</b></p>
 <pre><code>

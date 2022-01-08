@@ -1,10 +1,10 @@
 <html>
 <body>
-如果類沒有引用其外部類的成員，則將類上的 <code>inner</code> 修飾符報告為冗余。
+如果類沒有引用其外部類的成員，則將類上的 <code>inner</code> 修飾符報告為冗餘。
 <p><b>示例：</b></p>
 <pre><code>
   class Foo {
-      <b>inner</b> class InnerClass { // 冗余 `inner` 修飾符
+      <b>inner</b> class InnerClass { // 冗餘 `inner` 修飾符
           fun hello() {
               println("Hi!")
           }
@@ -14,17 +14,17 @@
   class List {
       val objects = Array&lt;Any&gt;(42) { Any() }
 
-      <b>inner</b> class Iterator { // 非冗余 `inner` 修飾符
+      <b>inner</b> class Iterator { // 非冗餘 `inner` 修飾符
           fun next(): Any {
               return objects[0]
           }
       }
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   class Foo {
-      class InnerClass { // 冗余 `inner` 修飾符
+      class InnerClass { // 冗餘 `inner` 修飾符
           fun hello() {
               println("Hi!")
           }
@@ -34,7 +34,7 @@
   class List {
       val objects = Array&lt;Any&gt;(42) { Any() }
 
-      <b>inner</b> class Iterator { // 非冗余 `inner` 修飾符
+      <b>inner</b> class Iterator { // 非冗餘 `inner` 修飾符
           fun next(): Any {
               return objects[0]
           }

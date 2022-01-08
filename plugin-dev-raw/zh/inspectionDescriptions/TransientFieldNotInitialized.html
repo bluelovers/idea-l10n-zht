@@ -10,7 +10,7 @@
 <p><b>示例：</b></p>
 <pre><code>
   class Person implements Serializable {
-    transient String name = "Default"; //警告，反序列化后實際上可能為 null
+    transient String name = "Default"; //警告，反序列化後實際上可能為 null
     transient String surname; //null 被視為默認值，不予報告
   }
 </code></pre>

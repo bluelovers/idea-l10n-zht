@@ -1,6 +1,6 @@
 <html>
 <body>
-報告代碼和 <code>plugin.xml</code> 描述符中未正確注冊的插件組件（組件和操作）。
+報告代碼和 <code>plugin.xml</code> 描述符中未正確註冊的插件組件（組件和操作）。
 <p>
   報告的問題如下：
 </p>
@@ -8,11 +8,11 @@
   <li>未解析的組件/操作實現類 (<code>plugin.xml</code>)</li>
   <li>未解析的組件接口類 (<code>plugin.xml</code>)</li>
   <li>無法將組件實現類分配給其接口類 (<code>plugin.xml</code>)</li>
-  <li>組件注冊不正確，例如，將 <code>ProjectComponent</code> 注冊為應用程序組件，或者類完全沒有實現任何組件接口（<code>plugin.xml</code> 和 Java 代碼）
+  <li>組件註冊不正確，例如，將 <code>ProjectComponent</code> 註冊為應用程序組件，或者類完全沒有實現任何組件接口（<code>plugin.xml</code> 和 Java 代碼）
   </li>
   <li>類修飾符不正確：操作類必須為 <code>public</code>，並且必須有 public 無實參構造函數。 此外，操作和組件實現類不得為 abstract（<code>plugin.xml</code> 和 Java 代碼）
   </li>
-  <li>接口類重復：只能將類用作接口類一次 (<code>plugin.xml</code>)</li>
+  <li>接口類重複：只能將類用作接口類一次 (<code>plugin.xml</code>)</li>
 </ul>
 <!-- tooltip end -->
 <p>配置檢查：</p>

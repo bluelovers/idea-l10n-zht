@@ -1,7 +1,7 @@
 <html>
 <body>
 報告無意義的算術表達式。 此類表達式包括加 0、減 0、乘以 0 或 1 以及除以 1。
-<p>此類表達式可能是自動重構所致，不太可能是開发者的本意。</p>
+<p>此類表達式可能是自動重構所致，不太可能是開發者的本意。</p>
 <p>該快速修復會簡化此類表達式。</p>
 <p><b>示例：</b>
 <pre><code>
@@ -11,7 +11,7 @@
     int res = x / x;
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   void f(int a) {
     int x = 0;
@@ -21,9 +21,9 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  請注意，在極少數情況下，建議的替換可能不完全等同于所有可能輸入的原始代碼。 例如，該檢查會建議將 <code>x / x</code> 替換為 <code>1</code>。
+  請注意，在極少數情況下，建議的替換可能不完全等同於所有可能輸入的原始代碼。 例如，該檢查會建議將 <code>x / x</code> 替換為 <code>1</code>。
   但是，如果 <code>x</code> 為零，原始代碼將拋出 <code>ArithmeticException</code> 或導致 <code>NaN</code>。
-  另外，如果 <code>x</code> 為 <code>NaN</code>，則結果也是 <code>NaN</code>。 此類行為不太可能出于本意。
+  另外，如果 <code>x</code> 為 <code>NaN</code>，則結果也是 <code>NaN</code>。 此類行為不太可能出於本意。
 </p>
 </body>
 </html>

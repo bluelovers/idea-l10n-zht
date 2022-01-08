@@ -1,6 +1,6 @@
 <html>
 <body>
-報告在循環內发生的對 <code>java.lang.Thread.sleep()</code> 的調用。
+報告在循環內發生的對 <code>java.lang.Thread.sleep()</code> 的調用。
 <p>此類調用表示“忙等待”。 忙等待通常效率低下，並且可能導致意外死鎖，因為忙等待線程不會釋放鎖定的資源。</p>
 <p><b>示例：</b></p>
 <pre><code>
@@ -8,7 +8,7 @@
      volatile int x;
      public void waitX() throws Exception {
       while (x &gt; 0) {
-        Thread.sleep(10);// 警告：在循環中調用 'Thread.sleep()'，可能處于忙等待
+        Thread.sleep(10);// 警告：在循環中調用 'Thread.sleep()'，可能處於忙等待
       }
     }
   }

@@ -1,12 +1,12 @@
 <html>
 <body>
-報告字符串模板中用于括簡單標識符的大括號的用法。
-<p>使用“移除大括號”快速修復可移除冗余的大括號。</p>
+報告字符串模板中用於括簡單標識符的大括號的用法。
+<p>使用“移除大括號”快速修復可移除冗餘的大括號。</p>
 <p><b>示例：</b></p>
 <pre><code>
   fun redundant() {
      val x = 4
-     val y = "${x}" // &lt;== 冗余
+     val y = "${x}" // &lt;== 冗餘
   }
 
   fun correctUsage() {
@@ -14,7 +14,7 @@
       val y = "${x.length}" // &lt;== 可以
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   fun redundant() {
      val x = 4

@@ -2,7 +2,7 @@
 <body>
 報告對包含 <code>java.util.List</code> 實參的 <code>java.util.Set.removeAll()</code> 的調用。
 <p>
-  當實參大小大于或等于集合大小，並且集合是 <code>java.util.AbstractSet</code> 的子類時，此類調用可能會很慢。
+  當實參大小大於或等於集合大小，並且集合是 <code>java.util.AbstractSet</code> 的子類時，此類調用可能會很慢。
   在本例中，對集合中的每個元素調用了 <code>List.contains()</code>，將執行線性搜索。
 </p>
 <p><b>示例：</b></p>
@@ -11,7 +11,7 @@
     mySet.removeAll(List.of(ss));
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>  public void check(String... ss) {
     // O(n) 復雜度
     List.of(ss).forEach(mySet::remove);

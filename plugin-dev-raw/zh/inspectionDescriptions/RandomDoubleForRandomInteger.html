@@ -1,8 +1,8 @@
 <html>
 <body>
-報告對 <code>java.util.Random.nextDouble()</code> 的調用，這些調用用于通過將調用乘以一個系數並轉換為整數來創建正整數。
+報告對 <code>java.util.Random.nextDouble()</code> 的調用，這些調用用於通過將調用乘以一個系數並轉換為整數來創建正整數。
 <p>
-  對于在一定范圍內生成隨機正整數，<code>java.util.Random.nextInt(int)</code> 更加簡單和高效。
+  對於在一定範圍內生成隨機正整數，<code>java.util.Random.nextInt(int)</code> 更加簡單和高效。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
@@ -11,7 +11,7 @@
   }
   </code>
 </pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   int getRandomInt() {
     return (new Random()).nextInt(SIZE);

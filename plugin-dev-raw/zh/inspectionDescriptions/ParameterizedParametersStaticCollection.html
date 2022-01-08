@@ -1,6 +1,6 @@
 <html>
 <body>
-報告使用 <code>@RunWith(Parameterized.class)</code> 注解，但要么不包括使用 <code>@Parameterized.Parameters</code> 注解的數據提供程序方法，要么此方法的簽名不正確的 JUnit 4 <a href="https://github.com/junit-team/junit4/wiki/parameterized-tests">形參化測試</a>類。 這種測試類無法運行。
+報告使用 <code>@RunWith(Parameterized.class)</code> 注解，但要麼不包括使用 <code>@Parameterized.Parameters</code> 注解的數據提供程序方法，要麼此方法的簽名不正確的 JUnit 4 <a href="https://github.com/junit-team/junit4/wiki/parameterized-tests">形參化測試</a>類。 這種測試類無法運行。
 數據提供程序方法應為 <code>public</code> 和 <code>static</code> 並具有 <code>Iterable</code> 或 <code>Object[]</code> 的返回類型。
 <p>建議創建一個空的形參提供程序方法或更改不正確的數據提供程序方法的簽名。</p>
 
@@ -19,7 +19,7 @@
     // …測試用例
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   @RunWith(Parameterized.class)
   <b>public class</b> ImportantTest {

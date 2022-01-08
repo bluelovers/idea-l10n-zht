@@ -14,7 +14,7 @@
   }
 </code></pre>
 <p>
-  這里的 <code>userName</code> 解讀為格式字符串的一部分，這可能導致 <code>IllegalArgumentException</code>（例如，如果 <code>userName</code> 為 <code>"{"</code>）。
+  這裡的 <code>userName</code> 解讀為格式字符串的一部分，這可能導致 <code>IllegalArgumentException</code>（例如，如果 <code>userName</code> 為 <code>"{"</code>）。
   此調用或許應當替換為 <code>MessageFormat.format("Hello, {0}! Your balance is {1}.", userName, balance)</code>。
 </p>
 <!-- tooltip end -->

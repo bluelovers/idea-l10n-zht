@@ -2,8 +2,8 @@
 <body>
 報告沒有在循環中調用的 <code>java.util.concurrent.locks.Condition.await()</code>。
 <p>
-  <code>await()</code> 和相關方法通常用于掛起線程，直到某個條件變為 true 為止。
-  線程可能出于不同原因而被喚醒，因此應在 <code>await()</code> 調用返回后檢查條件。
+  <code>await()</code> 和相關方法通常用於掛起線程，直到某個條件變為 true 為止。
+  線程可能出於不同原因而被喚醒，因此應在 <code>await()</code> 調用返回後檢查條件。
   使用循環很容易做到這一點。
 </p>
 <p><b>示例：</b></p>
@@ -12,7 +12,7 @@
     released.await();
   }
 </code></pre>
-<p>優良的代碼應類似于：</p>
+<p>優良的代碼應類似於：</p>
 <pre><code>
   void acquire(Condition released) throws InterruptedException {
     while (acquired) {

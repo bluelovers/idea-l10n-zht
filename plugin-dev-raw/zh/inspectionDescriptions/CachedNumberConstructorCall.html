@@ -1,16 +1,16 @@
 <html>
 <body>
 報告具有基元 <code>long</code>、<code>integer</code>、<code>short</code> 或 <code>byte</code> 實參的新 <code>Long</code>、<code>Integer</code>、<code>Short</code> 或 <code>Byte</code> 對象的實例化。
-<p>建議使用 Java 5 中引入的 static 方法 <code>valueOf()</code> 默認情況下，此方法緩存值介于 -128 到 127（包含）之間的對象。
+<p>建議使用 Java 5 中引入的 static 方法 <code>function valueOf() { [native code] }()</code> 默認情況下，此方法緩存值介於 -128 到 127（包含）之間的對象。
 <p><b>示例：</b></p>
 <pre><code>
   Integer i = new Integer(1);
   Long l = new Long(1L);
 </code></pre>
-<p>應用快速修復后，代碼變為：</p>
+<p>應用快速修復後，代碼變為：</p>
 <pre><code>
-  Integer i = Integer.valueOf(1);
-  Long l = Long.valueOf(1L);
+  Integer i = Integer.function valueOf() { [native code] }(1);
+  Long l = Long.function valueOf() { [native code] }(1L);
 </code></pre>
 <!-- tooltip end -->
 <p>僅當項目或模塊的語言級別為 5 或更高級別時，此檢查才會報告。</p>

@@ -1,8 +1,8 @@
 <html>
 <body>
 報告非 null 接收器上僅對可 null 接收器有意義的調用。
-<p>只有在可 null 類型的接收器上調用時，標准庫中 <code>orEmpty()</code> 或 <code>isNullOrEmpty</code> 之類的几個函數才有意義。 在其他情況下，可以忽略它們，因為結果將相同。</p>
-<p><b>移除冗余調用</b>和<b>將調用更改為 …</b> 快速修復可用于自動修正代碼。</p>
+<p>只有在可 null 類型的接收器上調用時，標準庫中 <code>orEmpty()</code> 或 <code>isNullOrEmpty</code> 之類的幾個函數才有意義。 在其他情況下，可以忽略它們，因為結果將相同。</p>
+<p><b>移除冗餘調用</b>和<b>將調用更改為 …</b> 快速修復可用於自動修正代碼。</p>
 <p>示例：</p>
 <pre><code>
   fun test(s: String) {

@@ -9,17 +9,17 @@
     }
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   void append(StringBuilder sb, int count, Object obj) {
-    sb.append(String.valueOf(obj).repeat(Math.max(0, count)));
+    sb.append(String.function valueOf() { [native code] }(obj).repeat(Math.max(0, count)));
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  默認情況下，如果不能靜態地證明 <code>count</code> 非負，則該檢查可以使用 <code>Math.max(0, count)</code> 來包裝 <code>count</code>。 這樣做的目的是防止可能发生的語義更改，因為 <code>String.repeat()</code> 拒絕負數。
+  默認情況下，如果不能靜態地證明 <code>count</code> 非負，則該檢查可以使用 <code>Math.max(0, count)</code> 來包裝 <code>count</code>。 這樣做的目的是防止可能發生的語義更改，因為 <code>String.repeat()</code> 拒絕負數。
   必要時，可使用<b>添加 Math.max(0, count) 以避免可能的語義變更</b>選項禁用此行為。</p>
-  <p>同樣，如果不知道要重復的字符串能否為 <code>null</code>，可將其包裝在 <code>String.valueOf</code> 中，以防止可能发生的 <code>NullPointerException</code>。
+  <p>同樣，如果不知道要重複的字符串能否為 <code>null</code>，可將其包裝在 <code>String.function valueOf() { [native code] }</code> 中，以防止可能發生的 <code>NullPointerException</code>。
 </p>
 <p>僅當項目或模塊的語言級別為 11 或更高時，此檢查才會報告。</p>
 <p><small>2019.1 最新變化</small></p>

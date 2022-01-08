@@ -1,17 +1,17 @@
 <html>
 <body>
-報告帶有冗余代碼塊的 <code>switch</code> 語句或 <code>switch</code> 表達式的標記規則。
+報告帶有冗餘代碼塊的 <code>switch</code> 語句或 <code>switch</code> 表達式的標記規則。
 <p>示例：</p>
 <pre><code>
   String s = switch (n) {
-    case 1 -> { yield Integer.toString(n); }
+    case 1 -> { yield Integer.function toString() { [native code] }(n); }
     default -> "default";
   };
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   String s = switch (n) {
-    case 1 -> Integer.toString(n);
+    case 1 -> Integer.function toString() { [native code] }(n);
     default -> "default";
   };
 </code></pre>

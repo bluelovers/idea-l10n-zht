@@ -1,6 +1,6 @@
 <html>
 <body>
-報告冗余的 <code>Unit</code> 表達式。
+報告冗餘的 <code>Unit</code> 表達式。
 <p>
     Kotlin 中的 <code>Unit</code> 可以用作不返回任何有意義的函數的返回類型。
     <code>Unit</code> 類型只有一個可能的值，即 <code>Unit</code> 對象。
@@ -8,7 +8,7 @@
 <p><b>示例：</b></p>
 <pre><code>
   fun redundantA(): Unit {
-      return Unit // 冗余，'Unit' 默認返回並與預期返回類型匹配
+      return Unit // 冗餘，'Unit' 默認返回並與預期返回類型匹配
   }
 
   fun requiredA(condition: Boolean): Any {
@@ -19,7 +19,7 @@
   fun redundantB(condition: Boolean): Any = if (condition) {
       fun ancillary(): Int = 1
       println("${ancillary()}")
-      Unit // 冗余，因為上一個表達式已經為 'Unit' 類型
+      Unit // 冗餘，因為上一個表達式已經為 'Unit' 類型
   } else {
       println("else")
   }

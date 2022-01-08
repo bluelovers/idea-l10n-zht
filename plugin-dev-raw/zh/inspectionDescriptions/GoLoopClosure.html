@@ -1,7 +1,7 @@
 <html>
 <body>
 報告在 <code>defer</code> 和 <code>go</code> 語句中的 <code>func</code> 文字內對循環變量的引用。
-  此類變量可能具有意外值，因為它們沒有被復制到 <code>func</code> 文字中，並且 <code>defer</code> 和 <code>go</code> 中的 <code>func</code> 文字不會立即執行。
+  此類變量可能具有意外值，因為它們沒有被複製到 <code>func</code> 文字中，並且 <code>defer</code> 和 <code>go</code> 中的 <code>func</code> 文字不會立即執行。
 
 <p>有關閉包和 goroutine 的更多信息，請參見 <a href="https://golang.org/doc/go_faq.html#closures_and_goroutines">golang.org 上的 What happens
   with closures running as goroutines? </a> 頁面。</p>
@@ -11,15 +11,15 @@
     fmt.Println(v) // 輸出可能會是 `c c c`，而不是 `a b c`。
   }()
 }</code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>for _, v := range []string{"a", "b", "c"} {
-  v := v // `v` 現已被復制
+  v := v // `v` 現已被複製
   go func() {
     fmt.Println(v)
   }()
 }</code></pre>
 <!-- tooltip end -->
-<p>請注意，僅當 <code> defer</code> 和 <code>go</code> 語句是循環主體中的最后一個語句時，分析器才會檢查它們。
+<p>請注意，僅當 <code> defer</code> 和 <code>go</code> 語句是循環主體中的最後一個語句時，分析器才會檢查它們。
   否則，分析可能會產生錯誤的檢測結果。</p>
 </body>
 </html>

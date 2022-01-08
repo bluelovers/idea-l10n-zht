@@ -9,7 +9,7 @@
     System.out.println(item);
   }
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
   for (String item : list) {
     System.out.println(item);
@@ -19,7 +19,7 @@
 <p>
   使用<b>報告索引的 'java.util.List' 循環</b>選項可查找涉及 <code>list.get(index)</code> 調用的循環。
   這些循環通常可以替換為增強型 <code>for</code> 循環，除非它們修改了進程中的基礎列表，例如通過調用 <code>list.remove(index)</code> 進行修改。
-  如果是后面這種情況，增強型 <code>for</code> 循環可能拋出 <code>ConcurrentModificationException</code>。
+  如果是後面這種情況，增強型 <code>for</code> 循環可能拋出 <code>ConcurrentModificationException</code>。
   在某些情況下，<code>list.get(index)</code> 循環的操作速度也可能更快一些。</p>
 <p>
   使用<b>不報告無類型集合上的迭代</b>選項可忽略沒有類型形參的集合。

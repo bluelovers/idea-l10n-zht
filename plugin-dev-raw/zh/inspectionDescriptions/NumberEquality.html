@@ -9,7 +9,7 @@
     final boolean bool = a == b;
   }
 </code></pre>
-<p>如果已知 <code>a</code> 為非 null，則可以安全地應用“不安全”的快速修復，並獲得類似于如下所示的結果：</p>
+<p>如果已知 <code>a</code> 為非 null，則可以安全地應用“不安全”的快速修復，並獲得類似於如下所示的結果：</p>
 <pre><code>  void foo(Integer a, Integer b) {
     final boolean bool = a.equals(b);
   }

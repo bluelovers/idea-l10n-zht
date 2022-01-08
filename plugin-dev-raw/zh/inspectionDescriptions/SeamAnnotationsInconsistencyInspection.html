@@ -2,9 +2,9 @@
 <body>
 <p>報告無效組件類型上的 Seam 注解用法。</p>
 
-<p>只有屬于 Seam 組件的類才允許使用 Seam 注解
+<p>只有屬於 Seam 組件的類才允許使用 Seam 注解
 （<code>@Around</code>、<code>@Within</code>、<code>@DataBinderClass</code> 和 <code>@DataSelectorClass</code> 除外）。<br>
-此外，許多注解僅對特定組件類型有效，例如，實體 Bean 不支持雙向注入、上下文划分或事務划分。</p>
+此外，許多注解僅對特定組件類型有效，例如，實體 Bean 不支持雙向注入、上下文劃分或事務劃分。</p>
 
 <p>Seam 注解允許使用以下組件類型：</p>
 <table border="1">
@@ -85,7 +85,7 @@
   <td></td><td>@Observer</td><td>X</td><td>X</td><td>X</td><td>X</td>
   </tr>
   <tr>
-  <td>上下文<br>划分</td><td>@Begin</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  <td>上下文<br>劃分</td><td>@Begin</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
   </tr>
   <tr>
   <td></td><td>@BeginTask</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
@@ -106,7 +106,7 @@
   <td></td><td>@CreateProcess</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
   </tr>
   <tr>
-  <td>事務<br>划分</td><td>@Transactional</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>X</td>
+  <td>事務<br>劃分</td><td>@Transactional</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>X</td>
   </tr>
   <tr>
   <td></td><td>@Rollback</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>

@@ -5,10 +5,10 @@
 <p><b>示例：</b></p>
 <pre><code>
   @ContextConfiguration
-  @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // 在注解的測試類上設置方法模式沒有意義。 對于類級別控制，請改用 classMode。
+  @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // 在注解的測試類上設置方法模式沒有意義。 對於類級別控制，請改用 classMode。
                   hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // 通過 @ContextHierarchy 將上下文配置為層次結構的一部分時，應使用 hierarchyMode
   public class MyTest {
-    @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // 在注解的測試方法上設置類模式沒有意義。 對于方法級別控制，請改用 methodMode。
+    @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // 在注解的測試方法上設置類模式沒有意義。 對於方法級別控制，請改用 methodMode。
                      hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // 通過 @ContextHierarchy 將上下文配置為層次結構的一部分時，應使用 hierarchyMode
     public void testFoo() {...}
   }

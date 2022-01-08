@@ -6,13 +6,13 @@
 <pre><code>
 Flux.just("1").flatMap(f -&gt; {
     Flux&lt;String&gt; just = loadUsersFromDatabase();
-    just.toIterable(); // 錯誤：在非阻塞范圍內調用阻塞運算符
+    just.toIterable(); // 錯誤：在非阻塞範圍內調用阻塞運算符
     return just;
   }
 );
 </code></pre>
 
-<p>考慮使用<a href="https://projectreactor.io/docs/core/release/reference/#faq.wrap-blocking">適當的計划程序</a>（例如 <code>Schedulers.boundedElastic()</code>）運行阻塞代碼，或者嘗試尋找替代的非阻塞 API。</p>
+<p>考慮使用<a href="https://projectreactor.io/docs/core/release/reference/#faq.wrap-blocking">適當的計劃程序</a>（例如 <code>Schedulers.boundedElastic()</code>）運行阻塞代碼，或者嘗試尋找替代的非阻塞 API。</p>
 
 <br/>
 

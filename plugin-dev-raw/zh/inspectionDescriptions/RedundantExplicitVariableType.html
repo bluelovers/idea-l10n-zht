@@ -1,6 +1,6 @@
 <html>
 <body>
-報告冗余局部變量類型。
+報告冗餘局部變量類型。
 <p>這些類型可以從上下文中推斷出來，因此替換為 <code>var</code>。</p>
 <p><b>示例：</b></p>
 <pre><code>
@@ -8,7 +8,7 @@
     try (InputStream in = s) {}
   }
 </code></pre>
-<p>應用修正后：</p>
+<p>應用修正後：</p>
 <pre><code>
   void test(InputStream s) {
     try (var in = s) {}

@@ -1,11 +1,11 @@
 <html>
 <body>
-在只能使用 <code>String</code> 路徑的情況下，報告在下面的一種構造函數中創建的冗余 <code>File</code>：<code>FileInputStream</code>、<code>FileOutputStream</code>、<code>FileReader</code>、<code>FileWriter</code>、<code>PrintStream</code>、<code>PrintWriter</code>、<code>Formatter</code>。
+在只能使用 <code>String</code> 路徑的情況下，報告在下面的一種構造函數中創建的冗餘 <code>File</code>：<code>FileInputStream</code>、<code>FileOutputStream</code>、<code>FileReader</code>、<code>FileWriter</code>、<code>PrintStream</code>、<code>PrintWriter</code>、<code>Formatter</code>。
 <p>示例：</p>
 <pre><code>
 InputStream is = new FileInputStream(new File("in.txt"));
 </code></pre>
-<p>在應用快速修復后：</p>
+<p>在應用快速修復後：</p>
 <pre><code>
 InputStream is = new FileInputStream("in.txt");
 </code></pre>

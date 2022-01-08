@@ -1,8 +1,8 @@
 <html>
 <body>
-報告對 <code>testing.T.FailNow</code> 和位于測試文件 goroutine 中的類似方法的調用。
+報告對 <code>testing.T.FailNow</code> 和位於測試文件 goroutine 中的類似方法的調用。
 <p>像 <code>FailNow</code> 這種方法會調用 <code>runtime.Goexit</code>，並停止調用 goroutine，而不是測試。
-  因此，必須僅從運行測試或基准的 goroutine 中調用。</p>
+  因此，必須僅從運行測試或基準的 goroutine 中調用。</p>
 <p>有關 <code>FailNow</code> 的更多信息，請參見 <a href="https://golang.org/pkg/testing/#T.FailNow">golang.org 的 func (*T) FailNow</a>。</p>
 <p>示例：</p>
 <pre><code>func TestFoo(t *testing.T) {
@@ -10,7 +10,7 @@
     t.Fatal("oops") // 退出 goroutine，而不是 TestFoo
   }()
 }</code></pre>
-<p>在應用<b>替換為 'Error' 和 'return'</b> 快速修復后：</p>
+<p>在應用<b>替換為 'Error' 和 'return'</b> 快速修復後：</p>
 <pre><code>func TestFoo(t *testing.T) {
   go func() {
     t.Error("oops")
