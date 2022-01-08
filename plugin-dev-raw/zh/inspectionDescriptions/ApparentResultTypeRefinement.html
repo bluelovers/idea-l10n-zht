@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>報告結果類型和函數體之間缺少 <code>=</code>。</p>
+<p>當用作函數的結果類型時，不能細化類型。
+    但是，當結果類型和函數體之間缺少 <code>=</code> 時，它可能看起來很精致。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def test(): T {}
+</code></pre>
+<p>在應用快速修復后</p>
+<pre><code>
+  def test(): T = {}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

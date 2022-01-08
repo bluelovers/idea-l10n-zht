@@ -1,0 +1,40 @@
+<html>
+<body>
+<p>報告不是所有抽象屬性或方法都在子類中定義的情況。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+from abc import abstractmethod, ABC
+
+
+class Figure(ABC):
+
+    @abstractmethod
+    def do_figure(self):
+        pass
+
+
+class Triangle(Figure):
+    def do_triangle(self):
+        pass
+</pre>
+<p>應用快速修復后，IDE 為 <code>Triangle</code> 類實現抽象方法：</p>
+<pre style="font-family: monospace">
+from abc import abstractmethod, ABC
+
+
+class Figure(ABC):
+
+    @abstractmethod
+    def do_figure(self):
+        pass
+
+
+class Triangle(Figure):
+    def do_figure(self):
+        pass
+
+    def do_triangle(self):
+        pass
+</pre>
+</body>
+</html>

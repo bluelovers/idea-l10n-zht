@@ -1,0 +1,20 @@
+<html>
+<body>
+報告單例類。
+<p>單例類按照只能實例化該類一個實例的方式進行聲明。 單例類導致測試復雜化，存在這種情況可能表明欠缺面向對象的設計。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Singleton {
+    private static final Singleton ourInstance = new Singleton();
+
+    private Singleton() {
+    }
+
+    public Singleton getInstance() {
+        return ourInstance;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+報告前面包含用于檢查不同類型的 <code>instanceof</code> 的類型轉換表達式。
+<p>
+  盡管這可能是有意為之，但此類結構很可能是錯誤，在運行時將導致 <code>java.lang.ClassCastException</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Main {
+    int whenCharSequenceCastToNumber(Object o){
+      if (o instanceof CharSequence) {
+        return ((Number) o).intValue();
+      }
+      return 0;
+    }
+
+    int earlyReturnWhenNotCharSequence(Object o){
+      if (!(o instanceof CharSequence)) return 0;
+      return ((Number)o).intValue();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

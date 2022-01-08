@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>報告 Reactor/RxJava 運算符代碼中的 <code>throw</code> 表達式。</p>
+<p>從 Reactor/RxJava 運算符拋出異常表明可能存在問題，因為您可以返回“類似于 Reactive”的錯誤：從 <code>flatMap()</code> 的 <code>Mono.error()</code> 或 <code>Flowable.error()</code>，或者從 Reactor 的 <code>handle()</code> 運算符調用 <code>sink.error()</code>。
+</p>
+<p>
+此外，Reactor 工廠方法允許在沒有任何錯誤的情況下返回已檢查的異常，而在沒有 <code>Exceptions</code> 類的情況下拋出此類異常會導致編譯錯誤。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+Flux.just(1, 2, 3).flatMap(i -> {
+            throw new RuntimeException();
+        })
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+Flux.just(1, 2, 3).flatMap(i -> {
+            return Flux.error(new RuntimeException());
+        })
+</code></pre>
+<!-- tooltip end -->
+<p><small>2019.3 最新變化</small></p>
+</body>
+</html>

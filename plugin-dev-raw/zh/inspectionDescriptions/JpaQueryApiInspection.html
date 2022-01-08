@@ -1,0 +1,25 @@
+<html>
+<body>
+報告命名和原生查詢以及相關 API 方法中的未解析符號：
+<ul>
+  <li>未知命名查詢</li>
+  <li>未知查詢形參</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+  @Entity
+  @NamedQuery(name = "SelectByConditionQuery", query = "...")
+  public class JavaEntity { ... }
+
+  class Main {
+    public static void executeQuery() {
+      Persistence.createEntityManagerFactory("")
+        .createEntityManager()
+        .createNamedQuery("SelectAllQuery") // 錯誤：未知查詢名稱
+        ...
+    }
+  }
+</code></pre>
+</body>
+</html>

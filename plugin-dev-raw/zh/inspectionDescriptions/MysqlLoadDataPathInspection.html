@@ -1,0 +1,11 @@
+<html>
+<body>
+報告 LOAD 語句中以波浪符號開頭的路徑。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE table_name (id int);
+LOAD DATA LOCAL INFILE '~/Documents/some_file.txt'
+INTO TABLE table_name FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
+IGNORE 1 LINES;</code></pre>
+<p>使用文件的完整路徑代替波浪符號。</p>
+</body>
+</html>

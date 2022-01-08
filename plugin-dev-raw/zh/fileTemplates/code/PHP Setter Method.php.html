@@ -1,0 +1,70 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      一個 PHP setter 方法的內置模板。 例如，當調用 "添加 getter 和 setter" 快速修復時，就會用到它。
+    </font>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">預定義變量接收以下值：</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${STATIC}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">如果屬性是靜態的，則取值為 'static'，否則為空字符串。</font></td>
+  </tr>
+  <tr>    
+    <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">
+      使用駱駝拼寫法樣式的方法名，沒有 "set" 前綴，第一個字符大寫。 例如，屬性名稱 '_my_property' 被
+      轉換為 'MyProperty'。
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CLASS_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">包含類名稱。</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${SCALAR_TYPE_HINT}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">如果語言級別為 PHP 7.0 或更高版本，則包含標量類型提示</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${FIELD_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">原始屬性名稱保持原樣。</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">setter 形參名稱。 几乎與 ${FIELD_NAME} 相同，
+    但刪除了第一個下划線（如果有的話）。 例如，屬性名稱 '_myProperty' 被
+      轉換為 'myProperty'。</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${TYPE_HINT}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">屬性類型提示，如果未指定，則為空字符串。</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${VOID_RETURN_TYPE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">指示 <i>void</i> 返回類型是否可用于項目中的 PHP 語言級別。</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">美元符號，計算為普通的 “$” 字符。</font></td>
+  </tr>
+</table>
+</body>
+</html>

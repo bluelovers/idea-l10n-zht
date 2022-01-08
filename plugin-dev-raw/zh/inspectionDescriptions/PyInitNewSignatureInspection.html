@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>報告 <code>__new__</code> 和 <code>__init__</code> 方法不兼容的簽名。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class MyClass(object):
+    def __new__(cls, arg1):
+        return super().__new__(cls)
+
+    def __init__(self):
+        pass
+</pre>
+<p>如果 <code>__new__</code> 和 <code>__init__</code> 有不同的實參，則無法實例化 <code>MyClass</code>。</p>
+<p>IDE 提議的修復方法是應用“更改簽名”重構。</p>
+</body>
+</html>

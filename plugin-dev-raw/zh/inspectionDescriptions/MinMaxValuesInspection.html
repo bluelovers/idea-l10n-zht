@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>報告 Bean 驗證約束注解中 <code>max</code> 和 <code>min</code> 值的不正確值。</p>
+
+<p><strong>示例：</strong></p>
+<pre><code>
+public class Car {
+  @NotNull
+  @Size(min = 14, max = <strong>2</strong>) // 'max' 值小于 'min' 值
+  private String licensePlate;
+}
+</code></pre>
+</body>
+</html>

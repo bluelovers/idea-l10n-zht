@@ -1,0 +1,28 @@
+<html>
+<body>
+報告可移動到 <code>when</code> 表達式中的變量聲明。
+<p><b>示例：</b></p>
+<pre><code>
+fun someCalc(x: Int) = x * 42
+
+fun foo(x: Int): Int {
+  val a = someCalc(x)
+  return when (a) {
+    1 -&gt; a
+    2 -&gt; 2 * a
+    else -&gt; 24
+  }
+}
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+fun foo(x: Int): Int {
+  return when (val a = someCalc(x)) {
+    1 -&gt; a
+    2 -&gt; 2 * a
+    else -&gt; 24
+  }
+}
+</code></pre>
+</body>
+</html>

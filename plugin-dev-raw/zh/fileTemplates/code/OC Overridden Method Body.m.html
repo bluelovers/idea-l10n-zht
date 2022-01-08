@@ -1,0 +1,46 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      生成（例如，調用<b>代碼 | 重寫方法</b>操作）時創建被重寫方法的主體。<br>
+      模板是可編輯的。 除了 Objective-C 表達式和注釋外，您還可以使用預定義變量，這些變量隨后將被擴展為相應值。</font>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">預定義變量將接收以下值：</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">super 方法調用，對于 <b>void</b> 方法 — <code>[<b>super</b> <i>methodName</i>]</code>，帶或不帶形參；
+      對于其他方法 — <code><b>return</b> [<b>super</b> <i>methodName</i>]</code>，帶或不帶形參
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">創建的方法的返回類型</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">方法默認返回的值</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CONTAINING_CLASS}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在其中重寫方法的類的名稱</font></td>
+  </tr>
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1"><b>C 文件頭</b>模板（<b>包含</b>選項卡）中的所有預定義變量也可用
+      （例如，
+      <font face="verdana" size="-2"><b>${USER}</b></font>、
+      <font face="verdana" size="-2"><b>${DATE}</b></font> 等）</font>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

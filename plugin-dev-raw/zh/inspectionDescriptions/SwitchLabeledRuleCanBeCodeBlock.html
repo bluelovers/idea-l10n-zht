@@ -1,0 +1,25 @@
+<html>
+<body>
+報告 <code>switch</code> 表達式或帶有表達式體的增強 <code>switch</code> 語句的規則。
+這些可以轉換為代碼塊。
+<p>示例：</p>
+<pre><code>
+  String message = switch (errorCode) {
+    case 404 -> "Not found!";
+    ...
+  };
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  String message = switch (errorCode) {
+    case 404 -> {
+                yield "Not found!";
+            }
+    ...
+  };
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的語言級別為 14 或更高時，此檢查才會報告。</p>
+<p><small>2019.1 最新變化</small></p>
+</body>
+</html>

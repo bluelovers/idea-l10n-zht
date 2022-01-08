@@ -1,0 +1,13 @@
+<html>
+<body>
+報告查詢中限制行的冗余子句，例如 FETCH 和 LIMIT。
+<p>示例（PostgreSQL）：</p>
+<pre><code>CREATE TABLE foo(a INT);
+
+SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo LIMIT 2);
+SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo FETCH FIRST 2 ROWS ONLY);</code></pre>
+<p>要修復警告，您可以將 OFFSET 添加到限制子句。 如果缺少 OFFSET，則 LIMIT 是多余的，因為 LIMIT 的用法不會影響 EXISTS 的運算結果。 在 OFFSET 的情況下，我們跳過前 <code>N</code> 行，這將影響輸出。</p>
+<pre><code>SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo OFFSET 1 ROW LIMIT 2);
+SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo OFFSET 1 ROW FETCH FIRST 2 ROWS ONLY);</code></pre>
+</body>
+</html>

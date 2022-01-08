@@ -1,0 +1,27 @@
+<html>
+<body>
+報告 <code>case</code> 標簽太多的 <code>switch</code> 語句或表達式。
+<p>如此之長的 switch 語句可能令人困惑，或許應進行重構。
+  有時這並非問題（例如一個域非常復雜，並且有包含大量常量的枚舉）。</p>
+<p>示例：</p>
+<pre><code>
+    switch (x) {
+        case 1 -> {}
+        case 2 -> {}
+        case 3 -> {}
+        case 4 -> {}
+        case 5 -> {}
+        case 6 -> {}
+        case 7 -> {}
+        case 8 -> {}
+        case 9 -> {}
+        case 10 -> {}
+        case 11,12,13 -> {}
+        default -> {}
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>最大分支數</b>字段可以指定 <code>case</code> 標簽的預期最大數量。
+<p>
+</body>
+</html>

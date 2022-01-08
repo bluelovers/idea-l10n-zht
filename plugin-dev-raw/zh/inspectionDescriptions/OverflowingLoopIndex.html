@@ -1,0 +1,16 @@
+<html>
+<body>
+報告沒有索引溢出就無法完成的循環或根本不循環的循環。
+之所以发生這種情況，通常是因為更新操作中有錯誤。
+<p>示例：</p>
+<pre><code>
+  void foo(int s) {
+    for (int i = s; i > 12; i++) { // i-- 應在此處
+      System.out.println(i);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2019.1 最新變化</small></p>
+</body>
+</html>

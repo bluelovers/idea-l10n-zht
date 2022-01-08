@@ -1,0 +1,13 @@
+<html>
+<body>
+報告對無法為之找到相應 <code>Object.wait()</code> 調用的 <code>Object.notify()</code> 或 <code>Object.notifyAll()</code> 的調用。
+<p>此檢查僅報告以當前類的目標字段為目標的調用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  synchronized (synList) {
+    synList.notify(); //從未調用 synList.wait()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

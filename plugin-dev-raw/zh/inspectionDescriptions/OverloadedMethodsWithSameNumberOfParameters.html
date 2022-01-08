@@ -1,0 +1,17 @@
+<html>
+<body>
+報告在同一類中聲明、具有相同名稱和相同數量形參的方法。
+此類重載可能非常令人困惑，因為可能不清楚調用的是哪個重載。
+<p><b>示例：</b></p>
+<pre><code>
+  class Main {
+    public static void execute(Runnable r) {}
+    public static &lt;T&gt; void execute(RunnableFuture&lt;T&gt; c) {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用該選項可以忽略形參類型絕對不兼容的重載方法。
+</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+報告非標准 EL 擴展可能導致的問題：特性之外的 JSF EL 表達式、非標准 EL 表達式等。
+
+<p><b>示例：</b></p><br/>
+<pre><code>
+&lt;f:view&gt;
+  &lt;h:form&gt;
+    &lt;f:loadBundle var="example"/&gt;
+    &lt;h:commandButton action="${example.size()}"/&gt; // 警告：方法調用是非標准擴展
+  &lt;/h:form&gt;
+&lt;/f:view&gt;
+</code></pre>
+</body>
+</html>

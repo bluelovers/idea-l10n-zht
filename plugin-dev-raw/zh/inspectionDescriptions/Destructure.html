@@ -1,0 +1,27 @@
+<html>
+<body>
+報告可以析構的聲明。
+<p><b>示例：</b></p>
+<pre><code>
+  data class My(val first: String, val second: Int, val third: Boolean)
+
+  fun foo(list: List&lt;My>) {
+      list.forEach { my ->
+          println(my.second)
+          println(my.third)
+      }
+  }
+</code></pre>
+<p>該快速修復會析構聲明並引入具有來自相應類的名稱的新變量：</p>
+<pre><code>
+  data class My(val first: String, val second: Int, val third: Boolean)
+
+  fun foo(list: List&lt;My>) {
+      list.forEach { (_, second, third) ->
+          println(second)
+          println(third)
+      }
+  }
+</code></pre>
+</body>
+</html>

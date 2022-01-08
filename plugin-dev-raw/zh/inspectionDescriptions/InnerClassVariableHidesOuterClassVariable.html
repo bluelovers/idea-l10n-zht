@@ -1,0 +1,22 @@
+<html>
+<body>
+報告與周圍類的字段同名的內部類字段。
+由于進行此類命名，在周圍類有意使用同名字段的情況下，您可能會誤用內部類的字段。
+<p>建議通過快速修復重命名該內部類字段。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Outer {
+    private String name;
+
+    class Inner {
+      private String name;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用此選項可選擇此檢查應報告所有名稱衝突，還是只報告與內部類可見的字段的衝突。
+</p>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>報告不正確的 <a href="https://spring.io/projects/spring-ws">Spring Web Services</a> 注解。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  // 1.  @PayloadRoot on non-endpoint classes
+  public class HolidayEndpoint {
+	<strong>@PayloadRoot</strong>(namespace = NAMESPACE_URI, localPart = "HolidayRequest") // @Endpoint 類支持 @PayloadRoot
+	public void handleHolidayRequest(@RequestPayload Element holidayRequest) throws Exception {
+     ...
+  }
+
+  // 2.  @PayLoad 方法上的 @XPathParam
+  @Endpoint
+  public class AirlineEndpoint {
+	  @Namespace(prefix = "m", uri = MESSAGES_NAMESPACE) @ResponsePayload
+	  public GetFlightsResponse getFlights(<strong>@XPathParam</strong>("//m:sc") String serviceClassString) {..} //@PayLoad 方法支持 @XPathParam
+  }
+}
+</code></pre>
+</body>
+</html>

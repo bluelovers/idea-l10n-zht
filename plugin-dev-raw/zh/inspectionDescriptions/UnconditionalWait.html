@@ -1,0 +1,22 @@
+<html>
+<body>
+報告在同步上下文中無條件調用的 <code>wait()</code>。
+<p>
+  <code>wait()</code> 通常用于在某個條件為 true 前阻塞線程。 如果是無條件調用 <code>wait()</code>，它通常表示在獲取鎖定之前檢查了條件。 在這種情況下可能會发生數據競爭，條件在得到檢查和獲取鎖定之間變為 true。
+</p>
+<p>
+  雖然此檢查发現的結構未必不正確，但肯定值得檢查。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Bar {
+      void foo() throws InterruptedException {
+          synchronized (this) {
+              wait(); // 警告
+          }
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

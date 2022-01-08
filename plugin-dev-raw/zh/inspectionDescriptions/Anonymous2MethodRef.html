@@ -1,0 +1,22 @@
+<html>
+<body>
+報告可以替換為方法引用的匿名類。
+<p>
+  請注意，如果將匿名類轉換為未綁定的方法引用，則 Java 運行時可以在后續調用期間重用相同的方法引用對象。 另一方面，使用匿名類時，每次都會創建單獨的對象。 因此，在極少數情況下，應用該快速修復可能會導致語義发生變化，例如，當匿名類實例用作 <code>HashMap</code> 鍵時。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+    Runnable r = new Runnable() {
+      @Override
+      public void run() {
+        System.out.println();
+      }
+    };
+</code></pre>
+<p>該快速修復會將此代碼更改為壓縮形式：<code>Runnable r = System.out::println;</code>。</p>
+<!-- tooltip end -->
+<p>使用<b>在接口未使用 @FunctionalInterface 注解時報告</b>選項可為未使用 @FunctionalInterface 注解的接口啟用此檢查。</p>
+
+<p>僅當項目或模塊的語言級別為 8 或更高時，此檢查才會報告。</p>
+</body>
+</html>

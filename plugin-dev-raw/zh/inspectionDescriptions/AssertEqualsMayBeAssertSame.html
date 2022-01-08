@@ -1,0 +1,24 @@
+<html>
+<body>
+報告可以替換為等效 <code>assertSame()</code> 調用的 JUnit <code>assertEquals()</code> 調用。
+當實參是不重寫 <code>Object.equals()</code> 方法並顯式比較對象標識的 <code>final</code> 類的實例時，可能发生這種情況。
+<p>建議將 <code>assertEquals()</code> 替換為 <code>assertSame()</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @Test
+  <b>public void</b> testObjectType() {
+    Object o = getObject();
+    Assert.assertEquals(String.<b>class</b>, o.getClass());
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  @Test
+  <b>public void</b> testSort() {
+    Object o = getObject();
+    Assert.assertSame(String.<b>class</b>, o.getClass());
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

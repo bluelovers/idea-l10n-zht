@@ -1,0 +1,24 @@
+<html>
+<body>
+報告語句體為空的 <code>synchronized</code> 語句。
+<p>
+  空的 <code>synchronized</code> 語句有時用于等待其他線程釋放特定資源。 但是，不能保證空的 <code>synchronized</code> 語句完成后不會再次獲取同一資源。
+  為了正確同步，應當在 <code>synchronized</code> 塊中使用此資源。
+</p>
+<p>
+  此外，在移除冗余代碼后，重構后可能會出現空的 <code>synchronized</code> 塊。 在本例中，<code>synchronized</code> 塊本身是冗余的，也應移除。
+</p>
+<p>示例：</p>
+<pre><code>
+  synchronized(lock) {}
+</code></pre>
+<p>
+  建議通過快速修復移除空的 synchronized 語句。
+</p>
+<!-- tooltip end -->
+<p>
+  JSP 文件中禁用了此檢查。
+<p>
+
+</body>
+</html>

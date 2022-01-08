@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>報告未使用的類、方法和字段。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Department {
+      private Organization myOrganization;
+  }
+</code></pre>
+<p>在這里，<code>Department</code> 顯式引用 <code>Organization</code>，但如果 <code>Department</code> 類未使用，則此檢查將報告這兩個類。 
+
+<p>
+該檢查還會報告其方法、所有方法實現/重寫器未使用的形參，以及已聲明但未使用的局部變量。
+</p>
+<!-- tooltip end -->
+<p>有關更多信息，請參閱 Java 中的相同檢查。</p>
+</body>
+</html>

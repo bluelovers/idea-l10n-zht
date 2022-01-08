@@ -1,0 +1,35 @@
+<html>
+<body>
+報告用作另一個方法調用的形參的方法調用。
+<p>該快速修復會引入一個變量，使代碼更簡單，也更易于調試。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public int y() { return 1; }
+  public int f(int x) { return 2 * x; }
+
+  public void foo() {
+      int x = f(y());
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  public int y() { return 1; }
+  public int f(int x) { return 2 * x; }
+
+  public void foo() {
+      int y = y();
+      int x = f(y);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用檢查選項可以切換以下各項的報告：
+</p>
+<ul>
+  <li>字段初始值設定項中的方法調用</li>
+  <li>對 static 方法的調用</li>
+  <li>對簡單 getter 的調用</li>
+</ul>
+
+</body>
+</html>

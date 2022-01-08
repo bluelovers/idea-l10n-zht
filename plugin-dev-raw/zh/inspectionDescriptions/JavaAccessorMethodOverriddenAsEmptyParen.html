@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>報告具有重寫 Java 訪問器方法的空形參子句的方法。</p>
+
+<p>符合訪問器 <a href="https://en.wikipedia.org/wiki/JavaBean">JavaBean</a> 命名協定的方法預計不會有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>。
+    推薦的慣例是，在沒有形參且方法沒有副作用時使用無形參方法。
+    該慣例促進了<a href="https://en.wikipedia.org/wiki/Uniform_access_principle">統一訪問原則</a>，即客戶端代碼不應受到將特性實現為字段或方法的決定的影響。</p>
+
+<p>問題是 Java 沒有實現統一訪問原則，不允許沒有形參子句的方法。
+    為了填補這一空白，Scala 允許您使用沒有形參子句的方法來重寫帶有空形參子句的方法。</p>
+
+<p>該快速修復會移除空形參子句。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  class TestException extends Exception {
+    override def getMessage(): String = ???
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class TestException extends Exception {
+    override def getMessage: String = ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

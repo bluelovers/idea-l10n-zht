@@ -1,0 +1,18 @@
+<html>
+<body>
+如果表達式的結果可以重用，則報告同一表達式在方法（或構造函數，或類初始值設定項）中的多次等效匹配項。
+<p>
+  如果表達式沒有副作用並且其結果始終相同（就 <code>Object.equals()</code> 而言），則會報告該表達式。
+  此類表達式的示例是 <code>a + b</code>、<code>Math.max(a, b)</code>、<code>a.equals(b)</code>、<code> s.substring(a,b)</code>。 為確保結果始終相同，已驗證表達式中使用的變量在表達式匹配項之間不會更改其值。</p>
+<p>
+  此類表達式可能包含不可變的類（如 <code>String</code>、<code>BigDecimal</code> 等）和實用程序類（如 <code>Objects</code>、<code>Math</code>，<code>random()</code> 除外）的方法。
+  <code>Object.equals() </code>、<code> Object.hashCode() </code>、<code> Object.toString() </code>、
+   <code>Comparable.compareTo()</code> 和 <code>Comparator.compare()</code> 等常用方法也可以使用，因為沒有任何可見的副作用。
+</p>
+<!-- tooltip end -->
+<p>
+  使用<b>表達式復雜性閾值</b>選項可指定最小表達復雜性閾值。 指定更大的數字將移除關于短表達式的報告。
+</p>
+<p><small>2018.3 最新變化</small></p>
+</body>
+</html>

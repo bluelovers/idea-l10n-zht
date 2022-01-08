@@ -1,0 +1,23 @@
+<html>
+<body>
+報告未指向函數的標簽。
+<p>禁止聲明不表示函數的目標標簽。</p>
+<p>該快速修復會移除標簽。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun testValLabelInReturn() {
+      L@ val fn = { return@L }
+      fn()
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun testValLabelInReturn() {
+      L@ val fn = { return }
+      fn()
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的語言級別為 1.4 或更高時，此檢查才會報告。</p>
+</body>
+</html>

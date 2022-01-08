@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>報告 <code>'paste'</code> 函數中的空分隔符。
+  該快速修復會將 <code>'paste'</code> 調用替換為 <code>'paste0'</code> 函數。
+<p><b>示例：</b></p>
+<p>
+  <code>
+    paste("a", "b", sep = '')
+  </code>
+</p>
+<p>
+  當您應用該快速修復時，代碼變為：
+</p>
+<p>
+  <code>
+    paste0("a", "b")
+  </code>
+</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+報告“預期”實參和“實際”實參的類型不兼容時對斷言方法的調用。
+<p>此類調用通常表明測試中存在錯誤。
+  該檢查會檢查相關的 JUnit、TestNG 和 AssertJ 方法。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  assertEquals("1", 1);
+  assertNotSame(new int[0], 0);
+
+  // 弱警告，可能只測試 equals() 約定
+  assertThat(foo).as("user type").isNotEqualTo(bar);
+</code></pre>
+</body>
+</html>

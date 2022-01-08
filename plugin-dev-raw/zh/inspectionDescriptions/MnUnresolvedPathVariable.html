@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>報告在方法簽名中聲明但在 URL 路徑中缺失或者在 URL 路徑中聲明但在方法簽名中缺失的 <code>@PathVariable</code> 形參。
+  該快速修復會添加缺失的形參。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @Get("/path/{myVariable}/")
+  public String handler(@PathVariable String name_is_not_equal_to_myVariable) {
+    return "...";
+  }
+</code></pre>
+<p>應用快速修復后，結果如下所示：</p>
+<pre><code>
+  @Get("/path/{myVariable}/")
+  public String handler(@PathVariable String myVariable) {
+    return "...";
+  }
+</code></pre>
+</body>
+</html>

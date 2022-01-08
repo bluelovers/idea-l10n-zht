@@ -1,0 +1,19 @@
+<html>
+<body>
+報告可以替換為 <code>EnumType.values()</code> 調用的枚舉常量數組。
+<p>通常，在更新這樣一個枚舉時，您必須同時更新數組。 但是，如果您改用 <code>EnumType.values()</code>，則無需修改。</p>
+<p>示例：</p>
+<pre><code>
+  enum States {
+     NOT_RUN, IN_PROGRESS, FINISHED;
+  }
+  
+  handleStates(new States[] {NOT_RUN, IN_PROGRESS, FINISHED});
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  handleStates(States.values());
+</code></pre>
+<p><small>2019.1 最新變化</small></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+報告對不必要地用封閉類的名稱進行了限定的內部類的任何引用。
+<p>此類限定可以安全地移除，這有時會為內部類添加導入。</p>
+<p>示例：</p>
+<pre><code>
+  class X {
+     X.Y foo;
+     class Y{}
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class X {
+     Y foo;
+     class Y{}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>忽略需要導入的引用</b>選項可忽略對內部類的引用，其中移除限定會添加導入。
+<p>
+</body>
+</html>

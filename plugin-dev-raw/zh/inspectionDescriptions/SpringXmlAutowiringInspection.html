@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>報告在 XML 應用程序上下文中配置的 Spring Bean 的不正確自動裝配。</p>
+
+<p><b>示例：</b></p>
+<pre>
+public interface FooInterface {...}
+@Component public class FooBean implements FooInterface {...}
+@Component public class OtherBean implements FooInterface {...}
+
+@Component
+public class MyComponent {
+	 public void setFooInterface(FooInterface foo) {...}
+}
+
+<hr/>
+
+&lt;beans&gt;
+	&lt;bean class="beans.OtherBean" id="otherBean"/&gt;
+	&lt;bean class="beans.FooBean" id="fooBean"/&gt;
+
+	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; // 報告 "無法自動裝配。 有不止一種 'FooInterface' 類型的 Bean。
+                                                               //          Beans: otherBean,fooBean. Properties: 'fooInterface' "
+&lt;/beans&gt;
+</pre>
+</body>
+</html>

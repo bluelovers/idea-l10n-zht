@@ -1,0 +1,12 @@
+<html>
+<body>
+報告帶有對超出其范圍的局部變量的引用的變量。
+<p><b>示例：</b></p>
+<pre><code>
+  int *escapeLocalScope() {
+    int lv = 100;
+    return &#38lv;
+  }
+</code></pre>
+</body>
+</html>

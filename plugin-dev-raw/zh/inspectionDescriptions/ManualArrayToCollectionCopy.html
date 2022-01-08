@@ -1,0 +1,28 @@
+<html>
+<body>
+報告使用循環將數組內容復制到集合中的代碼。
+<p>
+  一種更短並且有可能更快（取決于集合實現）的方法是使用 <code>Collection.addAll(Arrays.asList())</code> 或 <code>Collections.addAll()</code>。
+</p>
+<p>
+<p>僅報告內部沒有附加語句的循環。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void addAll(List&lt;String&gt; list, String[] arr) {
+    for (int i = 0; i &lt; arr.length; i++) {
+      String s = arr[i];
+      list.add(s);
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  void addAll(List&lt;String&gt; list, String[] arr) {
+    Collections.addAll(list, arr);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

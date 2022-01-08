@@ -1,0 +1,28 @@
+<html>
+<body>
+報告對 <code>String.startsWith()</code> 和 <code>String.endsWith()</code> 的調用，其中單字符字符串文字會作為實參傳遞。
+<p>
+  建議通過快速修復，使用更高效實現的 <code>String.charAt()</code> 替換此類調用。
+</p>
+<p>
+  然而，由于額外的非零長度檢查，此類更改的性能增益很小並且會降低代碼的可讀性，建議僅在緊密循環內應用該快速修復。
+</p>
+<p>
+  此檢查適用于 Java ME 和其他資源高度受限的環境。
+  不加考慮地應用此檢查的結果可能會對代碼清晰度和設計產生負面影響。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  boolean startsWithX(String s) {
+    return s.startsWith("x");
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  boolean startsWithX(String s) {
+    return !s.isEmpty() && s.charAt(0) == 'x';
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

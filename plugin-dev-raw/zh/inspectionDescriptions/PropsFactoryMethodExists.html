@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>報告可將動態構造函數調用安全替換為工廠方法調用的情況。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  import akka.actor._
+  
+  class Foo extends AbstractActor
+  
+  object Foo {
+    def props(): Props = Props(new Foo())
+  }
+  
+  Props(classOf[Foo])
+</code></pre>
+<p>在應用快速修復后：</p>    
+<pre><code>
+  import akka.actor._
+  
+  class Foo extends AbstractActor
+  
+  object Foo {
+    def props(): Props = Props(new Foo())
+  }
+  
+  Foo.props()
+</code></pre>  
+<!-- tooltip end -->
+</body>
+</html>

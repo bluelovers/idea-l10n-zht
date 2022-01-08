@@ -1,0 +1,20 @@
+<html>
+<body>
+報告布爾運算符 'and' 和 'or' 的非短路形式（<code>&</code>
+和 <code>|</code>）。
+<p>
+  非短路版本偶爾有用，但是，它們通常是由非短路形式（<code>&&</code>
+  和 <code>||</code>）拼寫錯誤導致的，並且可能產生難以捉摸的錯誤。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+if (a & b) {}
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+if (a && b) {}
+</code></pre>
+
+</body>
+</html>

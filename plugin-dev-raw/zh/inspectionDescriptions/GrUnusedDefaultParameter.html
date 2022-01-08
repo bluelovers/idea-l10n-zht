@@ -1,0 +1,9 @@
+<html>
+<body>
+<p>報告未使用的默認形參。</p>
+<pre><code>
+  def foo(a, <b>b = 2</b>) {}
+</code></pre>
+<p>如果所有 <code>foo</code> 調用將顯式包含 <code>b</code> 的實參，則 <code>b</code> 的初始值設定項將高亮顯示為“未使用”，並且具有將其移除的選項。</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+報告實例特性定義在<code>__init__</code> 方法外部的問題。
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+    class Book:
+    def __init__(self):
+        self.author = 'Mark Twain'
+
+    def release(self):
+        self.year = '1889'
+</pre>
+<p>
+  應用快速修復后，代碼示例變為：
+</p>
+<pre style="font-family: monospace">
+    class Book:
+    def __init__(self):
+        self.year = '1889'
+        self.author = 'Mark Twain'
+
+    def release(self):
+        pass
+</pre>
+</body>
+</html>

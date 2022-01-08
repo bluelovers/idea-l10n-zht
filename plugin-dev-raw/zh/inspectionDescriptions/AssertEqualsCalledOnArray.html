@@ -1,0 +1,27 @@
+<html>
+<body>
+報告帶有數組類型實參的 JUnit <code>assertEquals()</code> 調用。
+此類方法會比較數組的標識，而不是數組的內容。
+應使用 <code>assertArrayEquals()</code> 方法檢查數組內容。
+<p><b>示例：</b></p>
+<pre><code>
+  @Test
+  <b>public void</b> testSort() {
+    <b>int</b>[] actual = {248, 496, 0, 56};
+    Arrays.sort(actual);
+    Assert.assertEquals(<b>new int</b>[] {0, 56, 248, 496}, actual);
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  @Test
+  <b>public void</b> testSort() {
+    <b>int</b>[] actual = {248, 496, 0, 56};
+    Arrays.sort(actual);
+    Assert.assertArrayEquals(<b>new int</b>[] {0, 56, 248, 496}, actual);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

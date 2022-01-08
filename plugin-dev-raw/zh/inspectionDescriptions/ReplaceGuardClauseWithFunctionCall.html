@@ -1,0 +1,15 @@
+<html>
+<body>
+報告可以替換為函數調用的臨界子句。
+<p><b>示例：</b></p>
+<pre><code>  fun test(foo: Int?) {
+      if (foo == null) throw IllegalArgumentException("foo") // 可替換的子句
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>  fun test(foo: Int?) {
+      checkNotNull(foo)
+  }
+</code></pre>
+</body>
+</html>

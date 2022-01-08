@@ -1,0 +1,25 @@
+<html>
+<body>
+報告任何被聲明為 <code>static</code>、未被聲明為 <code>public</code>、不返回 <code>void</code> 或具有形參的 JUnit 測試方法。
+此類測試方法很容易無意間創建，但是 JUnit 測試運行程序不會執行這些方法。
+<p><b>示例：</b></p>
+<pre><code>
+  @Test
+  void test() {
+    assertEquals(1, 1);
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  @Test
+  public void test() {
+    assertEquals(1, 1);
+  }
+</code></pre>
+<!-- tooltip end -->
+
+<p>使用檢查選項可以指定注解。
+  不會報告任何使用其中一種注解進行注解的形參。
+<p>
+</body>
+</html>

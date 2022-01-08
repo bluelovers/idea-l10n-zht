@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>報告帶有類型形參的局部變量。</p>
+<p>局部變量的類型形參沒有意義，因為它不能被專門化。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun main() {
+      val &lt;T&gt; x = ""
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun main() {
+      val x = ""
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的 Kotlin 語言級別為 1.4 或更高時，此檢查才會報告。</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<body>
+報告在對象構造期間對當前類的 <code>abstract</code> 方法的調用。
+<p>如果方法位于以下位置，則會在對象構造期間調用：
+<ul>
+  <li>構造函數</li>
+  <li>非 static 實例初始值設定項</li>
+  <li>非 static 字段初始值設定項</li>
+  <li><code>clone()</code> 方法</li>
+  <li><code>readObject()</code> 方法</li>
+  <li><code>readObjectNoData()</code> 方法</li>
+</ul>
+<p>此類調用可能會導致難以捉摸的錯誤，因為對象初始化可能发生在方法調用之前。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  abstract class Parent {
+    abstract void abstractMethod();
+  }
+
+  class Child extends Parent {
+    Child() {
+      abstractMethod();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>此檢查與以下檢查共享功能：</p>
+<ul>
+  <li>在對象構造期間調用的可重寫方法</li>
+  <li>在對象構造期間調用的重寫的方法</li>
+</ul>
+<p>一次只能啟用一個檢查，以防止警告重復。</p>
+</body>
+</html>

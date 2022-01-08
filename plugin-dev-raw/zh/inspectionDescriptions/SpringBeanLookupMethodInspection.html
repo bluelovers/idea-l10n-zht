@@ -1,0 +1,35 @@
+<html>
+<body>
+<p>報告 XML 應用程序上下文中 Bean 的不正確 <strong>&lt;lookup-method&gt;</strong>。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  public abstract class FooLookupBean {
+    protected abstract FooBean createCommand();
+    private FooBean createCommand() {...}
+    protected static FooBean createCommandStatic() {...}
+    protected abstract FooBean createWithArgs(String foo);
+    protected abstract OtherBean createOtherBean();
+  }
+
+  &lt;beans&gt;
+    &lt;bean class="FooLookupBean" id="lookupTest"&gt;
+      &lt;lookup-method bean="fooBean" name="createCommand"/&gt;
+      &lt;!-- private --&gt;
+      &lt;lookup-method bean="fooBean" name="createCommand"/&gt;// "方法必須為 public 或 protected"
+      &lt;!-- static --&gt;
+      &lt;lookup-method bean="fooBean" name="createCommandStatic"/&gt; // 此處不允許使用 static 方法
+      &lt;!-- 有實參 --&gt;
+      &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt;// 方法必須沒有形參
+      &lt;!-- 不存在 --&gt;
+      &lt;lookup-method bean="fooBean" name="unknown"/&gt;  // 未知方法
+      &lt;!-- 不匹配 --&gt;
+      &lt;lookup-method bean="fooBean" name="createOtherBean"/&gt; // 查找方法返回類型與 'FooBean' Bean 類不匹配
+    &lt;/bean&gt;
+
+    &lt;bean class="FooBean" id="fooBean"/&gt;
+    &lt;bean class="OtherBean" id="otherBean"/&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

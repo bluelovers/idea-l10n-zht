@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>報告重寫方法簽名的不一致。</p>
+
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class Book:
+    def add_title(self):
+        pass
+
+
+class Novel(Book):
+    def add_title(self, text):
+        pass
+</pre>
+
+<p><code>Novel</code> 類中的 <code> add_title</code> 方法的形參與 <code>Book</code> 類中指定的方法簽名不匹配。 IDE 提議的修復方法是應用“更改簽名”重構。</p>
+</body>
+</html>

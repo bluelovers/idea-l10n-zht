@@ -1,0 +1,57 @@
+<html>
+<body>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+    這是內置模板，用于將 <b>GSP</b> 中的文本，
+    例如：
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+        &lt;<span style="font-weight:bold;">html</span>&gt;
+        &lt;<span style="font-weight:bold;">body</span>&gt;
+      <font face="verdana">Hello ${'world'}!</font>
+      &lt;<span style="font-weight:bold;">/body</span>&gt;
+      &lt;<span style="font-weight:bold;">/html</span>&gt;
+      <br>
+    替換為國際化 GSP 自定義標記用法，
+      例如：
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &lt;<span style="font-weight:bold;">html</span>&gt;
+      &lt;<span style="font-weight:bold;">body</span>&gt;
+      <font face="verdana">&lt;g:message code="HelloKey" args="['world']"/&gt;</font>
+    &lt;<span style="font-weight:bold;">/body</span>&gt;
+    &lt;<span style="font-weight:bold;">/html</span>&gt;
+    。
+    <p>
+    模板是可編輯的。 除了 GSP 上下文中允許的表達式外，您還可以使用預定義變量，這些變量隨后將被擴展為相應值。</font>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">預定義變量接收以下值：</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_KEY}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在相應的屬性文件中指定的屬性鍵名稱。
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_VALUE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在相應的屬性文件中指定的屬性值。
+      這是一個原始的 GSP 文本選擇值。
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${ARGS_KEY}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">實參</font></td>
+  </tr>
+
+</table>
+</body>
+</html>

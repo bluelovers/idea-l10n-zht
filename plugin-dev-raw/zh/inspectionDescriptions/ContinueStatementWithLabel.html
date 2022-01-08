@@ -1,0 +1,18 @@
+<html>
+<body>
+報告包含標簽的 <code>continue</code> 語句。
+<p><code>continue</code> 標簽語句導致重構復雜化，可能令人困惑。</p>
+<p>示例：</p>
+<pre><code>
+  void handle(List&lt;String&gt; strs) {
+    outer:
+    for (String s: strs) {
+      for (char ch : s.toCharArray()) {
+        if ('s' == ch) continue outer;
+        handleChar(ch);
+      }
+    }
+  }
+</code></pre>
+</body>
+</html>

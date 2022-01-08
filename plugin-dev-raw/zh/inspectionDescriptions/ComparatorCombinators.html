@@ -1,0 +1,26 @@
+<html>
+<body>
+報告定義為可以使用 <code>Comparator.comparing()</code> 調用表示的 lambda 表達式的 <code>Comparator</code> 實例。
+還會報告可以替換為 <code>Comparator.thenComparing()</code> 表達式的鏈式比較。
+<p>示例：</p>
+<pre><code>
+  myList.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
+
+  myList2.sort((person1, person2) -> {
+      int res = person1.first().compareTo(person2.first());
+      if(res == 0) res = person1.second().compareTo(person2.second());
+      if(res == 0) res = person1.third() - person2.third();
+      return res;
+  });
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  myList.sort(Comparator.comparing(Person::getName));
+
+  myList2.sort(Comparator.comparing(Person::first)
+                         .thenComparing(Person::second)
+                         .thenComparingInt(Person::third));
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

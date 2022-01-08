@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/html">
+<body>
+<p>報告用于實例化 case 類的 <code>new</code> 並建議將其刪除。</p>
+
+<p>會自動為 case 類提供 <code>apply</code> 方法。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  case class Book(isbn: String)
+  val guide = new Book("978-0345391803")
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  case class Book(isbn: String)
+  val guide = Book("978-0345391803")
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

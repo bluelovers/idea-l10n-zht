@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>報告類外部方法中的 <code>@classmethod</code> 或 <code>@staticmethod</code> 裝飾器的用法。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class State(object):
+
+    @classmethod
+    def my_state(cls, name):
+        cls.name = name
+
+
+@classmethod
+def change_state(self):
+    pass
+</pre>
+<p><code>change_state</code> 方法不應使用 <code>@classmethod</code> 裝飾器，或應將其移動到 <code>state</code> 類聲明。 </p>
+<p>如果應用<code>移除裝飾器</code>操作，代碼變為：</p>
+<pre style="font-family: monospace">
+class State(object):
+
+    @classmethod
+    def my_state(cls, name):
+        cls.name = name
+
+
+def change_state(self):
+    pass
+</pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+報告在循環開始或結束處的條件中斷，並建議使用循環條件來縮短代碼。
+<p>示例：</p>
+<pre><code>
+  <b>while</b> (true) {
+    <b>if</b> (i  == 23) <b>break</b>;
+    i++;
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  <b>while</b> (i != 23) {
+    i++;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

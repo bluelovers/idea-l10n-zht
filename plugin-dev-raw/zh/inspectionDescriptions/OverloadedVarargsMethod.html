@@ -1,0 +1,12 @@
+<html>
+<body>
+報告與類或超類中的其他方法同名的 vararg 方法。
+采用可變數量實參的重載方法可能非常令人困惑，因為通常不清楚調用的是哪個重載。
+<p><b>示例：</b></p>
+<pre><code>
+    public void execute(Runnable... r) {} // 警告
+    public void execute(Runnable r1, Runnable r2) {}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

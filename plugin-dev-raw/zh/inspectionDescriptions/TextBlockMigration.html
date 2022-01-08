@@ -1,0 +1,34 @@
+<html>
+<body>
+報告 <code>String</code> 文字，並建議將其替換為文本塊。
+<p>要求：</p>
+<ul>
+  <li><code>\n</code> 发生兩次或多次。</li>
+  <li>文本塊未串聯。</li>
+</ul>
+<p>
+使用<b>應用于單字符串文字</b>選項，可建議修正包含換行符的單一文字。
+<p>
+<p><b>示例：</b></p>
+<pre><code>
+  String html = "&lt;html&gt;\n" +
+                "    &lt;body&gt;\n" +
+                "        &lt;p&gt;Hello, world&lt;/p&gt;\n" +
+                "    &lt;/body&gt;\n" +
+                "&lt;/html&gt;\n";
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  String html = """
+                &lt;html&gt;
+                    &lt;body&gt;
+                        &lt;p&gt;Hello, world&lt;/p&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                """;
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的語言級別為 15 或更高時，此檢查才會報告。</p>
+<p><small>2019.3 最新變化</small></p>
+</body>
+</html>

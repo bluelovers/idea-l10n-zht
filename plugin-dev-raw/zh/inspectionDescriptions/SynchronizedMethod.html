@@ -1,0 +1,50 @@
+<html>
+<body>
+報告方法上的 <code>synchronized</code> 修飾符。
+<p>
+  對方法使用 <code>synchronized</code> 修飾符可能並非好主意，原因有几點：
+</p>
+<ol>
+  <li>
+    在鎖定的情況下應盡可能少地執行工作。 因此，通常最好使用 <code>synchronized</code> 塊，只保留共享狀態的代碼。
+  </li>
+  <li>
+    同步成為方法接口的一部分。 這導致難以轉換到不同的鎖定機制。
+  </li>
+  <li>
+    跟踪鎖定特定對象的內容變得更加困難。
+  </li>
+  <li>
+    在繼承方法的類時，無論是有意還是無意進行的 DoS（拒絕服務）攻擊都變得可行。
+  </li>
+</ol>
+<p>
+  替代做法是考慮在 <code>private final</code> 鎖定對象上同步，可以完全控制對該對象的訪問。
+</p>
+<p>可以通過快速修復使用 <code>synchronized(this)</code> 包裝方法體。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Main {
+    public synchronized void fooBar() {
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Main {
+    public void fooBar() {
+      synchronized (this) {
+      }
+    }
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p>您可以為此檢查配置以下選項：</p>
+<ol>
+  <li><strong>包括原生方法</strong> - 將原生方法納入檢查范圍。</li>
+  <li><strong>忽略重寫 synchronized 方法的方法</strong> - 不報告重寫 <code>synchronized</code> 方法的方法。</li>
+</ol>
+
+</body>
+</html>

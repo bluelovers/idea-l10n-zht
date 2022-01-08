@@ -1,0 +1,34 @@
+<html>
+<body>
+報告對超類中從子類構造函數中聲明的字段的賦值或修改。
+<p>最好在其自己的構造函數中初始化超類的字段，並在子類中委托給該構造函數。 如果它在構造后沒有改變，這還將允許聲明一個字段 <code>final</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Super {
+    int x;
+  }
+  class Sub extends Super {
+    Sub(int _x) {
+      // Warning: x is declared in a superclass
+      x = _x;
+    }
+  }
+</code></pre>
+<p>要避免此問題，請聲明超類構造函數：</p>
+<pre><code>
+  class Super {
+    final int x;
+
+    Super(int _x) {
+      x = _x;
+    }
+  }
+  class Sub extends Super {
+    Sub(int _x) {
+      super(_x);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

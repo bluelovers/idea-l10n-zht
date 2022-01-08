@@ -1,0 +1,38 @@
+<html>
+<body>
+報告對 `orm.xml` 配置文件中任何數據庫對象的未解析引用：
+<ul>
+  <li>表</li>
+  <li>列</li>
+  <li>架構</li>
+  <li>目錄</li>
+  <li>序列</li>
+</ul>
+
+<p><b>示例數據庫表：</b></p><br/>
+<pre><code>
+CREATE TABLE DATA_TABLE (
+  ID INTEGER,
+  DATA VARCHAR(100)
+);
+</code></pre><br/>
+
+<p><b>示例 orm.xml 文件：</b></p><br/>
+<pre><code>
+&lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
+    &lt;package&gt;example&lt;/package&gt;
+    &lt;entity name="JavaEntity" class="JavaEntity"&gt;
+        &lt;table name="DATA_TABLE"/&gt;
+        &lt;attributes&gt;
+          &lt;id name="id"&gt;
+            &lt;column name="UNKNOWN_ID" nullable="false" length="20"/&gt; // 錯誤：未解析的列名
+          &lt;/id&gt;
+          &lt;basic name="data"&gt;
+            &lt;column name="DATA" length="12"/&gt; // OK
+          &lt;/basic&gt;
+        &lt;/attributes&gt;
+    &lt;/entity&gt;
+&lt;/entity-mappings&gt;
+</code></pre>
+</body>
+</html>

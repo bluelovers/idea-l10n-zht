@@ -1,0 +1,21 @@
+<html>
+<body>
+報告可以替換為模式變量的局部變量聲明，模式變量通常更緊湊。
+<p><b>示例：</b></p>
+<pre><code>
+  if (obj instanceof String) {
+    String str = (String) obj;
+    System.out.println(str);
+  }
+</code></pre>
+<p>可以替換為：</p>
+<pre><code>
+  if (obj instanceof String str) {
+    System.out.println(str);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的語言級別為 15（預覽）或更高時，此檢查才會報告。</p>
+<p><small>2020.1 最新變化</small></p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>報告在 XML 應用程序上下文中定義的自定義架構 Bean 注入的不正確類型。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  public class SimpleBean{}
+
+  &lt;beans ...>
+    &lt;bean class="SimpleBean" id="simpleBean"/&gt;
+       &lt;mvc:annotation-driven
+         conversion-service="simpleBean"      &lt;!-- reports "Bean must be of 'org.springframework.core.convert.ConversionService' type" --&gt;
+         message-codes-resolver="simpleBean"  &lt;!-- 報告 "Bean 必須為 'org.springframework.validation.MessageCodesResolver' 類型" --&gt;
+         validator="simpleBean"               &lt;!-- 報告 "Bean 必須為 'org.springframework.validation.Validator' 類型" --&gt;
+    /&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

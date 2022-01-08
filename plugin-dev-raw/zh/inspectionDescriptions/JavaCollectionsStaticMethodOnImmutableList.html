@@ -1,0 +1,16 @@
+<html>
+<body>
+報告在不可變的 Kotlin 集合上對 Java 更改器方法的調用（如 <code>fill</code>、<code>reverse</code>、<code>shuffle</code>、<code>sort</code>）。
+<p>這可能會在運行時導致 <code>UnsupportedOperationException</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  import java.util.Collections
+
+  fun test() {
+      val immutableList = listOf(1, 2)
+      Collections.reverse(immutableList)
+  }
+</code></pre>
+<p>要修正此問題，請使列表可變。</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>報告冗余 <code>return</code>。</p>
+<p>方法中的最后一條語句會自動返回，在這種情況下使用 <code>return</code> 關鍵字是冗余的。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  def test: Int = {
+    return 3
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  def test: Int = {
+    3
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

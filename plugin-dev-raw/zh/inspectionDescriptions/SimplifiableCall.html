@@ -1,0 +1,20 @@
+<html>
+<body>
+報告可替換為簡化形式的庫函數調用。
+<p>使用相應函數可使代碼更簡單。</p>
+<p>該快速修復會在函數調用之間彼此替換。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(list: List&lt;Any&gt;) {
+      list.filter { it is String }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun test(list: List&lt;Any&gt;) {
+      list.filterIsInstance&lt;String&gt;()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

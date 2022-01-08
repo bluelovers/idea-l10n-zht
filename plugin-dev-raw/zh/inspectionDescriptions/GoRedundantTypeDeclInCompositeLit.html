@@ -1,0 +1,27 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+報告復合文字中的冗余類型聲明。
+<p>示例：</p>
+<pre><code>nums := [][]int{[]int{1}, []int{2}}</code></pre>
+<p>這是一個 <code>int</code> 類型的切片的切片。 在這種情況下，可以使用較短的定義。 您可以手動修復此代碼，也可以使用<b>刪除冗余類型</b>快速修復。 應用快速修復后，代碼如下所示：</p>
+<pre><code>nums := [][]int{{1},{2}}</code></pre>
+<p>有關復合文字的更多信息，請參見 <a href="https://golang.org/ref/spec#Composite_literals">golang.org 上的 Go Language Specification:
+  Composite Literals</a> 頁面。</p>
+</body>
+</html>

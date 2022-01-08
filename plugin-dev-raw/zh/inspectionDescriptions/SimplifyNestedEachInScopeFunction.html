@@ -1,0 +1,20 @@
+<html>
+<body>
+報告 <code>also</code> 或 <code>apply</code> 等范圍函數中可以簡化的 <code>forEach</code> 函數。
+<p><b>將 forEach 調用轉換為 onEach</b> 快速修復可用于自動修正代碼。</p>
+<p>示例：</p>
+<pre><code>
+  fun test(list: List&lt;Int&gt;) {
+      val x = list.also { it.forEach { it + 4 } }.toString()
+      val y = list.apply { forEach { println(it) } }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun test(list: List&lt;Int&gt;) {
+      val x = list.onEach { it + 4 }.toString()
+      val y = list.onEach { println(it) }
+  }
+</code></pre>
+</body>
+</html>

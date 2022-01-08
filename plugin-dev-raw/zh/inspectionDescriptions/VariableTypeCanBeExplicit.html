@@ -1,0 +1,16 @@
+<html>
+<body>
+報告可以替換為顯式類型的 <code>var</code> 類型的局部變量。
+<p>在降級的情況下，該檢查有助于发現和消除隱式類型的用法。</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  var str = "Hello";
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  String str = "Hello";
+</code></pre>
+<p>僅當項目或模塊的語言級別為 10 或更高時，此檢查才會報告。</p>
+</body>
+</html>

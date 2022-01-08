@@ -1,0 +1,14 @@
+<html>
+<body>
+報告創建沒有 DEFAULT 值的 NOT NULL 列的嘗試。
+<p>示例（Microsoft SQL 服務器）：</p>
+<pre><code>CREATE TABLE foo (a INT, b  INT)
+
+ALTER TABLE foo ADD c INT NOT NULL;</code></pre>
+<p>默認情況下，列包含 NULL 值。 在示例中，我們使用 NOT NULL 約束強制列不接受 NULL 值。
+  如果我們禁止使用 NULL 值，則必須設置 SQL 在創建新記錄時可以使用的 DEFAULT 值。
+</p>
+<pre><code>ALTER TABLE foo ADD c INT NOT NULL DEFAULT 42;</code></pre>
+<p>您可以使用<b>添加 DEFAULT 值</b>快速修復快速添加 DEFAULT 值。</p>
+</body>
+</html>

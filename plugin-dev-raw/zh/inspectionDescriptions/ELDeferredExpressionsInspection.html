@@ -1,0 +1,13 @@
+<html>
+<body>
+報告需要延遲表達式的動態表達式或需要動態表達式的延遲表達式。
+
+<p><b>示例：</b></p><br/>
+<pre><code>
+&lt;jsp:useBean id="exampleBean" scope="request" type="java.util.Date"/&gt;
+
+&lt;h:outputText id="${exampleBean.day}" value="#{exampleBean.day}" /&gt; // OK
+&lt;h:outputText id="#{exampleBean.day}" value="${exampleBean.day}" /&gt; // 錯誤：`id` 特性需要動態表達式，`value` - 延遲 
+</code></pre>
+</body>
+</html>

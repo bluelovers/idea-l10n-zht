@@ -1,0 +1,40 @@
+<html>
+<body>
+報告有三個以上分支並且可以替換為 <code>when</code> 表達式的 <code>if</code> 語句。
+<p><b>示例：</b></p>
+<pre><code>
+  fun checkIdentifier(id: String) {
+      fun Char.isIdentifierStart() = this in 'A'..'z'
+      fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
+
+      if (id.isEmpty()) {
+          print("Identifier is empty")
+      } else if (!id.first().isIdentifierStart()) {
+          print("Identifier should start with a letter")
+      } else if (!id.subSequence(1, id.length).all(Char::isIdentifierPart)) {
+          print("Identifier should contain only letters and numbers")
+      }
+  }
+</code></pre>
+<p>快速修復會將 <code>if</code> 表達式轉換為 <code>when</code>：</p>
+<pre><code>
+  fun checkIdentifier(id: String) {
+      fun Char.isIdentifierStart() = this in 'A'..'z'
+      fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
+
+      when {
+          id.isEmpty() -> {
+              print("Identifier is empty")
+          }
+          !id.first().isIdentifierStart() -> {
+              print("Identifier should start with a letter")
+          }
+          !id.subSequence(1, id.length).all(Char::isIdentifierPart) -> {
+              print("Identifier should contain only letters and numbers")
+          }
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

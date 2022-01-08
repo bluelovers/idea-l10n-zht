@@ -1,0 +1,27 @@
+<html>
+<body>
+報告名稱與其重寫的方法的相應形參不同的形參。 雖然在 Java 中是合法的，但這種不一致的名稱可能令人困惑，並減少具有良好命名做法的文檔優勢。
+<p><b>示例：</b></p>
+<pre><code>
+  class Person {
+    Person(String fullName) {}
+  }
+  class Child extends Person {
+    Child(String name) { super(name); }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Person {
+    Person(String fullName) {}
+  }
+  class Child extends Person {
+    Child(String fullName) { super(fullName); }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用選項可以指示是否忽略只有單個字符長度或來自庫方法的重寫的形參名稱。 如果您不希望受到庫中使用的可疑命名慣例的約束，那么兩者都會很有用。
+</p>
+</body>
+</html>

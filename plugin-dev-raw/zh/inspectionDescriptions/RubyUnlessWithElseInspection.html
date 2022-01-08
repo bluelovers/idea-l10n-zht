@@ -1,0 +1,28 @@
+<html>
+<body>
+報告與 <code>else</code> 一起使用的 <code>unless</code> 語句。 最好將肯定分支放在最前面。
+<p>示例：</p>
+<pre>
+<code># 不良做法
+a = 1
+unless a > 2
+  puts 'a is 2 or less'
+else
+  puts 'a is greater than 2'
+end</code>
+</pre>
+
+可以通過快速修復將 <code>unless</code> 轉換為 <code>if</code>。 應用快速修復后，結果如下所示：
+
+<pre>
+<code># 優良做法
+a = 1
+if a > 2
+  puts 'a is greater than 2'
+else
+  puts 'a is 2 or less'
+end</code>
+</pre>
+<p><span style="font-size: smaller;">受 <a href="https://github.com/rubocop-hq/ruby-style-guide#no-else-with-unless">'Ruby Style Guide'</a> 啟发</span></p>
+</body>
+</html>

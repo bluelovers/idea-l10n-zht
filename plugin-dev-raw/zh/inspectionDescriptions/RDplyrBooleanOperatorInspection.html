@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告 dplyr 表達式中 `&&` 和 `||` 運算的用法。</p>
+<p><b>示例：</b></p>
+<p>
+  <code>
+    filter(diamonds, carat > 0.7 && depth > 62.0)
+  </code>
+</p>
+<p>當您應用該快速修復時，代碼變為：</p>
+<p>
+  <code>
+    filter(diamonds, carat > 0.7 & depth > 62.0)
+  </code>
+</p>
+</body>
+</html>

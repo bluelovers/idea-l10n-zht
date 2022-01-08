@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>報告枚舉條目上的冗余構造函數調用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  enum class Baz(i: Int = 0) {
+      A(1),
+      B<b>()</b>,
+      C<b>()</b>,
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  enum class Baz(i: Int = 0) {
+      A(1),
+      B,
+      C,
+  }
+</code></pre>
+</body>
+</html>

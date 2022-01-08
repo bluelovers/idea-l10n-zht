@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>報告類型不正確的 Spring Data CRUD 倉庫方法形參。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  public class Person {
+    private int id;
+    private String lastname;
+    private Address address;
+  }
+
+  public class Address {
+    private int zipCode;
+  }
+
+  public interface CustomerRepository extends CrudRepository&lt;Person, Integer&gt; {
+    List&lt;Person&gt; <strong>findByAddress</strong>(String lastname);  // 應為 'Address' 類型
+    List&lt;Person&gt; <strong>findByAddressZipCode</strong>(String str);   // 應為 'int' 類型
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>報告違反 <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> 命名慣例的情況。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class mammalia(object):
+    extremities = 4
+
+    def feeds(self):
+        print("milk")
+</pre>
+<p>在這段代碼中，IDE 提議將 <code>mammalia</code> 重命名為 <code>Mammalia</code>。
+  應用快速修復后，代碼變為：</p>
+<pre style="font-family: monospace">
+class Mammalia(object):
+    extremities = 4
+
+    def feeds(self):
+        print("milk")
+</pre>
+</body>
+</html>

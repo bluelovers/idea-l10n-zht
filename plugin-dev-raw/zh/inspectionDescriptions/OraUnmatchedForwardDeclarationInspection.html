@@ -1,0 +1,20 @@
+<html>
+<body>
+報告在代碼中缺少實現的過程和函數的聲明。
+<p>在 Oracle 中，您可以聲明一個沒有主體的過程或函數，並在稍后的某個時間編寫實現。 該檢查將報告未實現的此類過程或函數的名稱。</p>
+<p>示例（Oracle）：</p>
+<pre><code>DECLARE PROCEDURE foo(a int, b varchar2);
+BEGIN
+    NULL;
+END;</code></pre>
+<p><code>foo</code> 過程已被聲明，但缺少實現。 我們可以添加實現來消除錯誤。</p>
+<pre><code>DECLARE PROCEDURE foo(a int, b varchar2);
+  PROCEDURE foo(a int, b varchar2) IS
+BEGIN
+    NULL;
+END;
+BEGIN
+    NULL;
+END;</code></pre>
+</body>
+</html>

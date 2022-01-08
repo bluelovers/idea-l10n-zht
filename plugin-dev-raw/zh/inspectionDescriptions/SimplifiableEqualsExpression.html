@@ -1,0 +1,18 @@
+<html>
+<body>
+報告與后接使用常量實參調用 <code>equals()</code> 的 <code>null</code> 的比較。
+
+<p><b>示例：</b></p>
+<pre><code>
+  if (s != null && s.equals("literal")) {}
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  if ("literal".equals(s)) {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+    當 <code>equals()</code> 的實參被證明不是 <code>null</code> 時，使用檢查設置可以報告帶有非常量實參的 <code>equals()</code> 調用。
+</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>報告函數調用表達式、目標和返回值中的類型錯誤。 在動態類型語言中，少數情況下可能會這樣。 </p>
+<p>在 docstring 或 Python 3 函數注解中可以指定函數形參的類型。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+def foo() -> int:
+    return "abc" # 應為 int，得到的是 str
+
+
+a: str
+a = foo() # 應為 str，得到的是 int
+</pre>
+<p>進行快速修復可以修改有問題的類型：</p>
+<pre style="font-family: monospace">
+def foo() -> str:
+    return "abc"
+
+
+a: str
+a = foo()
+</pre>
+</body>
+</html>

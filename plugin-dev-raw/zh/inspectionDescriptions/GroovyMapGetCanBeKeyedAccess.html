@@ -1,0 +1,19 @@
+<html>
+<body>
+報告對 <code>java.util.Map.get()</code> 方法的調用。 此類調用可由更簡短明確的鍵控訪問形式替代。
+<p><b>示例：</b></p>
+<pre>
+<code>
+def map = ["foo": "bar"]
+def str = map.get("foo") // map.get("foo") 可以替換為 map["foo"]
+</code>
+</pre>
+<p>在應用快速修復后：</p>
+<pre>
+<code>
+def map = ["foo": "bar"]
+def str = map["foo"]
+</code>
+</pre>
+</body>
+</html>

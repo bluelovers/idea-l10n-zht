@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+報告以軟件包名稱開頭的導出名稱。 此檢查不會在 <code>main</code> 軟件包中報告此類名稱。
+<p>示例：</p>
+<pre><code>package myPackage
+
+func MyPackageGetIP() {
+
+}</code></pre>
+<p><code>MyPackageGetIP</code> 名稱將高亮顯示，因為它以軟件包名稱開頭。</p>
+<p>根據 <a href="https://golang.org/wiki/CodeReviewComments#package-names">golang.org 上的 Package Names</a> 頁面，對軟件包中名稱的所有引用都將使用軟件包名稱完成，因此可以從標識符中省略該名稱。
+  例如，如果您在軟件包 <code>foo</code> 中，則不需要類型 <code>FooFile</code>，客戶端將其寫為 <code>foo.FooFile</code>。 相反，我們將類型命名為 <code>File</code>，客戶端將其寫為 <code>foo.File</code>。</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<body>
+報告實現 <code>java.lang.Comparator</code> 但不實現 <code>java.io.Serializable</code> 的類。
+<p>
+  如果使用不可序列化的比較器來構建 <code>java.util.TreeMap</code> 或 <code>java.util.TreeSet</code> 之類的有序集合，那么該集合也將不可序列化。 這可能會導致意外且難以診斷的錯誤。
+</p>
+<p>
+  <code>java.lang.Comparator</code> 的子類通常無狀態，因此只需將它們標記為可序列化，即可輕松避免此類問題。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo implements Comparator { // 警告
+      @Override
+      public int compare(Object o1, Object o2) {
+          /* ... */
+      }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Foo implements Comparator, Serializable { // 此處無警告
+      @Override
+      public int compare(Object o1, Object o2) {
+          /* ... */
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

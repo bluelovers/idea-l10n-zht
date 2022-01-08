@@ -1,0 +1,30 @@
+<html>
+<body>
+報告包含多個循環語句的方法。
+<p><b>示例：</b></p>
+<p>以下方法將被報告，因為它包含兩個循環：</p>
+<pre><code>
+  void methodWithTwoLoops(int n1, int n2) {
+    for (int i = 0; i &lt; n1; i++) {
+      System.out.println(i);
+    }
+
+    int j = 0;
+    while (j &lt; n2) {
+      System.out.println(j);
+      j++;
+    }
+  }
+</code></pre>
+<p>以下方法也會被報告，因為它包含嵌套循環：</p>
+<pre><code>
+  void methodWithNestedLoop(int n1, int n2) {
+    for (int i = 0; i &lt; n1; i++) {
+      for (int j = 0; j &lt; n2; j++) {
+        System.out.println(i + j);
+      }
+    }
+  }
+</code></pre>
+</body>
+</html>

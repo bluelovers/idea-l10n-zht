@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>報告循環中最后能夠到達的 <code>continue</code> 語句。
+這些 <code>continue</code> 語句是不必要的語句，可以安全移除。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  for(int i in array) {
+      println(i)
+      <b>continue</b>
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  for(int i in array) {
+      println(i)
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>有關更多信息，請參閱 Java 中的相同檢查。</p>
+</body>
+</html>

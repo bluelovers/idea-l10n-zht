@@ -1,0 +1,15 @@
+<html>
+<body>
+報告對不處理 <code>error</code> 類型調用結果的函數和方法的調用。
+<p>此類函數的 API 意味著執行可能會失敗並返回錯誤。
+  不處理錯誤結果的調用可能意味著 API 被濫用。</p>
+<p>示例：</p>
+<pre><code>
+os.Remove("non-existing") // 錯誤被忽略</code></pre>
+<p>在應用<b>處理錯誤</b>快速修復后：</p>
+<pre><code>err := os.Remove("non-existing") // 錯誤被處理
+if err != nil {
+  return err
+}</code></pre>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+報告來自構造函數或析構函數的虛擬成員函數調用。
+由于構造從基類開始並移動到派生類，派生類的資源尚未初始化。
+析構以相反的順序執行，因此調用虛擬函數可能會導致訪問已破壞的資源。
+<p><b>示例：</b></p>
+<pre><code>
+  class Test {
+  public:
+      void virtual setUp();
+
+      Test() {
+          setUp();
+      }
+  };
+</code></pre>
+<!-- tooltip end -->
+<p><small>2019.3 最新變化</small></p>
+</body>
+</html>

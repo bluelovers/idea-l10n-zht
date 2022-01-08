@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>報告可將動態調用替換為構造函數調用的情況。</p>
+<p><b>示例：</b></p>    
+<pre><code>
+  import akka.actor._
+  
+  class Foo(foo: String, bar: Int) extends AbstractActor
+  
+  object Foo {
+    def props(foo: String, bar: Int): Props = Props(classOf[Foo], foo, bar)
+  }
+  
+  Foo.props("foo", 42)
+</code></pre>
+<p>在應用快速修復后：</p>    
+<pre><code>
+  import akka.actor._
+  
+  class Foo(foo: String, bar: Int) extends AbstractActor
+  
+  object Foo {
+    def props(foo: String, bar: Int): Props = Props(new Foo(foo, bar))
+  }
+  
+  Foo.props("foo", 42)
+</code></pre>  
+<!-- tooltip end -->
+</body>
+</html>

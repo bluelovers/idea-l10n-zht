@@ -1,0 +1,20 @@
+<html>
+<body>
+報告變量對自身的賦值。
+<p>該快速修復會移除冗余賦值。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test() {
+      var bar = 1
+      bar = bar
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun test() {
+      var bar = 1
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<body>
+報告未用類名稱限定的 static 成員的用法。
+<p>
+如果 static 成員在同一個類中，是合法的，但可能令人困惑。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    static void foo() {}
+    static int x;
+
+    void bar() {
+      foo();
+      System.out.println(x);
+    }
+
+    static void baz() { foo(); }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Foo {
+    static void foo() {}
+    static int x;
+
+    void bar() {
+      Foo.foo();
+      System.out.println(Foo.x);
+    }
+
+    static void baz() { Foo.foo(); }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用檢查設置可以切換以下各項的報告：</p>
+<ul>
+  <li>
+    <p>
+      static 字段訪問<br>
+      <code>void bar() { System.out.println(x); }</code>
+    </p>
+  </li>
+  <li>
+    <p>
+      對 static 方法的調用<br>
+      <code>void bar() { foo(); }</code><br>
+      <code>static void baz() { foo(); }</code>
+    </p>
+  </li>
+</ul>
+<p>
+  您還可以將檢查配置為僅報告來自非 static 上下文的 static 成員用法。
+  在上面的示例中，不會報告 <code>static void baz() { foo(); }</code>。
+</p>
+</body>
+</html>

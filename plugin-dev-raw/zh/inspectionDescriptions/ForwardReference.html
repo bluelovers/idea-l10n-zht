@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>報告類級別上前向引用的用法，這可能會導致類初始化期間出現意外行為。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Test {
+    val first: Int  = second + 5 // 此處 second 為  0
+    val second: Int = 5
+    // first 是 5 而不是 10
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

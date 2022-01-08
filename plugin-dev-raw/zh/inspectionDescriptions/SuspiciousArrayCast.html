@@ -1,0 +1,12 @@
+<html>
+<body>
+報告可疑的數組轉換。
+當數組轉換為更具體的數組類型時，數組轉換被視為可疑。 雖然此類轉換在編譯時是合法的，但在運行時可能會因 <code>ClassCastException</code> 而失敗。
+<p><b>示例：</b></p>
+<pre><code>
+  Number[] numbers = new Number[]{1L, 2L, 4L};
+  Long[] longs = (Long[])numbers;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

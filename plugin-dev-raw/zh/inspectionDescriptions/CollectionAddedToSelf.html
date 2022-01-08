@@ -1,0 +1,15 @@
+<html>
+<body>
+報告對 <code>java.util.Collection</code>
+或 <code>java.util.Map</code> 的方法調用的實參是集合或映射本身的情況。
+由于復制粘貼，原始類型的代碼中可能會出現此類情況。
+
+<p><b>示例：</b></p>
+<pre><code>
+  ArrayList list = new ArrayList&lt;&gt;();
+  list.add(list); // 此處為警告
+  return list.hashCode(); // 拋出 StackOverflowError
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

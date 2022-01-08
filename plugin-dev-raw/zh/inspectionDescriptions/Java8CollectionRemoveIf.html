@@ -1,0 +1,22 @@
+<html>
+<body>
+報告可以折疊為單個 <code>Collection.removeIf</code> 調用的循環。
+<p>示例：</p>
+<pre><code>
+  for (Iterator&lt;String&gt; it = collection.iterator(); it.hasNext(); ) {
+    String aValue = it.next();
+    if(shouldBeRemoved(aValue)) {
+      it.remove();
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  collection.removeIf(aValue -> shouldBeRemoved(aValue));
+</code></pre>
+<!-- tooltip end -->
+<p>
+  僅當項目或模塊的語言級別為 8 或更高時，此檢查才會報告。
+</p>
+</body>
+</html>

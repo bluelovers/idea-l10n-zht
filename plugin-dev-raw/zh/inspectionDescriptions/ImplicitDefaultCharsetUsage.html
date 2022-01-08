@@ -1,0 +1,17 @@
+<html>
+<body>
+報告隱式使用平台默認字符集的方法和構造函數調用。 在使用不同默認字符集的系統上，這些調用可能產生不同的結果。 這可能會導致意外的行為。
+<p><b>示例：</b></p>
+<pre><code>void foo(byte[] bytes) {
+  String s = new String(bytes);
+}</code>
+</pre>
+<p>如果相應的重載方法可用，則可以采用指定顯式 UTF-8 字符集的快速修復。
+  在應用快速修復后：</p>
+<pre><code>void foo(byte[] bytes) {
+  String s = new String(bytes, StandardCharsets.UTF_8);
+}</code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>創建 <code>VIRTUAL</code> 類的對象時報告問題。</p>
+<p><b>示例：</b></p>
+<pre><code>
+setClass('MyClass', slots = c('aa', 'bb'), contains = "VIRTUAL")
+new('MyClass')
+</code></pre>
+<p>
+  <code>VIRTUAL</code> 類的最常見用法是類聯合，即在調用 <code>setClassUnion()</code> 而不是調用 <code>setClass()</code> 時定義的虛擬類。
+</p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+報告正則表達式替換中的空分支。
+空分支只能匹配空字符串，在大多數情況下，這並不是我們的目的。
+此檢查不會報告位于替換開頭或末尾的單個空分支。
+<p><b>示例：</b></p>
+<pre><code>
+  (alpha||bravo)
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  (alpha|bravo)
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.2 最新變化</small>
+</body>
+</html>

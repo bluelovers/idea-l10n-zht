@@ -1,0 +1,37 @@
+<html>
+<body>
+<p>報告 Bean 驗證 <code>&lt;constraint-mappings&gt;</code> 文件中的不正確元素：</p>
+
+<ul>
+  <li>對不可實例化類的引用</li>
+  <li>對不擴展所需類的類的引用</li>
+  <li>對范圍不適當的類的引用</li>
+  <li>空標記和特性值</li>
+  <li>與所需模式不匹配的標記和特性值（例如，Java 標識符）</li>
+  <li>不包含必需子標記或特性的標記</li>
+  <li>定義具有重復名稱的對象的標記</li>
+</ul>
+
+<p><strong>示例：</strong></p>
+<pre><code>
+&lt;constraint-mappings version="1.1"&gt;
+    &lt;bean class="my.UserClass" ignore-annotations="false"&gt;
+        &lt;field name="name"&gt;
+            &lt;constraint annotation="<strong>java.lang.String</strong>"/&gt;  &lt;!--'java.lang.String' 不是 Java 注解 --&gt;
+        &lt;/field&gt;
+
+        &lt;field name="name"&gt;
+            &lt;constraint annotation="javax.validation.constraints.Size"&gt;
+                &lt;element name="min"&gt;<strong>non-number</strong>&lt;/element&gt;    &lt;!--應該為 '-2,147,483,648' 到 '2,147,483,647' 之間的數字 --&gt;
+            &lt;/constraint&gt;
+        &lt;/field&gt;
+
+        &lt;getter name="<strong>zzz</strong>"&gt; 無法解析 'zzz' 符號
+            &lt;valid/&gt;
+        &lt;/getter&gt;
+
+    &lt;/bean&gt;
+&lt;/constraint-mappings&gt;
+</code></pre>
+</body>
+</html>

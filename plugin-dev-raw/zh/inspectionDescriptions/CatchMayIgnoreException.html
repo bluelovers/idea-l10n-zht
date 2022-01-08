@@ -1,0 +1,50 @@
+<html>
+<body>
+報告空的或可能忽略異常的 <code>catch</code> 塊。
+<p>雖然偶爾是有意為之，但空的 <code>catch</code> 塊可能導致調試復雜化。
+此外，忽略 <code>catch</code> 形參可能是錯誤的。
+  最后，靜態代碼分析器會報告是否檢測到 <code>catch</code> 塊可能無提示地忽略重要的 VM 異常，如 <code>NullPointerException</code>。 忽略此類異常（不記錄或重新拋出）可能會隱藏錯誤。</p>
+
+<p>
+  該檢查不會報告任何命名為 <code>ignore</code> 或 <code>ignored</code> 的 <code>catch</code> 形參。
+  相反，它將對真正在使用的命名為 <code>ignore</code> 或 <code>ignored</code> 的 <code>catch</code> 形參发出警告。
+  此外，該檢查不會報告命名為 <code>expected</code> 或 <code>ok</code> 的測試源中的 <code>catch</code> 形參。
+</p>
+<p>
+  您可以使用快速修復將異常名稱更改為 <code>ignored</code>。
+  對于空的 <b>catch</b> 塊，建議使用其他快速修復來生成 <b>catch</b> 主體。
+  您可以在<a href="settings://fileTemplates">設置 | 編輯器 | 文件和代碼模板</a>中的“代碼”選項卡上修改 "Catch Statement Body" 模板。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  try {
+    throwingMethod();
+  } catch (IOException ex) {
+
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  try {
+    System.out.println(System.in.read());
+  } catch (IOException ignored) {
+
+  }
+</code></pre>
+  <!-- tooltip end -->
+<p>配置檢查：</p>
+<ul>
+  <li>
+    使用<b>當 'catch' 塊包含注釋時不发出警告</b>選項可以忽略包含注釋的 <code>catch</code> 塊。
+  </li>
+  <li>
+    使用<b>當 'catch' 塊不為空時不发出警告</b>選項可以忽略其中包含語句或注釋但又不使用變量本身的 <code>catch</code> 塊。
+  </li>
+  <li>
+    使用<b>當名稱為 'ignore(d)' 的異常實際上未被忽略時不发出警告</b>選項可以忽略使用中名稱為 <code>ignored</code> 的變量。
+  </li>
+</ul>
+
+<p><small>2018.1 最新變化</small></p>
+</body>
+</html>

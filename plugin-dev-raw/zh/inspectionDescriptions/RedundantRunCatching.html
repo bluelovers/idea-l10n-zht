@@ -1,0 +1,14 @@
+<html>
+<body>
+報告后面緊跟 <code>getOrThrow</code> 的 <code>runCatching</code> 調用。
+此類調用可以僅替換為 <code>run</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo() = runCatching { doSomething() }.getOrThrow()
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun foo() = run { doSomething() }
+</code></pre>
+</body>
+</html>

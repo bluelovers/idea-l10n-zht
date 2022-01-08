@@ -1,0 +1,46 @@
+<html>
+<body>
+報告 <code>Serializable</code> 和 <code>Externalizable</code> 類中適合使用 <code>java.io.Serial</code> 注解進行注解的方法和字段。 該快速修復會添加注解。
+<p><b>示例：</b></p>
+<pre><code>
+class Main implements Serializable {
+  private static final long serialVersionUID = 7874493593505141603L;
+
+  private void writeObject(ObjectOutputStream out) throws IOException {
+  }
+}
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Main implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 7874493593505141603L;
+
+    @Serial
+    private void writeObject(ObjectOutputStream out) throws IOException {
+    }
+}
+</code></pre>
+<p><b>示例：</b></p>
+<pre><code>
+  class Main implements Externalizable {
+    protected Object readResolve() throws ObjectStreamException {
+      return "SomeObject";
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Main implements Externalizable {
+    @Serial
+    protected Object readResolve() throws ObjectStreamException {
+        return "SomeObject";
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>有關所有可能情況的更多信息，請參閱 <code>java.io.Serial</code> 的文檔。</p>
+<p>此檢查適用于項目或模塊的語言級別為 14 或更高級別的情況。</p>
+<p><small>2020.3 最新變化</small></p>
+</body>
+</html>

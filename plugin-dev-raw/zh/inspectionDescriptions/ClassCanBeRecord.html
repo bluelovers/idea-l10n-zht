@@ -1,0 +1,44 @@
+<html>
+<body>
+建議用記錄替換類。
+<p>當您需要專注于建模不可變數據而不是可擴展行為時，檢查會很有用。
+  數據驅動方法的自動實現，例如 equals 和訪問器，有助于消除樣板。</p>
+<p>
+  請注意，不是每個類都可以成為記錄。 以下是一些限制：
+</p>
+<ul>
+  <li>類不能包含繼承者，並且必須是一個頂級類。</li>
+  <li>類中的所有非 static 字段必須為 final。</li>
+  <li>不允許類包含實例初始值設定項、泛型構造函數或原生方法。</li>
+</ul>
+<p>要獲取完整的限制列表，請參閱 <a href="https://docs.oracle.com/javase/specs/jls/se15/preview/specs/records-jls.html">Oracle 文檔</a>。</p>
+<!-- tooltip end -->
+<p>示例：</p>
+<pre><code>
+  class Point {
+    private final double x;
+    private final double y;
+
+    Point(double x, double y) {
+      this.x = x;
+      this.y = y;
+    }
+
+    double getX() {
+      return x;
+    }
+
+    double getY() {
+      return y;
+    }
+  }
+</code></pre>
+<p>此記錄將轉換為：</p>
+<pre><code>
+  record Point(int x, int y) {
+  }
+</code></pre>
+<p>僅當項目或模塊的語言級別為 15（預覽）或更高時，此檢查才會報告。</p>
+<p><small>2020.3 最新變化</small></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+報告可以替換為常規字符串文字的文本塊。
+<p>在代碼遷回 Java 15 以前的 Java 版本時，可能會出現此類文本塊。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Object obj = engine.eval("""
+                           function hello() {
+                             print('"Hello, world"');
+                           }
+
+                           hello();
+                           """);
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  Object obj = engine.eval("function hello() {\n" +
+                           "  print('\"Hello, world\"');\n" +
+                           "}\n" +
+                           "\n" +
+                           "hello();\n");
+</code></pre>
+<!-- tooltip end -->
+<p>僅當配置的語言級別為 15 或更高時，此檢查才會報告。</p>
+<p><small>2019.3 最新變化</small></p>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">一個 PHP 特征的 PHPDoc 注釋的內置模板。 它包含一個代碼片段，可以在 <b>#parse</b> 指令的幫助下將其包含在文件模板（<b>Templates</b> 標簽）中。<br>
+      模板是可編輯的。 除了靜態文本、代碼和注釋外，您還可以使用預定義變量，這些變量將像宏一樣被擴展為相應值。</font><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      預定義變量接收以下值：</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">特征名稱。</font></td>
+  </tr>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAMESPACE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">特征類的完全限定名稱，沒有前導斜杠。</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">美元符號，計算為普通的 “$” 字符。</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前系統日期</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前系統時間</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前年度</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前月份</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前月份名稱的前 3 個字母。 例如：Jan、Feb 等</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前月份的全名。 例如：January、February 等</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前月份的日期</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前小時</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前分鐘</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${SECOND}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前秒</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前項目名稱</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前用戶</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${CARET}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">標記添加注釋后文本光標必須移動到的位置。</font></td>
+  </tr>
+</table>
+</body>
+</html>

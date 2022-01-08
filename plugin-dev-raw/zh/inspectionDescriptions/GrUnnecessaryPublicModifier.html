@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>報告不必要的 <code>public</code> 修飾符，因為 Groovy 類和方法默認為 <code>public</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Foo{
+      public void bar(){
+      }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Foo{
+      void bar(){
+      }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+報告任何不必要的 <code>break</code> 語句。
+<p>如果 <code>break</code> 語句在被移除后沒有執行其他語句，則該語句是不必要的語句。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  switch (e) {
+    case A -&gt; {
+        System.out.println("A");
+        break; // 報告 'break' 為不必要的語句
+    }
+    default -&gt; {
+        System.out.println("Default");
+        break; // 報告 'break' 為不必要的語句
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>報告 <code>except</code> 子句沒有按照從更具體到更通用的正確順序列出，或者一個異常類被捕獲兩次的情況。 </p>
+<p>
+  如果不修復順序，最具體的處理程序可能無法捕獲某些異常。
+</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+try:
+    call()
+except ValueError:
+    pass
+except UnicodeError:
+    pass
+</pre>
+<p>IDE 建議將該子句上移。 應用快速修復后，代碼變為：</p>
+<pre style="font-family: monospace">
+try:
+    call()
+except UnicodeError:
+    pass
+except ValueError:
+    pass
+</pre>
+</body>
+</html>

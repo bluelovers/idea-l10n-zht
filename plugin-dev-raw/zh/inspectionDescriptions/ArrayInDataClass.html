@@ -1,0 +1,33 @@
+<html>
+<body>
+報告 <code>data</code> 類中類型為 <code>Array</code> 但沒有被重寫的 <code>equals()</code> 或 <code>hashCode()</code> 的屬性。
+<p>
+    數組形參通過引用相等進行了比較，這可能是一種意外行為。
+    在此類情況下，強烈建議重寫 <code>equals()</code> 和 <code>hashCode()</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  data class Text(val lines: Array&lt;String&gt;)
+</code></pre>
+<p>該快速修復會生成缺失的 <code>equals()</code> 和 <code>hashCode()</code> 實現：</p>
+<pre><code>
+  data class Text(val lines: Array&lt;String&gt;) {
+      override fun equals(other: Any?): Boolean {
+          if (this === other) return true
+          if (javaClass != other?.javaClass) return false
+
+          other as Text
+
+          if (!lines.contentEquals(other.lines)) return false
+
+          return true
+      }
+
+      override fun hashCode(): Int {
+          return lines.contentHashCode()
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

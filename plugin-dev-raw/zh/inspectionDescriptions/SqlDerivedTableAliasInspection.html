@@ -1,0 +1,19 @@
+<html>
+<body>
+報告沒有別名的派生表。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE table1 (id INT, name VARCHAR(20), cats FLOAT);
+CREATE TABLE table2 (id INT, age INTEGER);
+
+SELECT id AS ID, name, cats, age
+FROM (SELECT table1.id, name, cats, age
+FROM table1
+JOIN table2 ON table1.id = table2.id);</code></pre>
+<p>根據 <a href="https://dev.mysql.com/doc/refman/8.0/en/derived-tables.html">dev.mysql.com 上的 Derived Tables</a> 頁面，別名是強制的。 您可以使用<b>引入別名</b>快速修復來添加別名。</p>
+<p>在應用快速修復后：</p>
+<pre><code>SELECT id AS ID, name, cats, age
+FROM (SELECT table1.id, name, cats, age
+FROM table1
+JOIN table2 ON table1.id = table2.id);</code></pre>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+報告對只有一個形參的方法的無實參調用。
+這等效于使用 <code>null</code> 進行調用，但這種行為通常令人困惑並且是無意為之。
+<p><b>示例：</b></p>
+<pre>
+<code>
+def foo(String s){}
+foo() // 此調用實際上為 'foo(null)' 調用
+</code>
+</pre>
+</body>
+</html>

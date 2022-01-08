@@ -1,0 +1,40 @@
+<html>
+<body>
+報告帶有未被保護條件包圍的非常量實參的日志記錄調用。
+對日志記錄調用的實參的評估可能開銷巨大。
+當日志記錄語句使用的級別禁用日志記錄時，使用臨界子句包圍日志記錄調用可避免這種開銷。 這對于最不嚴重的日志記錄調用級別（跟踪、調試、最精細）特別有用，因為這些調用在生產環境中最常被禁用。
+<p><b>示例：</b></p>
+<pre><code>
+  <b>public class</b> Principal {
+    <b>void</b> bad(Object object) {
+      <b>if</b> (true) {
+        LOG.debug("log log log " + expensiveCalculation(object));
+      }
+      LOG.debug("some more logging " + expensiveCalculation(1));
+    }
+
+    <b>void</b> good(Object) {
+      <b>if</b> (LOG.isDebug()) {
+        LOG.debug("value: " + expensiveCalculation(object));
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  配置檢查：
+</p>
+<ul>
+  <li>
+      使用<b>記錄器類名</b>字段可以指定使用的記錄器類名。
+  </li>
+  <li>
+    <p>
+      使用該表可以指定此檢查應警告的日志記錄方法，以及相應的日志條件文本。
+  </li>
+  <li>
+      使用<b>標記所有不受保護的日志調用</b>選項可讓檢查標記所有不受保護的日志調用，而不僅僅是那些具有非常量實參的調用。
+  </li>
+</ul>
+</body>
+</html>

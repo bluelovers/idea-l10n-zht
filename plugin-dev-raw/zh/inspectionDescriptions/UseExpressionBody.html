@@ -1,0 +1,25 @@
+<html>
+<body>
+返回可以替換為表達式主體語法的 <code>return</code> 表達式（一行代碼或 <code>when</code>）。
+<p>表達式主體語法建議在<a href="https://kotlinlang.org/docs/coding-conventions.html#functions">樣式指南</a>中給出。</p>
+<p><b>轉換為表達式主體</b>快速修復可用于自動修正代碼。</p>
+<p>示例：</p>
+<pre><code>
+  fun sign(x: Int): Int {
+      return when { // &lt;== 可以簡化
+          x &lt; 0 -> -1
+          x > 0 -> 1
+          else -> 0
+      }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun sign(x: Int): Int = when {
+      x &lt; 0 -> -1
+      x > 0 -> 1
+      else -> 0
+  }
+</code></pre>
+</body>
+</html>

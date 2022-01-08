@@ -1,0 +1,17 @@
+<html>
+<body><p>報告冗余轉換方法調用（<code>toInt</code>、<code>toString</code> 等）。</p>
+
+<p>如果轉換不會更改集合的類型，則轉換是冗余的。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  "Test".toString
+  Seq(1, 2).toSeq
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  "Test".toString
+  Seq(1, 2).toSeq
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

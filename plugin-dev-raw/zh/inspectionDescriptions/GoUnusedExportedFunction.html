@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+報告未使用的導出函數。
+<p>在 Go 中，如果函數以大寫字母開頭，則會導出該函數。 已定義但從未使用過的導出函數的名稱顯示為灰色。</p>
+<pre><code>// 未使用的導出函數
+func ExportedUnusedFunc()  {
+
+}
+
+func main() {
+ fmt.Println("Hello")
+}</code></pre>
+</body>
+</html>

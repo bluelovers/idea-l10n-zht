@@ -1,0 +1,23 @@
+<html>
+<body>
+報告對 <code>Thread.yield()</code> 的調用。
+<p>
+  <code>yield()</code> 的行為是不確定的並且依賴于平台，很少適合使用此方法。
+  它的使用應當與詳細的分析和基准測試相結合，以確保真正達到預期效果。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public static void main(String[] args) {
+    Runnable r = () -> {
+      for (int i = 0; i &lt; 10; i++) {
+        System.out.println(i);
+        Thread.yield();
+      }
+    };
+    new Thread(r).start();
+    new Thread(r).start();
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

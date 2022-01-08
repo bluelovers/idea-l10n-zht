@@ -1,0 +1,42 @@
+<html>
+<body>
+報告從方法形參到數組或可變類型（如 <code>Collection</code>、<code>Date</code>、<code>Map</code>、<code>Calendar</code> 等）的返回或賦值
+<p>由于這種類型是可變的，此結構可能會導致來自所屬類之外的對象狀態发生意外修改。 盡管出于性能原因，此結構可能很有用，但它本質上很容易出現錯誤。</p>
+<p>報告了以下可變類型：</p>
+<ul>
+  <li><code>java.util.Date</code></li>
+  <li><code>java.util.Calendar</code></li>
+  <li><code>java.util.Collection</code></li>
+  <li><code>java.util.Map</code></li>
+  <li><code>com.google.common.collect.Multimap</code></li>
+  <li><code>com.google.common.collect.Table</code></li>
+</ul>
+<p>該快速修復會添加對字段的 <code>.clone()</code> 方法的調用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Log {
+    String[] messages;
+    ...
+
+    String[] getMessages() {
+      return messages; // 警告：返回 String[] 字段 'messages'
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Log {
+    String[] messages;
+    ...
+
+    String[] getMessages() {
+      return messages.clone();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>忽略 private 方法中的賦值和返回值</b>選項可忽略 <code>private</code>方法中的賦值和返回值。
+
+  <!--<p><small>New in 2017.3</small>-->
+</body>
+</html>

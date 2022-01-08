@@ -1,0 +1,26 @@
+<html>
+<body>
+報告對屬性訪問不當的情況：
+<ul>
+  <li>設置只讀屬性</li>
+  <li>讀取只寫屬性</li>
+  <li>刪除了不可刪除的屬性</li>
+</ul>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class MyClass:
+    @property
+    def read_only(self): return None
+
+    def __write_only_setter(self, value): pass
+
+    write_only = property(None, __write_only_setter)
+
+
+a = MyClass()
+a.read_only = 10 # 無法設置屬性
+del a.read_only # 無法刪除屬性
+print(a.write_only) # 無法讀取屬性
+</pre>
+</body>
+</html>

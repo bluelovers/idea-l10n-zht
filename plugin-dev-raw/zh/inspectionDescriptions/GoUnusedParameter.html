@@ -1,0 +1,36 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+報告未使用的函數形參。
+<pre><code>func main() {
+ printAll(
+  42,
+  "bird",
+ )
+}
+
+func printAll(
+ i int,
+ s string,
+) {
+ fmt.Println(i)
+}</code></pre>
+<p>我們調用 <b>printAll</b> 函數，將 <code>42</code> 和 <code>bird</code> 作為實參傳遞。 <b>printAll</b> 函數接受兩個形參 <code>int</code> 和 <code>string</code>，但是僅使用第一個形參。 因此，<code>s string</code> 將顯示為灰色。
+</p>
+</body>
+</html>

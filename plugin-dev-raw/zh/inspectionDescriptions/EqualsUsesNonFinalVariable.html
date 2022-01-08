@@ -1,0 +1,25 @@
+<html>
+<body>
+報告訪問非 <code>final</code> 變量的 <code>equals()</code> 的實現。 此類訪問可能導致 <code>equals()</code> 在該對象生命周期的不同時刻返回不同的結果，進而可能在使用標准集合類時導致問題。
+<p><b>示例：</b></p>
+<pre><code>
+  public class Person {
+    private String lastName;
+
+    @Override
+    public boolean equals(Object obj) {
+      ...
+      Person other = (Person) obj;
+      if (lastName == null) {
+        if (!lastName.equals(other.lastName)) {
+        return false;
+      ...
+      }
+    }
+  }
+  </code>
+</pre>
+<!-- tooltip end -->
+
+</body>
+</html>

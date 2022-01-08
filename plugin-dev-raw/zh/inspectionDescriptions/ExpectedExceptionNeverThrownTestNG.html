@@ -1,0 +1,14 @@
+<html>
+<body>
+報告 TestNG 測試方法預期但從未在方法主體內拋出的已檢查的異常。
+<p><b>示例：</b></p>
+<pre><code>
+  @Test(expectedExceptions = Exception.class) // 警告：從未拋出預期的 ‘Exception'
+  public void testEngineIsRunning() {
+    assertTrue(engine.isRunning());
+  }
+  </code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

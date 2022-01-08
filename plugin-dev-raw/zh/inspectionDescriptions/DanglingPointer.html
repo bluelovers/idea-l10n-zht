@@ -1,0 +1,15 @@
+<html>
+<body>
+報告指向已被 <code>delete</code> 運算符或 <code>free(void* ptr)</code> 函數刪除的內存的指針的用法。
+<p><b>示例：</b></p>
+<pre><code>
+  void process() {
+    for(node *pt = head; pt != nullptr; pt = pt->next) {
+        delete pt;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2020.2 最新變化</small></p>
+</body>
+</html>

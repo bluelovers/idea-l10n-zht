@@ -1,0 +1,22 @@
+<html>
+<body>
+報告其中一個實參為空字符串的字符串串聯。
+此類連接是不必要且低效的，特別是當用作將非 <code>String</code> 對象或基元格式化為 <code>String</code> 的習慣用法時。
+<p>
+  建議通過快速修復來簡化串聯。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo(int x, int y) {
+    String s = "" + x + " ; " + y;
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  void foo(int x, int y) {
+    String s = x + " ; " + y;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

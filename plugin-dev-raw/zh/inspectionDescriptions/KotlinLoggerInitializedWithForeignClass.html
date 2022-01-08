@@ -1,0 +1,26 @@
+<html>
+<body>
+報告使用類文字初始化的 <code>Logger</code> 實例，而非使用 <code>Logger</code> 駐留的類。
+<p>
+    當從另一個類復制粘貼時可能會发生這種情況。
+    這可能導致記錄意外類別下的事件以及錯誤篩選。
+</p>
+<p>
+    使用檢查選項可指定此檢查識別的記錄器工廠類和方法。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+class AnotherService
+class MyService {
+    private val logger = LoggerFactory.getLogger(AnotherService::class.java)
+}
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+class MyService {
+    private val logger = LoggerFactory.getLogger(MyService::class.java)
+}
+</code></pre>
+
+</body>
+</html>

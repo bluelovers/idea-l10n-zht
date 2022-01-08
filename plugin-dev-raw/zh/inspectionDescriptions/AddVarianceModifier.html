@@ -1,0 +1,31 @@
+<html>
+<body>
+報告可以具有 <code>in</code> 或 <code>out</code> 差異的類型形參。
+<p>使用 <code>in</code> 和 <code>out</code> 差異可以在 Kotlin 中提供更精確的類型推斷以及更清晰的代碼語義。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Box&lt;T&gt;(val obj: T)
+
+  fun consumeString(box: Box&lt;String&gt;) {}
+  fun consumeCharSequence(box: Box&lt;CharSequence&gt;) {}
+
+  fun usage(box: Box&lt;String&gt;) {
+      consumeString(box)
+      consumeCharSequence(box) // 編譯時錯誤
+  }
+</code></pre>
+<p>該快速修復會添加匹配的差異修飾符：</p>
+<pre><code>
+  class Box&lt;out T&gt;(val obj: T)
+
+  fun consumeString(box: Box&lt;String&gt;) {}
+  fun consumeCharSequence(box: Box&lt;CharSequence&gt;) {}
+
+  fun usage(box: Box&lt;String&gt;) ++{
+      consumeString(box)
+      consumeCharSequence(box) // 可以
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+報告在 XPath 表達式中使用但在關聯的 XML 文件中缺少並且也沒有在引用的架構中定義的元素或特性的名稱。
+此類名稱通常是拼寫錯誤所致，否則可能只會在運行時被发現。
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;xsl:template match="<b>h:txtarea</b>" />
+</code></pre>
+
+<p>
+  如果 <code>h</code> 被綁定到 XHTML 命名空間，檢查會將 <code>match</code> 表達式的這一部分報告為未知元素名稱，因為該元素的正確名稱是 "textarea"。
+</p>
+
+
+<p><small>由 XPathView + XSLT-Support 提供技術支持</small></p>
+</body>
+</html>

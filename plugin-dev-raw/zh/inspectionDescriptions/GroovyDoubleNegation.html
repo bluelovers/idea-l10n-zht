@@ -1,0 +1,19 @@
+<html>
+<body>
+報告可以簡化的雙重否定。
+<p><b>示例：</b></p>
+<pre>
+<code>
+if (!!functionCall()) {} // 雙重否定
+if (!(a != b)) {} // 雙重否定
+</code>
+</pre>
+<p>在應用快速修復后：</p>
+<pre>
+<code>
+if (functionCall()) {}
+if (a == b) {}
+</code>
+</pre>
+</body>
+</html>

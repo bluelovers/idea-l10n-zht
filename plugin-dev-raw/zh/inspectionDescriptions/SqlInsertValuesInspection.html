@@ -1,0 +1,10 @@
+<html>
+<body>
+報告 VALUES 中的形參數目與目標表中的列數不匹配的情況。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE foo(a INT, b INT, c INT);
+
+INSERT INTO foo VALUES (1,2,3,4)</code></pre>
+<p><code>foo</code> 表有三列，但在 INSERT INTO 語句中我們傳遞了四列。</p>
+</body>
+</html>

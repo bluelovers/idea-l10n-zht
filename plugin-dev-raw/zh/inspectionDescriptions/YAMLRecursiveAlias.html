@@ -1,0 +1,12 @@
+<html>
+<body>
+報告 YAML 別名中的遞歸。
+<p>別名不能遞歸並在相應定位標記引用的數據中使用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  some_key: &some_anchor
+    sub_key1: value1
+    sub_key2: *some_anchor
+</code></pre>
+</body>
+</html>

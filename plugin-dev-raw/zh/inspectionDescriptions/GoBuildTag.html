@@ -1,0 +1,18 @@
+<html>
+<body>
+報告構建標記的格式錯誤和放置在錯誤位置的構建標記。 <code>go</code> 工具要求將構建標記放置在特定位置並以特殊語法編寫。 如果不滿足這些要求，則可能會忽略構建標記或可能會意外地從構建中刪除文件。
+<p>請參閱 <a href="https://golang.org/pkg/go/build/#hdr-Build_Constraints">golang.org 上的 Build Constraints</a> 頁面。</p>
+<p>示例：</p>
+<pre><code>package main
+
+// +build ignore
+
+func main() {}</code></pre>
+<p><code>// +build ignore</code> 部分應該在軟件包聲明之前。 要解決此問題，您可以應用<b>在軟件包前面放置構建標簽</b>快速修復。 在應用快速修復后：</p>
+<pre><code>// +build ignore
+
+package main
+
+import "fmt"</code></pre>
+</body>
+</html>

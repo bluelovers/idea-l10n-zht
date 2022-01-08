@@ -1,0 +1,25 @@
+<html>
+<body>
+報告多個 <code>catch</code> 部分並建議將它們拆分為單獨的 <code>catch</code> 塊。
+<p>示例：</p>
+<pre><code>
+  try {
+    int i = getIndex();
+  } catch (NullPointerException|IndexOutOfBoundsException e) {
+    e.printStackTrace();
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  try {
+    int i = getIndex();
+  } catch (NullPointerException e) {
+    e.printStackTrace();
+  } catch (IndexOutOfBoundsException e) {
+    e.printStackTrace();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的語言級別為 7 或更高時，此檢查才會報告。</p>
+</body>
+</html>

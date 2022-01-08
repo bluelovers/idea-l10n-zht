@@ -1,0 +1,33 @@
+<html>
+<body>
+報告不屬于任何類、方法或字段的 Javadoc 注釋。
+Javadoc 工具會忽略懸空的 Javadoc 注釋，並且不會將它們包含在其生成的 HTML 文檔中。
+<p><b>示例：</b></p>
+<pre><code>
+  class A {
+    /**
+     * Dangling comment
+     */
+    /**
+     * Method javadoc
+     */
+     public void m(){}
+  }
+</code></pre>
+<p>可以通過快速修復完全刪除此類注釋或將它們轉換為塊注釋。 在應用快速修復后：</p>
+<pre><code>
+  class A {
+    /*
+      Dangling comment
+    */
+    /**
+     * Method javadoc
+     */
+    public void m(){}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>忽略 JavaDoc 格式的文件頭注釋</b>選項可以忽略 Java 文件開頭的注釋。
+這些通常是版權消息。
+</body>
+</html>

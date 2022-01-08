@@ -1,0 +1,28 @@
+<html>
+<body>
+報告數組元素類型的類中有常量時已知長度為零的數組分配。
+由于零長度數組不可變，您可以重用相同的數組實例來節省內存。
+<p><b>示例：</b></p>
+<pre><code>
+  class Item {
+    // 可重用的 public 零長度數組常量 
+    public static final Item[] EMPTY_ARRAY = new Item[0];
+  }
+  class EmptyNode {
+    Item[] getChildren() {
+      // 不必要的零長度數組創建
+      return new Item[0];
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class EmptyNode {
+    Item[] getChildren() {
+      return Item.EMPTY_ARRAY;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

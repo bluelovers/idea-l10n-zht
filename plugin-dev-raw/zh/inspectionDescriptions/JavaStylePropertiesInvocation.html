@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>報告通過方法調用訪問的屬性。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+      int foo
+  }
+
+  def bar = new Foo()
+  print(<b>bar.getFoo()</b>)
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Foo {
+      int foo
+  }
+
+  def bar = new Foo()
+  print(<b>bar.foo</b>)
+</code></pre>
+</body>
+</html>

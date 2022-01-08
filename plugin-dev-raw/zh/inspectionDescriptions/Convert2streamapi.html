@@ -1,0 +1,26 @@
+<html>
+<body>
+報告使用 lambda 表達式替換為流 API 調用的循環。
+<p>此類替換將命令式樣式更改為功能式樣式，代碼也變得更加緊湊。</p>
+<p>示例：</p>
+<pre><code>
+  <b>boolean</b> check(List&lt;String> data) {
+    <b>for</b> (String e : data) {
+      String trimmed = e.trim();
+      <b>if</b> (!trimmed.startsWith("xyz")) {
+        <b>return</b> false;
+      }
+    }
+    return true;
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  <b>boolean</b> check(List&lt;String> data) {
+    <b>return</b> data.stream().map(String::trim).allMatch(trimmed -> trimmed.startsWith("xyz"));
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的語言級別為 8 或更高時，此檢查才會報告。
+</body>
+</html>

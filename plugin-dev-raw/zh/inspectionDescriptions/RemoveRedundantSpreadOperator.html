@@ -1,0 +1,24 @@
+<html>
+<body>
+報告針對一系列 <code>arrayOf</code> 函數調用而使用冗余展開運算符的情況。
+<p>使用“移除冗余展開運算符”快速修復可清理代碼。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(vararg s: String) { }
+
+  fun bar(ss: Array&lt;String&gt;) {
+      foo(*arrayOf("abc"))       // 對于 'foo' 的兩次調用，數組創建
+      foo(*arrayOf(*ss, "zzz"))  // 及其后續分配均冗余
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun foo(vararg s: String) { }
+
+  fun bar(ss: Array&lt;String&gt;) {
+      foo("abc")
+      foo(*ss, "zzz")
+  }
+</code></pre>
+</body>
+</html>

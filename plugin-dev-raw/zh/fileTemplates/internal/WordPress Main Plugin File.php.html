@@ -1,0 +1,111 @@
+<html>
+<body>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      一個 WordPress 主插件文件的內置模板。 每次創建 WordPress 插件類型的新項目時都會使用它。<br>
+      模板是可編輯的。 除了 PHP 語句、表達式和注釋外，您還可以使用下面列出的預定義變量。 每個變量都像宏一樣擴展為相應的值。<br>通過 <b>#parse</b> 指令，可以通過將所需模板的全名指定為引號中的形參，從而包含 <b>Includes</b> 選項卡中的模板。</font>
+    </td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">預定義變量接收以下值：</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${PLUGIN_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">派生自目錄名稱的當前插件名稱</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${FILE_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前文件名稱</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前的用戶系統登錄名</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前系統日期</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前系統時間</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前年度</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前月份</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前月份的日期</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前小時</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前分鐘</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${PRODUCT_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前 IDE 名稱</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前項目名稱</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">美元符號，計算為普通的 “$” 字符。</font></td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+報告 switch 語句中的 <i>fallthrough</i>。  雖然偶爾有用，但直落通常是無意為之，並且可能導致意外的錯誤。
+<p><b>示例：</b></p>
+<pre>
+<code>
+switch(n) {
+  case 1:
+    print 1
+  case 2: // "case 1" 直落到 "case 2"。 從 "case 2" 開始的語句將在執行 "case 1" 后立即執行。
+    print 2
+    break
+  default:
+    print "Default"
+}
+</code>
+</pre>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+報告未實現 <code>java.io.Serializable</code> 的類中的 <code>transient</code> 字段。
+<p><b>示例：</b></p>
+<pre><code>
+  public class NonSerializableClass {
+    private transient String password; // 警告：字段 'password' 被標記為 'transient'，位于不可序列化類中
+  }
+  </code>
+</pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  public class NonSerializableClass {
+    private String password;
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

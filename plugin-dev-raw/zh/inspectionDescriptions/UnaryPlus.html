@@ -1,0 +1,33 @@
+<html>
+<body>
+報告使用 <code>+</code> 一元運算符的情況。 一元加號通常為 null 運算，它的存在可能代表編碼錯誤。 例如，與遞增運算符（如 <code>+++</code> 中）或相等運算符（如 <code>=+</code> 中）結合使用。
+<p><b>示例：</b></p>
+<pre><code>
+  void unaryPlus(int i) {
+    int x = + +i;
+  }
+</code></pre>
+<p>建議使用以下快速修復：</p>
+<ul>
+  <li><p>移除 <code>i</code> 變量前的 <code>+</code> 運算符：</p>
+<pre><code>
+  void unaryPlus(int i) {
+    int x = i;
+  }
+</code></pre>
+  </li>
+  <li><p>使用前綴遞增運算符替換 <code>+</code> 運算符：</p>
+<pre><code>
+  void unaryPlus(int i) {
+    int x = ++i;
+  }
+</code></pre>
+  </li>
+</ul>
+<!-- tooltip end -->
+<p>
+使用下面的復選框可以報告與二進制或另一個一元表達式一起使用的一元加號。
+這意味著檢查將不會報告將一元加號表達式用于數組初始值設定項表達式或用作方法實參的情況。
+</p>
+</body>
+</html>

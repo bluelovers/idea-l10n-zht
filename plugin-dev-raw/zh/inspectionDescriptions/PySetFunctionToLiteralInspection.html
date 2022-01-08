@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告對可以替換為 <code>set</code> 文字的 <code>set</code> 函數的調用。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+def do_mult(a, b):
+    c = a * b
+    return set([c, a, b])
+</pre>
+<p>應用快速修復后，代碼變為：</p>
+<pre style="font-family: monospace">
+def do_mult(a, b):
+    c = a * b
+    return {c, a, b}
+</pre>
+</body>
+</html>

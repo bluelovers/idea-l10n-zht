@@ -1,0 +1,48 @@
+<html>
+<body>
+報告 <code>public</code> 構造函數。
+<p>有些編碼標准不建議使用 <code>public</code> 構造函數，而是建議使用 <code>static</code> 工廠方法。
+這樣就可以在不影響調用點的情況下交換實現。
+<p><b>示例：</b></p>
+<pre><code>
+  class Test {
+    private String name;
+
+    public Test(String name) {
+        this.name = name;
+    }
+
+    public void test() {
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+        new Test("str").test();
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Test {
+    private String name;
+
+    private Test(String name) {
+        this.name = name;
+    }
+
+    public static Test getInstance(String name) {
+        return new Test(name);
+    }
+
+    public void test() {
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+        getInstance("str").test();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<body>
+報告 SQL 代碼中不明確的引用。
+<p>例如，當名稱同時引用表列和例程形參時。 由于違反直觀的解析邏輯，此類代碼的執行可能會導致錯誤或意外結果。 通常，范圍更局部的名稱具有更高的優先級。</p>
+    <p>示例（PostgreSQL）：</p>
+    <pre><code>CREATE TABLE foo
+(
+    id   INT,
+    name VARCHAR(5)
+);
+CREATE FUNCTION func(name VARCHAR(5)) RETURNS INT AS
+$$
+DECLARE
+    b INT;
+BEGIN
+      -- `name` 不明確，因為它被用作列名和形參
+    SELECT COUNT(*) INTO b FROM foo t WHERE t.name = name;
+    RETURN b;
+END;
+$$ LANGUAGE plpgsql;</code></pre>
+  <p>在 PostgreSQL 中，您可以使用 <code>#variable_conflict</code> 指令來明確指定正確的引用。 例如，使用 <code>#variable_conflict use_column</code> 引用列名，或使用 <code>#variable_conflict use_variable</code> 引用形參。</p>
+<pre><code>CREATE TABLE foo
+(
+    id   INT,
+    name VARCHAR(5)
+);
+CREATE FUNCTION func(name VARCHAR(5)) RETURNS INT AS
+$$
+    #variable_conflict use_column
+DECLARE
+    b INT;
+BEGIN
+    SELECT COUNT(*) INTO b FROM foo t WHERE t.name = name;
+    RETURN b;
+END;
+$$ LANGUAGE plpgsql;</code></pre>
+</body>
+</html>

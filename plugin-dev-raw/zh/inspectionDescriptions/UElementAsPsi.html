@@ -1,0 +1,16 @@
+<html>
+<body>
+報告將 UAST <code>UElement</code> 作為 <code>PsiElement</code> 的用法。
+<p>
+  以這種方式獲取的 <code>PsiElement</code> 不明確。
+</p>
+<p>
+  要獲取“物理”<code>PsiElement</code>，請使用 <code>UElementKt.getSourcePsiElement()</code>，
+  對于“模擬”Java 元素（<code>PsiClass</code>、<code>PsiMethod</code> 等）的行為的 <code>PsiElement</code>，
+  請使用 <code>UElementKt.getAsJavaPsiElement()</code>。
+</p>
+<p>
+  請參閱 SDK 文檔中的 <a href="https://plugins.jetbrains.com/docs/intellij/uast.html">UAST - 統一抽象語法樹</a>。
+</p>
+</body>
+</html>

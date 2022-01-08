@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>除非被聲明為非 strict，否則報告使用 <code>@Singleton</code> 注解的類的構造函數。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @Singleton
+  class Foo{
+      Foo(){
+      }
+  }
+</code></pre>
+<p>有兩種可能的快速修復方法：移除該構造函數，或者將 <code>@Singleton</code> 聲明為非 strict。</p>
+<p>在應用快速修復后：</p>
+<pre><code>
+  @Singleton
+  class Foo{
+  }
+</code></pre>
+<p>或：</p>
+<pre><code>
+  @Singleton(<b>strict = false</b>)
+  class Foo{
+      Foo(){
+      }
+  }
+</code></pre>
+</body>
+</html>

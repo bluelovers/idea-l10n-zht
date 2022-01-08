@@ -1,0 +1,31 @@
+<html>
+<body>
+報告用來初始化的 <code>class</code> 文字所屬的類與 <code>Logger</code> 所屬的類不同的 <code>Logger</code> 實例。 從另一個類復制粘貼某些代碼時，很容易发生這種情況，並可能導致在意外類別下記錄事件，並導致篩選器應用不正確。
+<p>提供了一個快速修復來用周圍類中的文字替換外類文字。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>public class</b> Paramount {
+    <b>protected static final</b> Logger LOG = Logger.getLogger(Critical.class);
+
+    // …其他字段和方法
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  <b>public class</b> Paramount {
+    <b>protected static final</b> Logger LOG = Logger.getLogger(Paramount.class);
+
+    // …其他字段和方法
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  配置檢查：
+</p>
+<ul>
+  <li>使用該表可以指定此檢查識別的記錄器工廠類和記錄器工廠方法。</li>
+  <li>使用<b>忽略使用超類初始化的記錄器</b>選項可以忽略使用包含該記錄器的類的超類初始化的記錄器。</li>
+  <li>使用<b>忽略非 public 類中的記錄器</b>，僅對 <code>public</code> 類中的記錄器发出警告。</li>
+</ul>
+</body>
+</html>

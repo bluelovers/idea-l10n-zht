@@ -1,0 +1,20 @@
+<html>
+<body>
+報告 <code>requires</code> 指令中自動模塊的用法。
+<p>自動模塊不可靠，因為它可能依賴于類路徑中的類型，並且當它轉換為顯式模塊時，它的名稱和導出的軟件包可能會改變。</p>
+<p>對應于 <code>-Xlint:requires-automatic</code> 和 <code>-Xlint:requires-transitive-automatic</code> Javac 選項。
+第一個選項增加了對何時使用自動模塊的了解。
+第二個選項則是警示模塊的作者，建立自動模塊的隱含可讀性將使該模塊的用戶面臨風險。
+<p><b>示例：</b></p>
+<pre><code>
+  //module-info.java
+  module org.printer {
+    requires transitive drivers.corp.org; // 在 'drivers.corp.org' 為自動模塊時報告
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用<b>僅高亮顯示傳遞依賴</b>選項，可僅對傳遞依賴发出警告。
+</p>
+</body>
+</html>

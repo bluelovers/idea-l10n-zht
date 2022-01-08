@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>報告 WebSocket 端點聲明錯誤。</p>
+<p>
+  根據 JSR 356 規范，WebSocket 端點對于每種消息類型必須只有一個 <code>@OnMessage</code> 方法：text、message 和 pong
+</p>
+<p>
+  使用 <code>javax.websocket.server.ServerEndpoint</code> 注解的端點類只能具有一個帶有以下三種生命周期注解之一的方法：
+</p>
+<ul>
+  <li><code>@OnOpen</code></li>
+  <li><code>@OnClose</code></li>
+  <li><code>@OnError</code></li>
+</ul>
+<p>
+  從 <code>javax.websocket.Endpoint</code> 擴展的端點類必須實現相應的生命周期方法，而不是使用注解。
+</p>
+</body>
+</html>

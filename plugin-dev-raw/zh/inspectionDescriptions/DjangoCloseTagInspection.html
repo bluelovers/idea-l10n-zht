@@ -1,0 +1,10 @@
+<html>
+<body>
+<p>報告 Django 模板中的左標記與右標記未正確匹配的情況。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+{% if error_message %}&lt;p&gt;&lt;strong&gt;{{ error_message }}&lt;/p&gt;{% endif %}
+</pre>
+<p>IDE 報告 <code>strong</code> 標記未關閉的錯誤。</p>
+</body>
+</html>

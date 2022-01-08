@@ -1,0 +1,19 @@
+<html>
+<body>
+報告使用 <code>instanceof</code> 表達式來測試 <code>catch</code> 塊中形參類型的情況。
+<p>測試 <code>catch</code> 形參的類型通常最好使用單獨的 <code>catch</code> 塊，而不是使用 <code>instanceof</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo(Runnable runnable) {
+    try {
+        runnable.run();
+    } catch (Throwable throwable) {
+        if (throwable instanceof NoClassDefFoundError) { // 警告：'catch' 形參 'throwable' 上的 'instanceof'
+            System.out.println("Class not found!");
+        }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

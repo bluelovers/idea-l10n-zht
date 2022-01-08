@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>報告由于某些 ORM 原因而可能沒有調用的几種方法。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class Choice:
+    question = ForeignKey(Question, null=False)
+
+
+choice_set = Question.objects.get(id=1).choice_set.remove()
+</pre>
+<p>如果外鍵有 <code>null=False</code>，則無法調用 <code>remove</code> 函數。</p>
+</body>
+</html>

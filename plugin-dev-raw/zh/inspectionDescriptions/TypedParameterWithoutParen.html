@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告未被圓括號包圍的函數文字形參。</p>
+
+<p>在 Scala 3 中，只有一個形參的函數文字不能省略形參周圍的圓括號。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  call { a: Int => a }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  call { (a: Int) => a }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

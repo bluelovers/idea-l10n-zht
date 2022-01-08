@@ -1,0 +1,21 @@
+<html>
+<body>
+報告未實現用作 <code>javax.servlet.http.HttpSession.setAttribute()</code> 或 <code>javax.servlet.http.HttpSession.putValue()</code> 實參的 <code>java.io.Serializable</code> 的類對象。
+<p>
+  如果 <code>HttpSession</code> 被鈍化或遷移，則不會序列化此類對象，並且可能導致難以診斷的錯誤。
+</p>
+<p>
+  此檢查假定 <code>java.util.Collection</code> 和
+<code>java.util.Map</code> 類型的對象為 <code>Serializable</code>，除非類型形參為非 <code>Serializable</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo(HttpSession session) {
+      session.setAttribute("foo", new NonSerializable());
+  }
+  static class NonSerializable {}
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

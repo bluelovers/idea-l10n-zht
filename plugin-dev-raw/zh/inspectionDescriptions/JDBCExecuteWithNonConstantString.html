@@ -1,0 +1,21 @@
+<html>
+<body>
+報告對 <code>java.sql.Statement.execute()</code> 或其任何變體的調用，這些變體會將動態構造的字符串作為要執行的查詢。
+<p>構造的 SQL 語句是安全漏洞的常見來源。
+  默認情況下，此檢查會忽略編譯時常量。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  ResultSet execute(Statement statement, String name) throws SQLException {
+    return statement.executeQuery("select * from " + name); // 報告警告
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用檢查選項可以將任何 <code>static</code> <code>final</code> 字段視為常量。
+請小心，因為啟用該選項時，像下面這樣的字符串將被忽略：
+<pre><code>
+  private static final String SQL = "SELECT * FROM user WHERE name='" + getUserInput() + "'";
+</code></pre>
+<p>
+</body>
+</html>

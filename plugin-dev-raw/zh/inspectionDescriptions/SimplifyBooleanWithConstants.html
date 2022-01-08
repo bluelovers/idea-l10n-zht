@@ -1,0 +1,23 @@
+<html>
+<body>
+報告能夠縮減為常量的布爾表達式。
+<p>該快速修復會簡化條件。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun use(arg: Boolean) {
+      if (false == arg) {
+
+      }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun use(arg: Boolean) {
+      if (!arg) {
+
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

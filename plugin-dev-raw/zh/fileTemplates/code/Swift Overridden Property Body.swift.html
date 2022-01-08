@@ -1,0 +1,66 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      在生成被重寫屬性（例如，使用<b>代碼 | 生成 | 重寫方法</b>操作）時填充屬性的主體。<br>
+      模板是可編輯的。 除了 Swift 表達式和注釋外，您還可以使用預定義變量，這些變量隨后將被擴展為相應值。
+    </font></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">預定義變量接收以下值：</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">super 屬性調用：<code>super.propertyName</code></font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">創建的屬性的返回類型</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">屬性默認返回的值</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${SIGNATURE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">屬性簽名</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_SET}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當屬性有 setter 時，為 <b>"true"</b></font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_SUPER_SET}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當被重寫屬性有 setter 時，為 <b>"true"</b></font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${GETTER_EFFECTS}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">屬性 getter 的 getter 效果（<code>async</code>、<code>throws</code>）</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${GET_ATTRIBUTES}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">屬性 getter 的特性</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${SET_ATTRIBUTES}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">屬性 setter 的特性</font></td>
+  </tr>
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1"><b>Swift 文件頭</b>模板（<b>包含</b>選項卡）中的所有預定義變量也可用（例如 <font face="verdana" size="-2"><b>${USER}</b></font>、<font face="verdana" size="-2"><b>${DATE}</b></font> 等）。
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<body>
+<p>報告 Spring Websocket 基于 XML 的應用程序上下文的問題：</p>
+
+<ul>
+  <li>未解析的 Bean 引用</li>
+  <li>缺少必需的標記或特性</li>
+  <li>屬性類型不正確</li>
+  <li><code>enum</code> 屬性不一致</li>
+  <li>引用 Bean 的類型不正確</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;beans ... &gt;
+  
+    &lt;bean id="dummyBean" class="java.lang.String"/&gt;
+  
+    &lt;<strong>websocket:message-broker </strong>application-destination-prefix="/app"&gt; &lt;!-- 僅需 &lt;simple-broker&gt; 或 &lt;stomp-broker-relay&gt;  之一--&gt;
+        &lt;websocket:stomp-endpoint path="/hello" &gt;
+            &lt;websocket:sockjs&gt;
+                &lt;websocket:transport-handlers&gt;
+                    &lt;ref bean="<strong>dummyBean</strong>"/&gt; &lt;!-- Bean 必須為 'org.springframework.web.socket.sockjs.transport.TransportHandler' 類型 --&gt;
+                    &lt;bean class=<strong>"java.lang.String"</strong>/&gt; &lt;!-- java.lang.String' 未分配到 'org.springframework.web.socket.sockjs.transport.TransportHandler --&gt;
+                &lt;/websocket:transport-handlers&gt;
+            &lt;/websocket:sockjs&gt;
+        &lt;/websocket:stomp-endpoint&gt;
+        &lt;websocket:stomp-broker-relay/&gt;
+        &lt;websocket:simple-broker prefix="/topic"/&gt;
+        &lt;websocket:broker-channel&gt;
+            &lt;websocket:executor keep-alive-seconds="10"/&gt;
+            &lt;websocket:interceptors&gt;
+              &lt;ref bean="<strong>dummyBean</strong>"/&gt;  &lt;!-- Bean 必須為 'org.springframework.messaging.support.ChannelInterceptor' 類型 --&gt;
+              &lt;bean class="<strong>java.lang.String</strong>"/&gt; &lt;!-- java.lang.String' 未分配到 'org.springframework.messaging.support.ChannelInterceptor' --&gt;
+            &lt;/websocket:interceptors&gt;
+        &lt;/websocket:broker-channel&gt;
+  &lt;/websocket:message-broker&gt;
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>

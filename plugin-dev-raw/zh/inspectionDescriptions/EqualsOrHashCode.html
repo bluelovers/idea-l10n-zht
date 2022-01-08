@@ -1,0 +1,49 @@
+<html>
+<body>
+報告重寫 <code>equals()</code> 但不重寫 <code>hashCode()</code>（或者相反操作）的類。
+同時還報告重寫 <code>equals()</code> 或 <code>hashCode()</code> 的對象聲明。
+<p>這可能會導致在將類添加到 <code>Collection</code> 時產生不良行為</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class C1 {
+      override fun equals(other: Any?) = true
+  }
+
+  class C2 {
+      override fun hashCode() = 0
+  }
+
+  object O1 {
+      override fun equals(other: Any?) = true
+  }
+
+  object O2 {
+      override fun hashCode() = 0
+  }
+</code></pre>
+<p>該快速修復會為類重寫 <code>equals()</code> 或 <code>hashCode()</code> 方法並為對象刪除這些方法：</p>
+<pre><code>
+   class C1 {
+       override fun equals(other: Any?) = true
+       override fun hashCode(): Int {
+           return javaClass.hashCode()
+       }
+   }
+
+   class C2 {
+       override fun hashCode() = 0
+       override fun equals(other: Any?): Boolean {
+           if (this === other) return true
+           if (javaClass != other?.javaClass) return false
+           return true
+       }
+   }
+
+   object O1 {
+   }
+
+   object O2 {
+   }
+</code></pre>
+</body>
+</html>

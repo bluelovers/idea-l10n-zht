@@ -1,0 +1,22 @@
+<html>
+<body>
+報告可以替換為字符串模板的 <code>toString</code> 函數調用。
+<p>使用字符串模板可使代碼更簡單。</p>
+<p>該快速修復會將 <code>toString</code> 替換為字符串模板。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(): String {
+      val x = 1
+      return x.toString()
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun test(): String {
+      val x = 1
+      return &quot;$x&quot;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

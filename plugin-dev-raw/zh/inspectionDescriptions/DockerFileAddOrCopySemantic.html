@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>報告 <code>ADD</code> 和 <code>COPY</code> 命令中無效的目標目錄。</p>
+<p>
+  根據 <a href="https://docs.docker.com/engine/reference/builder/#add">Dockerfile 規范</a>，如果指定了多個源，則目標必須是目錄，並且必須以斜杠 '/' 結尾。
+  否則，Docker 構建會失敗。
+</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  # 下面的所有命令都將失敗
+  ADD textA.txt textB.txt relativeDir
+  ADD ["binaryA.jar", "binary2.jar", "destination"]
+  COPY text3.txt text4.txt /absolute/path
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  ADD textA.txt textB.txt relativeDir/
+  ADD ["binaryA.jar", "binary2.jar", "destination/"]
+  COPY text3.txt text4.txt /absolute/path/
+</code></pre>
+</body>
+</html>

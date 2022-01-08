@@ -1,0 +1,28 @@
+<html>
+<body>
+檢測可以通過將實參轉換為 <code>Set</code> 而加快速度的函數調用。
+
+<p>
+    當實參為集合時，'minus' 或 'intersect' 等運算更高效。
+    將 <code>Iterable&lt;T&gt;</code> 或 <code>Array&lt;T&gt;</code> 顯式轉換為 <code>Set&lt;T&gt;</code> 通常可以提高代碼效率。
+</p>
+
+<p>
+    該快速修復會向函數調用添加顯式轉換。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  fun &lt;T&gt; f(a: Iterable&lt;T&gt;, b: Iterable&lt;T&gt;): Int =
+      a.intersect(b).size
+</code></pre>
+
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun &lt;T&gt; f(a: Iterable&lt;T&gt;, b: Iterable&lt;T&gt;): Int =
+      a.intersect(b.toSet()).size
+</code></pre>
+</body>
+<!-- tooltip end -->
+</body>
+</html>

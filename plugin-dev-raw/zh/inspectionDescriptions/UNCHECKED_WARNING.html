@@ -1,0 +1,16 @@
+<html>
+<body>
+報告 javac 編譯器发出未檢查的警告的代碼。
+每個未檢查的警告都可能在運行時觸发 <code>ClassCastException</code>。
+<p>示例：</p>
+<pre><code>
+  List items = Arrays.asList("string", "string");
+  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // 未檢查的賦值
+</code></pre>
+<p>該快速修復會嘗試泛化該包含文件，此舉可能會揭示編輯器中以及編譯期間以前僅在運行時出現的問題：</p>
+<pre><code>
+  List&lt;String&gt; items = Arrays.asList("string", "string");
+  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // 不兼容的類型
+</code></pre>
+</body>
+</html>

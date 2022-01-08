@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>報告未使用的本地符號。</p>
+
+<p>該快速修復會移除未使用的符號。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  def test(): Int = {
+    val unused = 3
+    3
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  def test(): Int = {
+    3
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>報告可以簡化的鏈式比較。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def do_comparison(x):
+      xmin = 10
+      xmax = 100
+      if x >= xmin and x &lt;= xmax:
+          pass
+</code></pre>
+<p>IDE 提議簡化 <code>if x >= xmin and x &lt;= xmax</code>。
+  應用快速修復后，代碼變為：</p>
+<pre><code>
+  def do_comparison(x):
+      xmin = 10
+      xmax = 100
+      if xmin &lt;= x &lt;= xmax:
+          pass
+</code></pre>
+</body>
+</html>

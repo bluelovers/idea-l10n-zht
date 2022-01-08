@@ -1,0 +1,16 @@
+<html>
+<body>
+報告返回匿名類、局部類或內部類實例的 <code>return</code> 語句。
+此類實例會保持對外部實例的隱式引用，這可以防止外部實例被垃圾回收。
+任何返回此類實例的方法的調用方都可能通過保留返回的實例而導致內存泄漏。
+<!-- tooltip end -->
+<p>
+  配置檢查：
+</p>
+<ul>
+  <li>使用<b>忽略非 public 方法的返回值</b>選項可以忽略來自 <code>protected</code> 或 package-private 方法的返回值。
+    始終忽略來自 <code>private</code> 方法的返回。
+  </li>
+</ul>
+</body>
+</html>

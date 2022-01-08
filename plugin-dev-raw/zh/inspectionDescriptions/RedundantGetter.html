@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>報告冗余屬性 getter。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Test {
+      val a = 1
+          <b>get</b>
+      val b = 1
+          <b>get() = field</b>
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Test {
+      val a = 1
+      val b = 1
+  }
+</code></pre>
+</body>
+</html>

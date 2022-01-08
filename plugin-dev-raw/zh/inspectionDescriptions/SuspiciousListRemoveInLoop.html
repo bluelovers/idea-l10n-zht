@@ -1,0 +1,29 @@
+<html>
+<body>
+報告升序計數循環中的 <code>list.remove(index)</code> 調用。
+<p>
+  這很可疑，因為移除后列表變短，下一個元素被跳過。 簡單的修正方法是在移除后減小索引變量，但更穩健的做法可能是通過迭代器或使用 <code>removeIf()</code> 方法（Java 8 及更高版本）移除。
+  如果您不希望 <code>remove()</code> 在循環中被多次調用，不妨在它后面添加 <code>break</code>。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>  public static void main(String[] args) {
+    process(new ArrayList&lt;>(
+      Arrays.asList("1", "2", "|", "3", "4")));
+  }
+
+  static void process(List&lt;String&gt; list) {
+    for (int i = 0; i &lt; list.size(); i++) {
+      if (list.get(i).equals("|")) {
+        list.remove(i);
+        continue;
+      }
+      System.out.println(list.get(i));
+    }
+  }
+</code></pre>
+<p>代碼看起來像是會打印 <code>1 2 3 4</code>，但實則在輸出中將跳過 <code>3</code>。</p>
+<!-- tooltip end -->
+<p><small>2018.2 最新變化</small></p>
+</body>
+</html>

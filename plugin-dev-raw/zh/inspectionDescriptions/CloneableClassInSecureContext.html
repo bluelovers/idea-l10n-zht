@@ -1,0 +1,23 @@
+<html>
+<body>
+報告可能被克隆的類。
+<p>
+  如果一個類支持 <code>Cloneable</code> 接口，並且它的 <code>clone()</code> 方法沒有定義為立即拋出錯誤，則該類可以被克隆。 在用于安全使用的代碼中，可克隆類可能是危險的。
+</p>
+<p><b>示例：</b></p>
+<code>class SecureBean implements Cloneable {}</code>
+<p>在應用快速修復后：</p><code>class SecureBean {}</code>
+<p>
+當類擴展現有的可克隆類或實現可克隆接口時，應用該快速修復后，代碼可能如下所示： 
+<pre><code>class SecureBean extends ParentBean {
+    @Override
+    protected SecureBean clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException();
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

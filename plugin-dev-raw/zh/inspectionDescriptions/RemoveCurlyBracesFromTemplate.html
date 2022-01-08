@@ -1,0 +1,30 @@
+<html>
+<body>
+報告字符串模板中用于括簡單標識符的大括號的用法。
+<p>使用“移除大括號”快速修復可移除冗余的大括號。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun redundant() {
+     val x = 4
+     val y = "${x}" // &lt;== 冗余
+  }
+
+  fun correctUsage() {
+      val x = "x"
+      val y = "${x.length}" // &lt;== 可以
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun redundant() {
+     val x = 4
+     val y = "$x"
+  }
+
+  fun correctUsage() {
+      val x = "x" &lt;== 已更新
+      val y = "${x.length}"
+  }
+</code></pre>
+</body>
+</html>

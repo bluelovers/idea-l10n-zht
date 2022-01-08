@@ -1,0 +1,21 @@
+<html>
+<body>
+報告可以替換為更簡潔的主構造函數的輔助構造函數。
+<p><b>示例：</b></p>
+<pre><code>
+  class User {
+      val name: String
+
+      constructor(name: String) {
+          this.name = name
+      }
+  }
+</code></pre>
+<p>該快速修復會自動轉換代碼：</p>
+<pre><code>
+  class User(val name: String) {
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

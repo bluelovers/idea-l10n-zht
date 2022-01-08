@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>報告使用 <code>@groovy.lang.Singleton</code> 注解的類的新實例創建。
+  此類構造可能導致運行時異常<b>無法實例化單例</b>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @Singleton
+  class Foo{
+  }
+  
+  Foo foo = <b>new Foo()</b>
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  @Singleton
+  class Foo{
+  }
+  
+  Foo foo = <b>Foo.instance</b>
+</code></pre>
+</body>
+</html>

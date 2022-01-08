@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告 lambda 表達式之外的冗余返回標簽。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test() {
+      return@test
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun test() {
+      return
+  }
+</code></pre>
+</body>
+</html>

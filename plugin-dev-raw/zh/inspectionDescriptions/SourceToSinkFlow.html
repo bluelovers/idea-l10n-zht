@@ -1,0 +1,45 @@
+<html><body>
+報告將非安全字符串傳遞給帶有使用注解 <code>org.checkerframework.checker.tainting.qual.Untainted</code> 標記的形參的方法的情況。
+<p>
+  安全字符串為：
+<ul>
+  <li>標記為 <code>@Untainted</code> 的方法調用</li>
+  <li>未調用非安全方法的局部變量或方法形參</li>
+  <li>標記為 <code>@Untainted</code> 且沒有分配非安全方法調用的字段、局部變量或形參</li>
+</ul>
+<p>
+示例：
+<pre>
+<code>
+  void doSmth(boolean b) {
+    String s = safe();
+    String s1 = "other";
+    if (b) s1 = s;
+    sink(s);
+  }
+  
+  String sink(@Untainted String s) {}
+</code>
+</pre>
+<p>
+此處沒有將非安全字符串賦值給 <code>s</code>，因此沒有產生警告。 另一方面：
+<pre>
+<code>
+  void doSmth(boolean b) {
+    String s = safe();
+    String s1 = "other";
+    s1 = foo();
+    if (b) s1 = s;
+    sink(s);        // 此處為警告
+  }
+  
+  String foo();
+
+  String sink(@Untainted String s) {}
+</code>
+</pre>
+<p>
+這里有一條警告，因為 <code>s1</code> 在 <code>foo</code> 調用結果賦值后具有未知狀態。
+<!-- tooltip end -->
+<p><small>2021.2 最新變化</small></p>
+</body></html>

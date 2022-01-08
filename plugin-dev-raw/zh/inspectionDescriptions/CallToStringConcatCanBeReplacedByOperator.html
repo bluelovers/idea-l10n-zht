@@ -1,0 +1,20 @@
+<html>
+<body>
+報告對 <code>java.lang.String.concat()</code> 的調用。
+<p>
+  如果在帶有常量實參的常量上調用該方法，可以將此類調用替換為 <code>+</code> 運算符，以提高清晰度和性能。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  String foo(String name) {
+    return name.concat("foo");
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  String foo(String name) {
+    return name + "foo";
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

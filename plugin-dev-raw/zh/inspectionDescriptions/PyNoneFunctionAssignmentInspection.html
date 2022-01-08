@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>報告使用不返回任何內容的函數進行賦值的情況。</p>
+此檢查與 <a href="https://docs.pylint.org/en/1.6.0/features.html#id6">pylint 檢查 E1111</a> 相似。
+<p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+def just_print():
+    print("Hello!")
+
+
+action = just_print()
+</pre>
+<p>IDE 提議的快速修復是移除此賦值。</p>
+</body>
+</html>

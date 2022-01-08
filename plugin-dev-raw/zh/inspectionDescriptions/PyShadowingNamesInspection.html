@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>報告在外部范圍中定義的名稱被隱藏。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+def outer(p):
+    def inner(p):
+        pass
+</pre>
+<p>IDE 提議的快速修復是移除形參或重命名形參。</p>
+</body>
+</html>

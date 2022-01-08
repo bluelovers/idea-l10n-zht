@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>從 Kotlin 1.4 開始，報告導致編譯錯誤的冗余標簽。</p>
+<p>從 Kotlin 1.0 開始，可以用標簽標記任何語句：</p>
+<pre><code>
+  fun foo() {
+    L1@ val x = L2@bar()
+  }
+</code></pre>
+但是，這些標簽僅能以有限的几種方式引用：
+<ul>
+    <li>中斷/繼續循環</li>
+    <li>從內聯 lambda 或內聯匿名函數的非本地返回</li>sssss
+</ul>
+<p>從 Kotlin 1.4 開始禁止使用此類標簽。</p>
+<!-- tooltip end -->
+<p>僅當項目或模塊的 Kotlin 語言級別為 1.4 或更高時，此檢查才會報告。</p>
+</body>
+</html>

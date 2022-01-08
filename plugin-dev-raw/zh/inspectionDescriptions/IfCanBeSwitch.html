@@ -1,0 +1,41 @@
+<html>
+<body>
+報告可以替換為 <code>switch</code> 語句的 <code>if</code> 語句。
+<p>替換結果通常更簡短、更清晰。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void test(String str) {
+    if (str.equals("1")) {
+      System.out.println(1);
+    } else if (str.equals("2")) {
+      System.out.println(2);
+    } else if (str.equals("3")) {
+      System.out.println(3);
+    } else {
+      System.out.println(4);
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  void test(String str) {
+    switch (str) {
+      case "1" -&gt; System.out.println(1);
+      case "2" -&gt; System.out.println(2);
+      case "3" -&gt; System.out.println(3);
+      default -&gt; System.out.println(4);
+    }
+  }
+  </code></pre>
+<!-- tooltip end -->
+<p>該檢查適用于項目或模塊的語言級別為 7 或更高級別的情況。</p>
+<p>使用 <b>'if' 條件分支的最小數量</b>字段可指定必須報告 <code>if</code> 語句的最小 <code>if</code> 條件分支數。 注意，不計入終端 <code>else</code> 分支（無 <code>if</code>）。</p>
+<p>
+使用<b>對數字啟用 switch 建議</b>選項，可以對基元和裝箱的數字及字符啟用 <code>switch</code> 語句建議。
+<p>
+使用<b>對枚舉啟用 switch 建議</b>選項，可以對 <code>enum</code> 常量啟用 <code>switch</code> 語句建議。
+<p>
+  使用<b>僅對 null-safe 表達式啟用建議</b>選項，可僅建議不能引入 <code>NullPointerException</code> 的 <code>switch</code> 語句。
+</p>
+</body>
+</html>

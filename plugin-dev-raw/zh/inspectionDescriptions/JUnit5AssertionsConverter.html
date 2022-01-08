@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>報告 JUnit 5 測試中對任何<code>junit.framework.Assert</code>、<code>org.junit.Assert</code> 或 <code>org.junit.Assume</code> 類中的方法的調用。</p>
+<p>盡管這些測試正常工作，但遷移到 <code>org.junit.jupiter.api.Assertions</code>/<code>org.junit.jupiter.api.Assumptions</code> 有助于避免對舊版 JUnit 的依賴。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  import org.junit.Assert;
+  import org.junit.jupiter.api.Test;
+
+  public class MyTest {
+    @Test
+    public void simpleTest() {
+      Assert.assertEquals(4, 2 + 2);
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  import org.junit.jupiter.api.Assertions;
+  import org.junit.jupiter.api.Test;
+
+  public class MyTest {
+    @Test
+    public void simpleTest() {
+      Assertions.assertEquals(4, 2 + 2);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+報告對從 PHP 8.1 開始棄用的標准 PHP 庫函數的調用。
+<!-- tooltip end -->
+<p>
+  報告以下調用：
+</p>
+<ul>
+  <li>
+    將對象作為實參的 <code>key()</code>、<code>current()</code>、<code>next()</code>、<code>prev()</code> 和 <code>reset( )</code> 調用。
+  </li>
+  <li>
+    不包含實參的 <code>mb_check_encoding()</code> 調用。
+  </li>
+  <li>
+    不包含實參的 <code>get_class()</code>、<code>get_parent_class()</code> 和 <code>get_Called_class()</code> 調用。
+  </li>
+  <li>
+    將布爾值作為 <code>$value</code> 實參傳遞的 <code>IntlCalendar::roll()</code> 調用。
+  </li>
+  <li>
+    包含非字符串實參的 <code>ctype_*()</code> 調用。
+  </li>
+</ul>
+<p>
+  有關詳細信息，請參閱 <a href="https://wiki.php.net/rfc/deprecations_php_8_1">PHP RFC：PHP 8.1 棄用</a>。
+</p>
+</body>
+</html>

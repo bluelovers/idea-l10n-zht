@@ -1,0 +1,26 @@
+<html>
+<body>
+報告以下 EJB 規范違規：
+<ul>
+  <li>注入的屬性類型無效</li>
+  <li>EJB 引用與 `ejb-jar.xml` 不一致</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+@LocalBean
+@Stateless
+public class ExampleBean {
+
+  private AnotherBean anotherBean;
+
+  @Inject
+  public void getAnotherBean() { // 錯誤：應在字段或 setter 方法中執行注入
+    return anotherBean;
+  }
+
+  ...
+}
+</code></pre>
+</body>
+</html>

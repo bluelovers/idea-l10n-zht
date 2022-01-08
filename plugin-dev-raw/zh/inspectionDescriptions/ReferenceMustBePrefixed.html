@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>報告和修正隱藏常見 Scala 類（例如 <code>List</code>）的導入名稱。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  import java.util.List
+
+  val list: List[Int] = null
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  import java.util
+  import java.util.List
+
+  val list: util.List[Int] = null
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+報告未在 <code>try</code> 塊前打開並在相應的 <code>finally</code> 塊中關閉的 Java ME <code>javax.microedition.rms.RecordStore</code> 資源。
+<p>如果在資源關閉之前拋出異常，此類資源可能會被無意泄漏。</p>
+<p>
+  此檢查適用于 Java ME 和其他資源高度受限的環境。
+  不加考慮地應用此檢查的結果可能會對代碼清晰度和設計產生負面影響。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo1() throws RecordStoreException {
+      RecordStore rs = RecordStore.openRecordStore("bar", true); // 警告
+  }
+  void foo2() throws RecordStoreException {
+      RecordStore rs = RecordStore.openRecordStore("bar", true); // 無警告
+      try {
+          /* ... */
+      } finally {
+          rs.closeRecordStore();
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

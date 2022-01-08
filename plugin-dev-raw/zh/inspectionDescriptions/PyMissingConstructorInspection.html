@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>報告類中缺少對 <code>super</code> 構造函數進行調用的情況。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class Fruit:
+    def __init__(self):
+        pass
+
+
+class Pear(Fruit):
+    def __init__(self):
+        pass
+</pre>
+<p><code>Pear</code> 類在 <code>__init__</code> 方法中應有 <code>super</code> 調用。</p>
+<p>應用快速修復后，代碼變為：</p>
+<pre style="font-family: monospace">
+class Fruit:
+    def __init__(self):
+        pass
+
+
+class Pear(Fruit):
+    def __init__(self):
+        super().__init__()
+</pre>
+</body>
+</html>

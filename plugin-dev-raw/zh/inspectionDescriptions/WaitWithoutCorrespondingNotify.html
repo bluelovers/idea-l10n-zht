@@ -1,0 +1,17 @@
+<html>
+<body>
+報告對無法為之找到相應 <code>Object.notify()</code> 或 <code>Object.notifyAll()</code> 調用的 <code>Object.wait()</code> 的調用。
+<p>此檢查僅報告包含引用當前類字段的限定符的調用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Foo {
+    public Object foo = new Object();
+
+    void bar() throws InterruptedException {
+      this.foo.wait();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

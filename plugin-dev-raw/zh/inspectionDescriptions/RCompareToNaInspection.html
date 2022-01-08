@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告 <code>NA</code> 常量在相等檢查中的用法，並建議將其替換為 <code>is.na</code> 函數。</p>
+<p><b>示例：</b></p>
+<pre><code>
+if (a==NA){
+  print ("a is not available!")
+}
+</code></pre>
+<p>當您應用該快速修復時，代碼變為：</p>
+<pre><code>
+if (is.na(a)){
+  print ("a is not available!")
+}
+</code></pre>
+</body>
+</html>

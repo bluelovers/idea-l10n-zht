@@ -1,0 +1,9 @@
+<html>
+<body>
+報告未指定 <code>java.util.Locale</code> 的 <code>String</code> 對象上的 <code>toUpperCase()</code> 或 <code>toLowerCase()</code> 調用。 這些情況下使用默認的系統區域設置，可能會在國際化環境中導致問題。
+<p>
+  例如，代碼 <code>"i".toUpperCase().equals("I")</code> 在土耳其語和阿塞拜疆語區域設置中返回 <code>false</code>，其中帶點和無點的 'i' 是單獨的字母。 在土耳其語區域設置中運行時，對包含 'i' 的英文字符串調用 <code>toUpperCase()</code> 將返回不正確的結果。 或者，在處理應被視為與區域設置無關的字符串（如 HTML 標記）時，可能會導致錯誤。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

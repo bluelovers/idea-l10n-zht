@@ -1,0 +1,19 @@
+<html>
+<body>
+報告代碼中使用的已棄用的類、方法和字段。
+<p>示例：</p>
+
+<pre><code>
+  class MyCode {
+  @Deprecated
+  void oldMethod() {}// 警告："棄用的成員仍在使用"
+
+  void newMethod() {
+    oldMethod(); // 被遺忘的用法
+  }
+  }
+</code></pre>
+<p>已棄用的元素中的用法將被忽略。</p>
+<p><b>注意</b>：由于性能原因，僅當非 private 成員的名稱很少出現在項目中時，才會對其進行檢查。</p>
+</body>
+</html>

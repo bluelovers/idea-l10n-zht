@@ -1,0 +1,24 @@
+<html>
+<body>
+報告空類和沒有任何定義類的 Java 文件。
+<p>如果一個類不包含任何字段、方法、構造函數或初始值設定項，則為空類。 在進行重大變更或重構后，空類通常會保留下來。</p>
+<!-- tooltip end -->
+<p>配置檢查：</p>
+<ul>
+  <li>
+    使用<b>有注解時忽略</b>選項可以指定特殊注解。 該檢查將忽略用這些注解標記的類。
+  </li>
+  <li><p>
+    使用<b>如果類是父類型的形參化，則將其忽略</b>選項，可以忽略形參化超類的類。 示例：
+  </p>
+    <pre><code>class MyList extends ArrayList&lt;String&gt; {}</code></pre>
+  </li>
+  <li>
+    使用<b>忽略 java.lang.Throwable 的子類</b>，可以忽略擴展 <code>java.lang.Throwable</code> 的類。
+  </li>
+  <li>
+    使用<b>注釋計為內容</b>選項可忽略包含注釋的類。
+  </li>
+</ul>
+</body>
+</html>

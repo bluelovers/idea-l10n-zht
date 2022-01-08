@@ -1,0 +1,20 @@
+<html>
+<body>
+報告沒有關聯映射的 servlet。
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;web-app&gt;
+    &lt;servlet&gt;
+      &lt;servlet-name&gt;foo&lt;/servlet-name&gt; // 錯誤：servlet 應該有一個映射
+      &lt;servlet-class&gt;javax.servlet.Servlet&lt;/servlet-class&gt;
+    &lt;/servlet&gt;
+  
+    &lt;filter&gt;
+      &lt;filter-name&gt;bar&lt;/filter-name&gt; // 錯誤：篩選器應該有一個映射
+      &lt;filter-class&gt;java.lang.String&lt;/filter-class&gt;
+    &lt;/filter&gt;
+  &lt;/web-app&gt;
+</code></pre>
+</body>
+</html>

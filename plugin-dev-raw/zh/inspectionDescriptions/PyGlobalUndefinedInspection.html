@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>報告通過 <code>global</code> 語句定義的變量未在模塊范圍中定義的問題。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+def foo():
+    global bar
+    print(bar)
+
+foo()
+</pre>
+<p>可以移動該全局變量聲明來進行修正：</p>
+<pre style="font-family: monospace">
+global bar
+
+
+def foo():
+    print(bar)
+</pre>
+</body>
+</html>

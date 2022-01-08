@@ -1,0 +1,17 @@
+<html>
+<body>
+報告包含不必要標簽的 <code>continue</code> 語句。
+<p>示例：</p>
+<pre><code>
+  LABEL:
+  while (a &gt; b) {
+    System.out.println("Hello");
+    //下面的代碼是循環中的最后一條語句，
+    //因此可以移除不必要的標簽和 continue
+    continue LABEL;
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

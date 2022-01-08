@@ -1,0 +1,18 @@
+<html>
+<body>
+報告顯式分配給主構造函數形參的屬性。
+<p>可以直接在主構造函數中聲明屬性，從而減少代碼量並提高代碼可讀性。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class User(name: String) {
+      val name = name
+  }
+</code></pre>
+<p>快速修復會將形參和屬性聲明聯接到主構造函數形參中：</p>
+<pre><code>
+  class User(val name: String) {
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>報告在未使用 <code>await</code> 語法的情況下調用的協同程序。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+async def bar():
+    pass
+
+
+async def foo():
+    bar()
+</pre>
+<p>應用快速修復后，代碼變為：</p>
+<pre style="font-family: monospace">
+async def bar():
+    pass
+
+
+async def foo():
+    await bar()
+</pre>
+</body>
+</html>

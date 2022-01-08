@@ -1,0 +1,31 @@
+<html>
+<body>
+報告對未使用封閉類名稱限定的內部類的引用。
+<p><b>示例：</b></p>
+<pre><code>
+  import foo.Foo.Bar;
+
+  class Foo {
+    class Bar {}
+  }
+
+  class Baz {
+    void f(Bar bar) {}
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Foo {
+    class Bar {}
+  }
+
+  class Baz {
+    void f(Foo.Bar bar) {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用檢查設置可以忽略對同一類中的內部類的引用，因此這些類不需要導入。
+<p>
+</body>
+</html>

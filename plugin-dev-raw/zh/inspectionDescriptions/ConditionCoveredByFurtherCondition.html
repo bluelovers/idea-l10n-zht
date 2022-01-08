@@ -1,0 +1,9 @@
+<html>
+<body>
+報告由于后續條件完全覆蓋而變得冗余的條件。
+<p>例如，在 <code>value != -1 && value > 0</code> 條件下，第一部分是冗余的：如果它為 false，那么第二部分也為 false。
+或者在像 <code>obj != null && obj instanceof String</code> 這樣的條件下，null 檢查是冗余的，因為 <code>instanceof</code> 運算符意味著非 null。</p>
+<!-- tooltip end -->
+<p><small>2018.3 最新變化</small></p>
+</body>
+</html>

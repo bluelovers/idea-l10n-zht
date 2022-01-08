@@ -1,0 +1,13 @@
+<html>
+<body>
+報告不使用可迭代值的 <code>forEach</code> 循環。
+<p><b>示例：</b></p>
+<pre><code>
+  listOf(1, 2, 3).forEach { }
+</code></pre>
+<p>該快速修復會在 <code>forEach</code> 部分引入匿名形參：</p>
+<pre><code>
+  listOf(1, 2, 3).forEach { _ -> }
+</code></pre>
+</body>
+</html>

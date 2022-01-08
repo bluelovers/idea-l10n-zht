@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>報告 <code>catch</code> 塊中匹配所有類型的模式。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  try f() catch {
+    case e => ???
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  try f() catch {
+    case e: Throwable => ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

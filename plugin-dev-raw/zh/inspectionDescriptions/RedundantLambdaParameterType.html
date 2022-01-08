@@ -1,0 +1,15 @@
+<html>
+<body>
+報告由于可以從上下文中推斷而冗余的 lambda 形參類型。
+<p><b>示例：</b></p>
+<pre><code>
+  Map&lt;String, Integer&gt; map = ...
+  map.forEach((String s, Integer i) -> log.info(s + "=" + i));
+</code></pre>
+<p>該快速修復會從 lambda 中移除這些形參類型。</p>
+<pre><code>
+  Map&lt;String, Integer&gt; map = ...
+  map.forEach((s, i) -> log.info(s + "=" + i));
+</code></pre>
+</body>
+</html>

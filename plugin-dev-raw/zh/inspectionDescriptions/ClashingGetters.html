@@ -1,0 +1,16 @@
+<html>
+<body>
+報告可通過同一屬性名稱訪問的布爾方法。
+<p>訪問此類屬性可能產生意外的結果。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class X {
+      boolean isFoo() { true }
+      boolean getFoo() { false }
+  }
+
+  // 將調用 getFoo()
+  new X().foo
+</code></pre>
+</body>
+</html>

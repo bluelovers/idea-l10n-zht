@@ -1,0 +1,30 @@
+<html>
+<body>
+報告具有空主體的類和對象的聲明。
+<p>使用“移除冗余的空類主體”快速修復可清理代碼。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class EmptyA() {} // &lt;== 空主體
+
+  class EmptyB {
+      companion object {} // &lt;== 空主體
+  }
+
+  fun emptyC() {
+     object {} // &lt;== 匿名對象，可以（未報告）
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class EmptyA()
+
+  class EmptyB {
+      companion object
+  }
+
+  fun emptyC() {
+     object {}
+  }
+</code></pre>
+</body>
+</html>

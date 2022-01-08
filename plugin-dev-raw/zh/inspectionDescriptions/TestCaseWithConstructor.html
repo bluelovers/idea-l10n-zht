@@ -1,0 +1,20 @@
+<html>
+<body>
+報告 JUnit 測試用例及其構造函數中的初始化邏輯。
+如果構造函數失敗，將不會調用 <code>@After</code> 注解方法或 <code>tearDown()</code> 方法。
+這可能導致測試環境部分初始化，因而對其他測試產生不利影響。
+相反，JUnit 測試用例初始化應在 <code>setUp()</code> 或 <code>@Before</code> 注解方法中完成。
+<p>不良示例：</p>
+<pre><code>
+  <b>public class</b> ImportantTest {
+    <b>private</b> File file;
+    <b>public</b> ImportantTest() <b>throws</b> IOException {
+      file = File.createTempFile("xyz", ".tmp");
+    }
+
+    // ... 測試轉到此處
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

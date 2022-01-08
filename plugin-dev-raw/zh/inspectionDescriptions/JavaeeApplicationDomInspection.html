@@ -1,0 +1,24 @@
+<html>
+<body>
+報告 `application.xml` 配置文件中的以下問題：
+<ul>
+  <li>對不可實例化類的引用</li>
+  <li>對不擴展所需類的類的引用</li>
+  <li>對范圍不適當的類的引用</li>
+  <li>與所需模式不匹配的標記和特性值（例如，Java 標識符）</li>
+  <li>不包含必需子標記或特性的標記</li>
+  <li>定義具有重復名稱的對象的標記</li>
+</ul>
+
+<p><b>示例：</b></p><br/>
+<pre><code>
+&lt;application&gt;
+    &lt;module id="ExampleWebModule"&gt;
+      &lt;web&gt; // 錯誤：應定義 “web-uri” 子標記
+        &lt;context-root&gt;ExampleWebApp&lt;/context-root&gt;
+      &lt;/web&gt;
+    &lt;/module&gt;
+&lt;/application&gt;
+</code></pre>
+</body>
+</html>

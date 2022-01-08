@@ -1,0 +1,29 @@
+<html>
+<body>
+報告其內容已查詢但未更新或已更新但未查詢的集合。
+<!-- tooltip end -->
+<p>
+  此類不一致查詢和更新毫無意義，可能表明有死碼或拼寫錯誤。
+</p>
+<p>
+  使用檢查設置可以指定與更新/查詢方法相對應的名稱模式。
+  返回元素的查詢方法會被自動檢測，並且只需指定將數據寫入輸出形參的查詢方法（例如 <code>OutputStream</code>）。
+<p>
+<p><b>示例：</b></p>
+<p>假設您有一個包含方法 <code>store()</code> 的自定義 <code>FixedStack</code> 類：
+<pre><code>
+  public class FixedStack&lt;T&gt; extends Collection&lt;T&gt; {
+    public T store(T t) {
+      // 實現
+    }
+  }
+</code></pre>
+<p>您可以將 <code>store</code> 添加到更新方法表中，以報告不匹配的查詢，例如：
+<pre><code>
+  void test(int i) {
+    FixedStack&lt;Integer&gt; stack = new FixedStack&lt;&gt;();
+    stack.store(i);
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+報告對非線程安全類型的 <code>static</code> 字段的訪問。
+<p>
+  從實例方法或非同步塊訪問 <code>static</code> 字段時，多個線程都可以訪問該字段。
+  這可能導致未指明的副作用，例如異常和不正確的結果。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Sample {
+    private static final SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+    String method() {
+      return df.format("");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  您可以指定哪些類型應被視為非線程安全。
+  僅報告具有這些確切類型或使用這些確切類型進行初始化的字段，因為可能存在這些類型的線程安全子類。
+</p>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+報告迭代集合並且可以替換為增強型 <code>for</code> 循環（foreach 迭代語法）的 <code>while</code> 循環。
+<!--  'foreach' still used in this description so that the inspection continues to be found using this keyword -->
+<p><b>示例：</b></p>
+<pre><code>
+  Iterator it = c.iterator();
+  while(it.hasNext()) {
+    Object obj = it.next();
+    System.out.println(obj);
+  }
+</code></pre>
+<p>可以替換為：</p>
+<pre><code>
+  for (Object obj : c) {
+    System.out.println(obj);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的語言級別為 5 或更高時，此檢查才會報告。</p>
+
+</body>
+</html>

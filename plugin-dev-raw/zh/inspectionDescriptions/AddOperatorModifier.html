@@ -1,0 +1,29 @@
+<html>
+<body>
+報告與其中一個運算符慣例匹配但缺少 <code>operator</code> 關鍵字的函數。
+<p>通過添加 <code>operator</code> 修飾符，您可以允許函數使用者編寫慣用的 Kotlin 代碼。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Complex(val real: Double, val imaginary: Double) {
+      fun plus(other: Complex) =
+          Complex(real + other.real, imaginary + other.imaginary)
+  }
+
+  fun usage(a: Complex, b: Complex) {
+      a.plus(b)
+  }
+</code></pre>
+<p>該快速修復會添加 <code>operator</code> 修飾符關鍵字：</p>
+<pre><code>
+  class Complex(val real: Double, val imaginary: Double) {
+      operator fun plus(other: Complex) =
+          Complex(real + other.real, imaginary + other.imaginary)
+  }
+
+  fun usage(a: Complex, b: Complex) {
+      a + b
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

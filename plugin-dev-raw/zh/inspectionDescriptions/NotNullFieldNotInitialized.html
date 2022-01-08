@@ -1,0 +1,26 @@
+<html>
+<body>
+報告構造函數中未初始化的注解為非 null 的字段。
+<p>示例：</p>
+<pre><code>public class MyClass {
+  private @NotNull String value;
+
+  public void setValue(@NotNull String value) {
+    this.value = value;
+  }
+
+  public @NotNull String getValue() {
+    return value;
+  }
+  }</code></pre>
+<p>
+  此類字段可能違反非 null 約束。 在上例中，<code>setValue</code> 形參注解為非 null，但是如果沒有調用 setter，<code>getValue</code> 可能返回 null。
+</p>
+<!-- tooltip end -->
+<p>配置檢查：</p>
+<ul>
+  <li>使用<b>忽略可以隱式初始化的字段</b>選項，可控制該字段能夠隱式初始化（例如通過依賴項注入）時是否應发出警告。</li>
+  <li>使用<b>忽略在 setUp() 方法中初始化的字段</b>選項，可控制在測試用例 <code>setUp()</code> 方法中寫入該字段時是否應发出警告。</li>
+</ul>
+</body>
+</html>

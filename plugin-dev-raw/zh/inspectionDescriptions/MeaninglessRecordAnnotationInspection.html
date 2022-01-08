@@ -1,0 +1,23 @@
+<html>
+<body>
+報告記錄組件上使用但並沒有效果的注解。
+<p>這可能发生在以下兩種情況下：</p>
+<ul>
+  <li>報告的注解具有 METHOD 目標，但顯式定義了相應的訪問器。</li>
+  <li>報告的注解具有 PARAMETER 目標，但顯式定義了規范構造函數。</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+@Target(ElementType.METHOD)
+@interface A { }
+  
+// 該注解根本不會出現在字節碼中，
+// 因為它應當傳播到訪問器，但顯式定義了訪問器
+record R(@A int x) {
+  public int x() { return x; }
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2021.1 最新變化</small></p>
+</body>
+</html>

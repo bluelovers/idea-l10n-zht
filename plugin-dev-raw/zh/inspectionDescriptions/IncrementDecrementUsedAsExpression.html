@@ -1,0 +1,24 @@
+<html>
+<body>
+報告嵌套在其他表達式中的增量或減量表達式。
+此類表達式可能令人困惑，並違反一般設計原則，即任何結構應當只发揮一種作用。
+<p>該快速修復會將遞增或遞減運算提取到單獨的表達式語句中。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  int i = 10;
+  while (i-- > 0) {
+    System.out.println(i);
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  int i = 10;
+  while (i > 0) {
+    i--;
+    System.out.println(i);
+  }
+  i--;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

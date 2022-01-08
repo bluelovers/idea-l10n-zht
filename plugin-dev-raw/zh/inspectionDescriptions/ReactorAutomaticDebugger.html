@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>報告冗余的 <code>ReactorDebugAgent.init()</code> 調用。</p>
+<p>
+  IDE 可以自動初始化 Reactor Debug 模式，因此用戶不需要顯式調用 <code>ReactorDebugAgent.init()</code> 或 <code>Hooks.onOperatorDebug()</code>。
+  </p>
+
+  <p>此外，同時調用 <code>ReactorDebugAgent.init()</code> 和 <code>Hooks.onOperatorDebug()</code> 會導致 Reactor 生成雙倍的調試堆棧幀。
+  </p>
+</body>
+</html>

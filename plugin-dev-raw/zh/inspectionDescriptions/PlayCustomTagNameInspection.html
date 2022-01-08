@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>報告不存在的自定義標記。</p>
+
+<p>
+  您可以使用存儲在 <code>app/views/tags</code> 目錄中的簡單模板文件為您的應用程序創建自定義標記。
+  模板的文件名用作標記名稱。
+  例如，要創建 <code>hello</code> 標記，只需創建 <code>app/views/tags/hello.html</code> 文件。
+  直接引用標記：<code>#{hello /}</code>。
+</p>
+
+<p>如果 <code>app/views/tags/hello.html</code> 不存在，此檢查將報告 <code>#{hello /}</code> 引用。</p>
+
+</body>
+</html>

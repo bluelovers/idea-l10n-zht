@@ -1,0 +1,14 @@
+<html>
+<body>
+報告捕獲 <code>java.lang.ThreadDeath</code> 並且不重新拋出異常的 <code>try</code> 語句。
+<p><b>示例：</b></p>
+<pre><code>
+  try {
+    executeInParallel(request);
+  } catch (ThreadDeath ex) { // warning: ThreadDeath 'ex' not rethrown
+    return false;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

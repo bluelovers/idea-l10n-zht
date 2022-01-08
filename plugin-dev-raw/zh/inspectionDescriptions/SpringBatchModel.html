@@ -1,0 +1,39 @@
+<html>
+<body>
+報告 <a href="https://spring.io/projects/spring-batch">Spring Batch</a> 基于 XML 的應用程序上下文的問題：
+<ul>
+  <li>未解析的 Bean 引用</li>
+  <li>缺少標記和特性</li>
+  <li>屬性類型不正確</li>
+  <li><code>enum</code> 屬性不一致</li>
+  <li>引用 Bean 的類型不正確</li>
+</ul>
+
+<!-- tooltip end -->
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;beans ... &gt;
+  &lt;batch:job id="" &lt;!-- Value must not be empty --&gt;
+    incrementer="dummyBean"  &lt;!-- Bean 必須為 'org.springframework.batch.core.JobParametersIncrementer' 類型 --&gt;
+    job-repository="transactionManager"  &lt;!-- Bean 必須為 'org.springframework.batch.core.repository.JobRepository' 類型 --&gt;
+    parent="INVALID_VALUE" &lt;!-- 無法解析作業 INVALID_VALUE --&gt;
+    restartable="INVALID_VALUE"> &lt;!-- 無法解析符號 INVALID_VALUE --&gt;
+    &lt;batch:validator
+      ref="dataSource"&gt;  &lt;!-- Bean 必須為 'org.springframework.batch.core.JobParametersValidator' 類型 --&gt;
+    &lt;/batch:validator&gt;
+  &lt;/batch:job&gt;
+  &lt;batch:job-repository/&gt;
+
+  &lt;bean id="dataSource" class="org.springframework.jdbc.datasource.DelegatingDataSource"/&gt;
+  &lt;bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"/&gt;
+
+  &lt;bean id="dummyBean" class="java.lang.String"/&gt;
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>
+
+</body>
+</html>
+

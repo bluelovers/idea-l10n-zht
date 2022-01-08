@@ -1,0 +1,37 @@
+<html>
+<body>
+報告在對象構造期間對當前類的重寫方法的任何調用。
+如果對象構造在內部，則會发生這種情況：
+<ul>
+  <li>構造函數</li>
+  <li>非 static 實例初始值設定項</li>
+  <li>非 static 字段初始值設定項</li>
+  <li><code>clone()</code></li>
+  <li><code>readObject()</code></li>
+  <li><code>readObjectNoData()</code></li>
+</ul>
+<p>此類調用可能會導致難以捉摸的錯誤，因為不能保證對象在方法調用发生之前被初始化。</p>
+<p>示例：</p>
+<pre><code>
+  abstract class Parent {
+    void someMethod() { }
+  }
+
+  class Child extends Parent {
+    Child() {
+      someMethod();
+    }
+
+    @Override
+    void someMethod() { }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>此檢查與以下各項共享其功能：</p>
+<ul>
+  <li><b>對象構造期間調用的 abstract 方法</b>檢查</li>
+  <li><b>對象構造期間調用的可重寫方法</b>檢查</li>
+</ul>
+<p>一次只應啟用一個檢查，以防止重復警告。</p>
+</body>
+</html>

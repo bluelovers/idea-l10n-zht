@@ -1,0 +1,45 @@
+<html>
+<body>
+<p>報告 XML 應用程序上下文中注入點的不一致標記和特性。</p>
+
+<ul>
+  <li><code>&lt;property&gt;</code> 和 <code>&lt;constructor-arg&gt;</code> 必須指定 <code>ref</code>、<code>value</code> 或子元素</li>
+  <li><code>&lt;property&gt;</code> 和 <code>&lt;constructor-arg&gt;</code> 不能包含多個子元素</li>
+  <li><code>&lt;ref&gt;</code> 可以包含 <code>bean</code> 特性、<code>local</code> 特性或 <code>parent</code> 特性</li>
+  <li><code>&lt;ref&gt;</code> 必須指定一個 Bean</li>
+  <li><code>&lt;idref&gt;</code> 可以包含 <code>bean</code> 特性或 <code>local</code> 特性</li>
+  <li><code>&lt;idref&gt;</code> 必須指定一個 Bean</li>
+  <li><code>&lt;map&gt;</code> 必須指定一個鍵</li>
+  <li><code>&lt;idref&gt;</code> 可以包含 <code>key</code> 特性、<code>key-ref</code> 特性或 <code>&lt;key&gt;</code> 子元素</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;beans&gt;
+
+  <em>&lt;!-- 1.  屬性只允許包含 "ref" 特性或 "value" 特性或子元素 --&gt;</em>
+  &lt;bean class="MyClass"&gt;
+    &lt;property name="bean" ref="myBean" value="foo"/&gt;
+    // 屬性只允許包含 "ref" 特性或 "value" 特性或子元素
+  &lt;/bean&gt;
+
+  <em>&lt;!--  2.  屬性不得包含多個子元素 --&gt;</em>
+  &lt;bean class="MyFactory"&gt;
+    &lt;property name="bean"&gt;
+    &lt;ref&gt;bean&lt;/ref&gt; // 屬性不得包含多個子元素
+     &lt;value&gt;foo&lt;/value&gt; // 屬性不得包含多個子元素
+     &lt;/property&gt;
+  &lt;/bean&gt;
+
+  <em>&lt;!-- 3. 映射條目必須指定一個鍵  --&gt;</em>
+  &lt;bean class="MyBean"&gt;
+     &lt;property name="map"&gt;
+        &lt;map&gt;
+           &lt;entry value="foo"/&gt;  // 映射條目必須指定一個鍵
+        &lt;/map&gt;
+     &lt;/property&gt;
+  &lt;/bean&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

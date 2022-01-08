@@ -1,0 +1,35 @@
+<html>
+<body>
+報告可以自動替換為增強型 <code>switch</code> 語句或表達式的 <code>switch</code> 語句。
+<p><b>示例：</b></p>
+<pre><code>
+  double getPrice(String fruit) {
+    // Switch 語句可以替換為增強型 'switch'
+    switch (fruit) {
+      case "Apple":
+        return 1.0;
+      case "Orange":
+        return 1.5;
+      case "Mango":
+        return 2.0;
+      default:
+        throw new IllegalArgumentException();
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  double getPrice(String fruit) {
+    return switch (fruit) {
+      case "Apple" -> 1.0;
+      case "Orange" -> 1.5;
+      case "Mango" -> 2.0;
+      default -> throw new IllegalArgumentException();
+    };
+  }
+  </code></pre>
+<!-- tooltip end -->
+<p>此檢查僅適用于 14 級或更高的語言級別</p>
+<p><small>2019.1 最新變化</small></p>
+</body>
+</html>

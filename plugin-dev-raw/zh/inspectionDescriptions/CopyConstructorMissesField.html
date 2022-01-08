@@ -1,0 +1,27 @@
+<html>
+<body>
+報告不復制該類所有字段的復制構造函數。
+<p>
+  帶有初始值設定項的 <code>final</code> 字段和 <code>transient</code> 字段被視為不必復制。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Point {
+
+    private int x;
+    private int y;
+
+    Point(int x, int y) {
+      this.x = x;
+      this.y = y;
+    }
+
+    Point(Point other) {
+      // 字段 x 和 y 未初始化
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.1 最新變化</small>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+報告方法 <code>throws</code> 列表中的重復異常。
+<p>示例：</p>
+<pre><code>
+  void f() throws Exception, Exception {}
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  void f() throws Exception {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用<b>忽略子類化其他異常的異常</b>選項可以忽略子類化其他異常的異常。
+</p>
+</body>
+</html>

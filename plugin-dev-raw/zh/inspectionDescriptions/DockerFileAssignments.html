@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>報告 <code>ARG</code>、<code>ENV</code> 和 <code>LABEL</code> 命令中鍵值對的不正確間距。</p>
+<p>
+  盡管 <a href="https://docs.docker.com/engine/reference/builder/#arg">Dockerfile 規范</a>中沒有明確指定，但不允許使用鍵值對的某些間距組合。
+  到達問題指令后，Docker 構建將失敗。
+</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<ul>
+  <li><code>ARG</code> 命令不允許在 '=' 周圍有任何空格</li>
+  <li><code>ENV</code> 和 <code>LABEL</code> 在 '=' 后不允許有空格</li>
+</ul>
+<pre><code>
+  # 下面的所有命令都將失敗
+  ARG answer = 42
+  ARG version= "1.0.0"
+  LABEL "maintained.by"= someone@gmail.com
+  ENV JAVA_HOME= "/docker-java-home"
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  ARG answer=2
+  ARG version="1.0.0"
+  LABEL "maintained.by"=someone@gmail.com
+  ENV JAVA_HOME="/docker-java-home"
+</code></pre>
+</body>
+</html>

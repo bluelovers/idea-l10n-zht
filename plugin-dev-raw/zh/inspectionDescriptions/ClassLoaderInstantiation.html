@@ -1,0 +1,16 @@
+<html>
+<body>
+報告 <code>java.lang.ClassLoader</code> 類的實例化。
+<p>雖然通常是良性的，但在任何安全審核中都應該仔細檢查 <code>ClassLoader</code> 的任何實例化。</p>
+<p><b>示例：</b></p>
+<pre><code>    Class&lt;?&gt; loadExtraClass(String name) throws Exception {
+      try(URLClassLoader loader =
+          new URLClassLoader(new URL[]{new URL("extraClasses/")})) {
+        return loader.loadClass(name);
+      }
+    }
+  </code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

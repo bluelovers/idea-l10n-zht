@@ -1,0 +1,35 @@
+<html>
+<body>
+報告隱式轉換為 long 的整數乘法和左移。
+<p><b>示例：</b></p>
+<pre><code>
+  void f(int i) {
+    long val = 65536 * i;
+  }
+</code></pre>
+<p>應用快速修復后，代碼變為：</p>
+<pre><code>
+  void x(int i) {
+    long val = 65536<b>L</b> * i;
+  }
+</code></pre>
+<p><b>示例：</b></p>
+<pre><code>
+  void f(int i) {
+    long value = i &lt;&lt; 24;
+  }
+</code></pre>
+<p>應用快速修復后，代碼變為：</p>
+<pre><code>
+  void f(int i) {
+    long value = (long) i &lt;&lt; 24;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  此類乘法通常表明有錯誤，因為可能會意外发生溢出截斷。
+  將 <code>int</code> 文字轉換為 <code>long</code> 文字 (<code>65536<b>L</b></code>) 可以修正該問題。
+</p>
+
+</body>
+</html>

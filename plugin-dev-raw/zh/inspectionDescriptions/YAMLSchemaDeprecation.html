@@ -1,0 +1,22 @@
+<html>
+<body>
+報告 YAML 文件中已棄用的鍵。
+<p>僅當存在與相應 YAML 文件關聯的 JSON 架構時，才會檢查是否棄用。</p>
+<p>請注意，JSON 架構規范中尚未定義棄用機制，並且此檢查使用非標准的 <code>deprecationMessage</code> 擴展。</p>
+<p><b>方案棄用示例：</b></p>
+<pre><code>
+  {
+    "properties": {
+      "SomeDeprecatedProperty": {
+        "deprecationMessage": "Baz",
+        "description": "Foo bar"
+      }
+    }
+  }
+</code></pre>
+<p><b>以下是帶有相應警告的示例：</b></p>
+<pre><code>
+  SomeDeprecatedProperty: some value
+</code></pre>
+</body>
+</html>

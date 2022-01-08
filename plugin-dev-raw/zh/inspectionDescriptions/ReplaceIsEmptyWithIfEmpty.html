@@ -1,0 +1,28 @@
+<html>
+<body>
+報告 <code>if</code> 語句中的 <code>isEmpty</code>、<code>isBlank</code>、<code>isNotEmpty</code> 或 <code>isNotBlank</code> 調用以賦予默認值。
+<p>該快速修復會將 <code>if</code> 條件替換為 <code>ifEmpty</code> 或 <code>ifBlank</code> 調用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(list: List&lt;Int&gt;): List&lt;Int&gt; {
+      return if (list.isEmpty()) {
+          println()
+          foo()
+      } else {
+          list
+      }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun test(list: List&lt;Int&gt;): List&lt;Int&gt; {
+      return list.ifEmpty {
+          println()
+          foo()
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>此檢查僅報告項目或模塊的 Kotlin 語言版本是否為 1.3 或更高版本。</p>
+</body>
+</html>

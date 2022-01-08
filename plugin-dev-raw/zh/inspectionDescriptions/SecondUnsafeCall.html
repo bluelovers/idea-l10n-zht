@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>報告鏈方法或屬性調用過程中可能產生的 <b>NullPointerException</b>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  domain?.getZone().getName()
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  domain?.getZone()?.getName()
+</code></pre>
+</body>
+</html>

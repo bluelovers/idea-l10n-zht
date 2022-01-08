@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>如果沒有 <code>pointcut</code> 或 <code>pointcut-ref</code> 特性，則報告不正確的建議和顧問元素。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+&lt;beans &gt;
+    &lt;aop:config&gt;
+      &lt;aop:pointcut id="zzz" expression="args()"/&gt;
+        &lt;aop:aspect ref="xxx"&gt;
+            &lt;aop:before method="writeArg1" pointcut="execution(* *(String))"/&gt;
+            &lt;aop:after method="aaa" pointcut-ref="zzz"/&gt;
+            &lt;<strong>aop:after-throwing</strong> method="aaa"/&gt; &lt;!--應定義 'pointcut' 或 'pointcut-ref' 特性 --&gt;
+       &lt;/aop:aspect&gt;
+    &lt;/aop:config&gt;
+&lt;/beans&gt;
+
+</code></pre>
+
+</body>
+</html>

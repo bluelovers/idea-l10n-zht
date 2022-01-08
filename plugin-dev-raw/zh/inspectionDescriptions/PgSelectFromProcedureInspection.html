@@ -1,0 +1,16 @@
+<html>
+<body>
+報告從函數執行 SELECT 或執行沒有類型別名的 DBLINK（例如 <code> AS t1 (s VARCHAR) </code>）的情況。
+  <p>此要求不適用于標量函數。</p>
+<p>示例（PostgreSQL）：</p>
+<pre><code>CREATE FUNCTION produce_a_table() RETURNS RECORD AS $$
+SELECT 1;
+$$ LANGUAGE sql;
+SELECT * FROM produce_a_table() AS s (c1 INT);
+SELECT * FROM produce_a_table() AS s (c1);
+SELECT * FROM DBLINK('dbname=mydb', 'SELECT proname, prosrc FROM pg_proc') AS t1;</code></pre>
+<p><code>AS s (c1 INT)</code> 具有類型別名，而 <code>AS s (c1)</code> 和 <code>AS t1</code> 沒有。
+  在這種情況下，將高亮顯示 <code>produce_a_table()</code> 和 <code>DBLINK()</code> 的第二次調用。
+</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+報告導出到定義它們的同一 Java 9 模塊或在該模塊中打開的軟件包。
+該快速修復會從 <code>module-info.java</code> 中移除此類指令。
+<p>示例：</p>
+<pre><code>
+  module com.mycomp {
+    exports com.mycomp.main to com.mycomp;
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  module main {
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的語言級別為 9 或更高時，此檢查才會報告。</p>
+</body>
+</html>

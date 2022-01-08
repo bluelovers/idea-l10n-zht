@@ -1,0 +1,17 @@
+<html>
+<body>
+報告未調用由 <code>context.WithCancel</code> 和類似的函數返回 <code>cancel</code> 函數的執行路徑。
+<p><code>WithCancel</code>、<code>WithDeadline</code> 和 <code>WithTimeout</code> 函數接收一個 <code>Context</code>（父項）並返回一個派生的 <code>Context</code>（子項）和一個 <code>CancelFunc</code>。
+  調用 <code>CancelFunc</code> 可以取消子項及其子項，刪除父項對該子項的引用，並停止任何
+  相關的定時器。
+  如果不調用 CancelFunc，就會泄漏子項和其子項，直到父項被取消或定時器啟動。</p>
+<p>有關 <code>context</code> 軟件包的更多信息，請參見 <a href="https://golang.org/pkg/context/">golang.org 上的 Package context</a> 頁面。</p>
+<p>示例：</p>
+<pre><code>func _(ctx context.Context, cancel func()) {
+ var ctx2 context.Context
+ ctx2, cancel = context.WithCancel(ctx)
+ _ = ctx2
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+報告被聲明為 <code>java.lang.String</code> 且重復追加的變量。 此類變量可以更有效地被聲明為 <code>java.lang.StringBuffer</code> 或 <code>java.lang.StringBuilder</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  String s = "";
+  for (int i = 0; i &lt; names.length; i++) {
+    String name = names[i] + (i == names.length - 1 ? "" : " ");
+    s = s + name;
+  }
+</code></pre>
+<p>此類循環可以替換為：</p>
+<pre><code>
+  StringBuilder s = new StringBuilder();
+  for (int i = 0; i &lt; names.length; i++) {
+    String name = names[i] + (i == names.length - 1 ? "" : " ");
+    s.append(name);
+  }
+</code></pre>
+<p>或者甚至可以替換為：</p>
+<pre><code>
+  String s = String.join(" ", names);
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用該選項可使此檢查僅在變量被附加到循環中時報告。
+</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+報告具有 <code>@deprecated</code> Javadoc 標記但沒有 <code>@java.lang.Deprecated</code> 注解的模塊聲明、類、字段或方法。
+<p><b>示例：</b></p>
+<pre><code>
+  /**
+   * @deprecated use {@code example()} instead
+   */
+  void sample(){ }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  /**
+   * @deprecated use {@code example()} instead
+   */
+  @Deprecated
+  void sample(){ }
+</code></pre>
+<!-- tooltip end -->
+<p>此檢查僅在項目或模塊的語言級別為 5 或更高時有效。</p>
+<p>
+使用下面的復選框，對使用 <code>@Deprecated</code> 注解但在 <code>@deprecated</code> Javadoc 標記中沒有解釋的符號发出警告。
+
+</body>
+</html>

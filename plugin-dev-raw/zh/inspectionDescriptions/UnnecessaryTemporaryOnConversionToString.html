@@ -1,0 +1,14 @@
+<html>
+<body>
+報告從基元類型轉換為 <code>String</code> 時創建的不必要的臨時對象。
+<p><b>示例：</b></p>
+<pre><code>
+  String foo = new Integer(3).toString();
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  String foo = Integer.toString(3);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

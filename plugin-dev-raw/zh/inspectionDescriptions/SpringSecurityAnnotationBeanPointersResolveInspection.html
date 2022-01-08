@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>報告 <a href="https://spring.io/projects/spring-security">Spring Security</a> 注解中引用的未解析 Spring Bean。</p>
+
+<p><b>示例：</b></p>
+<ul>
+  <li>
+    <pre><code>@WithUserDetails(value = "admin", userDetailsServiceBeanName = "unknownUserDetailsService")
+      // 如果 Spring 模型中沒有定義 'unknownUserDetailsService'，將報告 "無法解析 'unknownUserDetailsService' Bean"
+    </code></pre>
+  </li>
+  <li>
+    <pre><code>@WithUserDetails(value = "admin", userDetailsServiceBeanName = "jpaUserDetailsService")
+      //"Bean 必須為 'org.springframework.security.core.userdetails.UserDetailsService' 類型"
+      // 如果 "jpaUserDetailsService" Bean 不是 'UserDetailsService' 類型，將報告
+    </code></pre>
+  </li>
+</ul>
+</body>
+</html>

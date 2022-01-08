@@ -1,0 +1,67 @@
+<html>
+<body>
+<p>報告出現在具有無效簽名或無效類型字段的類或方法上的 Seam 注解。</p>
+
+<ul>
+  <li>
+    <p><code>@Name</code> 在接口和 abstract 類上無效。 在注解的類中要求一個無實參構造函數。</p>
+  </li>
+  <li>
+    <p><code>@In</code> 必須出現在字段或 setter 方法上，例如 <code>void setUser(User user)</code>。</p>
+    <ul>
+      <li>void 返回類型</li>
+      <li>一個實參</li>
+      <li>非 static</li>
+      <li>名稱必須以 <code>set</code> 開頭</li>
+    </ul>
+  </li>
+  <li>
+    <p><code>@Out</code> 必須出現在字段或 getter 方法上，例如 <code>User getUser()</code>。</p>
+    <ul>
+      <li>非 void 返回類型</li>
+      <li>無實參</li>
+      <li>非 static</li>
+      <li>名稱必須以 <code>get</code> 開頭，如果返回類型為 <code>boolean</code>，則可選 <code>is</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>@DataModel</strong> 必須出現在字段或 getter 方法上（與 <code>@Out</code> 注解相同）。
+    字段類型或返回類型必須是以下之一：</p>
+    <ul>
+      <li><code>java.util.List</code></li>
+      <li><code>java.util.Set</code></li>
+      <li><code>java.util.Map</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><code>@DataModelSelection</code> 必須出現在 setter 方法上。</p>
+  </li>
+  <li>
+    <p><code>@DataModelSelectionIndex</code> 必須出現在 setter 方法上。</p>
+  </li>
+  <li>
+    <p><code>@Factory</code> 和 <code>@Unwrap</code> 必須出現在具有以下簽名的方法上：</p>
+    <ul>
+      <li>非 void 返回類型</li>
+      <li>沒有形參或單個 <code>org.jboss.seam.Component</code> 形參（或其超類型）</li>
+      <li>非 static</li>
+    </ul>
+  </li>
+  <li>
+    <p><code>@Create</code> 必須出現在具有以下簽名的方法上：</p>
+    <ul>
+      <li>沒有形參或單個 <code>org.jboss.seam.Component</code> 形參（或其超類型）</li>
+      <li>非 static</li>
+    </ul>
+  </li>
+  <li>
+    <p><code>@Destroy</code> 必須出現在具有以下簽名的方法上：</p>
+    <ul>
+      <li>void 返回類型</li>
+      <li>無形參</li>
+      <li>非 static</li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

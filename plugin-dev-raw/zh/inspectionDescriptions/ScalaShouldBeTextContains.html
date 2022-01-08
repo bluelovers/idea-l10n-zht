@@ -1,0 +1,14 @@
+<html>
+<body>
+報告 PsiElement 或 ASTNode 上 <code>.getText.contains(char)</code> 的用法，並建議將其替換為 <code>PsiElement.textContains(char)</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  psiElement.getText.contains('x')
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  psiElement.textContains('x')
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

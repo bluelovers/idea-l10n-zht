@@ -1,0 +1,24 @@
+<html>
+<body>
+報告無法使用 <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> 以所需精度表示的浮點文字 <code>Float</code> 和 <code>Double</code> 類型。
+
+<p>
+    例如，<code>1.9999999999999999999</code> 的有效數字太多，因此其作為 <code>Double</code> 的表示將舍入為 <code>2.0</code>。
+    指定多余的數字可能具有誤導性，因為它掩蓋了改用舍入值進行計算的事實。
+</p>
+
+<p>
+    該快速修復會將文字替換為與常量的實際表示相匹配的舍入值。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  val x: Float = 3.14159265359f
+</code></pre>
+
+<p>在應用快速修復后：</p>
+<pre><code>
+  val x: Float = 3.1415927f
+</code></pre>
+</body>
+</html>

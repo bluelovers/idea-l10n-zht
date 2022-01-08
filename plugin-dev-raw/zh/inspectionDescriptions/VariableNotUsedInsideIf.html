@@ -1,0 +1,17 @@
+<html>
+<body>
+報告對在 <code>if</code> 語句或條件表達式的條件中檢查可 null 性但未在該 <code>if</code> 語句內部使用的變量的引用。
+<p>
+  這通常意味著不必要進行該檢查，或者在 <code>if</code> 語句中沒有錯誤引用變量。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void test(Integer i) {
+    if (i != null) { // 這里的 'i' 沒有在 'if' 語句內部使用
+      System.out.println();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

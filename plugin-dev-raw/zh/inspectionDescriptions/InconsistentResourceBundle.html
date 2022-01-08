@@ -1,0 +1,81 @@
+<html>
+<body>
+報告資源包中包含的屬性文件中的問題。
+<ul>
+  <li><b>報告缺失的翻譯</b>
+  </li>
+</ul>
+選項會控制搜索未翻譯的屬性。 <br>
+它報告在父屬性文件中包含但在繼承中缺失的屬性（除非它是語言方言）。 <br>
+例如： 擁有此資源包： <br>
+
+<b>messages.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
+<b>messages_fr.properties</b>：空<br>
+
+屬性 <font color="#000080"><b>abc</b></font> 將報告為未翻譯。
+<ul>
+  <li>
+
+    <b>報告不一致的屬性</b>
+  </li>
+</ul>
+選項會控制無效的資源包結構檢查。 <br>
+它報告在繼承屬性文件中包含但在父級（如果沒有父級，則在同級）中缺失的屬性。 <br>
+例如： 擁有此資源包： <br>
+<b>messages.properties</b>：空 <br>
+<b>messages_fr.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
+
+此處的屬性 <font color="#000080"><b>abc</b></font> 翻譯不適用于法語以外的任何語言，因此，將在（默認）屬性文件 <b>messages.properties</b> 中報告為缺失。
+
+<ul>
+  <li>
+
+    <b>報告使用相同值重寫的屬性</b>
+  </li>
+</ul>
+選項會檢查逐字復制粘貼到多個屬性文件中的屬性。 <br>
+例如： 在此資源包中： <br>
+<b>messages.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
+<b>messages_fr.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
+
+屬性 <font color="#000080"><b>abc</b></font> 將在文件 <b>messages_fr.properties</b> 中報告為不必要地繼承。
+<br>
+
+<ul>
+  <li>
+
+    <b>報告被不同的占位符重寫的屬性</b>
+  </li>
+</ul>
+選項會檢查為占位符一致性而重寫的屬性。 <br>
+例如： 在此資源包中： <br>
+<b>messages.properties</b>： <br>
+<font color="#000080"><b>qwe={0}xxx{1}</b></font> <br>
+<font color="#000080"><b>abc={0}yyy{1}</b></font> <br>
+<b>messages_fr.properties</b>： <br>
+<font color="#000080"><b>qwe={0}xxx{0}xxx{1}</b></font> <br>
+<font color="#000080"><b>abc={0}yyy</b></font> <br>
+
+
+將報告屬性 <font color="#000080"><b>abc</b></font>，因為屬性包含值與 <b>messages.properties</b> 不對應的消息格式占位符。
+<br>
+
+<ul>
+  <li>
+
+    <b>報告使用不同值結尾重寫的屬性</b>
+  </li>
+</ul>
+選項會檢查為了結尾一致性而被重寫的屬性。 <br>
+例如： 在此資源包中： <br>
+<b>messages.properties</b>： <br>
+<font color="#000080"><b>abc=xxxzzz</b></font> <br>
+<b>messages_fr.properties</b>： <br>
+<font color="#000080"><b>abc=xxx;</b></font> <br>
+
+
+屬性 <font color="#000080"><b>abc</b></font> 將被報告，因為屬性在值的末尾包含特殊符號（<b>'!'</b>、<b>'?'</b>、<b>'.'</b>、<b>':'</b> 或 <b>';'</b>），但 <b>messages.properties</b> 中的值沒有。
+<br>
+
+</body>
+</html>

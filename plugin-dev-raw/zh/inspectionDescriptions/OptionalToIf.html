@@ -1,0 +1,23 @@
+<html>
+<body>
+報告可替換為 <code>if</code> 語句序列的 <code>Optional</code> 調用鏈。
+<p>示例：</p>
+<pre><code>
+  return Optional.ofNullable(name)
+    .map(this::extractInitials)
+    .map(initials -> initials.toUpperCase(Locale.ENGLISH))
+    .orElseGet(this::getDefault);
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  if (name != null) {
+    String initials = extractInitials(name);
+    if (initials != null) return initials.toUpperCase(Locale.ENGLISH);
+  }
+  return getDefault();
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的語言級別為 8 或更高時，此檢查才會報告。</p>
+<p><small>2020.2 最新變化</small></p>
+</body>
+</html>

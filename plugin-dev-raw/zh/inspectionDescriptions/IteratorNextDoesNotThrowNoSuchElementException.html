@@ -1,0 +1,24 @@
+<html>
+<body>
+報告不能拋出 <code>java.util.NoSuchElementException</code> 的 <code>Iterator.next()</code> 的實現。
+<p>
+  此類實現違反了 <code>java.util.iterator</code> 的約定，如果以非標准方式使用迭代器，可能會導致難以捉摸的錯誤。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Numbers implements Iterator&lt;Integer&gt; {
+    @Override
+    public Integer next() { //warning
+        if (hasNext()) {
+            return generateNext();
+        } else {
+            return null; //而是拋出 NoSuchElementException
+        }
+    }
+
+    ...
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

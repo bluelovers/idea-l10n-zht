@@ -1,0 +1,43 @@
+<html>
+<body>
+報告重寫特定方法而不調用 <code>super</code> 的方法。
+<p>這也稱作<i>被拒絕的遺贈</i>。 此類方法可能表明抽象失敗，導致出現難以跟踪的錯誤。</p>
+  <p>該檢查不報告默認方法和從 <code>java.lang.Object</code> 重寫的方法，但對 <code>clone()</code> 除外。
+  <code>clone()</code> 方法預計會調用其 <code>super</code>，從而自動返回正確類型的對象。</p>
+<p><b>示例：</b></p>
+<ul>
+  <li><pre><code>
+  class A {
+    @Override
+    public Object clone() { // 已報告，因為它不調用 'super.clone()'
+      return new A();
+    }
+  }
+  </code></pre> </li>
+  <li><pre><code>
+  interface I {
+    default void foo() {}
+  }
+
+  class A implements I {
+    // 禁用“忽略 'default' super 方法”和“忽略注解”選項時對方法发出警告
+    @Override
+    public void foo(){}
+  }
+    </code></pre></li>
+</ul>
+<!-- tooltip end -->
+<p>配置檢查：</p>
+<ul>
+  <li>
+    使用<b>僅在通過以下方式注解 super 方法時報告</b>選項，可忽略使用所提供列表中的注解標記的 <code>super</code> 方法。 您可以手動將注解添加到此列表中。
+  </li>
+  <li>
+    使用<b>忽略空 super 方法</b>選項，可忽略僅拋出異常或空的 <code>super</code> 方法。
+  </li>
+  <li>
+    使用<b>忽略 'default' super 方法</b>選項，可忽略包含 <code>default</code> 關鍵字的 <code>super</code> 方法。
+  </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+報告使用以下其中一種方法訪問系統屬性的代碼：
+<ul>
+  <li>
+    <code>System.getProperties()</code>、<code>System.setProperty()</code>、<code>System.setProperties()</code>、<code>System.clearProperties()</code>
+  </li>
+  <li>
+    <code>Integer.getInteger()</code>
+  </li>
+  <li>
+    <code>Boolean.getBoolean()</code>
+  </li>
+</ul>
+<p>
+雖然訪問系統屬性本身並不是安全風險，但它經常出現在惡意代碼中。
+在任何安全審核中都應該仔細檢查訪問系統屬性的代碼。
+</body>
+</html>

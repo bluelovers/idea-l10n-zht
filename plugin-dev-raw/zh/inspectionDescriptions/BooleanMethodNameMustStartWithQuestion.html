@@ -1,0 +1,19 @@
+<html>
+<body>
+報告名稱不以疑問詞開頭的布爾方法。
+<p>此檢查將忽略重寫庫方法的布爾方法。</p>
+<p><b>示例：</b></p>
+<pre><code>boolean empty(List&lt;String&gt; list) {
+  return list.isEmpty();
+}</code></pre>
+<p>只能在編輯器中使用重命名此類方法的快速修復。</p>
+<!-- tooltip end -->
+<p>配置檢查：</p>
+<ul>
+  <li>使用<b>布爾方法名稱前綴</b>列表可指定布爾方法名稱開頭可以接受的疑問詞。</li>
+  <li>使用<b>忽略具有 'java.lang.Boolean' 返回類型的方法</b>選項，可忽略返回類型為 <code>java.lang.Boolean</code> 的方法。 </li>
+  <li>使用<b>忽略 @&interface 中的布爾方法</b>選項，可忽略注解返回類型 (<code>@interface</code>) 的布爾方法。</li>
+  <li>使用<b>忽略重寫/實現 super 方法的方法</b>選項，可忽略具有 super 方法的方法。</li>
+</ul>
+</body>
+</html>

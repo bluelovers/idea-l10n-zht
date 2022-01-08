@@ -1,0 +1,36 @@
+<html>
+<body>
+報告不應阻塞線程的代碼段中的線程阻塞方法調用。
+
+<p><b>示例（項目 Reactor）：</b></p>
+<pre><code>
+Flux.just("1").flatMap(f -&gt; {
+    Flux&lt;String&gt; just = loadUsersFromDatabase();
+    just.toIterable(); // 錯誤：在非阻塞范圍內調用阻塞運算符
+    return just;
+  }
+);
+</code></pre>
+
+<p>考慮使用<a href="https://projectreactor.io/docs/core/release/reference/#faq.wrap-blocking">適當的計划程序</a>（例如 <code>Schedulers.boundedElastic()</code>）運行阻塞代碼，或者嘗試尋找替代的非阻塞 API。</p>
+
+<br/>
+
+<p><b>示例（Kotlin 協同程序）：</b></p>
+<pre><code>
+suspend fun exampleFun() {
+    Thread.sleep(100); // 錯誤：在掛起函數中調用阻塞方法
+}
+</code></pre>
+
+<p>考慮<a href="https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html">使用特殊調度程序</a>（例如 <code>Dispatchers.IO</code>）運行阻塞代碼，或嘗試尋找替代的非阻塞 API。</p>
+
+<!-- tooltip end -->
+<p>配置檢查：</p>
+<ul>
+  <li>在<b>阻塞注解</b>列表中，指定標記線程阻塞方法的注解。</li>
+  <li>在<b>無阻塞注解</b>列表中，指定標記非阻塞方法的注解。</li>
+</ul>
+<p>指定的注解可用作<a href="https://www.jetbrains.com/help/idea/external-annotations.html">外部注解</a></p>
+</body>
+</html>

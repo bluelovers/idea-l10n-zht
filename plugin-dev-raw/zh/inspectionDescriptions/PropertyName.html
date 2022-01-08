@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>報告不遵循推薦命名慣例的屬性名稱。</p>
+<p>
+    一致的命名會讓閱讀和理解代碼變得更容易。
+    根據 <a href="https://kotlinlang.org/docs/coding-conventions.html#naming-rules">Kotlin 官方樣式指南</a>，屬性名稱應以小寫字母開頭並使用駝峰拼寫法。
+</p>
+<p>可以通過更改“模式”正則表達式來引入其他命名規則。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val My_Cool_Property = ""
+</code></pre>
+<p>該快速修復會根據 Kotlin 命名慣例重命名類：</p>
+<pre><code>
+  val myCoolProperty = ""
+</code></pre>
+</body>
+</html>

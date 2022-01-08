@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>報告默認軟件包中的<code>@SpringBootApplication</code> 和冗余的<code>@EnableAutoConfiguration</code> 或 <code>@ComponentScan</code> 注解。</p>
+<p>該快速修復會移除冗余注解。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+@SpringBootApplication
+@ComponentScan // 報告 '冗余聲明: @SpringBootApplication 已暗示 @ComponentScan'
+public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  @SpringBootApplication
+  public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.2 最新變化</small></p>
+</body>
+</html>

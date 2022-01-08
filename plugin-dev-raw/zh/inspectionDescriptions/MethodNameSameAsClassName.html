@@ -1,0 +1,31 @@
+<html>
+<body>
+報告與其類同名的方法。
+雖然 Java 語言允許此類命名，但按照約定，它被保留用于定義構造函數。
+將它用于方法可能是一種錯誤或不好的做法。
+<p><b>示例：</b></p>
+<pre><code>
+  class MyClass {
+    int val;
+
+    // 方法 MyClass 的名稱與其包含類相同。
+    // 可能是錯誤添加了 'void'。
+    void MyClass(int val) {
+      this.val = val;
+    }
+  }
+</code></pre>
+<p>在適當的情況下，可以通過快速修復將方法轉換為構造函數：</p>
+<pre><code>
+  class MyClass {
+    int val;
+
+    MyClass(int val) {
+      this.val = val;
+    }
+  }
+</code></pre>
+<p>可以通過另一種快速修復重命名該方法。</p>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+在以下情況下報告具有特定名稱的方法：
+<ul>
+  <li>方法的名稱與標准庫中几個眾所周知的接口方法的名稱相匹配</li>
+  <li>簽名與對應接口方法的簽名不匹配</li>
+</ul>
+<p>此類方法可能表明接收器類型旨在滿足標准庫中的接口，但由于方法簽名中的錯誤而無法滿足。</p>
+<p>示例：</p>
+<pre><code>type MyReader []byte
+
+func (r MyReader) ReadByte(data []byte) (byte, error) {
+}</code></pre>
+<p>這種用法很可疑，因為它看起來像是試圖實現 <code>io.ByteReader</code>，但簽名不正確。
+  下面這樣寫比較合適：</p>
+<pre><code>type MyReader []byte
+
+func (r MyReader) ReadByte() (byte, error) {
+}</code></pre>
+</body>
+</html>

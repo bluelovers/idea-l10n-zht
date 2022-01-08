@@ -1,0 +1,21 @@
+<html>
+<body>
+報告對程序的語義冗余的代碼塊，並且可以用其內容替換。
+<p>作為 <code>if</code>、<code>do</code>、<code>while</code> 或 <code>for</code> 語句主體的代碼塊將不會被此檢查報告。</p>
+<p>示例：</p>
+<pre><code>
+  void foo() {
+    { // 不必要
+      int result = call();
+      analyze(result);
+    } // 不必要
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置檢查：</p>
+<p>
+使用 <b>忽略 'switch' 語句的分支</b> 選項來忽略用作 switch 語句分支的代碼塊。
+<p>
+
+</body>
+</html>

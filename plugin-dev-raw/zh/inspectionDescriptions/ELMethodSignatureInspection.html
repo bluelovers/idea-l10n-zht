@@ -1,0 +1,22 @@
+<html>
+<body>
+報告 EL 中與 TLD 文件中的 <code>method-signature</code> 約束不匹配的方法調用。
+
+<p><b>示例 Java 類：</b></p><br/>
+<pre><code>
+public class ExampleAction {
+  public void goodAction() { ... }
+  public void badAction(String str) { ... }
+}
+</code></pre>
+
+<p><b>示例 JSP 文件：</b></p><br/>
+<pre><code>
+&lt;jsp:useBean id="example" scope="request" type="org.example.ExampleAction"/&gt;
+&lt;f:view&gt;
+  &lt;h:commandButton action="#{example.goodAction}"/&gt; // 優良：方法接受零實參並返回 `void`
+  &lt;h:commandButton action="#{example.badAction}"/&gt; // 錯誤：方法 `void badAction(String)` 返回 `java.lang.String` 類型而不是 `void`
+&lt;/f:view&gt;
+</code></pre>
+</body>
+</html>

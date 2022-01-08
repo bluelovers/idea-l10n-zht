@@ -1,0 +1,28 @@
+<html>
+<body>
+報告可以替換為 lambda 表達式的匿名類。
+<p>示例：</p>
+<pre><code>
+  new Thread(new Runnable() {
+    @Override
+    public void run() {
+      // 運行線程
+    }
+  });
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  new Thread(() -> {
+    // 運行線程
+  });
+</code></pre>
+<p>
+請注意，如果將匿名類轉換為無狀態 lambda，則 Java 運行時可以在后續調用期間重用相同的 lambda 對象。 另一方面，當使用匿名類時，每次都會創建單獨的對象。 因此，在極少數情況下，應用該快速修復可能會導致語義发生變化，例如，當匿名類實例用作 <code>HashMap</code> 鍵時。
+</p>
+<p>Java 1.7 和更早版本的 JVM 不支持 lambda 語法。</p>
+<!-- tooltip end -->
+<p>
+使用<b>在接口未使用 @FunctionalInterface 注解時報告</b>選項可忽略匿名類實現沒有 <code>@FunctionalInterface</code> 注解的接口的情況。
+</p>
+</body>
+</html>

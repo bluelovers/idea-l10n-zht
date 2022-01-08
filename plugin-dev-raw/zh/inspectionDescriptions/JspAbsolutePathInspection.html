@@ -1,0 +1,19 @@
+<html>
+<body>
+報告 JSP 文件中的絕對路徑。
+<p>如果應用程序上下文非空，它們就不會被解析，因此 JSP 中禁止絕對路徑。</p>
+<p>該快速修復將向路徑中添加動態前綴。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;%@page contentType=&quot;text/html; ISO-8859-1&quot; %&gt;
+
+  &lt;a href=&quot;/hey.jsp&quot;&gt;hey&lt;/a&gt;
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  &lt;%@page contentType=&quot;text/html; ISO-8859-1&quot; %&gt;
+
+  &lt;a href=&quot;${pageContext.request.contextPath}/hey.jsp&quot;&gt;hey&lt;/a&gt;
+</code></pre>
+</body>
+</html>

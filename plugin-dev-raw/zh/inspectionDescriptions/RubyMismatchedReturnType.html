@@ -1,0 +1,17 @@
+<html>
+<body>
+報告推斷類型與方法的預期返回類型不匹配的方法和塊的返回值。 預期的返回類型取自其中任意一種：
+<ul>
+  <li>RBS 類型簽名</li>
+  <li>Sorbet 類型簽名</li>
+  <li>YARD <code>@return</code> 標記</li>
+</ul>
+<p>示例：</p>
+<pre>
+<code># @return [Integer]
+def method
+  1.0
+end</code>
+</pre>
+</body>
+</html>

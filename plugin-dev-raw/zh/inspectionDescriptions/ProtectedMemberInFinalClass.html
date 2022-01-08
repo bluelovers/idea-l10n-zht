@@ -1,0 +1,26 @@
+<html>
+<body>
+報告 <code>final</code> 類中的 <code>protected</code> 成員。
+<p>由于無法繼承 <code>final</code> 類，將方法標記為 <code>protected</code> 可能令人困惑。 最好將此類成員聲明為 <code>private</code> 或軟件包可見。</p>
+<p><b>示例：</b></p>
+<pre><code>record Bar(int a, int b) {
+  protected int sum() { 
+     return a + b;
+  }
+}
+</code>
+</pre>
+<p>在應用快速修復后：</p>
+<pre><code>record Bar(int a, int b) {
+  int sum() { 
+     return a + b;
+  }
+}
+</code></pre>
+
+<p>如本例所示，可以顯式或隱式地將類標記為 <code>final</code>。</p>
+
+<!-- tooltip end -->
+<p>
+</body>
+</html>

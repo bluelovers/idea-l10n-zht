@@ -1,0 +1,34 @@
+<html>
+<body>
+報告可以安全地替換為 <code>static</code> 內部類的匿名類。
+如果某個匿名類沒有從周圍方法顯式引用其封閉實例或局部類，則它可能是 <code>static</code> 內部類。
+<p>
+<code>static</code> 內部類不保留對其封閉實例的隱式引用。
+這可以防止常見的內存泄漏，並減少每個類實例使用的內存。
+</p>
+<p>該快速修復會將匿名類提取到命名的 <code>static</code> 內部類中。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void sample(){
+    Thread thread = new Thread(new Runnable() {
+      @Override
+      public void run() {
+      }
+    });
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  void sample() {
+    Thread thread = new Thread(new Task());
+  }
+
+  private static class Task implements Runnable {
+    @Override
+    public void run() {
+    }
+  }
+</code></pre>
+  <!-- tooltip end -->
+</body>
+</html>

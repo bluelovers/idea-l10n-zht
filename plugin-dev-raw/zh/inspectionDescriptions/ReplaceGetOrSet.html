@@ -1,0 +1,33 @@
+<html>
+<body>
+報告對可通過索引運算符 <code>[]</code> 替換的 <code>get</code> 或 <code>set</code> 函數的顯式調用。
+<p>
+    Kotlin 允許對類型的預定義運算符集進行自定義實現。
+    要重載運算符，您可以使用 <code>operator</code> 修飾符標記相應的函數：
+    <pre><code>
+  operator fun get(index: Int) {}
+  operator fun set(index: Int, value: Int) {}
+    </code></pre>
+
+以上函數對應于索引運算符。
+
+<p><b>示例：</b></p>
+<pre><code>  class Test {
+      operator fun get(i: Int): Int = 0
+  }
+
+  fun test() {
+      Test().get(0) // 可替換的 'get()'
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>  class Test {
+      operator fun get(i: Int): Int = 0
+  }
+
+  fun test() {
+      Test()[0]
+  }
+</code></pre>
+</body>
+</html>

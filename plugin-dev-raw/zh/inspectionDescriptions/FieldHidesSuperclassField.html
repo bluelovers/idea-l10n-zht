@@ -1,0 +1,31 @@
+<html>
+<body>
+報告派生類中與超類的字段同名的字段。
+Java 字段無法在派生類中重寫，因此派生類中的字段將對超類隱藏該字段。
+<p>
+  由于進行此類命名，在基類有意使用同名字段的情況下，您可能會誤用派生類的字段。
+</p>
+<p>建議通過快速修復重命名派生類中的字段。</p>
+<p><b>示例：</b></p>
+<pre><code>class Parent {
+  Parent parent;
+}
+class Child extends Parent {
+  Child parent;
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  您可以為此檢查配置以下選項：
+</p>
+<ol>
+  <li>
+    <strong>忽略不可訪問字段</strong> - 指示此檢查應報告所有名稱衝突，還是只報告與子類可見的字段的衝突。
+  </li>
+  <li>
+    <strong>忽略隱藏 static 字段的 static 字段</strong> - 忽略隱藏基類中的 <code>static</code> 字段的 <code>static</code> 字段。
+  </li>
+</ol>
+
+</body>
+</html>

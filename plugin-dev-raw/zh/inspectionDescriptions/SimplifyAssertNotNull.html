@@ -1,0 +1,21 @@
+<html>
+<body>
+報告檢查已聲明變量非 null 值的 <code>assert</code> 調用。
+<p>使用 <code>!!</code> or <code>?:</code> 可使代碼更簡單。</p>
+<p>該快速修復會將變量初始值設定項中的 <code>assert</code> 替換為 <code>!!</code> 或 <code>?:</code> 運算符。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(p: Array&lt;String?&gt;) {
+      val v = p[0]
+      assert(v != null, { &quot;Should be not null&quot; })
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun foo(p: Array&lt;String?&gt;) {
+      val v = p[0] ?: error(&quot;Should be not null&quot;)
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

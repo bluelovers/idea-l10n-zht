@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>如果 <code>@DefaultValue</code> 的值無法轉換為指定類型的形參，則報告該值。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @GET
+  @Path("/{n}")
+  public String get(@PathParam("n") @DefaultValue("<b>III</b>") int n) { // 錯誤：無法將 'III' 轉換為 int
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+報告在可能已縮小其訪問修飾符的指定檢查范圍中发現的所有字段、方法或類。
+<p>示例：</p>
+<pre><code>
+  class Sample {
+    void foo() {
+        bar("foo", "foo");
+    }
+    void bar(String x, String y) { } // 可以為 private
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用檢查選項可以定義修飾符更改建議的規則。</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+報告不提供無障礙功能上下文的 Swing 組件。
+<p>
+  此信息由屏幕閱讀器使用。 如果不提供，則視障用戶將無法訪問該組件。
+</p>
+<p><b>示例：</b></p>
+<pre><code>  ListCellRenderer&lt;String&gt; renderer = (list, val, index, sel, cell) -> {
+    JPanel panel = new JPanel();
+    return panel;
+  };
+</code></pre>
+<p>
+  要修正此問題，您應該在返回的 <code>JPanel</code> 上調用 <code>setAccessibleName()</code> 或重寫其 <code>getAccessibleContext()</code> 方法。
+</p>
+<p>
+  返回的文本應反映組件的用途。 例如，在 <code>ListCellRenderer</code> 的情況下，這將是菜單項的文本。
+</p>
+</body>
+</html>

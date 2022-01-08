@@ -1,0 +1,23 @@
+<html>
+<body>
+報告可以替換為更具體的常用類或接口的實現或擴展的類或接口。
+<p>為進行此檢查，超類需位于項目源文件中，並且項目需要使用 IntelliJ IDEA 構建系統。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class MyInheritor implements A {} // B 針對 A 引用提供建議
+
+  interface A {}
+
+  abstract class B implements A {}
+
+  abstract class C1 extends B {}
+  abstract class C2 extends B {}
+  abstract class C3 extends B {}
+  abstract class C4 extends B {}
+  abstract class C5 extends B {}
+</code></pre>
+<!-- tooltip end -->
+<p>默認情況下，此檢查不會在編輯器中高亮顯示問題，而是只提供快速修復。</p>
+<p><small>2017.2 最新變化</small>
+</body>
+</html>

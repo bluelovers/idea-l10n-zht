@@ -1,0 +1,10 @@
+<html>
+<body>
+報告測試，基准和示例名稱的格式錯誤。
+<p>根據 <a href="https://golang.org/pkg/testing/">golang.org 上的軟件包測試</a>，名稱必須按照特殊規則編寫，以便 go 工具可以正確處理此名稱。</p>
+<p>示例：</p>
+<pre><code>func Testfoo(*testing.T) {} // 'go' 工具不會運行這個測試</code></pre>
+<p>在應用<b>重命名為</b>快速修復后：</p>
+<pre><code>func TestFoo(*testing.T) {}</code></pre>
+</body>
+</html>

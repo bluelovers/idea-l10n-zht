@@ -1,0 +1,38 @@
+<html>
+<body>
+報告實現 <code>java.io.Serializable</code> 的類中的不可序列化字段。 如果對象被序列化，此類字段將導致運行時異常。
+<p>
+  不報告被聲明為 <code>transient</code> 或 <code>static</code> 的字段，也不報告定義了 <code>writeObject</code> 方法的類的字段。
+</p>
+<p>
+  此檢查假定 <code>java.util.Collection</code> 和 <code>java.util.Map</code> 類型的字段為 <code>Serializable</code>，除非聲明它們的類型為非 <code>Serializable</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class NonSerializableClass {}
+
+  public class SerializableClass implements Serializable {
+      NonSerializableClass clazz; // //警告：可序列化類中存在不可序列化字段 'clazz'
+      static NonSerializableClass staticClazz; // 無警告
+  }
+  </code>
+</pre>
+<!-- tooltip end -->
+<p>
+  使用以下選項配置檢查：
+</p>
+<ul>
+  <li>
+    列出此檢查不應報告其繼承者的類。
+    這適用于從超類繼承 <code>Serializable</code> 但不用于序列化的類。
+  </li>
+  <li>
+    列出會使檢查忽略注解字段的注解。
+  </li>
+  <li>
+    是否忽略使用匿名類初始化的字段。
+  </li>
+</ul>
+
+</body>
+</html>

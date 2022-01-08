@@ -1,0 +1,27 @@
+<html>
+<body>
+報告對 <code>junit.framework.Assert</code> 類中方法的任何調用。 此類已廢棄，這些調用可以替換為對 <code>org.junit.Assert</code> 類中方法的調用。
+<p>示例：</p>
+<pre><code>
+  <b>import</b> org.junit.*;
+  <b>public class</b> NecessaryTest {
+    @Test
+    <b>public void</b> testIt() {
+      junit.framework.Assert.assertEquals("expected", "actual");
+    }
+  }
+</code></pre>
+<p>應用快速修復后，結果如下所示：</p>
+<pre><code>
+  <b>import</b> org.junit;
+  <b>public class</b> NecessaryTest {
+
+    <b>public void</b> testIt() {
+      Assert.assertEquals("expected", "actual");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html><body>
+報告傳遞給 <code>@Test</code> 注解中的 <code>dependsOnMethods</code> 特性的非法方法名稱。
+<p>如果方法名稱不能解析為當前類或其任何父類中的有效、可訪問的 <code>@Test</code> 注解方法，則該方法名稱被認為是非法的。</p>
+<p>示例：</p>
+<pre><code>
+  public class SampleTest {
+    @Test(dependsOnMethods = "testSpellignError")
+    public void testSample() {}
+    @Test
+    public void testSpellingError(){}
+  }
+</code></pre>
+</body></html>

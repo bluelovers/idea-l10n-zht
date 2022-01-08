@@ -1,0 +1,21 @@
+<html>
+<body>
+報告帶有多個資源的 <code>try</code> 語句，這些語句可以自動拆分為多條 try-with-resources 語句。
+<p>這種轉換對于進一步重構很有用 （例如，用于將嵌套的 <code>try</code> 語句提取到單獨的方法中）。 </p>
+<p>示例：</p>
+<pre><code>
+  try (FileInputStream in = new FileInputStream("in.txt");
+     FileOutputStream out = new FileOutputStream("out.txt")) {
+     /*讀取和寫入*/
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  try (FileInputStream in = new FileInputStream("in.txt")) {
+    try (FileOutputStream out = new FileOutputStream("out.txt")) {
+      /*讀取和寫入*/
+    }
+  }
+</code></pre>
+</body>
+</html>

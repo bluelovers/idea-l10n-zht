@@ -1,0 +1,25 @@
+<html>
+<body>
+建議使用字段初始值設定項替換通過賦值的字段初始化。
+<p>僅當字段初始值設定項位于初始值設定項中時才會高亮顯示代碼，並且將其與字段聲明結合可能是安全的。
+  在其他情況下，檢查提供沒有代碼高亮顯示的快速修復，因為修復可能會更改代碼語義。</p>
+<p>示例：</p>
+<pre><code>
+  class MyClass {
+    static final int intConstant;
+    
+    static {
+      intConstant = 10;
+    }
+  }
+</code></pre>
+快速修復將賦予的值移動到字段初始值設定項，並移除類初始值設定項部分（如果可能）：
+<pre><code>
+  class MyClass {
+    static final int intConstant = 10;
+  }
+</code></pre>
+<!-- tooltip end -->
+<small>自從 2017.2</small>
+</body>
+</html>

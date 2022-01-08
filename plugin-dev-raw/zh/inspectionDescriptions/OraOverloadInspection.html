@@ -1,0 +1,15 @@
+<html>
+<body>
+報告 Oracle 中子程序重載的無效情況。
+<p>示例（Oracle）：</p>
+<pre><code>DECLARE
+    SUBTYPE fff IS BINARY_INTEGER;
+    SUBTYPE ggg IS NATURAL;
+    PROCEDURE foo (a IN ggg) IS BEGIN NULL; END;
+    PROCEDURE foo (a IN fff) IS BEGIN NULL; END;
+BEGIN
+    NULL;
+END;</code></pre>
+<p>您不能重載形參僅在子類型方面不同的子程序。 例如，您不能重載一個接受 BINARY INTEGER 形參而另一個接受 NATURAL 形參的過程。 有關過程重載限制的更多信息，請參閱 <a href="https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/subprograms.htm">docs.oracle.com 上的“重載限制”</a>頁面。</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+報告由非 <code>final</code> 字段引用組成的 <code>synchronized</code> 語句鎖定表達式。
+此類語句不太可能包含有用的語義，因為不同的線程即便在對同一對象上操作時也可能獲取不同的鎖定。
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  private Object o;
+  public void foo() {
+    synchronized (o) // 在非 final 字段上同步
+    { }
+  }
+</code></pre>
+</body>
+</html>

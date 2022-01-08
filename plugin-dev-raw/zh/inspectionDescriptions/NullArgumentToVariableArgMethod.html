@@ -1,0 +1,14 @@
+<html>
+<body>
+報告對可變 arity 方法的調用，該調用在 vararg 形參位置有一個實參，這個實參要么是 <code>null</code>，要么是 vararg 形參子類型的數組。
+此類實參可能令人困惑，因為不清楚需要 vararg 調用還是非 vararg 調用。
+<p><b>示例：</b></p>
+<pre><code>
+  String[] ss = new String[]{"foo", "bar"};
+  System.out.printf("%s", ss);
+</code></pre>
+<p>在本例中，不會打印整個數組，而是只打印數組的第一個元素。</p>
+<!-- tooltip end -->
+
+</body>
+</html>

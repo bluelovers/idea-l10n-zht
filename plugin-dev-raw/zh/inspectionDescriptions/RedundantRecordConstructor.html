@@ -1,0 +1,34 @@
+<html>
+<body>
+報告在 Java 記錄中聲明的冗余構造函數。
+<p><b>示例 1：</b></p>
+<pre><code>
+  record Point(int x, int y) {
+    public Point {} // 可以移除
+  }
+  
+  record Point(int x, int y) {
+    public Point(int x, int y) { // 可以移除
+      this.x = x;
+      this.y = y;
+    }
+  }
+</code></pre>
+<p>該快速修復會移除冗余的構造函數。</p>
+<p><b>示例 2：</b></p>
+<pre><code>
+   // 可以轉換為壓縮構造函數
+  record Range(int from, int to) {
+    public Range(int from, int to) {
+      if (from > to) throw new IllegalArgumentException();
+      this.from = from;
+      this.to = to;
+    }
+  }
+</code></pre>
+<p>該快速修復會將此代碼轉換為緊湊構造函數。</p>
+<!-- tooltip end -->
+<p>僅當配置的語言級別為 14 預覽版或 15 預覽版時，此檢查才會報告。</p>
+<p><small>2020.1 最新變化</small></p>
+</body>
+</html>

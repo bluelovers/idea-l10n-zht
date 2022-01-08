@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>報告在應用程序上下文中定義的重復 Bean 名稱。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;beans profile="PROD"&gt;
+    &lt;bean class="..." id="duplicatedName"/&gt;  // 錯誤
+    &lt;bean class="..." name="foo_name, duplicatedName"/&gt; // 'duplicatedName' 錯誤
+    &lt;bean class="..." id="toBeAliased"/&gt;
+
+    &lt;alias alias="duplicatedName" name="toBeAliased"/&gt; // 'duplicatedName' 錯誤
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

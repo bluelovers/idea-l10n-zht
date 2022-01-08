@@ -1,0 +1,11 @@
+<html>
+<body>
+報告作為 <code>@Pattern</code> 形參的實參傳遞並從與指定模式不匹配的 <code>@Pattern</code> 注解方法返回的表達式。
+<p><b>示例：</b></p>
+<pre><code>
+  @Pattern("\\d\\d-\\d\\d\\d") String getId() {
+    <b>return</b> "1";
+  }
+</code></pre>
+</body>
+</html>

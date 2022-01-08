@@ -1,0 +1,34 @@
+<html>
+<body>
+報告尾遞歸，即方法在返回前調用自身作為其最后一項操作。
+<p>
+  尾遞歸總是可以替換為循環，循環的速度快得多。
+  有些 JVM 執行尾調用優化，而其他一些 JVM 則不執行。 因此，尾遞歸解決方案在不同的虛擬機上可能有截然不同的性能特征。
+</p>
+<p>示例：</p>
+<pre><code>
+  int factorial(int val, int runningVal) {
+    if (val == 1) {
+      return runningVal;
+    } else {
+      return factorial(val - 1, runningVal * val);
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  int factorial(int val, int runningVal) {
+    while (true) {
+      if (val == 1) {
+        return runningVal;
+      } else {
+        runningVal = runningVal * val;
+        val = val - 1;
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

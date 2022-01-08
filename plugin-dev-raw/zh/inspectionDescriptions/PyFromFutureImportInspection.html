@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>報告未在文件開頭使用的 <code>from __future__ import</code> 語句</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+a = 1
+from __future__ import print_function
+print()
+</pre>
+<p>應用快速修復后，代碼變為：</p>
+<pre style="font-family: monospace">
+from __future__ import print_function
+
+a = 1
+print()
+</pre>
+</body>
+</html>

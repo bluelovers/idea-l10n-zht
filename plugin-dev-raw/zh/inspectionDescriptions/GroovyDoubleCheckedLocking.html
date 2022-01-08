@@ -1,0 +1,28 @@
+<html>
+<body>
+報告雙重檢查鎖定。
+<p>
+  雙重檢查鎖定會嘗試以線程安全的方式按需初始化字段，同時避免同步的開銷。
+  遺憾的是，在未被聲明為 <code>volatile</code> 的字段上使用時，它不具備線程安全性。
+  在使用 Java 1.4 或更低版本時，即便是 <code>volatile</code> 字段，雙重檢查鎖定也不起作用。
+  有關此問題的說明，請參閱<a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">本文</a>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+      private Helper helper = null
+
+      Helper getHelper() {
+          if (helper == null)
+              synchronized(this) {
+                  if (helper == null) {
+                      helper = new Helper()
+                  }
+              }
+          }
+          return helper;
+      }
+  }
+</code></pre>
+</body>
+</html>

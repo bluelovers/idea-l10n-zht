@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>
+  報告未添加到字符串文件的本地化字符串的用法。
+</p>
+<p>
+  默認情況下，如果任何可用字符串文件中未定義本地化鍵，則觸发該檢查。 使用下面的復選框，只有在所有語言中都未定義此鍵時才发出警告。
+</p>
+<p>
+  建議將缺少的鍵值對添加到字符串文件中。
+</p>
+<!-- tooltip end -->
+<p>
+  <b>示例：</b>
+</p>
+<pre><code>
+  let presentation = "Do It"
+</code></pre>
+<p>
+  在應用快速修復后：
+</p>
+<pre><code>
+  let presentation = NSLocalizedString("Do It", comment: ""))
+</code></pre>
+</body>
+</html>

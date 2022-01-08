@@ -1,0 +1,44 @@
+<html>
+<body>
+報告 <code>compareTo()</code> 方法和實現 <code>java.util.Comparator.compare()</code> 的方法中的減法。
+<p>
+  雖然使用整數減法的結果作為 <code>compareTo()</code> 方法的結果是一種慣常做法，但在整數溢出的情況下，此結構可能會導致難以捉摸的錯誤。
+  在大多數情況下，更好的做法是直接比較整數值並返回 <code>-1</code>、<code>0</code> 或 <code>1</code> 。
+</p>
+<p>
+  四舍五入可能導致精度損失，因此也會報告直接轉換為整型的浮點值減法。
+</p>
+<p>
+  在靜態地確定值范圍有限並且決不會发生溢出時，該檢查不會報告。
+  此外，對 <code>int</code> 大于或等于 <code>0</code> 的數字執行減法絕不會溢出。
+  因此，在這樣的情況下此檢查不发出警告。
+</p>
+<p>
+  總是返回零或更大值的方法可以用 <code>javax.annotation.Nonnegative</code> 注解進行標記，或者在此檢查的選項中指定。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class DoubleHolder implements Comparable&lt;DoubleHolder&gt; {
+    double d;
+    public int compareTo(DoubleHolder that) {
+        return (int)(this.d - that.d);
+    }
+ }
+</code></pre>
+<p>這是一個無警告的示例，因為已知 <code>String.length()</code> 非負：</p>
+<pre><code>
+  class A implements Comparable&lt;A&gt; {
+    final String s = "";
+    public int compareTo(A a) {
+        return s.length() - a.s.length();
+    }
+ }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用這些選項可列出在減法中安全使用的方法。
+  方法返回始終大于或等于 <code>0</code> 的 <code>int</code> 值時，表明方法就是安全的。
+</p>
+
+</body>
+</html>

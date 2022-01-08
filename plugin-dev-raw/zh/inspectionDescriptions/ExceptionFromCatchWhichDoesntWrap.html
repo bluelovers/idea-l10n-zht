@@ -1,0 +1,20 @@
+<html>
+<body>
+報告從 <code>catch</code> 塊內部拋出但不“包裝”所捕獲異常的異常。
+<p>當異常被拋出以響應異常時，包裝初始異常可防止丟失有價值的上下文信息，如堆棧幀和行號。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  ...
+  catch (IOException e) {
+    closeAllConnections();
+    throw new ConnectException("Connection problem."); // 警告：'catch' 塊內的 'throw' 忽略捕獲的異常 'e'
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置檢查：</p>
+<ul>
+  <li>使用<b>如果使用異常方法調用的結果，則忽略</b>選項可指示檢查是否應忽略實參為原始異常方法調用結果的異常，例如 <code>getMessage()</code>。</li>
+  <li>使用<b>如果拋出的異常無法包裝異常，則忽略</b>選項可忽略在沒有接受 <code>Throwable</code> 子句的構造函數的情況下拋出異常的 <code>throw</code> 語句。</li>
+</ul>
+</body>
+</html>

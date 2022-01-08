@@ -1,0 +1,23 @@
+<html>
+<body>
+報告可以用單個 <code>String</code> 串聯替換的 <code>StringBuffer</code>、<code>StringBuilder</code> 或 <code>StringJoiner</code> 的用法。
+<p>使用 <code>String</code> 串聯會使代碼更短更簡單。</p>
+<p>
+此檢查僅在建議的替換不會導致現代 JVM 的性能顯著下降時報告。 在許多情況下，<code>String</code> 串聯可能執行效果更好。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  StringBuilder result = new StringBuilder();
+  result.append("i = ");
+  result.append(i);
+  result.append(";");
+  return result.toString();
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  String result = "i = " + i + ";";
+  return result;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

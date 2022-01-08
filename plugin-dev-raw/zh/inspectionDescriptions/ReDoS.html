@@ -1,0 +1,16 @@
+<!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  -->
+
+<html>
+<body>
+報告正則表達式中的指數回溯（可能導致匹配速度極慢）。
+如果能夠以多種方式匹配單個字符串，則會发生指數回溯，導致出現指數運行時。
+指數回溯也稱為正則表達式拒絕服務 (ReDoS)、災難性回溯、爆炸性量詞和指數匹配。
+此檢查僅會檢測有限形式的指數回溯，因此，沒有出現警告並不能保證模式不包含指數回溯問題。
+
+<!-- tooltip end -->
+<p>
+  <small>2017.1 最新變化</small>
+</body>
+</html>

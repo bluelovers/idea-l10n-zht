@@ -1,0 +1,20 @@
+<html>
+<body>
+報告可由單個調用替換的雙調用鏈。
+<p>它可以幫助您避免冗余代碼執行。</p>
+<p>該快速修復會將調用鏈替換為單個調用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun main() {
+      listOf(1, 2, 3).filter { it &gt; 1 }.count()
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun main() {
+      listOf(1, 2, 3).count { it &gt; 1 }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

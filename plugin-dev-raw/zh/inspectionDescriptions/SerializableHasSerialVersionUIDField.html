@@ -1,0 +1,31 @@
+<html>
+<body>
+報告實現 <code>Serializable</code> 且不聲明 <code>serialVersionUID</code> 字段的類。
+<p>
+  如果沒有 <code>serialVersionUID</code> 字段，對該類做出的任何更改都將導致以前序列化的版本不可讀。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Main implements Serializable {
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Main implements Serializable {
+      private static final long serialVersionUID = -1446398935944895849L;
+  }
+</code></pre>
+當使用 JDK 14 或更高的語言級別時，快速修復還將添加 <code>java.io.Serial</code> 注解。
+<!-- tooltip end -->
+<p>使用以下選項配置檢查：</p>
+<ul>
+  <li>
+    列出此檢查不應報告其繼承者的類。
+    這適用于從超類繼承 <code>Serializable</code> 但不用于序列化的類。
+  </li>
+  <li>
+    是否忽略 <code>Serializable</code> 匿名類。
+  </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<body>
+報告任何不必要的分號，包括在類成員之間、塊語句內部或類定義之后使用的分號。
+<p>盡管這些分號在 Java 中有效，但它們是冗余的，可以被刪除。</p>
+<p>示例：</p>
+<pre><code>
+  class C {
+    ;
+    void m() throws Exception {
+        try (AutoCloseable r1 = createAutoCloseable();) {
+          ;
+        }
+    }
+    ;
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class C {
+    void m() throws Exception {
+      try (AutoCloseable r1 = createAutoCloseable()) {
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

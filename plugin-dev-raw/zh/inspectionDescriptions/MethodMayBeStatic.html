@@ -1,0 +1,28 @@
+<html>
+<body>
+報告可以安全設置為 <code>static</code> 的方法。
+盡可能將方法設置為 static 可減少內存消耗並提高代碼質量。
+<p>如果滿足以下條件，則方法可以為 <code>static</code>：</p>
+<ul>
+  <li>
+    不是 <code>synchronized</code>、<code>native</code> 或 <code>abstract</code>，
+  </li>
+  <li>
+    不引用包含類中的任何非 static 方法和非 static 字段，
+  </li>
+  <li>
+    不是重寫，也不會在子類中被重寫。
+  </li>
+</ul>
+<!-- tooltip end -->
+<p>使用以下選項配置檢查：</p>
+<ul>
+  <li>是否只報告 <code>private</code> 和 <code>final</code> 方法，從而提高此檢查的性能。</li>
+  <li>是否忽略空方法。</li>
+  <li>使用 Java 8 或更高版本時是否忽略接口中的默認方法。</li>
+  <li>
+    是否讓該快速修復在調用被設為 <code>static</code> 的方法時使用類引用替換實例限定符，即調用 <code>myClass.m()</code> 將被替換為 <code>MyClass.m()</code>。
+  </li>
+</ul>
+</body>
+</html>

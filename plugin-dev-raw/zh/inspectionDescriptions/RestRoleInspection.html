@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告 reStructuredText 文件中未定義的角色。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+.. role:: custom
+.. role:: newcustom(emphasis)
+
+:custom:`interpreted text` 使用示例
+:newcustom:`interpreted text` 使用示例
+:emphasis:`interpreted text` 使用示例
+
+
+某些文本使用未定義的角色 :undef:`interpreted text`
+</pre>
+</body>
+</html>

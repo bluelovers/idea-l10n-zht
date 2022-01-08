@@ -1,0 +1,43 @@
+<html>
+<body>
+報告方法調用和字段引用中不必要的 <code>super</code> 限定符。
+<p>
+  當超類的字段或方法在調用類中未被隱藏/重寫時，不需要 <code>super</code> 限定符。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    void foo() {}
+  }
+
+  class Bar extends Foo {
+    void bar() {
+      super.foo();
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Foo {
+    void foo() {}
+  }
+
+  class Bar extends Foo {
+    void bar() {
+      foo();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用檢查設置可以忽略有助于區分超類成員訪問與外部類的同名成員的限定符。
+<p>
+<p>
+  另請參閱以下檢查：
+</p>
+<ul>
+  <li><i>Java | 可見性 | 繼承字段的訪問類似于訪問周圍代碼中的元素</i></li>
+  <li><i>Java | 可見性 | 對繼承方法的調用類似于對局部方法的調用</i></li>
+</ul>
+</body>
+</html>

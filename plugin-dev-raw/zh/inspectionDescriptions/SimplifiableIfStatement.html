@@ -1,0 +1,25 @@
+<html>
+<body>
+報告可以替換為使用 <code>&&</code>、<code>||</code>、<code>==</code>、<code>!=</code> 或 <code>?:</code> 運算符的條件的 <code>if</code> 語句 。
+<p>結果通常更短，但並不總是更清晰，因此不建議在每種情況下都應用此修復程序。</p>
+<p>示例：</p>
+<pre><code>
+  if (condition) return true; else return foo;
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  return condition || foo;
+</code></pre>
+<!-- tooltip end -->
+<p>配置檢查：</p>
+<ul>
+<li>
+  當建議使用 <code>?:</code> 運算符時，請使用 <b>不建議使用 '?:' 運算符</b> 選項禁用警告。 在這種情況下，只會突出顯示 <code>&&</code>、<code>||</code>、<code>==</code> 和 <code>!=</code> 建議。 快速修復仍將在編輯器中可用。
+</li>
+<li>
+  使用 <b>忽略鏈式 'if' 語句</b> 選項禁用 <code>if-else</code> 鏈的警告 快速修復仍將在編輯器中可用。
+</li>
+</ul>
+<p><small>2018.2 最新變化</small></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+報告可以轉換為單引號引用字符串的雙引號引用字符串。 不包含任何表達式替換或特殊符號的任意字符串均可以被轉換。
+<p>示例：</p>
+<pre>
+<code># 不良做法
+&quot;Hello world&quot;
+&quot;Hello \&quot;John Doe\&quot;&quot;</code>
+</pre>
+
+可以通過快速修復來轉換雙引號引用的字符串。 應用快速修復后，結果如下所示：
+
+<pre>
+<code># 優良做法
+'Hello world'
+'Hello &quot;John Doe&quot;'
+&quot;Hello 'John Doe'&quot;</code>
+</pre>
+<p>使用<i>忽略包含單引號的字符串</i>復選框，可忽略需要轉義的字符串。</p>
+<p><span style="font-size: smaller;">受 <a href="https://github.com/rubocop-hq/ruby-style-guide#consistent-string-literals">'RuboCop'</a> 啟发</span>
+</p>
+</body>
+</html>

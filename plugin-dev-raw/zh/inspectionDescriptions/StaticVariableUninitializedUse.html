@@ -1,0 +1,19 @@
+<html>
+<body>
+報告在初始化之前讀取的 <code>static</code> 變量。
+<p>該檢查會忽略 <code>null</code> 的相等檢查。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    public static int bar;
+
+    public static void main(String[] args) {
+      System.out.println(bar);
+    }
+  }
+</code></pre>
+<p>請注意，此檢查使用非常保守的數據流算法，並且可能會將 <code>static</code> 變量錯誤地報告為未初始化。 報告為已初始化的變量將始終被初始化。</p>
+<!-- tooltip end -->
+<p>使用<b>忽略基元字段</b>選項可以忽略未初始化的基元字段。</p>
+</body>
+</html>

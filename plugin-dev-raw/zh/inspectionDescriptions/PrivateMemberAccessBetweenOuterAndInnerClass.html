@@ -1,0 +1,41 @@
+<html>
+<body>
+報告從嵌套類到外部類的非常量 <code>private</code> 成員的引用。
+對于此類引用，javac 將生成 package-private 合成訪問器方法，這可能會危及安全性，因為看似為 private 的成員實際上可以從整個軟件包中訪問。
+<p>
+  嵌套類及其外部類會被編譯為單獨的類文件。 Java 虛擬機通常會禁止從一個類訪問另一個類的 private 字段和方法。 為了實現從嵌套類訪問外部類的 private 成員，javac 創建了一個 package-private 合成訪問器方法。
+</p>
+<p>
+  通過將 <code>private</code> 成員設為 package-private，實際的可訪問性變成了顯式。
+  這也會節省少量內存，可能會在資源受限的環境中提高性能。
+</p>
+<p>
+  語言級別設置為 Java 11 或更高時，此檢查不會報告，因為由于基于嵌套的訪問控制 (JEP 181)，不再生成訪問器方法。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Outer {
+    private void x() {}
+
+    class Inner {
+      void y() {
+        x();
+      }
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Outer {
+    void x() {}
+
+    class Inner {
+      void y() {
+        x();
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

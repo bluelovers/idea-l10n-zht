@@ -1,0 +1,24 @@
+<html>
+<body>
+報告接受任意數量形參的方法（也稱為 vararg 方法）。
+<p>Java 1.4 或更早版本的 JVM 不支持此類方法。</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  enum EnumConstants {
+  A(null), B, C;
+
+  EnumConstants(String... ss) {}
+}
+</code></pre>
+<p>可通過快速修復將可變實參形參替換為等效的數組形參。 方法調用中的相關實參包裝在數組初始值設定項表達式中。
+  在應用快速修復后：</p>
+<pre><code>
+  enum EnumConstants {
+  A(null), B(new String[]{}), C(new String[]{});
+
+  EnumConstants(String[] ss) {}
+}
+</code></pre>
+</body>
+</html>

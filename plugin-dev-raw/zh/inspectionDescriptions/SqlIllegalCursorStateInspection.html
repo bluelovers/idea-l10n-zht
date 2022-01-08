@@ -1,0 +1,28 @@
+<html>
+<body>
+報告 SQL 例程中的非法光標狀態。
+<ul>
+  <li>例程具有 CLOSE 或 FETCH 語句，但光標可能已被關閉。</li>
+  <li>例程具有 OPEN 語句，但光標可能已被打開。</li>
+</ul>
+<p>示例（Microsoft SQL 服務器）：</p>
+<pre><code>CREATE TABLE t(col INT);
+
+CREATE PROCEDURE foo() AS
+BEGIN
+DECLARE my_cursor CURSOR FOR SELECT * FROM t;
+DECLARE a INT;
+FETCH my_cursor INTO a;
+CLOSE my_cursor;
+END;</code></pre>
+<p>根據 <a href="https://docs.microsoft.com/en-us/sql/t-sql/language-elements/close-transact-sql">docs.microsoft.com 上的 CLOSE (Transact-SQL)</a> 頁面，必須為打開的光標執行 CLOSE，並且不允許對僅聲明或已經關閉的光標執行 CLOSE。 因此，我們需要打開光標來修正警告。</p>
+<pre><code>CREATE PROCEDURE foo() AS
+BEGIN
+DECLARE my_cursor CURSOR FOR SELECT * FROM t;
+DECLARE a INT;
+OPEN my_cursor;
+FETCH my_cursor INTO a;
+CLOSE my_cursor;
+END;</code></pre>
+</body>
+</html>

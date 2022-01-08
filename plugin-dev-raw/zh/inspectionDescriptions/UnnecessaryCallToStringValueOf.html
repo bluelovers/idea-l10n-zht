@@ -1,0 +1,32 @@
+<html>
+<body>
+報告在不需要顯式字符串轉換的字符串串聯中使用或作為庫方法實參使用的靜態方法調用，例如 <code>String.valueOf()</code> 或 <code>Integer.toString()</code>。
+<p>示例：</p>
+<pre><code>
+  System.out.println("Number: " + Integer.toString(count));
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  System.out.println("Number: " + count);
+</code></pre>
+<!-- tooltip end -->
+<p>其中顯式字符串轉換被認為是冗余的庫方法：</p>
+<ul>
+  <li>
+    類 <code>java.io.PrintWriter</code>, <code>java.io.PrintStream</code>
+    <ul><li><code>print()</code>, <code>println()</code></li></ul>
+  </li>
+  <li>
+    類 <code>java.lang.StringBuilder</code>, <code>java.lang.StringBuffer</code>
+    <ul><li><code>append()</code></li></ul>
+  </li>
+
+  <li>
+    類 <code>org.slf4j.Logger</code>
+    <ul>
+      <li><code>trace()</code>, <code>debug()</code>, <code>info()</code>, <code>warn()</code>, <code>error()</code></li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

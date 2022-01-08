@@ -1,0 +1,8 @@
+<html>
+<body>
+  報告直接发送的 <code>dealloc</code> 消息。 此類消息絕不應直接发送。
+  相反，對象的 <code>dealloc</code> 方法應通過 <code>release
+  NSObject</code> 協議方法間接調用（如果 <code>release</code> 消息導致接收器的保留計數變為 0）。
+  有關使用這些方法的更多詳細信息，請參閱<a href="https://developer.apple.com/library/ios/documentation/cocoa/conceptual/MemoryMgmt/Articles/MemoryMgmt.html">內存管理編程指南</a>。
+</body>
+</html>

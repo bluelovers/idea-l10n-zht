@@ -1,0 +1,25 @@
+<html>
+<body>
+報告冗余重寫聲明。
+<p>
+    如果重寫不修改繼承的簽名語義，則可以省略重寫，例如，通過更改可見性。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>open class</b> Foo {
+      open fun singleExpression() {
+      }
+  }
+
+  class Bar : Foo() {
+      <b>override</b> fun singleExpression() = super.singleExpression()
+  }
+</code></pre>
+
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Bar : Foo() {
+  }
+</code></pre>
+</body>
+</html>

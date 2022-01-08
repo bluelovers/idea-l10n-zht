@@ -1,0 +1,28 @@
+<html>
+<body>
+報告 <code>abstract</code> 類的 <code>public</code> 構造函數。
+<p>
+  <code>abstract</code> 類的構造函數只能從其子類的構造函數進行調用，將其聲明為 <code>public</code> 可能令人困惑。
+</p>
+<p>該快速修復會將此類構造函數設為 protected。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>public abstract class</b> Foo {
+    <b>public</b> Foo () { // 警告：有 'public' 修飾符
+        /* ... */
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  <b>public abstract class</b> Foo {
+    <b>protected</b> Foo () {
+        /* ... */
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置檢查：</p>
+<p>使用下面的選項可以忽略非 public 類。</p>
+</body>
+</html>

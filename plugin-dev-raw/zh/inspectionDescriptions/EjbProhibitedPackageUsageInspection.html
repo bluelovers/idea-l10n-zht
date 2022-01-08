@@ -1,0 +1,17 @@
+<html>
+<body>
+報告 EJB 中禁止的軟件包和類。
+
+<p><b>示例：</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+
+  public void getAnotherBean() {
+    ...
+    java.lang.Thread.sleep(100); // 錯誤：Bean 類中使用了非法軟件包
+  }
+}
+</code></pre>
+</body>
+</html>

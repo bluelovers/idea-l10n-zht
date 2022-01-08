@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>報告重寫 <b>synchronized</b> 方法的非 <b>synchronized</b> 方法。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  abstract class Base {
+      <b>synchronized</b> void foo() {
+          // ...
+      }
+  }
+  class Derived extends Base {
+      @Override
+      <b>void foo()</b> {
+          super.foo()
+            // ...
+        }
+    }
+</code></pre>
+<p>在這里，類 <code>Bar</code> 中的非 synchronized 方法 <code>foo()</code> 會重寫 synchronized 方法。
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<body>
+如果無法在配置的數據源中解析，則報告以下 Persistence ORM 注解中的引用：<br/>
+<ul>
+  <li> Table</li>
+  <li> Column</li>
+  <li> [Any]To[Any]</li>
+  <li> JoinColumn / JoinTable</li>
+  <li> NamedQuery / NativeQuery</li>
+  <li> Embeddable</li>
+</ul><br/>
+
+建議刷新數據源或分配不同的數據源。<br/>
+
+<p><b>示例數據庫表：</b></p>
+<pre><code>
+  CREATE TABLE DATA_TABLE (
+    ID INTEGER,
+    DATA VARCHAR(100)
+);
+</code></pre><br/>
+
+<p><b>示例 JPA 實體類：</b></p>
+<pre><code>
+  @Entity
+  @Table(name = "UNKNOWN_TABLE") // 未解決的引用
+  public class JavaEntity {
+    @Column(name = "ID") // 無法解析未定義的表中的列
+    Integer id;
+  }
+</code></pre><br/>
+
+<!-- tooltip end -->
+<p>
+  <b>注意</b>：數據源可以通過 `分配數據源` 操作或實體類的相應間距圖標進行配置
+</p>
+</body>
+</html>

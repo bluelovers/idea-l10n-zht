@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>報告索引邊界的顯式檢查。</p>
+
+<p>該快速修復改用 <code>lift</code>。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  var x: Seq[Int]
+  if (i < x.length) Some(x(i)) else None
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  var x: Seq[Int]
+  x.lift(i)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

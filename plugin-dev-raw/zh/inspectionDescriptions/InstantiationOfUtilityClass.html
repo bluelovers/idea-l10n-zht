@@ -1,0 +1,26 @@
+<html>
+<body>
+報告使用 <code>new</code> 關鍵字的實用程序類的實例化。
+<p>
+  在實用程序類中，所有字段和方法均為 <code>static</code>。
+  這種類的實例化很可能不必要，並且表明存在錯誤。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class MyUtils {
+    public static double cube(double x) {
+      return x * x * x;
+    }
+  }
+  class Main {
+    public static void main(String[] args) {
+      // 實用類的實例化
+      MyUtils utils = new MyUtils();
+    }
+  }
+</code></pre>
+<p>
+  為防止實用程序類被實例化，建議使用 <code>private</code> 構造函數。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+報告對聲明為 <code>@GuardedBy</code> 且不受適當同步結構保護的字段的訪問。
+<p>示例：</p>
+<pre><code>
+    @GuardedBy("this")
+    void x() {
+        notify();
+    }
+    void y() {
+        x(); // 不受保護的方法調用
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>支持的 <code>@GuardedBy</code> 注解是：</p>
+<ul>
+  <li><code>net.jcip.annotations.GuardedBy</code></li>
+  <li><code>javax.annotation.concurrent.GuardedBy</code></li>
+  <li><code>org.apache.http.annotation.GuardedBy</code></li>
+  <li><code>com.android.annotations.concurrency.GuardedBy</code></li>
+  <li><code>androidx.annotation.GuardedBy</code></li>
+  <li><code>com.google.errorprone.annotations.concurrent.GuardedBy</code></li>
+</ul>
+</body>
+</html>

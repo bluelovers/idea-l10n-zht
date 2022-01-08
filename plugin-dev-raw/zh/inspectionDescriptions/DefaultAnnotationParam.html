@@ -1,0 +1,20 @@
+<html>
+<body>
+報告被賦值給其 <code>default</code> 值的注解形參。
+<p>示例：</p>
+<pre><code>
+  @interface Test {
+      Class&lt;?> expected() default Throwable.class;
+  }
+
+  @Test(expected = Throwable.class)
+  void testSmth() {}
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  @Test()
+  void testSmth() {}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

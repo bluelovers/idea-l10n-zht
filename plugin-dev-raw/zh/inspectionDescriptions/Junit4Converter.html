@@ -1,0 +1,24 @@
+<html>
+<body>
+報告可以轉換為 JUnit 4 測試類的 JUnit 3 測試類。
+<p><b>示例：</b></p>
+<pre><code>
+  public class MainTestCase extends junit.framework.TestCase {
+    public void test() {
+      Assert.assertTrue(true);
+    }
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  public class MainTestCase {
+    @org.junit.Test
+    public void test() {
+      Assert.assertTrue(true);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>當項目或模塊的語言級別為 5 或更高級別並且在類路徑上可以使用 JUnit 4 時，此檢查才會報告。</p>
+</body>
+</html>

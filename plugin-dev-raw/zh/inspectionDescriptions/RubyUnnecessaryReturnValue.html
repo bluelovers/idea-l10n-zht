@@ -1,0 +1,23 @@
+<html>
+<body>
+報告用作返回值的變量。
+<p>示例：</p>
+
+<pre>
+<code># 不良做法
+def foo(bar)
+  result = bar + 1
+  result
+end</code>
+</pre>
+
+可以通過快速修復來移除這些變量。 應用快速修復后，結果如下所示：
+
+<pre>
+<code># 優良做法
+def foo(bar)
+  bar + 1
+end</code>
+</pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+報告嘗試從索引表中刪除列的情況。 此檢查在 Microsoft SQL Server 和 Sybase ASE 中可用。
+<p>示例（Microsoft SQL 服務器）：</p>
+<pre><code>CREATE TABLE test_index
+(
+col  INT NOT NULL,
+col2 INT NOT NULL,
+col3 INT NOT NULL UNIQUE,
+col4 VARCHAR(200)
+);
+
+CREATE UNIQUE INDEX aaaa ON test_index (col, col2);
+
+ALTER TABLE test_index
+DROP COLUMN col;</code></pre>
+<p>您不能刪除 <code>col</code> 列，因為它在索引表中。 要刪除該列，您需要先刪除 <code>aaaa</code> 索引（例如 DROP INDEX aaaa）。</p>
+</body>
+</html>

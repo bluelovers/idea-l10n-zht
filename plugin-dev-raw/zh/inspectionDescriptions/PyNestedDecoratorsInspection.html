@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>報告嵌套裝飾器的問題。 此檢查高亮顯示先于另一個裝飾器應用 <code>classmethod</code> 或 <code>staticmethod</code> 的情況。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+def innocent(f):
+    return f
+
+
+class A:
+    @innocent  # 裝飾器不會收到預期的可調用對象
+    @classmethod
+    def f2(cls):
+        pass
+
+    @innocent  # 裝飾器不會收到預期的可調用對象
+    @staticmethod
+    def f1():
+        pass
+</pre>
+<p>IDE 提議的快速修復是移除此裝飾器。</p>
+</body>
+</html>

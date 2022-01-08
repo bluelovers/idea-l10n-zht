@@ -1,0 +1,23 @@
+<html>
+<body>
+報告具有基元 <code>long</code>、<code>integer</code>、<code>short</code> 或 <code>byte</code> 實參的新 <code>Long</code>、<code>Integer</code>、<code>Short</code> 或 <code>Byte</code> 對象的實例化。
+<p>建議使用 Java 5 中引入的 static 方法 <code>valueOf()</code> 默認情況下，此方法緩存值介于 -128 到 127（包含）之間的對象。
+<p><b>示例：</b></p>
+<pre><code>
+  Integer i = new Integer(1);
+  Long l = new Long(1L);
+</code></pre>
+<p>應用快速修復后，代碼變為：</p>
+<pre><code>
+  Integer i = Integer.valueOf(1);
+  Long l = Long.valueOf(1L);
+</code></pre>
+<!-- tooltip end -->
+<p>僅當項目或模塊的語言級別為 5 或更高級別時，此檢查才會報告。</p>
+<p>
+  使用<b>忽略具有字符串實參的新數字表達式</b>選項可以忽略對包含 <code>String</code> 實參的數字構造函數的調用。</p>
+<p>
+  使用<b>僅在構造函數為 @Deprecated 時報告</b>選項，僅報告對棄用的構造函數的調用。
+  <code>Long</code>、<code>Integer</code>、<code>Short</code> 和 <code>Byte</code> 構造函數自 JDK 9 起已被棄用。</p>
+</body>
+</html>

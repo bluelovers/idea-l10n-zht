@@ -1,0 +1,39 @@
+<html>
+<body>
+報告循環內的對象或數組分配。 雖然不一定是問題，但循環內的對象分配是查找內存泄漏和性能問題的好地方。
+<p>
+  檢查會報告以下結構：
+</p>
+<ul>
+  <li>通過 <code>new</code> 運算符進行的顯式分配</li>
+  <li>已知會返回新對象的方法</li>
+  <li>實例綁定方法引用</li>
+  <li>捕獲變量或 <code>this</code> 引用的 lambda</li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+  // 顯式分配
+  for (Status status : Status.values()) {
+    declarationsMap.put(status, new ArrayList&lt;&gt;());
+  }
+
+  // Lambda 捕獲變量
+  String message = "Engine running.";
+  for (Engine engine : engines) {
+      if (!isRunning(engine)) {
+          logger.warn(() -> {
+              return String.format(message);
+          });
+      }
+  }
+
+  // 實例綁定方法引用
+  for(Node node : nodes) {
+    descriptor = node.getDescription();
+    descriptor.ifPresent(dynamicTestExecutor::execute);
+  }
+</code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

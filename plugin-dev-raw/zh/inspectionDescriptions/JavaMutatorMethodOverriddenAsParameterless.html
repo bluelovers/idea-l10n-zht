@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>報告沒有形參子句並使用類似轉變器的名稱重寫 Java 方法的方法。</p>
+<p>Scala 允許重寫沒有形參子句的無形參 Java 方法。
+    這主要是為了允許 Scala 代碼以與 Scala 訪問器方法相同的方式重寫 Java 訪問器方法。
+    即，不使用任何形參子句並遵守<a href="https://en.wikipedia.org/wiki/Uniform_access_principle">統一訪問原則</a>，也就是說客戶端代碼不應受到將特性實現為字段或方法的決定的影響。</p>
+
+<p>但是，對于具有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>的方法，通常有一個空形參子句。
+    這將符合<a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">里氏替換原則</a>，即當被重寫的方法有副作用時，重寫方法也必須被聲明為具有副作用的方法。</p>
+
+<p>該快速修復會添加一個空形參子句。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  import java.util
+
+  class Test extends util.ArrayList[String] {
+    override def clear: Unit = ???
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  import java.util
+
+  class Test extends util.ArrayList[String] {
+    override def clear(): Unit = ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

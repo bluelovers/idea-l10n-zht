@@ -1,0 +1,29 @@
+<html>
+<body>
+報告循環語句條件部分中的方法調用。 在資源高度受限的環境中，此類調用可能會對性能產生不利影響。
+<p>
+  不加考慮地應用此檢查的結果可能會對代碼清晰度和設計產生負面影響。
+  此檢查適用于 Java ME 和其他資源高度受限的環境。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  String s = "example";
+  for (int i = 0; i &lt; s.length(); i++) {
+    System.out.println(s.charAt(i));
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  String s = "example";
+  int length = s.length();
+  for (int i = 0; i &lt; length; i++) {
+    System.out.println(s.charAt(i));
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用該選項可以忽略對常見 Java 迭代方法（例如 <code>Iterator.hasNext()</code>）和具有副作用的已知方法（例如 <code>Atomic*.compareAndSet</code>）的調用。
+</p>
+
+</body>
+</html>

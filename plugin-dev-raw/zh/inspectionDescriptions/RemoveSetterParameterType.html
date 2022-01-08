@@ -1,0 +1,23 @@
+<html>
+<body>
+報告在屬性 setter 中明確指定的形參類型。
+<p>
+    setter 形參類型始終與屬性類型匹配，因此不要求為顯式。
+    “移除顯式類型規范”快速修復允許相應地修改代碼。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun process(x: Int) {}
+
+  var x: Int = 0
+      set(value: Int) = process(value) // &lt;== 'Int' 規格可以安全忽略
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  fun process(x: Int) {}
+
+  var x: Int = 0
+      set(value) = process(value)
+</code></pre>
+</body>
+</html>

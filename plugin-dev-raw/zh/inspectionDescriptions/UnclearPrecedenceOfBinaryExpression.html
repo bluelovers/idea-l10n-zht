@@ -1,0 +1,13 @@
+<html>
+<body>
+報告包含不同運算符且無圓括號的二進制表達式。
+<p>此類表達式可能由于不同的運算符<a href="https://kotlinlang.org/docs/reference/grammar.html#expressions">優先級規則</a>而可讀性不佳。</p>
+<p>示例：</p>
+<pre>
+  fun foo(b: Boolean?, i: Int?) {
+      val x = b ?: i == null // 評估為 `(b ?: i) == null`
+      val y = i ?: 0 + 1 // 評估為 `i ?: (0 + 1)`
+  }
+</pre>
+</body>
+</html>

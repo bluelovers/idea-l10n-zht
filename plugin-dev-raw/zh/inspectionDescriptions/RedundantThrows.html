@@ -1,0 +1,26 @@
+<html>
+<body>
+報告在方法簽名中聲明但方法本身或其實現和派生從未拋出的異常。
+<p>該檢查會忽略與序列化相關的方法，例如方法 <code>readObject()</code> 或 <code>writeObject()</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void method() throws InterruptedException {
+    System.out.println();
+  }
+</code></pre>
+<p>該快速修復會移除聲明中不必要的異常，並規范化冗余的 <code>try</code>-<code>catch</code> 語句：</p>
+<pre><code>
+  void method() {
+    System.out.println();
+  }
+</code></pre>
+<p>
+  <b>注意</b>：在編輯器中高亮顯示時可能不會報告某些異常。
+  由于性能原因，僅當非 private 方法的名稱很少出現在項目中時，才會對其進行檢查。
+  要查看所有結果，請從主菜單中選擇<b>代碼 | 檢查代碼</b>或<b>代碼 | 分析代碼 | 按名稱運行檢查</b>來運行檢查。
+</p>
+<!-- tooltip end -->
+<p>使用<b>忽略由入口點方法拋出的異常</b>選項可以忽略由入口點方法拋出的異常。
+  入口點方法在以下檢查中配置：<b>編輯器 | 檢查 | Java | 聲明冗余 | 未使用的聲明</b>。</p>
+</body>
+</html>

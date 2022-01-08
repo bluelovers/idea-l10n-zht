@@ -1,0 +1,20 @@
+<html>
+<body>
+報告不帶 <code>@Pattern</code> 注解的方法重寫帶 <code>@Pattern</code> 注解方法的情況。
+這不會阻止在編輯器中高亮顯示錯誤，但重寫方法在運行時將不會被檢查。
+<p>
+提供了快速修復，用于添加與超類方法中注解相匹配的 <code>@Pattern</code> 注解。 這確保
+運行時檢查檢測正常工作。
+<p><b>示例：</b></p>
+<pre><code>
+  abstract class Parent {
+    abstract @Pattern("\\d\\d-\\d\\d\\d") String getId();
+  }
+  class Child extends Parent {
+    @Override String getId() { // 此處為警告
+      return "12-345";
+    }
+  }
+</code></pre>
+</body>
+</html>

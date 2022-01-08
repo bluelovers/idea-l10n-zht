@@ -1,0 +1,17 @@
+<!-- Copied from community/plugins/InspectionGadgets/src/inspectionDescriptions/ReplaceAssignmentWithOperatorAssignment.html -->
+<html>
+<body>
+報告可由運算符賦值替換的賦值運算，以使代碼更簡潔、更清晰。
+<p>
+  示例：
+<pre>
+<code>  x = x + 3;</code>
+  <code>x = x / 3;</code>
+</pre>
+<p>應用快速修復后，結果如下所示：
+<pre>
+  <code>x += 3;</code>
+  <code>x /= 3;</code>
+</pre>
+</body>
+</html>

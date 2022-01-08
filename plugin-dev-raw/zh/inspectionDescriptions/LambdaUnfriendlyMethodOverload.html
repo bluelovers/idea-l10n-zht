@@ -1,0 +1,19 @@
+<html>
+<body>
+報告采用的函數接口存在抽象方法簽名衝突的重載方法。
+<p>此類重載會引入歧義，並要求調用方將 lambda 轉換為特定類型或顯式指定 lambda 形參類型。
+  最好為重載方法賦予不同的名稱，以消除歧義。</p>
+<p>示例：</p>
+<pre><code>
+  interface MyExecutor {
+    void execute(Supplier&lt;?&gt; supplier);
+    void execute(Callable&lt;?&gt; callable);
+  }
+</code></pre>
+<p>
+這里的 <code>Supplier</code> 和 <code>Callable</code> 為函數接口，其單抽象方法不接受任何形參並返回非 void 值。
+因此，除非使用顯式轉換，否則無法在調用點推斷 lambda 的類型。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

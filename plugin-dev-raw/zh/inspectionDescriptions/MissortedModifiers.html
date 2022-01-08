@@ -1,0 +1,35 @@
+<html>
+<body>
+報告修飾符不符合規范首選順序（如 Java 語言規范中所述）的聲明。
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    native public final void foo();
+  }
+</code></pre>
+<p>在應用快速修復后：</p>
+<pre><code>
+  class Foo {
+    public final native void foo();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用檢查設置可以：</p>
+<ul>
+  <li>
+    <p>
+      切換位置錯誤的注解的報告：
+       （帶有 <code>ElementType.TYPE_USE</code> 的<em>不</em>緊接在類型之前和修飾符關鍵字之后的注解，或其他<em>不</em>在修飾符關鍵字之前的注解）。
+      禁用此選項后，任何注解都可以放置在修飾符關鍵字之前或之后。
+      將始終報告在修飾符關鍵字之間帶有注解的修飾符列表。
+    </p>
+  </li>
+  <li>
+    <p>
+      指定 <code>ElementType.TYPE_USE</code> 注解是否應直接置于類型之前，即使該注解指定了其他目標。
+    </p>
+  </li>
+</ul>
+
+</body>
+</html>

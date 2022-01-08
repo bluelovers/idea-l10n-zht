@@ -1,0 +1,22 @@
+<html>
+<body>
+報告在初始化后立即檢查變量是否為 null 的 <code>if</code> 表達式，該表達式可以在初始值設定項中轉換為 elvis 運算符。
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(foo: Int?, bar: Int): Int {
+      var i = foo
+      if (i == null) {
+          return bar
+      }
+      return i
+  }
+</code></pre>
+<p>該快速修復會將帶有初始值設定項的 <code>if</code> 表達式轉換為 elvis 表達式：</p>
+<pre><code>
+  fun test(foo: Int?, bar: Int): Int {
+      var i = foo ?: return bar
+      return i
+  }
+</code></pre>
+</body>
+</html>

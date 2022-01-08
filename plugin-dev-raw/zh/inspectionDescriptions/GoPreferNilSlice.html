@@ -1,0 +1,11 @@
+<html>
+<body>
+報告使用空文字初始值設定項而不是 <code>nil</code> 的切片聲明。
+<p>空切片可以用 <code>nil</code> 或空切片文字表示。 最好使用第一種方法，因為它不會導致內存分配。 有關空切片的更多信息，請參閱 <a href="https://golang.org/wiki/CodeReviewComments#declaring-empty-slices">golang.org 上的 Declaring Empty Slices</a> 頁面。</p>
+<p>示例：</p>
+<pre><code>s := []string{}</code></pre>
+<p>要更改聲明，請使用 <b>替換為 nil 切片聲明 (更改語義)</b> 快速修復。
+  在應用快速修復后：</p>
+<pre><code>var s []string</code></pre>
+</body>
+</html>

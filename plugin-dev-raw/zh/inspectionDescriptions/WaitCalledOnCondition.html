@@ -1,0 +1,22 @@
+<html>
+<body>
+報告在 <code>java.util.concurrent.locks.Condition</code> 對象上進行的 <code>wait()</code> 調用。 這可能是編程錯誤，本應使用 <code>await()</code> 方法的某種變體。
+<p><b>示例：</b></p>
+<pre><code>
+  void acquire(Condition released) throws InterruptedException {
+    while (acquired) {
+      released.wait();
+    }
+  }
+</code></pre>
+<p>優良的代碼應類似于：</p>
+<pre><code>
+  void acquire(Condition released) throws InterruptedException {
+    while (acquired) {
+      released.await();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

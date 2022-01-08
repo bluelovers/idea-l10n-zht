@@ -1,0 +1,12 @@
+<html>
+<body>
+報告對 <code>getClass()</code> 的調用上的同步。
+<p>
+  如果包含同步的類被子類化，子類將在不同的類對象上同步。 對 <code>getClass()</code> 的調用通常可以替換為類的文字表達式，例如 <code>String.class</code>。 一種更好的解決辦法是在 <code>private static final</code> 鎖對象上同步，從而完全控制對該對象的訪問。
+</p>
+<p><b>示例：</b></p>
+<pre><code> synchronized(getClass()) {}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

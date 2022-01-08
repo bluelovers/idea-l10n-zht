@@ -1,0 +1,19 @@
+<html>
+<body>
+報告在正常對象構造過程中初始化，但其類沒有 <code>readObject</code> 方法的 <code>transient</code> 字段。
+<p>
+  <code>transient</code> 字段未被序列化，因此在反序列化期間，需要在 <code>readObject()</code> 方法中單獨初始化。
+</p>
+<p>
+  任何在正常對象構造過程中未被初始化的 <code>transient</code> 字段都被視為使用默認初始化，並且不會被此檢查報告。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Person implements Serializable {
+    transient String name = "Default"; //警告，反序列化后實際上可能為 null
+    transient String surname; //null 被視為默認值，不予報告
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

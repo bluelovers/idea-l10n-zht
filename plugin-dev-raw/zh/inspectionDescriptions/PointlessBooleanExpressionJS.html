@@ -1,0 +1,15 @@
+<html>
+<body>
+報告無意義或復雜的沒有意義的布爾表達式或語句。
+<p>示例：
+<pre><code>
+  let a = !(false && x);
+  let b = false || x;
+</code></pre>
+<p>應用快速修復后，結果如下所示：
+<pre><code>
+  let a = true;
+  let b = x;
+</code></pre>
+</body>
+</html>

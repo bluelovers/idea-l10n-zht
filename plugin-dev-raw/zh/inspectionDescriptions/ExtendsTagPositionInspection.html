@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>報告不是 Django 模板中第一個標記的
+<code>{% extends %}</code> 標記。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+{% load my_custom_tags %}
+{% extends "../DjangoApp/templatetags/my_custom_tags.py"%}
+</pre>
+<p>在本例中，<code>{% extends %}</code> 標記高亮顯示，因為它應該放在
+<code>{% load %}</code> 標記前面。</p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+當主構造函數隱式可用時，報告其中為空的主構造函數。
+<p>
+    主構造函數冗余，當其沒有任何注解或可見性修飾符時可以安全地省略。
+    使用“移除空主構造函數”快速修復可清理代碼。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class MyClassA constructor() //  冗余，可以替換為 'class MyClassA'
+
+  annotation class MyAnnotation
+  class MyClassB @MyAnnotation constructor() //  由于注解而必選
+
+  class MyClassC private constructor() // 由于可見性修飾符而必選
+</code></pre>
+</body>
+</html>

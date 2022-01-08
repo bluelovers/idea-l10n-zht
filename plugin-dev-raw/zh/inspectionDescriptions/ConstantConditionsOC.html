@@ -1,0 +1,16 @@
+<html>
+<body>
+報告始終為 <code>true</code> 或 <code>false</code> 的條件以及值被靜態證明為常量的表達式。
+<p><b>示例：</b></p>
+<pre><code>
+  void process(State current) {
+    current = State::Started;
+
+    if (current == State::Stopped) {
+        //代碼
+    }
+    //代碼
+  }
+</code></pre>
+</body>
+</html>

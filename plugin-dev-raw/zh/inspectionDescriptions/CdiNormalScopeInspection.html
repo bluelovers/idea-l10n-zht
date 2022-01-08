@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>報告具有不在默認 <code>@Dependent</code> 范圍內的 public 實例字段的托管 Bean。
+  根據 CDI 規范，上下文范圍（<code>@RequestScoped</code>、<code>@ApplicationScoped</code>、<code>@SessionScoped</code> 和 <code>ConversationScoped</code>）不允許用于具有 public 實例字段的托管  Bean。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @ApplicationScoped // 警告：具有非默認范圍的 Bean 不得具有 public 字段
+  class Car {
+    public String engine;
+  }
+</code></pre>
+</body>
+</html>

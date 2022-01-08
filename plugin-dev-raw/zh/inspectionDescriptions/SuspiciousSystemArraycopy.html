@@ -1,0 +1,23 @@
+<html>
+<body>
+報告對 <code>System.arraycopy()</code> 的可疑調用。
+<p>此類調用在以下情況下可疑：</p>
+<ul>
+<li>源或目標非數組類型
+<li>源和目標的類型不同
+<li>復制的塊長度大于 <code>src.length - srcPos</code>
+<li>復制的塊長度大于 <code>dest.length - destPos</code>
+<li>當源和目標為同一個數組時，范圍始終相交
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo() {
+    int[] src = new int[] { 1, 2, 3, 4 };
+    System.arraycopy(src, 0, src, 1, 2); // 警告：復制到具有相交范圍的同一數組
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

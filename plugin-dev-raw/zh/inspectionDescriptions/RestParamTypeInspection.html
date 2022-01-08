@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>報告具有不受支持類型的資源方法形參（使用 <code>@PathParam</code>、<code>@QueryParam</code> 等注解）。</p>
+<p>注解的形參、字段或屬性的類型必須滿足以下要求之一：</p>
+<ol>
+  <li>為基元類型</li>
+  <li>有一個接受單個 <code>String</code> 實參的構造函數</li>
+  <li>有一個名為 <code>valueOf()</code> 或 <code>fromString()</code> 的 static 方法，它接受單個 <code>String</code> 實參，例如 <code>Integer.valueOf(String)</code>。
+  </li>
+  <li>擁有 <code>ParamConverterProvider</code> JAX-RS 擴展 SPI 的注冊實現，它返回一個能夠將字符串轉換為特定類型的 <code>ParamConverter</code> 實例。
+  </li>
+  <li>為 <code>List&lt;T&gt;</code>、<code>Set&lt;T&gt;</code> 或 <code>SortedSet&lt;T&gt;</code>，其中 T 為 2、3 或 4 以上。 生成的集合為只讀。</li>
+</ol>
+</body>
+</html>

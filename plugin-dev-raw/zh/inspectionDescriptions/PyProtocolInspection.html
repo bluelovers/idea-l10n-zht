@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>報告 <a href="https://www.python.org/dev/peps/pep-0544/">PEP-544</a> 中引入的協議的無效定義和用法。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+from typing import Protocol
+
+
+class MyProtocol(Protocol):
+    def method(self, p: int) -> str:
+        pass
+
+
+class MyClass(MyProtocol):
+    def method(self, p: str) -> int: # 'method' 的類型不兼容 'MyProtocol'
+        pass
+
+
+class MyAnotherProtocol(MyClass, Protocol): # 協議的所有父類必須為協議
+    pass
+
+</pre>
+</body>
+</html>

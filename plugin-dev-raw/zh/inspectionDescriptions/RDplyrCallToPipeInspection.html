@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>報告嵌套的 dplyr 調用並建議將其替換為管道。</p>
+<p><b>示例：</b></p>
+<p>
+  <code>
+    summarise(filter(diamonds, depth > 62.0), mean = mean(carat))
+  </code>
+</p>
+<p>當您應用該快速修復時，代碼變為：</p>
+<p>
+  <code>
+    diamonds %>%
+    filter(depth > 62.0) %>%
+    summarise(mean = mean(carat))
+  </code>
+</p>
+</body>
+</html>
