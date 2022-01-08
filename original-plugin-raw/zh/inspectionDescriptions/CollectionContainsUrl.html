@@ -1,0 +1,16 @@
+<html>
+<body>
+报告包含 <code>java.net.URL</code> 对象的 <code>java.util.Set</code> 和 <code>java.util.Map</code> 的实例化。
+<p>
+  由于对 <code>URL</code> 的 <code>equals()</code> 和 <code>hashCode()</code> 方法的调用，将 <code>URL</code> 对象添加到此类集合可能会导致性能问题。
+</p>
+<p>
+  <code>URL</code> 的 <code>equals()</code> 和 <code>hashCode()</code> 方法使用 DNS 查找，这取决于网络的可用性，且 DNS 服务器的速度可能会导致显著延迟。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Set&lt;URL&gt; set = new HashSet&lt;URL&gt;();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

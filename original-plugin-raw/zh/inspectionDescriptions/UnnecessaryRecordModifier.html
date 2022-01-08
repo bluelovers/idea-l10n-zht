@@ -1,0 +1,17 @@
+<html>
+<body>
+报告记录上冗余的 <code>final</code>、<code>static</code> 修饰符。
+<p>示例：</p>
+<pre><code>
+final record R() {
+}
+
+class Test {
+  static record R() {
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+报告类型为 <code>Boolean</code> 但未指定显式形参名称的调用实参。
+<p>
+    按顺序传递多个布尔文字时，很容易忘记形参顺序，这可能会导致错误。
+    显式形参名称让阅读和理解代码变得更容易。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun check(checkName: Boolean, checkAddress: Boolean, checkPhone: Boolean) {}
+
+  fun usage() {
+      check(true, false, true) //这是什么意思？
+  }
+</code></pre>
+<p>该快速修复会添加缺少的形参名称：</p>
+<pre><code>
+  fun check(checkName: Boolean, checkAddress: Boolean, checkPhone: Boolean) {}
+
+  fun usage() {
+      check(checkName = true, checkAddress = false, checkPhone = true)
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

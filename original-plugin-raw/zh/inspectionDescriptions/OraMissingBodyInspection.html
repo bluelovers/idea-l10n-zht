@@ -1,0 +1,10 @@
+<html>
+<body>
+报告缺少主体声明的软件包和对象类型规范。
+<p>声明例程的软件包规范和对象类型以及带有光标的软件包规范必须具有实现这些例程和光标的主体声明。 在程序代码中调用例程或光标时，缺少主体会导致运行时错误。</p>
+<p>示例（Oracle）：</p>
+<pre><code>CREATE OR REPLACE PACKAGE ppp IS
+    FUNCTION foo(a INT) RETURN INT;
+END;</code></pre>
+</body>
+</html>

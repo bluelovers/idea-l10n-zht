@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告在 Spring XML 上下文中配置的未解析占位符。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;beans&gt;
+    &lt;ctx:property-placeholder location="application.properties"/&gt;
+
+    &lt;bean class="beans.ServerComponent"&gt;
+      &lt;property name="serverName" value="${server.name}}"/&gt;
+      &lt;property name="port" value="${unknown.property}}"/&gt; // 报告 "无法解析属性键"
+    &lt;/bean&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

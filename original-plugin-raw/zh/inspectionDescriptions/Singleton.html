@@ -1,0 +1,20 @@
+<html>
+<body>
+报告单例类。
+<p>单例类按照只能实例化该类一个实例的方式进行声明。 单例类导致测试复杂化，存在这种情况可能表明欠缺面向对象的设计。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Singleton {
+    private static final Singleton ourInstance = new Singleton();
+
+    private Singleton() {
+    }
+
+    public Singleton getInstance() {
+        return ourInstance;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告检查所有元素的条件的 <code>fold</code> 的用法。</p>
+
+<p>该快速修复会将 <code>fold</code> 替换为等效的 <code>forall</code>。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  var x: Seq[Int]
+  x.foldLeft(true)((x,y) => x && p(y))
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  var x: Seq[Int]
+  x.forall(y => p(y))
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

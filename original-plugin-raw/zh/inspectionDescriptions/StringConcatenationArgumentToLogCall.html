@@ -1,0 +1,38 @@
+<html>
+<body>
+报告用作 <b>SLF4J</b> 和 <b>Log4j 2</b> 日志记录方法实参的非常量字符串串联。
+即使未记录日志消息，也会在运行时评估非常量串联；这会对性能产生负面影响。
+建议改用形参化日志消息，禁用日志记录时不会对其进行评估。
+<p><b>示例：</b></p>
+<pre><code>
+  <b>public class</b> Vital {
+    <b>private static final</b> Logger LOG = LoggerFactory.getLogger(Vital.class);
+
+    <b>public void</b> saveTheWorld(<b>int</b> i, String s, <b>boolean</b> b) {
+      LOG.info("saveTheWorld(" + i + ", " + s + ", "  + b + ")");
+      // todo
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>public class</b> Vital {
+    <b>private static final</b> Logger LOG = LoggerFactory.getLogger(Vital.class);
+
+    <b>public void</b> saveTheWorld(<b>int</b> i, String s, <b>boolean</b> b) {
+      LOG.info("saveTheWorld({}, {}, {})", i, s, b);
+      // todo
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  配置检查：
+</p>
+<ul>
+  <li>
+    使用<b>警告对象</b>列表可以忽略某些更高的日志记录级别。 即使在生产中也可以启用更高的日志记录级别，并且始终会评估实参。
+  </li>
+</ul>
+</body>
+</html>

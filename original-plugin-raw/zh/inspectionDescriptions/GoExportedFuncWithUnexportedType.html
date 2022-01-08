@@ -1,0 +1,18 @@
+<html>
+<body>
+报告具有未导出的返回类型的导出函数。
+<p>在 <strong>go doc</strong> 下查看文档时，未导出的类型可能难以使用。</p>
+<p>示例：</p>
+<pre><code>type hidden struct{}
+
+func Exported() hidden { // 具有 `hidden` 未导出返回类型的导出函数
+ return hidden{}
+}</code></pre>
+<p>您可以应用<b>导出</b>快速修复来导出类型。 应用快速修复后，类型名称将会大写：</p>
+<pre><code>type Hidden struct{}
+
+func Exported() Hidden { // 已修正
+ return Hidden{}
+}</code></pre>
+</body>
+</html>

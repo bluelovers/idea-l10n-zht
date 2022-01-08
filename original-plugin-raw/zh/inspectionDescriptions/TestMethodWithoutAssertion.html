@@ -1,0 +1,32 @@
+<html>
+<body>
+报告不包含任何断言的测试方法。 此类方法可能表示测试用例不完整或薄弱。
+<p><b>示例：</b></p>
+<pre><code>
+  <b>public class</b> ExtensiveTest {
+
+    @Test
+    <b>public void</b> testAlive() {
+      System.out.println("nothing");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  配置检查：
+</p>
+<ul>
+  <li>
+      使用该表可以指定应作为断言的完全限定类名和方法名正则表达式的组合。 类名也匹配子类。
+  </li>
+  <li>
+      使用 <b>'assert' 关键字被视为断言</b>选项可以指定是否应将使用 <code>assert</code> 关键字的 Java <code>assert</code> 语句视为断言。
+  </li>
+  <li>
+      使用<b>忽略声明异常的测试方法</b>选项可以忽略声明异常的测试方法。
+      当您的测试会在失败时抛出异常并因此不需要任何断言时，这会很有用。
+  </li>
+</ul>
+
+</body>
+</html>

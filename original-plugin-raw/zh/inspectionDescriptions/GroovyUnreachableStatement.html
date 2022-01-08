@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告无法到达的语句。 如果该语句位于无线循环、<code>return</code>、<code>break</code> 或 <code>continue</code> 语句后，则可能发生这种情况。</p>
+<p><b>示例：</b>
+<pre><code>
+  <b>void</b> foo (int n) {
+      if (n < 1) {
+          return
+          <b>print('This statement is unreachable')</b>
+      }
+      while (true){
+          print ('Hello, world!')
+      }
+      <b>print('This statement is unreachable too')</b>
+  }
+</code></pre>
+</body>
+</html>

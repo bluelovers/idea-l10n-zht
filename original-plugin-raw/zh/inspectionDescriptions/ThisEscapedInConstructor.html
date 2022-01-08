@@ -1,0 +1,14 @@
+<html>
+<body>
+报告对象初始化期间可能的 <code>this</code> 转义。 当 <code>this</code> 用作构造函数或初始值设定项中的方法实参或赋值对象时，就会发生转义。 此类转义可能会导致难以捉摸的错误，因为现在该对象在不保证得到初始化的上下文中可用。
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    {
+      System.out.println(this);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

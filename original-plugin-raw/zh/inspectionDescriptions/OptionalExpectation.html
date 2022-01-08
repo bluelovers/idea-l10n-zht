@@ -1,0 +1,17 @@
+<html>
+<body>
+报告某些平台模块中没有实际注解的可选预期注解。
+<p><b>示例：</b></p>
+<pre><code>// 通用代码
+@OptionalExpectation
+expect annotation class JvmName(val name: String)
+
+@JvmName(name = "JvmFoo")
+fun foo() { }
+
+// jvm 代码
+actual annotation class JvmName(val name: String)
+</code></pre>
+<p>该检查还会报告对非 JVM 平台（例如 Native）省略 <code>actual annotation class JvmName</code> 的情况。</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>除非被声明为非 strict，否则报告使用 <code>@Singleton</code> 注解的类的构造函数。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @Singleton
+  class Foo{
+      Foo(){
+      }
+  }
+</code></pre>
+<p>有两种可能的快速修复方法：移除该构造函数，或者将 <code>@Singleton</code> 声明为非 strict。</p>
+<p>在应用快速修复后：</p>
+<pre><code>
+  @Singleton
+  class Foo{
+  }
+</code></pre>
+<p>或：</p>
+<pre><code>
+  @Singleton(<b>strict = false</b>)
+  class Foo{
+      Foo(){
+      }
+  }
+</code></pre>
+</body>
+</html>

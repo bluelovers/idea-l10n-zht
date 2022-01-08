@@ -1,0 +1,25 @@
+<html>
+<body>
+报告空的 <code>catch</code> 块。 虽然偶尔是有意为之，但空的 <code>catch</code> 块可能导致调试变得极其困难。
+<p><b>示例：</b></p>
+<pre>
+<code>
+try {
+  throw new Exception()
+}
+catch (Exception e) {
+}
+</code>
+</pre>
+<p>在应用快速修复后：</p>
+<pre>
+<code>
+try {
+  throw new Exception()
+}
+catch (Exception ignored) {
+}
+</code>
+</pre>
+</body>
+</html>

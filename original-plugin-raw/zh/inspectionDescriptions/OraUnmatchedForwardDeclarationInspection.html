@@ -1,0 +1,20 @@
+<html>
+<body>
+报告在代码中缺少实现的过程和函数的声明。
+<p>在 Oracle 中，您可以声明一个没有主体的过程或函数，并在稍后的某个时间编写实现。 该检查将报告未实现的此类过程或函数的名称。</p>
+<p>示例（Oracle）：</p>
+<pre><code>DECLARE PROCEDURE foo(a int, b varchar2);
+BEGIN
+    NULL;
+END;</code></pre>
+<p><code>foo</code> 过程已被声明，但缺少实现。 我们可以添加实现来消除错误。</p>
+<pre><code>DECLARE PROCEDURE foo(a int, b varchar2);
+  PROCEDURE foo(a int, b varchar2) IS
+BEGIN
+    NULL;
+END;
+BEGIN
+    NULL;
+END;</code></pre>
+</body>
+</html>

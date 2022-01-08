@@ -1,0 +1,18 @@
+<html>
+<body>
+报告方法 <code>@Contract</code> 注解中的问题。 可以报告的问题类型有：
+<ul>
+<li>约定语法错误</li>
+<li>不符合方法签名的约定（错误的形参计数）</li>
+<li>与约定不一致的方法实现（例如，即使约定声明 <code> false</code>，也返回 <code>true</code>）</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+  // 方法没有形参，参约定预期 1
+  @Contract("_ -> fail")
+  <b>void</b> x() {
+    <b>throw</b> new AssertionError();
+  }
+</code></pre>
+</body>
+</html>

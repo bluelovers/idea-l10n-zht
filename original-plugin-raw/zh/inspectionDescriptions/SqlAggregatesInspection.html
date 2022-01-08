@@ -1,0 +1,27 @@
+<html>
+<body>
+报告 SQL 聚合函数的无效用法。
+<p>即以下情况：</p>
+<ul>
+  <li><p>在 HAVING 和 ORDER BY 子句中使用但在 GROUP BY 子句中遗漏的列。</p>
+    <pre><code>CREATE TABLE foo(id INT PRIMARY KEY, a INT, b INT);
+SELECT a, MAX(b) FROM foo GROUP BY a HAVING b > 0;
+SELECT * FROM foo GROUP BY a ORDER BY b;</code></pre>
+    <p>当按主键进行分组时，此规则不适用。</p>
+    <pre><code>SELECT * FROM foo GROUP BY id ORDER BY b;</code></pre>
+  </li>
+  <li><p>在错误的上下文中聚合函数。 通常，您可以在以下上下文中使用聚合函数： SELECT 中的表达式列表； 在 HAVING 和 ORDER BY 部分； 和其他特定于方言的案例。 以下查询将显示错误。</p>
+    <pre><code>SELECT a FROM foo WHERE MAX(b) > 0;
+SELECT a FROM foo GROUP BY MAX(a);</code></pre>
+  </li>
+  <li><p>聚合函数的嵌套调用。</p>
+    <pre><code>SELECT MAX(SUM(a)) FROM foo GROUP BY a;</code></pre>
+    <p>此规则不适用于解析函数。 以下查询有效且正确。</p>
+    <pre><code>SELECT MAX(SUM(a) OVER ()) FROM foo;</code></pre>
+  </li>
+  <li><p>没有聚合函数的 HAVING 的用法。 在这种情况下，请考虑使用 WHERE 部分重写您的代码。</p>
+    <pre><code>SELECT a, MAX(b) FROM foo GROUP BY a HAVING a > 0;</code></pre>
+  </li>
+</ul>
+</body>
+</html>

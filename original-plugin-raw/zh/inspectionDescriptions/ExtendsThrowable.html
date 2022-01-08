@@ -1,0 +1,12 @@
+<html>
+<body>
+报告直接扩展 <code>java.lang.Throwable</code> 的类。
+<p>直接扩展 <code>java.lang.Throwable</code> 通常被认为是一种不好的做法。
+  通常扩展 <code>java.lang.RuntimeException</code>、<code>java.lang.Exception</code> 或在特殊情况下扩展 <code>java.lang.Error</code> 就足够了。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class EnigmaThrowable extends Throwable {} // 警告：'EnigmaThrowable' 类会直接扩展 'java.lang.Throwable'
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+报告语句数超过指定最大值的方法。
+<p>语句过多的方法可能令人困惑，并且表明可能有必要重构。</p>
+<p>以下语句不计算在内：</p>
+<ul>
+  <li>空语句（分号）</li>
+  <li>块语句</li>
+  <li><code>for</code> 循环初始化语句，即 <code>for(int i = ...;...)</code> 语句内的 <code>int i = ...</code></li>
+  <li><code>for</code> 循环 update 语句，即 <code>for(int i = ...;...; i += 2)</code> 语句内的 <code>i += 2</code></li>
+</ul>
+<!-- tooltip end -->
+<p>使用<b>每个方法的最大语句数</b>字段可指定方法中允许的最大语句数。<p>
+</body>
+</html>

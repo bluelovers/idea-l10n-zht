@@ -1,0 +1,8 @@
+<html>
+<body>
+报告在同一软件包但在不同模块中声明的 package-private 成员的用法。
+<p>如果声明类由不同的加载器加载，则访问 package-private 成员的代码将在运行时失败，并显示 <code>IllegalAccessError</code>。</p>
+<p>如果某个方法重写了由不同加载器加载的类中的 package-private 方法，那么在实现类的实例上调用 super 方法时，它将不会被调用。</p>
+<p>如果某个方法从由不同加载器加载的类中实现了 abstract package-private 方法，则在实现类的实例上调用 super 方法将失败并显示 <code>AbstractMethodError</code>。</p>
+</body>
+</html>

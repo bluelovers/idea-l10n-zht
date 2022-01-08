@@ -1,0 +1,18 @@
+<html>
+<body>
+报告位置实参在命名实参之后的调用。 适用于 PostgreSQL、Oracle 和 Db2。
+<p>示例（PostgreSQL 中）：</p>
+<pre><code>CREATE FUNCTION foo(a int, b int, c int) RETURNS int
+    LANGUAGE plpgsql AS
+$$
+BEGIN
+    RETURN a + b + c;
+END
+$$;
+SELECT foo(a => 1, b => 2, c => 3);
+  -- `3` 在命名实参之后
+SELECT foo(1, b => 2, 3);
+  -- `1` 和 `3` 在命名实参之后
+SELECT foo(b => 2, 1, 3);</code></pre>
+</body>
+</html>

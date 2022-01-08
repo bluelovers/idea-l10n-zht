@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>创建 <code>VIRTUAL</code> 类的对象时报告问题。</p>
+<p><b>示例：</b></p>
+<pre><code>
+setClass('MyClass', slots = c('aa', 'bb'), contains = "VIRTUAL")
+new('MyClass')
+</code></pre>
+<p>
+  <code>VIRTUAL</code> 类的最常见用法是类联合，即在调用 <code>setClassUnion()</code> 而不是调用 <code>setClass()</code> 时定义的虚拟类。
+</p>
+</body>
+</html>

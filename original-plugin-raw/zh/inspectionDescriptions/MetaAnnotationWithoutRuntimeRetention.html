@@ -1,0 +1,20 @@
+<html>
+<body>
+报告 JUnit 5 应当使用的包含 <code>SOURCE</code> 或 <code>CLASS</code> 保留策略的注解。
+此类注解在运行时不可用，很可能应当修正其保留策略，才能通过反射进行访问。
+<p>请注意，如果未指定保留策略，则使用默认保留策略 <code>CLASS</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @Testable
+  public @interface UnitTest {}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  @Retention(RetentionPolicy.RUNTIME)
+  @Testable
+  public @interface UnitTest {}
+</code></pre>
+<!-- tooltip end -->
+<!--<p><small>New in 2017.2</small></p>-->
+</body>
+</html>

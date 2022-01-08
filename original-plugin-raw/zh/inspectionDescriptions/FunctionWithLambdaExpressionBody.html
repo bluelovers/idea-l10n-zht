@@ -1,0 +1,13 @@
+<html>
+<body>
+报告具有 <code>= { ... }</code> 和推断返回类型的函数。
+<p><b>示例：</b></p>
+<pre><code>
+  fun sum(a: Int, b: Int) = { a + b } // 此函数的返回类型为 '() -> Int'。
+</code></pre>
+<p>该快速修复会移除大括号：</p>
+<pre><code>
+  fun sum(a: Int, b: Int) = a + b
+</code></pre>
+</body>
+</html>

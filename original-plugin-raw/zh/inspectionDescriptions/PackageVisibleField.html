@@ -1,0 +1,14 @@
+<html>
+<body>
+报告在没有任何访问修饰符（也称为 package-private）的情况下声明的字段。
+<p>不报告常量（即标记为 <code>static</code> 和 <code>final</code> 的字段）。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class A {
+    Object object;             // 警告
+    final static int MODE = 0; // 常量，无警告
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

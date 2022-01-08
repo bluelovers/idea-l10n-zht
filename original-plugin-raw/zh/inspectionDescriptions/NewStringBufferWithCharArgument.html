@@ -1,0 +1,15 @@
+<html>
+<body>
+报告对 <code>char</code> 作为实参的 <code>StringBuffer</code> 和 <code>StringBuilder</code> 构造函数的调用。
+在本例中，<code>char</code> 无提示地转换为整数，并解读为缓冲区的初始容量。
+<p><b>示例：</b></p>
+<pre><code>
+  new StringBuilder('(').append("1").append(')');
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  new StringBuilder("(").append("1").append(')');
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

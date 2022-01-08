@@ -1,0 +1,19 @@
+<html>
+<body>
+报告与那些从 Java <code>get</code> 或 <code>set</code> 方法自动生成的合成属性相冲突的扩展属性。
+<p>应移除或重命名此类属性，以避免将来在编译器中进行更改时破坏代码。</p>
+<p>该快速修复会删除扩展属性。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val File.name: String
+      get() = getName()
+</code></pre>
+<p>该快速修复会添加 <code>@Deprecated</code> 注解：</p>
+<pre><code>
+  @Deprecated("Is replaced with automatic synthetic extension", ReplaceWith("name"), level = DeprecationLevel.HIDDEN)
+  val File.name: String
+      get() = getName()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

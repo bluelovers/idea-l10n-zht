@@ -1,0 +1,19 @@
+<html>
+<body>
+报告触发器中转换表变量的不正确用法。
+<p>示例 (HSQLDB)：</p>
+<pre><code>CREATE TABLE foo(a INT);
+
+CREATE TRIGGER trg
+ AFTER DELETE ON foo
+BEGIN
+   SELECT * FROM NEW;
+END;
+
+CREATE TRIGGER trig AFTER INSERT ON foo
+   REFERENCING OLD ROW AS newrow
+   FOR EACH ROW WHEN (a > 1)
+   INSERT INTO foo VALUES (1)</code></pre>
+<p>在 HSQLDB 中，DELETE 触发器只能用于 OLD 状态，而 INSERT 触发器只能用于 NEW 状态。 因此，在前面的示例中，<code>SELECT * FROM NEW;</code> 中的 NEW 和 <code>REFERENCING OLD ROW AS newrow</code> 中的 OLD 将被高亮显示。</p>
+</body>
+</html>

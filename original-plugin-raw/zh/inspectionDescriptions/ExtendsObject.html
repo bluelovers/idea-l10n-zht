@@ -1,0 +1,17 @@
+<html>
+<body>
+报告一个明确声明要扩展<code> java.lang.Object</code> 的类。
+<p>这种声明是冗余的，可以安全地删除。</p>
+<p>示例：</p>
+<pre><code>
+  class MyClass extends Object {
+  }
+</code></pre>
+<p>快速修复删除了冗余的 <code>extends Object</code> 子句：</p>
+<pre><code>
+  class MyClass {
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

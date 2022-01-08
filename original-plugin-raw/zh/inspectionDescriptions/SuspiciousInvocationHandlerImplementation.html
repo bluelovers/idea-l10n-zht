@@ -1,0 +1,24 @@
+<html>
+<body>
+报告不代理 <code>hashCode()</code>、<code>equals()</code> 和 <code>toString()</code> 等标准 <code>Object</code> 方法的 <code>InvocationHandler</code> 的实现。
+<p>未能处理这些方法可能会在代理实例上调用它们时导致意外问题。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  InvocationHandler myHandler = (proxy, method, params) -&gt; {
+    System.out.println("Hello World!");
+    <b>return</b> null;
+  };
+  Runnable myProxy = (Runnable) Proxy.newProxyInstance(
+    Thread.currentThread().getContextClassLoader(),
+    <b>new</b> Class[] {Runnable.class}, myHandler
+  );
+</code></pre>
+<p>
+  此代码段的宗旨是仅代理 <code>Runnable.run()</code> 方法。
+  但是，也会代理对 <code>hashCode()</code> 等任何 <code>Object</code> 方法的调用。
+  这可能导致 <code>NullPointerException</code> 等问题，例如在将 <code>myProxy</code> 添加到 <code>HashSet</code> 时。
+</p>
+<!-- tooltip end -->
+<p><small>2020.2 最新变化</small>
+</body>
+</html>

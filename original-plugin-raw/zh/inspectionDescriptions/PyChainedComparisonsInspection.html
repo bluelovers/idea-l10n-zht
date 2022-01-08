@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告可以简化的链式比较。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def do_comparison(x):
+      xmin = 10
+      xmax = 100
+      if x >= xmin and x &lt;= xmax:
+          pass
+</code></pre>
+<p>IDE 提议简化 <code>if x >= xmin and x &lt;= xmax</code>。
+  应用快速修复后，代码变为：</p>
+<pre><code>
+  def do_comparison(x):
+      xmin = 10
+      xmax = 100
+      if xmin &lt;= x &lt;= xmax:
+          pass
+</code></pre>
+</body>
+</html>

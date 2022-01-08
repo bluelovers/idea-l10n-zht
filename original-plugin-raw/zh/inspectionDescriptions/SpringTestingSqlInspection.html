@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>报告 <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/Sql.html>@Sql</a> 注解的 <code>scripts</code> 特性和 <code>@Sql</code> 元注解的相应别名特性中未解析的文件引用。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  @SqlGroup({
+     @Sql("not-found"), // 报告 "无法解析文件 'not-found""
+     @Sql("found.sql")
+  })
+  public class MyTestWithSqlData {...}
+</code></pre>
+</body>
+</html>

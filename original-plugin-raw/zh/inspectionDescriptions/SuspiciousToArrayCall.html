@@ -1,0 +1,26 @@
+<html>
+<body>
+报告对 <code>Collection.toArray()</code> 的可疑调用。
+<p>以下类型的调用视为可疑：</p>
+<ul>
+  <li>
+    数组实参的类型与结果被转换成的数组类型不相同。
+  </li>
+  <li>
+    数组实参的类型与集合声明中的类型形参不匹配。
+  </li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+void m1(List list) {
+  Number[] ns = (Number[]) list.toArray(new String[0]);
+}
+
+void m2(List&lt;Number&gt; list) {
+  Number[] ns = list.toArray(new String[0]);
+}
+</code></pre>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+报告确保评估为 <code>true</code> 或 <code>false</code> 的按位掩码表达式。
+<p>
+  该检查将检查 <code>(var & constant1) == constant2</code> 或 <code>(var | constant1) == constant2</code> 形式的表达式，其中 <code>constant1</code> 和 <code>constant2</code> 是不兼容的位掩码常量。</p>
+<p><b>示例：</b></p>
+<pre><code>  // 不兼容的掩码：由于掩码以 00 结尾，
+  // 结果可能是 0x1200，但不是 0x1234
+  if ((mask & 0xFF00) == 0x1234) {...}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

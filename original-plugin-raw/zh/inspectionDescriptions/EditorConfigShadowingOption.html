@@ -1,0 +1,15 @@
+<!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
+<html>
+<body>
+报告覆盖文件中先前定义的相同属性的属性。
+<p>示例：
+<pre><code>
+[*.java]
+indent_size=4
+[{*.java,*.js}]
+indent_size=2
+</code></pre>
+第二部分同样包含 <code>[*.java]</code> 文件，但还将 indent_size 设置为值 2。
+因此第一个声明 <code>indent_size=4</code> 将被忽略。
+</body>
+</html>

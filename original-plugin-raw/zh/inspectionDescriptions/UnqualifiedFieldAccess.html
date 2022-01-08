@@ -1,0 +1,29 @@
+<html>
+<body>
+报告未使用 <code>this</code> 或某些其他限定符限定的字段访问操作。
+<p>
+  某些编码样式要求对所有字段访问操作进行限定，以防止与局部变量或局部形参访问混淆。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    int foo;
+
+    void bar() {
+      foo += 1;
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    int foo;
+
+    void bar() {
+      this.foo += 1;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

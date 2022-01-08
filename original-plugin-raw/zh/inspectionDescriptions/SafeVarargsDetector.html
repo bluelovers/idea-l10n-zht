@@ -1,0 +1,31 @@
+<html>
+<body>
+报告所有包含可变 arity 且可以注解为 <code>@SafeVarargs</code> 的方法。
+<code>@SafeVarargs</code> 注解禁止有关在调用点创建形参化数组的未检查的警告。
+<p><b>示例：</b></p>
+<pre><code>
+  public class Foo&lt;T&gt; {
+    private List&lt;T&gt; list = new ArrayList&lt;&gt;();
+
+    public final void safeVarargs(T... elements) {
+      Collections.addAll(list, elements);
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  public class Foo&lt;T&gt; {
+    private List&lt;T&gt; list = new ArrayList&lt;&gt;();
+
+    @SafeVarargs
+    public final void safeVarargs(T... elements) {
+      Collections.addAll(list, elements);
+    }
+  }
+</code></pre>
+<p>
+  Java 1.6 或更早版本的 JVM 不支持此注解。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

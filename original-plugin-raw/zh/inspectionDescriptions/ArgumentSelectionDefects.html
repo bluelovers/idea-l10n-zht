@@ -1,0 +1,22 @@
+<html>
+<body>
+报告实参标识符名称和形参名称之间的不匹配。
+这可以帮助检测编程错误，例如，当您意外切换同一类型的实参时。
+原始研究论文可在<a href="https://static.googleusercontent.com/media/research.google.com/ru//pubs/archive/46317.pdf">此处</a>找到。
+<p><b>示例：</b></p>
+<pre><code>
+  const User* get_User(int64_t company_id, int64_t user_id) {
+    return new User{company_id, user_id, "foo"};
+  }
+
+  void call_User(int64_t company_id, int64_t user_id) {
+    const User* user = get_User(user_id, company_id); // 此处有潜在问题
+    //...
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用下面的复选框可以检查名称少于三个符号的实参。</p>
+<p><small><a href="https://www.jetbrains.com/help/clion/argument-selection-defects-inspection.html">了解更多。</a></small></p>
+<p><small>2018.2 最新变化</small></p>
+</body>
+</html>

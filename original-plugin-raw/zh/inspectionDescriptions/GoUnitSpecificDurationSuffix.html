@@ -1,0 +1,9 @@
+<html>
+<body>
+报告 <code>time.Duration</code> 类型的常量和变量名称中的特定于单位的后缀。
+<p>检查来自 <code>go lint</code>。 可以在 <a href="https://github.com/golang/lint/blob/c5fb716d6688a859aae56d26d3e6070808df29f7/lint.go#L1365-L1373">github.com 上的 golang 存储库</a>中找到表示时间单位的后缀列表。</p>
+<p><code>time.Duration</code> 表示一个以纳秒为单位的值，因此添加时间单位后缀可能会使变量的含义变得混乱，甚至指示对 <code>time.Duration</code> API 的滥用。</p>
+<p>示例：</p>
+<pre><code>var timeoutSeconds = 5 * time.Second</code></pre>
+</body>
+</html>

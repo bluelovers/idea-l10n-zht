@@ -1,0 +1,15 @@
+<html>
+<body>
+报告对新 <code>StringBuffer</code> 或 <code>StringBuilder</code> 对象进行实例化而不指定其初始容量的尝试。
+<p>
+  如果未指定初始容量，则使用默认容量，这很少是最佳选择。
+  如果在超出初始容量时需要重新分配空间并复制内存，则未指定 <code>StringBuffer</code> 的初始容量可能会导致性能问题。
+</p>
+<p>示例：</p>
+<pre><code>
+  // 未指定容量
+  var sb = new StringBuilder();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

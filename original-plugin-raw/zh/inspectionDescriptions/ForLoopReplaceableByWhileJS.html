@@ -1,0 +1,20 @@
+<html>
+<body>
+报告既不包含初始化也不包含更新组件的
+<code>for</code> 循环。 建议将该循环替换为更简单的 <code>while</code> 语句。
+<p>示例：</p>
+<pre><code>
+  for(; exitCondition(); ) {
+    process();
+  }
+</code></pre>
+<p>应用快速修复后，结果如下所示：</p>
+<pre><code>
+  while(exitCondition()) {
+    process();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>如果希望此检查忽略包含普通条件或不存在条件的 <b>for</b> 循环，请使用下面的复选框。</p>
+</body>
+</html>

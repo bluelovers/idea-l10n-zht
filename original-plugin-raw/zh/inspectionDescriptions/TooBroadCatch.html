@@ -1,0 +1,29 @@
+<html>
+<body>
+报告形参比相应的 <code>try</code> 块抛出的异常更通用的 <code>catch</code> 块。
+<p><b>示例：</b></p>
+<pre><code>
+  try  {
+    File file = new File(pathToFile);
+    return file.getAbsolutePath();
+  } catch (Exception ex) { // warning: 'catch' of 'Exception' is too broad, masking exceptions 'RuntimeException'
+    return defaultFilePath;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  try  {
+    File file = new File(pathToFile);
+    return file.getAbsolutePath();
+  } catch (RuntimeException ex) {
+    return defaultFilePath;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>仅对 RuntimeException、异常、错误或 Throwable 发出警告</b>选项可使此检查仅对最常见的异常发出警告。</li>
+  <li>使用<b>忽略隐藏其他异常但自身被抛出的异常</b>选项可忽略任何隐藏其他异常但仍可能被抛出的异常，因此在技术上不会过于宽泛。</li>
+</ul>
+</body>
+</html>

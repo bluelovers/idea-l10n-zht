@@ -1,0 +1,15 @@
+<html>
+<body>
+报告对 <code>Optional</code> 上的 <code>get()</code> 的调用而不检查它是否有值。
+<p>在空 <code>Optional</code> 实例上调用 <code>Optional.get()</code> 将抛出异常。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>void</b> x(List&lt;Integer> list) {
+    <b>final</b> Optional&lt;Integer> optional =
+      list.stream().filter(x -> x > 10).findFirst();
+    <b>final</b> Integer result = optional.get(); // 此处有问题
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+报告对 <code>Arrays.fill()</code> 等实参类型不匹配的非泛型数组操作方法的调用。
+此类调用不会执行任何有用的工作，很可能是错误的。
+<p><b>示例：</b></p>
+<pre><code>
+  int foo(String[] strings) {
+    return Arrays.binarySearch(strings, 1);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.2 最新变化</small></p>
+</body>
+</html>

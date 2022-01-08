@@ -1,0 +1,22 @@
+<html>
+<body>
+报告 YAML 文件中已弃用的键。
+<p>仅当存在与相应 YAML 文件关联的 JSON 架构时，才会检查是否弃用。</p>
+<p>请注意，JSON 架构规范中尚未定义弃用机制，并且此检查使用非标准的 <code>deprecationMessage</code> 扩展。</p>
+<p><b>方案弃用示例：</b></p>
+<pre><code>
+  {
+    "properties": {
+      "SomeDeprecatedProperty": {
+        "deprecationMessage": "Baz",
+        "description": "Foo bar"
+      }
+    }
+  }
+</code></pre>
+<p><b>以下是带有相应警告的示例：</b></p>
+<pre><code>
+  SomeDeprecatedProperty: some value
+</code></pre>
+</body>
+</html>

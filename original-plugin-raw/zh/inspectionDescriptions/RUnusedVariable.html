@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告当前范围内未使用的变量。
+  这些变量非必要，可以移除。</p>
+<p><b>示例：</b></p>
+<pre><code>
+my_func  &lt;- function(a) {
+  x  &lt;- 3
+  return (a^2)
+}
+</code></pre>
+<p><code>x</code> 变量未使用，可以移除：</p>
+<pre><code>
+my_func  &lt;- function(a) {
+  return (a^2)
+}
+</code></pre>
+</body>
+</html>

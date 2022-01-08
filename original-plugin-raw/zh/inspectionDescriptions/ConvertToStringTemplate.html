@@ -1,0 +1,25 @@
+<html>
+<body>
+报告可以转换为字符串模板的字符串串联。
+<p>建议使用字符串模板，因为这样会使代码更容易读取。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun example() {
+      val capitals = mapOf("France" to "Paris", "Spain" to "Madrid")
+      for ((country, capital) in capitals) {
+          print(capital + " is a capital of " + country)
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun example() {
+      val capitals = mapOf("France" to "Paris", "Spain" to "Madrid")
+      for ((country, capital) in capitals) {
+          print("$capital is a capital of $country")
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

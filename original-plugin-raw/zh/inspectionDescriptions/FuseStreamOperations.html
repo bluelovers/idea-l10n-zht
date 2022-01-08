@@ -1,0 +1,22 @@
+<html>
+<body>
+检测 Stream API 链之外的可以合并到其中的转换。
+<p>示例：</p>
+<pre><code>
+  List&lt;String&gt; list = stream.collect(Collectors.toList());
+  list.sort(null);
+  return list.toArray(new String[list.size()]);
+</code></pre>
+<p>转换后：</p>
+<pre><code>
+  return stream.sorted().toArray(String[]::new);
+</code></pre>
+<p>
+  请注意，有时转换后的 Stream 链可能会将显式 <code>ArrayList</code> 替换为 <code>Collectors.toList()</code> 或将显式 <code>HashSet</code> 替换为 <code>Collectors.toSet()</code>。 当前库实现会在内部使用这些集合。 但是，这种方法不是很可靠，将来可能会更改代码的语义。</p>
+
+<!-- tooltip end -->
+<p>如果您对此感到担心，请使用<b>不建议使用 'toList()' 或 'toSet()' 收集器</b>选项来建议使用 <code>Collectors.toCollection()</code> 而不是 <code>toList</code> 和 <code>toSet</code> 收集器。
+<p>仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。</p>
+<!--<p><small>New in 2017.3</small></p>-->
+</body>
+</html>

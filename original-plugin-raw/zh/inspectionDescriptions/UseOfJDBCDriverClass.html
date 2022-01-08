@@ -1,0 +1,16 @@
+<html>
+<body>
+报告使用特定 JDBC 驱动程序类的情况。 使用这种类会将您的项目绑定到特定的数据库和驱动程序，从而违背了 JDBC 的目的并导致失去可移植性。
+<p><b>示例：</b></p>
+<pre><code>
+  import java.sql.Driver;
+
+  abstract class Sample implements Driver {
+    public void foo() {
+        Sample sample;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

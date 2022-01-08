@@ -1,0 +1,26 @@
+<html>
+<body>
+报告 <code>async</code> 函数中没有预期的 <code>await</code> 前缀的 <code> async</code> 函数调用。
+此类调用返回 <code>Promise</code>，并且控制流会立即继续。
+<p>示例：</p>
+<pre><code>
+async function bar() { /* ... */ }
+async function foo() {
+    bar(); // 不良
+}
+</code></pre>
+<p>
+应用快速修复后，将添加 <code>await</code> 前缀：</p>
+<pre><code>
+async function bar() { /* ... */ }
+async function foo() {
+    await bar(); // 优良
+}
+</code></pre>
+<br/>
+在选中“报告 return 语句中的 promise”复选框的情况下，还建议在 return 语句中添加 <code>await</code>。<br/>
+虽然一般不必这样做，但它有两大好处。<br/><ul><li>
+使用 <code>try-catch</code> 环绕代码时，您不会忘记去添加 <code>await</code>。</li>
+<li>显式的 <code>await</code> 有助于 V8 运行时提供<a href="https://bit.ly/v8-zero-cost-async-stack-traces">异步堆栈跟踪</a>。</li></ul>
+</body>
+</html>

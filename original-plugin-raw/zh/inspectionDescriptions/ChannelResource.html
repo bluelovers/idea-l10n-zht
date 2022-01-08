@@ -1,0 +1,27 @@
+<html>
+<body>
+报告未安全关闭的 <code>Channel</code> 资源，包括任何通过在文件或套接字资源上调用 <code>getChannel()</code> 而创建的实例。
+<p>
+  默认情况下，该检查假定资源可以由名称中带有 'close' 或 'cleanup' 的任何方法关闭。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void send(Socket socket) throws IOException {
+    SocketChannel channel = socket.getChannel(); //警告
+    channel.write(ByteBuffer.wrap("message".getBytes()));
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用以下选项配置检查：
+</p>
+<ul>
+  <li>
+    是否允许在 <code>try</code> 块内打开 <code>Channel</code> 资源。 这种样式不太合意，因为它比在 <code>try</code> 块前面打开 <code>Channel</code> 更复杂。
+  </li>
+  <li>
+    资源能否通过任何将资源作为实参传递的方法调用来关闭。
+  </li>
+</ul>
+</body>
+</html>

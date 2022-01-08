@@ -1,0 +1,18 @@
+<html>
+<body>
+报告已修改但从未查询的对象。
+<p>该检查依赖于方法突变协定，对于某些库方法，可以推断或预先注解突变协定。 此检查不报告集合、映射和字符串构建器，因为其他更精准的检查会报告这些类型。
+</p>
+<p>示例：</p>
+<pre><code>
+  AtomicReference&lt;String&gt; ref = new AtomicReference&lt;&gt;();
+  ref.set("hello"); // ref 不再使用
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用<b>忽略不纯的构造函数</b>选项可以控制是否处理由构造函数或纯度未知的方法创建的对象。
+  如果在构造过程中故意泄漏对象引用，取消选中该选项可能会引起某些误报。
+</p>
+<b><small>2021.2 最新变化</small></b>
+</body>
+</html>

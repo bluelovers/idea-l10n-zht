@@ -1,0 +1,21 @@
+<html>
+<body>
+报告圆括号中可以移到外部的 lambda 表达式。
+<p><b>示例：</b></p>
+<pre><code>
+fun square(a: Int, b: (Int) -&gt; Int) {
+  b(a * a)
+}
+
+fun foo() {
+  square(2, { it })
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+fun foo() {
+  square(2){ it }
+}
+</code></pre>
+</body>
+</html>

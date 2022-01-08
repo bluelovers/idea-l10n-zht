@@ -1,0 +1,23 @@
+<html>
+<body>
+报告未指向函数的标签。
+<p>禁止声明不表示函数的目标标签。</p>
+<p>该快速修复会移除标签。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun testValLabelInReturn() {
+      L@ val fn = { return@L }
+      fn()
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun testValLabelInReturn() {
+      L@ val fn = { return }
+      fn()
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 1.4 或更高时，此检查才会报告。</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+报告与析构数据类的不同属性名称匹配的析构声明条目。
+<p><b>示例：</b></p>
+<pre><code>
+  data class Foo(val a: String, val b: Int, val c: String)
+
+  fun bar(f: Foo) {
+      val (a, c) = f
+  }
+</code></pre>
+<p>该快速修复会更改变量的名称以匹配相应类字段的名称：</p>
+<pre><code>
+  data class Foo(val a: String, val b: Int, val c: String)
+
+  fun bar(f: Foo) {
+      val (a, b) = f
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+报告采用不正确圆括号样式的方法定义。 与没有形参的方法定义相反，
+在带有形参的方法定义中应使用圆括号。
+<p>示例：</p>
+<pre>
+<code># 不良做法
+def example_method(); end
+def example_method_with_parameters param1, param2; end</code>
+</pre>
+
+可以通过快速修复分别移除或添加圆括号。 应用快速修复后，结果如下所示：
+
+<pre>
+<code># 优良做法
+def example_method; end
+def example_method_with_parameters(param1, param2); end</code>
+</pre>
+<p><span style="font-size: smaller;">受 <a href="https://github.com/rubocop-hq/ruby-style-guide#method-parens">'RuboCop'</a> 启发</span>
+</p>
+</body>
+</html>

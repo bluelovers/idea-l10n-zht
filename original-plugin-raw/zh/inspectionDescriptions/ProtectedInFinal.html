@@ -1,0 +1,18 @@
+<html>
+<body>
+报告在 <code>final</code> 类内部使用的 <code>protected</code> 可见性。
+在这种情况下，<code>protected</code> 成员只能在类本身中访问，因此它们实际上是 <code>private</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  class FinalClass {
+      <b>protected</b> fun foo() {}
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class FinalClass {
+      <b>private</b> fun foo() {}
+  }
+</code></pre>
+</body>
+</html>

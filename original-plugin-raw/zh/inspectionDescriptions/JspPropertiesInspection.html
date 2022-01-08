@@ -1,0 +1,13 @@
+<html>
+<body>
+报告 <code>*.properties</code> 文件中的未解析属性。
+
+<p><b>示例 JSP 文件：</b></p>
+<pre><code>
+&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
+&lt;%@ taglib uri="/tags/fmt" prefix="fmt" %&gt;
+
+&lt;fmt:message bundle="bundle.properties" key="unknown.property"/&gt; // 错误：引用的文件中没有此类属性
+</code></pre>
+</body>
+</html>

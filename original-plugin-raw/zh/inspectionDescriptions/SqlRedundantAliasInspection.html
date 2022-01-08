@@ -1,0 +1,13 @@
+<html>
+<body>
+报告可能与表中的列名重叠并且可能是冗余的别名表达式。
+<p>示例（PostgreSQL）：</p>
+<pre><code>CREATE TABLE foo(a INT, b INT);
+
+SELECT * FROM foo foo(a, b);
+SELECT * FROM foo foo(a);
+SELECT * FROM foo foo(x);
+SELECT * FROM foo foo(x, y);</code></pre>
+<p>前两个别名使用与 <code>foo</code> 表中相同的列名。 这些被认为是冗余的，因为列具有相同的名称。</p>
+</body>
+</html>

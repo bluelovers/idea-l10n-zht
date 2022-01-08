@@ -1,0 +1,12 @@
+<html>
+<body>
+报告结构不当的 <code>Hash[...]</code> 调用。 有 3 种使用 <code>[...]</code> 构造新哈希的正确方法：
+<ul>
+  <li><code>Hash['a', 100, 'b', 200]</code></li>
+  <li><code>Hash[ [ ['a', 100], ['b', 200] ] ]</code></li>
+  <li><code>Hash['a' => 100, 'b' => 200]</code></li>
+</ul>
+<p><span style="font-size: smaller;">受 <a
+  href="https://github.com/bbatsov/ruby-style-guide">'Ruby Style Guide'</a> 启发</span></p>
+</body>
+</html>

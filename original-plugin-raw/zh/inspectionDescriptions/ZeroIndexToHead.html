@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告按索引而不是 <code>head</code> 访问集合的第一个元素。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  var seq: Seq[Int]
+  seq(0)
+  seq.apply(0)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.head
+  seq.head
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+报告可以替换为更简洁的方法或可以从中提取中间步骤的 <code>forEach()</code> 调用。
+<p><b>示例：</b></p>
+<pre><code>
+  List&lt;String&gt; findNStrings(List&lt;String&gt; list, int n) {
+    List&lt;String&gt; other = new ArrayList&lt;>();
+    list.forEach(s -> {
+      if(s.length() > n) other.add(s);
+    });
+    return other;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  List&lt;String&gt; findNStrings(List&lt;String&gt; list, int n) {
+    List&lt;String&gt; other = list.stream()
+      .filter(s -> s.length() > n)
+      .collect(Collectors.toList());
+    return other;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。</p>
+<p><small>2017.3 最新变化</small></p>
+</body>
+</html>

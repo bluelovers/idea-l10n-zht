@@ -1,0 +1,61 @@
+<html>
+<body>
+<p>
+  报告 Spring Boot 应用程序 <code>.properties</code> 配置文件中未解析和弃用的配置键和无效值，这可能导致运行时错误。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+server.port=invalid # 报告 '无法将 'invalid' 转换为 java.lang.Integer'
+</code></pre>
+
+<p>如果已弃用的配置键有替换键，您可以应用 '使用替换键' 快速修复。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+logging.path=${path} # 报告 '已弃用的配置属性 'logging.path''
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+logging.file.path=${path}
+</code></pre>
+
+<p>
+  如果 <code>spring-configuration-metadata.json</code> 中未定义配置键，您可以应用创建 <code>META-INF/spring-additional-configuration-metadata.json</code> 文件并定义必要键的 '定义配置键' 快速修复。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+new.key=value #报告 '无法解析配置属性 'new.key''
+</code></pre>
+
+<p>应用快速修复后，以下内容将添加到 <code>META-INF/spring-additional-configuration-metadata.json</code>：</p>
+<pre><code>
+{
+  "properties": [
+    {
+      "name": "new.key",
+      "type": "java.lang.String",
+      "description": "Description for new.key."
+  }
+] }
+</code></pre>
+
+<p>该检查还会高亮显示列表和映射配置键中的索引表示法错误。</p>
+<p><b>示例：</b></p>
+<pre><code>
+spring.datasource.schema[]=${schema} #报告 '缺少索引值'
+</code></pre>
+<!-- tooltip end -->
+
+<p>
+  使用<b>替换令牌</b>选项定义用于配置文件中值占位符的令牌。
+  这些令牌以 <code>beginToken*endToken</code> 的形式指定。
+  如果没有 <code>*</code>，则假定开始和结束的令牌相同。
+</p>
+<p>
+  例如，开始和结束令牌的默认值都是 <code>@</code>，这使您可以定义占位符，例如 <code>some.property=@another.property@</code>。
+</p>
+<p>替换令牌 (<code>@property.key@</code>) 内的值不会高亮显示。</p>
+</body>
+</html>

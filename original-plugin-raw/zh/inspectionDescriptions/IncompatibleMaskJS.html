@@ -1,0 +1,17 @@
+<!-- Copied from community/plugins/InspectionGadgets/src/inspectionDescriptions/IncompatibleMask.html -->
+<html>
+<body>
+报告确定评估为 <code>true</code> 或 <code>false</code>
+的按位掩码表达式。
+表达式的形式为 <code>(var & constant1) == constant2</code> 或
+<code>(var | constant1) == constant2</code>，其中 <code>constant1</code> 
+和 <code>constant2</code> 是不兼容的位掩码常量。
+<p>示例：</p>
+<pre>
+// 不兼容的掩码：由于掩码中的最后一个字节为零，
+// 因此 0x1200 是可能的，但 0x1234 不可能
+if ((mask & 0xFF00) == 0x1234) {...}
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+报告在 <code>java.lang.Class</code> 实例上调用的 <code>getClass()</code> 方法。
+<p>这通常是一个错误，因为结果总是等同于 <code>Class.class</code>。
+如果是错误，那么最好移除 <code>getClass()</code> 调用并直接使用限定符。
+  如果行为是故意的，最好显式编写 <code>Class.class</code> 以避免混淆。</p>
+<p>示例：</p>
+<pre><code>
+  void test(Class&lt;?&gt; clazz) {
+    String name = clazz.getClass().getName();
+  }
+</code></pre>
+<p>在应用可能的快速修复之一后：</p>
+<pre><code>
+  void test(Class&lt;?&gt; clazz) {
+    String name = clazz.getName();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.2 最新变化</small></p>
+</body>
+</html>

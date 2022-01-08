@@ -1,0 +1,27 @@
+<html>
+<body>
+报告用于将 Web 模块部署到服务器的描述符中的以下问题：
+<ul>
+  <li>对不可实例化类的引用</li>
+  <li>对不扩展所需类的类的引用</li>
+  <li>对范围不适当的类的引用</li>
+  <li>空标记和特性值</li>
+  <li>与所需模式不匹配的标记和特性值（例如，Java 标识符）</li>
+  <li>不包含必需子标记或特性的标记</li>
+  <li>定义具有重复名称的对象的标记</li>
+</ul>
+
+<p><b>示例：</b></p><br/>
+<pre><code>
+&lt;web-app&gt;
+  &lt;filter-mapping&gt;
+    &lt;filter-name&gt;CustomFilter&lt;/filter-name&gt; // 错误：应定义 servlet-name 或 url-pattern 子标记
+  &lt;/filter-mapping&gt;
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;CustomServletName&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/ baseUrl&lt;/url-pattern&gt; // 错误：URI 模式不得包含空格
+  &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+</code></pre>
+</body>
+</html>

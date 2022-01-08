@@ -1,0 +1,17 @@
+<html>
+<body>
+报告方法 <code>throws</code> 列表中的重复异常。
+<p>示例：</p>
+<pre><code>
+  void f() throws Exception, Exception {}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void f() throws Exception {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用<b>忽略子类化其他异常的异常</b>选项可以忽略子类化其他异常的异常。
+</p>
+</body>
+</html>

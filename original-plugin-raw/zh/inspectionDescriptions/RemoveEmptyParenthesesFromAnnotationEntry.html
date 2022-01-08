@@ -1,0 +1,24 @@
+<html>
+<body>
+报告注解条目中的冗余空圆括号。
+<p>使用“移除不必要的圆括号”快速修复可清理代码。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  annotation class MyAnnotationA
+  annotation class MyAnnotationB(val x: Int)
+  annotation class MyAnnotationC(val x: Int = 10) // 存在默认值
+
+  @MyAnnotationA() // &lt;== 圆括号冗余
+  fun testA() {
+  }
+
+  @MyAnnotationB() // &lt;== 缺少实参，圆括号为必选项
+  fun testB() {
+  }
+
+  @MyAnnotationC() // &lt;== 圆括号冗余
+  fun testC() {
+  }
+</code></pre>
+</body>
+</html>

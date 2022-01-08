@@ -1,0 +1,25 @@
+<html>
+<body>
+报告对在 <code>this</code> 或 <code>this</code> 的实例字段上锁定的非常量 static 字段的访问。
+<p>
+  在实例数据上锁定 static 字段并不能防止其他实例修改该字段，因此可能会导致意外的竞争条件。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  static String test;
+  public void foo() {
+      synchronized (this) {
+          System.out.println(test); // 警告
+      }
+  }
+</code></pre>
+<p>
+  通过快速修复可以忽略特定类型的 static 字段。
+  可以在检查选项中管理被忽略的类型。
+</p>
+<!-- tooltip end -->
+<p>
+  使用检查选项可以指定应忽略哪些用于 static 字段的类。
+<p>
+</body>
+</html>

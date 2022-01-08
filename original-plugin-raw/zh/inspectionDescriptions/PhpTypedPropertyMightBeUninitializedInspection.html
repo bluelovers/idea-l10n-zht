@@ -1,0 +1,17 @@
+<html>
+<body>
+报告从一个未初始化的类型化属性中读取的尝试。 这种尝试将导致 <code>TypeError</code>。
+<p>
+  类型属性应以下列任何一种方式初始化：
+</p>
+<ul>
+  <li>以一个默认值</li>
+  <li>在构造函数中</li>
+  <li>以 <code>__get()</code> 魔术 getter</li>
+  <li>就地，在使用的时候</li>
+</ul>
+<p>
+  有关详细信息，请参阅 <a href="https://wiki.php.net/rfc/typed_properties_v2#uninitialized_and_unset_properties">Uninitialized and Unset Properties (php.net)</a>。
+</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+报告方法 <code>throws</code> 子句中未检查的异常的声明（<code>java.lang.RuntimeException</code> 或其子类之一）。
+<p>未检查的异常的声明不是必需的，可以删除或移动到 Javadoc <code>@throws</code> 标记。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class InvalidDataException extends RuntimeException {}
+
+  class TextEditor {
+    void readSettings() throws InvalidDataException {} // 警告：在 'throws' 子句中声明了未检查的异常 'InvalidDataException'
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

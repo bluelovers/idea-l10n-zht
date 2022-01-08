@@ -1,0 +1,32 @@
+<html>
+<body>
+报告不必要的 <code>this</code> 或 <code>super</code> 限定。
+<p>
+  在 <code>this</code> 或 <code>super</code> 上使用限定符来消除代码引用的歧义可能很容易通过自动重构变得不必要，为了清楚起见应该删除。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    void foo() {}
+  }
+
+  class Bar extends Foo {
+    void bar() {
+      Bar.super.foo();
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    void foo() {}
+  }
+
+  class Bar extends Foo {
+    void bar() {
+      super.foo();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

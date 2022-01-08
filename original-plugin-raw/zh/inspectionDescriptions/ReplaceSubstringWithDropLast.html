@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可以替换为 <code>s.dropLast(x)</code> 的 <code>s.substring(0, s.length - x)</code> 等调用。
+<p>使用相应函数可使代码更简单。</p>
+<p>该快速修复会将 <code>substring</code> 调用替换为 <code>dropLast</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(s: String) {
+      s.substring(0, s.length - 5)
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(s: String) {
+      s.dropLast(5)
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

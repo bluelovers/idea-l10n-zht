@@ -1,0 +1,38 @@
+<html>
+<body>
+报告实现 <code>Cloneable</code> 接口但不重写 <code>clone()</code> 方法的类。
+<p>这种类使用 <code>clone()</code> 的默认实现，它不是 <code>public</code>，而是 <code>protected</code>，并且不复制该类的可变状态。</p>
+<p>可以通过快速修复生成基本的 <code>clone()</code> 方法，它可以作为 <code>Cloneable</code> 类所期望的正常运行的 <code>clone()</code> 方法的基础。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>public class</b> Data <b>implements</b> Cloneable {
+    <b>private</b> String[] names;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>public class</b> Data <b>implements</b> Cloneable {
+    <b>private</b> String[] names;
+
+    @Override
+    <b>public</b> Data clone() {
+      <b>try</b> {
+        Data clone = (Data) <b>super</b>.clone();
+        // TODO：在此处复制可变状态，因此克隆无法更改原始克隆的内部项 
+         <b>return</b> clone;
+      } <b>catch</b> (CloneNotSupportedException e) {
+        <b>throw new</b> AssertionError();
+      }
+    }
+  }
+</code></pre>
+<!--
+Note for translators: the text of the TODO comment in the example code above comes from
+community/plugins/InspectionGadgets/InspectionGadgetsAnalysis/resources/messages/InspectionGadgetsBundle.properties
+property key: cloneable.class.without.clone.todo.message
+-->
+<!-- tooltip end -->
+<p>使用<b>忽略由于继承而可克隆的类</b>选项可以忽略因继承自 <code>Cloneable</code> 类而 <code>Cloneable</code> 的类。</p>
+<p>使用<b>忽略需要 Cloneable 才能调用超类的 clone() 方法的情况</b>选项可以忽略因从超类调用 <code>clone()</code> 方法而需要实现 <code>Cloneable</code> 的类。</p>
+</body>
+</html>

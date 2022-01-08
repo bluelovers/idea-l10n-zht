@@ -1,0 +1,9 @@
+<html>
+<body>
+报告 <code>java.lang.Class</code> 方法的冗余调用。
+<p>例如，<code>Xyz.class.isInstance(object)</code> 可以替换为 <code>object instanceof Xyz</code>。
+首选 instanceof 检查：尽管性能与这些方法可能并无本质区别，但它们更好地指示了静态检查。</p>
+<!-- tooltip end -->
+<p><small>2018.2 最新变化</small></p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+报告已装箱值的装箱。
+<p>
+  这是冗余的操作，因为任何装箱的值都会先自动拆箱，然后再次对该值装箱。 如果在内部循环中进行，此类代码可能会导致性能问题。
+</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  Integer value = 1;
+  method(Integer.valueOf(value));
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Integer value = 1;
+  method(value);
+</code></pre>
+<p>
+</body>
+</html>

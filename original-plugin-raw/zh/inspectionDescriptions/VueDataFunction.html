@@ -1,0 +1,6 @@
+<html>
+<body>
+报告并非函数的 Vue 组件 <a href="https://vuejs.org/v2/api/#data">data</a> 属性。 建议用函数包装对象文字。
+<p>在定义组件时，<code>data</code> 必须声明为返回初始数据对象的函数，因为将使用相同的定义创建多个实例。 如果 <code>data</code> 仍然使用普通对象，那么该对象将通过引用来在创建的所有实例中共享！ 有了 <code>data</code> 函数，每次创建新实例时，都可以直接调用它以返回初始数据的新副本。
+</body>
+</html>

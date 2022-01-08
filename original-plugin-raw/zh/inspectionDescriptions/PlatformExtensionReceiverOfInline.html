@@ -1,0 +1,37 @@
+<html>
+<body>
+<p>报告使用灵活可 null 的扩展接收器（具有未知可 null 性的平台类型）对内联函数的潜在不安全调用。</p>
+<p>
+    在 Kotlin 1.2 之前，使用灵活的可 null 扩展接收器（具有未知可 null 性的平台类型）对 <code>inline fun</code> 的调用不包括字节码中的可 null 性检查。 自 Kotlin 1.2 起，字节码中包含可 null 性检查（请参阅 <a href="https://youtrack.jetbrains.com/issue/KT-12899">KT-12899</a>）。
+</p>
+<p>
+    建议添加要抛出异常的显式 <code>!!</code>，或者考虑将函数的接收器类型更改为可 null（如果它能够无异常地运行）。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  inline fun String.removePrefix(prefix: String): String {
+      return this.substring(prefix.length)
+  }
+
+  fun main() {
+      // `System.getProperty` 返回不可表示的 `String!` 类型
+      val property = System.getProperty("user.dir")
+      println(property.removePrefix("/home"))
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  inline fun String.removePrefix(prefix: String): String {
+      return this.substring(prefix.length)
+  }
+
+  fun main() {
+      // `System.getProperty` 返回不可表示的 `String!` 类型
+      val property = System.getProperty("user.dir")
+      println(property!!.removePrefix("/home"))
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的 Kotlin 语言级别低于 1.2 时，此检查才会报告。</p>
+</body>
+</html>

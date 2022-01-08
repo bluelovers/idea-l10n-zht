@@ -1,0 +1,14 @@
+<html>
+<body>
+报告对可以替换为断言相等函数的 <code>assertTrue()</code> 和 <code>assertFalse()</code> 的调用。
+<p>
+    <code>assertEquals()</code>、<code>assertSame()</code> 及其否定对应项 (-Not-) 可以提供有关失败的更多信息。
+</p>
+<p><b>示例：</b></p>
+<pre><code>  assertTrue(a == b)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>  assertEquals(a, b)
+</code></pre>
+</body>
+</html>

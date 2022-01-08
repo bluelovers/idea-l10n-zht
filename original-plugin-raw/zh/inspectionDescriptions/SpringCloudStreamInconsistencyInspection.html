@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告流处理程序方法中的不一致错误。</p>
+<p>
+  使用 <code>@StreamListener</code> 或 <code>@StreamEmitter</code> 注解的输入和输出流处理程序方法具有各种约束。
+  违反约束会导致运行时出错。
+</p>
+<p>示例：</p>
+<ul>
+  <li>
+    <code>@StreamListener</code> <code>value</code> 特性中定义的通道永远不能与使用 <code>@Input</code> 或 <code>@Output</code> 注解的方法形参组合
+  </li>
+  <li>必须为使用 <code>@StreamListener</code> 注解的方法指定输入通道</li>
+  <li>必须为可以返回值的方法指定输出通道</li>
+  <li>不能为不返回值的方法指定输出通道</li>
+  <li><code>@StreamListener</code> <code>condition</code> 不能为返回值的方法设置特性</li>
+</ul>
+<!-- tooltip end -->
+</body>
+</html>

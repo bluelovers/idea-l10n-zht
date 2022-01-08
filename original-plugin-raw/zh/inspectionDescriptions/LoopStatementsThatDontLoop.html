@@ -1,0 +1,17 @@
+<html>
+<body>
+报告其语句体最多执行一次的 <code>for</code>、<code>while</code> 和 <code>do</code> 语句的任何实例。 通常，这表明存在错误。
+<!-- tooltip end -->
+<p>
+使用<b>忽略增强型 for 循环</b>选项可忽略 foreach 循环。
+它们有时用于以紧凑的方式仅对可迭代对象的第一个条目执行操作。
+</p>
+<p>示例：</p>
+<pre><code>
+  <b>for</b> (String s : stringIterable) {
+    doSomethingOnFirstString(s);
+    <b>break</b>;
+  }
+</code></pre>
+</body>
+</html>

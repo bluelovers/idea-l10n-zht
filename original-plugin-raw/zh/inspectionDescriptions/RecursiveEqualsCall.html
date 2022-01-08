@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>报告递归 <code>equals</code>(<code>==</code>) 调用。</p>
+<p>
+    在 Kotlin 中，<code>==</code> 会通过在后台调用 <code>equals</code> 方法来比较对象值。
+    另一方面，<code>===</code> 则通过引用来比较对象。
+</p>
+<p>
+    <code>===</code> 通常用于 <code>equals</code> 方法实现。
+    但 <code>===</code> 可能会错误地与 <code>==</code> 混淆，从而导致无限递归。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class X {
+      override fun equals(other: Any?): Boolean {
+          if (<b>this == other</b>) return true
+          return false
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class X {
+      override fun equals(other: Any?): Boolean {
+          if (<b>this === other</b>) return true
+          return false
+      }
+  }
+</code></pre>
+</body>
+</html>

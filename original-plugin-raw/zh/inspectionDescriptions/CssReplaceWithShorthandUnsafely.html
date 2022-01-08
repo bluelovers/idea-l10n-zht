@@ -1,0 +1,15 @@
+<html>
+<body>
+报告一组 CSS 常规属性，并建议将不完整的一组 CSS 常规属性替换为速记形式，但在本例中，速记形式并非 100% 等效。
+<p>
+  例如，这两个属性: <code>outline-color</code> 和 <code>outline-style</code>，可以替换为单独一个 <code>outline</code> 属性。
+  此类替换不是 100% 等效，因为速记形式会将所有忽略的子值重置为其初始状态。
+  在本例中，切换到 <code>outling</code> 简写形式意味着 <code>outling-width</code> 也将设置为其初始值，即 <code>medium</code>。
+</p>
+<!-- tooltip end -->
+<p>
+  此检查不会处理整组普通写法的属性(在完全可以切换到简写形式时)。
+  对于此类情况，请参阅“属性可以安全替换为速记形式”检查。
+</p>
+</body>
+</html>

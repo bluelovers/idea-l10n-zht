@@ -1,0 +1,9 @@
+<html>
+<body>
+报告非 <code>public</code> 类中的所有 <code>public</code> 构造函数。
+<p>在访问级别较低的类中，通常没有理由创建 <code>public</code> 构造函数。
+  但请注意，此检查会改变某些反射调用的行为。 特别是，<code>Class.getConstructor()</code> 将无法找到更新的构造函数（应改为使用 <code>Class.getDeclaredConstructor()</code>）。 如果您的代码或某些已使用的框架的代码通过 <code>getConstructor()</code> 依赖于构造函数的可访问性，请不要使用该检查。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

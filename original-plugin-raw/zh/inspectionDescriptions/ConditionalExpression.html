@@ -1,0 +1,29 @@
+<html>
+<body>
+报告三元条件运算符的用法并建议将它们转换为 <code>if</code>/<code>else</code> 语句。
+<p>一些代码标准禁止使用条件运算符。</p>
+<p>示例：</p>
+<pre><code>
+  Object result = (condition) ? foo() : bar();
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Object result;
+  if (condition) {
+    comp = foo();
+  }
+  else {
+    comp = bar();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<p>使用 <b>对简单赋值和返回值忽略</b> 选项忽略简单的赋值和返回并允许以下结构：</p>
+<pre><code>
+  String s = (foo == null) ? "" : foo.toString();
+</code></pre>
+<p>
+  在不可能用 if 语句自动替换的上下文中（例如，当条件表达式用作 <code>super()</code> 构造函数调用），使用 <b>忽略无法使用 if 语句的位置</b> 选项来忽略条件表达式。
+</p>
+</body>
+</html>

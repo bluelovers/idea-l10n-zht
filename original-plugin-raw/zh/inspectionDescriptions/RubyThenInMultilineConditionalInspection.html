@@ -1,0 +1,22 @@
+<html>
+<body>
+报告多行 <code>if/unless</code> 块中的冗余 <code>then</code> 关键字。
+<p>示例：</p>
+<pre>
+<code># 不良做法
+if x > y then
+  x = y
+end</code>
+</pre>
+
+可以通过快速修复来移除 <code>then</code> 关键字。
+
+<pre>
+<code># 优良做法
+if x > y
+  x = y
+end</code>
+</pre>
+<p><span style="font-size: smaller;">受 <a href="https://github.com/rubocop/ruby-style-guide/blob/master/README.adoc#then-in-multi-line-expression">'RuboCop'</a> 启发。</span></p>
+</body>
+</html>

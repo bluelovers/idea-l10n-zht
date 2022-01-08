@@ -1,0 +1,26 @@
+<html>
+<body>
+报告实现 <code>Serializable</code> 并在未实现 <code>Serializable</code> 的类中声明的非 static 内部类。
+<p>
+  由于对外部类的隐式引用，这种类不太可能正确序列化。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class A {
+      class Main implements Serializable {
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用以下选项配置检查：</p>
+<ul>
+  <li>
+    列出此检查不应报告其继承者的类。
+    这适用于从超类继承 <code>Serializable</code> 但不用于序列化的类。
+  </li>
+  <li>
+    是否忽略 <code>Serializable</code> 匿名类。
+  </li>
+</ul>
+</body>
+</html>

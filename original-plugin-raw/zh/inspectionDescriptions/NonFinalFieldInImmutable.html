@@ -1,0 +1,24 @@
+<html>
+<body>
+报告包含 <code>@Immutable</code> 注解的类中的任何非 final 字段。
+这违反了 <code>@Immutable</code> 注解的约定。
+<p>示例：</p>
+<pre><code>
+  import javax.annotation.concurrent.Immutable;
+  @Immutable
+  class Foo {
+    String bar = "foo";
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>支持的 <code>@GuardedBy</code> 注解是：</p>
+<ul>
+  <li><code>net.jcip.annotations.GuardedBy</code></li>
+  <li><code>javax.annotation.concurrent.GuardedBy</code></li>
+  <li><code>org.apache.http.annotation.GuardedBy</code></li>
+  <li><code>com.android.annotations.concurrency.GuardedBy</code></li>
+  <li><code>androidx.annotation.GuardedBy</code></li>
+  <li><code>com.google.errorprone.annotations.concurrent.GuardedBy</code></li>
+</ul>
+</body>
+</html>

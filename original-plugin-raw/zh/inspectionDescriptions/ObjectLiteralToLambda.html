@@ -1,0 +1,25 @@
+<html>
+<body>
+报告使用单个 abstract 方法实现 Java 接口的匿名对象文字，该方法可使用 lambda 表达式转换为调用。
+<p><b>示例：</b></p>
+<pre><code>
+class SomeService {
+  val threadPool = Executors.newCachedThreadPool()
+    
+  fun foo() {
+    threadPool.submit(object : Runnable {
+      override fun run() {
+        println("hello")
+      }
+    })
+  }
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo() {
+    threadPool.submit { println("hello") }
+  }
+</code></pre>
+</body>
+</html>

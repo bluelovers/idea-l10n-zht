@@ -1,0 +1,46 @@
+<html>
+<body>
+报告调用时从不使用其返回值的方法。
+此类方法的返回类型可以设置为 <code>void</code>。
+<p>不会报告使用 Error Prone 或 AssertJ 的 <code>@CanIgnoreReturnValue</code> 注解进行注解的方法。
+  该快速修复会更新方法签名，并移除方法中的 <code>return</code> 语句。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  // 可见性设置为 Protected 或 Public 时报告
+  protected String myToUpperCase(String s) {
+    return s.toUpperCase();
+  }
+
+  // 简单的 setter，根据设置进行报告
+  public String setStr(String str) {
+    myStr = str;
+    return myStr;
+  }
+
+  void test() {
+    setStr("value");          // 未使用返回值
+    myToUpperCase("result");  // 未使用返回值
+  }
+</code></pre>
+<p>对这两种方法应用该快速修复后：</p>
+<pre><code>
+    protected void myToUpperCase(String s) {
+      // 完全移除了 'return'
+      // 因为 's.toUpperCase()' 没有任何副作用
+    }
+
+    public void setStr(String str) {
+      myStr = str;
+      // 移除了 'return'
+    }
+  ...
+</code></pre>
+<p>
+  <b>注意</b>：由于性能原因，在编辑器中高亮显示时可能不会报告某些方法。
+  要查看所有结果，请通过<b>代码 | 检查代码</b>或<b>代码 | 分析代码 | 按名称运行检查</b>来运行检查>
+</p>
+<!-- tooltip end -->
+<p>使用<b>忽略简单的 setter</b> 选项可以忽略简单 setter 调用中未使用的返回值。</p>
+<p>使用<b>报告方法最大可见性</b>选项可以控制要报告的方法的最大可见性。</p>
+</body>
+</html>

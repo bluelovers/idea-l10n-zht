@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>在模拟 <code>headOption</code> 或 <code>lastOption</code> 时报告。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  var seq: Seq[Int]
+  if (seq.nonEmpty) Some(seq.head) else None
+  seq.lift(0)
+
+  if (seq.size == 0) None else seq.lastOption
+  seq.lift(seq.size - 1)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.headOption
+  seq.headOption
+
+  seq.lastOption
+  seq.lastOption
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

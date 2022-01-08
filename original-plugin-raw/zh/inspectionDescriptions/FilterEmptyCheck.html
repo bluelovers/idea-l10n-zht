@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>报告已筛选集合上的空性检查。</p>
+
+<p>该快速修复使用 <code>exists</code> 或 <code>forall</code> 检查是否为空。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  var x: Seq[Int]
+  x.filter(p).size == 0
+  x.filter(p).length > 0
+  x.filterNot(p).isEmpty
+  x.filterNot(p).nonEmpty
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  var x: Seq[Int]
+  !x.exists(p)
+  x.exists(p)
+  x.forall(p)
+  !x.forall(p)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

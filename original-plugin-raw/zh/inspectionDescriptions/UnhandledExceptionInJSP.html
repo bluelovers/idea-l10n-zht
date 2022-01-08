@@ -1,0 +1,29 @@
+<html>
+<body>
+报告由顶级 JSP Scriptlet 抛出的异常。<br/>
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;%!
+  String getFormattedDate() {
+    ...
+    throw new IllegalArgumentException(...); // 错误
+  }
+  %&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+    &lt;title&gt;Hello, JSP!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;i&gt;Today is &lt;%= getFormattedDate() %&gt;&lt;/i&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre><br/>
+
+<!-- tooltip end -->
+<p>
+  <b>注意</b>：此类 JSP 页面会编译，因为 servlet 容器将所有 JSP 代码包装在 <b>try {} catch() {}</b> 块中，但它们在服务器上部署时会产生运行时异常。
+</p>
+</body>
+</html>

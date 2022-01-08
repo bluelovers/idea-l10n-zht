@@ -1,0 +1,19 @@
+<html>
+<body>
+如果指定了架构，则报告 YAML 文件和 JSON 架构之间的不一致。
+<p><b>方案示例：</b></p>
+<pre><code>
+  {
+    "properties": {
+      "SomeNumberProperty": {
+        "type": "number"
+      }
+    }
+  }
+</code></pre>
+<p><b>以下是带有相应警告的示例：</b></p>
+<pre><code>
+  SomeNumberProperty: hello world
+</code></pre>
+</body>
+</html>

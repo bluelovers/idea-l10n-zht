@@ -1,0 +1,20 @@
+<html>
+<body>
+报告<em>特性依恋</em>代码异味。 当方法调用另一个类的方法三次或更多次时，将抛出警告。 对库类、父类、包含类的调用不计入此检查。 特性依恋通常表明该功能位于错误的类中。
+<p>示例：</p>
+<pre><code>
+  class JobManager {
+    // 警告：此方法调用 Job 类的
+    // 三个方法
+    // 最好将此调用链
+    // 移至 Job 类本身。
+    void performJob(Job job) {
+      job.beforeStart();
+      job.process();
+      job.afterProcessing();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

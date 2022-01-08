@@ -1,0 +1,22 @@
+<html>
+<body>
+报告返回 <code>void</code> 的构造函数和方法结尾的 <code>return</code> 语句。 这些语句冗余，可以安全移除。
+<p>此检查不会在 JSP 文件中报告。
+<p>示例：</p>
+<pre><code>
+  <b>void</b> message() {
+    System.out.println("Hello World");
+    <b>return</b>;
+  }
+</code></pre>
+<p>在应用快速修复后：
+<pre><code>
+  <b>void</b> message() {
+    System.out.println("Hello World");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用<b>在具有 'else' 分支的 'if' 语句的 then 分支中忽略</b>选项可以忽略也有 <code>else</code> 分支的 <code>if</code> 语句的 then 分支中的 <code>return</code> 语句。
+</body>
+</html>

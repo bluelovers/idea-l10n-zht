@@ -1,0 +1,19 @@
+<html>
+<body>
+报告满足以下条件表达式：带有 <code>then</code> 和 <c>else</c> 分支，且足够相似，以便表达式可以移入内部。 此操作会缩短代码。
+<p>示例：</p>
+<pre><code>
+  double g(int a, int b) {
+    return a == b ? Math.cos(0) : Math.cos(1);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  double g(int a, int b) {
+    return Math.cos(a == b ? 0 : 1);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.2 最新变化</small></p>
+</body>
+</html>

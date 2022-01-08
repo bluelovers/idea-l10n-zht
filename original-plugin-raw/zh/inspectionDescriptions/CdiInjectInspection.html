@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告不正确的注入点：使用 <code>@Inject</code> 注解并违反 CDI 规范的字段、方法和形参。</p>
+
+<p>字段要求：</p>
+<ul>
+  <li>不能为 static 或 final</li>
+  <li>不能使用 <code>@Produces</code> 注解</li>
+</ul>
+
+<p>对包含注入的方法的要求：</p>
+<ul>
+  <li>不能为 static 或 abstract</li>
+  <li>不能具有使用 <code>@Disposes</code> 和 <code>@Observes</code> 注解的形参</li>
+</ul>
+</body>
+</html>

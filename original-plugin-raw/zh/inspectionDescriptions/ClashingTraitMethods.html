@@ -1,0 +1,31 @@
+<html>
+<body>
+报告实现两个或多个特征（包含具有相同签名的方法）的类。
+<p>调用此类方法可能产生意外的结果。</p>
+<p>该快速修复会添加显式重写方法。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  trait T1 {
+      def foo() {}
+  }
+
+  trait T2 {
+      def foo() {}
+  }
+
+  class X implements T1, T2 {}
+
+  // 将调用 T2.foo()
+  new X().foo()
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class X implements T1, T2 {
+      @Override
+      Object foo() {
+          return T2.super.foo()
+      }
+  }
+</code></pre>
+</body>
+</html>

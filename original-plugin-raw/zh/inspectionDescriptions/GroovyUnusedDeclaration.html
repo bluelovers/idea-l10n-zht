@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告未使用的类、方法和字段。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Department {
+      private Organization myOrganization;
+  }
+</code></pre>
+<p>在这里，<code>Department</code> 显式引用 <code>Organization</code>，但如果 <code>Department</code> 类未使用，则此检查将报告这两个类。 
+
+<p>
+该检查还会报告其方法、所有方法实现/重写器未使用的形参，以及已声明但未使用的局部变量。
+</p>
+<!-- tooltip end -->
+<p>有关更多信息，请参阅 Java 中的相同检查。</p>
+</body>
+</html>

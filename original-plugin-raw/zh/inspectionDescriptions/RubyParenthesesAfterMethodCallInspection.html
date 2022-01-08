@@ -1,0 +1,18 @@
+<html>
+<body>
+报告包含圆括号的无实参方法调用。
+<p>示例：</p>
+<pre>
+<code># 不良做法
+gets.chomp()</code>
+</pre>
+
+可以通过快速修复来移除冗余圆括号。 应用快速修复后，结果如下所示：
+
+<pre>
+<code># 优良做法
+gets.chomp</code>
+</pre>
+<p><span style="font-size: smaller;">受 <a href="https://github.com/rubocop/ruby-style-guide#method-call-with-no-arguments-">'RuboCop'</a> 启发</span></p>
+</body>
+</html>

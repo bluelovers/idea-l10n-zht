@@ -1,0 +1,21 @@
+<html>
+<body>
+报告可以替换为 <code>case</code> 语句的 <code>if</code> 语句。
+<p>使用<i>最小分支数</i>字段为得到的
+  <code>case</code> 语句指定最小 <code>when</code> 分支数。</p>
+<p>示例：</p>
+<pre>
+<code>fruit = gets
+
+if fruit == 'apple' # Simplifiable 'if' statement
+  puts 'This is apple!'
+elsif fruit == 'peach'
+  puts 'This is peach!'
+elsif fruit == 'orange'
+  puts 'This is orange!'
+elsif fruit == 'banana'
+  puts 'This is banana!'
+end</code>
+</pre>
+</body>
+</html>

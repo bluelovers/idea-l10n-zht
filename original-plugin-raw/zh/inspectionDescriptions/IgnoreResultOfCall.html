@@ -1,0 +1,25 @@
+<html>
+<body>
+报告其结果被忽略的方法调用。
+<p>忽略结果对于许多方法完全合法，但对于某些方法，几乎肯定是错误。 忽略结果可能是错误之举的方法示例包括返回实际读取字节数的 <code>java.io.inputStream.read()</code>，以及 <code>java.lang.String</code> 或 <code>java.math.BigInteger</code> 上的任何方法。 这些方法不会产生副作用，因此忽略它们的结果将毫无意义。
+</p>
+<p>将检查对以下方法的调用：</p>
+<ul>
+  <li>简单 getter（除返回字段外别无他用）</li>
+  <li>在此检查的设置中指定的方法</li>
+  <li>使用 <code>org.jetbrains.annotations.Contract(pure=true)</code> 注解的方法</li>
+  <li>使用 .*.<code>CheckReturnValue</code> 注解的方法</li>
+  <li>使用 <code>javax.annotation.CheckReturnValue</code> 注解的类或软件包中的方法</li>
+  <li>所有非库方法（可选）</li>
+</ul>
+<p>不会报告对使用 Error Prone 或 AssertJ 的 <code>@CanIgnoreReturnValue</code> 注解进行注解的方法的调用。
+
+<!-- tooltip end -->
+<p>
+  使用检查设置指定要检查的类。
+  方法采用 Java 正则表达式语法按名称或名称模式进行匹配。
+  对于类，请使用完全限定名称。 每个条目都应用于该类及其所有继承者。
+<p>
+
+</body>
+</html>

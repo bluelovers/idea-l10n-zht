@@ -1,0 +1,23 @@
+<html>
+<body>
+报告形参名称和数量与超类中的方法相同，但其中至少一个形参为不同的不兼容类型的实例方法。
+<p>
+  在本例中，子类中的方法将重载而不是重写超类中的方法。 如果不是有意为之，可能会导致潜在错误。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Foo {
+    void foo(int x) {}
+  }
+
+  public class Bar extends Foo {
+    void foo(Number x) {} // 在重写可能是有意为之的情况下，
+                          // 方法 'foo()' 重载超类的兼容方法
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用此选项可选择该检查是否也应报告形参类型不兼容的情况。
+<p>
+</body>
+</html>

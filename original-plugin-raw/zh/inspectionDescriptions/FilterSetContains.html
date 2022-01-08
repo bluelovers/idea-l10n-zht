@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>报告 <code>filter</code> 中的冗余 <code>contains</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Seq(1, 2, 3).filter(Set(1, 3).contains)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Seq(1, 2, 3).filter(Set(1, 3))
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

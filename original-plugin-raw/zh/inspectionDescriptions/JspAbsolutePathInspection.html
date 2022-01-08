@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 JSP 文件中的绝对路径。
+<p>如果应用程序上下文非空，它们就不会被解析，因此 JSP 中禁止绝对路径。</p>
+<p>该快速修复将向路径中添加动态前缀。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;%@page contentType=&quot;text/html; ISO-8859-1&quot; %&gt;
+
+  &lt;a href=&quot;/hey.jsp&quot;&gt;hey&lt;/a&gt;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  &lt;%@page contentType=&quot;text/html; ISO-8859-1&quot; %&gt;
+
+  &lt;a href=&quot;${pageContext.request.contextPath}/hey.jsp&quot;&gt;hey&lt;/a&gt;
+</code></pre>
+</body>
+</html>

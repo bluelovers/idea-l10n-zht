@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告 <code>Map.get</code> 结果的空性检查，并建议将其替换为对 <code>Map.contains</code> 的调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.get(key).nonEmpty
+  map.get(key).isEmpty
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.contains(key)
+  !map.contains(key)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

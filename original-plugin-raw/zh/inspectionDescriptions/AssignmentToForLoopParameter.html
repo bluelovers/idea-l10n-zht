@@ -1,0 +1,38 @@
+<html>
+<body>
+报告对循环体内 <code>for</code> 循环形参的赋值或修改。
+<p>虽然偶尔是有意为之，但此结构可能令人困惑，通常是由拼写错误或使用错误变量引起。</p>
+<p>该快速修复会添加新变量的声明。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  for (String s : list) {
+    // 警告：s 在循环内被更改
+    s = s.trim();
+    System.out.println("String: " + s);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  for (String s : list) {
+    String trimmed = s.trim();
+    System.out.println("String: " + trimmed);
+  }
+</code></pre>
+<p>不报告没有 update 语句的基本 <code>for</code> 循环中的赋值。
+  在此类情况下，赋值很可能是预期的，不能轻易移动到 <code>for</code> 循环的更新部分。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  for (int i = 0; i &lt; list.size(); ) {
+    if (element.equals(list.get(i))) {
+      list.remove(i);
+    } else {
+      // 因为没有 update 语句
+      // 所以不报告 for 循环形参的修改
+      i++;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>检查增强型 'for' 循环形参</b>选项可指定是否还应报告增强的 <code>for</code> 循环形参的修改。</p>
+</body>
+</html>

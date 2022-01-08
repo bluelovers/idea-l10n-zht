@@ -1,0 +1,17 @@
+<html>
+<body>
+报告其 permits 子句不包含来自同一文件的某些子类的密封类。
+<p>示例：</p>
+<pre><code>
+  sealed class A {}
+  final class B extends A {}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  sealed class A permits B {}
+  final class B extends A {}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2020.3 最新变化</small></p>
+</body>
+</html>

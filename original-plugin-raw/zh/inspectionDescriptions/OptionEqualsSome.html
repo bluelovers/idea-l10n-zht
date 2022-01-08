@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>报告简化 <code>Option</code> 和 <code>Some(x)</code> 相等检查的机会。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  option == Some(x)
+  Some(x) != option
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  option.contains(x)
+  !option.contains(x)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

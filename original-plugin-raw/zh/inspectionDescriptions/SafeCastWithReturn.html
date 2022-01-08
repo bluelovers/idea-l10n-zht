@@ -1,0 +1,20 @@
+<html>
+<body>
+报告带 <code>return</code> 且可以替换为 <code>if</code> 类型检查的安全转换。
+<p>使用相应函数可使代码更简单。</p>
+<p>该快速修复会将安全转换替换为 <code>if</code> 类型检查。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(x: Any) {
+      x as? String ?: return
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun test(x: Any) {
+      if (x !is String) return
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

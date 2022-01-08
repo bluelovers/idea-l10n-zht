@@ -1,0 +1,20 @@
+<html>
+<body>
+报告在 try-with-resources 块的末尾对 <code>close()</code> 的不必要调用，并建议移除它们。
+<p><b>示例</b>：</p>
+<pre><code>
+  try(MyAutoCloseable ac = new MyAutoCloseable()) {
+    foo();
+    ac.close();
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  try(MyAutoCloseable ac = new MyAutoCloseable()) {
+    foo();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.1 最新变化</small></p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+报告在 <code>readObject()</code> 方法反序列化对象后不保证被初始化的字段。
+<p>该检查不报告 transient 字段。</p>
+<p>
+  注意：此检查使用非常保守的控制流算法，可能会将字段误报告为未初始化。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+class DataObject implements Serializable {
+  String s; // s 在 readObject 中未初始化
+  int i;
+
+  private void readObject(ObjectInputStream stream) throws IOException {
+    i = stream.readInt();
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

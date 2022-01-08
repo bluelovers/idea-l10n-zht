@@ -1,0 +1,20 @@
+<html>
+<body>
+报告包含字符串文字实参的 <code>String.equals()</code> 或 <code>String.equalsIgnoreCase()</code> 调用。
+<p>某些编码标准指定字符串文字应当为 <code>equals()</code> 的限定符而不是实参，从而最大限度减少 <code>NullPointerException</code>。</p>
+<p>可以通过快速修复交换文字和表达式。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  boolean isFoo(String value) {
+    return value.equals("foo");
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  boolean isFoo(String value) {
+    return "foo".equals(value);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

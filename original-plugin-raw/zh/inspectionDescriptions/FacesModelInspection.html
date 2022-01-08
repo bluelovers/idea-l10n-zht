@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>报告 Java Server Faces <code>faces-config.xml</code> 文件中不正确的元素：</p>
+
+<ul>
+  <li>对不可实例化类的引用</li>
+  <li>对不扩展所需类的类的引用</li>
+  <li>对范围不适当的类的引用</li>
+  <li>空标记和特性值</li>
+  <li>与所需模式不匹配的标记和特性值（例如，Java 标识符）</li>
+  <li>不包含必需子标记或特性的标记</li>
+  <li>定义具有重复名称的对象的标记</li>
+</ul>
+
+<p><strong>示例：</strong></p>
+<pre><code>
+  &lt;faces-config &gt;
+     &lt;application&gt;
+        &lt;action-listener&gt;<strong>java.lang.String</strong>&lt;/action-listener&gt;  &lt;!-- 'java.lang.String' 不可分配给 'javax.faces.event.ActionListener'  --&gt;
+    &lt;/application&gt;
+    &lt;navigation-rule&gt;
+        &lt;from-view-id&gt;myView.xhtml&lt;/from-view-id&gt;
+        &lt;navigation-case&gt;
+            &lt;to-view-id&gt;<strong>unknown.xhtml</strong>&lt;/to-view-id&gt;  &lt;!-- 无法解析 'unknown.xhtml'  --&gt;
+        &lt;/navigation-case&gt;
+    &lt;/navigation-rule&gt;
+  &lt;/faces-config&gt;
+</code></pre>
+</body>
+</html>

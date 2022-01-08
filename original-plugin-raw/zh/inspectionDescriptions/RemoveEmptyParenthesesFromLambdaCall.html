@@ -1,0 +1,18 @@
+<html>
+<body>
+报告函数调用的冗余空圆括号，其中唯一的形参是圆括号外的 lambda。
+<p>使用“从带 lambda 的函数调用中移除不必要的圆括号”快速修复可清理代码。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo() {
+      listOf(1).forEach() {  }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo() {
+      listOf(1).forEach {  }
+  }
+</code></pre>
+</body>
+</html>

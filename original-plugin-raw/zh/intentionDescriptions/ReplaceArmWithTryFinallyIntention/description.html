@@ -1,0 +1,6 @@
+<html>
+<body>
+将自动资源管理块替换为常规的 <code>try finally</code> 构造。
+<p>如果 ARM 块没有 <code>catch</code> 部分，则替换整个块。 如果 ARM 确实有 <code>catch</code> 部分，则将其转换为普通的 <code>try catch</code> 块，并将 <code>try finally</code> 构造放在其中。</p>
+</body>
+</html>

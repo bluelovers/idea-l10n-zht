@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告不使用完全限定引用的 import 语句。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  package org.something
+
+  import someInnerPackage
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  package org.something
+
+  import org.something.someInnerPackage
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

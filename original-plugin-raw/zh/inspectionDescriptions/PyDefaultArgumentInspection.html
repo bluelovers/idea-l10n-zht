@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告在实参的默认值中检测到列表或字典形式可变值的问题。 <br/>
+  默认实参值仅在函数定义时进行一次求值，这意味着修改该实参的默认值将影响此函数的所有后续调用。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+def func(s, cache={}):
+    cache[s] = None
+</pre>
+<p>应用快速修复后，代码变为：</p>
+<pre style="font-family: monospace">
+def func(s, cache=None):
+    if cache is None:
+        cache = {}
+    cache[s] = None
+</pre>
+</body>
+</html>

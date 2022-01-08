@@ -1,0 +1,19 @@
+<html>
+<body>
+报告对象构造过程中在 <code>java.lang.Thread</code> 或其任何子类上对 <code>start()</code> 的调用。
+<p>
+  虽然此类结构偶尔有用，但由于继承问题，应避免使用。
+  在对象构造期间启动线程的类的子类在线程启动前不会完成自身的任何初始化逻辑。
+</p>
+<p>如果启动线程的类被声明为 <code>final</code>，此检查不会报告。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class MyThread extends Thread {
+    MyThread() {
+      start();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

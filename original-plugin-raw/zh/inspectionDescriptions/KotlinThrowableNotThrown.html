@@ -1,0 +1,21 @@
+<html>
+<body>
+当创建的 <code>Throwable</code> 从未实际抛出时，报告 <code>Throwable</code> 或其子类的实例化。
+<p>报告的代码指出了测试中难以捕获的错误。</p>
+<p>
+    此外，当结果 <code>Throwable</code> 实例未抛出时，此检查会报告返回 <code>Throwable</code> 或其子类实例的方法调用。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun check(condition: Boolean) {
+      if (!condition) /* throw is missing here */ IllegalArgumentException("condition is not met");
+  }
+
+  fun createError() = RuntimeException()
+
+  fun foo() {
+      /* throw is missing here */ createError()
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+报告循环内部可以替换为批量方法的单一运算。
+<p>
+  批量方法不仅更短，而且有时性能也更好。
+</p>
+<p><b>示例：</b></p>
+<pre><code>  void test(Collection&lt;Integer&gt; numbers) {
+    List&lt;Integer&gt; result = new ArrayList&lt;>();
+    for (Integer i : numbers) {
+      result.add(i);
+    }
+  }
+</code></pre>
+<p>应用修正后：</p>
+<pre><code>
+  void test(Collection&lt;Integer&gt; numbers) {
+    List&lt;Integer&gt; result = new ArrayList&lt;>();
+    result.addAll(numbers);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  即便批量方法需要集合，<b>使用 Arrays.asList() 包装数组</b>选项也使您能够报告数组。
+  在本例中，该快速修复会自动将数组包装在 <code>Arrays.asList()</code> 调用中。
+</p>
+<p><small>2017.1 最新变化</small></p>
+</body>
+</html>

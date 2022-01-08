@@ -1,0 +1,39 @@
+<html>
+<body>
+报告循环内的对象或数组分配。 虽然不一定是问题，但循环内的对象分配是查找内存泄漏和性能问题的好地方。
+<p>
+  检查会报告以下结构：
+</p>
+<ul>
+  <li>通过 <code>new</code> 运算符进行的显式分配</li>
+  <li>已知会返回新对象的方法</li>
+  <li>实例绑定方法引用</li>
+  <li>捕获变量或 <code>this</code> 引用的 lambda</li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+  // 显式分配
+  for (Status status : Status.values()) {
+    declarationsMap.put(status, new ArrayList&lt;&gt;());
+  }
+
+  // Lambda 捕获变量
+  String message = "Engine running.";
+  for (Engine engine : engines) {
+      if (!isRunning(engine)) {
+          logger.warn(() -> {
+              return String.format(message);
+          });
+      }
+  }
+
+  // 实例绑定方法引用
+  for(Node node : nodes) {
+    descriptor = node.getDescription();
+    descriptor.ifPresent(dynamicTestExecutor::execute);
+  }
+</code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

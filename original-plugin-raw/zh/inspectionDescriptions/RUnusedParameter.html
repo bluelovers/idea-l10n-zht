@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告函数体中未使用的函数形参。</p>
+<p><b>示例：</b></p>
+<pre><code>
+my_fahrenheit_to_celsius  &lt;- function(f_temp) {
+  return((temp - 32) * 5 / 9)
+}
+</code></pre>
+<p>修改高亮显示的代码段以确保使用或删除该形参。</p>
+<p><b>可能的解决方案：</b></p>
+<pre><code>
+my_fahrenheit_to_celsius  &lt;- function(f_temp) {
+  return((f_temp - 32) * 5 / 9)
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+报告对 <code>System.exit()</code>、<code>Runtime.exit()</code> 和 <code>Runtime.halt()</code> 的调用。
+<p>
+  调用 <code>System.exit()</code> 或 <code>Runtime.exit()</code> 会调用关闭挂钩并终止当前运行的 Java 虚拟机。 调用 <code>Runtime.halt()</code> 会强行终止 JVM，而不会导致启动关闭挂钩。
+  这些方法中的每一种都应极其谨慎地使用。 对这些方法的调用使得调用代码对于大多数应用程序服务器来说不可移植。
+</p>
+<!-- tooltip end -->
+<p>
+  使用该选项可以忽略主方法中的调用。
+<p>
+</body>
+</html>

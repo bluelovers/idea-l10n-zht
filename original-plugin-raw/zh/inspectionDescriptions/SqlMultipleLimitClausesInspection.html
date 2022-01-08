@@ -1,0 +1,12 @@
+<html>
+<body>
+报告单个查询中多个行限制子句的使用情况。
+
+<p>示例（Microsoft SQL 服务器）：</p>
+<pre><code>create table foo(a int);
+select top 1 * from foo order by a offset 10 rows fetch next 20 rows only;</code></pre>
+
+<p>SELECT TOP 子句用于指定必须只返回 1 条记录。 FETCH 子句指定在处理完 OFFSET 子句后要返回的行数。 但是因为我们已经有了 SELECT TOP 限制子句，所以 FETCH 子句可能是冗余的。
+</p>
+</body>
+</html>

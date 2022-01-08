@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>如果 XML 配置中没有 <strong>&lt;aop:aspectj-autoproxy/&gt;</strong> 元素，则报告早于 2.5 的 Spring 版本中的 <code>@Aspect</code> 注解。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+<strong>@Aspect</strong> // 未启用 '@AspectJ 支持
+class MyAspect {
+   ...
+}
+
+&lt;beans&gt;
+   &lt;!-- &lt;aop:aspectj-autoproxy/&gt; --&gt;
+&lt;/beans&gt;
+</code></pre>
+
+</body>
+</html>

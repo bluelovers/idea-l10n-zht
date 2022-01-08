@@ -1,0 +1,21 @@
+<html>
+<body>
+报告调用的未发生任何可检测到的状态变更的 <code>Object.notify()</code> 或 <code>Object.notifyAll()</code>。
+<p>
+  <code>Object.notify()</code> 和 <code>Object.notifyAll()</code> 通常用于通知其他线程发生了状态变更。 该状态变更应发生在包含 <code>Object.notify()</code> 或
+<code>Object.notifyAll()</code> 调用的同步上下文中，并且发生在调用之前。 尽管没有此类状态变更未必就不正确，但肯定值得检查。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  synchronized (this) {
+    notify();
+  }
+  // 无状态变更
+  synchronized (this) {
+    notify(); // 告知可能冗余
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

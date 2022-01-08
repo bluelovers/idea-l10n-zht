@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>报告 Spring Expression Language (SpEL) 代码中的语法错误，例如未解析的引用和无效位置。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+@Controller
+public class MyController {
+    @Value("#{T(java.lang.Math).<strong>unknown</strong>()}") // 无法解析属性或 'unknown' 方法
+    public void setValue(String s) {}
+}
+</code></pre>
+</body>
+</html>

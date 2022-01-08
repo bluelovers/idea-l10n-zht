@@ -1,0 +1,16 @@
+<html>
+<body>
+报告可通过同一属性名称访问的布尔方法。
+<p>访问此类属性可能产生意外的结果。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class X {
+      boolean isFoo() { true }
+      boolean getFoo() { false }
+  }
+
+  // 将调用 getFoo()
+  new X().foo
+</code></pre>
+</body>
+</html>

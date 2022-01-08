@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告在 <code>web.xml</code> 中注册但在 Web 根目录中没有必需 XML 应用程序上下文的 <a href="https://docs.spring.io/spring-ws/sites/2.0/apidocs/org/springframework/ws/transport/http/MessageDispatcherServlet.html">MessageDispatcherServlet</a> Servlet。</p>
+
+<p><b>web.xml 示例：</b></p>
+<pre><code>
+&lt;web-app&gt;
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;<strong>spring-ws</strong>&lt;/servlet-name&gt;  &lt;!-- 找不到应用程序上下文 WEB-INF/spring-ws-servlet.xml --&gt;
+    &lt;servlet-class&gt;org.springframework.ws.transport.http.MessageDispatcherServlet&lt;/servlet-class&gt;
+    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+  &lt;/servlet&gt;
+&lt;/web-app&gt;
+</code></pre>
+</body>
+</html>
+</body>
+</html>

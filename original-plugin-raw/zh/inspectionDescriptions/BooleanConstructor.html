@@ -1,0 +1,18 @@
+<html>
+<body>
+报告 <code>Boolean</code> 对象的创建情况。
+<p>
+  基本不必要创建新的 <code>Boolean</code> 对象，如果经常这样做，可能会导致性能问题。 此外，<code>Boolean</code> 构造函数自 Java 9 起已弃用，在未来的 Java 版本中可能会被移除或变得无法访问。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Boolean b1 = new Boolean(true);
+  Boolean b2 = new Boolean(str);
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Boolean b1 = Boolean.TRUE;
+  Boolean b2 = Boolean.valueOf(str);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

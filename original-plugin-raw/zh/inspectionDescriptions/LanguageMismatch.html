@@ -1,0 +1,14 @@
+<html>
+<body>
+报告引用的语言与用法上下文的预期语言不匹配的情况。
+
+<p>示例：</p>
+<pre><code>
+  @Language("JavaScript")
+  String JS_CODE = "var x;";
+
+  @Language("XPath")
+  String XPATH_CODE = JS_CODE; // 此处为警告
+</code></pre>
+</body>
+</html>

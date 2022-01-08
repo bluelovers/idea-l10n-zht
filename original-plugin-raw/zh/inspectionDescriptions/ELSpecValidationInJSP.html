@@ -1,0 +1,15 @@
+<html>
+<body>
+报告非标准 EL 扩展可能导致的问题：特性之外的 JSF EL 表达式、非标准 EL 表达式等。
+
+<p><b>示例：</b></p><br/>
+<pre><code>
+&lt;f:view&gt;
+  &lt;h:form&gt;
+    &lt;f:loadBundle var="example"/&gt;
+    &lt;h:commandButton action="${example.size()}"/&gt; // 警告：方法调用是非标准扩展
+  &lt;/h:form&gt;
+&lt;/f:view&gt;
+</code></pre>
+</body>
+</html>

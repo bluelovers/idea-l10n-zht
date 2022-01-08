@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>报告与显式类型声明一起使用时不必要的 <code>def</code> 修饰符。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>def</b> boolean foo() {} // 修饰符不必要
+  <b>def</b> Object bar // 修饰符不必要
+
+  // 修饰符是必要的，因此未高亮显示
+  <b>def</b> (int a, String b) = []
+</code></pre>
+</body>
+</html>

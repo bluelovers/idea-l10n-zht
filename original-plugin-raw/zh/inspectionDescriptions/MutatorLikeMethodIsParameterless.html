@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告具有类似转变器名称且没有形参子句的方法。</p>
+
+<p>对于具有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>的方法，通常有一个空形参子句来表明它不仅仅是一个访问器方法。</p>
+
+<p>该快速修复会添加一个空形参子句。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  trait Test {
+    def updateAll: Boolean
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  trait Test {
+    def updateAll(): Boolean
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

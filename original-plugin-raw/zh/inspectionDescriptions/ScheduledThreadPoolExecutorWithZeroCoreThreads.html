@@ -1,0 +1,16 @@
+<html>
+<body>
+报告任何通过 <code>setCorePoolSize</code> 方法或对象构造函数将 <code>corePoolSize</code> 设置为零的 <code>java.util.concurrent.ScheduledThreadPoolExecutor</code> 实例。
+<p>
+  无核心线程的 <code>ScheduledThreadPoolExecutor</code> 不运行任何内容。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo(int corePoolSize) {
+      if (corePoolSize != 0) return;
+      ThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(corePoolSize); // 警告
+      executor.setCorePoolSize(corePoolSize); // 警告
+  }
+</code></pre>
+</body>
+</html>

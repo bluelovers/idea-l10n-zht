@@ -1,0 +1,18 @@
+<html>
+<body>
+报告可以替换为安全调用的链式 null 检查。
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(my: My?) {
+      if (my != null && my.foo() != null) {}
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun test(my: My?) {
+      if (my?.foo() != null) {}
+  }
+</code></pre>
+
+</body>
+</html>

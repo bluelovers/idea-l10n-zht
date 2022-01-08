@@ -1,0 +1,43 @@
+<html>
+<body>
+报告 <code>return</code> 点数超过指定最大值的方法。
+具有太多 <code>return</code> 点的方法可能令人困惑且难以重构。
+<p>一个 <code>return</code> 点可以是 <code>return</code> 语句，也可以是从 <code>void</code> 方法或构造函数底部的直落。</p>
+<p><b>示例：</b></p>
+<p>如果只允许两个 <code>return</code> 语句，则报告以下方法：</p>
+<pre><code>
+  void doSmth(User[] users) {
+    for (User user : users) {
+      if (cond1(user)) {
+        user.setId(getId());
+        return;
+      } else if (cond2(user)) {
+        if (cond3(user)) {
+          user.setId(getId());
+          return;
+        }
+      }
+    }
+  }
+</code></pre>
+<p>请考虑重写该方法，使其更容易理解：</p>
+<pre><code>
+  void doSmth(User[] users) {
+    for (User user : users) {
+      if (cond1(user) || cond2(user) && cond3(user)) {
+        user.setId(getId());
+        return;
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用 <b>return 点限制</b>字段可指定方法允许的最大 <code>return</code> 点数。</li>
+  <li>使用<b>忽略临界子句</b>选项可忽略临界子句。
+    临界子句是只包含 <code>return</code> 语句的 <code>if</code> 语句</li>
+  <li>使用<b>对 'equals()' 方法忽略</b>选项可忽略 <code>equals()</code> 方法中的 <code>return</code> 点。</li>
+</ul>
+</body>
+</html>

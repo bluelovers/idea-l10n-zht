@@ -1,0 +1,20 @@
+<html>
+<body>
+报告名称以疑问词开头的非布尔方法。 此类方法名称可能令人困惑。
+<p>此检查将忽略重写库方法的非布尔方法。</p>
+<p><b>示例：</b>
+<pre><code>
+  public void hasName(String name) {
+    assert names.contains(name);
+  }
+</code></pre>
+<p>只能在编辑器中使用重命名此类方法的快速修复。</p>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>布尔方法名称前缀</b>列表可指定应仅用于布尔方法的疑问词。</li>
+  <li>使用<b>忽略具有 'java.lang.Boolean' 返回类型的方法</b>选项可忽略返回类型为 <code>java.lang.Boolean</code> 的方法。</li>
+  <li>使用<b>忽略重写/实现 super 方法的方法</b>选项可忽略具有 super 方法的方法。 </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+报告至 <code>var</code> 属性的接口委托
+<p>仅使用属性的初始值进行委托，任何后续的赋值都不会影响它。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Example(var text: CharSequence): CharSequence by text
+</code></pre>
+<p>快速修复可将属性替换为不可变的属性：</p>
+<pre><code>
+  class Example(val text: CharSequence): CharSequence by text
+</code></pre>
+<p>如果您出于某种原因依赖可变性，则可使用另一种方法：</p>
+<pre><code>
+  class Example(text: CharSequence): CharSequence by text {
+      var text = text
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

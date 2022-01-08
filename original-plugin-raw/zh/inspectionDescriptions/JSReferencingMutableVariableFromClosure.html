@@ -1,0 +1,13 @@
+<html>
+<body>
+报告函数中对外部可变变量的访问。 
+<p>示例：</p>
+<pre><code>
+  for (var i = 1; i &lt;= 3; i++) {
+    setTimeout(function() {
+        console.log(i); // 不良
+    }, 0);
+  }
+</code></pre>
+</body>
+</html>

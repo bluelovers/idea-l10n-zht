@@ -1,0 +1,30 @@
+<html>
+<body>
+报告以下类型的字段：
+<ul>
+  <li><code>java.util.concurrent.atomic.AtomicLongFieldUpdater</code></li>
+  <li><code>java.util.concurrent.atomic.AtomicIntegerFieldUpdater</code></li>
+  <li><code>java.util.concurrent.atomic.AtomicReferenceFieldUpdater</code></li>
+</ul>
+其类型为 <code>static final</code>。
+因为在一个类的所有实例中，只需要一个原子字段更新程序来更新 <code>volatile</code> 字段，所以它几乎总是 <code>static</code>。
+
+<p>使更新程序为 <code>final</code>，JVM 就能优化访问以提高性能。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  class Main {
+    private volatile int id;
+    private AtomicIntegerFieldUpdater&lt;Main&gt; idFieldUpdater = AtomicIntegerFieldUpdater.newUpdater(Main.class, "id");
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Main {
+    private volatile int id;
+    private static final AtomicIntegerFieldUpdater&lt;Main&gt; idFieldUpdater = AtomicIntegerFieldUpdater.newUpdater(Main.class, "id");
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

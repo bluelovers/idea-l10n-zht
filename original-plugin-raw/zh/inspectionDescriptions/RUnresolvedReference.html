@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告未解析的符号和函数引用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+my_fahrenheit_to_celsius(40)
+</code></pre>
+<p><code>my_fahrenheit_to_celsius</code> 函数未定义，因此 IDE 会显示警告。
+  您应该添加缺少的声明。</p>
+<p><b>可能的解决方案：</b>
+<pre><code>
+my_fahrenheit_to_celsius  &lt;- function(f_temp) {
+  return((f_temp - 32) * 5 / 9)
+}
+
+my_fahrenheit_to_celsius(40)
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+报告任何对 <code>Serializable</code> lambda、局部类和匿名类外部的非 <code>Serializable</code> 局部变量的引用。
+<p>
+  从匿名类引用局部变量时，它的值存储在该类的隐式字段中。 对于局部类和 lambda 也是如此。 如果变量类型为非 <code>Serializable</code>，序列化将失败。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  interface A extends Serializable {
+      abstract void foo();
+  }
+  class B {}
+  class C {
+      void foo() {
+          B b = new B();
+          A a = new A() {
+              @Override
+              public void foo() {
+                  System.out.println(b); // 警告
+              }
+          };
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

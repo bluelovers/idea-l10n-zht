@@ -1,0 +1,22 @@
+<html>
+<body>
+报告对最多包含一个实参的 <code>Arrays.asList()</code> 的调用。
+<p>
+  在 JDK 9 及更高版本中，此类调用可以替换为 <code>Collections.singletonList()</code>、<code>Collections.emptyList()</code> 或 <code>List.of()</code>，从而节省内存。</p>
+<p>特别是，无实参的 <code>Collections.emptyList()</code> 和 <code>List.of()</code> 总是返回共享实例，而无实参的 <code>Arrays.asList()</code> 每次调用时都会创建一个新对象。</p>
+<p>注意：<code>Collections.singletonList()</code> 和 <code>List.of()</code> 返回的列表不可变，而列表返回的 <code>Arrays.asList()</code> 允许调用 <code>set()</code> 方法。
+这在极少数情况下可能会破坏代码。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  List&lt;String&gt; empty = Arrays.asList();
+  List&lt;String&gt; one = Arrays.asList("one");
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  List&lt;String&gt; empty = Collections.emptyList();
+  List&lt;String&gt; one = Collections.singletonList("one");
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

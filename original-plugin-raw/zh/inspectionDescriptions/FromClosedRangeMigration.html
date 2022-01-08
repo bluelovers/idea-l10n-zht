@@ -1,0 +1,13 @@
+<html>
+<body>
+报告带 <code>MIN_VALUE</code> 步骤的 <code>IntProgression.fromClosedRange()</code> 和 <code>LongProgression.fromClosedRange()</code>。
+<p>
+禁止调用带有 <code>MIN_VALUE</code> 步骤的 <code>IntProgression.fromClosedRange()</code> 和 <code>LongProgression.fromClosedRange()</code>。 在迁移到 Kotlin 1.3+ 期间，应检查所有此类调用。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  IntProgression.fromClosedRange(12, 143, Int.MIN_VALUE)
+</code></pre>
+<p>要修正此问题，请更改进程的步骤。</p>
+</body>
+</html>

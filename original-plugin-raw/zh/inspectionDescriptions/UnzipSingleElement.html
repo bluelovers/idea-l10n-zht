@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告用于提取单个元素的 <code>unzip</code>。</p>
+
+<p>该快速修复会将其替换为 <code>map</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+Seq((1, 11), (2, 22)).unzip._1
+Seq((1, 11, 111), (2, 22, 222)).unzip3._1
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+Seq((1, 11), (2, 22)).map(_._1)
+Seq((1, 11, 111), (2, 22, 222)).map(_._1)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

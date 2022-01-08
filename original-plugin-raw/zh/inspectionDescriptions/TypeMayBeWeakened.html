@@ -1,0 +1,43 @@
+<html>
+<body>
+报告可以更改为更抽象（更弱）类型的变量和方法返回类型。
+这使代码更抽象，因此可重用性更高。
+<p>示例：</p>
+<pre><code>
+  // 形参类型可以削弱为 java.util.List
+  void processList(ArrayList&lt;String&gt; list) {
+    if (list.isEmpty()) return;
+    System.out.println("Processing");
+    for (String s : list) {
+      System.out.println("String: " + s);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  启用下面的<b>使用右侧类型</b>复选框可防止在右侧并非类型转换或新表达式时削弱赋值的左侧。 在变量中存储方法调用结果时，保留方法调用结果的类型不会不必要地削弱它，反而会很有用。
+</p>
+<p>
+  启用下面的<b>使用形参化类型</b>复选框可在求值的对象用作形参类型为 <code>java.lang.Object</code> 的集合方法的实参时，将集合的形参化类型用作最弱的类型。
+  在将对象传递给以下集合方法时，使用此选项可以防止削弱为 <code>Object</code>：
+  <code>get()</code>、<code>remove()</code>、<code>contains()</code>、<code>indexOf()</code>、<code>lastIndexOf()</code>、<code>containsKey()</code> 和 <code>containsValue()</code>。
+</p>
+<p>
+  启用下面的<b>不削弱为 Object</b> 复选框可以指定是否应将类型削弱为 <code>java.lang.Object</code>。
+  削弱为 <code>java.lang.Object</code> 很少有用。
+</p>
+<p>
+  启用下面的<b>仅削弱为接口</b>复选框，可仅在该类型可以削弱为接口类型时才报告问题。
+</p>
+<p>
+  启用下面的<b>不削弱返回类型</b>复选框，可防止在返回类型可能被削弱时报告问题。
+  只分析变量。
+</p>
+<p>
+  启用下面的<b>不建议削弱声明为 'var' 的变量</b>复选框，可防止报告使用 'var' 关键字声明的局部变量 (Java 10+)
+</p>
+<p>
+<b>停止类</b>意在防止类削弱至低于停止类的程度，即便可能出现这种情况，也能予以防止。
+在某些情况下，这可能会提高可读性。
+</body>
+</html>

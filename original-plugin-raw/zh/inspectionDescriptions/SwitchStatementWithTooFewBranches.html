@@ -1,0 +1,23 @@
+<html>
+<body>
+报告带有太少 <code>case</code> 标签的 <code>switch</code> 语句和表达式，并建议将它们重写为 <code>if</code> 和 <code>else if</code> 语句。
+<p>示例 (minimum branches == 3)：</p>
+<pre><code>
+  switch (expression) {
+    case "foo" -&gt; foo();
+    case "bar" -&gt; bar();
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  if ("foo".equals(expression)) {
+    foo();
+  } else if ("bar".equals(expression)) {
+    bar();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<p>使用<b>最小分支数</b> 字段指定 <code>case</code> 标签的最小预期数量。</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告在属性访问器上重复使用非 <code>@Repeatable</code> 注解的情况。</p>
+<p>
+    由于多次使用非 <code>@Repeatable</code> 注解，这两种注解的使用都会出现在字节码中，从而导致反射调用中的歧义。
+</p>
+<p>
+    从 Kotlin 1.4 开始，必须将注解标记为 <code>@Repeatable</code> 或不重复注解，否则会导致编译错误。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  annotation class Foo(val x: Int)
+
+  @get:<b>Foo</b>(10)
+  val a: String
+      @<b>Foo</b>(20) get() = "foo" // 注解重复两次，但未被标记为 @Repeatable
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的 Kotlin 语言级别为 1.4 或更高时，此检查才会报告。</p>
+</body>
+</html>

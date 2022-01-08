@@ -1,0 +1,16 @@
+<html>
+<body>
+报告 JSP 页面中未转义的 EL 表达式。
+<p>未转义的 EL 表达式可能导致<a href="http://en.wikipedia.org/wiki/Cross-site_scripting">跨站脚本攻击 (XSS)</a> 漏洞。</p>
+<p>该快速修复会使用 JSTL <code>&lt;out&gt;</code> 标记包装原始 EL 表达式。</p>
+<p><b>示例：</b></p>
+<pre><code>
+${foo}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+&lt;c:out value=&quot;${foo}&quot;/&gt;
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<body>
+报告对未使用封闭类名称限定的内部类的引用。
+<p><b>示例：</b></p>
+<pre><code>
+  import foo.Foo.Bar;
+
+  class Foo {
+    class Bar {}
+  }
+
+  class Baz {
+    void f(Bar bar) {}
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    class Bar {}
+  }
+
+  class Baz {
+    void f(Foo.Bar bar) {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用检查设置可以忽略对同一类中的内部类的引用，因此这些类不需要导入。
+<p>
+</body>
+</html>

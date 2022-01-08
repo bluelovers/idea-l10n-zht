@@ -1,0 +1,23 @@
+<html>
+<body>
+报告带有零个或一个实参的 <code>c</code> 调用。 该检查会建议移除冗余调用。
+<p><b>示例：</b></p>
+<pre><code>
+    a &lt;- c()
+</code></pre>
+<p>和</p>
+<pre><code>
+    c(10) + 10
+</code></pre>
+<p>
+  当您应用快速修复时，代码变为：
+</p>
+<pre><code>
+    a &lt;- NULL
+</code></pre>
+<p>和</p>
+<pre><code>
+    10 + 10
+</code></pre>
+</body>
+</html>

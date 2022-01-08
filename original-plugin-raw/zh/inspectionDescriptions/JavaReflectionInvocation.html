@@ -1,0 +1,13 @@
+<html>
+<body>
+报告提供给 <code>Method.invoke()</code> 和 <code>Constructor.newInstance()</code> 的实参与 <code>Class.getMethod()</code> 和 <code>Class.getConstructor()</code> 中指定的签名不匹配的情况。
+<p>示例：</p>
+<pre><code>
+  Method m = myObj.getClass().getMethod("myMethod", <b>int</b>.class);
+  <i>//此实参应为 <b>int</b> 值</i>
+  m.invoke(myObj, "<b>abc</b>");
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.2 最新变化</small></p>
+</body>
+</html>

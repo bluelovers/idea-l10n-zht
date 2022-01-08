@@ -1,0 +1,13 @@
+<html>
+<body>
+报告 MongoDB 和 JavaScript 代码中未解析的引用。
+<p>示例：</p>
+<pre><code>db
+use foo
+  -- a reference to a non-existing collection
+db.non_existing_collection
+db['non_existing_collection']
+db['non_existing_collection'].find().hasNext()</code></pre>
+<p><code>non_existing_collection</code> 集合在数据库中不存在，将被报告。</p>
+</body>
+</html>

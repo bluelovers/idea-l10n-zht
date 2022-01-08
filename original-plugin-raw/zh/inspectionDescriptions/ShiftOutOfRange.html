@@ -1,0 +1,14 @@
+<html>
+<body>
+报告移位值为超出合理范围的常量的移位运算。
+<p>报告 <code>0..31</code> 范围以外的整数移位运算以及 <code>0..63</code> 范围以外的长移位运算。 负值或过大值移位几乎肯定表明存在编码错误。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  int shiftSize = 32;
+  // 警告：移动 32 位相当于移动 0 位，所以根本没有移位。
+  int mask = (1 &lt;&lt; shiftSize) - 1;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

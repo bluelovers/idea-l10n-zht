@@ -1,0 +1,17 @@
+<html>
+<body>
+报告包含两个具有自动增量的列的表。 在 MySQL、Microsoft SQL Server 和 Db2 方言中，一个表只能有一个带有自动增量选项的字段，并且此字段必须是键。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE my_table
+(
+    id INT AUTO_INCREMENT,
+    c2 INT AUTO_INCREMENT,
+);</code></pre>
+<p><code>c2</code> 的 AUTO_INCREMENT 约束将被高亮显示，因为 <code>c1</code> 已经具有此约束。 要修正警告，您可以将 <code>id</code> 设为主键并删除 <code>c2</code> 的 AUTO_INCREMENT。</p>
+<pre><code>CREATE TABLE my_table
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    c2 INT,
+);</code></pre>
+</body>
+</html>

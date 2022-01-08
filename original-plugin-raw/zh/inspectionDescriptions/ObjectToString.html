@@ -1,0 +1,25 @@
+<html>
+<body>
+报告对使用 <code>java.lang.Object</code> 中默认实现的 <code>toString()</code> 的调用。
+<p>该默认实现很少是有意为之，可能是误用。</p>
+<p>
+  此检查将忽略对包含 <code>java.lang.Object</code>、接口或 abstract 类类型的对象的 <code>toString()</code> 调用。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Bar {
+      void foo1(Bar bar) {
+          String s = bar.toString(); // 警告
+          /* ... */
+      }
+
+      void foo2(Object obj) {
+          String s = obj.toString(); // 此处无警告
+          /* ... */
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+报告常量值在错误一侧的比较运算。
+<p>某些编码惯例会指定常量应该位于比较的特定一侧，要么左侧，要么右侧。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  boolean compare(int x) {
+    return 1 &gt; x; // 位于比较左侧的常量 '1'
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  boolean compare(int x) {
+    return x &lt; 1;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用检查设置可以选择比较中的常量一侧，并选择 <code>null</code> 文字位于错误一侧时是否发出警告。
+</p>
+<p><small>2019.2 最新变化</small></p>
+</body>
+</html>

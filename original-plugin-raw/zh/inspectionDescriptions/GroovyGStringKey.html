@@ -1,0 +1,18 @@
+<html>
+<body>
+报告将 <code>groovy.lang.GString</code> 对象用作映射键的语句。
+通常，<code>GString</code> 对象是可变的，可能不应用作键。
+此外，使用具有相同值的 <code>java.lang.String</code> 对象无法访问 <code>GString</code> 条目。
+<p><b>示例：</b></p>
+<pre>
+<code>
+def map = [:]
+def key = 'foo'
+map &lt&lt ["${key}": 'bar']
+assert map[key] == null // 令人困惑的比较 'true' 结果
+</code>
+</pre>
+<!-- tooltip end -->
+<p><small>2017.1 最新变化</small></p>
+</body>
+</html>

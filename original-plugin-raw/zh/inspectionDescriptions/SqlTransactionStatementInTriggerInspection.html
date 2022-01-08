@@ -1,0 +1,40 @@
+<html>
+<body>
+报告触发器主体中事务管理语句（如 COMMIT 或 ROLLBACK）的用法。
+<p>在触发器主体中使用 COMMIT 或 ROLLBACK 语句时，触发器将不会编译。
+  发生错误是因为触发器在事务中间触发。 当触发器启动时，当前事务仍未完成。 因为 COMMIT 会终止事务，这两个语句（COMMIT 和 ROLLBACK）都会导致异常。
+  在触发器中执行的更改应该由启动触发器的所属事务提交（或回滚）。</p>
+<p>示例（Oracle）：</p>
+<pre><code>CREATE TABLE employee_audit
+(
+    id          INT  NOT NULL,
+    update_date DATE NOT NULL,
+    old_name    VARCHAR2(100),
+    new_name    VARCHAR2(100)
+);
+
+CREATE TABLE employees
+(
+    id   INT           NOT NULL,
+    name VARCHAR2(100) NOT NULL
+);
+
+CREATE OR REPLACE TRIGGER trig_commit
+    AFTER UPDATE OF name
+    ON employees
+    FOR EACH ROW
+BEGIN
+    INSERT INTO employee_audit VALUES (:old.id, SYSDATE, :old.name, :new.name);
+    COMMIT;
+END;
+
+CREATE OR REPLACE TRIGGER trig_rollback
+    AFTER UPDATE OF name
+    ON employees
+    FOR EACH ROW
+BEGIN
+    INSERT INTO employee_audit VALUES (:old.id, SYSDATE, :old.name, :new.name);
+    ROLLBACK;
+END;</code></pre>
+</body>
+</html>

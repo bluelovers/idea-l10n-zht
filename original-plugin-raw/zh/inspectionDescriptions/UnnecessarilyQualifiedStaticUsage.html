@@ -1,0 +1,52 @@
+<html>
+<body>
+报告用类名限定的 static 成员的用法。
+<p>
+  此类限定不必要，并且可以安全移除。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    static void foo() {}
+    static int x;
+
+    void bar() {
+      Foo.foo();
+      System.out.println(Foo.x);
+    }
+
+    static void baz() { Foo.foo(); }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    static void foo() {}
+    static int x;
+
+    void bar() {
+      foo();
+      System.out.println(x);
+    }
+
+    static void baz() { foo(); }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用检查选项可以切换以下各项的报告：
+</p>
+<ul>
+  <li>
+    <p>static 字段访问：<br><code>void bar() { System.out.println(Foo.x); }</code></p>
+  </li>
+  <li>
+    <p>对 static 方法的调用：<br><code>void bar() { Foo.foo(); }</code></p>
+  </li>
+</ul>
+<p>
+  此外，您可以将检查配置为仅报告 static 上下文中的 static 成员用法。 在这种情况下，只会报告 <code>static void baz() { Foo.foo(); }</code>。
+</p>
+
+</body>
+</html>

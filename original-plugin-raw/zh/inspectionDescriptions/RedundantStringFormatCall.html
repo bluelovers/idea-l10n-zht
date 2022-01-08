@@ -1,0 +1,14 @@
+<html>
+<body>
+报告对 <code>format()</code> 和 <code>printf()</code> 等可以安全移除或简化的方法的调用。
+<p><b>示例：</b></p>
+<pre><code>
+  System.out.println(String.format("Total count: %d", 42));
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  System.out.printf("Total count: %d%n", 42);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

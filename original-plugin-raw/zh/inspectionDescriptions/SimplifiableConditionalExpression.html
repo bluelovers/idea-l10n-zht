@@ -1,0 +1,12 @@
+<html>
+<body>
+报告并建议简化条件表达式。
+<p>示例：</p>
+<pre><code>condition ? true : foo &rarr; condition || foo</code></pre>
+<pre><code>condition ? false : foo &rarr; !condition && foo</code></pre>
+<pre><code>condition ? foo : !foo &rarr; condition == foo</code></pre>
+<pre><code>condition ? true : false &rarr; condition</code></pre>
+<pre><code>a == b ? b : a &rarr; a</code></pre>
+<pre><code>result != null ? result : null &rarr; result</code></pre>
+</body>
+</html>

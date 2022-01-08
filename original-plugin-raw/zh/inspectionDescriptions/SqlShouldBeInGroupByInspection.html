@@ -1,0 +1,11 @@
+<html>
+<body>
+报告不在 GROUP BY 子句或聚合函数调用中的列。
+<p>示例（Microsoft SQL 服务器）：</p>
+<pre><code>CREATE TABLE t1 (a INT, b INT);
+SELECT a, b FROM t1 GROUP BY a;</code></pre>
+<p>如果您运行 SELECT 查询，您将收到一个错误，因为 Microsoft SQL Server 需要 <code>b</code> 列在 GROUP BY 中或在聚合函数内使用。 以下两个示例将修复该错误。</p>
+<pre><code>SELECT a, b FROM t1 GROUP BY a, b;
+SELECT a, max(b) max_b FROM t1 GROUP BY a;</code></pre>
+</body>
+</html>

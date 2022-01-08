@@ -1,0 +1,38 @@
+<html>
+<body>
+报告重写 <code>equals()</code> 方法但不重写 <code>hashCode()</code> 方法的类，反之亦然。将类添加到 <code>Collection</code> 或 <code>HashMap</code> 时，可能会导致问题。
+<p>该快速修复会为不存在的方法生成默认实现。</p>
+<p>示例：</p>
+<pre><code>
+class StringHolder {
+  String s;
+
+  @Override public int hashCode() {
+    return s != null ? s.hashCode() : 0;
+  }
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+class StringHolder {
+  String s;
+
+  @Override public int hashCode() {
+    return s != null ? s.hashCode() : 0;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof StringHolder)) return false;
+
+    StringHolder holder = (StringHolder)o;
+
+    if (s != null ? !s.equals(holder.s) : holder.s != null) return false;
+
+    return true;
+  }
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+报告冗余的 <code>import</code> 语句。
+<p>如果不使用源文件中导入的类和软件包，则不必使用常规 <code>import</code> 语句。
+这同样适用于源文件中未使用但已导入的 <code>static</code> 字段和方法。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  import java.util.ArrayList;
+  public class Example {
+    public static void main(String[] args) {
+      System.out.println("Hello World!");
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：
+<pre><code>
+  public class Example {
+    public static void main(String[] args) {
+      System.out.println("Hello World!");
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<body>
+报告可以转换为接口的 <code>abstract</code> 类。
+<p>最好使用接口而不是类，因为 Java 不支持多类继承，而一个类可以实现多个接口。</p>
+<p>如果一个类没有超类（Object 以外）、只有 <code>public static final</code> 字段、<code>public abstract</code> 方法和 <code>public</code> 内部类，则可以将其转换为接口。
+<!-- tooltip end -->
+
+<p>示例：</p>
+<pre><code>
+abstract class Example {
+    public static final int MY_CONST = 42;
+    public abstract void foo();
+}
+
+class Inheritor extends Example {
+    @Override
+    public void foo() {
+        System.out.println(MY_CONST);
+    }
+}
+</code></pre>
+
+<p>在应用快速修复后：</p>
+
+<pre><code>
+interface Example {
+    int MY_CONST = 42;
+    void foo();
+}
+
+class Inheritor implements Example {
+    @Override
+    public void foo() {
+        System.out.println(MY_CONST);
+    }
+}
+</code></pre>
+<p>配置检查：</p>
+<p>
+  <b>使用 Java 8 时报告包含非 abstract 方法的类</b> 选项可用于仅报告其 <code>static</code> 和非 abstract 方法可以转换为 <code>default</code> 方法的类（仅适用于语言级别为 8 或更高时）。
+<p>
+
+</body>
+</html>

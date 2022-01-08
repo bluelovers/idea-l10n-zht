@@ -1,0 +1,32 @@
+<html>
+<body>
+报告可能在线程之间共享的 <code>java.util.concurrent.ThreadLocalRandom</code> 实例。
+<p>
+  <code>ThreadLocalRandom</code> 不应在线程之间共享，因为不具备线程安全。
+  该检查可以报告分配给用作方法实参的字段，或分配给局部变量并在匿名类或嵌套类中使用的实例，因为它们可能在线程之间共享。
+</p>
+<p>
+  <code>ThreadLocalRandom</code> 的用法通常应类似于<code>ThreadLocalRandom.current().nextInt(...)</code>（或 <code>nextDouble(...)</code> 等）。
+  当所有用法都采取这种形式时，<code>ThreadLocalRandom</code> 实例就不会被多个线程误用。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+    class Main {
+      void printRandomNumbersAsync() {
+        ThreadLocalRandom random = ThreadLocalRandom.current();
+        CompletableFuture.supplyAsync(() -&gt; generateNumbers(random))
+          .thenAccept(numbers -&gt; System.out.println(Arrays.toString(numbers)));
+      }
+
+      private int[] generateNumbers(Random random) {
+        return random.ints(1000, 0, 100).toArray();
+      }
+    }
+  </code></pre>
+<!-- tooltip end -->
+<p>
+  使用这些选项可以列出能够作为实参传递给 <code>ThreadLocalRandom</code> 实例的方法。
+  可以将正则表达式用于方法名称。
+</p>
+</body>
+</html>

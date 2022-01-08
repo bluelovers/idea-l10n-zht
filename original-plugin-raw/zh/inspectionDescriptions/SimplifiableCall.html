@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可替换为简化形式的库函数调用。
+<p>使用相应函数可使代码更简单。</p>
+<p>该快速修复会在函数调用之间彼此替换。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(list: List&lt;Any&gt;) {
+      list.filter { it is String }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun test(list: List&lt;Any&gt;) {
+      list.filterIsInstance&lt;String&gt;()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

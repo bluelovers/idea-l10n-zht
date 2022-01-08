@@ -1,0 +1,17 @@
+<html>
+<body>
+报告自 Ruby 1.9 版本起弃用的语法的使用情况。 例如，对于单行 <code>if</code>、<code>when</code>、<code>unless</code>，
+使用 <code>:</code> 而不是 <code>then</code>。
+<p>示例：</p>
+<pre>
+<code>condition = true
+if condition: 1 else 0 # -> if condition then 1 else 0
+unless condition: 0 else 1 # -> unless condition then 0 else 1
+
+value = 1
+case value
+when 1: true # -> when 1 then true
+end</code>
+</pre>
+</body>
+</html>

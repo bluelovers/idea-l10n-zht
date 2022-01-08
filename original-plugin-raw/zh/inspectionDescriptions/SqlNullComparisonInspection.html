@@ -1,0 +1,13 @@
+<html>
+<body>
+报告与可以替换为 IS NULL 或 IS NOT NULL 运算符的 NULL 的比较。
+<p>示例（Microsoft SQL 服务器）：</p>
+<pre><code>CREATE TABLE foo ( id int );
+
+SELECT * FROM foo WHERE NULL = NULL;
+SELECT * FROM foo WHERE NULL != NULL;</code></pre>
+<p><code>NULL = NULL</code> 可以替换为 <code>IS NULL</code>，<code>NULL != NULL</code> 比较可以替换为 <code>IS NOT NULL</code>。 要进行此替换，您可以使用<b>使用 IS NULL 运算符</b>或<b>使用 IS NOT NULL 运算符</b>快速修复。</p>
+<pre><code>SELECT * FROM foo WHERE NULL IS NULL;
+SELECT * FROM foo WHERE NULL IS NOT NULL;</code></pre>
+</body>
+</html>

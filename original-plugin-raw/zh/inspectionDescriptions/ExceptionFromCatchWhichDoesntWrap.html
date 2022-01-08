@@ -1,0 +1,20 @@
+<html>
+<body>
+报告从 <code>catch</code> 块内部抛出但不“包装”所捕获异常的异常。
+<p>当异常被抛出以响应异常时，包装初始异常可防止丢失有价值的上下文信息，如堆栈帧和行号。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  ...
+  catch (IOException e) {
+    closeAllConnections();
+    throw new ConnectException("Connection problem."); // 警告：'catch' 块内的 'throw' 忽略捕获的异常 'e'
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>如果使用异常方法调用的结果，则忽略</b>选项可指示检查是否应忽略实参为原始异常方法调用结果的异常，例如 <code>getMessage()</code>。</li>
+  <li>使用<b>如果抛出的异常无法包装异常，则忽略</b>选项可忽略在没有接受 <code>Throwable</code> 子句的构造函数的情况下抛出异常的 <code>throw</code> 语句。</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>报告尝试调用属性等不可调用对象的问题：</p>
+<pre  style="font-family: monospace">
+class Record:
+    @property
+    def as_json(self):
+
+json = Record().as_json()
+</pre>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+报告任何不包含日志记录语句的 public 方法。 此检查不报告简单的 getter 和 setter。
+<p>示例：</p>
+<pre><code>
+  <b>public class</b> Crucial {
+    <b>private static final </b>Logger LOG = LoggerFactory.getLogger(Crucial.class);
+    <b>public void</b> doImportantStuff() {
+      // 对此方法发出警告
+    }
+
+    <b>public void</b> doOtherStuff() {
+      LOG.info("do other stuff");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用下表可指定 Logger 类名。
+此检查将报告不使用指定类的实例方法的 public 方法。
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+报告为了获得更好的性能和 Java 互操作性而可能声明为 <code>const</code> 的对象中的顶级 <code>val</code> 属性。
+<p><b>示例：</b></p>
+<pre><code>
+  object A {
+      val foo = 1
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  object A {
+      const val foo = 1
+  }
+</code></pre>
+</body>
+</html>

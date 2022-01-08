@@ -1,0 +1,19 @@
+<html>
+<body>
+报告包含对其中一个子类进行了引用的类。
+此类引用可能令人困惑，并违反面向对象设计的多条规则。
+<p>示例：</p>
+<pre><code>
+  class Entity {
+    // 警告：该类引用了其子类
+    void compare(SimpleEntity entity) {
+      ...
+    }
+  }
+  class SimpleEntity extends Entity {
+    ...
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

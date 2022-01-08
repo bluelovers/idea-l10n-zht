@@ -1,0 +1,13 @@
+<html>
+<body>
+报告对未在变量类型中定义的属性的赋值。 <p>示例： </p>
+<pre><code>
+/**
+ * @type {{ property1: string, property2: number }}
+ */
+let myVariable = create();
+
+myVariable.newProperty = 3; // 不良
+</code></pre>
+</body>
+</html>

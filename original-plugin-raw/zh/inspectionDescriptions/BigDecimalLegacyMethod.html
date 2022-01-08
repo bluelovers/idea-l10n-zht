@@ -1,0 +1,12 @@
+<html>
+<body>
+报告对使用整数常量指定舍入模式的 <code>BigDecimal.divide()</code> 或 <code>BigDecimal.setScale()</code> 的调用。
+自 JDK 1.5 起，可以考虑使用接受 <code>RoundingMode</code> <code>enum</code> 形参的方法。
+<p><b>示例：</b></p>
+<pre><code>new BigDecimal("42").setScale(2, BigDecimal.ROUND_FLOOR);</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>new BigDecimal("42").setScale(2, RoundingMode.FLOOR);</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

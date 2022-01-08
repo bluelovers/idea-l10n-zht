@@ -1,0 +1,23 @@
+<html>
+<body>
+报告可能使用 Java 7 Automatic Resource Management（这样不容易出错）的 <code>try</code>-<code>finally</code> 语句。
+<p>可以通过快速修复将 <code>try</code>-<code>finally</code> 语句转换为 <code>try</code>-with-resources 语句。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  PrintStream printStream = new PrintStream(fileName);
+  try {
+    printStream.print(true);
+  } finally {
+    printStream.close();
+  }
+</code></pre>
+<p>通过快速修复将原因传递给构造函数：</p>
+<pre><code>
+  try (PrintStream printStream = new PrintStream(fileName)) {
+    printStream.print(true);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 7 或更高时，此检查才会报告。</p>
+</body>
+</html>

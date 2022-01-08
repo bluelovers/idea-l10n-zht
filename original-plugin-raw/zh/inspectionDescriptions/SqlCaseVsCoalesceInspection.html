@@ -1,0 +1,15 @@
+<html>
+<body>
+报告 CASE 和 COALESCE 调用可以互换的情况。 此检查具有以下意图操作：<b>替换为 'COALESCE' 调用</b>和相反的 <b>替换为 CASE 表达式</b>。
+<p>示例（MySQL）：</p>
+<pre><code>SELECT
+  -- this CASE may be replaced by COALESCE
+	CASE
+		WHEN C1 IS NOT NULL THEN C1
+		ELSE 0
+		END
+FROM dual;</code></pre>
+<p>在该示例中，CASE 语句可以替换为 <code>SELECT COALESCE(C1, 0)</code>，这会产生相同的结果。</p>
+<p>如果您更喜欢使用 CASE 表达式，请在检查页面上选择 <b>CASE 表达式优先于 COALESCE 函数</b>选项。</p>
+</body>
+</html>

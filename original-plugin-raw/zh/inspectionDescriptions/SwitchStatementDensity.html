@@ -1,0 +1,22 @@
+<html>
+<body>
+报告 switch 标签与可执行语句的比率太低的 <code>switch</code> 语句或表达式。
+<p>此类 <code>switch</code> 语句可能令人困惑，或许应对其进行重构。</p>
+
+<p>示例：</p>
+<pre><code>
+    switch (i) { // 1 个 case，5 个可执行语句 -> 20% 的密度
+        case 1:
+            System.out.println("1");
+            System.out.println("2");
+            System.out.println("3");
+            System.out.println("4");
+            System.out.println("5");
+            break;
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>
+<p>使用<b>分支的最小密度</b>字段可以指定 switch 标签与可执行语句的允许比率。</p>
+</body>
+</html>

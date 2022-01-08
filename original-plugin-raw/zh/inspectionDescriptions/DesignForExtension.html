@@ -1,0 +1,21 @@
+<html>
+<body>
+报告非 <code>static</code>、<code>private</code>、<code>final</code> 或 <code>abstract</code>，且其语句体不为空的方法。
+<p>
+  使用避免此类方法的样式进行编码可以保护类的约定不会被它们的子类破坏。 这种样式的好处是子类不会因为忘记调用 super 方法而破坏超类的状态。 代价是子类的灵活性受到限制，特别是它们不能阻止超类中代码的执行。 使用该快速修复可以添加缺失的修饰符。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    public boolean equals(Object o) { return true; }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    public final boolean equals(Object o) { return true; }
+  }
+</code></pre>
+此检查适用于将在安全环境中使用的代码，可能不适合限制较少的环境。
+<!-- tooltip end -->
+</body>
+</html>

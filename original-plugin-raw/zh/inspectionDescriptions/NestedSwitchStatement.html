@@ -1,0 +1,19 @@
+<html>
+<body>
+报告嵌套的 <code>switch</code> 语句或表达式。
+<p>嵌套的 <code>switch</code> 语句可能导致代码格外令人困惑。 这些语句可以提取到一个单独的方法中。</p>
+<p>示例：</p>
+<pre><code>
+  int res = switch (i) {
+            case 0 -> 0;
+            default -> switch (i) {
+                case 100 -> 0;
+                default -> i;
+            };
+        };
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

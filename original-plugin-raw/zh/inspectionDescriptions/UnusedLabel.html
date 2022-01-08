@@ -1,0 +1,22 @@
+<html>
+<body>
+报告不是任何 <code>break</code> 或 <code>continue</code> 语句目标的标签。
+<p><b>示例：</b></p>
+<pre><code>
+  label: <b>for</b> (int i = 0; i &lt; 10; i++) {
+    <b>if</b> (i == 3) {
+      <b>break</b>;
+    }
+  }
+</code></pre>
+<p>应用快速修复后，该标签将被移除：</p>
+<pre><code>
+  <b>for</b> (int i = 0; i &lt; 10; i++) {
+    <b>if</b> (i == 3) {
+      <b>break</b>;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

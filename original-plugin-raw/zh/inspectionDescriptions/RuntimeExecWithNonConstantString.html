@@ -1,0 +1,23 @@
+<html>
+<body>
+报告对 <code>java.lang.Runtime.exec()</code> 的调用，该调用会将动态构造的字符串作为要执行的命令。
+<p>
+  构造的执行字符串是安全漏洞的常见来源。
+  默认情况下，此检查会忽略编译时常量。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  String i = getUserInput();
+  Runtime runtime = Runtime.getRuntime();
+  runtime.exec("foo" + i); // 报告警告
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用检查设置可以将任何 <code>static</code> <code>final</code> 字段视为常量。
+请小心，因为启用该选项时，像下面这样的字符串将被忽略：
+<pre><code>
+  static final String COMMAND = "ping " + getDomainFromUserInput() + "'";
+</code></pre>
+<p>
+</body>
+</html>

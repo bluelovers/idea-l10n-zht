@@ -1,0 +1,26 @@
+<html>
+<body>
+报告对无法为之找到相应 <code>Condition.await()</code> 调用的 <code>Condition.signal()</code> 或 <code>Condition.signalAll()</code> 的调用。
+<p>此检查仅报告以当前类的目标字段为目标的调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Queue {
+    private final Condition isEmpty = ...;
+
+    void add(Object elem) {
+      // ...
+      isEmpty.signal(); // 警告：在没有相应 'await()' 的情况下调用 'signal()'
+      // ...
+    }
+
+    void remove(Object elem) throws InterruptedException {
+      // ...
+      //      isEmpty.await();
+      // ...
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

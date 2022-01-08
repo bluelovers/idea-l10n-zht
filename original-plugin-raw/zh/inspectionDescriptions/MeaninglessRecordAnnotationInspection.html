@@ -1,0 +1,23 @@
+<html>
+<body>
+报告记录组件上使用但并没有效果的注解。
+<p>这可能发生在以下两种情况下：</p>
+<ul>
+  <li>报告的注解具有 METHOD 目标，但显式定义了相应的访问器。</li>
+  <li>报告的注解具有 PARAMETER 目标，但显式定义了规范构造函数。</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+@Target(ElementType.METHOD)
+@interface A { }
+  
+// 该注解根本不会出现在字节码中，
+// 因为它应当传播到访问器，但显式定义了访问器
+record R(@A int x) {
+  public int x() { return x; }
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2021.1 最新变化</small></p>
+</body>
+</html>

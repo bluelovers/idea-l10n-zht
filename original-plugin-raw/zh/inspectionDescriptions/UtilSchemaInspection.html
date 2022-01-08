@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告在 XML 应用程序上下文中定义的不正确<a href="https://www.springframework.org/schema/util">架构 Bean</a>。</p>
+
+<pre><code>
+  &lt;beans ... xmlns:util="https://www.springframework.org/schema/util"&gt;
+    &lt;bean class="MyBean" id="myBean"/&gt;
+    &lt;bean class="ErrTypeBean" id="errTypeBean"/&gt;
+    &lt;util:list list-class="java.lang.String"/&gt; // 报告 "类必须为 'java.util.List' 的继承者"
+    &lt;util:set value-type="MyBean"&gt;
+      &lt;ref bean="fooBean"/&gt;
+      &lt;ref bean="errTypeBean"/&gt; // 报告 "无法添加到 'MyBean' 类型的集合中"
+    &lt;/util:set&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+<body>
+报告泛型类的实例化，其中使用 <b>&lt;&gt;</b> 符号（菱形）代替类型形参。
+
+<p>快速修复会将 <b>&lt;&gt;</b>（菱形）替换为显式类型形参。
+  此操作可用于使代码与 Java 6 兼容。</p>
+<p>示例：</p>
+<pre><code>List &lt;String&gt; list = new ArrayList&lt;&gt;()</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>List &lt;String&gt; list = new ArrayList&lt;String&gt;()</code></pre>
+</body>
+</html>

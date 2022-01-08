@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html">@Bean</a> 注解的 <code>initMethod</code> 和 <code>destroyMethod</code> 形参上的未解析方法引用。</p>
+
+<p><b>示例：</b></p>
+如果 MyBean 类不包含 'public void 'doInit'(){...}' 方法，将在 'doInit' 表达式上报告 "无法解析方法"
+<pre><code>
+  public class MyBean {...}
+
+  @Component
+  public class MyComponent {
+     @Bean(initMethod="doInit" )
+     public MyBean myBean() {...}
+  }
+</code></pre>
+
+<p>在此示例中，如果 <code>MyBean</code> 不定义 <code>doInit()</code> 方法，该检查将报告未解析的方法引用。</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<body>
+报告在单个声明中声明的多个变量，并建议为每个变量创建单独的声明。
+<p>一些编码标准禁止此类声明。</p>
+<p>示例：</p>
+<pre><code>
+  int x = 1, y = 2;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  int x = 1;
+  int y = 2;
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+<li>使用 <b>忽略 'for' 循环声明</b> 选项可忽略在 'for' 循环语句的初始化中声明的多个变量，例如：
+<pre><code>
+  <b>for</b> (int i = 0, max = list.size(); i &gt; max; i++) {}
+</code></pre>
+</li>
+<li>使用 <b>仅在单个声明中对不同的数组维度发出警告</b> 选项，以仅在单个声明中声明具有不同数组维度的变量时发出警告，例如：
+<pre><code>
+  String s = "", array[];
+</code></pre>
+</li>
+</ul>
+<p><small>2019.2 最新变化</small></p>
+</body>
+</html>

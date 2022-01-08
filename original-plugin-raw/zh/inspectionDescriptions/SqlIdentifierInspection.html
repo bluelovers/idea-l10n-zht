@@ -1,0 +1,12 @@
+<html>
+<body>
+报告在查询中使用 SQL 预留关键字作为标识符名称时的情况。
+<p>示例（Microsoft SQL 服务器）：</p>
+<pre><code>CREATE TABLE select (identity INT IDENTITY NOT NULL, order INT NOT NULL);</code></pre>
+<p>我们使用 <code>select</code>、<code>identity</code> 和<code>order</code> 作为表名和列名。
+  但它们也是 Microsoft SQL Server 中的保留关键字。
+  因此，为了将它们用作查询中的对象名称，您必须用引号引用这些标识符。 要用引号引用它们，您可以使用<b>为标识符加引号</b> 快速修复。</p>
+<p>在应用快速修复后：</p>
+<pre><code>CREATE TABLE [select] ([identity] INT IDENTITY NOT NULL, [order] INT NOT NULL);</code></pre>
+</body>
+</html>

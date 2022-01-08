@@ -1,0 +1,39 @@
+<html>
+<body>
+<p>报告使用 <code>null</code> 显式初始化的变量定义。</p>
+<p><code> var v: T = null </code> 共有三种不同类型：</p>
+<ol>
+    <li><code>v</code> 是一个 <em>可选</em>值<br>
+        &rarr; 使用 <code>Option[T]</code> 类型，这是习惯用法并且类型安全</li>
+    <li><code>v</code> 是一个 <em>未初始化的</em>值（必须分配一个值）<br>
+        &rarr; 使用清晰、简洁且与平台无关的 <code>_</code> (Scala 2) 或 <code>scala.compiletime.uninitialized</code> (Scala 3)
+          作为初始化器</li>
+    <li>这是一种性能<em>优化</em>（您实际上使用的是 <code>null</code> 值）<br>
+         &rarr; 明确禁止对不安全代码的检查</li>
+</ol>
+<p>将提供两个快速修复：</p>
+<ul>
+    <li><em>使用 _ 初始值设定项</em>会将 <code>null</code> 替换为 <code>_</code></li>
+    <li><em>使用 Option 类型</em>会将变量的类型替换为 <code>Option</code> 并使用 <code>None</code> 初始化</li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+  class Test {
+    var optional: String = null
+    var uninit: String = null
+
+    uninit = "initialized later"
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Test {
+    var optional: Option[String] = None
+    var uninit: String = _
+
+    uninit = "initialized later"
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

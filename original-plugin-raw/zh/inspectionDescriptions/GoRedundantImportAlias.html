@@ -1,0 +1,27 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+报告可以省略的导入软件包的别名。
+<p>通常，此类别名等于导入软件包的名称，因此别名没有任何作用，可以直接使用软件包名称。</p>
+<p>示例：</p>
+<pre><code>import fmt "fmt"</code></pre>
+<p><code>fmt</code> 别名与同样名为 <code>"fmt"</code> 的软件包名称重复。 要删除别名，请使用 <b>删除导入别名</b> 快速修复。</p>
+<p>在应用快速修复后：</p>
+<pre><code>import "fmt"</code></pre>
+</body>
+</html>

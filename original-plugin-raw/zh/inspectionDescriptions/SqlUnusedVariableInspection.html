@@ -1,0 +1,13 @@
+<html>
+<body>
+报告未使用的实参、变量或形参。
+<p>示例（PostgreSQL）：</p>
+<pre><code>CREATE FUNCTION foo(PARAMUSED INT, PARAMUNUSED INT) RETURNS INT AS
+$$
+BEGIN
+    RETURN PARAMUSED;
+END
+$$ LANGUAGE plpgsql;</code></pre>
+<p><code>PARAMUNUSED</code> 形参未在函数中使用，可能会被删除。</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+报告异常比方法实际抛出的异常更通用的 <code>throws</code> 子句。
+<p><b>示例：</b></p>
+<pre><code>
+  public void createFile() throws Exception { // 警告：'throws Exception' 范围过广，屏蔽异常 'IOException'
+    File file = new File("pathToFile");
+    file.createNewFile();
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  public void createFile() throws IOException {
+    File file = new File("pathToFile");
+    file.createNewFile();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>仅对 RuntimeException、异常、错误或 Throwable 发出警告</b>选项可使此检查仅对最常见的异常发出警告。</li>
+  <li>使用<b>忽略在重写库方法的方法上声明的异常</b>选项可忽略在重写库方法的方法中过于宽泛的 <code>throws</code> 子句。</li>
+  <li>使用<b>忽略隐藏其他异常但自身被抛出的异常</b>选项可忽略任何隐藏其他异常但仍可能从方法体抛出的异常，因此在技术上不会过于宽泛。</li>
+</ul>
+</body>
+</html>

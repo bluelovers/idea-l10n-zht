@@ -1,0 +1,21 @@
+<html>
+<body>
+生成用于惯用错误处理的样板代码。
+<p>
+  可以在 <code>error</code> 类型的变量和表达式上调用。
+</p>
+<ul>
+  <li><p>用以下构造替换 <code>err</code> 变量：</p>
+  <pre><code>if err != nil {
+    return value1, value2, ...
+  }</code></pre></li>
+  <li><p>用以下构造替换 <code>expr</code> 表达式：</p>
+  <pre><code>if err := expr; err != nil {
+    return value1, value2, ...
+  }</code></pre></li>
+</ul>
+<p>
+  每个 <code>value</code> 要么是 <code>err</code> 变量，要么是封闭函数的相应返回类型的默认值。 您可以在具有多个值的表达式上调用此模板。
+</p>
+</body>
+</html>

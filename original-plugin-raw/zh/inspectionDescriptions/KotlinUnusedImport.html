@@ -1,0 +1,32 @@
+<html>
+<body>
+报告冗余的 <code>import</code> 语句。
+
+<p>可以安全地移除默认和未使用的导入。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  import kotlin.*
+  import kotlin.collections.*
+  import kotlin.comparisons.*
+  import kotlin.io.*
+  import kotlin.ranges.*
+  import kotlin.sequences.*
+  import kotlin.text.*
+
+  // 特定于 jvm
+  import java.lang.*
+  import kotlin.jvm.*
+
+  // 特定于 js
+  import kotlin.js.*
+
+  import java.io.* // 此导入未使用，可以移除
+  import java.util.*
+
+  fun foo(list: ArrayList&lt;String&gt;) {
+      list.add("")
+  }
+</code></pre>
+</body>
+</html>

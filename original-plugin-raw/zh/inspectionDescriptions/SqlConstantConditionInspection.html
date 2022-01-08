@@ -1,0 +1,9 @@
+<html>
+<body>
+报告 WHERE 或 JOIN 子句中始终为 TRUE 或始终为 FALSE 的条件。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE t1 (a TEXT, b INT, c BOOLEAN);
+SELECT a FROM t1 WHERE 'Cat' = 'Cat';</code></pre>
+<p><code>'Cat' = 'Cat'</code> 始终为 true，将被报告。</p>
+</body>
+</html>

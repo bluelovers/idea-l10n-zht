@@ -1,0 +1,23 @@
+<html>
+<body>
+报告包含不必要标签的 <code>break</code> 语句。 此类标签不会改变控制流，但会导致难以跟随代码。
+<p><b>示例：</b></p>
+<pre><code>
+  label:
+  for(int i = 0; i &lt; 10; i++) {
+    if (shouldBreak()) break label;
+    //doSmth
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  label:
+  for(int i = 0; i &lt; 10; i++) {
+    if (shouldBreak()) break;
+    //doSmth
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

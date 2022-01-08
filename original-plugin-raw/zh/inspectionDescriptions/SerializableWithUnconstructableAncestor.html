@@ -1,0 +1,23 @@
+<html>
+<body>
+报告最近的不可序列化祖先没有无实参构造函数的 <code>Serializable</code> 类。 这种类无法反序列化，将失败并抛出 <code>InvalidClassException</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  class Ancestor {
+    private String name;
+    Ancestor(String name) {
+      this.name = name;
+    }
+  }
+
+  //对此类发出警告，因为超类并非
+//可序列化，并且其构造函数接受实参
+  class Descendant extends Ancestor implements Serializable {
+    Descendant() {
+      super("Bob");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

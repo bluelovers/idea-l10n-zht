@@ -1,0 +1,18 @@
+<html>
+<body>
+在以下情况下报告错误定义的托管 Bean 类：
+<ul>
+  <li>类不为 final</li>
+  <li>类为 abstract</li>
+  <li>Bean 为非 static 内部类</li>
+</ul>
+
+<p><b>示例：</b></p><br/>
+<pre><code>
+  @ManagedBean
+  public final class JavaManagedBean { // 错误：托管 Bean 不应为 final
+    ...
+  }
+</code></pre>
+</body>
+</html>

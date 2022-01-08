@@ -1,0 +1,31 @@
+<html>
+<body>
+报告其中的 <code>default</code> case 位于另一个 case 前面的 <code>switch</code> 语句或表达式。
+<p>此结构造成不必要的困惑。
+可以通过快速修复将 <code>default</code> case 移到最后位置。
+  只有给定分支的结尾有 <code>break</code>/<code>yield</code> 时，才能进行修正。</p>
+<p>示例：</p>
+<pre><code>
+  switch (n) {
+      default:
+          System.out.println();
+          break;
+      case 1:
+          break;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  switch (n) {
+    case 1:
+        break;
+    default:
+        System.out.println();
+        break;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

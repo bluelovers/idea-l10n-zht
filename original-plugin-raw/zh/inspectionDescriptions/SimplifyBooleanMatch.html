@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>报告可以由条件语句替换的布尔表达式上的普通模式匹配。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val bool: Boolean
+  bool match {
+    case true => ???
+    case false => ???
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val bool: Boolean
+  if (bool) {
+    ???
+  } else {
+    ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

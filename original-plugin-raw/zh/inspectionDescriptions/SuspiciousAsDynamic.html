@@ -1,0 +1,15 @@
+<html>
+<body>
+报告动态类型接收器上的 <code>asDynamic</code> 函数用法。
+<p><code>asDynamic</code> 函数对动态类型的表达式无影响。</p>
+<p>动态类型接收器上的 <code>asDynamic</code> 函数会导致运行时问题，因为 <code>asDynamic</code> 将在 JavaScript 环境中执行，而且此类函数在运行时可能并不显示。
+    预期方式是在常用 Kotlin 类型上使用此函数。</p>
+<p><b>移除 "asDynamic" 调用</b>快速修复可用于自动修正代码。</p>
+<p>示例：</p>
+<pre><code>
+  fun wrongUsage(d: Dynamic) {
+     d.asDynamic().foo() // &lt;== 冗余，快速修复会将调用表达式简化为 "d.foo()"
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<body>
+报告访问非 <code>final</code> 变量的 <code>hashCode()</code> 的实现。
+<p>
+  此类访问可能导致 <code>hashCode()</code> 在该对象生命周期的不同时刻返回不同的值，进而可能在使用标准集合类时导致问题。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Drink {
+    String name;
+    Drink(String name) { this.name = name; }
+    @Override public int hashCode() {
+      return Objects.hash(name); //警告
+    }
+  }
+  ...
+    Drink coffee = new Drink("Coffee");
+    priceMap.put(coffee, 10.0);
+    coffee.name = "Tea";
+    double coffeePrice = priceMap.get(coffee); //找不到
+</code></pre>
+<p>建议通过快速修复将该字段设为 final：</p>
+<pre><code>
+  class Drink {
+    final String name;
+    ...
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

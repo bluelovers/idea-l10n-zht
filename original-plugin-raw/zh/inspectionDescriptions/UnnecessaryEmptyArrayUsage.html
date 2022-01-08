@@ -1,0 +1,28 @@
+<html>
+<body>
+报告数组元素类型的类中有常量时已知长度为零的数组分配。
+由于零长度数组不可变，您可以重用相同的数组实例来节省内存。
+<p><b>示例：</b></p>
+<pre><code>
+  class Item {
+    // 可重用的 public 零长度数组常量 
+    public static final Item[] EMPTY_ARRAY = new Item[0];
+  }
+  class EmptyNode {
+    Item[] getChildren() {
+      // 不必要的零长度数组创建
+      return new Item[0];
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class EmptyNode {
+    Item[] getChildren() {
+      return Item.EMPTY_ARRAY;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

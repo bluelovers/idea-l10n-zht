@@ -1,0 +1,31 @@
+<html>
+<body>
+报告 <code>equals()</code>、<code>hashCode()</code>、<code>compareTo()</code> 和 <code>Comparator.compare()</code> 方法内（临时）新对象的构造。
+<p>
+  除了构造函数调用之外，还可以通过在 <code>foreach</code> 语句中自动装箱或迭代器创建来创建新对象。
+  这可能会导致性能问题，例如，将对象添加到 <code>Set</code> 或 <code>Map</code> 时，这些方法将在这些地方被经常调用。
+</p>
+<p>
+  当在 <code>throw</code> 或 <code>assert</code> 语句中创建对象时，该检查将不会报告。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Person {
+    private String name;
+    private int age;
+
+    public boolean equals(Object o) {
+      return Arrays.equals(new Object[] {name, age}, new Object[] {((Foo)o).name, ((Foo)o).age});
+    }
+
+    public int hashCode() {
+      return (name + age).hashCode();
+    }
+  }
+</code></pre>
+<p>
+  在此示例中，在 <code>equals()</code> 内部创建了两个额外的数组，<code>age</code> 字段的用法需要装箱，而 <code>name + age</code> 隐式地创建了一个新字符串。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

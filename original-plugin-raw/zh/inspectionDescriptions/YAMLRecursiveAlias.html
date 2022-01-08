@@ -1,0 +1,12 @@
+<html>
+<body>
+报告 YAML 别名中的递归。
+<p>别名不能递归并在相应定位标记引用的数据中使用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  some_key: &some_anchor
+    sub_key1: value1
+    sub_key2: *some_anchor
+</code></pre>
+</body>
+</html>

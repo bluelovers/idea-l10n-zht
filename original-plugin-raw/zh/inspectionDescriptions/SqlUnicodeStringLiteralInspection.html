@@ -1,0 +1,12 @@
+<html>
+<body>
+报告使用没有 <code>N</code> 前缀的国家字符的字符串文字。
+<p>如果没有 N 前缀，字符串将被转换为数据库的默认代码页面。 此默认代码页面可能无法识别某些字符。 有关更多信息，请参阅 <a href="https://docs.microsoft.com/en-us/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql" target="_blank">docs.microsoft.com 上的“nchar 和 nvarchar”(Transact-SQL)</a> 页面。</p>
+<p>示例（Microsoft SQL 服务器）：</p>
+<pre><code>SELECT 'abcde' AS a;
+SELECT N'abcde' AS b;
+SELECT 'абвгд' AS c;
+SELECT N'абвгд' AS d;</code></pre>
+<p><code>SELECT 'абвгд' AS c;</code> 没有 <code>N</code> 前缀，<code>'абвгд'</code> 部分将被高亮显示。</p>
+</body>
+</html>

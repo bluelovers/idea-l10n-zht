@@ -1,0 +1,27 @@
+<html>
+<body>
+报告未被声明为 <code>static</code> 和/或 <code>final</code> 的记录器字段。
+确保每个类记录器都是有效的常量并绑定到该类可以简化为应用程序提供统一日志记录实现的任务。
+<p>提供了一个快速修复来将记录器修饰符更改为 <code>static final</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>public class</b> Significant {
+    <b>private</b> Logger LOG = Logger.getLogger(Critical.class);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>public class</b> Significant {
+    <b>private static final</b> Logger LOG = Logger.getLogger(Critical.class);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  配置检查：
+</p>
+<ul>
+  <li>使用<b>记录器类名</b>表可以指定记录器类名。 该检查将报告不是 <code>static</code> 和 <code>final</code> 并且类型等同于指定类名之一的字段。
+  </li>
+</ul>
+</body>
+</html>

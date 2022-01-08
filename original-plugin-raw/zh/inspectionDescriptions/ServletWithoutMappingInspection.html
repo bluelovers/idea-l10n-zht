@@ -1,0 +1,20 @@
+<html>
+<body>
+报告没有关联映射的 servlet。
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;web-app&gt;
+    &lt;servlet&gt;
+      &lt;servlet-name&gt;foo&lt;/servlet-name&gt; // 错误：servlet 应该有一个映射
+      &lt;servlet-class&gt;javax.servlet.Servlet&lt;/servlet-class&gt;
+    &lt;/servlet&gt;
+  
+    &lt;filter&gt;
+      &lt;filter-name&gt;bar&lt;/filter-name&gt; // 错误：筛选器应该有一个映射
+      &lt;filter-class&gt;java.lang.String&lt;/filter-class&gt;
+    &lt;/filter&gt;
+  &lt;/web-app&gt;
+</code></pre>
+</body>
+</html>

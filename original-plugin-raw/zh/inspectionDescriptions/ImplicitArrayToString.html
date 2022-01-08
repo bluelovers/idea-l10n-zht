@@ -1,0 +1,21 @@
+<html>
+<body>
+报告 <code>String</code> 连接中使用的数组，或作为形参传递给 <code>java.io.PrintStream</code> 方法的数组，如 <code>System.out.println()</code>。
+<p>
+  通常使用数组的内容，而不是使用数组对象本身。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void print(Object[] objects) {
+    System.out.println(objects);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void print(Object[] objects) {
+    System.out.println(Arrays.toString(objects));
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

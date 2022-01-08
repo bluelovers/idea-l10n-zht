@@ -1,0 +1,21 @@
+<html>
+<body>
+报告在循环条件中使用且未在循环内更新的任何变量和形参。
+<p>此类变量和形参通常被错误使用，因为如果执行它们可能会导致无限循环。</p>
+<p>示例：</p>
+<pre><code>
+  void loopDoesNotLoop(boolean b) {
+    while (b) {
+      System.out.println();
+      break;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<p>
+  如果条件可以间接更新（例如，通过调用的方法或从另一个线程并发更新），请使用 <b>忽略可能的非本地变更</b> 选项来禁用此检查。
+</p>
+
+</body>
+</html>

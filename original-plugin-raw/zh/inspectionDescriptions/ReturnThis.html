@@ -1,0 +1,17 @@
+<html>
+<body>
+报告返回 <code>this</code> 的方法。
+<p>
+  虽然此类返回是有效的，但很少有必要，并且通常表明该方法旨在被用作类似方法调用链的一部分（例如，<code>buffer.append("foo").append( "bar").append("baz")</code>）。
+  许多编码标准不赞成此类链。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public Builder append(String str) {
+    // [...]
+    return this;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

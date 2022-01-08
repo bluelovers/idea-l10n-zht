@@ -1,0 +1,17 @@
+<html>
+<body>
+报告重写另一个 <code>lateinit var</code> 属性的 <code>lateinit var</code> 属性。
+<p>
+    一个子类实例的单个属性会有两个字段，而来自超类的一个将保持不使用。</p>
+</body>
+<p><b>示例：</b></p>
+open class BaseClass {
+  open lateinit var name: String
+}
+
+class RealClass : BaseClass() {
+  override lateinit var name: String
+}
+<pre><code>
+</code></pre>
+</html>

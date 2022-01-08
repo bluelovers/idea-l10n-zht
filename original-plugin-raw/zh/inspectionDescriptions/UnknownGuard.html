@@ -1,0 +1,24 @@
+<html>
+<body>
+报告其中指定的保护字段未知的 <code>@GuardedBy</code> 注解。
+<p>示例：</p>
+<pre><code>
+    private Object state;
+
+    @GuardedBy("lock") //未知的保护引用
+    public void bar() {
+        state = new Object();
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>支持的 <code>@GuardedBy</code> 注解是：</p>
+<ul>
+  <li><code>net.jcip.annotations.GuardedBy</code></li>
+  <li><code>javax.annotation.concurrent.GuardedBy</code></li>
+  <li><code>org.apache.http.annotation.GuardedBy</code></li>
+  <li><code>com.android.annotations.concurrency.GuardedBy</code></li>
+  <li><code>androidx.annotation.GuardedBy</code></li>
+  <li><code>com.google.errorprone.annotations.concurrent.GuardedBy</code></li>
+</ul>
+</body>
+</html>

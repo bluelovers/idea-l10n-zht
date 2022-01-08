@@ -1,0 +1,42 @@
+<html>
+<body>
+<p>报告使用 <code>@Deployment</code> 注解的方法的不正确返回类型。</p>
+<p>
+  根据 <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/en-US/html/gettingstarted.html#d0e451">Arquillian 文档</a>，使用 <code>@Deployment</code> 注解的方法必须具有从 ShrinkWrap Archive 继承的返回类型。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  // 此测试用例无法被 Arquillian 启动
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Deployment
+    public static ZipFile createDeployment() {
+      throw new UnsupportedOperationException("Implement me");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  import org.jboss.shrinkwrap.api.Archive;
+
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Deployment
+    public static Archive createDeployment() {
+      throw new UnsupportedOperationException("Implement me");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+</body>
+</html>

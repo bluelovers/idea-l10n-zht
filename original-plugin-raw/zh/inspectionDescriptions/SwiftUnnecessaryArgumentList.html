@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>
+  报告使用尾随闭包的函数调用后面的空圆括号。
+</p>
+<p>
+  建议移除空圆括号。
+</p>
+<!-- tooltip end -->
+<p>
+  <b>示例：</b>
+</p>
+<pre><code>
+  any() { $0 > 0 }
+</code></pre>
+<p>
+  在应用快速修复后：
+</p>
+<pre><code>
+  any { $0 > 0 }
+</code></pre>
+</body>
+</html>

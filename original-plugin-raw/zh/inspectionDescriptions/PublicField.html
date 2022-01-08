@@ -1,0 +1,32 @@
+<html>
+<body>
+报告 <code>public</code> 字段。
+不报告常量（标记 <code>static</code> 和 <code>final</code> 的字段）。
+<p><b>示例：</b></p>
+<pre><code>
+  class Main {
+    public String name;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Main {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>有注解时忽略</b>列表可指定要忽略的注解。 该检查将忽略包含其中任何注解的字段。</li>
+  <li>使用<b>忽略枚举的 'public final' 字段</b>选项，可以忽略 <code>enum</code> 类型的 <code>public final</code> 字段。</li>
+</ul>
+</body>
+</html>

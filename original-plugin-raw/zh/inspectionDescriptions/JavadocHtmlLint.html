@@ -1,0 +1,23 @@
+<html>
+<body>
+报告自 Java 8 以来 DocLint 报告的 Javadoc 注释中的相同 HTML 问题。
+<p>该检查发现以下问题：</p>
+<ul>
+  <li>自闭合、未闭合、未知、放错位置或空的标记</li>
+  <li>未知或错误的特性</li>
+  <li>放错位置的文本</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+/**
+ * 未知标记：List&lt;String&gt;
+ * 未闭合标记：error&lt;/b&gt;
+ * 放错位置的文本或标记：&lt;ul&gt;&lt;li&gt;one&lt;/li&gt;, &lt;li&gt;two&lt;/li&gt;&lt;/ul&gt;
+ * 错误或空的特性：&lt;a href=""&gt;&lt;/a&gt;
+ * 自闭合标记：&lt;br/&gt;
+ * …
+ */
+void sample(){ }
+</code></pre>
+</body>
+</html>

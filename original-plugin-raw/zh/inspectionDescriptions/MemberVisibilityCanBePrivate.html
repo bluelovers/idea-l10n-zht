@@ -1,0 +1,17 @@
+<html>
+<body>
+报告可以设为 <code>private</code> 以遵循封装原则的声明。
+<p><b>示例：</b></p>
+<pre><code>
+class Service(val url: String) {
+    fun connect(): URLConnection = URL(url).openConnection()
+}
+</code></pre>
+<p>应用快速修复后（考虑到 <code>Service</code> 类之外没有使用 <code>url</code> 的情况）：</p>
+<pre><code>
+class Service(private val url: String) {
+    fun connect(): URLConnection = URL(url).openConnection()
+}
+</code></pre>
+</body>
+</html>

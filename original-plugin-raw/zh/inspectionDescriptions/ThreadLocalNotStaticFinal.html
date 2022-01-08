@@ -1,0 +1,18 @@
+<html>
+<body>
+报告未被声明为 <code>static final</code> 的 <code>java.lang.ThreadLocal</code> 类型的字段。
+<p>
+  在最常见的情况下，<code>java.lang.ThreadLocal</code> 实例会将状态与线程关联。
+  非 static、非 final <code>java.lang.ThreadLocal</code> 字段会将状态与实例线程组合关联。
+  这通常是不必要的，而且通常是可能导致内存泄漏和行为不正确的错误。
+</p>
+<p>
+  建议通过快速修复将该字段设为 <code>static final</code>。
+<p>
+<p><b>示例：</b></p>
+<pre><code>
+  private ThreadLocal tl = ThreadLocal.withInitial(() -> Boolean.TRUE);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

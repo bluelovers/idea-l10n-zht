@@ -1,0 +1,15 @@
+<html>
+<body>
+报告对 <code>java.util.Collection</code>
+或 <code>java.util.Map</code> 的方法调用的实参是集合或映射本身的情况。
+由于复制粘贴，原始类型的代码中可能会出现此类情况。
+
+<p><b>示例：</b></p>
+<pre><code>
+  ArrayList list = new ArrayList&lt;&gt;();
+  list.add(list); // 此处为警告
+  return list.hashCode(); // 抛出 StackOverflowError
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

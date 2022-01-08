@@ -1,0 +1,18 @@
+<html>
+<body>
+报告字符串或字符文字中的正斜杠 (<code>/</code>) 或反斜杠 (<code>\</code>)。 这些字符通常用作文件分隔符，如果它们被硬编码，则可移植性可能会受到影响。
+<p>
+  该检查不会报告转义序列内的反斜杠和紧跟在 '&lt;' 字符之后或紧接在 '&gt;' 字符之前的正斜杠，因为它们通常表示 XML 或 HTML 标记而不是文件名。
+  表示 <code>java.util.TimeZone</code> ID 的字符串、作为有效正则表达式的字符串或与 IANA 注册的 MIME 媒体类型等效的字符串也不会被报告。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  new File("C:\\Users\\Name");
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用该选项可将 <code>example/*</code> 包含在已识别的媒体类型集中。
+  通常，在示例之外（例如在 <code>Content-Type</code> 标头中）使用 <code>example/*</code> MIME 媒体类型是错误的。
+</p>
+</body>
+</html>

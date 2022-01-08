@@ -1,0 +1,14 @@
+<html>
+<body>
+报告禁止检查的注释或注解。
+<p>当有意保留禁止以供进一步检查时，此检查可能有用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+    @SuppressWarnings("unused")
+    static Stream&lt;String&gt; stringProvider() {
+        return Stream.of("foo", "bar");
+    }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

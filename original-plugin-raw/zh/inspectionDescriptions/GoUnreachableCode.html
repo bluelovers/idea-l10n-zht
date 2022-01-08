@@ -1,0 +1,12 @@
+<html>
+<body>
+报告永远不会执行的代码，因为没有来自程序其他地方的控制流路径。
+<p>示例：</p>
+<pre><code>func _() int {
+ print(1)
+ return 2
+ println() // 此代码无法到达
+ return 0
+}</code></pre>
+</body>
+</html>

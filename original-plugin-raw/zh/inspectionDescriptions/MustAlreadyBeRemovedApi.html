@@ -1,0 +1,19 @@
+<html>
+<body>
+报告使用应从当前版本的声明库中移除的 <code>@ApiStatus.ScheduledForRemoval</code>
+标记的声明。
+<!-- tooltip end -->
+<p>它会将计划移除的指定版本与可在下面设置的版本进行比较。</p>
+<p>
+  以点分隔字符串指定版本，可选择加上
+  <code>alpha</code>、<code>beta</code>、<code>snapshot</code> 或 <code>eap</code> 后缀。
+</p>
+<p>有效版本示例：<code>1.0</code>、<code>2.3.1</code>、<code>2018.1</code>、<code>7.5-snapshot</code>、<code>3.0-eap</code>。
+</p>
+<p>
+  版本比较非常直观，例如：<code>1.0 &lt; 2.0</code>、<code>1.0-eap &lt; 1.0</code>、<code>2.3-snapshot &lt; 2.3</code> 等。
+  有关详细比较逻辑，请参阅 <a
+  href="https://github.com/JetBrains/intellij-community/blob/master/platform/util-rt/src/com/intellij/util/text/VersionComparatorUtil.java">VersionComparatorUtil</a> 的实现。
+</p>
+</body>
+</html>

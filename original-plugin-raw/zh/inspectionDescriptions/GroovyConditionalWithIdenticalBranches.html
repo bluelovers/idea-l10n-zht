@@ -1,0 +1,14 @@
+<html>
+<body>
+报告包含相同 "then" 和 "else" 分支的三元表达式。 此类表达式几乎肯定表明程序员出现错误。
+<p>该快速修复会将替换表达式替换为其 "then" 分支。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  condition ? a.foo() : a.foo()
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  a.foo()
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+报告对 <code>testing.T.FailNow</code> 和位于测试文件 goroutine 中的类似方法的调用。
+<p>像 <code>FailNow</code> 这种方法会调用 <code>runtime.Goexit</code>，并停止调用 goroutine，而不是测试。
+  因此，必须仅从运行测试或基准的 goroutine 中调用。</p>
+<p>有关 <code>FailNow</code> 的更多信息，请参见 <a href="https://golang.org/pkg/testing/#T.FailNow">golang.org 的 func (*T) FailNow</a>。</p>
+<p>示例：</p>
+<pre><code>func TestFoo(t *testing.T) {
+  go func() {
+    t.Fatal("oops") // 退出 goroutine，而不是 TestFoo
+  }()
+}</code></pre>
+<p>在应用<b>替换为 'Error' 和 'return'</b> 快速修复后：</p>
+<pre><code>func TestFoo(t *testing.T) {
+  go func() {
+    t.Error("oops")
+    return
+  }()
+}</code>
+</pre>
+</body>
+</html>

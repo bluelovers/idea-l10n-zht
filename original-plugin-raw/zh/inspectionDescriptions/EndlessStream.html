@@ -1,0 +1,9 @@
+<html>
+<body>
+报告消耗无限流的非短路运算。 此类运算只能通过抛出异常来完成。
+<p>示例：</p>
+<pre><code>
+  Stream.iterate(0, i -> i + 1).collect(Collectors.toList())
+</code></pre>
+</body>
+</html>

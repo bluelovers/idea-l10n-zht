@@ -1,0 +1,20 @@
+<html>
+<body>
+报告从 Java 代码中的 Kotlin sealed 接口或类进行继承的尝试。
+<p><b>示例：</b></p>
+<pre><code>
+// Kotlin 文件：MathExpression.kt
+
+sealed class MathExpression
+
+data class Const(val number: Double) : MathExpression()
+data class Sum(val e1: MathExpression, val e2: MathExpression) : MathExpression()
+</code></pre>
+<pre><code>
+// Java 文件：NotANumber.java
+
+public class NotANumber extends MathExpression {
+}
+</code></pre>
+</body>
+</html>

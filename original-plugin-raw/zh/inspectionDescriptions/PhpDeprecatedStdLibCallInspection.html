@@ -1,0 +1,29 @@
+<html>
+<body>
+报告对从 PHP 8.1 开始弃用的标准 PHP 库函数的调用。
+<!-- tooltip end -->
+<p>
+  报告以下调用：
+</p>
+<ul>
+  <li>
+    将对象作为实参的 <code>key()</code>、<code>current()</code>、<code>next()</code>、<code>prev()</code> 和 <code>reset( )</code> 调用。
+  </li>
+  <li>
+    不包含实参的 <code>mb_check_encoding()</code> 调用。
+  </li>
+  <li>
+    不包含实参的 <code>get_class()</code>、<code>get_parent_class()</code> 和 <code>get_Called_class()</code> 调用。
+  </li>
+  <li>
+    将布尔值作为 <code>$value</code> 实参传递的 <code>IntlCalendar::roll()</code> 调用。
+  </li>
+  <li>
+    包含非字符串实参的 <code>ctype_*()</code> 调用。
+  </li>
+</ul>
+<p>
+  有关详细信息，请参阅 <a href="https://wiki.php.net/rfc/deprecations_php_8_1">PHP RFC：PHP 8.1 弃用</a>。
+</p>
+</body>
+</html>

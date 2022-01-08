@@ -1,0 +1,15 @@
+<html>
+<body>
+报告从回调中引用但未被发现的函数、方法、属性或类。
+<!-- tooltip end -->
+<p>使用以下选项来自定义检查：</p>
+<ul>
+  <li>
+    <b>忽略来自 '*_exists' 和 'is_callable' 函数的回调</b>：如果选择，检查将跳过来自
+    <code>method_exists</code>、<code>function_exists</code>、<code>property_exists</code>、<code>class_exists</code> 和 <code>is_callable</code> 函数的回调。
+  </li>
+  <li><b>不明确时不报告</b>：如果选择，检查将跳过具有多种可能类型的形参，例如标记为 <code>callable|string</code>。
+  </li>
+</ul>
+</body>
+</html>

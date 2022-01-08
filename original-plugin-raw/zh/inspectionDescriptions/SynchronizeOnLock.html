@@ -1,0 +1,15 @@
+<html>
+<body>
+报告锁定 <code>java.util.concurrent.locks.Lock</code> 实例的 <code>synchronized</code> 块。
+此类同步几乎肯定是无意为之，应当改用适当版本的 <code>.lock()</code> 和 <code>.unlock()</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  final ReentrantLock lock = new ReentrantLock();
+
+  public void foo() {
+    synchronized (lock) {}
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

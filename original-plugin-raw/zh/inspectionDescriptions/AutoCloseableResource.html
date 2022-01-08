@@ -1,0 +1,47 @@
+<html>
+<body>
+报告未在 try-with-resources 语句中使用的 <code>AutoCloseable</code> 实例，也称 <i>自动资源管理</i>。
+<p>
+  这意味着还报告在 try-with-resources 可用前使用的“在 <code>try</code> 前面/中打开资源，在 <code>finally</code> 中关闭资源”的样式。
+  在 Java 7 及更高版本中开发时，此检查意在取代所有<i>已打开但未安全关闭</i>的检查。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  private static void foo() throws IOException {
+    InputStream profile = Thread.currentThread().getContextClassLoader().getResourceAsStream("/someFile");
+    System.out.println(profile.read());
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用以下选项配置检查：
+</p>
+<ul>
+  <li>
+    列出不需关闭并且此检查应当忽略的 <code>AutoCloseable</code> 的子类。
+    <br/>
+    <b>注意</b>：即便列出将忽略 <code>java.util.stream.Stream</code>，该检查仍将报告从 <code>java.nio.file.Files</code> 方法 <code>lines()</code>、<code>walk()</code>、<code>list()</code> 以及 <code>find()</code> 返回的流。
+    这些流包含需要关闭的关联 I/O 资源。
+  </li>
+  <li>
+    列出在调用时应被忽略的返回 <code>AutoCloseable</code> 的方法。
+  </li>
+  <li>
+    如果为方法调用的结果时是否忽略 <code>AutoCloseable</code>。
+    启用此选项时，工厂方法的结果也将被忽略。
+  </li>
+  <li>
+    当 <code>AutoCloseable</code> 实例作为方法调用实参传递时，该检查是否应报告。
+    如果启用此选项，该检查将假定所调用方法中的资源已关闭。
+    不会忽略名称中含有 'close' 的 <code>finally</code> 块和 <code>AutoCloseable</code> 实参中的方法调用。
+  </li>
+  <li>
+    是否忽略对资源类构造函数的方法引用。
+  </li>
+  <li>
+    是否忽略返回资源且名称以 'get' 开头的方法。
+    这可能会减少误报，因为大多数 getter 不转移资源的所有权，并且其调用点不负责关闭资源。
+  </li>
+</ul>
+</body>
+</html>

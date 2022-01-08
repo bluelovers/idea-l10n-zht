@@ -1,0 +1,26 @@
+<html>
+<body>
+报告对另一个对象的 <code>private</code> 或 <code>protected</code> 字段的访问。
+Java 允许访问与当前对象属于同一类的对象的此类字段，但某些编码样式不鼓励这种用法。 此外，这种对 <code>private</code> 字段的直接访问在面向组件的架构（例如 Spring 或 Hibernate）中可能会失败，它们期望对其他对象的所有访问都通过方法调用进行，以便框架可以使用代理调解访问。
+<p><b>示例：</b></p>
+<pre><code>
+  public class Base {
+    protected int bar;
+
+    void increment(Base base) {
+      bar++;
+      base.bar++; // warning: direct access to another object's non-public field
+    }
+  }
+</code></pre>
+可以通过快速修复封装该字段。
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>忽略来自同一类的访问</b>选项可忽略来自同一类的访问，只报告来自内部或外部类的访问。
+    <p>要忽略来自内部类的访问，请使用嵌套的<b>忽略来自内部类的访问</b>。</p>
+  </li>
+  <li>使用<b>忽略来自 'equals()' 方法的访问</b>可忽略来自 <code>equals()</code> 方法的访问。</li>
+</ul>
+</body>
+</html>

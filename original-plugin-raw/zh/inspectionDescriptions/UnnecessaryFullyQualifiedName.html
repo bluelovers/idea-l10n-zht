@@ -1,0 +1,30 @@
+<html>
+<body>
+报告可以缩短的完全限定类名。
+<p>快速修复会缩短完全限定名称并在必要时添加导入语句。</p>
+<p>示例：</p>
+<pre><code>
+  class ListWrapper {
+    java.util.List&lt;Integer&gt; l;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  import java.util.List;
+  class ListWrapper {
+    List&lt;Integer&gt; l;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+
+<p>
+  使用 <b>在 Java 9 模块语句中忽略</b> 选项忽略 Java 9 <code>provides</code> 和 <code>uses</code> 模块语句中的完全限定名称。
+<p>
+  在<a href="settings://preferences.sourceCode.Java?JavaDoc%20Inner">设置| 编辑器 | 代码样式 | Java | 导入</a> 中，请使用以下选项配置检查：</p>
+<ul>
+  <li>如果应使用外部类限定对内部类的引用，请使用 <b>为内部类插入导入</b> 选项。</li>
+  <li>使用<b>在 JavaDoc 中使用完全限定类名</b> 选项允许在 Javadoc 中使用完全限定名称。</li>
+</ul>
+</body>
+</html>

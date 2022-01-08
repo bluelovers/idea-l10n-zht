@@ -1,0 +1,46 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+报告与使用的导入重叠的变量、实参或函数的声明。
+<p>此类声明虽然本身合法，但可能会使软件包的导出标识符不可用或在读取代码时造成混乱。</p>
+<p>示例：</p>
+<pre><code>import "fmt"
+import _ "fmt"
+import iio "io"
+
+func _() {
+ fmt.Println("demo")
+ demo := true
+ _, _ = iio.EOF, demo
+}
+
+func demo() (int, int) {
+ return 1, 2
+}
+
+func _() {
+ _, _ = iio.EOF, demo
+ fmt := "demo"
+ iio := 1
+ _, _ = iio, fmt
+ a, _ := demo()
+ _ = a
+}</code></pre>
+<p>变量名 <code>fmt</code> 和 <code>iio</code> 与导入软件包的名称冲突。 为了之后不在代码中混淆他们，最好重命名这些变量。</p>
+</body>
+</html>

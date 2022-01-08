@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告 <code>RUN</code> 命令中的缺失继续符。</p>
+<p>
+  在 <i>shell</i> 形式的 <code>RUN</code> 命令中，应使用 '\'（反斜杠）将单条 <code>RUN</code> 指令延续到下一行。
+  否则，Docker 构建会失败。
+</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  # the command below will fail
+  RUN /bin/bash -c 'source $HOME/.bashrc;
+      echo $HOME'
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  RUN /bin/bash -c 'source $HOME/.bashrc; \
+      echo $HOME'
+</code></pre>
+</body>
+</html>

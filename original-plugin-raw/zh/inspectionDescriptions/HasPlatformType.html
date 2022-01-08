@@ -1,0 +1,14 @@
+<html>
+<body>
+报告具有平台类型的函数和属性。
+<p>为防止意外错误，应显式声明类型。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo() = java.lang.String.valueOf(1)
+</code></pre>
+<p>快速修复让您能够指定返回类型：</p>
+<pre><code>
+  fun foo(): String = java.lang.String.valueOf(1)
+</code></pre>
+</body>
+</html>

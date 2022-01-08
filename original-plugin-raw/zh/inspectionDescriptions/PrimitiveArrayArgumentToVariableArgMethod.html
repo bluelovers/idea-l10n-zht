@@ -1,0 +1,15 @@
+<html>
+<body>
+报告对可变 arity 方法的任何调用，其中该调用在 arity 形参位置有基元数组（例如 <code>System.out.printf("%s", new int[]{1, 2, 3})</code>）。
+此类基元数组实参可能令人困惑，因为它将被包装为单一元素数组，而不是像预期的那样将每个单独的元素装箱。
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  String.format("%s", new int[]{1, 2, 3});
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  String.format("%s", (Object) new int[]{1, 2, 3});
+</code></pre>
+</body>
+</html>

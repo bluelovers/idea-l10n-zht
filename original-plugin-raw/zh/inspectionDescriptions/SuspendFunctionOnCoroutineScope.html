@@ -1,0 +1,9 @@
+<html>
+<body>
+报告带有 <code>CoroutineScope</code> 接收器的 suspend 函数内 <code>CoroutineScope</code> 扩展或成员的调用和访问。
+<p>当函数为 <code>suspend</code> 且具有 <code>CoroutineScope</code> 接收器时，它通过 <code>kotlin.coroutines.coroutineContext</code> 和 <code>CoroutineScope.coroutineContext</code> 访问 <code>CoroutineContext</code> 的权限不明确，而且这两个上下文通常不同。</p>
+<p>
+为了改善这种状况，可以将可疑的调用包装在 <code>coroutineScope { ... }</code> 中，或者去除 <code>CoroutineScope</code> 函数接收器。
+</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可彼此转换的范围函数（<code>let</code>、<code>run</code>、<code>apply</code>、<code>also</code>）。
+<p>使用相应函数可使代码更简单。</p>
+<p>该快速修复会在范围函数之间彼此替换。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val x = &quot;&quot;.let {
+      it.length
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val x = &quot;&quot;.run {
+      length
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>
+    报告具有隐式返回类型的 <code>public</code> 和 <code>protected</code> 函数和属性。
+    出于 API 稳定性的原因，建议显式指定此种类型。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun publicFunctionWhichAbusesTypeInference() =
+      otherFunctionWithNotObviousReturnType() ?: yetAnotherFunctionWithNotObviousReturnType()
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun publicFunctionWhichAbusesTypeInference(): <b>Api</b> =
+      otherFunctionWithNotObviousReturnType() ?: yetAnotherFunctionWithNotObviousReturnType()
+</code></pre>
+</body>
+</html>

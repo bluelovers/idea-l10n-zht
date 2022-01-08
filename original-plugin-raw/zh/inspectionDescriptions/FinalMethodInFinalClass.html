@@ -1,0 +1,25 @@
+<html>
+<body>
+报告 <code>final</code> 类中的 <code>final</code> 方法。
+<p>由于不能继承 <code>final</code> 类，将方法标记为 <code>final</code> 可能是多余之举，而且令人困惑。</p>
+<p><b>示例：</b></p>
+<pre><code>record Bar(int a, int b) {
+  public final int sum() { 
+     return a + b;
+  }
+}
+</code>
+</pre>
+<p>在应用快速修复后：</p>
+<pre><code>record Bar(int a, int b) {
+  public int sum() { 
+     return a + b;
+  }
+}
+</code></pre>
+
+<p>如本例所示，可以显式或隐式地将类标记为 <code>final</code>。</p>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

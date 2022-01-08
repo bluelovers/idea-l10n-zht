@@ -1,0 +1,17 @@
+<html>
+<body>
+报告转义元字符。
+某些正则表达式代码样式指定应将元字符放在字符类中，从而使正则表达式更易于理解。
+此检查不会警告元字符 <code>[</code>, <code>]</code> 和 <code>^</code>，因为这些字符可能需要在字符类中进行额外的转义。
+<p><b>示例：</b></p>
+<pre><code>
+  \d+\.\d+
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  \d+[.]\d+
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.1 最新变化</small>
+</body>
+</html>

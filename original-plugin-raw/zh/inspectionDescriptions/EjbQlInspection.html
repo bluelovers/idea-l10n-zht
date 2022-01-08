@@ -1,0 +1,18 @@
+<html>
+<body>
+报告 EJB QL 查询的中以下错误：
+<ul>
+  <li>不匹配的表达式类型</li>
+  <li>形参不正确</li>
+  <li>空或常量条件</li>
+  <li>未解析的符号</li>
+</ul>
+
+<p><b>示例查询：</b></p>
+<pre><code>
+SELECT OBJECT(e) FROM Employee e WHERE SQRT(ABS(e.firstName - ?1)) > 50000; // 错误：类型不匹配，需要数字类型
+
+SELECT e.firstName FROM Employee e WHERE SUBSTRING(e.firstName, ?1, ?2) = ?4; // 错误：只有 3 个实际查询形参
+</code></pre>
+</body>
+</html>

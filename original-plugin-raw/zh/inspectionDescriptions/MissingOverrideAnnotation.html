@@ -1,0 +1,21 @@
+<html>
+<body>
+  报告重写没有 <code>@java.lang.Override</code> 注解的超类方法的方法。
+<p>
+  由于表明了意图，注解方法提高了代码可读性。 此外，在重写方法的签名与超类方法不匹配时，编译器会报错。
+</p>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>
+    使用<b>忽略 'equals()'、'hashCode()' 和 'toString()'</b> 选项可以忽略这些 <code>java.lang.Object</code> 方法：<code>equals()</code>、<code>hashCode()</code> 和
+<code>toString()</code>。 由于 <code>@Override</code> 注解而使得这些方法消失且代码不再编译的风险相对较小。
+  </li>
+  <li>
+    使用<b>忽略匿名类中的方法</b>选项可以忽略匿名类中的方法。
+  </li>
+</ul>
+<p>此检查适用于项目或模块的语言级别为 5 或更高级别的情况。</p>
+
+</body>
+</html>

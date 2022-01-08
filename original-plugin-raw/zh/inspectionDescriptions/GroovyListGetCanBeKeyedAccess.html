@@ -1,0 +1,19 @@
+<html>
+<body>
+报告对 <code>java.util.List.get()</code> 方法的调用。 此类调用可由更简短明确的键控访问形式替代。
+<p><b>示例：</b></p>
+<pre>
+<code>
+def list = ["foo"]
+def str = list.get(0) // list.get(0) 可以替换为 list[0]
+</code>
+</pre>
+<p>在应用快速修复后：</p>
+<pre>
+<code>
+def list = ["foo"]
+def str = list[0]
+</code>
+</pre>
+</body>
+</html>

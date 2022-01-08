@@ -1,0 +1,24 @@
+<html>
+<body>
+报告不更新支持字段的属性 setter。
+<p>该快速修复会向支持字段中添加赋值。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Test {
+      var foo: Int = 1
+          set(value) {
+          }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Test {
+      var foo: Int = 1
+          set(value) {
+              field = value
+          }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

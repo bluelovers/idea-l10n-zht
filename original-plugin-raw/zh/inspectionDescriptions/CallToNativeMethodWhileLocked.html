@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 <code>synchronized</code> 块或方法中的调用 <code>native</code> 方法。
+<p>
+  如果可能，最好将对 <code>native</code> 方法的调用排除在同步上下文之外，因为此类调用会导致开销巨大的上下文切换，并且可能导致性能问题。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  native void nativeMethod();
+
+  void example(){
+    synchronized (lock){
+      nativeMethod();//警告
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

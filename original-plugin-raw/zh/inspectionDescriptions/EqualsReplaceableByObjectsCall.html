@@ -1,0 +1,22 @@
+<html>
+<body>
+报告可以替换为对 <code>java.util.Objects#equals</code> 的调用的表达式。
+<p><b>示例：</b></p>
+<pre><code>
+  void f(Object a, Object b) {
+    boolean result = a != null && a.equals(b);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void f(Object a, Object b) {
+    boolean result = Objects.equals(a, b);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  将 <code>a != null && a.equals(b)</code> 之类的表达式替换为 <code>Objects.equals(a, b)</code> 会略微改变语义。 使用<b>高亮显示与 'a != null && a.equals(b)' 类似的表达式</b>选项，可启用或禁用此行为。
+</p>
+<p>仅当项目或模块的语言级别为 7 或更高时，此检查才会报告。</p>
+</body>
+</html>

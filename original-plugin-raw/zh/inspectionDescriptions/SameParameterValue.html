@@ -1,0 +1,33 @@
+<html>
+<body>
+报告其中的形参似乎总是同一个常量的方法。
+
+<p>示例：</p>
+<pre><code>
+  static void printPoint(int x, int y) { // x 始终为 0
+    System.out.println(x + ", " + y);
+  }
+
+  public static void main(String[] args) {
+    printPoint(0, 1);
+    printPoint(0, 2);
+  }
+</code></pre>
+<p>该快速修复会内联常量值。 这可能会简化方法实现。</p>
+<!-- tooltip end -->
+<p>
+  在以下情况下，使用<b>内联形参初始值设定项不成功时忽略</b>选项来禁止检查：
+</p>
+<ul>
+  <li>形参在方法内部被修改。</li>
+  <li>传递的形参值引用了不可访问的字段（仅在 Java 中）。</li>
+  <li>形参为 vararg（仅在 Java 中）。</li>
+</ul>
+<p>
+  使用<b>报告方法最大可见性</b>选项可以控制要报告的方法的最大可见性。
+</p>
+<p>
+  使用<b>报告方法最小使用计数</b>字段可以指定具有相同形参值的最小方法使用数。
+</p>
+</body>
+</html>

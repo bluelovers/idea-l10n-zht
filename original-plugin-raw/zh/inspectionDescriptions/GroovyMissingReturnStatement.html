@@ -1,0 +1,22 @@
+<html>
+<body>
+报告具有非 <b>void</b> 返回类型的方法结尾缺少 <code>return</code> 语句。
+方法的执行流应该可以执行到方法结尾。
+<p><b>示例：</b></p>
+<pre>
+<code>
+String foo(int a) {
+  if (a > 0) {
+    return "more than zero"
+  }
+} // foo(-1) 将返回 'null'
+
+int bar(int a) {
+  if (a > 0) {
+    return a
+  }
+} // bar(-1) 将失败并引发运行时异常
+</code>
+</pre>
+</body>
+</html>

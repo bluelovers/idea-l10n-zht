@@ -1,0 +1,63 @@
+<html>
+<body>
+报告可以使用<a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">有界通配符</a>的通用方法形参。
+<p><b>示例：</b></p>
+<pre><code>
+  void process(Consumer&lt;Number&gt; consumer);
+</code></pre>
+<p>应替换为：</p>
+<pre><code>
+  void process(Consumer&lt;? super Number&gt; consumer);
+</code></pre>
+<p>
+  此方法签名更灵活，因为它接受更多类型：不仅是 <code>Consumer&lt;Number&gt;</code>，还有 <code>Consumer&lt;Object&gt;</code>。
+</p>
+<p>同样，在协变位置输入形参：</p>
+<pre><code>
+  T produce(Producer&lt;T&gt; p);
+</code></pre>
+<p>应替换为：</p>
+<pre><code>
+  T produce(Producer&lt;? extends T&gt; p);
+</code></pre>
+<!-- tooltip end -->
+<p>
+  引用 <em>Effective Java</em> 第三版中的 <a href="https://en.wikipedia.org/wiki/Joshua_Bloch#Effective_Java">Joshua Bloch</a>：
+</p>
+<blockquote>
+  <h4>第 31 项：使用有界通配符增加 API 灵活性</h4>
+  在 API 中使用通配符类型虽然麻烦，但会使 API 更加灵活。
+  如果您编写的库将被广泛使用，则应强制正确使用通配符类型。
+  记住基本规则：生产者-extends, 使用者-super (PECS)。
+  还要记住，所有 Comparable 和 Comparator 都是消费者。
+</blockquote>
+
+<p>
+  使用检查选项可以切换以下各项的报告：
+</p>
+<ul>
+  <li>
+    <p>
+      不变类。 一个不变类的示例是 <code>java.util.List&lt;T&gt;</code>，因为它既接受值（通过 <code>List.add(T)</code> 方法）又生成值（通过 <code>T List.get()</code> 方法）。
+    </p>
+    <p>
+      另一方面，<code>contravariant</code> 类只接收值，例如，只有方法 <code>accept(T)</code> 的 <code>java.util.function.Consumer&lt;T&gt;</code>。 类似地，<code>covariant</code> 类只产生值，例如，只有方法 <code>T get()</code> 的 <code>java.util.function.Supplier&lt;T&gt;</code>。
+    </p>
+    <p>
+      人们经常在协变/逆变类中使用有界通配符，但避免在不变类中使用通配符，例如 <code>void process(List&lt;? extends T&gt; l)</code>。
+      禁用此选项可以忽略这种不变类并保留它们的严格类型，例如 <code>void process(List&lt;T&gt; l)</code>。
+    </p>
+  </li>
+  <li>
+    <p>
+      可视为不属于公共 API 一部分的 <code>private</code> 方法
+    </p>
+  </li>
+  <li>
+    <p>
+      实例方法
+    </p>
+  </li>
+</ul>
+</body>
+</html>

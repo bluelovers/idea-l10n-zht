@@ -1,0 +1,23 @@
+<html>
+<body>
+报告用作对 <code>MessageFormat.format()</code> 的调用实参的非常量字符串串联。
+<p>
+  虽然偶尔是有意为之，但这通常是误用格式化方法，串联的字符串中包含 <code>{</code> 等特殊字符时，甚至可能导致异常。
+</p>
+<p>
+  此外，有时这可能是在本应键入 <code>,</code> 时键入了 <code>+</code> 而错误串联字符串格式实参所致。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  String formatGreeting(String userName, int balance) {
+    return MessageFormat.format("Hello, " + userName + "! Your balance is {0}.", balance);
+  }
+</code></pre>
+<p>
+  这里的 <code>userName</code> 解读为格式字符串的一部分，这可能导致 <code>IllegalArgumentException</code>（例如，如果 <code>userName</code> 为 <code>"{"</code>）。
+  此调用或许应当替换为 <code>MessageFormat.format("Hello, {0}! Your balance is {1}.", userName, balance)</code>。
+</p>
+<!-- tooltip end -->
+
+</body>
+</html>

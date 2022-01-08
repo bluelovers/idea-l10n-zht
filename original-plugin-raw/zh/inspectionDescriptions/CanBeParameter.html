@@ -1,0 +1,27 @@
+<html>
+<body>
+报告 <code>val</code> 或 <code>var</code> 可被移除的主构造函数形参。
+<p>
+    在构造函数中声明的类属性会增加内存消耗。
+    如果形参值仅在构造函数中使用，则可以省略它们。
+</p>
+<p>请注意，引用的对象可能是之前被垃圾回收。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Task(val name: String) {
+      init {
+          print("Task created: $name")
+      }
+  }
+</code></pre>
+<p>该快速修复会移除额外的 <code>val</code> 或 <code>var</code> 关键字：</p>
+<pre><code>
+  class Task(name: String) {
+      init {
+          print("Task created: $name")
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

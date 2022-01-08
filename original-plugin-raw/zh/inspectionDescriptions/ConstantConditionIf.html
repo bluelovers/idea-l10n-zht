@@ -1,0 +1,21 @@
+<html>
+<body>
+报告具有 <code>true</code> 或 <code>false</code> 常量文字条件且可以简化的 <code>if</code> 表达式。
+<p>虽然偶尔是有意为之，但此结构令人困惑，并且通常是由拼写错误或之前的重构所致。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun example() {
+      if (true) {
+          throw IllegalStateException("Unexpected state")
+      }
+  }
+</code></pre>
+<p>该快速修复会移除 <code>if</code> 条件：</p>
+<pre><code>
+  fun example() {
+      throw IllegalStateException("Unexpected state")
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+报告 <code>finally</code> 块中的 <code>return</code> 语句。
+<p>虽然偶尔是有意为之，但此类 <code>return</code> 语句可能会掩盖抛出的异常，并导致调试复杂化。</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  try {
+    foo();
+  } finally {
+    if (bar()) return;
+  }
+</code></pre>
+</body>
+</html>

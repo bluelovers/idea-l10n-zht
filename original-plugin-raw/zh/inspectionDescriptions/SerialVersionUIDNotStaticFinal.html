@@ -1,0 +1,17 @@
+<html>
+<body>
+报告 <code>serialVersionUID</code> 字段未被声明为 <code>private static final long</code> 的 <code>Serializable</code> 类。
+<p><b>示例：</b></p>
+<pre><code>
+  class SampleClass implements Serializable {
+    private long serialVersionUID = 1; // Serializable 类的字段未声明为 'private static final long'
+
+    public SampleClass() {
+        System.out.println(serialVersionUID);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

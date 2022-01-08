@@ -1,0 +1,13 @@
+<html>
+<body>
+报告这样一种情况： Java 9 模块 <code>A</code> 需要 Java 9 模块 <code>B</code>，
+但是 <code>A</code> 不使用 <code>B</code> 中的任何软件包。
+此外，需要 <code>java.base</code> 模块的指令是冗余的。
+<!-- tooltip end -->
+<p>
+  该修复删除了此类冗余依赖项的 <code>requires</code> 指令。
+  如果删除的依赖项重新导出了实际使用的模块，则修复程序会为这些模块添加 <code>requires</code> 指令。
+</p>
+<small>2017.1 最新变化</small>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+<body>
+报告未在 <code>try</code> 块前打开并在相应的 <code>finally</code> 块中关闭的 Java ME <code>javax.microedition.io.Connection</code> 资源。 如果在资源关闭之前抛出异常，此类资源可能会被无意泄漏。
+<p><b>示例：</b></p>
+<pre><code>
+  void example() throws IOException {
+    Connection c = Connector.open("foo");
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>从 Kotlin 1.4 开始，报告导致编译错误的冗余标签。</p>
+<p>从 Kotlin 1.0 开始，可以用标签标记任何语句：</p>
+<pre><code>
+  fun foo() {
+    L1@ val x = L2@bar()
+  }
+</code></pre>
+但是，这些标签仅能以有限的几种方式引用：
+<ul>
+    <li>中断/继续循环</li>
+    <li>从内联 lambda 或内联匿名函数的非本地返回</li>sssss
+</ul>
+<p>从 Kotlin 1.4 开始禁止使用此类标签。</p>
+<!-- tooltip end -->
+<p>仅当项目或模块的 Kotlin 语言级别为 1.4 或更高时，此检查才会报告。</p>
+</body>
+</html>

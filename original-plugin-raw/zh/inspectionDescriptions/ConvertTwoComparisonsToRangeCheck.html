@@ -1,0 +1,19 @@
+<html>
+<body>
+报告可转换为范围检查的两个连续比较。
+<p>通过移除测试主体重复，针对范围进行检查使代码更简单。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun checkMonth(month: Int): Boolean {
+      return month >= 1 && month &lt;= 12
+  }
+</code></pre>
+<p>快速修复可将基于比较的检查替换为针对范围的检查：</p>
+<pre><code>
+  fun checkMonth(month: Int): Boolean {
+      return month in 1..12
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

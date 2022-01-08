@@ -1,0 +1,9 @@
+<html>
+<body>
+报告 SELECT 中别名名称与 FROM 子句中的列名称匹配。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE foo (a INT, b INT, c INT);
+SELECT a b, c FROM foo;</code></pre>
+<p><code>a</code> 列使用 <code>b</code> 别名，但 <code>b</code> 名称也被 <code>foo</code> 表中的列使用。</p>
+</body>
+</html>

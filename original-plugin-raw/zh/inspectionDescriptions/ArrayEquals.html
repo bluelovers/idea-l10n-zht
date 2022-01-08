@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可以比较两个数组的 <code>equals()</code> 调用。
+<p>对数组调用 <code>equals()</code> 可以比较同一性，相当于使用 <code>==</code>。
+  使用 <code>Arrays.equals()</code> 比较两个数组的内容，或使用 <code>Arrays.deepEquals()</code> 比较多维数组的内容。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void sample(int[] first, int[] second){
+    if (first.equals(second)) return;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void sample(int[] first, int[] second){
+    if (Arrays.equals(first, second)) return;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告返回 <code>void</code> 的构造函数和方法结尾的 <code>return</code> 语句。 此类调用不必要，并且可以安全移除。</p>
+<p><b>示例：</b>
+<pre><code>
+  <b>void</b> foo (String s){
+      print(s)
+      <b>return</b>
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>void</b> foo (String s){
+      print(s)
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>有关更多信息，请参阅 Java 中的相同检查。</p>
+</body>
+</html>

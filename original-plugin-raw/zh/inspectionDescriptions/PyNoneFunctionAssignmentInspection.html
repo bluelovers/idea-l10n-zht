@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>报告使用不返回任何内容的函数进行赋值的情况。</p>
+此检查与 <a href="https://docs.pylint.org/en/1.6.0/features.html#id6">pylint 检查 E1111</a> 相似。
+<p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+def just_print():
+    print("Hello!")
+
+
+action = just_print()
+</pre>
+<p>IDE 提议的快速修复是移除此赋值。</p>
+</body>
+</html>

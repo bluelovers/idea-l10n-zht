@@ -1,0 +1,24 @@
+<html>
+<body>
+报告所访问字段的名称不是其预期名称的 getter 或 setter 方法。
+例如，当 <code>getY()</code> 返回 <code>x</code> 字段时。 这通常可能表明复制粘贴错误。
+<p><b>示例：</b></p>
+<pre><code>class Point {
+    private int x;
+    private int y;
+
+    public void setX(int x) { // 警告：setter 'setX()' 分配字段 'y'
+      this.y = x;
+    }
+
+    public int getY() { // 警告：getter 'getY()' 返回字段 'x'
+      return x;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用下面的复选框可报告类中字段的名称与 getter 或 setter 的名称相匹配的情况。
+<p>
+</body>
+</html>

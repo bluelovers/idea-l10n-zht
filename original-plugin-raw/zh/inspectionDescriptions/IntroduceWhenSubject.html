@@ -1,0 +1,25 @@
+<html>
+<body>
+报告可以通过引入主体实参进行简化的 <code>when</code> 表达式。
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(obj: Any): String {
+      return when {
+          obj is String -> "string"
+          obj is Int -> "int"
+          else -> "unknown"
+      }
+  }
+</code></pre>
+<p>该快速修复会引入一个主体实参：</p>
+<pre><code>
+  fun test(obj: Any): String {
+      return when (obj) {
+          is String -> "string"
+          is Int -> "int"
+          else -> "unknown"
+      }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+报告对立即转换为 <code>int</code> 的 <code>Math.random()</code> 的调用。 
+<p>将 <code>0.0</code>（包括）和 <code>1.0</code>（不包括）之间的 <code>double</code> 转换为 <code>int</code> 将始终舍入为零。 在将该值转换为 <code>int</code> 前，应先将其乘以某个因子，以获取介于零（包括）和乘法因子（不包括）之间的值。
+  另一种可能的解决办法是使用 <code>java.util.Random</code> 的 <code>nextInt()</code> 方法。</p>
+<p><b>示例：</b></p>
+<pre><code>  <b>int</b> r = (<b>int</b>)Math.random() * 10;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>  <b>int</b> r = (<b>int</b>)(Math.random() * 10);
+</code></pre>
+  <!-- tooltip end -->
+</body>
+</html>

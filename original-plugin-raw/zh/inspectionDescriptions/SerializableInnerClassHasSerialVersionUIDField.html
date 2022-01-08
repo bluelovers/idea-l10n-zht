@@ -1,0 +1,36 @@
+<html>
+<body>
+报告实现 <code>java.io.Serializable</code> 但不定义 <code>serialVersionUID</code> 字段的非 static 内部类。
+<p>
+  如果没有 <code>serialVersionUID</code> 字段，对该类做出的任何更改都将导致以前序列化的版本不可读。 强烈建议 <code>Serializable</code> 非 static 内部类包含 <code>serialVersionUID</code> 字段，否则由于合成访问器方法的差异，默认序列化算法可能导致编译器之间的序列化版本不兼容。
+</p>
+<p>
+  建议通过快速修复添加缺失的 <code>serialVersionUID</code> 字段。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Outer {
+      class Inner implements Serializable {}
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Outer {
+      class Inner implements Serializable {
+          private static final long serialVersionUID = -7004458730436243902L;
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用以下选项配置检查：</p>
+<ul>
+  <li>
+    列出此检查不应报告其继承者的类。
+    这适用于从超类继承 <code>Serializable</code> 但不用于序列化的类。
+  </li>
+  <li>
+    是否忽略 <code>Serializable</code> 匿名类。
+  </li>
+</ul>
+</body>
+</html>

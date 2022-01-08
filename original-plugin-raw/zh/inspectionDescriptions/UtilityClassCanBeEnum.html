@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可转换为枚举的实用程序类。
+<p>某些编码样式准则声明将实用程序类作为枚举实现，以避免 <code>private</code> 构造函数中的代码覆盖率问题。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class StringUtils {
+    public static final String EMPTY = "";
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  enum StringUtils {
+    ;
+    public static final String EMPTY = "";
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

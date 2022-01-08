@@ -1,0 +1,24 @@
+<html>
+<body>
+报告可替换为 stdlib 运算的序列（如 <code>map</code>、<code>filter</code> 等）的 <code>for</code> 循环。
+<p><b>示例：</b></p>
+<pre><code>
+fun foo(list: List&lt;String&gt;): List&lt;Int&gt; {
+  val result = ArrayList&lt;Int&gt;()
+  for (s in list) {
+     if (s.length &gt; 0)
+       result.add(s.hashCode())
+     }
+  return result
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+fun foo(list: List&lt;String&gt;): List&lt;Int&gt; {
+  val result = list
+    .filter { it.length &gt; 0 }
+    .map { it.hashCode() }
+  return result
+}</code></pre>
+</body>
+</html>

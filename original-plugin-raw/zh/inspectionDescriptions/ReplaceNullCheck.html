@@ -1,0 +1,23 @@
+<html>
+<body>
+报告可以替换为 <code>Objects</code>/<code>Stream</code> static 方法的 null 检查。
+<p><b>示例：</b></p>
+<pre><code>
+if (message == null) {
+  application.messageStorage().save(new EmptyMessage());
+} else {
+  application.messageStorage().save(message);
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  application.messageStorage()
+    .save(Objects.requireNonNullElseGet(message, () -> new EmptyMessage()));
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用<b>替换长度大于原始长度时不发出警告</b>选项，可以忽略替换长度超过原始代码的情况。
+</p>
+<p><small>2017.3 最新变化</small></p>
+</body>
+</html>

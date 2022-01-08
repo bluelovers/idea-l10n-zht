@@ -1,0 +1,25 @@
+<html>
+<body>
+报告 JSP 文件中对默认软件包中类的任何引用。
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;%!
+  Integer countSomeUsefulStuff() {
+    ...
+    new ClassFromDefaultPackage(...); // 错误
+    new com.example.GoodClass(...); // OK
+  }
+  %&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;Hello, JSP!&lt;/title&gt;
+    &lt;/head&gt;
+  &lt;/html&gt;
+</code></pre><br/>
+<!-- tooltip end -->
+<p>
+  <b>注意</b>：在 JSP 编译期间不会解析此类引用，因为 JSP 的编译类通常会放在非默认软件包（例如，Tomcat 的 "org.apache.jsp"，WebSphere  的 "com.ibm._jsp"）中，但在 Java 中不允许从默认软件包导入。
+</p>
+</body>
+</html>

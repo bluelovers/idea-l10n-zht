@@ -1,0 +1,30 @@
+<html>
+<body>
+报告不是 <code>const</code> 并用作 Java 注解实参的 Kotlin 属性。
+<p>
+例如，具有 <code>@JvmField</code> 注解的属性有一个可以在编译时评估的初始值设定项，它有一个基元类型或 <code>String</code> 类型。
+</p>
+
+<p>
+此类属性在 Kotlin 1.1-1.2 中的字节码中具有 <code>ConstantValue</code> 特性。
+此特性允许 javac 折叠相应字段的用法并在注解中使用该字段。
+在混合 Java/Kotlin 代码中单独或增量编译的情况下，这可能导致错误行为。
+此行为在 Kotlin 1.3 中可能发生变化（不再有 <code>ConstantValue</code> 特性）。
+</p>
+<p><b>示例：</b></p>
+<p>foo.kt 文件中的 Kotlin 代码：</p>
+<pre><code>
+  annotation class Ann(val s: String)
+  @JvmField val importantString = "important"
+</code></pre>
+<p>Java 代码：</p>
+<pre><code>
+  public class JavaUser {
+      // 这很危险
+      @Ann(s = FooKt.importantString)
+      public void foo() {}
+  }
+</code></pre>
+<p>要修正此问题，请将 <code>@JvmField</code> 注解替换为相关 Kotlin 属性上的 <code>const</code> 修饰符或将其内联。</p>
+</body>
+</html>

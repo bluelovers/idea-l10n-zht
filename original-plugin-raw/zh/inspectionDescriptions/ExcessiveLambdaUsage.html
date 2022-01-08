@@ -1,0 +1,16 @@
+<html>
+<body>
+报告一个普通的 lambda 表达式被用在另一种方法中的情况，这种方法以相同方式运行，但只接受一个具体的值而不是 lambda。
+<p>此检查有助于简化代码。</p>
+<p>示例：</p>
+<pre><code>
+  Optional.orElseGet(() -> null)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Optional.orElse(null)
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.1 最新变化</small></p>
+</body>
+</html>

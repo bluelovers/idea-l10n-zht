@@ -1,0 +1,18 @@
+<html>
+<body>
+报告文字中的非基本拉丁字符，并建议将它们替换为 unicode 实体。
+<p>示例：</p>
+<pre><code>
+  // © 2021
+  char c = '©';
+  String s = "Áî";
+</code>
+</pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  // &amp;copy; 2021
+  char c = '\u00a9';
+  String s = "\u00c1\u00ee";
+</code></pre>
+</body>
+</html>

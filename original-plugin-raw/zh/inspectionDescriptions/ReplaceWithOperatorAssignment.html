@@ -1,0 +1,21 @@
+<html>
+<body>
+报告带简单赋值（例如 <code>y = y + x</code>）且可以替换为运算符赋值的变量的修改。
+<p>该快速修复会将赋值替换为赋值运算符。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo() {
+      val list = mutableListOf(1, 2, 3)
+      list = list + 4
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo() {
+      val list = mutableListOf(1, 2, 3)
+      list += 4
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

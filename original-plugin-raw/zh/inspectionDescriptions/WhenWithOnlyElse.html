@@ -1,0 +1,14 @@
+<html>
+<body>
+报告只有一个 <code>else</code> 分支且可以简化的 <code>when</code> 表达式。
+<p><b>简化表达式</b>快速修复可用于自动修正代码。</p>
+<p>示例：</p>
+<pre><code>
+  fun redundant() {
+      val x = when { // &lt;== 冗余，快速修复会将 when 表达式简化为 "val x = 1"
+          else -> 1
+      }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+报告由非 <code>final</code> 字段引用组成的 <code>synchronized</code> 语句锁定表达式。
+此类语句不太可能包含有用的语义，因为不同的线程即便在对同一对象上操作时也可能获取不同的锁定。
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  private Object o;
+  public void foo() {
+    synchronized (o) // 在非 final 字段上同步
+    { }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+报告具有 <code>kotlinx.coroutines.Deferred</code> 返回类型的函数。
+<p>
+    使用 <code>Deferred</code> 作为返回类型的函数其名称应带有 <code>Async</code> 后缀。
+    否则，建议将函数标记为 <code>suspend</code> 并在其中解包 <code>Deferred</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun calcEverything(): Deferred&lt;Int&gt; {
+      return CompletableDeferred(42)
+  }
+</code></pre>
+<p>应用添加 <code>Async</code> 后缀的快速修复之后：</p>
+<pre><code>
+  fun calcEverythingAsync(): Deferred&lt;Int&gt; {
+      return CompletableDeferred(42)
+  }
+</code></pre>
+<p>应用将函数转换为 <code>suspend</code> 的快速修复之后：</p>
+<pre><code>
+  suspend fun calcEverything(): Int {
+      return CompletableDeferred(42).await()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

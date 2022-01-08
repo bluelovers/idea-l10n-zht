@@ -1,0 +1,39 @@
+<html>
+<body>
+报告与周围类的字段同名的方法形参。
+由于进行此类命名，在有意使用同名字段的情况下，您可能会误用该形参。
+<p>建议通过快速修复重命名该形参。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Main {
+    private String value;
+
+    public Main(String value) {
+      value = value.toUpperCase();
+    }
+  }
+  </code></pre>
+<!-- tooltip end -->
+<p>
+  您可以为此检查配置以下选项：
+</p>
+<ol>
+  <li>
+    <strong>对属性 setter 忽略</strong> - 忽略简单 setter 的形参。
+  </li>
+  <li>
+    <strong>忽略从子类不可见的超类字段</strong> - 忽略超类中对此方法不可见的 <code>private</code> 字段。
+  </li>
+  <li>
+    <strong>对构造函数忽略</strong> - 忽略构造函数的形参。
+  </li>
+  <li>
+    <strong>对 abstract 方法忽略</strong> - 忽略 abstract 方法的形参。
+  </li>
+  <li>
+    <strong>对隐藏实例字段的 static 方法形参忽略</strong> - 忽略隐藏实例字段的 <code>static</code> 方法的形参，并忽略隐藏外部类实例字段的 static 内部类中实例方法的形参。 虽然不是严格意义上的隐藏，但此类形参仍然令人困惑。
+  </li>
+</ol>
+
+</body>
+</html>

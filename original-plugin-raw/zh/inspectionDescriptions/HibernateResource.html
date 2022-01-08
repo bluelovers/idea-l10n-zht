@@ -1,0 +1,27 @@
+<html>
+<body>
+如果返回的 <code>org.hibernate.Session</code> 资源没有被安全关闭，报告对 <code>openSession()</code> 方法的调用。
+<p>
+  默认情况下，该检查假定资源可以由名称中带有 'close' 或 'cleanup' 的任何方法关闭。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void doHibernateQuery(SessionFactory factory) {
+    Session session = factory.openSession(); //警告
+    session.createQuery("...");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用以下选项配置检查：
+</p>
+<ul>
+  <li>
+    是否允许在 <code>try</code> 块内打开 <code>org.hibernate.Session</code> 资源。 这种样式不太合意，因为它比在 <code>try</code> 块前面打开资源更冗长。
+  </li>
+  <li>
+    资源能否通过任何将资源作为实参传递的方法调用来关闭。
+  </li>
+</ul>
+</body>
+</html>

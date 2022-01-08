@@ -1,0 +1,22 @@
+<html>
+<body>
+报告 <code>==</code> 或 <code>!=</code> 运算符的用法，用于应替换为 <code>contentEquals()</code> 的数组。
+<p>
+    <code>==</code> 和 <code>!=</code> 运算符比较数组引用而不是它们的内容。
+</p>
+<p><b>示例：</b></p>
+<pre><code>  fun test() {
+      val a = arrayOf(1, 2, 3)
+      val b = arrayOf(1, 2, 3)
+      println(a == b) // 参考比较
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>  fun test() {
+      val a = arrayOf(1, 2, 3)
+      val b = arrayOf(1, 2, 3)
+      println(a.contentEquals(b))
+  }
+</code></pre>
+</body>
+</html>

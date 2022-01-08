@@ -1,0 +1,34 @@
+<html>
+<body>
+报告在 Java 记录中声明的冗余构造函数。
+<p><b>示例 1：</b></p>
+<pre><code>
+  record Point(int x, int y) {
+    public Point {} // 可以移除
+  }
+  
+  record Point(int x, int y) {
+    public Point(int x, int y) { // 可以移除
+      this.x = x;
+      this.y = y;
+    }
+  }
+</code></pre>
+<p>该快速修复会移除冗余的构造函数。</p>
+<p><b>示例 2：</b></p>
+<pre><code>
+   // 可以转换为压缩构造函数
+  record Range(int from, int to) {
+    public Range(int from, int to) {
+      if (from > to) throw new IllegalArgumentException();
+      this.from = from;
+      this.to = to;
+    }
+  }
+</code></pre>
+<p>该快速修复会将此代码转换为紧凑构造函数。</p>
+<!-- tooltip end -->
+<p>仅当配置的语言级别为 14 预览版或 15 预览版时，此检查才会报告。</p>
+<p><small>2020.1 最新变化</small></p>
+</body>
+</html>

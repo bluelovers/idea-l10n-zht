@@ -1,0 +1,21 @@
+<html>
+<body>
+报告 <code>Comparator.compare()</code> 实现中的问题。
+<p>报告的情况如下：</p>
+<ul>
+  <li>
+    未使用形参。 很可能这是拼写错误，另一个形参与本身相比较，或者未正确实现方法。
+  </li>
+  <li>
+    比较器显然没有为相同的元素返回 <code>0</code>。 此类比较器违反了约定，当遇到相同的元素时，会产生不可预测的结果。 特别是，某些数据可能会出现异常而导致排序失败。</li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+  Comparator&lt;String&gt; lambda =
+    (a, b) -&gt; a.length() &gt; b.length()
+              ? 0
+              : Math.random() &gt; 0.5 ? -1 : 1;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

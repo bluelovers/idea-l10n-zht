@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>报告 <a href="https://www.python.org/dev/peps/pep-0589/">TypedDict</a> 无效的定义和用法。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+from typing import TypedDict
+
+
+class Movie(TypedDict):
+    name: str
+    year: int
+    rate: int = 10  # 右侧值不受支持
+
+    def method(self): # TypedDict 中的语句无效
+        pass
+
+
+m = Movie(name="name", year=1000, rate=9)
+print(m["director"])  # 'Movie' 中没有 'director' 键
+del m["name"]  # 无法删除 'name' 键
+m["year"] = "1001"  # 应为 'int'，得到的是 'str'
+</pre>
+</body>
+</html>

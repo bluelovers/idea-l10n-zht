@@ -1,0 +1,25 @@
+<html>
+<body>
+报告保护符是 <code>static</code> 字段的实例字段或方法上的 <code>@GuardedBy</code> 注解。 用 static 来保护非 static 可能会导致过度的锁争用，因为访问任何对象实例中的每个锁定字段均将阻止同时访问每个对象实例中的字段。
+<p>示例：</p>
+<pre><code>
+    private static ReadWriteLock lock = new ReentrantReadWriteLock(); //static 保护字段
+    private Object state;
+
+    @GuardedBy("lock")
+    public void bar() {
+        state = new Object();
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>支持的 <code>@GuardedBy</code> 注解是：</p>
+<ul>
+  <li><code>net.jcip.annotations.GuardedBy</code></li>
+  <li><code>javax.annotation.concurrent.GuardedBy</code></li>
+  <li><code>org.apache.http.annotation.GuardedBy</code></li>
+  <li><code>com.android.annotations.concurrency.GuardedBy</code></li>
+  <li><code>androidx.annotation.GuardedBy</code></li>
+  <li><code>com.google.errorprone.annotations.concurrent.GuardedBy</code></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+报告基于实参的冗余 <code>let</code> 调用。
+<p>当 lambda 形参仅用作调用表达式中的限定符时，<code>let</code> 冗余。</p>
+<p>如果需要为限定表达式命名，请声明一个局部变量。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun splitNumbers() {
+      "1,2,3".let { it.split(',') }
+  }
+</code></pre>
+<p>该快速修复会移除额外的 <code>let()</code> 调用：</p>
+<pre><code>
+  fun example() {
+      "1,2,3".split(',')
+  }
+</code></pre>
+<p>或者：</p>
+<pre><code>
+  fun splitNumbers() {
+      val numbers = "1,2,3"
+      numbers.split(',')
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

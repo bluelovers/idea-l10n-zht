@@ -1,0 +1,35 @@
+<html>
+<body>
+报告使用具有混合数组分支和非数组分支的三元运算符的 vararg 方法调用。
+<p>
+编译时，两个分支都被包装在数组中。 结果，数组分支变成了二维数组，这可能说明有问题。
+</p>
+<p>
+该快速修复会将非数组分支包装在数组中以防止编译器执行转换。
+</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+    static void bar(boolean flag) {
+        Object[] a = {1, 2};
+        Object b = "hello";
+        foo(flag ? a : b);
+    }
+    static void foo(Object... obj) {
+    }
+</code></pre>
+
+<p>应用该快速修复后： </p>
+<pre><code>
+    static void bar(boolean flag) {
+        Object[] a = {1, 2};
+        Object b = "hello";
+        foo(flag ? a : new Object[]{b});
+    }
+    static void foo(Object... obj) {
+    }
+</code></pre>
+
+<p><small>2020.3 最新变化</small></p>
+</body>
+</html>

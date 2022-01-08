@@ -1,0 +1,22 @@
+<html>
+<body>
+报告在对象构造期间对无实参超类构造函数的调用。
+<p>此类调用不必要，可以移除。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    Foo() {
+      super();
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    Foo() {
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

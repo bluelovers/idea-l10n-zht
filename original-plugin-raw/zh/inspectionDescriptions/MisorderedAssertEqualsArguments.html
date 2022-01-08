@@ -1,0 +1,22 @@
+<html>
+<body>
+报告对预期实参和实际实参的顺序错误的 <code>assertEquals()</code> 的调用。
+<p>
+  对于 JUnit 3、4 和 5，正确的顺序是<code>(expected, actual)</code>。
+  对于 TestNG，正确的顺序是<code>(actual, expected)</code>。
+</p>
+<p>
+  对于通过的断言，此类调用没有问题，但可能会在失败时给出令人困惑的错误报告。
+  使用该快速修复可以翻转实参顺序。
+</p>
+<p><b>示例 (JUnit)：</b></p>
+<pre><code>
+  assertEquals(actual, expected)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  assertEquals(expected, actual)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+如果将变量类型范围缩小到转换类型，则报告可以移除的类型转换。
+<p>示例：</p>
+<pre><code>
+  Object x = "  string  ";
+  System.out.println(((String)x).trim());
+</code></pre>
+<p>
+在这里，将 <code>x</code> 的类型更改为 <code>String</code> 使转换变得冗余。 建议的快速修复会更新变量类型并移除该变量上的所有冗余转换：
+</p>
+<pre><code>
+  String x = "  string  ";
+  System.out.println(x.trim());
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.2 最新变化</small></p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<body>
+报告对 <code>catch</code> 块形参的赋值。
+<p>更改 <code>catch</code> 块形参很容易令人困惑，不建议使用。</p>
+<p>该快速修复会添加新变量的声明。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void processFile(String fileName) throws Exception {
+    try {
+      doProcessFile(fileName);
+    } catch(Exception ex) {
+      if (ex instanceof UncheckedIOException) {
+        // Warning: catch block parameter reassigned
+        ex = ((UncheckedIOException) ex).getCause();
+      }
+      throw ex;
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void processFile(String fileName) throws Exception {
+    try {
+      doProcessFile(fileName);
+    } catch(Exception ex) {
+      Exception unwrapped = ex;
+      if (unwrapped instanceof UncheckedIOException) {
+        unwrapped = ((UncheckedIOException)
+          unwrapped).getCause();
+      }
+      throw unwrapped;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+报告与内置或保留关键字重叠的变量、实参或函数的声明。
+<p>当您看到这个错误时，这是因为代码没有尽可能的明确，这可能会使其他用户感到困惑。</p>
+<p>示例：</p>
+<pre><code>type byte struct{}
+type string interface{}</code></pre>
+<p><code>byte</code> 和 <code>string</code> 类型与内置类型别名冲突。 因此，这些将高亮显示。
+  考虑重命名此类声明。</p>
+</body>
+</html>

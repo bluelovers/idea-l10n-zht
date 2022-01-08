@@ -1,0 +1,18 @@
+<html>
+<body>
+报告实参的推断类型与形参的预期类型不匹配的方法和 yield 调用。 预期的形参类型取自其中任意一种：
+<ul>
+  <li>RBS 类型签名</li>
+  <li>Sorbet 类型签名</li>
+  <li>YARD <code>@param</code> 标记</li>
+</ul>
+<p>示例：</p>
+<pre>
+<code># @param [Integer] param
+def method(param) end
+
+method([1, 2])
+</code>
+</pre>
+</body>
+</html>

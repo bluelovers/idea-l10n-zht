@@ -1,0 +1,19 @@
+<html>
+<body>
+报告不检查其形参类型的 <code>equals()</code> 方法。
+<p>无法检查 <code>equals()</code> 方法中形参的类型时，如果在无类型集合中使用该对象，可能会导致潜在错误。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class MyClass {
+    int x;
+
+    @Override
+    public boolean equals(Object obj) {
+      // 如果 obj 不为 MyClass，equals 方法应返回 false
+      return ((MyClass)obj).x == x;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

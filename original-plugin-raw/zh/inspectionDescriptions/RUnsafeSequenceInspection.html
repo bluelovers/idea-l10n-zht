@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告由冒号 (<code>:</code>) 生成的不安全序列，并建议将其替换为安全调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+    a &lt;- 1:length(c)
+    b &lt;- 1:nrow(data.frame())
+</code></pre>
+<p>
+  当您应用快速修复时，代码变为：
+</p>
+<pre><code>
+    a &lt;- seq_along(c)
+    b &lt;- seq_len(nrow(data.frame()))
+  </code></pre>
+</body>
+</html>

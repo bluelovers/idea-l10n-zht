@@ -1,0 +1,17 @@
+<html>
+<body>
+报告包含相同 <code>then</code> 和 <code>else</code> 分支的条件表达式。
+<p>此类表达式几乎肯定表明有错误。 该检查提供了一种折叠条件表达式的修正。</p>
+<p>示例：</p>
+<pre><code>
+  int y = x == 10 ? 4 : 4;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  int y = 4;
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+报告可以使用 elvis 表达式替换的三元表达式。
+<p><b>示例：</b></p>
+<pre><code>
+  def notNull(o, defaultValue) {
+      o != null ? o : defaultValue
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def notNull(o, defaultValue) {
+      o ?: defaultValue
+  }
+</code></pre>
+</body>
+</html>

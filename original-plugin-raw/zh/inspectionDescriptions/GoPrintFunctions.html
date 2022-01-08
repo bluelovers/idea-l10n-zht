@@ -1,0 +1,31 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+报告对 <code>fmt.Printf</code>、<code>fmt.Println</code> 以及类似的格式化和打印功能的不正确使用情况。
+<p>在格式化字符串中，格式化函数使用格式化动词，如 <code>%s</code>、<code>%d</code>、<code>%v</code> 等。
+  如果格式化动词使用不正确，格式化函数的结果将包含错误。
+  有关格式动词的更多信息，请参见 <a href="https://golang.org/pkg/fmt/">golang.org 上的 Package fmt</a> 页面。
+</p>
+<p>示例：</p>
+<pre><code>fmt.Printf("id: %s", 42)</code></pre>
+<p>这个函数的输出是 <code>id: %!s(int=42)</code>。 这可能不是您所期望的。
+  以下函数使用 <code>%d</code> 格式化动词。
+  带有 <code>%d</code> 格式化动词的输出将是 <code>id: 42</code>。</p>
+<pre><code>fmt.Printf("id: %d", 42)</code></pre>
+</body>
+</html>

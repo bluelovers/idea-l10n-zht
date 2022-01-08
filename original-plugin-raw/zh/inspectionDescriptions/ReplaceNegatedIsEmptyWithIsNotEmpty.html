@@ -1,0 +1,26 @@
+<html>
+<body>
+报告集合与 <code>String</code> 的否定 <code>isEmpty()</code> 和 <code>isNotEmpty()</code>，或者 <code>String</code> 的 <code>isBlank()</code> 和 <code>isNotBlank()</code>。
+<p>使用相应函数可使代码更简单。</p>
+<p>该快速修复会将否定调用替换为标准库中的相应调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun main() {
+      val list = listOf(1,2,3)
+      if (!list.isEmpty()) {
+          // 执行 smth
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun main() {
+      val list = listOf(1,2,3)
+      if (list.isNotEmpty()) {
+          // 执行 smth
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

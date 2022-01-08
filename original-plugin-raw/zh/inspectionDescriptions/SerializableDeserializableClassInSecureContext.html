@@ -1,0 +1,46 @@
+<html>
+<body>
+报告可以被序列化或反序列化的类。
+<p>
+  如果一个类支持 <code>Serializable</code> 接口，并且它的 <code>readObject()</code> 和 <code>writeObject()</code> 方法未被定义为总是抛出异常，那么就可以被序列化。 在供安全使用的代码中，可序列化的类可能比较危险。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class DeserializableClass implements Serializable { // 该类不包含抛出异常的 'writeObject()' 方法
+    private int sensitive = 736326;
+
+    private void readObject(ObjectInputStream in) {
+        throw new Error();
+    }
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class DeserializableClass implements Serializable {
+    private int sensitive = 736326;
+
+    private void readObject(ObjectInputStream in) {
+        throw new Error();
+    }
+
+    private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
+        throw new java.io.NotSerializableException("DeserializableClass");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用以下选项配置检查：
+</p>
+<ul>
+  <li>
+    列出此检查不应报告其继承者的类。
+    这适用于从超类继承 <code>Serializable</code> 但不用于序列化的类。
+    请注意，与其忽略这些类，添加始终抛出异常的 <code>readObject()</code> 和 <code>writeObject()</code> 方法可能更安全。
+  </li>
+  <li>
+    是否忽略可序列化的匿名类。
+  </li>
+</ul>
+</body>
+</html>

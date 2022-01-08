@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告 XML 应用程序上下文 <strong>&lt;component-scan&gt;</strong> 中不一致的 <strong>&lt;filter&gt;</strong> 定义。</p>
+
+<p><b>示例：</b></p>
+
+<pre><code>
+  public class NonAnnotationTypeClass {}
+  &lt;beans&gt;
+    &lt;ctx:component-scan base-package="com.my.company"&gt;
+      &lt;ctx:exclude-filter expression="com.my.company.anno.NonAnnotationTypeClass" type="annotation"/&gt;
+    &lt;/ctx:component-scan&gt;
+  &lt;/beans&gt;
+</code></pre>
+
+<p>在此示例中，<code>NonAnnotationTypeClass</code> 应为注解类型。</p>
+</body>
+</html>

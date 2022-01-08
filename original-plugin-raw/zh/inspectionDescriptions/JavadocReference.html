@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 Javadoc 注释中未解析的引用。
+<p>在以下示例中，由于缺少 <code>someParam</code> 形参，将高亮显示该形参：</p>
+<pre><code>
+class A {
+    /**
+     * @param someParam description
+     **/
+    void foo() {
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  禁用<b>报告无法访问的符号</b>选项，可忽略引用缺少的方法形参、类、字段和方法的标记。</p>
+
+</body>
+</html>

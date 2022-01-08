@@ -1,0 +1,16 @@
+<html>
+<body>
+报告与当前范围中的可见类型名称相同的类型形参。 此类形参名称可能令人困惑。
+<!-- tooltip end -->
+<p>示例：</p>
+<pre><code>
+  abstract class MyList&lt;T&gt; extends AbstractList&lt;T&gt; {
+    private List&lt;T&gt; elements;
+    // 类型形参 'T' 隐藏类型形参 'T'
+    public &lt;T&gt; T[] toArray(T[] array) {
+        return elements.toArray(array);
+    }
+}
+</code></pre>
+</body>
+</html>

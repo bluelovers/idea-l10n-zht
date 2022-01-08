@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>报告 <code>Option</code> 上的 <code>map</code> 和 <code>getOrElse</code>，并建议将其替换为 <code>fold</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def p(x: Int): Boolean = ???
+  Option(0).map(p).getOrElse(false)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def p(x: Int): Boolean = ???
+  Option(0).fold(false)(p)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

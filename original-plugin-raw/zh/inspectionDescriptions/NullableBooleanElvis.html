@@ -1,0 +1,17 @@
+<html>
+<body>
+报告应该使用相等检查而不是 elvis 运算符的情况。
+<p><b>示例：</b></p>
+<pre><code>
+fun check(a: Boolean? == null) {
+    if (a ?: false) throw IllegalStateException()
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+fun check(a: Boolean? == null) {
+    if (a == true) throw IllegalStateException()
+}
+</code></pre>
+</body>
+</html>

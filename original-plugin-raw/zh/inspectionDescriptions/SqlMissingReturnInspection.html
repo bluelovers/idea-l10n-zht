@@ -1,0 +1,20 @@
+<html>
+<body>
+报告没有 RETURN 语句的函数。
+
+<p>示例（Oracle）：</p>
+
+<pre>
+<code>CREATE FUNCTION foo RETURN int AS
+BEGIN
+END;
+</code></pre>
+
+<p><code>foo</code> 函数必须返回整数值，但函数体不返回任何内容。 要修正错误，请添加 RETURN 语句（例如，<code>RETURN 1;</code>）。</p>
+
+<pre><code>CREATE FUNCTION foo RETURN int AS
+BEGIN
+ RETURN 1;
+END;</code></pre>
+</body>
+</html>

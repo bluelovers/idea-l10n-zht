@@ -1,0 +1,34 @@
+<html>
+<body>
+报告在对象构造期间对当前类的 <code>abstract</code> 方法的调用。
+<p>如果方法位于以下位置，则会在对象构造期间调用：
+<ul>
+  <li>构造函数</li>
+  <li>非 static 实例初始值设定项</li>
+  <li>非 static 字段初始值设定项</li>
+  <li><code>clone()</code> 方法</li>
+  <li><code>readObject()</code> 方法</li>
+  <li><code>readObjectNoData()</code> 方法</li>
+</ul>
+<p>此类调用可能会导致难以捉摸的错误，因为对象初始化可能发生在方法调用之前。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  abstract class Parent {
+    abstract void abstractMethod();
+  }
+
+  class Child extends Parent {
+    Child() {
+      abstractMethod();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>此检查与以下检查共享功能：</p>
+<ul>
+  <li>在对象构造期间调用的可重写方法</li>
+  <li>在对象构造期间调用的重写的方法</li>
+</ul>
+<p>一次只能启用一个检查，以防止警告重复。</p>
+</body>
+</html>

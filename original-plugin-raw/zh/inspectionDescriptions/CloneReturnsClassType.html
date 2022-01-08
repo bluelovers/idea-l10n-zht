@@ -1,0 +1,32 @@
+<html>
+<body>
+报告返回类型与其所在的类不同的 <code>clone()</code> 方法。
+<p><code>clone()</code> 方法的返回类型通常为 <code>java.lang.Object</code>，这导致其难以被客户端使用。
+<i>Effective Java</i>（第二版和第三版）建议将 <code>clone()</code> 方法的返回类型设为与其返回对象的类的类型相同。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>class</b> Foo <b>implements</b> Cloneable {
+    <b>public</b> Object clone() {
+      <b>try</b> {
+        <b>return</b> super.clone();
+      } <b>catch</b> (CloneNotSupportedException e) {
+        <b>throw new</b> AssertionError();
+      }
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>class</b> Foo <b>implements</b> Cloneable {
+    <b>public</b> Foo clone() {
+      <b>try</b> {
+        <b>return</b> (Foo)super.clone();
+      } <b>catch</b> (CloneNotSupportedException e) {
+        <b>throw new</b> AssertionError();
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

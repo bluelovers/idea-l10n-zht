@@ -1,0 +1,30 @@
+<html>
+<body>
+报告与相应 super 方法的形参类型同名但属于不同软件包的子类方法的形参类型。
+在这些情况下，子类方法不能重写 super 方法。
+<p><b>示例：</b></p>
+<pre><code>
+<b>public class</b> A {
+ <b>public void</b> method(Object o) {}
+}
+
+<b>public class</b> B <b>extends</b> A {
+ <b>public void</b> method(Object o) {} // 对形参类型发出警告
+ <b>class</b> Object {}
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+<b>public class</b> A {
+ <b>public void</b> method(Object o) {}
+}
+
+<b>public class</b> B <b>extends</b> A {
+ <b>public void</b> method(java.lang.Object o) {} // 新形参类型
+ <b>class</b> Object {}
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

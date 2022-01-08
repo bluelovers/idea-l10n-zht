@@ -1,0 +1,29 @@
+<html>
+<body>
+报告迭代集合或数组并且可以自动替换为增强型 <code>for</code> 循环（foreach 迭代语法）的 <code>for</code> 循环。
+<!--  'foreach' still used in this description so that the inspection continues to be found using this keyword -->
+<p><b>示例：</b></p>
+<pre><code>
+  for (Iterator&lt;String&gt; iterator = list.iterator(); iterator.hasNext(); ) {
+    String item = iterator.next();
+    System.out.println(item);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  for (String item : list) {
+    System.out.println(item);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用<b>报告索引的 'java.util.List' 循环</b>选项可查找涉及 <code>list.get(index)</code> 调用的循环。
+  这些循环通常可以替换为增强型 <code>for</code> 循环，除非它们修改了进程中的基础列表，例如通过调用 <code>list.remove(index)</code> 进行修改。
+  如果是后面这种情况，增强型 <code>for</code> 循环可能抛出 <code>ConcurrentModificationException</code>。
+  在某些情况下，<code>list.get(index)</code> 循环的操作速度也可能更快一些。</p>
+<p>
+  使用<b>不报告无类型集合上的迭代</b>选项可忽略没有类型形参的集合。
+  这将防止创建 <code>java.lang.Object</code> 类型的增强型 <code>for</code> 循环变量以及在使用循环变量的位置插入转换。</p>
+<p>仅当项目或模块的语言级别为 5 或更高时，此检查才会报告。</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 <code>serialPersistentFields</code> 字段未被声明为 <code>private static final ObjectStreamField[]</code> 的 <code>Serializable</code> 类。
+<p>
+  如果 <code>serialPersistentFields</code> 字段未使用这些修饰符进行声明，序列化行为将与根本未声明该字段如出一辙。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class List implements Serializable {
+    private List next;
+
+    ObjectStreamField[] serialPersistentFields = {new ObjectStreamField("next", List.class)};
+
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

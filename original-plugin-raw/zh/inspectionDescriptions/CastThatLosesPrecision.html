@@ -1,0 +1,16 @@
+<html>
+<body>
+报告可能导致精度损失的基元数值类型之间的转换运算。
+<p>此类转换不一定是问题，但如果意外造成精度损失，则可能会导致难以跟踪错误。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  int a = 420;
+  byte b = (byte) a;
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>忽略从 int 到 char 的转换</b>选项可以忽略从 <code>int</code> 到 <code>char</code> 的转换。
+  在实现 I/O 操作时经常使用这种类型的转换，因为 <code>java.io.Reader</code> 类的 <code>read()</code> 方法会返回一个 <code>int</code>。</p>
+<p>使用<b>忽略从 int 128-255 到字节的转换</b>选项可以忽略从 <code>int</code> 到 <code>byte</code> 的常量值 (128-255) 的转换。
+  此类值将溢出到仍能容纳在一个字节内的负数。</p>
+</body>
+</html>

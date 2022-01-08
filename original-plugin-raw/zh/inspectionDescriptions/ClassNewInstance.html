@@ -1,0 +1,21 @@
+<html>
+<body>
+报告对 <code>java.lang.Class.newInstance()</code> 的调用。
+<p>
+  此方法会传播由无实参构造函数抛出的异常，包括已检查的异常。 使用此方法可以有效地绕过本由编译器执行的编译时异常检查。
+</p>
+<p>
+  建议通过快速修复将该调用替换为对 <code>java.lang.reflect.Constructor.newInstance()</code> 方法的调用，这种方式将构造函数抛出的任何异常包装在（已检查的）<code>java.lang.reflect.InvocationTargetException</code> 中，从而可以避免这个问题。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  clazz.newInstance()
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  clazz.getConstructor().newInstance();
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>报告常规 Python 文件中的重载放置在实现之后或其签名与实现不兼容的情况。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+from typing import overload
+
+
+@overload
+def foo(p1, p2): # 重载签名不兼容实现
+    pass
+
+
+@overload
+def foo(p1): # 重载签名不兼容实现
+    pass
+
+
+def foo(p1, p2, p3):
+    print(p1, p2, p3)
+</pre>
+</body>
+</html>

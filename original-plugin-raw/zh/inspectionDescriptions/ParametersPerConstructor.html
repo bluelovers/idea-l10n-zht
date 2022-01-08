@@ -1,0 +1,23 @@
+<html>
+<body>
+报告形参数量超过指定最大值的构造函数。
+此类对象很难实例化，特别是在某些形参是可选形参的情况下。
+构造函数的形参过多可能表明有必要重构。
+例如，请考虑应用构建器模式。
+<p><b>示例：</b></p>
+<pre><code>
+  public BankAccount(long accountNumber,
+                     String owner,
+                     double balance,
+                     double interestRate) {
+    // fields initialization
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>形参限制</b>字段可以指定构造函数中允许的最大形参数量。</li>
+  <li>使用<b>忽略具有以下可见性的构造函数</b>列表可指定检查是否应忽略具有特定可见性的构造函数。</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+报告无意义的算术表达式。 此类表达式包括加 0、减 0、乘以 0 或 1 以及除以 1。
+<p>此类表达式可能是自动重构所致，不太可能是开发者的本意。</p>
+<p>该快速修复会简化此类表达式。</p>
+<p><b>示例：</b>
+<pre><code>
+  void f(int a) {
+    int x = a - a;
+    int y = a + 0;
+    int res = x / x;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void f(int a) {
+    int x = 0;
+    int y = a;
+    int res = 1;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  请注意，在极少数情况下，建议的替换可能不完全等同于所有可能输入的原始代码。 例如，该检查会建议将 <code>x / x</code> 替换为 <code>1</code>。
+  但是，如果 <code>x</code> 为零，原始代码将抛出 <code>ArithmeticException</code> 或导致 <code>NaN</code>。
+  另外，如果 <code>x</code> 为 <code>NaN</code>，则结果也是 <code>NaN</code>。 此类行为不太可能出于本意。
+</p>
+</body>
+</html>

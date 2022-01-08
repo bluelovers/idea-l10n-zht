@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告通过 <code>global</code> 语句定义的变量未在模块范围中定义的问题。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+def foo():
+    global bar
+    print(bar)
+
+foo()
+</pre>
+<p>可以移动该全局变量声明来进行修正：</p>
+<pre style="font-family: monospace">
+global bar
+
+
+def foo():
+    print(bar)
+</pre>
+</body>
+</html>

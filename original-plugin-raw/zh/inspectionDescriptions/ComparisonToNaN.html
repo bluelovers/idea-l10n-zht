@@ -1,0 +1,16 @@
+<html>
+<body>
+报告任何与 <code>Double.NaN</code> 或 <code>Float.NaN</code> 的比较。
+此类比较毫无意义，因为 NaN 不等于任何内容，包括不等于自身。
+改用 <code>Double.isNaN()</code> 或 <code>Float.isNaN()</code> 方法。
+<p><b>示例：</b></p>
+<pre><code>
+  if (x == Double.NaN) {...}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  if (Double.isNaN(x)) {...}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

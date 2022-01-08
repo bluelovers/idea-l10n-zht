@@ -1,0 +1,18 @@
+<html>
+<body>
+报告以下实体 EJB 相关条目的不正确定义：
+<ul>
+  <li>类未实现预期接口（EJBLocalObject、EJBObject 等）</li>
+  <li>EJB 类修饰符不正确</li>
+  <li>类未定义 public 无实参构造函数</li>
+  <li>使用类而不是接口或者使用接口而不是类</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+public final class SessionEJB implements javax.ejb.SessionBean {
+  private SessionEJB() {} // 错误：类应该定义 public 无实参构造函数
+}
+</code></pre>
+</body>
+</html>

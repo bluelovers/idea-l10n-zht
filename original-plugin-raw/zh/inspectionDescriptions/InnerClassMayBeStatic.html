@@ -1,0 +1,32 @@
+<html>
+<body>
+报告可以设置为 <code>static</code> 的内部类。
+<p><code>static</code> 内部类不保留对其封闭实例的隐式引用。
+  这可以防止常见的内存泄漏，减少类的每个实例使用的内存。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>public class</b> Outer {
+    <b>class</b> Inner { // 非 static
+      <b>public void</b> foo() {
+        bar("x");
+      }
+
+      <b>private void</b> bar(String string) {}
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>public class</b> Outer {
+    <b>static class</b> Inner {
+      <b>public void</b> foo() {
+        bar("x");
+      }
+
+      <b>private void</b> bar(String string) {}
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

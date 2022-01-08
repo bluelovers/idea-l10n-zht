@@ -1,0 +1,8 @@
+<html>
+<body>
+注入方言并将其与所选 SQL 类型相关联。
+将此方言应用于相同类型的所有匹配项（例如，<code>query</code>）。
+<p>在 <b>Before</b> 示例中，您可以对 <code>'SELECT * FROM foo'</code> 值调用<b>按类型注入</b>意图操作，然后注入此对象类型并将其与任何 SQL 方言关联。 此值的对象类型为 <code>query</code>（由 <code>q query DEFAULT 'SELECT * FROM foo'</code> 指定）。
+  因此，当您下次在代码中使用 <code>query</code> 类型时，将自动注入所选方言。</p>
+</body>
+</html>

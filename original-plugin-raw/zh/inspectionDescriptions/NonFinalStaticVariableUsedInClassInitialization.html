@@ -1,0 +1,17 @@
+<html>
+<body>
+报告在类初始化期间使用 <code>final</code> <code>static</code> 变量的情况。
+<p>在此类情况下，代码语义可能会依赖于类的创建顺序。 此外，此类情况可能会导致在变量初始化之前使用变量，并且通常会导致困难和令人困惑的错误。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    public static int bar = 0;
+
+    static {
+      System.out.println(bar);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

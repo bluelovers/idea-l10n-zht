@@ -1,0 +1,20 @@
+<html>
+<body>
+报告嵌套的三元运算符。 嵌套的三元运算符可能难以读取，通常最好改为使用至少一个
+<code>if</code> 语句。
+<p>示例：</p>
+<p><code>min = x &lt; y ? (x &lt; z ? x : z) : (y &lt; z ? y : z)</code></p>
+
+应用快速修复后，结果如下所示：
+
+<pre>
+<code>min = if x &lt; y
+  x &lt; z ? x : z
+else
+  y &lt; z ? y : z
+end</code>
+</pre>
+<p><span style="font-size: smaller;">受 <a href="https://github.com/rubocop-hq/ruby-style-guide#no-nested-ternary">'Ruby Style Guide'</a> 启发</span>
+</p>
+</body>
+</html>

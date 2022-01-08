@@ -1,0 +1,15 @@
+<html>
+<body>
+报告 <code>require()</code> 语句。 建议使用 <code>import</code> 语句将其转换为 <code>require()</code> 调用。
+<br/><br/>
+启用“使用‘全部修复’操作转换内部范围中的 require()”，
+在使用“全部修复”操作时转换嵌套函数和语句内部的所有 <code>require()</code> 调用。
+<br/><br/>
+请注意，将内部范围中的 <code>require()</code> 语句转换为 <code>import</code> 语句
+可能会导致代码语义更改。
+Import 语句是 static 模块依赖项，它们获得了提升，
+这表明它们被移至当前模块的顶部。 <code>require()</code> 调用动态加载模块。
+它们可以有条件地执行，其范围由使用它们的表达式来定义。
+<br/>清除“使用‘全部修复’操作转换内部范围中的 require()”复选框，以防止在使用“全部修复”操作时对这些复杂情况进行任何更改。
+</body>
+</html>

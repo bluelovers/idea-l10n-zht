@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可以替换为 <code>"abc"[0]</code> 的 <code>"abc".substring(0, 1)</code> 等调用。
+<p>按索引获取元素可使代码更简单。</p>
+<p>该快速修复会将 <code>substring</code> 调用替换为索引运算符。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo() {
+      &quot;abc&quot;.substring(0, 1)
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo() {
+      &quot;abc&quot;[0]
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

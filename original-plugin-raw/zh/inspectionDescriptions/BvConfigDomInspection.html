@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>报告 Bean 验证 <code>&lt;validation-config&gt;</code> 文件中的不正确元素：</p>
+
+<ul>
+  <li>对不可实例化类的引用</li>
+  <li>对不扩展所需类的类的引用</li>
+  <li>对范围不适当的类的引用</li>
+  <li>空标记和特性值</li>
+  <li>与所需模式不匹配的标记和特性值（例如，Java 标识符）</li>
+  <li>不包含必需子标记或特性的标记</li>
+  <li>定义具有重复名称的对象的标记</li>
+</ul>
+
+<p><strong>示例：</strong></p>
+<pre><code>
+&lt;validation-config&gt;
+  &lt;default-provider&gt;<strong>foo.UnknownProvider</strong>&lt;/default-provider&gt;  &lt;!-- 无法解析 'UnknownProvider' 类或软件包 --&gt;
+  &lt;message-interpolator&gt;my.Interpolator&lt;/message-interpolator&gt;
+  &lt;constraint-mapping&gt;META-INF/ConstraintMappings.xml&lt;/constraint-mapping&gt;
+  &lt;constraint-mapping&gt;META-INF/<strong>unknown.xml</strong>&lt;/constraint-mapping&gt;
+&lt;/validation-config&gt;
+</code></pre>
+</body>
+</html>

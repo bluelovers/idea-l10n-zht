@@ -1,0 +1,34 @@
+<html>
+<body>
+报告由于所有可能的值都被 <code>case</code> 分支覆盖而导致其 <code>default</code> 分支绝不会被接受的枚举 <code>switch</code> 语句或表达式。
+<p>此类元素冗余，对于 <code>switch</code> 表达式更是如此，因为当 <code>case</code> 分支没有覆盖所有枚举常量时，它们不会进行编译。</p>
+<p>
+  需要将语言级别配置为 14，才会报告 <code>switch</code> 表达式。
+</p>
+<p>提供的快速修复可以移除 <code>default</code> 分支。</p>
+<p>示例：</p>
+<pre><code>
+  enum E { A, B }
+  int foo(E e) {
+    return switch (e) {
+      case A -&gt; 1;
+      case B -&gt; 2;
+      default -&gt; 3;
+    };
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  enum E { A, B }
+  int foo(E e) {
+    return switch (e) {
+      case A -&gt; 1;
+      case B -&gt; 2;
+    };
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>仅报告 switch 表达式</b>选项可以仅报告 switch 表达式中的冗余 <code>default</code> 分支。</p>
+
+</body>
+</html>

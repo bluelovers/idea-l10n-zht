@@ -1,0 +1,14 @@
+<html>
+<body>
+报告非 null 接收器上仅对可 null 接收器有意义的调用。
+<p>只有在可 null 类型的接收器上调用时，标准库中 <code>orEmpty()</code> 或 <code>isNullOrEmpty</code> 之类的几个函数才有意义。 在其他情况下，可以忽略它们，因为结果将相同。</p>
+<p><b>移除冗余调用</b>和<b>将调用更改为 …</b> 快速修复可用于自动修正代码。</p>
+<p>示例：</p>
+<pre><code>
+  fun test(s: String) {
+      val x = s.orEmpty() // 快速修复会简化为 's'
+      val y = s.isNullOrEmpty() // 快速修复会简化为 's.isEmpty()'
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+报告 AWT 和 Swing 中的绝对对齐常量的用法。 国际化应用程序使用相对对齐，因为它遵循区域设置组件的方向设置。
+<p><b>示例：</b></p>
+<pre><code>
+  JPanel panel = new JPanel(new BorderLayout(2, 2));
+  JLabel label = new JLabel("Hello World");
+  panel.add(label, BorderLayout.NORTH);
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  JPanel panel = new JPanel(new BorderLayout(2, 2));
+  JLabel label = new JLabel("Hello World");
+  panel.add(label, BorderLayout.PAGE_START);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

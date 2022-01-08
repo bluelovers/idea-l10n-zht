@@ -1,0 +1,16 @@
+<html>
+<body>
+报告决不会在任何控制流中执行并且可以安全移除的不可到达的代码。
+<p>示例：</p>
+<pre>
+<code>def largest_number(x, y)
+  if x > y
+    return x
+  else
+    return y
+  end
+  puts 'The largest number is ' + x #不可到达的代码
+end</code>
+</pre>
+</body>
+</html>

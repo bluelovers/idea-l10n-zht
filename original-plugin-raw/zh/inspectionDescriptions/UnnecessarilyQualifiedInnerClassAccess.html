@@ -1,0 +1,23 @@
+<html>
+<body>
+报告对不必要地用封闭类的名称进行了限定的内部类的任何引用。
+<p>此类限定可以安全地移除，这有时会为内部类添加导入。</p>
+<p>示例：</p>
+<pre><code>
+  class X {
+     X.Y foo;
+     class Y{}
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class X {
+     Y foo;
+     class Y{}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>忽略需要导入的引用</b>选项可忽略对内部类的引用，其中移除限定会添加导入。
+<p>
+</body>
+</html>

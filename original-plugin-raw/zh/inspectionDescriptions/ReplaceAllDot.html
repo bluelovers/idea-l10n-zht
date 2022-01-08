@@ -1,0 +1,22 @@
+<html>
+<body>
+报告对其中第一个实参为单一正则表达式元字符实参的 <code>String.replaceAll()</code> 或 <code>String.split()</code> 的调用。
+<p>
+  正则表达式元字符为 <code>.$|()[{^?*+\</code> 之一。 它们在正则表达式中有特殊的含义。
+  例如，调用 <code>"ab.cd".replaceAll(".", "-")</code> 将生成 <code>"-----"</code>，因为点匹配任意字符。
+  很可能本意是转义变体 <code>"\\."</code>。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  s.replaceAll(".", "-");
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  s.replaceAll("\\.", "-");
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

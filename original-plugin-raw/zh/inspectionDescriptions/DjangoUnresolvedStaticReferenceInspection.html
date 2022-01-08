@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>报告对静态资源的未解析引用。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+{% load staticfiles %}
+&lt;link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" /&gt;
+</pre>
+<p>在本例中，如果 <code>static/poll</code> 目录中没有 <code>style.css</code> 文件，
+则高亮显示此文件。</p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+报告显式声明为扩展 <code>java.lang.Object</code> 的类型形参和通配符类型实参。
+<p>此类 'extends' 子句是冗余的，因为 <code>java.lang.Object</code> 是所有类的父类型。</p>
+<p><b>示例：</b></p>
+<pre><code>  class ClassA&lt;T extends Object&gt; {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  如果由于注解而需保留 'extends Object' 子句，请禁用<b>注解 java.lang.Object 时忽略</b>选项。
+  这可能会有用，例如在您使用空值分析器并且 'extends Object' 子句包含 <code>@Nullable</code>/<code>@NotNull</code> 注解时。
+</p>
+<p><b>示例：</b></p>
+<pre><code>  class MyClass&lt;T extends @NotNull Object&gt; {}
+</code></pre>
+
+</body>
+</html>

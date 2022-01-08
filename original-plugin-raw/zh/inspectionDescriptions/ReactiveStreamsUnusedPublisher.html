@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>报告未使用的 <code>Publisher</code> 实例。</p>
+<p>
+  要使用生成新的 <code>Publisher</code> 实例的运算符（返回 Mono/Flux/Flowable 的 Mono/Flux/Flowable 对象的方法），您必须通过 <code>subscribe()</code> 订阅创建的 <code>Publisher</code>。
+</p>
+<p>
+  使用工厂（例如，<code>Mono.just()</code>）而不订阅返回的 <code>Publisher</code>，会创建一个从未使用的对象，并被视为不必要的内存分配。
+</p>
+<p>
+  例如，<code>Mono.just(1, 2, 3).map(i -> i + 3)</code> 不会被执行，除非您订阅了此 <code>Publisher</code>，或者除非您通过应用运算符生成新的 <code>Publisher</code> 并订阅它。
+</p>
+<p><b>示例：</b></p>
+<p>未使用的 <code>Flux</code> 实例：</p>
+<pre><code>
+Flux.just(1, 2, 3);
+</code></pre>
+<p>使用者使用的 <code>Flux</code> 实例：</p>
+<pre><code>
+Flux.just(1, 2, 3).subscribe(System.out::println);
+</code></pre>
+<p>不会报告对使用 Error Prone 或 AssertJ 的 <code>@CanIgnoreReturnValue</code> 注解进行注解的方法的调用。
+<!-- tooltip end -->
+<p><small>2019.3 最新变化</small></p>
+</body>
+</html>

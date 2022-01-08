@@ -1,0 +1,22 @@
+<html>
+<body>
+报告可以替换为 Kotlin 函数的 Java 方法调用，例如 <code>System.out.println()</code>。
+<p>替换该代码会去除 Java 的依赖项并使 Kotlin 代码更地道。</p>
+<p>该快速修复会替换相同 Kotlin 调用上的 Java 方法调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  import java.util.Arrays
+
+  fun main() {
+      val a = Arrays.asList(1, 3, null)
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun main() {
+      val a = listOf(1, 3, null)
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

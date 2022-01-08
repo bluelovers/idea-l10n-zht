@@ -1,0 +1,14 @@
+<html>
+<body>
+报告标准库中已筛选的集合上的 <code>filter…</code> 调用。
+<p>只有在类型不同于结果类型的接收器上调用时，标准库中 <code>filterNotNull()</code> 或 <code>filterIsInstance</code> 之类的几个函数才有意义。 在其他情况下，可以忽略此类调用，因为结果将相同。</p>
+<p><b>移除冗余调用</b>快速修复可用于自动修正代码。</p>
+<p>示例：</p>
+<pre><code>
+  fun test(list: List&lt;String&gt;) {
+      val x = list.filterNotNull() // 快速修复会简化为 'list'
+      val y = list.filterIsInstance&lt;String&gt;() // 快速修复会简化为 'list'
+  }
+</code></pre>
+</body>
+</html>

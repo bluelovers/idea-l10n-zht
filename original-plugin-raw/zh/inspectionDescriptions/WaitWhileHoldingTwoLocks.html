@@ -1,0 +1,22 @@
+<html>
+<body>
+报告在当前线程持有两个锁定时可能发生的对 <code>wait()</code> 方法的调用。
+<p>
+  调用 <code>wait()</code> 只会释放目标上的一个锁定，因此持有两个锁定时的等待很容易导致死锁。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  synchronized (lockA) {
+    synchronized (lockB) {
+      lockB.wait(); //警告
+      //线程 A 卡在这里，持有 lockA
+    }
+  }
+
+  synchronized (lockA) { //线程 B 无法进入此块和释放线程 A
+    lockB.notify();
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

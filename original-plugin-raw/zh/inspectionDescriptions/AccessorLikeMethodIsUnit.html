@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>报告具有类似访问器名称且结果类型为 <code>Unit</code> 的方法。</p>
+<p>符合访问器 <a href="https://en.wikipedia.org/wiki/JavaBean">JavaBean</a> 命名协定的方法预计不会有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>。 然而，结果类型为 <code>Unit</code> 的方法仅针对它们的副作用而执行。</p>
+<p>这表明该方法应该导致非 <code>Unit</code> 类型或重命名以更好地反映副作用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  trait Test {
+    def getTarget(): Unit
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>此检查将不报告重写其他成员的方法。</p>
+</body>
+</html>

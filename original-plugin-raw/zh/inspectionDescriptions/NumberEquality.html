@@ -1,0 +1,21 @@
+<html>
+<body>
+报告使用 <b>==</b> 或 <b>!=</b> 而不是 <code>equals()</code> 来测试 <code>Number</code> 相等性的代码。
+<p>
+  使用自动装箱时很容易犯这样的错误：即不比较两个基元，而是比较包装器类型的两个实例，例如使用  <code>Integer</code> 而不是 <code>int</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>  void foo(Integer a, Integer b) {
+    final boolean bool = a == b;
+  }
+</code></pre>
+<p>如果已知 <code>a</code> 为非 null，则可以安全地应用“不安全”的快速修复，并获得类似于如下所示的结果：</p>
+<pre><code>  void foo(Integer a, Integer b) {
+    final boolean bool = a.equals(b);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

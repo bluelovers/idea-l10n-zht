@@ -1,0 +1,42 @@
+<html>
+<body>
+报告不必要地声明为 <code>final</code> 的局部变量或形参。
+<p>出于简洁的原因，某些编码标准不赞成声明为 <code>final</code> 的变量。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    Foo(Object o) {}
+
+    void bar(final Object o) {
+      new Foo(o);
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    Foo(Object o) {}
+
+    void bar(Object o) {
+      new Foo(o);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用检查选项可以切换以下各项的报告：
+</p>
+<ul>
+  <li>
+    局部变量
+  </li>
+  <li>
+    形参（包括 <code>catch</code> 块的形参和增强型 <code>for</code> 语句）
+  </li>
+</ul>
+<p>
+  此外，您可以将检查配置为仅报告 <code>abstract</code> 或接口方法的 <code>final</code> 形参，这可能被认为是多余的，因为此类标记不会影响这些方法的实现。
+</p>
+
+</body>
+</html>

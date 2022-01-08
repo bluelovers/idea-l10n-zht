@@ -1,0 +1,14 @@
+<html>
+<body>
+报告尝试在基于值的类的实例上进行同步的情况，从 Java 16 开始，这些实例会生成编译时警告并引发运行时异常。
+<p>
+  例如，<code>java.lang.Double</code> 用 <code>jdk.internal.ValueBased</code> 注解，因此以下代码会产生编译时警告：
+</p>
+<pre><code>
+Double d = 20.0;
+synchronized (d) { ... } // javac 警告
+</code></pre>
+<!-- tooltip end -->
+<p><small>2021.1 最新变化</small></p>
+</body>
+</html>

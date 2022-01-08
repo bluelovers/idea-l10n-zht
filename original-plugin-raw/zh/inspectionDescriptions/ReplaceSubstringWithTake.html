@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可以替换为 <code>s.take(x)</code> 的 <code>s.substring(0, x)</code> 等调用。
+<p>使用 <code>take()</code> 可使代码更简单。</p>
+<p>该快速修复会将 <code>substring</code> 调用替换为 <code>take()</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(s: String) {
+      s.substring(0, 10)
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(s: String) {
+      s.take(10)
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

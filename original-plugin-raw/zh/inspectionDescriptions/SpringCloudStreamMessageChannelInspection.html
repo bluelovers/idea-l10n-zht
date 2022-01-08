@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告 <code>@StreamListener</code>、<code>@SendTo</code>、<code>@Output</code> 和 <code>@Input</code> 注解中未解析的通道特性。</p>
+<p>使用无效的绑定名称会在运行时导致 '找不到 Bean' 错误。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @EnableBinding(Sink.class)
+  public class LogSource {
+    @StreamListener(Sink.class)
+	  public void log1() {
+    }
+
+    @StreamListener("invalid")  // 报告 '找不到通道'
+	  public void log2() {
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

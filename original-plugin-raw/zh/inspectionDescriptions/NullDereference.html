@@ -1,0 +1,14 @@
+<html>
+<body>
+报告可能包含 <code>nullptr</code> 的指针的取消引用。
+<p><b>示例：</b></p>
+<pre><code>
+  using namespace std;
+  void process(string *a, string b) {
+    if (a != nullptr || a->length()) {
+      a = &#38b;
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<body>
+报告对 <code>compareTo()</code> 实现中的非 <code>final</code> 字段的访问。
+<p>
+  此类访问可能导致 <code>compareTo()</code> 在对象生命周期的不同时刻返回不同的结果，进而可能在使用 <code>java.util.TreeSet</code> 等标准集合类时导致问题。
+</p>
+<p>
+  只有在对该字段不具备写入访问权限时，才可以通过快速修复将该字段设为 <code>final</code>，否则不建议进行修正。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo implements Comparable&lt;Foo&gt;{
+    private int index;
+    Foo(int idx) {
+      index = idx;
+    }
+    @Override
+    public int compareTo(Foo foo) {
+     return Integer.compare(this.index, foo.index);
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo implements Comparable&lt;Foo&gt;{
+    private final int index;
+    Foo(int idx) {
+      index = idx;
+    }
+    @Override
+    public int compareTo(Foo foo) {
+      return Integer.compare(this.index, foo.index);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

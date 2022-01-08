@@ -1,0 +1,19 @@
+<html>
+<body>
+报告重写 <code>synchronized</code> 方法的非 <code>synchronized</code> 方法。
+<p>
+  如果超类方法被声明为 <code>synchronized</code>，重写的方法将不会自动同步。 这可能导致使用子类时出现意外的竞争条件。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Super {
+    synchronized void process() {}
+  }
+  class Sub extends Super {
+    // 非 synchronized 方法 'process()' 重写 synchronized 方法
+    void process() {}
+  }  
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

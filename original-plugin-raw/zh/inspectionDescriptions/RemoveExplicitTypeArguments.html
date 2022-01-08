@@ -1,0 +1,20 @@
+<html>
+<body>
+报告具有可自动推断的类型实参的函数调用。 这种类型实参是冗余的，可以安全地省略。
+<p>使用“移除显式类型实参”快速修复可清理代码。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  // 在这里可以推断 'String' 类型
+  fun foo(): MutableList&lt;String&gt; = mutableListOf&lt;String&gt;()
+
+  // 在这里无法推断 'String'，类型实参为必选项。
+  fun bar() = mutableListOf&lt;String&gt;()
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(): MutableList&lt;String&gt; = mutableListOf() &lt;== 已更新
+
+  fun bar() = mutableListOf&lt;String&gt;()
+</code></pre>
+</body>
+</html>

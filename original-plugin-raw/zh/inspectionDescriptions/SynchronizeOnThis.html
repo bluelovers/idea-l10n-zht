@@ -1,0 +1,28 @@
+<html>
+<body>
+报告 <code>this</code> 或 <code>class</code> 表达式的同步。
+报告的结构包括 <code>synchronized</code> 块以及对 <code>wait()</code>、<code>notify()</code> 或 <code>notifyAll()</code> 的调用。
+<p>同步 <code>this</code> 或 <code>class</code> 表达式可能并非好主意，原因有几点：</p>
+<ol>
+  <li>
+    它使同步成为类的外部接口的一部分，导致将来很难更改为其他锁定机制，
+  </li>
+  <li>
+    难以跟踪究竟是谁锁定了给定对象，
+  </li>
+  <li>
+    使得故意为之或在子类化时很容易意外发生的拒绝服务攻击成为可能。
+  </li>
+</ol>
+<p>替代做法是考虑在 <code>private final</code> 锁定对象上同步，可以完全控制对该对象的访问。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public void print() {
+    synchronized(this) { // 警告：对 'this' 的锁定操作可能会产生不可预见的副作用
+      System.out.println("synchronized");
+    }
+  }
+  </code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告带有类型形参的局部变量。</p>
+<p>局部变量的类型形参没有意义，因为它不能被专门化。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun main() {
+      val &lt;T&gt; x = ""
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun main() {
+      val x = ""
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的 Kotlin 语言级别为 1.4 或更高时，此检查才会报告。</p>
+</body>
+</html>

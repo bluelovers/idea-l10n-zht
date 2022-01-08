@@ -1,0 +1,21 @@
+<html>
+<body>
+报告目标变量或函数形参的名称与分配给它的值的名称不匹配的赋值和函数调用。
+<p>示例 1：</p>
+<pre><code>
+  <b>int</b> x = 0;
+  <b>int</b> y = x; // x 用作 y 坐标
+  </code></pre>
+<p>示例 2：</p>
+<pre><code>
+  <b>int</b> x = 0, y = 0;
+  // x 用作 y 坐标，y 用作 x 坐标
+  Rectangle rc = <b>new</b> Rectangle(y, x, 20, 20);
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<p>使用<b>名称组</b>区域可以指定不应一起使用的名称：如果形参名称或赋值目标名称包含一个组中的字词，而赋值或传递的变量名称包含另一个组中的字词，就会报告错误。
+<p>使用<b>忽略方法</b>区域可以指定不应检查但名称可能存疑的方法。
+例如，<code>Integer.compare()</code> 形参被命名为 <code>x</code> 和 <code>y</code>，但与坐标无关。
+</body>
+</html>

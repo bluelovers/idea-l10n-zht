@@ -1,0 +1,33 @@
+<html>
+<body>
+报告对其中的调用由声明类的子类而不是由声明类本身限定的 static 字段的访问。
+<p>
+  Java 允许此类限定，但是此类访问可能表明继承和重写之间存在难以捉摸的混淆。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Parent {
+    static int foo = 0;
+  }
+
+  class Child extends Parent { }
+
+  void bar() {
+    System.out.println(Child.foo);
+  }
+</code></pre>
+<p>应用快速修复后，结果如下所示：</p>
+<pre><code>
+  class Parent {
+    static int foo = 0;
+  }
+
+  class Child extends Parent { }
+
+  void bar() {
+    System.out.println(Parent.foo);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

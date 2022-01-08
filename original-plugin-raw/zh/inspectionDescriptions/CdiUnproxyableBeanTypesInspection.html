@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>报告无法代理的 Bean 类型的不正确用法。</p>
+<p>容器不能代理某些合法的 Bean 类型：没有不带形参的非 private 构造函数的类、声明为 final 的类或具有 final 方法、基元类型和数组类型的类。</p>
+
+<p>此检查会报告此类 Bean 类型的以下违规行为：</p>
+<ul>
+  <li>声明钝化范围的托管 Bean 必须为 <code>java.io.Serializable</code></li>
+  <li>不可序列化类型的 Bean 不能注入钝化范围的 Bean</li>
+  <li>容器必须能够代理注入的正常范围 Bean</li>
+</ul>
+</body>
+</html>

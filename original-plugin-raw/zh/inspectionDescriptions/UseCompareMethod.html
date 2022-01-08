@@ -1,0 +1,23 @@
+<html>
+<body>
+报告可以不使用更详细或效率较低的结构，而是使用 static <code>Integer.compare()</code> 方法或类似方法的情况。
+<p>如果 <code>x</code> 和 <code>y</code> 已是装箱的整数，则建议使用 <code>x.compareTo(y)</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public int compare(int x, int y) {
+    return x > y ? 1 : x &lt; y ? -1 : 0;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  public int compare(int x, int y) {
+    return Integer.compare(x, y);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Java 1.4 中引入了 <code>Double.compare()</code> 和 <code>Float.compare()</code> 方法。 其他基元类型的方法自 Java 1.7 起即可使用。
+</p>
+<p><small>2017.2 最新变化</small></p>
+</body>
+</html>

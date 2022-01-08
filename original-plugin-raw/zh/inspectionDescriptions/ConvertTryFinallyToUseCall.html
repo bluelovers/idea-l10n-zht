@@ -1,0 +1,26 @@
+<html>
+<body>
+报告 <code>finally</code> 中带有 <code>resource.close()</code> 并可转换为 <code>resource.use()</code> 调用的 <code>try-finally</code> 块。
+<p><code>use()</code> 更容易读取，且不易出错，因为无需显式 <code>close()</code> 调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun example() {
+      val reader = File("file.txt").bufferedReader()
+      try {
+          reader.lineSequence().forEach(::print)
+      } finally {
+          reader.close()
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun example() {
+      File("file.txt").bufferedReader().use { reader ->
+          reader.lineSequence().forEach(::print)
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+报告使用 <b>==</b> 或 <b>!=</b> 比较字符串的代码。
+<p>
+  这些运算符确定引用相等，而不是比较内容。
+  在大多数情况下，应使用 <code>equals()</code> 对字符串进行比较，当字符串为不同的对象时，会逐字符进行比较。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo(String s, String t) {
+    final boolean b = t == s;
+  }
+</code></pre>
+<p>如果已知 <code>t</code> 为非 null 值，则可以安全地应用“不安全”的快速修复，并获得类似于以下的结果：</p>
+<pre><code>
+  void foo(String s, String t) {
+    final boolean b = t.equals(s);
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

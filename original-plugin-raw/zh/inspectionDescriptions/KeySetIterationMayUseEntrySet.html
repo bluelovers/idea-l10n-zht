@@ -1,0 +1,22 @@
+<html>
+<body>
+报告对 <code>java.util.Map</code> 实例的 <code>keySet()</code> 的迭代，其中迭代的键用于从映射中检索值。
+<p>
+  替换为 <code>entrySet()</code> 或 <code>values()</code> 的迭代时，此类迭代可能会更有效（如果实际上没有使用键）。
+</p>
+<p>
+  同理，如果在 lambda 中检索值，则 <code>keySet().forEach(key -&gt; ...)</code> 可以替换为 <code>forEach((key, value) -&gt; ...)</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  for (Object key : map.keySet()) {
+   Object val = map.get(key);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  for (Object val : map.values()) {}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>报告在单体转换（<code>map</code>、<code>flatMap</code> 和 <code>filter</code>）中有副作用的表达式。</p>
+<p>考虑将单体转换移动到单独的 <code>foreach</code> 通道。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  var a = 0
+  Seq(1, 2).map(a += _)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

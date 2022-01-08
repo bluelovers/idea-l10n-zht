@@ -1,0 +1,20 @@
+<html>
+<body>
+报告 <code>also</code> 或 <code>apply</code> 等范围函数中可以简化的 <code>forEach</code> 函数。
+<p><b>将 forEach 调用转换为 onEach</b> 快速修复可用于自动修正代码。</p>
+<p>示例：</p>
+<pre><code>
+  fun test(list: List&lt;Int&gt;) {
+      val x = list.also { it.forEach { it + 4 } }.toString()
+      val y = list.apply { forEach { println(it) } }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun test(list: List&lt;Int&gt;) {
+      val x = list.onEach { it + 4 }.toString()
+      val y = list.onEach { println(it) }
+  }
+</code></pre>
+</body>
+</html>

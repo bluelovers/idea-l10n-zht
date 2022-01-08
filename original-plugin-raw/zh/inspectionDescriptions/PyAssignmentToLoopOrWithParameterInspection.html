@@ -1,0 +1,18 @@
+<html>
+<body>
+报告使用内部循环重写循环变量的情况：
+<pre style="font-family: monospace">
+    for i in range(5):
+      for i in range(20, 25):
+          print("Inner", i)
+      print("Outer", i)
+  </pre>
+
+如果在 <code>with</code> 语句中声明的变量在语句体中重新声明，它也会向您发出警告：
+<pre style="font-family: monospace">
+    with open("file") as f:
+      f.read()
+      with open("file") as f:
+  </pre>
+</body>
+</html>

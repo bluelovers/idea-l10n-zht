@@ -1,0 +1,15 @@
+<html>
+<body>
+报告肯定会无限递归或抛出异常的方法。
+此检查报告的方法无法正确结束。
+<p><b>示例：</b></p>
+<pre>
+<code>
+// 此函数会使循环越来越深
+def fibonacci(int n) {
+  return fibonacci(n-1) + fibonacci(n-2)
+}
+</code>
+</pre>
+</body>
+</html>

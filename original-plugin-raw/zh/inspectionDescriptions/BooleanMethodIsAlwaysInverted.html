@@ -1,0 +1,38 @@
+<html>
+<body>
+报告一个返回类型为 <code> boolean </code> 的方法，该方法仅在否定上下文中使用。
+<p>您可以使用快速修复来重命名方法和反转方法。
+  由于性能原因，某些方法可能不会在编辑器中高亮显示。</p>
+<p>示例：</p>
+<pre><code>
+  class C {
+    boolean alwaysTrue() {
+      return true;
+    }
+
+    void f() {
+      if (!alwaysTrue()) {
+        return;
+      }
+    }
+    boolean member = !alwaysTrue();
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class C {
+    boolean alwaysFalse() {
+      return false;
+    }
+
+    void f() {
+      if (alwaysFalse()) {
+        return;
+      }
+    }
+    boolean member = alwaysFalse();
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

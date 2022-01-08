@@ -1,0 +1,16 @@
+<html>
+<body>
+报告引发不适当异常的 <code>throw</code> 语句。
+例如，异常可能因为过于通用而不适当，例如 <code>java.lang.Exception</code> 或 <code>java.io.IOException</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  void setup(Mode mode) {
+      if (mode == null)
+          throw new RuntimeException("Problem during setup"); // 警告：抛出了禁止的异常 'RuntimeException'
+      ...
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>被禁止的异常</b>列表可指定应报告哪些异常。<p>
+</body>
+</html>

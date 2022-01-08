@@ -1,0 +1,23 @@
+<html>
+<body>
+报告使用 <code>var</code> 关键字声明但从未被修改的局部变量。
+<p>Kotlin 鼓励使用 <code>val</code> 关键字声明几乎不可变的变量，以确保它们的值永远不会改变。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun example() {
+      var primeNumbers = listOf(1, 2, 3, 5, 7, 11, 13)
+      var fibonacciNumbers = listOf(1, 1, 2, 3, 5, 8, 13)
+      print("Same numbers: " + primeNumbers.intersect(fibonacciNumbers))
+  }
+</code></pre>
+<p>快速修复会将 <code>var</code> 关键字替换为 <code>val</code>：</p>
+<pre><code>
+  fun example() {
+      val primeNumbers = listOf(1, 2, 3, 5, 7, 11, 13)
+      val fibonacciNumbers = listOf(1, 1, 2, 3, 5, 8, 13)
+      print("Same numbers: " + primeNumbers.intersect(fibonacciNumbers))
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

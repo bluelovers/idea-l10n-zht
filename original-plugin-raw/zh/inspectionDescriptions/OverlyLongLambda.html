@@ -1,0 +1,15 @@
+<html>
+<body>
+报告语句数超过指定最大值的 lambda 表达式。
+<p>过长的 lambda 表达式可能令人困惑，将语句提取到单独的方法中通常会更好。<p>
+<p>以下语句不计算在内：</p>
+<ul>
+  <li>空语句（分号）</li>
+  <li>块语句</li>
+  <li><code>for</code> 循环初始化语句，即 <code>for(int i = ...;...)</code> 语句内的 <code>int i = ...</code></li>
+  <li><code>for</code> 循环 update 语句，即 <code>for(int i = ...;...; i += 2)</code> 语句内的 <code>i += 2</code></li>
+</ul>
+<!-- tooltip end -->
+<p>使用<b>非注释源语句限制</b>字段可指定 lambda 表达式中允许的最大语句数。<p>
+</body>
+</html>

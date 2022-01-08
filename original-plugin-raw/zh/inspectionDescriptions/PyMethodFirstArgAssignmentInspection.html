@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>报告第一个形参（如 <code>self</code> 或 <code>cls</code>）在方法中重新赋值的情况。
+  因为在大多数情况下，这种重新赋值中没有目标，所以 IDE 会指示错误。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class Account:
+    def calc(self, balance):
+        if balance == 0:
+            self = balance
+        return self
+</pre>
+<p>修复方法可以是检查和修改算法，以确保有必要进行这样的重新赋值。 如果一切都正确无误，可以调用此代码的意图操作，并选择忽略警告。</p>
+</body></html>

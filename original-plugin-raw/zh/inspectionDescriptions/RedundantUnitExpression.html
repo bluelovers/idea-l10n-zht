@@ -1,0 +1,35 @@
+<html>
+<body>
+报告冗余的 <code>Unit</code> 表达式。
+<p>
+    Kotlin 中的 <code>Unit</code> 可以用作不返回任何有意义的函数的返回类型。
+    <code>Unit</code> 类型只有一个可能的值，即 <code>Unit</code> 对象。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun redundantA(): Unit {
+      return Unit // 冗余，'Unit' 默认返回并与预期返回类型匹配
+  }
+
+  fun requiredA(condition: Boolean): Any {
+      if (condition) return "hello"
+      return Unit // 显式 'Unit' 为必选项，因为预期类型为 'Any'
+  }
+
+  fun redundantB(condition: Boolean): Any = if (condition) {
+      fun ancillary(): Int = 1
+      println("${ancillary()}")
+      Unit // 冗余，因为上一个表达式已经为 'Unit' 类型
+  } else {
+      println("else")
+  }
+
+  fun requiredB(condition: Boolean): Any = if (condition) {
+      1024
+      Unit // 必选项，否则 '1024' (Int) 将为返回值
+  } else {
+      println("else")
+  }
+</code></pre>
+</body>
+</html>

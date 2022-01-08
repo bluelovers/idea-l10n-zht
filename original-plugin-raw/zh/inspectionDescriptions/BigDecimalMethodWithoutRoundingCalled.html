@@ -1,0 +1,12 @@
+<html>
+<body>
+报告对没有舍入模式实参的 <code>divide()</code> 或 <code>setScale()</code> 的调用。
+<p>在结果中不能表示精确值时（例如由于具有非终止十进制扩展），此类调用可能导致 <code>ArithmeticException</code>。</p>
+<p>指定舍入模式可防止 <code>ArithmeticException</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  BigDecimal.valueOf(1).divide(BigDecimal.valueOf(3));
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

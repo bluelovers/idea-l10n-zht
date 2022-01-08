@@ -1,0 +1,25 @@
+<html>
+<body>
+报告接受 <code>boolean</code> 形参的 public 方法。
+<p>如果某个 public 方法（API 的一部分）不是 setter，则向该方法添加 <code>boolean</code> 形参几乎始终是一种不好的做法。
+使用此类方法读取代码时，如果不查看源代码或文档，会很难理解 <code>boolean</code> 的含义。</p>
+<p>此问题也被称为<a href="https://ariya.io/2011/08/hall-of-api-shame-boolean-trap">布尔陷阱</a>。
+  <code>boolean</code> 形参通常可以替换为 <code>enum</code>。</p>
+<p>示例：</p>
+<pre><code>
+  // 警告：在查看对此方法的
+  // 调用时，很难理解
+  // 布尔形参的含义
+  public boolean setPermission(File f,
+                               int access,
+                               boolean enable,
+                               boolean ownerOnly) {
+    // ...
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用<b>仅报告具有多个布尔形参的方法</b>选项可以仅在一个方法包含多个布尔形参时发出警告。
+<p>
+</body>
+</html>

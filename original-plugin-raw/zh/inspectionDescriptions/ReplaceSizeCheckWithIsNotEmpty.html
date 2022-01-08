@@ -1,0 +1,22 @@
+<html>
+<body>
+报告应替换为 <code>isNotEmpty()</code> 的 <code>Collections/Array/String</code> 的大小检查。
+<p>使用 <code>isNotEmpty()</code> 可使代码更简单。</p>
+<p>该快速修复会将大小检查替换为 <code>isNotEmpty()</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo() {
+      val arrayOf = arrayOf(1, 2, 3)
+      arrayOf.size &gt; 0
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo() {
+      val arrayOf = arrayOf(1, 2, 3)
+      arrayOf.isNotEmpty()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

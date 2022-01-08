@@ -1,0 +1,27 @@
+<html>
+<body>
+报告在循环中调用的可以替换为 <code>List.subList().clear()</code> 的 <code>List.remove(index)</code>。
+<p>在删除多个元素的情况下，此替换对于大多数  <code>List</code> 实现更有效。</p>
+<p>示例：</p>
+<pre><code>
+  void removeRange(List&lt;String&gt; list, int from, int to) {
+    for (int i = from; i &lt; to; i++) {
+        list.remove(from);
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void removeRange(List&lt;String&gt; list, int from, int to) {
+    if (to &gt; from) {
+      list.subList(from, to).clear();
+    }
+  }
+</code></pre>
+<p>
+  该快速修复会自动添加范围检查，以防止在最小值大于最大值时可能出现的 <code>IndexOutOfBoundsException</code>。 如果代码中不可能出现这种情况，则可将其移除。
+</p>
+<!-- tooltip end -->
+<p><small>2018.2 最新变化</small></p>
+</body>
+</html>

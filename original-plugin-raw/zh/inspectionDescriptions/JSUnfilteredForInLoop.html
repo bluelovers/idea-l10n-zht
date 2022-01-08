@@ -1,0 +1,27 @@
+<html>
+<body>
+报告未筛选的 <code>for-in</code> 循环。
+<br/><br/>
+使用此结构不仅会处理对象自身的属性，还会处理对象原型的属性。
+在某些特定情况下可能出人意料，例如，在复制或修改所有属性的实用程序方法中
+或者 <code>Object</code> 的原型可能被错误修改时。
+例如，以下代码将打印 <b>42</b> 和 <b>myMethod</b>：
+<br/><br/>
+<pre><code>
+Object.prototype.myMethod = function myMethod() {};
+let a = { foo: 42 };
+for (let i in a) {
+  console.log(a[i]);
+}
+</code></pre>
+
+<p>建议将整个循环替换为 <code>Object.keys()</code> 方法，或添加 <code>hasOwnProperty()</code> 检查。 应用快速修复后，代码如下所示：</p>
+<pre><code>
+for (let i in a) {
+  if (a.hasOwnProperty(i)) {
+    console.log(a[i]);
+  }
+}
+</code></pre>
+</body>
+</html>

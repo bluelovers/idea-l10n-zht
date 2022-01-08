@@ -1,0 +1,16 @@
+<html>
+<body>
+报告仅具有一个直接继承者的 abstract 类。 虽然这种类可能会在内存受限或带宽受限的环境中提供令人钦佩的设计清晰度，但它们不必要地增加了应用程序的总占用空间。 请考虑将抽象类与其继承者合并。
+<p>
+  此检查适用于 Java ME 和其他资源高度受限的环境。
+  不加考虑地应用此检查的结果可能会对代码清晰度和设计产生负面影响。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  abstract class Base {} // 将被报告
+
+  class Inheritor extends Base {}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

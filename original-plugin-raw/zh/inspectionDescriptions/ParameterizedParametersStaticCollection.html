@@ -1,0 +1,45 @@
+<html>
+<body>
+报告使用 <code>@RunWith(Parameterized.class)</code> 注解，但要么不包括使用 <code>@Parameterized.Parameters</code> 注解的数据提供程序方法，要么此方法的签名不正确的 JUnit 4 <a href="https://github.com/junit-team/junit4/wiki/parameterized-tests">形参化测试</a>类。 这种测试类无法运行。
+数据提供程序方法应为 <code>public</code> 和 <code>static</code> 并具有 <code>Iterable</code> 或 <code>Object[]</code> 的返回类型。
+<p>建议创建一个空的形参提供程序方法或更改不正确的数据提供程序方法的签名。</p>
+
+<p><b>示例：</b><p>
+<pre><code>
+  @RunWith(Parameterized.class)
+  <b>public class</b> ImportantTest {
+    <b>private int</b> input;
+    <b>private int</b> expected;
+
+    ImportantTest(<b>int</b> input, <b>int</b> expected) {
+      <b>this</b>.input = input;
+      <b>this</b>.expected = expected;
+    }
+
+    // …测试用例
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  @RunWith(Parameterized.class)
+  <b>public class</b> ImportantTest {
+    <b>private int</b> input;
+    <b>private int</b> expected;
+
+    ImportantTest(<b>int</b> input, <b>int</b> expected) {
+      <b>this</b>.input = input;
+      <b>this</b>.expected = expected;
+    }
+
+    @Parameters
+    <b>public static</b> Iterable&lt;Object[]> parameters() {
+      <b>return null</b>;
+    }
+
+    // …测试用例
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

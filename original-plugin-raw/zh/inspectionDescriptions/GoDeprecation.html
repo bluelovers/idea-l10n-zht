@@ -1,0 +1,29 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+报告已弃用的元素的用法。
+<p>示例：</p>
+<pre><code>// 已弃用：使用 io.SeekStart、io.SeekCurrent 和 io.SeekEnd。
+const (
+ SEEK_SET int = 0 // 相对于文件的原点寻找
+ SEEK_CUR int = 1 // 相对于当前的偏移量寻找
+ SEEK_END int = 2 // 相对于终点寻找
+)</code></pre>
+<p>根据 <a href="https://golang.org/pkg/os/#pkg-constants">golang.org 上的 Constants</a> 页面，<code>SEEK_SET</code>、<code>SEEK_CUR</code> 和 <code>SEEK_END</code> 已被弃用。</p>
+</body>
+</html>

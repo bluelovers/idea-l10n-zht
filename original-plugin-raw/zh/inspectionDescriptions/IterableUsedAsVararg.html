@@ -1,0 +1,17 @@
+<html>
+<body>
+报告 vararg 方法调用中 <code>Collection</code> 或 <code>Iterable</code> 的可疑用法。
+<p>例如，在以下方法中：</p>
+<pre><code>
+  &lt;T&gt; boolean contains(T needle, T... haystack) {...}
+</code></pre>
+<p>像下面这样的调用</p>
+<pre><code>
+  if(contains("item", listOfStrings)) {...}
+</code></pre>
+<p>看起来很可疑，因为列表将被包装成一个元素数组。
+  此类代码可以被成功编译并且很可能会无异常地运行，但它可能被错误地使用。</p>
+<!-- tooltip end -->
+<p><small>2019.2 最新变化</small></p>
+</body>
+</html>

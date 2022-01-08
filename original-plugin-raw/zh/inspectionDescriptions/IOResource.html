@@ -1,0 +1,32 @@
+<html>
+<body>
+报告未安全关闭的 I/O 资源。 此检查所检查的 I/O 资源包括 <code>java.io.InputStream</code>、<code>java.io.OutputStream</code>、<code>java.io.Reader</code>、<code>java.io.Writer</code>、<code>java.util.zip.ZipFile</code>、<code>java.io.Closeable</code> 和 <code>java.io.RandomAccessFile</code>。
+<p>
+  不报告由其他 I/O 资源包装的 I/O 资源，因为包装资源将关闭被包装资源。
+</p>
+<p>
+  默认情况下，该检查假定资源可以由名称中带有 'close' 或 'cleanup' 的任何方法关闭。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void save() throws IOException {
+    FileWriter writer = new FileWriter("filename.txt"); //警告
+    writer.write("sample");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用以下选项配置检查：
+</p>
+<ul>
+  <li>列出不需关闭并且此检查应当忽略的 I/O 资源类。</li>
+  <li>
+    是否允许在 <code>try</code> 块内打开 I/O 资源。
+    这种样式不太合意，因为它比在 <code>try</code> 块前面打开资源更冗长。
+  </li>
+  <li>
+    资源能否通过任何将资源作为实参传递的方法调用来关闭。
+  </li>
+</ul>
+</body>
+</html>

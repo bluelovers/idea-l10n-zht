@@ -1,0 +1,30 @@
+<html>
+<body>
+在对象构造期间使用 <code>this</code> 报告不安全的操作，包括：
+
+<ul>
+  <li>在类初始化期间访问非 final 属性：从构造函数或属性初始化</li>
+  <li>在类初始化期间调用非 final 函数</li>
+  <li>在非 final 类的构造函数中使用 <code>this</code> 作为函数实参</li>
+</ul>
+
+<p>
+    如果其他类继承自给定的类，则在执行不安全操作时，可能无法完全初始化它们。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>abstract class</b> Base {
+      <b>val</b> code = calculate()
+      <b>abstract fun</b> calculate(): Int
+  }
+
+  <b>class</b> Derived(<b>private val</b> x: Int) : Base() {
+      <b>override fun</b> calculate() = x
+  }
+
+  <b>fun</b> testIt() {
+      println(Derived(42).code) <i>// 预期值：42，实际值：0</i>
+  }
+</code></pre>
+</body>
+</html>

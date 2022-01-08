@@ -1,0 +1,15 @@
+<html>
+<body>
+报告 <code>@TupleConstructor</code> 和 <code>@MapConstructor</code>
+<code>includes</code> 和 <code>excludes</code> 注解特性值中的未解析标识符。
+<p><b>示例：</b></p>
+<pre><code>
+  // 未解析的 'c'
+  @TupleConstructor(includes = ['a', 'b', 'c'])
+  class X {
+      def a
+      def b
+  }
+</code></pre>
+</body>
+</html>

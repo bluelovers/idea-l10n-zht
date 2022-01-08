@@ -1,0 +1,18 @@
+<html>
+<body>
+报告带有返回 <code>this</code> 或将其作为形参的方法的 EJB 类。
+
+<p><b>示例：</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+  private AnotherBean anotherBean;
+
+  public ExampleBean setAnotherBean(AnotherBean anotherBean) {
+    this.anotherBean = anotherBean;
+    return this; // 错误：不应在此处返回 `this`
+  }
+}
+</code></pre>
+</body>
+</html>

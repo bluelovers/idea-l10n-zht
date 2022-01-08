@@ -1,0 +1,16 @@
+<html>
+<body>
+报告捕获 <code>java.lang.Error</code> 或其任何子类并且不重新抛出错误的 <code>try</code> 语句。
+<p>不会报告捕获 <code>java.lang.ThreadDeath</code> 的语句。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  try {
+    executeTests(request);
+  }
+  catch (OutOfMemoryError ex) { // 警告：错误 'ex' 未重新抛出
+    return false;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

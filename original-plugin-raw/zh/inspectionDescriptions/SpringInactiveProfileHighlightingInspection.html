@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告 Spring XML 应用程序上下文中的停用配置文件。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;!-- 为此应用程序上下文选择有效配置文件 <strong>'DEV'</strong> --&gt;
+  &lt;beans profile="<strong>DEV</strong>"&gt;
+    &lt;bean class="MyFactory" factory-method="createBean"/&gt;
+  &lt;/beans&gt;
+  &lt;!--  此标记的内容高亮显示为 'unused' --&gt;
+  <em>&lt;beans profile="<strong>TESTS</strong>"&gt;
+    &lt;bean class="MyTestFactory" factory-method="createBean"/&gt;
+  &lt;/beans&gt;</em>
+  &lt;!--  'unused' 部分的结尾 --&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

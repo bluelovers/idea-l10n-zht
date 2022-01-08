@@ -1,0 +1,15 @@
+<html>
+<body>
+报告 CASE 和 IF 可互换的情况。
+<p>示例（MySQL）：</p>
+<pre><code>SELECT CASE
+WHEN C1 IS NULL THEN 1
+ELSE 0
+END
+FROM dual;</code></pre>
+<p>您可以通过用 IF 替换 CASE 结构来缩短代码。 为此，请应用 <b> 替换为 'IF' 调用 </b> 意图操作。 示例代码如下所示：</p>
+<pre><code>SELECT IF(C1 IS NULL, 1, 0)
+FROM dual;</code></pre>
+<p>要将 IF 恢复为 CASE，请点击 IF 并应用<b>替换为 CASE 表达式</b> 意图操作。</p>
+</body>
+</html>

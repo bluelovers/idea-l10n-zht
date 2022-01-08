@@ -1,0 +1,16 @@
+<html>
+<body>
+报告覆盖 <code>Map</code> 键、<code>Set</code> 元素或 <code>add</code>/<code>put</code> 调用序列中的数组元素或使用类似于 <code>Set.of</code> 的 Java 9 工厂方法（将导致运行时异常）的代码。
+<p>这通常是复制粘贴错误所致。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  map.put("A", 1);
+  map.put("B", 2);
+  map.put("C", 3);
+  map.put("D", 4);
+  map.put("A", 5); // 键 "A" 重复，覆盖以前写入的条目
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.3 最新变化</small></p>
+</body>
+</html>

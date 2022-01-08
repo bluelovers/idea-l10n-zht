@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>报告立即创建和使用的 lambda 或匿名函数。</p>
+<!-- tooltip end -->
+<pre><code>
+  <b>fun</b> test() {
+      ({ println() })() // 冗余
+      (<b>fun</b>() { println() })() // 冗余
+  }
+</code></pre>
+</body>
+</html>

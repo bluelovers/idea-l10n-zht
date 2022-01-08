@@ -1,0 +1,12 @@
+<html><body>
+报告方法形参中的字符串和使用 <code>@Nls</code> 注解的返回值，并将形参大写以符合大多数平台 UI 指南中的大写规则。
+<p><b>示例：</b></p>
+<pre><code>
+  void setTitle(@NlsContexts.DialogTitle String title) {}
+  setTitle("This is sentence capitalization but should be title"); 
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  setTitle("This Is Sentence Capitalization but Should Be Title"); 
+</code></pre>
+</body></html>

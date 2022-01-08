@@ -1,0 +1,25 @@
+<html>
+<body>
+建议使用字段初始值设定项替换通过赋值的字段初始化。
+<p>仅当字段初始值设定项位于初始值设定项中时才会高亮显示代码，并且将其与字段声明结合可能是安全的。
+  在其他情况下，检查提供没有代码高亮显示的快速修复，因为修复可能会更改代码语义。</p>
+<p>示例：</p>
+<pre><code>
+  class MyClass {
+    static final int intConstant;
+    
+    static {
+      intConstant = 10;
+    }
+  }
+</code></pre>
+快速修复将赋予的值移动到字段初始值设定项，并移除类初始值设定项部分（如果可能）：
+<pre><code>
+  class MyClass {
+    static final int intConstant = 10;
+  }
+</code></pre>
+<!-- tooltip end -->
+<small>自从 2017.2</small>
+</body>
+</html>

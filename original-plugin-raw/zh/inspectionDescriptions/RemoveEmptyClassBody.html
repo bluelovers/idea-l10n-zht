@@ -1,0 +1,30 @@
+<html>
+<body>
+报告具有空主体的类和对象的声明。
+<p>使用“移除冗余的空类主体”快速修复可清理代码。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class EmptyA() {} // &lt;== 空主体
+
+  class EmptyB {
+      companion object {} // &lt;== 空主体
+  }
+
+  fun emptyC() {
+     object {} // &lt;== 匿名对象，可以（未报告）
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class EmptyA()
+
+  class EmptyB {
+      companion object
+  }
+
+  fun emptyC() {
+     object {}
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+报告可以替换为二元运算符（特别是与比较相关的运算符）的函数调用。
+<p><b>示例：</b></p>
+<pre><code>  fun test(): Boolean {
+      return 2.compareTo(1) > 0 // 可替换的 'compareTo()'
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>  fun test(): Boolean {
+      return 2 > 1
+  }
+</code></pre>
+</body>
+</html>

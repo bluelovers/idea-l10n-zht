@@ -1,0 +1,26 @@
+<html>
+<body>
+报告可以替换为 Kotlin 合成属性的 Java <code>get</code> 和 <code>set</code> 方法调用。
+<p><b>使用属性访问语法</b>快速修复可用于自动修正代码。</p>
+<p>示例：</p>
+<pre><code>
+  // Java:
+  public class JavaClassWithGetter {
+      private final String expr = "result";
+
+      // ...
+
+      public String getExpr() {
+          return expr;
+      }
+  }
+</code></pre>
+<pre><code>
+  // Kotlin:
+  fun test(j: JavaClassWithGetter) {
+      // ...
+      j.getExpr() // &lt;== 快速修复会将表达式简化为 'j.expr'
+  }
+</code></pre>
+</body>
+</html>

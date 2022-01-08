@@ -1,0 +1,23 @@
+<html>
+<body>
+报告 <code>for</code> 循环的用法。 最好使用 <code>.each</code> 而不是 <code>for</code> 循环。
+<p>示例：</p>
+<pre>
+<code># 不良做法
+for i in 0..5
+  puts &quot;Value is #{i}&quot;
+end</code>
+</pre>
+
+可以通过快速修复将 <code>for</code> 循环转换为 <code>.each</code> 循环。 应用快速修复后，结果如下所示：
+
+<pre>
+<code># 优良做法
+(0..5).each do |i|
+  puts &quot;Value is #{i}&quot;
+end
+</code>
+</pre>
+<p><span style="font-size: smaller;">受 <a href="https://github.com/martinjandrews/roodi">'Roodi'</a> 启发</span></p>
+</body>
+</html>

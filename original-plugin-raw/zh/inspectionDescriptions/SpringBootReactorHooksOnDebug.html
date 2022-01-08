@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>报告调用 <code>ReactorDebugAgent.init()</code> 时 <code>Hooks.onOperatorDebug()</code> 的用法。</p>
+<p>
+  如果 <code>ReactorDebugAgent</code> 在类路径中，并且 <code>spring.reactor.debug-agent.enabled</code> 为 <code>true</code>（默认值），启动时自动调用 <code>ReactorDebugAgent.init()</code>。
+  同时使用 <code>Hooks.onOperatorDebug()</code> 和 <code>ReactorDebugAgent.init()</code> 会导致 Reactor 生成双倍的调试堆栈帧。
+  此外，<code>Hooks.onOperatorDebug()</code> 会导致性能开销。
+</p>
+
+<p>该快速修复会移除对 <code>Hooks.onOperatorDebug()</code> 的调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public void hook() {
+    Hooks.onOperatorDebug(); // 报告 '初始化 ReactorDebugAgent 时调用 Hooks.onOperatorDebug()'
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  public void hook() {
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>此检查仅在项目或模块的 Spring Boot 版本为 2.2.0 或更高时触发。</p>
+</body>
+</html>

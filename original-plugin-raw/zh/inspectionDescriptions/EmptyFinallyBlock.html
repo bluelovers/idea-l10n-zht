@@ -1,0 +1,26 @@
+<html>
+<body>
+报告空的 <code>finally</code> 块。
+<p>空的 <code>finally</code> 块通常表明存在编码错误。 在代码重构后它们可能保留下来，可以安全移除。</p>
+<p>此检查不报告在 JSP 文件中发现的空 <code>finally</code> 块。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  try {
+    Files.readString(Paths.get("in.txt"));
+  } catch (IOException e) {
+    throw new RuntimeException(e);
+  } finally {
+
+  }
+</code></pre>
+<p>在应用快速修复后：
+<pre><code>
+  try {
+    Files.readString(Paths.get("in.txt"));
+  } catch (IOException e) {
+    throw new RuntimeException(e);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

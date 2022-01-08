@@ -1,0 +1,47 @@
+<html>
+<body>
+<p>报告当前文件中未启用的高级语言功能的用法。</p>
+
+<p>高级语言功能需要通过相应的编译器选项或通过在使用它们的文件中导入显式功能标志来启用。</p>
+
+<p>
+    后缀运算符表示法：<br>
+    <code>val s = 123 toString</code>
+</p>
+
+<p>
+    反射调用：<br>
+    <code>def foo(v: {def bar()}) = v.bar()</code>
+</p>
+
+<p>
+    动态成员选择：<br>
+    <code>class Foo extends Dynamic</code>
+</p>
+
+<p>
+    隐式转换：<br>
+    <code>implicit def toInt(s: String) = s.toInt</code>
+</p>
+
+<p>
+    高阶类型<small>（自 <em>Scala 2.13.1</em> 起默认启用）</small>：<br>
+    <code>class Bar[M[A]]</code>
+</p>
+
+<p>
+    存在类型：<br>
+    <code>def foo(v: Seq[T] forSome { type T })</code>
+</p>
+
+<p>
+    宏定义：<br>
+    <code>def assert(s: String) = macro Asserts.assertImpl</code>
+</p>
+<!-- tooltip end -->
+
+<p>当提供 "-feature" 选项时，Scala 编译器也可能会发出这些警告。 </p>
+
+<p>有关编译器选项，请参阅：<b>项目设置 | 编译器 | Scala 编译器 | 功能</b></p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+报告采用的函数接口存在抽象方法签名冲突的重载方法。
+<p>此类重载会引入歧义，并要求调用方将 lambda 转换为特定类型或显式指定 lambda 形参类型。
+  最好为重载方法赋予不同的名称，以消除歧义。</p>
+<p>示例：</p>
+<pre><code>
+  interface MyExecutor {
+    void execute(Supplier&lt;?&gt; supplier);
+    void execute(Callable&lt;?&gt; callable);
+  }
+</code></pre>
+<p>
+这里的 <code>Supplier</code> 和 <code>Callable</code> 为函数接口，其单抽象方法不接受任何形参并返回非 void 值。
+因此，除非使用显式转换，否则无法在调用点推断 lambda 的类型。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<body>
+报告从属性的类内部对简单属性 getter 的调用。
+<p>
+  简单的属性 getter 会被定义为只返回字段的值，而不进行其他计算。 可以使用该快速修复安全地内联此类简单的 getter 调用。
+  为了保持代码清晰，某些编码标准还建议不使用简单的 getter。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Salient {
+    private String name;
+
+    public String getName() {
+      return name;
+    }
+
+    @Override
+    public String toString() {
+      return getName();
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  public class Salient {
+    private String name;
+
+    public String getName() {
+      return name;
+    }
+
+    @Override
+    public String toString() {
+      return name;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用以下选项配置检查：</p>
+<ul>
+  <li>是否仅报告 <code>this</code> 上的 getter 调用，而不报告作为形参传入的相同类型的对象。</li>
+  <li>是否忽略非 <code>private</code> getter。</li>
+</ul>
+
+</body>
+</html>

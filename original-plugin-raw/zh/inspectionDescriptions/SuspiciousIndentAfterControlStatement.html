@@ -1,0 +1,25 @@
+<html>
+<body>
+报告不带大括号控制语句后面的语句的可疑缩进。
+<p>
+  进行此类缩进时，语句看似在控制语句内部，其实它将在控制语句后无条件地执行。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Bar {
+      void foo(int i) {
+          if (i == 0)
+              System.out.println("foo");
+              System.out.println("bar"); // 警告
+          if (i == 1);
+              System.out.println("great"); // 警告
+          if (i == 42)
+              System.out.println("answer");
+                  System.out.println("question"); // 警告
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

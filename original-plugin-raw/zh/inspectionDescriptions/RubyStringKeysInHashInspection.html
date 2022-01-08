@@ -1,0 +1,19 @@
+<html>
+<body>
+报告字符串作为键的哈希。 最好使用符号而不是字符串作为哈希键。
+<p>示例：</p>
+<pre>
+<code># 不良做法
+{ 'foo' => 1, 'bar' => 2 }</code>
+</pre>
+
+可通过快速修复将所有字符串键转换为符号。 应用快速修复后，结果如下所示：
+
+<pre>
+<code># 优良做法
+{ foo: 1, bar: 2 }</code>
+</pre>
+<p><span style="font-size: smaller;">受 <a
+  href="https://github.com/rubocop-hq/ruby-style-guide#symbols-as-keys">'RuboCop'</a> 启发</span></p>
+</body>
+</html>

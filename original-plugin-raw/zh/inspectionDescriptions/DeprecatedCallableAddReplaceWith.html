@@ -1,0 +1,24 @@
+<html>
+<body>
+报告在其 <code>kotlin.deprecated</code> 注解中没有 <code>kotlin.ReplaceWith</code> 实参的已弃用函数和属性，IDE 会建议根据它们的主体进行添加。
+<p>
+    Kotlin 提供 <code>ReplaceWith</code> 实参来自动替换已弃用的声明。
+    建议使用实参来修正代码中的弃用问题。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @Deprecated("Use refined() instead.")
+  fun deprecated() = refined()
+
+  fun refined() = 42
+</code></pre>
+<p>该快速修复会添加 <code>ReplaceWith()</code> 实参：</p>
+<pre><code>
+  @Deprecated("Use refined() instead.", ReplaceWith("refined()"))
+  fun deprecated() = refined()
+
+  fun refined() = 42
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

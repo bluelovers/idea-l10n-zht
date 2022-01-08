@@ -1,0 +1,23 @@
+<html>
+<body>
+报告对 <code>CharSequence</code> 作为实参的 <code>String.equals()</code> 的调用。
+<p>
+  对于 <code>String</code> 实参，<code>String.equals()</code> 只能返回 <code>true</code>。
+  要比较包含非 <code>String</code> <code>CharSequence</code> 实参的 <code>String</code> 的内容，请使用 <code>contentEquals()</code> 方法。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  boolean equals(String s, CharSequence ch) {
+    return s.equals(ch);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  boolean equals(String s, CharSequence ch) {
+    return s.contentEquals(ch);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+<small>2017.3 最新变化</small>
+</body>
+</html>

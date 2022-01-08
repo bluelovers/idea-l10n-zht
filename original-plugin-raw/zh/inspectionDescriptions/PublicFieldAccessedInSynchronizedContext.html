@@ -1,0 +1,20 @@
+<html>
+<body>
+报告在同步上下文中访问的非 <code>final</code>、非 <code>private</code> 字段。
+<p>
+  不能保证始终以同步方式访问非 <code>private</code> 字段，此类“部分同步的”访问可能意外导致不一致的数据结构。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Bar {
+    public String field1;
+  }
+  public Bar myBar;
+
+  synchronized public void sample() {
+   myBar.field1 = "bar";
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

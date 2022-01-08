@@ -1,0 +1,10 @@
+<html>
+<body>
+报告在只读连接期间可能会修改数据库的语句。 <p>要为连接启用只读模式，请在<b>数据库</b>工具窗口（<b>视图 | 工具窗口 | 数据库</b>）中右键点击数据源，然后选择<b>属性</b>。
+  在<b>数据源和驱动程序</b>对话框中，点击<b>选项</b>选项卡并选中<b>只读</b>复选框。</p>
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE foo(a INT);
+INSERT INTO foo VALUES (1);</code></pre>
+<p>由于 <code>CREATE TABLE</code> 和<code>INSERT INTO</code> 语句会导致数据库修改，因此这些语句将在只读连接模式中高亮显示。</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+当签名中类的可见性不如成员本身的可见性时，报告类在字段或方法签名中的用法。
+虽然是合法的 Java，但此类成员在可见性范围之外是无用的。
+<p>示例：</p>
+<ul>
+  <li>返回 <code>private</code> 内部 <code>class</code> 的 <code>public</code> 方法。</li>
+  <li>类型为 package-local <code>class</code> 的 <code>protected</code> 字段。</li>
+</ul>
+<p>
+在 Java 9 中，模块可能会通过将其软件包排除在导出之外来隐藏某些类。
+因此，如果导出的 API 的签名包含非导出类，此类 API 在模块之外就是无用的。
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>模块的 API 公开未导出的类(Java 9+)</b> 选项可以报告公开未导出类的模块 API。<br>请注意，项目或模块的语言级别为 9 或更高时，该选项才有效。</li>
+  <li>使用<b>公共 API 公开不可访问的类</b>选项可以报告公开不可访问类的公共 API。</li>
+  <li>使用 <b>Package-local API 公开 private 类</b>选项可以以报告公开 <code>private</code> 类的 package-local API。</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+报告导出到定义它们的同一 Java 9 模块或在该模块中打开的软件包。
+该快速修复会从 <code>module-info.java</code> 中移除此类指令。
+<p>示例：</p>
+<pre><code>
+  module com.mycomp {
+    exports com.mycomp.main to com.mycomp;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  module main {
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 9 或更高时，此检查才会报告。</p>
+</body>
+</html>

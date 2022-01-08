@@ -1,0 +1,30 @@
+<html>
+<body>
+报告对可以替换为 <code>associateBy()</code> 或 <code>associateWith()</code> 的 <code>associate()</code> 和 <code>associateTo()</code> 的调用。
+<p>
+    两个函数都接受应用于给定序列或集合（作为接收器）的元素的转换器函数。
+    然后该对函数被用于构建结果 <code>Map</code>。
+</p>
+<p>
+    鉴于转换器引用 <code>it</code>，<code>associate[To]()</code> 调用可以替换为性能更高的 <code>associateBy()</code> 或 <code>associateWith()</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>  fun getKey(i: Int) = 1L
+  fun getValue(i: Int) = 1L
+
+  fun test() {
+      arrayOf(1).associate { getKey(it) to it }  // 可替换的 'associate()'
+      listOf(1).associate { it to getValue(it) } // 可替换的 'associate()'
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>  fun getKey(i: Int) = 1L
+  fun getValue(i: Int) = 1L
+
+  fun test() {
+      arrayOf(1).associateBy { getKey(it) }
+      listOf(1).associateWith { getValue(it) }
+  }
+</code></pre>
+</body>
+</html>

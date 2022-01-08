@@ -1,0 +1,23 @@
+<html>
+<body>
+报告过强的类型转换。 例如，将对象转换为 <code>ArrayList</code>，将其转换为 <code>List</code> 也可以。
+<p>
+  <b>注意</b>：与<i>冗余类型转换</i>检查非常相似，如果您有意使用过强的转换来生成 <code>ClassCastException</code>，则对此检查应用修正可能会改变程序的语义。
+</p>
+<p>示例：</p>
+<pre><code>
+  interface Super {
+    void doSmth();
+  }
+  interface Sub extends Super { }
+
+  void use(Object obj) {
+    // 警告：可以使用 ((Super)obj).doSmth()
+    ((Sub)obj).doSmth();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  在代码中有匹配的 <code>instanceof</code> 检查时，使用下面的复选框可忽略转换。
+</body>
+</html>

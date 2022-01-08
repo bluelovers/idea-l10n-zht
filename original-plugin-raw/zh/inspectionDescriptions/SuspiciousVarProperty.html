@@ -1,0 +1,15 @@
+<html>
+<body>
+报告具有默认 setter 和 getter 且未引用支持字段的 <code>var</code> 属性。
+<p>
+此类属性不影响调用其 setter；因此，将此类属性更改为 <code>val</code> 并删除初始值设定项将会更加清晰易懂。
+</p>
+<p><b>更改为 val 并删除初始值设定项</b>快速修复可用于自动修正代码。</p>
+<p>示例：</p>
+<pre><code>
+  // 此属性始终返回 '1'，属性为 'var' 并不重要
+  var foo: Int = 0
+      get() = 1
+</code></pre>
+</body>
+</html>

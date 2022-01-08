@@ -1,0 +1,20 @@
+<html>
+<body>
+报告以下 EJB 规范违规：
+<ul>
+  <li>类未实现预期接口（EJBLocalObject、EJBObject 等）</li>
+  <li>类未定义 public 无实参构造函数</li>
+  <li>使用类而不是接口或者使用接口而不是类</li>
+  <li>EJB 方法为 static</li>
+  <li>无状态会话 Bean 类定义了多个 `ejbCreate` 方法</li>
+  <li>会话 Bean 类的方法返回类型不正确</li>
+  <li>EJB 定义了 `finalize` 方法</li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+public class SessionEJB implements java.io.Serializable { // 错误：类应该扩展 `SessionBean`
+  private SessionEJB() {} // 错误：类应该定义 public 无实参构造函数
+}
+</code></pre>
+</body>
+</html>

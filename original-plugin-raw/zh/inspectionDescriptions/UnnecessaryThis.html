@@ -1,0 +1,31 @@
+<html>
+<body>
+报告不必要的 <code>this</code> 限定符。
+<p>
+  使用 <code> this </code> 来消除代码引用的歧义在许多编码样式中都不受鼓励，并且很容易通过自动重构变得不必要。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    int x;
+    void foo() {
+      this.x = 2;
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    int x;
+    void foo() {
+      x = 2;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用检查设置可以忽略对字段的赋值。
+  例如，<code>this.x = 2;</code> 不会被报告，但 <code>int y = this.x;</code> 会被报告。
+<p>
+</body>
+</html>

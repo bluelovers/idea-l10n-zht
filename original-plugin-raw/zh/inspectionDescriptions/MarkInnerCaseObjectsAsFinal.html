@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告缺少 case 对象的 final 修饰符。</p>
+<p>虽然内部 case 对象在 Scala 中实际上是 final，但它们不能扩展，并且它们并不总是在编译的字节码中被标记为这样。 因此，此检查建议您这样做。
+    请参阅<a href="https://nrinaudo.github.io/scala-best-practices/adts/final_case_objects.html">最佳做法</a>。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  object Outer {
+    case object Inner
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  object Outer {
+    final case object Inner
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

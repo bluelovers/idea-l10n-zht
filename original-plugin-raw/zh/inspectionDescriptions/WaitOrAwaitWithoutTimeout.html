@@ -1,0 +1,15 @@
+<html>
+<body>
+报告对未指定超时的 <code>Object.wait()</code> 或 <code>Condition.await()</code> 的调用。
+<p>
+  在高可用性程序中，此类调用可能很危险，因为如果从未调用 <code>notify()</code>/<code>notifyAll()</code> 或 <code>signal()</code>/<code>signalAll()</code>，那么一个组件中的故障可能会导致等待的组件发生阻塞。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo(Object bar) throws InterruptedException {
+    bar.wait();
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可由单个调用替换的双调用链。
+<p>它可以帮助您避免冗余代码执行。</p>
+<p>该快速修复会将调用链替换为单个调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun main() {
+      listOf(1, 2, 3).filter { it &gt; 1 }.count()
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun main() {
+      listOf(1, 2, 3).count { it &gt; 1 }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

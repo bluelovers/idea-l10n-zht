@@ -1,0 +1,34 @@
+<html>
+<body>
+报告循环中最后能够到达的 <code>continue</code> 语句。
+这些 <code>continue</code> 语句是不必要的语句，可以安全移除。
+<p>示例：</p>
+<pre><code>
+  for (String element: elements) {
+    System.out.println();
+    continue;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  for (String element: elements) {
+    System.out.println();
+  }
+</code></pre>
+<p>该检查不分析 JSP 文件。</p>
+<!-- tooltip end -->
+<p>
+  使用<b>在具有 'else' 分支的 'if' 语句的 then 分支中忽略</b>选项可以忽略位于完整 <code>if</code>-<code>else</code> 语句的 <code>then</code> 分支中的 <code>continue</code>语句。
+</p>
+<p>示例：</p>
+<pre><code>
+  for (String element: elements) {
+    if(element.isEmpty()) {
+      continue;
+    } else {
+      //...
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<body>
+报告仅从包含该方法的类的内部类调用的 <code>private</code> 方法。 此类方法可以安全地移到该内部类中。
+<p>示例：</p>
+<pre><code>
+public class Outer {
+  public static void main(String[] args) {
+    new Inner().run(args[0]);
+  }
+
+  static class Inner {
+    void run(String arg) {
+      // 方法 isEmpty() 仅从内部类使用
+      // 考虑将其移到内部类
+      if (!isEmpty(arg)) {
+        System.out.println("Argument is supplied");
+      }
+    }
+  }
+
+  private static boolean isEmpty(String s) {
+    return s != null && s.trim().isEmpty();
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用下面的第一个复选框可忽略从匿名类或本地类调用的 <code>private</code> 方法。
+<p>
+使用第三个复选框可仅报告 <code>static</code> 方法。
+<p>
+
+</body>
+</html>

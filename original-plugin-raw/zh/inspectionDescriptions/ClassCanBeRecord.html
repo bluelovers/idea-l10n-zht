@@ -1,0 +1,44 @@
+<html>
+<body>
+建议用记录替换类。
+<p>当您需要专注于建模不可变数据而不是可扩展行为时，检查会很有用。
+  数据驱动方法的自动实现，例如 equals 和访问器，有助于消除样板。</p>
+<p>
+  请注意，不是每个类都可以成为记录。 以下是一些限制：
+</p>
+<ul>
+  <li>类不能包含继承者，并且必须是一个顶级类。</li>
+  <li>类中的所有非 static 字段必须为 final。</li>
+  <li>不允许类包含实例初始值设定项、泛型构造函数或原生方法。</li>
+</ul>
+<p>要获取完整的限制列表，请参阅 <a href="https://docs.oracle.com/javase/specs/jls/se15/preview/specs/records-jls.html">Oracle 文档</a>。</p>
+<!-- tooltip end -->
+<p>示例：</p>
+<pre><code>
+  class Point {
+    private final double x;
+    private final double y;
+
+    Point(double x, double y) {
+      this.x = x;
+      this.y = y;
+    }
+
+    double getX() {
+      return x;
+    }
+
+    double getY() {
+      return y;
+    }
+  }
+</code></pre>
+<p>此记录将转换为：</p>
+<pre><code>
+  record Point(int x, int y) {
+  }
+</code></pre>
+<p>仅当项目或模块的语言级别为 15（预览）或更高时，此检查才会报告。</p>
+<p><small>2020.3 最新变化</small></p>
+</body>
+</html>

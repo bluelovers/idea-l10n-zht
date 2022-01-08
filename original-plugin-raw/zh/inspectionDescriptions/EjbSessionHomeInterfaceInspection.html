@@ -1,0 +1,16 @@
+<html>
+<body>
+报告以下 EJB 规范违规：
+<ul>
+  <li><code>create()</code> 未正确定义</li>
+  <li>不允许 <code>finder()</code></li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+public interface SessionHome extends javax.ejb.EJBHome {
+  Session create() throws java.rmi.RemoteException; // 错误：也应该抛出 `javax.ejb.CreateException`
+}
+</code></pre>
+</body>
+</html>

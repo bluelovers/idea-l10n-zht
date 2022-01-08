@@ -1,0 +1,42 @@
+<html>
+<body>
+报告以下 Javadoc 注释缺陷：
+<ul>
+  <li>在需要有 Javadoc 的位置没有 Javadoc</li>
+  <li>缺少必要的标记</li>
+  <li>标记无效或不完整</li>
+  <li>Javadoc 描述缺失或不完整</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+  class Main {
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  /**
+   *
+   */
+  class Main {
+  }
+</code></pre>
+<p>示例：</p>
+<pre><code>
+  String id(String value) {
+    return value;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  /**
+   * @param value
+   * @return
+   */
+  String id(String value) {
+    return value;
+  }
+</code></pre>
+<!-- tooltip end -->
+使用选项卡和相应的检查选项可定义需要具备 Javadoc 的可见性范围，以及类、方法、字段和内部类所需的 Javadoc 标记。
+</body>
+</html>

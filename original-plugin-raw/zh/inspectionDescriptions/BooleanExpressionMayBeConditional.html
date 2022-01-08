@@ -1,0 +1,16 @@
+<html>
+<body>
+报告任何能够以比使用条件表达式更紧凑、更清晰的方式来表述的 <code>boolean</code> 表达式。
+<p>使用该快速修复可以将 <code>boolean</code> 表达式替换为条件表达式。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  a &amp;&amp; b || !a &amp;&amp; c;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  a ? b : c;
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

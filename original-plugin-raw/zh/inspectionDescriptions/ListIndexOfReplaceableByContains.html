@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可以用 <code>List.contains()</code> 方法替换的任何 <code>List.indexOf()</code> 表达式。
+<p>示例：</p>
+<pre><code>
+  boolean hasEmptyString(List&lt;String&gt; list) {
+    // 警告：可以简化
+    return list.indexOf("") &gt;= 0;
+  }
+</code></pre>
+<p>提供的快速修复将 <code>indexOf</code> 调用替换为 <code>contains</code> 调用：</p>
+<pre><code>
+  boolean hasEmptyString(List&lt;String&gt; list) {
+    // 快速修复已应用
+    return list.contains("");
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

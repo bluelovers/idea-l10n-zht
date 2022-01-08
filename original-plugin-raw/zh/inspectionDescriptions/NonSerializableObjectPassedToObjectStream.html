@@ -1,0 +1,20 @@
+<html>
+<body>
+报告用作 <code>java.io.ObjectOutputStream.write()</code> 实参的非 <code>Serializable</code> 对象。 此类调用将导致运行时异常。
+<p>
+  此检查假定 <code>java.util.Collection</code> 和 <code>java.util.Map</code> 类型的对象为 <code>Serializable</code>，除非声明它们的类型为非 <code>Serializable</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class IWantToSerializeThis {
+    public static void main(String[] args) throws IOException {
+      try(var stream = new ObjectOutputStream(Files.newOutputStream(Paths.get("output")))) {
+        // 警告 -- 将会失败并抛出 NotSerializableException
+        stream.writeObject(new IWantToSerializeThis());
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

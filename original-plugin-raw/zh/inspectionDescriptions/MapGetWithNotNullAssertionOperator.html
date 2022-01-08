@@ -1,0 +1,13 @@
+<html>
+<body>
+报告可替换为 <code>map.getValue()</code>、<code>map.getOrElse()</code> 等的 <code>map.get()!!</code>。
+<p><b>示例：</b></p>
+<pre><code>
+fun test(map: Map&lt;Int, String&gt;): String = map.get(0)!!
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+fun test(map: Map&lt;Int, String&gt;): String = map.getValue(0)
+</code></pre>
+</body>
+</html>

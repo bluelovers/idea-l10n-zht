@@ -1,0 +1,16 @@
+<html>
+<body>
+报告非 <code>java.lang.String</code> 类型的 <code>assert</code> 消息。
+<p>使用字符串可以提供更多信息，有助于诊断失败或断言原因。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo(List&lt;Integer&gt; myList) {
+    assert myList.isEmpty() : false;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用<b>仅当 <code>assert</code> 消息为 'boolean' 或 'java.lang.Boolean' 时发出警告</b>选项可以仅在 <code>assert</code> 消息类型为 <code>boolean</code> 或 <code>java.lang.Boolean</code> 时发出警告。
+<code>boolean</code> 详细消息不太可能提供有关断言失败的其他信息，可能是由于错误输入 <code>:</code> 而不是 <code>&</code> 所致。
+</body>
+</html>

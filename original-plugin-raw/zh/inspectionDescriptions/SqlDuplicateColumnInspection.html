@@ -1,0 +1,10 @@
+<html>
+<body>
+报告 SELECT 列表中列别名的重复名称。
+<p>示例（Sybase ASE）：</p>
+<pre><code>CREATE TABLE t1 (a TEXT, b INT, c INT);
+
+SELECT a AS x, b AS x FROM t1;</code></pre>
+<p><code>x</code> 别名用于 <code>a</code> 和 <code>b</code> 列。 这些分配高亮显示为错误，因为您不能对 Sybase ASE 中的列使用相同的别名。</p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+报告由于 <code>start</code> 值大于 <code>endInclusive</code> 值而为空的范围。
+<p><b>示例：</b></p>
+<pre><code>
+  val range = 2..1
+</code></pre>
+<p>该快速修复会将 <code>..</code> 运算符更改为 <code>downTo</code>：</p>
+<pre><code>
+  val range = 2 downTo 1
+</code></pre>
+</body>
+</html>

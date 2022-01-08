@@ -1,0 +1,27 @@
+<html>
+<body>
+报告不包含 <code>else</code> 块的 <code>case</code> 语句。 <code>else</code> 块应始终存在，以指定
+未找到匹配项时的默认结果。
+<p>示例：</p>
+<pre>
+<code># 不良做法
+case status
+when :active
+  perform_action
+end</code>
+</pre>
+
+可通过快速修复来插入 <code>else</code> 块。 应用快速修复后，结果如下所示：
+
+<pre>
+<code># 优良做法
+case status
+when :active
+  perform_action
+else
+  # 此处键入代码
+end</code>
+</pre>
+<p><span style="font-size: smaller;">受 <a href="https://github.com/martinjandrews/roodi">'Roodi'</a> 启发</span></p>
+</body>
+</html>

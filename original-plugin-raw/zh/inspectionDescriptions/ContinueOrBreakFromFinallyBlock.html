@@ -1,0 +1,17 @@
+<html>
+<body>
+报告 <code>finally</code> 块中的 <code>break</code> 或 <code>continue</code> 语句。
+<p>虽然偶尔是有意为之，但此类语句非常令人困惑，可能会掩盖抛出的异常，并导致调试复杂化。</p>
+<p><b>示例：</b></p>
+<pre><code>
+    while (true) {
+        try {
+          throwingMethod();
+        } finally {
+            continue;
+        }
+    }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

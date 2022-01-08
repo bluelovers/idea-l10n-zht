@@ -1,0 +1,14 @@
+<html>
+<body>
+报告存储在实例变量中的未释放的拥有对象。<br>
+如果符合以下条件，您将获得对象的所有权：<br>
+- 使用名称以 <code>alloc</code> 或 <code>new</code> 开头或包含 <code>copy</code><br> 的方法创建
+- 向其发送 <code>retain</code> 消息<br>
+- 设置具有<code>retain</code> 或 <code>copy</code> 特性并与实例变量合成的属性的值<br> 
+要放弃对象的所有权，您需要：<br>
+- 向其发送 <code>release</code> 或 <code>autorelease</code> 消息<br>
+- 将 <code>nil</code> 分配给与实例变量合成的属性<br> 
+如果 ARC（自动引用计数）已启用，则此检查会被禁用。 如果下面的复选框被关闭，您可以在类的任何方法中释放实例变量。 如果打开，您可以在 <code>dealloc</code>、<code>tearDown</code>、<code>applicationWillTerminate:</code>、
+<code>didTurnIntoFault</code> 方法以及任何可以从它们调用的方法中释放实例变量。
+</body>
+</html>

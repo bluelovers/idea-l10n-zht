@@ -1,0 +1,30 @@
+<html>
+<body>
+报告可以从分支中提取通用部分的 <code>if</code> 语句。
+<p>这些通用部分独立于条件并使 <code>if</code> 语句更难理解。</p>
+<p>示例：</p>
+<pre><code>
+  if (x &gt; 12) {
+    doSomethingBefore();
+    doSomethingDifferent1();
+    doSomethingAfter();
+  } else {
+    doSomethingBefore();
+    doSomethingDifferent2();
+    doSomethingAfter();
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  doSomethingBefore();
+  if (x &gt; 12) {
+    doSomethingDifferent1();
+  } else {
+    doSomethingDifferent2();
+  }
+  doSomethingAfter();
+</code></pre>
+<!-- tooltip end -->
+<p><small>这是 2018.1 更新的功能</small></p>
+</body>
+</html>

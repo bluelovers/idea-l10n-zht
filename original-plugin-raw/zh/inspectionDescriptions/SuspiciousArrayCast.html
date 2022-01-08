@@ -1,0 +1,12 @@
+<html>
+<body>
+报告可疑的数组转换。
+当数组转换为更具体的数组类型时，数组转换被视为可疑。 虽然此类转换在编译时是合法的，但在运行时可能会因 <code>ClassCastException</code> 而失败。
+<p><b>示例：</b></p>
+<pre><code>
+  Number[] numbers = new Number[]{1L, 2L, 4L};
+  Long[] longs = (Long[])numbers;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

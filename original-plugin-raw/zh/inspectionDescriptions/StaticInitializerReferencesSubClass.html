@@ -1,0 +1,13 @@
+<html>
+<body>
+报告在 static 初始值设定项或 static 字段中引用其子类的类。
+<p>此类引用可能在多线程环境（即一个线程试图加载超类，另一个线程同时试图加载子类）中引起 JVM 级死锁。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Parent {
+    static final Child field = new Child();
+  }
+  class Child extends Parent { }
+</code></pre>
+</body>
+</html>

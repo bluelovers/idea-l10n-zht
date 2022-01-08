@@ -1,0 +1,16 @@
+<html>
+<body>
+报告不对其执行任何操作，而是立即重新抛出所捕获的异常的 <code>catch</code> 块。
+此类 <code>catch</code> 块非必要，并且没有处理错误。
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+        try {
+            new FileInputStream("");
+        } catch (FileNotFoundException e) {
+            throw e;
+        }
+</code></pre>
+
+</body>
+</html>

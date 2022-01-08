@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告注解类的构造函数的 <code>@JvmOverloads</code>，因为其毫无意义。</p>
+<p>
+    生成的字节码和 Kotlin 元数据中没有 <code>@JvmOverloads</code> 的占用空间，因此 <code>@JvmOverloads</code> 不会影响生成的字节码和代码行为。
+</p>
+<p>自 Kotlin 1.4 起，注解类构造函数上的 <code>@JvmOverloads</code> 会导致编译错误。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  annotation class A <b>@JvmOverloads</b> constructor(val x: Int = 1)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  annotation class A constructor(val x: Int = 1)
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+报告<a href="https://www.c2.com/cgi/wiki?DoubleBraceInitialization">双大括号初始化</a>。
+<p>双大括号初始化在非 static 上下文中使用时可能会导致内存泄漏，因为它创建了一个将引用周围对象的匿名类。</p>
+<p>与常规初始化相比，双大括号初始化的性能更差，因为它需要加载一个额外的类。</p>
+<p>如果 <code>equals()</code> 方法不接受子类作为形参，还可能导致 <code>equals()</code> 比较失败。</p>
+<p>此外，在 Java 9 以前的版本中，双大括号初始化不能与 Diamond 运算符结合使用，因为它与匿名类不兼容。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  List&lt;Integer&gt; list = new ArrayList&lt;&gt;() {{
+    add(1);
+    add(2);
+  }};
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+  list.add(1);
+  list.add(2);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

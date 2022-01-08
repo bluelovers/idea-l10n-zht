@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告具有不明确依赖项的 Bean 类中的注入点。</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  interface Engine {}
+
+  @Singleton
+  class GasEngine implements Engine {}
+
+  @Singleton
+  class ElectricEngine implements Engine {}
+
+  @Singleton
+  class Car {
+    @Inject Engine <b>engine</b>; // 依赖项不明确：有多个 Bean 匹配注入点
+  }
+</code></pre>
+</body>
+</html>

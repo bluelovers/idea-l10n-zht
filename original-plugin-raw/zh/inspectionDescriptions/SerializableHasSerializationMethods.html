@@ -1,0 +1,24 @@
+<html>
+<body>
+报告不实现 <code>readObject()</code> 和 <code>writeObject()</code> 方法的 <code>Serializable</code> 类。
+<p>
+  如果没有实现 <code>readObject()</code> 和 <code>writeObject()</code> 方法，将使用默认的序列化算法，在许多环境中，这对于性能和兼容性而言或许是次优选择。
+</p>
+<!-- tooltip end -->
+<p>
+  使用以下选项配置检查：
+</p>
+<ul>
+  <li>
+    列出此检查不应报告其继承者的类。
+    这适用于从超类继承 <code>Serializable</code> 但不用于序列化的类。
+  </li>
+  <li>
+    是否忽略没有非 static 字段的 <code>Serializable</code> 类。
+  </li>
+  <li>
+    是否忽略 <code>Serializable</code> 匿名类。
+  </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+报告被声明为 <code>volatile</code> 的数组字段。 此类声明可能令人困惑，因为访问数组本身遵循 <code>volatile</code> 字段的规则，但访问数组的内容时并非如此。
+<p><b>示例：</b></p>
+<pre><code>
+  class Data {
+    private volatile int[] idx = new int[0];
+  }
+</code></pre>
+<p>
+  如果需要对数组内容进行此类可变访问，不妨改用 <code>java.util.concurrent.atomic</code> 类：
+</p>
+<pre><code>
+  class Data {
+    private final AtomicIntegerArray idx = new AtomicIntegerArray(new int[0]);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

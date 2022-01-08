@@ -1,0 +1,37 @@
+<html>
+<body>
+<p>
+  报告 <code>additional-spring-configuration-metadata.json</code> 配置文件中缺失和弃用的属性、未解析的引用和无效值。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  {
+    "properties": [
+      {
+        "name": "old.key",
+        "type": "com.Unknown", // 报告 '无法解析 'Unknown' 类'
+        "description": "Description for old.key", // 报告 '文本应以 '.' 结尾'
+        "deprecation": {
+          "replacement": "new.key", // 报告 '无法解析配置键引用 'new.key''
+          "reason": "Reason", // 报告 '文本应以 '.' 结尾'
+          "level": "warning"
+         }
+      },
+      {
+        "name": "duplicate", // 报告 'duplicate' 的重复条目'
+        "type": "java.lang.String"
+      },
+      {
+        "name": "duplicate", // 报告 'duplicate' 的重复条目'
+        "type": "java.lang.String"
+      },
+      {
+        // 报告 '缺少必要的 'name''
+        "type": "java.lang.String"
+      }
+    ]
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

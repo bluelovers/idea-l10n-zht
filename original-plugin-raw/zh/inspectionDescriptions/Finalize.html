@@ -1,0 +1,18 @@
+<html>
+<body>
+报告重写 <code>Object.finalize()</code> 方法。
+<p>根据 <code>Object.finalize()</code> 文档：</p>
+<blockquote>
+  <p>
+    终结机制本身就有问题。 终结可能导致性能问题、死锁和挂起。 终结器中的错误可能导致资源泄漏；如果不再需要，那么无从取消终结；并且对不同对象的 <code>finalize</code> 方法的调用之间没有指定顺序。 此外，关于终结时机也没有任何保证。 <code>finalize</code> 方法只能在不确定的延迟之后才对可终结的对象调用（如果有）。
+  </p>
+</blockquote>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>
+    使用<b>对普通 'finalize()' 实现忽略</b>选项可以忽略具有空方法体或仅包含具有计算结果为 <code>false</code> 的条件并且是编译时常量的 <code>if</code> 语句的方法体的 <code>finalize()</code> 实现。 出于性能原因，在子类中使用空实现重写非普通 <code>finalize()</code> 可能会有好处。 空的 final <code>finalize()</code> 实现也可以用来防止子类被重写。
+  </li>
+</ul>
+</body>
+</html>

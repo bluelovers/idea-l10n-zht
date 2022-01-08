@@ -1,0 +1,10 @@
+<html>
+<body>
+报告对不处理调用结果的特定函数和方法的调用。
+<p>此类函数的 API 意味着用户调用函数的主要目的应该是获取返回值并处理它，而不是因为副作用。 不处理调用结果的调用可能意味着 API 被滥用。</p>
+<p>示例：</p>
+<pre><code>fmt.Errorf("error: %s", reason) // 构造的错误将被忽略</code></pre>
+<p>在应用<b>引入局部变量</b>快速修复后：</p>
+<pre><code>err := fmt.Errorf("error: %s", reason)</code></pre>
+</body>
+</html>

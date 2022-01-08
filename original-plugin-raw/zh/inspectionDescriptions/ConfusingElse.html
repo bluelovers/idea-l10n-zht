@@ -1,0 +1,26 @@
+<html>
+<body>
+在 <code>if</code>&mdash;<code>else</code> 语句和语句链中报告冗余的 <code>else</code> 关键字。
+<p>
+如果 <code>else</code> 关键字因为之前分支中的代码以 <code>return</code>、<code>throw</code>、<code>break</code> 或 <code>continue</code> 语句结尾而无法到达，则它是冗余的。 在这种情况下，来自 <code>else</code> 分支的语句可以放在 <code>if</code> 语句之后，并且 <code>else</code> 关键字可以删除。
+</p>
+<p>示例：</p>
+<pre><code>
+  if (name == null) {
+      throw new IllegalArgumentException();
+  } else {
+      System.out.println(name);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  if (name == null) {
+      throw new IllegalArgumentException();
+  }
+  System.out.println(name);
+</code></pre>
+<!-- tooltip end -->
+<p>禁用 <b>当 'if' 语句之后没有其他语句时报告</b> 选项以忽略 <code>if</code>&mdash;<code>else</code> 语句是代码块中最后一条语句的情况。</p>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+报告将 NULL 值插入仅接受 NOT NULL 值的列的情况。
+<p>示例（Microsoft SQL 服务器）：</p>
+<pre><code>CREATE TABLE br2 (
+id INT NOT NULL,
+col1 NVARCHAR (20) NOT NULL,
+col2 NVARCHAR (20) NOT NULL,
+);
+--
+INSERT INTO br2 (id, col1, col2)
+VALUES (1, NULL, NULL);</code></pre>
+<p>您不能在 <code>col1</code> 和 <code>col2</code> 中插入 NULL 值，因为它们被定义为 NOT NULL。 如果按原样运行脚本，则会收到错误消息。 要修复此代码，请将 VALUES 部分中的 NULL 替换为值（例如，<code>42</code> 和 <code>'bird'</code>）。</p>
+<pre>INSERT INTO br2 (id, col1, col2)
+VALUES (1, 42, 'bird');</pre>
+</body>
+</html>

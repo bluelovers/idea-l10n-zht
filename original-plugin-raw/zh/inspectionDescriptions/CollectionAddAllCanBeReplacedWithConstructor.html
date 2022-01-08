@@ -1,0 +1,16 @@
+<html>
+<body>
+在使用无参构造函数实例化集合后，立即报告 <code>Collection.addAll()</code> 和 <code>Map.putAll()</code> 调用。
+<p>此类结构可以替换为对形参化构造函数的单次调用，从而简化代码。 此外，对于某些集合，替换可能会更高效。</p>
+<p><b>示例：</b></p>
+<pre><code>  Set&lt;String&gt; set = new HashSet&lt;&gt;();
+  set.addAll(Arrays.asList("alpha", "beta", "gamma"));
+</code></pre>
+<p>可以替换为：</p>
+<pre><code>  Set&lt;String&gt; set = new HashSet&lt;&gt;(Arrays.asList("alpha", "beta", "gamma"));
+</code></pre>
+<!-- tooltip end -->
+<p>
+默认情况下支持标准的 JDK 集合类。 此外，还可以在检查选项中指定其他类。
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+报告定义 <code>readObject()</code> 或 <code>writeObject()</code> 方法的 <code>Externalizable</code> 类。 这些方法并非为了序列化 <code>Externalizable</code> 对象而调用。
+<p><b>示例：</b></p>
+<pre><code>
+  abstract class Crucial implements Externalizable {
+    int value;
+    private void readObject(ObjectInputStream in) {
+      value = in.readInt();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

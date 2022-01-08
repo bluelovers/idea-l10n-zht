@@ -1,0 +1,38 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+报告直接调用 <code>panic()</code> 或 <code>recover()</code> 的 <code>defer</code> 和 <code>go</code> 语句。
+<p>此类语句很少有用，可能意味着误用了 <code>panic()</code> 和 <code>recover()</code> 机制。
+  应特别注意以下事项：</p>
+<ul>
+  <li><code>go panic()</code>：一个新启动的 goroutine 会立即 panic。</li>
+  <li><code>defer panic()</code>：带有这个语句的函数在退出时总是会 panic。</li>
+  <li><code>go recovery()</code>：没有效果，因为新启动的 goroutine 不能 panic。</li>
+  <li><code>defer recovery()</code>：带有这个语句的函数将默默地停止 panic。 这种用法可能有效，但一种惯用的方法是检查 <code>recover()</code> 返回的值：
+    <pre><code>defer func() {
+  if r := recover(); r != nil {
+    fmt.Println("Recovered from: ", r)
+  }
+}()</code></pre>
+  </li>
+</ul>
+<p>有关 go 语句和 panic 处理的更多信息，请参阅 Go 语言规范中的 <a href="https://golang.org/ref/spec#Handling_panics">Handling
+  panics</a> 和
+  <a href="https://golang.org/ref/spec#Go_statements">Go statements</a> 页面。</p>
+</body>
+</html>

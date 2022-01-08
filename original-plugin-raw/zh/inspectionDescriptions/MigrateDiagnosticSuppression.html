@@ -1,0 +1,22 @@
+<html>
+<body>
+报告带有旧诊断名称的禁止，例如 <code>@Suppress("HEADER_WITHOUT_IMPLEMENTATION")</code>。
+<p>
+    来自 Kotlin 1.2 及更早版本的一些诊断现在已经过时，从而使这样的禁止变得冗余。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+@Suppress("HEADER_DECLARATION_WITH_BODY")
+expect fun connection() {
+  // ...
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+@Suppress("EXPECTED_DECLARATION_WITH_BODY")
+expect fun connection() {
+  // ...
+}
+</code></pre>
+</body>
+</html>

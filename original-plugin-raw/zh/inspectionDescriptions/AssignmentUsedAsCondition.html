@@ -1,0 +1,27 @@
+<html>
+<body>
+报告用作 <code>if</code>、<code>while</code>、<code>for</code> 或
+<code>do</code> 语句或条件表达式的赋值。
+<p>虽然有时是有意为之，但这种用法令人困惑，并且可能表明存在拼写错误（例如，应使用 <code>=</code> 而不是 <code>==</code>）。</p>
+<p>该快速修复会将 <code>=</code> 替换为 <code>==</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void update(String str, boolean empty) {
+    // 警告：'empty' 被重新赋值，
+    // 不与 str.isEmpty() 进行比较
+    if (empty = str.isEmpty()) {
+      ...
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void update(String str, boolean empty) {
+    if (empty == str.isEmpty()) {
+      ...
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

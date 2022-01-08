@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>报告未在相应的块中使用的 <b>catch</b> 形参。 此检查不会报告任何命名为 "ignore"或 "ignored" 的 <b>catch</b> 形参。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  try {
+      def arr = new int[3]
+      arr[5] = 5
+  } catch(Exception <b>ex</b>) {
+      println('Catching the exception')
+  }
+</code></pre>
+<p>此处的形参 <b>ex</b> 永远不会在 <b>catch</b> 块中使用。
+<p>在应用快速修复后：</p>
+<pre><code>
+  try {
+      def arr = new int[3]
+      arr[5] = 5
+  } catch(Exception <b>ignored</b>) {
+      println('Catching the exception')
+  }
+</code></pre>
+</body>
+</html>

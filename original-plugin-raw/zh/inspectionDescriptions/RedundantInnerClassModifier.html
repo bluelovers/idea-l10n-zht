@@ -1,0 +1,45 @@
+<html>
+<body>
+如果类没有引用其外部类的成员，则将类上的 <code>inner</code> 修饰符报告为冗余。
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+      <b>inner</b> class InnerClass { // 冗余 `inner` 修饰符
+          fun hello() {
+              println("Hi!")
+          }
+      }
+  }
+
+  class List {
+      val objects = Array&lt;Any&gt;(42) { Any() }
+
+      <b>inner</b> class Iterator { // 非冗余 `inner` 修饰符
+          fun next(): Any {
+              return objects[0]
+          }
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+      class InnerClass { // 冗余 `inner` 修饰符
+          fun hello() {
+              println("Hi!")
+          }
+      }
+  }
+
+  class List {
+      val objects = Array&lt;Any&gt;(42) { Any() }
+
+      <b>inner</b> class Iterator { // 非冗余 `inner` 修饰符
+          fun next(): Any {
+              return objects[0]
+          }
+      }
+  }
+</code></pre>
+</body>
+</html>

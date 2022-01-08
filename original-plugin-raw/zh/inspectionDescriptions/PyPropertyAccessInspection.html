@@ -1,0 +1,26 @@
+<html>
+<body>
+报告对属性访问不当的情况：
+<ul>
+  <li>设置只读属性</li>
+  <li>读取只写属性</li>
+  <li>删除了不可删除的属性</li>
+</ul>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class MyClass:
+    @property
+    def read_only(self): return None
+
+    def __write_only_setter(self, value): pass
+
+    write_only = property(None, __write_only_setter)
+
+
+a = MyClass()
+a.read_only = 10 # 无法设置属性
+del a.read_only # 无法删除属性
+print(a.write_only) # 无法读取属性
+</pre>
+</body>
+</html>

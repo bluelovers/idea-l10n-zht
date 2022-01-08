@@ -1,0 +1,10 @@
+<html>
+<body>
+报告在输出表达式中没有显式别名的查询（例如，在 SELECT 语句中）。
+<p>示例（PostgreSQL）：</p>
+<pre><code>CREATE TABLE foo(a INT, b INT);
+
+SELECT 1, a + 1 AS A2, MAX(b) AS M
+FROM foo;</code></pre>
+</body>
+</html>

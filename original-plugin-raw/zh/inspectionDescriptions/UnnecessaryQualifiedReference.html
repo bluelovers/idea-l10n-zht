@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>报告可以替换为 import 的完全限定引用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def swingBuilder = new groovy.swing.SwingBuilder()
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  import groovy.swing.SwingBuilder
+ 
+  def swingBuilder = new SwingBuilder()
+</code></pre>
+</body>
+</html>

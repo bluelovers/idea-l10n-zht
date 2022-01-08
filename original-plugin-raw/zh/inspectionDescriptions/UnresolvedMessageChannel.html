@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>报告端点方法注解中不正确的通道特性：
+<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Gateway.html">@Gateway</a>、
+<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/ServiceActivator.html">@ServiceActivator、</a>
+<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Filter.html">@Filter</a> 等。</p>
+
+<p><b>示例：</b></p>
+
+<pre><code>
+  @Component
+  public class MyComponent {}
+     @Gateway(requestChannel = "requestChannel", replyChannel = "replyChannel")
+     public void gateway() {...}
+
+     @Gateway(
+        requestChannel ="<strong>simpleBean</strong>",   // Bean 必须为以下一种类型：org.springframework.integration.MessageChannel,org.springframework.messaging.MessageChannel
+        replyChannel = "<strong>unknownChannel</strong>")   // 找不到通道
+     public void errors() {...}
+
+     @Bean
+     public MyBean simpleBean() {...}
+  }
+</code></pre>
+</body>
+</html>
+

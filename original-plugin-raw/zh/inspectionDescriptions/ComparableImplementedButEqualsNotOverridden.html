@@ -1,0 +1,38 @@
+<html>
+<body>
+报告实现 <code>java.lang.Comparable</code> 但不重写 <code>equals()</code> 的类。
+<p>
+  如果未重写 <code>equals()</code>，<code>equals()</code> 实现与 <code>compareTo()</code> 实现将不一致。 如果将这种类的对象添加到 <code>java.util.SortedSet</code> 等集合，该集合将违反根据 <code>equals()</code> 定义的 <code>java.util.Set</code> 的约定。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Length implements Comparable&lt;Length> {
+    private int cm = 0;
+
+    @Override
+    public int compareTo(@NotNull Length o) {
+      if (cm == o.cm) return 0;
+      return cm &lt; o.cm ? -1 : 1;
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Length implements Comparable&lt;Length> {
+    private int cm = 0;
+
+    @Override
+    public int compareTo(@NotNull Length o) {
+      if (cm == o.cm) return 0;
+      return cm &lt; o.cm ? -1 : 1;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+      return o instanceof Length && compareTo((Length) o) == 0;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

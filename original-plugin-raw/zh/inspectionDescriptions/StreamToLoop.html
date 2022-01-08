@@ -1,0 +1,47 @@
+<html>
+<body>
+报告可以自动转换为经典循环的 Stream API 链、<code>Iterable.forEach</code> 和 <code>Map.forEach</code> 调用。
+<p>示例：</p>
+<pre><code>
+  String joinNonEmpty(List&lt;String&gt; list) {
+    return list.stream() // 流可以转换为循环
+      .filter(s -> !s.isEmpty())
+      .map(String::trim)
+      .collect(Collectors.joining(", "));
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  String joinNonEmpty(List&lt;String&gt; list) {
+    StringJoiner joiner = new StringJoiner(", ");
+    for (String s : list) {
+      if (!s.isEmpty()) {
+        String trim = s.trim();
+        joiner.add(trim);
+      }
+    }
+    return joiner.toString();
+  }
+</code></pre>
+<p>
+  请注意，有时此检查可能会导致轻微的语义变化。
+  必须特别注意短路，因为流短路未指定读取的实际元素数。
+</p>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<p>使用 <b>通过 Stream.iterator() 迭代未知的流源</b> 选项来建议转换来源无法识别的流。
+  在这种情况下，迭代器将从流中创建。
+  例如，选择复选框时，此处将建议转换：</p>
+<pre><code>
+  List&lt;ProcessHandle&gt; handles = ProcessHandle.allProcesses().collect(Collectors.toList());</code></pre>
+<p>在这种情况下，结果如下：</p>
+<pre><code>
+  List&lt;ProcessHandle&gt; handles = new ArrayList&lt;&gt;();
+  for (Iterator&lt;ProcessHandle&gt; it = ProcessHandle.allProcesses().iterator(); it.hasNext(); ) {
+    ProcessHandle allProcess = it.next();
+    handles.add(allProcess);
+  }
+</code></pre>
+<p><small>2017.1 最新变化</small></p>
+</body>
+</html>

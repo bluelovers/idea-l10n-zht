@@ -1,0 +1,31 @@
+<html>
+<body>
+报告与其类同名的方法。
+虽然 Java 语言允许此类命名，但按照约定，它被保留用于定义构造函数。
+将它用于方法可能是一种错误或不好的做法。
+<p><b>示例：</b></p>
+<pre><code>
+  class MyClass {
+    int val;
+
+    // 方法 MyClass 的名称与其包含类相同。
+    // 可能是错误添加了 'void'。
+    void MyClass(int val) {
+      this.val = val;
+    }
+  }
+</code></pre>
+<p>在适当的情况下，可以通过快速修复将方法转换为构造函数：</p>
+<pre><code>
+  class MyClass {
+    int val;
+
+    MyClass(int val) {
+      this.val = val;
+    }
+  }
+</code></pre>
+<p>可以通过另一种快速修复重命名该方法。</p>
+<!-- tooltip end -->
+</body>
+</html>

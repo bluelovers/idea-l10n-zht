@@ -1,0 +1,21 @@
+<html>
+<body>
+报告在例程调用中不带名称使用的实参。 默认情况下，此检查处于禁用状态。
+<p>有关命名形参和未命名形参之间差异的详细信息，请参阅 <a
+    href="https://docs.microsoft.com/en-us/sql/odbc/reference/develop-app/binding-parameters-by-name-named-parameters">docs.microsoft.com 上的 Binding Parameters by Name (Named Parameters) </a> 页面。</p>
+<p>示例（Microsoft SQL 服务器）：</p>
+<pre><code>CREATE FUNCTION foo(n INT, m INT) RETURNS INT AS
+BEGIN
+    RETURN n + m;
+END;
+
+CREATE PROCEDURE test AS
+BEGIN
+    foo n = 1, m = 2;
+
+--- 以下调用缺少形参名称，会被高亮显示
+    foo 1, 2;
+END;</code></pre>
+<p><code>foo 1, 2;</code> 调用中的形参 <code>1, 2</code> 突出显示，因为它们缺少名称。</p>
+</body>
+</html>

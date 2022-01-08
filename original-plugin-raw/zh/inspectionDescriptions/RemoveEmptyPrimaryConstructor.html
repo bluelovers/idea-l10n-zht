@@ -1,0 +1,18 @@
+<html>
+<body>
+当主构造函数隐式可用时，报告其中为空的主构造函数。
+<p>
+    主构造函数冗余，当其没有任何注解或可见性修饰符时可以安全地省略。
+    使用“移除空主构造函数”快速修复可清理代码。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class MyClassA constructor() //  冗余，可以替换为 'class MyClassA'
+
+  annotation class MyAnnotation
+  class MyClassB @MyAnnotation constructor() //  由于注解而必选
+
+  class MyClassC private constructor() // 由于可见性修饰符而必选
+</code></pre>
+</body>
+</html>

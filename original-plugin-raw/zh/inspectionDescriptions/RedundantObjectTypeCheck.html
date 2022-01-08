@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>报告对象的非惯用 <code>is</code> 类型检查。</p>
+<p>建议将此类检查替换为引用比较。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  object Foo
+
+  fun foo(arg: Any) = when {
+      arg <b>is</b> Foo -> ...
+      arg <b>!is</b> Foo -> ...
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  object Foo
+
+  fun foo(arg: Any) = when {
+      arg <b>===</b> Foo -> ...
+      arg <b>!==</b> Foo -> ...
+  }
+</code></pre>
+</body>
+</html>

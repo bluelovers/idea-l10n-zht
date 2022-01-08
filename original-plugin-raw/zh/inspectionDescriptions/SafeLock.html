@@ -1,0 +1,16 @@
+<html>
+<body>
+报告没有在 <code>try</code> 块前面获取，或者没有在相应的 <code>finally</code> 块中解锁的 <code>java.util.concurrent.locks.Lock</code> 资源。 如果在资源关闭之前抛出异常，此类资源可能会被无意泄漏。
+<p><b>示例：</b></p>
+<pre><code>
+  lock.lock(); // 由于缺少 'finally' 块，因此会报告
+  try {
+    doSmthWithLock();
+  } catch (IOException e) {
+    throw new UncheckedIOException(e);
+  }
+  lock.unlock();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

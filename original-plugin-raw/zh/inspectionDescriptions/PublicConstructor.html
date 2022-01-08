@@ -1,0 +1,48 @@
+<html>
+<body>
+报告 <code>public</code> 构造函数。
+<p>有些编码标准不建议使用 <code>public</code> 构造函数，而是建议使用 <code>static</code> 工厂方法。
+这样就可以在不影响调用点的情况下交换实现。
+<p><b>示例：</b></p>
+<pre><code>
+  class Test {
+    private String name;
+
+    public Test(String name) {
+        this.name = name;
+    }
+
+    public void test() {
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+        new Test("str").test();
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Test {
+    private String name;
+
+    private Test(String name) {
+        this.name = name;
+    }
+
+    public static Test getInstance(String name) {
+        return new Test(name);
+    }
+
+    public void test() {
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+        getInstance("str").test();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

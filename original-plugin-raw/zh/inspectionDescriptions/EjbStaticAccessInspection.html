@@ -1,0 +1,19 @@
+<html>
+<body>
+报告写入 static 字段的 EJB 类。
+
+<p><b>示例：</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+  private static int counter = 0;
+  private AnotherBean anotherBean;
+
+  public void setAnotherBean(AnotherBean anotherBean) {
+    this.anotherBean = anotherBean;
+    counter++; // 错误：不应在此处写入任何 static 字段
+  }
+}
+</code></pre>
+</body>
+</html>

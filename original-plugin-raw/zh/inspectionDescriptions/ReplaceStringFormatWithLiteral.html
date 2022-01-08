@@ -1,0 +1,24 @@
+<html>
+<body>
+报告可以替换为字符串模板的 <code>String.format</code> 调用。
+<p>使用字符串模板可使代码更简单。</p>
+<p>该快速修复会将调用替换为字符串模板。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun main() {
+      val id = &quot;abc&quot;
+      val date = &quot;123&quot;
+      val s = String.format(&quot;%s_%s_%s&quot;, id, date, id)
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun main() {
+      val id = &quot;abc&quot;
+      val date = &quot;123&quot;
+      val s = &quot;${id}_${date}_$id&quot;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

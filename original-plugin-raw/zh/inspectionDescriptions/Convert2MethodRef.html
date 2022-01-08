@@ -1,0 +1,19 @@
+<html>
+<body>
+报告可以替换为方法引用的 lambda。 方法引用比 lambda 更容易理解和阅读，尽管它们通常取决于您的喜好。
+<p>示例：</p>
+<pre><code>
+  Runnable r = () -> System.out.println();
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Runnable r = System.out::println;
+</code></pre>
+<!-- tooltip end -->
+<p>
+  即使 lambda 不调用任何方法，该检查也可能会建议方法引用，例如将 <code>obj -> obj != null</code> 替换为 <code>Objects::nonNull</code>。 
+  使用<a href="settings://preferences.sourceCode.Java?Lambda%20Body">设置 | 编辑器 | 代码样式 | Java | 代码生成</a>设置来配置特殊方法引用。
+</p>
+<p>仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。</p>
+</body>
+</html>

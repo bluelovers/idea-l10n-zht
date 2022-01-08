@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>报告 Docker Compose 文件中未加引号的端口映射。</p>
+<p>
+  根据 <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-1">Compose 文件规范</a>，<code>HOST:CONTAINER</code> 格式的映射端口在使用小于 60 的容器端口时可能会导致错误的结果，因为 YAML 会将格式为 <code>xx:yy</code> 的数字解析为六十进制值。
+  因此，我们建议始终将端口映射明确指定为字符串。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  ports:
+    - 3000
+    - 3000-3005
+    - 22:22
+    - 8080:8080
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  ports:
+    - "3000"
+    - "3000-3005"
+    - "22:22"
+    - "8080:8080"
+</code></pre>
+</body>
+</html>

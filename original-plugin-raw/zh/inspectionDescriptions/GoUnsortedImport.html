@@ -1,0 +1,34 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+报告未排序的导入。
+<p>所有的 Go 程序都需要以同样的方式进行格式化，格式化规则由 <a href="https://golang.org/cmd/gofmt">gofmt</a> 工具固定。 这些规则要求对导入进行分类。</p>
+<p>错误排序的实例：</p>
+<pre><code>import (
+ "net"
+ "errors"
+ "fmt"
+)</code></pre>
+<p>您可以应用 <b>import 排序</b>快速修复来解决排序问题。 应用快速修复后，排序如下所示：</p>
+<pre><code>import (
+ "errors"
+ "fmt"
+ "net"
+)</code></pre>
+</body>
+</html>

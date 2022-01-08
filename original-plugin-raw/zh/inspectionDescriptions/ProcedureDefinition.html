@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>使用过程语法报告方法定义。</p>
+<p>不建议开发者对方法使用类似过程的语法。
+  它将在 Scala 3 中被移除，因为它不一致并且可能导致错误。</p>
+<p>该快速修复会将定义从过程语法转换为函数语法。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Test {
+    def method() { }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Test {
+    def method(): Unit = { }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><em>提示</em>：您可以使用“通过名称分析/运行检查”(Ctrl+Alt+Shift+I) 将此检查应用于整个项目。</p>
+</body>
+</html>

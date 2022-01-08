@@ -1,0 +1,14 @@
+<html>
+<body>
+报告内置函数的签名问题。
+<p>检查将报告错误数量的实参、无效的关键字、错误的数据类型和其他问题。</p>
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE foo (a INT, b INT, c INT)
+
+SELECT IFNULL() FROM foo; -- 错误
+SELECT IFNULL(a) FROM foo; -- 错误
+SELECT IFNULL(a, b) FROM foo; -- 正确
+SELECT IFNULL(a, b, c) FROM foo; -- 错误</code></pre>
+<p>在 MySQL 中，<code>IFNULL()</code> 函数严格接受两个实参。 因此，只有 <code>SELECT IFNULL(a, b) FROM foo;</code> 查询是正确的。</p>
+</body>
+</html>

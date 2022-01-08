@@ -1,0 +1,11 @@
+<html>
+<body>
+报告查询中未使用的通用表表达式 (CTE)。
+<p>示例（PostgreSQL）：</p>
+<pre><code>CREATE TABLE foo(a INT);
+
+WITH a AS (SELECT 1 AS x FROM foo)
+SELECT 1 + 2 FROM foo;</code></pre>
+<p>通过使用 WITH，我们创建了一个名为 <code>a</code> 的临时命名结果集，也称为通用表表达式 (CTE)。 但是，我们稍后不会在代码中使用此 CTE。 未使用的 CTE 显示为灰色。</p>
+</body>
+</html>

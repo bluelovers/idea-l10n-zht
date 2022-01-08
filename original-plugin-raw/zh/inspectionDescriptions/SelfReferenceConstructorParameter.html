@@ -1,0 +1,16 @@
+<html>
+<body>
+报告具有非 null 自引用形参的构造函数。
+<p>此类构造函数从不实例化类。</p>
+<p>该快速修复会将形参类型转换为可 null。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class SelfRef(val ref: SelfRef)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class SelfRef(val ref: SelfRef?)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+报告 ISNULL 函数中字符串实参的截断。
+
+<p>ISNULL 语法是 <code>ISNULL(check_expression, replacement_value)</code>。
+</p>
+
+<p>根据 <a href="https://docs.microsoft.com/en-us/sql/t-sql/functions/isnull-transact-sql" target="_blank">docs.microsoft.com 上的 ISNULL</a>，如果 <code>replacement_value</code> 比 <code>check_expression</code> 长，<code>replacement_value</code> 将被截断。
+</p>
+
+<p>示例（Microsoft SQL 服务器）：</p>
+
+<pre><code>DECLARE @name1 VARCHAR(2) = NULL;
+DECLARE @name2 VARCHAR(10) = 'Example';
+DECLARE @name3 VARCHAR(2) = 'Hi';
+
+  -- `@name2` 是 VARCHAR(10) 并且将被截断
+SELECT ISNULL(@name1, @name2);
+
+  -- `@name3` 是 VARCHAR(2)（作为 `@name1`）并且不会被截断
+SELECT ISNULL(@name1, @name3);</code></pre>
+
+</body>
+</html>

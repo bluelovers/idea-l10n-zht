@@ -1,0 +1,15 @@
+<html>
+<body>
+报告局部变量或形参的同步。 
+<p>
+  使用此类同步时，很难保证正确的运算。
+  可以改进此类代码，例如，通过使用 synchronized 包装器类控制访问或通过在字段上进行同步。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void bar() {
+    final Object lock = new Object();
+    synchronized (lock) { }
+  }
+</code></pre>
+</body>
+</html>

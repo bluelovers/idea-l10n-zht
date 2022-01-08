@@ -1,0 +1,16 @@
+<html>
+<body>
+报告以下 EJB 规范违规：
+<ul>
+  <li>EJB 类通过接口公开</li>
+  <li>方法名称与保留的规范名称冲突</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+public interface EntityHome extends javax.ejb.EJBHome {
+  void ejbExampleMethod() // 错误：名称冲突
+}
+</code></pre>
+</body>
+</html>

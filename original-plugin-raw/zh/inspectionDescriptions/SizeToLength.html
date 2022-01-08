@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告 <code>array.size</code> 和 <code>string.size</code> 调用。</p>
+<p>虽然此类调用是合法的，但它们需要额外的隐式转换为 <code>SeqLike</code>。
+    对数组和字符串调用 <code>length</code> 可能会提供显著优势。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Array(1, 2, 3, 4).size
+  "this is a string".size
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Array(1, 2, 3, 4).length
+  "this is a string".length
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

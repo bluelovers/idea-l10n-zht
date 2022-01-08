@@ -1,0 +1,26 @@
+<html>
+<body>
+报告在 <code>java.util.concurrent.locks.Condition</code> 对象上对 <code>notify()</code> 或 <code>notifyAll()</code> 的调用。
+<p>
+  这可能是编程错误，本应使用 <code>signal()</code> 或 <code>signalAll()</code> 方法的某些变体，否则可能出现 <code>IllegalMonitorStateException</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class C {
+    final Lock l = new ReentrantLock();
+    final Condition c = l.newCondition();
+
+    void release() {
+      l.lock();
+      try {
+        c.notifyAll(); // 此处可能本应使用 'signalAll()'
+      } finally {
+        l.unlock();
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

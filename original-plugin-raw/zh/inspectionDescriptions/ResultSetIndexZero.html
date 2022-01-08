@@ -1,0 +1,13 @@
+<html>
+<body>
+报告访问 <code>java.sql.ResultSet</code> 或 <code>java.sql.PreparedStatement</code> 的第 0 列的尝试。
+由于历史原因，<code>java.sql.ResultSet</code> 和 <code>java.sql.PreparedStatement</code> 的列不是从 <b>0</b> 开始编号，而是从 <b>1</b> 开始编号，并且访问第 0 列是 JDBC 编程中的常见错误。
+<p><b>示例：</b></p>
+<pre><code>
+  String getName(ResultSet rs) {
+    <b>return</b> rs.getString(0);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

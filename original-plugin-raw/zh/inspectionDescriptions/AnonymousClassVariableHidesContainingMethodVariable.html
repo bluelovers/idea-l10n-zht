@@ -1,0 +1,23 @@
+<html>
+<body>
+报告匿名类中名称与包含方法或 lambda 表达式的局部变量或形参相同的字段。
+<p>
+  由于进行此类命名，在包含方法中有意使用同名变量或形参的情况下，您可能会误用匿名类字段。
+</p>
+<p>建议通过快速修复重命名该字段。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Test {
+    public Test(String value) {
+      Object foo = new Object() {
+        private String value = "TEST";
+        public void foo() {
+          System.out.println(value); //访问的是字段，而不是形参
+        }
+      };
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+报告与超类的不可访问方法包含相同签名的方法，
+例如，另一个软件包中的超类的 private 方法或 package-private 方法。
+<p>
+  此类方法名称可能令人困惑，因为子类中的方法看似重写，实则隐藏了超类不可访问的方法。
+  此外，如果此方法在超类中的可见性日后发生变化，可能会静默地更改子类的语义，否则会导致编译错误。
+</p>
+<p>建议通过快速修复重命名该方法。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Super {
+    private void test() {
+    }
+  }
+
+  public class Sub extends Super {
+    void test() { // 将 'Super.test()' 设为 public 将导致编译错误
+                  // 将 'Super.test()' 设为 package-private 会使 'Sub.test()' 变成重写
+    }
+  }</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

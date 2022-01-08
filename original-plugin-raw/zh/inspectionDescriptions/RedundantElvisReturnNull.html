@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>报告冗余的 <code>?: return null</code></p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(): Int? {
+      ...
+  }
+
+  fun test() : Int? {
+      return foo() <b>?: return null</b>
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(): Int? {
+      ...
+  }
+
+  fun test() : Int? {
+      return foo()
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+报告代码块中仅有一条语句的控制流语句，并建议移除控制流语句体中的大括号。
+<p>示例：</p>
+<pre><code>
+  if (x > 0) {
+    System.out.println("x is positive");
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  if (x > 0) System.out.println("x is positive");
+</code></pre>
+</body>
+</html>

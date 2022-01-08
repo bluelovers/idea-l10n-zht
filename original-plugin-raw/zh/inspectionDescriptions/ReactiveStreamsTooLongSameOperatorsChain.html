@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>报告长的 Reactive Streams 转换链。</p>
+<p>每个运算符方法调用，例如 <code>map()</code> 或 <code>filter()</code>，都会为这些运算符创建一些对象。
+  在每个订阅上对每个流元素调用长运算符链可能会导致性能开销。
+  为避免这种情况，请尽可能将长运算符链合并为一个运算符调用。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+Flux.just(1, 2, 3)
+        .map(it -> it + 1)
+        .map(it -> it + 2)
+        .map(it -> it + 3)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+Flux.just(1, 2, 3)
+        .map(it -> it + 1 + 2 + 3)
+</code></pre>
+<!-- tooltip end -->
+<p><small>2019.3 最新变化</small></p>
+</body>
+</html>

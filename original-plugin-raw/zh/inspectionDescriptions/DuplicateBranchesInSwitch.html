@@ -1,0 +1,31 @@
+<html>
+<body>
+报告在不同分支中包含相同代码的 <code>switch</code> 语句或表达式，并建议合并重复的分支。
+<p>示例：</p>
+<pre><code>
+  <b>switch</b> (n) {
+    <b>case</b> 1:
+      System.out.println(n);
+      <b>break</b>;
+    <b>case</b> 2:
+      System.out.println(n);
+      <b>break</b>;
+    <b>default</b>:
+      System.out.println("default");
+  }
+</code></pre>
+<p>可以替换为：</p>
+<pre><code>
+  <b>switch</b> (n) {
+    <b>case</b> 1:
+    <b>case</b> 2:
+      System.out.println(n);
+      <b>break</b>;
+    <b>default</b>:
+      System.out.println("default");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2019.1 最新变化</small></p>
+</body>
+</html>

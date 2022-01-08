@@ -1,0 +1,33 @@
+<html>
+<body>
+报告对可通过索引运算符 <code>[]</code> 替换的 <code>get</code> 或 <code>set</code> 函数的显式调用。
+<p>
+    Kotlin 允许对类型的预定义运算符集进行自定义实现。
+    要重载运算符，您可以使用 <code>operator</code> 修饰符标记相应的函数：
+    <pre><code>
+  operator fun get(index: Int) {}
+  operator fun set(index: Int, value: Int) {}
+    </code></pre>
+
+以上函数对应于索引运算符。
+
+<p><b>示例：</b></p>
+<pre><code>  class Test {
+      operator fun get(i: Int): Int = 0
+  }
+
+  fun test() {
+      Test().get(0) // 可替换的 'get()'
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>  class Test {
+      operator fun get(i: Int): Int = 0
+  }
+
+  fun test() {
+      Test()[0]
+  }
+</code></pre>
+</body>
+</html>

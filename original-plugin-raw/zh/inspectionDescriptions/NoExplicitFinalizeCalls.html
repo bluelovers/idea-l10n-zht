@@ -1,0 +1,15 @@
+<html>
+<body>
+报告对 <code>Object.finalize()</code> 的调用。
+<p>显式调用 <code>Object.finalize()</code> 可能导致对象处于不一致的状态。
+  垃圾收集器在确定没有对该对象的引用时，自动对该对象调用此方法。</p>
+<p>该检查不报告 <code>finalize()</code> 实现中对 <code>super.finalize()</code> 的调用，因为它们是良性的。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  MyObject m = new MyObject();
+  m.finalize();
+  System.gc()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

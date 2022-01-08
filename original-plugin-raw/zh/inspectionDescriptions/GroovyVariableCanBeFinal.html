@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告可能添加了 final 修饰符的形参或局部变量。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  def list = [1,2,3]
+  return list
+</code></pre>
+<p>在应用快速修复后：
+<pre><code>
+  final def list = [1,2,3]
+  return list
+</code></pre>
+<!-- tooltip end -->
+<p>有关更多信息，请参阅 Java 中的相同检查。</p>
+</body>
+</html>

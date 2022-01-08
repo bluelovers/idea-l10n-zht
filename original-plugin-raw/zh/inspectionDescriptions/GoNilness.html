@@ -1,0 +1,17 @@
+<html>
+<body>
+报告由错误使用 <code>nil</code> 值引起的问题。
+
+<p>IDE 分析数据流，以确定变量是否可以有 <code>nil</code> 或非 <code>nil</code> 值。
+  IDE 使用这个结果来报告您的代码中的潜在问题。 请考虑以下可能导致意外后果的情况：</p>
+
+<ul>
+  <li>带有 <code>nil</code> 接收器的方法调用可能会导致 ‘nil 指针取消引用’。</li>
+  <li><code>nil</code> 切片索引可能会导致 panic。</li>
+  <li>如果已知 <code>v</code> 始终为 <code>nil</code>或非 <code>nil</code>，那么像 <code>v == nil</code> 这种比较可能毫无意义。
+  </li>
+  <li>有对应错误的变量不会被检查不是 <code>nil</code>。 当变量和错误在类似 <code>v, err := foo()</code> 语句中一起定义或赋值时，错误对应于一个变量。
+  </li>
+</ul>
+</body>
+</html>

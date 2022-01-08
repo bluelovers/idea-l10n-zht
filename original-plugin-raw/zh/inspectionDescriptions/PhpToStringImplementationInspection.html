@@ -1,0 +1,15 @@
+<html>
+<body>
+  报告将没有 <code>__ toString</code> 方法实现的对象转换为 <code>string</code> 的尝试。
+<!-- tooltip end -->
+  <p>
+    在 PHP 7.4 之前，这将导致一个致命的 <code>E_RECOVERABLE_ERROR</code> 级错误。 在 PHP 7.4 中，会抛出一个致命的不可恢复的 <code>ERROR</code>。 从 PHP 8.0 开始，返回值遵循标准 PHP 类型语义，如果可能且严格类型模式被禁用，就会被强制转换为字符串。
+  </p>
+  <p>
+    如果启用了<b>检查每种表达式类型是否存在 __toString</b> 选项，则该检查将会检查表达式的所有可能类型，如果其中至少一种类型不包含 <code>__toString</code> 方法实现，则进行报告。
+  </p>
+<p>
+  有关详细信息，请参阅 <a href="https://www.php.net/manual/en/language.oop5.magic.php#language.oop5.magic.tostring">__toString (php.net)</a>。
+</p>
+</body>
+</html>

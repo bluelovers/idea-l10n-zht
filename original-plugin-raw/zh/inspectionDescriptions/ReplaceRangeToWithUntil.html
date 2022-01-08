@@ -1,0 +1,24 @@
+<html>
+<body>
+报告对 <code>rangeTo</code> 或 <code>..</code> 运算符的调用，而非对 <code>until</code> 的调用。
+<p>使用相应函数可使代码更简单。</p>
+<p>该快速修复会将 <code>rangeTo</code> 或 <code>..</code> 调用替换为 <code>until</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(a: Int) {
+      for (i in 0..a - 1) {
+
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(a: Int) {
+      for (i in 0 until a) {
+
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<body>
+报告目标是另一个方法调用的方法调用。
+该快速修复会建议引入局部变量。
+<p><b>示例：</b></p>
+<pre><code>
+  class X {
+    int foo(File f) {
+      return f.getName().length();
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class X {
+    int foo(File f) {
+      final String name = f.getName();
+      return name.length();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用检查选项来切换以下各项的警告：</p>
+<ul>
+  <li>
+    <p>
+      字段初始值设定项中的链式方法调用，例如 <code>private final int i = new Random().nextInt();</code>
+    </p>
+  </li>
+  <li>
+    <p>
+      在相同的类型上运算的链式方法调用，例如，<code>new StringBuilder().append("x: ").append(new X()).append("y: ").append(new Y()).toString();</code>。
+    </p>
+  </li>
+</ul>
+
+</body>
+</html>

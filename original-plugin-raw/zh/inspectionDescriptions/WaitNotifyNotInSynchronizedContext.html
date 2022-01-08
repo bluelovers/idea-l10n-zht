@@ -1,0 +1,22 @@
+<html>
+<body>
+报告不是在相应的 synchronized 语句或 synchronized 方法进行中的 <code>wait()</code>、<code>notify()</code> 和 <code>notifyAll()</code> 调用。
+<p>
+  在没有持有锁定的对象上调用这些方法会导 <code>IllegalMonitorStateException</code>。
+  此类结构不一定错误，因为在调用该包含方法前可能已获取必要的锁定，但即便如此，还是要仔细查看。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Sync {
+    private final Object lock = new Object();
+
+    void test() throws InterruptedException {
+      synchronized (this) {
+        lock.wait(); // 'lock.wait()' 未在 'lock' 上同步
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

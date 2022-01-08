@@ -1,0 +1,21 @@
+<html>
+<body>
+报告没有状态和被重写的 <code>equals()</code> 方法的 <code>sealed</code> 类的直接继承者。
+<p>强烈建议重写 <code>equals()</code> 以提供比较稳定性，或将 <code>class</code> 转换为 <code>object</code> 以达到相同的效果。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  sealed class Receiver {
+      class Everyone : Receiver()
+      class User(val id: Int) : Receiver()
+  }
+</code></pre>
+<p>快速修复会将 <code>class</code> 转换为 <code>object</code>：</p>
+<pre><code>
+  sealed class Receiver {
+      object Everyone : Receiver()
+      class User(val id: Int) : Receiver()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

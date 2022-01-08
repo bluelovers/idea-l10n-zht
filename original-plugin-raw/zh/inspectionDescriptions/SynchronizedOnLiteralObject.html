@@ -1,0 +1,23 @@
+<html>
+<body>
+报告在用文字初始化的对象上锁定的 <code>synchronized</code> 块。
+<p>
+  字符串文字是暂存的，<code>Character</code>、<code>Boolean</code> 和 <code>Number</code> 文字可以从缓存中分配。
+  正因为如此，可能系统的其他某些部分（使用通过相同文字初始化的对象）实际上会包含对完全相同的对象的引用。 如果锁定对象被认为是 private 对象，这可能会产生意外的死锁情况。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Main {
+    final String mutex = "Mutex";
+    void method() {
+      synchronized (mutex) {
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用<strong>警告所有可能的文字</strong>选项可以报告 <code>String</code>、<code>Character</code>、<code>Boolean</code> 和 <code>Number</code> 对象的任何同步。
+</p>
+</body>
+</html>

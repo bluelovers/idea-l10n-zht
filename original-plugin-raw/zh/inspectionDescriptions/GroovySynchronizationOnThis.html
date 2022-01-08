@@ -1,0 +1,9 @@
+<html>
+<body>
+报告使用 <code>this</code> 作为其锁定表达式的同步。
+<p>
+  报告的结构包括锁定 <code>this</code> 的 <code>synchronized</code> 块，以及对以 <code>wait()</code> 为目标的 <code>wait()</code> <code>notify()</code> 或 <code>notifyAll()</code> 的调用。
+  此类结构（如 synchronized 方法）会导致难以跟踪给定对象上锁定的对象，并且可能导致对象遭到“拒绝服务”攻击。 替代做法是考虑在 private 实例变量上锁定，从而完全控制对该对象的访问。
+</p>
+</body>
+</html>

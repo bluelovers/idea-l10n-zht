@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>报告不扩展密封基类的允许类。<p>
+<p>Groovy 不要求所有的允许类都应在编译时可用并与基类一起编译。 编译器不会在处理非扩展允许子类时警告用户，但这与密封类的性质相矛盾。
+<p><b>示例：</b></p>
+<pre><code>
+  class A permits B {} // 报告 B
+  class B {}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+报告具有隐式 <b>Nothing?</b> 类型的变量和函数。
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo() = null
+</code></pre>
+<p>该快速修复会显式指定返回类型：</p>
+<pre><code>
+  fun foo(): Nothing? = null
+</code></pre>
+</body>
+</html>

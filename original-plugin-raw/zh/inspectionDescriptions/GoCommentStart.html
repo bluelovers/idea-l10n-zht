@@ -1,0 +1,31 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+报告不以导出元素名称开头的注释。
+<p>根据 <a href="https://golang.org/wiki/CodeReviewComments#comment-sentences">golang.org 上的 Comment Sentences</a> 页面，将导出元素的名称放在评论的开头是一个惯例。</p>
+<p>示例：</p>
+<pre><code>// 表示运行命令的请求。
+type Request struct {}</code></pre>
+
+<p>注释以结构描述开头，而不是结构名称。 为了遵守惯例规则，您可以应用 <b>向注释中添加前缀</b> 快速修复。 应用快速修复后，注释如下所示：</p>
+<pre>
+// Request 表示运行命令的请求。
+type Request struct {} // 更好
+</pre>
+</body>
+</html>

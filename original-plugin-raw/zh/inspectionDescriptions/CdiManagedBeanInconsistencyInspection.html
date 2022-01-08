@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告不正确的 Bean 定义规则。</p>
+<p>顶级 Java 类可以为简单的 Bean，如果：</p>
+<ul>
+  <li>它不是形参化类型。</li>
+  <li>它不是一个非 static 内部类。</li>
+  <li>它是一个具体类，或者使用 <code>@Decorator</code> 进行注解。</li>
+  <li>拥有适当的构造函数：该类具有没有形参的构造函数，或声明使用 <code> @Initializer </code> 注解的构造函数。
+  </li>
+  <li>它不实现以下任何接口：
+    <code>javax.servlet.Servlet</code>、
+    <code>javax.servlet.Filter</code>、
+    <code>javax.servlet.ServletContextListener</code>、
+    <code>javax.servlet.http.HttpSessionListener</code>、
+    <code>javax.servlet.ServletRequestListener</code>、
+    <code>javax.ejb.EnterpriseBean</code>。
+  </li>
+  <li>它不扩展 <code>javax.faces.component.UIComponent</code>。</li>
+</ul>
+</body>
+</html>

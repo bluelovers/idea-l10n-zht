@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告引用的抽象 Bean。</p>
+
+<p>抽象 Bean 只能用作模板 Bean 定义，即子定义的父项。
+  尝试通过作为另一个 Bean 的 ref 属性进行引用，或者通过使用父 Bean ID 调用 <code>getBean()</code> 来单独使用此类抽象父 Bean，将导致错误。</p>
+
+<p><b>示例：</b></p>
+
+<pre><code>
+  &lt;bean abstract="true" id="parentBeanWithoutClass"/&gt;
+  &lt;bean class="com.my.company.FooBean" id="childBean" parent="parentBeanWithoutClass"&gt;
+  &lt;!--  properties --&gt;
+  &lt;/bean&gt;
+</code></pre>
+
+<p>在此示例中，父 Bean 不能自己实例化，因为它不完整并且被显式声明为抽象。</p>
+</body>
+</html>
+

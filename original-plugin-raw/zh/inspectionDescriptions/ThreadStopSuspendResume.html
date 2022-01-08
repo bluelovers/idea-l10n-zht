@@ -1,0 +1,10 @@
+<html>
+<body>
+报告对 <code>Thread.stop()</code>、<code>Thread.suspend()</code> 和 <code>Thread.resume()</code> 的调用。
+<p>
+  这些调用本质上容易导致数据损坏和死锁，强烈建议不要使用。
+  最好使用合作取消代替 <code>stop</code>，使用中断代替直接调用 <code>suspend</code> 和 <code>resume</code>。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

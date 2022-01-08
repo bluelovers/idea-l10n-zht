@@ -1,0 +1,11 @@
+<html>
+<body>
+报告在单个表达式内的同一变量上使用的 <code>==</code> 和 <code>===</code> 比较。
+<p>由于相似性，<code>==</code> 和 <code>===</code> 可能会在无通知的情况下混用，需要仔细检查使用的是 <code>==</code> 而非 <code>===</code></p>
+<p>示例：</p>
+<pre><code>
+  if (type === FIELD || type == METHOD || type == ANNOTATION_METHOD || // 请注意，"==" 使用错误
+      type === LAMBDA_EXPRESSION) return
+</code></pre>
+</body>
+</html>

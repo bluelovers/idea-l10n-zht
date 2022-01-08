@@ -1,0 +1,31 @@
+<html>
+<body>
+报告仅包含 <code>{@inheritDoc}</code> 标记的 Javadoc 注释。 由于 Javadoc 会在没有注释的情况下复制超类的注释，因此仅包含 <code>{@inheritDoc}</code> 的注释不会添加任何内容。
+<p>此外，它还会报告无效位置（例如，字段）中的 <code>{@inheritDoc}</code> 用法。</p>
+<p>建议移除不必要的 Javadoc 注释。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Example implements Comparable&lt;Example&gt; {
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int compareTo(Example o) {
+      return 0;
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Example implements Comparable&lt;Example&gt; {
+    @Override
+    public int compareTo(Example o) {
+      return 0;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

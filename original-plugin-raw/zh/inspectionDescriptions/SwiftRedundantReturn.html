@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>
+  报告可以忽略 <code>return</code> 的用法，即在所有单表达式闭包、getter 和函数中的用法。
+</p>
+<p>
+  建议移除冗余的 <code>return</code>。
+</p>
+<!-- tooltip end -->
+<p>
+  <b>示例：</b>
+</p>
+<pre><code>
+  func thinkDeeply() { return 42 }
+</code></pre>
+<p>
+  在应用快速修复后：
+</p>
+<pre><code>
+  func thinkDeeply() { 42 }
+</code></pre>
+</body>
+</html>

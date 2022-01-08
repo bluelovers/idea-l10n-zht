@@ -1,0 +1,27 @@
+<html>
+<body>
+报告已知为常量的变量的所有用法。
+<p>如果（读取）使用的变量被 <code>if</code>、<code>while</code> 或 <code>for</code> 语句包围，且存在该变量与常量相比较的 <code>==</code> 条件时，就会发生这种情况。
+  在这种情况下，使用的已知为常量的变量可以替换为实际常量。</p>
+<p>示例：</p>
+<pre><code>
+    private static void foo(double number) {
+        if (number == 1.0) {
+            f(number);
+        }
+    }
+    private static void f(double number) {}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+    private static void foo(double number) {
+        if (number == 1.0) {
+            f(1.0);
+        }
+    }
+    private static void f(double number) {}
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

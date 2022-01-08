@@ -1,0 +1,28 @@
+<html>
+<body>
+报告对 <code>Throwable.initCause()</code> 的调用，其中异常构造函数还包含 <code>Throwable cause</code> 实参。
+<p>在本例中，可以移除 <code>initCause()</code> 调用，并将其实参添加到对异常构造函数的调用中。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  try {
+      process();
+  }
+  catch (RuntimeException ex) {
+    RuntimeException wrapper = new RuntimeException("Error while processing");
+    wrapper.initCause(ex); // 不必要调用 'Throwable.initCause()'
+    throw wrapper;
+  }
+</code></pre>
+<p>可通过快速修复将 cause 实参传递给构造函数。 在应用快速修复后：</p>
+<pre><code>
+  try {
+      process();
+  }
+  catch (RuntimeException ex) {
+    RuntimeException wrapper = new RuntimeException("Error while processing", ex);
+    throw wrapper;
+  }
+  </code></pre>
+<!-- tooltip end -->
+</body>
+</html>

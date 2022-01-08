@@ -1,0 +1,14 @@
+<html>
+<body>
+报告在运行时代码阻止某个框架（例如 Spring 或 Hibernate）对类进行子类化的情况。
+<!-- tooltip end -->
+<p>必要但不可能进行子类化的典型示例：</p>
+<ul>
+  <li>使用特定于框架的注解（例如 Spring <code>@Configuration</code>）标记的 <code>final</code> 类</li>
+  <li>使用特定于框架的注解（例如 Spring <code>@Transactional</code>）标记的 <code>final</code>、<code>static</code> 或 <code>private</code> 方法</li>
+  <li><code>final</code> 类中使用特定于框架的注解标记的方法</li>
+</ul>
+
+<p>报告的情况清单取决于使用的框架。</p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+报告迭代集合并且可以替换为增强型 <code>for</code> 循环（foreach 迭代语法）的 <code>while</code> 循环。
+<!--  'foreach' still used in this description so that the inspection continues to be found using this keyword -->
+<p><b>示例：</b></p>
+<pre><code>
+  Iterator it = c.iterator();
+  while(it.hasNext()) {
+    Object obj = it.next();
+    System.out.println(obj);
+  }
+</code></pre>
+<p>可以替换为：</p>
+<pre><code>
+  for (Object obj : c) {
+    System.out.println(obj);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 5 或更高时，此检查才会报告。</p>
+
+</body>
+</html>

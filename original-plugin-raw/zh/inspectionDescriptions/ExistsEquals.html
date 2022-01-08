@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告搜索特定元素的 <code>exists</code> 或 <code>forall</code> 的用法。</p>
+
+
+<p>该快速修复改用 <code>contains</code>。</p>
+
+<p>示例：</p>
+<pre><code>
+  set.exists(x => x == "a")
+  set.forall(x => x != "a")
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  set.contains("a")
+  !set.contains("a")
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

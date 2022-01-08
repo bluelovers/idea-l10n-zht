@@ -1,0 +1,22 @@
+<html>
+<body>
+报告与周围类的字段同名的 lambda 形参。
+由于进行此类命名，在有意使用同名字段的情况下，您可能会误用 lambda 形参。
+<p>建议通过快速修复重命名该 lambda 形参。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class MyClass {
+    public Object foo;
+
+    void sort(List&lt;Integer&gt; list) {
+      list.sort((foo, bar) -> foo - bar);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用此选项可选择是否忽略对 lambda 表达式不可见的字段。
+  例如，超类的 private 字段。
+<p>
+</body>
+</html>

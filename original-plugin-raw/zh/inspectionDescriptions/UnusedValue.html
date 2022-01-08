@@ -1,0 +1,28 @@
+<html>
+<body>
+报告分配后从未使用的变量值。 这可能会在以下情况发生：
+<ul>
+  <li>变量在被赋值后从未读取</li>
+  <li>值在被读取之前被另一个赋值重写</li>
+  <li>变量初始值设定项冗余（由于以上两种原因之一）</li>
+  <li>变量从未使用。</li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+  class C {
+    int field;
+
+    void foo() {
+      field = unused_value;
+    }
+
+    void bar() {
+      use(field);
+      foo();
+    }
+  };
+</code></pre>
+<!-- tooltip end -->
+<p>使用下面的复选框可以让此检查忽略变量初始值设定项。</p>
+</body>
+</html>

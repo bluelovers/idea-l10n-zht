@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>报告 Spring 组件的自动装配和注入的 static 方法/字段。</p>
+
+<p><b>示例：</b></p>
+<pre>
+@Component
+public class MyComponent {
+	@Autowired
+	static FooInterface foo;  // 报告 "不自动装配 static 成员"
+}
+</pre>
+</body>
+</html>

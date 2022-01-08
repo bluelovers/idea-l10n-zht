@@ -1,0 +1,10 @@
+<html>
+<body>
+报告扩展、实现或重写使用 <code>@ApiStatus.NonExtendable</code> 标记的 API 元素的类、接口和方法。
+<p>
+  <code>@ApiStatus.NonExtendable</code> 注解表示<strong>不得扩展、实现或重写</strong>类、接口或方法。
+  将此类接口和类转换为内部库实现很常见，因此，如果客户端提供不同的实现，将获得 <code>ClassCastException</code>。
+  将新的 abstract 方法添加到这种类和接口将破坏与客户端实现的兼容性。
+</p>
+</body>
+</html>

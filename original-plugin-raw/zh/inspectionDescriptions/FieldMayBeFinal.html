@@ -1,0 +1,14 @@
+<html>
+<body>
+报告可以安全地设为 <code>final</code> 的任何字段。
+<p>使用 <code>final</code> 变量会使代码更不容易出错。 它还可以通过优化编译器来帮助加速您的程序。</p>
+<p>只有当一个字段具有 <code>private</code> 访问修饰符才可以安全地设为 <code> final </code>（或者它在本地/匿名类中定义），并且：<p>
+<ul>
+  <li>它是 <code>static</code>，并在其声明或 static 的类初始化程序之一中进行初始化。</li>
+  <li>它是非 static 的，并在其声明、非 static 的类初始化程序或所有构造函数中初始化。</li>
+</ul>
+<!-- tooltip end -->
+
+
+</body>
+</html>

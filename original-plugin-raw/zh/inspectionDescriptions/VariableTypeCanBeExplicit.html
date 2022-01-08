@@ -1,0 +1,16 @@
+<html>
+<body>
+报告可以替换为显式类型的 <code>var</code> 类型的局部变量。
+<p>在降级的情况下，该检查有助于发现和消除隐式类型的用法。</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  var str = "Hello";
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  String str = "Hello";
+</code></pre>
+<p>仅当项目或模块的语言级别为 10 或更高时，此检查才会报告。</p>
+</body>
+</html>

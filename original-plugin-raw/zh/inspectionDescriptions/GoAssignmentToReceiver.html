@@ -1,0 +1,62 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+报告给方法接收器的赋值。
+<p>当您将值赋给方法接收器时，该值将不会反映在方法本身之外。
+  值将反映在来自同一方法的后续调用中。</p>
+<p>示例：</p>
+<pre><code>package main
+
+import "fmt"
+
+type demo struct {
+ Val int
+}
+
+func (d *demo) change() {
+ d = nil // 对方法接收器的分配仅传播给被调用者，而不传播给调用者
+ d.myVal()
+}
+
+func (d *demo) myVal() {
+ fmt.Printf("my val: %#v\n", d)
+}
+
+func (d demo) change2() {
+ d = demo{} // 对方法接收器的分配不会传播到其他调用
+ d.myVal()
+}
+
+func (d *demo) change3() {
+ d.Val = 3
+ d.myVal()
+}
+
+func main() {
+ d := &demo{}
+ d.myVal()
+ d.change()
+ d.myVal()
+ d.Val = 2
+ d.change2()
+ d.myVal()
+ d.change3()
+ d.myVal()
+}</code></pre>
+</body>
+</html>

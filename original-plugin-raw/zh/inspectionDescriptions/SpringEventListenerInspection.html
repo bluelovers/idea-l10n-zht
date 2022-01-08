@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>报告不正确的 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/event/EventListener.html">@EventListener</a> 方法。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  @Configuration @ComponentScan
+  open class Config
+
+  data class MyEvent(val string: String)
+
+  @Component
+  class LogComponent {
+    @EventListener // 使用 @EventListener 注解的方法必须为 public
+    private fun logCommands(commandName: MyEvent) {}
+
+    @EventListener // 方法必须最多只有一个形参
+    fun processCommand(commandName: MyEvent, text: String) {}
+  }
+</code></pre>
+
+</body>
+</html>

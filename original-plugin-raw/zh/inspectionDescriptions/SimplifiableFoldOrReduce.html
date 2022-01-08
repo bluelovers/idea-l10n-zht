@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告可以替换为 <code>sum</code>、<code>product</code>、<code>max</code> 或 <code>min</code> 的 <code>fold</code> 和 <code>reduce</code> 方法。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  List(1, 2, 3).foldLeft(1){(x,y) => x * y}
+  List(1, 2, 3).fold(0)(_ + _)
+  List(1, 2, 3).reduce(_ + _)
+  List(1, 2, 3).reduceLeft(_ min _)
+  List(1, 2, 3).reduce((x, y) => math.max(x, y))
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  List(1, 2, 3).product
+  List(1, 2, 3).sum
+  List(1, 2, 3).sum
+  List(1, 2, 3).min
+  List(1, 2, 3).max
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

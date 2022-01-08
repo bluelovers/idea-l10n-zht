@@ -1,0 +1,39 @@
+<html>
+<body>
+    报告可以安全移除的冗余分号 (<code>;</code>)。
+<p>
+    Kotlin 不要求在每个语句或表达式的末尾使用分号。
+    建议使用快速修复移除冗余的分号。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val myMap = mapOf("one" to 1, "two" to 2);
+  myMap.forEach { (key, value) ->  print("$key -> $value")};
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val myMap = mapOf("one" to 1, "two" to 2)
+  myMap.forEach { (key, value) ->  print("$key -> $value")}
+</code></pre>
+
+<p>有两种情况需要使用分号：</p>
+<ol>
+    <li>
+        放在一个行里的多个语句需要用分号隔开：
+<pre><code>
+  map.forEach { val (key, value) = it; println("$key -> $value") }
+</code></pre>
+    </li>
+    <li>
+        同时声明了属性或函数的 <code>enum</code> 类要求在枚举常量列表后加一个分号：
+        <pre><code>
+  enum class Mode {
+      SILENT, VERBOSE;
+
+      fun isSilent(): Boolean = this == SILENT
+  }
+        </code></pre>
+    </li>
+</ol>
+</body>
+</html>

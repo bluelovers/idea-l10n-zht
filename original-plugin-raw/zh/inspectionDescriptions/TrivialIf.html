@@ -1,0 +1,31 @@
+<html>
+<body>
+报告可以简化为单个赋值、<code>return</code> 或 <code>assert</code> 语句的 <code>if</code> 语句。
+<p>示例：</p>
+<pre><code>
+  if (foo()) {
+    return true;
+  } else {
+    return false;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  return foo();
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<p>如果要隐藏链式 <code>if</code> 语句的警告，请使用<b>忽略链式 'if' 语句</b>选项。</p>
+<p>例如，在以下代码中，警告将被隐藏，但快速修复仍然可用：</p>
+<pre><code>
+  if (condition1) return true;
+  if (condition2) return false;
+  return true;
+</code></pre>
+<p>如果要隐藏 <code>if</code> 语句在其主体中仅包含 <code>assert</code> 语句的警告，请使用 <b>忽略 'assert' 语句</b>选项。</p>
+<p>例如，在以下代码中，警告将被隐藏：</p>
+<pre><code>
+  if (isTrue()) assert false;
+</code></pre>
+</body>
+</html>

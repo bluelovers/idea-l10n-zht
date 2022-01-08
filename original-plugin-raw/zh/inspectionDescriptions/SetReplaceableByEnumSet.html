@@ -1,0 +1,21 @@
+<html>
+<body>
+报告内容类型为枚举类的 <code>java.util.Set</code> 对象的实例化。 此类 <code>Set</code> 对象可以替换为 <code>java.util.EnumSet</code> 对象。
+<p>
+  与其他集合相比，<code>EnumSet</code> 实现的效率更高，因为底层数据结构是位向量。 使用该快速修复可以将初始值设定项替换为 <code>EnumSet.noneOf()</code> 调用。 当变量类型是 <code>Set</code> 的子类时，此快速修复不可用。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  enum MyEnum { FOO, BAR; }
+
+  Set&lt;MyEnum&gt; enums = new HashSet&lt;MyEnum&gt;();
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  enum MyEnum { FOO, BAR; }
+
+  Set&lt;MyEnum&gt; enums = EnumSet.noneOf(MyEnum.class);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

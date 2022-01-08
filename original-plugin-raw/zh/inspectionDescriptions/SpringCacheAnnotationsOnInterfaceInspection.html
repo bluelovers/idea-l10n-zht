@@ -1,0 +1,10 @@
+<html>
+<body>
+<p>报告接口上的 <code>@Cache*</code> 注解。</p>
+
+<p>您应该只使用 <code>@Cache*</code> 注解具体类（和具体类的方法）。
+使用 <code>@Cache*</code> 注解接口（或接口方法）需要使用基于接口的代理。
+由于 Java 注解不是从接口继承的，当使用基于类的代理 (<code>proxy-target-class="true"</code>) 或基于编织的切面 (<code>mode="aspectj"</code>) 时，代理和编织基础架构将无法识别缓存设置 。
+因此，该对象将不会被包装在缓存代理中。</p>
+</body>
+</html>

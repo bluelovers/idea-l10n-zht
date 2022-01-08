@@ -1,0 +1,15 @@
+<html>
+<body>
+报告用于加法或减法表达式的 <code>char</code> 类型的表达式。
+<p>此类代码不一定是问题，但可能会导致错误（例如，如果需要字符串）。</p>
+<p><b>示例</b>：<code>int a = 'a' + 42;</code></p>
+<p>应用该快速修复后：<code>int a = (int) 'a' + 42;</code></p>
+<p>对于 <code>String</code> 上下文：
+<pre><code>int i1 = 1;
+int i2 = 2;
+System.out.println(i2 + '-' + i1 + &quot; = &quot; + (i2 - i1));</code></pre>
+<p>在应用快速修复后：</p>
+<code>System.out.println(i2 + &quot;-&quot; + i1 + &quot; = &quot; + (i2 - i1));</code>
+<!-- tooltip end -->
+</body>
+</html>

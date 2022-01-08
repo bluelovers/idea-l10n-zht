@@ -1,0 +1,22 @@
+<html>
+<body>
+报告使用集合类作为类型而不是使用相应接口进行的 <code>Collection</code> 变量的声明。 如果削弱变量类型会导致编译错误，则不发出警告。
+<p>示例：</p>
+<pre><code>
+  // 警告：使用了具体集合类 ArrayList。
+  int getTotalLength(ArrayList&lt;String&gt; list) {
+    return list.stream().mapToInt(String::length).sum();
+  }
+
+  // 无警告，因为 trimToSize() 方法
+  // 在 List 接口中不可用
+  void addData(ArrayList&lt;String&gt; data) {
+    data.add("Hello");
+    data.add("World");
+    data.trimToSize();
+  }
+</code></pre>
+建议通过快速修复使用相应集合接口（例如 <code>Collection</code>、<code>Set</code> 或 <code>List</code>）。
+<!-- tooltip end -->
+</body>
+</html>

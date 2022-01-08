@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>报告对 <code>super(A, B)</code> 的任何调用不符合以下要求的情况：</p>
+<ul>
+  <li><code>B</code> 是 <code>A</code> 的实例</li>
+  <li><code>B</code> 是 <code>A</code> 的子类</li>
+</ul>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class Figure:
+    def color(self):
+        pass
+
+
+class Rectangle(Figure):
+    def color(self):
+        pass
+
+
+class Square(Figure):
+    def color(self):
+        return super(Rectangle, self).color() # Square 不是 Rectangle 的子类
+</pre>
+<p>作为修复，您可以令 <code>Square</code> 为 <code>Rectangle</code> 类的实例。</p>
+</body>
+</html>

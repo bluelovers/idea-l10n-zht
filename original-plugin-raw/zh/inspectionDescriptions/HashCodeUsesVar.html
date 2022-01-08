@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>如果 <code>hashCode</code> 中使用了 <code>var</code> 字段，则报告这些字段。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Test {
+    var value = 3
+    override def hashCode(): Int =
+      value // 值可能会改变，表明 hashCode() 被误用
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

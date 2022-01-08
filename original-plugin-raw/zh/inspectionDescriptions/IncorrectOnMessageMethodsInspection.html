@@ -1,0 +1,51 @@
+<html>
+<body>
+<p>报告使用 <code>@OnMessage</code> 注解的不正确 WebSocket 方法。</p>
+
+<p>
+  此注解标记处理传入 WebSocket 消息的方法。 每个 WebSocket 端点只能包含一个处理所有 WebSocket 消息格式（文本、二进制、pong）的消息处理方法。 带有 <code>@OnMessage</code> 注解的方法允许以任何顺序具有以下形参集：
+</p>
+
+<ul>
+  <li>
+    可以包含以下形参集之一：
+    <ul>
+      <li>
+        如果该方法正在处理文本消息：
+        <ul>
+          <li><code>String</code>，用于接收整条消息</li>
+          <li>Java 基元类型或类等效项，用于接收转换为该类型的整条消息</li>
+          <li><code>String</code> 和布尔对，用于按部分接收消息</li>
+          <li><code>Reader</code>，用于以阻塞流的形式接收整条消息</li>
+          <li>端点具有文本解码器的任何对象形参（<code>Decoder.Text</code> 或 <code>Decoder.TextStream</code>）
+          </li>
+        </ul>
+      </li>
+      <li>
+        如果该方法正在处理二进制消息：
+        <ul>
+          <li><code>byte[]</code> 或 <code>ByteBuffer</code>，用于接收整条消息</li>
+          <li><code>byte[]</code> 和布尔对，或 <code>ByteBuffer</code> 和布尔对，用于按部分接收消息</li>
+          <li><code>InputStream</code>，用于以阻塞流的形式接收整条消息</li>
+          <li>端点具有二进制解码器的任何对象形参（<code>Decoder.Binary</code> 或 <code>Decoder.BinaryStream</code>）
+          </li>
+        </ul>
+      </li>
+      <li>
+        如果该方法正在处理 pong 消息：
+        <ul>
+          <li><code>PongMessage</code>，用于处理 pong 消息</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>使用 <code>@PathParam</code> 注解的任意数量的服务器端点的 <code>String</code> 或 Java 基元形参</li>
+  <li>一个可选的 <code>Session</code> 形参</li>
+</ul>
+
+<p>
+  如果该方法返回一个值，WebSocket 运行时会将其解释为返回给对等方的消息。
+  允许的返回类型是 <code>String</code>、<code>ByteBuffer</code>、<code>byte[]</code>、任何 Java 基元或类等效项，以及任何带有编码器的类型。 如果该方法返回一个 Java 基元值，则实现必须使用 Java 基元的标准 Java 字符串表示来构造要发送的文本消息，除非开发者为此端点配置的类型提供了编码器，在这种情况下必须使用该编码器。 如果该方法返回 Java 基元的类等效项，则实现必须按照前面所述从 Java 基元等效项构造文本消息。
+</p>
+</body>
+</html>

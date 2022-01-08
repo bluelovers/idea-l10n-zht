@@ -1,0 +1,15 @@
+<html>
+<body>
+报告带有常量 <code>true</code> 或 <code>false</code> 分支的 <code>when</code> 表达式。
+<p><b>简化 "when"</b> 快速修复可用于自动修正代码。</p>
+<p>示例：</p>
+<pre><code>
+  fun redundant() {
+      when { // &lt;== 冗余，快速修复会将 when 表达式简化为 "println("true")"
+          true -> println("true")
+          else -> println("false")
+      }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+报告对 volatile 字段的非原子操作。
+<p>
+  非原子操作的示例之一是使用增量运算符更新字段。
+  由于操作涉及读写，并且在此之间可能发生其他修改，因此可能损坏数据。
+  使用 <code>synchronized</code> 块进行环绕，或使用 <code>java.util.concurrent.atomic</code> 软件包中的一个类，可以使该项操作成为原子操作。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  private volatile int v = 1;
+
+  void foo() {
+    v = 2 * v;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

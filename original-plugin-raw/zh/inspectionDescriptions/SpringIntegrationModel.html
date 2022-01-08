@@ -1,0 +1,46 @@
+<html>
+<body>
+<p>报告 <a href="https://spring.io/projects/spring-integration">Spring Integration</a> 基于 XML 的应用程序上下文的问题：</p>
+<ul>
+  <li>未解析的 Bean 引用</li>
+  <li>缺少必需的标记或特性</li>
+  <li>属性类型不正确</li>
+  <li><code>enum</code> 属性不一致</li>
+  <li>引用 Bean 的类型不正确</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;beans ... &gt;
+  &lt;int:channel id="channel"&gt; &lt;!-- 'dispatcher' 和 'queue' 不能一起使用  --&gt;
+    &lt;int:dispatcher failover="true"/&gt;
+    &lt;int:priority-queue capacity="4"/&gt;
+  &lt;/int:channel&gt;
+  
+  &lt;int:channel id="another" &gt;
+    &lt;int:queue &lt;!--Exactly one of 'message-store' or 'ref' is required  --&gt;
+              capacity="4" message-store="myMessageStore" ref="myQueue"/&gt;
+  &lt;/int:channel&gt;
+  
+   &lt;int:gateway id="asyncGatewayError"
+                async-executor="dummyBean"/&gt; &lt;!--Bean 必须为 'java.util.concurrent.Executor' 类型  --&gt;
+
+   &lt;int:delayer default-delay="3"
+              message-store="myMessageStore"
+              scheduler="scheduler"
+              wait-for-tasks-to-complete-on-shutdown="false"/&gt;
+  &lt;!--Bean 必须为 'java.util.concurrent.Executor' 类型  --&gt;
+  &lt;int:delayer
+    default-delay="INVALID_VALUE"  &lt;!--Cannot convert string 'INVALID_VALUE' to target class 'java.lang.Integer' --&gt;
+               message-store="dummyBean" &lt;!-- Bean 必须为 'org.springframework.integration.store.MessageStore' 类型--&gt;
+               scheduler="dummyBean" &lt;!-- Bean 必须为以下一种类型：java.util.concurrent.ScheduledExecutorService,org.springframework.scheduling.TaskScheduler--&gt;
+               wait-for-tasks-to-complete-on-shutdown="INVALID_VALUE"/&gt; &lt;!-- 无法解析符号 'INVALID_VALUE' --&gt;
+
+  &lt;bean id="dummyBean" class="java.lang.String"/&gt;
+  &lt;bean id="myMessageStore" class="org.springframework.integration.store.SimpleMessageStore"/&gt;
+  &lt;task:scheduler id="scheduler"/&gt;
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<html>
+<body>
+报告枚举类型中的非 final 字段，因为很少需要它们，且提供全局可变状态。
+<p><b>示例：</b></p>
+<pre><code>
+  enum Enum {
+    FIRST("first"),
+    SECOND("second");
+
+    public String str;
+
+    Enum(String str) {
+        this.str = str;
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  enum Enum {
+    FIRST("first"),
+    SECOND("second");
+
+    public final String str;
+
+    Enum(String str) {
+        this.str = str;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+配置“在快速修复不可用时忽略字段”复选框以仅高亮显示可通过该快速修复设为 final 的字段。
+</body>
+</html>

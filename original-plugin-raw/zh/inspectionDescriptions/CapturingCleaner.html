@@ -1,0 +1,24 @@
+<html>
+<body>
+报告当 <code>Runnable</code> 传递给 <code>Cleaner.register()</code> 捕获引用时会导致内存泄漏的情况。
+<p>此问题的可能来源：</p>
+<ul>
+  <li>使用非 static 方法、字段或 <code>this</code> 本身的 lambda</li>
+  <li>非 static 内部类（匿名与否）始终捕获此引用</li>
+  <li>实例方法引用</li>
+  <li>从非 static 内部类访问外部类非 static 成员</li>
+</ul>
+<!-- tooltip end -->
+<p>将报告的代码示例： </p>
+<pre><code>
+  int fileDescriptor;
+  Cleaner.Cleanable cleanable = Cleaner.create().register(this, () -> {
+    System.out.println("adsad");
+    //<i>this</i> 通过 <i>fileDescriptor</i> 捕获
+    fileDescriptor = 0;
+  });
+</code></pre>
+<p>仅当项目或模块的语言级别为 9 或更高时，此检查才会报告。</p>
+<p><small>2018.1 最新变化</small></p>
+</body>
+</html>

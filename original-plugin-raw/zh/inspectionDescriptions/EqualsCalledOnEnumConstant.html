@@ -1,0 +1,20 @@
+<html>
+<body>
+报告枚举常量上的 <code>equals()</code> 调用。
+<p>此类调用可以替换为同一性比较 (<code>==</code>)，因为只有两个枚举常量具备相同的同一性时，它们才相等。</p>
+<p>可以通过快速修复将该调用更改为比较。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  boolean foo(MyEnum value) {
+    return value.equals(MyEnum.FOO);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  boolean foo(MyEnum value) {
+    return value == MyEnum.FOO;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

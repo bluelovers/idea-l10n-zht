@@ -1,0 +1,14 @@
+<html>
+<body>
+生成用于惯用错误处理的样板代码。
+<p>
+  您可以在返回 <code>error</code> 的调用或 <code>error</code> 类型的任何表达式上调用模板。
+  模板引入新变量，将表达式赋值给它们，并使用以下代码检查 error 是否为 <code>nil</code>：
+</p>
+<pre><code>if err != nil {
+  return value1, value2, ...
+}</code></pre>
+<p>每个 <code>value</code> 要么是 <code>err</code> 变量，要么是封闭函数的相应返回类型的默认值。</p>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+报告除了第一次迭代中产生的副作用外，在第二次和后续迭代中不产生其他副作用的循环，这可能表示编程错误。
+<p>此类循环可能只迭代零次、一次或无限次。
+如果不存在无限循环的情况，则可以将其替换为 <code> if </code> 语句。
+  否则，程序可能会卡住。</p>
+<p>示例：</p>
+<pre><code>
+    public void foo(String baseName, String names) {
+        int suffix = 1;
+        String name = baseName;
+        while (names.contains(name)) {
+            // 错误：suffix 未更新，导致循环体幂等
+            name = baseName + suffix;
+        }
+    }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.1 最新变化</small></p>
+</body>
+</html>

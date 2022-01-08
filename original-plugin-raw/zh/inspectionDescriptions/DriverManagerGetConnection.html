@@ -1,0 +1,12 @@
+<html>
+<body>
+报告任何使用 <code>java.sql.DriverManager</code> 获取 JDBC 连接的情况。 
+<p>
+  <code>java.sql.DriverManager</code> 已被 <code>javax.sql.Datasource</code> 取代，后者允许连接池和其他优化。
+</p>
+<p><b>示例：</b></p>
+<pre><code>  Connection conn = DriverManager.getConnection(url, username, password);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

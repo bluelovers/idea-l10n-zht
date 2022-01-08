@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>报告模拟对 <code>Option.apply(x)</code> 的调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  if (x == null) None else Some(x)
+  if (x != null) Some(x) else None
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Option(x)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

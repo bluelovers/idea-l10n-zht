@@ -1,0 +1,42 @@
+<html>
+<body>
+报告 <code>switch</code> 语句中的直落。
+<p>当 <code>case</code> 标签后面的一系列可执行语句不能保证在下一个 <code>case</code> 标签前转移控制权时，就会发生直落。 例如，如果分支缺少 <code>break</code> 语句，就可能发生这种情况。
+在这种情况下，即便 <code>switch</code> 表达式不等于被直落标签的值，控制权也会直落到 <code>switch</code> 标签后面的语句。 虽然偶尔是有意为之，但此结构令人困惑，并且通常是由拼写错误所致。</p>
+<p>
+此检查将忽略任何使用与正则表达式模式 <code>(?i)falls?\s*thro?u</code> 相匹配的文本注释的直落。
+</p>
+<p>可以通过修正向可能直落到下一个分支的分支添加 <code>break</code>。</p>
+<p>示例：</p>
+<pre><code>
+    switch(x) {
+      case (4):
+          if (condition) {
+              System.out.println("3");
+              // 此处无 break
+          } else {
+              break;
+          }
+      case (6):
+          System.out.println("4");
+    }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+    switch(x) {
+        case (4):
+            if (condition) {
+                System.out.println("3");
+            } else {
+                break;
+            }
+            break;
+        case (6):
+            System.out.println("4");
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

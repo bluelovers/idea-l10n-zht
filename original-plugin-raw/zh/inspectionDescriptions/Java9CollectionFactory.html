@@ -1,0 +1,36 @@
+<html>
+<body>
+报告 <code>java.util.Collections</code> 不可修改的集合调用，这些调用可以转换为更新的集合工厂方法。
+例如，这些可以替换为在 Java 9 中引入的 <code>List.of()</code> 或 <code>Set.of()</code> 或在 Java 10 中引入的 <code>List.copyOf()</code>。
+
+<p>请注意，与 <code>java.util.Collections</code> 方法相比，Java 9 集合工厂方法：
+<ul>
+  <li>不接受 <code>null</code> 值。
+  <li>需要唯一的集合元素和映射键。
+  <li>不要接受 <code>null</code> 实参来查询返回集合的 <code>List.contains()</code> 或 <code>Map.get()</code> 等方法。
+</ul>
+<p>当这些情况被违反时，会抛出异常。
+  这可以在迁移后更改代码的语义。</p>
+<p>示例：
+<pre><code>
+  List&lt;Integer> even = Collections.unmodifiableList(
+    Arrays.asList(2, 4, 6, 8, 10, 2));
+  List&lt;Integer> evenCopy = Collections.unmodifiableList(
+    new ArrayList&lt;>(list1));
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  List&lt;Integer> even = List.of(2, 4, 6, 8, 10, 2);
+  List&lt;Integer> evenCopy = List.copyOf(list);
+</code></pre>
+
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 9 或更高时，此检查才会报告。
+<p>
+使用<b>当内容为非常量时不发出警告</b>选项可以仅在提供的实参是编译时常量的情况下报告。
+这减少了行为改变的机会，因为并不总是可以静态检查原始元素是否唯一且为非 <code>null</code>。
+<p>
+  使用<b>建议 'Map.ofEntries'</b> 选项可建议使用 <code>Map.ofEntries()</code> 替换超过 10 个条目的不可修改的映射。
+<p><small>2017.2 最新变化</small>
+</body>
+</html>

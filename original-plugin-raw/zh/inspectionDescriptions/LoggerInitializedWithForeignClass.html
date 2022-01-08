@@ -1,0 +1,31 @@
+<html>
+<body>
+报告用来初始化的 <code>class</code> 文字所属的类与 <code>Logger</code> 所属的类不同的 <code>Logger</code> 实例。 从另一个类复制粘贴某些代码时，很容易发生这种情况，并可能导致在意外类别下记录事件，并导致筛选器应用不正确。
+<p>提供了一个快速修复来用周围类中的文字替换外类文字。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>public class</b> Paramount {
+    <b>protected static final</b> Logger LOG = Logger.getLogger(Critical.class);
+
+    // …其他字段和方法
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>public class</b> Paramount {
+    <b>protected static final</b> Logger LOG = Logger.getLogger(Paramount.class);
+
+    // …其他字段和方法
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  配置检查：
+</p>
+<ul>
+  <li>使用该表可以指定此检查识别的记录器工厂类和记录器工厂方法。</li>
+  <li>使用<b>忽略使用超类初始化的记录器</b>选项可以忽略使用包含该记录器的类的超类初始化的记录器。</li>
+  <li>使用<b>忽略非 public 类中的记录器</b>，仅对 <code>public</code> 类中的记录器发出警告。</li>
+</ul>
+</body>
+</html>

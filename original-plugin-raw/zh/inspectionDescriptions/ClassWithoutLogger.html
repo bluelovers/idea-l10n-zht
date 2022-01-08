@@ -1,0 +1,21 @@
+<html>
+<body>
+报告没有声明记录器的类。
+<p>确保每个类都有一个专用的记录器是为应用程序提供统一的日志记录实现的重要步骤。 此检查不报告接口、枚举、注解、内部类和 abstract 类。</p>
+<p>示例：</p>
+<pre><code>
+  <b>public class</b> NoLoggerDeclared {
+
+    <b>int</b> calculateNthDigitOfPi(<b>int</b> n) {
+      // todo
+      <b>return</b> 1;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用 <b>Options</b> 部分中的表可以指定记录器类名。
+此检查将报告未声明具有指定类之一类型的字段的类。
+
+</body>
+</html>

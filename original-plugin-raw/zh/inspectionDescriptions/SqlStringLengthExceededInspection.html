@@ -1,0 +1,26 @@
+<html>
+<body>
+报告超过定义的字符长度的变量。
+<p>示例（Microsoft SQL 服务器）：</p>
+<pre><code>CREATE PROCEDURE test() AS
+BEGIN
+DECLARE myVarOk VARCHAR(5) = 'abcde';
+DECLARE myVarExceeded VARCHAR(5) = 'abcde12345';
+
+SET myVarOk = 'xyz';
+SET myVarExceeded = '123456789';
+END;</code></pre>
+<p><code>myVarExceeded</code> 变量被定义为 <code>VARCHAR(5)</code> 但两个分配的值（<code>'abcde12345'</code> 和 <code>'123456789'</code>) 都超出了此限制。 您可以截断指定的值或增加定义的长度。
+  要增加长度，请使用<b>增加类型长度</b> 快速修复。
+</p>
+<p>在应用快速修复后：</p>
+<pre><code>CREATE PROCEDURE test() AS
+BEGIN
+DECLARE myVarOk VARCHAR(5) = 'abcde';
+DECLARE myVarExceeded VARCHAR(10) = 'abcde12345';
+
+SET myVarOk = 'xyz';
+SET myVarExceeded = '123456789';
+END;</code></pre>
+</body>
+</html>

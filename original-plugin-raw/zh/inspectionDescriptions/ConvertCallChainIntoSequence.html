@@ -1,0 +1,33 @@
+<html>
+<body>
+报告应转换为 <b>Sequence</b> 的 <code>Collection</code> 上的调用链。
+<p>每个 <code>Collection</code> 转换函数（例如 <code>map()</code> 或 <code>filter()</code>）都会在后台创建一个新的
+     <code>Collection</code>（通常是 <code>List</code> 或 <code>Set</code>）。
+    多次后续调用以及 <code>Collection</code> 中存在大量条目的情况下，内存流量可能会很大。
+    这种情况下，最好使用 <code>Sequence</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Entity(val key: String, val value: String)
+
+  fun getValues(lines: List&lt;String&gt;) = lines
+      .filter { it.isNotEmpty() }
+      .map { it.split(',', limit = 2) }
+      .filter { it.size == 2 }
+      .map { Entity(it[0], it[1]) }
+</code></pre>
+<p>快速修复可将调用链包装到 <code>asSequence()</code> 和 <code>toList()</code> 中：</p>
+<pre><code>
+  class Entity(val key: String, val value: String)
+
+  fun getValues(lines: List&lt;String&gt;) = lines
+      .asSequence()
+      .filter { it.isNotEmpty() }
+      .map { it.split(',', limit = 2) }
+      .filter { it.size == 2 }
+      .map { Entity(it[0], it[1]) }
+      .toList()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

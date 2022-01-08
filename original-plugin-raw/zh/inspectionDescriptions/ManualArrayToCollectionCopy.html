@@ -1,0 +1,28 @@
+<html>
+<body>
+报告使用循环将数组内容复制到集合中的代码。
+<p>
+  一种更短并且有可能更快（取决于集合实现）的方法是使用 <code>Collection.addAll(Arrays.asList())</code> 或 <code>Collections.addAll()</code>。
+</p>
+<p>
+<p>仅报告内部没有附加语句的循环。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void addAll(List&lt;String&gt; list, String[] arr) {
+    for (int i = 0; i &lt; arr.length; i++) {
+      String s = arr[i];
+      list.add(s);
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void addAll(List&lt;String&gt; list, String[] arr) {
+    Collections.addAll(list, arr);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+<body>
+报告未解析的 SQL 引用。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE users(id INT, name VARCHAR(40));
+CREATE TABLE admins(id INT, col1 INT);
+
+SELECT users.id, admins.id FROM admins WHERE admins.id > 1;</code></pre>
+<p><code>users.id</code> 列未解析，因为 FROM 子句中缺少 <code>users</code> 表。</p>
+</body>
+</html>

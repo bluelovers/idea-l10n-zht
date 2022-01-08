@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可以替换为 elvis 运算符和 return (<code>?: return</code>) 的非 null 断言 (<code>!!</code>) 调用。
+<p>非 null 断言会产生非预期的 NPE (NullPointerException)。 比较好的做法是避免使用 <code>!!</code>。</p>
+<p>该快速修复会将非 null 断言替换为 <code>return</code> 或 <code>return null</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(number: Int?) {
+      val x = number!!
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun test(number: Int?) {
+      val x = number ?: return
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<body>
+报告不正确的 <a href="https://spring.io/projects/spring-integration">Spring Integration</a> 端点方法声明。
+
+<p><b>示例：</b></p>
+<pre><code>
+class MyEndpoints {
+  @InboundChannelAdapter("channel")
+  public void <strong>cannotBeVoid</strong>() {...} // 使用 @InboundChannelAdapter 注解的方法必须具有返回类型
+
+  @InboundChannelAdapter("channel")
+  public String <strong>cannotHaveParams</strong>(String s) {..} // 使用 @InboundChannelAdapter 注解的方法不能有实参
+
+  @<strong>Filter</strong>(inputChannel = "channel", // 端点只能具有一个轮询器
+    outputChannel = "channel2",
+    poller = {@Poller(fixedDelay = "100"), @Poller(fixedRate = "100")})
+  public void testMultiplePollers() {
+  }
+
+  @Filter(inputChannel = "channel",
+  outputChannel = "channel2",
+  poller = @<strong>Poller</strong>(value = "poller", maxMessagesPerPoll = "100"))
+  public void testValue() {
+  }
+
+  @Filter(inputChannel = "channel",
+    outputChannel = "channel2",
+    poller = @<strong>Poller</strong>(trigger = "trigger", cron = "0 */10 * * * *")) // 'trigger' 特性与其他特性互斥
+  public void testTrigger() {
+  }
+}
+</code></pre>
+</body>
+</html>

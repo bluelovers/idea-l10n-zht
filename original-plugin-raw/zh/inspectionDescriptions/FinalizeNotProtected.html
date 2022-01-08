@@ -1,0 +1,28 @@
+<html>
+<body>
+报告被声明为 <code>public</code> 的 <code>Object.finalize()</code> 方法的任何实现。
+<p>
+  根据 <code>Object.finalize()</code> 的约定，只有垃圾回收器调用此方法。 将此方法设为 public 可能令人困惑，因为这意味着该方法可供用户使用。
+</p>
+<p>
+  该快速修复会将方法设为 protected，防止它被其他类显式调用。
+</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+  <b>class</b> X {
+    <b>public void</b> finalize() {
+      /* ... */
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>class</b> X {
+    <b>protected void</b> finalize() {
+      /* ... */
+    }
+  }
+</code></pre>
+</body>
+</html>

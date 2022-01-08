@@ -1,0 +1,16 @@
+<html>
+<body>
+报告将值赋给生成的列的 INSERT 语句。 可以读取生成的列，但不能直接写入其值。
+<p>示例（PostgreSQL）：</p>
+<pre><code>CREATE TABLE foo
+(
+   col1 INT,
+   col2 INT GENERATED ALWAYS AS (col1 + 1) STORED
+);
+INSERT INTO foo(col1, col2) VALUES (1, 2);</code>
+</pre>
+<p>您不能将 <code>2</code> 插入到 <code>col2</code> 列中，因为此列已生成。
+  要使此脚本正常工作，您可以将 <code>2</code> 更改为 DEFAULT。</p>
+<code>INSERT INTO foo(col1, col2) VALUES (1, DEFAULT);</code>
+</body>
+</html>

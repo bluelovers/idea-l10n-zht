@@ -1,0 +1,34 @@
+<html>
+<body>
+报告对可以迁移到 Hamcrest 声明式样式 <code>Assert.assertThat()</code> 调用的 <code>Assert.assertEquals()</code>、<code>Assert.assertTrue()</code> 等方法的调用。
+<p>示例：</p>
+<pre><code>
+  <b>public class</b> SubstantialTest {
+    @Test
+    <b>public void</b> testContents(Collection&lt;String> c, String s) {
+      Assert.assertTrue(c.contains(s));
+      Assert.assertEquals(c, s);
+      Assert.assertNotNull(c);
+      Assert.assertNull(c);
+      Assert.assertFalse(c.contains(s));
+    }
+  }
+</code></pre>
+<p>为执行迁移提供了快速修复：</p>
+<pre><code>
+  <b>public class</b> SubstantialTest {
+    @Test
+    <b>public void</b> testContents(Collection&lt;String> c, String s) {
+      assertThat(c, hasItem(o));
+      assertThat(o, is(c));
+      assertThat(c, notNullValue());
+      assertThat(c, nullValue());
+      assertThat(c, not(hasItem(o)));
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>此检查要求类路径上有可用的 Hamcrest 库。
+<p>使用<b>静态导入匹配程序的方法</b>选项，可指定是否希望该快速修复静态导入 Hamcrest 匹配程序方法。
+</body>
+</html>

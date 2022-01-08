@@ -1,0 +1,22 @@
+<html>
+<body>
+报告用于测试数组相等性的运算符 <code>==</code> 和 <code>!=</code>。
+在大多数情况下，如果原本就要测试数组内容的相等性，可以通过 <code>java.util.Arrays.equals()</code> 方法来完成。
+<p>
+  建议通过快速修复将 <code>==</code> 替换为 <code>java.util.Arrays.equals()</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo(Object[] x, Object[] y) {
+    boolean comparison = x == y;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void foo(Object[] x, Object[] y) {
+    boolean comparison = Arrays.equals(x, y);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

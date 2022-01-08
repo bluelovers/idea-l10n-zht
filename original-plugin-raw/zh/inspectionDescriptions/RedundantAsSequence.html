@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>报告永远不会产生积极的性能影响的冗余 <code>asSequence()</code> 调用。</p>
+<p>
+    <code>asSequence()</code> 会加速包含多个运算的集合处理，因为它会延迟执行运算并且不会创建中间集合。
+</p>
+<p>
+    但是，如果在 <code>asSequence()</code> 之后立即使用终端运算（例如 <code>toList()</code>），则不会带来任何积极的性能效果。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(list: List&lt;String&gt;) {
+      list.<b>asSequence()</b>.last()
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun test(list: List&lt;String&gt;) {
+      list.last()
+  }
+</code></pre>
+</body>
+</html>

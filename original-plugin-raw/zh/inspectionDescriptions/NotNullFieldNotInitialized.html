@@ -1,0 +1,26 @@
+<html>
+<body>
+报告构造函数中未初始化的注解为非 null 的字段。
+<p>示例：</p>
+<pre><code>public class MyClass {
+  private @NotNull String value;
+
+  public void setValue(@NotNull String value) {
+    this.value = value;
+  }
+
+  public @NotNull String getValue() {
+    return value;
+  }
+  }</code></pre>
+<p>
+  此类字段可能违反非 null 约束。 在上例中，<code>setValue</code> 形参注解为非 null，但是如果没有调用 setter，<code>getValue</code> 可能返回 null。
+</p>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>忽略可以隐式初始化的字段</b>选项，可控制该字段能够隐式初始化（例如通过依赖项注入）时是否应发出警告。</li>
+  <li>使用<b>忽略在 setUp() 方法中初始化的字段</b>选项，可控制在测试用例 <code>setUp()</code> 方法中写入该字段时是否应发出警告。</li>
+</ul>
+</body>
+</html>

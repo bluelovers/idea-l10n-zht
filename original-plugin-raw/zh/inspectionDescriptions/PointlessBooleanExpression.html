@@ -1,0 +1,25 @@
+<html>
+<body>
+报告不必要的或过于复杂的布尔表达式。
+<p>此类表达式包括： <code>&&</code> 和 <code>true</code> 的组合、
+<code>||</code> 和 <code>false</code> 的组合、布尔文字的相等比较或布尔文字求反。 此类表达可以简化。</p>
+<p>示例：
+<pre><code>
+  <b>boolean</b> a = !(x && <b>false</b>);
+  <b>boolean</b> b = <b>false</b> || x;
+  <b>boolean</b> c = x != <b>true</b>;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>boolean</b> a = <b>true</b>;
+  <b>boolean</b> b = x;
+  <b>boolean</b> c = !x;
+</code></pre>
+<!-- tooltip end -->
+<p>
+<p>配置检查：</p>
+使用 <b>在确定无意义表达式时忽略命名常量</b> 选项可在确定表达式是否无意义时忽略命名常量。
+<p>
+
+</body>
+</html>

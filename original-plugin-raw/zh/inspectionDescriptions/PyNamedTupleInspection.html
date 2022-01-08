@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>报告 <a href="https://docs.python.org/3/library/typing.html#typing.NamedTuple">typing.NamedTuple</a> 的无效定义。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+import typing
+
+
+class FullName(typing.NamedTuple):
+    first: str
+    last: str = ""
+    middle: str
+</pre>
+<p>修复方法是将有默认值的字段放在没有默认值的字段后面：</p>
+<pre style="font-family: monospace">
+import typing
+
+
+class FullName(typing.NamedTuple):
+    first: str
+    middle: str
+    last: str = ""
+</pre>
+</body>
+</html>

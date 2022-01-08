@@ -1,0 +1,22 @@
+<html>
+<body>
+报告可能导致意外类型强制的相等运算符的用法。
+建议将 <code>==</code> 和 <code>!=</code> 替换为类型安全的相等运算符 <code>===</code> 和 <code>!==</code>。
+<p>根据所选的选项，将报告下面的一种情况：</p>
+<ul>
+  <li>
+    <code>==</code> 和 <code>!=</code> 运算符的所有用法。
+  </li>
+  <li>
+    除了与 null 比较之外的所有用法。 某些代码样式允许使用 <code>x == null</code> 替代
+    <code>x === null || x === undefined</code>。
+  </li>
+  <li>
+    仅可疑的表达式，例如：<code>==</code> 或 <code>!=</code> 与
+     <code>0</code>、<code>''</code>、
+    <code>null</code>、<code>true</code>、
+    <code>false</code> 或 <code>undefined</code> 比较。
+  </li>
+</ul>
+</body>
+</html>

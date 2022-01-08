@@ -1,0 +1,26 @@
+<html>
+<body>
+报告使用 <code>new</code> 关键字的实用程序类的实例化。
+<p>
+  在实用程序类中，所有字段和方法均为 <code>static</code>。
+  这种类的实例化很可能不必要，并且表明存在错误。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class MyUtils {
+    public static double cube(double x) {
+      return x * x * x;
+    }
+  }
+  class Main {
+    public static void main(String[] args) {
+      // 实用类的实例化
+      MyUtils utils = new MyUtils();
+    }
+  }
+</code></pre>
+<p>
+  为防止实用程序类被实例化，建议使用 <code>private</code> 构造函数。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

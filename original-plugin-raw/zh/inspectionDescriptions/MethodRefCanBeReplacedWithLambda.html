@@ -1,0 +1,16 @@
+<html>
+<body>
+报告方法引用，例如 <code>MyClass::myMethod</code> 和 <code>myObject::myMethod</code>，并建议将它们替换为等效的 lambda 表达式。
+<p>Lambda 表达式比方法引用更容易修改。</p>
+<p>示例：</p>
+<pre><code>
+  System.out::println
+</code></pre>
+<p>在应用快速修复后： </p>
+<pre><code>
+  s -&gt; System.out.println(s)
+</code></pre>
+<!-- tooltip end -->
+<p>默认情况下，此检查不会高亮显示编辑器中的代码，而仅提供快速修复。</p>
+</body>
+</html>

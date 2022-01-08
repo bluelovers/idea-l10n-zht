@@ -1,0 +1,26 @@
+<html>
+<body>
+报告可以转换为构造函数或带有 lambda 表达式实参的工厂方法调用的匿名类。
+<p>本次检查报告以下类别：
+<ul>
+  <li>扩展 <code>ThreadLocal</code> 的匿名类，其具有 <code>initialValue()</code> 方法（可以替换为 <code>ThreadLocal.withInitial</code>）</li>
+  <li>扩展 <code>Thread</code> 的匿名类，其具有 <code>run()</code> 方法（可以替换为 <code>new Thread(Runnable)</code>）</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+  <b>new</b> Thread() {
+    @Override
+    <b>public void</b> run() {
+      System.out.println("Hello from thread!");
+    }
+  }.start();
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>new</b> Thread(() -> {
+    System.out.println("Hello from thread!");
+  }).start();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

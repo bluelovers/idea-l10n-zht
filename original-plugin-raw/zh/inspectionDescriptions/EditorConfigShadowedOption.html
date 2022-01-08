@@ -1,0 +1,15 @@
+<!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
+<html>
+<body>
+报告已在其他部分中定义的属性。
+<p>示例：
+<pre><code>
+[*.java]
+indent_size=4
+[{*.java,*.js}]
+indent_size=2
+</code></pre>
+第二部分也包括所有 <code>*.java</code> 文件，但它也重新定义了 indent_size。
+因此，值 "2" 将用于匹配 <code>*.java</code> 的文件。
+</body>
+</html>

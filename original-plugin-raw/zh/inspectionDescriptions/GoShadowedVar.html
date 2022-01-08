@@ -1,0 +1,16 @@
+<html>
+<body>
+报告与外部范围中的声明重叠的变量声明。
+<p>由于这种情况下变量的含义取决于作用范围，因此可能会造成混乱并导致意外后果。</p>
+<p>示例：</p>
+<pre><code>for i := 0; i &lt; len(nums); i++ {
+    for i := 0; i &lt; len(nums); i++ {
+    }
+  }</code></pre>
+<p>嵌入循环中的 <code>i</code> 变量被隐藏。 要去除隐藏，请考虑重命名嵌入循环中的变量。</p>
+<pre><code>for i := 0; i &lt; len(nums); i++ {
+    for j := 0; j &lt; len(nums); j++ {
+    }
+  }</code></pre>
+</body>
+</html>

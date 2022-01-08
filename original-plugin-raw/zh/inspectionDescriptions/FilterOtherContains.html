@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>报告 <code>Set</code> 上的 <code>filter</code> 或 <code>filterNot</code> 并建议改用 <code>intersect</code> 或 <code>diff</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val set = Set(1, 2)
+  val others = Set(2, 3)
+  set.filter(others.contains(_))
+  set.filterNot(others.contains)
+  set.filter(x => !others.contains(x))
+  set.filterNot(x => !others.contains(x))
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val set = Set(1, 2)
+  val others = Set(2, 3)
+  set.intersect(others)
+  set.diff(others)
+  set.diff(others)
+  set.intersect(others)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+报告对插件配置元素的未解析引用。
+<p>
+  使用未知 <code>id</code> 引用扩展程序可能在运行时导致错误。
+</p>
+<p>
+  支持以下扩展点：
+<ul>
+  <li>资源包 <code>advanced.setting.*</code> 键中的 <code>com.intellij.advancedSetting</code></li>
+  <li><code>Experiments.isFeatureEnabled()/setFeatureEnabled()</code> 中的 <code>com.intellij.experimentalFeature</code></li>
+  <li><code>Notification</code> 构造函数和 <code>NotificationGroupManager.getNotificationGroup()</code> 中的 <code>com.intellij.notificationGroup</code></li>
+  <li><code>Registry</code> 方法 <code>key</code> 形参中的 <code>com.intellij.registryKey</code></li>
+  <li>资源包 <code>toolwindow.stripe.*</code> 键中的 <code>com.intellij.toolWindow</code></li>
+</ul>
+</body>
+</html>

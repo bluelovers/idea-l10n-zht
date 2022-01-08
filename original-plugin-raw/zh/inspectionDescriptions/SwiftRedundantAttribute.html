@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>
+  报告 <code>@objc</code> 特性在已具有推断的 <code>@objc</code> 特性的声明上的用法。
+</p>
+<p>
+  建议移除冗余的 <code>@objc</code> 和 <code>@nonobjc</code>。
+</p>
+<!-- tooltip end -->
+<p>
+  <b>示例：</b>
+</p>
+<pre><code>
+  @objc
+  class C : NSObject {
+  }
+</code></pre>
+<p>
+  在应用快速修复后：
+</p>
+<pre><code>
+  class C : NSObject {
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+报告不复制该类所有字段的复制构造函数。
+<p>
+  带有初始值设定项的 <code>final</code> 字段和 <code>transient</code> 字段被视为不必复制。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Point {
+
+    private int x;
+    private int y;
+
+    Point(int x, int y) {
+      this.x = x;
+      this.y = y;
+    }
+
+    Point(Point other) {
+      // 字段 x 和 y 未初始化
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.1 最新变化</small>
+</body>
+</html>

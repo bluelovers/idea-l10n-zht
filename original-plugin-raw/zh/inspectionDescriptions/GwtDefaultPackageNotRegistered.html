@@ -1,0 +1,9 @@
+<html>
+<body>
+报告一个 GWT 模块描述符，它不注册默认的 <i>client</i> 或 <i>public</i> 文件夹，但注册自定义源或公共文件夹。
+<p>仅当 gwt.xml 文件中没有 <code>source</code> 和 <code>super-source</code> 标记时，GWT 才隐式地将 <i>client</i> 文件夹视为客户端源路径。
+  所以，如果 <i>client</i> 文件夹存在，但是没有在 gwt.xml 文件中注册，并且 gwt.xml 声明了自定义 <code>source</code> 或者 <code>super-source</code> 标签，很可能这表明一个错误。</p>
+<p>同样，如果 gwt.xml 声明了自定义 <i>public</i> 文件夹，但没有使用默认名称注册现有文件夹，这也可能表明存在错误。</p>
+<p>快速修复将默认文件夹的显式注册添加到 gwt.xml 文件中。</p>
+</body>
+</html>

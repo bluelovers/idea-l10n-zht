@@ -1,0 +1,22 @@
+<html>
+<body>
+报告对<code>java.lang.System.loadLibrary()</code>、<code>java.lang.System.load()</code>、<code>java.lang.Runtime.loadLibrary()</code> 和 <code>java.lang.Runtime.load()</code> 的调用，它们会将动态构造的字符串作为库的名称。
+<p>
+  构造的库名称字符串是安全漏洞的常见来源。
+  默认情况下，此检查会忽略编译时常量。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void test(int i) {
+    System.loadLibrary("foo" + i);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用检查设置可以将任何 <code>static final</code> 字段视为常量。
+请小心，因为启用该选项时，像下面这样的字符串将被忽略：
+</p>
+<pre><code>
+  private static final String LIBRARY = getUserInput();
+</code></pre>
+</body>
+</html>

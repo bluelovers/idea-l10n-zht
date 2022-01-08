@@ -1,0 +1,22 @@
+<html>
+<body>
+报告仅从 <code>then</code> 分支抛出 <code>java.lang.Throwable</code> 而没有 <code>else</code> 分支的 <code>if</code> 语句。 此类语句可以转换为更紧凑的 <code>assert</code> 语句。
+<p>
+检查还报告 Guava 的 <code>Preconditions.checkNotNull()</code>。
+  它们可以替换为不需要库 <code>Objects.requireNonNull()</code> 调用。</p>
+<p>示例：</p>
+<pre><code>
+  <b>if</b> (x == 2) <b>throw new</b> RuntimeException("fail");
+  <b>if</b> (y == null) <b>throw new</b> AssertionError();
+  Preconditions.checkNotNull(z, "z");
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>assert</b> x != 2 : "fail";
+  Objects.requireNonNull(y);
+  Objects.requireNonNull(z, "z");
+</code></pre>
+<!-- tooltip end -->
+<p>默认情况下，此检查在编辑器中提供快速修复，而没有高亮显示代码。</p>
+</body>
+</html>

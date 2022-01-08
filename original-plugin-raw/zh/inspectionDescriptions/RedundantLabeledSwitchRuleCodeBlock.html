@@ -1,0 +1,22 @@
+<html>
+<body>
+报告带有冗余代码块的 <code>switch</code> 语句或 <code>switch</code> 表达式的标记规则。
+<p>示例：</p>
+<pre><code>
+  String s = switch (n) {
+    case 1 -> { yield Integer.toString(n); }
+    default -> "default";
+  };
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  String s = switch (n) {
+    case 1 -> Integer.toString(n);
+    default -> "default";
+  };
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 14 或更高时，此检查才会报告。</p>
+<p><small>2019.1 最新变化</small></p>
+</body>
+</html>

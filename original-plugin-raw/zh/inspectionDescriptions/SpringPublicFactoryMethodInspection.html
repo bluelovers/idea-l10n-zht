@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告在 <strong>&lt;bean&gt;</strong> 元素的 <code>factory-method</code> 特性中引用的非 public 方法。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+public class MyFactory {
+  private static FooBean createBean() {...}
+  }
+}
+
+<hr/>
+
+&lt;beans&gt;
+  &lt;bean class="MyFactory" factory-method="createBean"/&gt;
+  // 报告 "工厂方法 'createBean' 应为 public"
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>

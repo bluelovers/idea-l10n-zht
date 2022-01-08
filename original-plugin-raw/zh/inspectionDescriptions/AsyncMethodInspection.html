@@ -1,0 +1,10 @@
+<html>
+<body>
+<p>报告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/Async.html">@Async</a> 方法的不正确返回类型。</p>
+
+<p>对于目标方法签名，允许任何形参类型。
+  但是，返回类型应该是 <code>void</code> 或 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html">Future</a>。
+  还可以返回更具体的 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/util/concurrent/ListenableFuture.html">ListenableFuture</a> 或 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">CompletableFuture</a> 类型，它们允许与异步任务进行更丰富的交互，并允许与进一步处理步骤立即组合。</p>
+
+</body>
+</html>

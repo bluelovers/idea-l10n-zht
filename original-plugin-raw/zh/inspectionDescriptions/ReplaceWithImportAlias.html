@@ -1,0 +1,19 @@
+<html>
+<body>
+报告可以替换为现有导入别名的完全限定名称。
+<p><b>示例：</b></p>
+<pre><code>
+import foo.Foo as Bar
+fun main() {
+    foo.Foo()
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+import foo.Foo as Bar
+fun main() {
+    Bar()
+}
+</code></pre>
+</body>
+</html>

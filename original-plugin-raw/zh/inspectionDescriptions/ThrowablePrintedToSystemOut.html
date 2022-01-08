@@ -1,0 +1,26 @@
+<html>
+<body>
+报告以异常作为实参的 <code>System.out.println()</code> 调用。
+<p>使用 print 语句记录异常会隐藏堆栈跟踪，这可能会使问题的调查变得复杂。
+  建议您改用记录器。</p>
+<p>也会报告以异常作为实参的 <code>System.out.print()</code>、<code>System.err.println()</code> 和 <code>System.err.print()</code> 调用。 建议使用记录器来记录异常。</p>
+<!-- tooltip end -->
+<p>例如，不建议使用：</p>
+<pre><code>
+  try {
+      foo();
+  } catch (Exception e) {
+      System.out.println(e);
+  }
+</code></pre>
+<p>用以下代码代替：</p>
+<pre><code>
+  try {
+      foo();
+  } catch (Exception e) {
+      logger.warn(e); // 记录器调用可能有所不同
+  }
+</code></pre>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>报告对具有类似转变器名称而没有实参子句的方法的调用。</p>
+<p>Scala 允许在没有实参子句的情况下调用无形参 Java 方法。
+    这主要是为了允许 Scala 代码以与 Scala 访问器方法相同的方式使用无形参 Java 访问器方法。
+    即，不使用任何实参子句并遵守<a href="https://en.wikipedia.org/wiki/Uniform_access_principle">统一访问原则</a>，也就是说客户端代码不应受到将特性实现为字段或方法的决定的影响。</p>
+
+<p>但是，对于具有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>的方法，通常使用空实参子句。</p>
+
+<p>该快速修复会添加一个空实参子句。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val stringBuilder = new java.util.ArrayList[String]
+  stringBuilder.clear
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val stringBuilder = new java.util.ArrayList[String]
+  stringBuilder.clear()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

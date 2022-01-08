@@ -1,0 +1,26 @@
+<html>
+<body>
+报告对没有命名实参的数据类的 <code>copy()</code> 方法的调用。
+<p>
+    由于 <code>copy()</code> 函数的所有实参都是可选的，因此可能很难理解修改了哪些属性。
+    显式提供形参名称使得代码容易理解，且无需导航到 <code>data class</code> 声明。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  data class User(val name: String, val age: Int)
+
+  fun copyUser(user: User): User {
+      return user.copy("John")
+  }
+</code></pre>
+<p>快速修复程序会为所有的 <code>copy()</code> 实参提供形参名称：</p>
+<pre><code>
+  data class User(val name: String, val age: Int)
+
+  fun copyUser(user: User): User {
+      return user.copy(name = "John")
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+报告 <code>readObject</code> 或 <code>writeObject</code> 方法未被声明为 private 的 <code>Serializable</code> 类。
+这些方法的可见性没有理由比 <code>private</code> 更高。
+<p>
+  建议通过快速修复将相应的方法设为 <code>private</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Test implements Serializable {
+    public void readObject(ObjectInputStream stream) {
+      /* ... */
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  public class Test implements Serializable {
+    private void readObject(ObjectInputStream stream) {
+      /* ... */
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

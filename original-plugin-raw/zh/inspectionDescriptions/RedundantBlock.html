@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>报告插值字符串中的冗余封闭块。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val name = "Andy"
+  s"Do you know ${name}?"
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val name = "Andy"
+  s"Do you know $name?"
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

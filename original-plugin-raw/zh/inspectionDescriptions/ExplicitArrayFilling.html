@@ -1,0 +1,19 @@
+<html>
+<body>
+报告可以替换为 <code>Arrays.setAll()</code> 或 <code>Arrays.fill()</code> 调用的循环。
+<p>如果项目或模块的语言级别为 8 或更高，则此检查建议将循环替换为 <code>Arrays.setAll()</code>。
+  您可以在任何语言级别将循环替换为 <code>Arrays.fill()</code>。</p>
+<p>示例：</p>
+<pre><code>
+  for (int i=0; i&lt;array.length; i++) {
+     array[i] = calc(i);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Arrays.setAll(array, this::calc);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.1 最新变化</small></p>
+</body>
+</html>

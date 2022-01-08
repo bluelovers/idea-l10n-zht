@@ -1,0 +1,25 @@
+<html>
+<body>
+报告从不符合所声明方法返回范围的方法返回的数值。
+您可以使用许多注解声明方法的返回范围：
+<ul>
+  <li>JetBrains 注解软件包中的 <code>org.jetbrains.annotations.Range</code>（指定 'from' 和 'to'）</li>
+  <li>Checker Framework 注解软件包中的 <code>org.checkerframework.common.value.qual.IntRange</code>（指定 'from' 和 'to'）</li>
+  <li>Checker Framework 注解软件包中的 <code>org.checkerframework.checker.index.qual.GTENegativeOne</code>（范围为 '>= -1'）</li>
+  <li>Checker Framework 注解软件包中的 <code>org.checkerframework.checker.index.qual.NonNegative</code>（范围为 '>= 0'）</li>
+  <li>Checker Framework 注解软件包中的 <code>org.checkerframework.checker.index.qual.Positive</code>（范围为 '> 0'）</li>
+  <li>JSR 305 注解软件包中的 <code>javax.annotation.Nonnegative</code>（范围为 '>= 0'）</li>
+  <li><code>javax.validation.constraints.Min</code>（指定最小值）</li>
+  <li><code>javax.validation.constraints.Max</code>（指定最大值）</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+  @Range(from = 0, to = Integer.MAX_VALUE) int getValue() {
+    // 警告：-1 超出声明的范围
+    return -1;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2021.2 最新变化</small></p>
+</body>
+</html>

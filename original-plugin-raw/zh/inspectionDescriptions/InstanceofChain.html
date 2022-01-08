@@ -1,0 +1,32 @@
+<html>
+<body>
+报告所有语句条件均为 <code>instanceof</code> 表达式或类等式表达式（例如与 <code>String.class</code> 比较）的 <code>if</code>-<code>else</code> 语句的任何链。
+此类结构通常表明面向对象的设计失败，面向对象的设计要求此类基于类型的调度应通过多态方法调用而不是类型测试的显式链来完成。
+<p>示例：</p>
+<pre><code>
+  double getArea(Shape shape) {
+    // 警告：抽象失败。
+    // 最好在 shape 接口中
+    // 声明 getArea() 抽象方法，
+    // 并在每个继承者中实现。
+    if (shape instanceof Point) {
+      return 0;
+    }
+    if (shape instanceof Circle) {
+      return Math.PI *
+        Math.pow(((Circle) shape).radius(), 2);
+    }
+    if (shape instanceof Rectangle) {
+      return ((Rectangle) shape).width() *
+        ((Rectangle) shape).height();
+    }
+    throw new IllegalArgumentException();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用下面的复选框可忽略库类中的 <code>instanceof</code> 表达式。
+<p>
+
+</body>
+</html>

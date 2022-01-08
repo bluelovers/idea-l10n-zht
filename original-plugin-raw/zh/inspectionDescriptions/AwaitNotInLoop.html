@@ -1,0 +1,25 @@
+<html>
+<body>
+报告没有在循环中调用的 <code>java.util.concurrent.locks.Condition.await()</code>。
+<p>
+  <code>await()</code> 和相关方法通常用于挂起线程，直到某个条件变为 true 为止。
+  线程可能出于不同原因而被唤醒，因此应在 <code>await()</code> 调用返回后检查条件。
+  使用循环很容易做到这一点。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void acquire(Condition released) throws InterruptedException {
+    released.await();
+  }
+</code></pre>
+<p>优良的代码应类似于：</p>
+<pre><code>
+  void acquire(Condition released) throws InterruptedException {
+    while (acquired) {
+      released.await();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

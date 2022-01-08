@@ -1,0 +1,19 @@
+<html>
+<body>
+报告实际实参类型与集合的元素类型不一致的形参化集合的方法调用。
+<p><b>示例：</b></p>
+<pre><code>
+  List&lt;Integer&gt; list = getListOfElements();
+  list.remove(""); //remove 被高亮显示
+</code></pre>
+<!-- tooltip end -->
+<p>
+  在检查设置中，可以禁用对可能正确的代码发出警告，如下所示：
+</p>
+<pre><code>
+  public boolean accept(Map&lt;Integer, String&gt; map, Object key) {
+    return map.containsKey(key);
+  }
+</code></pre>
+</body>
+</html>

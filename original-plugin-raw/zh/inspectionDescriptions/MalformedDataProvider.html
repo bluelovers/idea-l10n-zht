@@ -1,0 +1,24 @@
+<html><body>
+报告对不存在或不可访问的数据提供者方法的引用。
+<!-- tooltip end -->
+<p>示例：</p>
+<pre><code>
+public class InstanceDataProviderFromForeignClass {
+  // 方法 data() 在类 A 中不存在
+  @Test(dataProvider = "data", dataProviderClass = A.class)
+  public void test() {
+  }
+}
+class A { }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+//所需的 data() 方法在类 A 中创建
+class A {
+  @DataProvider
+  public Object[][] data() {
+    return new Object[][]{};
+  }
+}
+</code></pre>
+</body></html>

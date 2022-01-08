@@ -1,0 +1,24 @@
+<html>
+<body>
+报告可以简化的双重否定。
+<p>示例：</p>
+<pre><code>
+  if (!!functionCall()) {}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  if (functionCall()) {}
+</code></pre>
+<p>示例：</p>
+<pre><code>
+  if (!(a != b)) {}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  if (a == b) {}
+</code></pre>
+  <!-- tooltip end -->
+<p>
+
+</body>
+</html>

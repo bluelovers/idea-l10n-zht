@@ -1,0 +1,13 @@
+<html>
+<body>
+报告可以安全移除的单表达式字符串模板。
+<p><b>示例：</b></p>
+<pre><code>  val x = "Hello"
+  val y = "$x"
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>  val x = "Hello"
+  val y = x // &lt;== 已更新
+</code></pre>
+</body>
+</html>

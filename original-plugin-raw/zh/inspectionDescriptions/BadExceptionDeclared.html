@@ -1,0 +1,16 @@
+<html>
+<body>
+报告在其 <code>throws</code> 子句中声明不适当异常的方法。
+例如，异常可能因为过于通用而不适当，例如 <code>java.lang.Exception</code> 或 <code>java.lang.Throwable</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  void describeModule(String module) throws Exception {} // 警告：声明了禁止的异常 'Exception'
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>被禁止的异常</b>列表可指定应报告哪些异常。</li>
+  <li>使用<b>忽略在重写库方法的方法上声明的异常</b>选项可忽略在重写库方法的方法上声明的异常。</li>
+</ul>
+</body>
+</html>

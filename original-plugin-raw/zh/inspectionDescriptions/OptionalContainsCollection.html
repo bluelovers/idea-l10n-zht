@@ -1,0 +1,19 @@
+<html>
+<body>
+报告包含数组或集合类型形参的 <code>java.util.Optional</code> 或 <code>com.google.common.base.Optional</code> 类型。
+<p>在此类情况下，使用空的数组或集合来表示无结果更为清晰。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Optional&lt;List&lt;Integer&gt;&gt; foo() {
+    return Optional.empty();
+  }
+</code></pre>
+<p>此代码可能如下所示：</p>
+<pre><code>
+  List&lt;Integer&gt; foo() {
+    return new List&lt;&gt;();
+  }
+  </code></pre>
+<!-- tooltip end -->
+</body>
+</html>

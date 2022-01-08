@@ -1,0 +1,13 @@
+<html>
+<body>
+报告未使用的 <code>@DelegatesTo.Target</code> 注解和未解析的 <code>@DelegatedTo.target</code> 注解特性值。
+<p><b>示例：</b></p>
+<pre><code>
+  // 未使用的目标 't1' 和未解析的目标 't2'
+  def m(
+      @DelegatesTo.Target('t1') target,
+      @DelegatesTo(target = 't2') Closure c
+  ) {}
+</code></pre>
+</body>
+</html>

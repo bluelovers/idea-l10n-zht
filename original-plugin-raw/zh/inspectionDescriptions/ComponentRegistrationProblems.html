@@ -1,0 +1,25 @@
+<html>
+<body>
+报告代码和 <code>plugin.xml</code> 描述符中未正确注册的插件组件（组件和操作）。
+<p>
+  报告的问题如下：
+</p>
+<ul>
+  <li>未解析的组件/操作实现类 (<code>plugin.xml</code>)</li>
+  <li>未解析的组件接口类 (<code>plugin.xml</code>)</li>
+  <li>无法将组件实现类分配给其接口类 (<code>plugin.xml</code>)</li>
+  <li>组件注册不正确，例如，将 <code>ProjectComponent</code> 注册为应用程序组件，或者类完全没有实现任何组件接口（<code>plugin.xml</code> 和 Java 代码）
+  </li>
+  <li>类修饰符不正确：操作类必须为 <code>public</code>，并且必须有 public 无实参构造函数。 此外，操作和组件实现类不得为 abstract（<code>plugin.xml</code> 和 Java 代码）
+  </li>
+  <li>接口类重复：只能将类用作接口类一次 (<code>plugin.xml</code>)</li>
+</ul>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>检查插件描述符(plugin.xml)</b> 选项可以禁用 <code>plugin.xml</code> 描述符中的检查。</li>
+  <li>使用<b>检查 Java 操作</b>选项可以禁用操作代码中的检查。</li>
+  <li>使用<b>检查 Java 代码</b>选项可以禁用代码中的所有检查。</li>
+</ul>
+</body>
+</html>

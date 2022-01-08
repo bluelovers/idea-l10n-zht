@@ -1,0 +1,18 @@
+<html>
+<body>
+报告对 <code>Objects.equals(a, b)</code> 的调用，其中第一个实参是静态已知为非 null。
+<p>如果两个实参都是基元，此类调用可以安全地替换为 <code>a.equals(b)</code> 或 <code>a == b</code>。</p>
+<p>示例：</p>
+<pre><code>
+  String defaultName = "default";
+  boolean isDefault = Objects.equals(defaultName, name);
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  String defaultName = "default";
+  boolean isDefault = defaultName.equals(name);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.3 最新变化</small></p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告返回类型不正确的 Spring Data CRUD 仓库方法。</p>
+<p>支持以下返回类型：</p>
+<list>
+  <li><code>void</code></li>
+  <li>基元类型</li>
+  <li>包装器类型</li>
+  <li><code>T</code>（当查询方法应最多返回一个结果时）。 如果没有结果，则返回 <code>null</code>，如果有多个结果，则抛出 <code>IncorrectResultSizeDataAccessException</code>。
+  </li>
+  <li><code>java.util.List </code> 或任何常见的 <code> Iterable</code> 类型</li>
+  <li><code>java.util.stream.Stream</code></li>
+  <li><code>java.util.Optional</code> 或 <code>scala.Option</code>（当查询方法应最多返回一个结果时）。 如果没有结果，则返回 <code>Optional.empty()</code> 或 <code>Optional.absent()</code>，如果有多个结果，则抛出 <code>IncorrectResultSizeDataAccessException</code>。
+  </li>
+  <li><code>io.micronaut.data.model.Page</code></li>
+  <li><code>io.micronaut.data.model.Slice</code></li>
+  <li><code>java.util.concurrent.Future</code>、<code>java.util.concurrent.CompletableFuture</code> 或 <code>ListenableFuture</code>（如果该方法使用 <code>@Async</code> 进行注解并启用 Spring 异步方法执行）
+  </li>
+  <li><code>GeoResults&lt;T&gt;</code>、<code>GeoResult&lt;T&gt;</code> 或 <code>GeoPage&lt;T&gt;</code></li>
+</list>
+</body>
+</html>

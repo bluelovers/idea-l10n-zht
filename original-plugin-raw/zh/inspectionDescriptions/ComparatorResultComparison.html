@@ -1,0 +1,25 @@
+<html>
+<body>
+报告 <code>Comparator.compare()</code> 或 <code>Comparable.compareTo()</code> 调用结果与非零常量的比较。
+根据约定，这些方法可以返回任何整数（不只是 -1、0 或 1），因此与特定数字比较是一种不好的做法。 某些广泛使用的比较方法（例如 <code>String.compareTo()</code>）实际上返回 [-1..1] 范围之外的值，此类比较可能会导致不正确的程序行为。
+<p>示例：</p>
+<pre><code>
+  void validate(String s1, String s2) {
+    // 与 1 比较不正确
+    if (s1.compareTo(s2) == 1) {
+      throw new IllegalArgumentException("Incorrect order");
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void validate(String s1, String s2) {
+    if (s1.compareTo(s2) > 0) {
+      throw new IllegalArgumentException("Incorrect order");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.2 最新变化</small></p>
+</body>
+</html>

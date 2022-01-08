@@ -1,0 +1,18 @@
+<html>
+<body>
+报告可以优化并且以 <code>count()</code> 运算结束的 Stream API 调用链。
+<p>
+  以下调用链替换为此检查：
+</p>
+<ul>
+  <li><code>Collection.stream().count()</code> &rarr; <code>Collection.size()</code>. 在 Java 8 中，<code>Collection.stream().count()</code> 实际上是通过迭代集合元素来进行计数，而 <code>Collection.size()</code> 对于大多数集合来说速度要快得多。</li>
+  <li><code>Stream.flatMap(Collection::stream).count()</code> &rarr; <code>Stream.mapToLong(Collection::size).sum()</code>. 同样，不需要遍历所有嵌套集合。 相反，它们的大小可以相加。</li>
+  <li><code>Stream.filter(o -> ...).count() > 0</code> &rarr; <code>Stream.anyMatch(o -> ...)</code>. 与初始调用不同，一旦找到匹配元素后 <code>anyMatch()</code> 就可以立即停止计算。</li>
+  <li><code>Stream.filter(o -> ...).count() == 0</code> &rarr; <code>Stream.noneMatch(o -> ...)</code>. 与以上相似。</li>
+</ul>
+<p>
+  请注意，如果替换涉及 <code>anyMatch()</code> 等短路操作，那么中间流操作产生副作用时，可能会出现明显的行为变化。 在 Stream API 调用中通常应避免副作用。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

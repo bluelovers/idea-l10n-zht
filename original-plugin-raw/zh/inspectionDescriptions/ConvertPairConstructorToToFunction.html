@@ -1,0 +1,26 @@
+<html>
+<body>
+报告可替换为 <code>to()</code> 中缀函数调用的 <code>Pair</code> 构造函数调用。
+<p>
+    显式构造函数调用可能会增添冗余，尤其是在多次使用时。
+    将构造函数调用替换为 <code>to()</code> 会使读取和维护代码变得更容易。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val countries = mapOf(
+      Pair("France", "Paris"),
+      Pair("Spain", "Madrid"),
+      Pair("Germany", "Berlin")
+  )
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val countries = mapOf(
+      "France" to "Paris",
+      "Spain" to "Madrid",
+      "Germany" to "Berlin"
+  )
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+报告有更简单的替代方案的过于复杂的集合操作。
+<p>示例：</p>
+<pre><code>
+  void f(String[] array, Collection&lt;String&gt; collection) {
+    String[] strings = Arrays.asList(array).subList(0, 10).toArray(new String[0]);
+    boolean contains = collection.containsAll(Collections.singletonList("x"));
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void f(String[] array, Collection&lt;String&gt; collection) {
+    String[] strings = Arrays.copyOf(array, 10);
+    boolean contains = collection.contains("x");
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>2018.1 最新变化</small></p>
+</body>
+</html>

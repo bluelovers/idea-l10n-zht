@@ -1,0 +1,14 @@
+<html>
+<body>
+报告传递给形参注解为 <code>@PropertyKey</code> 的方法的无效实参。
+<p>这些实参应为相应属性文件中的有效属性键。
+此外，该检查还将验证 <code>@PropertyKey</code> 注解的 <code>resourceBundle</code> 实参是否为现有的资源包。</p>
+<p>
+  使用该快速修复可以创建新属性或选择现有属性。
+</p>
+<p>示例：</p>
+<pre><code>
+  @PropertyKey(resourceBundle = "myBundle") String value = "invalid.key";
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<html>
+<body>
+<p>报告不是在相应的 synchronized 语句或 synchronized 方法中进行的 <code>wait()</code> 调用。</p>
+<p>在没有持有锁定的对象上调用 <code>wait()</code> 会导致抛出 <code>IllegalMonitorStateException</code>。
+此类结构不一定错误，因为在调用该包含方法前可能已获取必要的锁定，但即便如此，还是要仔细查看。</p>
+</body>
+</html>

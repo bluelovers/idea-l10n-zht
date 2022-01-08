@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>报告在方法、字段或变量上使用的不必要的 <code>non-sealed</code> 修饰符。</p>
+<p>此修饰符仅对类、接口和特征有效。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  <b>non-sealed</b> boolean foo() {} // 修饰符不必要
+  <b>non-sealed</b> Object bar // 修饰符不必要
+
+  // 修饰符为必选项，因此未高亮显示
+  <b>non-sealed</b> class A {}
+</code></pre>
+</body>
+</html>

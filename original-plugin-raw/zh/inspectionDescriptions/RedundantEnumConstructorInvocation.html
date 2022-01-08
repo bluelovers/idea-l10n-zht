@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告枚举条目上的冗余构造函数调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  enum class Baz(i: Int = 0) {
+      A(1),
+      B<b>()</b>,
+      C<b>()</b>,
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  enum class Baz(i: Int = 0) {
+      A(1),
+      B,
+      C,
+  }
+</code></pre>
+</body>
+</html>

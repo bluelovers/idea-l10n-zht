@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告评估为 <code>Option</code> 的 if 语句，并建议将其替换为 <code>filter</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def condition(x: Int): Boolean = ???
+  val value = 3
+  if (condition(value)) Some(value) else None
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def condition(x: Int): Boolean = ???
+  val value = 3
+  Some(value).filter(condition)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

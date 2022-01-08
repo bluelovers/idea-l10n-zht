@@ -1,0 +1,17 @@
+<html>
+<body>
+报告以下 EJB 规范违规：
+<ul>
+  <li>方法未声明它抛出 <code>java.rmi.RemoteException</code></li>
+  <li>方法返回类型或实参与 RMI/IIOP 不兼容</li>
+  <li>EJB 服务端点接口具有常量声明</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+public interface EntityRemote extends javax.ejb.EJBObject{
+  public int businessExample(String value) throws java.lang.RuntimeException; // 错误：应改为声明 'RemoteException'
+}
+</code></pre>
+</body>
+</html>

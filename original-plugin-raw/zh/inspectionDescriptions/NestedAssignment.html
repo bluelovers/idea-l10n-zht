@@ -1,0 +1,15 @@
+<html>
+<body>
+报告嵌套在其他表达式中的赋值表达式。
+<p>此类表达式可能令人困惑，并违反一般设计原则，即任何结构应当只发挥一种作用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  String userName;
+  // 警告：使用了对 'userName' 赋值的结果
+  String message = "Hello " + (userName = "Alice") + "!"
+  System.out.println(message);
+  System.out.println("Goodbye " + userName);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

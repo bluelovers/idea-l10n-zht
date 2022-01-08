@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>报告 <code>@Specializes</code> 注解的不正确用法。</p>
+
+<ul>
+  <li>专用化 Bean 必须扩展另一个 Bean</li>
+  <li>专用化方法必须重写其直接超类的 <code>@Produces</code> 方法</li>
+  <li><code>@Named</code> 注解不能用于专用化类和专用类</li>
+  <li>两个或多个类不能专用化同一个超类</li>
+  <li>专用化方法不能为 static</li>
+</ul>
+</body>
+</html>

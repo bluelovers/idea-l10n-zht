@@ -1,0 +1,26 @@
+<html>
+<body>
+报告静态已知始终为 true、false、null 或零的非普通条件和值。
+虽然有时会有意为之，但通常这是程序中存在逻辑错误的迹象。 此外，报告永远无法到达 <code>when</code> 分支和某些静态已知始终失败的表达式。
+<p>示例：</p>
+<pre><code>
+fun process(x: Int?) {
+  val isNull = x == null
+  if (!isNull) {
+    if (<span style="background: yellow">x != null</span>) {} // 条件始终为 true
+    require(<span style="background: yellow">x!! &lt; 0 && x &gt; 10</span>) // 条件始终为 false
+  } else {
+    println(x<span style="background: yellow">!!</span>) // !! operator will always fail
+  }
+}
+fun process(v: Any) {
+  when(v) {
+    is CharSequence -&gt; println(v <span style="background: yellow">as</span> Int) // 转换将始终失败
+    <span style="background: yellow">is String</span> -&gt; println(v) // 分支无法到达
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2021.3 最新变化</small></p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告冗余的空初始值设定项块。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+      init {
+          // 空 init 块
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+  }
+</code></pre>
+</body>
+</html>

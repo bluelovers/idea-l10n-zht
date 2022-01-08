@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可以替换为中缀形式的 <code>to</code> 函数调用。
+<p>使用中缀形式可使代码更简单。</p>
+<p>该快速修复会将 <code>to</code> 替换为中缀形式。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(a: Int, b: Int) {
+      val pair = a.to(b)
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(a: Int, b: Int) {
+      val pair = a to b
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

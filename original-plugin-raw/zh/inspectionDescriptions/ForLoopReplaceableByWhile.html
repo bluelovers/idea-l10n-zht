@@ -1,0 +1,21 @@
+<html>
+<body>
+报告不包含初始化和更新组件的 <code>for</code> 循环，并建议将它们转换为 <code>while</code> 循环。 这使代码更易于阅读。
+<p>示例：</p>
+<pre><code>
+  for(; exitCondition(); ) {
+    process();
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  while(exitCondition()) {
+    process();
+  }
+</code></pre>
+<p>快速修复也可用于其他 <code>for</code> 循环，因此您可以用 <code>while</code> 循环替换任何 <code>for</code> 循环。</p>
+<!-- tooltip end -->
+<p>如果您想忽略具有不重要或不存在条件的 <code>for</code> 循环，使用 <b>忽略无条件的 'infinite' for 循环</b> 选项。
+<p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 <code>0</code> 文字可以替换为对 <code>.isEmpty()</code> 的调用的 <code>.size()</code> 或 <code>.length()</code> 比较。
+<p><b>示例：</b></p>
+<pre><code>
+  boolean emptyList = list.size() == 0;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  boolean emptyList = list.isEmpty();
+  </code></pre>
+<!-- tooltip end -->
+<p>
+  使用<b>忽略类</b>表可以添加不应为之替换任何 <code>.size()</code> 或 <code>.length()</code> 比较的类。
+</p>
+<p>使用<b>忽略将替换为 <code>'!isEmpty()'</code> 的表达式</b>选项可以忽略任何将替换为 <code>!isEmpty()</code> 的表达式。
+</p>
+</body>
+</html>

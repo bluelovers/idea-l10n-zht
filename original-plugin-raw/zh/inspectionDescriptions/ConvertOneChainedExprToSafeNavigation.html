@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可以使用安全导航运算符 (<code>&amp;.</code>) 简化的链式调用。 一组链式调用是
+用于检查每个调用组件中的 <code>nil</code> 的常见模式。
+<p>示例：</p>
+<pre>
+<code># 不良做法
+if user &amp;&amp; user.profile &amp;&amp; user.profile.thumbnails
+end</code>
+</pre>
+
+可以使用快速修复来通过 <code>&amp;.</code> 简化表达式。 应用快速修复后，结果如下所示：
+
+<pre>
+<code># 优良做法
+if user&amp;.profile&amp;.thumbnails
+end</code>
+</pre>
+</body>
+</html>

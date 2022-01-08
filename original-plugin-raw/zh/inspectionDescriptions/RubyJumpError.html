@@ -1,0 +1,18 @@
+<html>
+<body>
+报告控制流跳转语句的错误使用情况，例如 <code>return</code>、
+<code>retry</code>、
+<code>redo</code>、<code>break</code> 和 <code>continue</code>。
+<p>示例：</p>
+<pre>
+<code>i = 1
+while true
+  if i * 6 >= 30
+    retry
+  end
+  puts i * 6
+  i += 1
+end</code>
+</pre>
+</body>
+</html>

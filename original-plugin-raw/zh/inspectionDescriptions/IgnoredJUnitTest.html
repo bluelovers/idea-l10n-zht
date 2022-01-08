@@ -1,0 +1,26 @@
+<html>
+<body>
+报告 JUnit 4 的 <code>@Ignore</code> 或 JUnit 5 的 <code>@Disabled</code> 注解的用法。
+长期使用这些注解进行注解的测试，特别是在没有指定原因的情况下，都是代码异味。
+<p><b>示例：</b></p>
+<pre><code>
+  @Ignore
+  <b>public class</b> UrgentTest {
+
+    @Test
+    <b>public void</b> testIt() {
+      Assert.assertEquals("expected", "actual");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  配置检查：
+</p>
+<ul>
+  <li>
+    使用<b>仅报告没有原因的注解</b>选项可以仅报告没有原因被指定为注解的 <code>value</code> 特性的情况。
+  </li>
+</ul>
+</body>
+</html>

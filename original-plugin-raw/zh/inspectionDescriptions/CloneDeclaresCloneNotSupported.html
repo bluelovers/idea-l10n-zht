@@ -1,0 +1,24 @@
+<html>
+<body>
+报告不声明 <code>throws CloneNotSupportedException</code> 的 <code>clone()</code> 方法。
+<p>如果没有声明 <code>throws CloneNotSupportedException</code>，该方法的子类将不能以标准方式禁止克隆。 此检查不会报告声明为 <code>final</code> 的 <code>clone()</code> 方法和 <code>final</code> 类内的 <code>clone()</code> 方法。</p>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<p>使用<b>仅对 'protected' 克隆方法发出警告</b>选项可以指示此检查仅对 <code>protected clone()</code> 方法发出警告。
+<i>Effective Java</i> 一书（第二版和第三版）建议在 <code>public</code> 方法上省略 <code>CloneNotSupportedException</code> 声明，因为不抛出已检查的异常的方法更容易使用。
+<p>示例：</p>
+<pre><code>
+  <b>public class</b> Example <b>implements</b> Cloneable {
+    // 方法未声明 ’throws CloneNotSupportedException‘
+    <b>protected</b> Object clone() {
+        <b>try</b> {
+            <b>return</b> <b>super</b>.clone();
+        } <b>catch</b> (CloneNotSupportedException e) {
+            <b>return</b> null;
+        }
+    }
+  }
+</code></pre>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+报告可能的 <code>nil</code> 解引用。 解引用 <code>nil</code> 可能导致 <code>NoMethodError</code>。
+<p>示例：</p>
+<pre>
+<code>def foo
+  rand(2) == 1 ? nil : 1
+end
+
+a = foo
+a.nomethod # 方法调用可能产生 NoMethodError</code>
+</pre>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+报告对 lambda 形参的赋值或修改。
+虽然偶尔是有意为之，但此结构可能令人困惑，通常是由拼写错误或使用错误变量所致。
+<p>该快速修复会添加新变量的声明。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  list.forEach(s -> {
+    s = s.trim();
+    System.out.println("String: " + s);
+  });
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  list.forEach(s -> {
+    String trimmed = s.trim();
+    System.out.println("String: " + trimmed);
+  });
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>如果赋值是原始形参的转换，则忽略</b>选项可以忽略根据先前值修改形参值的赋值。</p>
+</body>
+</html>

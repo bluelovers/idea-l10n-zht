@@ -1,0 +1,31 @@
+<html>
+<body>
+报告与周围类的字段同名的局部变量。
+由于进行此类命名，在有意使用同名字段的情况下，您可能会误用该变量。
+<p>建议通过快速修复重命名该变量。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Foo {
+    public Object foo;
+
+    void bar() {
+      Object o = new Object() {
+        void baz() {
+          Object foo; // 局部变量 'foo' 隐藏类 'Foo' 中的字段
+        }
+      };
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  您可以为此检查配置以下选项：
+</p>
+<ol>
+  <li><strong>忽略不可访问字段</strong> - 忽略与不可见的超类字段同名的局部变量（例如，由于这些字段是 private 字段）。</li>
+  <li><strong>忽略隐藏非 static 字段的 static 上下文中的局部变量</strong> - 
+例如，当局部变量位于 static 方法内部或位于 static 内部类中的方法内部时。
+  </li>
+</ol>
+</body>
+</html>

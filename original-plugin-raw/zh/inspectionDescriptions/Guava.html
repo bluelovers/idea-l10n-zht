@@ -1,0 +1,19 @@
+<html>
+<body>
+报告可以迁移到标准 Java API 调用的 Guava 函数基元的用法。
+<p>例如，该检查会报告类和接口（如 <code>FluentIterable</code>、<code>Optional</code>、<code>Function</code>、<code>Predicate</code> 或 <code>Supplier</code>）的用法。</p>
+<p>示例：</p>
+<pre><code>
+  ImmutableList&lt;String&gt; results = FluentIterable.from(List.of(1, 2, 3)).transform(Object::toString).toList();
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  List&lt;String&gt; results = List.of(1, 2, 3).stream().map(Object::toString).collect(Collectors.toList());
+</code></pre>
+<p>
+该快速修复可能会改变语义。 Guava 的一些惰性求值的可迭代对象可以转换为预求值的可迭代对象。
+</p>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。</p>
+</body>
+</html>

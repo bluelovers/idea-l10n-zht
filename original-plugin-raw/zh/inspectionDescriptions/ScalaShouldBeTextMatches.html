@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>报告与字符串进行比较时使用 <code>PsiElement.getText</code> 的情况，并建议将其替换为 <code>PsiElement.textMatches</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  psiElement.getText == "null"
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  psiElement.textMatches("null")
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

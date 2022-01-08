@@ -1,0 +1,17 @@
+<html>
+<body>
+报告与基类中声明具有相同签名并隐藏非虚拟函数的函数。
+<p>示例：</p>
+<pre>
+class Base {
+  public:
+    void operate() {}
+};
+
+class Derived : public Base {
+  public:
+    void operate() {}
+}
+</pre>
+</body>
+</html>

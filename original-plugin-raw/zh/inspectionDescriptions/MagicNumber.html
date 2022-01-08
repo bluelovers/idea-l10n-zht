@@ -1,0 +1,32 @@
+<html>
+<body>
+报告“幻数”：未通过常量声明来命名的数值文字。
+<p>使用幻数会导致代码不清晰，并且如果幻数在一个位置更改但在另一个位置保持不变，则会导致错误。 此检查不会报告数字 0、1、2、3、4、5、6、7、8、9、10、100、1000、0L、1L、2L、0.0、1.0、0.0F 和 1.0F。</p>
+<p>示例：</p>
+<pre><code>
+  void checkFileSize(long bytes) {
+    if (bytes > 1_048_576) {
+      throw new IllegalArgumentException("too big");
+    }
+  }
+</code></pre>
+<p>快速修复引入了一个新常量：</p>
+<pre><code>
+  static final int MAX_SUPPORTED_FILE_SIZE = 1_048_576;
+
+  void checkFileSize(long bytes) {
+    if (bytes > MAX_SUPPORTED_FILE_SIZE) {
+      throw new IllegalArgumentException("too big");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>忽略 'hashCode()' 方法中的常量</b>选项可在 <code>hashCode()</code> 方法中禁用此检查。</li>
+  <li>使用<b>在注解中忽略</b>选项可以忽略注解中的幻数。</li>
+  <li>在构造 <code>Collection</code>、<code>Map</code>、<code>StringBuilder</code> 或 <code>StringBuffer</code> 对象时，使用<b>忽略 StringBuilders 和 Collections 的初始容量</b>选项可以忽略用作初始容量的幻数。</li>
+</ul>
+
+</body>
+</html>

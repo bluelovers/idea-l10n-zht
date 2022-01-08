@@ -1,0 +1,31 @@
+<html>
+<body>
+报告实现 <code>Serializable</code> 且不声明 <code>serialVersionUID</code> 字段的类。
+<p>
+  如果没有 <code>serialVersionUID</code> 字段，对该类做出的任何更改都将导致以前序列化的版本不可读。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Main implements Serializable {
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Main implements Serializable {
+      private static final long serialVersionUID = -1446398935944895849L;
+  }
+</code></pre>
+当使用 JDK 14 或更高的语言级别时，快速修复还将添加 <code>java.io.Serial</code> 注解。
+<!-- tooltip end -->
+<p>使用以下选项配置检查：</p>
+<ul>
+  <li>
+    列出此检查不应报告其继承者的类。
+    这适用于从超类继承 <code>Serializable</code> 但不用于序列化的类。
+  </li>
+  <li>
+    是否忽略 <code>Serializable</code> 匿名类。
+  </li>
+</ul>
+</body>
+</html>

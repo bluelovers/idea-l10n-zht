@@ -1,0 +1,25 @@
+<html>
+<body>
+报告在以下情况下使用的 <code>toString()</code> 调用：
+<ul>
+  <li>在字符串串联中</li>
+  <li>在 <code>java.lang.StringBuilder#append()</code> 或 <code>java.lang.StringBuffer#append()</code> 方法中</li>
+  <li>在 <code>java.io.PrintWriter</code> 或 <code>java.io.PrintStream</code> 的方法中</li>
+  <li>在 <code>org.slf4j.Logger</code> 的方法中</li>
+</ul>
+<p>在这些情况下，转换为字符串将由底层库方法处理，不需要显式调用 <code>toString()</code>。</p>
+<p>示例：</p>
+<pre><code>
+  System.out.println(this.toString())
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  System.out.println(this)
+</code></pre>
+<!-- tooltip end -->
+<p>
+  请注意，没有 <code>toString()</code> 调用，代码语义可能会有所不同：如果表达式为 null，则将使用 <code>null</code> 字符串，而不是抛出 <code>NullPointerException</code>。</p>
+  <p>使用 <b>仅在已知限定符为非 null 时报告</b> 选项以避免对可能为 null 的值发出警告。
+</p>
+</body>
+</html>

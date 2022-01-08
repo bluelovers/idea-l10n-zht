@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告当前版本的 <a href="https://spring.io/projects/spring-integration">Spring Integration</a> 基于 XML 的应用程序上下文中已弃用的 XML 元素。</p>
+
+<p>有关详细信息，请参阅 <a href="https://github.com/SpringSource/spring-integration/wiki/Spring-Integration-2.0-to-2.1-Migration-Guide">迁移指南</a>。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+&lt;beans ... &gt;
+   &lt;int:channel id="failChannel"
+                dispatcher="<strong>failover</strong>"/&gt; &lt;!-- 此特性已被弃用，请改用调度程序子元素 --&gt;
+   &lt;int:poller default="true"&gt;
+     &lt;<strong>int:cron-trigger</strong>  expression="5"/&gt;  &lt;!-- 此元素在 Spring Integration 2.1 中已被移除，请改用 'cron' 特性 --&gt;
+     &lt;<strong>int:interval-trigger</strong> interval="3"/&gt; &lt;!--  此元素在 Spring Integration 2.1 中已被移除，请改用 interval-trigger 特性 --&gt;
+  &lt;/int:poller&gt;
+  &lt;ftp:inbound-channel-adapter session-factory="ftpSessionFactory"
+                               cache-sessions="<strong>false</strong>" &lt;!--  This attribute is deprecated, use CachingSessionFactory instead --&gt;
+                               channel="channel"/&gt;
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>

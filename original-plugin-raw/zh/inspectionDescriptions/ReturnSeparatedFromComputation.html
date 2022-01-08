@@ -1,0 +1,28 @@
+<html>
+<body>
+报告返回局部变量的 <code>return</code> 语句，其中变量的值在同一方法中的其他位置计算。
+<p>快速修复通过将 return 语句移动到计算变量值的位置来内联返回的变量。
+  当返回值无法内联到 <code>return</code> 语句中时，快速修复尝试将 return 语句移动到尽可能接近计算的返回值的位置。</p>
+<p>示例：</p>
+<pre><code>
+  int n = -1;
+  for (int i = 0; i &lt; a.length; i++) {
+    if (a[i] == b) {
+      n = i;
+      break;
+    }
+  }
+  return n;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  int n = -1;
+  for (int i = 0; i &lt; a.length; i++) {
+    if (a[i] == b) {
+      return i;
+    }
+  }
+  return n;
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告 <code>drop</code> 和 <code>take</code> 的组合并将其替换为 <code>slice</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  var x: Seq[Int]
+  x.drop(n).take(m)
+  x.take(m).drop(n)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  var x: Seq[Int]
+  x.slice(n, n + m)
+  x.slice(n, m)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

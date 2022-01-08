@@ -1,0 +1,17 @@
+<html>
+<body>
+报告 kind-projector 语法中 <code>?</code> 标识符的用法。
+<p><code>?</code> 标识符将用于 Scala 3 中类型中的通配符实参（请参阅<a href="https://dotty.epfl.ch/docs/reference/changed-features/wildcards.html">类型中的通配符实参</a>）。
+    它在 kind-projector 类型 lambda 中的用法已被弃用，并将被 <code>*</code> 取代。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  List[?]
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  List[*]
+</code></pre>
+<!-- tooltip end -->
+<p><small>此检查在 <b>Kind Projector</b> 插件启用时运行。</small></p>
+</body>
+</html>

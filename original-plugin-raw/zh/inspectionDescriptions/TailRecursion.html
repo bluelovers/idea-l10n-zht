@@ -1,0 +1,34 @@
+<html>
+<body>
+报告尾递归，即方法在返回前调用自身作为其最后一项操作。
+<p>
+  尾递归总是可以替换为循环，循环的速度快得多。
+  有些 JVM 执行尾调用优化，而其他一些 JVM 则不执行。 因此，尾递归解决方案在不同的虚拟机上可能有截然不同的性能特征。
+</p>
+<p>示例：</p>
+<pre><code>
+  int factorial(int val, int runningVal) {
+    if (val == 1) {
+      return runningVal;
+    } else {
+      return factorial(val - 1, runningVal * val);
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  int factorial(int val, int runningVal) {
+    while (true) {
+      if (val == 1) {
+        return runningVal;
+      } else {
+        runningVal = runningVal * val;
+        val = val - 1;
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

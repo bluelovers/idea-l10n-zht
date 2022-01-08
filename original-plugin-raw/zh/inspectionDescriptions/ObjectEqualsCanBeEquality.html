@@ -1,0 +1,10 @@
+<html>
+<body>
+报告对可以替换为 <code>==</code> 或 <code>!=</code> 表达式而又不改变语义的 <code>equals()</code> 的调用。
+<p>当这些调用用于比较没有自身的 <code>equals()</code> 实现但使用默认 <code>Object.equals()</code> 的<code>final</code> 类时，可以替换这些调用。
+此替换可能会提升性能。</p>
+<p>对 <code>enum</code> 值上的 <code>equals()</code> 调用进行单独检查：对 Enum 值调用 'equals()'。</p>
+<!-- tooltip end -->
+<!--<p><small>New in 2017.3</small>-->
+</body>
+</html>

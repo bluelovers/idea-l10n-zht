@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 <code>Collection</code> 类型的 static 字段。 虽然这不一定是问题，但静态集合通常会导致内存泄漏，因此会被某些编码标准禁止。
+<p><b>示例：</b></p>
+<pre><code>
+  public class Example {
+    static List&lt;String&gt; list = new ArrayList&lt;&gt;();
+
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  配置检查：
+</p>
+<ul>
+  <li>使用<b>忽略弱静态集合或映射</b>选项可以忽略 <code>java.util.WeakHashMap</code> 类型的字段。</li>
+</ul>
+</body>
+</html>

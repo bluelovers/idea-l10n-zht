@@ -1,0 +1,21 @@
+<html>
+<body>
+报告可能错误使用的日期格式模式。
+<p>报告的模式如下：</p>
+<ul>
+  <li>大写的“Y”，除非“w”出现在附近。 它代表“周年”，几乎总是与正常的“年份”（小写的 "y" 模式）相同，但可能指向 12 月结束后的下一年。</li>
+  <li>靠近 "H"、"K"、"h" 或 "k"（小时）的大写 "M"（月份）。 可能本意是使用小写的 "m"（分钟）。</li>
+  <li>靠近 "y"（年份）或 "d"（一月中的某天）的小写 "m"（分钟）。 可能本意是使用大写的 "M"（分钟）。</li>
+  <li>靠近 "M" 或 "L"（月份）的大写的 "D"（一年中的某天）。 可能本意是使用小写的 "d"（一月中的某天）。</li>
+  <li>靠近 "m"（分钟）的大写的 "S"（毫秒）。 可能本意是使用小写的 "s"（秒）。</li>
+</ul>
+<p>
+  示例：<br>
+  <code>new SimpleDateFormat("YYYY-MM-dd")</code>：可能本意是使用 <code>"yyyy-MM-dd"</code>。<br>
+  <code>new SimpleDateFormat("yyyy-MM-DD")</code>：可能本意是使用 <code>"yyyy-MM-dd"</code>。<br>
+  <code>new SimpleDateFormat("HH:MM")</code>：可能本意是使用 <code>"HH:mm"</code>。
+</p>
+<!-- tooltip end -->
+<p><small>2020.1 最新变化</small></p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+报告可能的 EL 问题，例如未解析的引用和无效的 EL 位置。
+
+<p><b>示例：</b></p><br/>
+考虑在当前命名空间中定义 `exampleFun(String)` 函数。
+<pre><code>
+&lt;jsp:root xmlns:example="urn:jsptld:exampleNamespace.tld"&gt;
+  ${ example:exampleFun("1") + example:unknownFun("2") } // 错误：无法解析函数 'unknownFun'
+  ${ example:exampleFun("1", "2") } // 错误：正式形参和实际形参的数量不同
+&lt;/jsp:root&gt;
+</code></pre>
+</body>
+</html>

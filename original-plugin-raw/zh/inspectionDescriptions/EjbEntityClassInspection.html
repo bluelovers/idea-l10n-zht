@@ -1,0 +1,20 @@
+<html>
+<body>
+检测以下错误级别的 EJB 规范违规：
+<ul>
+  <li>Finder 和 Selector 方法未正确定义</li>
+  <li>CMP 和 CMR 字段访问器未正确定义</li>
+</ul>
+</body>
+
+<p><b>示例：</b></p>
+<pre><code>
+public class SessionEJB implements javax.ejb.SessionBean {
+  // 错误：方法 'ejbCreateXXX' 应该为 public
+  protected void ejbCreateExample() { ... }
+
+  // 错误：方法 'ejbCreateAnotherExample' 应该返回 'void'
+  public int ejbCreateAnotherExample() { ... }
+}
+</code></pre>
+</html>

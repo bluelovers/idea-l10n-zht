@@ -1,0 +1,21 @@
+<html>
+<body>
+报告引用中的冗余反引号。
+<p>
+    一些 Kotlin 关键字在 Java 中是有效的标识符，例如：<code>in</code>、<code>object</code>、<code>is</code>。
+    如果 Java 库将 Kotlin 关键字用于方法，您仍然可以调用该方法并使用反引号字符 (<code>`</code>) 对其进行转义，例如 <code>foo.`is`(bar)</code>。
+    有时这种转义是冗余的，可以安全地省略。 该检查会发现并报告此类情况，并与“移除冗余反引号”快速修复配对，允许您修改高亮显示的代码。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun `is`(x: String) {}
+  fun foo() {
+      `is`("bar") // 'is' 是一个关键字，反引号为必选项
+  }
+
+  fun `test that smth works as designed`() {} // 可以，复杂标识符有助于改进可读性
+
+  val `a` = 1  // 不需要反引号
+</code></pre>
+</body>
+</html>

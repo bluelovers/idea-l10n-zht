@@ -1,0 +1,16 @@
+<html>
+<body>
+报告对循环语句条件部分中数组的 <code>.length</code> 属性的访问。 在资源高度受限的环境中，此类调用可能会对性能产生不利影响。
+<p>
+  此检查适用于 Java ME 和其他资源高度受限的环境。
+  不加考虑地应用此检查的结果可能会对代码清晰度和设计产生负面影响。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo(Object[] x) {
+    for (int i = 0; i &lt; x.length; i++) { /**/ }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

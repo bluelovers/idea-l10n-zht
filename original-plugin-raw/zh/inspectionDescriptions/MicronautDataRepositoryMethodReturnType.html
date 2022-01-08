@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告不正确的 Micronaut Data <a href="https://micronaut-projects.github.io/micronaut-data/latest/guide/#querying"> 仓库方法返回类型</a>。</p>
+<p>支持以下返回类型：</p>
+<list>
+  <li>void</li>
+  <li>基元类型</li>
+  <li>简单类型</li>
+  <li><code>java.util.List </code> 或任何常见的 <code> Iterable</code> 类型</li>
+  <li><code>java.util.stream.Stream</code></li>
+  <li><code>java.util.Optional</code></li>
+  <li><code>io.micronaut.data.model.Page</code></li>
+  <li><code>io.micronaut.data.model.Slice</code></li>
+  <li><code>java.util.concurrent.Future</code> 或 <code>java.util.concurrent.CompletableFuture</code></li>
+  <li>与 Reactive Streams 兼容的类型，例如 <code>Publisher</code>、<code>Single</code>、<code>Maybe</code>、<code>Flux</code>、<code>Mono</code> 等
+  </li>
+</list>
+</body>
+</html>

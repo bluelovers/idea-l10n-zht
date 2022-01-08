@@ -1,0 +1,30 @@
+<html>
+<body>
+如果发生 <code>org.testng.TestNGException</code>，则报告具有相同名称的 <code>TestNG</code> 数据提供者。
+<p>示例：</p>
+<pre><code>
+  public class DuplicatedDataProviders {
+    @DataProvider
+    public Object[][] intTestData() { // 重复项 1
+      return new Integer[][]{
+        new Integer[]{1, 1},
+      };
+    }
+
+    @DataProvider(name = "intTestData")
+    public Object[][] someTestData() { // 重复项 2
+      return new Integer[][]{
+        new Integer[]{1, 1},
+      };
+    }
+
+    @Test(dataProvider = "intTestData")
+    public void testIsOK(Integer key, Integer value) {
+      assertEquals(key, value);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

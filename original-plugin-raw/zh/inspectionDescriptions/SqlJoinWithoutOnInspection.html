@@ -1,0 +1,11 @@
+<html>
+<body>
+报告可能更改整个数据库的语句的缺失条件检查。
+<p>例如，在没有 ON 或 WHERE 的 DELETE 语句中使用 JOIN 子句。 如果不对 JOIN 进行条件检查，DELETE 将删除整个表的内容。</p>
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE foo (a INT,b INT,c INT);
+CREATE TABLE bar (a INT,b INT,c INT);
+
+DELETE table1 FROM foo table1  INNER JOIN bar table2;</code></pre>
+</body>
+</html>

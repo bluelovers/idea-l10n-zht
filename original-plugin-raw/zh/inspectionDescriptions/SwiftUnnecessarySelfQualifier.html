@@ -1,0 +1,39 @@
+<html>
+<body>
+<p>
+  报告 <code>self</code> 作为限定符但转义闭包并无此要求的用法。
+</p>
+<p>
+  建议移除冗余的 <code>self</code>。
+</p>
+<!-- tooltip end -->
+<p>
+  <b>示例：</b>
+</p>
+<pre><code>
+  struct URL {
+      func loadAsync() {
+          print(self.path)
+
+          DispatchQueue.global().async {
+              self.loadSync()
+          }
+      }
+  }
+</code></pre>
+<p>
+  在应用快速修复后：
+</p>
+<pre><code>
+  struct URL {
+      func loadAsync() {
+          print(path)
+
+          DispatchQueue.global().async {
+              loadSync()
+          }
+      }
+  }
+</code></pre>
+</body>
+</html>

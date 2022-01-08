@@ -1,0 +1,14 @@
+<html>
+<body>
+报告旧式的构造函数声明（<code>ClassName()</code>），并建议用新式的构造函数（<code>__construct()</code>）替换它们。
+<!-- tooltip end -->
+<p>
+  在 PHP 8.0 之前，全局命名空间中的类所使用的旧式构造函数语法被视为弃用的，会导致 <code>E_DEPRECATED</code> 错误。 如果同时定义了 <code>__construct()</code> 和 <code>ClassName()</code> 方法，<code>__construct()</code> 将被调用。
+</p>
+<p>在带命名空间的类，或者任何 PHP 8.0 的类中，<code>ClassName()</code> 方法从来没有任何特殊含义，也不会被作为构造函数调用。 因此，如果 PHP 语言级别设置为 8.0 或更高，检查就不会报告这种情况。
+</p>
+<p>
+  有关详细信息，请参阅 <a href="https://www.php.net/manual/en/language.oop5.decon.php">Constructors and destructors (php.net)</a>。
+</p>
+</body>
+</html>

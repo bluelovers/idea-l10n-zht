@@ -1,0 +1,13 @@
+<html>
+<body>
+报告任何使用 <code>java.lang.Random</code> 或 <code>java.lang.Math.random()</code> 的情况。
+<p>
+  在安全环境中，<code>java.secure.SecureRandom</code> 是更好的选择，因为它提供加密安全的随机数生成。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  long token = new Random().nextLong();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

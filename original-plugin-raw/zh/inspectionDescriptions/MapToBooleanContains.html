@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告将集合映射到布尔值并在它上面使用 <code>contains</code>。</p>
+
+<p>该快速修复改用 <code>.exists()</code> 或 <code>!.forall()</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def p(x: Int): Boolean = ???
+  var seq: Seq[Int]
+  seq.map(p).contains(true)
+  seq.map(p).contains(false)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def p(x: Int): Boolean = ???
+  var seq: Seq[Int]
+  seq.exists(p)
+  !seq.forall(p)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

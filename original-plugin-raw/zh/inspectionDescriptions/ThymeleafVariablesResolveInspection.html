@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告未解析的引用和无效的 Thymeleaf 表达式。</p>
+
+<p><strong>示例：</strong></p>
+<pre><code>
+&lt;html xmlns:th="https://www.thymeleaf.org"&gt;
+&lt;body&gt;
+  &lt;form th:object="${<strong>unknownPet</strong>}"  &lt;!-- Cannot resolve 'unknownPet'  --&gt;
+        class="form-horizontal" method="post"&gt;
+    &lt;input type="hidden" name="id" th:value="*{<strong>id</strong>}" /&gt; &lt;!-- 无法解析 'id'  --&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</body>
+</html>

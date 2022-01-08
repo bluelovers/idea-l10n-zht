@@ -1,0 +1,16 @@
+<html>
+<body>
+报告 <code>typeof</code> 或 <code>instanceof</code> 不健全的类型防护检查。
+在以下两种情况下，<code>typeof x</code> 类型防护可能不健全：
+<ul>
+<li><code>typeof x</code> 不对应于指定的值（例如，当 <code>x</code> 为 'string | boolean' 类型时，<code>typeof x === 'number'</code>）</li>
+<li><code>typeof x</code> 始终对应于指定的值（例如，当 <code>x</code> 为 'string' 类型时，<code>typeof x === 'string'</code>）</li>
+</ul>
+<br>
+在以下两种情况下，<code>x instanceof A</code> 类型防护可能不健全：
+<ul>
+  <li><code>x</code> 的类型与 <code>A</code> 不相关</li>
+  <li><code>x</code> 的类型是 <code>A</code> 或 <code>A</code> 的子类型</li>
+</ul>
+</body>
+</html>

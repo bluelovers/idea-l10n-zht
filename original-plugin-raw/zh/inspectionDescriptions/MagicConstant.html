@@ -1,0 +1,23 @@
+<html>
+<body>
+报告可以替换为“魔术”常量的表达式。
+<p>示例 1：</p>
+<pre><code>
+  // 使用了裸文字 "2"，警告：
+  Font font = new Font("Arial", 2)
+</code></pre>
+<p>示例 2：</p>
+<pre><code>
+  // 使用了预定义常量，良好：
+  Font font = new Font("Arial", Font.ITALIC)
+</code></pre>
+<p>
+  如果可能，该快速修复会插入相应的预定义常量。
+</p>
+<!-- tooltip end -->
+<p>
+  此检查的行为由 <code>org.intellij.lang.annotations.MagicConstant</code> 注解进行控制。
+  有些标准的 Java 库方法进行了预先注解，但您也可以在代码中使用该注解。
+</p>
+</body>
+</html>

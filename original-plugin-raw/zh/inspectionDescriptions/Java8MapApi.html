@@ -1,0 +1,52 @@
+<html>
+<body>
+报告 <code>java.util.Map</code> 常见的使用模式，并建议将其替换为：
+<code>getOrDefault()</code>、<code>computeIfAbsent()</code>、<code>putIfAbsent()</code>、<code>merge()</code> 或 <code>replaceAll( )</code>。
+<p>示例：</p>
+<pre><code>
+  map.containsKey(key) ? map.get(key) : "default";
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  map.getOrDefault(key, "default");
+</code></pre>
+<p>示例：</p>
+<pre><code>
+  List&lt;String&gt; list = map.get(key);
+  if (list == null) {
+    list = new ArrayList&lt;&gt;();
+    map.put(key, list);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  map.computeIfAbsent(key, localKey -> new ArrayList&lt;&gt;());
+</code></pre>
+<p>示例：</p>
+<pre><code>
+  Integer val = map.get(key);
+  if (val == null) map.put(key, 1);
+  else map.put(key, val + 1);
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  map.merge(key, 1, (localKey, localValue) -> localValue + 1);
+</code></pre>
+<p>示例：</p>
+<pre><code>
+  for (Map.Entry&lt;String, String&gt; entry : map.entrySet()) {
+    map.put(entry.getKey(), transform(entry.getValue()));
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  map.replaceAll((localKey, localValue) -> transform(localValue));
+</code></pre>
+
+<!-- tooltip end -->
+<p>请注意，如果提取到 lambda 表达式的代码修改了相同的 <code>Map</code>，对于某些 <code>Map</code>，替换为 <code>computeIfAbsent()</code> 或 <code>merge()</code> 可能无法正常使用。 在默认情况下，如果这段代码有副作用，则不会出现警告。 如有必要，启用<b>建议替换，即使 lambda 可能有副作用</b>选项，以始终显示警告。</p>
+<p>此外，由于 <code>put()</code> 等旧方法和 <code>computeIfAbsent()</code> 或 <code>merge()</code> 等新方法中对 <code>null</code> 值的不同处理，语义可能会改变，如果将 <code>null</code> 值存储到给定的 <code>Map</code> 中很重要，您需要考虑这一点。 当值是静态已知为 null 时，该检查不会建议进行替换。但对于可 null 性未知的值，仍然建议进行替换。 在这些情况下，我们建议禁止警告并添加说明注释。
+</p>
+<p>此检查仅在项目或模块的语言级别为 8 或更高时有效。</p>
+</body>
+</html>

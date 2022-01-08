@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告 <code>if</code> 中具有 <code>return</code> 的冗余 <code>if</code></p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(arg: Boolean): Int {
+      if (arg) return 0
+      else { // 此 else 冗余，大括号中的代码正好可以向左移动
+          someCode()
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(arg: Boolean): Int {
+      if (arg) return 0
+      someCode()
+  }
+</code></pre>
+</body>
+</html>

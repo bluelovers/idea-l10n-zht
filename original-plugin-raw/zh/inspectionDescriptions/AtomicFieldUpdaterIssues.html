@@ -1,0 +1,24 @@
+<html>
+<body>
+报告 <code>AtomicLongFieldUpdater</code>、<code>AtomicIntegerFieldUpdater</code> 或 <code>AtomicReferenceFieldUpdater</code> 字段（<code>java.util.concurrent.atomic</code> 软件包）的问题。
+<p>报告的问题与原子字段更新程序可能发生的运行时问题相同：找不到指定字段、指定字段不可访问、指定字段类型错误等。</p>
+<p><b>示例：</b></p>
+<ul>
+  <li><pre><code>
+  class A {
+    private static volatile int value = 0;
+    private static final AtomicIntegerFieldUpdater updater =
+    AtomicIntegerFieldUpdater.newUpdater((A.class), "value"); // 警告：字段 'value' 具有 'static' 修饰符
+  }
+  </code></pre></li>
+  <li><pre><code>
+  class B {
+    private static final AtomicIntegerFieldUpdater updater =
+      AtomicIntegerFieldUpdater.newUpdater(B.class, "value"); // 警告：在类 'B' 中找不到名为 'Value' 的字段
+  }
+  </code></pre></li>
+</ul>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

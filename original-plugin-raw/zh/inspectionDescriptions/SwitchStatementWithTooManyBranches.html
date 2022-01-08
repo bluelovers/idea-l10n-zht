@@ -1,0 +1,27 @@
+<html>
+<body>
+报告 <code>case</code> 标签太多的 <code>switch</code> 语句或表达式。
+<p>如此之长的 switch 语句可能令人困惑，或许应进行重构。
+  有时这并非问题（例如一个域非常复杂，并且有包含大量常量的枚举）。</p>
+<p>示例：</p>
+<pre><code>
+    switch (x) {
+        case 1 -> {}
+        case 2 -> {}
+        case 3 -> {}
+        case 4 -> {}
+        case 5 -> {}
+        case 6 -> {}
+        case 7 -> {}
+        case 8 -> {}
+        case 9 -> {}
+        case 10 -> {}
+        case 11,12,13 -> {}
+        default -> {}
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>最大分支数</b>字段可以指定 <code>case</code> 标签的预期最大数量。
+<p>
+</body>
+</html>

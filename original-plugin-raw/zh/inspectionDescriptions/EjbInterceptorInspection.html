@@ -1,0 +1,17 @@
+<html>
+<body>
+报告同时定义为 EJB 和侦听器类的类。
+
+<p><b>示例：</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+
+  @Interceptors(ExampleBean.class) // 错误：类同时定义为 EJB 和侦听器
+  public void getAnotherBean() {
+    ...
+  }
+}
+</code></pre>
+</body>
+</html>

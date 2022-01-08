@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>报告不存在的自定义标记。</p>
+
+<p>
+  您可以使用存储在 <code>app/views/tags</code> 目录中的简单模板文件为您的应用程序创建自定义标记。
+  模板的文件名用作标记名称。
+  例如，要创建 <code>hello</code> 标记，只需创建 <code>app/views/tags/hello.html</code> 文件。
+  直接引用标记：<code>#{hello /}</code>。
+</p>
+
+<p>如果 <code>app/views/tags/hello.html</code> 不存在，此检查将报告 <code>#{hello /}</code> 引用。</p>
+
+</body>
+</html>

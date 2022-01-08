@@ -1,0 +1,13 @@
+<html>
+<body>
+报告通过 <code>@NamedVariant</code>/<code>@NamedParam</code>/<code>@NamedDelegate</code> 注解的方法调用中未解析的实参标签。
+<p><b>示例：</b></p>
+<pre><code>
+  @groovy.transform.NamedVariant
+  def foo(a, b) {}
+
+  // 未解析的标签 'c'
+  foo(a: 1, b: 2, c: 3)
+</code></pre>
+</body>
+</html>

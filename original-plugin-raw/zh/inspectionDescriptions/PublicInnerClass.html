@@ -1,0 +1,20 @@
+<html>
+<body>
+报告 <code>public</code> 嵌套类。
+<p><b>示例：</b></p>
+<pre><code>
+  public class Outer {
+    public static class Nested {} // 警告
+    public class Inner {}         // 警告
+    public enum Mode {}           // 警告取决于设置
+    public interface I {}         // 警告取决于设置
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>忽略 'public' 内部枚举</b>选项可忽略 <code>public</code> 内部枚举。</li>
+  <li>使用<b>忽略 'public' 内部接口</b>选项可忽略 <code>public</code> 内部接口。</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+报告 <code>java.lang.Exception</code> 的子类中未被声明为 <code>final</code> 的字段。
+<p>不应修改异常对象上的数据，因为这可能会导致丢失可供以后调试和记录的错误上下文。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class EditorException extends Exception {
+    private String message; // 警告：异常类的非 final 字段 'message'
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

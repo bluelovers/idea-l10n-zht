@@ -1,0 +1,22 @@
+<html>
+<body>
+报告 <code>equals()</code> 被调用以将 <code>String</code> 与空字符串进行比较的情况。
+在这种情况下，使用 <code>.isEmpty()</code> 更好，因为它可以准确显示您正在检查的内容。
+<p><b>示例：</b></p>
+<pre><code>
+  void checkString(String s){
+    if ("".equals(s)) throw new IllegalArgumentException();
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void checkString(String s){
+    if (s != null && s.isEmpty()) throw new IllegalArgumentException();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <code>"".equals(str)</code> 在 <code>str</code> 为空时返回 false。 为了安全起见，当 <code>equals()</code> 实参可以为空时，此检查的快速修复会插入一个显式 null 检查。 使用该选项可使检查忽略此类情况。
+</p>
+</body>
+</html>

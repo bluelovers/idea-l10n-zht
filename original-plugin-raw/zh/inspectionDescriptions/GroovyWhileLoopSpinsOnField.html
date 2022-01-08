@@ -1,0 +1,33 @@
+<html>
+<body>
+<p>报告在非 <code>volatile</code> 字段值上自旋，等待它被另一个线程更改的 <code>while</code> 循环。</p>
+<p>
+除了在循环内完成少量工作时可能会非常耗费 CPU 之外，此类循环很可能具有与预期不同的语义。 即便另一个线程改变了该字段的值，Java 内存模型也允许该循环永不完成。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class SpinsOnField {
+      boolean ready = false;
+
+      void run() {
+          // 即使在从其他线程调用 markAsReady 后，
+          // 该循环也可能永不完成
+          while (!ready) {
+          }
+          // 执行某些工作
+      }
+
+      void markAsReady() {
+          ready = true;
+      }
+  }
+</code></pre>
+<p>
+此外，自 Java 9 起，建议在 <code>volatile</code> 字段的自旋循环中调用 <code>Thread.onSpinWait()</code>，这可能会显著提高在某些硬件上的性能。
+</p>
+<!-- tooltip end -->
+<p>
+使用下面的复选框可使此检查仅报告空 <code>while</code> 循环。
+<p>
+</body>
+</html>

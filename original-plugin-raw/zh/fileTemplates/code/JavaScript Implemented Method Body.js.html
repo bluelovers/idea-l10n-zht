@@ -1,0 +1,53 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3">
+      <font face="verdana" size="-1">
+        此内置模板用于在每次生成方法（例如，通过<code>从用法创建方法</code>意图操作）时填充方法体。<br>
+         模板是可编辑的。 除了 Javascript 表达式和注释，您还可以使用预定义变量。
+        当模板被应用时，这些变量将被替换成相应的值。
+      </font>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">预定义变量接收以下值：</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${IS_ASSIGNMENT_TARGET}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">如果创建的方法是赋值目标，则返回 'true'。</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${IS_NEW_CALL}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">如果创建的方法是在 ‘new’ 调用下，则返回 ‘true’。</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_EXPECTED_TYPE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">如果创建的方法在应为类型的位置，则返回 'true'。</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">创建方法的预期类型的默认值（如果没有预期类型，则为 'undefined'）</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${METHOD_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">创建的方法名称</font></td>
+  </tr>
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">所有来自 <i>文件头</i> 模板（<i>包含</i>选项卡）的预定义变量也可用。
+      （例如：
+      <font face="verdana" size="-2"><b>${USER}</b></font>、
+      <font face="verdana" size="-2"><b>${DATE}</b></font>
+      等。）</font>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

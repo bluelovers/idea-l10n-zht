@@ -1,0 +1,21 @@
+<html>
+<body>
+报告嵌套的 <code>synchronized</code> 语句。
+建议尽量避免嵌套同步，因为在某些情况下，嵌套同步可能会导致死锁。
+<p><b>示例：</b></p>
+<pre><code>
+  synchronized (lockA){
+    //线程 1 在等待 lockB
+    synchronized (lockB){ //警告
+    }
+  }
+  ...
+  synchronized (lockB) {
+    //线程 2 在等待 lockA
+    synchronized (lockA) { //警告
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

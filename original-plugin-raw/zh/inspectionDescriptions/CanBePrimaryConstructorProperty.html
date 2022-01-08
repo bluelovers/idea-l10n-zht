@@ -1,0 +1,18 @@
+<html>
+<body>
+报告显式分配给主构造函数形参的属性。
+<p>可以直接在主构造函数中声明属性，从而减少代码量并提高代码可读性。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class User(name: String) {
+      val name = name
+  }
+</code></pre>
+<p>快速修复会将形参和属性声明联接到主构造函数形参中：</p>
+<pre><code>
+  class User(val name: String) {
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

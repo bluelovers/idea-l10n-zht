@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告对不可为 null 表达式的冗余 <code>requireNotNull</code> 或 <code>checkNotNull</code> 调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(i: Int) {
+      requireNotNull(i) //此 'i' 始终不为 null，因此该 'requireNotNull' 为冗余调用。
+      ...
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(i: Int) {
+      ...
+  }
+</code></pre>
+</body>
+</html>

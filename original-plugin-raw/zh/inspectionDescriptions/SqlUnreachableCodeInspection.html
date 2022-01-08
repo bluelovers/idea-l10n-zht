@@ -1,0 +1,12 @@
+<html>
+<body>
+报告 SQL 例程中不可到达的语句。
+<p>示例（Microsoft SQL 服务器）：</p>
+<pre><code>CREATE FUNCTION foo() RETURNS INT AS
+BEGIN
+    THROW;
+    RETURN 1;
+END;</code></pre>
+<p>在 Microsoft SQL Server 中，<code>THROW</code> 语句会引发异常并将执行转移到 TRY...CATCH 结构的 CATCH 块。 因此，<code>RETURN 1;</code> 部分将永远不会被执行。</p>
+</body>
+</html>

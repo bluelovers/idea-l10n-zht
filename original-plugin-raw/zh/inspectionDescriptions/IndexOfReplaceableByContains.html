@@ -1,0 +1,16 @@
+<html>
+<body>
+报告与 <code>String.indexOf()</code> 调用（可以替换为对 <code>String.contains()</code> 方法的调用）的比较。
+<p><b>示例：</b></p>
+<pre><code>
+  <b>boolean</b> b = "abcd".indexOf('e') >= 0;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>boolean</b> b = "abcd".contains('e');
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 5 或更高时，此检查才会报告。</p>
+
+</body>
+</html>

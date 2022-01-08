@@ -1,0 +1,33 @@
+<html>
+<body>
+报告不必要的一元减号。 此类表达式可能难以理解并且可能包含错误。
+<p><b>示例：</b></p>
+<pre><code>void unaryMinus(int i) {
+    int x = - -i;
+  }</code></pre>
+<p>此处建议使用以下快速修复：</p>
+<ul>
+  <li><p>移除 <code>i</code> 变量前的 <code>-</code> 运算符：</p>
+    <pre><code>void unaryMinus(int i) {
+    int x = i;
+  }</code></pre>
+  </li>
+  <li>
+ <p>使用前缀递减运算符替换 <code>-</code> 运算符：</p>
+    <pre><code>void unaryMinus(int i) {
+    int x = --i;
+  }</code></pre>
+  </li>
+</ul>
+
+<p><b>另一个示例：</b></p>
+<pre><code>void unaryMinus(int i) {
+    i += - 8;
+  }</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>void unaryMinus(int i) {
+    i -= 8;
+  }</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+报告有三个或更多否定的方法。
+此类方法可能令人困惑。
+<p><b>示例：</b></p>
+<pre><code>
+  void doSmth(int a, int b, boolean flag1, boolean flag2) {
+    if (!flag && !flag2) {
+      if (a != b) {
+        doOther();
+      }
+    }
+  }
+</code></pre>
+<p>没有否定，该方法变得更容易理解：</p>
+<pre><code>
+  void doSmth(int a, int b, boolean flag1, boolean flag2) {
+    if (flag1 || flag2 || a == b) return;
+    doOther();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>忽略 'equals()' 方法中的否定</b>选项可禁用 <code>equals()</code> 方法中的检查。</li>
+  <li>使用<b>忽略 'assert' 语句中的否定</b>可禁用 <code>assert</code> 语句中的检查。</li>
+</ul>
+</body>
+</html>

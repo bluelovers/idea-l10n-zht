@@ -1,0 +1,8 @@
+<html>
+<body>
+报告除 COALESCE 函数中第一个不评估为 NULL 的表达式之外的所有实参。
+<p>示例（MySQL）：</p>
+<pre><code>SELECT COALESCE(NULL, NULL, NULL, 42, NULL, 'string') as a;</code></pre>
+<p>第一个 NOT NULL 实参是 <code>42</code>，所有其他实参将显示为灰色。</p>
+</body>
+</html>

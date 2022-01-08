@@ -1,0 +1,27 @@
+<html>
+<body>
+报告具有多个异常的 JUnit 测试方法的 <code>throws</code> 子句。
+此类子句会造成不必要的冗余。
+不会从其他项目代码调用测试方法，因此无需单独处理这些异常。
+<p>示例：</p>
+<pre><code>
+  @Test
+  <b>public void</b> testReflection() <b>throws</b> NoSuchMethodException,
+      InvocationTargetException, IllegalAccessException {
+    String result = (String) String.class.getMethod("trim")
+        .invoke(" hello ");
+    assertEquals("hello", result);
+  }
+</code></pre>
+<p>通过快速修复将异常声明替换为单个异常：</p>
+<pre><code>
+  @Test
+  <b>public void</b> testReflection() <b>throws</b> Exception {
+    String result = (String) String.class.getMethod("trim")
+        .invoke(" hello ");
+    assertEquals("hello", result);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

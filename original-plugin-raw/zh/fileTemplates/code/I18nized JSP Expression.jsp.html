@@ -1,0 +1,42 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+    替换 JSP 中的文本，
+    例如：</font>
+    <br>
+      <code>&nbsp;&nbsp;&lt;<b>html</b>&gt;&lt;<b>body</b>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Hello!<br>
+        &nbsp;&nbsp;&lt;/<b>body</b>&gt;&lt;/<b>html</b>&gt;</code>
+      <br>
+      <font face="verdana" size="-1">带有国际化的 JSP 自定义标记，例如：</font>
+      <br>
+      <code>&nbsp;&nbsp;&lt;<b>html</b>&gt;&lt;<b>body</b>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<b>bean:message</b>&nbsp;key="HelloKey"/&gt;<br>
+        &nbsp;&nbsp;&lt;/<b>body</b>&gt;&lt;/<b>html</b>&gt;</code>
+    <br>
+      <font face="verdana" size="-1">此内置模板是可编辑的。 除了 JSP 上下文中允许的表达式外，您还可以使用预定义变量，这些变量随后将被扩展为相应值。</font>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">预定义变量接收以下值：</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_KEY}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在相应的属性文件中指定的属性键名称。
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_VALUE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在相应的属性文件中指定的属性值。
+      这是原始的 JSP 文本选择值。
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>

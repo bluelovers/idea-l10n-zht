@@ -1,0 +1,23 @@
+<html>
+<body>
+报告可以替换为更具体的常用类或接口的实现或扩展的类或接口。
+<p>为进行此检查，超类需位于项目源文件中，并且项目需要使用 IntelliJ IDEA 构建系统。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class MyInheritor implements A {} // B 针对 A 引用提供建议
+
+  interface A {}
+
+  abstract class B implements A {}
+
+  abstract class C1 extends B {}
+  abstract class C2 extends B {}
+  abstract class C3 extends B {}
+  abstract class C4 extends B {}
+  abstract class C5 extends B {}
+</code></pre>
+<!-- tooltip end -->
+<p>默认情况下，此检查不会在编辑器中高亮显示问题，而是只提供快速修复。</p>
+<p><small>2017.2 最新变化</small>
+</body>
+</html>

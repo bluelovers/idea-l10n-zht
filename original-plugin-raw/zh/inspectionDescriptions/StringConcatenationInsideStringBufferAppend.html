@@ -1,0 +1,19 @@
+<html>
+<body>
+报告用作 <code>StringBuffer.append()</code>、<code>StringBuilder.append()</code> 或 <code>Appendable.append()</code> 的实参的 <code>String</code> 串联。
+<p>
+  此类调用可以有利地转变为现有 <code>StringBuffer/Builder/Appendable</code> 中的链式追加调用，从而节省额外的 <code>StringBuffer/Builder</code> 分配成本。
+  此检查将忽略编译时求值的 <code>String</code> 串联，在这种情况下，转换只会降低性能。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  void bar(StringBuilder builder, String name) {
+    builder.append("Hello," + name);    //警告
+    builder.append("Hello," + "world"); //无警告
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

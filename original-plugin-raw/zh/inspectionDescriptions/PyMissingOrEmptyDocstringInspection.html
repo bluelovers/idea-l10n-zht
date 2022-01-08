@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>报告缺失的和空的 docstring。</p>
+<p><b>缺失 docstring 的示例</b></p>
+<pre style="font-family: monospace">
+def demo(a):
+    c = a ** 2
+</pre>
+<p><b>空 docstring 的示例</b></p>
+<pre style="font-family: monospace">
+def demo(a):
+    """
+    """
+    c = a ** 2
+</pre>
+<p>应用快速修复后，这段代码变为：</p>
+<pre style="font-family: monospace">
+def demo(a):
+    """
+
+    :param a:
+    """
+    c = a ** 2
+</pre>
+<p>您需要提供一些有关所生成模板中的形参的详细信息。</p>
+</body>
+</html>

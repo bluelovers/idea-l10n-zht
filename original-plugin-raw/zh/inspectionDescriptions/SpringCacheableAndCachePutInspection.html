@@ -1,0 +1,9 @@
+<html>
+<body>
+<p>报告在同一方法上声明的 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/annotation/CachePut.html">@CachePut</a> 和 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/annotation/Cacheable.html">@Cacheable</a> 注解。</p>
+
+<code>@Cacheable</code> 导致方法跳过使用缓存的执行，<code>@CachePut</code> 强制执行以更新缓存。
+这会导致意外行为，应该避免，除非在非常特殊的情况下注解中的条件将它们排除在外。
+请注意，此类条件不应依赖于结果对象（<code>#result</code> 变量），因为这些条件已预先验证以确认排除。
+</body>
+</html>

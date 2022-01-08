@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+报告布尔表达式中始终为 <code>true</code>、始终为 <code>false</code> 或冗余的部分。
+  此类布尔表达式可以被简化，从而使您的代码更易于阅读。 在某些情况下，这还表明存在其他问题。
+
+<p>示例：</p>
+<pre><code>func isNonZero(x, y int) bool {
+  // 第二个比较要么始终为 true，
+  // 要么根本不执行
+  return x > 0 && x > 0
+}</code></pre>
+<p>您可以对 <code>x > 0 && x > 0</code> 部分应用 <b>简化表达式</b> 快速修复。 应用快速修复后，表达式如下所示：<code>x > 0</code>。</p>
+</body>
+</html>

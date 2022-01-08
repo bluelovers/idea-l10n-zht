@@ -1,0 +1,35 @@
+<html>
+<body>
+报告未在接口中公开的类中的 <code>public</code> 方法。
+<p>通过接口公开所有 <code>public</code> 方法对于维护松散耦合非常重要，某些基于组件的编程风格可能需要这样做。</p>
+<p>示例：</p>
+<pre><code>
+interface Person {
+  String getName();
+}
+
+class PersonImpl implements Person {
+  private String name;
+
+  // 正常：方法在接口中公开
+  @Override
+  public String getName() {
+    return name;
+  }
+
+  // 警告：方法为 public
+  // 但未在接口中公开
+  public void setName() {
+    this.name = name;
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用<b>有注解时忽略</b>列表可指定特殊注解。 此检查将忽略使用其中一种注解进行注解的方法。
+<p>
+  使用<b>如果包含类未实现非库接口，则忽略</b>选项可以忽略未实现项目中任何接口的类中的方法。
+<p>
+
+</body>
+</html>

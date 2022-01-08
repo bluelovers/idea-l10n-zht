@@ -1,0 +1,24 @@
+<html>
+<body>
+报告可以替换为 <code>EnumMap</code> 构造函数调用的 <code>hashMapOf</code> 函数或 <code>HashMap</code> 构造函数调用。
+<p>使用 <code>EnumMap</code> 构造函数可使代码更简单。</p>
+<p>该快速修复会将函数调用替换为 <code>EnumMap</code> 构造函数调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  enum class E {
+      A, B
+  }
+
+  fun getMap(): Map&lt;E, String&gt; = hashMapOf()
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  enum class E {
+      A, B
+  }
+
+  fun getMap(): Map&lt;E, String&gt; = EnumMap(E::class.java)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

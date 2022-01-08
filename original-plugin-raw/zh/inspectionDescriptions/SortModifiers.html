@@ -1,0 +1,12 @@
+<html>
+<body>
+报告未遵循<a href="https://kotlinlang.org/docs/coding-conventions.html#modifiers-order">样式指南</a>中所建议顺序的修饰符。
+<p><b>对修饰符排序</b>快速修复可用于自动修正代码。</p>
+<p>示例：</p>
+<pre><code>
+  private inline fun correctOrder(f: () -> Unit) {} // &lt;== Ok
+
+  infix private fun Int.wrongOrder(expr: Int) {} // &lt;== 顺序错误，快速修复会将修饰符修正为 "private infix"
+</code></pre>
+</body>
+</html>

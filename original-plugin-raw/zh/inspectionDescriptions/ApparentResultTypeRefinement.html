@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>报告结果类型和函数体之间缺少 <code>=</code>。</p>
+<p>当用作函数的结果类型时，不能细化类型。
+    但是，当结果类型和函数体之间缺少 <code>=</code> 时，它可能看起来很精致。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def test(): T {}
+</code></pre>
+<p>在应用快速修复后</p>
+<pre><code>
+  def test(): T = {}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

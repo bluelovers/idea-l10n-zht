@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>报告类型投影并建议将其转换为 <b>Kind Projector</b> 格式。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def a: ({type L[A] = (A, A)})#L
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def a: Lambda[A => (A, A)]
+</code></pre>
+<!-- tooltip end -->
+<p><small>此检查在 Kind Projector 插件启用时运行。</small></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+报告可以替换为 Kotlin stdlib 的 Java <code>Collections</code> static 方法调用。
+<p><b>示例：</b></p>
+<pre><code>
+  import java.util.Collections
+
+  fun test() {
+      val mutableList = mutableListOf(1, 2)
+      Collections.fill(mutableList, 3)
+  }
+</code></pre>
+<p>该快速修复会将 Java <code>Collections</code> static 方法调用替换为相应的 Kotlin stdlib 方法调用：</p>
+<pre><code>
+  import java.util.Collections
+
+  fun test() {
+      val mutableList = mutableListOf(1, 2)
+      mutableList.fill(3)
+  }
+</code></pre>
+</body>
+</html>

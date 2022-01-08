@@ -1,0 +1,10 @@
+<html>
+<body>
+报告存储在局部变量或形参中的拥有对象，这些对象稍后不会释放或在释放前被另一个值重写。<br>
+&nbsp;- 如果您使用名称以 <code>alloc</code> 或 <code>new</code> 开头、包含 <code>copy</code> 或者如果您向其发送 <code>retain</code> 消息的方法创建对象，您将获得该对象的所有权。<br>
+&nbsp;- 您可以使用 <code>release</code> 或 <code>autorelease</code> 放弃对象的所有权。<br>
+Objective-C 内存管理规则要求释放或自动释放每个拥有的对象，请参阅
+<a href="https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html">内存管理编程指南</a>。<br>
+如果 ARC（自动引用计数）已启用，则此检查会被禁用。
+</body>
+</html>

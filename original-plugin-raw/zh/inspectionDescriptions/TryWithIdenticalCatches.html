@@ -1,0 +1,29 @@
+<html>
+<body>
+报告单个 <code>try</code> 语句中相同的 <code>catch</code> 部分。
+<p>将这些部分折叠成一个 <i>multi-catch</i> 块可以减少代码重复，并防止出现一个 <code>catch</code> 部分更新而另一个部分未更新的情况。</p>
+<p><b>示例：</b></p>
+<pre><code>
+    try {
+        doSmth();
+    }
+    catch (IOException e) {
+        LOG.error(e);
+    }
+    catch (URISyntaxException e) {
+        LOG.error(e);
+    }
+</code></pre>
+<p>可通过快速修复使代码更加紧凑：</p>
+<pre><code>
+    try {
+        doSmth();
+    }
+    catch (IOException | URISyntaxException e) {
+        LOG.error(e);
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 7 或更高时，此检查才会报告。</p>
+</body>
+</html>

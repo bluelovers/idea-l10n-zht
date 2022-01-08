@@ -1,0 +1,17 @@
+<html>
+<body>
+报告在同一类中声明、具有相同名称和相同数量形参的方法。
+此类重载可能非常令人困惑，因为可能不清楚调用的是哪个重载。
+<p><b>示例：</b></p>
+<pre><code>
+  class Main {
+    public static void execute(Runnable r) {}
+    public static &lt;T&gt; void execute(RunnableFuture&lt;T&gt; c) {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用该选项可以忽略形参类型绝对不兼容的重载方法。
+</p>
+</body>
+</html>

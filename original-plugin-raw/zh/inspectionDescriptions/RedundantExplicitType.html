@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>报告局部变量的显式给定类型，这些类型显而易见且冗余，例如 <code>val f: Foo = Foo()</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Point(val x: Int, val y: Int)
+
+  fun foo() {
+      val t: <b>Boolean</b> = true
+      val p: <b>Point</b> = Point(1, 2)
+      val i: <b>Int</b> = 42
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Point(val x: Int, val y: Int)
+
+  fun foo() {
+      val t = true
+      val p = Point(1, 2)
+      val i = 42
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+报告对不存在或不可见的字段和方法的反射访问。
+<p>示例：</p>
+<pre><code>
+  Field stringHashField() throws NoSuchFieldException {
+    return String.class.getField("hash");
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Field stringHashField() throws NoSuchFieldException {
+    return String.class.getDeclaredField("hash");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  对于 <code>final</code> 类，很清楚该类中是否存在具有指定名称的字段或方法。
+</p>
+<p>
+  对于非 <code>final</code> 类，子类中可能有使用该名称的字段或方法，因此可能会出现误报。
+  使用该项检查的设置，可消除任何位置或特定类的此类误报。
+</p>
+<p><small>2017.2 最新变化</small></p>
+</body>
+</html>

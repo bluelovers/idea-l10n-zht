@@ -1,0 +1,17 @@
+<html>
+<body>
+报告隐式使用平台默认字符集的方法和构造函数调用。 在使用不同默认字符集的系统上，这些调用可能产生不同的结果。 这可能会导致意外的行为。
+<p><b>示例：</b></p>
+<pre><code>void foo(byte[] bytes) {
+  String s = new String(bytes);
+}</code>
+</pre>
+<p>如果相应的重载方法可用，则可以采用指定显式 UTF-8 字符集的快速修复。
+  在应用快速修复后：</p>
+<pre><code>void foo(byte[] bytes) {
+  String s = new String(bytes, StandardCharsets.UTF_8);
+}</code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

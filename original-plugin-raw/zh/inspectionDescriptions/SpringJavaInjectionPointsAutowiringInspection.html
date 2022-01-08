@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>报告 Spring Bean 注入点的自动装配问题：</p>
+
+<ul>
+  <li>不止一种 'concrete' 类型的 Bean</li>
+  <li>没有 'concrete' 类型的 Bean</li>
+  <li>没有带限定符的 Bean</li>
+  <li>没有形参的自动装配方法或构造函数</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre>
+public interface FooInterface {...}
+  @Component public class FooBean implements FooInterface {...}
+  @Component public class OtherBean implements FooInterface {...}
+
+@Component
+public class MyComponent {
+	@Autowired
+	FooInterface foo;  // 无法自动装配。 有不止一种 'FooInterface' 类型的 Bean。
+                     // Beans: fooBean(FooBean.java), otherBean(OtherBean.java)"
+}
+</pre>
+</body>
+</html>

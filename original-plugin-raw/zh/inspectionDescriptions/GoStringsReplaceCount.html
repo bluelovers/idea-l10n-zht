@@ -1,0 +1,9 @@
+<html>
+<body>
+报告替换次数为 <code>0</code> 而不是 <code>-1</code> 的 <code> strings.Replace </code> 的调用。
+<p>指示替换字符串次数的计数实参不能为 <code>0</code>，因为它不会进行任何替换从而使函数调用是冗余的。 请改用 <code>-1</code>。</p>
+<p>示例：</p>
+<pre><code>a := strings.Replace("SSS", "S", "H", 0) // 没有替换任何东西
+b := strings.Replace("SSS", "S", "H", -1) // 用 “H” 替换所有出现的 “S”</code></pre>
+</body>
+</html>

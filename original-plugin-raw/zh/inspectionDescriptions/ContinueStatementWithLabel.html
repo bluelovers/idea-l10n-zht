@@ -1,0 +1,18 @@
+<html>
+<body>
+报告包含标签的 <code>continue</code> 语句。
+<p><code>continue</code> 标签语句导致重构复杂化，可能令人困惑。</p>
+<p>示例：</p>
+<pre><code>
+  void handle(List&lt;String&gt; strs) {
+    outer:
+    for (String s: strs) {
+      for (char ch : s.toCharArray()) {
+        if ('s' == ch) continue outer;
+        handleChar(ch);
+      }
+    }
+  }
+</code></pre>
+</body>
+</html>

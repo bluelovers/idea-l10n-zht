@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 <code>java.util.Optional&lt;T&gt;</code>、<code>java.util.OptionalDouble</code>、<code>java.util.OptionalInt</code>、<code>java.util.OptionalLong</code> 或 <code>com.google.common.base.Optional</code> 用为字段或形参的类型的任何情况。
+<p><code>Optional</code> 设计为在需要一个明确的方式来表示 "没有结果"的情况下，为库方法的返回类型提供有限的机制。</p>
+<p>如果类需要 <code>Serializable</code>，则使用 <code>java.util.Optional</code> 类型的字段也有问题，因为 <code>java.util.Optional</code> 不可序列化。</p>
+<p>示例：</p>
+<pre><code>
+  class MyClass {
+    Optional&lt;String&gt; name; // Optional 字段
+
+    // Optional 形参
+    void setName(Optional&lt;String&gt; name) {
+      this.name = name;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<body>
+报告包含 <code>else</code> 分支并且条件被否定的 <code>if</code> 语句。
+<p>翻转 <code>if</code> 和 <code>else</code> 分支的顺序通常会增加此类语句的清晰度。</p>
+<p>可以通过修正反转当前 <code>if</code> 语句。</p>
+<p>示例：</p>
+<pre><code>
+    void m(Object o1, Object o2) {
+        if (o1 != o2) {
+            System.out.println(1);
+        }
+        else {
+            System.out.println(2);
+        }
+    }
+</code></pre>
+<p>应用快速修复后：</p>
+<pre><code>
+    void m(Object o1, Object o2) {
+        if (o1 == o2) {
+            System.out.println(2);
+        } else {
+            System.out.println(1);
+        }
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>忽略 '!= null' 比较</b>选项可以忽略 <code>!= null</code> 形式的比较。</p>
+<p>使用<b>忽略 '!= 0' 比较</b>选项可以忽略 <code>!= 0</code> 形式的比较。</p>
+
+</body>
+</html>

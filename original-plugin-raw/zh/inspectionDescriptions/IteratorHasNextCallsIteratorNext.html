@@ -1,0 +1,13 @@
+<html>
+<body>
+报告迭代器实例上调用 <code>Iterator.next()</code> 或 <code>ListIterator.previous()</code> 的 <code>Iterator.hasNext()</code> 或 <code>ListIterator.hasPrevious()</code> 的实现。 此类调用几乎肯定是错误，因为 <code>hasNext()</code> 之类的方法不应修改迭代器状态，而 <code>next()</code> 应修改迭代器状态。
+<p><b>示例：</b></p>
+<pre><code>
+  class MyIterator implements Iterator&lt;Integer&gt; {
+    public boolean hasNext() {
+      return next() != null;
+    }
+  }
+</code></pre>
+</body>
+</html>

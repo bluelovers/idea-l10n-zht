@@ -1,0 +1,25 @@
+<html>
+<body>
+报告其主体只包含一条 <code>synchronized</code> 语句的方法。
+对于实例方法，此 <code>synchronized</code> 语句的锁定表达式必须等于 <code>this</code>；对于 static 方法，必须等于 <code>[ClassName].class</code>。
+<p>
+  为改善此类方法的可读性，可以移除 <code>synchronized</code> 包装器，并将方法标记为 <code>synchronized</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public int generateInt(int x) {
+    synchronized (this) {
+      return 1;
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  public synchronized int generateInt(int x) {
+    return 1;
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

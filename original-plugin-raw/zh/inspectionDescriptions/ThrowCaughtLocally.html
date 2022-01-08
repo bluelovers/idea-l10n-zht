@@ -1,0 +1,19 @@
+<html>
+<body>
+报告异常始终可以通过包含 <code>try</code> 语句捕获的 <code>throw</code> 语句。
+<p>使用 <code>throw</code> 语句作为 "goto" 来更改局部控制流会令人困惑并导致性能不佳。
+<p><b>示例：</b></p>
+<pre><code>
+  try {
+    if (!Files.isDirectory(PROJECTS)) {
+        throw new IllegalStateException("Directory not found."); // 警告：'throw' 被所包含的 'try' 语句捕获
+    }
+    ...
+  } catch (Exception e) {
+      LOG.error("run failed");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>忽略重新抛出的异常</b>选项可忽略重新抛出的异常。</p>
+</body>
+</html>

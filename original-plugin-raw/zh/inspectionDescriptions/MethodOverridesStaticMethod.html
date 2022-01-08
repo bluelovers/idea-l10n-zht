@@ -1,0 +1,17 @@
+<html>
+<body>
+报告签名与超类的 <code>static</code> 方法相同的 <code>static</code> 方法。
+此类方法可能看似重写，但实则它对超类隐藏了该方法，因为 Java 中的 <code>static</code> 方法不能被重写。
+<p><b>示例：</b></p>
+<pre><code>
+  class Parent {
+    static void method(){}
+  }
+
+  class Example extends Parent {
+    static void method(){} //警告
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

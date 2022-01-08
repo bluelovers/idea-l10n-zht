@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>报告 <a href="https://spring.io/projects/spring-webflow">Spring Webflow</a> 基于 XML 的上下文的问题：</p>
+
+<ul>
+  <li>未解析的 Bean 引用</li>
+  <li>缺少必需的标记或特性</li>
+  <li>属性类型不正确</li>
+  <li><code>enum</code> 属性不一致</li>
+  <li>引用 Bean 的类型不正确</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;beans ...
+    xmlns:webflow="http://www.springframework.org/schema/webflow-config ..."&gt;
+    
+    &lt;webflow:flow-executor id="flowExecutorWithoutFlowRegistryRef"/&gt; &lt;!-- 找不到默认 ID 为 'flowRegistry' 的 &lt;flow-registry&gt; --&gt;
+    &lt;webflow:flow-executor
+      id=""  &lt;!--Value must not be empty--&gt;
+      flow-registry="INVALID_VALUE"  &lt;!-- 无法解析 Bean INVALID_VALUE --&gt;
+           &lt;webflow:flow-execution-repository
+                   conversation-manager="dummyBean" &lt;!-- Bean must be of 'org.springframework.webflow.conversation.ConversationManager' type"--&gt;
+                    max-executions="INVALID_VALUE" &lt;!-- 值应为整数--&gt;
+                    max-execution-snapshots="INVALID_VALUE"/&gt;  &lt;!-- 值应为整数--&gt;
+           &lt;webflow:flow-execution-listeners&gt;
+			&lt;webflow:listener criteria="*"
+                           ref="dummyBean" /&gt; &lt;!-- Bean 必须为 'org.springframework.webflow.execution.FlowExecutionListener' 类型 --&gt;
+           &lt;/webflow:flow-execution-listeners&gt;
+    &lt;/webflow:flow-executor&gt;
+    &lt;webflow:flow-executor id="dummy"
+      flow-registry="dummyBean"/&gt; &lt;!-- Bean 必须为 'org.springframework.webflow.definition.registry.FlowDefinitionRegistry' 类型 --&gt;
+
+    &lt;bean id="dummyBean" class="java.lang.String"/&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

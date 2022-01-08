@@ -1,0 +1,57 @@
+<html>
+<body>
+<p>报告 <a href="https://spring.io/projects/spring-security">Spring Security</a> 基于 XML 的上下文的问题：</p>
+
+<ul>
+  <li>未解析的 Bean 引用</li>
+  <li>缺少必需的标记或特性</li>
+  <li>属性类型不正确</li>
+  <li><code>enum</code> 属性不一致</li>
+  <li>引用 Bean 的类型不正确</li>
+</ul>
+
+<p>也报告以下问题：</p>
+
+<ul>
+  <li>&lt;https&gt; 配置错误
+    <ul>
+      <li>带 '/**' 模式的 &lt;http&gt; 必须位于最后</li>
+      <li>不允许使用多个无 'pattern' 的 &lt;http&gt; 元素</li>
+    </ul>
+  </li>
+  <li>&lt;http&gt; 配置错误
+    <ul>
+      <li>如果 <code>security='none'</code>，则为空标记</li>
+    </ul>
+  </li>
+  <li>&lt;user-service&gt;
+    <ul>
+      <li>必须具有特性 'properties' 或 &lt;user&gt; 元素列表</li>
+    </ul>
+  </li>
+  <li>&lt;ldap-server&gt;
+    <ul>
+      <li>使用 'manager-dn' 时需要 'manager-password'</li>
+      <li>必须具有 'user-context-mapper-ref' 或 'user-details-class'</li>
+    </ul>
+  </li>
+  <li> &lt;authentication-provider&gt;
+    <ul>
+      <li>仅允许使用一种用户服务</li>
+    </ul>
+  </li>
+  <li>&lt;global-method-security&gt;
+    <ul>
+      <li>'pre-post-annotations' 的值必须为 'enabled' 才能使用 &lt;pre-post-annotation-handling&gt;</li>
+      <li>无法为 &lt;protect-pointcut&gt; 和 &lt;intercept-url&gt; 使用值为 'aspectj' 的 'mode'</li>
+      <li>仅对父 &lt;http&gt; 允许 'requires-channel' 特性</li>
+    </ul>
+  </li>
+  <li>&lt;protect&gt;
+    <ul>
+      <li>不建议将 &lt;protect&gt; 与 &lt;global-method-security&gt; 混用</li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

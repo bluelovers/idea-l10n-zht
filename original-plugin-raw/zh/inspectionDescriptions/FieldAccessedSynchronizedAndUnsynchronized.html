@@ -1,0 +1,29 @@
+<html>
+<body>
+报告在 <code>synchronized</code> 和非 <code>synchronized</code> 上下文中访问的非 final 字段。
+<code>volatile</code> 字段以及构造函数和初始值设定项中的访问将被此检查忽略。
+<p>
+  此类“部分同步的”访问通常是编码疏忽所致，可能导致意外的不一致数据结构。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Program {
+    Console console; // 警告：在同步和非同步上下文中都访问字段 'console'
+
+    public synchronized void execute() {
+      console.print("running");
+    }
+
+    public void check() {
+      console.check();
+    }
+  }
+</code>
+</pre>
+<!-- tooltip end -->
+<p>
+  使用该选项可以指定简单的 getter 和 setter 是否也算作访问。
+<p>
+
+</body>
+</html>

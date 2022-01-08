@@ -1,0 +1,17 @@
+<html>
+<body>
+报告对没有错误消息字符串实参的 <code>assertXXX()</code> 或 <code>fail()</code> 的调用。
+有关断言失败的错误消息可能有助于澄清测试用例的意图。
+<p><b>示例：</b></p>
+<pre><code>
+  assertTrue(checkValid());
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>assertTrue(checkValid(), "|");</code></pre>
+<p>
+  消息实参根据所使用的断言框架添加到现有实参前面或后面。
+</p>
+<!-- tooltip end -->
+
+</body>
+</html>

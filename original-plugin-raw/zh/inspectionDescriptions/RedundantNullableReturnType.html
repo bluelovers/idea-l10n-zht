@@ -1,0 +1,13 @@
+<html>
+<body>
+报告具有可为 null 的返回类型的函数和变量，这些函数和变量永远不会返回或变为 <code>null</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  fun greeting(user: String): String? = "Hello, $user!"
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun greeting(user: String): String = "Hello, $user!"
+</code></pre>
+</body>
+</html>

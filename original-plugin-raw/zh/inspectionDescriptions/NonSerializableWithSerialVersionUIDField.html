@@ -1,0 +1,12 @@
+<html>
+<body>
+报告定义 <code>serialVersionUID</code> 字段的非 <code>Serializable</code> 类。 该上下文中的 <code>serialVersionUID</code> 字段通常表明有错误，因为该字段将被忽略，且该类将不会被序列化。
+<p><b>示例：</b></p>
+<pre><code>
+  public class IWantToSerializeThis {
+    private static final long serialVersionUID = 2669293150219020249L;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

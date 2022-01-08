@@ -1,0 +1,40 @@
+<html>
+<body>
+<p>报告使用 <code>@Deployment</code> 注解的方法的不正确签名。</p>
+<p>
+  根据 <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/en-US/html/gettingstarted.html#d0e451">Arquillian 文档</a>，Arquillian 测试类应该使用具有特定签名的 public static 方法定义部署归档，并使用 <code>@Deployment</code> 注解。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  //此测试用例无法被 Arquillian 启动，Deployment 方法不为 static
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Deployment
+    public JavaArchive createDeployment() {
+      throw new UnsupportedOperationException("Implement me");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Deployment
+    public static JavaArchive createDeployment() {
+      throw new UnsupportedOperationException("Implement me");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+</body>
+</html>

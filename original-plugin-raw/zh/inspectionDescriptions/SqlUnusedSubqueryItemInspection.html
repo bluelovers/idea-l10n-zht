@@ -1,0 +1,10 @@
+<html>
+<body>
+报告外部查询表达式中未引用的列、别名和其他子查询项。
+<p>示例（PostgreSQL）：</p>
+<pre><code>CREATE TABLE for_subquery(id INT);
+SELECT a, q FROM (SELECT 1 AS a, 10 AS b, 2 + 3 AS q, id
+      FROM for_subquery) x;</code></pre>
+<p>我们引用子查询中的别名 <code>a</code> 和 <code>q</code>。 但是 <code>b</code> 别名和 <code>id</code> 列在外部 SELECT 语句中没有被引用。 因此，<code>b</code> 和 <code>id</code> 将显示为灰色。</p>
+</body>
+</html>

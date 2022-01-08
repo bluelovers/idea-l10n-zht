@@ -1,0 +1,14 @@
+<html>
+<body>
+报告当该类没有另一个采用 <code>Any?</code> 作为其实参类型的 <code>equals()</code> 时，采用除 <code>Any?</code> 以外的实参类型的 <code>equals()</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+      fun equals(other: Foo?): Boolean {
+          return true
+      }
+  }
+</code></pre>
+<p>要修正此问题，请创建采用 <code>Any?</code> 类型实参的 <code>equals()</code> 方法。</p>
+</body>
+</html>

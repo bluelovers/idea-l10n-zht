@@ -1,0 +1,16 @@
+<html>
+<body>
+报告从 <code>uintptr</code> 到 <code>unsafe.Pointer</code> 的潜在错误转换。
+<p>如果内存中有存放指针值的 <code>uintptr</code> 类型字词，则从 <code>uintptr</code> 到 <code>unsafe.Pointer</code> 的转换无效，因为该字词对于堆栈复制和垃圾收集器不可见。
+</p>
+<p>用法无效的示例：</p>
+<pre><code>nums := []int8{42, 24}
+ptr := unsafe.Pointer(&nums[0])
+addr := uintptr(ptr) // 地址存储到本地变量
+ptr = unsafe.Pointer(addr + uintptr(1))</code></pre>
+<p>用法有效的示例：</p>
+<pre><code>nums := []int8{42, 24}
+ptr := unsafe.Pointer(&nums[0])
+ptr = unsafe.Pointer(uintptr(ptr) + uintptr(1))</code></pre>
+</body>
+</html>

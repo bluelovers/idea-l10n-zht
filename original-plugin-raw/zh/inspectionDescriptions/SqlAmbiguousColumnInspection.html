@@ -1,0 +1,12 @@
+<html>
+<body>
+报告名称相同但属于不同表的列。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE foo(id INT PRIMARY KEY);
+CREATE TABLE bar(id INT PRIMARY KEY);
+
+SELECT foo.id, bar.id FROM foo, bar WHERE id > 0;</code></pre>
+<p><code>id</code> 列出现在 <code>foo</code> 和 <code>bar</code> 表中。 您需要限定列名以使查询正确。</p>
+<pre><code>SELECT foo.id, bar.id FROM foo, bar WHERE foo.id > 0;</code></pre>
+</body>
+</html>

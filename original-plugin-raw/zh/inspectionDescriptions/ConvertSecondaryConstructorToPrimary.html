@@ -1,0 +1,21 @@
+<html>
+<body>
+报告可以替换为更简洁的主构造函数的辅助构造函数。
+<p><b>示例：</b></p>
+<pre><code>
+  class User {
+      val name: String
+
+      constructor(name: String) {
+          this.name = name
+      }
+  }
+</code></pre>
+<p>该快速修复会自动转换代码：</p>
+<pre><code>
+  class User(val name: String) {
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

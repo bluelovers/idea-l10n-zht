@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告 <code>@ConfigurationProperties</code> 注解中定义的无效前缀：</p>
+<ul>
+  <li>缺少前缀</li>
+  <li>空前缀</li>
+  <li>重复前缀</li>
+  <li>短横线隔开式命名以外的表示法中的前缀</li>
+</ul>
+<p>
+  检查在使用 <code>@ConfigurationProperties</code> 注解且未通过 <code>@EnableConfigurationProperties</code> 注册、标记为 Spring 组件或通过 <code>@ConfigurationPropertiesScan</code> 扫描的类中触发。</p>
+<!-- tooltip end -->
+<p>
+  当项目或模块的 Spring Boot 版本设置为 2.2.0 或更高版本时，此检查仅在使用 <code>@ConfigurationProperties</code> 注解且未通过 <code>@ConfigurationPropertiesScan</code> 扫描的类中触发。
+</p>
+<p><small>2018.3 最新变化</small></p>
+</body>
+</html>

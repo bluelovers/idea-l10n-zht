@@ -1,0 +1,39 @@
+<html>
+<body>
+报告从属性的类内部对简单属性 setter 的调用。
+<p>
+  简单的属性 setter 被定义为只将其形参的值分配给一个字段，而不进行其他计算。 可以安全地内联此类简单的 setter 调用。
+  为了保持代码清晰，某些编码标准还建议不使用简单的 setter。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+  private int index;
+    public Foo(int idx) {
+       setIndex(idx);
+    }
+    public void setIndex(int idx) {
+       index = idx;
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    private int index;
+    public Foo(int idx) {
+      index = idx;
+    }
+    public void setIndex(int idx) {
+      index = idx;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用以下选项配置检查：</p>
+<ul>
+  <li>是否仅报告 <code>this</code> 上的 setter 调用，而不报告作为形参传入的相同类型的对象。</li>
+  <li>是否忽略非 <code>private</code> setter。</li>
+</ul>
+</body>
+</html>

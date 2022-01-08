@@ -1,0 +1,11 @@
+<html>
+<body>
+报告 <code>short</code> 与 <code>char</code> 值之间的相等比较。
+<p>此类比较可能会导致难以捉摸的错误，因为虽然两个值都是 2 字节长，<code>short</code> 值有符号，而 <code>char</code> 值无符号。</p>
+<p><b>示例：</b></p>
+<pre><code>
+if (Character.MAX_VALUE == shortValue()) {} // 永远不能为 true
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

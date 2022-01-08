@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>报告 Spring 组件中注入或自动装配的字段。</p>
+
+<p>该快速修复会在 Bean 和断言中为强制字段建议基于构造函数的推荐依赖项注入。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+class MyComponent {
+  @Inject MyCollaborator collaborator; // 注入字段
+
+  public void myBusinessMethod() {
+    collaborator.doSomething(); // 抛出 NullPointerException
+  }
+}
+</code></pre>
+<br>
+
+<p>应用快速修复后：</p>
+<pre><code>
+class MyComponent {
+
+  private final MyCollaborator collaborator;
+
+  @Inject
+  public MyComponent(MyCollaborator collaborator) {
+    Assert.notNull(collaborator, "MyCollaborator must not be null!");
+    this.collaborator = collaborator;
+  }
+
+  public void myBusinessMethod() {
+    collaborator.doSomething(); // 现在这个调用是安全的
+  }
+}
+</code></pre>
+
+</body>
+</html>

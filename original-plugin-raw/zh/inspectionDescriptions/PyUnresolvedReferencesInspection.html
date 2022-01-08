@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>报告代码中无法解析的引用。</p>
+<p>在动态类型语言中，少数情况下可能会这样。 </p>
+<p>如果引用类型未知，其特性不会被高亮显示为未解析，即便它应该被高亮显示:</p>
+<pre style="font-family: monospace">
+def print_string(s):
+  print(s.abc())
+</pre>
+<p>在这段代码中，<code>s</code> 始终为字符串，<code>abc</code> 应高亮显示为未解析状态。 但是，<code>s</code> 类型被推断为 <code>Any</code>，并且未报告任何警告。</p>
+<p>IDE 提供快速修复操作来即时添加缺少的引用。</p>
+</body>
+</html>

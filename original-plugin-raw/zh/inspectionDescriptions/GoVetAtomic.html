@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 <code>x = atomic.AddUint64(&x, 1)</code> 形式的赋值语句。
+<p>此类操作为非原子操作，这是 <code> sync/atomic </code> API 中的常见误用。 要使其原子化，请删除赋值并直接调用它，如 <code> atomic.AddUint64(& x, 1) </code>。 在这种情况下，<code>x</code> 的值由地址以原子方式更新。</p>
+<p>示例：</p>
+<pre><code>import (
+ "sync/atomic"
+)
+
+type Counter uint64
+
+func AtomicTests() {
+ x := uint64(1)
+ x = atomic.AddUint64(&x, 1)         // 错误 “直接赋值给原子值”
+ _, x = 10, atomic.AddUint64(&x, 1)  // 错误 “直接赋值给原子值”
+ x, _ = atomic.AddUint64(&x, 1), 10  // 错误 “直接赋值给原子值”
+}</code></pre>
+</body>
+</html>

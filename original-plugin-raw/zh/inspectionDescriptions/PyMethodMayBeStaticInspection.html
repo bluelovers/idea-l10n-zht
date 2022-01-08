@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>报告任何无需创建类实例并且可以设置为 static 的方法。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+class MyClass(object):
+    def my_method(self, x):
+        print(x)
+</pre>
+<p>如果应用<b>从方法中生成函数</b>快速修复，代码将变为：</p>
+<pre style="font-family: monospace">
+def my_method(x):
+    print(x)
+
+
+class MyClass(object):
+    pass
+</pre>
+<p>如果选择<b>将方法设为 static</b> 快速修复，将添加 <code>@staticmethod</code> 装饰器：</p>
+<pre style="font-family: monospace">
+class MyClass(object):
+    @staticmethod
+    def my_method(x):
+        print(x)
+</pre>
+</body>
+</html>

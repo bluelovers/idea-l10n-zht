@@ -1,0 +1,18 @@
+<html>
+<body>
+报告没有 <code>final</code> 修饰符的 <code>clone()</code> 方法。
+<p>
+  <code>clone()</code> 可以用于在不使用构造函数的情况下实例化对象，因此允许重写 <code>clone()</code> 方法可能导致对象损坏，甚至导致安全漏洞。 将 <code>clone()</code> 方法或封闭类本身设为 <code>final</code> 可以防止这种情况。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Main implements Cloneable {
+      @Override
+      protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

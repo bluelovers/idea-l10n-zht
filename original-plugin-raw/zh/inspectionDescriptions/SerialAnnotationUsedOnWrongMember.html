@@ -1,0 +1,27 @@
+<html>
+<body>
+报告 <code>Serializable</code> 和 <code>Externalizable</code> 类中不适合使用 <code>java.io.Serial</code> 注解进行注解的方法和字段。
+<p><b>示例：</b></p>
+<pre><code>
+class Test implements Serializable {
+  @Serial // 注解的字段不是序列化机制的一部分，因为它并非 final
+  private static long serialVersionUID = 7874493593505141603L;
+
+  @Serial // 注解的方法不是序列化机制的一部分，因为它并非 private
+  void writeObject(ObjectOutputStream out) throws IOException {
+  }
+}
+</code></pre>
+<pre><code>
+class Test implements Externalizable {
+  @Serial // 该注解方法不是序列化机制的一部分，因为它在 Externalizable 类内部
+  private void writeObject(ObjectOutputStream out) throws IOException {
+  }
+}
+</code></pre>
+<p>有关所有有效情况的信息，请参阅 <code>java.io.Serial</code> 的文档。</p>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 14 或更高时，此检查才会报告。
+<p><small>2020.3 最新变化</small></p>
+</body>
+</html>

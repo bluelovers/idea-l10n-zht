@@ -1,0 +1,49 @@
+<html>
+<body>
+报告重写 <code>equals()</code> 但不重写 <code>hashCode()</code>（或者相反操作）的类。
+同时还报告重写 <code>equals()</code> 或 <code>hashCode()</code> 的对象声明。
+<p>这可能会导致在将类添加到 <code>Collection</code> 时产生不良行为</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class C1 {
+      override fun equals(other: Any?) = true
+  }
+
+  class C2 {
+      override fun hashCode() = 0
+  }
+
+  object O1 {
+      override fun equals(other: Any?) = true
+  }
+
+  object O2 {
+      override fun hashCode() = 0
+  }
+</code></pre>
+<p>该快速修复会为类重写 <code>equals()</code> 或 <code>hashCode()</code> 方法并为对象删除这些方法：</p>
+<pre><code>
+   class C1 {
+       override fun equals(other: Any?) = true
+       override fun hashCode(): Int {
+           return javaClass.hashCode()
+       }
+   }
+
+   class C2 {
+       override fun hashCode() = 0
+       override fun equals(other: Any?): Boolean {
+           if (this === other) return true
+           if (javaClass != other?.javaClass) return false
+           return true
+       }
+   }
+
+   object O1 {
+   }
+
+   object O2 {
+   }
+</code></pre>
+</body>
+</html>

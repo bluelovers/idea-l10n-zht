@@ -1,0 +1,54 @@
+<html>
+<body>
+报告具有冗余父类型限定的 <code>super</code> 成员调用。
+<p>
+    派生类中的代码可以使用 <code>super</code> 关键字调用其父类函数和属性访问器实现。
+    要指定从中获取继承实现的父类型，可以通过尖括号中的父类型名称来限定 <code>super</code> ，例如 <code>super&lt;Base&gt;</code>。 有时这种限定是冗余的，可以省略。
+    使用“移除显式父类型限定”快速修复可清理代码。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  open class B {
+      open fun foo(){}
+  }
+
+  class A : B() {
+      override fun foo() {
+         super&lt;B&gt;.foo() // &lt;== 冗余，因为 'B' 是唯一父类型
+      }
+  }
+
+  interface I {
+      fun foo() {}
+  }
+
+  class C : B(), I {
+      override fun foo() {
+          super&lt;B&gt;.foo() // &lt;== 在这里，需要 &lt;B&gt; 限定符以将 'B.foo()' 与 'I.foo()' 区分
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  open class B {
+      open fun foo(){}
+  }
+
+  class A : B() {
+      override fun foo() {
+         super.foo() // &lt;== 已更新
+      }
+  }
+
+  interface I {
+      fun foo() {}
+  }
+
+  class C : B(), I {
+      override fun foo() {
+          super&lt;B&gt;.foo()
+      }
+  }
+</code></pre>
+</body>
+</html>

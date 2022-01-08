@@ -1,0 +1,20 @@
+<html>
+<body>
+报告可以替换为索引运算符 (<code>[]</code>) 的 <code>map.put</code> 函数调用。
+<p>使用语法糖可使代码更简单。</p>
+<p>该快速修复会将 <code>put</code> 调用替换为赋值。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(map: MutableMap&lt;Int, String&gt;) {
+      map.put(42, &quot;foo&quot;)
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(map: MutableMap&lt;Int, String&gt;) {
+      map[42] = &quot;foo&quot;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

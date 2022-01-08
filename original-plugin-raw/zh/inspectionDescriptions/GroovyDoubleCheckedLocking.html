@@ -1,0 +1,28 @@
+<html>
+<body>
+报告双重检查锁定。
+<p>
+  双重检查锁定会尝试以线程安全的方式按需初始化字段，同时避免同步的开销。
+  遗憾的是，在未被声明为 <code>volatile</code> 的字段上使用时，它不具备线程安全性。
+  在使用 Java 1.4 或更低版本时，即便是 <code>volatile</code> 字段，双重检查锁定也不起作用。
+  有关此问题的说明，请参阅<a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">本文</a>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+      private Helper helper = null
+
+      Helper getHelper() {
+          if (helper == null)
+              synchronized(this) {
+                  if (helper == null) {
+                      helper = new Helper()
+                  }
+              }
+          }
+          return helper;
+      }
+  }
+</code></pre>
+</body>
+</html>

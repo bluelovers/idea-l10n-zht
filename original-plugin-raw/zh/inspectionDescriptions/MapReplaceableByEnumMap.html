@@ -1,0 +1,17 @@
+<html>
+<body>
+报告键类型为枚举类的 <code>java.util.Map</code> 对象的实例化。 此类 <code>java.util.Map</code> 对象可以替换为 <code>java.util.EnumMap</code> 对象。
+<p>
+  <code>java.util.EnumMap</code> 实现可以更加高效，因为底层数据结构是简单的数组。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Map&lt;MyEnum, String&gt; myEnums = new HashMap&lt;&gt;();
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Map&lt;MyEnum, String&gt; myEnums = new EnumMap&lt;&gt;(MyEnum.class);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

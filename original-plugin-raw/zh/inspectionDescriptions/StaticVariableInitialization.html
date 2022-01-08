@@ -1,0 +1,16 @@
+<html>
+<body>
+报告在类初始化时可能未被初始化的 <code>static</code> 变量。
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    public static int bar;
+
+    static { }
+  }
+</code></pre>
+<p>请注意，此检查使用非常保守的数据流算法，并且可能会将 <code>static</code> 变量错误地报告为未初始化。 报告为已初始化的变量将始终被初始化。</p>
+<!-- tooltip end -->
+<p>使用<b>忽略基元字段</b>选项可以忽略未初始化的基元字段。</p>
+</body>
+</html>

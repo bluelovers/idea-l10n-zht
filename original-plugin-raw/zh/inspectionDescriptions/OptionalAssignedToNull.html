@@ -1,0 +1,25 @@
+<html>
+<body>
+报告 <code>null</code> 分配给 <code>Optional</code> 变量或从返回 <code>Optional</code> 的方法返回。
+<p>建议您使用 <code>Optional.empty()</code>（或 <code>Optional.absent()</code> 用于 Guava）来表示空值。</p>
+<p>示例：</p>
+<pre><code>
+  Optional&lt;Integer&gt; foo(boolean flag) {
+    return flag ? Optional.of(42) : null;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Optional&lt;Integer&gt; foo(boolean flag) {
+    return flag ? Optional.of(42) : Optional.empty();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<p>
+  使用 <b>报告 Optional 与 null 的比较</b> 选项还可以报告<code>optional == null</code> 之类的比较。 虽然在极少数情况下（例如延迟初始化的可选字段）这可能是正确的，但可选变量通常不会为 null，并且可能应为  <code>optional.isPresent()</code>。
+</p>
+<p>仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。</p>
+<p><small>2017.2 最新变化</small>
+</body>
+</html>

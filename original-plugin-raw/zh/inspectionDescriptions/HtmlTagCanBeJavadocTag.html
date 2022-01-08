@@ -1,0 +1,22 @@
+<html>
+<body>
+报告 <code>&lt;code&gt;</code> 标记在 Javadoc 注释中的用法。
+从 Java 5 起，这些标记可以替换为 <code>{@code ...}</code> 结构。
+这允许在注释中使用尖括号 <code>&lt;</code> 和 <code>&gt;</code> 而不是 HTML 字符实体。
+<p><b>示例：</b></p>
+<pre><code>
+  /**
+   * @return empty &lt;code&gt;ArrayList&amp;lt;Integer&amp;gt;&lt;/code&gt;
+   */
+  List&lt;Integer&gt; getList(){ ... }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  /**
+   * @return empty {@code ArrayList&lt;Integer&gt;}
+   */
+  List&lt;Integer&gt; getList(){ ... }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

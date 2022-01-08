@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 <code>expectException()</code> 的弃用用法。
+<p>
+  已弃用将 <code>\PHPUnit\Framework\Error\Deprecated</code>、
+  <code>\PHPUnit\Framework\Error\Error</code>、
+  <code>\PHPUnit\Framework\Error\Notice</code> 和
+  <code>\PHPUnit\Framework\Error\Warning</code> 与 <code>expectException()</code> 一起使用的支持，并将在 PHPUnit 10 中删除。
+</p>
+<p>
+  应该改为使用 <code>expectDeprecation()</code>、<code>expectError()</code>、<code>expectNotice()</code> 和 
+  <code>expectWarning()</code> 方法。
+</p>
+
+<p>
+  有关详细信息，请参阅 <a href="https://phpunit.readthedocs.io/en/9.0/writing-tests-for-phpunit.html#testing-php-errors-warnings-and-notices">Testing PHP Errors, Warnings, and Notices (phpunit.readthedocs.io)</a>。
+</p>
+</body>
+</html>

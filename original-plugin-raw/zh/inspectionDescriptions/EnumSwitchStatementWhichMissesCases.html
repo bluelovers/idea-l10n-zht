@@ -1,0 +1,36 @@
+<html>
+<body>
+报告为不详尽的枚举类型执行的 <code>switch</code> 语句。
+<p><b>示例：</b></p>
+<pre><code>
+  <b>enum</b> AlphaBetaGamma {
+    A, B, C;
+
+    <b>void</b> x(AlphaBetaGamma e) {
+      <b>switch</b> (e) {
+
+      }
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  <b>enum</b> AlphaBetaGamma {
+    A, B, C;
+
+    <b>void</b> x(AlphaBetaGamma e) {
+      <b>switch</b> (e) {
+        <b>case</b> A -> {}
+        <b>case</b> B -> {}
+        <b>case</b> C -> {}
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用 <b>忽略具有默认分支的 switch 语句</b> 选项忽略具有 <code>default</code> 分支的 <code>switch</code> 语句。
+<p>
+
+</body>
+</html>

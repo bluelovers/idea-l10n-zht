@@ -1,0 +1,23 @@
+<html>
+<body>
+报告对 <code>System.arraycopy()</code> 的可疑调用。
+<p>此类调用在以下情况下可疑：</p>
+<ul>
+<li>源或目标非数组类型
+<li>源和目标的类型不同
+<li>复制的块长度大于 <code>src.length - srcPos</code>
+<li>复制的块长度大于 <code>dest.length - destPos</code>
+<li>当源和目标为同一个数组时，范围始终相交
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+  void foo() {
+    int[] src = new int[] { 1, 2, 3, 4 };
+    System.arraycopy(src, 0, src, 1, 2); // 警告：复制到具有相交范围的同一数组
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

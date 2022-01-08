@@ -1,0 +1,18 @@
+<html>
+<body>
+如果表达式的结果可以重用，则报告同一表达式在方法（或构造函数，或类初始值设定项）中的多次等效匹配项。
+<p>
+  如果表达式没有副作用并且其结果始终相同（就 <code>Object.equals()</code> 而言），则会报告该表达式。
+  此类表达式的示例是 <code>a + b</code>、<code>Math.max(a, b)</code>、<code>a.equals(b)</code>、<code> s.substring(a,b)</code>。 为确保结果始终相同，已验证表达式中使用的变量在表达式匹配项之间不会更改其值。</p>
+<p>
+  此类表达式可能包含不可变的类（如 <code>String</code>、<code>BigDecimal</code> 等）和实用程序类（如 <code>Objects</code>、<code>Math</code>，<code>random()</code> 除外）的方法。
+  <code>Object.equals() </code>、<code> Object.hashCode() </code>、<code> Object.toString() </code>、
+   <code>Comparable.compareTo()</code> 和 <code>Comparator.compare()</code> 等常用方法也可以使用，因为没有任何可见的副作用。
+</p>
+<!-- tooltip end -->
+<p>
+  使用<b>表达式复杂性阈值</b>选项可指定最小表达复杂性阈值。 指定更大的数字将移除关于短表达式的报告。
+</p>
+<p><small>2018.3 最新变化</small></p>
+</body>
+</html>

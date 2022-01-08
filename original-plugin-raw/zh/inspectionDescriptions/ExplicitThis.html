@@ -1,0 +1,19 @@
+<html>
+<body>
+报告可以省略的显式 <code>this</code>。
+<p><b>示例：</b></p>
+<pre><code>
+  class C {
+      private val i = 1
+      fun f() = this.i
+  }
+</code></pre>
+<p>该快速修复会移除冗余的 <code>this</code>：</p>
+<pre><code>
+  class C {
+      private val i = 1
+      fun f() = i
+  }
+</code></pre>
+</body>
+</html>

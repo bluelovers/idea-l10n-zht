@@ -1,0 +1,9 @@
+<html>
+<body>
+报告接受非普通表达式的方法调用，这些方法调用可以替换为接受 lambda 的等效方法调用。
+<p>
+将表达式转换为 lambda 可确保不会评估方法中未使用的表达式。 例如，<code>optional.orElse(createDefaultValue())</code> 可以转换为 <code>optional.orElseGet(this::createDefaultValue)</code>。
+<!-- tooltip end -->
+<p><small>2018.1 最新变化</small></p>
+</body>
+</html>

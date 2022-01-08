@@ -1,0 +1,25 @@
+<html>
+<body>
+报告具有隐藏的隐式形参的嵌套 lambda。
+<p><b>示例：</b></p>
+<pre><code>
+fun foo(listOfLists: List&lt;List&lt;String&gt;&gt;) {
+  listOfLists.forEach {
+    it.forEach {
+      println(it)
+    }
+  }
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+fun foo(listOfLists: List&lt;List&lt;String&gt;&gt;) {
+  listOfLists.forEach {
+    it.forEach { it1 -&gt;
+      println(it1)
+    }
+  }
+}
+</code></pre>
+</body>
+</html>

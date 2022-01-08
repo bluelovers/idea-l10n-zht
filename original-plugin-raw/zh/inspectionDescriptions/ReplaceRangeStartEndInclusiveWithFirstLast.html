@@ -1,0 +1,20 @@
+<html>
+<body>
+报告<b>装箱的</b> <code>Range.start</code> 和 <code>Range.endInclusive</code> 属性。
+<p>这些属性可替换为<b>未装箱的</b> <code>first</code> 和 <code>last</code> 属性以避免冗余调用。</p>
+<p>该快速修复会将 <code>start</code> 和 <code>endInclusive</code> 属性替换为相应的 <code>first</code> 和 <code>last</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(range: CharRange) {
+      val lastElement = range.endInclusive
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(range: CharRange) {
+      val lastElement = range.last
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

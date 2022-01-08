@@ -1,0 +1,9 @@
+<html>
+<body>
+在 ORDER BY 子句中报告冗余的排序方向，如 ASC 和 DESC。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE foo(a INT, b INT, c INT);
+SELECT * FROM foo ORDER BY a ASC, b DESC, c ASC;</code></pre>
+<p>ORDER BY 关键字默认按升序对记录进行排序。 因此，<code>a</code> 和 <code>c</code> 列的 <code>ASC</code> 关键字是冗余的。</p>
+</body>
+</html>

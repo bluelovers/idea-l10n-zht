@@ -1,0 +1,17 @@
+<html>
+<body>
+报告闭包中的用于引用外部上下文属性的 <code>this</code>。 <p>示例：</p>
+<pre><code>
+function Outer() {
+  this.outerProp = 1;
+  function inner() {
+    // 不良，因为 Outer 的 'outerProp' 
+    // 不会如预期的那样
+    // 在调用 'new Outer()' 时在此处进行更新
+    this.outerProp = 2;
+  }
+  inner();
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>报告在声明之前引用的 Cython 变量。</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+cdef int c_x
+
+print(c_x, c_y)  # 变量 'c_y' 在其声明前使用
+
+cdef int c_y = 0
+</pre>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+将 <code>Collections.emptyList()</code> 或 <code>Collections.singletonList()</code> 调用替换为对 <code>Arrays.asList()</code> 的调用。
+<p>当项目或模块使用语言级别 9 时：</p>
+<ul>
+  <li>该意图将 <code>Collections.emptyList()</code> 或 <code>Collections.singletonList()</code> 替换为对 <code>java.util.List.of()</code> 的调用。</li>
+  <li>将 <code>Collections.emptySet()</code> 或 <code>Collections.singleton()</code> 调用替换为 <code>java.util.Set.of()</code>。</li>
+  <li>将 <code>Collections.emptyMap()</code> 或 <code>Collections.singletonMap()</code> 调用替换为 <code>java.util.Map.of()</code>。</li>
+</ul>
+<p>当项目或模块使用 Guava 库且语言级别为 9 或更低时，该意图会将 <code>Collections.emptyList()</code> 或 <code>Collections.singletonList()</code> 调用替换为 <code>com.google.common.collect.ImmutableList</code>、<code>com.google.common.collect.ImmutableSet</code> 或
+<code>com.google.common.collect.ImmutableMap</code>。</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+报告调用的函数从表达式主体返回 lambda 时返回值并未使用的调用。
+<p>
+如果函数头和主体块之间存在 <code>=</code>，则不会评估函数中的代码，这可能导致不正确的行为。
+</p>
+<p><b>从函数声明中移除 = 令牌</b>可用于自动修正代码。</p>
+<p>示例：</p>
+<pre><code>
+  fun printHello() = { println("Hello") }
+
+  fun main() {
+      printHello() // 此函数不打印任何内容
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun printHello() { println("Hello") }
+
+  fun main() {
+      printHello()
+  }
+</code></pre>
+</body>
+</html>

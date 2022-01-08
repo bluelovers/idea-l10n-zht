@@ -1,0 +1,42 @@
+<html>
+<body>
+报告赋值后未使用的赋值。
+如果不使用，最好移除该赋值，以缩短代码并避免冗余分配。
+<p>报告的情况如下：</p>
+<ul>
+  <li>该变量在赋值后从未被读取。</li>
+  <li>该变量在被读取前始终被新值重写。</li>
+  <li>变量初始值设定项冗余（出于以上两种原因之一）。</li>
+</ul>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<p>
+使用<b>报告冗余初始值设定项</b>选项可以报告冗余的初始值设定项：
+</p>
+<pre><code>
+  int getI() {
+    int i = 0; // 冗余初始化
+    i = 2;
+    return i;
+  }
+</code></pre>
+<p>
+使用<b>在可以替换为(i + 1)时报告 ++i</b> 选项，报告 <code>++i</code> 表达式可以替换为 <code>i + 1</code> 的情况：
+</p>
+<pre><code>
+  int preInc(int i) {
+    int res = i;
+    return ++res;
+  }
+</code></pre>
+<p>
+使用<b>在变更后的值后续未使用时报告 i++</b> 选项可以报告后续不使用 <code>i++</code> 表达式的结果的情况：
+</p>
+<pre><code>
+  int postInc(int i) {
+    int res = i;
+    return res++;
+  }
+</code></pre>
+</body>
+</html>

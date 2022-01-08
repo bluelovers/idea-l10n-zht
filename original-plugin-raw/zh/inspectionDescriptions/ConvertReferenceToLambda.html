@@ -1,0 +1,28 @@
+<html>
+<body>
+报告可以替换为函数文字 (lambda) 的函数引用表达式。
+<p>
+    有时，传递 lambda 会更直接，并且与代码的其余部分更一致。
+    此外，如果需要将简单的调用替换为更复杂的调用，该修正可能很方便。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun Int.isEven() = this % 2 == 0
+
+  fun example() {
+      val numbers = listOf(1, 2, 4, 7, 9, 10)
+      val evenNumbers = numbers.filter(Int::isEven)
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun Int.isEven() = this % 2 == 0
+
+  fun example() {
+      val numbers = listOf(1, 2, 4, 7, 9, 10)
+      val evenNumbers = numbers.filter { it.isEven() }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

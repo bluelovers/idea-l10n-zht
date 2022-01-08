@@ -1,0 +1,29 @@
+<html>
+<body>
+报告其内容已查询但未更新或已更新但未查询的集合。
+<!-- tooltip end -->
+<p>
+  此类不一致查询和更新毫无意义，可能表明有死码或拼写错误。
+</p>
+<p>
+  使用检查设置可以指定与更新/查询方法相对应的名称模式。
+  返回元素的查询方法会被自动检测，并且只需指定将数据写入输出形参的查询方法（例如 <code>OutputStream</code>）。
+<p>
+<p><b>示例：</b></p>
+<p>假设您有一个包含方法 <code>store()</code> 的自定义 <code>FixedStack</code> 类：
+<pre><code>
+  public class FixedStack&lt;T&gt; extends Collection&lt;T&gt; {
+    public T store(T t) {
+      // 实现
+    }
+  }
+</code></pre>
+<p>您可以将 <code>store</code> 添加到更新方法表中，以报告不匹配的查询，例如：
+<pre><code>
+  void test(int i) {
+    FixedStack&lt;Integer&gt; stack = new FixedStack&lt;&gt;();
+    stack.store(i);
+  }
+</code></pre>
+</body>
+</html>

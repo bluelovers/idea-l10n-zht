@@ -1,0 +1,11 @@
+<html>
+<body>
+将列名替换为位置引用。
+<p>某些 DBMS 可以通过序列号引用 ORDER BY 和 GROUP BY 中的列。 除了 Cassandra、ClickHouse、Hive、Spark 和 HSQLDB 之外，所有方言都支持 ORDER BY。 MySQL、Maria、PostgreSQL（及其子方言）、Exasol、SQLite 和 Snowflake 支持 GROUP BY。</p>
+<p>示例（PostgreSQL）：</p>
+<pre><code>CREATE TABLE tab(a INT, b INT);
+SELECT * FROM tab ORDER BY 1;</code></pre>
+<p>您可以使用此意图操作将 SELECT 查询中的 <code>1</code> 替换为列名。 因此，在应用该意图操作后，查询将如下所示。</p>
+<pre><code>SELECT * FROM tab ORDER BY a;</code></pre>
+</body>
+</html>

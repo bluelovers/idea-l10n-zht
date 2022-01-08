@@ -1,0 +1,29 @@
+<html>
+<body>
+报告显式初始化为其默认值的字段。
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    int foo = 0;
+    List bar = null;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    int foo;
+    List bar;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用检查设置可以仅报告显式 <code>null</code> 初始化，例如：
+</p>
+<pre><code>
+  class Foo {
+    int foo = 0;     // 无警告
+    List bar = null; // 冗余字段初始化警告
+  }
+</code></pre>
+</body>
+</html>

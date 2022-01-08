@@ -1,0 +1,20 @@
+<html>
+<body>
+报告映射到 <code>Comparator</code> 接口的不履行其约定的方法引用。
+<p>
+某些方法引用，例如 <code>Integer::max</code>，可以映射到 <code>Comparator</code> 接口。
+但是，将它们用作 <code>Comparator</code> 是没有意义的，结果可能是不可预测的。
+</p>
+<p>示例：</p>
+<pre><code>
+  ArrayList&lt;Integer&gt; ints = foo();
+  ints.sort(Math::min);
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  ArrayList&lt;Integer&gt; ints = foo();
+  ints.sort(Comparator.reverseOrder());
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

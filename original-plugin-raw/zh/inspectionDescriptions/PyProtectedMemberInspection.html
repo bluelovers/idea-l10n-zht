@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告 protected 成员在类、定义其的类的后代或模块的外部访问的情况。</p>
+<pre style="font-family: monospace">
+class Foo:
+    def _protected_method(self):
+        pass
+
+
+class Bar(Foo):
+    def public_method(self):
+        self._protected_method()
+
+
+foo = Foo()
+foo._protected_method() # 访问 protected 方法
+</pre>
+</body>
+</html>

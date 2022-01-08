@@ -1,0 +1,35 @@
+<html>
+<body>
+报告用作另一个方法调用的形参的方法调用。
+<p>该快速修复会引入一个变量，使代码更简单，也更易于调试。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public int y() { return 1; }
+  public int f(int x) { return 2 * x; }
+
+  public void foo() {
+      int x = f(y());
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  public int y() { return 1; }
+  public int f(int x) { return 2 * x; }
+
+  public void foo() {
+      int y = y();
+      int x = f(y);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用检查选项可以切换以下各项的报告：
+</p>
+<ul>
+  <li>字段初始值设定项中的方法调用</li>
+  <li>对 static 方法的调用</li>
+  <li>对简单 getter 的调用</li>
+</ul>
+
+</body>
+</html>

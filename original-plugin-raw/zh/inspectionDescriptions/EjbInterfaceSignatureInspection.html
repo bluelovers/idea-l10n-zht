@@ -1,0 +1,14 @@
+<html>
+<body>
+报告以下 EJB 规范违规：
+<ul>
+  <li>EJB 接口未扩展正确的 EJB 接口</li>
+  <li>EJB 接口不是 public 或者不是 final</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+public interface EntityRemote extends Runnable {} // 错误：类应该扩展 `javax.ejb.EJBObject`
+</code></pre>
+</body>
+</html>

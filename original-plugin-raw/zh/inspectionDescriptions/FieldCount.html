@@ -1,0 +1,14 @@
+<html>
+<body>
+报告字段数超过指定最大值的类。
+<p>具有大量字段的类通常会试图进行过多处理。 请考虑将这种类拆分为多个较小的类。</p>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>字段计数限制</b>字段可指定类中允许的最大字段数。</li>
+  <li>使用<b>在计数中包含常量字段</b>选项可指示是否应计算常量字段。</li>
+  <li>默认情况下，只有不可变的 <code>static final</code> 对象会被计为常量。 使用<b>将 'static final' 字段计为常量</b>选项可将任何 <code>static final</code> 字段计为常量。</li>
+  <li>使用<b>在计数中包含枚举常量</b>选项可指定是否应计算 <code>enum</code> 类中的 <code>enum</code> 常量。</li>
+</ul>
+</body>
+</html>

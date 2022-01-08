@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>报告 <code>&lt;flow&gt;</code> 配置中定义的引用上的不正确 Bean 类型。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;flow&gt;
+    ...
+    &lt;exception-handler bean="<strong>dummyBean</strong>"/&gt; &lt;!--Bean 必须为 'org.springframework.webflow.engine.FlowExecutionExceptionHandler' 类型 --&gt;
+    &lt;bean id="dummyBean" class="java.lang.String"/&gt;
+    ...
+  &lt;/flow&gt;</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

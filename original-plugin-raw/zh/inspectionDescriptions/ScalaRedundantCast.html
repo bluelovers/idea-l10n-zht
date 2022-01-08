@@ -1,0 +1,15 @@
+<html>
+<body><p>报告冗余的 <code>asInstanceOf</code> 转换并建议将其移除。</p>
+<p>如果表达式的类型与转换类型相同，则转换是冗余的。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  "test".asInstanceOf[String]
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  "test"
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

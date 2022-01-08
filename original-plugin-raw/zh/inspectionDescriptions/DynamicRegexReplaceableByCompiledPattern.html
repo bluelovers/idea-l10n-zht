@@ -1,0 +1,18 @@
+<html>
+<body>
+报告使用常量实参对 <code>java.lang.String</code> 的正则表达式方法（例如 <code>matches()</code> 或 <code>replace()</code>）的调用。
+<p>
+  此类调用可以有利地替换为 <code>private static final Pattern</code> 字段，从而不必在每次使用正则表达式时都对其进行编译。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  text.replace("abc", replacement);
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  private static final Pattern ABC = Pattern.compile("abc", Pattern.LITERAL);
+  ABC.matcher(text).replaceAll(Matcher.quoteReplacement(replacement));
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

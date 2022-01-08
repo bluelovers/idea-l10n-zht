@@ -1,0 +1,15 @@
+<html>
+<body>
+报告条件为 <code>true</code> 或 <code>false</code> 常量的条件表达式。
+这些表达式有时是自动重构的结果，并且可以被简化。
+<p>示例：</p>
+<pre><code>
+  return true ? "Yes" : "No";
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  return "Yes";
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

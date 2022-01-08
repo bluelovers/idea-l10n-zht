@@ -1,0 +1,21 @@
+<html>
+<body>
+报告用于记录软件包的任何 <code>package.html</code> 文件。
+<p>从 JDK 1.5 开始，建议您改用 <code>package-info.java</code> 文件，因为此类文件还可以包含软件包注解。 这样，package-info.java 就变成了软件包级别注解和文档的唯一仓库。</p>
+<p>示例：<code>package.html</code></p>
+<pre><code>
+&lt;html&gt;
+  &lt;body&gt;
+    Documentation example.
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>应用该快速修复后：<code>package-info.java</code></p>
+<pre><code>
+/**
+ * Documentation example.
+ */
+package com.sample;
+</code></pre>
+</body>
+</html>

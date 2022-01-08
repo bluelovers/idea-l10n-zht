@@ -1,0 +1,10 @@
+<html>
+<body>
+报告不带 WHERE 子句的 DELETE 或 UPDATE 语句的用法。
+  <p>如果没有 WHERE 子句，DELETE 会删除表中的所有数据，而 UPDATE 会覆盖所有表行的值。</p>
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE t1 (a TEXT, b INT, c BOOLEAN);
+update t1 set  a = 'Smith';
+delete from t1;</code></pre>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a> 注解中不正确的 'mode' 配置。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  @ContextConfiguration
+  @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // 在注解的测试类上设置方法模式没有意义。 对于类级别控制，请改用 classMode。
+                  hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // 通过 @ContextHierarchy 将上下文配置为层次结构的一部分时，应使用 hierarchyMode
+  public class MyTest {
+    @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // 在注解的测试方法上设置类模式没有意义。 对于方法级别控制，请改用 methodMode。
+                     hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // 通过 @ContextHierarchy 将上下文配置为层次结构的一部分时，应使用 hierarchyMode
+    public void testFoo() {...}
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<body>
+报告可以简化的布尔表达式。
+<p>示例：</p>
+<pre><code>
+  void f(boolean foo, boolean bar) {
+    boolean b = !(foo ^ bar);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void f(boolean foo, boolean bar) {
+    boolean b = foo == bar;
+  }
+</code></pre>
+
+<p>示例：</p>
+<pre><code>
+  void f(boolean foo, boolean bar) {
+    boolean b = (foo && bar) || !foo;
+  }
+  </code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void f(boolean foo, boolean bar) {
+    boolean b = !foo || bar;
+  }
+  </code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>

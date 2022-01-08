@@ -1,0 +1,37 @@
+<html>
+<body>
+<p>报告带有不可为 null 的扩展接收器的内联函数，这些函数不使用扩展接收器不可为 null 的事实。</p>
+<p>
+    在 Kotlin 1.2 之前，使用灵活的可 null 扩展接收器（具有未知可 null 性的平台类型）对 <code>inline fun</code> 的调用不包括字节码中的可 null 性检查。 自 Kotlin 1.2 起，字节码中包含可 null 性检查（请参阅 <a href="https://youtrack.jetbrains.com/issue/KT-12899">KT-12899</a>）。
+</p>
+<p>
+    因此，在 Kotlin 1.2 之前的版本中，不使用扩展接收器不可为 null 这一事实的函数是危险的，建议使此类函数具有可为 null 的接收器。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  inline fun String.greet() {
+      println("Hello, $this!")
+  }
+
+  fun main() {
+      // `System.getProperty` 返回不可表示的 `String!` 类型
+      val user = System.getProperty("user.name")
+      user.greet()
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  inline fun String.greet() {
+      println("Hello, $this!")
+  }
+
+  fun main() {
+      // `System.getProperty` 返回不可表示的 `String!` 类型
+      val user = System.getProperty("user.name")
+      user.greet()
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的 Kotlin 语言级别低于 1.2 时，此检查才会报告。</p>
+</body>
+</html>

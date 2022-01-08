@@ -1,0 +1,22 @@
+<html>
+<body>
+报告实现 <code>java.io.Serializable</code> 且其中的 <code>readResolve()</code> 或 <code>writeReplace()</code> 方法未被声明为 <code>protected</code> 的类。
+<p>
+  将 <code>readResolve()</code> 和 <code>writeReplace()</code> 方法声明为 <code>private</code> 可以强制子类无提示地忽略它们，而声明为 <code>public</code> 则允许不受信任的代码调用它们。
+</p>
+<p>
+  如果包含类被声明为 <code>final</code>，这些方法就可以被声明为 <code>private</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class ClassWithSerialization implements Serializable {
+    public Object writeReplace() { // 警告：'writeReplace()' 未被声明为 protected
+        ...
+    }
+  }
+  </code>
+</pre>
+<!-- tooltip end -->
+
+</body>
+</html>

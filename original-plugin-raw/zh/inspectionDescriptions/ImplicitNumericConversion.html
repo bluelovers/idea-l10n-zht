@@ -1,0 +1,25 @@
+<html>
+<body>
+报告数值类型之间的隐式转换。
+<p>隐式数字转换本身不是问题，但如果是意外，可能会在跟踪错误时造成困难。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  double m(int i) {
+    return i * 10;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  double m(int i) {
+    return (double) (i * 10);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>忽略扩大转换</b>选项可以忽略不会导致数据丢失的隐式转换（例如，<code>int</code>-&gt;<code>long</code>）。</li>
+  <li>使用<b>忽略 'char' 与其他类型之间的转换</b>选项可以忽略 <code>char</code> 与其他类型之间的转换。 该检查仍将报告浮点数与其他类型之间的转换。</li>
+  <li>使用<b>忽略来自常量和文字的转换</b>可使检查忽略来自文字和编译时常量的转换。</li>
+</ul>
+</body>
+</html>

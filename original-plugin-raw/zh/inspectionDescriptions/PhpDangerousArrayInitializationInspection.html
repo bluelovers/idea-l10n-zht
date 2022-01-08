@@ -1,0 +1,10 @@
+<html>
+<body>
+报告危险的数组初始化（如 <code>$arr[] = value</code>）。
+<p>
+  不建议采取这种做法，因为如果 <code>$arr</code> 已包含某些值（例如来自请求变量的字符串），此值将保留，并且 <code>[]</code> 实际上可能代表字符串访问运算符。 最好始终通过直接赋值来初始化变量。
+</p>
+<p>有关详细信息，请参阅 <a href="https://www.php.net/manual/en/language.types.array.php#language.types.array.syntax.modifying">Creating/modifying with square bracket syntax (php.net)</a>。
+</p>
+</body>
+</html>

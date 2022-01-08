@@ -1,0 +1,16 @@
+<html>
+<body>
+报告从函数执行 SELECT 或执行没有类型别名的 DBLINK（例如 <code> AS t1 (s VARCHAR) </code>）的情况。
+  <p>此要求不适用于标量函数。</p>
+<p>示例（PostgreSQL）：</p>
+<pre><code>CREATE FUNCTION produce_a_table() RETURNS RECORD AS $$
+SELECT 1;
+$$ LANGUAGE sql;
+SELECT * FROM produce_a_table() AS s (c1 INT);
+SELECT * FROM produce_a_table() AS s (c1);
+SELECT * FROM DBLINK('dbname=mydb', 'SELECT proname, prosrc FROM pg_proc') AS t1;</code></pre>
+<p><code>AS s (c1 INT)</code> 具有类型别名，而 <code>AS s (c1)</code> 和 <code>AS t1</code> 没有。
+  在这种情况下，将高亮显示 <code>produce_a_table()</code> 和 <code>DBLINK()</code> 的第二次调用。
+</p>
+</body>
+</html>

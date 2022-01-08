@@ -1,0 +1,15 @@
+<html>
+<body>
+报告可修改的 <code>public</code> <code>static</code> 集合字段。
+<p>尽管这些字段经常用于存储常量值集合，但它们仍然代表着安全隐患，因为即使字段被声明为 <code>final</code>，它们的内容仍可能被修改。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public static final List&lt;String&gt; EVENTS = new ArrayList&lt;&gt;();
+  </code>
+</pre>
+<!-- tooltip end -->
+<p>
+  使用<b>选项</b>部分中的表可指定返回不可修改集合的方法。
+  将不会报告使用这些方法初始化的 <code>public</code> <code>static</code> 集合字段。
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>从 Kotlin 1.4 开始，报告超类的无意义注解目标。</p>
+<p>诸如 <code>@get:</code> 之类的注解目标在超类中毫无意义并且被禁止。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  interface Foo
+
+  annotation class Ann
+
+  class E : @field:Ann @get:Ann @set:Ann @setparam:Ann Foo
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  interface Foo
+
+  annotation class Ann
+
+  class E : Foo
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的 Kotlin 语言级别为 1.4 或更高时，此检查才会报告。</p>
+</body>
+</html>

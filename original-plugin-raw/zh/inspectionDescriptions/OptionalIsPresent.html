@@ -1,0 +1,15 @@
+<html>
+<body>
+报告可以用函数样式重写的条件，如 <code>if(Optional.isPresent())</code>，因为它更短并更容易阅读。
+<p>示例：</p>
+<pre><code>
+  if (str.isPresent()) str.get().trim();
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  str.ifPresent(String::trim);
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。</p>
+</body>
+</html>

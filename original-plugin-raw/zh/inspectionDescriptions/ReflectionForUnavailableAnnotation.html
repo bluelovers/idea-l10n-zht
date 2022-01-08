@@ -1,0 +1,18 @@
+<html>
+<body>
+报告对非运行时注解的存在与否执行反射性检查的尝试。
+<p>使用 <code>Class.isAnnotationPresent()</code> 测试保留策略设置为 <code>SOURCE</code> 或 <code>CLASS</code>（默认值）的注解是否始终得到否定结果。 此错误很容易被忽视。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  {
+    getClass().isAnnotationPresent(SourceAnnotation.class); //始终为 false
+  }
+
+  @Retention(RetentionPolicy.SOURCE)
+  @interface SourceAnnotation {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

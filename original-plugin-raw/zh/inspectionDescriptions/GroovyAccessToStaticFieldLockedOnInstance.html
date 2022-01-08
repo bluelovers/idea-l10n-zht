@@ -1,0 +1,17 @@
+<html>
+<body>
+报告对在 <code>this</code> 或 <code>this</code> 的实例字段上锁定的非常量 static 字段的访问。
+<p>
+  在实例数据上锁定 static 字段并不能防止其他实例修改该字段，因此可能会导致意外的竞争条件。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  static String s;
+  def foo() {
+      synchronized (this) {
+          System.out.println(s); // 警告
+      }
+  }
+</code></pre>
+</body>
+</html>

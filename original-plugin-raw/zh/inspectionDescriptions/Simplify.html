@@ -1,0 +1,12 @@
+<html>
+<body>
+报告可以简化的语句，例如常量条件、相同的 if 分支、冗余布尔表达式等。
+使用下面的复选框可以控制分析选项：
+<ul>
+<li><b>简化 "if (true)", "while(false)"</b>：建议将 <code>if</code>/<code>while</code> 语句替换为布尔文字。</li>
+<li><b>简化 "condition == true"</b>：建议将相等语句替换为布尔文字。</li>
+<li><b>简化 "condition1 ? true : condition2;"</b>：建议简化其中一个表达式是布尔文字的三元运算符。</li>
+  <li><b>简化 "if (condition1) return true; return condition2;"</b>：建议简化符合以下条件的 <code>if</code>：如果条件为 true 则返回布尔文字，否则返回另一个条件。</li>
+</ul>
+</body>
+</html>

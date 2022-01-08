@@ -1,0 +1,20 @@
+<html>
+<body>
+报告在循环内发生的对 <code>java.lang.Thread.sleep()</code> 的调用。
+<p>此类调用表示“忙等待”。 忙等待通常效率低下，并且可能导致意外死锁，因为忙等待线程不会释放锁定的资源。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class X {
+     volatile int x;
+     public void waitX() throws Exception {
+      while (x &gt; 0) {
+        Thread.sleep(10);// 警告：在循环中调用 'Thread.sleep()'，可能处于忙等待
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

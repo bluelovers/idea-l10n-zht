@@ -1,0 +1,23 @@
+<html>
+<body>
+报告在属性 setter 中明确指定的形参类型。
+<p>
+    setter 形参类型始终与属性类型匹配，因此不要求为显式。
+    “移除显式类型规范”快速修复允许相应地修改代码。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun process(x: Int) {}
+
+  var x: Int = 0
+      set(value: Int) = process(value) // &lt;== 'Int' 规格可以安全忽略
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun process(x: Int) {}
+
+  var x: Int = 0
+      set(value) = process(value)
+</code></pre>
+</body>
+</html>

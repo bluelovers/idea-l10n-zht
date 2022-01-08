@@ -1,0 +1,31 @@
+<html>
+<body>
+报告不是在循环中进行的 <code>wait()</code> 调用。
+<p>
+  <code>wait()</code> 通常用于挂起线程，直到某个条件变为 true 为止。
+  线程可能出于不同的原因而被唤醒，因此在 <code>wait()</code> 调用返回后应检查条件。
+  使用循环很容易做到这一点。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class BoundedCounter {
+    private int count;
+    synchronized void inc() throws InterruptedException {
+      if (count >= 10) wait();
+      ++count;
+    }
+  }
+</code></pre>
+<p>优良的代码应类似于：</p>
+<pre><code>
+  class BoundedCounter {
+    private int count;
+    synchronized void inc() throws InterruptedException {
+      while (count >= 10) wait();
+      ++count;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+报告对接受 <code>double</code> 值的 <code>BigDecimal</code> 构造函数的调用。
+这些构造函数生成正好等于提供的 <code>double</code> 值的 <code>BigDecimal</code>。
+但是，由于 double 是以 IEEE 754 64 位双精度二进制浮点格式进行编码，确切值可能出乎意料。
+<p>例如，<code>new BigDecimal(0.1)</code> 会生成一个 <code>BigDecimal</code> 对象。 它的值为 <small><code>0.1000000000000000055511151231257827021181583404541015625</code></small>，这是最接近 0.1 的数字，可以表示为 double。
+  要获取存储的值与源代码中编写的值相同的 <code>BigDecimal</code>，请使用 <code>new BigDecimal("0.1")</code> 或 <code>BigDecimal.valueOf(0.1)</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Constructor {
+    void foo() {
+      new BigDecimal(0.1);
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Constructor {
+    void foo() {
+      new BigDecimal("0.1");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

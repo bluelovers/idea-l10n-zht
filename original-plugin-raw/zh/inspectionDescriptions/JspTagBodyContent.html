@@ -1,0 +1,18 @@
+<html>
+<body>
+报告不符合 TLD 主体内容规范的 JSP 标记主体内容。
+<p>如果指定了空的主体内容，则标记的主体应为空。</p>
+<p>如果指定了无脚本主体内容，该标记的主体不应包含 JSP scriptlet。</p>
+<p>对于空内容类型，该快速修复将移除标记的主体，如果指定了无脚本内容类型，则移除 scriptlet。</p>
+<p><b>示例：</b></p>
+<pre><code>
+&lt;s:empty&gt;body not allowed here&lt;/s:empty&gt;
+&lt;s:scriptless&gt;say: &lt;% System.out.println(&quot;hey&quot;); %&gt;&lt;/s:scriptless&gt;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+&lt;s:empty/&gt;
+&lt;s:scriptless&gt;say: &lt;/s:scriptless&gt;
+</code></pre>
+</body>
+</html>

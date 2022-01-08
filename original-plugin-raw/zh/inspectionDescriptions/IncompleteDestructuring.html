@@ -1,0 +1,17 @@
+<html>
+<body>
+报告不完整的析构声明。
+<p><b>示例：</b></p>
+<pre><code>
+  data class Person(val name: String, val age: Int)
+  val person = Person("", 0)
+  val (name) = person
+</code></pre>
+<p>该快速修复会使用新变量完成析构声明：</p>
+<pre><code>
+  data class Person(val name: String, val age: Int)
+  val person = Person("", 0)
+  val (name, age) = person
+</code></pre>
+</body>
+</html>

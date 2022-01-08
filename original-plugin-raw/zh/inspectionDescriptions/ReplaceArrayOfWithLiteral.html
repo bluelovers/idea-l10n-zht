@@ -1,0 +1,17 @@
+<html>
+<body>
+报告可以替换为数组文字 <code>[...]</code> 的 <code>arrayOf</code> 调用。
+<p><b>示例：</b></p>
+<pre><code>  annotation class MyAnnotation(val strings: Array&lt;String&gt;)
+
+  @MyAnnotation(arrayOf("alpha", "beta", "omega")) // 可替换的 'arrayOf()'
+  class MyClass
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>  annotation class MyAnnotation(val strings: Array&lt;String&gt;)
+
+  @MyAnnotation(["alpha", "beta", "omega"])
+  class MyClass
+</code></pre>
+</body>
+</html>

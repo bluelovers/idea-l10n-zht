@@ -1,0 +1,20 @@
+<html>
+<body>
+报告在 <code>finally</code> 块内使用的 <code>return</code>、<code>throw</code>、<code>break</code>、<code>continue</code> 和 <code>yield</code> 语句。
+这些会导致 <code>finally</code> 块无法正常完成，而是突然完成。
+从同一 <code>try</code>-<code>catch</code> 语句的 <code>try</code> 和 <code>catch</code> 块抛出的任何异常将被禁止。
+<p><b>示例：</b></p>
+<pre><code>
+  void x() {
+    <b>try</b> {
+      throw new RuntimeException();
+    } <b>finally</b> {
+      // 如果 bar() 返回 true，则 RuntimeException 将被禁止
+      <b>if</b> (bar()) <b>return</b>;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

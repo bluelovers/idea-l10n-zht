@@ -1,0 +1,26 @@
+<html>
+<body>
+报告条件被否定的条件表达式。
+<p>翻转条件表达式分支的顺序通常会增加此类语句的清晰度。</p>
+<!-- tooltip end -->
+<p>
+  使用<b>忽略 '!= null' 比较</b>和<b>忽略 '!= 0' 比较</b>选项可以忽略 <code>obj != null</code> 或 <code>num != 0</code> 形式的比较。
+  由于 <code>obj != null</code> 实际上意味着 "obj exists"，整个表达式的含义不涉及任何否定，所以易于理解。
+<p>
+  同样的推理也适用于 <code>num !=0</code> 表达式，在使用位掩码时更是如此。
+<p>
+  这些形式还有另外的好处，即先提及有趣的情况。
+  在大多数情况下，<code>== null</code> 分支的值为 <code>null</code> 本身，如以下示例所示：
+
+<pre><code>
+    static String getName(Person p) {
+        return p != null ? p.getName() : null;
+    }
+
+    static String getExecutableString(int fileMode) {
+        return (fileMode & 0b001001001) != 0 ? "executable" : "non-executable";
+    }
+</code></pre>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+报告使用 <code>withIndex()</code> 函数而非索引变量迭代集合的 <code>for</code> 循环。
+<p>使用“移除 'for' 循环中的索引”快速修复可清理代码。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(bar: List&lt;String&gt;) {
+     for ((index : Int, value: String) in bar.withIndex()) { // &lt;== 'index' 未使用
+         println(value)
+     }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(bar: List&lt;String&gt;) {
+      for (value: String in bar) { // &lt;== '.withIndex()' 和 'index' 已被移除
+          println(value)
+      }
+  }
+</code></pre>
+</body>
+</html>

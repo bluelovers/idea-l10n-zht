@@ -1,0 +1,35 @@
+<html>
+<body>
+报告关于类名、函数和属性的冗余限定符（或其部分）。
+<p>
+    完全限定名称是一种明确的标识符，用于指定调用所引用的对象、函数或属性。
+    在可以缩短名称的上下文中，检查会告知机会，关联的“移除冗余限定符名称”快速修复可以修改代码。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  package my.simple.name
+  import kotlin.Int.Companion.MAX_VALUE
+
+  class Foo
+
+  fun main() {
+      val a = my.simple.name.Foo()    // 'Foo' 位于声明的 'my.simple.name' 软件包中，限定符冗余
+      val b = kotlin.Int.MAX_VALUE    // 可以替换为 'MAX_VALUE'，因为它已被导入
+      val c = kotlin.Double.MAX_VALUE // 可以替换为 'Double.MAX_VALUE'，因为内置类型会被自动导入
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  package my.simple.name
+  import kotlin.Int.Companion.MAX_VALUE
+
+  class Foo
+
+  fun main() {
+      val a = Foo()
+      val b = MAX_VALUE
+      val c = Double.MAX_VALUE
+  }
+</code></pre>
+</body>
+</html>

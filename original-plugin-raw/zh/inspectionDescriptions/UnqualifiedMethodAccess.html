@@ -1,0 +1,26 @@
+<html>
+<body>
+报告对同一实例上未使用 <code>this</code> 限定的非 <code>static</code> 方法的调用。
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+    void bar() {}
+
+    void foo() {
+      bar();
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Foo {
+    void bar() {}
+
+    void foo() {
+      this.bar();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

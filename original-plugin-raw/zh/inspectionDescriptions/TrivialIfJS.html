@@ -1,0 +1,21 @@
+<html>
+<body>
+报告可以简化为单个赋值
+或 <code>return</code> 语句的
+<code>if</code> 语句。  <p>示例：</p>
+<pre><code>
+if(foo())
+ {
+  return true;
+ }
+ else
+ {
+   return false;
+ }
+</code></pre>
+<p>应用快速修复后，代码如下所示：</p>
+<pre>
+ <code>return foo();</code>
+</pre>
+</body>
+</html>

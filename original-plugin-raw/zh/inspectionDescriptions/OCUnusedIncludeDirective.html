@@ -1,0 +1,16 @@
+<html>
+<body>
+报告未使用或不需要且可以安全移除的 include 指令。
+<dl>
+  <dt><b>检测完全未使用的 include 指令</b></dt>
+  <dd>如果在翻译单元中从未使用过 include 指令的声明，则认为该指令未使用。</dd>
+  <dt><b>检测未直接使用的 include 指令</b></dt>
+  <dd>如果未直接在文件中使用 include 指令的声明，则认为该指令未使用。 搭配“包括您使用的内容”策略时效果最佳。</dd>
+  <dt><b>检测不需要的 include 指令</b></dt>
+  <dd>检测要编译的文件的最少 include 指令集。 所有其他 #include 指令都被视为未使用。</dd>
+</dl>
+<p>使用下面的复选框在头文件中运行检查。</p>
+<!-- tooltip end -->
+<p><small>2019.2 最新变化</small></p>
+</body>
+</html>

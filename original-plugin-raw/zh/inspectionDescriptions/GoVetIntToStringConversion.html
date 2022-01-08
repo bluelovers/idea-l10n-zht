@@ -1,0 +1,19 @@
+<html>
+<body>
+报告类似于 <code>string(x)</code> 表达式的转换，其中 <code>x</code> 是整数，但不是字节或 rune。
+
+<p>不建议这种转换，因为它们返回 Unicode 代码点 <code>x</code> 的 UTF-8 表示，而不是人们可能预期的返回 <code>x</code> 的十进制字符串表示。 此外，如果 <code>x</code> 表示无效的代码点，转换不能被静态拒绝。</p>
+
+<p>对于打算使用代码点的转换，请考虑使用 <code>string(rune(x))</code> 替换它们。 否则， <code>strconv.Itoa</code> 或其等效函数可以返回基于所需基数值的字符串表示。</p>
+<p>示例：</p>
+<pre><code>func main() {
+ a := 1
+ _ = string(a)
+}</code></pre>
+<p>在应用<b>将整数转换为 rune</b>快速修复后：</p>
+<pre><code>func main() {
+ a := 1
+ _ = string(rune(a))
+}</code></pre>
+</body>
+</html>

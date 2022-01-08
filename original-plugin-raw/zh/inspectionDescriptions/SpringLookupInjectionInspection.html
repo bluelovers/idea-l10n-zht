@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Lookup.html">@Lookup</a> 注解的 <code>value</code> 形参中不正确的 Bean 引用。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  @Component public class FooBean {...}
+  @Component public class OtherBean {...}
+
+  @Component public class MyComponent {
+  @Lookup("fooBean")
+  public FooBean fooBean() {...}
+
+  @Lookup("fooBean") // 报告 "Bean 必须为 'OtherBean' 类型"
+  public OtherBean otherBean() {...}
+
+  @Lookup("unknown") // 报告 "无法解析 Bean 'unknown'"
+  public OtherBean fooBean() {...}
+  }
+</code></pre>
+</body>
+</html>

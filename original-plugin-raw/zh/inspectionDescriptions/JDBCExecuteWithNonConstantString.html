@@ -1,0 +1,21 @@
+<html>
+<body>
+报告对 <code>java.sql.Statement.execute()</code> 或其任何变体的调用，这些变体会将动态构造的字符串作为要执行的查询。
+<p>构造的 SQL 语句是安全漏洞的常见来源。
+  默认情况下，此检查会忽略编译时常量。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  ResultSet execute(Statement statement, String name) throws SQLException {
+    return statement.executeQuery("select * from " + name); // 报告警告
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+使用检查选项可以将任何 <code>static</code> <code>final</code> 字段视为常量。
+请小心，因为启用该选项时，像下面这样的字符串将被忽略：
+<pre><code>
+  private static final String SQL = "SELECT * FROM user WHERE name='" + getUserInput() + "'";
+</code></pre>
+<p>
+</body>
+</html>

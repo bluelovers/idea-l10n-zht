@@ -1,0 +1,17 @@
+<html>
+<body>
+报告可以转换为可变 arity 方法的方法。
+<p><b>示例：</b></p>
+<pre><code>
+  void process(String name, Object[] objects);
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  void process(String name, Object... objects);
+</code></pre>
+<!-- tooltip end -->
+<p>
+  仅当项目或模块的语言级别为 5 或更高时，此检查才会报告。
+</p>
+</body>
+</html>

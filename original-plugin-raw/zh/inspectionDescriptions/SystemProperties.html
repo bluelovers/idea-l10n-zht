@@ -1,0 +1,19 @@
+<html>
+<body>
+报告使用以下其中一种方法访问系统属性的代码：
+<ul>
+  <li>
+    <code>System.getProperties()</code>、<code>System.setProperty()</code>、<code>System.setProperties()</code>、<code>System.clearProperties()</code>
+  </li>
+  <li>
+    <code>Integer.getInteger()</code>
+  </li>
+  <li>
+    <code>Boolean.getBoolean()</code>
+  </li>
+</ul>
+<p>
+虽然访问系统属性本身并不是安全风险，但它经常出现在恶意代码中。
+在任何安全审核中都应该仔细检查访问系统属性的代码。
+</body>
+</html>

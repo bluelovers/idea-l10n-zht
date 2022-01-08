@@ -1,0 +1,24 @@
+<html>
+<body>
+报告针对一系列 <code>arrayOf</code> 函数调用而使用冗余展开运算符的情况。
+<p>使用“移除冗余展开运算符”快速修复可清理代码。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(vararg s: String) { }
+
+  fun bar(ss: Array&lt;String&gt;) {
+      foo(*arrayOf("abc"))       // 对于 'foo' 的两次调用，数组创建
+      foo(*arrayOf(*ss, "zzz"))  // 及其后续分配均冗余
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(vararg s: String) { }
+
+  fun bar(ss: Array&lt;String&gt;) {
+      foo("abc")
+      foo(*ss, "zzz")
+  }
+</code></pre>
+</body>
+</html>

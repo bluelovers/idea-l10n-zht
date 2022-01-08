@@ -1,0 +1,11 @@
+<html>
+<body>
+  报告那些不返回 <code>string</code> 的 <code>__toString</code> 方法。
+  <!-- tooltip end -->
+  <p>在 PHP 7.4 之前，这将导致一个致命的 <code>E_RECOVERABLE_ERROR</code> 级错误。 在 PHP 7.4 中，会抛出一个致命的不可恢复的 <code>ERROR</code>。 从 PHP 8.0 开始，返回值遵循标准 PHP 类型语义，如果可能且严格类型模式被禁用，就会被强制转换为字符串。
+  </p>
+  <p>
+    有关详细信息，请参阅 <a href="https://www.php.net/manual/en/language.oop5.magic.php#language.oop5.magic.tostring">__toString (php.net)</a>。
+  </p>
+</body>
+</html>

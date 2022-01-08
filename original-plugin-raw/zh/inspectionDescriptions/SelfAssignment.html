@@ -1,0 +1,20 @@
+<html>
+<body>
+报告变量对自身的赋值。
+<p>该快速修复会移除冗余赋值。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test() {
+      var bar = 1
+      bar = bar
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun test() {
+      var bar = 1
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

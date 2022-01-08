@@ -1,0 +1,16 @@
+<html>
+<body>
+报告捕获不适当异常的 <code>catch</code> 子句。
+<p>一些异常（例如 <code>java.lang.NullPointerException</code> 或 <code>java.lang.IllegalMonitorStateException</code>）表示编程错误，因此几乎肯定不会在生产代码中被捕获。
+<p><b>示例：</b></p>
+<pre><code>
+  try {
+    return component.getMousePosition(true) != null;
+  } catch (NullPointerException e) { // warning: Prohibited exception 'NullPointerException' caught
+    return false;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>被禁止的异常</b>列表可指定应报告哪些异常。<p>
+</body>
+</html>

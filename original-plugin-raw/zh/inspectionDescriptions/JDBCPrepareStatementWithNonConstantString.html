@@ -1,0 +1,20 @@
+<html>
+<body>
+报告对 <code>java.sql.Connection.prepareStatement()</code>、<code>java.sql.Connection.prepareCall()</code> 或其任何变体的调用，这些变体会将动态构造的字符串作为要准备的语句。
+<p>
+  构造的 SQL 语句是安全漏洞的常见来源。 默认情况下，此检查会忽略编译时常量。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  String bar() { return "bar"; }
+
+  Connection connection = DriverManager.getConnection("", "", "");
+  connection.("SELECT * FROM user WHERE name='" + bar() + "'");
+</code></pre>
+<!-- tooltip end -->
+使用检查设置可以将任何 <code>static</code> <code>final</code> 字段视为常量。 请小心，因为启用该选项时，像下面这样的字符串将被忽略：
+<pre><code>
+  static final String SQL = "SELECT * FROM user WHERE name='" + getUserInput() + "'";
+</code></pre>
+</body>
+</html>

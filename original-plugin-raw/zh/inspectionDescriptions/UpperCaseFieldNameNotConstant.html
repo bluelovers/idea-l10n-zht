@@ -1,0 +1,12 @@
+<html>
+<body>
+报告名称全部为大写的非 <code>static</code> 非 <code>final</code> 字段。
+<p>此类字段可能会因违反通用命名惯例而引起混淆，并且经常被错误使用。</p>
+<p><b>示例：</b> <pre><code>
+  public static int THE_ANSWER = 42; // 此处警告：final 修饰符缺失
+</code></pre>
+<p>只能在编辑器中使用重命名此类字段的快速修复。</p>
+<!-- tooltip end -->
+
+</body>
+</html>

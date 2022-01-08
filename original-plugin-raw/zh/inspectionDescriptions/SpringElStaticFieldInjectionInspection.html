@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>报告将 Spring Expression Language (SpEL) 注入静态字段（注入 'null' 值）的尝试。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+@Controller
+public class MyController {
+    <strong>@Value</strong>("#{systemProperties['some.key']}")  //  不允许注入到 static 字段
+    static String spelWithDefaultValue;
+}
+</code></pre>
+</body>
+</html>

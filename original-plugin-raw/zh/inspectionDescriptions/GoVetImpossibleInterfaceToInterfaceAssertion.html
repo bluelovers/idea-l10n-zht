@@ -1,0 +1,16 @@
+<html>
+<body>
+报告不可能的接口到接口类型断言。
+<p>检查类型断言 <code>v.(T)</code> 和相应的类型切换 case，其中 <code>v</code> 的静态类型 <code>V</code> 是不可能实现目标接口的接口 <code>T</code>。 当 <code>V</code> 和 <code>T</code> 包含名称相同但签名不同的方法时，会发生这种情况。</p>
+
+<p>示例：</p>
+<pre><code>var v interface {
+  Read()
+}
+_ = v.(io.Reader)</code></pre>
+
+<p><code>v</code> 中的 <code>Read</code> 方法与 <code>io.Reader</code> 中的 <code>Read</code> 方法具有不同的签名，因此该断言将失败。</p>
+<!-- tooltip end -->
+<p>仅当语言版本为 1.15 或更高时，此检查才会报告。</p>
+</body>
+</html>

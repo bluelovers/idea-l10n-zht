@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>使用未实现所需接口的特定 JSF 注解的报告类：</p>
+
+<ul>
+  <li><code>@FacesComponent</code> 必须扩展 <code>&lt;javax/jakarta&gt;.faces.component.FacesComponent</code></li>
+  <li><code>@FacesRenderer</code> 必须扩展 <code>&lt;javax/jakarta&gt;.faces.render.Renderer</code></li>
+  <li><code>@FacesConverter</code> 必须扩展 <code>&lt;javax/jakarta&gt;.faces.convert.Converter</code></li>
+  <li><code>@FacesValidator</code> 必须扩展 <code>&lt;javax/jakarta&gt;.faces.validator.Validator</code></li>
+</ul>
+
+<p><strong>示例：</strong></p>
+<pre><code>
+
+<strong>@FacesConverter</strong>(value="...")  // 类必须扩展 'javax.faces.convert.Converter'
+public class FooConverter {
+}
+
+<strong>@FacesRenderer</strong>(rendererType="..", componentFamily="..")  // 类必须扩展 'javax.faces.render.Renderer'
+public class FooConverter {
+}
+
+<strong>@FacesRenderer</strong>(rendererType="..", componentFamily="..")  // 类必须扩展 'javax.faces.validator.Validator'
+public class FooValidator {
+}
+
+</code></pre>
+</body>
+</html>

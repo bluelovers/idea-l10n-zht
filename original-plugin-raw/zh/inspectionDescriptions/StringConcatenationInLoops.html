@@ -1,0 +1,28 @@
+<html>
+<body>
+报告循环中的 String 串联。
+<p>
+  由于每个 String 串联都会复制整个字符串，因此通常最好将其替换为对 <code>StringBuilder.append()</code> 或 <code>StringBuffer.append()</code> 的显式调用。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  String str = "";
+  for(int i=0; i&lt;10; i++) {
+    str += i;
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  String str = "";
+  StringBuilder strBuilder = new StringBuilder(str);
+  for(int i = 0; i&lt;10; i++) {
+    strBuilder.append(i);
+  }
+  str = strBuilder.toString();
+</code></pre>
+<!-- tooltip end -->
+<p>
+  有时，通过该快速修复可将 <code>String</code> 变量转换为 <code>StringBuilder</code> 或引入新的 <code>StringBuilder</code>。 原始代码专门处理 <code>null</code> 值时应小心，因为替换可能会改变语义。 如果可能为 <code>null</code>，建议进行 null 安全修正，生成必要的 null 检查。 此外，也不能保证自动替换总是性能更好。
+</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+报告锁错误地通过值传递。
+<p>不小心复制包含锁的值可能会导致两个副本均无法正常工作。 通常，此类值应通过指针引用。 这里的锁表示实现 <code>sync.Locker</code> 的类型，例如 <code>sync.Mutex</code> 或 <code>sync.WaitGroup</code>。</p>
+<p>示例：</p>
+<pre><code>type SafeInt struct {
+  m sync.Mutex
+  i int
+}
+
+func (s SafeInt) Inc() { // 互斥被复制
+  s.m.Lock()
+  s.i++
+  s.m.Unlock()
+}</code></pre>
+<p>在应用<b>添加指针</b>快速修复后：</p>
+<pre><code>type SafeInt struct {
+  m sync.Mutex
+  i int
+}
+
+func (s *SafeInt) Inc() {
+  s.m.Lock()
+  s.i++
+  s.m.Unlock()
+}</code></pre>
+</body>
+</html>

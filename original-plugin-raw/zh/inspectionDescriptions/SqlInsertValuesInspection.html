@@ -1,0 +1,10 @@
+<html>
+<body>
+报告 VALUES 中的形参数目与目标表中的列数不匹配的情况。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE foo(a INT, b INT, c INT);
+
+INSERT INTO foo VALUES (1,2,3,4)</code></pre>
+<p><code>foo</code> 表有三列，但在 INSERT INTO 语句中我们传递了四列。</p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<html>
+<body>
+<p>
+  报告非 public 字段和方法上的 <code>com.google.inject.Inject</code> 注解。
+  虽然 Guice 可以处理此类注入，但由于安全限制，它在部署过程中可能无法正常工作。
+  一般来说，最好通过将注入的字段和方法设为 public，或者创建一个 public setter 并使用 <code> @Inject </code> 注解来避免此类注入。
+</p>
+</body>
+</html>

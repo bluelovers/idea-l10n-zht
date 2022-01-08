@@ -1,0 +1,34 @@
+<html>
+<body>
+报告对其中的调用由声明类的子类而不是声明类本身限定的内部类和嵌套类的访问。
+<p>
+  Java 允许此类限定，但是此类访问可能表明继承和重写之间存在难以捉摸的混淆。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Super {
+    static class Inner {}
+  }
+
+  class Sub extends Super {
+    void test() {
+      Sub.Inner s = new Sub.Inner(); // 'Inner' 类在 'Super' 类中声明，但通过 'Sub' 类引用
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Super {
+    static class Inner {}
+  }
+
+  class Sub extends Super {
+    void test() {
+      Super.Inner s = new Super.Inner();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>
