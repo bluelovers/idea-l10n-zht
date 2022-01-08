@@ -3,6 +3,7 @@ import { join } from 'path';
 // @ts-ignore
 import progressEstimator from 'progress-estimator';
 import { findPkgModuleCachePathCore, findPkgModulePathCore } from 'cache-path/lib/finder/findPkgModuleCachePath';
+import { __root } from '../test/__root';
 
 export function createProgressEstimator(root: string)
 {
@@ -13,3 +14,5 @@ export function createProgressEstimator(root: string)
 		storagePath,
 	});
 }
+
+export const cli_logger = createProgressEstimator(__root);
