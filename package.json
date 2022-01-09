@@ -9,6 +9,7 @@
   "author": "bluelovers",
   "main": "index.js",
   "scripts": {
+    "plugin:handle-source": "ts-node scripts/plugin-handle-source.ts",
     "review": "yarn run review:coverage",
     "review:coverage": "yarn run lint && yarn run coverage",
     "review:test": "yarn run lint && yarn run test",
@@ -55,8 +56,10 @@
     "@bluelovers/fast-glob": "^3.0.4",
     "@lazy-cjk/zh-convert": "^1.0.42",
     "@yarn-tool/find-root": "^1.0.60",
+    "ansi-colors": "^4.1.1",
     "bluebird": "^3.7.2",
     "cache-path": "^2.0.29",
+    "cli-progress": "^3.10.0",
     "crlf-normalize": "^1.0.6",
     "cross-fetch": "^3.1.4",
     "debug-color2": "^1.2.7",
@@ -70,6 +73,7 @@
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.28",
     "@types/bluebird": "^3.5.36",
+    "@types/cli-progress": "^3.9.2",
     "@types/fs-extra": "^9.0.13",
     "@types/node": "*",
     "@types/node-fetch": "^2.5.12"

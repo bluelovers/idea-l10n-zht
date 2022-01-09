@@ -2,23 +2,33 @@
  * Created by user on 2022/1/9.
  */
 
-import { cn2tw_min } from '@lazy-cjk/zh-convert/min';
 import { async as FastGlob } from '@bluelovers/fast-glob/bluebird';
 import { __plugin_dev_dir, __plugin_downloaded_dir_unzip } from '../lib/const';
 import { outputFile, pathExists, readFile, unlink } from 'fs-extra';
 import { join } from 'upath2';
 import { console } from 'debug-color2';
-import { cli_logger } from '../lib/cli-progress';
+import { createMultiBar } from '../lib/cli-progress';
 import { processText } from 'novel-segment-cli';
-import { chkcrlf, CR, LF, CRLF } from 'crlf-normalize';
+import { chkcrlf, CR, CRLF, LF } from 'crlf-normalize';
+import { SingleBar } from 'cli-progress';
 
-cli_logger(FastGlob([
+const multibar = createMultiBar();
+let bar: SingleBar;
+
+export default FastGlob([
 	'**/*',
+	'!*.list.json',
 ], {
 	cwd: __plugin_downloaded_dir_unzip,
 })
-	.each(async (file: string) =>
+	.tap((ls) =>
 	{
+		console.cyan.log(`convert to zht`);
+		bar = multibar.create(ls.length, 0);
+	})
+	.each(async (file: string, index) =>
+	{
+		bar.update(index + 1, { filename: file });
 		let fullpath_new = join(__plugin_dev_dir, file);
 
 		if (!/\.(png)$|MANIFEST\.MF/i.test(file))
@@ -40,7 +50,7 @@ cli_logger(FastGlob([
 
 			if (content_new !== content_old)
 			{
-				console.success(file);
+				//console.success(file);
 				await outputFile(fullpath_new, content_new);
 				return;
 			}
@@ -48,10 +58,16 @@ cli_logger(FastGlob([
 
 		if (await pathExists(fullpath_new))
 		{
-			console.warn(file);
+			//console.warn(file);
 			return unlink(fullpath_new);
 		}
-	}), `convert to zht`)
+	})
+	.finally(() =>
+	{
+		bar?.update(bar.getTotal());
+		bar?.stop();
+		multibar.stop();
+	})
 ;
 
 

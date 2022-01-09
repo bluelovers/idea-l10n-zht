@@ -2,8 +2,10 @@ import { ensureDirSync } from 'fs-extra';
 import { join } from 'path';
 // @ts-ignore
 import progressEstimator from 'progress-estimator';
-import { findPkgModuleCachePathCore, findPkgModulePathCore } from 'cache-path/lib/finder/findPkgModuleCachePath';
+import { findPkgModuleCachePathCore } from 'cache-path/lib/finder/findPkgModuleCachePath';
 import { __root } from '../test/__root';
+import { MultiBar, Presets } from 'cli-progress';
+import { gray, green, yellow } from 'ansi-colors';
 
 export function createProgressEstimator(root: string)
 {
@@ -13,6 +15,22 @@ export function createProgressEstimator(root: string)
 		// All configuration keys are optional, but it's recommended to specify a storage location.
 		storagePath,
 	});
+}
+
+export function createMultiBar()
+{
+	return new MultiBar({
+		clearOnComplete: false,
+		hideCursor: true,
+
+		barCompleteChar: '\u2588',
+		barIncompleteChar: '\u2591',
+
+		format: `${green('{bar}')} ${yellow('{percentage}%')} | ${gray('{duration_formatted}')} | {filename}`,
+
+		barsize: 20,
+
+	}, Presets.shades_classic);
 }
 
 export const cli_logger = createProgressEstimator(__root);
