@@ -3,7 +3,7 @@
  */
 
 import { async as FastGlob } from '@bluelovers/fast-glob/bluebird';
-import { __plugin_dev_dir, __plugin_downloaded_dir_unzip } from '../lib/const';
+import { __plugin_dev_raw_dir, __plugin_downloaded_dir_unzip } from '../lib/const';
 import { outputFile, outputJSON, pathExists, readFile, readJSON, unlink } from 'fs-extra';
 import { join } from 'upath2';
 import { console } from 'debug-color2';
@@ -44,9 +44,9 @@ export default FastGlob<string>([
 			})
 			.each(async (file: string, index) =>
 			{
-				bar.update(index + 1, { filename: file });
+				bar.update(index, { filename: file });
 				const fullpath = join(cwd, file);
-				const fullpath_new = join(__plugin_dev_dir, lang, file);
+				const fullpath_new = join(__plugin_dev_raw_dir, lang, file);
 
 				if (cacheList.includes(file))
 				{
@@ -80,7 +80,7 @@ export default FastGlob<string>([
 				}
 				else
 				{
-					bar.update(index + 1, { filename: red(file) });
+					bar.update(index, { filename: red(file) });
 
 					if (await pathExists(fullpath))
 					{
@@ -90,7 +90,7 @@ export default FastGlob<string>([
 
 				if (await pathExists(fullpath_new))
 				{
-					bar.update(index + 1, { filename: gray(file) });
+					bar.update(index, { filename: gray(file) });
 
 					await unlink(fullpath_new);
 				}
@@ -98,7 +98,7 @@ export default FastGlob<string>([
 			})
 			.tap(() =>
 			{
-				return outputJSON(join(__plugin_dev_dir, lang + '.list.json'), cacheListNew, {
+				return outputJSON(join(__plugin_dev_raw_dir, lang + '.list.json'), cacheListNew, {
 					spaces: 2,
 				})
 			})
