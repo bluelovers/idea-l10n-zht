@@ -23,7 +23,6 @@ export default FastGlob<string>([
 		const cwd = join(__plugin_downloaded_dir_unzip, lang);
 		const cacheList: string[] = await readJSON(join(__plugin_downloaded_dir_unzip, lang + '.list.json'));
 
-		const zip = new JSZip();
 		const jar = new JSZip();
 
 		const bar = multibar.create(cacheList.length, 0);
@@ -66,22 +65,13 @@ export default FastGlob<string>([
 					mimeType: 'application/java-archive',
 				});
 
-				zip.file('lib/zh.jar', buf);
-
 				return Promise.all([
-					zip.generateAsync({
-						type: "nodebuffer",
-						mimeType: 'application/java-archive',
-					}),
+					buf,
 					outputJSON(join(__plugin_dev_output_dir, lang + '.list.json'), ls, {
 						spaces: 2,
 					}),
 					outputFile(join(__plugin_dev_output_dir, lang + '.jar'), buf)
-				]).then(ls => ls[0] as Buffer);
-			})
-			.tap((buf) =>
-			{
-				return outputFile(join(__plugin_dev_output_dir, lang + '.zip'), buf)
+				] as const).then(ls => ls[0] as Buffer);
 			})
 			.finally(() =>
 			{
