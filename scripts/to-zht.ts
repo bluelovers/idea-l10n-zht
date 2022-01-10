@@ -12,6 +12,7 @@ import { processText } from 'novel-segment-cli';
 import { chkcrlf, CR, CRLF, LF } from 'crlf-normalize';
 import { SingleBar } from 'cli-progress';
 import { gray, red } from 'ansi-colors';
+import { updateMeta } from '../lib/meta';
 
 const multibar = createMultiBar();
 
@@ -63,11 +64,7 @@ export default FastGlob<string>([
 
 						if (/META-INF\/plugin\.xml$/i.test(file))
 						{
-							content_new = content_new
-								.replace(/<name>.+<\/name>/, `<name>Chinese (Traditional) Language Pack / 繁體中文語言包</name>`)
-								.replace(/<vendor>.+<\/vendor>/, `<vendor>bluelovers</vendor>`)
-								.replace(/<description>.+<\/description>/, `<description><![CDATA[The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine, and WebStorm into Chinese.<br><br>中文語言包將為您的 IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine, 和WebStorm 帶來中文化的界面。]]></description>`)
-							;
+							content_new = updateMeta(content_new);
 						}
 
 						if (content_new !== content_old)

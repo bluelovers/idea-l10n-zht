@@ -8,7 +8,7 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 ## install
 
-- install from (github)[https://github.com/bluelovers/idea-l10n-zht/raw/master/plugin-dev-out/zh.jar]
-- install from jetbrains
+- install from [github](https://github.com/bluelovers/idea-l10n-zht/raw/master/plugin-dev-out/zh.jar)
+- install from [jetbrains](https://plugins.jetbrains.com/plugin/18365-chinese-traditional-language-pack-----)
 
 > 注意：請先移除或禁用官方簡體中文語言包

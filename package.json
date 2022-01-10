@@ -10,6 +10,7 @@
   "main": "index.js",
   "scripts": {
     "plugin:handle-source": "ts-node scripts/plugin-handle-source.ts",
+    "prebuild": "ts-node scripts/update-meta.ts",
     "build": "ts-node scripts/puglin-build-install-file.ts",
     "review": "yarn run review:coverage",
     "review:coverage": "yarn run lint && yarn run coverage",
