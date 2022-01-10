@@ -9,6 +9,7 @@
   "author": "bluelovers",
   "main": "index.js",
   "scripts": {
+    "plugin:build": "yarn run plugin:handle-source && yarn run build",
     "plugin:handle-source": "ts-node scripts/plugin-handle-source.ts",
     "prebuild": "ts-node scripts/update-meta.ts",
     "build": "ts-node scripts/puglin-build-install-file.ts",
@@ -18,7 +19,7 @@
     "coverage": "yarn run test -- --coverage",
     "lint": "yarn run lint:eslint",
     "lint:eslint": "ynpx eslint --ext .ts,.tsx,.mts,.cts ./",
-    "test": "echo \"Error: no test specified\"",
+    "test": "jest --passWithNoTests",
     "test:jest": "jest --passWithNoTests",
     "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "test:tsdx": "ynpx @bluelovers/tsdx test --passWithNoTests",
@@ -67,6 +68,7 @@
     "debug-color2": "^1.2.7",
     "fs-extra": "^10.0.0",
     "jszip": "^3.7.1",
+    "novel-segment": "^2.7.82",
     "novel-segment-cli": "^1.1.100",
     "progress-estimator": "^0.3.0",
     "tslib": "^2.3.1",
@@ -77,6 +79,7 @@
     "@types/bluebird": "^3.5.36",
     "@types/cli-progress": "^3.9.2",
     "@types/fs-extra": "^9.0.13",
+    "@types/jest": "^27.4.0",
     "@types/node": "*",
     "@types/node-fetch": "^2.5.12"
   },

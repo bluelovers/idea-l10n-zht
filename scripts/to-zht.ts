@@ -13,6 +13,7 @@ import { chkcrlf, CR, CRLF, LF } from 'crlf-normalize';
 import { SingleBar } from 'cli-progress';
 import { gray, red } from 'ansi-colors';
 import { updateMeta } from '../lib/meta';
+import { processIdeaSegmentText } from '../lib/segment';
 
 const multibar = createMultiBar();
 
@@ -43,7 +44,7 @@ export default FastGlob<string>([
 			{
 				bar.setTotal(ls.length);
 			})
-			.each(async (file: string, index) =>
+			.mapSeries(async (file: string, index) =>
 			{
 				bar.update(index, { filename: file });
 				const fullpath = join(cwd, file);
@@ -55,12 +56,7 @@ export default FastGlob<string>([
 					{
 						const content_old = await readFile(fullpath).then(content => content.toString());
 
-						let _lb = chkcrlf(content_old);
-
-						let content_new = await processText(content_old, {
-							convertToZhTw: true,
-							crlf: _lb.crlf ? CRLF : (_lb.lf || !_lb.cr) ? LF : CR,
-						});
+						let content_new = await processIdeaSegmentText(content_old);
 
 						if (/META-INF\/plugin\.xml$/i.test(file))
 						{
