@@ -1,6 +1,6 @@
 # README.md
 
-    Chinese (Traditional) Language Pack / 繁體中文語言包
+    Jetbrains IntelliJ Chinese (Traditional) Language Pack / 繁體中文語言包
 
 The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine, and WebStorm into Chinese.
 
