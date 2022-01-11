@@ -7,7 +7,7 @@
     指定 <code>@In(create=true)</code> 時，上下文變量必須屬於已聲明的 Seam 組件。
     否則，Seam 將不知道要實例化哪個類。
     換句話說，對於 <code>create=true</code>，您不能注入不是 Seam 組件的值。
-    Seam 始終使用組件聲明中定義的範圍（組件類型的默認範圍或 <code>@Scope</code> 或 <code>@Role</code> 中定義的範圍）。
+    Seam 始終使用組件聲明中定義的範圍（組件類型的預設範圍或 <code>@Scope</code> 或 <code>@Role</code> 中定義的範圍）。
   </li>
   <li>
     當您使用 <code>@Out</code> 彈出已聲明的 Seam 組件的值時，範圍始終從該組件中獲取。

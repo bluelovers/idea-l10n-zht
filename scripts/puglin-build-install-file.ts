@@ -6,7 +6,7 @@ import { join } from 'upath2';
 import JSZip from "jszip";
 import Bluebird from 'bluebird';
 import { createMultiBar } from '../lib/cli-progress';
-import { gray, cyan } from 'ansi-colors';
+import { cyan, gray } from 'ansi-colors';
 
 const multibar = createMultiBar();
 
@@ -61,7 +61,7 @@ export default FastGlob<string>([
 				bar.update(bar.getTotal() - 1, { filename: cyan(lang + '.jar') });
 
 				const buf = await jar.generateAsync({
-					type: "nodebuffer" ,
+					type: "nodebuffer",
 					mimeType: 'application/java-archive',
 				});
 
@@ -70,7 +70,7 @@ export default FastGlob<string>([
 					outputJSON(join(__plugin_dev_output_dir, lang + '.list.json'), ls, {
 						spaces: 2,
 					}),
-					outputFile(join(__plugin_dev_output_dir, lang + '.jar'), buf)
+					outputFile(join(__plugin_dev_output_dir, lang + '.jar'), buf),
 				] as const).then(ls => ls[0] as Buffer);
 			})
 			.finally(() =>

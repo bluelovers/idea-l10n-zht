@@ -1,13 +1,13 @@
 <html>
 <body>
 報告可以移除的空方法。
-<p>如果方法本身是空的並且僅被空方法重寫或實現，則方法被視為空。 請注意，僅包含注釋的方法和帶有自己形參的 <code>super()</code> 調用也被視為空。</p>
-<p>該檢查會忽略帶有特殊注解的方法，例如 <code>javax.ejb.Init</code> 和 <code>javax.ejb.Remove</code> EJB 注釋。</p>
+<p>如果方法本身是空的並且僅被空方法重寫或實現，則方法被視為空。 請注意，僅包含註釋的方法和帶有自己形參的 <code>super()</code> 調用也被視為空。</p>
+<p>該檢查會忽略帶有特殊注解的方法，例如 <code>javax.ejb.Init</code> 和 <code>javax.ejb.Remove</code> EJB 註釋。</p>
 <p>該快速修復會安全地移除不必要的方法。</p>
 <!-- tooltip end -->
 <p>配置檢查：</p>
 <ul>
-  <li>使用<b>注釋和 javadoc 計為內容</b>選項可選擇是否應將帶有注釋的方法視為非空方法。</li>
+  <li>使用<b>註釋和 javadoc 計為內容</b>選項可選擇是否應將帶有註釋的方法視為非空方法。</li>
   <li>使用<b>額外的特別注解</b>選項可配置此檢查應忽略的其他注解。</li>
 </ul>
 </body>

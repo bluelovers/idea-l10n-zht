@@ -9,7 +9,7 @@
   "author": "bluelovers",
   "main": "index.js",
   "scripts": {
-    "plugin:build": "yarn run plugin:handle-source && yarn run build",
+    "plugin:build": "yarn run test && yarn run plugin:handle-source && yarn run build",
     "plugin:handle-source": "ts-node scripts/plugin-handle-source.ts",
     "prebuild": "ts-node scripts/update-meta.ts",
     "build": "ts-node scripts/puglin-build-install-file.ts",
@@ -60,8 +60,10 @@
     "@lazy-cjk/zh-convert": "^1.0.42",
     "@yarn-tool/find-root": "^1.0.60",
     "ansi-colors": "^4.1.1",
+    "array-hyper-unique": "^2.0.6",
     "bluebird": "^3.7.2",
     "cache-path": "^2.0.29",
+    "cjk-conv": "^1.2.137",
     "cli-progress": "^3.10.0",
     "crlf-normalize": "^1.0.6",
     "cross-fetch": "^3.1.4",
@@ -81,7 +83,7 @@
     "@types/fs-extra": "^9.0.13",
     "@types/jest": "^27.4.0",
     "@types/node": "*",
-    "@types/node-fetch": "^2.5.12"
+    "@types/node-fetch": "^3.0.2"
   },
   "peerDependencies": {},
   "packageManager": "yarn@^1.22.11"

@@ -2,33 +2,52 @@ import { getSegment, processText } from "novel-segment-cli";
 import { chkcrlf, CR, CRLF, LF } from 'crlf-normalize';
 import { EnumDictDatabase } from "novel-segment/lib/const";
 import Bluebird from 'bluebird';
+import Segment from "novel-segment/lib";
 
-let inited: boolean;
+let inited: Segment;
 
 export function initIdeaSegmentText()
 {
 	return Bluebird.resolve()
-		.then(() =>
+		.then(async () =>
 		{
-			return !inited && getSegment().then(segment =>
+			if (!inited)
 			{
+				inited = await getSegment({
+					//disableCache: true,
+				}).then(segment =>
+				{
+					let db_dict = segment.getDictDatabase(EnumDictDatabase.TABLE);
+					let db_synonym = segment.getDictDatabase(EnumDictDatabase.SYNONYM);
 
-				let db_dict = segment.getDictDatabase(EnumDictDatabase.TABLE);
-				let db_synonym = segment.getDictDatabase(EnumDictDatabase.SYNONYM);
+					const autoCjk = db_dict.options.autoCjk;
+					db_dict.options.autoCjk = true;
 
-				db_dict
-					.add(['選項卡', 0x100000, 0])
-				;
+					db_dict
+						.add(['選項卡', 0x100000, 0])
+						.add(['標籤頁', 0x100000, 0])
+						.add(['標簽頁', 0x100000, 0])
+					;
 
-				db_synonym
-					.add(['頁籤', '選項卡'])
-					.add(['視窗', '窗口'])
-					.add(['默認', '預設'])
-					.add(['列印', '打印'])
-				;
+					db_dict.options.autoCjk = autoCjk;
 
-				inited = true;
-			})
+					db_synonym
+						.add(['頁籤', '選項卡', '標籤頁', '標簽頁', '选项卡', '标签页', '标签页'])
+						.add(['視窗', '窗口', '窗口'])
+						.add(['預設', '默認', '默认'])
+						.add(['列印', '打印', '打印'])
+						.add(['貼上', '粘貼', '粘贴'])
+						.add(['剪貼簿', '剪貼板', '剪贴板'])
+						.add(['剪下', '剪切', '剪切'])
+						.add(['註釋', '注釋', '注释'])
+						.add(['唯讀', '只讀', '只读'])
+						.add(['選單', '菜單', '菜单'])
+					;
+
+					return inited = segment;
+				})
+			}
+			return inited
 		})
 }
 
@@ -39,8 +58,5 @@ export function processIdeaSegmentText(text: string)
 	return initIdeaSegmentText().then(() => processText(text, {
 		convertToZhTw: true,
 		crlf: _lb.crlf ? CRLF : (_lb.lf || !_lb.cr) ? LF : CR,
-	})).then(text => {
-		return text
-			//.replace(/打印/, '列印')
-	})
+	}))
 }

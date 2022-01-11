@@ -16,13 +16,13 @@
 
 <html>
 <body>
-報告不以導出元素名稱開頭的注釋。
+報告不以導出元素名稱開頭的註釋。
 <p>根據 <a href="https://golang.org/wiki/CodeReviewComments#comment-sentences">golang.org 上的 Comment Sentences</a> 頁面，將導出元素的名稱放在評論的開頭是一個慣例。</p>
 <p>示例：</p>
 <pre><code>// 表示運行命令的請求。
 type Request struct {}</code></pre>
 
-<p>注釋以結構描述開頭，而不是結構名稱。 為了遵守慣例規則，您可以應用 <b>向注釋中添加前綴</b> 快速修復。 應用快速修復後，注釋如下所示：</p>
+<p>註釋以結構描述開頭，而不是結構名稱。 為了遵守慣例規則，您可以應用 <b>向註釋中添加前綴</b> 快速修復。 應用快速修復後，註釋如下所示：</p>
 <pre>
 // Request 表示運行命令的請求。
 type Request struct {} // 更好

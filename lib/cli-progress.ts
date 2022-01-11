@@ -28,7 +28,7 @@ export function createMultiBar()
 
 		format: `${green('{bar}')} ${yellow('{percentage}%')} | ${gray('{duration_formatted}')} | {filename}`,
 
-		barsize: 20,
+		barsize: 10,
 
 	}, Presets.shades_classic);
 }

@@ -8,12 +8,11 @@ import { outputFile, outputJSON, pathExists, readFile, readJSON, unlink } from '
 import { join } from 'upath2';
 import { console } from 'debug-color2';
 import { createMultiBar } from '../lib/cli-progress';
-import { processText } from 'novel-segment-cli';
-import { chkcrlf, CR, CRLF, LF } from 'crlf-normalize';
 import { SingleBar } from 'cli-progress';
 import { gray, red } from 'ansi-colors';
 import { updateMeta } from '../lib/meta';
 import { processIdeaSegmentText } from '../lib/segment';
+import { array_unique_overwrite } from 'array-hyper-unique';
 
 const multibar = createMultiBar();
 
@@ -40,6 +39,13 @@ export default FastGlob<string>([
 		], {
 			cwd,
 		})
+			.then(ls =>
+			{
+				return array_unique_overwrite([
+					...cacheList,
+					...ls,
+				])
+			})
 			.tap((ls) =>
 			{
 				bar.setTotal(ls.length);

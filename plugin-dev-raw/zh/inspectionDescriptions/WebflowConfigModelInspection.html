@@ -15,7 +15,7 @@
   &lt;beans ...
     xmlns:webflow="http://www.springframework.org/schema/webflow-config ..."&gt;
     
-    &lt;webflow:flow-executor id="flowExecutorWithoutFlowRegistryRef"/&gt; &lt;!-- 找不到默認 ID 為 'flowRegistry' 的 &lt;flow-registry&gt; --&gt;
+    &lt;webflow:flow-executor id="flowExecutorWithoutFlowRegistryRef"/&gt; &lt;!-- 找不到預設 ID 為 'flowRegistry' 的 &lt;flow-registry&gt; --&gt;
     &lt;webflow:flow-executor
       id=""  &lt;!--Value must not be empty--&gt;
       flow-registry="INVALID_VALUE"  &lt;!-- 無法解析 Bean INVALID_VALUE --&gt;
