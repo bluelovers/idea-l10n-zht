@@ -17,7 +17,7 @@ function unzipLang(lang: string | 'zh')
 {
 	console.cyan.log(`unzip ${lang}.zip`);
 
-	let bar: SingleBar;
+	let bar: SingleBar = multibar.create(200, 0);
 
 	return Bluebird.resolve(readFile(join(__plugin_downloaded_dir, `${lang}.zip`)))
 		.then<JSZip>(JSZip.loadAsync)
@@ -38,7 +38,7 @@ function unzipLang(lang: string | 'zh')
 		})
 		.tap((ls) =>
 		{
-			bar = multibar.create(ls.length, 0);
+			bar.setTotal(ls.length);
 		})
 		.reduce(async (ls, file, index) =>
 		{
@@ -58,8 +58,8 @@ function unzipLang(lang: string | 'zh')
 		})
 		.finally(() =>
 		{
-			bar?.update(bar.getTotal());
-			bar?.stop();
+			bar.update(bar.getTotal());
+			bar.stop();
 		})
 		//.tap(console.dir)
 		;
