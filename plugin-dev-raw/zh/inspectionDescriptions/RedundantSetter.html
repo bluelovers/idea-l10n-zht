@@ -6,7 +6,7 @@
 </p>
 <ol>
     <li>
-        setter 沒有主體。 訪問器可見性未更改，聲明不是 <code>external</code> 並且沒有注解。
+        setter 沒有主體。 訪問器可見性未更改，聲明不是 <code>external</code> 並且沒有註解。
         <pre><code>
   var myPropWithRedundantSetter: Int = 0
       set // redundant
@@ -18,7 +18,7 @@
       external set // 可以 - 未在 Kotlin 中實現（外部）
 
   var myPropC: Int = 0
-      @Inject set // 可以 - 訪問器被注解
+      @Inject set // 可以 - 訪問器被註解
         </code></pre>
     </li>
     <li>

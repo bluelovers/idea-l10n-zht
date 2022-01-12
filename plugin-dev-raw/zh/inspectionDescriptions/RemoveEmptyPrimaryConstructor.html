@@ -2,7 +2,7 @@
 <body>
 當主構造函數隱式可用時，報告其中為空的主構造函數。
 <p>
-    主構造函數冗餘，當其沒有任何注解或可見性修飾符時可以安全地省略。
+    主構造函數冗餘，當其沒有任何註解或可見性修飾符時可以安全地省略。
     使用“移除空主構造函數”快速修復可清理代碼。
 </p>
 <p><b>示例：</b></p>
@@ -10,7 +10,7 @@
   class MyClassA function Object() { [native code] }() //  冗餘，可以替換為 'class MyClassA'
 
   annotation class MyAnnotation
-  class MyClassB @MyAnnotation function Object() { [native code] }() //  由於注解而必選
+  class MyClassB @MyAnnotation function Object() { [native code] }() //  由於註解而必選
 
   class MyClassC private function Object() { [native code] }() // 由於可見性修飾符而必選
 </code></pre>

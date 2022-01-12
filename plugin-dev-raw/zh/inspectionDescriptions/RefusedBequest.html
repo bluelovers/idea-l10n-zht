@@ -20,7 +20,7 @@
   }
 
   class A implements I {
-    // 禁用“忽略 'default' super 方法”和“忽略注解”選項時對方法發出警告
+    // 禁用“忽略 'default' super 方法”和“忽略註解”選項時對方法發出警告
     @Override
     public void foo(){}
   }
@@ -30,7 +30,7 @@
 <p>配置檢查：</p>
 <ul>
   <li>
-    使用<b>僅在通過以下方式注解 super 方法時報告</b>選項，可忽略使用所提供列表中的注解標記的 <code>super</code> 方法。 您可以手動將注解添加到此列表中。
+    使用<b>僅在通過以下方式註解 super 方法時報告</b>選項，可忽略使用所提供列表中的註解標記的 <code>super</code> 方法。 您可以手動將註解添加到此列表中。
   </li>
   <li>
     使用<b>忽略空 super 方法</b>選項，可忽略僅拋出異常或空的 <code>super</code> 方法。

@@ -1,6 +1,6 @@
 <html>
 <body>
-報告錯誤的“緩存”注解：<code>@Cacheable</code>、<code>@CacheEvict</code>、<code>@CachePut</code>、<code>@CacheConfig</code> 等。
+報告錯誤的“緩存”註解：<code>@Cacheable</code>、<code>@CacheEvict</code>、<code>@CachePut</code>、<code>@CacheConfig</code> 等。
 
 <p><b>示例：</b></p>
 <pre><code>
@@ -13,7 +13,7 @@ public class MyConfiguration {
    public String getCache(String isbn) { ...}
 
    @Cacheable(value = "abc",
-   private String getAbc() // 報告 "應在 public 方法上定義緩存注解"
+   private String getAbc() // 報告 "應在 public 方法上定義緩存註解"
    {...}
 }
 </code></pre>

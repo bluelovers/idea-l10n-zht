@@ -11,7 +11,7 @@
 
   @Component
   class LogComponent {
-    @EventListener // 使用 @EventListener 注解的方法必須為 public
+    @EventListener // 使用 @EventListener 註解的方法必須為 public
     private fun logCommands(commandName: MyEvent) {}
 
     @EventListener // 方法必須最多只有一個形參

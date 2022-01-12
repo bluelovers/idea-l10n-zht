@@ -5,14 +5,14 @@
 <ul>
   <li>類不是頂級類</li>
   <li>類為 final</li>
-  <li>類被多次注解</li>
+  <li>類被多次註解</li>
   <li>類被定義為持久實體和實體偵聽器</li>
 </ul>
 
 <p><b>示例：</b></p><br/>
 <pre><code>
   @Entity
-  @EntityListeners(value = JavaEntity.class) // 錯誤：@Entity 和 @EntityListener 注解都指向同一個類
+  @EntityListeners(value = JavaEntity.class) // 錯誤：@Entity 和 @EntityListener 註解都指向同一個類
   public final class JavaEntity { // 錯誤：持久實體不應為 final
     ...
   }

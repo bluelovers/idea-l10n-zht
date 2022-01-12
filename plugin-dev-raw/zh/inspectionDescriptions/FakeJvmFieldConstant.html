@@ -1,13 +1,13 @@
 <html>
 <body>
-報告不是 <code>const</code> 並用作 Java 注解實參的 Kotlin 屬性。
+報告不是 <code>const</code> 並用作 Java 註解實參的 Kotlin 屬性。
 <p>
-例如，具有 <code>@JvmField</code> 注解的屬性有一個可以在編譯時評估的初始值設定項，它有一個基元類型或 <code>String</code> 類型。
+例如，具有 <code>@JvmField</code> 註解的屬性有一個可以在編譯時評估的初始值設定項，它有一個基元類型或 <code>String</code> 類型。
 </p>
 
 <p>
 此類屬性在 Kotlin 1.1-1.2 中的字節碼中具有 <code>ConstantValue</code> 特性。
-此特性允許 javac 折疊相應字段的用法並在注解中使用該字段。
+此特性允許 javac 折疊相應字段的用法並在註解中使用該字段。
 在混合 Java/Kotlin 代碼中單獨或增量編譯的情況下，這可能導致錯誤行為。
 此行為在 Kotlin 1.3 中可能發生變化（不再有 <code>ConstantValue</code> 特性）。
 </p>
@@ -25,6 +25,6 @@
       public void foo() {}
   }
 </code></pre>
-<p>要修正此問題，請將 <code>@JvmField</code> 注解替換為相關 Kotlin 屬性上的 <code>const</code> 修飾符或將其內聯。</p>
+<p>要修正此問題，請將 <code>@JvmField</code> 註解替換為相關 Kotlin 屬性上的 <code>const</code> 修飾符或將其內聯。</p>
 </body>
 </html>

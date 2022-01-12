@@ -1,6 +1,6 @@
 <html>
 <body>
-報告保護符是 <code>static</code> 字段的實例字段或方法上的 <code>@GuardedBy</code> 注解。 用 static 來保護非 static 可能會導致過度的鎖爭用，因為訪問任何對象實例中的每個鎖定字段均將阻止同時訪問每個對象實例中的字段。
+報告保護符是 <code>static</code> 字段的實例字段或方法上的 <code>@GuardedBy</code> 註解。 用 static 來保護非 static 可能會導致過度的鎖爭用，因為訪問任何對象實例中的每個鎖定字段均將阻止同時訪問每個對象實例中的字段。
 <p>示例：</p>
 <pre><code>
     private static ReadWriteLock lock = new ReentrantReadWriteLock(); //static 保護字段
@@ -12,7 +12,7 @@
     }
 </code></pre>
 <!-- tooltip end -->
-<p>支持的 <code>@GuardedBy</code> 注解是：</p>
+<p>支持的 <code>@GuardedBy</code> 註解是：</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>
   <li><code>javax.annotation.concurrent.GuardedBy</code></li>

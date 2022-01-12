@@ -8,7 +8,7 @@
   val File.name: String
       get() = getName()
 </code></pre>
-<p>該快速修復會添加 <code>@Deprecated</code> 注解：</p>
+<p>該快速修復會添加 <code>@Deprecated</code> 註解：</p>
 <pre><code>
   @Deprecated("Is replaced with automatic synthetic extension", ReplaceWith("name"), level = DeprecationLevel.HIDDEN)
   val File.name: String

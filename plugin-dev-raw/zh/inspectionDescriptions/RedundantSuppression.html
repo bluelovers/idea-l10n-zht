@@ -2,7 +2,7 @@
 <body>
 報告由於它們所影響的檢查在此上下文中不再適用而可以安全移除的下列元素：
 <ul>
-  <li><code>@SuppressWarning</code> 注解或</li>
+  <li><code>@SuppressWarning</code> 註解或</li>
   <li><code>// noinspection</code> 行註釋，或</li>
   <li><code>/** noinspection */</code> JavaDoc 註釋</li>
 </ul>
@@ -10,7 +10,7 @@
 <pre><code>
 <b><font color="#000080">public class</font></b> C {
  // 符號已經為 private，
- // 但周圍仍有注解
+ // 但周圍仍有註解
   @SuppressWarnings({"WeakerAccess"})
  <b><font color="#000080">private boolean</font></b> CONST = <b><font color="#000080">true</font></b>;
  <b><font color="#000080">void</font></b> f() {

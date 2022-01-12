@@ -6,10 +6,10 @@
 <pre><code>
 class MyEndpoints {
   @InboundChannelAdapter("channel")
-  public void <strong>cannotBeVoid</strong>() {...} // 使用 @InboundChannelAdapter 注解的方法必須具有返回類型
+  public void <strong>cannotBeVoid</strong>() {...} // 使用 @InboundChannelAdapter 註解的方法必須具有返回類型
 
   @InboundChannelAdapter("channel")
-  public String <strong>cannotHaveParams</strong>(String s) {..} // 使用 @InboundChannelAdapter 注解的方法不能有實參
+  public String <strong>cannotHaveParams</strong>(String s) {..} // 使用 @InboundChannelAdapter 註解的方法不能有實參
 
   @<strong>Filter</strong>(inputChannel = "channel", // 端點只能具有一個輪詢器
     outputChannel = "channel2",

@@ -1,9 +1,9 @@
 <html>
 <body>
-報告與可 null 性注解相關的問題。
+報告與可 null 性註解相關的問題。
 <p><b>示例：</b></p>
 <ul>
-  <li>重寫方法未注解：
+  <li>重寫方法未註解：
     <pre><code>
 abstract class A {
   @NotNull abstract String m();
@@ -13,7 +13,7 @@ class B extends A {
 }
     </code></pre>
   </li>
-  <li>注解的基元類型：<code>@NotNull int myFoo;</code> </li>
+  <li>註解的基元類型：<code>@NotNull int myFoo;</code> </li>
   <li><code>@Nullable</code> 和 <code>@NotNull</code> 位於同一成員上：<code>@Nullable @NotNull String myFooString;</code></li>
   <li>可 null 元素的集合被分配到非 null 元素的集合中：
     <pre><code>
@@ -24,7 +24,7 @@ void testList(List&lt;@Nullable String> nullableList) {
   </li>
 </ul>
 <!-- tooltip end -->
-<p>使用<b>配置注解</b>按鈕可指定可 null 性注解，使用復選框可細調該檢查提供警告的位置。</p>
-<p>僅當項目或模塊的語言級別為 5 或更高，並且類路徑上提供可 null 性注解時，此檢查才會報告。</p>
+<p>使用<b>配置註解</b>按鈕可指定可 null 性註解，使用復選框可細調該檢查提供警告的位置。</p>
+<p>僅當項目或模塊的語言級別為 5 或更高，並且類路徑上提供可 null 性註解時，此檢查才會報告。</p>
 </body>
 </html>

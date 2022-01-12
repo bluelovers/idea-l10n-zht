@@ -1,6 +1,6 @@
 <html>
 <body>
-報告其中的保護字段不是 <code>final</code> 的 <code>@GuardedBy</code> 注解。
+報告其中的保護字段不是 <code>final</code> 的 <code>@GuardedBy</code> 註解。
 <p>在非 final 字段上進行保護可能會導致意外的競爭條件，因為該字段的值會被鎖定（可能會變化），而不是鎖定字段本身。</p>
 <p>示例：</p>
 <pre><code>
@@ -13,7 +13,7 @@
     }
 </code></pre>
 <!-- tooltip end -->
-<p>支持的 <code>@GuardedBy</code> 注解是：</p>
+<p>支持的 <code>@GuardedBy</code> 註解是：</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>
   <li><code>javax.annotation.concurrent.GuardedBy</code></li>
