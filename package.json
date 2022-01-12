@@ -20,7 +20,7 @@
     "coverage": "yarn run test -- --coverage",
     "lint": "yarn run lint:eslint",
     "lint:eslint": "ynpx eslint --ext .ts,.tsx,.mts,.cts ./",
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests -u",
     "test:jest": "jest --passWithNoTests",
     "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "test:tsdx": "ynpx @bluelovers/tsdx test --passWithNoTests",
