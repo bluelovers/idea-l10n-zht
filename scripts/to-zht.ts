@@ -48,11 +48,11 @@ export default FastGlob<string>([
 			})
 			.tap((ls) =>
 			{
-				bar.setTotal(ls.length);
+				bar?.setTotal(ls.length);
 			})
 			.mapSeries(async (file: string, index) =>
 			{
-				bar.update(index, { filename: file });
+				bar?.update(index, { filename: file });
 				const fullpath = join(cwd, file);
 				const fullpath_new = join(__plugin_dev_raw_dir, lang, file);
 
@@ -80,7 +80,7 @@ export default FastGlob<string>([
 				}
 				else
 				{
-					bar.update(index, { filename: red(file) });
+					bar?.update(index, { filename: red(file) });
 
 					if (await pathExists(fullpath))
 					{
@@ -90,7 +90,7 @@ export default FastGlob<string>([
 
 				if (await pathExists(fullpath_new))
 				{
-					bar.update(index, { filename: gray(file) });
+					bar?.update(index, { filename: gray(file) });
 
 					await unlink(fullpath_new);
 				}
@@ -104,12 +104,12 @@ export default FastGlob<string>([
 			})
 			.finally(() =>
 			{
-				bar.update(bar.getTotal());
-				bar.stop();
+				bar?.update(bar.getTotal());
+				bar?.stop();
 			})
 	})
 	.then(() =>
 	{
-		multibar.stop();
+		multibar?.stop();
 	})
 ;

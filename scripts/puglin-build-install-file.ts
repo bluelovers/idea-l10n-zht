@@ -30,7 +30,7 @@ export default FastGlob<string>([
 		return Bluebird.reduce(cacheList, async (ls, file, index) =>
 			{
 
-				bar.update(index, { filename: file });
+				bar?.update(index, { filename: file });
 
 				const fullpath = join(cwd, file);
 				const fullpath_new = join(__plugin_dev_raw_dir, lang, file);
@@ -38,7 +38,7 @@ export default FastGlob<string>([
 
 				if (/^(search|postfixTemplates|intentionDescriptions)\//.test(file))
 				{
-					bar.update(index, { filename: gray(file) });
+					bar?.update(index, { filename: gray(file) });
 					return ls;
 				}
 				else if (await pathExists(fullpath_new))
@@ -58,7 +58,7 @@ export default FastGlob<string>([
 			}, [] as string[])
 			.then(async (ls) =>
 			{
-				bar.update(bar.getTotal() - 1, { filename: cyan(lang + '.jar') });
+				bar?.update(bar.getTotal() - 1, { filename: cyan(lang + '.jar') });
 
 				const buf = await jar.generateAsync({
 					type: "nodebuffer",
@@ -75,12 +75,12 @@ export default FastGlob<string>([
 			})
 			.finally(() =>
 			{
-				bar.update(bar.getTotal());
-				bar.stop();
+				bar?.update(bar.getTotal());
+				bar?.stop();
 			})
 	})
 	.then(() =>
 	{
-		multibar.stop();
+		multibar?.stop();
 	})
 ;

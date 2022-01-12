@@ -40,13 +40,13 @@ function unzipLang(lang: string | 'zh')
 		})
 		.tap((ls) =>
 		{
-			bar.setTotal(ls.length);
+			bar?.setTotal(ls.length);
 		})
 		.reduce(async (ls, file, index) =>
 		{
 			if (!file.dir)
 			{
-				bar.update(index + 1, { filename: file.name });
+				bar?.update(index + 1, { filename: file.name });
 				ls.push(file.name);
 				await outputFile(join(__plugin_downloaded_dir_unzip, lang, file.name), await file.async('nodebuffer'))
 			}
@@ -60,8 +60,8 @@ function unzipLang(lang: string | 'zh')
 		})
 		.then(() =>
 		{
-			bar.update(bar.getTotal());
-			bar.stop();
+			bar?.update(bar.getTotal());
+			bar?.stop();
 		})
 		//.tap(console.dir)
 		;
