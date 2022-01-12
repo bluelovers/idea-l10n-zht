@@ -9,6 +9,7 @@
   "author": "bluelovers",
   "main": "index.js",
   "scripts": {
+    "ci:build": "yarn run plugin:build && git commit -m \"build(release): update build\" ./plugin-dev-out ./plugin-dev-raw",
     "plugin:build": "yarn run test && yarn run plugin:handle-source && yarn run build",
     "plugin:handle-source": "ts-node scripts/plugin-handle-source.ts",
     "prebuild": "ts-node scripts/update-meta.ts",
@@ -83,7 +84,7 @@
     "@types/fs-extra": "^9.0.13",
     "@types/jest": "^27.4.0",
     "@types/node": "*",
-    "@types/node-fetch": "^3.0.2"
+    "@types/node-fetch": "<3 >=2.5.12"
   },
   "peerDependencies": {},
   "packageManager": "yarn@^1.22.11"

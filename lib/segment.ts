@@ -42,6 +42,8 @@ export function initIdeaSegmentText()
 						.add(['註釋', '注釋', '注释'])
 						.add(['唯讀', '只讀', '只读'])
 						.add(['選單', '菜單', '菜单'])
+						.add(['日誌', '日志'])
+						.add(['註解', '注解', '注解'])
 					;
 
 					return inited = segment;
