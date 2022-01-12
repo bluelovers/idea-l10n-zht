@@ -79,7 +79,7 @@ export default FastGlob<string>([
 				bar.stop();
 			})
 	})
-	.finally(() =>
+	.then(() =>
 	{
 		multibar.stop();
 	})

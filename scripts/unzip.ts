@@ -56,7 +56,7 @@ function unzipLang(lang: string | 'zh')
 				spaces: 2,
 			})
 		})
-		.finally(() =>
+		.then(() =>
 		{
 			bar.update(bar.getTotal());
 			bar.stop();
