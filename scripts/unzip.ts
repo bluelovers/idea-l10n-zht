@@ -10,14 +10,16 @@ import { createMultiBar } from '../lib/cli-progress';
 const multibar = createMultiBar();
 
 export default unzipLang('zh')
-	.finally(() => multibar.stop())
+	.then(() => multibar.stop())
 ;
 
 function unzipLang(lang: string | 'zh')
 {
 	console.cyan.log(`unzip ${lang}.zip`);
 
-	let bar: SingleBar = multibar.create(200, 0);
+	const bar: SingleBar = multibar.create(200, 0);
+
+	console.log(bar);
 
 	return Bluebird.resolve(readFile(join(__plugin_downloaded_dir, `${lang}.zip`)))
 		.then<JSZip>(JSZip.loadAsync)
