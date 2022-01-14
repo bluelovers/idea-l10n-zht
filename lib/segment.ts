@@ -79,8 +79,15 @@ export function processIdeaSegmentText(text: string)
 {
 	let _lb = chkcrlf(text);
 
-	return initIdeaSegmentText().then(() => processText(text, {
-		convertToZhTw: true,
-		crlf: _lb.crlf ? CRLF : (_lb.lf || !_lb.cr) ? LF : CR,
-	}))
+	return initIdeaSegmentText()
+		.then(() => processText(text, {
+			convertToZhTw: true,
+			crlf: _lb.crlf ? CRLF : (_lb.lf || !_lb.cr) ? LF : CR,
+		}))
+		.then(text =>
+		{
+			return text
+				.replace(/后/g, '後')
+				;
+		})
 }
