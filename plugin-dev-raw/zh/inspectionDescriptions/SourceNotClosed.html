@@ -2,7 +2,7 @@
 <body>
 <p>報告未關閉的 <code>scala.io.Source</code>。</p>
 
-<p>直接在由 <code>fromFile</code>、<code>fromURL</code> 或 <code>fromURI</code> 打開的 <code>Source</code> 上使用 <code>.mkString</code> 或 <code>.getLines</code> 之類的函數將泄漏底層文件句柄。</p>
+<p>直接在由 <code>fromFile</code>、<code>fromURL</code> 或 <code>fromURI</code> 打開的 <code>Source</code> 上使用 <code>.mkString</code> 或 <code>.getLines</code> 之類的函數將泄漏底層檔案句柄。</p>
 
 <p>考慮使用 <code>.close()</code> 和 <code>try</code>/<code>finally</code> 來管理資源的生命周期或使用 <a href="https://scala-lang.org/files/archive/api/2.13.0/scala/util/Using$.html">Scala 2.13 的 <code>Using</code></a>。</p>
 

@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>如果 <code>url()</code> 函數的 URL 路徑中包含形參，則報告模板文件中缺少的形參。</p>
+<p>如果 <code>url()</code> 函數的 URL 路徑中包含形參，則報告模板檔案中缺少的形參。</p>
 <p><b>示例：</b></p>
-<p>在 <code>url.py</code> 文件中</p>
+<p>在 <code>url.py</code> 檔案中</p>
 <pre style="font-family: monospace">
 url(r'^(?P&lt;question_id&gt;[0-9]+)/', views.detail, name='detail')
 </pre>
-<p>在模板文件中</p>
+<p>在模板檔案中</p>
 <pre style="font-family: monospace">
 {% url 'polls:detail' %}
 </pre>

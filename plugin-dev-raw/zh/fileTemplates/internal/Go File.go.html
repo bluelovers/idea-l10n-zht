@@ -2,13 +2,13 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td><font face="verdana" size="-1"><b>Go 文件</b> 是每次創建新 Go 文件時使用的內置模板。 要使用此模板，請轉到 <b> 文件 | 新建 </b>，在 Go 類別中選擇 <b> Go 文件 </b>，然後選擇 <b>空文件</b>。<br><br>
+    <td><font face="verdana" size="-1"><b>Go 檔案</b> 是每次創建新 Go 檔案時使用的內置模板。 要使用此模板，請轉到 <b> 檔案 | 新建 </b>，在 Go 類別中選擇 <b> Go 檔案 </b>，然後選擇 <b>空檔案</b>。<br><br>
 
        模板是可編輯的。 在模板中，可以使用下面列出的預定義變量。 這些變量稍後將
       在編輯器中擴展為相應的值。<br> <br>
 
        您也可以指定自定義變量。 自定義變量使用以下格式：<code>${VARIABLE_NAME}</code>，其中 <code>VARIABLE_NAME</code>是變量的名稱（例如，<code>${MY_CUSTOM_FUNCTION_NAME}</code>） 。
-      在 IDE 使用自定義變量創建新文件之前，您會看到一個對話框，您可以在其中定義模板中自定義變量的值。<br><br>
+      在 IDE 使用自定義變量創建新檔案之前，您會看到一個對話框，您可以在其中定義模板中自定義變量的值。<br><br>
 
        通過使用 <code>#parse</code> 指令，可以包括 <b>包含</b> 選項中的模板。 要包含模板，請在引號中將模板的全名指定為形參（例如，<code>#parse("File Header")</code>）。
     </font></td>
@@ -23,14 +23,14 @@
       <nobr><font face="verdana" size="-2"><strong>${GO_PACKAGE_NAME_WITH_TEST_SUFFIX}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">在其中創建新測試文件的軟件包名稱。 該文件必須具有 <code>_test</code> 後綴。 該名稱的格式如下：<code>package_test</code>。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在其中創建新測試檔案的軟件包名稱。 該檔案必須具有 <code>_test</code> 後綴。 該名稱的格式如下：<code>package_test</code>。</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${GO_PACKAGE_NAME}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">在其中創建新文件的軟件包名稱。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在其中創建新檔案的軟件包名稱。</font></td>
   </tr>
   <tr>
     <td valign="top">
@@ -65,7 +65,7 @@
       <nobr><font face="verdana" size="-2"><strong>${DIR_PATH}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"> 新文件的目錄路徑。 此路徑相對於項目根目錄的。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> 新檔案的目錄路徑。 此路徑相對於項目根目錄的。</font></td>
   </tr>
   <tr>
     <td valign="top">
@@ -130,7 +130,7 @@
       <nobr><font face="verdana" size="-2"><strong>${NAME}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"> 新實體的名稱：文件、類型、接口等。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> 新實體的名稱：檔案、類型、接口等。</font></td>
   </tr>
   <tr>
     <td valign="top">

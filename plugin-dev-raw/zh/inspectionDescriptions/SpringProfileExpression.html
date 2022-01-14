@@ -3,8 +3,8 @@
 <p>報告不正確的 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Profile.html">@Profile</a> 表達式：</p>
 
 <ul>
-  <li>Spring 配置文件不得為空</li>
-  <li>在 Spring 配置文件表達式中，'&' 和 '|' 運算符不得在沒有圓括號的情況下混用</li>
+  <li>Spring 配置檔案不得為空</li>
+  <li>在 Spring 配置檔案表達式中，'&' 和 '|' 運算符不得在沒有圓括號的情況下混用</li>
 </ul>
 
 <p><b>示例：</b></p>
@@ -16,12 +16,12 @@
 
   <!-- empty  -->
   @Configuration
-  @Profile() // 報告 "配置文件表達式必須包含文本"
+  @Profile() // 報告 "配置檔案表達式必須包含文本"
   public class MyConfiguration {...}
 
   <!-- mixed operators without  parentheses -->
   @Configuration
-  @Profile("a & b | c") // 報告 "格式不正確的配置文件表達式"
+  @Profile("a & b | c") // 報告 "格式不正確的配置檔案表達式"
   public class MyConfiguration {...}
 </code></pre>
 </body>

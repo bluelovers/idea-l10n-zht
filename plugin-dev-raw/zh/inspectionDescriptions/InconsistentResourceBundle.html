@@ -1,12 +1,12 @@
 <html>
 <body>
-報告資源包中包含的屬性文件中的問題。
+報告資源包中包含的屬性檔案中的問題。
 <ul>
   <li><b>報告缺失的翻譯</b>
   </li>
 </ul>
 選項會控制搜索未翻譯的屬性。 <br>
-它報告在父屬性文件中包含但在繼承中缺失的屬性（除非它是語言方言）。 <br>
+它報告在父屬性檔案中包含但在繼承中缺失的屬性（除非它是語言方言）。 <br>
 例如： 擁有此資源包： <br>
 
 <b>messages.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
@@ -20,12 +20,12 @@
   </li>
 </ul>
 選項會控制無效的資源包結構檢查。 <br>
-它報告在繼承屬性文件中包含但在父級（如果沒有父級，則在同級）中缺失的屬性。 <br>
+它報告在繼承屬性檔案中包含但在父級（如果沒有父級，則在同級）中缺失的屬性。 <br>
 例如： 擁有此資源包： <br>
 <b>messages.properties</b>：空 <br>
 <b>messages_fr.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
 
-此處的屬性 <font color="#000080"><b>abc</b></font> 翻譯不適用於法語以外的任何語言，因此，將在（預設）屬性文件 <b>messages.properties</b> 中報告為缺失。
+此處的屬性 <font color="#000080"><b>abc</b></font> 翻譯不適用於法語以外的任何語言，因此，將在（預設）屬性檔案 <b>messages.properties</b> 中報告為缺失。
 
 <ul>
   <li>
@@ -33,12 +33,12 @@
     <b>報告使用相同值重寫的屬性</b>
   </li>
 </ul>
-選項會檢查逐字複製貼上到多個屬性文件中的屬性。 <br>
+選項會檢查逐字複製貼上到多個屬性檔案中的屬性。 <br>
 例如： 在此資源包中： <br>
 <b>messages.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
 <b>messages_fr.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
 
-屬性 <font color="#000080"><b>abc</b></font> 將在文件 <b>messages_fr.properties</b> 中報告為不必要地繼承。
+屬性 <font color="#000080"><b>abc</b></font> 將在檔案 <b>messages_fr.properties</b> 中報告為不必要地繼承。
 <br>
 
 <ul>

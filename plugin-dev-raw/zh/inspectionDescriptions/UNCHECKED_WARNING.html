@@ -7,7 +7,7 @@
   List items = Arrays.asList("string", "string");
   List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // 未檢查的賦值
 </code></pre>
-<p>該快速修復會嘗試泛化該包含文件，此舉可能會揭示編輯器中以及編譯期間以前僅在運行時出現的問題：</p>
+<p>該快速修復會嘗試泛化該包含檔案，此舉可能會揭示編輯器中以及編譯期間以前僅在運行時出現的問題：</p>
 <pre><code>
   List&lt;String&gt; items = Arrays.asList("string", "string");
   List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // 不兼容的類型
