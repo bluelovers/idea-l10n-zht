@@ -1,11 +1,11 @@
 import { getSegment, processText } from "novel-segment-cli";
 import { chkcrlf, CR, CRLF, LF } from 'crlf-normalize';
-import { EnumDictDatabase } from "novel-segment/lib/const";
 import Bluebird from 'bluebird';
 import Segment from "novel-segment/lib";
 import { load as loadSynonym } from '@novel-segment/loaders/segment/synonym';
 import { load as loadTable } from '@novel-segment/loaders/segment/index';
 import { __dict_synonym_txt, __dict_table_txt } from './const';
+import { EnumDictDatabase } from "@novel-segment/types";
 
 let inited: Segment;
 
@@ -46,7 +46,7 @@ export function initIdeaSegmentText()
 					await loadSynonym(__dict_synonym_txt)
 						.each(data =>
 						{
-							return db_synonym.add(data as any);
+							return db_synonym.add(data as any, false, true);
 						})
 					;
 

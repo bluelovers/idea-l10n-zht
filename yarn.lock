@@ -230,24 +230,25 @@
     "@novel-segment/dict-loader-core" "^1.0.14"
     tslib "^2.3.1"
 
-"@novel-segment/loaders@^1.0.25":
-  version "1.0.25"
-  resolved "https://registry.npmjs.org/@novel-segment/loaders/-/loaders-1.0.25.tgz#9ab2f2ed7b576f29e5cf9e68f987bca0dd5a743b"
-  integrity sha512-dfgesesxtq50AsF3PSJmYZOWdH8EYeOxL4Nv+i/2u/cr0uZCXLHrRT5+hNuXaNNYT9YCKE+/9QL3hk39VzY3aQ==
+"@novel-segment/loaders@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.npmjs.org/@novel-segment/loaders/-/loaders-1.0.26.tgz#1d4e36d32293d84d99c2917b963619222e0e0be0"
+  integrity sha512-UGJRwhZToOZ5KaMPQjv5hH4CzUKGmqRLsgLGMrwyLv+bG06tJhNGR8FcafF3YztQoMN869H/k4nELWPA4og3vw==
   dependencies:
     "@novel-segment/dict-loader-core" "^1.0.14"
     "@novel-segment/loader-line" "^1.0.14"
     "@novel-segment/loader-stopword" "^1.0.14"
     "@novel-segment/stream-loader-core" "^1.0.17"
+    "@novel-segment/types" "^1.0.1"
     tslib "^2.3.1"
 
-"@novel-segment/postag@^1.0.13":
-  version "1.0.13"
-  resolved "https://registry.npmjs.org/@novel-segment/postag/-/postag-1.0.13.tgz#7e32a60eceaaa4e1cd317f0af605d8df4b59eb4f"
-  integrity sha512-URaMASSj2/eVI6OQ4EJ8BfSLAvEfXfz4xfQDyzo0va78cxf2cpSvUsjo0vCV3pmoMkCdigGdd+7eyw1Ut1DtpQ==
+"@novel-segment/postag@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.npmjs.org/@novel-segment/postag/-/postag-1.0.14.tgz#0f7c6de57ddb5a46b98b89190f0d5b343ec9e9d8"
+  integrity sha512-7X3GJcFSNhjoyIhTzjIFxP02sy4XlBaQ+vydQ/xGJt1lpBZrpxEFiAv6bHx2o9AGR0zlaFM2DNZP7hpu4SoqNw==
   dependencies:
     ts-enum-util "^4.0.2"
-    ts-type "^2.1.2"
+    ts-type "^2.1.4"
     tslib "^2.3.1"
 
 "@novel-segment/stream-loader-core@^1.0.17":
@@ -258,6 +259,13 @@
     bluebird "^3.7.2"
     split2 "^4.1.0"
     stream-pipe "^1.0.4"
+    tslib "^2.3.1"
+
+"@novel-segment/types@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@novel-segment/types/-/types-1.0.1.tgz#fce0bf687815109fade87726b2966f0dfc28695c"
+  integrity sha512-52dRquVPXCahdzraA8kR9e+wTar6Rqqvzt34WnKmm8+fvmQGuE8NZWFEzHtjUi27yLqu/m7RZnZf/YRfWfr/bA==
+  dependencies:
     tslib "^2.3.1"
 
 "@novel-segment/util@^1.0.56":
@@ -302,13 +310,13 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@ts-type/package-dts@^1.0.56":
-  version "1.0.56"
-  resolved "https://registry.npmjs.org/@ts-type/package-dts/-/package-dts-1.0.56.tgz#b4870cdb54dbd3130c1ef3085765a431919bc45d"
-  integrity sha512-nBjbCaVV+R81jk7q/6sRuNYOhDAbBOmaCkPI2quK0Rnye2f4FUHX+4JL+3rDPiRPHxgX3pNfVKKHBlPAHiRddw==
+"@ts-type/package-dts@^1.0.58":
+  version "1.0.58"
+  resolved "https://registry.npmjs.org/@ts-type/package-dts/-/package-dts-1.0.58.tgz#75f6fdf5f1e8f262a5081b90346439b4c4bc8d01"
+  integrity sha512-Ry5RPZDAnSz/gyLtjd2a2yNC07CZ/PCOsuDzYj3phOolIgEH68HXRw6SbsDlavnVUEenDYj5GUM10gQ5iVEbVQ==
   dependencies:
     "@types/semver" "^7.3.9"
-    ts-type "^2.1.2"
+    ts-type "^2.1.4"
 
 "@types/bluebird@*", "@types/bluebird@^3.5.36":
   version "3.5.36"
@@ -367,12 +375,12 @@
   resolved "https://registry.npmjs.org/@types/semver/-/semver-7.3.9.tgz#152c6c20a7688c30b967ec1841d31ace569863fc"
   integrity sha512-L/TMpyURfBkf+o/526Zb6kd/tchUP3iBDEPjqjb+U2MAJhVRxxrmr2fwpe08E7QsV7YLcpq0tUaQ9O9x97ZIxQ==
 
-"@yarn-tool/find-root@^1.0.60":
-  version "1.0.60"
-  resolved "https://registry.npmjs.org/@yarn-tool/find-root/-/find-root-1.0.60.tgz#80a2720dbb9a646f5f2c767897c9dc37d85e6a43"
-  integrity sha512-XFljbajwJnly3kbfUcbTRYJihlXPCl/4DQbnQ5eAU5cjxYs6xAW9huMeetloQNFUpZ961bG1bgb+0psQX1KHUw==
+"@yarn-tool/find-root@^1.0.61":
+  version "1.0.61"
+  resolved "https://registry.npmjs.org/@yarn-tool/find-root/-/find-root-1.0.61.tgz#f9895789914522cc513bad81a0628e71e4c3cbc0"
+  integrity sha512-qXfGl33bJxDOYUSmHjPofUilc43v7V1PXzGNcl1/kJh1dQBrjyOCbJ7McuCIz26QBeXN/KESFNDdVwC4YO+3Dg==
   dependencies:
-    "@ts-type/package-dts" "^1.0.56"
+    "@ts-type/package-dts" "^1.0.58"
     err-code "^3.0.1"
     find-yarn-workspace-root2 "^1.2.36"
     pkg-dir "< 6 >= 5"
@@ -387,7 +395,7 @@
     is-npx "^1.0.0"
     tslib "^2.3.1"
 
-"@yarn-tool/update-notifier@^1.0.23":
+"@yarn-tool/update-notifier@^1.0.24":
   version "1.0.24"
   resolved "https://registry.npmjs.org/@yarn-tool/update-notifier/-/update-notifier-1.0.24.tgz#bab6ad65e1905b4419d44e3b5a6c92a5ab19b200"
   integrity sha512-m75GxQvQVoRDlVjarwIK2OsJJkE+p5UBlnVBhOYOAEdZZ+Jj7MLMtHCJPAmMPWEmVmh5Ig335Iq3Jp7JXDN51A==
@@ -538,14 +546,14 @@ cacache@^15:
     tar "^6.0.2"
     unique-filename "^1.1.1"
 
-cache-path@^2.0.27, cache-path@^2.0.29, cache-path@^2.0.3:
-  version "2.0.29"
-  resolved "https://registry.npmjs.org/cache-path/-/cache-path-2.0.29.tgz#725dd2495d0794318f0cc80eee8c92779e0e4987"
-  integrity sha512-a9eTLFrcPvT1PqBDU4vs3XtIjjdcw2wst+HLBUw+KdCYwbavsZ99VuwEE41BIZQjS6EpBCBALFlfZrzZvIYSig==
+cache-path@^2.0.3, cache-path@^2.0.30:
+  version "2.0.30"
+  resolved "https://registry.npmjs.org/cache-path/-/cache-path-2.0.30.tgz#55ea9b7f57a1cbc480b030e2b3eda83a06d899f5"
+  integrity sha512-OVpOCZHbJpTUMbQtBUlDNZ1KsKPQWh3KCoXqDWwy26ZLkGZZJkFlodRGiFHb7QQDunTyJYCZQ/N2xH67zpFHCw==
   dependencies:
     "@lazy-node/is-writeable-path" "^1.0.10"
     "@types/bluebird" "*"
-    "@yarn-tool/find-root" "^1.0.60"
+    "@yarn-tool/find-root" "^1.0.61"
     array-hyper-unique "^2.0.6"
     bluebird "^3.7.2"
     cross-spawn-extra "^2.1.0"
@@ -1002,7 +1010,7 @@ fs-extra@^9:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
-fs-iconv@^3.1.7:
+fs-iconv@^3.1.8:
   version "3.1.8"
   resolved "https://registry.npmjs.org/fs-iconv/-/fs-iconv-3.1.8.tgz#a23ca7505889688c051d3fce9e61c5b0faa2cb6e"
   integrity sha512-HIHve3hl92m69HWbAbGuseuqQ+V6mxrub/p9KwcZUIlSWCo5G4JyaSTzVfdW9fWSylRp9bWwCHIl7VrUZKNRlQ==
@@ -1124,7 +1132,7 @@ humanize-duration@^3.15.3:
   resolved "https://registry.npmjs.org/humanize-duration/-/humanize-duration-3.27.1.tgz#2cd4ea4b03bd92184aee6d90d77a8f3d7628df69"
   integrity sha512-jCVkMl+EaM80rrMrAPl96SGG4NRac53UyI1o/yAzebDntEY6K6/Fj2HOjdPg8omTqIe5Y0wPBai2q5xXrIbarA==
 
-iconv-jschardet@^2.0.21, iconv-jschardet@^2.0.24:
+iconv-jschardet@^2.0.24:
   version "2.0.24"
   resolved "https://registry.npmjs.org/iconv-jschardet/-/iconv-jschardet-2.0.24.tgz#934278739f33d7b715ad65a4936a77450528a519"
   integrity sha512-sMXAVpm8fLv9OlppDeX0SE3zV33glXUB1F1XAN7Y65Hhwp3eY/ZEzHPOuv0YUpNm75LnuDCOOEhYtVqmHRQMTA==
@@ -1512,38 +1520,41 @@ normalize-url@^4.1.0:
   resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-4.5.1.tgz#0dd90cf1288ee1d1313b87081c9a5932ee48518a"
   integrity sha512-9UZCFRHQdNrfTpGg8+1INIg93B6zE0aXMVFkw1WFwvO4SlZywU6aLg5Of0Ap/PgcbSw4LNxvMWXMeugwMCX0AA==
 
-novel-segment-cli@^1.1.100:
-  version "1.1.100"
-  resolved "https://registry.npmjs.org/novel-segment-cli/-/novel-segment-cli-1.1.100.tgz#378be7fc60cc13a07fe593945b0674b20ea2368c"
-  integrity sha512-6KBE1AwBKxQO13498di6RuN4xtSvzR0MbZEO2w5EZ+WnFbW7StpXDQNatQhgl9M1T75BNYbIKfL99e9o2a+ArQ==
+novel-segment-cli@^1.1.102:
+  version "1.1.102"
+  resolved "https://registry.npmjs.org/novel-segment-cli/-/novel-segment-cli-1.1.102.tgz#c787e973ab3961ab05bf93cdbc7ed9a7dbdeab7f"
+  integrity sha512-BecemvGXQSQyyIg8Q8Sm6qdD1cbTPp/RTfaooiCrgnb3Sgp769XBJ3uJyx/dGWXqxu4BeWj4dFVOFA1/emhfYQ==
   dependencies:
     "@bluelovers/fast-glob" "^3.0.4"
-    "@yarn-tool/update-notifier" "^1.0.23"
+    "@novel-segment/types" "^1.0.1"
+    "@yarn-tool/update-notifier" "^1.0.24"
     array-hyper-unique "^2.0.6"
     bluebird "^3.7.2"
-    cache-path "^2.0.27"
+    cache-path "^2.0.30"
     crlf-normalize "^1.0.6"
     debug-color2 "^1.2.7"
     fs-extra "^10"
-    fs-iconv "^3.1.7"
-    iconv-jschardet "^2.0.21"
+    fs-iconv "^3.1.8"
+    iconv-jschardet "^2.0.24"
     lazy-cacache "^2.0.4"
     lodash "^4.17.21"
-    novel-segment "^2.7.82"
+    novel-segment "^2.7.84"
     pkg-up "<4 >= 3.1.0"
     prettyuse "^0.0.0"
+    ts-type "^2.1.4"
     tslib "^2.3.1"
-    upath2 "^3.1.10"
+    upath2 "^3.1.12"
     yargs "^17"
 
-novel-segment@^2.7.82:
-  version "2.7.82"
-  resolved "https://registry.npmjs.org/novel-segment/-/novel-segment-2.7.82.tgz#fcde7ac1e24301608b05b101b9f40c92b8b187c6"
-  integrity sha512-QVBTbBrR3PhDWb1EBgxA7YTioXkNkUTNGOUWvLejty31orwqDK2NcUyxpvFfjo9mGOi2hA7TBsK/HanoGi0aSA==
+novel-segment@^2.7.84:
+  version "2.7.84"
+  resolved "https://registry.npmjs.org/novel-segment/-/novel-segment-2.7.84.tgz#12dae147ad1d81fb94b627591c2524e660b78e33"
+  integrity sha512-4gP8HWcbhC8fKuSupQ/Gb5B+D3E/6z6Gc8xEKLJCydXTNl/0LEex3QbWaM3tVTlSZ0R30duUDLMNK+OzvrFzlA==
   dependencies:
     "@bluelovers/fast-glob" "^3.0.4"
     "@lazy-cjk/zh-table-list" "^1.0.78"
-    "@novel-segment/postag" "^1.0.13"
+    "@novel-segment/postag" "^1.0.14"
+    "@novel-segment/types" "^1.0.1"
     array-hyper-unique "^2.0.6"
     bluebird "^3.7.2"
     cjk-conv "^1.2.137"
@@ -1552,11 +1563,11 @@ novel-segment@^2.7.82:
     deepmerge-plus "^2.1.3"
     lodash "^4.17.21"
     regexp-cjk "^3.3.104"
-    segment-dict "^2.3.164"
+    segment-dict "^2.3.165"
     sort-object-keys2 "^2.0.3"
     str-util "^2.3.27"
     ts-enum-util "4.0.2"
-    ts-type "^2.1.2"
+    ts-type "^2.1.4"
     tslib "^2.3.1"
     uni-string "^1.1.11"
 
@@ -1940,15 +1951,15 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-segment-dict@^2.3.164:
-  version "2.3.164"
-  resolved "https://registry.npmjs.org/segment-dict/-/segment-dict-2.3.164.tgz#d52bed234808ec5ba59b3681d754042ebc0c5bdb"
-  integrity sha512-oK6Yg7dUjSwBQeY/xzKJLrHes3GwCZqXFCJoU4ZoK8e1BboJVcHA2KWEy3eCOZIpZfdiZxs3vR/FGaEm6jc8Hw==
+segment-dict@^2.3.165:
+  version "2.3.165"
+  resolved "https://registry.npmjs.org/segment-dict/-/segment-dict-2.3.165.tgz#2aaaa5fef5a177658b625a394620eb345d29659c"
+  integrity sha512-Qy67uHAy64hAm/cl18HN4JfUTk8r7WeO+kx/jXwa/61DAjnkNIUyT3CkTzKer8vkTJ5aNRtn07gS7Go+37g9+Q==
   dependencies:
     "@bluelovers/fast-glob" "^3.0.4"
     "@novel-segment/dict-loader-core" "^1.0.14"
     "@novel-segment/loader-stopword" "^1.0.14"
-    "@novel-segment/loaders" "^1.0.25"
+    "@novel-segment/loaders" "^1.0.26"
     "@novel-segment/stream-loader-core" "^1.0.17"
     "@novel-segment/util" "^1.0.56"
     bluebird "^3.7.2"
@@ -2156,10 +2167,10 @@ ts-type@^1.2.35:
     tslib "^2.3.0"
     typedarray-dts "^1.0.0"
 
-ts-type@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.npmjs.org/ts-type/-/ts-type-2.1.2.tgz#2e7734e729806729d41b4071b4fd513c9cd5cfac"
-  integrity sha512-64/2XoaipFXa/bidwXChQCSJ3VaCUVKrEaRPXiP5gLIlkPoAHfnwOMC0EWr42DsTm/+qYYuNwzxc0VQroeDs+g==
+ts-type@^2.1.2, ts-type@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.npmjs.org/ts-type/-/ts-type-2.1.4.tgz#d268d52ac054ef3076bf1c3b2fde0d4d5496e6a3"
+  integrity sha512-wnajiiIMhn/RHJ1oPld95siKmMJrOgaT6+rMmC8vO1LORgDFEzKP2nBmEFM5b4XVe7Q0J5KcU9oRJFzju7UzrA==
   dependencies:
     tslib "^2.3.1"
     typedarray-dts "^1.0.0"
@@ -2226,7 +2237,7 @@ universalify@^2.0.0:
   resolved "https://registry.npmjs.org/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
   integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
 
-upath2@^3, upath2@^3.1.10, upath2@^3.1.12:
+upath2@^3, upath2@^3.1.12:
   version "3.1.12"
   resolved "https://registry.npmjs.org/upath2/-/upath2-3.1.12.tgz#441b3dfbadde21731017bd1b7beb169498efd0a9"
   integrity sha512-yC3eZeCyCXFWjy7Nu4pgjLhXNYjuzuUmJiRgSSw6TJp8Emc+E4951HGPJf+bldFC5SL7oBLeNbtm1fGzXn2gxw==

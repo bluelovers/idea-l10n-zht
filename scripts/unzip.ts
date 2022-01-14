@@ -19,8 +19,6 @@ function unzipLang(lang: string | 'zh')
 
 	const bar: SingleBar = multibar.create(200, 0);
 
-	console.log(bar);
-
 	return Bluebird.resolve(readFile(join(__plugin_downloaded_dir, `${lang}.zip`)))
 		.then<JSZip>(JSZip.loadAsync)
 		.then(async (zip) =>
