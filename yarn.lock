@@ -352,6 +352,13 @@
     jest-diff "^27.0.0"
     pretty-format "^27.0.0"
 
+"@types/jszip@*":
+  version "3.4.1"
+  resolved "https://registry.npmjs.org/@types/jszip/-/jszip-3.4.1.tgz#e7a4059486e494c949ef750933d009684227846f"
+  integrity sha512-TezXjmf3lj+zQ651r6hPqvSScqBLvyPI9FxdXBqpEwBijNGQ2NXpaFW/7joGzveYkKQUil7iiDHLo6LV71Pc0A==
+  dependencies:
+    jszip "*"
+
 "@types/luxon@*":
   version "2.0.9"
   resolved "https://registry.npmjs.org/@types/luxon/-/luxon-2.0.9.tgz#782a0edfa6d699191292c13168bd496cd66b87c6"
@@ -1319,7 +1326,15 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-jszip@^3.7.1:
+jszip-fixed-date@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/jszip-fixed-date/-/jszip-fixed-date-1.0.3.tgz#543dce6a41695228af99719f545731bd2f70831e"
+  integrity sha512-YJDR/obqTxJMHyJfTsggOCkHjYKisbdi4asGRumFuK0X277ms8yCOi6pdXBLb+ToI6U6ST0qc2JkrVCm3IcYxQ==
+  dependencies:
+    "@types/jszip" "*"
+    tslib "^2.3.0"
+
+jszip@*, jszip@^3.7.1:
   version "3.7.1"
   resolved "https://registry.npmjs.org/jszip/-/jszip-3.7.1.tgz#bd63401221c15625a1228c556ca8a68da6fda3d9"
   integrity sha512-ghL0tz1XG9ZEmRMcEN2vt7xabrDdqHHeykgARpmZ0BiIctWxM47Vt63ZO2dnp4QYt/xJVLLy5Zv1l/xRdh2byg==

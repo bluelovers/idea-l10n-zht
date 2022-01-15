@@ -7,6 +7,7 @@ import JSZip from "jszip";
 import Bluebird from 'bluebird';
 import { createMultiBar } from '../lib/cli-progress';
 import { cyan, gray } from 'ansi-colors';
+import { fixedJSZipDate } from 'jszip-fixed-date';
 
 const multibar = createMultiBar();
 
@@ -59,6 +60,8 @@ export default FastGlob<string>([
 			.then(async (ls) =>
 			{
 				bar?.update(bar.getTotal() - 1, { filename: cyan(lang + '.jar') });
+
+				fixedJSZipDate(jar, new Date('2022-01-1 00:00:00Z'));
 
 				const buf = await jar.generateAsync({
 					type: "nodebuffer",
