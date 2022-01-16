@@ -9,7 +9,8 @@
   "author": "bluelovers",
   "main": "index.js",
   "scripts": {
-    "ci:build": "yarn run plugin:build && git commit -m \"build(release): update build\" ./plugin-dev-out ./plugin-dev-raw",
+    "ci:build": "yarn run plugin:build && yarn run build:commit",
+    "build:commit": "git commit -m \"build(release): update build\" ./plugin-dev-out ./plugin-dev-raw & echo build:commit",
     "plugin:build": "yarn run test && yarn run plugin:handle-source && yarn run build",
     "plugin:handle-source": "ts-node scripts/plugin-handle-source.ts",
     "prebuild": "ts-node scripts/update-meta.ts",
