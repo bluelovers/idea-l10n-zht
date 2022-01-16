@@ -1,13 +1,20 @@
 import { async as FastGlob } from '@bluelovers/fast-glob/bluebird';
-import { __plugin_dev_output_dir, __plugin_dev_raw_dir, __plugin_downloaded_dir_unzip } from '../lib/const';
+import {
+	__plugin_dev_output_dir,
+	__plugin_dev_overwrite_dir,
+	__plugin_dev_raw_dir,
+	__plugin_downloaded_dir_unzip,
+} from '../lib/const';
 import { console } from 'debug-color2';
-import { outputFile, outputJSON, pathExists, readFile, readJSON } from 'fs-extra';
+import { outputFile, outputJSON } from 'fs-extra';
 import { join } from 'upath2';
 import JSZip from "jszip";
 import Bluebird from 'bluebird';
 import { createMultiBar } from '../lib/cli-progress';
-import { cyan, gray } from 'ansi-colors';
+import { cyan } from 'ansi-colors';
 import { fixedJSZipDate } from 'jszip-fixed-date';
+import { mergePaths } from '../lib/merge-paths';
+import { getBuildFileList } from '../lib/get-build-file-list';
 
 const multibar = createMultiBar();
 
@@ -22,38 +29,32 @@ export default FastGlob<string>([
 		console.cyan.log(`build ${lang}`);
 
 		const cwd = join(__plugin_downloaded_dir_unzip, lang);
-		const cacheList: string[] = await readJSON(join(__plugin_downloaded_dir_unzip, lang + '.list.json'));
+		const cacheList: string[] = await getBuildFileList(lang);
 
 		const jar = new JSZip();
 
 		const bar = multibar.create(cacheList.length, 0);
+
+		const {
+			readPathFile,
+		} = mergePaths([
+			join(__plugin_dev_overwrite_dir, lang),
+			join(__plugin_dev_raw_dir, lang),
+			cwd,
+		]);
 
 		return Bluebird.reduce(cacheList, async (ls, file, index) =>
 			{
 
 				bar?.update(index, { filename: file });
 
-				const fullpath = join(cwd, file);
-				const fullpath_new = join(__plugin_dev_raw_dir, lang, file);
-				let buf: string | Buffer;
+				let buf: Buffer = await readPathFile(file);
 
-				if (/^(search|postfixTemplates|intentionDescriptions)\//.test(file))
+				if (buf)
 				{
-					bar?.update(index, { filename: gray(file) });
-					return ls;
+					jar.file(file, buf);
+					ls.push(file);
 				}
-				else if (await pathExists(fullpath_new))
-				{
-					buf = await readFile(fullpath_new);
-				}
-				else
-				{
-					buf = await readFile(fullpath);
-				}
-
-				jar.file(file, buf);
-
-				ls.push(file);
 
 				return ls;
 			}, [] as string[])
