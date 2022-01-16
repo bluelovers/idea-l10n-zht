@@ -88,7 +88,7 @@ export function processIdeaSegmentText(text: string)
 		{
 			return text
 				.replace(/后/g, '後')
-				.replace(/于/g, '於後')
+				.replace(/于/g, '於')
 				;
 		})
 }
