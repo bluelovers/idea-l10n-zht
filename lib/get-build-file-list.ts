@@ -18,8 +18,6 @@ export function getBuildFileList(lang: string)
 		})
 		.then(data =>
 		{
-			console.dir(data.ls2);
-
 			return Object.values(data).flat()
 		})
 		.then(ls => array_unique_overwrite(ls))

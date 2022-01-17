@@ -1,5 +1,5 @@
 import { getSegment, processText } from "novel-segment-cli";
-import { chkcrlf, CR, CRLF, LF } from 'crlf-normalize';
+import { chkcrlf, CR, CRLF, detectLineBreak, LF } from 'crlf-normalize';
 import Bluebird from 'bluebird';
 import Segment from "novel-segment/lib";
 import { load as loadSynonym } from '@novel-segment/loaders/segment/synonym';
@@ -77,12 +77,10 @@ export function initIdeaSegmentText()
 
 export function processIdeaSegmentText(text: string)
 {
-	let _lb = chkcrlf(text);
-
 	return initIdeaSegmentText()
 		.then(() => processText(text, {
 			convertToZhTw: true,
-			crlf: _lb.crlf ? CRLF : (_lb.lf || !_lb.cr) ? LF : CR,
+			crlf: detectLineBreak(text),
 		}))
 		.then(text =>
 		{
