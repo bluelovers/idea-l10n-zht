@@ -9,26 +9,29 @@ import { array_unique_overwrite } from 'array-hyper-unique';
 jest.setTimeout(60 * 1000);
 
 const words = array_unique_overwrite([
-		`打印`,
-		`粘貼`,
-		`剪貼板`,
-		`選項卡`,
-		`只讀`,
-		`標籤頁`,
-	].reduce((ls, s) =>
-	{
+	`打印`,
+	`粘貼`,
+	`剪貼板`,
+	`選項卡`,
+	`只讀`,
+	`標籤頁`,
+].reduce((ls, s) =>
+{
 
-		ls.push(s);
-		ls.push(cn2tw_min(s));
-		ls.push(cn2tw(s));
+	ls.push(s);
+	ls.push(cn2tw_min(s));
+	ls.push(cn2tw(s));
 
-		return ls
-	}, [] as string[]));
+	return ls
+}, [] as string[]));
 
 const files = [
-		'messages/IdeBundle.properties',
-	] as const;
+	'messages/IdeBundle.properties',
+] as const;
 
+/**
+ * 檢查原始來源的檔案(簡體)
+ */
 describe(`src`, () =>
 {
 	files.forEach(file =>
@@ -54,6 +57,9 @@ describe(`src`, () =>
 
 })
 
+/**
+ * 檢查原始來源的檔案(繁體)
+ */
 describe(`dev`, () =>
 {
 	files.forEach(file =>
