@@ -1,10 +1,10 @@
 <html>
 <body>
-報告在唯讀連接期間可能會修改資料庫的語句。 <p>要為連接啟用唯讀模式，請在<b>資料庫</b>工具視窗（<b>視圖 | 工具視窗 | 資料庫</b>）中右鍵點擊數據源，然後選擇<b>屬性</b>。
+報告在唯讀連接期間可能會修改數據庫的語句。 <p>要為連接啟用唯讀模式，請在<b>數據庫</b>工具視窗（<b>視圖 | 工具視窗 | 數據庫</b>）中右鍵點擊數據源，然後選擇<b>屬性</b>。
   在<b>數據源和驅動程序</b>對話框中，點擊<b>選項</b>頁籤並選中<b>唯讀</b>復選框。</p>
 <p>示例（MySQL）：</p>
 <pre><code>CREATE TABLE foo(a INT);
 INSERT INTO foo VALUES (1);</code></pre>
-<p>由於 <code>CREATE TABLE</code> 和<code>INSERT INTO</code> 語句會導致資料庫修改，因此這些語句將在唯讀連接模式中高亮顯示。</p>
+<p>由於 <code>CREATE TABLE</code> 和<code>INSERT INTO</code> 語句會導致數據庫修改，因此這些語句將在唯讀連接模式中高亮顯示。</p>
 </body>
 </html>

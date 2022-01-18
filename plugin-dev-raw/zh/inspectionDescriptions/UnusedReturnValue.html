@@ -1,17 +1,17 @@
 <html>
 <body>
 報告調用時從不使用其返回值的方法。
-此類方法的返回類型可以設定為 <code>void</code>。
+此類方法的返回類型可以設置為 <code>void</code>。
 <p>不會報告使用 Error Prone 或 AssertJ 的 <code>@CanIgnoreReturnValue</code> 註解進行註解的方法。
   該快速修復會更新方法簽名，並移除方法中的 <code>return</code> 語句。</p>
 <p><b>示例：</b></p>
 <pre><code>
-  // 可見性設定為 Protected 或 Public 時報告
+  // 可見性設置為 Protected 或 Public 時報告
   protected String myToUpperCase(String s) {
     return s.toUpperCase();
   }
 
-  // 簡單的 setter，根據設定進行報告
+  // 簡單的 setter，根據設置進行報告
   public String setStr(String str) {
     myStr = str;
     return myStr;
