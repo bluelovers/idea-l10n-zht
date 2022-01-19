@@ -27,6 +27,7 @@ describe(`segment`, () =>
 		[`全局`, `使工具全局可见(&B)`],
 		[`全局库`, `导入的项目引用了未知的全局库`],
 		[`服務器`, `以下文件被禁止，因为其中一个文件很可能导致服务器崩溃。\n{0}`],
+		[`屏幕`, `action.android.emulator.home.button.text=主屏幕`],
 
 	].forEach(text =>
 	{
