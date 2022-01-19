@@ -4,7 +4,7 @@
 <p>
   <code>java.net.URL</code> 類會在內部使用 <code>java.net.URLStreamHandler</code> 的實例來執行 <code>hashCode()</code> 和 <code>equals() </code>。
   這會導致性能問題，因為 <code>java.net.URLStreamHandler</code> 會執行 DNS 查找。
-  根據網絡的可用性和 DNS 服務器的速度，這可能會導致顯著延遲。
+  根據網絡的可用性和 DNS 伺服器的速度，這可能會導致顯著延遲。
 </p>
 <p>該問題很可能可以通過改為使用 <code>java.net.URI</code> 加以解決。</p>
 <p><b>示例：</b></p>
