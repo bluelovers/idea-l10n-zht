@@ -12,3 +12,5 @@ export const __plugin_dev_overwrite_dir = join(__root, 'plugin-dev-overwrite');
 export const __dict_table_txt = join(__root, 'lib/static/table.txt');
 
 export const __dict_synonym_txt = join(__root, 'lib/static/synonym.txt');
+
+export const __dict_properties_lazy = join(__root, 'lib/static/lazy.properties');

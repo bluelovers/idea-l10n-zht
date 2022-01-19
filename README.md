@@ -32,6 +32,10 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 - https://github.com/bluelovers/ws-segment/blob/master/packages/%40novel-segment/postag/lib/postag/ids.ts
 - https://github.com/bluelovers/ws-segment/blob/master/packages/novel-segment/test/demo.cache.ts#L97
 
+## .properties
+
+透過 [lib/static/lazy.properties](lib/static/lazy.properties) 可無視分詞轉換結果直接取代內容
+
 ## 其他
 
 有部分無法透過分詞系統來轉換的則可以透過編輯以下檔案來完善
@@ -40,4 +44,3 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 ## TODO
 
-- 目前尚未支援取代/刪除特定 `.properties` 檔案下的 key/value

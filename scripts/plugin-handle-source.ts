@@ -9,6 +9,7 @@ export default Bluebird.mapSeries([
 	'./download-original-plugin',
 	'./unzip',
 	'./to-zht',
+	'./properties-replace',
 ] as const, lazyImport);
 
 function lazyImport(target: string)
