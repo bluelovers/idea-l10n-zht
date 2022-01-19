@@ -8,6 +8,9 @@ import { array_unique_overwrite } from 'array-hyper-unique';
 
 jest.setTimeout(60 * 1000);
 
+/**
+ * 繁體
+ */
 const words = array_unique_overwrite([
 	`打印`,
 	`粘貼`,
@@ -15,6 +18,7 @@ const words = array_unique_overwrite([
 	`選項卡`,
 	`只讀`,
 	`標籤頁`,
+	`文件夾`,
 ].reduce((ls, s) =>
 {
 
