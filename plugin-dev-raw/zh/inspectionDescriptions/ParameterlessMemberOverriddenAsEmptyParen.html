@@ -1,14 +1,14 @@
 <html>
 <body>
-<p>報告具有一個空形參子句且重寫沒有形參子句的方法的方法。</p>
+<p>報告具有一個空參數子句且重寫沒有參數子句的方法的方法。</p>
 
-<p>推薦的慣例是，只要沒有形參並且該方法沒有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>，就使用沒有形參子句的方法。</p>
+<p>推薦的慣例是，只要沒有參數並且該方法沒有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>，就使用沒有參數子句的方法。</p>
 
 <p>該慣例促進了<a href="https://en.wikipedia.org/wiki/Uniform_access_principle">統一訪問原則</a>，即客戶端代碼不應受到將特性實現為字段或方法的決定的影響。</p>
 
-<p>根據<a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">里氏替換原則</a>，當被重寫的方法沒有形參子句時，重寫方法也必須被聲明為沒有副作用的方法。</p>
+<p>根據<a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">里氏替換原則</a>，當被重寫的方法沒有參數子句時，重寫方法也必須被聲明為沒有副作用的方法。</p>
 
-<p>該快速修復會移除空形參子句。</p>
+<p>該快速修復會移除空參數子句。</p>
 <p><b>示例：</b></p>
 <pre><code>
   trait Base { def isOk: Boolean }

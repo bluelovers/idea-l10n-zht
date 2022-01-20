@@ -14,7 +14,7 @@
     @EventListener // 使用 @EventListener 註解的方法必須為 public
     private fun logCommands(commandName: MyEvent) {}
 
-    @EventListener // 方法必須最多只有一個形參
+    @EventListener // 方法必須最多只有一個參數
     fun processCommand(commandName: MyEvent, text: String) {}
   }
 </code></pre>

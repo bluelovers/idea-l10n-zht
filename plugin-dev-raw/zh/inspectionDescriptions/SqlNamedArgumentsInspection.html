@@ -1,7 +1,7 @@
 <html>
 <body>
 報告在例程調用中不帶名稱使用的實參。 預設情況下，此檢查處於禁用狀態。
-<p>有關命名形參和未命名形參之間差異的詳細信息，請參閱 <a
+<p>有關命名參數和未命名參數之間差異的詳細信息，請參閱 <a
     href="https://docs.microsoft.com/en-us/sql/odbc/reference/develop-app/binding-parameters-by-name-named-parameters">docs.microsoft.com 上的 Binding Parameters by Name (Named Parameters) </a> 頁面。</p>
 <p>示例（Microsoft SQL 伺服器）：</p>
 <pre><code>CREATE FUNCTION foo(n INT, m INT) RETURNS INT AS
@@ -13,9 +13,9 @@ CREATE PROCEDURE test AS
 BEGIN
     foo n = 1, m = 2;
 
---- 以下調用缺少形參名稱，會被高亮顯示
+--- 以下調用缺少參數名稱，會被高亮顯示
     foo 1, 2;
 END;</code></pre>
-<p><code>foo 1, 2;</code> 調用中的形參 <code>1, 2</code> 突出顯示，因為它們缺少名稱。</p>
+<p><code>foo 1, 2;</code> 調用中的參數 <code>1, 2</code> 突出顯示，因為它們缺少名稱。</p>
 </body>
 </html>

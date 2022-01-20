@@ -1,15 +1,15 @@
 <html>
 <body>
-報告接受 <code>boolean</code> 形參的 public 方法。
-<p>如果某個 public 方法（API 的一部分）不是 setter，則向該方法添加 <code>boolean</code> 形參幾乎始終是一種不好的做法。
+報告接受 <code>boolean</code> 參數的 public 方法。
+<p>如果某個 public 方法（API 的一部分）不是 setter，則向該方法添加 <code>boolean</code> 參數幾乎始終是一種不好的做法。
 使用此類方法讀取代碼時，如果不查看原始碼或文檔，會很難理解 <code>boolean</code> 的含義。</p>
 <p>此問題也被稱為<a href="https://ariya.io/2011/08/hall-of-api-shame-boolean-trap">布爾陷阱</a>。
-  <code>boolean</code> 形參通常可以替換為 <code>enum</code>。</p>
+  <code>boolean</code> 參數通常可以替換為 <code>enum</code>。</p>
 <p>示例：</p>
 <pre><code>
   // 警告：在查看對此方法的
   // 調用時，很難理解
-  // 布爾形參的含義
+  // 布爾參數的含義
   public boolean setPermission(File f,
                                int access,
                                boolean enable,
@@ -19,7 +19,7 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-使用<b>僅報告具有多個布爾形參的方法</b>選項可以僅在一個方法包含多個布爾形參時發出警告。
+使用<b>僅報告具有多個布爾參數的方法</b>選項可以僅在一個方法包含多個布爾參數時發出警告。
 <p>
 </body>
 </html>

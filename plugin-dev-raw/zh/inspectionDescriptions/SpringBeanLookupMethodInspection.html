@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>報告 XML 應用程序上下文中 Bean 的不正確 <strong>&lt;lookup-method&gt;</strong>。</p>
+<p>報告 XML 應用程式上下文中 Bean 的不正確 <strong>&lt;lookup-method&gt;</strong>。</p>
 
 <p><b>示例：</b></p>
 <pre><code>
@@ -20,7 +20,7 @@
       &lt;!-- static --&gt;
       &lt;lookup-method bean="fooBean" name="createCommandStatic"/&gt; // 此處不允許使用 static 方法
       &lt;!-- 有實參 --&gt;
-      &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt;// 方法必須沒有形參
+      &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt;// 方法必須沒有參數
       &lt;!-- 不存在 --&gt;
       &lt;lookup-method bean="fooBean" name="unknown"/&gt;  // 未知方法
       &lt;!-- 不匹配 --&gt;

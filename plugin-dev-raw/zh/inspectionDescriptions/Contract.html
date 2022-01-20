@@ -3,12 +3,12 @@
 報告方法 <code>@Contract</code> 註解中的問題。 可以報告的問題類型有：
 <ul>
 <li>約定語法錯誤</li>
-<li>不符合方法簽名的約定（錯誤的形參計數）</li>
+<li>不符合方法簽名的約定（錯誤的參數計數）</li>
 <li>與約定不一致的方法實現（例如，即使約定聲明 <code> false</code>，也返回 <code>true</code>）</li>
 </ul>
 <p>示例：</p>
 <pre><code>
-  // 方法沒有形參，參約定預期 1
+  // 方法沒有參數，參約定預期 1
   @Contract("_ -> fail")
   <b>void</b> x() {
     <b>throw</b> new AssertionError();

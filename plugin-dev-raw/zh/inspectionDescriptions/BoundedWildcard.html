@@ -1,6 +1,6 @@
 <html>
 <body>
-報告可以使用<a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">有界通配符</a>的通用方法形參。
+報告可以使用<a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">有界通配符</a>的通用方法參數。
 <p><b>示例：</b></p>
 <pre><code>
   void process(Consumer&lt;Number&gt; consumer);
@@ -12,7 +12,7 @@
 <p>
   此方法簽名更靈活，因為它接受更多類型：不僅是 <code>Consumer&lt;Number&gt;</code>，還有 <code>Consumer&lt;Object&gt;</code>。
 </p>
-<p>同樣，在協變位置輸入形參：</p>
+<p>同樣，在協變位置輸入參數：</p>
 <pre><code>
   T produce(Producer&lt;T&gt; p);
 </code></pre>

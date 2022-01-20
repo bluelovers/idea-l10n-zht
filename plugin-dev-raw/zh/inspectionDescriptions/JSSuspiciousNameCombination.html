@@ -1,7 +1,7 @@
 <!-- Copied from community/java/java-impl/src/inspectionDescriptions/SuspiciousNameCombination.html -->
 <html>
 <body>
-報告目標變量或函數形參的名稱與分配給它的值的名稱不匹配的賦值或函數調用。
+報告目標變量或函數參數的名稱與分配給它的值的名稱不匹配的賦值或函數調用。
 <p>示例：</p>
 <pre><code>
   <b>var</b> x = 0;
@@ -12,6 +12,6 @@
   <b>var</b> x = 0, y = 0;
   <b>var</b> rc = <b>new</b> Rectangle(y, x, 20, 20);
 </code></pre>
-<p>指定不應一起使用的名稱。 如果形參名稱或賦值目標名稱包含一個組中的詞語，而賦值或傳遞的變量的名稱包含另一個組中的詞語，則會報告錯誤。</p>
+<p>指定不應一起使用的名稱。 如果參數名稱或賦值目標名稱包含一個組中的詞語，而賦值或傳遞的變量的名稱包含另一個組中的詞語，則會報告錯誤。</p>
 </body>
 </html>

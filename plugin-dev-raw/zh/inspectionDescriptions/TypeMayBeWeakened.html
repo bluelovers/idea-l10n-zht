@@ -4,7 +4,7 @@
 這使代碼更抽象，因此可重用性更高。
 <p>示例：</p>
 <pre><code>
-  // 形參類型可以削弱為 java.util.List
+  // 參數類型可以削弱為 java.util.List
   void processList(ArrayList&lt;String&gt; list) {
     if (list.isEmpty()) return;
     System.out.println("Processing");
@@ -18,7 +18,7 @@
   啟用下面的<b>使用右側類型</b>復選框可防止在右側並非類型轉換或新表達式時削弱賦值的左側。 在變量中存儲方法調用結果時，保留方法調用結果的類型不會不必要地削弱它，反而會很有用。
 </p>
 <p>
-  啟用下面的<b>使用形參化類型</b>復選框可在求值的對象用作形參類型為 <code>java.lang.Object</code> 的集合方法的實參時，將集合的形參化類型用作最弱的類型。
+  啟用下面的<b>使用參數化類型</b>復選框可在求值的對象用作參數類型為 <code>java.lang.Object</code> 的集合方法的實參時，將集合的參數化類型用作最弱的類型。
   在將對象傳遞給以下集合方法時，使用此選項可以防止削弱為 <code>Object</code>：
   <code>get()</code>、<code>remove()</code>、<code>contains()</code>、<code>indexOf()</code>、<code>lastIndexOf()</code>、<code>containsKey()</code> 和 <code>containsValue()</code>。
 </p>

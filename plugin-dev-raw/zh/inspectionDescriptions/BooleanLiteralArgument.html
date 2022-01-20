@@ -1,9 +1,9 @@
 <html>
 <body>
-報告類型為 <code>Boolean</code> 但未指定顯式形參名稱的調用實參。
+報告類型為 <code>Boolean</code> 但未指定顯式參數名稱的調用實參。
 <p>
-    按順序傳遞多個布爾文字時，很容易忘記形參順序，這可能會導致錯誤。
-    顯式形參名稱讓閱讀和理解代碼變得更容易。
+    按順序傳遞多個布爾文字時，很容易忘記參數順序，這可能會導致錯誤。
+    顯式參數名稱讓閱讀和理解代碼變得更容易。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
@@ -13,7 +13,7 @@
       check(true, false, true) //這是什麼意思？
   }
 </code></pre>
-<p>該快速修復會添加缺少的形參名稱：</p>
+<p>該快速修復會添加缺少的參數名稱：</p>
 <pre><code>
   fun check(checkName: Boolean, checkAddress: Boolean, checkPhone: Boolean) {}
 

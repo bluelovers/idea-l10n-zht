@@ -1,12 +1,12 @@
 <html>
 <body>
-報告與當前範圍中的可見類型名稱相同的類型形參。 此類形參名稱可能令人困惑。
+報告與當前範圍中的可見類型名稱相同的類型參數。 此類參數名稱可能令人困惑。
 <!-- tooltip end -->
 <p>示例：</p>
 <pre><code>
   abstract class MyList&lt;T&gt; extends AbstractList&lt;T&gt; {
     private List&lt;T&gt; elements;
-    // 類型形參 'T' 隱藏類型形參 'T'
+    // 類型參數 'T' 隱藏類型參數 'T'
     public &lt;T&gt; T[] toArray(T[] array) {
         return elements.toArray(array);
     }
