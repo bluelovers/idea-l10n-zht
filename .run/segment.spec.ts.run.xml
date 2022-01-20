@@ -4,9 +4,20 @@
     <node-options value="--enable-source-maps" />
     <jest-package value="$USER_HOME$/AppData/Roaming/npm/node_modules/jest" />
     <working-dir value="$PROJECT_DIR$" />
+    <jest-options value="-u" />
     <envs />
     <scope-kind value="TEST_FILE" />
     <test-file value="$PROJECT_DIR$/test/segment.spec.ts" />
-    <method v="2" />
+    <method v="2">
+      <option name="NpmBeforeRunTask" enabled="true">
+        <package-json value="$PROJECT_DIR$/package.json" />
+        <command value="run" />
+        <scripts>
+          <script value="posttest" />
+        </scripts>
+        <node-interpreter value="project" />
+        <envs />
+      </option>
+    </method>
   </configuration>
 </component>
