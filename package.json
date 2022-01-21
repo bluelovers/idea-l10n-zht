@@ -31,6 +31,7 @@
     "build:tsdx": "ynpx @bluelovers/tsdx build --target node --name index",
     "postbuild": "yarn run build:sort",
     "ci:test": "yarn run test",
+    "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest ts-jest ts-node ynpx lerna yarn-tool",
     "ci:build": "yarn run plugin:build && yarn run build:commit",
     "npm:publish": "npm publish",
     "npm:publish:bump": "yarn run version:bump && npm publish",
