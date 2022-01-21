@@ -9,7 +9,7 @@
 server.port=invalid # 報告 '無法將 'invalid' 轉換為 java.lang.Integer'
 </code></pre>
 
-<p>如果已棄用的配置鍵有替換鍵，您可以應用 '使用替換鍵' 快速修復。</p>
+<p>如果已棄用的配置鍵有取代鍵，您可以應用 '使用取代鍵' 快速修復。</p>
 
 <p><b>示例：</b></p>
 <pre><code>
@@ -49,13 +49,13 @@ spring.datasource.schema[]=${schema} #報告 '缺少索引值'
 <!-- tooltip end -->
 
 <p>
-  使用<b>替換令牌</b>選項定義用於配置檔案中值佔位符的令牌。
+  使用<b>取代令牌</b>選項定義用於配置檔案中值佔位符的令牌。
   這些令牌以 <code>beginToken*endToken</code> 的形式指定。
   如果沒有 <code>*</code>，則假定開始和結束的令牌相同。
 </p>
 <p>
   例如，開始和結束令牌的默認值都是 <code>@</code>，這使您可以定義佔位符，例如 <code>some.property=@another.property@</code>。
 </p>
-<p>替換令牌 (<code>@property.key@</code>) 內的值不會高亮顯示。</p>
+<p>取代令牌 (<code>@property.key@</code>) 內的值不會高亮顯示。</p>
 </body>
 </html>

@@ -1,8 +1,8 @@
 <html>
 <body>
-報告對 <code>java.lang.Runtime.exec()</code> 的調用，該調用會將動態構造的字符串作為要執行的命令。
+報告對 <code>java.lang.Runtime.exec()</code> 的調用，該調用會將動態構造的字串作為要執行的命令。
 <p>
-  構造的執行字符串是安全漏洞的常見來源。
+  構造的執行字串是安全漏洞的常見來源。
   預設情況下，此檢查會忽略編譯時常量。
 </p>
 <p><b>示例：</b></p>
@@ -14,7 +14,7 @@
 <!-- tooltip end -->
 <p>
 使用檢查設定可以將任何 <code>static</code> <code>final</code> 字段視為常量。
-請小心，因為啟用該選項時，像下面這樣的字符串將被忽略：
+請小心，因為啟用該選項時，像下面這樣的字串將被忽略：
 <pre><code>
   static final String COMMAND = "ping " + getDomainFromUserInput() + "'";
 </code></pre>

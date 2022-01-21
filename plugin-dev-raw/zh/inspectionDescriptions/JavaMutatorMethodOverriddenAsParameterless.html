@@ -6,7 +6,7 @@
     即，不使用任何參數子句並遵守<a href="https://en.wikipedia.org/wiki/Uniform_access_principle">統一訪問原則</a>，也就是說客戶端代碼不應受到將特性實現為字段或方法的決定的影響。</p>
 
 <p>但是，對於具有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>的方法，通常有一個空參數子句。
-    這將符合<a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">里氏替換原則</a>，即當被重寫的方法有副作用時，重寫方法也必須被聲明為具有副作用的方法。</p>
+    這將符合<a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">里氏取代原則</a>，即當被重寫的方法有副作用時，重寫方法也必須被聲明為具有副作用的方法。</p>
 
 <p>該快速修復會添加一個空參數子句。</p>
 <p><b>示例：</b></p>

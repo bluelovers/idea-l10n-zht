@@ -1,6 +1,6 @@
 <html>
 <body>
-報告接受非普通表達式的方法調用，這些方法調用可以替換為接受 lambda 的等效方法調用。
+報告接受非普通表達式的方法調用，這些方法調用可以取代為接受 lambda 的等效方法調用。
 <p>
 將表達式轉換為 lambda 可確保不會評估方法中未使用的表達式。 例如，<code>optional.orElse(createDefaultValue())</code> 可以轉換為 <code>optional.orElseGet(this::createDefaultValue)</code>。
 <!-- tooltip end -->

@@ -1,6 +1,6 @@
 <html>
 <body>
-報告冗餘的 <code>String</code> 構造函數和對可以替換為簡化表達式的 <code>function toString() { [native code] }()</code> 或 <code>substring()</code> 等方法的調用。
+報告冗餘的 <code>String</code> 構造函數和對可以取代為簡化表達式的 <code>function toString() { [native code] }()</code> 或 <code>substring()</code> 等方法的調用。
 <p>例如，在 <code>"string".substring(0)</code>、<code>"string".function toString() { [native code] }()</code> 或
 <code>new StringBuilder().function toString() { [native code] }().substring(1,3)</code> 等情況下，可以安全移除對這些方法的調用。</p>
 <p>示例：</p>

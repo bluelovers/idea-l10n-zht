@@ -3,7 +3,7 @@
 報告可以簡化的流 API 調用鏈。
 簡化通常會在集合遍歷期間避免一些臨時對象創建操作。
 <p>
-  該檢查將替換以下調用鏈：
+  該檢查將取代以下調用鏈：
 </p>
 <ul>
   <li><code>collection.stream().forEach()</code> &rarr; <code>collection.forEach()</code></li>
@@ -31,7 +31,7 @@
   <li><code>optional.orElseGet(() -> { throw new ...; })</code> &rarr; <code>optional.orElseThrow()</code></li>
 </ul>
 <p>
-  請注意，在某些情況下，替換語義可能略有差異。 例如，<code>Collections.synchronizedList(...).stream().forEach()</code> 不同步，而 <code>Collections.synchronizedList(...).forEach()</code> 同步。
+  請注意，在某些情況下，取代語義可能略有差異。 例如，<code>Collections.synchronizedList(...).stream().forEach()</code> 不同步，而 <code>Collections.synchronizedList(...).forEach()</code> 同步。
   另外，如果得到的元素為 <code>null</code>，而 <code>Stream.max()</code> 在本例中拋出 <code>NullPointerException</code>，則 <code>collect(Collectors.maxBy())</code> 返回空的 <code>Optional</code>。
 </p>
 </body>

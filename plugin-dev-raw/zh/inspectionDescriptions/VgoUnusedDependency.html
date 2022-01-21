@@ -6,7 +6,7 @@
   此檢查等效於 <a href="https://golang.org/ref/mod#go-mod-why"><code>go mod why</code> 命令</a>。</p>
 <p>該檢查會處理 <code>require</code> 和 <code>replace</code> 指令。
   帶有 <code>// indirect</code> 註釋的 <code>require</code> 指令也會被處理。</p>
-<p>在以下情況下，該檢查可能無法準確確定是否未使用替換或間接要求的依賴項：</p>
+<p>在以下情況下，該檢查可能無法準確確定是否未使用取代或間接要求的依賴項：</p>
 <ul>
   <li>已啟用 vendoring 模式</li>
   <li>未下載某些依賴項</li>

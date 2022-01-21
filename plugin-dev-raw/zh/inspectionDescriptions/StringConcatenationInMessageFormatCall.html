@@ -1,11 +1,11 @@
 <html>
 <body>
-報告用作對 <code>MessageFormat.format()</code> 的調用實參的非常量字符串串聯。
+報告用作對 <code>MessageFormat.format()</code> 的調用實參的非常量字串串聯。
 <p>
-  雖然偶爾是有意為之，但這通常是誤用格式化方法，串聯的字符串中包含 <code>{</code> 等特殊字符時，甚至可能導致異常。
+  雖然偶爾是有意為之，但這通常是誤用格式化方法，串聯的字串中包含 <code>{</code> 等特殊字符時，甚至可能導致異常。
 </p>
 <p>
-  此外，有時這可能是在本應鍵入 <code>,</code> 時鍵入了 <code>+</code> 而錯誤串聯字符串格式實參所致。
+  此外，有時這可能是在本應鍵入 <code>,</code> 時鍵入了 <code>+</code> 而錯誤串聯字串格式實參所致。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
@@ -14,8 +14,8 @@
   }
 </code></pre>
 <p>
-  這裡的 <code>userName</code> 解讀為格式字符串的一部分，這可能導致 <code>IllegalArgumentException</code>（例如，如果 <code>userName</code> 為 <code>"{"</code>）。
-  此調用或許應當替換為 <code>MessageFormat.format("Hello, {0}! Your balance is {1}.", userName, balance)</code>。
+  這裡的 <code>userName</code> 解讀為格式字串的一部分，這可能導致 <code>IllegalArgumentException</code>（例如，如果 <code>userName</code> 為 <code>"{"</code>）。
+  此調用或許應當取代為 <code>MessageFormat.format("Hello, {0}! Your balance is {1}.", userName, balance)</code>。
 </p>
 <!-- tooltip end -->
 

@@ -5,7 +5,7 @@
 <pre><code>
   void process(Consumer&lt;Number&gt; consumer);
 </code></pre>
-<p>應替換為：</p>
+<p>應取代為：</p>
 <pre><code>
   void process(Consumer&lt;? super Number&gt; consumer);
 </code></pre>
@@ -16,7 +16,7 @@
 <pre><code>
   T produce(Producer&lt;T&gt; p);
 </code></pre>
-<p>應替換為：</p>
+<p>應取代為：</p>
 <pre><code>
   T produce(Producer&lt;? extends T&gt; p);
 </code></pre>

@@ -1,6 +1,6 @@
 <html>
 <body>
-報告迭代集合或數組並且可以自動替換為增強型 <code>for</code> 循環（foreach 迭代語法）的 <code>for</code> 循環。
+報告迭代集合或數組並且可以自動取代為增強型 <code>for</code> 循環（foreach 迭代語法）的 <code>for</code> 循環。
 <!--  'foreach' still used in this description so that the inspection continues to be found using this keyword -->
 <p><b>示例：</b></p>
 <pre><code>
@@ -18,7 +18,7 @@
 <!-- tooltip end -->
 <p>
   使用<b>報告索引的 'java.util.List' 循環</b>選項可尋找涉及 <code>list.get(index)</code> 調用的循環。
-  這些循環通常可以替換為增強型 <code>for</code> 循環，除非它們修改了進程中的基礎列表，例如通過調用 <code>list.remove(index)</code> 進行修改。
+  這些循環通常可以取代為增強型 <code>for</code> 循環，除非它們修改了進程中的基礎列表，例如通過調用 <code>list.remove(index)</code> 進行修改。
   如果是後面這種情況，增強型 <code>for</code> 循環可能拋出 <code>ConcurrentModificationException</code>。
   在某些情況下，<code>list.get(index)</code> 循環的操作速度也可能更快一些。</p>
 <p>

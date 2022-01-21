@@ -1,20 +1,20 @@
 <html>
 <body>
-報告對可以替換為 <code>associateBy()</code> 或 <code>associateWith()</code> 的 <code>associate()</code> 和 <code>associateTo()</code> 的調用。
+報告對可以取代為 <code>associateBy()</code> 或 <code>associateWith()</code> 的 <code>associate()</code> 和 <code>associateTo()</code> 的調用。
 <p>
     兩個函數都接受應用於給定序列或集合（作為接收器）的元素的轉換器函數。
     然後該對函數被用於構建結果 <code>Map</code>。
 </p>
 <p>
-    鑑於轉換器引用 <code>it</code>，<code>associate[To]()</code> 調用可以替換為性能更高的 <code>associateBy()</code> 或 <code>associateWith()</code>。
+    鑑於轉換器引用 <code>it</code>，<code>associate[To]()</code> 調用可以取代為性能更高的 <code>associateBy()</code> 或 <code>associateWith()</code>。
 </p>
 <p><b>示例：</b></p>
 <pre><code>  fun getKey(i: Int) = 1L
   fun getValue(i: Int) = 1L
 
   fun test() {
-      arrayOf(1).associate { getKey(it) to it }  // 可替換的 'associate()'
-      listOf(1).associate { it to getValue(it) } // 可替換的 'associate()'
+      arrayOf(1).associate { getKey(it) to it }  // 可取代的 'associate()'
+      listOf(1).associate { it to getValue(it) } // 可取代的 'associate()'
   }
 </code></pre>
 <p>在應用快速修復後：</p>

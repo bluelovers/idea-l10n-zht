@@ -1,9 +1,9 @@
 <html>
 <body>
 報告硬編碼 <code>String</code> 文字的任何實例。
-<p>硬編碼的 <code>String</code> 文字在國際化環境中可能是錯誤的。 此檢查不會報告空字符串和僅包含空格的字符串。 可以使用快速修復將字符串文字轉換為 <code>java.util.ResourceBundle.getString()</code> 方法調用。</p>
+<p>硬編碼的 <code>String</code> 文字在國際化環境中可能是錯誤的。 此檢查不會報告空字串和僅包含空格的字串。 可以使用快速修復將字串文字轉換為 <code>java.util.ResourceBundle.getString()</code> 方法調用。</p>
 <!-- tooltip end -->
-<p>使用檢查的選項可進一步專門化此檢查是否應報告以下位置的字符串：</p>
+<p>使用檢查的選項可進一步專門化此檢查是否應報告以下位置的字串：</p>
 <ul>
   <li>斷言語句，如 <code>assert str.equals("message")</code> 中</li>
   <li>異常構造函數調用，如 <code>new Exception("message")</code> 中</li>

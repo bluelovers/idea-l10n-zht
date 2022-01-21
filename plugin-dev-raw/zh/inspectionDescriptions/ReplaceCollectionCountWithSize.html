@@ -2,7 +2,7 @@
 <body>
 報告對 <code>Collection&lt;T&gt;.count()</code> 的調用。
 <p>
-    此函數調用可以替換為 <code>.size</code>。
+    此函數調用可以取代為 <code>.size</code>。
 </p>
 <p>
     <code>.size</code> 形式可以確保運算是 O(1) 並且不會分配額外的對象，而 <code>count()</code> 可能與 <code>Iterable&lt;T&gt;.count()</code> 混淆，後者是 O(n) 和分配。
@@ -11,7 +11,7 @@
 <p><b>示例：</b></p>
 <pre><code>  fun foo() {
       var list = listOf(1,2,3)
-      list.count() // 可替換的 'count()'
+      list.count() // 可取代的 'count()'
   }
 </code></pre>
 <p>在應用快速修復後：</p>

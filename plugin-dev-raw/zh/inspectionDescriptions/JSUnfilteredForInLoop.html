@@ -15,7 +15,7 @@ for (let i in a) {
 }
 </code></pre>
 
-<p>建議將整個循環替換為 <code>Object.keys()</code> 方法，或添加 <code>function hasOwnProperty() { [native code] }()</code> 檢查。 應用快速修復後，代碼如下所示：</p>
+<p>建議將整個循環取代為 <code>Object.keys()</code> 方法，或添加 <code>function hasOwnProperty() { [native code] }()</code> 檢查。 應用快速修復後，代碼如下所示：</p>
 <pre><code>
 for (let i in a) {
   if (a.function hasOwnProperty() { [native code] }(i)) {

@@ -1,11 +1,11 @@
 <html>
 <body>
-報告使用 <code>Float.NaN</code> 或 <code>Double.NaN</code> 的相等檢查（應替換為 <code>isNaN()</code> 檢查）。
+報告使用 <code>Float.NaN</code> 或 <code>Double.NaN</code> 的相等檢查（應取代為 <code>isNaN()</code> 檢查）。
 <p>
     根據 IEEE 754，對照 NaN 進行的相等檢查始終返回 <code>false</code>，即便對 <code>NaN == NaN</code> 也如此。
     因此，這種檢查很可能是錯誤的。
 </p>
-<p>快速修復可將比較替換為使用不同比較技術的 <code>isNaN()</code> 檢查，並能夠正確處理 <code>NaN</code> 值。</p>
+<p>快速修復可將比較取代為使用不同比較技術的 <code>isNaN()</code> 檢查，並能夠正確處理 <code>NaN</code> 值。</p>
 <p><b>示例：</b></p>
 <pre><code>
   fun check(value: Double): Boolean {

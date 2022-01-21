@@ -1,11 +1,11 @@
 <html>
 <body>
-報告用作格式字符串實參的非常量字符串串聯。
+報告用作格式字串實參的非常量字串串聯。
 <p>
-  雖然偶爾是有意為之，但這通常是誤用格式化方法，串聯的字符串中使用的變量包含 <code>%</code> 等特殊字符時，甚至可能導致安全問題。
+  雖然偶爾是有意為之，但這通常是誤用格式化方法，串聯的字串中使用的變量包含 <code>%</code> 等特殊字符時，甚至可能導致安全問題。
 </p>
 <p>
-  此外，有時這可能是在本應鍵入 <code>,</code> 時鍵入了 <code>+</code> 而錯誤串聯字符串格式實參所致。
+  此外，有時這可能是在本應鍵入 <code>,</code> 時鍵入了 <code>+</code> 而錯誤串聯字串格式實參所致。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
@@ -14,8 +14,8 @@
   }
 </code></pre>
 <p>
-  這裡的 <code>userName</code> 將解釋為格式字符串的一部分，從而可能導致 <code>IllegalFormatException</code>（例如，如果 <code>userName</code> 為 <code>"%"</code>）或使用大量內存（例如，如果 <code>userName</code> 為 <code>"%2000000000%"</code>）。
-  該調用可能應替換為 <code>String.format("Hello, %s", userName);</code>。
+  這裡的 <code>userName</code> 將解釋為格式字串的一部分，從而可能導致 <code>IllegalFormatException</code>（例如，如果 <code>userName</code> 為 <code>"%"</code>）或使用大量內存（例如，如果 <code>userName</code> 為 <code>"%2000000000%"</code>）。
+  該調用可能應取代為 <code>String.format("Hello, %s", userName);</code>。
 </p>
 <p>
   此檢查將檢查對 <code>java.util.Formatter</code>、<code>java.lang.String</code>、<code>java.io.PrintWriter</code> 或 <code>java.io.PrintStream</code> 的格式化方法的調用。

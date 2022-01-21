@@ -2,7 +2,7 @@
 <body>
   報告那些不返回 <code>string</code> 的 <code>__function toString() { [native code] }</code> 方法。
   <!-- tooltip end -->
-  <p>在 PHP 7.4 之前，這將導致一個致命的 <code>E_RECOVERABLE_ERROR</code> 級錯誤。 在 PHP 7.4 中，會拋出一個致命的不可恢復的 <code>ERROR</code>。 從 PHP 8.0 開始，返回值遵循標準 PHP 類型語義，如果可能且嚴格類型模式被禁用，就會被強制轉換為字符串。
+  <p>在 PHP 7.4 之前，這將導致一個致命的 <code>E_RECOVERABLE_ERROR</code> 級錯誤。 在 PHP 7.4 中，會拋出一個致命的不可恢復的 <code>ERROR</code>。 從 PHP 8.0 開始，返回值遵循標準 PHP 類型語義，如果可能且嚴格類型模式被禁用，就會被強制轉換為字串。
   </p>
   <p>
     有關詳細信息，請參閱 <a href="https://www.php.net/manual/en/language.oop5.magic.php#language.oop5.magic.tostring">__function toString() { [native code] } (php.net)</a>。
