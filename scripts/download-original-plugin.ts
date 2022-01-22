@@ -5,7 +5,7 @@ import { join } from 'upath2';
 import { cli_logger } from '../lib/cli-progress';
 import { __plugin_downloaded_dir } from '../lib/const';
 
-export default cli_logger(fetch('https://plugins.jetbrains.com/plugin/download?rel=true&updateId=149295')
+export default cli_logger(fetch('https://plugins.jetbrains.com/plugin/download?rel=true&updateId=154222')
 	.then((res) => (res as any as Response).buffer())
 	.then(buf =>
 	{
