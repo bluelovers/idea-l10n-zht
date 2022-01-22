@@ -19,7 +19,7 @@ SELECT a FROM foo GROUP BY MAX(a);</code></pre>
     <p>此規則不適用於解析函數。 以下查詢有效且正確。</p>
     <pre><code>SELECT MAX(SUM(a) OVER ()) FROM foo;</code></pre>
   </li>
-  <li><p>沒有聚合函數的 HAVING 的用法。 在這種情況下，請考慮使用 WHERE 部分重寫您的代碼。</p>
+  <li><p>沒有聚合函數的 HAVING 的用法。 在這種情況下，請考慮使用 WHERE 部分重寫您的程式碼。</p>
     <pre><code>SELECT a, MAX(b) FROM foo GROUP BY a HAVING a > 0;</code></pre>
   </li>
 </ul>

@@ -1,8 +1,8 @@
 <html>
 <body>
-報告與周圍類的字段同名的局部變量。
-由於進行此類命名，在有意使用同名字段的情況下，您可能會誤用該變量。
-<p>建議通過快速修復重命名該變量。</p>
+報告與周圍類的字段同名的局部變數。
+由於進行此類命名，在有意使用同名字段的情況下，您可能會誤用該變數。
+<p>建議通過快速修復重命名該變數。</p>
 <p><b>示例：</b></p>
 <pre><code>
   public class Foo {
@@ -11,7 +11,7 @@
     void bar() {
       Object o = new Object() {
         void baz() {
-          Object foo; // 局部變量 'foo' 隱藏類 'Foo' 中的字段
+          Object foo; // 局部變數 'foo' 隱藏類 'Foo' 中的字段
         }
       };
     }
@@ -22,9 +22,9 @@
   您可以為此檢查配置以下選項：
 </p>
 <ol>
-  <li><strong>忽略不可訪問字段</strong> - 忽略與不可見的超類字段同名的局部變量（例如，由於這些字段是 private 字段）。</li>
-  <li><strong>忽略隱藏非 static 字段的 static 上下文中的局部變量</strong> - 
-例如，當局部變量位於 static 方法內部或位於 static 內部類中的方法內部時。
+  <li><strong>忽略不可訪問字段</strong> - 忽略與不可見的超類字段同名的局部變數（例如，由於這些字段是 private 字段）。</li>
+  <li><strong>忽略隱藏非 static 字段的 static 上下文中的局部變數</strong> - 
+例如，當局部變數位於 static 方法內部或位於 static 內部類中的方法內部時。
   </li>
 </ol>
 </body>

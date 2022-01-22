@@ -1,8 +1,8 @@
 <html>
 <body>
-報告嘗試在基於值的類的實例上進行同步的情況，從 Java 16 開始，這些實例會生成編譯時警告並引發運行時異常。
+報告嘗試在基於值的類的實例上進行同步的情況，從 Java 16 開始，這些實例會生成編譯時警告並引發執行時異常。
 <p>
-  例如，<code>java.lang.Double</code> 用 <code>jdk.internal.ValueBased</code> 註解，因此以下代碼會產生編譯時警告：
+  例如，<code>java.lang.Double</code> 用 <code>jdk.internal.ValueBased</code> 註解，因此以下程式碼會產生編譯時警告：
 </p>
 <pre><code>
 Double d = 20.0;

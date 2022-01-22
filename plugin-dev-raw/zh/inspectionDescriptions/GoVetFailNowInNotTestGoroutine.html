@@ -2,8 +2,8 @@
 <body>
 報告對 <code>testing.T.FailNow</code> 和位於測試檔案 goroutine 中的類似方法的調用。
 <p>像 <code>FailNow</code> 這種方法會調用 <code>runtime.Goexit</code>，並停止調用 goroutine，而不是測試。
-  因此，必須僅從運行測試或基準的 goroutine 中調用。</p>
-<p>有關 <code>FailNow</code> 的更多信息，請參見 <a href="https://golang.org/pkg/testing/#T.FailNow">golang.org 的 func (*T) FailNow</a>。</p>
+  因此，必須僅從執行測試或基準的 goroutine 中調用。</p>
+<p>有關 <code>FailNow</code> 的更多資訊，請參見 <a href="https://golang.org/pkg/testing/#T.FailNow">golang.org 的 func (*T) FailNow</a>。</p>
 <p>示例：</p>
 <pre><code>func TestFoo(t *testing.T) {
   go func() {

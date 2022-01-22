@@ -8,7 +8,7 @@
   <li>通過 <code>new</code> 運算符進行的顯式分配</li>
   <li>已知會返回新對象的方法</li>
   <li>實例綁定方法引用</li>
-  <li>捕獲變量或 <code>this</code> 引用的 lambda</li>
+  <li>捕獲變數或 <code>this</code> 引用的 lambda</li>
 </ul>
 <p><b>示例：</b></p>
 <pre><code>
@@ -17,7 +17,7 @@
     declarationsMap.put(status, new ArrayList&lt;&gt;());
   }
 
-  // Lambda 捕獲變量
+  // Lambda 捕獲變數
   String message = "Engine running.";
   for (Engine engine : engines) {
       if (!isRunning(engine)) {

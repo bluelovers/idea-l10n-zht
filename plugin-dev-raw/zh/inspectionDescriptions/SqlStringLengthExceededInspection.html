@@ -1,6 +1,6 @@
 <html>
 <body>
-報告超過定義的字符長度的變量。
+報告超過定義的字符長度的變數。
 <p>示例（Microsoft SQL 伺服器）：</p>
 <pre><code>CREATE PROCEDURE test() AS
 BEGIN
@@ -10,7 +10,7 @@ DECLARE myVarExceeded VARCHAR(5) = 'abcde12345';
 SET myVarOk = 'xyz';
 SET myVarExceeded = '123456789';
 END;</code></pre>
-<p><code>myVarExceeded</code> 變量被定義為 <code>VARCHAR(5)</code> 但兩個分配的值（<code>'abcde12345'</code> 和 <code>'123456789'</code>) 都超出了此限制。 您可以截斷指定的值或增加定義的長度。
+<p><code>myVarExceeded</code> 變數被定義為 <code>VARCHAR(5)</code> 但兩個分配的值（<code>'abcde12345'</code> 和 <code>'123456789'</code>) 都超出了此限制。 您可以截斷指定的值或增加定義的長度。
   要增加長度，請使用<b>增加類型長度</b> 快速修復。
 </p>
 <p>在應用快速修復後：</p>

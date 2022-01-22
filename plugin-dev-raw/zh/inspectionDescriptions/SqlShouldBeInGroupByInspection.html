@@ -4,7 +4,7 @@
 <p>示例（Microsoft SQL 伺服器）：</p>
 <pre><code>CREATE TABLE t1 (a INT, b INT);
 SELECT a, b FROM t1 GROUP BY a;</code></pre>
-<p>如果您運行 SELECT 查詢，您將收到一個錯誤，因為 Microsoft SQL Server 需要 <code>b</code> 列在 GROUP BY 中或在聚合函數內使用。 以下兩個示例將修復該錯誤。</p>
+<p>如果您執行 SELECT 查詢，您將收到一個錯誤，因為 Microsoft SQL Server 需要 <code>b</code> 列在 GROUP BY 中或在聚合函數內使用。 以下兩個示例將修復該錯誤。</p>
 <pre><code>SELECT a, b FROM t1 GROUP BY a, b;
 SELECT a, max(b) max_b FROM t1 GROUP BY a;</code></pre>
 </body>

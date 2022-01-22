@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>報告代碼中無法解析的引用。</p>
+<p>報告程式碼中無法解析的引用。</p>
 <p>在動態類型語言中，少數情況下可能會這樣。 </p>
 <p>如果引用類型未知，其特性不會被高亮顯示為未解析，即便它應該被高亮顯示:</p>
 <pre style="font-family: monospace">
 def print_string(s):
   print(s.abc())
 </pre>
-<p>在這段代碼中，<code>s</code> 始終為字串，<code>abc</code> 應高亮顯示為未解析狀態。 但是，<code>s</code> 類型被推斷為 <code>Any</code>，並且未報告任何警告。</p>
+<p>在這段程式碼中，<code>s</code> 始終為字串，<code>abc</code> 應高亮顯示為未解析狀態。 但是，<code>s</code> 類型被推斷為 <code>Any</code>，並且未報告任何警告。</p>
 <p>IDE 提供快速修復操作來即時添加缺少的引用。</p>
 </body>
 </html>

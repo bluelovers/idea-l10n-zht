@@ -8,10 +8,10 @@
 <p>在此類上下文中移除 <code>await</code> 會導致兩個問題。</p>
 <ul>
   <li>
-    用 <code>try-catch </code> 環繞代碼並且忘記添加 <code>await</code> 會改變代碼語義，而您可能沒有注意到這一點。
+    用 <code>try-catch </code> 環繞程式碼並且忘記添加 <code>await</code> 會改變程式碼語義，而您可能沒有注意到這一點。
   </li>
   <li>
-    採用顯式的 <code>await</code> 可能會阻止 V8 運行時提供<a href="http://bit.ly/v8-zero-cost-async-stack-traces">異步堆棧跟踪</a>。
+    採用顯式的 <code>await</code> 可能會阻止 V8 執行時提供<a href="http://bit.ly/v8-zero-cost-async-stack-traces">異步堆棧跟踪</a>。
   </li>
 </ul>
 </body>

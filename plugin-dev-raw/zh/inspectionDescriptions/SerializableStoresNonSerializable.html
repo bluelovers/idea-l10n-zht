@@ -1,8 +1,8 @@
 <html>
 <body>
-報告任何對 <code>Serializable</code> lambda、局部類和匿名類外部的非 <code>Serializable</code> 局部變量的引用。
+報告任何對 <code>Serializable</code> lambda、局部類和匿名類外部的非 <code>Serializable</code> 局部變數的引用。
 <p>
-  從匿名類引用局部變量時，它的值存儲在該類的隱式字段中。 對於局部類和 lambda 也是如此。 如果變量類型為非 <code>Serializable</code>，序列化將失敗。
+  從匿名類引用局部變數時，它的值存儲在該類的隱式字段中。 對於局部類和 lambda 也是如此。 如果變數類型為非 <code>Serializable</code>，序列化將失敗。
 </p>
 <p><b>示例：</b></p>
 <pre><code>

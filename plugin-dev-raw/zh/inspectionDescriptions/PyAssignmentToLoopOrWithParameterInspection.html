@@ -1,6 +1,6 @@
 <html>
 <body>
-報告使用內部循環重寫循環變量的情況：
+報告使用內部循環重寫循環變數的情況：
 <pre style="font-family: monospace">
     for i in range(5):
       for i in range(20, 25):
@@ -8,7 +8,7 @@
       print("Outer", i)
   </pre>
 
-如果在 <code>with</code> 語句中聲明的變量在語句體中重新聲明，它也會向您發出警告：
+如果在 <code>with</code> 語句中聲明的變數在語句體中重新聲明，它也會向您發出警告：
 <pre style="font-family: monospace">
     with open("file") as f:
       f.read()

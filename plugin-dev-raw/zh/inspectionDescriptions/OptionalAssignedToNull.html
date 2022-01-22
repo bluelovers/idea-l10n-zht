@@ -1,6 +1,6 @@
 <html>
 <body>
-報告 <code>null</code> 分配給 <code>Optional</code> 變量或從返回 <code>Optional</code> 的方法返回。
+報告 <code>null</code> 分配給 <code>Optional</code> 變數或從返回 <code>Optional</code> 的方法返回。
 <p>建議您使用 <code>Optional.empty()</code>（或 <code>Optional.absent()</code> 用於 Guava）來表示空值。</p>
 <p>示例：</p>
 <pre><code>
@@ -17,7 +17,7 @@
 <!-- tooltip end -->
 <p>配置檢查：</p>
 <p>
-  使用 <b>報告 Optional 與 null 的比較</b> 選項還可以報告<code>optional == null</code> 之類的比較。 雖然在極少數情況下（例如延遲初始化的可選字段）這可能是正確的，但可選變量通常不會為 null，並且可能應為  <code>optional.isPresent()</code>。
+  使用 <b>報告 Optional 與 null 的比較</b> 選項還可以報告<code>optional == null</code> 之類的比較。 雖然在極少數情況下（例如延遲初始化的可選字段）這可能是正確的，但可選變數通常不會為 null，並且可能應為  <code>optional.isPresent()</code>。
 </p>
 <p>僅當項目或模塊的語言級別為 8 或更高時，此檢查才會報告。</p>
 <p><small>2017.2 最新變化</small>

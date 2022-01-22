@@ -2,7 +2,7 @@
 <body>
 報告對 <code>Thread.stop()</code>、<code>Thread.suspend()</code> 和 <code>Thread.resume()</code> 的調用。
 <p>
-  這些調用本質上容易導致數據損壞和死鎖，強烈建議不要使用。
+  這些調用本質上容易導致資料損壞和死鎖，強烈建議不要使用。
   最好使用合作取消代替 <code>stop</code>，使用中斷代替直接調用 <code>suspend</code> 和 <code>resume</code>。
 </p>
 <!-- tooltip end -->

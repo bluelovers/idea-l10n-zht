@@ -1,7 +1,7 @@
 <html>
 <body>
 報告記錄類並建議將它們轉換為普通類。
-<p>通過將快速修復應用到此記錄，此檢查可以將 Java 記錄移動到使用早期 Java 版本的代碼庫。</p>
+<p>通過將快速修復應用到此記錄，此檢查可以將 Java 記錄移動到使用早期 Java 版本的程式碼庫。</p>
 <p>
   請注意，生成的類並不完全等同於原始記錄：
 </p>
@@ -10,7 +10,7 @@
   <li><code>Class.isRecord()</code> 和 <code>Class.getRecordComponents()</code> 等反射方法會產生不同的結果。</li>
   <li>生成的 <code>hashCode()</code> 實現可能會產生不同的結果，因為故意沒有指定計算記錄 <code>hashCode</code> 的公式。</li>
   <li>記錄序列化機制不同於普通類。
-    有關詳細信息，請參閱 <i>Java 對象序列化規範</i>。</li>
+    有關詳細資訊，請參閱 <i>Java 對象序列化規範</i>。</li>
 </ul>
 <!-- tooltip end -->
 <p>示例：</p>

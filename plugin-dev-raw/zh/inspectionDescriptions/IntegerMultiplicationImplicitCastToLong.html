@@ -7,7 +7,7 @@
     long val = 65536 * i;
   }
 </code></pre>
-<p>應用快速修復後，代碼變為：</p>
+<p>應用快速修復後，程式碼變為：</p>
 <pre><code>
   void x(int i) {
     long val = 65536<b>L</b> * i;
@@ -19,7 +19,7 @@
     long value = i &lt;&lt; 24;
   }
 </code></pre>
-<p>應用快速修復後，代碼變為：</p>
+<p>應用快速修復後，程式碼變為：</p>
 <pre><code>
   void f(int i) {
     long value = (long) i &lt;&lt; 24;

@@ -14,7 +14,7 @@
   );
 </code></pre>
 <p>
-  此代碼段的宗旨是僅代理 <code>Runnable.run()</code> 方法。
+  此程式碼段的宗旨是僅代理 <code>Runnable.run()</code> 方法。
   但是，也會代理對 <code>hashCode()</code> 等任何 <code>Object</code> 方法的調用。
   這可能導致 <code>NullPointerException</code> 等問題，例如在將 <code>myProxy</code> 添加到 <code>HashSet</code> 時。
 </p>

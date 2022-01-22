@@ -1,13 +1,13 @@
 <html>
 <body>
 報告已棄用的 API（類、字段和方法）的用法，例如：<code>new Thread().stop();</code>。
-<p>預設情況下，如果不可能或很難避免，則檢查不會發出警告。  比如下面的代碼就不會被報告：</p>
+<p>預設情況下，如果不可能或很難避免，則檢查不會發出警告。  比如下面的程式碼就不會被報告：</p>
 <pre><code>
-  abstract class A { //庫代碼
+  abstract class A { //庫程式碼
      @Deprecated
      abstract void m();
   }
-  class B extends A { //項目代碼
+  class B extends A { //項目程式碼
      @Override
      void m() {
         //doSmth;

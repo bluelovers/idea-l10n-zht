@@ -2,9 +2,9 @@
 <body>
 報告動態類型接收器上的 <code>asDynamic</code> 函數用法。
 <p><code>asDynamic</code> 函數對動態類型的表達式無影響。</p>
-<p>動態類型接收器上的 <code>asDynamic</code> 函數會導致運行時問題，因為 <code>asDynamic</code> 將在 JavaScript 環境中執行，而且此類函數在運行時可能並不顯示。
+<p>動態類型接收器上的 <code>asDynamic</code> 函數會導致執行時問題，因為 <code>asDynamic</code> 將在 JavaScript 環境中執行，而且此類函數在執行時可能並不顯示。
     預期方式是在常用 Kotlin 類型上使用此函數。</p>
-<p><b>移除 "asDynamic" 調用</b>快速修復可用於自動修正代碼。</p>
+<p><b>移除 "asDynamic" 調用</b>快速修復可用於自動修正程式碼。</p>
 <p>示例：</p>
 <pre><code>
   fun wrongUsage(d: Dynamic) {

@@ -3,7 +3,7 @@
 報告可能在線程之間共享的 <code>java.util.concurrent.ThreadLocalRandom</code> 實例。
 <p>
   <code>ThreadLocalRandom</code> 不應在線程之間共享，因為不具備線程安全。
-  該檢查可以報告分配給用作方法實參的字段，或分配給局部變量並在匿名類或嵌套類中使用的實例，因為它們可能在線程之間共享。
+  該檢查可以報告分配給用作方法實參的字段，或分配給局部變數並在匿名類或嵌套類中使用的實例，因為它們可能在線程之間共享。
 </p>
 <p>
   <code>ThreadLocalRandom</code> 的用法通常應類似於<code>ThreadLocalRandom.current().nextInt(...)</code>（或 <code>nextDouble(...)</code> 等）。

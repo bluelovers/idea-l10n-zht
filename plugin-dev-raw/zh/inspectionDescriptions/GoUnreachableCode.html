@@ -1,11 +1,11 @@
 <html>
 <body>
-報告永遠不會執行的代碼，因為沒有來自程序其他地方的控制流路徑。
+報告永遠不會執行的程式碼，因為沒有來自程序其他地方的控制流路徑。
 <p>示例：</p>
 <pre><code>func _() int {
  print(1)
  return 2
- println() // 此代碼無法到達
+ println() // 此程式碼無法到達
  return 0
 }</code></pre>
 </body>

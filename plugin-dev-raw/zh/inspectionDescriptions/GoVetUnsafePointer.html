@@ -6,7 +6,7 @@
 <p>用法無效的示例：</p>
 <pre><code>nums := []int8{42, 24}
 ptr := unsafe.Pointer(&nums[0])
-addr := uintptr(ptr) // 地址存儲到本地變量
+addr := uintptr(ptr) // 地址存儲到本地變數
 ptr = unsafe.Pointer(addr + uintptr(1))</code></pre>
 <p>用法有效的示例：</p>
 <pre><code>nums := []int8{42, 24}

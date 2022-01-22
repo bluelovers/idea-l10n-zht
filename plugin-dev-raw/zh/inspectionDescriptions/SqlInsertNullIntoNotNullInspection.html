@@ -10,7 +10,7 @@ col2 NVARCHAR (20) NOT NULL,
 --
 INSERT INTO br2 (id, col1, col2)
 VALUES (1, NULL, NULL);</code></pre>
-<p>您不能在 <code>col1</code> 和 <code>col2</code> 中插入 NULL 值，因為它們被定義為 NOT NULL。 如果按原樣運行腳本，則會收到錯誤消息。 要修復此代碼，請將 VALUES 部分中的 NULL 取代為值（例如，<code>42</code> 和 <code>'bird'</code>）。</p>
+<p>您不能在 <code>col1</code> 和 <code>col2</code> 中插入 NULL 值，因為它們被定義為 NOT NULL。 如果按原樣執行腳本，則會收到錯誤消息。 要修復此程式碼，請將 VALUES 部分中的 NULL 取代為值（例如，<code>42</code> 和 <code>'bird'</code>）。</p>
 <pre>INSERT INTO br2 (id, col1, col2)
 VALUES (1, 42, 'bird');</pre>
 </body>

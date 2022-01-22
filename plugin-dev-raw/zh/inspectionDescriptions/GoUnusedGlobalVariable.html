@@ -16,15 +16,15 @@
 
 <html>
 <body>
-報告已定義但從未在代碼中使用的全域變量。
-<p>如果您有未使用的變量，代碼將無法編譯。
-  有關未使用的變量和導入的更多信息，請參閱 <a href="https://golang.org/doc/effective_go#blank_unused">golang.org 上的 Unused imports and
+報告已定義但從未在程式碼中使用的全域變數。
+<p>如果您有未使用的變數，程式碼將無法編譯。
+  有關未使用的變數和導入的更多資訊，請參閱 <a href="https://golang.org/doc/effective_go#blank_unused">golang.org 上的 Unused imports and
     variables</a> 頁面。
 </p>
 <pre><code>func main() {
  a := 422
 }</code></pre>
-<p>示例中的代碼將無法編譯。 因此，將其高亮顯示為錯誤。 對於此類情況，您可以應用兩個快速修復：<b>刪除變量</b> 和 <b>重命名 _</b>。 第一個快速修復刪除變量，第二個將變量轉換為空白
+<p>示例中的程式碼將無法編譯。 因此，將其高亮顯示為錯誤。 對於此類情況，您可以應用兩個快速修復：<b>刪除變數</b> 和 <b>重命名 _</b>。 第一個快速修復刪除變數，第二個將變數轉換為空白
    標識符。</p>
 <p>在應用<b>重命名 _</b>快速修復後：</p>
 <pre><code>func main() {
