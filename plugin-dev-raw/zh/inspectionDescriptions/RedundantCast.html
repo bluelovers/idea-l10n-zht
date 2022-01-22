@@ -1,5 +1,21 @@
 <html>
 <body>
 報告不必要的轉換表達式。
+
+<p>示例：</p>
+<pre><code>
+  static Object toObject(String s) {
+    return (Object) s;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  使用下面的復選框可以忽略澄清轉換，例如應為 <code>Object</code> 的集合調用中的轉換：
+<pre><code>
+  static void removeFromList(List&lt;String&gt; l, Object o) {
+    l.remove((String)o);
+  } 
+</code></pre>
+
 </body>
 </html>

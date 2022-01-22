@@ -1,22 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="鍵盤映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="" path="ActionManager" hit="!bookmark.go.to.next.editor.action.text!" />
-    <option name="action" path="ActionManager" hit="!bookmark.go.to.next.editor.action.text!" />
-    <option name="bookmark" path="ActionManager" hit="!bookmark.go.to.next.editor.action.text!" />
-    <option name="editor" path="ActionManager" hit="!bookmark.go.to.next.editor.action.text!" />
-    <option name="go" path="ActionManager" hit="!bookmark.go.to.next.editor.action.text!" />
-    <option name="next" path="ActionManager" hit="!bookmark.go.to.next.editor.action.text!" />
-    <option name="text" path="ActionManager" hit="!bookmark.go.to.next.editor.action.text!" />
-    <option name="to" path="ActionManager" hit="!bookmark.go.to.next.editor.action.text!" />
-    <option name="" path="ActionManager" hit="!bookmark.go.to.previous.editor.action.text!" />
-    <option name="action" path="ActionManager" hit="!bookmark.go.to.previous.editor.action.text!" />
-    <option name="bookmark" path="ActionManager" hit="!bookmark.go.to.previous.editor.action.text!" />
-    <option name="editor" path="ActionManager" hit="!bookmark.go.to.previous.editor.action.text!" />
-    <option name="go" path="ActionManager" hit="!bookmark.go.to.previous.editor.action.text!" />
-    <option name="previous" path="ActionManager" hit="!bookmark.go.to.previous.editor.action.text!" />
-    <option name="text" path="ActionManager" hit="!bookmark.go.to.previous.editor.action.text!" />
-    <option name="to" path="ActionManager" hit="!bookmark.go.to.previous.editor.action.text!" />
     <option name="emacs" path="ActionManager" hit="Emacs 頁籤" />
     <option name="頁籤" path="ActionManager" hit="Emacs 頁籤" />
     <option name="ide" path="ActionManager" hit="IDE 腳本控制台" />
@@ -139,7 +123,7 @@
     <option name="選單" path="ActionManager" hit="分析 Java 選單" />
     <option name="分析程式碼" path="ActionManager" hit="分析程式碼" />
     <option name="分析依賴關係" path="ActionManager" hit="分析依賴關係…" />
-    <option name="分析反向依賴關係" path="ActionManager" hit="分析反向依賴關係…" />
+    <option name="分析向後依賴關係" path="ActionManager" hit="分析向後依賴關係…" />
     <option name="分析指定目標上的依賴項" path="ActionManager" hit="分析指定目標上的依賴項" />
     <option name="分析模塊依賴關係" path="ActionManager" hit="分析模塊依賴關係…" />
     <option name="分析流入此處的資料" path="ActionManager" hit="分析流入此處的資料…" />
@@ -311,7 +295,6 @@
     <option name="隱藏聲明" path="ActionManager" hit="在導航欄中顯示/隱藏聲明" />
     <option name="在彈出視窗中顯示臨時檔案" path="ActionManager" hit="在彈出視窗中顯示臨時檔案" />
     <option name="在當前檔案中切換顯示導入彈出視窗" path="ActionManager" hit="在當前檔案中切換顯示導入彈出視窗" />
-    <option name="在當前目錄新建" path="ActionManager" hit="在當前目錄新建…" />
     <option name="在當前類中實現基接口" path="ActionManager" hit="在當前類中實現基接口/類方法" />
     <option name="類方法" path="ActionManager" hit="在當前類中實現基接口/類方法" />
     <option name="在當前類中重寫基類方法" path="ActionManager" hit="在當前類中重寫基類方法" />
@@ -328,6 +311,7 @@
     <option name="在此目錄中創建新的類" path="ActionManager" hit="在此目錄中創建新的類、接口、檔案或目錄" />
     <option name="接口" path="ActionManager" hit="在此目錄中創建新的類、接口、檔案或目錄" />
     <option name="檔案或目錄" path="ActionManager" hit="在此目錄中創建新的類、接口、檔案或目錄" />
+    <option name="在此目錄中新建" path="ActionManager" hit="在此目錄中新建…" />
     <option name="在活動編輯器中導航到上一個書簽" path="ActionManager" hit="在活動編輯器中導航到上一個書簽" />
     <option name="在活動編輯器中導航到上一個方法" path="ActionManager" hit="在活動編輯器中導航到上一個方法" />
     <option name="在活動編輯器中導航到上一個高亮顯示的錯誤" path="ActionManager" hit="在活動編輯器中導航到上一個高亮顯示的錯誤" />
@@ -640,7 +624,7 @@
     <option name="瀏覽所選方法的調用層次結構" path="ActionManager" hit="瀏覽所選方法的調用層次結構" />
     <option name="瀏覽所選類的層次結構" path="ActionManager" hit="瀏覽所選類的層次結構" />
     <option name="添加到收藏夾" path="ActionManager" hit="添加到收藏夾" />
-    <option name="添加快捷方式" path="ActionManager" hit="添加快捷方式…" />
+    <option name="添加快捷鍵" path="ActionManager" hit="添加快捷鍵…" />
     <option name="添加新收藏夾列表" path="ActionManager" hit="添加新收藏夾列表" />
     <option name="添加新的排列規則" path="ActionManager" hit="添加新的排列規則" />
     <option name="添加新部分排列規則" path="ActionManager" hit="添加新部分排列規則" />
@@ -663,7 +647,7 @@
     <option name="或" path="ActionManager" hit="生成構造函數、getter 或 setter 方法等" />
     <option name="方法等" path="ActionManager" hit="生成構造函數、getter 或 setter 方法等" />
     <option name="生成構造函數" path="ActionManager" hit="生成構造函數、getter 或 setter 方法等" />
-    <option name="相關檔案" path="ActionManager" hit="相關檔案…" />
+    <option name="相關符號" path="ActionManager" hit="相關符號…" />
     <option name="省電模式" path="ActionManager" hit="省電模式" />
     <option name="省電模式將禁用後台程式碼分析和其他後台操作" path="ActionManager" hit="省電模式將禁用後台程式碼分析和其他後台操作" />
     <option name="禁止" path="ActionManager" hit="禁止" />
@@ -689,6 +673,8 @@
     <option name="類層次結構" path="ActionManager" hit="類層次結構" />
     <option name="絕對路徑" path="ActionManager" hit="絕對路徑" />
     <option name="編輯" path="ActionManager" hit="編輯" />
+    <option name="編輯器中的上一行書簽" path="ActionManager" hit="編輯器中的上一行書簽" />
+    <option name="編輯器中的下一行書簽" path="ActionManager" hit="編輯器中的下一行書簽" />
     <option name="編輯器彈出視窗選單操作" path="ActionManager" hit="編輯器彈出視窗選單操作(1)" />
     <option name="編輯器彈出視窗選單操作" path="ActionManager" hit="編輯器彈出視窗選單操作(2)" />
     <option name="編輯器頁籤彈出視窗選單操作" path="ActionManager" hit="編輯器頁籤彈出視窗選單操作(1)" />

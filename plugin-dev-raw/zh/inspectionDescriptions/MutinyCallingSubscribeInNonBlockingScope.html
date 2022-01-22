@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>報告 "reactive" 方法中的 <code>subscribe()</code> 調用。</p>
-<p>返回發佈程序（包括 <code>Uni</code> 和 <code>Multi</code>）的方法不應直接調用 <code>subscribe()</code> 方法，因為它可能破壞反應式調用鏈。</p>
+<p>返回發佈程序(包括 <code>Uni</code> 和 <code>Multi</code>)的方法不應直接調用 <code>subscribe()</code> 方法，因為它可能破壞反應式調用鏈。</p>
 <p>不要使用 <code>subscribe()</code>，而是考慮使用組合運算符，例如 <code>flatMap()</code>、<code>merge()</code> 等。</p>
 <p><b>示例：</b></p>
 <pre><code>
