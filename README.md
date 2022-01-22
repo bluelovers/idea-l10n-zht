@@ -50,6 +50,8 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 ## TODO
 
+- 自動偵測抓取原版簡體最新下載網址
+
 ## 已知問題
 
 - `dot-properties-loader` 會將 `label.inactive.timeout.sec= 秒` 轉換為 `label.inactive.timeout.sec=秒` 對於 IDEA 的實際影響則不清楚，照一般來說等號後的空白應該是不會被當作內容值
