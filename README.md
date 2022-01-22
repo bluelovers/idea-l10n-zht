@@ -38,6 +38,12 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 - https://github.com/bluelovers/ws-segment/blob/master/packages/%40novel-segment/postag/lib/postag/ids.ts
 - https://github.com/bluelovers/ws-segment/blob/master/packages/novel-segment/test/demo.cache.ts#L97
 
+### [test/segment-check.ts](test/segment-check.ts)
+
+在 [test/temp/*.txt](test/temp) 資料夾底下新增任何副檔名為 .txt 檔案
+之後執行此腳本 則可以查看分詞系統分詞後結果  
+來了解 為什麼沒有發生預期的轉換
+
 ## .properties
 
 透過 [lib/static/lazy.properties](lib/static/lazy.properties) 可無視分詞轉換結果直接取代內容
