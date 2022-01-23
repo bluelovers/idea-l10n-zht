@@ -11,7 +11,7 @@
 <pre><code>
   class Person implements Serializable {
     transient String name = "Default"; //警告，反序列化後實際上可能為 null
-    transient String surname; //null 被視為默認值，不予報告
+    transient String surname; //null 被視為預設值，不予報告
   }
 </code></pre>
 <!-- tooltip end -->

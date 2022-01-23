@@ -11,10 +11,10 @@
 
     &lt;bean abstract="false" id="superfluousDefaultAttributeAbstract"/&gt;
 
-    &lt;!-- 具有默認值 'false' 的特性 abstract 是多餘的 --&gt;/
+    &lt;!-- 具有預設值 'false' 的特性 abstract 是多餘的 --&gt;/
     &lt;bean id="superfluousDefaultAttributeScope" scope="singleton"/&gt;
 
-    &lt;!-- 具有默認值 'singleton' 的特性範圍是多餘的 --&gt;/
+    &lt;!-- 具有預設值 'singleton' 的特性範圍是多餘的 --&gt;/
     &lt;bean class="java.lang.StringBuilder"&gt;
       &lt;property name="length"&gt;
          &lt;bean id="beanId" // Attribute id is superfluous

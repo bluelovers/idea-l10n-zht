@@ -2,7 +2,7 @@
 <body>
 <p>報告調用 <code>ReactorDebugAgent.init()</code> 時 <code>Hooks.onOperatorDebug()</code> 的用法。</p>
 <p>
-  如果 <code>ReactorDebugAgent</code> 在類路徑中，並且 <code>spring.reactor.debug-agent.enabled</code> 為 <code>true</code>（默認值），啟動時自動調用 <code>ReactorDebugAgent.init()</code>。
+  如果 <code>ReactorDebugAgent</code> 在類路徑中，並且 <code>spring.reactor.debug-agent.enabled</code> 為 <code>true</code>（預設值），啟動時自動調用 <code>ReactorDebugAgent.init()</code>。
   同時使用 <code>Hooks.onOperatorDebug()</code> 和 <code>ReactorDebugAgent.init()</code> 會導致 Reactor 生成雙倍的調試堆棧幀。
   此外，<code>Hooks.onOperatorDebug()</code> 會導致性能開銷。
 </p>
@@ -20,6 +20,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p>此檢查僅在項目或模塊的 Spring Boot 版本為 2.2.0 或更高時觸發。</p>
+<p>此檢查僅在專案或模塊的 Spring Boot 版本為 2.2.0 或更高時觸發。</p>
 </body>
 </html>

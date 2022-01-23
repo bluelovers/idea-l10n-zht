@@ -1,18 +1,18 @@
 <html>
 <body>
-<p>報告常規 Python 檔案中的重載放置在實現之後或其簽名與實現不兼容的情況。</p>
+<p>報告常規 Python 檔案中的重載放置在實現之後或其簽名與實現不相容的情況。</p>
 <p><b>示例：</b></p>
 <pre style="font-family: monospace">
 from typing import overload
 
 
 @overload
-def foo(p1, p2): # 重載簽名不兼容實現
+def foo(p1, p2): # 重載簽名不相容實現
     pass
 
 
 @overload
-def foo(p1): # 重載簽名不兼容實現
+def foo(p1): # 重載簽名不相容實現
     pass
 
 

@@ -1,8 +1,8 @@
 <html>
 <body>
 報告在同一軟件包但在不同模塊中聲明的 package-private 成員的用法。
-<p>如果聲明類由不同的加載器加載，則訪問 package-private 成員的程式碼將在執行時失敗，並顯示 <code>IllegalAccessError</code>。</p>
-<p>如果某個方法重寫了由不同加載器加載的類中的 package-private 方法，那麼在實現類的實例上調用 super 方法時，它將不會被調用。</p>
-<p>如果某個方法從由不同加載器加載的類中實現了 abstract package-private 方法，則在實現類的實例上調用 super 方法將失敗並顯示 <code>AbstractMethodError</code>。</p>
+<p>如果聲明類由不同的載入器載入，則訪問 package-private 成員的程式碼將在執行時失敗，並顯示 <code>IllegalAccessError</code>。</p>
+<p>如果某個方法重寫了由不同載入器載入的類中的 package-private 方法，那麼在實現類的實例上調用 super 方法時，它將不會被調用。</p>
+<p>如果某個方法從由不同載入器載入的類中實現了 abstract package-private 方法，則在實現類的實例上調用 super 方法將失敗並顯示 <code>AbstractMethodError</code>。</p>
 </body>
 </html>
