@@ -3,6 +3,7 @@ import { join } from 'upath2';
 import { __root } from './__root';
 import { outputJSON, readFile } from 'fs-extra';
 import { initIdeaSegmentText } from '../lib/segment';
+import { debug_token } from 'novel-segment/lib/util/index';
 
 const cwd = join(__root, 'test', 'temp');
 
@@ -20,6 +21,7 @@ export default FastGlob<string>([
 
 		return initIdeaSegmentText()
 			.then(seg => seg.doSegment(input))
+			.tap(result => debug_token(result))
 			.then(result => outputJSON(join(cwd, file + '.json'), result, {
 				spaces: 2,
 			}))
