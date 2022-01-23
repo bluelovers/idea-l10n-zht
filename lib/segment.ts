@@ -1,5 +1,5 @@
 import { getSegment, processText } from "novel-segment-cli";
-import { chkcrlf, CR, CRLF, detectLineBreak, LF } from 'crlf-normalize';
+import { detectLineBreak } from 'crlf-normalize';
 import Bluebird from 'bluebird';
 import Segment from "novel-segment/lib";
 import { load as loadSynonym } from '@novel-segment/loaders/segment/synonym';
@@ -18,6 +18,9 @@ export function initIdeaSegmentText()
 			{
 				inited = await getSegment({
 					//disableCache: true,
+					optionsSegment: {
+						nodeNovelMode: true,
+					},
 				}).then(async (segment) =>
 				{
 					let db_dict = segment.getDictDatabase(EnumDictDatabase.TABLE);
