@@ -19,6 +19,7 @@ const words = array_unique_overwrite([
 	`只讀`,
 	`標籤頁`,
 	`文件夾`,
+	`插件`,
 ].reduce((ls, s) =>
 {
 
@@ -31,6 +32,7 @@ const words = array_unique_overwrite([
 
 const files = [
 	'messages/IdeBundle.properties',
+	'messages/CloudConfigBundle.properties',
 ] as const;
 
 /**
