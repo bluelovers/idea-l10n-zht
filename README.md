@@ -54,6 +54,8 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 - lib/segment.ts
 
+- [OBFUSCATE 混淆與曖昧](OBFUSCATE.md) 此檔案放置需要確認或討論的項目
+
 ## TODO
 
 - 自動偵測抓取原版簡體最新下載網址
