@@ -58,7 +58,9 @@ jobs:
       - name: run script
         if: success()
 #        env:
-        run: yarn run ci:build
+        run: |
+          yarn run ci:build
+          yarn run ci:postpublish
       - name: Push changes
         if: success()
         uses: ad-m/github-push-action@master
