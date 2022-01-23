@@ -33,7 +33,7 @@
     "ci:test": "yarn run test",
     "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest ts-jest ts-node ynpx lerna yarn-tool",
     "ci:build": "yarn run plugin:build && yarn run build:commit",
-    "ci:postpublish": "yarn run postpublish:changelog && yarn run postpublish:git:commit && yarn run postpublish:git:tag & ci:postpublish",
+    "ci:postpublish": "yarn run postpublish:changelog && yarn run postpublish:git:commit && yarn run postpublish:git:tag & echo ci:postpublish",
     "npm:publish": "npm publish",
     "npm:publish:bump": "yarn run version:bump && npm publish",
     "preversion": "echo preversion && yarn run test",
