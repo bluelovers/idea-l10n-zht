@@ -1,6 +1,10 @@
+import { lazyMatchSynonym001, lazyMatchSynonym001Not } from '@novel-segment/assert';
 import { processIdeaSegmentText } from '../lib/segment';
+import { ITSValueOrArrayMaybeReadonly } from 'ts-type/lib/type/base';
 
 jest.setTimeout(60 * 1000);
+
+type ITestList = [ITSValueOrArrayMaybeReadonly<string>, string][];
 
 /**
  * 檢查是否確實轉換
@@ -12,7 +16,7 @@ describe(`segment`, () =>
 	/**
 	 * 繁體/簡體皆可 但簡體比較能反映真實運作
 	 */
-	[
+	(<ITestList>[
 		//[`繁體`, `繁體/簡體皆可 但簡體比較能反映真實運作`],
 
 		[`打印`, `action.Print.text=打印(_P)…\naction.Print.description=打印文件`],
@@ -55,15 +59,16 @@ describe(`segment`, () =>
 		[`插件`, `Kotlin 插件有可用的新版本 {0}。<b><a href="#">安裝</a></b>`],
 		[`兼容`, `從右到左文本兼容性問題`],
 
-	].forEach(text =>
+	]).forEach(text =>
 	{
 
-		test(text.join(' - '), async () =>
+		test(_handleTitles(text), async () =>
 		{
 
 			let actual = await processIdeaSegmentText(text[1]);
 
-			expect(actual).not.toContain(text[0])
+			lazyMatchSynonym001Not(actual, [text[0]].flat());
+			//expect(actual).not.toContain(text[0])
 			expect(actual).toMatchSnapshot();
 
 		});
@@ -78,7 +83,8 @@ describe(`segment`, () =>
 describe(`should include`, () =>
 {
 
-	[
+	(<ITestList>[
+
 		[`顯示`, `顯示屏幕外圖像`],
 		[`頁面`, `打开文件或项目。您也可以通过拖放到欢迎屏幕来打开项目或编辑文件。`],
 		[`頁面`, `显示初始屏幕`],
@@ -86,15 +92,16 @@ describe(`should include`, () =>
 		[`全域類別庫`, `导入的项目引用了未知的全局库`],
 		[`執行巨集`, `查看、更改、录制、播放宏`],
 
-	].forEach(text =>
+	]).forEach(text =>
 	{
 
-		test(text.join(' - '), async () =>
+		test(_handleTitles(text), async () =>
 		{
 
 			let actual = await processIdeaSegmentText(text[1]);
 
-			expect(actual).toContain(text[0])
+			lazyMatchSynonym001(actual, [text[0]].flat());
+			//expect(actual).toContain(text[0])
 			expect(actual).toMatchSnapshot();
 
 		});
@@ -102,3 +109,10 @@ describe(`should include`, () =>
 	});
 
 })
+
+function _handleTitles(actual: [ITSValueOrArrayMaybeReadonly<string>, string])
+{
+	let arr = actual.slice();
+	arr[0] = [arr[0]].flat().join('／');
+	return arr.join(' - ')
+}
