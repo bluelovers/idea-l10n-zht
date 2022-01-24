@@ -4,6 +4,8 @@ import { __root } from './__root';
 import { outputJSON, readFile } from 'fs-extra';
 import { initIdeaSegmentText } from '../lib/segment';
 import { debug_token } from 'novel-segment/lib/util/index';
+import { printPrettyDiff } from '@novel-segment/pretty-diff';
+import { chalkByConsole, console } from 'debug-color2';
 
 const cwd = join(__root, 'test', 'temp');
 
@@ -17,12 +19,19 @@ export default FastGlob<string>([
 })
 	.mapSeries(async (file) =>
 	{
+		console.info(file);
+
 		const input = await readFile(join(cwd, file)).then(buf => buf.toString());
 
 		return initIdeaSegmentText()
 			.then(seg => seg.doSegment(input))
 			.tap(result => debug_token(result))
-			.then(result => outputJSON(join(cwd, file + '.json'), result, {
+			.tap(result =>{
+				console.gray("==================");
+				printPrettyDiff(input, result);
+				console.gray("==================");
+			})
+			.tap(result => outputJSON(join(cwd, file + '.json'), result, {
 				spaces: 2,
 			}))
 			;
