@@ -6,6 +6,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # 1.0.0 (2022-01-24)
 
 
+### 🐛　Bug Fixes
+
+* { 按位掩码 => 位元遮罩 } , { 掩码 => 遮罩 } ([470badc](https://github.com/bluelovers/idea-l10n-zht/commit/470badc388087961f4811b4989596271d0625ff9))
+
+
+### 🛠　Build System
+
+* **release:** update build ([1d822ff](https://github.com/bluelovers/idea-l10n-zht/commit/1d822fffe80777916b96af433e46df8eb97dcb36))
+
+
+
+
+
+# 1.0.0 (2022-01-24)
+
+
 ### 🔖　Miscellaneous
 
 * . ([64f1a64](https://github.com/bluelovers/idea-l10n-zht/commit/64f1a641d0ef9170fb73c56a9a25ed240770783c))
