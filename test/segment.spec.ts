@@ -60,6 +60,8 @@ describe(`segment`, () =>
 		[`兼容`, `從右到左文本兼容性問題`],
 		[`光標`, `從文本光標開始的所有內容`],
 		[`標識符`, `不允許在一個模板中混用駝峰拼寫法和小寫標識符`],
+		[`骆驼拼写法`, `使用骆驼拼写法样式的方法名，没有 "get" 前缀，第一个字符大写。 例如，属性名称 '_my_property' 被转换为 'MyProperty'。`],
+		[`駝峰拼寫法`, `<p><a href="https://kotlinlang.org/docs/coding-conventions.html#function-names">建議的命名慣例</a>：必須以小寫字母開頭，使用駝峰拼寫法並且沒有下划線。</p>`],
 
 	]).forEach(text =>
 	{
@@ -93,6 +95,7 @@ describe(`should include`, () =>
 		[`原始碼`, `选择根源代码`],
 		[`全域類別庫`, `导入的项目引用了未知的全局库`],
 		[`執行巨集`, `查看、更改、录制、播放宏`],
+		[`駝峰式命名`, `<option name="切换骆驼拼写法" path="ActionManager" hit="切换骆驼拼写法/蛇形拼写法" />`],
 
 	]).forEach(text =>
 	{
