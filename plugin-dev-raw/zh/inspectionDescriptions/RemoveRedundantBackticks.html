@@ -2,7 +2,7 @@
 <body>
 報告引用中的冗餘反引號。
 <p>
-    一些 Kotlin 關鍵字在 Java 中是有效的標識符，例如：<code>in</code>、<code>object</code>、<code>is</code>。
+    一些 Kotlin 關鍵字在 Java 中是有效的關鍵字，例如：<code>in</code>、<code>object</code>、<code>is</code>。
     如果 Java 庫將 Kotlin 關鍵字用於方法，您仍然可以調用該方法並使用反引號字符 (<code>`</code>) 對其進行轉義，例如 <code>foo.`is`(bar)</code>。
     有時這種轉義是冗餘的，可以安全地省略。 該檢查會發現並報告此類情況，並與“移除冗餘反引號”快速修復配對，允許您修改高亮顯示的程式碼。
 </p>
@@ -13,7 +13,7 @@
       `is`("bar") // 'is' 是一個關鍵字，反引號為必選項
   }
 
-  fun `test that smth works as designed`() {} // 可以，複雜標識符有助於改進可讀性
+  fun `test that smth works as designed`() {} // 可以，複雜關鍵字有助於改進可讀性
 
   val `a` = 1  // 不需要反引號
 </code></pre>

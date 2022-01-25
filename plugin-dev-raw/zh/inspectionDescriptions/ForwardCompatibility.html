@@ -3,14 +3,14 @@
 報告未來 Java 版本中可能無法編譯的 Java 程式碼結構。
 <p>報告的問題如下：</p>
 <ul>
-  <li>使用 <code>assert</code>>、<code>enum</code> 或 <code>_</code> 作為標識符</li>
-  <li>使用 <code>var</code>、<code>yield</code> 或 <code>record</code> 受限標識符作為類型名稱</li>
+  <li>使用 <code>assert</code>>、<code>enum</code> 或 <code>_</code> 作為關鍵字</li>
+  <li>使用 <code>var</code>、<code>yield</code> 或 <code>record</code> 受限關鍵字作為類型名稱</li>
   <li>對 <code>yield</code> 方法的非限定調用</li>
   <li><code>module-info.java</code> 內部的 <code>requires java.base</code> 語句的修飾符</li>
 </ul>
 <p><b>示例：</b></p>
 <pre><code>
-  // 從 Java 14 起，由於 'yield' 成為受限標識符，此類將停止編譯。
+  // 從 Java 14 起，由於 'yield' 成為受限關鍵字，此類將停止編譯。
   public class yield {} 
 </code></pre>
 <p>及時解決這些問題，可以簡化向未來 Java 版本的遷移。</p>
