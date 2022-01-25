@@ -13,6 +13,7 @@ import { gray, red } from 'ansi-colors';
 import { updateMeta } from '../lib/meta';
 import { processIdeaSegmentText } from '../lib/segment';
 import { array_unique_overwrite } from 'array-hyper-unique';
+import { handleText } from '../lib/handleText';
 
 const multibar = createMultiBar();
 
@@ -62,12 +63,7 @@ export default FastGlob<string>([
 					{
 						const content_old = await readFile(fullpath).then(content => content.toString());
 
-						let content_new = await processIdeaSegmentText(content_old);
-
-						if (/META-INF\/plugin\.xml$/i.test(file))
-						{
-							content_new = updateMeta(content_new);
-						}
+						let content_new = await handleText(content_old);
 
 						if (content_new !== content_old)
 						{
