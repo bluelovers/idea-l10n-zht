@@ -48,6 +48,7 @@ const testExt = [
  */
 module.exports = {
 	clearMocks: true,
+	passWithNoTests: true,
 	moduleFileExtensions: [
 		'ts',
 		'tsx',

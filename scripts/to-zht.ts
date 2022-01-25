@@ -63,7 +63,9 @@ export default FastGlob<string>([
 					{
 						const content_old = await readFile(fullpath).then(content => content.toString());
 
-						let content_new = await handleText(content_old);
+						let content_new = await handleText(content_old, {
+							file,
+						});
 
 						if (content_new !== content_old)
 						{
