@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2022-01-25)
+
+
+### 🛠　Build System
+
+* **release:** update build ([59de17f](https://github.com/bluelovers/idea-l10n-zht/commit/59de17f099b0359d17d56bc031202a8a72e94b1f))
+
+
+### ♻️　Chores
+
+* add `.editorconfig` ([30bce4e](https://github.com/bluelovers/idea-l10n-zht/commit/30bce4e62451c878458eace7c86a8f12b15dfe8f))
+
+
+
+
+
 # 1.0.0 (2022-01-24)
 
 
