@@ -6,6 +6,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # 1.0.0 (2022-01-25)
 
 
+### 🐛　Bug Fixes
+
+* handleText ([12a90cb](https://github.com/bluelovers/idea-l10n-zht/commit/12a90cb1fa66487c757b0730a158678c2fd79c05))
+
+
+
+
+
+# 1.0.0 (2022-01-25)
+
+
 ### 🛠　Build System
 
 * **release:** update build ([59de17f](https://github.com/bluelovers/idea-l10n-zht/commit/59de17f099b0359d17d56bc031202a8a72e94b1f))
