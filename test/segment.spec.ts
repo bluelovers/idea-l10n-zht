@@ -62,7 +62,8 @@ describe(`segment`, () =>
 		[`標識符`, `不允許在一個模板中混用駝峰拼寫法和小寫標識符`],
 		[`骆驼拼写法`, `使用骆驼拼写法样式的方法名，没有 "get" 前缀，第一个字符大写。 例如，属性名称 '_my_property' 被转换为 'MyProperty'。`],
 		[`駝峰拼寫法`, `<p><a href="https://kotlinlang.org/docs/coding-conventions.html#function-names">建議的命名慣例</a>：必須以小寫字母開頭，使用駝峰拼寫法並且沒有下划線。</p>`],
-
+		[`導出`, `選擇包含導出的檢查結果的目錄`],
+		[`導入`, `選擇靜態可導入類`],
 			[`掩碼`, `文件掩码(&F)`],
 
 	]).forEach(text =>
