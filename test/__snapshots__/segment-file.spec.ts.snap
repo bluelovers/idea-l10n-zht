@@ -885,11 +885,11 @@ mixed.bag.installation=您的 {0} 安裝似乎已損壞，因為存在多個版�
 
 vm.options.env.vars=檢測到使用了 Java 選項環境變數。此類變數將重寫 IDE 配置檔案(*.vmoptions)，並可能導致性能和穩定性問題。請考慮刪除以下變數: {0}。
 
-code.cache.warn.message={0} MB 的程式碼緩存大小不足。請將 ''-XX:ReservedCodeCacheSize'' 增加到 {1} MB 或以上，以避免性能問題。
+code.cache.warn.message={0} MB 的程式碼快取大小不足。請將 ''-XX:ReservedCodeCacheSize'' 增加到 {1} MB 或以上，以避免性能問題。
 vm.options.edit.action.cap=編輯自定義 VM 選項
 
 implicit.plugin.directory.path=似乎您正在使用 ''idea.config.path'' 屬性指定設定目錄的位置。在 2020.1 中，應用程式目錄的預設位置已更改。為確保兼容性，IDE 選擇了套件的舊位置({0})，但為了避免將來出現任何歧義(並去除此警告)，另請設定 ''idea.plugins.path'' 屬性。
-implicit.log.directory.path=似乎您正在使用 ''idea.system.path'' 屬性指定緩存目錄的位置。在 2020.1 中，應用程式目錄的預設位置已更改。為確保兼容性，IDE 選擇了日誌的舊位置({0})，但為了避免將來出現任何歧義(並去除此警告)，另請設定 ''idea.log.path'' 屬性。
+implicit.log.directory.path=似乎您正在使用 ''idea.system.path'' 屬性指定快取目錄的位置。在 2020.1 中，應用程式目錄的預設位置已更改。為確保兼容性，IDE 選擇了日誌的舊位置({0})，但為了避免將來出現任何歧義(並去除此警告)，另請設定 ''idea.log.path'' 屬性。
 
 # example: ... is 11.0.10+11 by JetBrains s.r.o. at 'C:\\\\Tools\\\\IDEA\\\\jbr'
 bundled.jre.version.message=請考慮切換到更適合 IDE 的捆綁 Java 執行時(您當前的 Java 執行時為 {0}，來自於 {1}，位置為 ''{2}'')。
@@ -1642,7 +1642,7 @@ label.version.any=<any>
 link.more=更多…
 
 message.the.path.0.does.not.exist.maybe.on.remote=路徑 {0} 不存在。\\\\n如果它位於可移動驅動器或網絡驅動器上，請確保該驅動器已連接。
-dialog.title.invalidate.caches=清除緩存
+dialog.title.invalidate.caches=清除快取
 button.next=下一個
 button.previous=上一個
 action.description.unpin.tool.window.from.designer.editor=從設計器編輯器取消固定工具視窗
@@ -1840,7 +1840,7 @@ dialog.title.restart.ide=重新啟動?
 dialog.message.restart.ide=是否要重啟 IDE?
 dialog.action.restart.yes=重新啟動
 dialog.action.restart.cancel=取消
-dialog.message.caches.will.be.invalidated=移除所有專案的緩存和索引。重新打開專案時將構建新緩存。
+dialog.message.caches.will.be.invalidated=移除所有專案的快取和索引。重新打開專案時將構建新快取。
 button.invalidate.and.restart=清除並重新啟動(&R)
 button.invalidate.and.exit=清除並退出(&E)
 button.cancel.without.mnemonic=取消
@@ -2468,7 +2468,7 @@ old.dirs.action.progress=正在尋找過時的 IDE 存儲目錄…
 old.dirs.notification.text=找到過時的 IDE 存儲目錄。
 old.dirs.notification.action=查看並刪除…
 old.dirs.dialog.title=刪除過時的 IDE 存儲目錄
-old.dirs.dialog.text=<html>安裝在您計算機上的其他 IDE 版本使用下面列出的目錄來存儲特定於版本的<br>設定、緩存和套件。刪除它們可以釋放空間，並且不影響<i>此版本</i>的穩定性。<br><b>警告</b>: 不要刪除仍在使用的版本的目錄!<br><br>選擇要刪除的目錄:</html>
+old.dirs.dialog.text=<html>安裝在您計算機上的其他 IDE 版本使用下面列出的目錄來存儲特定於版本的<br>設定、快取和套件。刪除它們可以釋放空間，並且不影響<i>此版本</i>的穩定性。<br><b>警告</b>: 不要刪除仍在使用的版本的目錄!<br><br>選擇要刪除的目錄:</html>
 old.dirs.column.name=目錄
 old.dirs.column.updated=上次使用
 old.dirs.column.size=大小
@@ -2587,7 +2587,7 @@ dialog.message.file.already.exists=檔案已存在
 notification.cache.diagnostic.helper.title=IDE 修復
 notification.cache.diagnostic.helper.text=已執行 ''{0}'' 恢復步驟 ({1}/{2})
 recovery.progress.title=正在嘗試 {0}…
-invalidate.all.caches.recovery.action.name=清除緩存並重新啟動
+invalidate.all.caches.recovery.action.name=清除快取並重新啟動
 title.hierarchy.callees.of={0} 的被調用方
 title.hierarchy.callers.of={0} 的調用方
 browser.shortcut.or.shift={0}，按住 Shift 以打開本地檔案 URL
@@ -3560,11 +3560,11 @@ mixed.bag.installation=您的 {0} 安裝似乎已損壞，因為存在多個版�
 
 vm.options.env.vars=檢測到使用了 Java 選項環境變數。此類變數將重寫 IDE 配置檔案(*.vmoptions)，並可能導致性能和穩定性問題。請考慮刪除以下變數: {0}。
 
-code.cache.warn.message={0} MB 的程式碼緩存大小不足。請將 ''-XX:ReservedCodeCacheSize'' 增加到 {1} MB 或以上，以避免性能問題。
+code.cache.warn.message={0} MB 的程式碼快取大小不足。請將 ''-XX:ReservedCodeCacheSize'' 增加到 {1} MB 或以上，以避免性能問題。
 vm.options.edit.action.cap=編輯自定義 VM 選項
 
 implicit.plugin.directory.path=似乎您正在使用 ''idea.config.path'' 屬性指定設定目錄的位置。在 2020.1 中，應用程式目錄的預設位置已更改。為確保兼容性，IDE 選擇了套件的舊位置({0})，但為了避免將來出現任何歧義(並去除此警告)，另請設定 ''idea.plugins.path'' 屬性。
-implicit.log.directory.path=似乎您正在使用 ''idea.system.path'' 屬性指定緩存目錄的位置。在 2020.1 中，應用程式目錄的預設位置已更改。為確保兼容性，IDE 選擇了日誌的舊位置({0})，但為了避免將來出現任何歧義(並去除此警告)，另請設定 ''idea.log.path'' 屬性。
+implicit.log.directory.path=似乎您正在使用 ''idea.system.path'' 屬性指定快取目錄的位置。在 2020.1 中，應用程式目錄的預設位置已更改。為確保兼容性，IDE 選擇了日誌的舊位置({0})，但為了避免將來出現任何歧義(並去除此警告)，另請設定 ''idea.log.path'' 屬性。
 
 # example: ... is 11.0.10+11 by JetBrains s.r.o. at 'C:\\\\Tools\\\\IDEA\\\\jbr'
 bundled.jre.version.message=請考慮切換到更適合 IDE 的捆綁 Java 執行時(您當前的 Java 執行時為 {0}，來自於 {1}，位置為 ''{2}'')。
@@ -4324,7 +4324,7 @@ link.more=更多…
 
 message.the.path.0.does.not.exist.maybe.on.remote=路徑 {0} 不存在。\\\\n\\\\
 如果它位於可移動驅動器或網絡驅動器上，請確保該驅動器已連接。
-dialog.title.invalidate.caches=清除緩存
+dialog.title.invalidate.caches=清除快取
 button.next=下一個
 button.previous=上一個
 action.description.unpin.tool.window.from.designer.editor=從設計器編輯器取消固定工具視窗
@@ -4525,7 +4525,7 @@ dialog.title.restart.ide=重新啟動?
 dialog.message.restart.ide=是否要重啟 IDE?
 dialog.action.restart.yes=重新啟動
 dialog.action.restart.cancel=取消
-dialog.message.caches.will.be.invalidated=移除所有專案的緩存和索引。重新打開專案時將構建新緩存。
+dialog.message.caches.will.be.invalidated=移除所有專案的快取和索引。重新打開專案時將構建新快取。
 button.invalidate.and.restart=清除並重新啟動(&R)
 button.invalidate.and.exit=清除並退出(&E)
 button.cancel.without.mnemonic=取消
@@ -5165,7 +5165,7 @@ old.dirs.action.progress=正在尋找過時的 IDE 存儲目錄…
 old.dirs.notification.text=找到過時的 IDE 存儲目錄。
 old.dirs.notification.action=查看並刪除…
 old.dirs.dialog.title=刪除過時的 IDE 存儲目錄
-old.dirs.dialog.text=<html>安裝在您計算機上的其他 IDE 版本使用下面列出的目錄來存儲特定於版本的<br>設定、緩存和套件。刪除它們可以釋放空間，並且不影響<i>此版本</i>的穩定性。<br><b>警告</b>: 不要刪除仍在使用的版本的目錄!<br><br>選擇要刪除的目錄:</html>
+old.dirs.dialog.text=<html>安裝在您計算機上的其他 IDE 版本使用下面列出的目錄來存儲特定於版本的<br>設定、快取和套件。刪除它們可以釋放空間，並且不影響<i>此版本</i>的穩定性。<br><b>警告</b>: 不要刪除仍在使用的版本的目錄!<br><br>選擇要刪除的目錄:</html>
 old.dirs.column.name=目錄
 old.dirs.column.updated=上次使用
 old.dirs.column.size=大小
@@ -5284,7 +5284,7 @@ dialog.message.file.already.exists=檔案已存在
 notification.cache.diagnostic.helper.title=IDE 修復
 notification.cache.diagnostic.helper.text=已執行 ''{0}'' 恢復步驟 ({1}/{2})
 recovery.progress.title=正在嘗試 {0}…
-invalidate.all.caches.recovery.action.name=清除緩存並重新啟動
+invalidate.all.caches.recovery.action.name=清除快取並重新啟動
 title.hierarchy.callees.of={0} 的被調用方
 title.hierarchy.callers.of={0} 的調用方
 browser.shortcut.or.shift={0}，按住 Shift 以打開本地檔案 URL
