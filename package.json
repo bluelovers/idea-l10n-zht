@@ -22,7 +22,7 @@
     "posttest": "yarn run build:sort",
     "prebuild": "ts-node scripts/update-meta.ts",
     "build": "ts-node scripts/plugin-build-install-file.ts",
-    "build:commit": "git add ./original-plugin ./original-plugin-raw ./plugin-dev-out ./plugin-dev-raw ./lib/static ./test/__snapshots__ && git commit -m \"build(release): update build\" ./original-plugin ./original-plugin-raw ./plugin-dev-out ./plugin-dev-raw ./lib/static ./test/__snapshots__ & echo build:commit",
+    "build:commit": "git add ./original-plugin ./original-plugin-raw ./plugin-dev-out ./plugin-dev-raw ./lib/static ./test/__snapshots__ ./lib/const/link-of-zh-cn.ts && git commit -m \"build(release): update build\" ./original-plugin ./original-plugin-raw ./plugin-dev-out ./plugin-dev-raw ./lib/static ./test/__snapshots__  ./lib/const/link-of-zh-cn.ts & echo build:commit",
     "build:dts": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner & echo build:dts",
     "build:dts:copy": "copy .\\src\\index.d.ts .\\dist\\index.d.ts & echo build:dts",
     "build:dts:tsc": "tsc --emitDeclarationOnly --declaration --noEmit false",

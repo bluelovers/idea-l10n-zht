@@ -6,6 +6,7 @@ import Bluebird from 'bluebird';
 import { resolve } from 'upath2';
 
 export default Bluebird.mapSeries([
+	'./fetch-latest-version-of-zh-cn',
 	'./download-original-plugin',
 	'./unzip',
 	'./to-zht',
