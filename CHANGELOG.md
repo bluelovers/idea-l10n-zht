@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2022-01-27)
+
+
+### ✨　Features
+
+* 自動偵測抓取 zh-cn 最新版下載網址 ([34d5ecf](https://github.com/bluelovers/idea-l10n-zht/commit/34d5ecf7357425d88d19f9b790abec13e00c80f6))
+
+
+
+
+
 # 1.0.0 (2022-01-25)
 
 
