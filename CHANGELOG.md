@@ -3,6 +3,84 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-01-27)
+
+
+### 🐛　Bug Fixes
+
+* { 界面 => 介面 },{ 隊列 => 佇列 } ([dc7c9eb](https://github.com/bluelovers/idea-l10n-zht/commit/dc7c9eb7425c7d694c17085ee307efa180e140ef))
+* { 匹配 => 符合 } ([94dba9d](https://github.com/bluelovers/idea-l10n-zht/commit/94dba9decd9864408f861c722fbbd3d7ccf25750))
+* { 倉庫 => 儲存庫 },{ 常量 => 常數 } ([fe828ad](https://github.com/bluelovers/idea-l10n-zht/commit/fe828adb2fdc7d5ce5ac231784d8b7b666c75ba7))
+* { 緩存 => 快取 } ([c859c40](https://github.com/bluelovers/idea-l10n-zht/commit/c859c40cf383b5d3c731cb81ddd99a1917aefa64))
+* { 導入 => 匯入 },{ 導出 => 匯出 } ([41c842a](https://github.com/bluelovers/idea-l10n-zht/commit/41c842a836ec7f27e318ba069f8296d821874ed4))
+* handleText ([3b858be](https://github.com/bluelovers/idea-l10n-zht/commit/3b858bede16f62bd15a31b3f9b65228cf3c8b084))
+* handleText ([12a90cb](https://github.com/bluelovers/idea-l10n-zht/commit/12a90cb1fa66487c757b0730a158678c2fd79c05))
+* 在 git 檔案內將 { 提取 => 獲取 } ([9dc1d8a](https://github.com/bluelovers/idea-l10n-zht/commit/9dc1d8a74b09181c70cf8e18443e15ae413ccf2e))
+* { 位掩码 => 位元遮罩 } ([aa4217c](https://github.com/bluelovers/idea-l10n-zht/commit/aa4217cda447b01801f70ab66130c73520e2f7a7))
+* { 按位掩码 => 位元遮罩 } , { 掩码 => 遮罩 } ([470badc](https://github.com/bluelovers/idea-l10n-zht/commit/470badc388087961f4811b4989596271d0625ff9))
+* { 駝峰拼寫法, 駱駝拼寫法 => 駝峰式命名 } ([e6549c3](https://github.com/bluelovers/idea-l10n-zht/commit/e6549c3a0f0b8526a356eabc30426be6b3dff394))
+* { 標識符 => 關鍵字 },{ 光標 => 游標 } ([8b28236](https://github.com/bluelovers/idea-l10n-zht/commit/8b28236195886f8a509d20a33b216b066572b5ee))
+* 修正 https://github.com/bluelovers/idea-l10n-zht/commit/32ed37f2322c534101f11726b46213f6cb99574d ([146d9a3](https://github.com/bluelovers/idea-l10n-zht/commit/146d9a3ec8867ee35dc760b8c3999cba1a09c28a))
+
+
+### ✨　Features
+
+* 自動偵測抓取 zh-cn 最新版下載網址 ([34d5ecf](https://github.com/bluelovers/idea-l10n-zht/commit/34d5ecf7357425d88d19f9b790abec13e00c80f6))
+* 更動 segment 設定 ([b65cb15](https://github.com/bluelovers/idea-l10n-zht/commit/b65cb157ef48d68e8c122e80d31d7d9d2043cf5c))
+
+
+### 📚　Documentation
+
+* update change-notes ([f4b952a](https://github.com/bluelovers/idea-l10n-zht/commit/f4b952a37bc84de5011f436432a095ca4386a9d3))
+
+
+### 🚨　Tests
+
+* use `@novel-segment/assert` ([ddd4f62](https://github.com/bluelovers/idea-l10n-zht/commit/ddd4f62a0311c13369bc6f1f14d3bab62184dba3))
+* use `@novel-segment/pretty-diff` ([8f845b9](https://github.com/bluelovers/idea-l10n-zht/commit/8f845b95f548bb4919f3429155ede0521d7f3244))
+* **segment-check.ts:** 追加除錯資訊 ([9fcdddb](https://github.com/bluelovers/idea-l10n-zht/commit/9fcdddb2ed46fb3f2273c7dade7646219795468d))
+
+
+### 🛠　Build System
+
+* **release:** update build ([e0373cd](https://github.com/bluelovers/idea-l10n-zht/commit/e0373cd57febb7c16eef662cdba8484e97b4073c))
+* **release:** update build ([959588a](https://github.com/bluelovers/idea-l10n-zht/commit/959588a99a3ed6c61925ceeea84629935e11f24c))
+* **release:** update build ([59de17f](https://github.com/bluelovers/idea-l10n-zht/commit/59de17f099b0359d17d56bc031202a8a72e94b1f))
+* **release:** update build ([20c7817](https://github.com/bluelovers/idea-l10n-zht/commit/20c78178d42d70ebf1faf27c9eb544b384a46e98))
+* **release:** update build ([1d822ff](https://github.com/bluelovers/idea-l10n-zht/commit/1d822fffe80777916b96af433e46df8eb97dcb36))
+* **release:** update build ([bc6e522](https://github.com/bluelovers/idea-l10n-zht/commit/bc6e522f755a5dfdf05a5d2aac607c7407d8518a))
+* **release:** update build ([712f95d](https://github.com/bluelovers/idea-l10n-zht/commit/712f95dece12ea04347cd7ccaabcd955069557c5))
+* **release:** update build ([3b805e8](https://github.com/bluelovers/idea-l10n-zht/commit/3b805e82d1d25355faf0fbdb3ac09728c7030965))
+
+
+### ⚙️　Continuous Integration
+
+* 分離執行 來試圖防止 git 尚未執行完畢就執行下一個 git 指令 ([3d1a800](https://github.com/bluelovers/idea-l10n-zht/commit/3d1a8009f6dab0e11ef23821cdf398e8c7e72173))
+* trying to avoid `.git/index.lock` error ([7b1b2d9](https://github.com/bluelovers/idea-l10n-zht/commit/7b1b2d9702a6224fbc7957f1c1e1dee1ecf98008))
+* **fix:** ci:postpublish: not found ([95d87b3](https://github.com/bluelovers/idea-l10n-zht/commit/95d87b396c392a96aa70150c4bfe137f6503c313))
+
+
+### ♻️　Chores
+
+* add `.editorconfig` ([30bce4e](https://github.com/bluelovers/idea-l10n-zht/commit/30bce4e62451c878458eace7c86a8f12b15dfe8f))
+* add idea run configuration ([7ccba07](https://github.com/bluelovers/idea-l10n-zht/commit/7ccba0744b76aa0103adadf2e60a92672ee661ab))
+* **release:** publish ([f8d1b21](https://github.com/bluelovers/idea-l10n-zht/commit/f8d1b2129f3f9e3c83a72ac17117359539f06d49))
+* **release:** publish ([15a9e81](https://github.com/bluelovers/idea-l10n-zht/commit/15a9e81f66b4780a28d16b2cc6874247526ef1d5))
+* **release:** publish ([1888eb0](https://github.com/bluelovers/idea-l10n-zht/commit/1888eb07a3ec9211803f0ad82314927e745253fd))
+* **release:** publish ([e62ec67](https://github.com/bluelovers/idea-l10n-zht/commit/e62ec67460565bb856d4ef96bbc7e831f957c019))
+* **release:** publish ([74fabed](https://github.com/bluelovers/idea-l10n-zht/commit/74fabedf4c5495f947121c3750308ddfd61ec981))
+* **release:** publish ([b5e4a84](https://github.com/bluelovers/idea-l10n-zht/commit/b5e4a84ed8d598d25ed4297012cf036d7eaca92e))
+* **release:** publish ([b48816e](https://github.com/bluelovers/idea-l10n-zht/commit/b48816e2f69ccff40b29b9b2b54dbd10a3eff965))
+
+
+### 🔖　Miscellaneous
+
+* . ([64f1a64](https://github.com/bluelovers/idea-l10n-zht/commit/64f1a641d0ef9170fb73c56a9a25ed240770783c))
+
+
+
+
+
 # 1.0.0 (2022-01-27)
 
 
