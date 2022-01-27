@@ -1,12 +1,12 @@
 <html>
 <body>
 報告在沒有任何訪問修飾符（也稱為 package-private）的情況下聲明的字段。
-<p>不報告常量（即標記為 <code>static</code> 和 <code>final</code> 的字段）。</p>
+<p>不報告常數（即標記為 <code>static</code> 和 <code>final</code> 的字段）。</p>
 <p><b>示例：</b></p>
 <pre><code>
   public class A {
     Object object;             // 警告
-    final static int MODE = 0; // 常量，無警告
+    final static int MODE = 0; // 常數，無警告
   }
 </code></pre>
 <!-- tooltip end -->

@@ -13,12 +13,12 @@
     public static MyComponent getInstance(String name, int port) {
     }
     &lt;beans&gt;
-      &lt;bean class="beans.MyComponent" id="foo"&gt; // 報告 "在類 'MyComponent' 中找不到匹配的構造函數"
+      &lt;bean class="beans.MyComponent" id="foo"&gt; // 報告 "在類 'MyComponent' 中找不到符合的構造函數"
          &lt;function Object() { [native code] }-arg ref="myBean"/&gt;
          &lt;function Object() { [native code] }-arg value="123"/&gt;
       &lt;/bean&gt;
 
-      &lt;bean class="beans.MyComponent" factory-method="getInstance"&gt; // 報告 "在類中找不到匹配的工廠方法"
+      &lt;bean class="beans.MyComponent" factory-method="getInstance"&gt; // 報告 "在類中找不到符合的工廠方法"
          &lt;function Object() { [native code] }-arg value="123"/&gt;
       &lt;/bean&gt;
     &lt;/beans&gt;

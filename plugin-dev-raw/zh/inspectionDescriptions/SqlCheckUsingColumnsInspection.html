@@ -5,7 +5,7 @@
 <pre><code>CREATE TABLE t1 (i INT, j INT);
 CREATE TABLE t2 (k INT, l INT);
 SELECT * FROM t1 JOIN t2 USING (j);</code></pre>
-<p>在 USING 子句中，列名必須存在於兩個表中，SELECT 查詢將使用給定的列名自動連接這些表。 由於我們在 <code>t2</code> 中沒有 <code>j</code> 列，我們可以使用 ON 重寫查詢。 ON 子句可以連接兩個表中列名不匹配的表。</p>
+<p>在 USING 子句中，列名必須存在於兩個表中，SELECT 查詢將使用給定的列名自動連接這些表。 由於我們在 <code>t2</code> 中沒有 <code>j</code> 列，我們可以使用 ON 重寫查詢。 ON 子句可以連接兩個表中列名不符合的表。</p>
 <pre><code>SELECT * FROM t1 JOIN t2 ON t1.j = t2.l;</code></pre>
 </body>
 </html>

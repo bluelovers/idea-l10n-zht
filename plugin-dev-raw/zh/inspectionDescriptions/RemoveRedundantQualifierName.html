@@ -14,8 +14,8 @@
 
   fun main() {
       val a = my.simple.name.Foo()    // 'Foo' 位於聲明的 'my.simple.name' 軟件包中，限定符冗餘
-      val b = kotlin.Int.MAX_VALUE    // 可以取代為 'MAX_VALUE'，因為它已被導入
-      val c = kotlin.Double.MAX_VALUE // 可以取代為 'Double.MAX_VALUE'，因為內置類型會被自動導入
+      val b = kotlin.Int.MAX_VALUE    // 可以取代為 'MAX_VALUE'，因為它已被匯入
+      val c = kotlin.Double.MAX_VALUE // 可以取代為 'Double.MAX_VALUE'，因為內置類型會被自動匯入
   }
 </code></pre>
 <p>在應用快速修復後：</p>

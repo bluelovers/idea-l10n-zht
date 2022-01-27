@@ -1,12 +1,12 @@
 <html>
 <body>
 報告 <code>protected</code> 字段。
-<p>不報告常量（即標記為 <code>static</code> 或 <code>final</code> 的變數）。</p>
+<p>不報告常數（即標記為 <code>static</code> 或 <code>final</code> 的變數）。</p>
 <p><b>示例：</b></p>
 <pre><code>
   public class A {
     protected Object object;              // 警告
-    protected final static int MODE = 0;  // 常量，無警告
+    protected final static int MODE = 0;  // 常數，無警告
   }
 </code></pre>
 <!-- tooltip end -->

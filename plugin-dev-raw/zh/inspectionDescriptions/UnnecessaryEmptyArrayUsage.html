@@ -1,11 +1,11 @@
 <html>
 <body>
-報告數組元素類型的類中有常量時已知長度為零的數組分配。
+報告數組元素類型的類中有常數時已知長度為零的數組分配。
 由於零長度數組不可變，您可以重用相同的數組實例來節省內存。
 <p><b>示例：</b></p>
 <pre><code>
   class Item {
-    // 可重用的 public 零長度數組常量 
+    // 可重用的 public 零長度數組常數 
     public static final Item[] EMPTY_ARRAY = new Item[0];
   }
   class EmptyNode {

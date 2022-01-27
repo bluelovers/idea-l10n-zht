@@ -2,15 +2,15 @@
 <body>
 報告 Persistence QL 查詢中的以下錯誤：
 <ul>
-  <li>不匹配的表達式類型</li>
+  <li>不符合的表達式類型</li>
   <li>參數不正確</li>
-  <li>空或常量條件</li>
+  <li>空或常數條件</li>
   <li>未解析的符號</li>
 </ul>
 
 <p><b>示例查詢：</b></p>
 <pre><code>
-SELECT OBJECT(e) FROM JavaEntity e WHERE TRUE // 警告：常量條件
+SELECT OBJECT(e) FROM JavaEntity e WHERE TRUE // 警告：常數條件
 
 SELECT OBJECT(e) FROM JavaEntity e WHERE e.id BETWEEN 0 AND '2' // 錯誤：應為數值，但得到字串
 

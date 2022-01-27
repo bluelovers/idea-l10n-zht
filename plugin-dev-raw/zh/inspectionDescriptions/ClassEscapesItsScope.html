@@ -8,12 +8,12 @@
   <li>類型為 package-local <code>class</code> 的 <code>protected</code> 字段。</li>
 </ul>
 <p>
-在 Java 9 中，模塊可能會通過將其軟件包排除在導出之外來隱藏某些類。
-因此，如果導出的 API 的簽名包含非導出類，此類 API 在模塊之外就是無用的。
+在 Java 9 中，模塊可能會通過將其軟件包排除在匯出之外來隱藏某些類。
+因此，如果匯出的 API 的簽名包含非匯出類，此類 API 在模塊之外就是無用的。
 <!-- tooltip end -->
 <p>配置檢查：</p>
 <ul>
-  <li>使用<b>模塊的 API 公開未導出的類(Java 9+)</b> 選項可以報告公開未導出類的模塊 API。<br>請注意，專案或模塊的語言級別為 9 或更高時，該選項才有效。</li>
+  <li>使用<b>模塊的 API 公開未匯出的類(Java 9+)</b> 選項可以報告公開未匯出類的模塊 API。<br>請注意，專案或模塊的語言級別為 9 或更高時，該選項才有效。</li>
   <li>使用<b>公共 API 公開不可訪問的類</b>選項可以報告公開不可訪問類的公共 API。</li>
   <li>使用 <b>Package-local API 公開 private 類</b>選項可以以報告公開 <code>private</code> 類的 package-local API。</li>
 </ul>

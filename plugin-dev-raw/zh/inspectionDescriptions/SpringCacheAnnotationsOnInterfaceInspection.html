@@ -4,7 +4,7 @@
 
 <p>您應該只使用 <code>@Cache*</code> 註解具體類（和具體類的方法）。
 使用 <code>@Cache*</code> 註解接口（或接口方法）需要使用基於接口的代理。
-由於 Java 註解不是從接口繼承的，當使用基於類的代理 (<code>proxy-target-class="true"</code>) 或基於編織的切面 (<code>mode="aspectj"</code>) 時，代理和編織基礎架構將無法識別緩存設定 。
-因此，該對象將不會被包裝在緩存代理中。</p>
+由於 Java 註解不是從接口繼承的，當使用基於類的代理 (<code>proxy-target-class="true"</code>) 或基於編織的切面 (<code>mode="aspectj"</code>) 時，代理和編織基礎架構將無法識別快取設定 。
+因此，該對象將不會被包裝在快取代理中。</p>
 </body>
 </html>

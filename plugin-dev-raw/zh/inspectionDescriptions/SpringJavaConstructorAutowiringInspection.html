@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>報告 Spring Bean 構造函數上不正確的 <code>@Autowired</code> 用法：多個 <code>@Autowired</code> 構造函數、沒有匹配的 <code>@Autowired</code> 構造函數，等等。</p>
+<p>報告 Spring Bean 構造函數上不正確的 <code>@Autowired</code> 用法：多個 <code>@Autowired</code> 構造函數、沒有符合的 <code>@Autowired</code> 構造函數，等等。</p>
 
 <p><b>示例：</b></p>
 <pre><code>
@@ -14,7 +14,7 @@ public class MyComponent {
 }
 
 @Component
-public class MyFactory {  // 報告 '沒有匹配的 @Autowired 構造函數'
+public class MyFactory {  // 報告 '沒有符合的 @Autowired 構造函數'
 	public MyFactory(String str) {...}
 	public MyFactory(int count) {...}
 }
