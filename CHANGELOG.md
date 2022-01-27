@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2022-01-27)
+
+
+### ✨　Features
+
+* 試圖在 CHANGELOG 內保留來自 PR 的提交紀錄 ([1e52999](https://github.com/bluelovers/idea-l10n-zht/commit/1e529991b9a545a1ac3ae63442897a05df8a0ac1))
+
+
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-01-27)
 
 
