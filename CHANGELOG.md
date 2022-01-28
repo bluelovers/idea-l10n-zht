@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2022-01-28)
+
+
+### 🛠　Build System
+
+* **release:** update build ([2359e14](https://github.com/bluelovers/idea-l10n-zht/commit/2359e147d966cd78c7229c6543b4ed5516ff1ae8))
+
+
+
+
+
 # 1.0.0 (2022-01-27)
 
 
