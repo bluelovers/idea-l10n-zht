@@ -6,6 +6,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # 1.0.0 (2022-02-05)
 
 
+### 📚　Documentation
+
+* update repository-open-graph ([60ae067](https://github.com/bluelovers/idea-l10n-zht/commit/60ae0670016cfec75e20dddbd28a3af1e4d6af41))
+
+
+
+
+
+# 1.0.0 (2022-02-05)
+
+
 ### 🐛　Bug Fixes
 
 * { 软件 => 軟體 } ([3dbbd82](https://github.com/bluelovers/idea-l10n-zht/commit/3dbbd8263281541f5e7fc6e389f14c751b9a0d62))
