@@ -397,7 +397,6 @@ stash.error=無法儲藏 {0}
 # suppress inspection \\"UnusedProperty\\" - used in third-party plugins
 stashing.title=正在儲藏變更…
 stashing.progress.title=正在儲藏變更…
-stash.editor.diff.preview.title=儲藏: {0}
 stash.editor.diff.preview.empty.title=儲藏
 
 stash.tab.name=儲藏
@@ -522,7 +521,6 @@ git.unstash.drop.confirmation.title=移除儲藏 {0}?
 vcs.history.action.gitlog=在 Git 日誌中顯示
 
 # suppress inspection \\"UnusedProperty\\": used by 3-party plugins
-vcs.history.action.gitlog.error=Git 日誌未就緒
 
 exportable.Git.Application.Settings.presentable.name=Git
 
@@ -726,17 +724,15 @@ push.notification.view.filtered.commits.actions=查看與篩選器符合的 {0} 
 push.notification.view.received.commits.action=查看收到的{0,choice,1#提交|2#提交}
 push.rejected.dialog.title=推送被拒
 push.rejected.many.repos.item={1} 中的 {0}
-push.rejected.many.repos.single.branch=當前分支 {0} 的推送被拒
+push.rejected.many.repos.single.branch=當前分支 \\"{0}\\" 的推送被拒。
 push.rejected.many.repos=當前分支的推送被拒:
 push.rejected.merge.needed.with.problem=在推送前，必須先合併遠端更改。<br/><br/>在這種情況下，強烈建議進行<b>合併</b>，因為存在未推送的合併提交。\\\\n\\\\
 <br/>進行變基可能導致問題。
-push.rejected.merge.needed=推送前需要合併遠端變更
+push.rejected.merge.needed=推送前需要合併遠端變更。
 push.rejected.merge=&Merge
-push.rejected.only.one.git.repo=當前分支 {0} 的推送被拒
+push.rejected.only.one.git.repo=當前分支 \\"{0}\\" 的推送被拒。
 push.rejected.rebase.anyway=仍然變基
 push.rejected.rebase=變基(&R)
-push.rejected.remember.checkbox=請記住更新方法，並在日後進行靜默更新<br/>(您可以在設定/首選項 | 版本控制中進行更改)(&S)
-push.rejected.specific.repo=儲存庫 {1} 中的當前分支 {0} <br/>推送被拒
 push.rejected.update.not.rejected.repositories.as.well.checkbox=更新所有儲存庫(&U)
 
 install.download.and.install.action=下載並安裝
@@ -1162,7 +1158,7 @@ commit.options.sign.off.commit.checkbox=Sign-off 提交
 commit.options.sign.off.commit.message.line=在提交消息結尾添加以下行:<br/>Signed-off by: {0}
 commit.options.create.extra.commit.with.file.movements=使用檔案移動創建額外提交
 
-show.diff.between.dialog.title={0} 和當前工作樹之間的變更
+show.diff.between.dialog.title={0}與當前工作樹之間的變更
 show.diff.between.dialog.no.differences.empty.text=無差異
 show.diff.between.dialog.could.not.load.diff.with.branch.error=無法載入與 {0} 的差異: {1}
 annotations.options.detect.movements.across.files=檢測跨檔案的移動
@@ -1350,8 +1346,6 @@ notification.title.error.updating.root=更新 {0} 期間出錯
 notification.content.updating.root.failed.with.error=更新 {0} 失敗，出現錯誤: {1}
 git.update.operation=更新
 progress.update.destination.remote=遠端
-action.Vcs.ShowBranches.text=顯示分支
-action.Vcs.ShowMoreActions.text=版本控制
 no.revisions.available=無修訂
 search.everywhere.group.name=Git
 search.everywhere.group.full.name=Git 引用
@@ -1366,7 +1360,7 @@ stage.diff.staged.content.exception.message=無法獲取暫存內容: ''{0}''
 stage.vfs.shutdown.process=正在關閉 Git 索引 VFS
 apply.changes.unresolved.conflicts.text=工作樹中有未解決的衝突。
 apply.changes.unresolved.conflicts.notification.resolve.action.text=解決…
-apply.changes.unresolved.conflicts.notification.abort.action.text=中止 {0}
+apply.changes.unresolved.conflicts.notification.abort.action.text=中止{0}
 action.Git.Commit.Stage.text=提交…
 git.executable.error.bash.not.found=找不到 bash 可執行檔案
 settings.label.sign.gpg.commits.loading.text=使用 GPG 密鑰簽署提交: 正在讀取配置…
@@ -1415,7 +1409,7 @@ git.content.transform.filters=篩選器
 git.content.transform.textconv=TextConv
 settings.label.sign.gpg.commits.no.roots.text=專案中沒有 Git 根
 gpg.error.see.documentation.link.text=參閱 GPG 設定指南
-gpg.jb.manual.link=https://www.jetbrains.com/help/idea/set-up-GPG-commit-signing.html
+gpg.jb.manual.link=Set_up_GPG_commit_signing
 settings.commit.group.title=提交
 settings.push.group.title=推送
 settings.update.group.title=更新
@@ -1433,18 +1427,27 @@ branches.checkout.and.rebase.error.current.with.same.name=無法覆蓋當前分�
 branches.checkout.and.rebase.onto.current.process=正在簽出 {0} 並變基到當前分支
 progress.title.creating.git.repository=正在創建 Git 儲存庫…
 stash.load.changes.error=無法在解析為 {1} 的儲藏中載入根 {0} 中的變更
-git.log.diff.handler.changes.between.revisions.title={0} 和 {1} 之間的變更
+git.log.diff.handler.changes.between.revisions.title={0} 與 {1} 之間的變更
 git.log.diff.handler.changes.between.revisions.in.paths.title={2} 中 {0} 與 {1} 之間的變更
 commit.signature.verified=已驗證的 GPG 簽名
 commit.signature.unverified=未驗證的 GPG 簽名
 action.Git.PushUpToCommit.text=推送此前所有提交…
-action.Git.PushUpToCommit.description=推送此提交及其之前的所有提交
+action.Git.PushUpToCommit.description=推送所有之前的提交，包括所選提交
 push.upto.here.not.supported.notification.title=無法啟動推送
 push.upto.here.not.supported.notification.message=“推送此前所有提交”僅支援包含在本地分支中的提交
 push.upto.here.failed.dialog.title=無法啟動推送
 push.up.to.commit.allowed.progress.title=正在檢查是否允許推送到所選提交…
 push.up.to.commit.getting.reference.progress.title=正在獲取對 HEAD 的提交引用…
-git.status.bar.widget.text.unknown=<未知>"
+git.toolbar.widget.no.repo=無儲存庫
+push.rejected.remember.checkbox=請記住更新方法，並在日後進行靜默更新(&S)。稍後可以在“{0} | 版本控制”中進行更改。<br/>
+push.rejected.specific.repo=儲存庫 \\"{1}\\" 中的當前分支 \\"{0}\\" 推送被拒。
+git.status.bar.widget.text.unknown=<未知>
+git.toolbar.widget.tooltip=Git 分支: {0}
+action.Git.Toolbar.ShowMoreActions.text=版本控制
+action.Git.ShowBranches.text=顯示分支
+action.Git.ShowBranches.description=顯示分支
+action.Git.Toolbar.ShowMoreActions.description=VCS 操作
+stash.editor.diff.preview.id.change.title={0}：{1}"
 `;
 
 exports[`dev messages/GithubBundle.properties 1`] = `
@@ -2251,7 +2254,6 @@ stash.error=無法儲藏 {0}
 # suppress inspection \\"UnusedProperty\\" - used in third-party plugins
 stashing.title=正在儲藏變更…
 stashing.progress.title=正在儲藏變更…
-stash.editor.diff.preview.title=儲藏: {0}
 stash.editor.diff.preview.empty.title=儲藏
 
 stash.tab.name=儲藏
@@ -2376,7 +2378,6 @@ git.unstash.drop.confirmation.title=移除儲藏 {0}?
 vcs.history.action.gitlog=在 Git 日誌中顯示
 
 # suppress inspection \\"UnusedProperty\\": used by 3-party plugins
-vcs.history.action.gitlog.error=Git 日誌未就緒
 
 exportable.Git.Application.Settings.presentable.name=Git
 
@@ -2580,17 +2581,15 @@ push.notification.view.filtered.commits.actions=查看與篩選器符合的 {0} 
 push.notification.view.received.commits.action=查看收到的{0,choice,1#提交|2#提交}
 push.rejected.dialog.title=推送被拒
 push.rejected.many.repos.item={1} 中的 {0}
-push.rejected.many.repos.single.branch=當前分支 {0} 的推送被拒
+push.rejected.many.repos.single.branch=當前分支 \\"{0}\\" 的推送被拒。
 push.rejected.many.repos=當前分支的推送被拒:
 push.rejected.merge.needed.with.problem=在推送前，必須先合併遠端更改。<br/><br/>在這種情況下，強烈建議進行<b>合併</b>，因為存在未推送的合併提交。\\\\n\\\\
 <br/>進行變基可能導致問題。
-push.rejected.merge.needed=推送前需要合並遠端變更
+push.rejected.merge.needed=推送前需要合並遠端變更。
 push.rejected.merge=&Merge
-push.rejected.only.one.git.repo=當前分支 {0} 的推送被拒
+push.rejected.only.one.git.repo=當前分支 \\"{0}\\" 的推送被拒。
 push.rejected.rebase.anyway=仍然變基
 push.rejected.rebase=變基(&R)
-push.rejected.remember.checkbox=請記住更新方法，並在日後進行靜默更新<br/>(您可以在設定/首選項 | 版本控制中進行更改)(&S)
-push.rejected.specific.repo=儲存庫 {1} 中的當前分支 {0} <br/>推送被拒
 push.rejected.update.not.rejected.repositories.as.well.checkbox=更新所有儲存庫(&U)
 
 install.download.and.install.action=下載並安裝
@@ -3016,7 +3015,7 @@ commit.options.sign.off.commit.checkbox=Sign-off 提交
 commit.options.sign.off.commit.message.line=在提交消息結尾添加以下行:<br/>Signed-off by: {0}
 commit.options.create.extra.commit.with.file.movements=使用檔案移動創建額外提交
 
-show.diff.between.dialog.title={0} 和當前工作樹之間的變更
+show.diff.between.dialog.title={0}與當前工作樹之間的變更
 show.diff.between.dialog.no.differences.empty.text=無差異
 show.diff.between.dialog.could.not.load.diff.with.branch.error=無法載入與 {0} 的差異: {1}
 annotations.options.detect.movements.across.files=檢測跨檔案的移動
@@ -3204,8 +3203,6 @@ notification.title.error.updating.root=更新 {0} 期間出錯
 notification.content.updating.root.failed.with.error=更新 {0} 失敗，出現錯誤: {1}
 git.update.operation=更新
 progress.update.destination.remote=遠端
-action.Vcs.ShowBranches.text=顯示分支
-action.Vcs.ShowMoreActions.text=版本控制
 no.revisions.available=無修訂
 search.everywhere.group.name=Git
 search.everywhere.group.full.name=Git 引用
@@ -3220,7 +3217,7 @@ stage.diff.staged.content.exception.message=無法獲取暫存內容: ''{0}''
 stage.vfs.shutdown.process=正在關閉 Git 索引 VFS
 apply.changes.unresolved.conflicts.text=工作樹中有未解決的衝突。
 apply.changes.unresolved.conflicts.notification.resolve.action.text=解決…
-apply.changes.unresolved.conflicts.notification.abort.action.text=中止 {0}
+apply.changes.unresolved.conflicts.notification.abort.action.text=中止{0}
 action.Git.Commit.Stage.text=提交…
 git.executable.error.bash.not.found=找不到 bash 可執行檔案
 settings.label.sign.gpg.commits.loading.text=使用 GPG 密鑰簽署提交: 正在讀取配置…
@@ -3269,7 +3266,7 @@ git.content.transform.filters=篩選器
 git.content.transform.textconv=TextConv
 settings.label.sign.gpg.commits.no.roots.text=專案中沒有 Git 根
 gpg.error.see.documentation.link.text=參閱 GPG 設定指南
-gpg.jb.manual.link=https://www.jetbrains.com/help/idea/set-up-GPG-commit-signing.html
+gpg.jb.manual.link=Set_up_GPG_commit_signing
 settings.commit.group.title=提交
 settings.push.group.title=推送
 settings.update.group.title=更新
@@ -3287,18 +3284,27 @@ branches.checkout.and.rebase.error.current.with.same.name=無法覆蓋當前分�
 branches.checkout.and.rebase.onto.current.process=正在簽出 {0} 並變基到當前分支
 progress.title.creating.git.repository=正在創建 Git 儲存庫…
 stash.load.changes.error=無法在解析為 {1} 的儲藏中載入根 {0} 中的變更
-git.log.diff.handler.changes.between.revisions.title={0} 和 {1} 之間的變更
+git.log.diff.handler.changes.between.revisions.title={0} 與 {1} 之間的變更
 git.log.diff.handler.changes.between.revisions.in.paths.title={2} 中 {0} 與 {1} 之間的變更
 commit.signature.verified=已驗證的 GPG 簽名
 commit.signature.unverified=未驗證的 GPG 簽名
 action.Git.PushUpToCommit.text=推送此前所有提交…
-action.Git.PushUpToCommit.description=推送此提交及其之前的所有提交
+action.Git.PushUpToCommit.description=推送所有之前的提交，包括所選提交
 push.upto.here.not.supported.notification.title=無法啟動推送
 push.upto.here.not.supported.notification.message=“推送此前所有提交”僅支援包含在本地分支中的提交
 push.upto.here.failed.dialog.title=無法啟動推送
 push.up.to.commit.allowed.progress.title=正在檢查是否允許推送到所選提交…
 push.up.to.commit.getting.reference.progress.title=正在獲取對 HEAD 的提交引用…
-git.status.bar.widget.text.unknown=<未知>"
+git.toolbar.widget.no.repo=無儲存庫
+push.rejected.remember.checkbox=請記住更新方法，並在日後進行靜默更新(&S)。稍後可以在“{0} | 版本控制”中進行更改。<br/>
+push.rejected.specific.repo=儲存庫 \\"{1}\\" 中的當前分支 \\"{0}\\" 推送被拒。
+git.status.bar.widget.text.unknown=<未知>
+git.toolbar.widget.tooltip=Git 分支: {0}
+action.Git.Toolbar.ShowMoreActions.text=版本控制
+action.Git.ShowBranches.text=顯示分支
+action.Git.ShowBranches.description=顯示分支
+action.Git.Toolbar.ShowMoreActions.description=VCS 操作
+stash.editor.diff.preview.id.change.title={0}：{1}"
 `;
 
 exports[`src messages/GithubBundle.properties 1`] = `

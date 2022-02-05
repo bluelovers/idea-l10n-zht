@@ -1,0 +1,35 @@
+<html>
+<body>
+<p>报告在多个目标上使用 <code>@targetName</code> 注解的情况。</p>
+
+<p>该快速修复会移除 <code>@targetName</code> 注解。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  // 1
+  val list: List[Int] = (1 to 5).toList
+  @targetName("head_and_tail")
+  val (head, tail) = (list.head, list.tail)
+
+  // 2
+  enum E:
+    case A
+    @targetName("b_and_c")
+    case B, C
+    case D
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  // 1
+  val list: List[Int] = (1 to 5).toList
+  val (head, tail) = (list.head, list.tail)
+
+  // 2
+  enum E:
+    case A
+    case B, C
+    case D
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

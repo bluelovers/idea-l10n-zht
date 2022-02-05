@@ -1,5 +1,17 @@
 <html>
 <body>
-报告在某些浏览器中无法正常使用的空标记（如 <code>script</code>）。
+报告在某些浏览器中无法正常使用的空标记。
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;html>
+    &lt;script/>
+  &lt;/html>
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  &lt;html>
+    &lt;script>&lt;/script>
+  &lt;/html>
+</code></pre>
 </body>
 </html>

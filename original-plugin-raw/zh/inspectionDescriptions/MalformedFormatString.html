@@ -9,5 +9,12 @@
 </code></pre>
 <!-- tooltip end -->
 <p>使用检查设置可以将其他类和方法标记为与字符串格式相关。</p>
+<p>作为替代方案，您可以使用来自 <code>org.jetbrains:annotations package</code> 的 <code>org.intellij.lang.annotations.PrintFormat</code> 注解来标记格式字符串方法形参。 在这种情况下，格式实参形参必须紧跟在格式字符串之后，并且必须是最后一个方法形参。 示例：</p>
+<pre><code>
+  void myFormatMethod(int mode, @PrintFormat String formatString, Object... args) {...}
+</code></pre>
+<p>
+  此类方法也将被此检查识别。
+</p>
 </body>
 </html>

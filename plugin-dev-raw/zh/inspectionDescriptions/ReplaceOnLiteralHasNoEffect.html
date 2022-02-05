@@ -1,0 +1,15 @@
+<html>
+<body>
+Reports calls to the string methods <code>replace()</code>, <code>replaceAll()</code> or <code>replaceFirst()</code> that have no effect.
+Such calls can be guaranteed to have no effect when the qualifier and search string are compile-time constants
+and the search string is not found in the qualifier.
+這是冗餘程式碼，可能表示存在編程錯誤。
+<p><b>示例：</b></p>
+<pre><code>
+  // replacement does nothing
+  "hello".replace("$value$", value);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.1 最新變化</small></p>
+</body>
+</html>

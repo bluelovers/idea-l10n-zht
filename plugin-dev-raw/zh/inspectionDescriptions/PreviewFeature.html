@@ -1,14 +1,14 @@
 <html>
 <body>
-報告使用預覽特性 API 的情況：一組用 <code>@PreviewFeature</code> 註解的元素。
+報告預覽功能 API 的用法，即使用 <code>@PreviewFeature</code> 註解的 <code>java.*</code> 或 <code>javax.*</code> 命名空間中的模塊、軟件包、類、接口、方法、構造函數或枚舉常數。
 <p>
   預覽特性是 Java 語言、Java 虛擬機或 Java SE API 的一個新特性，它已完全指定、完全實現，但不是永久性的。 預覽特性的概念在 <a href="https://openjdk.java.net/jeps/12">JEP 12</a> 中進行了定義。
 </p>
 <p>
-  如果一段程式碼依賴於預覽特性，它可能會在未來的 JDK 版本中停止編譯，以防該特性得不到積極反饋並被移除或更改。
+  若某段程式碼依賴於預覽 API，那麼如果更改或移除該功能，該段程式碼可能會在未來的 JDK 版本中停止編譯。
 </p>
 <!-- tooltip end -->
-<p>僅當當前專案的語言級別為<b>預覽</b>時才啟用檢查。</p>
+<p>僅當專案或模塊的語言級別為<b>預覽</b>時，此檢查才會報告。</p>
 <p><small>2021.1 最新變化</small></p>
 </body>
 </html>

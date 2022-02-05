@@ -14,12 +14,12 @@
   @Profile("a & (b | c)")
   public class MyConfiguration {...}
 
-  <!-- empty  -->
+  <!-- 空  -->
   @Configuration
   @Profile() // 報告 "配置檔案表達式必須包含文本"
   public class MyConfiguration {...}
 
-  <!-- mixed operators without  parentheses -->
+  <!-- 不帶圓括號的混合運算符 -->
   @Configuration
   @Profile("a & b | c") // 報告 "格式不正確的配置檔案表達式"
   public class MyConfiguration {...}

@@ -1,7 +1,7 @@
 <html>
 <body>
-報告 &amp;&amp; 和 || 表達式以及 if 語句的分支中的重複條件。
-這些重複的條件表達式有時是故意使用的，但通常因疏忽大意所致。
+報告 <code>&amp;&amp;</code> 和 <code>||</code> 表達式以及 <code>if</code> 語句分支中的重複條件。
+這些重複的條件有時是有意為之，但通常是因為疏忽大意所致。
 <p>示例：</p>
 <pre><code>
   boolean result = digit1 != digit2 || digit1 != digit2;
@@ -13,7 +13,7 @@
 </p>
 <p>示例：</p>
 <pre><code>
-  if (iterator.next() != null || iterator.next() != null)
+  if (iterator.next() != null || iterator.next() != null) {
     System.out.println("Got it");
   }
 </code></pre>

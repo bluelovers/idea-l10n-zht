@@ -4,10 +4,9 @@
 <p><b>示例：</b></p>
 <pre><code>
   public class NonSerializableClass {
-    private transient String password; // 警告：字段 'password' 被标记为 'transient'，位于不可序列化类中
+    private transient String password;
   }
-  </code>
-</pre>
+</code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
   public class NonSerializableClass {

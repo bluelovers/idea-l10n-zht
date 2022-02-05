@@ -1,11 +1,11 @@
 <html>
 <body>
-報告包含 <code>java.net.URL</code> 對象的 <code>java.util.Set</code> 和 <code>java.util.Map</code> 的實例化。
+報告包含 <code>java.net.URL</code> 對象的 <code>java.util.Set</code> 和 <code>java.util.Map</code> 變數。
+此類集合將對插入的對象調用 <code>equals()</code> 和 <code>hashCode()</code> 方法，這可能會導致 <code>URL</code> 對象的性能問題。
 <p>
-  由於對 <code>URL</code> 的 <code>equals()</code> 和 <code>hashCode()</code> 方法的調用，將 <code>URL</code> 對象添加到此類集合可能會導致性能問題。
-</p>
-<p>
-  <code>URL</code> 的 <code>equals()</code> 和 <code>hashCode()</code> 方法使用 DNS 尋找，這取決於網絡的可用性，且 DNS 伺服器的速度可能會導致顯著延遲。
+  <code>URL</code> 的 <code>equals()</code> 和 <code>hashCode()</code> 方法可以執行 DNS 尋找來解析主機名。
+  這可能會導致重大延遲，具體取決於網絡和 DNS 伺服器的可用性和速度。
+  使用 <code>java.net.URI</code> 代替 <code>java.net.URL</code> 將避免 DNS 尋找。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
