@@ -8,6 +8,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛　Bug Fixes
 
+* { 软件 => 軟體 } ([3dbbd82](https://github.com/bluelovers/idea-l10n-zht/commit/3dbbd8263281541f5e7fc6e389f14c751b9a0d62))
+
+
+### 🛠　Build System
+
+* **release:** update build ([2ddad37](https://github.com/bluelovers/idea-l10n-zht/commit/2ddad3746deec819b355b41d4270a08347a65e9a))
+
+
+
+
+
+# 1.0.0 (2022-02-05)
+
+
+### 🐛　Bug Fixes
+
 * 同步 git config ([a3d4e5e](https://github.com/bluelovers/idea-l10n-zht/commit/a3d4e5e13cdd50ca1018af9f9c6d67935a91b78c))
 
 
