@@ -53,7 +53,7 @@
     "postpublish:changelog": "ynpx --quiet @yarn-tool/changelog && git add ./CHANGELOG.md",
     "postpublish:git:commit": "git commit -m \"chore(release): publish\" ./CHANGELOG.md & echo postpublish:git:commit",
     "postpublish:git:push": "git push --follow-tags",
-    "postpublish:git:tag": "ynpx --quiet @yarn-tool/tag",
+    "postpublish:git:tag": "ts-node scripts/update-git-tag.ts",
     "postpublishOnly": "echo postpublishOnly",
     "ncu": "yarn-tool ncu -u",
     "plugin:build": "yarn run test && yarn run plugin:handle-source && yarn run build",
@@ -66,6 +66,7 @@
   },
   "dependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
+    "@git-lazy/tag": "^1.0.9",
     "@lazy-cjk/zh-convert": "^1.0.44",
     "@novel-segment/assert": "^1.0.2",
     "@novel-segment/loaders": "^1.0.28",
