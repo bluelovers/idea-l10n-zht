@@ -67,6 +67,7 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 ## TODO
 
 - ~~自動偵測抓取原版簡體最新下載網址~~
+- 偵測檢查 zip / git / 檔案系統 上的檔案 是否存在大小寫不同的同名檔案
 
 ## 已知問題
 
