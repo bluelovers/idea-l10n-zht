@@ -14,10 +14,11 @@ export function handleText(content_old: string, info?: {
 			{
 				content_new = updateMeta(content_new);
 			}
-			else if (/Git(hub)?Bundle\.properties$/i.test(file))
+			else if (/(?:Git(?:hub)?|Vcs(?:Log)?)Bundle\.properties$/i.test(file))
 			{
 				content_new = content_new
 					.replace(/提取/g, '獲取')
+					.replace(/儲存庫/g, '版本庫')
 				;
 			}
 
