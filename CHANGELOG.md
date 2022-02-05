@@ -6,6 +6,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # 1.0.0 (2022-02-05)
 
 
+### ⚙️　Continuous Integration
+
+* 先試著 push 成功之後 則 強制推送 tag ([441a2c0](https://github.com/bluelovers/idea-l10n-zht/commit/441a2c048d76bdb840393587075b763fd5aa3867))
+
+
+
+
+
+# 1.0.0 (2022-02-05)
+
+
 ### 🛠　Build System
 
 * 自動更新 git 標籤 ([a588565](https://github.com/bluelovers/idea-l10n-zht/commit/a58856566e59d3e797918e857be19a257505a7a3))
