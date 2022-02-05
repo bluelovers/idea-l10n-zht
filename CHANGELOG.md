@@ -6,6 +6,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # 1.0.0 (2022-02-05)
 
 
+### 🐛　Bug Fixes
+
+* 同步 git config ([a3d4e5e](https://github.com/bluelovers/idea-l10n-zht/commit/a3d4e5e13cdd50ca1018af9f9c6d67935a91b78c))
+
+
+
+
+
+# 1.0.0 (2022-02-05)
+
+
 ### ⚙️　Continuous Integration
 
 * 先試著 push 成功之後 則 強制推送 tag ([441a2c0](https://github.com/bluelovers/idea-l10n-zht/commit/441a2c048d76bdb840393587075b763fd5aa3867))
