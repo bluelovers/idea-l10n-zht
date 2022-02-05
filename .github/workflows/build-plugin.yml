@@ -6,6 +6,12 @@ on:
     branches:
       - master
       - main
+    paths-ignore:
+      - 'test/**'
+      - '.run/**'
+      - '.github/**'
+      - '/*.*'
+      - '/.*'
   schedule:
 ## https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#scheduled-events-schedule
 ##            ┌───────────── minute (0 - 59)
