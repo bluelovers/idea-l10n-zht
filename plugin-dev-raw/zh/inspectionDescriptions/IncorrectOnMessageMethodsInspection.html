@@ -3,7 +3,7 @@
 <p>報告使用 <code>@OnMessage</code> 註解的不正確 WebSocket 方法。</p>
 
 <p>
-  此註解標記處理傳入 WebSocket 消息的方法。 每個 WebSocket 端點只能包含一個處理所有 WebSocket 消息格式（文本、二進制、pong）的消息處理方法。 帶有 <code>@OnMessage</code> 註解的方法允許以任何順序具有以下參數集：
+  此註解標記處理傳入 WebSocket 訊息的方法。 每個 WebSocket 端點只能包含一個處理所有 WebSocket 訊息格式（文本、二進制、pong）的訊息處理方法。 帶有 <code>@OnMessage</code> 註解的方法允許以任何順序具有以下參數集：
 </p>
 
 <ul>
@@ -11,30 +11,30 @@
     可以包含以下參數集之一：
     <ul>
       <li>
-        如果該方法正在處理文本消息：
+        如果該方法正在處理文本訊息：
         <ul>
-          <li><code>String</code>，用於接收整條消息</li>
-          <li>Java 基元類型或類等效項，用於接收轉換為該類型的整條消息</li>
-          <li><code>String</code> 和布爾對，用於按部分接收消息</li>
-          <li><code>Reader</code>，用於以阻塞流的形式接收整條消息</li>
+          <li><code>String</code>，用於接收整條訊息</li>
+          <li>Java 基元類型或類等效項，用於接收轉換為該類型的整條訊息</li>
+          <li><code>String</code> 和布爾對，用於按部分接收訊息</li>
+          <li><code>Reader</code>，用於以阻塞流的形式接收整條訊息</li>
           <li>端點具有文本解碼器的任何對象參數（<code>Decoder.Text</code> 或 <code>Decoder.TextStream</code>）
           </li>
         </ul>
       </li>
       <li>
-        如果該方法正在處理二進制消息：
+        如果該方法正在處理二進制訊息：
         <ul>
-          <li><code>byte[]</code> 或 <code>ByteBuffer</code>，用於接收整條消息</li>
-          <li><code>byte[]</code> 和布爾對，或 <code>ByteBuffer</code> 和布爾對，用於按部分接收消息</li>
-          <li><code>InputStream</code>，用於以阻塞流的形式接收整條消息</li>
+          <li><code>byte[]</code> 或 <code>ByteBuffer</code>，用於接收整條訊息</li>
+          <li><code>byte[]</code> 和布爾對，或 <code>ByteBuffer</code> 和布爾對，用於按部分接收訊息</li>
+          <li><code>InputStream</code>，用於以阻塞流的形式接收整條訊息</li>
           <li>端點具有二進制解碼器的任何對象參數（<code>Decoder.Binary</code> 或 <code>Decoder.BinaryStream</code>）
           </li>
         </ul>
       </li>
       <li>
-        如果該方法正在處理 pong 消息：
+        如果該方法正在處理 pong 訊息：
         <ul>
-          <li><code>PongMessage</code>，用於處理 pong 消息</li>
+          <li><code>PongMessage</code>，用於處理 pong 訊息</li>
         </ul>
       </li>
     </ul>
@@ -44,8 +44,8 @@
 </ul>
 
 <p>
-  如果該方法返回一個值，WebSocket 執行時會將其解釋為返回給對等方的消息。
-  允許的返回類型是 <code>String</code>、<code>ByteBuffer</code>、<code>byte[]</code>、任何 Java 基元或類等效項，以及任何帶有編碼器的類型。 如果該方法返回一個 Java 基元值，則實現必須使用 Java 基元的標準 Java 字串表示來構造要發送的文本消息，除非開發者為此端點配置的類型提供了編碼器，在這種情況下必須使用該編碼器。 如果該方法返回 Java 基元的類等效項，則實現必須按照前面所述從 Java 基元等效項構造文本消息。
+  如果該方法返回一個值，WebSocket 執行時會將其解釋為返回給對等方的訊息。
+  允許的返回類型是 <code>String</code>、<code>ByteBuffer</code>、<code>byte[]</code>、任何 Java 基元或類等效項，以及任何帶有編碼器的類型。 如果該方法返回一個 Java 基元值，則實現必須使用 Java 基元的標準 Java 字串表示來構造要發送的文本訊息，除非開發者為此端點配置的類型提供了編碼器，在這種情況下必須使用該編碼器。 如果該方法返回 Java 基元的類等效項，則實現必須按照前面所述從 Java 基元等效項構造文本訊息。
 </p>
 </body>
 </html>

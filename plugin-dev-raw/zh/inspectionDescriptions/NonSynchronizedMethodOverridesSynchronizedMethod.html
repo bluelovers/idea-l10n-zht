@@ -1,8 +1,8 @@
 <html>
 <body>
-報告重寫 <code>synchronized</code> 方法的非 <code>synchronized</code> 方法。
+報告覆寫 <code>synchronized</code> 方法的非 <code>synchronized</code> 方法。
 <p>
-  如果超類方法被聲明為 <code>synchronized</code>，重寫的方法將不會自動同步。 這可能導致使用子類時出現意外的競爭條件。
+  如果超類方法被聲明為 <code>synchronized</code>，覆寫的方法將不會自動同步。 這可能導致使用子類時出現意外的競爭條件。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
@@ -10,7 +10,7 @@
     synchronized void process() {}
   }
   class Sub extends Super {
-    // 非 synchronized 方法 'process()' 重寫 synchronized 方法
+    // 非 synchronized 方法 'process()' 覆寫 synchronized 方法
     void process() {}
   }  
 </code></pre>

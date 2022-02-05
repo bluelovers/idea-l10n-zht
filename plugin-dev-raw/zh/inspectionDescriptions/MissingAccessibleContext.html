@@ -11,7 +11,7 @@
   };
 </code></pre>
 <p>
-  要修正此問題，您應該在返回的 <code>JPanel</code> 上調用 <code>setAccessibleName()</code> 或重寫其 <code>getAccessibleContext()</code> 方法。
+  要修正此問題，您應該在返回的 <code>JPanel</code> 上調用 <code>setAccessibleName()</code> 或覆寫其 <code>getAccessibleContext()</code> 方法。
 </p>
 <p>
   返回的文本應反映組件的用途。 例如，在 <code>ListCellRenderer</code> 的情況下，這將是菜單項的文本。

@@ -11,7 +11,7 @@
   由於歷史原因，<code>java.util.Properties</code> 繼承 <code>java.util.Hashtable</code>，但為防止破壞 <code>String</code> 以外類型的屬性值，不建議使用這些方法。
 </p>
 <p>
-  儘管 <code>java.util.Properties#putAll</code> 會重寫 <code>java.util.Hashtable#putAll</code>，但當映射中的鍵值參數都為 <code>String</code> 類型時，就不會對它報告。
+  儘管 <code>java.util.Properties#putAll</code> 會覆寫 <code>java.util.Hashtable#putAll</code>，但當映射中的鍵值參數都為 <code>String</code> 類型時，就不會對它報告。
 </p>
 <p><b>示例：</b></p>
 <pre><code>

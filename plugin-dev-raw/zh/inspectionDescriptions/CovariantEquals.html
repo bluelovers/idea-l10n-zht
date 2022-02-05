@@ -2,7 +2,7 @@
 <body>
 如果包含類沒有將 <code>java.lang.Object</code> 作為其實參類型的其他 <code>equals()</code> 重載，則報告採用 <code>java.lang.Object</code> 以外的實參類型的 <code>equals()</code> 方法。
 <p>
-  <code>equals()</code> 的協變版本不會重寫 <code>Object.equals(Object)</code> 方法。 它可能會在執行時導致意外行為。 例如，如果該類用於構造一個標準集合類，該集合類預期會重寫 <code>Object.equals(Object)</code> 方法。
+  <code>equals()</code> 的協變版本不會覆寫 <code>Object.equals(Object)</code> 方法。 它可能會在執行時導致意外行為。 例如，如果該類用於構造一個標準集合類，該集合類預期會覆寫 <code>Object.equals(Object)</code> 方法。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
