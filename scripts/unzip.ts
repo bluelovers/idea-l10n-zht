@@ -18,6 +18,7 @@ function unzipLang(lang: string | 'zh')
 	console.cyan.log(`unzip ${lang}.zip`);
 
 	const bar: SingleBar = multibar.create(200, 0);
+	const cwd = join(__plugin_downloaded_dir_unzip, lang);
 
 	return Bluebird.resolve(readFile(join(__plugin_downloaded_dir, `${lang}.zip`)))
 		.then<JSZip>(JSZip.loadAsync)
@@ -42,17 +43,19 @@ function unzipLang(lang: string | 'zh')
 		})
 		.reduce(async (ls, file, index) =>
 		{
-			if (!file.dir)
+			if (!file.dir && ![
+				'inspectionDescriptions/Junit5MalformedParameterized.html',
+			].includes(file.name))
 			{
 				bar?.update(index + 1, { filename: file.name });
 				ls.push(file.name);
-				await outputFile(join(__plugin_downloaded_dir_unzip, lang, file.name), await file.async('nodebuffer'))
+				await outputFile(join(cwd, file.name), await file.async('nodebuffer'))
 			}
 			return ls
 		}, [] as string[])
 		.tap(ls =>
 		{
-			return outputJSON(join(__plugin_downloaded_dir_unzip, lang + '.list.json'), ls, {
+			return outputJSON(cwd + '.list.json', ls, {
 				spaces: 2,
 			})
 		})

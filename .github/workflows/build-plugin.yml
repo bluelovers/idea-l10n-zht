@@ -58,6 +58,10 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git config --local core.autocrlf false
+          git config --local core.ignorecase false
+          git config --local include.path ../.gitconfig
+          git config --local core.autocrlf false
+          git config --local core.ignorecase false
       - name: install deps
         run: |
           yarn install --frozen-lockfile

@@ -15,9 +15,10 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 ## dev
 
-請額外自行安裝 typescript@next jest ts-jest ts-node ynpx lerna yarn-tool
+1. 執行 `yarn run ci:git:config`
 
-或執行 `yarn ci:install`
+2. 請額外自行安裝 typescript@next jest ts-jest ts-node ynpx lerna yarn-tool  
+  或執行 `yarn run ci:install`
 
 ### 與官方簡體版差異
 
@@ -70,5 +71,7 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 ## 已知問題
 
 - `dot-properties-loader` 會將 `label.inactive.timeout.sec= 秒` 轉換為 `label.inactive.timeout.sec=秒` 對於 IDEA 的實際影響則不清楚，照一般來說等號後的空白應該是不會被當作內容值
-- 
+- 如果 git 發現詭異的檔案永遠都是變動狀態的話 請檢查是否存在與此 BUG 相同的問題  
+  https://youtrack.jetbrains.com/issue/IDEA-288057
+
 
