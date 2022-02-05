@@ -15,5 +15,5 @@ export default Bluebird.mapSeries([
 
 function lazyImport(target: string)
 {
-	return import(resolve(__dirname, target)).then(m => m.default ?? m)
+	return Bluebird.resolve(import(resolve(__dirname, target))).then(m => m.default ?? m).delay(2000)
 }
