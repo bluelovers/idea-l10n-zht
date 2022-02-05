@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2022-02-05)
+
+
+### 🐛　Bug Fixes
+
+* 增加延遲間隔來防止一些奇怪的狀況 ([41aba33](https://github.com/bluelovers/idea-l10n-zht/commit/41aba33c58fbddfd94d06db13d36f6dfed39dc97))
+
+
+### 🛠　Build System
+
+* **release:** update build ([5acbf29](https://github.com/bluelovers/idea-l10n-zht/commit/5acbf29992fbbcd8df749e9c57aab6df3fb24f4e))
+
+
+
+
+
 # 1.0.0 (2022-01-28)
 
 
