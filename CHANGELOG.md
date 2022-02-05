@@ -6,6 +6,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # 1.0.0 (2022-02-05)
 
 
+### 🛠　Build System
+
+* 自動更新 git 標籤 ([a588565](https://github.com/bluelovers/idea-l10n-zht/commit/a58856566e59d3e797918e857be19a257505a7a3))
+* **release:** update build ([e38171e](https://github.com/bluelovers/idea-l10n-zht/commit/e38171eeff6a494c85e1d1608f7cffdcfecfe780))
+
+
+
+
+
+# 1.0.0 (2022-02-05)
+
+
 ### 🐛　Bug Fixes
 
 * 增加延遲間隔來防止一些奇怪的狀況 ([41aba33](https://github.com/bluelovers/idea-l10n-zht/commit/41aba33c58fbddfd94d06db13d36f6dfed39dc97))
