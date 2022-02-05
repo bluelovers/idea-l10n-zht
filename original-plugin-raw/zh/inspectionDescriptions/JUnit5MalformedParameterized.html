@@ -1,0 +1,39 @@
+<html>
+<body>
+报告来源格式错误的形参化测试：
+<ul>
+  <li>
+    <code>MethodSource</code> 具有未知目标或方法不为 static、无实参。
+  </li>
+  <li>
+    <code>ValueSource</code> / <code>EnumSource</code> 类型不能转换为方法形参。
+  </li>
+  <li>
+    未定义来源。
+  </li>
+</ul>
+<p>示例：</p>
+<pre><code>
+  class Test {
+    @MethodSource("parameters")
+    @ParameterizedTest
+    void foo(String param) {}
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Test {
+    private static Stream&lt;Arguments&gt; parameters() {
+        return Stream.empty();
+    }
+
+    @MethodSource("parameters")
+    @ParameterizedTest
+    void foo(String param) {}
+  }
+  </code></pre>
+<!-- tooltip end -->
+<p>
+  <small>2017.2 最新变化</small>
+</body>
+</html>
