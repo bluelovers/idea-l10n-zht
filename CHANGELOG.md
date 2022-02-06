@@ -6,6 +6,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # 1.0.0 (2022-02-06)
 
 
+### ♻️　Chores
+
+* add `yarn run ci:git:fetch:remote:tag` ([48dd736](https://github.com/bluelovers/idea-l10n-zht/commit/48dd7369858122f5b44546bf2f6074dabd50475b))
+
+
+
+
+
+# 1.0.0 (2022-02-06)
+
+
 ### ✨　Features
 
 * update pluginIcon.svg ([cc562ab](https://github.com/bluelovers/idea-l10n-zht/commit/cc562aba7ad57829ad189ccd79cb8bb884f5c367))
