@@ -28,6 +28,9 @@ export default FastGlob<string>([
 			.tap(result => debug_token(result))
 			.tap(result =>{
 				console.gray("==================");
+
+				console.log(result.map(w => w.w).join('／'));
+
 				printPrettyDiff(input, result);
 				console.gray("==================");
 			})
