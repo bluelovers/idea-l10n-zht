@@ -6,6 +6,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # 1.0.0 (2022-02-06)
 
 
+### ✨　Features
+
+* update pluginIcon.svg ([cc562ab](https://github.com/bluelovers/idea-l10n-zht/commit/cc562aba7ad57829ad189ccd79cb8bb884f5c367))
+
+
+
+
+
+# 1.0.0 (2022-02-06)
+
+
 ### 🐛　Bug Fixes
 
 * 新增部分來自 pjchender/cn2tw4programmer 的字典 ([ac805c6](https://github.com/bluelovers/idea-l10n-zht/commit/ac805c612d9ae9f4429b841a382e1f4027a51ea5))
