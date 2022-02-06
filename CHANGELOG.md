@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2022-02-06)
+
+
+### 🐛　Bug Fixes
+
+* 新增部分來自 pjchender/cn2tw4programmer 的字典 ([ac805c6](https://github.com/bluelovers/idea-l10n-zht/commit/ac805c612d9ae9f4429b841a382e1f4027a51ea5))
+
+
+### 🛠　Build System
+
+* **release:** update build ([1e3ce29](https://github.com/bluelovers/idea-l10n-zht/commit/1e3ce298796b137c38742af1669a1eaab2279843))
+
+
+
+
+
 # 1.0.0 (2022-02-05)
 
 
