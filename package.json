@@ -35,6 +35,7 @@
     "ci:build": "yarn run plugin:build && yarn run build:commit",
     "ci:postpublish": "yarn run postpublish:changelog && yarn run postpublish:git:commit && yarn run postpublish:git:tag & echo ci:postpublish",
     "ci:git:config": "git config --local core.autocrlf false && git config --local core.ignorecase false && git config --local include.path ../.gitconfig && git config --local core.autocrlf false && git config --local core.ignorecase false",
+    "ci:git:fetch:remote:tag": "git fetch --tag -f",
     "npm:publish": "npm publish",
     "npm:publish:bump": "yarn run version:bump && npm publish",
     "preversion": "echo preversion && yarn run test",
