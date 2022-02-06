@@ -8,7 +8,7 @@
   <li>未解析的符號</li>
 </ul>
 
-<p><b>示例查詢：</b></p>
+<p><b>範例查詢：</b></p>
 <pre><code>
 SELECT OBJECT(e) FROM Employee e WHERE SQRT(ABS(e.firstName - ?1)) > 50000; // 錯誤：類型不符合，需要數字類型
 

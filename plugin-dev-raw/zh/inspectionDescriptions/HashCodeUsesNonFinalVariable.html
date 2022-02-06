@@ -4,7 +4,7 @@
 <p>
   此類訪問可能導致 <code>hashCode()</code> 在該對象生命周期的不同時刻返回不同的值，進而可能在使用標準集合類時導致問題。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Drink {
     String name;
@@ -19,7 +19,7 @@
     coffee.name = "Tea";
     double coffeePrice = priceMap.get(coffee); //找不到
 </code></pre>
-<p>建議通過快速修復將該字段設為 final：</p>
+<p>建議通過快速修復將該欄位設為 final：</p>
 <pre><code>
   class Drink {
     final String name;

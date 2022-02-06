@@ -2,7 +2,7 @@
 <body>
 報告 <code>&amp;&amp;</code> 和 <code>||</code> 表達式以及 <code>if</code> 語句分支中的重複條件。
 這些重複的條件有時是有意為之，但通常是因為疏忽大意所致。
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   boolean result = digit1 != digit2 || digit1 != digit2;
 </code></pre>
@@ -11,13 +11,13 @@
   要忽略可能產生副作用的條件，請使用<b>忽略有副作用的條件</b> 選項。
 禁用此選項可能會導致誤報，例如，當同一方法在後續調用中返回不同的值時。
 </p>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   if (iterator.next() != null || iterator.next() != null) {
     System.out.println("Got it");
   }
 </code></pre>
-<p>由於 <code>iterator.next()</code> 可能存在副作用（在示例中），只有在禁用 <b>忽略有副作用的條件</b> 選項時才會觸發警告。</p>
+<p>由於 <code>iterator.next()</code> 可能存在副作用（在範例中），只有在禁用 <b>忽略有副作用的條件</b> 選項時才會觸發警告。</p>
 
 </body>
 </html>

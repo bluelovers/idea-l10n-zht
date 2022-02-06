@@ -1,10 +1,10 @@
 <html>
 <body>
-報告不復制該類所有字段的複製構造函數。
+報告不復制該類所有欄位的複製構造函數。
 <p>
-  帶有初始值設定項的 <code>final</code> 字段和 <code>transient</code> 字段被視為不必複製。
+  帶有初始值設定項的 <code>final</code> 欄位和 <code>transient</code> 欄位被視為不必複製。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Point {
 
@@ -17,7 +17,7 @@
     }
 
     Point(Point other) {
-      // 字段 x 和 y 未初始化
+      // 欄位 x 和 y 未初始化
     }
   }
 </code></pre>

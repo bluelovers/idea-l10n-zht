@@ -2,7 +2,7 @@
 <body>
 報告不實現 <code>readObject()</code> 和 <code>writeObject()</code> 方法的 <code>Serializable</code> 類。
 <p>
-  如果沒有實現 <code>readObject()</code> 和 <code>writeObject()</code> 方法，將使用預設的序列化算法，在許多環境中，這對於性能和兼容性而言或許是次優選擇。
+  如果沒有實現 <code>readObject()</code> 和 <code>writeObject()</code> 方法，將使用預設的序列化演算法，在許多環境中，這對於性能和兼容性而言或許是次優選擇。
 </p>
 <!-- tooltip end -->
 <p>
@@ -14,7 +14,7 @@
     這適用於從超類繼承 <code>Serializable</code> 但不用於序列化的類。
   </li>
   <li>
-    是否忽略沒有非 static 字段的 <code>Serializable</code> 類。
+    是否忽略沒有非 static 欄位的 <code>Serializable</code> 類。
   </li>
   <li>
     是否忽略 <code>Serializable</code> 匿名類。

@@ -1,8 +1,8 @@
 <html>
 <body>
-報告寫入 static 字段的 EJB 類。
+報告寫入 static 欄位的 EJB 類。
 
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 @Stateless
 public class ExampleBean {
@@ -11,7 +11,7 @@ public class ExampleBean {
 
   public void setAnotherBean(AnotherBean anotherBean) {
     this.anotherBean = anotherBean;
-    counter++; // 錯誤：不應在此處寫入任何 static 字段
+    counter++; // 錯誤：不應在此處寫入任何 static 欄位
   }
 }
 </code></pre>

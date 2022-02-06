@@ -7,7 +7,7 @@
 <p>
     建議添加要拋出異常的顯式 <code>!!</code>，或者考慮將函數的接收器類型更改為可 null（如果它能夠無異常地執行）。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   inline fun String.removePrefix(prefix: String): String {
       return this.substring(prefix.length)

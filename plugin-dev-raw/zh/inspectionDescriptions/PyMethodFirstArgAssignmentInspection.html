@@ -2,7 +2,7 @@
 <body>
 <p>報告第一個參數（如 <code>self</code> 或 <code>cls</code>）在方法中重新賦值的情況。
   因為在大多數情況下，這種重新賦值中沒有目標，所以 IDE 會指示錯誤。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre style="font-family: monospace">
 class Account:
     def calc(self, balance):
@@ -10,5 +10,5 @@ class Account:
             self = balance
         return self
 </pre>
-<p>修復方法可以是檢查和修改算法，以確保有必要進行這樣的重新賦值。 如果一切都正確無誤，可以調用此程式碼的意圖操作，並選擇忽略警告。</p>
+<p>修復方法可以是檢查和修改演算法，以確保有必要進行這樣的重新賦值。 如果一切都正確無誤，可以調用此程式碼的意圖操作，並選擇忽略警告。</p>
 </body></html>

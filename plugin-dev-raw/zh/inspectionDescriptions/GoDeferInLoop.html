@@ -18,7 +18,7 @@
 <body>
 報告循環內的 <code>defer</code> 語句。
 <p>在循環中使用 <code>defer</code> 會導致資源泄漏或語句的執行順序不可預測。</p>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>func main() {
  for {
   field, err := db.Query("SELECT 1")
@@ -30,6 +30,6 @@
  }
 }</code></pre>
 <p><code>defer row.Close()</code> 在循環內的調用在函數完成執行之前不會執行。
-  而不是在 <code> for </code> 循環的每一步結束時。 這種實現可能會導致函數堆棧溢出和其他問題。</p>
+  而不是在 <code> for </code> 循環的每一步結束時。 這種實現可能會導致函數堆疊溢出和其他問題。</p>
 </body>
 </html>

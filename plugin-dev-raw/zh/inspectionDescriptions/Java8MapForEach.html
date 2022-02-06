@@ -2,7 +2,7 @@
 <body>
 建議將 <code>for(Entry&lt;?,?&gt; entry : map.entrySet()) {...}</code> 或 
 <code>map.entrySet().forEach(entry -&gt; ...)</code> 取代為 <code>map.forEach((key, value) -> ...)</code>。
-<p>示例</p>
+<p>範例</p>
 <pre><code>
   void print(Map&lt;String, Integer&gt; map) {
     map.entrySet().forEach(entry -> {

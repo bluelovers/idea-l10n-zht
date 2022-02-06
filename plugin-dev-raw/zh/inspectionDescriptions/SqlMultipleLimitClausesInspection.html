@@ -2,7 +2,7 @@
 <body>
 報告單個查詢中多個行限制子句的使用情況。
 
-<p>示例（Microsoft SQL 伺服器）：</p>
+<p>範例（Microsoft SQL 伺服器）：</p>
 <pre><code>create table foo(a int);
 select top 1 * from foo order by a offset 10 rows fetch next 20 rows only;</code></pre>
 

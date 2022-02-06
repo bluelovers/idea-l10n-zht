@@ -1,15 +1,15 @@
 <html>
 <body>
-報告對實例方法中 <code>static</code> 字段的賦值或修改。
-<p>雖然合法，但此類賦值很難安全完成，並且通常是無意中將字段標記為 <code>static</code> 的結果。</p>
-<p><b>示例：</b></p>
+報告對實例方法中 <code>static</code> 欄位的賦值或修改。
+<p>雖然合法，但此類賦值很難安全完成，並且通常是無意中將欄位標記為 <code>static</code> 的結果。</p>
+<p><b>範例：</b></p>
 <pre><code>
   class Counter {
     private static int count = 0;
 
     void increment() {
       // 警告：從實例方法
-      // 更新 static 字段
+      // 更新 static 欄位
       count++;
     }
   }

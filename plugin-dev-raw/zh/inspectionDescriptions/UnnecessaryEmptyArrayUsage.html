@@ -1,16 +1,16 @@
 <html>
 <body>
-報告數組元素類型的類中有常數時已知長度為零的數組分配。
-由於零長度數組不可變，您可以重用相同的數組實例來節省內存。
-<p><b>示例：</b></p>
+報告陣列元素類型的類中有常數時已知長度為零的陣列分配。
+由於零長度陣列不可變，您可以重用相同的陣列實例來節省內存。
+<p><b>範例：</b></p>
 <pre><code>
   class Item {
-    // 可重用的 public 零長度數組常數 
+    // 可重用的 public 零長度陣列常數 
     public static final Item[] EMPTY_ARRAY = new Item[0];
   }
   class EmptyNode {
     Item[] getChildren() {
-      // 不必要的零長度數組創建
+      // 不必要的零長度陣列創建
       return new Item[0];
     }
   }

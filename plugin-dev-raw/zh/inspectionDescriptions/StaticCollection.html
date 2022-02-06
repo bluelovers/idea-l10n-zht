@@ -1,7 +1,7 @@
 <html>
 <body>
-報告 <code>Collection</code> 類型的 static 字段。 雖然這不一定是問題，但靜態集合通常會導致內存泄漏，因此會被某些編碼標準禁止。
-<p><b>示例：</b></p>
+報告 <code>Collection</code> 類型的 static 欄位。 雖然這不一定是問題，但靜態集合通常會導致內存泄漏，因此會被某些編碼標準禁止。
+<p><b>範例：</b></p>
 <pre><code>
   public class Example {
     static List&lt;String&gt; list = new ArrayList&lt;&gt;();
@@ -13,7 +13,7 @@
   配置檢查：
 </p>
 <ul>
-  <li>使用<b>忽略弱靜態集合或映射</b>選項可以忽略 <code>java.util.WeakHashMap</code> 類型的字段。</li>
+  <li>使用<b>忽略弱靜態集合或映射</b>選項可以忽略 <code>java.util.WeakHashMap</code> 類型的欄位。</li>
 </ul>
 </body>
 </html>

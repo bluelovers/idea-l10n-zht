@@ -4,7 +4,7 @@
   報告 Spring Boot 應用程序 <code>.yaml</code> 配置檔案中未解析和棄用的配置鍵和無效值，它們可能導致執行時錯誤。
 </p>
 
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 server:
   port: invalid # 報告 '無法將 'invalid' 轉換為 java.lang.Integer'
@@ -12,7 +12,7 @@ server:
 
 <p>如果已棄用的配置鍵有取代鍵，您可以應用 '使用取代鍵' 快速修復。</p>
 
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 logging:
   path: ${path} # 報告 '已棄用的配置屬性 'logging.path''
@@ -28,7 +28,7 @@ logging:
 <p>
   如果 <code>spring-configuration-metadata.json</code> 中未定義配置鍵，您可以應用創建 <code>META-INF/spring-additional-configuration-metadata.json</code> 檔案並定義必要鍵的 '定義配置鍵' 快速修復。</p>
 
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 new:
   key: value # 報告 '無法解析配置屬性 'new.key''

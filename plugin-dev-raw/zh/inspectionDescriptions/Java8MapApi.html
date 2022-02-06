@@ -2,7 +2,7 @@
 <body>
 報告 <code>java.util.Map</code> 常見的使用模式，並建議將其取代為：
 <code>getOrDefault()</code>、<code>computeIfAbsent()</code>、<code>putIfAbsent()</code>、<code>merge()</code> 或 <code>replaceAll( )</code>。
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   map.containsKey(key) ? map.get(key) : "default";
 </code></pre>
@@ -10,7 +10,7 @@
 <pre><code>
   map.getOrDefault(key, "default");
 </code></pre>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   List&lt;String&gt; list = map.get(key);
   if (list == null) {
@@ -22,7 +22,7 @@
 <pre><code>
   map.computeIfAbsent(key, localKey -> new ArrayList&lt;&gt;());
 </code></pre>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   Integer val = map.get(key);
   if (val == null) map.put(key, 1);
@@ -32,7 +32,7 @@
 <pre><code>
   map.merge(key, 1, (localKey, localValue) -> localValue + 1);
 </code></pre>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   for (Map.Entry&lt;String, String&gt; entry : map.entrySet()) {
     map.put(entry.getKey(), transform(entry.getValue()));

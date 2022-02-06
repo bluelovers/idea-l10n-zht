@@ -3,7 +3,7 @@
 報告確保評估為 <code>true</code> 或 <code>false</code> 的位元遮罩表達式。
 <p>
   該檢查將檢查 <code>(var & constant1) == constant2</code> 或 <code>(var | constant1) == constant2</code> 形式的表達式，其中 <code>constant1</code> 和 <code>constant2</code> 是不相容的位元遮罩常數。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>  // 不相容的遮罩：由於遮罩以 00 結尾，
   // 結果可能是 0x1200，但不是 0x1234
   if ((mask & 0xFF00) == 0x1234) {...}

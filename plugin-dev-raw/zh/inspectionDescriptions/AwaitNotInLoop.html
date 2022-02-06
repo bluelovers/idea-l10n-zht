@@ -6,7 +6,7 @@
   線程可能出於不同原因而被喚醒，因此應在 <code>await()</code> 調用返回後檢查條件。
   使用循環很容易做到這一點。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   void acquire(Condition released) throws InterruptedException {
     released.await();

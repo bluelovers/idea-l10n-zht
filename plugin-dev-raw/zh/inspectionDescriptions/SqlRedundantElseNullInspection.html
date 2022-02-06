@@ -1,7 +1,7 @@
 <html>
 <body>
 報告冗餘的 ELSE NULL 子句。
-<p>示例（MySQL）：</p>
+<p>範例（MySQL）：</p>
 <pre><code>SELECT CASE WHEN 2 > 1 THEN 'OK' ELSE NULL END AS alias FROM foo;</code></pre>
 <p><code>ELSE NULL</code> 部分永遠不會被執行，可以省略。</p>
 </body>

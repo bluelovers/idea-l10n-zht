@@ -1,13 +1,13 @@
 <html>
 <body>
-報告在正常對象構造過程中初始化，但其類沒有 <code>readObject</code> 方法的 <code>transient</code> 字段。
+報告在正常對象構造過程中初始化，但其類沒有 <code>readObject</code> 方法的 <code>transient</code> 欄位。
 <p>
-  <code>transient</code> 字段未被序列化，因此在反序列化期間，需要在 <code>readObject()</code> 方法中單獨初始化。
+  <code>transient</code> 欄位未被序列化，因此在反序列化期間，需要在 <code>readObject()</code> 方法中單獨初始化。
 </p>
 <p>
-  任何在正常對象構造過程中未被初始化的 <code>transient</code> 字段都被視為使用預設初始化，並且不會被此檢查報告。
+  任何在正常對象構造過程中未被初始化的 <code>transient</code> 欄位都被視為使用預設初始化，並且不會被此檢查報告。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Person implements Serializable {
     transient String name = "Default"; //警告，反序列化後實際上可能為 null

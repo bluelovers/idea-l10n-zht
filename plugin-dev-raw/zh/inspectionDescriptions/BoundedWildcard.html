@@ -1,7 +1,7 @@
 <html>
 <body>
 報告可以使用<a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">有界通配符</a>的通用方法參數。
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   void process(Consumer&lt;Number&gt; consumer);
 </code></pre>
@@ -38,7 +38,7 @@
 <ul>
   <li>
     <p>
-      不變類。 一個不變類的示例是 <code>java.util.List&lt;T&gt;</code>，因為它既接受值（通過 <code>List.add(T)</code> 方法）又生成值（通過 <code>T List.get()</code> 方法）。
+      不變類。 一個不變類的範例是 <code>java.util.List&lt;T&gt;</code>，因為它既接受值（通過 <code>List.add(T)</code> 方法）又生成值（通過 <code>T List.get()</code> 方法）。
     </p>
     <p>
       另一方面，<code>contravariant</code> 類只接收值，例如，只有方法 <code>accept(T)</code> 的 <code>java.util.function.Consumer&lt;T&gt;</code>。 類似地，<code>covariant</code> 類只產生值，例如，只有方法 <code>T get()</code> 的 <code>java.util.function.Supplier&lt;T&gt;</code>。

@@ -3,7 +3,7 @@
 當第二個實參不是一個指向接口或實現錯誤的類型的指針時，報告對 <code>errors.As</code> 函數的調用。
 <p>此類調用在執行時會出現 panic。</p>
 <p>有關 <code>As</code> 函數的更多資訊，請參見 <a href="https://golang.org/pkg/errors/#As">golang.org 上的 func As</a> 頁面。</p>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>_, err := os.Open("non-existing")
 var pathError *fs.PathError
 if errors.As(err, pathError) { // 需要一個指向 *fs.PathError 的指針

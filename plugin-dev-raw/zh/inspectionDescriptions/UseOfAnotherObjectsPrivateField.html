@@ -1,8 +1,8 @@
 <html>
 <body>
-報告對另一個對象的 <code>private</code> 或 <code>protected</code> 字段的訪問。
-Java 允許訪問與當前對象屬於同一類的對象的此類字段，但某些編碼樣式不鼓勵這種用法。 此外，這種對 <code>private</code> 字段的直接訪問在面向組件的架構（例如 Spring 或 Hibernate）中可能會失敗，它們期望對其他對象的所有訪問都通過方法調用進行，以便框架可以使用代理調解訪問。
-<p><b>示例：</b></p>
+報告對另一個對象的 <code>private</code> 或 <code>protected</code> 欄位的訪問。
+Java 允許訪問與當前對象屬於同一類的對象的此類欄位，但某些編碼樣式不鼓勵這種用法。 此外，這種對 <code>private</code> 欄位的直接訪問在面向組件的架構（例如 Spring 或 Hibernate）中可能會失敗，它們期望對其他對象的所有訪問都通過方法調用進行，以便框架可以使用代理調解訪問。
+<p><b>範例：</b></p>
 <pre><code>
   public class Base {
     protected int bar;
@@ -13,7 +13,7 @@ Java 允許訪問與當前對象屬於同一類的對象的此類字段，但某
     }
   }
 </code></pre>
-可以通過快速修復封裝該字段。
+可以通過快速修復封裝該欄位。
 <!-- tooltip end -->
 <p>配置檢查：</p>
 <ul>

@@ -1,14 +1,14 @@
 <html>
 <body>
-報告在方法簽名中聲明但方法本身或其實現和派生從未拋出的異常。
+報告在方法簽名中宣告但方法本身或其實現和派生從未拋出的異常。
 <p>該檢查會忽略與序列化相關的方法，例如方法 <code>readObject()</code> 或 <code>writeObject()</code>。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   void method() throws InterruptedException {
     System.out.println();
   }
 </code></pre>
-<p>該快速修復會移除聲明中不必要的異常，並規范化冗餘的 <code>try</code>-<code>catch</code> 語句：</p>
+<p>該快速修復會移除宣告中不必要的異常，並規范化冗餘的 <code>try</code>-<code>catch</code> 語句：</p>
 <pre><code>
   void method() {
     System.out.println();
@@ -21,6 +21,6 @@
 </p>
 <!-- tooltip end -->
 <p>使用<b>忽略由入口點方法拋出的異常</b>選項可以忽略由入口點方法拋出的異常。
-  入口點方法在以下檢查中配置：<b>編輯器 | 檢查 | Java | 聲明冗餘 | 未使用的聲明</b>。</p>
+  入口點方法在以下檢查中配置：<b>編輯器 | 檢查 | Java | 宣告冗餘 | 未使用的宣告</b>。</p>
 </body>
 </html>

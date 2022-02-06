@@ -1,14 +1,14 @@
 <html>
 <body>
-報告被聲明為 <code>volatile</code> 的數組字段。 此類聲明可能令人困惑，因為訪問數組本身遵循 <code>volatile</code> 字段的規則，但訪問數組的內容時並非如此。
-<p><b>示例：</b></p>
+報告被宣告為 <code>volatile</code> 的陣列欄位。 此類宣告可能令人困惑，因為訪問陣列本身遵循 <code>volatile</code> 欄位的規則，但訪問陣列的內容時並非如此。
+<p><b>範例：</b></p>
 <pre><code>
   class Data {
     private volatile int[] idx = new int[0];
   }
 </code></pre>
 <p>
-  如果需要對數組內容進行此類可變訪問，不妨改用 <code>java.util.concurrent.atomic</code> 類：
+  如果需要對陣列內容進行此類可變訪問，不妨改用 <code>java.util.concurrent.atomic</code> 類：
 </p>
 <pre><code>
   class Data {

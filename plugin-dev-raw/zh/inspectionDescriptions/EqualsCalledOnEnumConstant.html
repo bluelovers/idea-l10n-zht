@@ -3,7 +3,7 @@
 報告枚舉常數上的 <code>equals()</code> 調用。
 <p>此類調用可以取代為同一性比較 (<code>==</code>)，因為只有兩個枚舉常數具備相同的同一性時，它們才相等。</p>
 <p>可以通過快速修復將該調用更改為比較。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   boolean foo(MyEnum value) {
     return value.equals(MyEnum.FOO);

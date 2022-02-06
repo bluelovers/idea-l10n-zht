@@ -7,7 +7,7 @@
 <p>
     但是，如果在 <code>asSequence()</code> 之後立即使用終端運算（例如 <code>toList()</code>），則不會帶來任何積極的性能效果。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   fun test(list: List&lt;String&gt;) {
       list.<b>asSequence()</b>.last()

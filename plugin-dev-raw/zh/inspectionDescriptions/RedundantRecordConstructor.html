@@ -1,7 +1,7 @@
 <html>
 <body>
-報告在 Java 記錄中聲明的冗餘構造函數。
-<p><b>示例 1：</b></p>
+報告在 Java 記錄中宣告的冗餘構造函數。
+<p><b>範例 1：</b></p>
 <pre><code>
   record Point(int x, int y) {
     public Point {} // 可以移除
@@ -15,7 +15,7 @@
   }
 </code></pre>
 <p>該快速修復會移除冗餘的構造函數。</p>
-<p><b>示例 2：</b></p>
+<p><b>範例 2：</b></p>
 <pre><code>
    // 可以轉換為壓縮構造函數
   record Range(int from, int to) {

@@ -1,7 +1,7 @@
 <html>
 <body>
 報告觸發器中轉換表變數的不正確用法。
-<p>示例 (HSQLDB)：</p>
+<p>範例 (HSQLDB)：</p>
 <pre><code>CREATE TABLE foo(a INT);
 
 CREATE TRIGGER trg
@@ -14,6 +14,6 @@ CREATE TRIGGER trig AFTER INSERT ON foo
    REFERENCING OLD ROW AS newrow
    FOR EACH ROW WHEN (a > 1)
    INSERT INTO foo VALUES (1)</code></pre>
-<p>在 HSQLDB 中，DELETE 觸發器只能用於 OLD 狀態，而 INSERT 觸發器只能用於 NEW 狀態。 因此，在前面的示例中，<code>SELECT * FROM NEW;</code> 中的 NEW 和 <code>REFERENCING OLD ROW AS newrow</code> 中的 OLD 將被高亮顯示。</p>
+<p>在 HSQLDB 中，DELETE 觸發器只能用於 OLD 狀態，而 INSERT 觸發器只能用於 NEW 狀態。 因此，在前面的範例中，<code>SELECT * FROM NEW;</code> 中的 NEW 和 <code>REFERENCING OLD ROW AS newrow</code> 中的 OLD 將被高亮顯示。</p>
 </body>
 </html>

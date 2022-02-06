@@ -1,12 +1,12 @@
 <html>
 <body>
-報告對 volatile 字段的非原子操作。
+報告對 volatile 欄位的非原子操作。
 <p>
-  非原子操作的示例之一是使用增量運算符更新字段。
+  非原子操作的範例之一是使用增量運算符更新欄位。
   由於操作涉及讀寫，並且在此之間可能發生其他修改，因此可能損壞資料。
   使用 <code>synchronized</code> 塊進行環繞，或使用 <code>java.util.concurrent.atomic</code> 軟件包中的一個類，可以使該項操作成為原子操作。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   private volatile int v = 1;
 

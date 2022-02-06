@@ -9,7 +9,7 @@ Reports multiple 'java.io.File' attribute calls in a row, such as:
 </ul>
 This calls can be replaced with a bulk 'Files.readAttributes' call. 
 Usually bulk method is more performant then multiple attribute calls.
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
 boolean isNewFile(File file, long lastModified) {
   return file.isFile() && file.lastModified() > lastModified;

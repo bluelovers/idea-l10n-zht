@@ -9,7 +9,7 @@
   快速修復會將列表包裝在 <code>new java.util.HashSet&lt;&gt;()</code> 中，因為從 <code>java.util.List</code> 創建 
   <code>java.util.HashSet</code> 並在 <code>java.util.HashSet</code> 上執行 <code>containsAll()</code> 的所需時間為 O(n+m)。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>  public boolean check(List&lt;String&gt; list, Collection&lt;String&gt; collection) {
     // O(n&middot;m) 復雜度
     return list.containsAll(collection);

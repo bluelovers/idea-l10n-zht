@@ -2,7 +2,7 @@
 <body>
 報告從函數執行 SELECT 或執行沒有類型別名的 DBLINK（例如 <code> AS t1 (s VARCHAR) </code>）的情況。
   <p>此要求不適用於標量函數。</p>
-<p>示例（PostgreSQL）：</p>
+<p>範例（PostgreSQL）：</p>
 <pre><code>CREATE FUNCTION produce_a_table() RETURNS RECORD AS $$
 SELECT 1;
 $$ LANGUAGE sql;

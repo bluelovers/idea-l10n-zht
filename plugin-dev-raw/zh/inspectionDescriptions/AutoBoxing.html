@@ -2,7 +2,7 @@
 <body>
 報告受自動裝箱轉換（將基元值自動包裝為對象）影響的表達式。
 盡量不使用對象，而是使用基元。 它可能會顯著影響性能。
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>Integer x = 42;</code></pre>
 <p>該快速修復會將轉換設為顯式：</p>
 <pre><code>Integer x = Integer.function valueOf() { [native code] }(42);</code></pre>

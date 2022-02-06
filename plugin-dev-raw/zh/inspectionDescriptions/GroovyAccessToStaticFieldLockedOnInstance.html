@@ -1,10 +1,10 @@
 <html>
 <body>
-報告對在 <code>this</code> 或 <code>this</code> 的實例字段上鎖定的非常量 static 字段的訪問。
+報告對在 <code>this</code> 或 <code>this</code> 的實例欄位上鎖定的非常數 static 欄位的訪問。
 <p>
-  在實例資料上鎖定 static 字段並不能防止其他實例修改該字段，因此可能會導致意外的競爭條件。
+  在實例資料上鎖定 static 欄位並不能防止其他實例修改該欄位，因此可能會導致意外的競爭條件。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   static String s;
   def foo() {

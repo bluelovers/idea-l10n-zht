@@ -7,7 +7,7 @@
   該快速修復會建議將 <code>map()</code> 取代為 <code>mapNotNull</code>，從而忽略異常。
 </p>
 
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>repository.findWithTailableCursorBy()
     .map(e -> (Person)null)
     .doOnNext(System.out::println)

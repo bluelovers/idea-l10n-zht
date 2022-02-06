@@ -5,7 +5,7 @@
   在沒有持有鎖定的對象上調用這些方法會導 <code>IllegalMonitorStateException</code>。
   此類結構不一定錯誤，因為在調用該包含方法前可能已獲取必要的鎖定，但即便如此，還是要仔細查看。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Sync {
     private final Object lock = new Object();

@@ -1,9 +1,9 @@
 <html>
 <body>
-報告未被聲明為 <code>static</code> 和/或 <code>final</code> 的記錄器字段。
+報告未被宣告為 <code>static</code> 和/或 <code>final</code> 的記錄器欄位。
 確保每個類記錄器都是有效的常數並綁定到該類可以簡化為應用程式提供統一日誌記錄實現的任務。
 <p>提供了一個快速修復來將記錄器修飾符更改為 <code>static final</code>。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   <b>public class</b> Significant {
     <b>private</b> Logger LOG = Logger.getLogger(Critical.class);
@@ -20,7 +20,7 @@
   配置檢查：
 </p>
 <ul>
-  <li>使用<b>記錄器類名</b>表可以指定記錄器類名。 該檢查將報告不是 <code>static</code> 和 <code>final</code> 並且類型等同於指定類名之一的字段。
+  <li>使用<b>記錄器類名</b>表可以指定記錄器類名。 該檢查將報告不是 <code>static</code> 和 <code>final</code> 並且類型等同於指定類名之一的欄位。
   </li>
 </ul>
 </body>

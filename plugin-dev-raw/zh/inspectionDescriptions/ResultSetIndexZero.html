@@ -2,7 +2,7 @@
 <body>
 報告訪問 <code>java.sql.ResultSet</code> 或 <code>java.sql.PreparedStatement</code> 的第 0 列的嘗試。
 由於歷史原因，<code>java.sql.ResultSet</code> 和 <code>java.sql.PreparedStatement</code> 的列不是從 <b>0</b> 開始編號，而是從 <b>1</b> 開始編號，並且訪問第 0 列是 JDBC 編程中的常見錯誤。
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   String getName(ResultSet rs) {
     <b>return</b> rs.getString(0);

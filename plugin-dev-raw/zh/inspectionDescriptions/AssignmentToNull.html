@@ -1,9 +1,9 @@
 <html>
 <body>
-報告在聲明外被賦值給 <code>null</code> 的變數。
+報告在宣告外被賦值給 <code>null</code> 的變數。
 <p>Java 中 <code>null</code> 的主要用途是表示未初始化的引用變數。 在極少數情況下，將變數顯式賦值給 <code>null</code> 有助於垃圾回收。 但是，使用 <code>null</code> 來表示缺失、未指定、無效值或找不到的元素被認為是一種不好的做法，可能會使您的程式碼更容易出現 <code>NullPointerExceptions</code>。
   請改為考慮定義具有預期語義的 sentinel 對象或使用像 <code>Optional</code> 這樣的庫類型來表示沒有值。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   Integer convert(String s) {
     Integer value;
@@ -18,7 +18,7 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-使用<b>忽略對字段的賦值</b>選項可忽略對字段的賦值。
+使用<b>忽略對欄位的賦值</b>選項可忽略對欄位的賦值。
 </p>
 
 </body>

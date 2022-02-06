@@ -1,9 +1,9 @@
 <html>
 <body>
-報告與周圍類的字段同名的方法參數。
-由於進行此類命名，在有意使用同名字段的情況下，您可能會誤用該參數。
+報告與周圍類的欄位同名的方法參數。
+由於進行此類命名，在有意使用同名欄位的情況下，您可能會誤用該參數。
 <p>建議通過快速修復重命名該參數。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Main {
     private String value;
@@ -22,7 +22,7 @@
     <strong>對屬性 setter 忽略</strong> - 忽略簡單 setter 的參數。
   </li>
   <li>
-    <strong>忽略從子類不可見的超類字段</strong> - 忽略超類中對此方法不可見的 <code>private</code> 字段。
+    <strong>忽略從子類不可見的超類欄位</strong> - 忽略超類中對此方法不可見的 <code>private</code> 欄位。
   </li>
   <li>
     <strong>對構造函數忽略</strong> - 忽略構造函數的參數。
@@ -31,7 +31,7 @@
     <strong>對 abstract 方法忽略</strong> - 忽略 abstract 方法的參數。
   </li>
   <li>
-    <strong>對隱藏實例字段的 static 方法參數忽略</strong> - 忽略隱藏實例字段的 <code>static</code> 方法的參數，並忽略隱藏外部類實例字段的 static 內部類中實例方法的參數。 雖然不是嚴格意義上的隱藏，但此類參數仍然令人困惑。
+    <strong>對隱藏實例欄位的 static 方法參數忽略</strong> - 忽略隱藏實例欄位的 <code>static</code> 方法的參數，並忽略隱藏外部類實例欄位的 static 內部類中實例方法的參數。 雖然不是嚴格意義上的隱藏，但此類參數仍然令人困惑。
   </li>
 </ol>
 

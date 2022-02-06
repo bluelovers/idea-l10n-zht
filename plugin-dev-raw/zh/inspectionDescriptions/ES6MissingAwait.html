@@ -2,7 +2,7 @@
 <body>
 報告 <code>async</code> 函數中沒有預期的 <code>await</code> 前綴的 <code> async</code> 函數調用。
 此類調用返回 <code>Promise</code>，並且控制流會立即繼續。
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
 async function bar() { /* ... */ }
 async function foo() {
@@ -21,6 +21,6 @@ async function foo() {
 在選中“報告 return 語句中的 promise”復選框的情況下，還建議在 return 語句中添加 <code>await</code>。<br/>
 雖然一般不必這樣做，但它有兩大好處。<br/><ul><li>
 使用 <code>try-catch</code> 環繞程式碼時，您不會忘記去添加 <code>await</code>。</li>
-<li>顯式的 <code>await</code> 有助於 V8 執行時提供<a href="https://bit.ly/v8-zero-cost-async-stack-traces">異步堆棧跟踪</a>。</li></ul>
+<li>顯式的 <code>await</code> 有助於 V8 執行時提供<a href="https://bit.ly/v8-zero-cost-async-stack-traces">異步堆疊跟踪</a>。</li></ul>
 </body>
 </html>

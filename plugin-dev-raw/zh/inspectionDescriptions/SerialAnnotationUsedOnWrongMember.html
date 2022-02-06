@@ -1,10 +1,10 @@
 <html>
 <body>
-報告 <code>Serializable</code> 和 <code>Externalizable</code> 類中不適合使用 <code>java.io.Serial</code> 註解進行註解的方法和字段。
-<p><b>示例：</b></p>
+報告 <code>Serializable</code> 和 <code>Externalizable</code> 類中不適合使用 <code>java.io.Serial</code> 註解進行註解的方法和欄位。
+<p><b>範例：</b></p>
 <pre><code>
 class Test implements Serializable {
-  @Serial // 註解的字段不是序列化機制的一部分，因為它並非 final
+  @Serial // 註解的欄位不是序列化機制的一部分，因為它並非 final
   private static long serialVersionUID = 7874493593505141603L;
 
   @Serial // 註解的方法不是序列化機制的一部分，因為它並非 private

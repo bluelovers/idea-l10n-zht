@@ -10,7 +10,7 @@
   <li>會話 Bean 類的方法返回類型不正確</li>
   <li>EJB 定義了 `finalize` 方法</li>
 </ul>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 public class SessionEJB implements java.io.Serializable { // 錯誤：類應該擴展 `SessionBean`
   private SessionEJB() {} // 錯誤：類應該定義 public 無實參構造函數

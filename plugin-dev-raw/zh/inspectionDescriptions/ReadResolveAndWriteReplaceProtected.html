@@ -1,16 +1,16 @@
 <html>
 <body>
-報告實現 <code>java.io.Serializable</code> 且其中的 <code>readResolve()</code> 或 <code>writeReplace()</code> 方法未被聲明為 <code>protected</code> 的類。
+報告實現 <code>java.io.Serializable</code> 且其中的 <code>readResolve()</code> 或 <code>writeReplace()</code> 方法未被宣告為 <code>protected</code> 的類。
 <p>
-  將 <code>readResolve()</code> 和 <code>writeReplace()</code> 方法聲明為 <code>private</code> 可以強制子類無提示地忽略它們，而聲明為 <code>public</code> 則允許不受信任的程式碼調用它們。
+  將 <code>readResolve()</code> 和 <code>writeReplace()</code> 方法宣告為 <code>private</code> 可以強制子類無提示地忽略它們，而宣告為 <code>public</code> 則允許不受信任的程式碼調用它們。
 </p>
 <p>
-  如果包含類被聲明為 <code>final</code>，這些方法就可以被聲明為 <code>private</code>。
+  如果包含類被宣告為 <code>final</code>，這些方法就可以被宣告為 <code>private</code>。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class ClassWithSerialization implements Serializable {
-    public Object writeReplace() { // 警告：'writeReplace()' 未被聲明為 protected
+    public Object writeReplace() { // 警告：'writeReplace()' 未被宣告為 protected
         ...
     }
   }

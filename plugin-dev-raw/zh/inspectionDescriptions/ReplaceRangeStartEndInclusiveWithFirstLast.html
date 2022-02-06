@@ -3,7 +3,7 @@
 報告<b>裝箱的</b> <code>Range.start</code> 和 <code>Range.endInclusive</code> 屬性。
 <p>這些屬性可取代為<b>未裝箱的</b> <code>first</code> 和 <code>last</code> 屬性以避免冗餘調用。</p>
 <p>該快速修復會將 <code>start</code> 和 <code>endInclusive</code> 屬性取代為相應的 <code>first</code> 和 <code>last</code>。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   fun foo(range: CharRange) {
       val lastElement = range.endInclusive

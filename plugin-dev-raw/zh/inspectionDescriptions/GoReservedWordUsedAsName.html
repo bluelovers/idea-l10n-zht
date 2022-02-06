@@ -16,12 +16,12 @@
 
 <html>
 <body>
-報告與內置或保留關鍵字重疊的變數、實參或函數的聲明。
+報告與內置或保留關鍵字重疊的變數、實參或函數的宣告。
 <p>當您看到這個錯誤時，這是因為程式碼沒有盡可能的明確，這可能會使其他使用者感到困惑。</p>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>type byte struct{}
 type string interface{}</code></pre>
 <p><code>byte</code> 和 <code>string</code> 類型與內置類型別名衝突。 因此，這些將高亮顯示。
-  考慮重命名此類聲明。</p>
+  考慮重命名此類宣告。</p>
 </body>
 </html>

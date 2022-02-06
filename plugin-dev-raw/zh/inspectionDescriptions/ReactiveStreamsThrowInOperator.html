@@ -6,7 +6,7 @@
 <p>
 此外，Reactor 工廠方法允許在沒有任何錯誤的情況下返回已檢查的異常，而在沒有 <code>Exceptions</code> 類的情況下拋出此類異常會導致編譯錯誤。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 Flux.just(1, 2, 3).flatMap(i -> {
             throw new RuntimeException();

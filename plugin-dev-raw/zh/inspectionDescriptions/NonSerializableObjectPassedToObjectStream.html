@@ -2,9 +2,9 @@
 <body>
 報告用作 <code>java.io.ObjectOutputStream.write()</code> 實參的非 <code>Serializable</code> 對象。 此類調用將導致執行時異常。
 <p>
-  此檢查假定 <code>java.util.Collection</code> 和 <code>java.util.Map</code> 類型的對象為 <code>Serializable</code>，除非聲明它們的類型為非 <code>Serializable</code>。
+  此檢查假定 <code>java.util.Collection</code> 和 <code>java.util.Map</code> 類型的對象為 <code>Serializable</code>，除非宣告它們的類型為非 <code>Serializable</code>。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   public class IWantToSerializeThis {
     public static void main(String[] args) throws IOException {

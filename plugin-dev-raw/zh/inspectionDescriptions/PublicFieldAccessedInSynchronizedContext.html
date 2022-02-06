@@ -1,10 +1,10 @@
 <html>
 <body>
-報告在同步上下文中訪問的非 <code>final</code>、非 <code>private</code> 字段。
+報告在同步上下文中訪問的非 <code>final</code>、非 <code>private</code> 欄位。
 <p>
-  不能保證始終以同步方式訪問非 <code>private</code> 字段，此類“部分同步的”訪問可能意外導致不一致的資料結構。
+  不能保證始終以同步方式訪問非 <code>private</code> 欄位，此類“部分同步的”訪問可能意外導致不一致的資料結構。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Bar {
     public String field1;

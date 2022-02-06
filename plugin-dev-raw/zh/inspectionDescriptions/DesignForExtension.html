@@ -3,7 +3,7 @@
 報告非 <code>static</code>、<code>private</code>、<code>final</code> 或 <code>abstract</code>，且其語句體不為空的方法。
 <p>
   使用避免此類方法的樣式進行編碼可以保護類的約定不會被它們的子類破壞。 這種樣式的好處是子類不會因為忘記調用 super 方法而破壞超類的狀態。 代價是子類的靈活性受到限制，特別是它們不能阻止超類中程式碼的執行。 使用該快速修復可以添加缺失的修飾符。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Foo {
     public boolean equals(Object o) { return true; }

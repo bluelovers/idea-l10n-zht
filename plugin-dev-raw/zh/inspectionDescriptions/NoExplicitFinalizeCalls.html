@@ -4,7 +4,7 @@
 <p>顯式調用 <code>Object.finalize()</code> 可能導致對象處於不一致的狀態。
   垃圾收集器在確定沒有對該對象的引用時，自動對該對象調用此方法。</p>
 <p>該檢查不報告 <code>finalize()</code> 實現中對 <code>super.finalize()</code> 的調用，因為它們是良性的。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   MyObject m = new MyObject();
   m.finalize();

@@ -3,7 +3,7 @@
 報告返回局部變數的 <code>return</code> 語句，其中變數的值在同一方法中的其他位置計算。
 <p>快速修復通過將 return 語句移動到計算變量值的位置來內聯返回的變數。
   當返回值無法內聯到 <code>return</code> 語句中時，快速修復嘗試將 return 語句移動到盡可能接近計算的返回值的位置。</p>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   int n = -1;
   for (int i = 0; i &lt; a.length; i++) {

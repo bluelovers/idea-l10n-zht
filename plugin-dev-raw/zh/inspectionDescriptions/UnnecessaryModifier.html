@@ -2,7 +2,7 @@
 <body>
 報告冗餘的修飾符並建議移除它們。
 結果程式碼會更短，但其行為和含義將保持不變。
-<p>示例 1：</p>
+<p>範例 1：</p>
 <pre><code>
   // 在 Java 17 和更高版本下，所有程式碼都是隱式 strictfp
   strictfp class X {
@@ -17,13 +17,13 @@
     }
   }
 </code></pre>
-<p>示例 2：</p>
+<p>範例 2：</p>
 <pre><code>
   final record R() {
     // 所有記錄均為隱式 final
   }
 </code></pre>
-<p><b>示例 3：</b></p>
+<p><b>範例 3：</b></p>
 <pre><code>
   // 所有接口均為隱式 abstract
   abstract interface Printer {

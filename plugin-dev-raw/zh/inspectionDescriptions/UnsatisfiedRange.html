@@ -1,7 +1,7 @@
 <html>
 <body>
-報告從不符合所聲明方法返回範圍的方法返回的數值。
-您可以使用許多註解聲明方法的返回範圍：
+報告從不符合所宣告方法返回範圍的方法返回的數值。
+您可以使用許多註解宣告方法的返回範圍：
 <ul>
   <li>JetBrains 註解軟件包中的 <code>org.jetbrains.annotations.Range</code>（指定 'from' 和 'to'）</li>
   <li>Checker Framework 註解軟件包中的 <code>org.checkerframework.common.value.qual.IntRange</code>（指定 'from' 和 'to'）</li>
@@ -12,10 +12,10 @@
   <li><code>javax.validation.constraints.Min</code>（指定最小值）</li>
   <li><code>javax.validation.constraints.Max</code>（指定最大值）</li>
 </ul>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   @Range(from = 0, to = Integer.MAX_VALUE) int getValue() {
-    // 警告：-1 超出聲明的範圍
+    // 警告：-1 超出宣告的範圍
     return -1;
   }
 </code></pre>

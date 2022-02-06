@@ -3,15 +3,15 @@
 報告以下 EJB 規範違規：
 <ul>
   <li>類實現了不被允許的接口</li>
-  <li>類包含 static 非 final 字段</li>
+  <li>類包含 static 非 final 欄位</li>
 </ul>
 
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 public class SessionEJB {
   public SessionEJB() {}
 
-  static Object data; // 錯誤：不允許可變 static 字段
+  static Object data; // 錯誤：不允許可變 static 欄位
 }
 </code></pre>
 </body>

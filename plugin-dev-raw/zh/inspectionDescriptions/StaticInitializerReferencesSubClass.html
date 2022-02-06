@@ -1,8 +1,8 @@
 <html>
 <body>
-報告在 static 初始值設定項或 static 字段中引用其子類的類。
+報告在 static 初始值設定項或 static 欄位中引用其子類的類。
 <p>此類引用可能在多線程環境（即一個線程試圖載入超類，另一個線程同時試圖載入子類）中引起 JVM 級死鎖。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Parent {
     static final Child field = new Child();

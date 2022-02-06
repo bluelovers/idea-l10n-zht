@@ -1,7 +1,7 @@
 <html>
 <body>
-報告對不存在或不可見的字段和方法的反射訪問。
-<p>示例：</p>
+報告對不存在或不可見的欄位和方法的反射訪問。
+<p>範例：</p>
 <pre><code>
   Field stringHashField() throws NoSuchFieldException {
     return String.class.getField("hash");
@@ -15,10 +15,10 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  對於 <code>final</code> 類，很清楚該類中是否存在具有指定名稱的字段或方法。
+  對於 <code>final</code> 類，很清楚該類中是否存在具有指定名稱的欄位或方法。
 </p>
 <p>
-  對於非 <code>final</code> 類，子類中可能有使用該名稱的字段或方法，因此可能會出現誤報。
+  對於非 <code>final</code> 類，子類中可能有使用該名稱的欄位或方法，因此可能會出現誤報。
   使用該項檢查的設定，可消除任何位置或特定類的此類誤報。
 </p>
 <p><small>2017.2 最新變化</small></p>

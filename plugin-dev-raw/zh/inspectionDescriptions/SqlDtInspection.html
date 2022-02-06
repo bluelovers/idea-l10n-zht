@@ -1,7 +1,7 @@
 <html>
 <body>
 報告日期和時間文字中的錯誤。 此檢查在 MySQL、Oracle、Db2 和 H2 中可用。
-<p>示例（MySQL）：</p>
+<p>範例（MySQL）：</p>
 <pre><code>SELECT TIME '10 -12:13:14' FROM dual;
 SELECT TIME ' 12 : 13 : 14 ' FROM dual;
 SELECT TIME '12 13 14' FROM dual;
@@ -10,7 +10,7 @@ SELECT TIME '12.13.14' FROM dual;
 SELECT TIME '12:13:' FROM dual;
 SELECT TIME '12:13' FROM dual;
 SELECT TIME '12:' FROM dual;</code></pre>
-<p>在此示例中，日期會忽略 MySQL 日期文字和時間文字標準。 因此，這些將高亮顯示。
+<p>在此範例中，日期會忽略 MySQL 日期文字和時間文字標準。 因此，這些將高亮顯示。
   有關 MySQL 中日期和時間文字的詳細資訊，請參閱 <a
     href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-literals.html">dev.mysql.com 上的“日期和時間文字”</a>頁面。</p>
 <p>以下日期和時間文字對 MySQL 有效。</p>

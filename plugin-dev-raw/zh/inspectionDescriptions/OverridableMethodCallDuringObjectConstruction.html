@@ -5,13 +5,13 @@
 <ul>
   <li>構造函數</li>
   <li>非 static 實例初始值設定項</li>
-  <li>非 static 字段初始值設定項</li>
+  <li>非 static 欄位初始值設定項</li>
   <li><code>clone()</code> 方法</li>
   <li><code>readObject()</code> 方法</li>
   <li><code>readObjectNoData()</code> 方法</li>
-<p>如果方法未被聲明為 <code>final</code>、<code>static</code> 或 <code>private</code>，則該方法可覆寫。
+<p>如果方法未被宣告為 <code>final</code>、<code>static</code> 或 <code>private</code>，則該方法可覆寫。
   即使可覆寫，package-local 方法也被認為是安全的。 此類調用可能會導致難以捉摸的錯誤，因為對象初始化可能發生在方法調用之前。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Parent {
     void someMethod() { }

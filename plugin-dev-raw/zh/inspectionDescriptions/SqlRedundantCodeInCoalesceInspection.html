@@ -1,7 +1,7 @@
 <html>
 <body>
 報告除 COALESCE 函數中第一個不評估為 NULL 的表達式之外的所有實參。
-<p>示例（MySQL）：</p>
+<p>範例（MySQL）：</p>
 <pre><code>SELECT COALESCE(NULL, NULL, NULL, 42, NULL, 'string') as a;</code></pre>
 <p>第一個 NOT NULL 實參是 <code>42</code>，所有其他實參將顯示為灰色。</p>
 </body>

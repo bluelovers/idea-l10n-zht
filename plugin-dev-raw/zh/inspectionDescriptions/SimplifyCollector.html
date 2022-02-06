@@ -2,7 +2,7 @@
 <body>
 報告可以簡化的收集器。
 <p>特別是，一些級聯的 <code>groupingBy</code> 收集器可以使用更簡單的 <code>toMap</code> 收集器來表示，這也可能會提高性能。</p>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   Collectors.groupingByConcurrent(String::length, Collectors.collectingAndThen(Collectors.maxBy(String::compareTo), Optional::get));
 </code></pre>

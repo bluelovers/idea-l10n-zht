@@ -5,7 +5,7 @@
 <p>抽象 Bean 只能用作模板 Bean 定義，即子定義的父項。
   嘗試通過作為另一個 Bean 的 ref 屬性進行引用，或者通過使用父 Bean ID 調用 <code>getBean()</code> 來單獨使用此類抽象父 Bean，將導致錯誤。</p>
 
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 
 <pre><code>
   &lt;bean abstract="true" id="parentBeanWithoutClass"/&gt;
@@ -14,7 +14,7 @@
   &lt;/bean&gt;
 </code></pre>
 
-<p>在此示例中，父 Bean 不能自己實例化，因為它不完整並且被顯式聲明為抽象。</p>
+<p>在此範例中，父 Bean 不能自己實例化，因為它不完整並且被顯式宣告為抽象。</p>
 </body>
 </html>
 

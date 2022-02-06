@@ -2,13 +2,13 @@
 <body>
 報告以下 JPA 規範錯誤：
 <ul>
-  <li>為一個方法或字段配置了多個特性</li>
+  <li>為一個方法或欄位配置了多個特性</li>
   <li>Embeddable 對象中使用了非法特性 (JPA 1.0)</li>
-  <li>持久特性元資料不在字段或屬性 getter 上指定</li>
+  <li>持久特性元資料不在欄位或屬性 getter 上指定</li>
   <li>沒有基於屬性訪問的 setter 或 getter</li>
 </ul>
 
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   @Entity
   @Table(name = "TABLE")
@@ -24,7 +24,7 @@
 
     public String getData() { ... }
 
-    @Basic // 錯誤：持久註解應該放在字段或 getter 方法上
+    @Basic // 錯誤：持久註解應該放在欄位或 getter 方法上
     public void setData(String data) { ... }
   }
 </code></pre><br/>

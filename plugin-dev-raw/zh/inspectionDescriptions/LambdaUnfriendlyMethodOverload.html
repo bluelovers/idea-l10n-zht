@@ -3,7 +3,7 @@
 報告採用的函數接口存在抽象方法簽名衝突的重載方法。
 <p>此類重載會引入歧義，並要求調用方將 lambda 轉換為特定類型或顯式指定 lambda 參數類型。
   最好為重載方法賦予不同的名稱，以消除歧義。</p>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   interface MyExecutor {
     void execute(Supplier&lt;?&gt; supplier);

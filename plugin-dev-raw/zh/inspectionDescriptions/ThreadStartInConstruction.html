@@ -5,8 +5,8 @@
   雖然此類結構偶爾有用，但由於繼承問題，應避免使用。
   在對象構造期間啟動線程的類的子類在線程啟動前不會完成自身的任何初始化邏輯。
 </p>
-<p>如果啟動線程的類被聲明為 <code>final</code>，此檢查不會報告。</p>
-<p><b>示例：</b></p>
+<p>如果啟動線程的類被宣告為 <code>final</code>，此檢查不會報告。</p>
+<p><b>範例：</b></p>
 <pre><code>
   class MyThread extends Thread {
     MyThread() {

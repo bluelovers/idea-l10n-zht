@@ -1,11 +1,11 @@
 <html>
 <body>
-<p>報告 Docker Compose 檔案中未加引號的端口映射。</p>
+<p>報告 Docker Compose 檔案中未加引號的連接埠映射。</p>
 <p>
-  根據 <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-1">Compose 檔案規範</a>，<code>HOST:CONTAINER</code> 格式的映射端口在使用小於 60 的容器端口時可能會導致錯誤的結果，因為 YAML 會將格式為 <code>xx:yy</code> 的數字解析為六十進制值。
-  因此，我們建議始終將端口映射明確指定為字串。
+  根據 <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-1">Compose 檔案規範</a>，<code>HOST:CONTAINER</code> 格式的映射連接埠在使用小於 60 的容器連接埠時可能會導致錯誤的結果，因為 YAML 會將格式為 <code>xx:yy</code> 的數字解析為六十進制值。
+  因此，我們建議始終將連接埠映射明確指定為字串。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   ports:
     - 3000

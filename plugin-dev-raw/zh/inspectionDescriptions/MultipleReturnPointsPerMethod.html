@@ -3,7 +3,7 @@
 報告 <code>return</code> 點數超過指定最大值的方法。
 具有太多 <code>return</code> 點的方法可能令人困惑且難以重構。
 <p>一個 <code>return</code> 點可以是 <code>return</code> 語句，也可以是從 <code>void</code> 方法或構造函數底部的直落。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <p>如果只允許兩個 <code>return</code> 語句，則報告以下方法：</p>
 <pre><code>
   void doSmth(User[] users) {
@@ -34,7 +34,7 @@
 <!-- tooltip end -->
 <p>配置檢查：</p>
 <ul>
-  <li>使用 <b>return 點限制</b>字段可指定方法允許的最大 <code>return</code> 點數。</li>
+  <li>使用 <b>return 點限制</b>欄位可指定方法允許的最大 <code>return</code> 點數。</li>
   <li>使用<b>忽略臨界子句</b>選項可忽略臨界子句。
     臨界子句是只包含 <code>return</code> 語句的 <code>if</code> 語句</li>
   <li>使用<b>對 'equals()' 方法忽略</b>選項可忽略 <code>equals()</code> 方法中的 <code>return</code> 點。</li>

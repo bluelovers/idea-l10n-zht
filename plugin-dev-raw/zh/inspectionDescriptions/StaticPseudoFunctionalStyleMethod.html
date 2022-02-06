@@ -3,7 +3,7 @@
 如果 <code>Java Stream API</code> 可用，則報告偽函數程式碼的用法。
 <p>雖然 <code>guava Iterable API</code> 提供類似於 <code>Java Streams API</code> 的功能，但它略有不同，可能會缺少某些功能。
   特別是，<code>IntStream</code> 等基元專門化的流變體比一般變體的性能更好。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTransformFunction);//警告：偽函數樣式程式碼
 </code></pre>

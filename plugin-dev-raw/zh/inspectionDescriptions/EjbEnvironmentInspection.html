@@ -6,7 +6,7 @@
   <li>EJB 引用與 `ejb-jar.xml` 不一致</li>
 </ul>
 
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 @LocalBean
 @Stateless
@@ -15,7 +15,7 @@ public class ExampleBean {
   private AnotherBean anotherBean;
 
   @Inject
-  public void getAnotherBean() { // 錯誤：應在字段或 setter 方法中執行注入
+  public void getAnotherBean() { // 錯誤：應在欄位或 setter 方法中執行注入
     return anotherBean;
   }
 

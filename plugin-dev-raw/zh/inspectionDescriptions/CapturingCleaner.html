@@ -3,13 +3,13 @@
 報告當 <code>Runnable</code> 傳遞給 <code>Cleaner.register()</code> 捕獲引用時會導致內存泄漏的情況。
 <p>此問題的可能來源：</p>
 <ul>
-  <li>使用非 static 方法、字段或 <code>this</code> 本身的 lambda</li>
+  <li>使用非 static 方法、欄位或 <code>this</code> 本身的 lambda</li>
   <li>非 static 內部類（匿名與否）始終捕獲此引用</li>
   <li>實例方法引用</li>
   <li>從非 static 內部類訪問外部類非 static 成員</li>
 </ul>
 <!-- tooltip end -->
-<p>將報告的程式碼示例： </p>
+<p>將報告的程式碼範例： </p>
 <pre><code>
   int fileDescriptor;
   Cleaner.Cleanable cleanable = Cleaner.create().register(this, () -> {

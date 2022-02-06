@@ -3,7 +3,7 @@
 <p>報告具有類似訪問器名稱且結果類型為 <code>Unit</code> 的方法。</p>
 <p>符合訪問器 <a href="https://en.wikipedia.org/wiki/JavaBean">JavaBean</a> 命名協定的方法預計不會有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>。 然而，結果類型為 <code>Unit</code> 的方法僅針對它們的副作用而執行。</p>
 <p>這表明該方法應該導致非 <code>Unit</code> 類型或重命名以更好地反映副作用。</p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   trait Test {
     def getTarget(): Unit

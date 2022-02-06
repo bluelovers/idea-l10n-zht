@@ -1,7 +1,7 @@
 <html>
 <body>
-報告 <code>Serializable</code> 和 <code>Externalizable</code> 類中適合使用 <code>java.io.Serial</code> 註解進行註解的方法和字段。 該快速修復會添加註解。
-<p><b>示例：</b></p>
+報告 <code>Serializable</code> 和 <code>Externalizable</code> 類中適合使用 <code>java.io.Serial</code> 註解進行註解的方法和欄位。 該快速修復會添加註解。
+<p><b>範例：</b></p>
 <pre><code>
 class Main implements Serializable {
   private static final long serialVersionUID = 7874493593505141603L;
@@ -21,7 +21,7 @@ class Main implements Serializable {
     }
 }
 </code></pre>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Main implements Externalizable {
     protected Object readResolve() throws ObjectStreamException {

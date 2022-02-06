@@ -1,7 +1,7 @@
 <html>
 <body>
 報告類型參數被忽略的泛型類。 這種對泛型類型的<i>原始</i>使用在 Java 中雖然有效，但它違背了類型參數的用途，並且可能掩蓋錯誤。 此檢查反映出 <code>javac</code> 的 <code>rawtypes</code> 警告。
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 //警告: 參數化類 'List' 的原始使用
 List list = new ArrayList&lt;String&gt;();
@@ -9,7 +9,7 @@ List list = new ArrayList&lt;String&gt;();
 list.add(1);
 </code></pre>
 <pre><code>
-//無警告，因為在數組創建期間不可能提供類型實參
+//無警告，因為在陣列創建期間不可能提供類型實參
 IntFunction&lt;List&lt;?&gt;[]> fun = List[]::new;
 </code></pre>
 <!-- tooltip end -->
@@ -17,7 +17,7 @@ IntFunction&lt;List&lt;?&gt;[]> fun = List[]::new;
 <ul>
   <li>使用<b>忽略新對象的構造</b>選項，可忽略對象構造中使用的原始類型。</li>
   <li>使用<b>忽略類型轉換</b>選項，可忽略類型轉換中使用的原始類型。</li>
-  <li>使用<b>忽略類型參數無法編譯的位置</b>選項，可忽略類型參數編譯失敗的情況（例如創建數組或覆寫庫方法的情況）。</li>
+  <li>使用<b>忽略類型參數無法編譯的位置</b>選項，可忽略類型參數編譯失敗的情況（例如創建陣列或覆寫庫方法的情況）。</li>
   <li>使用<b>忽略覆寫方法的參數類型</b>選項，可忽略覆寫方法的參數中使用的類型參數。</li>
   <li>使用<b>在自動快速修復不可用時忽略</b>選項，可忽略快速修復不可用的情況。</li>
 </ul>

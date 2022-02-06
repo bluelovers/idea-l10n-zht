@@ -1,10 +1,10 @@
 <html>
 <body>
-報告在非 <code>volatile</code> 字段值上自旋，等待它被另一個線程更改的 <code>while</code> 循環。
+報告在非 <code>volatile</code> 欄位值上自旋，等待它被另一個線程更改的 <code>while</code> 循環。
 <p>
-除了在循環內完成少量工作時可能會非常耗費 CPU 之外，此類循環很可能具有與預期不同的語義。 即便另一個線程改變了該字段的值，Java 內存模型也允許此類循環永不完成。
+除了在循環內完成少量工作時可能會非常耗費 CPU 之外，此類循環很可能具有與預期不同的語義。 即便另一個線程改變了該欄位的值，Java 內存模型也允許此類循環永不完成。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class SpinsOnField {
     boolean ready = false;
@@ -22,7 +22,7 @@
   }
 </code></pre>
 <p>
-此外，自 Java 9 起，建議在 <code>volatile</code> 字段上的自旋循環中調用 <code>Thread.onSpinWait()</code>，這可能會顯著提高某些硬件上的性能。
+此外，自 Java 9 起，建議在 <code>volatile</code> 欄位上的自旋循環中調用 <code>Thread.onSpinWait()</code>，這可能會顯著提高某些硬件上的性能。
 </p>
 <!-- tooltip end -->
 <p>

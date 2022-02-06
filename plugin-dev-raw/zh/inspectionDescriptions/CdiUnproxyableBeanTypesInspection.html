@@ -1,11 +1,11 @@
 <html>
 <body>
 <p>報告無法代理的 Bean 類型的不正確用法。</p>
-<p>容器不能代理某些合法的 Bean 類型：沒有不帶參數的非 private 構造函數的類、聲明為 final 的類或具有 final 方法、基元類型和數組類型的類。</p>
+<p>容器不能代理某些合法的 Bean 類型：沒有不帶參數的非 private 構造函數的類、宣告為 final 的類或具有 final 方法、基元類型和陣列類型的類。</p>
 
 <p>此檢查會報告此類 Bean 類型的以下違規行為：</p>
 <ul>
-  <li>聲明鈍化範圍的托管 Bean 必須為 <code>java.io.Serializable</code></li>
+  <li>宣告鈍化範圍的托管 Bean 必須為 <code>java.io.Serializable</code></li>
   <li>不可序列化類型的 Bean 不能注入鈍化範圍的 Bean</li>
   <li>容器必須能夠代理注入的正常範圍 Bean</li>
 </ul>

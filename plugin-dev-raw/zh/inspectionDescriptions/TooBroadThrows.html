@@ -1,7 +1,7 @@
 <html>
 <body>
 報告異常比方法實際拋出的異常更通用的 <code>throws</code> 子句。
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   public void createFile() throws Exception { // 警告：'throws Exception' 範圍過廣，屏蔽異常 'IOException'
     File file = new File("pathToFile");
@@ -19,7 +19,7 @@
 <p>配置檢查：</p>
 <ul>
   <li>使用<b>僅對 RuntimeException、異常、錯誤或 Throwable 發出警告</b>選項可使此檢查僅對最常見的異常發出警告。</li>
-  <li>使用<b>忽略在覆寫庫方法的方法上聲明的異常</b>選項可忽略在覆寫庫方法的方法中過於寬泛的 <code>throws</code> 子句。</li>
+  <li>使用<b>忽略在覆寫庫方法的方法上宣告的異常</b>選項可忽略在覆寫庫方法的方法中過於寬泛的 <code>throws</code> 子句。</li>
   <li>使用<b>忽略隱藏其他異常但自身被拋出的異常</b>選項可忽略任何隱藏其他異常但仍可能從方法體拋出的異常，因此在技術上不會過於寬泛。</li>
 </ul>
 </body>

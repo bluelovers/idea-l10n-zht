@@ -6,7 +6,7 @@
   相關的定時器。
   如果不調用 CancelFunc，就會泄漏子項和其子項，直到父項被取消或定時器啟動。</p>
 <p>有關 <code>context</code> 軟件包的更多資訊，請參見 <a href="https://golang.org/pkg/context/">golang.org 上的 Package context</a> 頁面。</p>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>func _(ctx context.Context, cancel func()) {
  var ctx2 context.Context
  ctx2, cancel = context.WithCancel(ctx)

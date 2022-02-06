@@ -4,7 +4,7 @@
 <p>
   在高可用性程序中，此類調用可能很危險，因為如果從未調用 <code>notify()</code>/<code>notifyAll()</code> 或 <code>signal()</code>/<code>signalAll()</code>，那麼一個組件中的故障可能會導致等待的組件發生阻塞。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   void foo(Object bar) throws InterruptedException {
     bar.wait();

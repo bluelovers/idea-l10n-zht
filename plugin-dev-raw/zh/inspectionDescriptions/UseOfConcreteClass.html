@@ -1,13 +1,13 @@
 <html>
 <body>
 報告使用具體類而非接口的情況。
-此類聲明可能代表抽象失敗，並可能使測試更加困難。
+此類宣告可能代表抽象失敗，並可能使測試更加困難。
 <p>
-此檢查不會報告其類來自系統或第三方庫的聲明。
+此檢查不會報告其類來自系統或第三方庫的宣告。
 <code>equals()</code> 方法實現中不會報告轉換、instanceof 和局部變數。
 此外，<code>clone()</code> 方法實現中不會報告轉換。
 </p>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   interface Entity {}
   class EntityImpl implements Entity {}

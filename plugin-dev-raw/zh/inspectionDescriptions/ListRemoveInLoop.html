@@ -2,7 +2,7 @@
 <body>
 報告在循環中調用的可以取代為 <code>List.subList().clear()</code> 的 <code>List.remove(index)</code>。
 <p>在刪除多個元素的情況下，此取代對於大多數  <code>List</code> 實現更有效。</p>
-<p>示例：</p>
+<p>範例：</p>
 <pre><code>
   void removeRange(List&lt;String&gt; list, int from, int to) {
     for (int i = from; i &lt; to; i++) {

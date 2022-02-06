@@ -5,7 +5,7 @@
   <code>Object.notify()</code> 和 <code>Object.notifyAll()</code> 通常用於通知其他線程發生了狀態變更。 該狀態變更應發生在包含 <code>Object.notify()</code> 或
 <code>Object.notifyAll()</code> 調用的同步上下文中，並且發生在調用之前。 儘管沒有此類狀態變更未必就不正確，但肯定值得檢查。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   synchronized (this) {
     notify();

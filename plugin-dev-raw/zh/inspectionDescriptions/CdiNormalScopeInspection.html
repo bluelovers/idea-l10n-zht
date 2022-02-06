@@ -1,11 +1,11 @@
 <html>
 <body>
-<p>報告具有不在預設 <code>@Dependent</code> 範圍內的 public 實例字段的托管 Bean。
-  根據 CDI 規範，上下文範圍（<code>@RequestScoped</code>、<code>@ApplicationScoped</code>、<code>@SessionScoped</code> 和 <code>ConversationScoped</code>）不允許用於具有 public 實例字段的托管  Bean。
+<p>報告具有不在預設 <code>@Dependent</code> 範圍內的 public 實例欄位的托管 Bean。
+  根據 CDI 規範，上下文範圍（<code>@RequestScoped</code>、<code>@ApplicationScoped</code>、<code>@SessionScoped</code> 和 <code>ConversationScoped</code>）不允許用於具有 public 實例欄位的托管  Bean。
 </p>
-<p><b>示例：</b></p>
+<p><b>範例：</b></p>
 <pre><code>
-  @ApplicationScoped // 警告：具有非預設範圍的 Bean 不得具有 public 字段
+  @ApplicationScoped // 警告：具有非預設範圍的 Bean 不得具有 public 欄位
   class Car {
     public String engine;
   }

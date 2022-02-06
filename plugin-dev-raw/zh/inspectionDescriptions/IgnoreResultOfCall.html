@@ -1,11 +1,11 @@
 <html>
 <body>
 報告其結果被忽略的方法調用。
-<p>忽略結果對於許多方法完全合法，但對於某些方法，幾乎肯定是錯誤。 忽略結果可能是錯誤之舉的方法示例包括返回實際讀取字節數的 <code>java.io.inputStream.read()</code>，以及 <code>java.lang.String</code> 或 <code>java.math.BigInteger</code> 上的任何方法。 這些方法不會產生副作用，因此忽略它們的結果將毫無意義。
+<p>忽略結果對於許多方法完全合法，但對於某些方法，幾乎肯定是錯誤。 忽略結果可能是錯誤之舉的方法範例包括返回實際讀取字節數的 <code>java.io.inputStream.read()</code>，以及 <code>java.lang.String</code> 或 <code>java.math.BigInteger</code> 上的任何方法。 這些方法不會產生副作用，因此忽略它們的結果將毫無意義。
 </p>
 <p>將檢查對以下方法的調用：</p>
 <ul>
-  <li>簡單 getter（除返回字段外別無他用）</li>
+  <li>簡單 getter（除返回欄位外別無他用）</li>
   <li>在此檢查的設定中指定的方法</li>
   <li>使用 <code>org.jetbrains.annotations.Contract(pure=true)</code> 註解的方法</li>
   <li>使用 .*.<code>CheckReturnValue</code> 註解的方法</li>
