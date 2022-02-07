@@ -1,6 +1,6 @@
 <html>
 <body>
-報告迭代集合或陣列並且可以自動取代為增強型 <code>for</code> 循環（foreach 迭代語法）的 <code>for</code> 循環。
+報告迭代集合或陣列並且可以自動取代為增強型 <code>for</code> 迴圈（foreach 迭代語法）的 <code>for</code> 迴圈。
 <!--  'foreach' still used in this description so that the inspection continues to be found using this keyword -->
 <p><b>範例：</b></p>
 <pre><code>
@@ -17,13 +17,13 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  使用<b>報告索引的 'java.util.List' 循環</b>選項可尋找涉及 <code>list.get(index)</code> 調用的循環。
-  這些循環通常可以取代為增強型 <code>for</code> 循環，除非它們修改了進程中的基礎列表，例如通過調用 <code>list.remove(index)</code> 進行修改。
-  如果是後面這種情況，增強型 <code>for</code> 循環可能拋出 <code>ConcurrentModificationException</code>。
-  在某些情況下，<code>list.get(index)</code> 循環的操作速度也可能更快一些。</p>
+  使用<b>報告索引的 'java.util.List' 迴圈</b>選項可尋找涉及 <code>list.get(index)</code> 調用的迴圈。
+  這些迴圈通常可以取代為增強型 <code>for</code> 迴圈，除非它們修改了進程中的基礎列表，例如通過調用 <code>list.remove(index)</code> 進行修改。
+  如果是後面這種情況，增強型 <code>for</code> 迴圈可能拋出 <code>ConcurrentModificationException</code>。
+  在某些情況下，<code>list.get(index)</code> 迴圈的操作速度也可能更快一些。</p>
 <p>
   使用<b>不報告無類型集合上的迭代</b>選項可忽略沒有類型參數的集合。
-  這將防止創建 <code>java.lang.Object</code> 類型的增強型 <code>for</code> 循環變數以及在使用循環變數的位置插入轉換。</p>
+  這將防止創建 <code>java.lang.Object</code> 類型的增強型 <code>for</code> 迴圈變數以及在使用迴圈變數的位置插入轉換。</p>
 <p>僅當專案或模塊的語言級別為 5 或更高時，此檢查才會報告。</p>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>報告不是在相應的 synchronized 語句或 synchronized 方法中進行的 <code>wait()</code> 調用。</p>
-<p>在沒有持有鎖定的對象上調用 <code>wait()</code> 會導致拋出 <code>IllegalMonitorStateException</code>。
+<p>在沒有持有鎖定的物件上調用 <code>wait()</code> 會導致拋出 <code>IllegalMonitorStateException</code>。
 此類結構不一定錯誤，因為在調用該包含方法前可能已獲取必要的鎖定，但即便如此，還是要仔細查看。</p>
 </body>
 </html>

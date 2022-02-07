@@ -8,7 +8,7 @@
 <pre><code>
 &lt;beans ... &gt;
    &lt;int:channel id="failChannel"
-                dispatcher="<strong>failover</strong>"/&gt; &lt;!-- 此特性已被棄用，請改用調度程序子元素 --&gt;
+                dispatcher="<strong>failover</strong>"/&gt; &lt;!-- 此特性已被棄用，請改用排程器子元素 --&gt;
    &lt;int:poller default="true"&gt;
      &lt;<strong>int:cron-trigger</strong>  expression="5"/&gt;  &lt;!-- 此元素在 Spring Integration 2.1 中已被移除，請改用 'cron' 特性 --&gt;
      &lt;<strong>int:interval-trigger</strong> interval="3"/&gt; &lt;!--  此元素在 Spring Integration 2.1 中已被移除，請改用 interval-trigger 特性 --&gt;

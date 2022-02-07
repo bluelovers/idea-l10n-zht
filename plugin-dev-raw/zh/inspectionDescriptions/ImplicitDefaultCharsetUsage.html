@@ -6,7 +6,7 @@
   String s = new String(bytes);
 }</code>
 </pre>
-<p>如果相應的重載方法可用，則可以採用指定顯式 UTF-8 字符集的快速修復。
+<p>如果相應的多載方法可用，則可以採用指定顯式 UTF-8 字符集的快速修復。
   在應用快速修復後：</p>
 <pre><code>void foo(byte[] bytes) {
   String s = new String(bytes, StandardCharsets.UTF_8);

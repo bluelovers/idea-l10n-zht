@@ -1,6 +1,6 @@
 <html>
 <body>
-報告可以使用<a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">有界通配符</a>的通用方法參數。
+報告可以使用<a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">有界萬用字元</a>的通用方法參數。
 <p><b>範例：</b></p>
 <pre><code>
   void process(Consumer&lt;Number&gt; consumer);
@@ -25,9 +25,9 @@
   引用 <em>Effective Java</em> 第三版中的 <a href="https://en.wikipedia.org/wiki/Joshua_Bloch#Effective_Java">Joshua Bloch</a>：
 </p>
 <blockquote>
-  <h4>第 31 項：使用有界通配符增加 API 靈活性</h4>
-  在 API 中使用通配符類型雖然麻煩，但會使 API 更加靈活。
-  如果您編寫的庫將被廣泛使用，則應強制正確使用通配符類型。
+  <h4>第 31 項：使用有界萬用字元增加 API 靈活性</h4>
+  在 API 中使用萬用字元類型雖然麻煩，但會使 API 更加靈活。
+  如果您編寫的庫將被廣泛使用，則應強制正確使用萬用字元類型。
   記住基本規則：生產者-extends, 使用者-super (PECS)。
   還要記住，所有 Comparable 和 Comparator 都是消費者。
 </blockquote>
@@ -44,7 +44,7 @@
       另一方面，<code>contravariant</code> 類只接收值，例如，只有方法 <code>accept(T)</code> 的 <code>java.util.function.Consumer&lt;T&gt;</code>。 類似地，<code>covariant</code> 類只產生值，例如，只有方法 <code>T get()</code> 的 <code>java.util.function.Supplier&lt;T&gt;</code>。
     </p>
     <p>
-      人們經常在協變/逆變類中使用有界通配符，但避免在不變類中使用通配符，例如 <code>void process(List&lt;? extends T&gt; l)</code>。
+      人們經常在協變/逆變類中使用有界萬用字元，但避免在不變類中使用萬用字元，例如 <code>void process(List&lt;? extends T&gt; l)</code>。
       禁用此選項可以忽略這種不變類並保留它們的嚴格類型，例如 <code>void process(List&lt;T&gt; l)</code>。
     </p>
   </li>

@@ -4,7 +4,7 @@ Reports Stream API chains, <code>Iterable.forEach()</code>, and <code>Map.forEac
 <p><b>範例：</b></p>
 <pre><code>
   String joinNonEmpty(List&lt;String&gt; list) {
-    return list.stream() // 流可以轉換為循環
+    return list.stream() // 流可以轉換為迴圈
       .filter(s -> !s.isEmpty())
       .map(String::trim)
       .collect(Collectors.joining(", "));
@@ -24,7 +24,7 @@ Reports Stream API chains, <code>Iterable.forEach()</code>, and <code>Map.forEac
   }
 </code></pre>
 <p>
-  請注意，有時此檢查可能會導致輕微的語義變化。
+  請注意，有時此檢查可能會導致輕微的語意變化。
   必須特別注意短路，因為流短路未指定讀取的實際元素數。
 </p>
 <!-- tooltip end -->

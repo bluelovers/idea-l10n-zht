@@ -1,7 +1,7 @@
 <html>
 <body>
-報告包含 <code>java.net.URL</code> 對象的 <code>java.util.Set</code> 和 <code>java.util.Map</code> 變數。
-此類集合將對插入的對象調用 <code>equals()</code> 和 <code>hashCode()</code> 方法，這可能會導致 <code>URL</code> 對象的性能問題。
+報告包含 <code>java.net.URL</code> 物件的 <code>java.util.Set</code> 和 <code>java.util.Map</code> 變數。
+此類集合將對插入的物件調用 <code>equals()</code> 和 <code>hashCode()</code> 方法，這可能會導致 <code>URL</code> 物件的性能問題。
 <p>
   <code>URL</code> 的 <code>equals()</code> 和 <code>hashCode()</code> 方法可以執行 DNS 尋找來解析主機名。
   這可能會導致重大延遲，具體取決於網絡和 DNS 伺服器的可用性和速度。

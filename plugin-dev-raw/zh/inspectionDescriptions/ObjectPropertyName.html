@@ -4,7 +4,7 @@
 <p>報告了以下屬性：</p>
 <ul>
     <li>頂級屬性</li>
-    <li>對象和伴生對象中的屬性</li>
+    <li>物件和伴生物件中的屬性</li>
 </ul>
 <p>您可以在檢查選項中指定所需的模式。</p>
 <p><a href="https://kotlinlang.org/docs/coding-conventions.html#naming-rules">建議的命名慣例</a>：必須以大寫字母開頭，使用駝峰式命名並且沒有下划線。</p>
@@ -12,12 +12,12 @@
 <pre><code>
   // 頂級屬性
   val USER_NAME_FIELD = "UserName"
-  // 包含對單例對象的引用的頂級屬性
+  // 包含對單例物件的引用的頂級屬性
   val PersonComparator: Comparator&lt;Person&gt; = /*...*/
 
   class Person {
     companion object {
-      // 伴生對象中的屬性
+      // 伴生物件中的屬性
       val NO_NAME = Person()
     }
   }

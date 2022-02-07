@@ -1,6 +1,6 @@
 <html>
 <body>
-報告保護符是 <code>static</code> 欄位的實例欄位或方法上的 <code>@GuardedBy</code> 註解。 用 static 來保護非 static 可能會導致過度的鎖爭用，因為訪問任何對象實例中的每個鎖定欄位均將阻止同時訪問每個對象實例中的欄位。
+報告保護符是 <code>static</code> 欄位的實例欄位或方法上的 <code>@GuardedBy</code> 註解。 用 static 來保護非 static 可能會導致過度的鎖爭用，因為訪問任何物件實例中的每個鎖定欄位均將阻止同時訪問每個物件實例中的欄位。
 <p>範例：</p>
 <pre><code>
     private static ReadWriteLock lock = new ReentrantReadWriteLock(); //static 保護欄位

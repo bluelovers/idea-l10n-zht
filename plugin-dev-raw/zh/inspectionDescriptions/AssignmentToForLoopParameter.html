@@ -1,12 +1,12 @@
 <html>
 <body>
-報告對循環體內 <code>for</code> 循環參數的賦值或修改。
+報告對循環體內 <code>for</code> 迴圈參數的賦值或修改。
 <p>雖然偶爾是有意為之，但此結構可能令人困惑，通常是由拼寫錯誤或使用錯誤變數引起。</p>
 <p>該快速修復會添加新變數的宣告。</p>
 <p><b>範例：</b></p>
 <pre><code>
   for (String s : list) {
-    // 警告：s 在循環內被更改
+    // 警告：s 在迴圈內被更改
     s = s.trim();
     System.out.println("String: " + s);
   }
@@ -18,8 +18,8 @@
     System.out.println("String: " + trimmed);
   }
 </code></pre>
-<p>不報告沒有 update 語句的基本 <code>for</code> 循環中的賦值。
-  在此類情況下，賦值很可能是預期的，不能輕易移動到 <code>for</code> 循環的更新部分。</p>
+<p>不報告沒有 update 語句的基本 <code>for</code> 迴圈中的賦值。
+  在此類情況下，賦值很可能是預期的，不能輕易移動到 <code>for</code> 迴圈的更新部分。</p>
 <p><b>範例：</b></p>
 <pre><code>
   for (int i = 0; i &lt; list.size(); ) {
@@ -27,12 +27,12 @@
       list.remove(i);
     } else {
       // 因為沒有 update 語句
-      // 所以不報告 for 循環參數的修改
+      // 所以不報告 for 迴圈參數的修改
       i++;
     }
   }
 </code></pre>
 <!-- tooltip end -->
-<p>使用<b>檢查增強型 'for' 循環參數</b>選項可指定是否還應報告增強的 <code>for</code> 循環參數的修改。</p>
+<p>使用<b>檢查增強型 'for' 迴圈參數</b>選項可指定是否還應報告增強的 <code>for</code> 迴圈參數的修改。</p>
 </body>
 </html>

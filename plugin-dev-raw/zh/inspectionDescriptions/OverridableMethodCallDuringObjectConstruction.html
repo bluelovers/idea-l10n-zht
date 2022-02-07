@@ -1,7 +1,7 @@
 <html>
 <body>
-報告在對象構造期間對當前類的可覆寫方法的調用。
-<p>如果方法位於以下位置，則會在對象構造期間調用：
+報告在物件構造期間對當前類的可覆寫方法的調用。
+<p>如果方法位於以下位置，則會在物件構造期間調用：
 <ul>
   <li>構造函數</li>
   <li>非 static 實例初始值設定項</li>
@@ -10,7 +10,7 @@
   <li><code>readObject()</code> 方法</li>
   <li><code>readObjectNoData()</code> 方法</li>
 <p>如果方法未被宣告為 <code>final</code>、<code>static</code> 或 <code>private</code>，則該方法可覆寫。
-  即使可覆寫，package-local 方法也被認為是安全的。 此類調用可能會導致難以捉摸的錯誤，因為對象初始化可能發生在方法調用之前。</p>
+  即使可覆寫，package-local 方法也被認為是安全的。 此類調用可能會導致難以捉摸的錯誤，因為物件初始化可能發生在方法調用之前。</p>
 <p><b>範例：</b></p>
 <pre><code>
   class Parent {
@@ -26,8 +26,8 @@
 <!-- tooltip end -->
   <p>此檢查與以下檢查共享功能：</p>
 <ul>
-  <li>對象構造期間調用的 abstract 方法</li>
-  <li>在對象構造期間調用的覆寫的方法</li>
+  <li>物件構造期間調用的 abstract 方法</li>
+  <li>在物件構造期間調用的覆寫的方法</li>
 </ul>
   <p>一次只能啟用一個檢查，以防止警告重複。</p>
 </body>

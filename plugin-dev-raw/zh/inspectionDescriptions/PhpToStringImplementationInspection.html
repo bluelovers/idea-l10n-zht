@@ -1,9 +1,9 @@
 <html>
 <body>
-  報告將沒有 <code>__ function toString() { [native code] }</code> 方法實現的對象轉換為 <code>string</code> 的嘗試。
+  報告將沒有 <code>__ function toString() { [native code] }</code> 方法實現的物件轉換為 <code>string</code> 的嘗試。
 <!-- tooltip end -->
   <p>
-    在 PHP 7.4 之前，這將導致一個致命的 <code>E_RECOVERABLE_ERROR</code> 級錯誤。 在 PHP 7.4 中，會拋出一個致命的不可恢復的 <code>ERROR</code>。 從 PHP 8.0 開始，返回值遵循標準 PHP 類型語義，如果可能且嚴格類型模式被禁用，就會被強制轉換為字串。
+    在 PHP 7.4 之前，這將導致一個致命的 <code>E_RECOVERABLE_ERROR</code> 級錯誤。 在 PHP 7.4 中，會拋出一個致命的不可恢復的 <code>ERROR</code>。 從 PHP 8.0 開始，返回值遵循標準 PHP 類型語意，如果可能且嚴格類型模式被禁用，就會被強制轉換為字串。
   </p>
   <p>
     如果啟用了<b>檢查每種表達式類型是否存在 __function toString() { [native code] }</b> 選項，則該檢查將會檢查表達式的所有可能類型，如果其中至少一種類型不包含 <code>__function toString() { [native code] }</code> 方法實現，則進行報告。

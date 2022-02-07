@@ -1,15 +1,15 @@
 <html>
 <body>
 報告主要用作基元類型的包裝器類型的局部變數。
-<p>在某些情況下，裝箱可能會導致嚴重的性能損失，尤其是在循環中。</p>
-<p>採用啟發估計裝箱操作次數。 例如，循環內的轉換數量視為更多。</p>
+<p>在某些情況下，裝箱可能會導致嚴重的性能損失，尤其是在迴圈中。</p>
+<p>採用啟發估計裝箱操作次數。 例如，迴圈內的轉換數量視為更多。</p>
 
 <p><b>範例：</b></p>
 <pre><code>  public void example() {
     Integer value = 12;
     needBox(value);
     for (int i = 0; i &lt; 10; i++) {
-      // 循環的用法正變得越來越頻繁
+      // 迴圈的用法正變得越來越頻繁
       needPrimitive(value);
     }
   }
@@ -22,7 +22,7 @@
     int value = 12;
     needBox(value);
     for (int i = 0; i &lt; 10; i++) {
-      // 循環的用法正變得越來越頻繁
+      // 迴圈的用法正變得越來越頻繁
       needPrimitive(value);
     }
   }

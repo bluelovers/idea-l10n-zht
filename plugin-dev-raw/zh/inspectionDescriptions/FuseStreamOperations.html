@@ -12,7 +12,7 @@
   return stream.sorted().toArray(String[]::new);
 </code></pre>
 <p>
-  請注意，有時轉換後的 Stream 鏈可能會將顯式 <code>ArrayList</code> 取代為 <code>Collectors.toList()</code> 或將顯式 <code>HashSet</code> 取代為 <code>Collectors.toSet()</code>。 當前庫實現會在內部使用這些集合。 但是，這種方法不是很可靠，將來可能會更改程式碼的語義。</p>
+  請注意，有時轉換後的 Stream 鏈可能會將顯式 <code>ArrayList</code> 取代為 <code>Collectors.toList()</code> 或將顯式 <code>HashSet</code> 取代為 <code>Collectors.toSet()</code>。 當前庫實現會在內部使用這些集合。 但是，這種方法不是很可靠，將來可能會更改程式碼的語意。</p>
 
 <!-- tooltip end -->
 <p>如果您對此感到擔心，請使用<b>不建議使用 'toList()' 或 'toSet()' 收集器</b>選項來建議使用 <code>Collectors.toCollection()</code> 而不是 <code>toList</code> 和 <code>toSet</code> 收集器。

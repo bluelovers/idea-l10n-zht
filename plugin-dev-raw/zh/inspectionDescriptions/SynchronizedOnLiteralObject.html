@@ -1,9 +1,9 @@
 <html>
 <body>
-報告在用文字初始化的對象上鎖定的 <code>synchronized</code> 塊。
+報告在用文字初始化的物件上鎖定的 <code>synchronized</code> 塊。
 <p>
   字串文字是暫存的，<code>Character</code>、<code>Boolean</code> 和 <code>Number</code> 文字可以從快取中分配。
-  正因為如此，可能系統的其他某些部分（使用通過相同文字初始化的對象）實際上會包含對完全相同的對象的引用。 如果鎖定對象被認為是 private 對象，這可能會產生意外的死鎖情況。
+  正因為如此，可能系統的其他某些部分（使用通過相同文字初始化的物件）實際上會包含對完全相同的物件的引用。 如果鎖定物件被認為是 private 物件，這可能會產生意外的死鎖情況。
 </p>
 <p><b>範例：</b></p>
 <pre><code>
@@ -17,7 +17,7 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  使用<strong>警告所有可能的文字</strong>選項可以報告 <code>String</code>、<code>Character</code>、<code>Boolean</code> 和 <code>Number</code> 對象的任何同步。
+  使用<strong>警告所有可能的文字</strong>選項可以報告 <code>String</code>、<code>Character</code>、<code>Boolean</code> 和 <code>Number</code> 物件的任何同步。
 </p>
 </body>
 </html>

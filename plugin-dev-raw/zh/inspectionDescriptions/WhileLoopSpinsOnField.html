@@ -1,8 +1,8 @@
 <html>
 <body>
-報告在非 <code>volatile</code> 欄位值上自旋，等待它被另一個線程更改的 <code>while</code> 循環。
+報告在非 <code>volatile</code> 欄位值上自旋，等待它被另一個線程更改的 <code>while</code> 迴圈。
 <p>
-除了在循環內完成少量工作時可能會非常耗費 CPU 之外，此類循環很可能具有與預期不同的語義。 即便另一個線程改變了該欄位的值，Java 內存模型也允許此類循環永不完成。
+除了在迴圈內完成少量工作時可能會非常耗費 CPU 之外，此類迴圈很可能具有與預期不同的語意。 即便另一個線程改變了該欄位的值，Java 內存模型也允許此類迴圈永不完成。
 </p>
 <p><b>範例：</b></p>
 <pre><code>
@@ -11,7 +11,7 @@
 
     void run() {
       while (!ready) { // 即使在從另一個線程調用 markAsReady 之後，
-                       // 該循環也可能永不完成
+                       // 該迴圈也可能永不完成
       }
       // 執行某些工作
     }
@@ -22,11 +22,11 @@
   }
 </code></pre>
 <p>
-此外，自 Java 9 起，建議在 <code>volatile</code> 欄位上的自旋循環中調用 <code>Thread.onSpinWait()</code>，這可能會顯著提高某些硬件上的性能。
+此外，自 Java 9 起，建議在 <code>volatile</code> 欄位上的自旋迴圈中調用 <code>Thread.onSpinWait()</code>，這可能會顯著提高某些硬件上的性能。
 </p>
 <!-- tooltip end -->
 <p>
-使用檢查選項可僅報告空的 <code>while</code> 循環。
+使用檢查選項可僅報告空的 <code>while</code> 迴圈。
 <p>
 </body>
 </html>
