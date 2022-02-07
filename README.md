@@ -49,9 +49,13 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 #### [test/segment-check.ts](test/segment-check.ts)
 
-在 [test/temp/*.txt](test/temp) 資料夾底下新增任何副檔名為 .txt 檔案
-之後執行此腳本 則可以查看分詞系統分詞後結果  
+在 [test/temp/*.txt](test/temp) 資料夾底下新增任何副檔名為 .txt 檔案後  
+執行此腳本 則可以查看分詞系統分詞後結果  
 來了解 為什麼沒有發生預期的轉換
+
+![img.png](docs/img.png)
+
+**_此檔案也能作為比執行測試更快知道轉換與分詞結果_**
 
 ### .properties
 
@@ -77,6 +81,14 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 - 如果 git 發現詭異的檔案永遠都是變動狀態的話 請檢查是否存在與此 BUG 相同的問題  
   https://youtrack.jetbrains.com/issue/IDEA-288057
 
+## 參考資料或其他
 
+- [Intellij 和 Android Studio 介面設定 繁體中文 漢化 套件(附安裝教學)](https://www.ruyut.com/2022/01/Chinese-Traditional.html)
+
+---
+
+- [英中繁簡編程術語對照](https://www.limoritakeu.tech/2017/11/20/translation-terms/)
+- https://github.com/pjchender/cn2tw4programmer/tree/master/src/terms
+- 
 
 [![jetbrains.svg](jetbrains.svg)](https://www.jetbrains.com/?from=idea-l10n-zht)
