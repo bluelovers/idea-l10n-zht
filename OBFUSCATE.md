@@ -7,3 +7,5 @@
 - patch
   https://terms.naer.edu.tw/detail/154830/
 - [Override 與 Overload 的差別](https://wayne265265.pixnet.net/blog/post/115533452-%E3%80%90%E6%95%99%E5%AD%B8%E3%80%91override-%E8%88%87-overload-%E7%9A%84%E5%B7%AE%E5%88%A5)
+- `上下文` 沒有一個通用的翻譯，根據狀況翻譯會有所差異
+- 
