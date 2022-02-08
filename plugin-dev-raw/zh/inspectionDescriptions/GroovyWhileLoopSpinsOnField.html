@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>報告在非 <code>volatile</code> 欄位值上自旋，等待它被另一個線程更改的 <code>while</code> 迴圈。</p>
+<p>報告在非 <code>volatile</code> 欄位值上自旋，等待它被另一個執行緒更改的 <code>while</code> 迴圈。</p>
 <p>
-除了在迴圈內完成少量工作時可能會非常耗費 CPU 之外，此類迴圈很可能具有與預期不同的語意。 即便另一個線程改變了該欄位的值，Java 內存模型也允許該迴圈永不完成。
+除了在迴圈內完成少量工作時可能會非常耗費 CPU 之外，此類迴圈很可能具有與預期不同的語意。 即便另一個執行緒改變了該欄位的值，Java 內存模型也允許該迴圈永不完成。
 </p>
 <p><b>範例：</b></p>
 <pre><code>
@@ -10,7 +10,7 @@
       boolean ready = false;
 
       void run() {
-          // 即使在從其他線程調用 markAsReady 後，
+          // 即使在從其他執行緒調用 markAsReady 後，
           // 該迴圈也可能永不完成
           while (!ready) {
           }

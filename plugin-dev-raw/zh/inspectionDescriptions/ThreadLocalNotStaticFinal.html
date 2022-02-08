@@ -2,8 +2,8 @@
 <body>
 報告未被宣告為 <code>static final</code> 的 <code>java.lang.ThreadLocal</code> 類型的欄位。
 <p>
-  在最常見的情況下，<code>java.lang.ThreadLocal</code> 實例會將狀態與線程關聯。
-  非 static、非 final <code>java.lang.ThreadLocal</code> 欄位會將狀態與實例線程組合關聯。
+  在最常見的情況下，<code>java.lang.ThreadLocal</code> 實例會將狀態與執行緒關聯。
+  非 static、非 final <code>java.lang.ThreadLocal</code> 欄位會將狀態與實例執行緒組合關聯。
   這通常是不必要的，而且通常是可能導致內存泄漏和行為不正確的錯誤。
 </p>
 <p>

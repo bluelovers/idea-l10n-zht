@@ -2,8 +2,8 @@
 <body>
 報告雙重檢查鎖定。
 <p>
-  雙重檢查鎖定會嘗試以線程安全的方式按需初始化欄位，同時避免同步的開銷。
-  遺憾的是，在未被宣告為 <code>volatile</code> 的欄位上使用時，它不具備線程安全性。
+  雙重檢查鎖定會嘗試以執行緒安全的方式按需初始化欄位，同時避免同步的開銷。
+  遺憾的是，在未被宣告為 <code>volatile</code> 的欄位上使用時，它不具備執行緒安全性。
   在使用 Java 1.4 或更低版本時，即便是 <code>volatile</code> 欄位，雙重檢查鎖定也不起作用。
   有關此問題的說明，請參閱<a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">本文</a>。
 </p>

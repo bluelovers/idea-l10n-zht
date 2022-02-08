@@ -1,6 +1,6 @@
 <html>
 <body>
-報告不應阻塞線程的程式碼段中的線程阻塞方法調用。
+報告不應阻塞執行緒的程式碼段中的執行緒阻塞方法調用。
 
 <p><b>範例（專案 Reactor）：</b></p>
 <pre><code>
@@ -28,7 +28,7 @@ suspend fun exampleFun() {
 <!-- tooltip end -->
 <p>配置檢查：</p>
 <ul>
-  <li>在<b>阻塞註解</b>列表中，指定標記線程阻塞方法的註解。</li>
+  <li>在<b>阻塞註解</b>列表中，指定標記執行緒阻塞方法的註解。</li>
   <li>在<b>無阻塞註解</b>列表中，指定標記非阻塞方法的註解。</li>
 </ul>
 <p>指定的註解可用作<a href="https://www.jetbrains.com/help/idea/external-annotations.html">外部註解</a></p>

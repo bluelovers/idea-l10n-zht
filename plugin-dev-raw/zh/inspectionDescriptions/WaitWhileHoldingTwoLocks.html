@@ -1,6 +1,6 @@
 <html>
 <body>
-報告在當前線程持有兩個鎖定時可能發生的對 <code>wait()</code> 方法的調用。
+報告在當前執行緒持有兩個鎖定時可能發生的對 <code>wait()</code> 方法的調用。
 <p>
   調用 <code>wait()</code> 只會釋放目標上的一個鎖定，因此持有兩個鎖定時的等待很容易導致死鎖。
 </p>
@@ -9,11 +9,11 @@
   synchronized (lockA) {
     synchronized (lockB) {
       lockB.wait(); //警告
-      //線程 A 卡在這裡，持有 lockA
+      //執行緒 A 卡在這裡，持有 lockA
     }
   }
 
-  synchronized (lockA) { //線程 B 無法進入此塊和釋放線程 A
+  synchronized (lockA) { //執行緒 B 無法進入此塊和釋放執行緒 A
     lockB.notify();
   }
 </code></pre>

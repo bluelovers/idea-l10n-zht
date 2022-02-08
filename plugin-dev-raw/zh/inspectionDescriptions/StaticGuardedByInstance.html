@@ -1,7 +1,7 @@
 <html>
 <body>
 報告其中的保護符為非 static 欄位或 <code>this</code> 的 <code>static</code> 欄位或方法上的 <code>@GuardedBy</code> 註解。
-<p>使用非 static 元素保護 static 元素可能會導致過度並發，多個線程可能在不同的物件上下文中鎖定，以同時訪問保護欄位。</p>
+<p>使用非 static 元素保護 static 元素可能會導致過度並發，多個執行緒可能在不同的物件上下文中鎖定，以同時訪問保護欄位。</p>
 <p>範例：</p>
 <pre><code>
     private ReadWriteLock lock = new ReentrantReadWriteLock();
