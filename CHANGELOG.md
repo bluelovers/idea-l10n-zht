@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2022-02-08)
+
+
+### 🐛　Bug Fixes
+
+* { 线程,缐程 => 執行緒 } ([eec1f38](https://github.com/bluelovers/idea-l10n-zht/commit/eec1f38f56afc402e5cc0e2a79c1bd3583796706))
+
+
+### 🛠　Build System
+
+* **release:** update build ([b8d605f](https://github.com/bluelovers/idea-l10n-zht/commit/b8d605faecbdaddf12cef495413a0aa663eed520))
+
+
+
+
+
 # 1.0.0 (2022-02-06)
 
 
