@@ -10,6 +10,9 @@ on:
       - 'test/**'
       - '.run/**'
       - '.github/**'
+      - 'docs/**'
+      - 'coverage/**'
+      - 'test/**'
       - '*.*'
       - '.*'
   schedule:
@@ -24,7 +27,7 @@ on:
 ##            │ │ │ │ │
 ##            * * * * *
 #    - cron: '* * 1 * *'
-    - cron: '* * * * 3'
+    - cron: '* 12 * * 3'
 
 jobs:
   build:
