@@ -17,7 +17,12 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 		let to = gitlog({
 			repo: __root,
 			cwd: __root,
-			number: 5,
+			number: 1,
+			execOptions: {
+				// 防止 git ENOBUFS 錯誤
+				// https://www.cxyzjd.com/article/F_Origin/108589968
+				maxBuffer: 1024 * 1024 * 100,
+			},
 		})[0].hash;
 
 		console.log(`input`);
