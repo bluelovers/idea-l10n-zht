@@ -10,10 +10,14 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 ## install
 
-- install from [github](https://github.com/bluelovers/idea-l10n-zht/raw/master/plugin-dev-out/zh.jar) (推薦安裝此版本來得到最新版本)
-- install from [jetbrains](https://plugins.jetbrains.com/plugin/18365-chinese-traditional-language-pack-----)
+- install from [GitHub](https://github.com/bluelovers/idea-l10n-zht/raw/master/plugin-dev-out/zh.jar) (推薦安裝此版本來得到最新版本)
+- install from [jetbrains:com.intellij.zh-tw](https://plugins.jetbrains.com/plugin/18365-chinese-traditional-language-pack-----) or [jetbrains:sc.plugin.com.intellij.zh-tw](https://plugins.jetbrains.com/plugin/18574-chinese-traditional-language-pack-----)
 
 > 注意：請先移除或禁用[官方簡體中文語言包](https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----)
+
+### Other Releases
+
+- [GitHub Tags](https://github.com/bluelovers/idea-l10n-zht/tags)
 
 ## dev
 
@@ -74,12 +78,16 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 - ~~自動偵測抓取原版簡體最新下載網址~~
 - 偵測檢查 zip / git / 檔案系統 上的檔案 是否存在大小寫不同的同名檔案
+- 可指定編譯基於指定版本的語言包
+- 同時更新多個版本的語言包
 
 ## 已知問題
 
 - `dot-properties-loader` 會將 `label.inactive.timeout.sec= 秒` 轉換為 `label.inactive.timeout.sec=秒` 對於 IDEA 的實際影響則不清楚，照一般來說等號後的空白應該是不會被當作內容值
 - 如果 git 發現詭異的檔案永遠都是變動狀態的話 請檢查是否存在與此 BUG 相同的問題  
   https://youtrack.jetbrains.com/issue/IDEA-288057
+- 由於是跟隨官方簡體版更新，所以最新版的通常只支援最新版本或 EAP 版本的 IDE  
+  如果有其他版本需要安裝請參考 README.md 內的 Other Releases
 
 ## 參考資料或其他
 
