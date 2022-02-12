@@ -2,10 +2,11 @@ import { gitDiffFrom } from 'git-diff-from';
 import { __root } from '../test/__root';
 import { gitlog } from 'gitlog2';
 import Bluebird from 'bluebird';
-import { not } from 'micromatch';
+import micromatch, { not, match } from 'micromatch';
 import { updateChangelogByCwd } from '@yarn-tool/changelog';
 import { console } from 'debug-color2';
 import { crossSpawnGitSync, crossSpawnGitAsync, ISpawnGitAsyncOptions, ISpawnGitSyncOptions } from '@git-lazy/spawn';
+import { opts } from '../lib/git/_config';
 
 export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 	.then((from) =>
@@ -69,7 +70,9 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 			return
 		}
 
-		if (files.length)
+		if (files.length && micromatch(files, [
+			'plugin-dev-out/*.jar',
+		]).length)
 		{
 			if (files.length < 10)
 			{
@@ -86,11 +89,11 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 				'-m',
 				`build(changelog): update CHANGELOG`,
 				'./CHANGELOG.md',
-			], {
-				cwd: __root,
-				throwError: true,
-				printStderr: true,
-			});
+			], opts);
+		}
+		else
+		{
+			console.warn(`編譯版本沒有任何變化`)
 		}
 
 		return result
