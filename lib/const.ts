@@ -14,3 +14,5 @@ export const __dict_table_txt = join(__root, 'lib/static/table.txt');
 export const __dict_synonym_txt = join(__root, 'lib/static/synonym.txt');
 
 export const __dict_properties_lazy = join(__root, 'lib/static/lazy.properties');
+
+export const __file_version_map_json = join(__root, 'lib/const/version-map.json');

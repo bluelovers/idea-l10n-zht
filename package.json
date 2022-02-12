@@ -22,7 +22,7 @@
     "posttest": "yarn run build:sort",
     "prebuild": "ts-node scripts/update-meta.ts",
     "build": "ts-node scripts/plugin-build-install-file.ts",
-    "build:commit": "git add --all ./original-plugin ./original-plugin-raw ./plugin-dev-out ./plugin-dev-raw ./lib/static ./test/__snapshots__ ./lib/const/link-of-zh-cn.ts && git commit -m \"build(release): update build\" ./original-plugin ./original-plugin-raw ./plugin-dev-out ./plugin-dev-raw ./lib/static ./test/__snapshots__  ./lib/const/link-of-zh-cn.ts & echo build:commit",
+    "build:commit": "ts-node ./scripts/git/build-commit.ts & echo build:commit",
     "build:dts": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner & echo build:dts",
     "build:dts:copy": "copy .\\src\\index.d.ts .\\dist\\index.d.ts & echo build:dts",
     "build:dts:tsc": "tsc --emitDeclarationOnly --declaration --noEmit false",
@@ -34,7 +34,7 @@
     "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest ts-jest ts-node ynpx lerna yarn-tool",
     "ci:build": "yarn run plugin:build && yarn run build:commit",
     "ci:postpublish": "ts-node scripts/ci-postpublish.ts && yarn run postpublish:git:tag & echo ci:postpublish",
-     "_ci:postpublish": "yarn run postpublish:changelog && yarn run postpublish:git:commit && yarn run postpublish:git:tag & echo ci:postpublish",
+    "_ci:postpublish": "yarn run postpublish:changelog && yarn run postpublish:git:commit && yarn run postpublish:git:tag & echo ci:postpublish",
     "ci:git:config": "git config --local core.autocrlf false && git config --local core.ignorecase false && git config --local include.path ../.gitconfig && git config --local core.autocrlf false && git config --local core.ignorecase false",
     "ci:git:fetch:remote:tag": "git fetch --tag -f",
     "npm:publish": "npm publish",
@@ -69,6 +69,7 @@
   },
   "dependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
+    "@bluelovers/string-natural-compare": "^2.0.5",
     "@git-lazy/spawn": "^1.0.28",
     "@git-lazy/tag": "^1.0.9",
     "@lazy-cjk/zh-convert": "^1.0.44",
@@ -98,6 +99,7 @@
     "novel-segment": "^2.7.87",
     "novel-segment-cli": "^1.1.105",
     "progress-estimator": "^0.3.0",
+    "semver": "^7.3.5",
     "tslib": "^2.3.1",
     "upath2": "^3.1.12"
   },
@@ -112,6 +114,7 @@
     "@types/micromatch": "^4.0.2",
     "@types/node": "*",
     "@types/node-fetch": "<3 >=2.5.12",
+    "@types/semver": "^7.3.9",
     "@yarn-tool/changelog": "^1.0.66",
     "git-diff-from": "^1.1.25",
     "gitlog2": "^5.0.21"
