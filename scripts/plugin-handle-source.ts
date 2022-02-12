@@ -4,6 +4,7 @@
 
 import Bluebird from 'bluebird';
 import { resolve } from 'upath2';
+import { _lazyImport, _lazyImportWithDelay } from '../lib/util/import';
 
 export default Bluebird.mapSeries([
 	'./fetch-latest-version-of-zh-cn',
@@ -15,5 +16,5 @@ export default Bluebird.mapSeries([
 
 function lazyImport(target: string)
 {
-	return Bluebird.resolve(import(resolve(__dirname, target))).then(m => m.default ?? m).delay(2000)
+	return _lazyImportWithDelay(target, __dirname)
 }

@@ -1,28 +1,29 @@
-import { crossSpawnGitAsync } from '@git-lazy/spawn';
-import { opts } from './_config';
+import { lazyCommitFiles } from '../../lib/git/commit';
+import { _lazyImportWithDelay } from '../../lib/util/import';
+import Bluebird from 'bluebird';
 
-const list = [
-	'./original-plugin',
-	'./original-plugin-raw',
-	'./plugin-dev-out',
-	'./plugin-dev-raw',
-	'./lib/static',
-	'./test/__snapshots__',
-	'./lib/const/link-of-zh-cn.ts',
-] as const;
-
-export default crossSpawnGitAsync('git', [
-	'add',
-	'--all',
-	...list,
-], opts)
+export default Bluebird.mapSeries([
+		'./commit-version-map.ts',
+		'./commit-link-of-zh-cn.ts',
+	] as const, lazyImport)
 	.then(() =>
 	{
-		return crossSpawnGitAsync('git', [
-			'commit',
-			'-m',
-			'build(release): update build',
-			...list,
-		], opts)
-	})
-;
+		const list = [
+			'./original-plugin',
+			'./original-plugin-raw',
+			'./plugin-dev-out',
+			'./plugin-dev-raw',
+			'./lib/static',
+			'./test/__snapshots__',
+			'./lib/const/link-of-zh-cn.ts',
+		] as const;
+
+		return lazyCommitFiles(list, 'build(release): update build', {
+			addFlags: ['--all'],
+		})
+	});
+
+function lazyImport(target: string)
+{
+	return _lazyImportWithDelay(target, __dirname)
+}

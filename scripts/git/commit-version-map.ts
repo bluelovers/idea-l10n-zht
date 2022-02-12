@@ -1,18 +1,5 @@
-import { crossSpawnGitAsync } from '@git-lazy/spawn';
-import { opts } from './_config';
+import { lazyCommitFiles } from '../../lib/git/commit';
 
-export default crossSpawnGitAsync('git', [
-	'add',
-	'./lib/const/version-map.json',
-], opts)
-	.then(() =>
-	{
-		return crossSpawnGitAsync('git', [
-			'commit',
-			'-m',
-			'build(cache): update version-map',
-			'./lib/const/version-map.json',
-		], opts)
-	})
+export default lazyCommitFiles('./lib/const/version-map.json', 'build(cache): update version-map')
 	.catch(() => void 0)
 ;
