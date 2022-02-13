@@ -3,8 +3,8 @@ import { _lazyImportWithDelay } from '../../lib/util/import';
 import Bluebird from 'bluebird';
 
 export default Bluebird.mapSeries([
-		'./commit-version-map.ts',
-		'./commit-link-of-zh-cn.ts',
+		'./commit-version-map',
+		'./commit-link-of-zh-cn',
 	] as const, lazyImport)
 	.then(() =>
 	{
@@ -21,7 +21,9 @@ export default Bluebird.mapSeries([
 		return lazyCommitFiles(list, 'build(release): update build', {
 			addFlags: ['--all'],
 		})
-	});
+	})
+	.catch(() => void 0)
+;
 
 function lazyImport(target: string)
 {

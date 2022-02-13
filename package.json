@@ -22,7 +22,7 @@
     "posttest": "yarn run build:sort",
     "prebuild": "ts-node scripts/update-meta.ts",
     "build": "ts-node scripts/plugin-build-install-file.ts",
-    "build:commit": "ts-node ./scripts/git/build-commit.ts & echo build:commit",
+    "build:commit": "ts-node ./scripts/git/build-commit.ts",
     "build:dts": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner & echo build:dts",
     "build:dts:copy": "copy .\\src\\index.d.ts .\\dist\\index.d.ts & echo build:dts",
     "build:dts:tsc": "tsc --emitDeclarationOnly --declaration --noEmit false",
