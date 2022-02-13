@@ -13,6 +13,10 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 	{
 		from ||= 'origin/master';
 
+		console.dir({
+			from,
+		});
+
 		//from = '2d01cffc5da15e0a34a40b40ec3b7d0cc7612dda';
 
 		let to = gitlog({

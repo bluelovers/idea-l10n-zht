@@ -34,4 +34,5 @@ export default Bluebird.resolve()
 
 		console.warn(`略過本次 git tag 更新`)
 	})
+	.catch(() => void 0)
 ;
