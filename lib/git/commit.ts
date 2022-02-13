@@ -2,6 +2,7 @@ import { crossSpawnGitAsync } from '@git-lazy/spawn';
 import { opts } from './_config';
 import { ITSArrayListMaybeReadonly, ITSValueOrArrayMaybeReadonly } from 'ts-type/lib/type/base';
 import { ISpawnGitAsyncOptions } from '@git-lazy/spawn/lib/types';
+import { console } from 'debug-color2';
 
 export function lazyCommitFiles(files: ITSValueOrArrayMaybeReadonly<string>, commitMessage: string, config?: {
 	addFlags?: ITSArrayListMaybeReadonly<string>,
@@ -18,19 +19,27 @@ export function lazyCommitFiles(files: ITSValueOrArrayMaybeReadonly<string>, com
 
 	const addFlags = config.addFlags ?? [];
 
-	return crossSpawnGitAsync('git', [
+	let args = [
 		'add',
 		...addFlags,
 		...files,
-	], options)
+	];
+
+	console.cyan.info('git', ...args);
+
+	return crossSpawnGitAsync('git', args, options)
 		.then(() =>
 		{
-			return crossSpawnGitAsync('git', [
+			args = [
 				'commit',
 				'-m',
 				commitMessage,
 				...files,
-			], options)
+			];
+
+			console.cyan.info('git', ...args);
+
+			return crossSpawnGitAsync('git', args, options)
 		})
 		;
 }
