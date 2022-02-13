@@ -4,7 +4,100 @@
  <idea-version since-build="221"/>
  <name>Chinese (Traditional) Language Pack / 繁體中文語言包</name>
  <vendor url="https://github.com/bluelovers/idea-l10n-zht">bluelovers</vendor><category>Language Pack</category>
- <description><![CDATA[Jetbrains IntelliJ Chinese (Traditional) Language Pack / 繁體中文語言包<p>The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine, and WebStorm into Chinese.</p><p>中文語言包將為您的 IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine, 和WebStorm 帶來中文化的界面。</p><h2>install</h2><ul><li>install from <a href="https://github.com/bluelovers/idea-l10n-zht/raw/master/plugin-dev-out/zh.jar" target="_blank">github</a> (推薦安裝此版本來得到最新版本)</li><li>install from <a href="https://plugins.jetbrains.com/plugin/18365-chinese-traditional-language-pack-----">jetbrains</a></li></ul><blockquote><p>注意：請先移除或禁用<a href="https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----" target="_blank">官方簡體中文語言包</a></p></blockquote><p>歡迎來協助改善翻譯 <a href="https://github.com/bluelovers/idea-l10n-zht">https://github.com/bluelovers/idea-l10n-zht</a></p>]]></description>
+ <description><![CDATA[<meta charset="utf-8"/><h1>README.md</h1>
+<p><img src="https://raw.githubusercontent.com/bluelovers/idea-l10n-zht/master/repository-open-graph.png" alt="repository-open-graph" /></p>
+<pre><code>Jetbrains IntelliJ Chinese (Traditional) Language Pack / 繁體中文語言包
+</code></pre>
+<p>The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine, and WebStorm into Chinese.</p>
+<p>中文語言包將為您的 IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine, 和WebStorm 帶來中文化的界面。</p>
+<h2>install</h2>
+<ul>
+<li>install from <a href="https://github.com/bluelovers/idea-l10n-zht/raw/master/plugin-dev-out/zh.jar">GitHub</a> (推薦安裝此版本來得到最新版本)</li>
+<li>install from <a href="https://plugins.jetbrains.com/plugin/18365-chinese-traditional-language-pack-----">jetbrains:com.intellij.zh-tw</a> or <a href="https://plugins.jetbrains.com/plugin/18574-chinese-traditional-language-pack-----">jetbrains:sc.plugin.com.intellij.zh-tw</a></li>
+</ul>
+<blockquote>
+<p>注意：請先移除或禁用<a href="https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----">官方簡體中文語言包</a></p>
+</blockquote>
+<h3>Other Releases</h3>
+<ul>
+<li><a href="https://github.com/bluelovers/idea-l10n-zht/tags">GitHub Tags</a></li>
+</ul>
+<h2>dev</h2>
+<ol>
+<li>
+<p>執行 <code>yarn run ci:git:config</code></p>
+</li>
+<li>
+<p>請額外自行安裝 typescript@next jest ts-jest ts-node ynpx lerna yarn-tool<br />
+或執行 <code>yarn run ci:install</code></p>
+</li>
+</ol>
+<h3>與官方簡體版差異</h3>
+<ul>
+<li>以分詞系統與轉繁來基於官方簡體版自動打包製作</li>
+<li>解除版本安裝上限範圍的限制 <em>until-build</em></li>
+<li>忽略部分官方版檔案</li>
+</ul>
+<h3>基於分詞系統的替換字詞說明</h3>
+<h4><a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/lib/static/synonym.txt">lib/static/synonym.txt</a></h4>
+<p>此檔案放置轉換用詞，格式為 <code>最終顯示的字詞,替換的字詞</code></p>
+<p>然後由於每次轉換都是以原始簡體檔案來做轉換，所以替換的字詞請包含簡體</p>
+<p>實際添加的內容請直接查看檔案內容做參考</p>
+<h4><a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/lib/static/table.txt">lib/static/table.txt</a></h4>
+<p>此檔案放置分詞系統的字典庫</p>
+<p>請參考</p>
+<ul>
+<li><a href="https://github.com/bluelovers/ws-segment/blob/master/packages/%40novel-segment/postag/lib/postag/ids.ts">https://github.com/bluelovers/ws-segment/blob/master/packages/%40novel-segment/postag/lib/postag/ids.ts</a></li>
+<li><a href="https://github.com/bluelovers/ws-segment/blob/master/packages/novel-segment/test/demo.cache.ts#L97">https://github.com/bluelovers/ws-segment/blob/master/packages/novel-segment/test/demo.cache.ts#L97</a></li>
+</ul>
+<h4><a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/test/segment-check.ts">test/segment-check.ts</a></h4>
+<p>在 <a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/test/temp">test/temp/*.txt</a> 資料夾底下新增任何副檔名為 .txt 檔案後<br />
+執行此腳本 則可以查看分詞系統分詞後結果<br />
+來了解 為什麼沒有發生預期的轉換</p>
+<p><img src="https://raw.githubusercontent.com/bluelovers/idea-l10n-zht/master/docs/img.png" alt="img.png" /></p>
+<p><strong><em>此檔案也能作為比執行測試更快知道轉換與分詞結果</em></strong></p>
+<h3>.properties</h3>
+<p>透過 <a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/lib/static/lazy.properties">lib/static/lazy.properties</a> 可無視分詞轉換結果直接取代內容</p>
+<h3>其他</h3>
+<p>有部分無法透過分詞系統來轉換的則可以透過編輯以下檔案來完善</p>
+<ul>
+<li>
+<p><a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/lib/segment.ts">lib/segment.ts</a></p>
+</li>
+<li>
+<p><a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/lib/handleText.ts">lib/handleText.ts</a></p>
+</li>
+<li>
+<p><a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/OBFUSCATE.md">OBFUSCATE 混淆與曖昧</a> 此檔案放置需要確認或討論的項目</p>
+</li>
+</ul>
+<h2>TODO</h2>
+<ul>
+<li><s>自動偵測抓取原版簡體最新下載網址</s></li>
+<li>偵測檢查 zip / git / 檔案系統 上的檔案 是否存在大小寫不同的同名檔案</li>
+<li>可指定編譯基於指定版本的語言包</li>
+<li>同時更新多個版本的語言包</li>
+</ul>
+<h2>已知問題</h2>
+<ul>
+<li><code>dot-properties-loader</code> 會將 <code>label.inactive.timeout.sec= 秒</code> 轉換為 <code>label.inactive.timeout.sec=秒</code> 對於 IDEA 的實際影響則不清楚，照一般來說等號後的空白應該是不會被當作內容值</li>
+<li>如果 git 發現詭異的檔案永遠都是變動狀態的話 請檢查是否存在與此 BUG 相同的問題<br />
+<a href="https://youtrack.jetbrains.com/issue/IDEA-288057">https://youtrack.jetbrains.com/issue/IDEA-288057</a></li>
+<li>由於是跟隨官方簡體版更新，所以最新版的通常只支援最新版本或 EAP 版本的 IDE<br />
+如果有其他版本需要安裝請參考 README.md 內的 Other Releases</li>
+</ul>
+<h2>參考資料或其他</h2>
+<ul>
+<li><a href="https://www.ruyut.com/2022/01/Chinese-Traditional.html">Intellij 和 Android Studio 介面設定 繁體中文 漢化 套件(附安裝教學)</a></li>
+</ul>
+<hr />
+<ul>
+<li><a href="https://www.limoritakeu.tech/2017/11/20/translation-terms/">英中繁簡編程術語對照</a></li>
+<li><a href="https://github.com/pjchender/cn2tw4programmer/tree/master/src/terms">https://github.com/pjchender/cn2tw4programmer/tree/master/src/terms</a></li>
+<li></li>
+</ul>
+<p><a href="https://www.jetbrains.com/?from=idea-l10n-zht"><img src="https://raw.githubusercontent.com/bluelovers/idea-l10n-zht/master/jetbrains.svg" alt="jetbrains.svg" /></a></p>
+]]></description>
  <change-notes><![CDATA[See <a href="https://github.com/bluelovers/idea-l10n-zht/commits/master">https://github.com/bluelovers/idea-l10n-zht/commits/master</a> or <a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/CHANGELOG.md">CHANGELOG.md</a>]]></change-notes>
  <depends>com.intellij.modules.platform</depends>
  <incompatible-with>com.intellij.modules.rider</incompatible-with>
