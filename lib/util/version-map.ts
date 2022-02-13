@@ -181,5 +181,7 @@ export function _handleVersionApiResultRow(row: IVersionApiResultRow)
 		]
 	});
 
+	delete row.downloads;
+
 	return row;
 }
