@@ -28,8 +28,9 @@ export default Bluebird.resolve()
 
 		const bool = match(commit.files, 'CHANGELOG.md').length > 0;
 
-		console.cyan.info(`${commit.subject}`);
+		console.cyan.info(commit.abbrevHash, `${commit.subject}`);
 		console.info(`include CHANGELOG: ${bool}`);
+		console.dir(commit.files);
 
 		if (bool)
 		{
