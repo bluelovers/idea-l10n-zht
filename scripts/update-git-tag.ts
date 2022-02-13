@@ -5,6 +5,8 @@ import { __plugin_zh_cn_version } from '../lib/const/link-of-zh-cn';
 import { __root } from '../test/__root';
 import { gitlog } from 'gitlog2';
 import micromatch, { not, match } from 'micromatch';
+import { console } from 'debug-color2';
+import { opts } from '../lib/git/_config';
 
 export default Bluebird.resolve()
 	.then(() =>
@@ -22,17 +24,24 @@ export default Bluebird.resolve()
 	})
 	.then((logs) =>
 	{
-		if (match(logs[0].files, 'CHANGELOG.md').length)
+		const commit = logs[0];
+
+		const bool = match(commit.files, 'CHANGELOG.md').length > 0;
+
+		console.cyan.info(`${commit.subject}`);
+		console.info(`include CHANGELOG: ${bool}`);
+
+		if (bool)
 		{
+			console.info(`更新 git tag`);
+
 			return gitTag(`v${__plugin_zh_cn_version}`, {
 				cwd: __root,
 				forceGitTag: true,
-			}, {
-				printStderr: true,
-			})
+			}, opts)
 		}
 
 		console.warn(`略過本次 git tag 更新`)
 	})
-	.catch(() => void 0)
+	.catch((e) => console.error(e))
 ;
