@@ -1,5 +1,8 @@
 import { join } from "path";
 import { console } from 'debug-color2';
+import { enableDebug } from '@git-lazy/debug';
+
+enableDebug();
 
 console.enabledColor = true;
 
