@@ -24,10 +24,15 @@ export function _versionMap(): IVersionMap
 	return versionMap ??= _loadVersionMapSync()
 }
 
-export function getLatestSeries(data?: IVersionMap)
+export function _getSeries(data?: IVersionMap)
 {
 	data ??= _versionMap();
-	return data.series[0]
+	return data.series
+}
+
+export function getLatestSeries(data?: IVersionMap)
+{
+	return _getSeries(data)[0]
 }
 
 export function getLatestVersion(data?: IVersionMap)
@@ -70,6 +75,12 @@ export function _getVersionDownloadByVersion(version: string, data?: IVersionMap
 {
 	data ??= _versionMap();
 	return data.version_download_map[version]
+}
+
+export function _getVersionDownloadBySeries(series: string, data?: IVersionMap)
+{
+	data ??= _versionMap();
+	return _getVersionDownloadByVersion(_getVersion(series, data), data)
 }
 
 /**
