@@ -15,7 +15,14 @@ export function downloadPlugin(link: string, output_file: string)
 		})
 }
 
-export function generateDownloadMessage(info: Pick<IVersionApiResultRow, 'id' | 'version'>)
+export function generateDownloadMessage(info: Pick<IVersionApiResultRow, 'id' | 'version'>, download: boolean = true)
 {
-	return `download Chinese ​(Simplified)​ Language Pack / 中文语言包\nid: ${info.id}\nversion: ${info.version}\n`
+	let msg = `Chinese ​(Simplified)​ Language Pack / 中文语言包\nid: ${info.id}\nversion: ${info.version}`;
+
+	if (download)
+	{
+		msg+=`\n`
+	}
+
+	return msg
 }

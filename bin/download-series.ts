@@ -12,16 +12,29 @@ import {
 	_getVersionInfoByVersion,
 } from '../lib/util/version-map';
 import { console, chalkByConsole } from 'debug-color2';
+import { pathExists } from 'fs-extra';
 
 cliSelectSeries()
-	.then((result) =>
+	.then(async (result) =>
 	{
 		const series = result.series;
 		const link = _getVersionDownloadBySeries(series);
 		const info = _getVersionInfoBySeries(series);
 
+		const file = join(__plugin_downloaded_dir, `zh-${info.version}.zip`);
+
+		const bool = await pathExists(file);
+		const msg = generateDownloadMessage(info, !bool);
+
+		if (bool)
+		{
+			console.warn(`檔案已經存在，忽略下載`);
+			console.log(msg);
+			return
+		}
+
 		console.info(link);
 
-		return cli_logger(downloadPlugin(link, join(__plugin_downloaded_dir, `zh-${info.version}.zip`)), generateDownloadMessage(info))
+		return cli_logger(downloadPlugin(link, file), msg)
 	})
 ;
