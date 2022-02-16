@@ -19,6 +19,12 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 - [GitHub Tags](https://github.com/bluelovers/idea-l10n-zht/tags)
 
+- 或執行 `yarn run plugin:series:build` 即可以最新版的打包程式來自行選擇要打包哪一個版本系列
+
+![img-001.png](docs/img-001.png)
+
+![img_1.png](docs/img_1.png)
+
 ## dev
 
 1. 執行 `yarn run ci:git:config`
@@ -78,7 +84,7 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 - ~~自動偵測抓取原版簡體最新下載網址~~
 - 偵測檢查 zip / git / 檔案系統 上的檔案 是否存在大小寫不同的同名檔案
-- 可指定編譯基於指定版本的語言包
+- ~~可指定編譯基於指定版本的語言包~~
 - 同時更新多個版本的語言包
 
 ## 已知問題

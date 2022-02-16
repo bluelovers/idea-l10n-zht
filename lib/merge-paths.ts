@@ -1,6 +1,7 @@
 import { join } from 'upath2';
 import { pathExists, readFile } from 'fs-extra';
 import { matcher } from 'micromatch';
+import { array_unique_overwrite } from 'array-hyper-unique';
 
 export type IPaths = [string, ...string[]];
 
@@ -20,6 +21,8 @@ export function mergePaths(dirs: string[], options?: IOptionsMergePaths)
 	const isMatch = matcher('**/*', {
 		ignore: options?.ignore ?? defaultIgnore,
 	});
+
+	dirs = array_unique_overwrite(dirs);
 
 	const getPath = async (...paths: IPaths) =>
 	{
