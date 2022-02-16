@@ -10,23 +10,83 @@ import {
 	_getVersionDownloadBySeries,
 	_getVersionInfoBySeries,
 	_getVersionInfoByVersion,
+	getLatestSeries,
 } from '../lib/util/version-map';
 import { console, chalkByConsole } from 'debug-color2';
 import { pathExists } from 'fs-extra';
 import { prompt } from 'enquirer';
+import yargs from 'yargs';
 
-export default cliSelectSeries()
+export default yargs
+	.option('series', {
+		alias: ['s'],
+		desc: ` IDE 版本系列`,
+		string: true,
+	})
+	.option('force', {
+		alias: ['f'],
+		desc: ` 忽略已存在下載檔案`,
+		boolean: true,
+	})
+	.parseAsync()
+	.then(argv =>
+	{
+		let { series, force } = argv;
+		if (series?.length)
+		{
+			if (series === 'latest')
+			{
+				series = getLatestSeries();
+			}
+			else if (!_getVersion(series)?.length)
+			{
+				series = void 0
+			}
+		}
+
+		if (!series?.length)
+		{
+			return cliSelectSeries()
+				.then(result =>
+				{
+					return {
+						...result,
+						force,
+					}
+				})
+		}
+
+		return {
+			series,
+			force,
+		}
+	})
 	.then(async (result) =>
 	{
-		const series = result.series;
+		const { series } = result;
 		const link = _getVersionDownloadBySeries(series);
 		const info = _getVersionInfoBySeries(series);
-
 		const file = join(__plugin_downloaded_dir, `zh-${info.version}.zip`);
+
+		const ret = {
+			series,
+			version: info.version,
+			link,
+			info,
+			file,
+		};
 
 		let bool = await pathExists(file);
 
-		if (bool)
+		if (bool && typeof result.force === 'boolean')
+		{
+			bool = !result.force;
+			console.warn(chalkByConsole((chalk) =>
+			{
+				return `檔案 ${chalk.cyan(basename(file))} 已經存在，但將強制下載`
+			}, console))
+		}
+		else if (bool)
 		{
 			await prompt<{
 				force: boolean,
@@ -48,11 +108,15 @@ export default cliSelectSeries()
 		if (bool)
 		{
 			console.log(msg);
-			return
+		}
+		else
+		{
+			console.info(link);
+
+			await cli_logger(downloadPlugin(link, file, true), msg)
 		}
 
-		console.info(link);
-
-		return cli_logger(downloadPlugin(link, file, true), msg)
+		return ret
 	})
 ;
+
