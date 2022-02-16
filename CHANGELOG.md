@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2022-02-16)
+
+
+### ✨　Features
+
+* download-series.ts 支援直接輸入執行參數 ([093be5c](https://github.com/bluelovers/idea-l10n-zht/commit/093be5c2edb93e6917665108fdf9a4232f8ff9b5))
+
+
+### 🛠　Build System
+
+* 可指定編譯基於指定版本的語言包 ([142c19d](https://github.com/bluelovers/idea-l10n-zht/commit/142c19d55a9296243e62b5f5215d34c7787c14c9))
+* **release:** update build ([11b4df4](https://github.com/bluelovers/idea-l10n-zht/commit/11b4df43627e117808f1e14b468edee142386d31))
+
+
+
+
+
 # 1.0.0 (2022-02-13)
 
 
