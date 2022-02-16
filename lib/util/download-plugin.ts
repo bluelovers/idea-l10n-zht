@@ -1,12 +1,28 @@
 import fetch from 'cross-fetch';
 import { Response } from 'node-fetch';
-import { outputFile } from 'fs-extra';
+import { outputFile, pathExists } from 'fs-extra';
 import { generateDownloadLink } from './version-map';
 import { IVersionApiResultRow } from '../const/version-map';
 import { console, chalkByConsole } from 'debug-color2';
+import { basename } from 'upath2';
 
-export function downloadPlugin(link: string, output_file: string)
+export async function downloadPlugin(link: string, output_file: string, force?: boolean)
 {
+	if (!force)
+	{
+		let name = basename(output_file);
+
+		if (/^\w+-\d+/i.test(name))
+		{
+			const bool = await pathExists(output_file);
+
+			if (bool)
+			{
+				return;
+			}
+		}
+	}
+
 	return fetch(link)
 		.then((res) => (res as any as Response).buffer())
 		.then(buf =>

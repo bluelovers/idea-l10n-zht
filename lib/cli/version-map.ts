@@ -10,7 +10,7 @@ export function cliSelectSeries()
 	}>({
 		name: 'series',
 		type: 'select',
-		message: 'Select IDE series?',
+		message: '請選擇 IDE 版本系列：',
 		choices: _getSeries().map(value =>
 		{
 			const version = _getVersion(value);
