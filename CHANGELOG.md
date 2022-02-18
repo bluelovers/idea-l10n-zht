@@ -8,6 +8,57 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛　Bug Fixes
 
+* { 无后台 => 無背景 } , { 在后台 => 在背景 } ([0b6dac6](https://github.com/bluelovers/idea-l10n-zht/commit/0b6dac6599a29d60ab878f1334239236ee15aef7))
+* { 无后台 => 無背景 } ([4ded1b1](https://github.com/bluelovers/idea-l10n-zht/commit/4ded1b179a2fd9fd5017425d0cf5bf280be07da8))
+* `運行時版本` 不應轉換為 `執行時版本` ([cb35fe2](https://github.com/bluelovers/idea-l10n-zht/commit/cb35fe29bf21415ecb46b2f70627d159632fb56f))
+
+
+### ✨　Features
+
+* download-series.ts 支援直接輸入執行參數 ([093be5c](https://github.com/bluelovers/idea-l10n-zht/commit/093be5c2edb93e6917665108fdf9a4232f8ff9b5))
+* 改善 cli 互動訊息 ([ce526c3](https://github.com/bluelovers/idea-l10n-zht/commit/ce526c3f612191f3ade3610b231c390bf8d3695c))
+
+
+### 📦　Code Refactoring
+
+* { 博文 => 網誌 } ([a2eff2c](https://github.com/bluelovers/idea-l10n-zht/commit/a2eff2cfb770878137b761bcd779e739c62e3fe7))
+* `apply` { 应用 => 套用 } ([f40d2d9](https://github.com/bluelovers/idea-l10n-zht/commit/f40d2d96c6b24e59633fb0780036752c14ff02fc))
+* { 后台 => 背景 } ([6f1b43e](https://github.com/bluelovers/idea-l10n-zht/commit/6f1b43ec05eea3de4c6e06912501f38fe803107c))
+* { 凭据 => 憑證 } ([2b00e13](https://github.com/bluelovers/idea-l10n-zht/commit/2b00e134bd3f8e9dd49bac5c92917164ce801f55))
+* { 内存 => 記憶體 } ([9648cfd](https://github.com/bluelovers/idea-l10n-zht/commit/9648cfdb3d4aa0baa5e3addec565fd1111444989))
+* { 软件包 => 軟體套件 } ([3ff1edf](https://github.com/bluelovers/idea-l10n-zht/commit/3ff1edfd86870bd99c37bfc219eb3668b2443085))
+* { 内部版本号 => 構建版本 } ([533818f](https://github.com/bluelovers/idea-l10n-zht/commit/533818f07337f7f21178c95d094f13e984a78709))
+
+
+### 📚　Documentation
+
+* update README.md ([fdbcb1b](https://github.com/bluelovers/idea-l10n-zht/commit/fdbcb1b870af20ca4827c67d0d79d869c03e8c93))
+
+
+### 🛠　Build System
+
+* 可指定編譯基於指定版本的語言包 ([142c19d](https://github.com/bluelovers/idea-l10n-zht/commit/142c19d55a9296243e62b5f5215d34c7787c14c9))
+* **changelog:** update CHANGELOG ([89b2712](https://github.com/bluelovers/idea-l10n-zht/commit/89b27127236e1ad483b5654c7de9deb3d63363b2))
+* **changelog:** update CHANGELOG ([5824378](https://github.com/bluelovers/idea-l10n-zht/commit/5824378008f3cb5cca4e17b15e74098c169c76e6))
+* **release:** update build ([ada1017](https://github.com/bluelovers/idea-l10n-zht/commit/ada101775a50047c20c6b8cf287042d0ad36e2cd))
+* **release:** update build ([6115fd5](https://github.com/bluelovers/idea-l10n-zht/commit/6115fd54c9f709f3743bd354e305182fb473f3f6))
+* **release:** update build ([11b4df4](https://github.com/bluelovers/idea-l10n-zht/commit/11b4df43627e117808f1e14b468edee142386d31))
+
+
+### ⚙️　Continuous Integration
+
+* ts-node 不支援 typescript@4.7 ([24a668e](https://github.com/bluelovers/idea-l10n-zht/commit/24a668e929661c7511c277f0641cd15faaad56df))
+* change fetch-depth to 20 ([e45f5af](https://github.com/bluelovers/idea-l10n-zht/commit/e45f5af891d4aafa0353ac46b4113a941a29bda0))
+
+
+
+
+
+# 1.0.0 (2022-02-18)
+
+
+### 🐛　Bug Fixes
+
 * `運行時版本` 不應轉換為 `執行時版本` ([cb35fe2](https://github.com/bluelovers/idea-l10n-zht/commit/cb35fe29bf21415ecb46b2f70627d159632fb56f))
 
 
