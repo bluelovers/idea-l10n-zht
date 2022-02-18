@@ -23,8 +23,8 @@ export function initIdeaSegmentText()
 					},
 				}).then(async (segment) =>
 				{
-					let db_dict = segment.getDictDatabase(EnumDictDatabase.TABLE);
-					let db_synonym = segment.getDictDatabase(EnumDictDatabase.SYNONYM);
+					const db_dict = segment.getDictDatabase(EnumDictDatabase.TABLE);
+					const db_synonym = segment.getDictDatabase(EnumDictDatabase.SYNONYM);
 
 					const autoCjk = db_dict.options.autoCjk;
 					db_dict.options.autoCjk = true;
@@ -36,6 +36,12 @@ export function initIdeaSegmentText()
 						.add(['標簽頁', 0x100000, 0])
 					;
 					 */
+
+					db_dict
+						.remove('复上')
+						.remove('复分析')
+						.remove('为重')
+					;
 
 					await loadTable(__dict_table_txt)
 						.each(data =>

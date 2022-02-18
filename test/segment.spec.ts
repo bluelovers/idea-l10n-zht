@@ -152,6 +152,10 @@ describe(`should include`, () =>
 		[`應用`, `CFDeploymentEditor.dialog.title.reload.application.settings=重新加载应用程序设置`],
 		[`套用`, `plugins.dialog.button=应用变更`],
 
+		[`複`, `，并为重复语言结构设定初始大小。`],
+		[`複`, `重复上一条命令`],
+		[`複`, `程式码重复分析`],
+
 	]).forEach(text =>
 	{
 
