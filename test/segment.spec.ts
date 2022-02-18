@@ -143,6 +143,7 @@ describe(`should include`, () =>
 
 		[`背景`, `power.save.mode.on.notification.content=代码洞察和后台任务已禁用。`],
 		[`背景`, `progress.window.empty.text=无后台任务`],
+		[`背景`, `label.start.search.in.background=在后台开始搜寻`],
 
 		[`模組`, `title.module.sub.group=模块子组`],
 
