@@ -1,7 +1,7 @@
 <html>
 <body>
 報告 Java Platform Module System <code>module-info.java</code> 檔案中的冗餘 <code>requires</code> 指令。
-當模塊 <code>A</code> 需要模塊 <code>B</code>，但模塊 <code>A</code> 中的程式碼不從 <code>B</code> 匯入任何軟件包或類時，則 <code>requires</code> 指令冗餘。
+當模塊 <code>A</code> 需要模塊 <code>B</code>，但模塊 <code>A</code> 中的程式碼不從 <code>B</code> 匯入任何軟體套件或類時，則 <code>requires</code> 指令冗餘。
 此外，所有模塊都隱式地宣告了對 <code>java.base</code> 模塊的依賴，因此 <code>requires java.base;</code> 指令始終冗餘。
 <p>
   快速修復會刪除冗餘的 <code>requires</code> 指令。

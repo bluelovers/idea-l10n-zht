@@ -1,7 +1,7 @@
 <html>
 <body>
 報告從 <code>uintptr</code> 到 <code>unsafe.Pointer</code> 的潛在錯誤轉換。
-<p>如果內存中有存放指針值的 <code>uintptr</code> 類型字詞，則從 <code>uintptr</code> 到 <code>unsafe.Pointer</code> 的轉換無效，因為該字詞對於堆疊複製和垃圾收集器不可見。
+<p>如果記憶體中有存放指針值的 <code>uintptr</code> 類型字詞，則從 <code>uintptr</code> 到 <code>unsafe.Pointer</code> 的轉換無效，因為該字詞對於堆疊複製和垃圾收集器不可見。
 </p>
 <p>用法無效的範例：</p>
 <pre><code>nums := []int8{42, 24}
