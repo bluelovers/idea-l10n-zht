@@ -74,6 +74,8 @@ describe(`segment`, () =>
 		[`隊列`, `消息隊列連接(彈出視窗)`],
 		[`掩碼`, `文件掩码(&F)`],
 
+		[`博文`, `update.snap.message.with.blog.post=IDE 已通过 Snap 更新。<a href=\\\\"{0}\\\\">博文</a>。`],
+
 	]).forEach(text =>
 	{
 
@@ -149,7 +151,6 @@ describe(`should include`, () =>
 
 		[`應用`, `CFDeploymentEditor.dialog.title.reload.application.settings=重新加载应用程序设置`],
 		[`套用`, `plugins.dialog.button=应用变更`],
-
 
 	]).forEach(text =>
 	{
