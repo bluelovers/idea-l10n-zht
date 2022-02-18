@@ -136,6 +136,7 @@ describe(`should include`, () =>
 		[`執行緒`, `获取线程转储`],
 
 		[`運行時版本`, `about.box.jre=运行时版本: {0} {1}`],
+		[`構建`, `about.box.build.number=内部版本号 #{0}`],
 
 	]).forEach(text =>
 	{
