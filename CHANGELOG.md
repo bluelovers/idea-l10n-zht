@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2022-02-18)
+
+
+### 🐛　Bug Fixes
+
+* `運行時版本` 不應轉換為 `執行時版本` ([cb35fe2](https://github.com/bluelovers/idea-l10n-zht/commit/cb35fe29bf21415ecb46b2f70627d159632fb56f))
+
+
+### ✨　Features
+
+* download-series.ts 支援直接輸入執行參數 ([093be5c](https://github.com/bluelovers/idea-l10n-zht/commit/093be5c2edb93e6917665108fdf9a4232f8ff9b5))
+* 改善 cli 互動訊息 ([ce526c3](https://github.com/bluelovers/idea-l10n-zht/commit/ce526c3f612191f3ade3610b231c390bf8d3695c))
+* 檔案已經存在時不再次下載 ([f9edbb4](https://github.com/bluelovers/idea-l10n-zht/commit/f9edbb44df64e6b93bf728a5f7b4e02c55471adf))
+
+
+### 📦　Code Refactoring
+
+* { 后台 => 背景 } ([6f1b43e](https://github.com/bluelovers/idea-l10n-zht/commit/6f1b43ec05eea3de4c6e06912501f38fe803107c))
+* { 凭据 => 憑證 } ([2b00e13](https://github.com/bluelovers/idea-l10n-zht/commit/2b00e134bd3f8e9dd49bac5c92917164ce801f55))
+* { 内存 => 記憶體 } ([9648cfd](https://github.com/bluelovers/idea-l10n-zht/commit/9648cfdb3d4aa0baa5e3addec565fd1111444989))
+* { 软件包 => 軟體套件 } ([3ff1edf](https://github.com/bluelovers/idea-l10n-zht/commit/3ff1edfd86870bd99c37bfc219eb3668b2443085))
+* { 内部版本号 => 構建版本 } ([533818f](https://github.com/bluelovers/idea-l10n-zht/commit/533818f07337f7f21178c95d094f13e984a78709))
+
+
+### 📚　Documentation
+
+* update README.md ([fdbcb1b](https://github.com/bluelovers/idea-l10n-zht/commit/fdbcb1b870af20ca4827c67d0d79d869c03e8c93))
+
+
+### 🛠　Build System
+
+* 可指定編譯基於指定版本的語言包 ([142c19d](https://github.com/bluelovers/idea-l10n-zht/commit/142c19d55a9296243e62b5f5215d34c7787c14c9))
+* **changelog:** update CHANGELOG ([5824378](https://github.com/bluelovers/idea-l10n-zht/commit/5824378008f3cb5cca4e17b15e74098c169c76e6))
+* **release:** update build ([6115fd5](https://github.com/bluelovers/idea-l10n-zht/commit/6115fd54c9f709f3743bd354e305182fb473f3f6))
+* **release:** update build ([11b4df4](https://github.com/bluelovers/idea-l10n-zht/commit/11b4df43627e117808f1e14b468edee142386d31))
+
+
+### ⚙️　Continuous Integration
+
+* ts-node 不支援 typescript@4.7 ([24a668e](https://github.com/bluelovers/idea-l10n-zht/commit/24a668e929661c7511c277f0641cd15faaad56df))
+* change fetch-depth to 20 ([e45f5af](https://github.com/bluelovers/idea-l10n-zht/commit/e45f5af891d4aafa0353ac46b4113a941a29bda0))
+* **fix:** 修正 github actions 上的 git 無法正確只回傳最後一個 commit 提交的檔案變動列表 ([5a4ceff](https://github.com/bluelovers/idea-l10n-zht/commit/5a4ceffdd98c1684ec4ccf80d09f519ea180f3df))
+* **fix:** github actions 上的 git 無法正確只回傳最後一個 commit 提交的檔案變動列表 ([cf0203e](https://github.com/bluelovers/idea-l10n-zht/commit/cf0203e40c0e5a61c4103730894d867f6968eb8d))
+
+
+### ♻️　Chores
+
+* allow download selected series ([8003efb](https://github.com/bluelovers/idea-l10n-zht/commit/8003efb12b9557d16006d017504ac78cb6dc29c4))
+* **deps:** update deps ([a0235f2](https://github.com/bluelovers/idea-l10n-zht/commit/a0235f224cb02bbe0675974a8e72008c7daeedd9))
+
+
+### 🔖　Miscellaneous
+
+* . ([f800efd](https://github.com/bluelovers/idea-l10n-zht/commit/f800efdbe5c679aa7974d9449b8417de3f4d9c4c))
+
+
+
+
+
 # 1.0.0 (2022-02-16)
 
 
