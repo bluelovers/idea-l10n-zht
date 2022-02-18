@@ -6,7 +6,7 @@
 <p>範例：</p>
 <pre><code>var animals []Animal
 err := json.Unmarshal(jsonData, animals) // 總是返回錯誤</code></pre>
-<p>在應用<b>在前面追加 '&amp;'</b>快速修復後：</p>
+<p>在套用<b>在前面追加 '&amp;'</b>快速修復後：</p>
 <pre><code>var animals []Animal
 err := json.Unmarshal(jsonData, &animals)</code>
 </pre>

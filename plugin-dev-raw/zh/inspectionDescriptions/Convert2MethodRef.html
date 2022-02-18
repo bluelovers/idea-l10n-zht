@@ -5,7 +5,7 @@
 <pre><code>
   Runnable r = () -> System.out.println();
 </code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>
   Runnable r = System.out::println;
 </code></pre>
@@ -14,6 +14,6 @@
   即使 lambda 不調用任何方法，該檢查也可能會建議方法引用，例如將 <code>obj -> obj != null</code> 取代為 <code>Objects::nonNull</code>。 
   使用<a href="settings://preferences.sourceCode.Java?Lambda%20Body">設定 | 編輯器 | 程式碼樣式 | Java | 程式碼生成</a>設定來配置特殊方法引用。
 </p>
-<p>僅當專案或模塊的語言級別為 8 或更高時，此檢查才會報告。</p>
+<p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
 <body>
-報告用來初始化的 <code>class</code> 文字所屬的類與 <code>Logger</code> 所屬的類不同的 <code>Logger</code> 實例。 從另一個類複製貼上某些程式碼時，很容易發生這種情況，並可能導致在意外類別下記錄事件，並導致篩選器應用不正確。
+報告用來初始化的 <code>class</code> 文字所屬的類與 <code>Logger</code> 所屬的類不同的 <code>Logger</code> 實例。 從另一個類複製貼上某些程式碼時，很容易發生這種情況，並可能導致在意外類別下記錄事件，並導致篩選器套用不正確。
 <p>提供了一個快速修復來用周圍類中的文字取代外類文字。</p>
 <p><b>範例：</b></p>
 <pre><code>
@@ -10,7 +10,7 @@
     // …其他欄位和方法
   }
 </code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>
   <b>public class</b> Paramount {
     <b>protected static final</b> Logger LOG = Logger.getLogger(Paramount.class);

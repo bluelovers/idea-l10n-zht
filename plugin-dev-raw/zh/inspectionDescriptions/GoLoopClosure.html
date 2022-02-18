@@ -11,7 +11,7 @@
     fmt.Println(v) // 輸出可能會是 `c c c`，而不是 `a b c`。
   }()
 }</code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>for _, v := range []string{"a", "b", "c"} {
   v := v // `v` 現已被複製
   go func() {

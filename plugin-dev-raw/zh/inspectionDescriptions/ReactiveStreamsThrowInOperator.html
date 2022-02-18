@@ -12,7 +12,7 @@ Flux.just(1, 2, 3).flatMap(i -> {
             throw new RuntimeException();
         })
 </code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>
 Flux.just(1, 2, 3).flatMap(i -> {
             return Flux.error(new RuntimeException());

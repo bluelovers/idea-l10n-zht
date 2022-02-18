@@ -8,7 +8,7 @@ Streams that are created using <code>Files</code> methods usually are more effic
 <pre><code>
 InputStream is = new BufferedInputStream(new FileInputStream(file));
 </code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>
 InputStream is = new BufferedInputStream(Files.newInputStream(file.toPath()));
 </code></pre>

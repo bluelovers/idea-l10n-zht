@@ -10,7 +10,7 @@
       scope.async(ctx) { doSomeJob() }.await()
   }
 </code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>
   suspend fun test(ctx: CoroutineContext, scope: CoroutineScope) {
       withContext(scope.coroutineContext + ctx) { doSomeJob() }

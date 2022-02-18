@@ -7,7 +7,7 @@ fun check(a: Boolean? == null) {
     if (a ?: false) throw IllegalStateException()
 }
 </code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>
 fun check(a: Boolean? == null) {
     if (a == true) throw IllegalStateException()

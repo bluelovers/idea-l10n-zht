@@ -1,13 +1,13 @@
 <html>
 <body>
 將 <code>Collections.emptyList()</code> 或 <code>Collections.singletonList()</code> 調用取代為對 <code>Arrays.asList()</code> 的調用。
-<p>當專案或模塊使用語言級別 9 時：</p>
+<p>當專案或模組使用語言級別 9 時：</p>
 <ul>
   <li>該意圖將 <code>Collections.emptyList()</code> 或 <code>Collections.singletonList()</code> 取代為對 <code>java.util.List.of()</code> 的調用。</li>
   <li>將 <code>Collections.emptySet()</code> 或 <code>Collections.singleton()</code> 調用取代為 <code>java.util.Set.of()</code>。</li>
   <li>將 <code>Collections.emptyMap()</code> 或 <code>Collections.singletonMap()</code> 調用取代為 <code>java.util.Map.of()</code>。</li>
 </ul>
-<p>當專案或模塊使用 Guava 庫且語言級別為 9 或更低時，該意圖會將 <code>Collections.emptyList()</code> 或 <code>Collections.singletonList()</code> 調用取代為 <code>com.google.common.collect.ImmutableList</code>、<code>com.google.common.collect.ImmutableSet</code> 或
+<p>當專案或模組使用 Guava 庫且語言級別為 9 或更低時，該意圖會將 <code>Collections.emptyList()</code> 或 <code>Collections.singletonList()</code> 調用取代為 <code>com.google.common.collect.ImmutableList</code>、<code>com.google.common.collect.ImmutableSet</code> 或
 <code>com.google.common.collect.ImmutableMap</code>。</p>
 </body>
 </html>

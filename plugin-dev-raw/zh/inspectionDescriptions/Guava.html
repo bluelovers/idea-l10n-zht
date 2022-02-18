@@ -6,7 +6,7 @@
 <pre><code>
   ImmutableList&lt;String&gt; results = FluentIterable.from(List.of(1, 2, 3)).transform(Object::function toString() { [native code] }).toList();
 </code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>
   List&lt;String&gt; results = List.of(1, 2, 3).stream().map(Object::function toString() { [native code] }).collect(Collectors.toList());
 </code></pre>
@@ -14,6 +14,6 @@
 該快速修復可能會改變語意。 Guava 的一些惰性求值的可迭代物件可以轉換為預求值的可迭代物件。
 </p>
 <!-- tooltip end -->
-<p>僅當專案或模塊的語言級別為 8 或更高時，此檢查才會報告。</p>
+<p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
 <body>
-報告具有 <code>@deprecated</code> Javadoc 標記但沒有 <code>@java.lang.Deprecated</code> 註解的模塊宣告、類、欄位或方法。
+報告具有 <code>@deprecated</code> Javadoc 標記但沒有 <code>@java.lang.Deprecated</code> 註解的模組宣告、類、欄位或方法。
 <p><b>範例：</b></p>
 <pre><code>
   /**
@@ -8,7 +8,7 @@
    */
   void sample(){ }
 </code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>
   /**
    * @deprecated use {@code example()} instead
@@ -17,7 +17,7 @@
   void sample(){ }
 </code></pre>
 <!-- tooltip end -->
-<p>此檢查僅在專案或模塊的語言級別為 5 或更高時有效。</p>
+<p>此檢查僅在專案或模組的語言級別為 5 或更高時有效。</p>
 <p>
 使用下面的復選框，對使用 <code>@Deprecated</code> 註解但在 <code>@deprecated</code> Javadoc 標記中沒有解釋的符號發出警告。
 

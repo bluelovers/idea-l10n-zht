@@ -7,7 +7,7 @@ class Service(val url: String) {
     fun connect(): URLConnection = URL(url).openConnection()
 }
 </code></pre>
-<p>應用快速修復後（考慮到 <code>Service</code> 類之外沒有使用 <code>url</code> 的情況）：</p>
+<p>套用快速修復後（考慮到 <code>Service</code> 類之外沒有使用 <code>url</code> 的情況）：</p>
 <pre><code>
 class Service(private val url: String) {
     fun connect(): URLConnection = URL(url).openConnection()

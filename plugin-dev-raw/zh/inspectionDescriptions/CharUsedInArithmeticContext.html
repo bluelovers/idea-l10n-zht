@@ -3,12 +3,12 @@
 報告用於加法或減法表達式的 <code>char</code> 類型的表達式。
 <p>此類程式碼不一定是問題，但可能會導致錯誤（例如，如果需要字串）。</p>
 <p><b>範例</b>：<code>int a = 'a' + 42;</code></p>
-<p>應用該快速修復後：<code>int a = (int) 'a' + 42;</code></p>
+<p>套用該快速修復後：<code>int a = (int) 'a' + 42;</code></p>
 <p>對於 <code>String</code> 上下文：
 <pre><code>int i1 = 1;
 int i2 = 2;
 System.out.println(i2 + '-' + i1 + &quot; = &quot; + (i2 - i1));</code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <code>System.out.println(i2 + &quot;-&quot; + i1 + &quot; = &quot; + (i2 - i1));</code>
 <!-- tooltip end -->
 </body>

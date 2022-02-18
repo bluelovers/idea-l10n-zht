@@ -10,7 +10,7 @@
     final boolean b = t == s;
   }
 </code></pre>
-<p>如果已知 <code>t</code> 為非 null 值，則可以安全地應用“不安全”的快速修復，並獲得類似於以下的結果：</p>
+<p>如果已知 <code>t</code> 為非 null 值，則可以安全地套用“不安全”的快速修復，並獲得類似於以下的結果：</p>
 <pre><code>
   void foo(String s, String t) {
     final boolean b = t.equals(s);

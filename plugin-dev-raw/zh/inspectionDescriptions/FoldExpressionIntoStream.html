@@ -7,7 +7,7 @@
     return a.startsWith(prefix) && b.startsWith(prefix) && c.startsWith(prefix) && d.startsWith(prefix);
   }
 </code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>
   boolean foo(String a, String b, String c, String d, String prefix) {
     return Stream.of(a, b, c, d).allMatch(s -> s.startsWith(prefix));
@@ -19,14 +19,14 @@
     return a + "," + b + "," + c + "," + d;
   }
 </code></pre>
-<p>在應用快速修復後：</p>
+<p>在套用快速修復後：</p>
 <pre><code>
   String joinAll(String a, String b, String c, String d) {
     return String.join(",", a, b, c, d);
   }
 </code></pre>
 <!-- tooltip end -->
-<p>僅當專案或模塊的語言級別為 8 或更高時，此檢查才會報告。</p>
+<p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>
 <p><small>2018.2 最新變化</small></p>
 </body>
 </html>
