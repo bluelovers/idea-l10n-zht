@@ -21,6 +21,12 @@ export function handleText(content_old: string, info?: {
 					.replace(/儲存庫/g, '版本庫')
 				;
 			}
+			else if (/LeakableMapKey\.html$/i.test(file))
+			{
+				content_new = content_new
+					.replace(/卸載/g, '解除安裝')
+				;
+			}
 
 			return content_new
 		})

@@ -533,6 +533,39 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
+"@regexp-cjk/escape-unicode-property@^1.0.23":
+  version "1.0.23"
+  resolved "https://registry.npmjs.org/@regexp-cjk/escape-unicode-property/-/escape-unicode-property-1.0.23.tgz#e621e01c8fcb369e7db1c7e9403566c610b033dd"
+  integrity sha512-1p18GD+8ZefWU7Q2piEwaPMXWBRtuFoZPOZxBSP1/5AeB8FMIcRUImS/VcgPSsH138gUkt+GCDf++k+LFdMJoQ==
+  dependencies:
+    "@regexp-cjk/rewrite-pattern" "^1.0.28"
+    lodash "^4.17.21"
+    tslib "^2.3.1"
+
+"@regexp-cjk/regexpu-core-v4@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/@regexp-cjk/regexpu-core-v4/-/regexpu-core-v4-1.0.3.tgz#d5dfc2ac2fab992d0451fa0ccd034eb042fc24f5"
+  integrity sha512-BPhJRYo48ka2ahMiEt25nzGq+buFZ/vweOWIGguwiYURa6vH+InglXrwj732KMIvlHL7IijZCRfmOkSHJvGzLw==
+  dependencies:
+    regexpu-core "<5 >=4.8.0"
+
+"@regexp-cjk/rewrite-flags@^1.0.17":
+  version "1.0.17"
+  resolved "https://registry.npmjs.org/@regexp-cjk/rewrite-flags/-/rewrite-flags-1.0.17.tgz#6454507ba5c4e0dab6eb665b87437ea2311419c0"
+  integrity sha512-jCG5kfqSIEPgzAw7U8Hcc8+MNHLyQWyiXNCA14yMyvpi6lxSCraATVZ6WgPguY70pfPCrZ9em49Meen2Jpz8/Q==
+  dependencies:
+    tslib "^2.3.1"
+
+"@regexp-cjk/rewrite-pattern@^1.0.28":
+  version "1.0.28"
+  resolved "https://registry.npmjs.org/@regexp-cjk/rewrite-pattern/-/rewrite-pattern-1.0.28.tgz#4ce79832c6bb0af0f2defeb0d345e947fa22dd8f"
+  integrity sha512-mfw8FV0L78klxEB/m44bTKDuElAvJb2VXuZ8boPxRA/jHl+6f2Vhutk+8/c4v16sJqQzad2ZQTe4OcMkqBoTAA==
+  dependencies:
+    "@regexp-cjk/regexpu-core-v4" "^1.0.3"
+    "@regexp-cjk/rewrite-flags" "^1.0.17"
+    lodash "^4.17.21"
+    tslib "^2.3.1"
+
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
@@ -2326,6 +2359,11 @@ jschardet@^3.0.0:
   resolved "https://registry.npmjs.org/jschardet/-/jschardet-3.0.0.tgz#898d2332e45ebabbdb6bf2feece9feea9a99e882"
   integrity sha512-lJH6tJ77V8Nzd5QWRkFYCLc13a3vADkh3r/Fi8HupZGWk2OVVDfnZP8V/VgQgZ+lzW0kG2UGb5hFgt3V3ndotQ==
 
+jsesc@~0.5.0:
+  version "0.5.0"
+  resolved "https://registry.npmjs.org/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
+  integrity sha1-597mbjXW/Bb3EP6R1c9p9w8IkR0=
+
 json-buffer@3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.0.tgz#5b1f397afc75d677bde8bcfc0e47e1f9a3d9a898"
@@ -3230,6 +3268,47 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
+regenerate-unicode-properties@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.npmjs.org/regenerate-unicode-properties/-/regenerate-unicode-properties-9.0.0.tgz#54d09c7115e1f53dc2314a974b32c1c344efe326"
+  integrity sha512-3E12UeNSPfjrgwjkR81m5J7Aw/T55Tu7nUyZVQYCKEOs+2dkxEY+DpPtZzO4YruuiPb7NkYLVcyJC4+zCbk5pA==
+  dependencies:
+    regenerate "^1.4.2"
+
+regenerate@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.npmjs.org/regenerate/-/regenerate-1.4.2.tgz#b9346d8827e8f5a32f7ba29637d398b69014848a"
+  integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
+
+regexp-cjk-plugin-escape-unicode-property@^1.0.33:
+  version "1.0.33"
+  resolved "https://registry.npmjs.org/regexp-cjk-plugin-escape-unicode-property/-/regexp-cjk-plugin-escape-unicode-property-1.0.33.tgz#6d05d24750d80e3909b074fd7dbeb07f9c4b36a3"
+  integrity sha512-+yTlWhhgGuDLtCQf3VQdi5772tTWJ2nc3JEKLH2h/jne4mWPQNvSj/g6Yq2lCoX+jufH3Vai2CbX7sxRprmJPg==
+  dependencies:
+    "@regexp-cjk/escape-unicode-property" "^1.0.23"
+    tslib "^2.3.1"
+
+regexp-cjk-plugin-extra@^1.0.41:
+  version "1.0.41"
+  resolved "https://registry.npmjs.org/regexp-cjk-plugin-extra/-/regexp-cjk-plugin-extra-1.0.41.tgz#d869d737f9bef62f030e3f9ed153d29a19fa8a63"
+  integrity sha512-KlqN/vtPnlcv9nRUVnjhrQ8x1tRRIl1wWvvMBAYpIa3ifWmyfxwXaMNWt+/i7osQ28oMgAGMrB9DlWAOO8pYLw==
+  dependencies:
+    array-hyper-unique "^2.0.6"
+    lodash "^4.17.21"
+    str-util "^2.3.28"
+    tslib "^2.3.1"
+    uni-string "^1.1.12"
+
+regexp-cjk-with-plugin-enabled@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.npmjs.org/regexp-cjk-with-plugin-enabled/-/regexp-cjk-with-plugin-enabled-1.0.12.tgz#fd8070f6db6a8bf5003d7f6358ad8eed772b8428"
+  integrity sha512-C5l0DZS3s+Qz8HsSqt0vsqEuxO/jhpXnizK+V6yIlsAtRz2xl23UoEG7N3jN+9czycR52HwGUsLnx3cOSsqZ5A==
+  dependencies:
+    regexp-cjk "^3.3.106"
+    regexp-cjk-plugin-escape-unicode-property "^1.0.33"
+    regexp-cjk-plugin-extra "^1.0.41"
+    tslib "^2.3.1"
+
 regexp-cjk@^3.3.106:
   version "3.3.106"
   resolved "https://registry.npmjs.org/regexp-cjk/-/regexp-cjk-3.3.106.tgz#7401b5e6c23a298b4dd771409faea0b14dff6e82"
@@ -3307,6 +3386,18 @@ regexpp2@^1.3.23:
   dependencies:
     tslib "^2.3.1"
 
+"regexpu-core@<5 >=4.8.0":
+  version "4.8.0"
+  resolved "https://registry.npmjs.org/regexpu-core/-/regexpu-core-4.8.0.tgz#e5605ba361b67b1718478501327502f4479a98f0"
+  integrity sha512-1F6bYsoYiz6is+oz70NWur2Vlh9KWtswuRuzJOfeYUrfPX2o8n74AnUVaOGDbUqVGO9fNHu48/pjJO4sNVwsOg==
+  dependencies:
+    regenerate "^1.4.2"
+    regenerate-unicode-properties "^9.0.0"
+    regjsgen "^0.5.2"
+    regjsparser "^0.7.0"
+    unicode-match-property-ecmascript "^2.0.0"
+    unicode-match-property-value-ecmascript "^2.0.0"
+
 registry-auth-token@^4.0.0:
   version "4.2.1"
   resolved "https://registry.npmjs.org/registry-auth-token/-/registry-auth-token-4.2.1.tgz#6d7b4006441918972ccd5fedcd41dc322c79b250"
@@ -3320,6 +3411,18 @@ registry-url@^5.0.0:
   integrity sha512-8acYXXTI0AkQv6RAOjE3vOaIXZkT9wo4LOFbBKYQEEnnMNBpKqdUrI6S4NT0KPIo/WVvJ5tE/X5LF/TQUf0ekw==
   dependencies:
     rc "^1.2.8"
+
+regjsgen@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.npmjs.org/regjsgen/-/regjsgen-0.5.2.tgz#92ff295fb1deecbf6ecdab2543d207e91aa33733"
+  integrity sha512-OFFT3MfrH90xIW8OOSyUrk6QHD5E9JOTeGodiJeBS3J6IwlgzJMNE/1bZklWz5oTg+9dCMyEetclvCVXOPoN3A==
+
+regjsparser@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.npmjs.org/regjsparser/-/regjsparser-0.7.0.tgz#a6b667b54c885e18b52554cb4960ef71187e9968"
+  integrity sha512-A4pcaORqmNMDVwUjWoTzuhwMGpP+NykpfqAsEgI1FSH/EzC7lrN5TMd+kN8YCovX+jMpu8eaqXgXPCa0g8FQNQ==
+  dependencies:
+    jsesc "~0.5.0"
 
 replace-url-protocol@^1.0.5:
   version "1.0.5"
@@ -3844,6 +3947,29 @@ uni-string@^1.1.12:
     es6-class-prototype "^1.0.4"
     runes2 "^0.4.16"
     tslib "^2.3.1"
+
+unicode-canonical-property-names-ecmascript@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-2.0.0.tgz#301acdc525631670d39f6146e0e77ff6bbdebddc"
+  integrity sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==
+
+unicode-match-property-ecmascript@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/unicode-match-property-ecmascript/-/unicode-match-property-ecmascript-2.0.0.tgz#54fd16e0ecb167cf04cf1f756bdcc92eba7976c3"
+  integrity sha512-5kaZCrbp5mmbz5ulBkDkbY0SsPOjKqVS35VpL9ulMPfSl0J0Xsm+9Evphv9CoIZFwre7aJoa94AY6seMKGVN5Q==
+  dependencies:
+    unicode-canonical-property-names-ecmascript "^2.0.0"
+    unicode-property-aliases-ecmascript "^2.0.0"
+
+unicode-match-property-value-ecmascript@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/unicode-match-property-value-ecmascript/-/unicode-match-property-value-ecmascript-2.0.0.tgz#1a01aa57247c14c568b89775a54938788189a714"
+  integrity sha512-7Yhkc0Ye+t4PNYzOGKedDhXbYIBe1XEQYQxOPyhcXNMJ0WCABqqj6ckydd6pWRZTHV4GuCPKdBAUiMc60tsKVw==
+
+unicode-property-aliases-ecmascript@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-2.0.0.tgz#0a36cb9a585c4f6abd51ad1deddb285c165297c8"
+  integrity sha512-5Zfuy9q/DFr4tfO7ZPeVXb1aPoeQSdeFMLpYuFebehDAhbuevLs5yxSZmIFN1tP5F9Wl4IpJrYojg85/zgyZHQ==
 
 unique-filename@^1.1.1:
   version "1.1.1"
