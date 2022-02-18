@@ -94,6 +94,9 @@
     "configurable.AppEngineModulesConfigurable.display.name": "Google App Engine",
     "python.app.engine.project.name": "Google App Engine"
   },
+  "messages/AppServersCommonBundle.properties": {
+    "ServerInstance.exception.message": "{0}: {1}"
+  },
   "messages/ApplicationBundle.properties": {
     "wrapping.try.resources": "'try-with-resources'",
     "combobox.crlf.windows": "Windows (\\r\\n)",
@@ -101,9 +104,6 @@
     "editorsearch.current.cursor.position": "{0}/{1}",
     "editorsearch.toomuch": "{0}+",
     "settings.hints.group.code.vision": "Code Vision"
-  },
-  "messages/AppServersCommonBundle.properties": {
-    "ServerInstance.exception.message": "{0}: {1}"
   },
   "messages/ArquillianBundle.properties": {
     "arquillian.junit.configuration.name": "Arquillian JUnit",
@@ -114,6 +114,9 @@
     "highlighting.tooltip.html": "<html><body>{0}</body></html>",
     "action.create.aspect.kind.annotation": "@Aspect"
   },
+  "messages/BVBundle.properties": {
+    "label.unknown": "@unknown"
+  },
   "messages/BackgroundTaskBundle.properties": {
     "settings.name": "File Watcher",
     "inspections.group.name": "File Watcher",
@@ -122,8 +125,39 @@
     "command.name.file.watcher.0": "File Watcher: {0}",
     "actions.on.save.page.label.file.watcher": "File Watcher"
   },
-  "messages/BVBundle.properties": {
-    "label.unknown": "@unknown"
+  "messages/CLionCMakeBundle.properties": {
+    "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options",
+    "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options",
+    "advanced.setting.cmake.run.shouldGenerateConfigs": "Generate run configurations for new CMake/Makefile targets automatically",
+    "advanced.setting.cmake.run.shouldDeleteObsoleteConfigs": "Delete run configurations for missing CMake/Makefile targets automatically",
+    "advanced.setting.cmake.reload.profiles.sequentially": "Reload CMake profiles sequentially",
+    "advanced.setting.cmake.reload.profiles.sequentially.description": "By default, CMake profiles are reloaded in parallel"
+  },
+  "messages/CLionExecutionBundle.properties": {
+    "cpp.build.description.1": "====================[ {0} ]====",
+    "cpp.build.description.2": "====================[ {0} | {1} ]====",
+    "cpp.build.description.3": "====================[ {0} | {1} | {2} ]====",
+    "gdbRemote.lldb.command": "'process connect' url:",
+    "gdbRemote.sysroot": "Sysroot:",
+    "gdbRemote.toolchain.incompatibleToolset.brief": "{0}",
+    "gdbRemote.toolchain.debuggerDoesNotExist.brief": "{0}",
+    "remote.debuggers.combobox.gdb": "GDB:",
+    "coredump.sysroot": "Sysroot:"
+  },
+  "messages/CLionProfilingBundle.properties": {
+    "dynamic.analysis.tools.memcheck.border.title": "Valgrind Memcheck",
+    "sanitizers.llvmSymbolizer.notification.title": "Google Sanitizers"
+  },
+  "messages/CMakeBundle.properties": {
+    "cmake.action.newCMakeLists.title": "CMakeLists.txt"
+  },
+  "messages/CPPBundle.properties": {
+    "language.cpp.settings.description": "C/C++"
+  },
+  "messages/CTestingBundle.properties": {
+    "test.project.indexing.tests.cancel": "Cancel Test Indexing",
+    "test.project.indexing.tests.cancel.tooltip": "Cancel test indexing",
+    "inspections.fileChecks.testIndexIsSuspended": "Test indexing for {0} is suspended. Navigation to the test source and completion of the test names may be broken."
   },
   "messages/CdiBundle.properties": {
     "actions.show.named": "@Named",
@@ -138,15 +172,15 @@
   "messages/CidrBoostBundle.properties": {
     "boost.test.configuration.name": "Boost.Test"
   },
+  "messages/CidrCTestBundle.properties": {
+    "ctest.test.number.column.header": "#"
+  },
   "messages/CidrCoverageBundle.properties": {
     "gcov.llvm.name": "gcov/llvm",
     "gcov.name": "gcov/llvm-cov",
     "gcov.binary.row.title": "gcov:",
     "llvm.cov.binary.row.title": "llvm-cov:",
     "llvm.profdata.binary.row.title": "llvm-profdata:"
-  },
-  "messages/CidrCTestBundle.properties": {
-    "ctest.test.number.column.header": "#"
   },
   "messages/CidrDebuggerBundle.properties": {
     "debug.memory.view.name.pattern": "{0} ({1})",
@@ -184,31 +218,8 @@
     "clang.tidy.update.settings.override": "Please be aware that .clang-tidy files may overwrite your IDE's default inspection settings",
     "inspection.clazy.message": "Clazy: {0}"
   },
-  "messages/CLionCMakeBundle.properties": {
-    "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options",
-    "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options",
-    "advanced.setting.cmake.run.shouldGenerateConfigs": "Generate run configurations for new CMake/Makefile targets automatically",
-    "advanced.setting.cmake.run.shouldDeleteObsoleteConfigs": "Delete run configurations for missing CMake/Makefile targets automatically",
-    "advanced.setting.cmake.reload.profiles.sequentially": "Reload CMake profiles sequentially",
-    "advanced.setting.cmake.reload.profiles.sequentially.description": "By default, CMake profiles are reloaded in parallel"
-  },
   "messages/ClionEmbeddedPlatformioBundle.properties": {
     "run.config.uploadfs": "PlatformIO Uploadfs"
-  },
-  "messages/CLionExecutionBundle.properties": {
-    "cpp.build.description.1": "====================[ {0} ]====",
-    "cpp.build.description.2": "====================[ {0} | {1} ]====",
-    "cpp.build.description.3": "====================[ {0} | {1} | {2} ]====",
-    "gdbRemote.lldb.command": "'process connect' url:",
-    "gdbRemote.sysroot": "Sysroot:",
-    "gdbRemote.toolchain.incompatibleToolset.brief": "{0}",
-    "gdbRemote.toolchain.debuggerDoesNotExist.brief": "{0}",
-    "remote.debuggers.combobox.gdb": "GDB:",
-    "coredump.sysroot": "Sysroot:"
-  },
-  "messages/CLionProfilingBundle.properties": {
-    "dynamic.analysis.tools.memcheck.border.title": "Valgrind Memcheck",
-    "sanitizers.llvmSymbolizer.notification.title": "Google Sanitizers"
   },
   "messages/CloudBundle.properties": {
     "run.configuration.name": "{0} - {1}",
@@ -222,9 +233,6 @@
   },
   "messages/CloudFoundryBundle.properties": {
     "CFIntegration.name": "Cloud Foundry"
-  },
-  "messages/CMakeBundle.properties": {
-    "cmake.action.newCMakeLists.title": "CMakeLists.txt"
   },
   "messages/CodeInsightBundle.properties": {
     "surround.with.cast.template": "((Type)expr)",
@@ -282,9 +290,6 @@
   "messages/CompDBBundle.properties": {
     "compdb.url": "http://clang.llvm.org/docs/JSONCompilationDatabase.html"
   },
-  "messages/CPPBundle.properties": {
-    "language.cpp.settings.description": "C/C++"
-  },
   "messages/CsBundle.properties": {
     "surrounder.if.else": "if/else",
     "surrounder.try.catch": "try/catch",
@@ -318,11 +323,6 @@
     "url.value.presentable.name": "<url>",
     "id.value.presentable.name": "<id>",
     "css.stylelint.message.prefix": "Stylelint:"
-  },
-  "messages/CTestingBundle.properties": {
-    "test.project.indexing.tests.cancel": "Cancel Test Indexing",
-    "test.project.indexing.tests.cancel.tooltip": "Cancel test indexing",
-    "inspections.fileChecks.testIndexIsSuspended": "Test indexing for {0} is suspended. Navigation to the test source and completion of the test names may be broken."
   },
   "messages/CucumberBundle.properties": {
     "step.definition.0.1": "{0} {1}"
@@ -524,6 +524,10 @@
     "clone.repository.url.label": "URL:",
     "multi.message.line.prefix.form": "{0}: {1}"
   },
+  "messages/EJBHighlightingBundle.properties": {
+    "ejb.enterprise.java.beans": "EJB: Enterprise Java Beans",
+    "ejb.label.name": "<ejb-name>(&N):"
+  },
   "messages/EclipseBundle.properties": {
     "eclipse.classpath.storage.description": "Eclipse (.classpath)"
   },
@@ -544,10 +548,6 @@
     "action.CreateServletAction.text": "Servlet(_S)",
     "action.GenerateServletAction.text": "Servlet(&S)…",
     "label.edit.relationship.ejb": "EJB:"
-  },
-  "messages/EJBHighlightingBundle.properties": {
-    "ejb.enterprise.java.beans": "EJB: Enterprise Java Beans",
-    "ejb.label.name": "<ejb-name>(&N):"
   },
   "messages/EmbeddedBundle.properties": {
     "svd.write.only": "<Write-Only>",
@@ -633,11 +633,11 @@
     "label.credential.store.key.http.password": "Git HTTP",
     "stash.editor.diff.preview.id.change.title": "{0}：{1}"
   },
-  "messages/GithubBundle.properties": {
-    "pull.request.list.item.info": "#{0,number,#} {1}，{2}"
-  },
   "messages/GitLessonsBundle.properties": {
     "git.annotate.close.changes": "As far as we see the highlighted commit message, this strange value of {0} is not a mistake. So, after the long journey through the history of this file, you can close the opened tool window. Press {1}."
+  },
+  "messages/GithubBundle.properties": {
+    "pull.request.list.item.info": "#{0,number,#} {1}，{2}"
   },
   "messages/GlassfishBundle.properties": {
     "descriptor.pattern.name": "{0} ({1})",
@@ -825,6 +825,18 @@
     "group.names.javaee.issues": "Java EE",
     "starter.web.application.hint": "Servlet、web.xml、index.jsp"
   },
+  "messages/JBossBundle.properties": {
+    "JBossIntegration.name": "JBoss/WildFly"
+  },
+  "messages/JSDebuggerBundle.properties": {
+    "javascript.debugger.settings.url": "URL(&U):",
+    "js.debug.firefox.config.name": "Firefox Remote",
+    "react.native.config.name": "React Native",
+    "react.native.project.generator.package.name": "React Native:"
+  },
+  "messages/JUnitBundle.properties": {
+    "default.junit.config.name.category": "@Category({0})"
+  },
   "messages/JadeBundle.properties": {
     "color.settings.name": "Pug/Jade",
     "pug.code.style.configurable.name": "Pug/Jade",
@@ -896,9 +908,6 @@
     "instances.window.show.history": "InstancesWindow.ShowHistory",
     "surround.with.runtime.type.template": "((RuntimeType)expr)",
     "memory.view.function": "Object() { [native code] }.tracker.name=MemoryViewConstructorTracker: {0}"
-  },
-  "messages/JavaeeJspBaseBundle.properties": {
-    "dialog.edit.template.checkbox.jsp": "JSP (&P)"
   },
   "messages/JavaErrorBundle.properties": {
     "lvti.selfReferenced": "Cannot infer type for ''{0}'', it is used in its own variable initializer",
@@ -1030,8 +1039,8 @@
     "project.structure.sdk": "SDK:",
     "notification.group.build.script.found": "Build script found"
   },
-  "messages/JBossBundle.properties": {
-    "JBossIntegration.name": "JBoss/WildFly"
+  "messages/JavaeeJspBaseBundle.properties": {
+    "dialog.edit.template.checkbox.jsp": "JSP (&P)"
   },
   "messages/JetBrainsTeamAuthBundle.properties": {
     "notification.title.failed": "JetBrains.team"
@@ -1047,18 +1056,9 @@
     "notification.content.commits.count.threshold": "Should be at least 150 commits for compilation caches download.",
     "notification.content.no.commits.since.latest.compilation": "No new commits since last success compilation."
   },
-  "messages/JSDebuggerBundle.properties": {
-    "javascript.debugger.settings.url": "URL(&U):",
-    "js.debug.firefox.config.name": "Firefox Remote",
-    "react.native.config.name": "React Native",
-    "react.native.project.generator.package.name": "React Native:"
-  },
   "messages/JsonBundle.properties": {
     "unnamed.desc": "<unnamed>",
     "schema.widget.prefix.json.files": "JSON:"
-  },
-  "messages/JUnitBundle.properties": {
-    "default.junit.config.name.category": "@Category({0})"
   },
   "messages/JupyterBundle.properties": {
     "Jupyter.action.create.notebook.text": "Jupyter Notebook",
@@ -1303,37 +1303,6 @@
     "bnd.configuration.name": "Bnd OSGi",
     "bnd.resolve.tree.via": "VIA:"
   },
-  "messages/packageSearchBundle.properties": {
-    "packagesearch.repository.copyableInfo.id": "ID: {0}",
-    "packagesearch.repository.copyableInfo.url": "URL: {0}",
-    "packagesearch.terminology.kotlinMultiplatform.platform.android_jvm": "Android JVM",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_arm32": "Android (arm32)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_arm64": "Android (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_x64": "Android (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_x86": "Android (x86)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.ios_arm32": "iOS (arm32)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.ios_arm64": "iOS (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.ios_x64": "iOS (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_arm32_hfp": "Linux (arm32_hfp)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_arm64": "Linux (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_mips32": "Linux (mips32)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_mipsel32": "Linux (mips32 little endian)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_x64": "Linux (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.macos_arm64": "macOS (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.macos_x64": "macOS (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.mingw_x64": "mingw (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.mingw_x86": "mingw (x86)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.node": "Node.js",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.tvos_arm64": "tvOS (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.tvos_x64": "tvOS (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.wasm32": "WebAssembly (wasm32)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_arm32": "watchOS (arm32)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_arm64": "watchOS (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_x64": "watchOS (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_x86": "watchOS (x86)",
-    "packagesearch.terminology.kotlinMultiplatform.tooltip": "Kotlin Multiplatform",
-    "packagesearch.ui.util.numberWithThousandsSymbol": "{0}k"
-  },
   "messages/PagesBundle.properties": {
     "action.Seam.Create.Pages.Xml.text": "Seam pages.xml"
   },
@@ -1505,12 +1474,6 @@
     "java.8.list.replaceall.inspection.description": "The loop can be replaced with 'List.replaceAll'",
     "java.8.list.replaceall.inspection.fix.name": "Replace the loop with 'List.replaceAll'"
   },
-  "messages/RbsBundle.properties": {
-    "rbs.actions.run.anything.help.placeholder": "rbs <command>",
-    "steep.actions.run.anything.help.placeholder": "steep <command>",
-    "rbs.rubysigs.name": "rbs ({0}) [bundled]",
-    "rbs.rubysigs.name.with.version": "rbs (v{0}, {1}) [bundled]"
-  },
   "messages/RBundle.properties": {
     "sdk.ruby.title": "Ruby SDK",
     "sdk.jruby.title": "JRuby SDK",
@@ -1591,6 +1554,37 @@
     "ruby.code.style.indent.visibility.modifiers": "Indent visibility modifiers",
     "ruby.code.style.indent.after.disabled.tooltip": "When visibility modifiers are outdented, methods following them are always indented."
   },
+  "messages/RPluginBundle.properties": {
+    "project.setting.rcpp.email": "your@email.com",
+    "project.setting.rcpp.license": "GPL (>= 2)",
+    "interpreter.status.bar.local.interpreter.representation": "R {0}",
+    "interpreter.status.bar.current.interpreter.name": "R {0}",
+    "rx.presentation.utils.environment.unnamed": "[environment]",
+    "rx.presentation.utils.list.element.name": "[[{0}]]",
+    "rx.presentation.utils.vector.element.name": "[{0}]",
+    "rx.presentation.utils.list.text": "List[1:{0}]",
+    "rx.presentation.utils.empty.list.text": "list()",
+    "import.data.dialog.encoding.utf": "UTF-8",
+    "import.data.dialog.encoding.latin": "Latin-1",
+    "inlay.hints.function.return.expression.explicit.prefix": "^",
+    "inlay.hints.function.return.expression.implicit.prefix": "<n>^",
+    "debugger.global.stack.frame": "[global]",
+    "create.new.r.markdown.file.notebook": "HTML Notebook",
+    "dataframe.viewer.page.count": "/{0}",
+    "rstudioapi.show.dialog.message": "{0}\n<a href=\"{1}\">{1}</a>",
+    "project.settings.ml.completion.version.none": "-",
+    "r.console.missing.path.to.r.message": "Cannot run console until path to viable R interpreter is specified"
+  },
+  "messages/RSBundle.properties": {
+    "webservices.file.templates.group.name": "JAX-RS",
+    "generate.java.from.wadl.url": "WADL URL:"
+  },
+  "messages/RbsBundle.properties": {
+    "rbs.actions.run.anything.help.placeholder": "rbs <command>",
+    "steep.actions.run.anything.help.placeholder": "steep <command>",
+    "rbs.rubysigs.name": "rbs ({0}) [bundled]",
+    "rbs.rubysigs.name.with.version": "rbs (v{0}, {1}) [bundled]"
+  },
   "messages/RegExpBundle.properties": {
     "error.dangling.opening.bracket": "Unexpected start of quantifier '{'",
     "inspection.name.simplifiable.expression": "Regular expression can be simplified",
@@ -1641,31 +1635,6 @@
     "http.request.navigate.to.private.environment.action.text": "Edit Private…",
     "http.request.no.environment.action.text": "No Environment"
   },
-  "messages/RPluginBundle.properties": {
-    "project.setting.rcpp.email": "your@email.com",
-    "project.setting.rcpp.license": "GPL (>= 2)",
-    "interpreter.status.bar.local.interpreter.representation": "R {0}",
-    "interpreter.status.bar.current.interpreter.name": "R {0}",
-    "rx.presentation.utils.environment.unnamed": "[environment]",
-    "rx.presentation.utils.list.element.name": "[[{0}]]",
-    "rx.presentation.utils.vector.element.name": "[{0}]",
-    "rx.presentation.utils.list.text": "List[1:{0}]",
-    "rx.presentation.utils.empty.list.text": "list()",
-    "import.data.dialog.encoding.utf": "UTF-8",
-    "import.data.dialog.encoding.latin": "Latin-1",
-    "inlay.hints.function.return.expression.explicit.prefix": "^",
-    "inlay.hints.function.return.expression.implicit.prefix": "<n>^",
-    "debugger.global.stack.frame": "[global]",
-    "create.new.r.markdown.file.notebook": "HTML Notebook",
-    "dataframe.viewer.page.count": "/{0}",
-    "rstudioapi.show.dialog.message": "{0}\n<a href=\"{1}\">{1}</a>",
-    "project.settings.ml.completion.version.none": "-",
-    "r.console.missing.path.to.r.message": "Cannot run console until path to viable R interpreter is specified"
-  },
-  "messages/RSBundle.properties": {
-    "webservices.file.templates.group.name": "JAX-RS",
-    "generate.java.from.wadl.url": "WADL URL:"
-  },
   "messages/RubyDockerBundle.properties": {
     "ruby.docker.compose.up.project": "\"docker-compose up\"",
     "ruby.docker.compose.command.type.run.name": "docker-compose run",
@@ -1678,6 +1647,17 @@
   "messages/SASSBundle.properties": {
     "color.settings.sass.name": "Sass/SCSS",
     "inspections.group.name": "Sass/SCSS"
+  },
+  "messages/SSRBundle.properties": {
+    "reference.0.label": "Reference={0}",
+    "script.0.label": "Script={0}",
+    "text.0.label": "Text={0}",
+    "type.0.label": "Type={0}",
+    "xml_html.category": "XML/HTML",
+    "j2ee.category": "Java/Java EE",
+    "min.occurs.tooltip.message": "[{0},{1}]",
+    "file.type.pattern.context": "{0} - {1}",
+    "replace.configuration.display.text": "{0} ⇨ {1}"
   },
   "messages/ScalaAkkaBundle.properties": {
     "intention.category.scala.akka": "Scala/Akka"
@@ -1748,6 +1728,9 @@
     "page.object.action.new.file.dialog.error": "Error Creating Page Object",
     "page.object.selector.gutter.pending": "Page Object Selector: validation is in progress"
   },
+  "messages/ShBundle.properties": {
+    "sh.unnamed.element.presentable.name": "<unnamed>"
+  },
   "messages/SharedIndexesBundle.properties": {
     "progress.message.permanent.auth.testing": "{0}",
     "configuration.section.jdk": "JDK:",
@@ -1760,9 +1743,6 @@
     "existing.indexes.req.presentable.str": "Use existing project caches",
     "non.existing.indexes.req.presentable.str": "Create caches from scratch",
     "shared.caches.copy.req.progress.text.copying": "Copying... {0}"
-  },
-  "messages/ShBundle.properties": {
-    "sh.unnamed.element.presentable.name": "<unnamed>"
   },
   "messages/SpaceBundle.properties": {
     "product.name.jetbrains.space": "JetBrains Space",
@@ -1881,17 +1861,6 @@
     "advanced.setting.ssh.tool.custom.path": "Custom path to an OpenSSH tool",
     "advanced.setting.ssh.tool.custom.path.description": "This option is used only when the OpenSSH config parser is selected.",
     "dialog.message.error.unable.to.list.processes.for": "Unable to load the processes list for the OS: {0}"
-  },
-  "messages/SSRBundle.properties": {
-    "reference.0.label": "Reference={0}",
-    "script.0.label": "Script={0}",
-    "text.0.label": "Text={0}",
-    "type.0.label": "Type={0}",
-    "xml_html.category": "XML/HTML",
-    "j2ee.category": "Java/Java EE",
-    "min.occurs.tooltip.message": "[{0},{1}]",
-    "file.type.pattern.context": "{0} - {1}",
-    "replace.configuration.display.text": "{0} ⇨ {1}"
   },
   "messages/Struts2Bundle.properties": {
     "struts2": "Struts 2",
@@ -2054,6 +2023,17 @@
     "confirm.before.files.uploading.title": "Confirm Uploading",
     "confirm.before.files.uploading.message": "Files will be uploaded to remote host ''{0}''.\nDo you want to proceed?"
   },
+  "messages/WSBundle.properties": {
+    "glassfish.jax.ws.2.x.ri.metro.1.x.jwsdp.2.0": "Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2",
+    "websphere.platform.name": "WebSphere 6.X",
+    "axis2.display.name": "Apache Axis 2",
+    "group.XmlBeans.text": "XMLBeans(_B)",
+    "group.JAXB.text": "JAXB(_X)",
+    "group.WebServicesActions.text": "WebService(_W)",
+    "jaxb.generation.dialog.sdk.label": "SDK:",
+    "jaxb.generation.dialog.xjc.label": "XJC:",
+    "jaxb.generation.dialog.jxc.label": "JXC:"
+  },
   "messages/WebBundle.properties": {
     "web.xml.validator.description": "Web.xml",
     "action.CreateServletAction.text": "Servlet(_S)",
@@ -2061,6 +2041,9 @@
     "create.jsp.action.jsp.jspx": "JSP/JSPX",
     "web.group.names.javaee.issues": "Java EE",
     "web.project.structure.root.type.name.java.web": "Java Web"
+  },
+  "messages/WebSphereBundle.properties": {
+    "websphere.integration.presentable.name": "WebSphere/Liberty"
   },
   "messages/WebflowBundle.properties": {
     "inspections.group.path.name": "Spring Web Flow",
@@ -2091,9 +2074,6 @@
     "weblogic.appc.name": "WebLogic APPC",
     "weblogic.ejbc.name": "WebLogic EJBC"
   },
-  "messages/WebSphereBundle.properties": {
-    "websphere.integration.presentable.name": "WebSphere/Liberty"
-  },
   "messages/WordPressBundle.properties": {
     "wp.cli.title": "WP-CLI",
     "wp.choose.invocation.of.hook.0": "Choose Invocation of Hook ''{0}''",
@@ -2101,23 +2081,18 @@
     "wp.has.registrations": "Has registrations",
     "wp.is.registered.in": "Is registered in"
   },
-  "messages/WSBundle.properties": {
-    "glassfish.jax.ws.2.x.ri.metro.1.x.jwsdp.2.0": "Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2",
-    "websphere.platform.name": "WebSphere 6.X",
-    "axis2.display.name": "Apache Axis 2",
-    "group.XmlBeans.text": "XMLBeans(_B)",
-    "group.JAXB.text": "JAXB(_X)",
-    "group.WebServicesActions.text": "WebService(_W)",
-    "jaxb.generation.dialog.sdk.label": "SDK:",
-    "jaxb.generation.dialog.xjc.label": "XJC:",
-    "jaxb.generation.dialog.jxc.label": "JXC:"
-  },
   "messages/XDebuggerBundle.properties": {
     "xdebugger.attach.pid": "pid {0,number,#}",
     "xdebugger.attach.action.items.error.message": "Failed to get the list of processes running on the host. Check the IDE log for additional details.",
     "xbreakpoint.default.display.text": "{1}:{0,number,#}",
     "action.Anonymous.text.breakpointdialog.gotosource": "BreakpointDialog.GoToSource",
     "action.Anonymous.text.breakpointdialog.showsource": "BreakpointDialog.ShowSource"
+  },
+  "messages/XPathBundle.properties": {
+    "dialog.title.xslt": "XSLT - {0}",
+    "label.uri": "URI(&U):",
+    "label.xpath": "XPath:",
+    "tab.title.xpath": "XPath ''{0}''"
   },
   "messages/XmlBundle.properties": {
     "web.editor.configuration.title": "HTML/CSS",
@@ -2134,10 +2109,35 @@
   "messages/XmlPsiBundle.properties": {
     "xml.quickfix.insert.required.attribute.text": "Insert required attribute ''{0}''"
   },
-  "messages/XPathBundle.properties": {
-    "dialog.title.xslt": "XSLT - {0}",
-    "label.uri": "URI(&U):",
-    "label.xpath": "XPath:",
-    "tab.title.xpath": "XPath ''{0}''"
+  "messages/packageSearchBundle.properties": {
+    "packagesearch.repository.copyableInfo.id": "ID: {0}",
+    "packagesearch.repository.copyableInfo.url": "URL: {0}",
+    "packagesearch.terminology.kotlinMultiplatform.platform.android_jvm": "Android JVM",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_arm32": "Android (arm32)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_arm64": "Android (arm64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_x64": "Android (x64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_x86": "Android (x86)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.ios_arm32": "iOS (arm32)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.ios_arm64": "iOS (arm64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.ios_x64": "iOS (x64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_arm32_hfp": "Linux (arm32_hfp)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_arm64": "Linux (arm64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_mips32": "Linux (mips32)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_mipsel32": "Linux (mips32 little endian)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_x64": "Linux (x64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.macos_arm64": "macOS (arm64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.macos_x64": "macOS (x64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.mingw_x64": "mingw (x64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.mingw_x86": "mingw (x86)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.node": "Node.js",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.tvos_arm64": "tvOS (arm64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.tvos_x64": "tvOS (x64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.wasm32": "WebAssembly (wasm32)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_arm32": "watchOS (arm32)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_arm64": "watchOS (arm64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_x64": "watchOS (x64)",
+    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_x86": "watchOS (x86)",
+    "packagesearch.terminology.kotlinMultiplatform.tooltip": "Kotlin Multiplatform",
+    "packagesearch.ui.util.numberWithThousandsSymbol": "{0}k"
   }
 }

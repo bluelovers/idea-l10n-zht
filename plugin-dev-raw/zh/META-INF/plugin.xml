@@ -44,10 +44,11 @@
 <li>以分詞系統與轉繁來基於官方簡體版自動打包製作</li>
 <li>解除版本安裝上限範圍的限制 <em>until-build</em></li>
 <li>忽略部分官方版檔案</li>
+<li>部分翻譯差異統一化</li>
 </ul>
 <h3>基於分詞系統的替換字詞說明</h3>
 <h4><a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/lib/static/synonym.txt">lib/static/synonym.txt</a></h4>
-<p>此檔案放置轉換用詞，格式為 <code>最終顯示的字詞,替換的字詞</code></p>
+<p>此檔案放置轉換用詞，格式為 <code>最終顯示的字詞,替换的原始简体字词</code></p>
 <p>然後由於每次轉換都是以原始簡體檔案來做轉換，所以替換的字詞請包含簡體</p>
 <p>實際添加的內容請直接查看檔案內容做參考</p>
 <h4><a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/lib/static/table.txt">lib/static/table.txt</a></h4>
@@ -89,6 +90,7 @@
 <li>偵測檢查 zip / git / 檔案系統 上的檔案 是否存在大小寫不同的同名檔案</li>
 <li><s>可指定編譯基於指定版本的語言包</s></li>
 <li>同時更新多個版本的語言包</li>
+<li><s>偵測檢查可能包含未翻譯內容的檔案與鍵值</s></li>
 </ul>
 <h2>已知問題</h2>
 <ul>
