@@ -37,12 +37,13 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 - 以分詞系統與轉繁來基於官方簡體版自動打包製作
 - 解除版本安裝上限範圍的限制 *until-build*
 - 忽略部分官方版檔案
+- 部分翻譯差異統一化
 
 ### 基於分詞系統的替換字詞說明
 
 #### [lib/static/synonym.txt](lib/static/synonym.txt)
 
-此檔案放置轉換用詞，格式為 `最終顯示的字詞,替換的字詞`
+此檔案放置轉換用詞，格式為 `最終顯示的字詞,替换的原始简体字词`
 
 然後由於每次轉換都是以原始簡體檔案來做轉換，所以替換的字詞請包含簡體
 
