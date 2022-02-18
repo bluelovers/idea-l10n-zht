@@ -57,6 +57,15 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 - https://github.com/bluelovers/ws-segment/blob/master/packages/%40novel-segment/postag/lib/postag/ids.ts
 - https://github.com/bluelovers/ws-segment/blob/master/packages/novel-segment/test/demo.cache.ts#L97
 
+#### [test/segment.spec.ts](test/segment.spec.ts)
+
+新增字典或轉換規則後，推薦編輯此檔案，來檢查是否正確轉換或者發生誤轉換  
+盡量以容易發生誤轉換的文字來做為首選測試
+
+![docs/img-segment-spec.png](docs/img-segment-spec.png)
+
+![docs/img-segment-spec-2.png](docs/img-segment-spec-2.png)
+
 #### [test/segment-check.ts](test/segment-check.ts)
 
 在 [test/temp/*.txt](test/temp) 資料夾底下新增任何副檔名為 .txt 檔案後  
