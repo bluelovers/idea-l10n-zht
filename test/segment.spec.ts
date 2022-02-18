@@ -137,6 +137,7 @@ describe(`should include`, () =>
 
 		[`運行時版本`, `about.box.jre=运行时版本: {0} {1}`],
 		[`構建`, `about.box.build.number=内部版本号 #{0}`],
+		[`軟體套件`, `command.create.package=创建软件包`],
 
 	]).forEach(text =>
 	{
