@@ -142,6 +142,9 @@ describe(`should include`, () =>
 		[`憑證`, `settings.password.internal.error.no.available.credential.store.implementation=内部错误，没有可用的凭据存储实现。`],
 
 		[`背景`, `power.save.mode.on.notification.content=代码洞察和后台任务已禁用。`],
+		[`背景`, `progress.window.empty.text=无后台任务`],
+
+		[`模組`, `title.module.sub.group=模块子组`],
 
 	]).forEach(text =>
 	{
