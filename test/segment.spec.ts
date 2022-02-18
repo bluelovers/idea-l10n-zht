@@ -147,6 +147,10 @@ describe(`should include`, () =>
 
 		[`模組`, `title.module.sub.group=模块子组`],
 
+		[`應用`, `CFDeploymentEditor.dialog.title.reload.application.settings=重新加载应用程序设置`],
+		[`套用`, `plugins.dialog.button=应用变更`],
+
+
 	]).forEach(text =>
 	{
 
