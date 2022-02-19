@@ -8,6 +8,57 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛　Bug Fixes
 
+* 修正 `书签名称为空` 分詞失敗的問題 ([5f41dfc](https://github.com/bluelovers/idea-l10n-zht/commit/5f41dfcfd84831015a8671d416787ab59b495af9))
+* { Git(_G) => &Git } ([c38f701](https://github.com/bluelovers/idea-l10n-zht/commit/c38f701e4b1245a684fe414a72cc8c9ffdbe7d2c))
+* 修正 `复上` , `复分析` , `为重` 的分詞錯誤 ([8156539](https://github.com/bluelovers/idea-l10n-zht/commit/81565392d224299ac61adb4be8e559bb5ec1fb14))
+* 統一化 { 内部版本号,内部版本 => 構建版本 } ([f5ec3b8](https://github.com/bluelovers/idea-l10n-zht/commit/f5ec3b890ae2da9910217b8f3a4936511dd25d00))
+* { 无后台 => 無背景 } , { 在后台 => 在背景 } ([0b6dac6](https://github.com/bluelovers/idea-l10n-zht/commit/0b6dac6599a29d60ab878f1334239236ee15aef7))
+* { 无后台 => 無背景 } ([4ded1b1](https://github.com/bluelovers/idea-l10n-zht/commit/4ded1b179a2fd9fd5017425d0cf5bf280be07da8))
+
+
+### ✨　Features
+
+* 取消忽略之前版本當中不打包的檔案 ([7b7633c](https://github.com/bluelovers/idea-l10n-zht/commit/7b7633c9da653a9cf1ba8139b2c38c7957dc49e1))
+* 使用 `handleText` 來處理 `LeakableMapKey.html` 的 { 卸載 => 解除安裝 } ([5bcf5fd](https://github.com/bluelovers/idea-l10n-zht/commit/5bcf5fdb9f65215ef0cd08b072da9506873153d6))
+* 偵測檢查可能包含未翻譯內容的檔案與鍵值 ([a4ad82b](https://github.com/bluelovers/idea-l10n-zht/commit/a4ad82b3077a853e631b63a62d11516a7332b3a1))
+
+
+### 📦　Code Refactoring
+
+* { 实现 => 實作 } ([ae78a68](https://github.com/bluelovers/idea-l10n-zht/commit/ae78a6840eceb2f991a3c0acbed16e8366021183))
+* { 博文 => 網誌 } ([a2eff2c](https://github.com/bluelovers/idea-l10n-zht/commit/a2eff2cfb770878137b761bcd779e739c62e3fe7))
+* `apply` { 应用 => 套用 } ([f40d2d9](https://github.com/bluelovers/idea-l10n-zht/commit/f40d2d96c6b24e59633fb0780036752c14ff02fc))
+
+
+### 🚨　Tests
+
+* 優化測試 並且 檢測 LeakableMapKey.html ([b288e0f](https://github.com/bluelovers/idea-l10n-zht/commit/b288e0f34a95d9217e8e30077aef0b254ecd3c1e))
+
+
+### 🛠　Build System
+
+* **changelog:** update CHANGELOG ([0659881](https://github.com/bluelovers/idea-l10n-zht/commit/065988188ed45b4d8e09e4cee64cb4d4b7512b08))
+* **changelog:** update CHANGELOG ([d04d358](https://github.com/bluelovers/idea-l10n-zht/commit/d04d358f6e9d912f610f2e48e5687e8c047580eb))
+* **changelog:** update CHANGELOG ([cea6c45](https://github.com/bluelovers/idea-l10n-zht/commit/cea6c45aae5f59d9a52c9f43e43dcc9c7ceae0ec))
+* **release:** update build ([59ac817](https://github.com/bluelovers/idea-l10n-zht/commit/59ac8178051d8317b6a0a335fe0ebe8a9009695b))
+* **release:** update build ([78f7ea1](https://github.com/bluelovers/idea-l10n-zht/commit/78f7ea17c48786109c42e33d46ecc96094100187))
+* **release:** update build ([1a5a3ee](https://github.com/bluelovers/idea-l10n-zht/commit/1a5a3ee9aaa844e229aefb164f4c4d19f8a6d43d))
+* **release:** update build ([ada1017](https://github.com/bluelovers/idea-l10n-zht/commit/ada101775a50047c20c6b8cf287042d0ad36e2cd))
+
+
+### 🔖　Miscellaneous
+
+* . ([b5bd3d7](https://github.com/bluelovers/idea-l10n-zht/commit/b5bd3d7cb8ec12f741e92b4e01b2e71811823e2a))
+
+
+
+
+
+# 1.0.0 (2022-02-19)
+
+
+### 🐛　Bug Fixes
+
 * 修正 `复上` , `复分析` , `为重` 的分詞錯誤 ([8156539](https://github.com/bluelovers/idea-l10n-zht/commit/81565392d224299ac61adb4be8e559bb5ec1fb14))
 * 統一化 { 内部版本号,内部版本 => 構建版本 } ([f5ec3b8](https://github.com/bluelovers/idea-l10n-zht/commit/f5ec3b890ae2da9910217b8f3a4936511dd25d00))
 * { 无后台 => 無背景 } , { 在后台 => 在背景 } ([0b6dac6](https://github.com/bluelovers/idea-l10n-zht/commit/0b6dac6599a29d60ab878f1334239236ee15aef7))
