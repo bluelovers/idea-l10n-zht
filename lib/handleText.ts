@@ -1,5 +1,6 @@
 import { processIdeaSegmentText } from './segment';
 import { updateMeta } from './meta';
+import { textToRegexp } from './util/text-to-regexp';
 
 export function handleText(content_old: string, info?: {
 	file?: string,
@@ -24,7 +25,7 @@ export function handleText(content_old: string, info?: {
 			else if (/LeakableMapKey\.html$/i.test(file))
 			{
 				content_new = content_new
-					.replace(/卸載/g, '解除安裝')
+					.replace(textToRegexp(/卸載|移除/g), '解除安裝')
 				;
 			}
 
