@@ -11,7 +11,7 @@
 
 func (r MyReader) ReadByte(data []byte) (byte, error) {
 }</code></pre>
-<p>這種用法很可疑，因為它看起來像是試圖實現 <code>io.ByteReader</code>，但簽名不正確。
+<p>這種用法很可疑，因為它看起來像是試圖實作 <code>io.ByteReader</code>，但簽名不正確。
   下面這樣寫比較合適：</p>
 <pre><code>type MyReader []byte
 

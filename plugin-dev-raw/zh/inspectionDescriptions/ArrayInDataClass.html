@@ -9,7 +9,7 @@
 <pre><code>
   data class Text(val lines: Array&lt;String&gt;)
 </code></pre>
-<p>該快速修復會生成缺失的 <code>equals()</code> 和 <code>hashCode()</code> 實現：</p>
+<p>該快速修復會生成缺失的 <code>equals()</code> 和 <code>hashCode()</code> 實作：</p>
 <pre><code>
   data class Text(val lines: Array&lt;String&gt;) {
       override fun equals(other: Any?): Boolean {

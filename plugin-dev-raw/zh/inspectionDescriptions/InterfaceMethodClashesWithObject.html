@@ -2,12 +2,12 @@
 <body>
 報告與 <code>java.lang.Object</code> 類中的 <b>protected</b> 方法 <code>clone()</code> 和 <code>finalize()</code> 衝突的接口方法。
 <p>在接口中，可以使用與 <code>java.lang.Object</code> 方法不相容的返回類型來宣告這些方法。
-  實現此類接口的類不可編譯。
+  實作此類接口的類不可編譯。
   當接口正常工作時，雖然仍可根據它創建 lambda，但不建議這樣做。</p>
 <p>範例：</p>
 <pre><code>
-  // // 警告：此接口不能由任何類實現，
-  // 只能由 lambda 或方法引用實現
+  // // 警告：此接口不能由任何類實作，
+  // 只能由 lambda 或方法引用實作
   interface MyInterface {
     double clone();
   }

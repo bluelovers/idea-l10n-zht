@@ -1,7 +1,7 @@
 <html>
 <body>
-報告實現 <code>Cloneable</code> 接口但不覆寫 <code>clone()</code> 方法的類。
-<p>這種類使用 <code>clone()</code> 的預設實現，它不是 <code>public</code>，而是 <code>protected</code>，並且不復制該類的可變狀態。</p>
+報告實作 <code>Cloneable</code> 接口但不覆寫 <code>clone()</code> 方法的類。
+<p>這種類使用 <code>clone()</code> 的預設實作，它不是 <code>public</code>，而是 <code>protected</code>，並且不復制該類的可變狀態。</p>
 <p>可以通過快速修復生成基本的 <code>clone()</code> 方法，它可以作為 <code>Cloneable</code> 類所期望的正常執行的 <code>clone()</code> 方法的基礎。</p>
 <p><b>範例：</b></p>
 <pre><code>
@@ -33,6 +33,6 @@ property key: cloneable.class.without.clone.todo.message
 -->
 <!-- tooltip end -->
 <p>使用<b>忽略由於繼承而可克隆的類</b>選項可以忽略因繼承自 <code>Cloneable</code> 類而 <code>Cloneable</code> 的類。</p>
-<p>使用<b>忽略需要 Cloneable 才能調用超類的 clone() 方法的情況</b>選項可以忽略因從超類調用 <code>clone()</code> 方法而需要實現 <code>Cloneable</code> 的類。</p>
+<p>使用<b>忽略需要 Cloneable 才能調用超類的 clone() 方法的情況</b>選項可以忽略因從超類調用 <code>clone()</code> 方法而需要實作 <code>Cloneable</code> 的類。</p>
 </body>
 </html>

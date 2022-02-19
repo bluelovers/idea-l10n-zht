@@ -1,6 +1,6 @@
 <html>
 <body>
-報告實現 <code>java.io.Serializable</code> 且其中的 <code>readResolve()</code> 或 <code>writeReplace()</code> 方法未被宣告為 <code>protected</code> 的類。
+報告實作 <code>java.io.Serializable</code> 且其中的 <code>readResolve()</code> 或 <code>writeReplace()</code> 方法未被宣告為 <code>protected</code> 的類。
 <p>
   將 <code>readResolve()</code> 和 <code>writeReplace()</code> 方法宣告為 <code>private</code> 可以強制子類無提示地忽略它們，而宣告為 <code>public</code> 則允許不受信任的程式碼調用它們。
 </p>

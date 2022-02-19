@@ -8,7 +8,7 @@
 <code>class SecureBean implements Cloneable {}</code>
 <p>在套用快速修復後：</p><code>class SecureBean {}</code>
 <p>
-當類擴展現有的可克隆類或實現可克隆接口時，套用該快速修復後，程式碼可能如下所示： 
+當類擴展現有的可克隆類或實作可克隆接口時，套用該快速修復後，程式碼可能如下所示： 
 <pre><code>class SecureBean extends ParentBean {
     @Override
     protected SecureBean clone() throws CloneNotSupportedException {
