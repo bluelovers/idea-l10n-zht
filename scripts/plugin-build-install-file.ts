@@ -17,10 +17,4 @@ import { mergePaths } from '../lib/merge-paths';
 import { getBuildFileList } from '../lib/get-build-file-list';
 import { packPluginJar } from '../lib/build/pack-plugin-jar';
 
-export default FastGlob<string>([
-	'*',
-	'!*.list.json',
-], {
-	cwd: __plugin_downloaded_dir_unzip,
-	onlyDirectories: true,
-}).mapSeries(packPluginJar);
+export default packPluginJar('zh');

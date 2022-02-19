@@ -8,6 +8,7 @@ import { async as FastGlob } from '@bluelovers/fast-glob/bluebird';
 import { outputJSON } from 'fs-extra';
 import { createSingleBar } from '../cli-progress';
 import { textIncludeCJK } from '../util/include-cjk';
+import { sortObjectKeys } from 'sort-object-keys2';
 
 export const LAZY_PROPERTIES = new DotProperties({
 	file: __dict_properties_lazy,
@@ -97,6 +98,10 @@ export function replaceProperties(lang: string | 'zh')
 				})
 				.tap(() =>
 				{
+					sortObjectKeys(maybeRecord, {
+						useSource: true,
+					});
+
 					return Promise.all([
 						outputJSON(join(__plugin_dev_raw_dir, lang + '.list.properties.changed.json'), changedList, {
 							spaces: 2,
