@@ -11,9 +11,9 @@ export interface IOptionsMergePaths
 }
 
 export const defaultIgnore = [
-	'search/**/*',
-	'intentionDescriptions/**/*',
-	'postfixTemplates/**/*',
+	//'search/**/*',
+	//'intentionDescriptions/**/*',
+	//'postfixTemplates/**/*',
 ] as const;
 
 export function mergePaths(dirs: string[], options?: IOptionsMergePaths)

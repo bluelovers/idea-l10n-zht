@@ -6,12 +6,14 @@ import { __plugin_dev_overwrite_dir, __plugin_dev_raw_dir } from '../lib/const';
 describe(`ignore`, () =>
 {
 
+	test.skip(`dummy`, () => {});
+
 	const {
 		isMatch,
 	} = mergePaths([]);
 
 	[
-		'intentionDescriptions/AdapterToListenerIntention/description.html',
+		//'intentionDescriptions/AdapterToListenerIntention/description.html',
 	].forEach(file => {
 
 		test(file, () =>
