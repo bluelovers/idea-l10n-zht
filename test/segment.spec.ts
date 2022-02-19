@@ -157,6 +157,8 @@ describe(`should include`, () =>
 		[`複`, `程式码重复分析`],
 
 		[`籤`, `书签名称为空`],
+		
+		[`實作`, `find.usages.panel.title.implementing.methods.cap=实现方法`],
 
 	]).forEach(text =>
 	{
