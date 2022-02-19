@@ -8,13 +8,14 @@ import micromatch, { not, match } from 'micromatch';
 import { console } from 'debug-color2';
 import { opts } from '../lib/git/_config';
 import { getGitLogs } from '../lib/git/git-logs';
+import { join } from 'upath2';
 
 export default Bluebird.resolve()
 	.then(() =>
 	{
 		return getGitLogs()
 	})
-	.then((logs) =>
+	.then(async (logs) =>
 	{
 		const commit = logs[0];
 
@@ -28,6 +29,16 @@ export default Bluebird.resolve()
 		if (bool)
 		{
 			console.info(`更新 git tag`);
+
+			const { name, version } = await import(join(__root, 'package.json'));
+
+			/**
+			 * changelog 專用 tag
+			 */
+			await gitTag(`${name}@${version}`, {
+				cwd: __root,
+				forceGitTag: true,
+			}, opts);
 
 			return gitTag(`v${__plugin_zh_cn_version}`, {
 				cwd: __root,
