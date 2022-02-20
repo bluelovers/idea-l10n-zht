@@ -161,6 +161,10 @@ describe(`should include`, () =>
 		[`實作`, `find.usages.panel.title.implementing.methods.cap=实现方法`],
 
 		[`註`, `DockerRegistryConfigurable.error.unsupporded.registry=不支持的注册表`],
+		[`註`, `dbgp.proxy.ide.unregister.success=IDE 已成功注销`],
+
+		[`注`, `actions.show.injection.points=显示注入点`],
+		[`注`, `configurable.clangTidy.min.supported.clangTidy.version=注意: 支援 7.0.0 或更高版本的 Clang-Tidy`],
 
 	]).forEach(text =>
 	{
