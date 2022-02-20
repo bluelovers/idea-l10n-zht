@@ -166,6 +166,8 @@ describe(`should include`, () =>
 		[`注`, `actions.show.injection.points=显示注入点`],
 		[`注`, `configurable.clangTidy.min.supported.clangTidy.version=注意: 支援 7.0.0 或更高版本的 Clang-Tidy`],
 
+		[`連字`, `checkbox.ligatures=字体连写`],
+
 	]).forEach(text =>
 	{
 
