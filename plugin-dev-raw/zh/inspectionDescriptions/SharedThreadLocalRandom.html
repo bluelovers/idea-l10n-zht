@@ -15,7 +15,7 @@
       void printRandomNumbersAsync() {
         ThreadLocalRandom random = ThreadLocalRandom.current();
         CompletableFuture.supplyAsync(() -&gt; generateNumbers(random))
-          .thenAccept(numbers -&gt; System.out.println(Arrays.function toString() { [native code] }(numbers)));
+          .thenAccept(numbers -&gt; System.out.println(Arrays.toString(numbers)));
       }
 
       private int[] generateNumbers(Random random) {

@@ -15,10 +15,10 @@ for (let i in a) {
 }
 </code></pre>
 
-<p>建議將整個迴圈取代為 <code>Object.keys()</code> 方法，或添加 <code>function hasOwnProperty() { [native code] }()</code> 檢查。 套用快速修復後，程式碼如下所示：</p>
+<p>建議將整個迴圈取代為 <code>Object.keys()</code> 方法，或添加 <code>hasOwnProperty()</code> 檢查。 套用快速修復後，程式碼如下所示：</p>
 <pre><code>
 for (let i in a) {
-  if (a.function hasOwnProperty() { [native code] }(i)) {
+  if (a.hasOwnProperty(i)) {
     console.log(a[i]);
   }
 }

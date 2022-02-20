@@ -4,8 +4,8 @@
 <p>對於 Java 5 和更高版本，不必要進行拆箱，並且可以安全移除。</p>
 <p><b>範例：</b></p>
 <ul>
-  <li><code>Integer i = Integer.function valueOf() { [native code] }(42).intValue();</code> &rarr; <code>Integer i = Integer.function valueOf() { [native code] }(42);</code></li>
-  <li><code>int k = Integer.function valueOf() { [native code] }(42).intValue();</code> &rarr; <code>int k = Integer.function valueOf() { [native code] }(42);</code>
+  <li><code>Integer i = Integer.valueOf(42).intValue();</code> &rarr; <code>Integer i = Integer.valueOf(42);</code></li>
+  <li><code>int k = Integer.valueOf(42).intValue();</code> &rarr; <code>int k = Integer.valueOf(42);</code>
     <p>（僅在未選中<b>僅報告真正多餘的拆箱表達式</b>選項時報告）</p></li>
 </ul>
 <!-- tooltip end -->

@@ -4,11 +4,11 @@
 <p>為防止意外錯誤，應顯式宣告類型。</p>
 <p><b>範例：</b></p>
 <pre><code>
-  fun foo() = java.lang.String.function valueOf() { [native code] }(1)
+  fun foo() = java.lang.String.valueOf(1)
 </code></pre>
 <p>快速修復讓您能夠指定返回類型：</p>
 <pre><code>
-  fun foo(): String = java.lang.String.function valueOf() { [native code] }(1)
+  fun foo(): String = java.lang.String.valueOf(1)
 </code></pre>
 </body>
 </html>

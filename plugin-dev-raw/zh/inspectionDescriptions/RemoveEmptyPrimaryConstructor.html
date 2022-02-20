@@ -7,12 +7,12 @@
 </p>
 <p><b>範例：</b></p>
 <pre><code>
-  class MyClassA function Object() { [native code] }() //  冗餘，可以取代為 'class MyClassA'
+  class MyClassA constructor() //  冗餘，可以取代為 'class MyClassA'
 
   annotation class MyAnnotation
-  class MyClassB @MyAnnotation function Object() { [native code] }() //  由於註解而必選
+  class MyClassB @MyAnnotation constructor() //  由於註解而必選
 
-  class MyClassC private function Object() { [native code] }() // 由於可見性修飾符而必選
+  class MyClassC private constructor() // 由於可見性修飾符而必選
 </code></pre>
 </body>
 </html>

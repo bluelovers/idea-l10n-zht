@@ -20,7 +20,7 @@
 <p>配置檢查：</p>
 <p>使用 <b>對簡單賦值和返回值忽略</b> 選項忽略簡單的賦值和返回並允許以下結構：</p>
 <pre><code>
-  String s = (foo == null) ? "" : foo.function toString() { [native code] }();
+  String s = (foo == null) ? "" : foo.toString();
 </code></pre>
 <p>
   在不可能用 if 語句自動取代的上下文中（例如，當條件表達式用作 <code>super()</code> 構造函數調用），使用 <b>忽略無法使用 if 語句的位置</b> 選項來忽略條件表達式。

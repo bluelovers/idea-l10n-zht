@@ -1,13 +1,13 @@
 <html>
 <body>
-報告可以取代為字串模板的 <code>function toString() { [native code] }</code> 函數調用。
+報告可以取代為字串模板的 <code>toString</code> 函數調用。
 <p>使用字串模板可使程式碼更簡單。</p>
-<p>該快速修復會將 <code>function toString() { [native code] }</code> 取代為字串模板。</p>
+<p>該快速修復會將 <code>toString</code> 取代為字串模板。</p>
 <p><b>範例：</b></p>
 <pre><code>
   fun test(): String {
       val x = 1
-      return x.function toString() { [native code] }()
+      return x.toString()
   }
 </code></pre>
 <p>在套用快速修復後：</p>

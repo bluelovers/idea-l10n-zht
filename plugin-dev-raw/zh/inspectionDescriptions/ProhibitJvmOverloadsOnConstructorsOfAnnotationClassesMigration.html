@@ -7,11 +7,11 @@
 <p>自 Kotlin 1.4 起，註解類構造函數上的 <code>@JvmOverloads</code> 會導致編譯錯誤。</p>
 <p><b>範例：</b></p>
 <pre><code>
-  annotation class A <b>@JvmOverloads</b> function Object() { [native code] }(val x: Int = 1)
+  annotation class A <b>@JvmOverloads</b> constructor(val x: Int = 1)
 </code></pre>
 <p>在套用快速修復後：</p>
 <pre><code>
-  annotation class A function Object() { [native code] }(val x: Int = 1)
+  annotation class A constructor(val x: Int = 1)
 </code></pre>
 </body>
 </html>

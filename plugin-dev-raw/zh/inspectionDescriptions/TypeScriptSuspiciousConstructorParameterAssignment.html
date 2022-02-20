@@ -4,7 +4,7 @@
 在這種情況下，<i>不會</i>賦值給相應的欄位，而只是修改局部參數值。
 <pre>
 class Foo {
-  function Object() { [native code] }(private p: number) {
+  constructor(private p: number) {
     p = 1; //必須為 this.p = 1;
   }
 }

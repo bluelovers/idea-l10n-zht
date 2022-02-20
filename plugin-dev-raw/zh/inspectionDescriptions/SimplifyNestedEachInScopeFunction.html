@@ -5,14 +5,14 @@
 <p>範例：</p>
 <pre><code>
   fun test(list: List&lt;Int&gt;) {
-      val x = list.also { it.forEach { it + 4 } }.function toString() { [native code] }()
+      val x = list.also { it.forEach { it + 4 } }.toString()
       val y = list.apply { forEach { println(it) } }
   }
 </code></pre>
 <p>在套用快速修復後：</p>
 <pre><code>
   fun test(list: List&lt;Int&gt;) {
-      val x = list.onEach { it + 4 }.function toString() { [native code] }()
+      val x = list.onEach { it + 4 }.toString()
       val y = list.onEach { println(it) }
   }
 </code></pre>

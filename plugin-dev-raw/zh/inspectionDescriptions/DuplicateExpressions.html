@@ -6,7 +6,7 @@
   此類表達式的範例是 <code>a + b</code>、<code>Math.max(a, b)</code>、<code>a.equals(b)</code>、<code> s.substring(a,b)</code>。 為確保結果始終相同，已驗證表達式中使用的變數在表達式符合項之間不會更改其值。</p>
 <p>
   此類表達式可能包含不可變的類（如 <code>String</code>、<code>BigDecimal</code> 等）和實用程序類（如 <code>Objects</code>、<code>Math</code>，<code>random()</code> 除外）的方法。
-  <code>Object.equals() </code>、<code> Object.hashCode() </code>、<code> Object.function toString() { [native code] }() </code>、
+  <code>Object.equals() </code>、<code> Object.hashCode() </code>、<code> Object.toString() </code>、
    <code>Comparable.compareTo()</code> 和 <code>Comparator.compare()</code> 等常用方法也可以使用，因為沒有任何可見的副作用。
 </p>
 <!-- tooltip end -->

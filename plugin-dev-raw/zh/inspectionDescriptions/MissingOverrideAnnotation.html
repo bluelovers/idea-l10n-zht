@@ -7,7 +7,7 @@
   <p><b>範例：</b></p>
   <pre><code>
     class X {
-      public String function toString() { [native code] }() {
+      public String toString() {
         return "hello world";
       }
     }
@@ -16,7 +16,7 @@
   <pre><code>
     class X {
       @Override
-      public String function toString() { [native code] }() {
+      public String toString() {
         return "hello world";
       }
     }
@@ -25,8 +25,8 @@
 <p>配置檢查：</p>
 <ul>
   <li>
-    使用<b>忽略 'equals()'、'hashCode()' 和 'function toString() { [native code] }()'</b> 選項可以忽略這些 <code>java.lang.Object</code> 方法：<code>equals()</code>、<code>hashCode()</code> 和
-<code>function toString() { [native code] }()</code>。 由於 <code>@Override</code> 註解而使得這些方法消失且程式碼不再編譯的風險相對較小。
+    使用<b>忽略 'equals()'、'hashCode()' 和 'toString()'</b> 選項可以忽略這些 <code>java.lang.Object</code> 方法：<code>equals()</code>、<code>hashCode()</code> 和
+<code>toString()</code>。 由於 <code>@Override</code> 註解而使得這些方法消失且程式碼不再編譯的風險相對較小。
   </li>
   <li>
     使用<b>忽略匿名類中的方法</b>選項可以忽略匿名類中的方法。

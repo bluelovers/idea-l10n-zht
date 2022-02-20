@@ -1,20 +1,20 @@
 <html>
 <body>
-報告對使用 <code>java.lang.Object</code> 中預設實作的 <code>function toString() { [native code] }()</code> 的調用。
+報告對使用 <code>java.lang.Object</code> 中預設實作的 <code>toString()</code> 的調用。
 <p>該預設實作很少是有意為之，可能是誤用。</p>
 <p>
-  此檢查將忽略對包含 <code>java.lang.Object</code>、接口或 abstract 類類型的物件的 <code>function toString() { [native code] }()</code> 調用。
+  此檢查將忽略對包含 <code>java.lang.Object</code>、接口或 abstract 類類型的物件的 <code>toString()</code> 調用。
 </p>
 <p><b>範例：</b></p>
 <pre><code>
   class Bar {
       void foo1(Bar bar) {
-          String s = bar.function toString() { [native code] }(); // 警告
+          String s = bar.toString(); // 警告
           /* ... */
       }
 
       void foo2(Object obj) {
-          String s = obj.function toString() { [native code] }(); // 此處無警告
+          String s = obj.toString(); // 此處無警告
           /* ... */
       }
   }
