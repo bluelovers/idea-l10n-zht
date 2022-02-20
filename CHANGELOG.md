@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2022-02-20)
+
+
+### 🐛　Bug Fixes
+
+* 修正轉換時 `constructor` 變成 `function Object() { [native code] }` 的 BUG ([731e5fd](https://github.com/bluelovers/idea-l10n-zht/commit/731e5fd743d029c3c94baa8942d11e55d46b88f5))
+* { 注册表 => 註冊表 } ([4196a31](https://github.com/bluelovers/idea-l10n-zht/commit/4196a3115eefebcbd5f336719657e84388018d56))
+* 修正 changelog 不能正確從上一次的修改之後開始分析的問題 ([da9f1cc](https://github.com/bluelovers/idea-l10n-zht/commit/da9f1ccd01afe2a8596807ad4422c8c599194687))
+* 修正 `书签名称为空` 分詞失敗的問題 ([5f41dfc](https://github.com/bluelovers/idea-l10n-zht/commit/5f41dfcfd84831015a8671d416787ab59b495af9))
+* { Git(_G) => &Git } ([c38f701](https://github.com/bluelovers/idea-l10n-zht/commit/c38f701e4b1245a684fe414a72cc8c9ffdbe7d2c))
+* 修正 `复上` , `复分析` , `为重` 的分詞錯誤 ([8156539](https://github.com/bluelovers/idea-l10n-zht/commit/81565392d224299ac61adb4be8e559bb5ec1fb14))
+
+
+### ✨　Features
+
+* 取消忽略之前版本當中不打包的檔案 ([7b7633c](https://github.com/bluelovers/idea-l10n-zht/commit/7b7633c9da653a9cf1ba8139b2c38c7957dc49e1))
+* 使用 `handleText` 來處理 `LeakableMapKey.html` 的 { 卸載 => 解除安裝 } ([5bcf5fd](https://github.com/bluelovers/idea-l10n-zht/commit/5bcf5fdb9f65215ef0cd08b072da9506873153d6))
+* 偵測檢查可能包含未翻譯內容的檔案與鍵值 ([a4ad82b](https://github.com/bluelovers/idea-l10n-zht/commit/a4ad82b3077a853e631b63a62d11516a7332b3a1))
+
+
+### 📦　Code Refactoring
+
+* { 连写 => 連字 } ([41b5d76](https://github.com/bluelovers/idea-l10n-zht/commit/41b5d761866b32264154d40517eefad8f083b9d4))
+* { 注销 => 註銷 } ([2f69d4b](https://github.com/bluelovers/idea-l10n-zht/commit/2f69d4b77c17202fc20b9ff385f332e81bff153a))
+* { 实现 => 實作 } ([ae78a68](https://github.com/bluelovers/idea-l10n-zht/commit/ae78a6840eceb2f991a3c0acbed16e8366021183))
+
+
+### 🚨　Tests
+
+* 優化測試 並且 檢測 LeakableMapKey.html ([b288e0f](https://github.com/bluelovers/idea-l10n-zht/commit/b288e0f34a95d9217e8e30077aef0b254ecd3c1e))
+
+
+### 🛠　Build System
+
+* **changelog:** update CHANGELOG ([44ba9be](https://github.com/bluelovers/idea-l10n-zht/commit/44ba9be432f8d4af07582662ab3f6eb761acfd83))
+* **changelog:** update CHANGELOG ([0659881](https://github.com/bluelovers/idea-l10n-zht/commit/065988188ed45b4d8e09e4cee64cb4d4b7512b08))
+* **changelog:** update CHANGELOG ([d04d358](https://github.com/bluelovers/idea-l10n-zht/commit/d04d358f6e9d912f610f2e48e5687e8c047580eb))
+* **release:** update build ([15f1abe](https://github.com/bluelovers/idea-l10n-zht/commit/15f1abebb1f2574d151d5751ea6451e35dfb25f0))
+* **release:** update build ([59ac817](https://github.com/bluelovers/idea-l10n-zht/commit/59ac8178051d8317b6a0a335fe0ebe8a9009695b))
+* **release:** update build ([78f7ea1](https://github.com/bluelovers/idea-l10n-zht/commit/78f7ea17c48786109c42e33d46ecc96094100187))
+* **release:** update build ([1a5a3ee](https://github.com/bluelovers/idea-l10n-zht/commit/1a5a3ee9aaa844e229aefb164f4c4d19f8a6d43d))
+
+
+### 🔖　Miscellaneous
+
+* . ([b5bd3d7](https://github.com/bluelovers/idea-l10n-zht/commit/b5bd3d7cb8ec12f741e92b4e01b2e71811823e2a))
+
+
+
+
+
 # 1.0.0 (2022-02-19)
 
 
