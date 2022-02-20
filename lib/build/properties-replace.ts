@@ -9,6 +9,12 @@ import { outputJSON } from 'fs-extra';
 import { createSingleBar } from '../cli-progress';
 import { textIncludeCJK } from '../util/include-cjk';
 import { sortObjectKeys } from 'sort-object-keys2';
+import { parse, ITree, stringify, IStringifyOptions, ILine, parseLines } from 'dot-properties2';
+
+export const defaultPropertiesStringifyOptions: IStringifyOptions = Object.freeze({
+	latin1: false,
+	keySep: '=',
+});
 
 export const LAZY_PROPERTIES = new DotProperties({
 	file: __dict_properties_lazy,
@@ -48,40 +54,17 @@ export function replaceProperties(lang: string | 'zh')
 				.mapSeries(async (file: string, index) =>
 				{
 					bar?.update(index, { filename: file });
-					const fullpath = join(cwd, file);
 
-					const dp = new DotProperties({
-						file: fullpath,
-					});
-
-					let _changed = false;
-
-					const tree = dp.tree;
-
-					LAZY_PROPERTIES_KEYS
-						.forEach(key =>
-						{
-
-							if (key in tree)
-							{
-								dp.set(key, LAZY_PROPERTIES.get(key) as any);
-
-								_changed = true;
-							}
-
-						})
-					;
+					const {
+						fullpath,
+						dp,
+						_changed,
+					} = handlePropertiesFile(file, cwd)
 
 					if (_changed)
 					{
 						changedList.push(file);
-						dp.save({
-							file: fullpath,
-							options: {
-								latin1: false,
-								keySep: '=',
-							},
-						});
+						saveProperties(dp, fullpath);
 					}
 
 					for (let key in dp.tree)
@@ -118,4 +101,62 @@ export function replaceProperties(lang: string | 'zh')
 				})
 		})
 		;
+}
+
+export function _handlePropertiesFileCore(dp: DotProperties)
+{
+	let _changed = false;
+
+	const tree = dp.tree;
+
+	LAZY_PROPERTIES_KEYS
+		.forEach(key =>
+		{
+
+			if (key in tree)
+			{
+				dp.set(key, LAZY_PROPERTIES.get(key) as any);
+
+				_changed = true;
+			}
+
+		})
+	;
+
+	return {
+		dp,
+		_changed,
+	}
+}
+
+export function handlePropertiesFile(file: string, cwd: string)
+{
+	const fullpath = join(cwd, file);
+
+	const dp = new DotProperties({
+		file: fullpath,
+	});
+
+	const { _changed } = _handlePropertiesFileCore(dp);
+
+	return {
+		file,
+		cwd,
+		fullpath,
+		dp,
+		_changed,
+	}
+}
+
+export function stringifyProperties(dp: DotProperties)
+{
+	return dp.stringify(defaultPropertiesStringifyOptions)
+}
+
+export function saveProperties(dp: DotProperties, fullpath: string)
+{
+	return dp.save({
+		file: fullpath,
+		options: defaultPropertiesStringifyOptions,
+	})
 }

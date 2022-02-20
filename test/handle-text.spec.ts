@@ -1,14 +1,9 @@
-import { readFile } from 'fs-extra';
 import { join } from 'upath2';
 import { __plugin_dev_raw_dir, __plugin_downloaded_dir_unzip } from '../lib/const';
-import { cn2tw_min } from '@lazy-cjk/zh-convert/min';
-import { cn2tw } from '@lazy-cjk/zh-convert';
 import { array_unique_overwrite } from 'array-hyper-unique';
-import { handleText } from '../lib/handleText';
-import { zhRegExpWithPluginEnabled } from 'regexp-cjk-with-plugin-enabled';
-import escapeStringRegexp from 'escape-string-regexp';
 import { textToRegexp } from '../lib/util/text-to-regexp';
 import { ITSArrayListMaybeReadonly, ITSValueOrArrayMaybeReadonly } from 'ts-type/lib/type/base';
+import { handleFile } from './lib/handle.file';
 
 jest.setTimeout(60 * 1000);
 
@@ -91,16 +86,3 @@ function _doTests([file, words, not]: ITestInput, cwd: string)
 	})
 }
 
-export async function handleFile(file: string, cwd: string)
-{
-	const text = await readFile(join(cwd, file)).then(m => m.toString());
-
-	const actual = await handleText(text, {
-		file,
-	});
-
-	return {
-		text,
-		actual,
-	}
-}
