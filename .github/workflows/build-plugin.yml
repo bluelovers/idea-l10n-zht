@@ -69,7 +69,7 @@ jobs:
           git config --local core.ignorecase false
       - name: fetch git tags
         run: |
-          git fetch origin 'refs/tags/*:refs/tags/*' --depth=1
+          git fetch origin 'refs/tags/*:refs/tags/*' --depth=20
       - name: install deps
         run: |
           yarn install --frozen-lockfile
