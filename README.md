@@ -114,6 +114,7 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 - [英中繁簡編程術語對照](https://www.limoritakeu.tech/2017/11/20/translation-terms/)
 - https://github.com/pjchender/cn2tw4programmer/tree/master/src/terms
+- [《Pro Git》第二版中文文件翻譯對照表與規範](https://gist.github.com/fntsrlike/cf1e96d60b6f34fab725599b06dfcb2a)
 - 
 
 [![jetbrains.svg](jetbrains.svg)](https://www.jetbrains.com/?from=idea-l10n-zht)
