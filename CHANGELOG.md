@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-02-21)
+
+
+### 🗑　Reverts
+
+* 取消 [#35113](https://github.com/bluelovers/idea-l10n-zht/issues/35113)b checkout { 签出 => 檢出 } ([44f9c5e](https://github.com/bluelovers/idea-l10n-zht/commit/44f9c5e9e82f418e925dbac41f8be8bdaadf8e58))
+
+
+### 📦　Code Refactoring
+
+* { 缩进 => 縮排 } , { 收起 => 摺疊 } ([c73e9a7](https://github.com/bluelovers/idea-l10n-zht/commit/c73e9a733982508dd0a89ba09614217fc84f6b06))
+* **vcs:** checkout { 签出 => 檢出 } ([35113b6](https://github.com/bluelovers/idea-l10n-zht/commit/35113b6a66566d8999f65277fc3237f57540fa8a))
+* **vsc:** unified { 統一 => 統合 } ([7052100](https://github.com/bluelovers/idea-l10n-zht/commit/7052100820153a56ce4d2de6f2f9440c1d02ec91))
+
+
+### 🛠　Build System
+
+* **release:** update build ([c9781ae](https://github.com/bluelovers/idea-l10n-zht/commit/c9781ae8d25bbdb59aa5afd1426871d8bc2307b4))
+
+
+### ⚙️　Continuous Integration
+
+* try fetch latest tags ([8665999](https://github.com/bluelovers/idea-l10n-zht/commit/8665999283182fbd9cc7c7bd4a70c6207cba1b3a))
+* display tag ([5517388](https://github.com/bluelovers/idea-l10n-zht/commit/55173884e2d6fabaae55c9a14a3429537eaa4cae))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([9e51967](https://github.com/bluelovers/idea-l10n-zht/commit/9e51967339a0d1b6e207c4fc55bda3911ab20eb9))
+
+
+
+
+
 # 1.0.0 (2022-02-20)
 
 
