@@ -168,6 +168,9 @@ describe(`should include`, () =>
 
 		[`連字`, `checkbox.ligatures=字体连写`],
 
+		[`檢`, `checkout.operation.checked.out.new.branch.from=已从 {1} 中签出新分支 {0}`],
+		[`檢`, `branch.checking.out.new.branch.process=正在签出新分支 {0}…`],
+
 	]).forEach(text =>
 	{
 

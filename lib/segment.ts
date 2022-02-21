@@ -41,6 +41,7 @@ export function initIdeaSegmentText()
 						.remove('复上')
 						.remove('复分析')
 						.remove('为重')
+						.remove('出新')
 					;
 
 					await loadTable(__dict_table_txt)

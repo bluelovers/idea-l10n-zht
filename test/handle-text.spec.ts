@@ -12,21 +12,17 @@ jest.setTimeout(60 * 1000);
  */
 const words_git = array_unique_overwrite([
 	`提取`,
-].reduce((ls, s) =>
-{
-
-//	ls.push(s);
-//	ls.push(cn2tw_min(s));
-//	ls.push(cn2tw(s));
-
-	ls.push(textToRegexp(s));
-
-	return ls
-}, [] as RegExp[]));
+	`签出`,
+	`儲存庫`,
+]);
 
 const files_git = [
 	'messages/GitBundle.properties',
 	'messages/GithubBundle.properties',
+	'messages/VcsBundle.properties',
+	'messages/VcsLogBundle.properties',
+	'messages/SvnBundle.properties',
+	'messages/DiffBundle.properties',
 ] as const;
 
 type ITestInput = [file: string, words: ITSValueOrArrayMaybeReadonly<string | RegExp>, notMatch?: boolean] | readonly [file: string, words: ITSValueOrArrayMaybeReadonly<string | RegExp>, notMatch?: boolean];
