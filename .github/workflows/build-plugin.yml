@@ -67,7 +67,9 @@ jobs:
           git config --local include.path ../.gitconfig
           git config --local core.autocrlf false
           git config --local core.ignorecase false
-          git describe --abbrev=0 --tags
+      - name: fetch git tags
+        run: |
+          git fetch origin 'refs/tags/*:refs/tags/*' --depth=1
       - name: install deps
         run: |
           yarn install --frozen-lockfile
