@@ -171,6 +171,10 @@ describe(`should include`, () =>
 		[`檢`, `checkout.operation.checked.out.new.branch.from=已从 {1} 中签出新分支 {0}`],
 		[`檢`, `branch.checking.out.new.branch.process=正在签出新分支 {0}…`],
 
+		[`縮排`, `checkbox.show.indent.guides=显示缩进参考缐`],
+
+		[`摺疊`, `action.Tree-selectChildExtendSelection.description=展开收起的节点或将子节点添加到选择范围。`],
+
 	]).forEach(text =>
 	{
 
