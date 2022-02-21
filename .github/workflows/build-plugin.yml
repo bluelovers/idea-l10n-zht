@@ -67,6 +67,7 @@ jobs:
           git config --local include.path ../.gitconfig
           git config --local core.autocrlf false
           git config --local core.ignorecase false
+          git describe --abbrev=0 --tags
       - name: install deps
         run: |
           yarn install --frozen-lockfile
