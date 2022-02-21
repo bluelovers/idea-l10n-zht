@@ -12,7 +12,7 @@ jest.setTimeout(60 * 1000);
  */
 const words_git = array_unique_overwrite([
 	`提取`,
-	`签出`,
+	//`签出`,
 	`儲存庫`,
 ]);
 

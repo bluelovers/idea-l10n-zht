@@ -116,5 +116,6 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 - https://github.com/pjchender/cn2tw4programmer/tree/master/src/terms
 - [《Pro Git》第二版中文文件翻譯對照表與規範](https://gist.github.com/fntsrlike/cf1e96d60b6f34fab725599b06dfcb2a)
 - [VSCode 繁體中文語言包](https://github.com/microsoft/vscode-loc/blob/main/i18n/vscode-language-pack-zh-hant/translations/main.i18n.json)
+- [GitKraken 正體中文 (台灣) 翻譯](https://github.com/rogeraabbccdd/GitKraken-zh-tw)
 
 [![jetbrains.svg](jetbrains.svg)](https://www.jetbrains.com/?from=idea-l10n-zht)
