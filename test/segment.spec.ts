@@ -177,6 +177,8 @@ describe(`should include`, () =>
 
 		[`裝置`, `android.logcat.clear.log.action.tooltip=清除设备上的 logcat 缓冲区`],
 
+		[`自訂`, `android.lint.inspections.clickable.view.accessibility=自定义视图中存在辅助功能`],
+
 	]).forEach(text =>
 	{
 
