@@ -175,6 +175,8 @@ describe(`should include`, () =>
 
 		[`摺疊`, `action.Tree-selectChildExtendSelection.description=展开收起的节点或将子节点添加到选择范围。`],
 
+		[`裝置`, `android.logcat.clear.log.action.tooltip=清除设备上的 logcat 缓冲区`],
+
 	]).forEach(text =>
 	{
 
