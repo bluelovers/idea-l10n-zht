@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-02-23)
+
+
+### 📦　Code Refactoring
+
+* { 拾色器 => 取色器 } ([475a267](https://github.com/bluelovers/idea-l10n-zht/commit/475a26778e35c051b6c9849c70d1b2ab4e7e5efb))
+* { 荧光笔 => 螢光筆 } ([64e80c3](https://github.com/bluelovers/idea-l10n-zht/commit/64e80c3ca96b66beeb39ede851a4e3a54d0ae253))
+
+
+### 🛠　Build System
+
+* **release:** update build ([289aa3a](https://github.com/bluelovers/idea-l10n-zht/commit/289aa3ad98e9e34e951532ae51de4b068205ad7a))
+
+
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-02-22)
 
 
