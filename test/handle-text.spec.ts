@@ -25,12 +25,26 @@ const files_git = [
 	'messages/DiffBundle.properties',
 ] as const;
 
-type ITestInput = [file: string, words: ITSValueOrArrayMaybeReadonly<string | RegExp>, notMatch?: boolean] | readonly [file: string, words: ITSValueOrArrayMaybeReadonly<string | RegExp>, notMatch?: boolean];
+type ITestConfig = [words: ITSValueOrArrayMaybeReadonly<string | RegExp>, notMatch?: boolean];
 
-const tests: ITSArrayListMaybeReadonly<ITestInput> = [
+type ITestInput = [file: string, ...config: ITestConfig] | readonly [file: string, ...config: ITestConfig];
+
+type ITestInput2 =
+	[file: ITSValueOrArrayMaybeReadonly<string>, ...config: ITestConfig]
+	| readonly [file: string, ...config: ITestConfig];
+
+const tests = _handleTestsSetting([
 	[`inspectionDescriptions/LeakableMapKey.html`, `解除安裝`],
-	...files_git.map(file => [file, words_git, true] as const),
-];
+	[files_git, words_git, true],
+	[
+		[
+			`messages/JavaScriptBundle.properties`,
+			`messages/PhpBundle.properties`,
+			`messages/InspectionGadgetsBundle.properties`,
+		], `縮小`, true,
+	],
+	[`messages/ActionsBundle.properties`, `縮小`],
+]);
 
 /**
  * 檢查原始來源的檔案(簡體)
@@ -54,18 +68,48 @@ describe(`dev`, () =>
 
 })
 
-function _initTests(tests: ITSArrayListMaybeReadonly<ITestInput>, cwd: string)
+function _handleTestsSetting(tests: ITSArrayListMaybeReadonly<ITestInput2>): Record<string, ITestConfig[]>
 {
-	tests.forEach((testInput) => _doTests(testInput, cwd))
+	// @ts-ignore
+	return tests.reduce((data: Record<string, ITestConfig[]>, [file, words, not]) =>
+	{
+
+		[file].flat()
+			.forEach(file =>
+			{
+				data[file] ??= [];
+
+				[words].flat()
+					.forEach(words =>
+					{
+						data[file].push([words, not])
+					})
+				;
+
+			})
+		;
+
+		return data
+	}, {} as Record<string, ITestConfig[]>);
 }
 
-function _doTests([file, words, not]: ITestInput, cwd: string)
+function _initTests(data: Record<string, ITestConfig[]>, cwd: string)
+{
+	Object.keys(data)
+		.forEach((file) =>
+		{
+			_doTests(file, data[file], cwd)
+		})
+	;
+}
+
+function _doTests(file: string, configs: ITestConfig[], cwd: string)
 {
 	test(file, async () =>
 	{
 		let { actual } = await handleFile(file, cwd);
 
-		[words].flat().forEach(s =>
+		configs.forEach(([s, not]) =>
 		{
 			let t = expect(actual);
 
@@ -75,10 +119,9 @@ function _doTests([file, words, not]: ITestInput, cwd: string)
 				t = t.not
 			}
 
-			t.toMatch(textToRegexp(s));
+			t.toMatch(textToRegexp(s as string));
 		});
 
 		expect(actual).toMatchSnapshot();
 	})
 }
-
