@@ -179,6 +179,8 @@ describe(`should include`, () =>
 
 		[`自訂`, `android.lint.inspections.clickable.view.accessibility=自定义视图中存在辅助功能`],
 
+		[`螢光筆`, `action.ShowEditorHighlighterTokens.text=显示编辑器荧光笔令牌`],
+
 	]).forEach(text =>
 	{
 
