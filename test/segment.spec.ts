@@ -181,6 +181,8 @@ describe(`should include`, () =>
 
 		[`螢光筆`, `action.ShowEditorHighlighterTokens.text=显示编辑器荧光笔令牌`],
 
+		[`取色器`, `action.ShowColorPicker.text=显示拾色器`],
+
 	]).forEach(text =>
 	{
 
