@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-02-24)
+
+
+### 📦　Code Refactoring
+
+* Typescript narrowed { 縮小 => 限縮 } ([afaa045](https://github.com/bluelovers/idea-l10n-zht/commit/afaa0457f54a7a3d15e8940adfcc606bd092c17c))
+
+
+### 🚨　Tests
+
+* update test config ([1e1f509](https://github.com/bluelovers/idea-l10n-zht/commit/1e1f5095d238c74279b94d0ad823c522c8f72ef2))
+
+
+### 🛠　Build System
+
+* **release:** update build ([33b80b6](https://github.com/bluelovers/idea-l10n-zht/commit/33b80b6ab9900bb9e94c8de81cf9e081594a01aa))
+
+
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-02-23)
 
 
