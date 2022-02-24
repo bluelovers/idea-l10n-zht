@@ -96,6 +96,7 @@ function _handleTestsSetting(tests: ITSArrayListMaybeReadonly<ITestInput2>): Rec
 function _initTests(data: Record<string, ITestConfig[]>, cwd: string)
 {
 	Object.keys(data)
+		.sort()
 		.forEach((file) =>
 		{
 			_doTests(file, data[file], cwd)

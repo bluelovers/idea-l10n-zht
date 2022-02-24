@@ -29,6 +29,12 @@ export function handleText(content_old: string, info?: {
 					.replace(textToRegexp(/卸載|移除/g), '解除安裝')
 				;
 			}
+			else if (/(JavaScript|InspectionGadgets|Php)Bundle.properties$/i.test(file))
+			{
+				content_new = content_new
+					.replace(textToRegexp(/縮小/g), '限縮')
+				;
+			}
 
 			return content_new
 		})
