@@ -183,6 +183,8 @@ describe(`should include`, () =>
 
 		[`取色器`, `action.ShowColorPicker.text=显示拾色器`],
 
+		[`存取器`, `encapsulate.fields.accessors.visibility.border.title=访问器可见性`],
+
 	]).forEach(text =>
 	{
 
