@@ -1,11 +1,11 @@
 <html>
 <body>
-報告對 <code>compareTo()</code> 實作中的非 <code>final</code> 欄位的訪問。
+報告對 <code>compareTo()</code> 實作中的非 <code>final</code> 欄位的存取。
 <p>
-  此類訪問可能導致 <code>compareTo()</code> 在物件生命周期的不同時刻返回不同的結果，進而可能在使用 <code>java.util.TreeSet</code> 等標準集合類時導致問題。
+  此類存取可能導致 <code>compareTo()</code> 在物件生命周期的不同時刻返回不同的結果，進而可能在使用 <code>java.util.TreeSet</code> 等標準集合類時導致問題。
 </p>
 <p>
-  只有在對該欄位不具備寫入訪問權限時，才可以通過快速修復將該欄位設為 <code>final</code>，否則不建議進行修正。
+  只有在對該欄位不具備寫入存取權限時，才可以通過快速修復將該欄位設為 <code>final</code>，否則不建議進行修正。
 </p>
 <p><b>範例：</b></p>
 <pre><code>

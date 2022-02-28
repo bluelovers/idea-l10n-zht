@@ -2,7 +2,7 @@
 <body>
 報告實作 <code>java.io.Serializable</code> 但不定義 <code>serialVersionUID</code> 欄位的非 static 內部類。
 <p>
-  如果沒有 <code>serialVersionUID</code> 欄位，對該類做出的任何更改都將導致以前序列化的版本不可讀。 強烈建議 <code>Serializable</code> 非 static 內部類包含 <code>serialVersionUID</code> 欄位，否則由於合成訪問器方法的差異，預設序列化演算法可能導致編譯器之間的序列化版本不相容。
+  如果沒有 <code>serialVersionUID</code> 欄位，對該類做出的任何更改都將導致以前序列化的版本不可讀。 強烈建議 <code>Serializable</code> 非 static 內部類包含 <code>serialVersionUID</code> 欄位，否則由於合成存取器方法的差異，預設序列化演算法可能導致編譯器之間的序列化版本不相容。
 </p>
 <p>
   建議通過快速修復添加缺失的 <code>serialVersionUID</code> 欄位。

@@ -1,6 +1,6 @@
 <html>
 <body>
-報告可以折疊到安全訪問 (<code>?.</code>) 表達式中的 <code>if-then</code> 表達式。
+報告可以折疊到安全存取 (<code>?.</code>) 表達式中的 <code>if-then</code> 表達式。
 <p><b>範例：</b></p>
 <pre><code>
   fun bar(x: String) = ""
@@ -9,7 +9,7 @@
      if (a != null) bar(a) else null
   }
 </code></pre>
-<p>該快速修復會將 <code>if-then</code> 表達式轉換為安全訪問 (<code>?.</code>) 表達式：</p>
+<p>該快速修復會將 <code>if-then</code> 表達式轉換為安全存取 (<code>?.</code>) 表達式：</p>
 <pre><code>
   fun bar(x: String) = ""
 

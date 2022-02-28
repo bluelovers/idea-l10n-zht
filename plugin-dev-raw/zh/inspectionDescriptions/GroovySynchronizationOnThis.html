@@ -3,7 +3,7 @@
 報告使用 <code>this</code> 作為其鎖定表達式的同步。
 <p>
   報告的結構包括鎖定 <code>this</code> 的 <code>synchronized</code> 塊，以及對以 <code>wait()</code> 為目標的 <code>wait()</code> <code>notify()</code> 或 <code>notifyAll()</code> 的調用。
-  此類結構（如 synchronized 方法）會導致難以跟踪給定物件上鎖定的物件，並且可能導致物件遭到“拒絕服務”攻擊。 替代做法是考慮在 private 實例變數上鎖定，從而完全控制對該物件的訪問。
+  此類結構（如 synchronized 方法）會導致難以跟踪給定物件上鎖定的物件，並且可能導致物件遭到“拒絕服務”攻擊。 替代做法是考慮在 private 實例變數上鎖定，從而完全控制對該物件的存取。
 </p>
 </body>
 </html>

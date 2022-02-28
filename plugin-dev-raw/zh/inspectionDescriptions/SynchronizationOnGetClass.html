@@ -2,7 +2,7 @@
 <body>
 報告對 <code>getClass()</code> 的調用上的同步。
 <p>
-  如果包含同步的類被子類化，子類將在不同的類物件上同步。 對 <code>getClass()</code> 的調用通常可以取代為類的文字表達式，例如 <code>String.class</code>。 一種更好的解決辦法是在 <code>private static final</code> 鎖物件上同步，從而完全控制對該物件的訪問。
+  如果包含同步的類被子類化，子類將在不同的類物件上同步。 對 <code>getClass()</code> 的調用通常可以取代為類的文字表達式，例如 <code>String.class</code>。 一種更好的解決辦法是在 <code>private static final</code> 鎖物件上同步，從而完全控制對該物件的存取。
 </p>
 <p><b>範例：</b></p>
 <pre><code> synchronized(getClass()) {}

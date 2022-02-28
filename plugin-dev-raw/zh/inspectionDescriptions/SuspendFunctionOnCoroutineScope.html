@@ -1,7 +1,7 @@
 <html>
 <body>
-報告帶有 <code>CoroutineScope</code> 接收器的 suspend 函數內 <code>CoroutineScope</code> 擴展或成員的調用和訪問。
-<p>當函數為 <code>suspend</code> 且具有 <code>CoroutineScope</code> 接收器時，它通過 <code>kotlin.coroutines.coroutineContext</code> 和 <code>CoroutineScope.coroutineContext</code> 訪問 <code>CoroutineContext</code> 的權限不明確，而且這兩個上下文通常不同。</p>
+報告帶有 <code>CoroutineScope</code> 接收器的 suspend 函數內 <code>CoroutineScope</code> 擴展或成員的調用和存取。
+<p>當函數為 <code>suspend</code> 且具有 <code>CoroutineScope</code> 接收器時，它通過 <code>kotlin.coroutines.coroutineContext</code> 和 <code>CoroutineScope.coroutineContext</code> 存取 <code>CoroutineContext</code> 的權限不明確，而且這兩個上下文通常不同。</p>
 <p>
 為了改善這種狀況，可以將可疑的調用包裝在 <code>coroutineScope { ... }</code> 中，或者去除 <code>CoroutineScope</code> 函數接收器。
 </p>

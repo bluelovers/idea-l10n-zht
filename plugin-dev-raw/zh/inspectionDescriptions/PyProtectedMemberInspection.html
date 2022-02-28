@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>報告 protected 成員在類、定義其的類的後代或模組的外部訪問的情況。</p>
+<p>報告 protected 成員在類、定義其的類的後代或模組的外部存取的情況。</p>
 <pre style="font-family: monospace">
 class Foo:
     def _protected_method(self):
@@ -13,7 +13,7 @@ class Bar(Foo):
 
 
 foo = Foo()
-foo._protected_method() # 訪問 protected 方法
+foo._protected_method() # 存取 protected 方法
 </pre>
 </body>
 </html>
