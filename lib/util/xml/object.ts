@@ -30,7 +30,7 @@ export class XMLSerialized
 			headless: this._headless,
 			indent: ' ',
 		})
-			.replace(/^\<\?xml version="1\.0"\?\>\s*/, '')
+			//.replace(/^\<\?xml version="1\.0"\?\>\s*/, '')
 			.replace(/\s+$/, '')
 	}
 

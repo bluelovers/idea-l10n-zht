@@ -9,6 +9,7 @@ import { handleText } from '../handleText';
 import { gray, red } from 'ansi-colors';
 import { createMultiBar, createSingleBar } from '../cli-progress';
 import Bluebird from 'bluebird';
+import { initIdeaSegmentText } from '../segment';
 
 //export const multibar = createMultiBar();
 
@@ -26,6 +27,8 @@ export function convertLang(lang: string | 'zh')
 			const cacheListNew: string[] = [];
 
 			bar = createSingleBar(cacheList.length, 0);
+
+			await initIdeaSegmentText();
 
 			return FastGlob([
 				'**/*',

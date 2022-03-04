@@ -1,3 +1,5 @@
+import { XMLSerializedAsObject } from 'xmlbuilder2/lib/interfaces';
+
 export interface IElementObject
 {
 	[key: `@${string}`]: string
@@ -12,13 +14,15 @@ export interface IElementObject
 	'#'?: string,
 }
 
-export function _toObject(elem: string | object): IElementObject
+export type IElementObjectInput = IElementObject | XMLSerializedAsObject;
+
+export function _toObject<T extends IElementObjectInput>(elem: string | T): Exclude<T, XMLSerializedAsObject> & IElementObject
 {
 	if (typeof elem === 'string')
 	{
 		return {
 			'#': elem,
-		}
+		} as any
 	}
 
 	assertElementObject(elem);
@@ -26,7 +30,9 @@ export function _toObject(elem: string | object): IElementObject
 	return elem as any
 }
 
-export function setElementCDATA(elem: string | object, value: string): IElementObject
+export function setElementCDATA<T extends IElementObjectInput>(elem: string | T, value: string): T & {
+	'$': string,
+}
 {
 	elem = _toObject(elem);
 	delete elem['#'];
@@ -35,7 +41,9 @@ export function setElementCDATA(elem: string | object, value: string): IElementO
 	return elem as any
 }
 
-export function setElementText(elem: string | object, value: string): IElementObject
+export function setElementInnerText<T extends IElementObjectInput>(elem: string | T, value: string): T & {
+	'#': string,
+}
 {
 	elem = _toObject(elem);
 	delete elem['$'];
@@ -44,7 +52,33 @@ export function setElementText(elem: string | object, value: string): IElementOb
 	return elem as any
 }
 
-export function getElementText(elem: string | object): string
+export function existsElementCDATA<T extends IElementObjectInput>(elem: T): elem is T & {
+	'$': string,
+}
+{
+	return typeof elem['$']?.length === 'number'
+}
+
+export function existsElementInnerText<T extends IElementObjectInput>(elem: T): elem is T & {
+	'#': string,
+}
+{
+	return typeof elem['#']?.length === 'number'
+}
+
+export function setElementText<T extends IElementObjectInput>(elem: string | T, value: string)
+{
+	elem = _toObject(elem);
+
+	if (existsElementInnerText(elem))
+	{
+		return setElementInnerText(elem, value);
+	}
+
+	return setElementCDATA(elem, value);
+}
+
+export function getElementText<T extends IElementObjectInput>(elem: string | T): string
 {
 	return elem['$'] ?? elem['#'] ?? elem
 }

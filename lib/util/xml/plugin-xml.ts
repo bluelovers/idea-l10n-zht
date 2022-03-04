@@ -42,7 +42,7 @@ export class PluginXml extends XMLSerialized
 
 	get description(): string
 	{
-		return getElementText(this.root['description'])
+		return getElementText(this.root['description'] as XMLSerializedAsObject)
 	}
 
 	set description(value: string)
@@ -52,7 +52,7 @@ export class PluginXml extends XMLSerialized
 
 	get changeNnotes(): string
 	{
-		return getElementText(this.root['change-notes'])
+		return getElementText(this.root['change-notes'] as XMLSerializedAsObject)
 	}
 
 	set changeNnotes(value: string)

@@ -54,4 +54,10 @@ export class CrowdinXLIFFXml extends XMLSerialized
 		return this.root['file'] as any as ICrowdinXLIFFXmlFile[]
 	}
 
+	override toString(): string
+	{
+		return super.toString()
+			.replace(/^\<\?xml version="1\.0"\?\>/, '<?xml version="1.0" encoding="UTF-8"?>')
+	}
+
 }
