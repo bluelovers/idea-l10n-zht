@@ -44,6 +44,7 @@ const tests = _handleTestsSetting([
 		], `縮小`, true,
 	],
 	[`messages/ActionsBundle.properties`, `縮小`],
+	[`messages/IdeBundle.properties`, [`Java 運行時`, `Java 執行時`], true],
 ]);
 
 /**

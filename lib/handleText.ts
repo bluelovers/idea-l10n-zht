@@ -1,6 +1,7 @@
 import { processIdeaSegmentText } from './segment';
 import { updateMeta } from './meta';
 import { textToRegexp } from './util/text-to-regexp';
+import { textIncludeCJK } from './util/include-cjk';
 
 export function handleText(content_old: string, info?: {
 	file?: string,
@@ -35,6 +36,18 @@ export function handleText(content_old: string, info?: {
 					.replace(textToRegexp(/縮小/g), '限縮')
 				;
 			}
+
+			content_new = content_new
+				.replace(textToRegexp(/Java (?:运|執)行时(.)?/g), ($0, $1) => {
+
+					if (textIncludeCJK($1))
+					{
+						$1 = ' ' + $1;
+					}
+
+					return 'Java Runtime' + $1
+				})
+			;
 
 			return content_new
 		})
