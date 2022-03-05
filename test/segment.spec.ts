@@ -1,6 +1,7 @@
 import { lazyMatchSynonym001, lazyMatchSynonym001Not } from '@novel-segment/assert';
 import { processIdeaSegmentText } from '../lib/segment';
 import { ITSValueOrArrayMaybeReadonly } from 'ts-type/lib/type/base';
+import { _comp } from './lib/_sort_comp';
 
 jest.setTimeout(60 * 1000);
 
@@ -76,7 +77,10 @@ describe(`segment`, () =>
 
 		[`博文`, `update.snap.message.with.blog.post=IDE 已通过 Snap 更新。<a href=\\\\"{0}\\\\">博文</a>。`],
 
-	]).forEach(text =>
+	]).sort((a, b) =>
+	{
+		return _comp(a[0], b[0])
+	}).forEach(text =>
 	{
 
 		test(_handleTitles(text), async () =>
@@ -187,7 +191,11 @@ describe(`should include`, () =>
 
 		[`數位簽章`, `plugin.invalid.signature.result=''{0}'' 插件的数字签名验证失败并显示以下消息: ''{1}''。`],
 
-	]).forEach(text =>
+		[`註`, `permission.dialog.call.unavailable=注: 當前的 Java Runtime 不支持音訊/語音聊天，但捆綁的 JetBrains 執行時支援。<a href="/runtime">點擊此處切換執行時</a>`],
+
+	]).sort((a, b) => {
+		return _comp(a[0], b[0])
+	}).forEach(text =>
 	{
 
 		test(_handleTitles(text), async () =>
