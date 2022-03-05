@@ -185,6 +185,8 @@ describe(`should include`, () =>
 
 		[`存取器`, `encapsulate.fields.accessors.visibility.border.title=访问器可见性`],
 
+		[`數位簽章`, `plugin.invalid.signature.result=''{0}'' 插件的数字签名验证失败并显示以下消息: ''{1}''。`],
+
 	]).forEach(text =>
 	{
 
