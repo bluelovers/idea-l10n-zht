@@ -193,6 +193,10 @@ describe(`should include`, () =>
 
 		[`註`, `permission.dialog.call.unavailable=注: 當前的 Java Runtime 不支持音訊/語音聊天，但捆綁的 JetBrains 執行時支援。<a href="/runtime">點擊此處切換執行時</a>`],
 
+		[`註`, `将注解放置到单独的`],
+
+		[`註`, `js.strict.mode.inspection.fix=添加“use strict”杂注`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text =>
