@@ -6,6 +6,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-03-05)
 
 
+### 📦　Code Refactoring
+
+* { 注 => 註 } ([8b70ce8](https://github.com/bluelovers/idea-l10n-zht/commit/8b70ce85962616257d76578d0ba387de011e351a))
+
+
+### 🛠　Build System
+
+* **release:** update build ([e17e320](https://github.com/bluelovers/idea-l10n-zht/commit/e17e320b9ed8f5aeb8626d8b58a981dd9264da33))
+
+
+
+
+
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-03-05)
+
+
 ### ✨　Features
 
 * handle xliff file ([13dcf3c](https://github.com/bluelovers/idea-l10n-zht/commit/13dcf3c1236bb7e1da6b2aa51397d960637e7544))
