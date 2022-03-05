@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-03-05)
+
+
+### ✨　Features
+
+* handle xliff file ([13dcf3c](https://github.com/bluelovers/idea-l10n-zht/commit/13dcf3c1236bb7e1da6b2aa51397d960637e7544))
+
+
+### Reverts
+
+* Revert "ci: ts-node 不支援 typescript@4.7" ([ba53d1d](https://github.com/bluelovers/idea-l10n-zht/commit/ba53d1dd4cc02da194fad56005552bfb865d5a8a))
+
+
+### 📦　Code Refactoring
+
+* { 数字签名 => 數位簽章 } ([de0517c](https://github.com/bluelovers/idea-l10n-zht/commit/de0517c50035f34411a098bbfa065f4db6751737))
+* { Java 运行时 => Java Runtime } ([147c915](https://github.com/bluelovers/idea-l10n-zht/commit/147c915410da0d1f0ed5dd629b431c9b19f7bac4))
+
+
+### 🛠　Build System
+
+* **cache:** update version-map ([843e0bd](https://github.com/bluelovers/idea-l10n-zht/commit/843e0bd2494eb777f924b071fdbbd52a94e18011))
+* **release:** update build ([c01cc9d](https://github.com/bluelovers/idea-l10n-zht/commit/c01cc9ddebc2c97243694afe491325ddb09f261e))
+
+
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-03-03)
 
 
