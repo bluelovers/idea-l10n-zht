@@ -4,8 +4,14 @@ import { array_unique_overwrite } from 'array-hyper-unique';
 import { textToRegexp } from '../lib/util/text-to-regexp';
 import { ITSArrayListMaybeReadonly, ITSValueOrArrayMaybeReadonly } from 'ts-type/lib/type/base';
 import { handleFile } from './lib/handle.file';
+import { before } from 'lodash';
+import { initIdeaSegmentText } from '../lib/segment';
 
 jest.setTimeout(60 * 1000);
+
+beforeAll(async () => {
+	await initIdeaSegmentText()
+});
 
 /**
  * 繁體

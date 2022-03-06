@@ -1,9 +1,15 @@
 import { lazyMatchSynonym001, lazyMatchSynonym001Not } from '@novel-segment/assert';
-import { processIdeaSegmentText } from '../lib/segment';
+import { initIdeaSegmentText, processIdeaSegmentText } from '../lib/segment';
 import { ITSValueOrArrayMaybeReadonly } from 'ts-type/lib/type/base';
 import { _comp } from './lib/_sort_comp';
+import { assertTestExpected } from './lib/assertTestExpected';
 
 jest.setTimeout(60 * 1000);
+
+beforeAll(async () =>
+{
+	await initIdeaSegmentText()
+});
 
 type ITestList = [ITSValueOrArrayMaybeReadonly<string>, string][];
 
@@ -31,7 +37,7 @@ describe(`segment`, () =>
 		[`文件夾`, `，右击任何文件夹，`],
 		[`文件夾`, `仅报告位於源文件夹下的空目录`],
 		[`全局`, `使工具全局可见(&B)`],
-		[`全局库`, `导入的项目引用了未知的全局库`],
+		[`全局庫`, `导入的项目引用了未知的全局库`],
 		[`服務器`, `以下文件被禁止，因为其中一个文件很可能导致服务器崩溃。\n{0}`],
 		[`屏幕`, `action.android.emulator.home.button.text=主屏幕`],
 		[`搜索`, `正在搜索受影響的檔案路徑…`],
@@ -61,7 +67,7 @@ describe(`segment`, () =>
 		[`兼容`, `從右到左文本兼容性問題`],
 		[`光標`, `從文本光標開始的所有內容`],
 		[`標識符`, `不允許在一個模板中混用駝峰拼寫法和小寫標識符`],
-		[`骆驼拼写法`, `使用骆驼拼写法样式的方法名，没有 "get" 前缀，第一个字符大写。 例如，属性名称 '_my_property' 被转换为 'MyProperty'。`],
+		[`駱駝拼寫法`, `使用骆驼拼写法样式的方法名，没有 "get" 前缀，第一个字符大写。 例如，属性名称 '_my_property' 被转换为 'MyProperty'。`],
 		[
 			`駝峰拼寫法`,
 			`<p><a href="https://kotlinlang.org/docs/coding-conventions.html#function-names">建議的命名慣例</a>：必須以小寫字母開頭，使用駝峰拼寫法並且沒有下划線。</p>`,
@@ -76,11 +82,11 @@ describe(`segment`, () =>
 		[`掩碼`, `文件掩码(&F)`],
 
 		[`博文`, `update.snap.message.with.blog.post=IDE 已通过 Snap 更新。<a href=\\\\"{0}\\\\">博文</a>。`],
-		[`构建`, `构建专案`],
-		[`进程`, `附加到进程`],
-		[`调试`, `调试 'Project'`],
-		[`常规`, `常规设定`],
-		[`优化`, `优化 import`],
+		[`構建`, `构建专案`],
+		[`進程`, `附加到进程`],
+		[`調試`, `调试 'Project'`],
+		[`常規`, `常规设定`],
+		[`優化`, `优化 import`],
 
 	]).sort((a, b) =>
 	{
@@ -90,10 +96,13 @@ describe(`segment`, () =>
 
 		test(_handleTitles(text), async () =>
 		{
+			const expected = [text[0]].flat();
+
+			assertTestExpected(expected);
 
 			let actual = await processIdeaSegmentText(text[1]);
 
-			lazyMatchSynonym001Not(actual, [text[0]].flat());
+			lazyMatchSynonym001Not(actual, expected);
 			//expect(actual).not.toContain(text[0])
 			expect(actual).toMatchSnapshot();
 
@@ -196,23 +205,30 @@ describe(`should include`, () =>
 
 		[`數位簽章`, `plugin.invalid.signature.result=''{0}'' 插件的数字签名验证失败并显示以下消息: ''{1}''。`],
 
-		[`註`, `permission.dialog.call.unavailable=注: 當前的 Java Runtime 不支持音訊/語音聊天，但捆綁的 JetBrains 執行時支援。<a href="/runtime">點擊此處切換執行時</a>`],
+		[
+			`註`,
+			`permission.dialog.call.unavailable=注: 當前的 Java Runtime 不支持音訊/語音聊天，但捆綁的 JetBrains 執行時支援。<a href="/runtime">點擊此處切換執行時</a>`,
+		],
 
 		[`註`, `将注解放置到单独的`],
 
 		[`註`, `js.strict.mode.inspection.fix=添加“use strict”杂注`],
 
-	]).sort((a, b) => {
+	]).sort((a, b) =>
+	{
 		return _comp(a[0], b[0])
 	}).forEach(text =>
 	{
 
 		test(_handleTitles(text), async () =>
 		{
+			const expected = [text[0]].flat();
 
 			let actual = await processIdeaSegmentText(text[1]);
 
-			lazyMatchSynonym001(actual, [text[0]].flat());
+			assertTestExpected(expected);
+
+			lazyMatchSynonym001(actual, expected);
 			//expect(actual).toContain(text[0])
 			expect(actual).toMatchSnapshot();
 
