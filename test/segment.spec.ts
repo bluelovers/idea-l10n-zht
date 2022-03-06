@@ -76,6 +76,11 @@ describe(`segment`, () =>
 		[`掩碼`, `文件掩码(&F)`],
 
 		[`博文`, `update.snap.message.with.blog.post=IDE 已通过 Snap 更新。<a href=\\\\"{0}\\\\">博文</a>。`],
+		[`构建`, `构建专案`],
+		[`进程`, `附加到进程`],
+		[`调试`, `调试 'Project'`],
+		[`常规`, `常规设定`],
+		[`优化`, `优化 import`],
 
 	]).sort((a, b) =>
 	{
