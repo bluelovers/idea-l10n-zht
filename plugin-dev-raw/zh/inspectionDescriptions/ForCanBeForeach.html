@@ -18,7 +18,7 @@
 <!-- tooltip end -->
 <p>
   使用<b>報告索引的 'java.util.List' 迴圈</b>選項可尋找涉及 <code>list.get(index)</code> 調用的迴圈。
-  這些迴圈通常可以取代為增強型 <code>for</code> 迴圈，除非它們修改了進程中的基礎列表，例如通過調用 <code>list.remove(index)</code> 進行修改。
+  這些迴圈通常可以取代為增強型 <code>for</code> 迴圈，除非它們修改了行程中的基礎列表，例如通過調用 <code>list.remove(index)</code> 進行修改。
   如果是後面這種情況，增強型 <code>for</code> 迴圈可能拋出 <code>ConcurrentModificationException</code>。
   在某些情況下，<code>list.get(index)</code> 迴圈的操作速度也可能更快一些。</p>
 <p>
