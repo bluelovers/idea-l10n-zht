@@ -1,13 +1,27 @@
 import { XMLSerialized } from './object';
 import { XMLSerializedAsObject, XMLSerializedAsObjectArray } from 'xmlbuilder2/lib/interfaces';
+import { ITSTypeAndStringLiteral } from 'ts-type';
+
+export enum EnumTranslationState
+{
+	NEEDS_TRANSLATION = 'needs-translation',
+	TRANSLATED = 'translated',
+	FINA = 'final',
+}
+
+export enum EnumTranslationApproved
+{
+	YES = 'yes',
+	NO = 'no',
+}
 
 export interface ITransUnit
 {
 	'@id': `${number}`,
-	'@approved': 'yes',
+	'@approved': ITSTypeAndStringLiteral<EnumTranslationApproved>,
 	source: string,
 	target: {
-		'@state': 'final' | 'translated',
+		'@state': ITSTypeAndStringLiteral<EnumTranslationState>,
 		'#': string
 	},
 	note: {
@@ -25,7 +39,7 @@ interface ICrowdinXLIFFXmlFile
 	 */
 	'@original': string;
 	'@source-language': string | 'en',
-	'@target-language': string | 'zh-CN';
+	'@target-language': string | 'zh-CN' | 'zh-TW';
 	'@datatype': 'plaintext';
 	'@project-id': `${number}`;
 

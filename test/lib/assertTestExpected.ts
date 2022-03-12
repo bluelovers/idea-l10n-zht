@@ -1,6 +1,6 @@
 import { cn2tw_min } from '@lazy-cjk/zh-convert/min';
 import { ITSValueOrArrayMaybeReadonly } from 'ts-type/lib/type/base';
-import { isArray } from '../../lib/util/assert/isArray';
+import { isArray } from '@ts-type/is-array';
 
 export function assertTestExpected(expected: ITSValueOrArrayMaybeReadonly<string>)
 {

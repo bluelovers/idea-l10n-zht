@@ -53,6 +53,9 @@ export function handleXLIFF(source: Buffer | string, runtime: {
 
 								changed = true;
 							}
+
+							delete unit['@approved'];
+							delete unit.target['@state'];
 						});
 					}
 				});

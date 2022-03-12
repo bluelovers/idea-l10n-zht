@@ -1,4 +1,5 @@
 import { XMLSerializedAsObject } from 'xmlbuilder2/lib/interfaces';
+import { isArray } from '@ts-type/is-array';
 
 export interface IElementObject
 {
@@ -85,7 +86,7 @@ export function getElementText<T extends IElementObjectInput>(elem: string | T):
 
 export function assertElementObject<T extends IElementObject>(elem: unknown): asserts elem is T
 {
-	if (typeof elem !== 'object' || Array.isArray(elem))
+	if (typeof elem !== 'object' || isArray(elem))
 	{
 		throw new TypeError()
 	}
