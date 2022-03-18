@@ -6,17 +6,32 @@ export default Bluebird.mapSeries([
 		'./commit-version-map',
 		'./commit-link-of-zh-cn',
 	] as const, lazyImport)
-	.then(() =>
+	.then(async () =>
 	{
 		const list = [
-			'./original-plugin',
-			'./original-plugin-raw',
 			'./plugin-dev-out',
 			'./plugin-dev-raw',
-			'./lib/static',
-			'./test/__snapshots__',
-			'./lib/const/link-of-zh-cn.ts',
 		] as const;
+
+		await lazyCommitFiles([
+			'./original-plugin',
+			'./original-plugin-raw',
+		], 'build(original): update original', {
+			addFlags: ['--all'],
+		});
+
+		await lazyCommitFiles([
+			'./lib/static',
+			'./lib/const/link-of-zh-cn.ts',
+		], 'build(cache): update cache', {
+			addFlags: ['--all'],
+		});
+
+		await lazyCommitFiles([
+			'./test/__snapshots__',
+		], 'build(test): update snapshots', {
+			addFlags: ['--all'],
+		});
 
 		return lazyCommitFiles(list, 'build(release): update build', {
 			addFlags: ['--all'],
