@@ -88,6 +88,7 @@ describe(`segment`, () =>
 		[`常規`, `常规设定`],
 		[`優化`, `优化 import`],
 		[`插件`, `支援 依赖项 'java:com.google.inject:guice' 的套件当前尚未安装。`],
+		[`軟件包`, `解除安装软件包。`],
 
 	]).sort((a, b) =>
 	{
