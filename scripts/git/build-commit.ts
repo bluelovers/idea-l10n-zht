@@ -10,7 +10,6 @@ export default Bluebird.mapSeries([
 	{
 		const list = [
 			'./plugin-dev-out',
-			'./plugin-dev-raw',
 		] as const;
 
 		await lazyCommitFiles([
@@ -18,20 +17,26 @@ export default Bluebird.mapSeries([
 			'./original-plugin-raw',
 		], 'build(original): update original', {
 			addFlags: ['--all'],
-		});
+		}).catch(() => void 0);
 
 		await lazyCommitFiles([
 			'./lib/static',
 			'./lib/const/link-of-zh-cn.ts',
 		], 'build(cache): update cache', {
 			addFlags: ['--all'],
-		});
+		}).catch(() => void 0);
 
 		await lazyCommitFiles([
 			'./test/__snapshots__',
 		], 'build(test): update snapshots', {
 			addFlags: ['--all'],
-		});
+		}).catch(() => void 0);
+
+		await lazyCommitFiles([
+			'./plugin-dev-raw',
+		], 'build(release): update dev build files', {
+			addFlags: ['--all'],
+		}).catch(() => void 0);
 
 		return lazyCommitFiles(list, 'build(release): update build', {
 			addFlags: ['--all'],
