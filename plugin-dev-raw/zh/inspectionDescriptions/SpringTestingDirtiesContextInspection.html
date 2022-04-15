@@ -1,15 +1,15 @@
 <html>
 <body>
-<p>報告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a> 註解中不正確的 'mode' 配置。</p>
+<p>報告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a> 註解中不正確的 'mode' 設定。</p>
 
 <p><b>範例：</b></p>
 <pre><code>
   @ContextConfiguration
   @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // 在註解的測試類上設定方法模式沒有意義。 對於類級別控制，請改用 classMode。
-                  hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // 通過 @ContextHierarchy 將上下文配置為層次結構的一部分時，應使用 hierarchyMode
+                  hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // 通過 @ContextHierarchy 將上下文設定為層次結構的一部分時，應使用 hierarchyMode
   public class MyTest {
     @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // 在註解的測試方法上設定類模式沒有意義。 對於方法級別控制，請改用 methodMode。
-                     hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // 通過 @ContextHierarchy 將上下文配置為層次結構的一部分時，應使用 hierarchyMode
+                     hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // 通過 @ContextHierarchy 將上下文設定為層次結構的一部分時，應使用 hierarchyMode
     public void testFoo() {...}
   }
 </code></pre>

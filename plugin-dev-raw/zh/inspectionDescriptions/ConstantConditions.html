@@ -19,9 +19,9 @@ Integer square(@Nullable Integer input) {
   檢查行為可能由許多註解控制，例如<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">可 null 性</a>註解、<code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 註解、<code>@Range</code> 註解等。
 </p>
 <!-- tooltip end -->
-<p>配置檢查：</p>
+<p>設定檢查：</p>
 <ul>
-  <li>使用<b>對可 null 值的方法/欄位/參數建議使用 @Nullable 註解</b>選項可以在以下情況下發出警告：null 值作為實參傳遞給具有非註解參數的方法時，存儲到非註解欄位時，或從非註解方法返回時。 在這種情況下，該檢查將建議傳播 <code>@Nullable</code> 註解。 您還可以使用<b>配置註解</b>按鈕配置可 null 性註解。</li>
+  <li>使用<b>對可 null 值的方法/欄位/參數建議使用 @Nullable 註解</b>選項可以在以下情況下發出警告：null 值作為實參傳遞給具有非註解參數的方法時，存儲到非註解欄位時，或從非註解方法返回時。 在這種情況下，該檢查將建議傳播 <code>@Nullable</code> 註解。 您還可以使用<b>設定註解</b>按鈕設定可 null 性註解。</li>
   <li>使用<b>將未註解的成員和參數視為 @Nullable</b> 選項可假設非註解成員可以為 null，因此不得在非 null 上下文中使用。</li>
   <li>使用<b>報告使用 null 文字實參用法的非 null 必需參數</b>>選項可以報告不能為 null（例如在方法體中立即取消引用），但存在傳遞 <code>null</code> 文字的調用點的方法參數。</li>
   <li>使用<b>報告始終返回非 null 值的可 null 方法</b>選項，可報告註解為 <code>@Nullable</code> 但始終返回非 null 值的方法。 在這種情況下，建議您將註解更改為 <code>@NotNull</code>。</li>

@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>報告 <code>ARG</code>、<code>ENV</code> 和 <code>LABEL</code> 命令中鍵值對的不正確間距。</p>
+<p>報告 <code>ARG</code>、<code>ENV</code> 和 <code>LABEL</code> 指令中鍵值對的不正確間距。</p>
 <p>
   儘管 <a href="https://docs.docker.com/engine/reference/builder/#arg">Dockerfile 規範</a>中沒有明確指定，但不允許使用鍵值對的某些間距組合。
   到達問題指令後，Docker 建置將失敗。
@@ -8,11 +8,11 @@
 <!-- tooltip end -->
 <p><b>範例：</b></p>
 <ul>
-  <li><code>ARG</code> 命令不允許在 '=' 周圍有任何空格</li>
+  <li><code>ARG</code> 指令不允許在 '=' 周圍有任何空格</li>
   <li><code>ENV</code> 和 <code>LABEL</code> 在 '=' 後不允許有空格</li>
 </ul>
 <pre><code>
-  # 下面的所有命令都將失敗
+  # 下面的所有指令都將失敗
   ARG answer = 42
   ARG version= "1.0.0"
   LABEL "maintained.by"= someone@gmail.com

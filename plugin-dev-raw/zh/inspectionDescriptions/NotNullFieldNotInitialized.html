@@ -17,7 +17,7 @@
   此類欄位可能違反非 null 約束。 在上例中，<code>setValue</code> 參數註解為非 null，但是如果沒有調用 setter，<code>getValue</code> 可能返回 null。
 </p>
 <!-- tooltip end -->
-<p>配置檢查：</p>
+<p>設定檢查：</p>
 <ul>
   <li>使用<b>忽略可以隱式初始化的欄位</b>選項，可控制該欄位能夠隱式初始化（例如通過依賴項注入）時是否應發出警告。</li>
   <li>使用<b>忽略在 setUp() 方法中初始化的欄位</b>選項，可控制在測試用例 <code>setUp()</code> 方法中寫入該欄位時是否應發出警告。</li>
