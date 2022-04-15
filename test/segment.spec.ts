@@ -6,8 +6,7 @@ import { assertTestExpected } from './lib/assertTestExpected';
 
 jest.setTimeout(60 * 1000);
 
-beforeAll(async () =>
-{
+beforeAll(async () => {
 	await initIdeaSegmentText()
 });
 
@@ -17,8 +16,7 @@ type ITestList = [ITSValueOrArrayMaybeReadonly<string>, string][];
  * 檢查是否確實轉換
  * 通過測試不代表轉換符合預期，因為檢查詞必須要正確設定才可以
  */
-describe(`segment`, () =>
-{
+describe(`segment`, () => {
 
 	/**
 	 * 繁體/簡體皆可 但簡體比較能反映真實運作
@@ -89,15 +87,14 @@ describe(`segment`, () =>
 		[`優化`, `优化 import`],
 		[`插件`, `支援 依赖项 'java:com.google.inject:guice' 的套件当前尚未安装。`],
 		[`軟件包`, `解除安装软件包。`],
+		[`內存`, `內存檢視`],
+		[`刷新`, `刷新文件历史记录`]
 
-	]).sort((a, b) =>
-	{
+	]).sort((a, b) => {
 		return _comp(a[0], b[0])
-	}).forEach(text =>
-	{
+	}).forEach(text => {
 
-		test(_handleTitles(text), async () =>
-		{
+		test(_handleTitles(text), async () => {
 			const expected = [text[0]].flat();
 
 			assertTestExpected(expected);
@@ -117,8 +114,7 @@ describe(`segment`, () =>
 /**
  * 檢查是否發生誤轉換
  */
-describe(`should include`, () =>
-{
+describe(`should include`, () => {
 
 	(<ITestList>[
 
@@ -216,14 +212,11 @@ describe(`should include`, () =>
 
 		[`註`, `js.strict.mode.inspection.fix=添加“use strict”杂注`],
 
-	]).sort((a, b) =>
-	{
+	]).sort((a, b) => {
 		return _comp(a[0], b[0])
-	}).forEach(text =>
-	{
+	}).forEach(text => {
 
-		test(_handleTitles(text), async () =>
-		{
+		test(_handleTitles(text), async () => {
 			const expected = [text[0]].flat();
 
 			let actual = await processIdeaSegmentText(text[1]);
@@ -240,8 +233,7 @@ describe(`should include`, () =>
 
 })
 
-function _handleTitles(actual: [ITSValueOrArrayMaybeReadonly<string>, string])
-{
+function _handleTitles(actual: [ITSValueOrArrayMaybeReadonly<string>, string]) {
 	let arr = actual.slice();
 	arr[0] = [arr[0]].flat().join('／');
 	return arr.join(' - ')
