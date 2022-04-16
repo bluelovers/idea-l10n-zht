@@ -1,33 +1,29 @@
 <html>
 <body>
-Reports multiple 'java.io.File' attribute calls in a row, such as:
+报告连续多个 <code>java.io.File</code> 特性检查，例如：
 <ul>
-  <li>isDirectory</li>
-  <li>isFile</li>
-  <li>lastModified</li>
-  <li>长度</li>
+  <li><code>isDirectory</code></li>
+  <li><code>isFile</code></li>
+  <li><code>lastModified</code></li>
+  <li><code>长度</code></li>
 </ul>
-This calls can be replaced with a bulk 'Files.readAttributes' call. 
-Usually bulk method is more performant then multiple attribute calls.
+这些调用可以替换为批量 <code>Files.readAttributes</code> 调用。 
+批量方法通常比多个特性检查更有效。
 <p>示例：</p>
 <pre><code>
-boolean isNewFile(File file, long lastModified) {
+boolean isNewFile(File file, long lastModified) throws IOException {
   return file.isFile() && file.lastModified() > lastModified;
 }
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
-boolean isNewFile(File file, long lastModified) {
-  BasicFileAttributes basicFileAttributes;
-  try {
-    basicFileAttributes = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
-  } catch (IOException e) {
-    throw new RuntimeException(e);
-  }
-  return basicFileAttributes.isRegularFile() && basicFileAttributes.lastModifiedTime().toMillis() > lastModified;
+boolean isNewFile(File file, long lastModified) throws IOException {
+  BasicFileAttributes fileAttributes = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
+  return fileAttributes.isRegularFile() && fileAttributes.lastModifiedTime().toMillis() > lastModified;
 }
 </code></pre>
 <!-- tooltip end -->
+<p>如果 <code>IOException</code> 在当前上下文中未被处理，则此检查不会显示警告，但快速修复仍然可用。</p>
 <p>仅当项目或模块的语言级别为 7 或更高时，此检查才会报告。</p>
 <p><small>2022.1 最新变化</small></p>
 </body>

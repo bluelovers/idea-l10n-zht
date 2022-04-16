@@ -1,0 +1,24 @@
+<html>
+<body>
+报告不必要并可以安全删除的选择加入注解。
+
+<p>使用实验性 API 的代码需要 <code>@OptIn</code> 注解，因为这些 API 将来随时都可能更改。 如果此类 API 未使用（例如，当实验性 API 稳定后，就不再要求选择加入了），此注解将变得没有意义，且可能具有误导性。
+</p>
+<p>
+    <b>移除注解</b>快速修复可用于移除不必要的 <code>@OptIn</code> 注解。
+</p>
+<p>示例：</p>
+<pre><code>
+  @OptIn(ExperimentalApi::class)
+  fun foo(x: Bar) {
+      x.baz()
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(x: Bar) {
+      x.baz()
+  }
+</code></pre>
+</body>
+</html>

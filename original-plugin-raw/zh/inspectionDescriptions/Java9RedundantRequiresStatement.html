@@ -2,10 +2,10 @@
 <body>
 报告 Java Platform Module System <code>module-info.java</code> 文件中的冗余 <code>requires</code> 指令。
 当模块 <code>A</code> 需要模块 <code>B</code>，但模块 <code>A</code> 中的代码不从 <code>B</code> 导入任何软件包或类时，则 <code>requires</code> 指令冗余。
-此外，所有模块都隐式地声明了对 <code>java.base</code> 模块的依赖，因此 <code>requires java.base;</code> 指令始终冗余。
+此外，所有模块都具有对 <code>java.base</code> 模块的隐式声明依赖，因此 <code>requires java.base;</code> 指令始终冗余。
 <p>
-  快速修复会删除冗余的 <code>requires</code> 指令。
-  如果删除的依赖项重新导出了实际使用的模块，则修复程序会为这些模块添加 <code>requires</code> 指令。
+  该快速修复会删除冗余的 <code>requires</code> 指令。
+  如果删除的依赖项重新导出了实际使用的模块，则修复会为这些模块添加 <code>requires</code> 指令。
 </p>
 <!-- tooltip end -->
 <p>仅当项目或模块的语言级别为 9 或更高时，此检查才会报告。</p>

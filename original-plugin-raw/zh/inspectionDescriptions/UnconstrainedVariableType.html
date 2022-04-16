@@ -3,7 +3,7 @@
 报告将受概念约束的表达式分配给被声明为 <code>auto</code> 的变量的情况，并建议添加类型约束。
 <p><b>示例：</b></p>
 <pre><code>
-  template<class T>
+  template&lt;class T&gt;
   concept Foo = true;
 
   Foo auto func() { return true; }

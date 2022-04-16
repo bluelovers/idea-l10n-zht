@@ -1,0 +1,34 @@
+<html>
+<body>
+报告具有以下问题的 Javadoc 注释和标记：
+<ul>
+  <li>标记名称无效</li>
+  <li>标记描述不完整</li>
+  <li>标记重复</li>
+  <li>缺少 Javadoc 描述</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+  /**
+   * 标记名称无效
+   * @poram param description
+   */
+  public void sample(int param){
+  }
+</code></pre>
+<p>示例：</p>
+<pre><code>
+  /**
+   * 指向自身 {@link #sample(int)}
+   */
+  public void sample(int param){
+  }
+</code></pre>
+<p>该快速修复会将未知的 Javadoc 标记添加到用户定义的附加标记列表中。</p>
+<!-- tooltip end -->
+<p>使用下面的文本字段可以定义附加 Javadoc 标记。</p>
+<p>使用第一个复选框可以忽略重复的 'throws' 标记。</p>
+<p>使用第二个复选框可以忽略描述中第一句话缺失或不完整的问题。</p>
+<p>使用第三个复选框可以忽略指向自身的引用。</p>
+</body>
+</html>

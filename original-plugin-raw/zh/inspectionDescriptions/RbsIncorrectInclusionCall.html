@@ -1,0 +1,14 @@
+<html>
+<body>
+报告引用类的包含调用（<code>include</code>、<code>prepend</code> 和 <code>extend</code>）。 包含调用只能引用模块或接口。
+<p>可以通过快速修复移除不正确的包含调用。</p>
+<p>示例：</p>
+<pre><code>class Example
+  # 在 'include' 调用中使用 'Object' 类
+  include Object
+end</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>class Example
+end</code></pre>
+</body>
+</html>

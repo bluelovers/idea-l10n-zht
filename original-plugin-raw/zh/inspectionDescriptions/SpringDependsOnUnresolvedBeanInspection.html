@@ -1,11 +1,11 @@
 <html>
 <body>
-<p>报告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html">@DependsOn</a> 注解的 <code>value</code> 参数中不正确的 bean 引用。</p>
+<p>报告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html">@DependsOn</a> 注解的 <code>value</code> 形参中不正确的 Bean 引用。</p>
 
 <p><b>示例：</b></p>
 <pre><code>
   @Component
-  @DependsOn("unknown")  // 报告 "无法解析 bean 'unknown'"
+  @DependsOn("unknown")  // 报告 "无法解析 Bean 'unknown'"
   public class MyComponent {
   }
 </code></pre>

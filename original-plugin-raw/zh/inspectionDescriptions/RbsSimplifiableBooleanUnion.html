@@ -1,6 +1,11 @@
 <html>
 <body>
-报告可替换为 <code>bool</code> 的 <code>true | false</code> 用法。
-<p><code>bool</code> 关键字是 <code>true | false</code> 的简写形式，有助于提高可读性。</p>
+报告可替换为 <code>bool</code> 的 <code>true | false</code> 用法。 <code>bool</code> 关键字是有助于提高可读性的速记形式。
+<p>可以通过快速修复将 <code>true | false</code> 的任意组合转换为 <code>bool</code>。</p>
+<p>示例：</p>
+<pre><code># 可以简化 'true | false'
+type example = true | false</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>type example = bool</code></pre>
 </body>
 </html>

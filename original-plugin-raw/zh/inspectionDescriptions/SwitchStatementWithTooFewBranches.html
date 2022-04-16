@@ -19,5 +19,14 @@
 <!-- tooltip end -->
 <p>配置检查：</p>
 <p>使用<b>最小分支数</b> 字段指定 <code>case</code> 标签的最小预期数量。</p>
+<p>Use the <b>Do not report pattern switch statements</b> option to avoid reporting switch statements and expressions that
+have pattern branches. E.g.:</p>
+<pre><code>
+  String result = switch(obj) {
+    case String str -> str.trim();
+    default -> "none";
+  };
+</code></pre>
+<p>It might be preferred to keep the switch even with a single pattern branch, rather than using the <code>instanceof</code> statement.</p>
 </body>
 </html>

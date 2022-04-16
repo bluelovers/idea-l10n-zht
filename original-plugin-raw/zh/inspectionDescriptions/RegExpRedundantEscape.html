@@ -1,11 +1,10 @@
 <html>
 <body>
-Reports redundant character escape sequences that can be replaced with unescaped characters preserving the meaning.
-Many escape sequences that are redundant inside square brackets <code>[]</code> of a character class are necessary outside of a character class.
+报告可以替换为保留其含义的非转义字符的冗余字符转义序列。
+许多在字符类的方括号 <code>[]</code> 中冗余的转义序列在字符类外部是必要的。
 <p>
-  Although unescaped opening curly braces <code>{</code> outside of character classes are allowed in some dialects (JavaScript, Python, and so on),
-  it can cause confusion and make the pattern less portable, because there are dialects that require escaping curly braces as characters.
-  For this reason the inspection does not report escaped opening curly braces.
+  尽管某些方言（JavaScript、Python 等）允许在字符类外部使用未转义的左大括号 <code>{</code>，但这样可能会导致混乱并降低模式的可移植性，因为某些方言要求将大括号作为字符进行转义。
+  因此，该检查不会报告转义的左大括号。
 <p><b>示例：</b></p>
 <pre><code>
   \-\;[\.]
@@ -16,8 +15,7 @@ Many escape sequences that are redundant inside square brackets <code>[]</code> 
 </code></pre>
 <!-- tooltip end -->
 <p>
-The <b>Ignore escaped closing brackets '}' and ']'</b> option specifies whether to report <code>\}</code> and <code>\]</code> outside of a character class
-when they are allowed to be unescaped by the RegExp dialect.
+<b>忽略转义的右括号 '}' 和 ']'</b> 选项可以指定当 RegExp 方言允许在字符类外部使用未转义的 <code>\}</code> 和 <code>\]</code> 时是否报告它们。
 <p><small>2017.3 最新变化</small>
 </body>
 </html>

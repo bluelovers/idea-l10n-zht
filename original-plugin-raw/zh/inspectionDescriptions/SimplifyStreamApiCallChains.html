@@ -31,7 +31,7 @@
   <li><code>optional.orElseGet(() -> { throw new ...; })</code> &rarr; <code>optional.orElseThrow()</code></li>
 </ul>
 <p>
-  Note that the replacement semantics may have minor differences in some cases. 例如，<code>Collections.synchronizedList(...).stream().forEach()</code> 不同步，而 <code>Collections.synchronizedList(...).forEach()</code> 同步。
+  请注意，在某些情况下，替换语义可能略有差异。 例如，<code>Collections.synchronizedList(...).stream().forEach()</code> 不同步，而 <code>Collections.synchronizedList(...).forEach()</code> 同步。
   另外，如果得到的元素为 <code>null</code>，而 <code>Stream.max()</code> 在本例中抛出 <code>NullPointerException</code>，则 <code>collect(Collectors.maxBy())</code> 返回空的 <code>Optional</code>。
 </p>
 </body>

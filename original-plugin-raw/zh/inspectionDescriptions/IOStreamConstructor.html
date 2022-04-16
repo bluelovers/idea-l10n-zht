@@ -1,9 +1,8 @@
 <html>
 <body>
-Reports <code>FileInputStream</code> or <code>FileOutputStream</code> constructors in cases when it is possible to replace
-them with <code>Files.newInputStream</code> or <code>Files.newOutputStream</code> accordingly.
+在可以将 <code>FileInputStream</code> 或 <code>FileOutputStream</code> 构造函数相应地替换为 <code>Files.newInputStream()</code> 或 <code>Files.newOutputStream()</code> 时报告。
 <br>
-Streams that are created using <code>Files</code> methods usually are more efficient than regular ones.
+使用 <code>Files</code> 方法创建的流通常比使用流构造函数创建的流更有效。
 <p>示例：</p>
 <pre><code>
 InputStream is = new BufferedInputStream(new FileInputStream(file));
@@ -13,6 +12,8 @@ InputStream is = new BufferedInputStream(new FileInputStream(file));
 InputStream is = new BufferedInputStream(Files.newInputStream(file.toPath()));
 </code></pre>
 <!-- tooltip end -->
+<p>如果语言级别为 10 或更高，则此检查不会显示警告，但快速修复仍然可用。</p>
+<p>仅当项目或模块的语言级别为 7 或更高时，此检查才会报告。</p>
 <p><small>2022.1 最新变化</small></p>
 </body>
 </html>

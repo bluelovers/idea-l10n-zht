@@ -1,0 +1,35 @@
+<html>
+<body>
+报告 Javadoc 注释中的空行。
+<p>
+  Javadoc 中的空行可能表示将文本拆分为不同段落的意图。 但是，Javadoc 工具和 IntelliJ IDEA 在呈现文档注释时会忽略它们。
+</p>
+<p>
+  该快速修复会建议将空行替换为段落标记 (&lt;p&gt;)。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Main {
+    /**
+     * 不起作用。
+     *
+     * 完全不起作用
+     */
+    void foo() {}
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Main {
+    /**
+     * 不起作用。
+     * &lt;p&gt;
+     * 完全不起作用
+     */
+    void foo() {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.1 最新变化</small></p>
+</body>
+</html>
