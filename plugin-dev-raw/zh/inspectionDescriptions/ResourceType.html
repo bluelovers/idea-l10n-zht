@@ -1,17 +1,17 @@
 <html>
 <body>
-此檢查會查看使用各種支援的註解(如 RequiresPermission 或 UiThread)進行註解的 Android API 調用，並標記未按照註解指定的方式正確使用 API 的任何調用。
+此檢查會查看使用各種支援註解（如 RequiresPermission 或 UiThread）進行註解的 Android API 調用，並標記未按照註解指定的方式正確使用 API 的任何調用。
 <br><br>
-由此檢查標記的錯誤範例:
+由此檢查標記的錯誤範例：
 <ul>
-  <li>將錯誤類型的資源整數(如 R.string)傳遞給需要不同類型(如 R.dimen)的 API。</li>
-  <li>忘記在需要它的方法中調用被覆蓋的方法(通過 super)</li>
+  <li>將錯誤類型的資源整數（如 R.string）傳遞給需要不同類型（如 R.dimen）的 API。</li>
+  <li>忘記在需要它的方法中調用被覆寫的方法（通過 super）</li>
   <li>調用需要權限但未在清單中宣告該權限的方法</li>
   <li>將資源顏色引用傳遞給需要 RGB 整數值的方法。</li>
 </ul>
-...以及更多。
+…以及更多。
 <br><br>
-有關詳細資訊，請參閱以下文檔: 
-<a href="http://developer.android.com/tools/debugging/annotations.html">http://developer.android.com/tools/debugging/annotations.html</a>
+有關詳細資訊，請參閱 
+<a href="http://developer.android.com/tools/debugging/annotations.html">http://developer.android.com/tools/debugging/annotations.html</a> 下的文檔
 </body>
 </html>

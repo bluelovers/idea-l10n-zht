@@ -1,12 +1,9 @@
 <html>
 <body>
-Reports redundant <code>Stream</code> or <code>Optional</code> calls like <code>map(x -&gt; x)</code>, <code>filter(x -&gt; true)</code> or
-redundant <code>sorted()</code> or <code>distinct()</code> calls.
+報告冗餘的 <code>Stream</code> 或 <code>Optional</code> 調用（例如 <code>map(x -&gt; x)</code>、<code>filter(x -&gt; true)</code>）或冗餘的 <code>sorted()</code> 或 <code>distinct()</code> 調用。
 <!-- tooltip end -->
-<p>Note that a mapping operation in code like <code>streamOfIntegers.map(Integer::valueOf)</code>
-  works as <code>requireNonNull()</code> check:
-  if the stream contains <code>null</code>, it throws a <code>NullPointerException</code>, thus it's not absolutely redundant.
-  Disable the <b>Report redundant boxing in Stream.map()</b> option if you do not want such cases to be reported.</p>
+<p>請注意，程式碼中 <code>streamOfIntegers.map(Integer::valueOf)</code> 之類的映射操作效果與 <code>requireNonNull()</code> 檢查相同：如果該流包含 <code>null</code>，它將拋出 <code>NullPointerException</code>，因此並非絕對冗餘。
+  如果不希望報告此類情況，請禁用<b>報告 Stream.map() 中的冗餘裝箱</b>選項。</p>
 <p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
 <body>
-報告對擴展 <code>Number</code> 的類的物件的 <code>toString()</code> 調用。
+報告擴展 <code>Number</code> 的類的物件上的 <code>toString()</code> 調用。
 此類調用在國際化環境中通常是不正確的，應該使用一些特定於區域設定的格式。
 <p><b>範例：</b></p>
 <pre><code>
@@ -8,7 +8,7 @@
     System.out.println(d.toString());
   }
 </code></pre>
-解決此問題的一種可能方式是:
+修正此問題的一種可能方式是：
 <pre><code>
   void print(Double d) {
     System.out.printf("%f%n", d);

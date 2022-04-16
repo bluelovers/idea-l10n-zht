@@ -1,0 +1,12 @@
+<html>
+<body>
+報告傳遞給泛型類型並且不是預期上限的子類型的類型實參。 類型實參必須是任意指定上限的子類型。
+<p>範例：</p>
+<pre><code>class Example[A &lt; Numeric]
+end
+
+# 'String' 不是 'Numeric' 的子類型
+type example = Example[String]
+</code></pre>
+</body>
+</html>

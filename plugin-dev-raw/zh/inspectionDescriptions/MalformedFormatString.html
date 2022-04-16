@@ -1,7 +1,8 @@
 <html>
 <body>
 報告不符合標準 Java 語法的格式字串。
-<p>預設情況下，如果編譯時常量被用作 <code>java.util.Formatter</code>、<code>java.lang.String</code>、<code>java.io.PrintWriter</code> 或 <code>java.io.PrintStream</code> 上相應方法的實參，則該檢查會將其視為格式字串。
+<p>預設情況下，如果編譯時常量被用作 <code>java.util.Formatter</code>、<code>java.lang.String</code>、<code>java.io.PrintWriter</code> 或
+<code>java.io.PrintStream</code> 上相應方法的實參，則該檢查會將其視為格式字串。
 </p>
 <p><b>範例：</b></p>
 <pre><code>
@@ -9,12 +10,13 @@
 </code></pre>
 <!-- tooltip end -->
 <p>使用檢查設定可以將其他類和方法標記為與字串格式相關。</p>
-<p>作為替代方案，您可以使用來自 <code>org.jetbrains:annotations package</code> 的 <code>org.intellij.lang.annotations.PrintFormat</code> 註解來標記格式字串方法參數。 在這種情況下，格式實參參數必須緊跟在格式字串之後，並且必須是最後一個方法參數。 範例：</p>
+<p>作為替代方案，您可以使用 <code>org.intellij.lang.annotations.PrintFormat</code> 註解
+來標記格式字串方法參數。 在這種情況下，格式實參參數必須緊跟在格式字串之後，並且必須是最後一個方法參數。 範例：</p>
 <pre><code>
   void myFormatMethod(int mode, @PrintFormat String formatString, Object... args) {...}
 </code></pre>
 <p>
-  此類方法也將被此檢查識別。
+  以這種方式註解的方法也將被此檢查識別。
 </p>
 </body>
 </html>

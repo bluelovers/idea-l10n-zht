@@ -1,7 +1,14 @@
 <html>
 <body>
-Reports container, method, and type alias type variables that are unused within the project.
-<p>可以安全地移除未使用的類型變數。</p>
+報告專案中未使用的容器、方法和類型別名類型變數。
 <p>僅當容器恰好有一個宣告時，才會檢查容器類型變數。</p>
+<p>可以通過快速修復移除未使用的類型變數。</p>
+<p>範例：</p>
+<pre><code># 'Example' 類的類型變數 'A' 未使用
+class Example[A]
+end</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>class Example
+end</code></pre>
 </body>
 </html>

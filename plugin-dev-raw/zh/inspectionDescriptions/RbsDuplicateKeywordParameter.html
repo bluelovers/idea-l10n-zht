@@ -1,0 +1,10 @@
+<html>
+<body>
+報告方法、塊和 proc 類型中的重複關鍵字參數。 只識別每個關鍵字參數的第一個宣告；所有其他宣告將被忽略。
+<p>範例：</p>
+<pre><code>class Example
+  # 重複的關鍵字參數
+  def call: (keyword: untyped, keyword: untyped) -> untyped
+end</code></pre>
+</body>
+</html>

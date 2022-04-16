@@ -2,13 +2,13 @@
 <body>
 報告一組 CSS 一般屬性，並建議將不完整的一組 CSS 一般屬性取代為速記形式，但在本例中，速記形式並非 100% 等效。
 <p>
-  例如，這兩個屬性: <code>outline-color</code> 和 <code>outline-style</code>，可以取代為單獨一個 <code>outline</code> 屬性。
+  例如，<code>outline-color</code> 和 <code>outline-style</code> 這 2 個屬性可以取代為單個 <code>outline</code>。
   此類取代不是 100% 等效，因為速記形式會將所有忽略的子值重置為其初始狀態。
   在本例中，切換到 <code>outling</code> 簡寫形式意味著 <code>outling-width</code> 也將設定為其初始值，即 <code>medium</code>。
 </p>
 <!-- tooltip end -->
 <p>
-  此檢查不會處理整組普通寫法的屬性(在完全可以切換到簡寫形式時)。
+  此檢查不會處理整組一般屬性（在切換到速記形式 100% 安全時）。
   對於此類情況，請參閱“屬性可以安全取代為速記形式”檢查。
 </p>
 </body>

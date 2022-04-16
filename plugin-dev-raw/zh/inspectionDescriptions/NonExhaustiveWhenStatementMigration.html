@@ -1,10 +1,10 @@
 <html>
 <body>
 報告從 1.7 版開始會導致編譯錯誤的非詳盡 <code>when</code> 語句。
-<p>動機類型:</p>
+<p>動機類型：</p>
 <ul>
     <li>
-        需要勸阻/阻止的有問題/無意義的用法模式(例如反直覺的行為)
+        需要勸阻/阻止的有問題/無意義的用法模式（例如反直覺的行為）
         <ul>
             <li>
                 程式碼容易出錯
@@ -12,10 +12,10 @@
         </ul>
     </li>
     <li>
-        設計中的不一致(在不同的上下文中存在不同的處理方式)
+        設計中的不一致（在不同的上下文中存在不同的處理方式）
     </li>
 </ul>
-<p>影響類型:</p>
+<p>影響類型：</p>
 <ul>
     <li>
         編譯。 一些過去可以編譯的程式碼已無法編譯
@@ -32,7 +32,7 @@
     </li>
 </ul>
 
-<p><b>更多詳細資訊: </b> <a href="https://youtrack.jetbrains.com/issue/KT-47709">KT-47709: 預設情況下使帶有 enum、sealed 和 Boolean 物件的 when 語句詳盡</a></p>
+<p><b>更多詳細資訊：</b> <a href="https://youtrack.jetbrains.com/issue/KT-47709">KT-47709：預設情況下使帶有 enum、sealed 和 Boolean 物件的 when 語句詳盡</a></p>
 <p>快速修復會添加缺少的 <code>else -> {}</code> 分支。</p>
 <p><b>範例：</b></p>
 <pre><code>

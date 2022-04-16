@@ -1,7 +1,6 @@
 <html>
 <body>
-Reports cases where the minimum or the maximum of two numbers can be calculated using
-a <code>Math.max()</code> or <code>Math.min()</code> call, instead of doing it manually.
+報告可以使用 <code>Math.max()</code> 或 <code>Math.min()</code> 調用而不是手動計算兩個數字的最小值或最大值的情況。
 <p><b>範例：</b></p>
 <pre><code>
   public int min(int a, int b) {
@@ -16,10 +15,9 @@ a <code>Math.max()</code> or <code>Math.min()</code> call, instead of doing it m
 </code></pre>
 <!-- tooltip end -->
 <p>
-  Use the <b>Disable for float and double</b> option to disable this inspection for <code>double</code> and <code>float</code> types.
-  This is useful because the quick-fix may slightly change the semantics for <code>float</code>/
-  <code>double</code> types when handling <code>NaN</code>. Nevertheless, in most cases this will actually fix
-  a subtle bug where <code>NaN</code> is not taken into account.
+  使用<b>禁用 float 和 double</b> 選項，可對 <code>double</code> 和 <code>float</code> 類型禁用此檢查。
+  由於該快速修復在處理 <code>NaN</code> 時可能會略微更改 <code>float</code>/
+<code>double</code> 類型的語意，因此這很有用。 然而，如果不考慮 <code>NaN</code>，此快速修復在大多數情況下其實會修正難以捉摸的錯誤。
 </p>
 <p><small>2019.2 最新變化</small></p>
 </body>

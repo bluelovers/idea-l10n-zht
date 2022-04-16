@@ -4,7 +4,7 @@
 報告具有不受支援的操作數的算術和按位表達式。
 
 <p>
-  從 PHP 8.0 開始，當操作數之一是陣列、資源或非多載物件時，使用算術和按位運算符 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>、<code>**</code>、<code>%</code>、<code>&lt; &lt;</code>、<code>></code>、<code>&</code>、<code>|</code>、<code>^</code>、<code>~</code>、<code>++</code>、<code>-</code> 將導致一個 <code>TypeError</code>。 唯一的例外是
+  從 PHP 8.0 開始，當操作數之一是陣列、資源或非多載物件時，使用算術和按位運算符 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>、<code>**</code>、<code>%</code>、<code>&lt; &lt;</code>、<code>></code>、<code>&</code>、<code>|</code>、<code>^</code>、<code>~</code>、<code>++</code>、<code>-</code> 將導致 <code>TypeError</code>。 唯一的例外是
   <code>array + array</code>合併操作，它仍然被支援。
 </p>
 

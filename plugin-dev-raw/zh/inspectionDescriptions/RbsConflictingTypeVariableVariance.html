@@ -1,6 +1,15 @@
 <html>
 <body>
-報告其差異(<code>in</code>、<code>out</code> 或 <code>unchecked</code>)與另一個宣告衝突的類型變數。
-<p>即使類型變數具有不同的名稱，類型變數在同一類或模組的部分宣告之間也必須在差異上符合。</p>
+報告其方差（<code>in</code>、<code>out</code> 或 <code>unchecked</code>）與另一個宣告衝突的類型變數。
+即使類型變數具有不同的名稱，類型變數在同一類或模組的部分宣告之間也必須在方差上符合。
+<p>範例：</p>
+<pre><code># 'Example' 類的類型變數 'B' 有一個與其他宣告衝突的差異，…
+class Example[A, in B, out C]
+end
+
+# 'Example' 類的類型變數 'Y' 有一個與其他宣告衝突的差異，…
+class Example[X, Y, Z]
+end
+</code></pre>
 </body>
 </html>
