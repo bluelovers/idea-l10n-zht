@@ -212,6 +212,8 @@ describe(`should include`, () => {
 
 		[`註`, `js.strict.mode.inspection.fix=添加“use strict”杂注`],
 
+		[`開啟`, `action.Android.DeviceExplorer.Help.text=打开设备资源管理器帮助`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
