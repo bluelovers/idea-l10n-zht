@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-04-29)
+
+
+### 📦　Code Refactoring
+
+* **dict:** { 打开 => 開啟 } ([fcf4323](https://github.com/bluelovers/idea-l10n-zht/commit/fcf4323e04c322d658b75e9815c489d307e60079))
+
+
+### 🛠　Build System
+
+* **cache:** update version-map ([57988ad](https://github.com/bluelovers/idea-l10n-zht/commit/57988ad28a199ba92ea67cf8e82537e6346c98e2))
+* **release:** update build ([5c72418](https://github.com/bluelovers/idea-l10n-zht/commit/5c7241818f5aa20004028cbd63d927c0f3e7a632))
+* **release:** update dev build files ([57312d4](https://github.com/bluelovers/idea-l10n-zht/commit/57312d459b68402d722416495b4b09f462d28daf))
+* **test:** update snapshots ([670666d](https://github.com/bluelovers/idea-l10n-zht/commit/670666db15c94f2fa1ba16a851e0620021c29952))
+
+
+### ♻️　Chores
+
+* **deps:** use jest@27 ([8a5ee52](https://github.com/bluelovers/idea-l10n-zht/commit/8a5ee5221c99fbf4745aa09f2996aca2f676f74b))
+* **deps:** update deps ([3d0a2cb](https://github.com/bluelovers/idea-l10n-zht/commit/3d0a2cb3b6faeb1bfa25a54bed64659e3fedab9a))
+
+
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-04-16)
 
 
