@@ -214,6 +214,8 @@ describe(`should include`, () => {
 
 		[`開啟`, `action.Android.DeviceExplorer.Help.text=打开设备资源管理器帮助`],
 
+		[`主控台`, `log.monitor.fragment.name=指定要在控制台中显示的日志`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
