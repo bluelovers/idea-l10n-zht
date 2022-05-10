@@ -47,6 +47,7 @@ const testExt = [
  * @type { import('@jest/types').Config.InitialOptions }
  */
 module.exports = {
+	maxWorkers: 1,
 	clearMocks: true,
 	passWithNoTests: true,
 	moduleFileExtensions: [
