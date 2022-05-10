@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-10)
+
+
+### 🐛　Bug Fixes
+
+* **dict:** `plugin` { 插件 => 套件 => 延伸模組 } [#21](https://github.com/bluelovers/idea-l10n-zht/issues/21) ([34e2f8d](https://github.com/bluelovers/idea-l10n-zht/commit/34e2f8d30c6e93ae1b49657ccc333dbad0c02c1b))
+
+
+### 📦　Code Refactoring
+
+* **dict:** { 许可证 => 授權 } [#24](https://github.com/bluelovers/idea-l10n-zht/issues/24) ([3e55968](https://github.com/bluelovers/idea-l10n-zht/commit/3e559686a2b3a853df6bb7c3472e2310663555b4))
+
+
+### 📚　Documentation
+
+* **todo:** `Configuration` 應該翻譯為【組態】而不是【設定】 [#20](https://github.com/bluelovers/idea-l10n-zht/issues/20) ([0adffde](https://github.com/bluelovers/idea-l10n-zht/commit/0adffded5aacd293b787f49fab037ad5d4278e6c))
+
+
+### 🛠　Build System
+
+* **cache:** update cache ([a870262](https://github.com/bluelovers/idea-l10n-zht/commit/a870262c08ca95ff973aa029438dcf7603e7aca4))
+* **cache:** update version-map ([d866afc](https://github.com/bluelovers/idea-l10n-zht/commit/d866afc1b497ed78c181e55d8bf25e425b831eb8))
+* **release:** update build ([be4ab65](https://github.com/bluelovers/idea-l10n-zht/commit/be4ab659cb6a15f771baec950553f8c456a3d0cf))
+* **release:** update dev build files ([ee1aabe](https://github.com/bluelovers/idea-l10n-zht/commit/ee1aabeae0472fa07d1c4e93db5a391be803a7e9))
+* **test:** update snapshots ([037f4cd](https://github.com/bluelovers/idea-l10n-zht/commit/037f4cd22518d91a46c906d723c8a5acfd47ec4b))
+
+
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-08)
 
 
