@@ -39,6 +39,10 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 - 忽略部分官方版檔案
 - 部分翻譯差異統一化
 
+### Git Commit Message Convention
+
+- 提交 git 訊息時可參考 [Git Commit Message Convention](.github/commit-convention.md)
+
 ### 基於分詞系統的替換字詞說明
 
 #### [lib/static/synonym.txt](lib/static/synonym.txt)
