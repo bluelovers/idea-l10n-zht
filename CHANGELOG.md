@@ -6,6 +6,30 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-10)
 
 
+### 📦　Code Refactoring
+
+* **dict:** { 初始值设定项 => 初始設定式 } ([0f964c0](https://github.com/bluelovers/idea-l10n-zht/commit/0f964c098cb1e5c1d11cefb864614b2cc26244f1))
+
+
+### 🚨　Tests
+
+* 限制 jest maxWorkers 防止 segment 多次初始化 ([1a650e7](https://github.com/bluelovers/idea-l10n-zht/commit/1a650e770a3e7cd2849d9747994fcd64b84199fd))
+
+
+### 🛠　Build System
+
+* **cache:** update cache ([ec5d01f](https://github.com/bluelovers/idea-l10n-zht/commit/ec5d01f679c37a8ebc3c8fd3d0d00d4646b48314))
+* **release:** update build ([948c570](https://github.com/bluelovers/idea-l10n-zht/commit/948c57094eebcef39412f21a6b31e748116183bb))
+* **release:** update dev build files ([8004c7c](https://github.com/bluelovers/idea-l10n-zht/commit/8004c7cbcdbe87606c9f08c81f44c4e2a14f42b2))
+* **test:** update snapshots ([d690f19](https://github.com/bluelovers/idea-l10n-zht/commit/d690f198f8b28650d1f7be94cd75eeba57df6f61))
+
+
+
+
+
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-10)
+
+
 ### 🐛　Bug Fixes
 
 * **dict:** `plugin` { 插件 => 套件 => 延伸模組 } [#21](https://github.com/bluelovers/idea-l10n-zht/issues/21) ([34e2f8d](https://github.com/bluelovers/idea-l10n-zht/commit/34e2f8d30c6e93ae1b49657ccc333dbad0c02c1b))
