@@ -216,6 +216,8 @@ describe(`should include`, () => {
 
 		[`主控台`, `log.monitor.fragment.name=指定要在控制台中显示的日志`],
 
+		[`授權`, `updates.channel.bundled.key=新版本有一个到期日期，不需要许可证密钥。`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
