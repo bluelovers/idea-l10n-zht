@@ -21,3 +21,7 @@
 ## 上下文
 
 沒有一個通用的翻譯，根據狀況翻譯會有所差異
+
+## Configuration
+
+- [Configuration 應該翻譯為【組態】而不是【設定】](https://github.com/bluelovers/idea-l10n-zht/issues/20)
