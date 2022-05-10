@@ -218,6 +218,8 @@ describe(`should include`, () => {
 
 		[`授權`, `updates.channel.bundled.key=新版本有一个到期日期，不需要许可证密钥。`],
 
+		[`初始設定式`, `inspection.compiler.javac.quirks.anno.array.comma.problem=注解数组初始值设定项中的尾随逗号可能会在某些 Javac 版本(例如 JDK 5 和 JDK 6)中导致编译错误。`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
