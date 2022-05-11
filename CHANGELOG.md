@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-11)
+
+
+### 📚　Documentation
+
+* **git:** Git Commit Message Convention ([f00285b](https://github.com/bluelovers/idea-l10n-zht/commit/f00285b3189ddbb38ba51c8e90c7df2325f3843f))
+
+
+### 🛠　Build System
+
+* **cache:** update cache ([64db6ec](https://github.com/bluelovers/idea-l10n-zht/commit/64db6ec08ae90c808e944f5bddf94b9e4ca3edd7))
+* **release:** update build ([892f42b](https://github.com/bluelovers/idea-l10n-zht/commit/892f42b7999a2a2b9676b3b8d309eb292a963d35))
+* **release:** update dev build files ([413cd25](https://github.com/bluelovers/idea-l10n-zht/commit/413cd25bbd9ccb271331e7ecd56a0642a1cc1958))
+
+
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-10)
 
 
