@@ -33336,7 +33336,7 @@ debug.stop.listen.debug.connections=停止偵聽 PHP 偵錯連接
 debug.start.listen.debug.connections=開始偵聽 PHP 偵錯連接
 debug.breakpoint.was.resolved=此處的偵錯會話已暫停，因為 ''{0}'' 處的中斷點已被解析到此位置。<br/>您可以<a href=\\"disable\\">禁用</a>中斷點解析或<a href=\\"more\\">了解詳情</a>。<a href=\\"dontshow\\">不再顯示</a>
 debug.breakpoint.resolved.disabled=中斷點解析已被禁用，從下一個偵錯會話開始將不會解析中斷點。 您可以稍後在 <a href=\\"open\\">PHP|偵錯</a>下將其啟用。
-debug.breakpoint.resolved.notify.disabled=中斷點解析通知已被禁用。您可以在 <a href=\\"open\\">PHP|偵錯|高級設定</a>下將其啟用。
+debug.breakpoint.resolved.notify.disabled=中斷點解析通知已被禁用。您可以在 <a href=\\"open\\">PHP|偵錯|進階設定</a>下將其啟用。
 debug.log.invalid.xdebug.message=由於 Xdebug 訊息無效，無法在中斷點處停止。\\\\n\\\\
 要解決此問題，請切換到穩定版本的 Xdebug 或使用 'xdebug.remote_log' 選項收集日誌並創建錯誤報告。 
 debug.log.stop=停止於 (''{0}'':{1})
@@ -33514,7 +33514,7 @@ PhpRemoteDebugRunConfigurationEditor.session.id.label=IDE 鍵(會話 ID)(&K):
 PhpRemoteDebugRunConfigurationEditor.auto.config=通過 IDE 鍵篩選偵錯連接
 PhpRemoteDebugRunConfigurationEditor.session.id.cannot.be.empty=IDE 鍵(會話 ID)不能為空
 PhpRemoteDebugRunConfigurationEditor.zero.configuration.used.title=已開始偵聽傳入 PHP 偵錯連接
-PhpRemoteDebugRunConfigurationEditor.filter.connections.help.title=高級選項
+PhpRemoteDebugRunConfigurationEditor.filter.connections.help.title=進階選項
 PhpRemoteDebugRunConfigurationEditor.filter.connections.help=適用於複雜伺服器設定，例如同一主機連接埠上有多個應用程式。<p/>保持未選中狀態以自動檢測設定，或使用<i>“偵聽偵錯連接”</i>操作。
 PhpRemoteDebugRunConfigurationEditor.filter.connections.help.link=閱讀更多資訊
 PhpRemoteDebugRunConfigurationEditor.zero.configuration.used=沒有為 <i>''{0}''</i> 執行設定指定<i>伺服器</i>，因此 PhpStorm 將偵聽所有傳入偵錯連接。<br/>查看<a href=\\"zero_config\\">零設定偵錯</a>獲取更多資訊。<br/><br/>要停止偵聽偵錯連接，請使用<a href=\\"stop\\">執行|停止偵聽 PHP 偵錯連接</a>。
@@ -33547,7 +33547,7 @@ PhpDebugConfigurable.import.use.statements=從評估上下文匯入命名空間�
 PhpDebugConfigurable.show.array.children.in.repl=在偵錯主控台中顯示陣列和物件子級
 PhpDebugConfigurable.external.connections=外部連接
 PhpDebugConfigurable.pass.required.configuration.options=通過命令行傳遞所需設定選項(仍需要手動啟用偵錯擴展)
-PhpDebugConfigurable.advanced.settings=高級設定
+PhpDebugConfigurable.advanced.settings=進階設定
 PhpDebugConfigurable.notify.session.stopped.without.pause=在偵錯會話完成而不暫停時通知
 PhpDebugConfigurable.notify.resolved.breakpoint=通知是否將中斷點解析為另一行(Xdebug 2.8+)
 PhpDebugConfigurable.detect.path.mappings.from.deployment=檢測部署設定的路徑映射
@@ -33788,7 +33788,7 @@ PhpProjectConfigurable.all=所有
 PhpProjectConfigurable.provide.include.path=提供 include 路徑
 PhpProjectConfigurable.docker.default.project.error.tooltip=開啟或創建專案以設定 Docker 容器
 PhpProjectConfigurable.php.runtime=PHP 執行時
-PhpProjectConfigurable.advanced.settings=高級設定(&V)
+PhpProjectConfigurable.advanced.settings=進階設定(&V)
 PhpProjectConfigurable.default.stubs.path=預設存根路徑(&D):
 PhpProjectConfigurable.select.default.stubs.path.title=選擇預設存根路徑
 PhpProjectConfigurable.select.default.stubs.path.description=選擇預設存根路徑
@@ -34222,7 +34222,7 @@ getters.setters.configure=設定…
 
 php.embedded.stubs.incorrect.path.warning.title=預設存根路徑不正確
 php.embedded.stubs.incorrect.path.warning.message=設定的預設存根路徑 ''{0}'' 不存在，改為使用嵌入式存根。
-php.embedded.stubs.notification.provider.notification=您正在查看不可變的嵌入式存根。為了能夠編輯這些存根，您需要克隆一個存根專案，然後通過“PHP / PHP 執行時 / 高級設定”提供預設存根路徑。
+php.embedded.stubs.notification.provider.notification=您正在查看不可變的嵌入式存根。為了能夠編輯這些存根，您需要克隆一個存根專案，然後通過“PHP / PHP 執行時 / 進階設定”提供預設存根路徑。
 php.embedded.stubs.notification.provider.clone=在 GitHub 上克隆
 php.embedded.stubs.notification.provider.provide=提供預設存根路徑
 php.embedded.stubs.notification.provider.do.not.show.again=不再顯示
