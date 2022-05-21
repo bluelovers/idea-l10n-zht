@@ -240,6 +240,10 @@ describe(`should include`, () => {
 
 		[`文字游標`, `editor.settings.keep.trailing.spaces.on.caret.line=保留文本光标行中的尾随空格`],
 
+		[`選單`, `action.PopupMenu-selectParent.text=选择父菜单项`],
+		[`選單`, `action.PopupMenu-selectChild.text=选择子菜单项`],
+		[`選單`, `action.PopupMenu-return.description=打开子菜单或从选定的菜单项中调用操作。`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
