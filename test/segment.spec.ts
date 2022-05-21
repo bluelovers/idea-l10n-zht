@@ -246,6 +246,9 @@ describe(`should include`, () => {
 
 		[`選單`, `action.ShowMainMenu.text=显示主菜单`],
 
+		[`上劃線`, `ANN.title.length=上划线长度必须与下划线匹配`],
+		[`下劃線`, `ANN.title.length=上划线长度必须与下划线匹配`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
