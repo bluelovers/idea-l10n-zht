@@ -15,6 +15,8 @@ type ITestList = [ITSValueOrArrayMaybeReadonly<string>, string][];
 /**
  * 檢查是否確實轉換
  * 通過測試不代表轉換符合預期，因為檢查詞必須要正確設定才可以
+ *
+ * 轉換結果必須『不包含』指定內容
  */
 describe(`segment`, () => {
 
@@ -88,7 +90,9 @@ describe(`segment`, () => {
 		[`插件`, `支援 依赖项 'java:com.google.inject:guice' 的套件当前尚未安装。`],
 		[`軟件包`, `解除安装软件包。`],
 		[`內存`, `內存檢視`],
-		[`刷新`, `刷新文件历史记录`]
+		[`刷新`, `刷新文件历史记录`],
+
+		[`階`, `或更高级别时`],
 
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
@@ -113,6 +117,7 @@ describe(`segment`, () => {
 
 /**
  * 檢查是否發生誤轉換
+ * 轉換結果必須『包含』指定內容
  */
 describe(`should include`, () => {
 
@@ -224,6 +229,10 @@ describe(`should include`, () => {
 			`高階語言`,
 			`advanced.language.feature=高级语言功能: {0}`
 		],
+
+		[`更高`, `或更高级别时`],
+
+		[`進階`, `search.advanced.settings=搜索高级设置`],
 
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
