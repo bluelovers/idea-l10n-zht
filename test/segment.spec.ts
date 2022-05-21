@@ -234,6 +234,10 @@ describe(`should include`, () => {
 
 		[`進階`, `search.advanced.settings=搜索高级设置`],
 
+		[`複`, `将复合声明转换为多个变量声明。`],
+
+		[`複`, `stash.keep.index.tooltip=如果选中此复选框，已建立索引的变更将保留在索引中。`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
