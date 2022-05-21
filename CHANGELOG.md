@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-21)
+
+
+### 🐛　Bug Fixes
+
+* 合併重複項 `憑證,凭据` + `憑證,證書` ([bf30dad](https://github.com/bluelovers/idea-l10n-zht/commit/bf30dadc48a1a3fbbba1378f02ab44a0fb6c99c3))
+
+
+### 🛠　Build System
+
+* **cache:** update version-map ([d7bff99](https://github.com/bluelovers/idea-l10n-zht/commit/d7bff9964f166188561c7051305ecb3095b29e38))
+* **cache:** update version-map ([628c9d1](https://github.com/bluelovers/idea-l10n-zht/commit/628c9d1e48ca8257acc416ddc85393d572ad9f15))
+* **release:** update build ([636ba44](https://github.com/bluelovers/idea-l10n-zht/commit/636ba44f8a429779c132f958ffaf3d8a23b0f298))
+* **release:** update dev build files ([15a87d9](https://github.com/bluelovers/idea-l10n-zht/commit/15a87d9c2c11be06083a5634dbd6d54c13a36575))
+* **test:** update snapshots ([8090396](https://github.com/bluelovers/idea-l10n-zht/commit/8090396a151aba9bb8462096c67992a0b54507ee))
+
+
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-11)
 
 
