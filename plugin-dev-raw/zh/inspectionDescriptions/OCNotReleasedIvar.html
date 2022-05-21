@@ -8,7 +8,7 @@
 要放棄物件的所有權，您需要：<br>
 - 向其發送 <code>release</code> 或 <code>autorelease</code> 訊息<br>
 - 將 <code>nil</code> 分配給與實例變數合成的屬性<br> 
-如果 ARC（自動引用計數）已啟用，則此檢查會被禁用。 如果下面的復選框被關閉，您可以在類的任何方法中釋放實例變數。 如果開啟，您可以在 <code>dealloc</code>、<code>tearDown</code>、<code>applicationWillTerminate:</code>、
+如果 ARC（自動引用計數）已啟用，則此檢查會被禁用。 如果下面的複選框被關閉，您可以在類的任何方法中釋放實例變數。 如果開啟，您可以在 <code>dealloc</code>、<code>tearDown</code>、<code>applicationWillTerminate:</code>、
 <code>didTurnIntoFault</code> 方法以及任何可以從它們調用的方法中釋放實例變數。
 </body>
 </html>
