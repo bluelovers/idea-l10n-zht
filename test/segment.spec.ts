@@ -244,6 +244,8 @@ describe(`should include`, () => {
 		[`選單`, `action.PopupMenu-selectChild.text=选择子菜单项`],
 		[`選單`, `action.PopupMenu-return.description=打开子菜单或从选定的菜单项中调用操作。`],
 
+		[`選單`, `action.ShowMainMenu.text=显示主菜单`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
