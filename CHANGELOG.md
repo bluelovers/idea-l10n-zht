@@ -8,6 +8,32 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛　Bug Fixes
 
+* **synonym:** 修正重複內容 ([754cdb4](https://github.com/bluelovers/idea-l10n-zht/commit/754cdb4465e61f82debcca72e86a9f3ed3d79890))
+* **synonym:** 修正沒有正確將高級轉換為進階的問題 ([d13f0d8](https://github.com/bluelovers/idea-l10n-zht/commit/d13f0d88dcea096020e51a2832eab174d7a05279))
+
+
+### 📦　Code Refactoring
+
+* **dict:** { 高级语言 => 高階語言 } ([0528032](https://github.com/bluelovers/idea-l10n-zht/commit/0528032fd7600fc07fcff99f902bbef16ec12ca6))
+
+
+### 🛠　Build System
+
+* **cache:** update cache ([f8f83e8](https://github.com/bluelovers/idea-l10n-zht/commit/f8f83e855ca708fb91d5bab427ae750942fcd256))
+* **cache:** update version-map ([ab805da](https://github.com/bluelovers/idea-l10n-zht/commit/ab805da73579e31d1e0bcb1f85da03fd563c9570))
+* **release:** update build ([b5c3e96](https://github.com/bluelovers/idea-l10n-zht/commit/b5c3e969abe2305ff964f3e495e06ed8acb0ee28))
+* **release:** update dev build files ([5410ce4](https://github.com/bluelovers/idea-l10n-zht/commit/5410ce4a965759e068a9f5e266920efd88706186))
+* **test:** update snapshots ([ff5082b](https://github.com/bluelovers/idea-l10n-zht/commit/ff5082ba6a0b6b4d2a20ea47bea8f6b968ecf5ac))
+
+
+
+
+
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-21)
+
+
+### 🐛　Bug Fixes
+
 * 合併重複項 `憑證,凭据` + `憑證,證書` ([bf30dad](https://github.com/bluelovers/idea-l10n-zht/commit/bf30dadc48a1a3fbbba1378f02ab44a0fb6c99c3))
 
 
