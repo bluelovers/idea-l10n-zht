@@ -220,6 +220,11 @@ describe(`should include`, () => {
 
 		[`初始設定式`, `inspection.compiler.javac.quirks.anno.array.comma.problem=注解数组初始值设定项中的尾随逗号可能会在某些 Javac 版本(例如 JDK 5 和 JDK 6)中导致编译错误。`],
 
+		[
+			`高階語言`,
+			`advanced.language.feature=高级语言功能: {0}`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
