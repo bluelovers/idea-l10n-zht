@@ -6,6 +6,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-21)
 
 
+### 🐛　Bug Fixes
+
+* { 主菜单 => 主選單 } ([55e4143](https://github.com/bluelovers/idea-l10n-zht/commit/55e4143ccdae0354feaab23930d064f408733862))
+* { 菜单项 => 選單項 } ([1f2eb0a](https://github.com/bluelovers/idea-l10n-zht/commit/1f2eb0a558312564ae0045e62dd8fa4604d01eb5))
+
+
+### 🛠　Build System
+
+* **cache:** update version-map ([3acd924](https://github.com/bluelovers/idea-l10n-zht/commit/3acd9246845a1de824b18b35ee2873588bc1e5ff))
+* **release:** update build ([7b537f8](https://github.com/bluelovers/idea-l10n-zht/commit/7b537f8ba13782b2e1b5c605697b8ad79111515e))
+* **release:** update dev build files ([d63d4a4](https://github.com/bluelovers/idea-l10n-zht/commit/d63d4a42a1af70f46e52fb1782904398e595997d))
+* **test:** update snapshots ([6bb1913](https://github.com/bluelovers/idea-l10n-zht/commit/6bb19138aaae30f99c23f3739fb638196254e387))
+
+
+
+
+
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-21)
+
+
 ### 📦　Code Refactoring
 
 * **dict:** { 文本光标 => 文字游標 } ([f74c9f0](https://github.com/bluelovers/idea-l10n-zht/commit/f74c9f0db2765a9ed5c5a99cc58ab5b485ad763c))
