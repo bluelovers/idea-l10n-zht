@@ -8,6 +8,33 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛　Bug Fixes
 
+* { 复合 => 複合 } , { 复选框 => 複選框 } ([8c9ca20](https://github.com/bluelovers/idea-l10n-zht/commit/8c9ca20ee79c63e35b6c362b5c4da810a48a43ec))
+* **synonym:** 修正重複內容 ([684f1ed](https://github.com/bluelovers/idea-l10n-zht/commit/684f1edcbfea3f64f9ed985e55074f06e1f2d831))
+
+
+### 🛠　Build System
+
+* **cache:** update version-map ([f3aa2e5](https://github.com/bluelovers/idea-l10n-zht/commit/f3aa2e56537b668f4c08ce3c2daca7c7c23089ff))
+* **cache:** update cache ([1657b2a](https://github.com/bluelovers/idea-l10n-zht/commit/1657b2a02c76f3dc8fbddbe8e764805039d348c4))
+* **cache:** update version-map ([b03153a](https://github.com/bluelovers/idea-l10n-zht/commit/b03153a74eae0f777ef28375fdcb49261db7f5ed))
+* **release:** update build ([bf62748](https://github.com/bluelovers/idea-l10n-zht/commit/bf6274804b4f6adcfdcd7b2ad9b36a3ab5f0b8d1))
+* **release:** update dev build files ([e2fbad1](https://github.com/bluelovers/idea-l10n-zht/commit/e2fbad114e458bda10dc545f39fab5569047402d))
+* **test:** update snapshots ([caa3793](https://github.com/bluelovers/idea-l10n-zht/commit/caa3793c2d9e0eb94322c58da3bdf386b9770272))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([c412200](https://github.com/bluelovers/idea-l10n-zht/commit/c412200b9f89dc6c701dc9e386f2ce0edae42145))
+
+
+
+
+
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-21)
+
+
+### 🐛　Bug Fixes
+
 * **synonym:** 修正重複內容 ([754cdb4](https://github.com/bluelovers/idea-l10n-zht/commit/754cdb4465e61f82debcca72e86a9f3ed3d79890))
 * **synonym:** 修正沒有正確將高級轉換為進階的問題 ([d13f0d8](https://github.com/bluelovers/idea-l10n-zht/commit/d13f0d88dcea096020e51a2832eab174d7a05279))
 
