@@ -238,6 +238,8 @@ describe(`should include`, () => {
 
 		[`複`, `stash.keep.index.tooltip=如果选中此复选框，已建立索引的变更将保留在索引中。`],
 
+		[`文字游標`, `editor.settings.keep.trailing.spaces.on.caret.line=保留文本光标行中的尾随空格`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
