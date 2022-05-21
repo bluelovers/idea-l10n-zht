@@ -8,6 +8,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛　Bug Fixes
 
+* 上劃線 , 下劃線 ([337365c](https://github.com/bluelovers/idea-l10n-zht/commit/337365c087041a84795dd84eeaef06df294340c2))
+
+
+### 🛠　Build System
+
+* **cache:** update version-map ([8a69ec4](https://github.com/bluelovers/idea-l10n-zht/commit/8a69ec462642304b63ab2ffcecd87bdaeb547d54))
+* **release:** update build ([396dbc0](https://github.com/bluelovers/idea-l10n-zht/commit/396dbc095a1a9dc413d66900615f7e2cf30e6af8))
+* **release:** update dev build files ([2e9eb82](https://github.com/bluelovers/idea-l10n-zht/commit/2e9eb82b6dc7f0fb03c284d08b58dee14f17a5ac))
+* **test:** update snapshots ([18dedde](https://github.com/bluelovers/idea-l10n-zht/commit/18dedde8d94972c8115042344e232719c3a9dc7e))
+
+
+
+
+
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-21)
+
+
+### 🐛　Bug Fixes
+
 * { 主菜单 => 主選單 } ([55e4143](https://github.com/bluelovers/idea-l10n-zht/commit/55e4143ccdae0354feaab23930d064f408733862))
 * { 菜单项 => 選單項 } ([1f2eb0a](https://github.com/bluelovers/idea-l10n-zht/commit/1f2eb0a558312564ae0045e62dd8fa4604d01eb5))
 
