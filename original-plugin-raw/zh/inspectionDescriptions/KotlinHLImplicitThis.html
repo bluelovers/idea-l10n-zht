@@ -1,0 +1,25 @@
+<html>
+<body>
+报告隐式 <b>this</b> 的使用情况。
+<p><b>示例：</b></p>
+<pre><code>
+  class Foo {
+      fun s() = ""
+
+      fun test() {
+          s()
+      }
+  }
+</code></pre>
+<p>该快速修复会显式指定 <b>this</b>：</p>
+<pre><code>
+  class Foo {
+      fun s() = ""
+
+      fun test() {
+          this.s()
+      }
+  }
+</code></pre>
+</body>
+</html>

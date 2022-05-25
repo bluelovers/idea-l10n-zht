@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>非局部 return 语句</title>
+</head>
+<body>
+<p>在匿名函数中使用 <code>return</code> 关键字可以提早跳出该函数。 这可能会导致不直观的控制流并降低可读性。 示例： </p>
+<pre><code>
+def foo(numbers: Seq[Int]): Int =
+  numbers.map { n =>
+    if (n > 5) return 0 // 高亮显示
+    n * 2
+  }.sum
+</code></pre>
+
+<p>此外，只有在 Scala 编译器选项 <code>-Xlint:nonlocal-return</code> 存在的情况下，才可以使用下面的复选框来进行检查。</p>
+<!-- tooltip end -->
+</body>
+</html>

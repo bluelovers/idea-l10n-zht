@@ -3,14 +3,15 @@
 报告未来 Java 版本中可能无法编译的 Java 代码结构。
 <p>报告的问题如下：</p>
 <ul>
-  <li>使用 <code>assert</code>>、<code>enum</code> 或 <code>_</code> 作为标识符</li>
+  <li>使用 <code>assert</code>、<code>enum</code> 或 <code>_</code> 作为标识符</li>
   <li>使用 <code>var</code>、<code>yield</code> 或 <code>record</code> 受限标识符作为类型名称</li>
-  <li>对 <code>yield</code> 方法的非限定调用</li>
+  <li>对 <code>yield()</code> 方法的非限定调用</li>
   <li><code>module-info.java</code> 内部的 <code>requires java.base</code> 语句的修饰符</li>
 </ul>
 <p><b>示例：</b></p>
 <pre><code>
-  // 从 Java 14 起，由于 'yield' 成为受限标识符，此类将停止编译。
+  // 这个以前合法的类无法在 Java 14 中编译，
+  // 因为 'yield' 变成了一个受限的标识符。
   public class yield {} 
 </code></pre>
 <p>及时解决这些问题，可以简化向未来 Java 版本的迁移。</p>

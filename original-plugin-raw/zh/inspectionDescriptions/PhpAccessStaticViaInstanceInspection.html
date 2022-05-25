@@ -1,0 +1,26 @@
+<html>
+<body>
+通过类实例而不是类本身报告对 static 方法和字段的引用。
+<p>虽然 PHP 语言规范允许通过实例变量引用 static 成员，但代码阅读者可能会误认为该方法依赖于实例，从而使代码引起混淆。</p>
+<p>该快速修复会将实例变量替换为类名。</p>
+<p>示例：</p>
+<pre><code>
+  class StaticClass {
+    public static function someStaticFunction(): int
+    {
+        return 3;
+    }
+
+  }
+
+  $var = new StaticClass
+  $var::someStaticFunction();
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  StaticClass::someStaticFunction()
+</code></pre>
+<p>
+
+</body>
+</html>

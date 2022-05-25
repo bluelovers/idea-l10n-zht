@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>报告可以简化为单个检查的 <code>null</code> 和空值检查的组合。</p>
+<p>快速修复会将高亮显示的检查替换为组合的检查调用，如 <code>isNullOrEmpty()</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(list: List&lt;Int>?) {
+      if (list == null || list.isEmpty()) {
+          println("List is empty!")
+      } else {
+          println(list.joinToString())
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun test(list: List&lt;Int>?) {
+      if (list.isNullOrEmpty()) {
+          println("List is empty!")
+      } else {
+          println(list.joinToString())
+      }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<body>
+报告从 1.9 版开始会导致编译错误的由 <code>@Deprecated</code> 注解传播的声明。
+<p>动机类型：</p>
+<ul>
+    <li>
+        出于实现设计/架构原因，需要对实现进行更改
+    </li>
+    <li>
+        设计中的不一致（在不同的上下文中存在不同的处理方式）
+    </li>
+</ul>
+
+<p><b>更多详细信息：</b> <a href="https://youtrack.jetbrains.com/issue/KT-47902">KT-47902：不要通过重写来传播方法弃用</a></p>
+<p>快速修复会复制父声明中的 <code>@Deprecated</code> 注解。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  open class <b>Base</b> {
+      @Deprecated("Don't use")
+      open fun foo() {}
+  }
+
+  class <b>Derived</b> : <b>Base</b>() {
+      override fun foo() {}
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  open class <b>Base</b> {
+      @Deprecated("Don't use")
+      open fun foo() {}
+  }
+
+  class <b>Derived</b> : <b>Base</b>() {
+      @Deprecated("Don't use")
+      override fun foo() {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的 Kotlin 语言级别为 1.6 或更高时，此检查才会报告。</p>
+</body>
+</html>

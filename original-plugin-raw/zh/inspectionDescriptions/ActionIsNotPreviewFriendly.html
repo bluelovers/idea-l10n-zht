@@ -1,6 +1,7 @@
 <html>
 <body>
 报告 <code>LocalQuickFix</code> 实现中阻止意图预览操作正常运行的字段。
+此外，在已知类型是安全的字段上报告了过多的 <code>@SafeFieldForPreview</code> 注解。
 <p>
   意图预览是 IntelliJ 平台的一项功能，可以显示在应用快速修复或意图操作后对当前文件所做的更改。 为了实现这一功能，需要使用指向当前文件的非物理副本的自定义 <code>ProblemDescriptor</code> 来调用 <code>LocalQuickFix.generatePreview()</code>。
   通常，此实现委托给 <code>LocalQuickFix.applyFix()</code>。 但是，某些快速修复可能会直接或间接引用物理元素并将其用于写入。 由于快速修复试图更新的是物理 PSI 而不是非物理 PSI，预览不起作用。
@@ -12,7 +13,7 @@
 <ol>
   <li>
     如果该字段其实未存储任何 PSI 引用，或者该 PSI 仅用于读取，
-您可以使用 <code>@SafeFieldForPreview</code> 注解该字段
+您可以使用 <code>@SafeFieldForPreview</code> 注解该字段. 如果字段类型永远无法存储任何可写入的 PSI 引用，则也可以使用 <code>@SafeTypeForPreview</code>。
   </li>
   <li>
     您可以重写 <code>getFileModifierForPreview()</code> 方法，然后创建一个快速修复副本，将其重新绑定至作为形参提供的非物理文件副本。 使用 <code>PsiTreeUtil.findSameElementInCopy()</code> 可以在提供的非物理副本中找到相应的 PSI 元素。

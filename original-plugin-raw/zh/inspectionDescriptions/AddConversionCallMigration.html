@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>报告将为 <code>Int</code> 类型，从而在 Kotlin 1.9 及更高版本中导致编译错误的表达式。</p>
+
+<p>示例：</p>
+<pre><code>
+  fun takeByte(x: Byte) {}
+
+  fun foo() {
+      takeByte(1 + 1) // 将在 1.9 版中解析为 Int
+  }
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun takeByte(x: Byte) {}
+
+  fun foo() {
+      takeByte((1 + 1).toByte()) // 将在 1.9 版中解析为 Int
+  }
+</code></pre>
+
+<p>从 1.7 版开始，可对 Kotlin 语言级别进行检查。</p>
+</body>
+</html>

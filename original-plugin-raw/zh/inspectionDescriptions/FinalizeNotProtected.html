@@ -2,10 +2,10 @@
 <body>
 报告被声明为 <code>public</code> 的 <code>Object.finalize()</code> 方法的任何实现。
 <p>
-  根据 <code>Object.finalize()</code> 的约定，只有垃圾回收器调用此方法。 将此方法设为 public 可能令人困惑，因为这意味着该方法可供用户使用。
+  根据 <code>Object.finalize()</code> 的约定，只有垃圾回收器调用此方法。 将此方法设为 public 可能令人困惑，因为这意味着该方法可以从其他代码中使用。
 </p>
 <p>
-  该快速修复会将方法设为 protected，防止它被其他类显式调用。
+  可以通过快速修复将该方法设为 <code>protected</code>，以防止它被其他类调用。
 </p>
 <!-- tooltip end -->
 <p><b>示例：</b></p>

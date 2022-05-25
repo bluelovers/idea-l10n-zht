@@ -2,17 +2,19 @@
 <body>
 报告对集合使用的可以替换为等效 <code>Iterator</code> 结构的 <code>Enumeration</code> 方法的调用。
 <p><b>示例：</b></p>
-<pre><code>Enumeration&lt;String&gt; keys = map.keys();
+<pre><code>
+  Enumeration&lt;String&gt; keys = map.keys();
   while (keys.hasMoreElements()) {
     String name = keys.nextElement();
-  }</code>
-</pre>
+  }
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre><code>Iterator&lt;String&gt; iterator = map.keySet().iterator();
+<pre><code>
+  Iterator&lt;String&gt; iterator = map.keySet().iterator();
   while (iterator.hasNext()) {
     String name = iterator.next();
-  }</code>
-</pre>
+  }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

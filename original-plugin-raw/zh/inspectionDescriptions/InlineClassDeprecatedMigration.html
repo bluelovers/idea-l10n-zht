@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>
+    报告在 Kotlin 1.5 和更高版本中已弃用并会导致编译警告的内联类。
+    请参阅 <a href="https://kotlinlang.org/docs/whatsnew15.html#inline-classes">Kotlin 1.5.0 的最新变化</a>
+</p>
+
+<p>示例：</p>
+<pre><code>
+  inline class Password(val s: String)
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+  @JvmInline
+  value class Password(val s: String)
+</code></pre>
+
+<p>从 1.5 版开始，可对 Kotlin 语言级别进行检查。</p>
+</body>
+</html>

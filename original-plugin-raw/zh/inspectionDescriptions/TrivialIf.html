@@ -22,10 +22,7 @@
   if (condition2) return false;
   return true;
 </code></pre>
-<p>如果要隐藏 <code>if</code> 语句在其主体中仅包含 <code>assert</code> 语句的警告，请使用 <b>忽略 'assert' 语句</b>选项。</p>
-<p>例如，在以下代码中，警告将被隐藏：</p>
-<pre><code>
-  if (isTrue()) assert false;
-</code></pre>
+<p>请注意，如果条件有副作用，将 <code>if (isTrue()) assert false;</code> 替换为 <code>assert isTrue();</code> 可能会改变禁用 assert 时的程序语义。
+  如果要隐藏 <code>if</code> 语句在其主体中仅包含 <code>assert</code> 语句的警告，请使用<b>忽略带有普通 'assert' 的 'if' 语句</b>选项。</p>
 </body>
 </html>

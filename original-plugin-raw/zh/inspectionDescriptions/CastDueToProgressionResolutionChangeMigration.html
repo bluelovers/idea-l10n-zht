@@ -1,0 +1,39 @@
+<html>
+<body>
+<p>
+    报告实参需要显式转换才能解析为正确声明的重载函数调用。
+    当前的编译器警告（从 Kotlin 1.6.20 开始提供）将成为 Kotlin 1.8 中的错误。
+</p>
+<p>
+    进度和范围类型 (<code>kotlin.ranges</code>) 将在 1.9 及更高版本中开始实现 <code>Collection</code> 接口。 此更新将导致重载函数的解析发生变化。 例如，在下面的示例中，<code>test(1..5)</code> 调用将在 Kotlin 1.8 及更早版本中被解析为 <code>test(t: Any)</code>，而在 Kotlin 1.9 及更高版本中被解析为 <code>test(t: Collection&lt;*&gt;)</code>。
+</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+  fun invoke() {
+    test(1..5) // 在 1.9 版中 IntRange 会变成 Collection
+  }
+</code></pre>
+
+<p>提供的快速修复会捕获 1.8 版及更早版本的编译器特有的行为：</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+
+  fun invoke() {
+    test(1..5) // 在 Kotlin 1.9 之前的版本中解析为 'test(t: T)'
+  }
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+
+  fun invoke() {
+    test((1..5) as Iterable&lt;Int&gt;) // 在 Kotlin 1.9 版中解析为 'test(t: T)'
+  }
+</code></pre>
+<p>从 1.6 版开始，可对 Kotlin 语言级别进行检查。</p>
+</body>
+</html>

@@ -1,20 +1,20 @@
 <html>
 <body>
-报告布尔 'and' 和 'or' 的非短路形式（<code>&amp;</code> 和 <code>|</code>）的用法。
+报告布尔 'and' 和 'or' 的非短路形式（<code>&amp;</code>、<code>|</code>、<code>&amp;=</code> 和 <code>|=</code>）的用法。
 尽管非短路版本偶尔有用，但在大多数情况下，本应使用短路形式（<code>&amp;&amp;</code> 和 <code>||</code>），此类无意的用法可能会导致难以捉摸的错误。
 <p>
   建议通过快速修复来使用短路版本。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
-  void foo(boolean x, boolean y) {
-    if (x | y) { /**/ }
+  void foo(boolean x, boolean y, boolean z) {
+    if (x | y) { x |= z; }
   }
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
   void foo(boolean x, boolean y) {
-    if (x || y) { /**/ }
+    if (x || y) { x = x || z; }
   }
 </code></pre>
 <!-- tooltip end -->
