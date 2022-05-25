@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>
+  Reports invalid references inside Spring Shell
+  <code>org.springframework.shell.standard.ShellMethodAvailability</code> annotations.
+</p>
+<p>範例：</p>
+<pre><code>
+@ShellComponent
+public class MyCommands {
+
+    @ShellMethod("sum")
+    @ShellMethodAvailability("sumAvailability") // annotation value will be highlighted as unresolved symbol
+    public int sum(int a, int b) {
+        return a + b;
+    }
+
+    @ShellMethodAvailability("sumMethod") // annotation value will be highlighted as unresolved symbol
+    public Availability isSumAvailable() {
+        return Availability.available();
+    }
+}
+</code></pre>
+</body>
+</html>

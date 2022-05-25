@@ -1,0 +1,25 @@
+<html>
+<body>
+報告從 1.9 版開始會導致編譯錯誤的對函數父類型的構造函數調用。
+<p>動機類型：</p>
+<ul>
+    <li>
+        該實作不遵守已發佈的規範或文檔
+    </li>
+</ul>
+
+<p><b>更多詳細資訊：</b> <a href="https://youtrack.jetbrains.com/issue/KT-46344">KT-46344：在父類型列表中的函數接口上調用超類構造函數沒有錯誤</a></p>
+<p>該快速修復會移除構造函數調用。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  abstract class A : () -> Int()
+</code></pre>
+
+<p>在套用快速修復後：</p>
+<pre><code>
+  abstract class A : () -> Int
+</code></pre>
+<!-- tooltip end -->
+<p>僅當專案或模組的 Kotlin 語言級別為 1.7 或更高時，此檢查才會報告。</p>
+</body>
+</html>

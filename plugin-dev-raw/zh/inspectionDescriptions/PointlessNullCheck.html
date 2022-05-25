@@ -1,8 +1,8 @@
 <html>
 <body>
-報告 null 檢查，後面跟隨一個方法調用，當 <code>null</code> 被傳遞時，肯定會返回 <code>false</code>（例如，<code>Class.isInstance</code>）。
+報告後接方法調用的 <code>null</code> 檢查，當 <code>null</code> 被傳遞時，此方法調用必定返回 <code>false</code>（例如，<code>Class.isInstance</code>）。
 <p>在這種情況下，方法調用總是返回 <code>false</code>，此類檢查似乎有些多餘。</p>
-<p>範例： </p>
+<p><b>範例：</b></p>
 <pre><code>
   if (x != null && myClass.isInstance(x)) { ... }
 </code></pre>

@@ -1,7 +1,6 @@
 <html>
 <body>
 報告可以取代為一般字串文字的文本塊。
-<p>在程式碼遷回 Java 15 以前的 Java 版本時，可能會出現此類文本塊。</p>
 <p><b>範例：</b></p>
 <pre><code>
   Object obj = engine.eval("""
@@ -21,7 +20,10 @@
                            "hello();\n");
 </code></pre>
 <!-- tooltip end -->
-<p>僅當專案或模組的語言級別為 15 或更高時，此檢查才會報告。</p>
+<p>
+  <i>文本塊</i>出現在 Java 15 中。
+  此檢查有助於為向後相容早期 Java 版本而降級。
+</p>
 <p><small>2019.3 最新變化</small></p>
 </body>
 </html>

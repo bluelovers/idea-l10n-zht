@@ -1,7 +1,7 @@
 <html>
 <body>
-報告在方法簽名中宣告但方法本身或其實現和派生從未拋出的異常。
-<p>該檢查會忽略與序列化相關的方法，例如方法 <code>readObject()</code> 或 <code>writeObject()</code>。</p>
+報告在方法簽名中宣告但方法本身或其實現和覆寫方法從未拋出的異常。
+<p>該檢查會忽略與序列化相關的方法，例如方法 <code>readObject()</code> 和 <code>writeObject()</code>。</p>
 <p><b>範例：</b></p>
 <pre><code>
   void method() throws InterruptedException {
@@ -15,12 +15,12 @@
   }
 </code></pre>
 <p>
-  <b>注意</b>：在編輯器中高亮顯示時可能不會報告某些異常。
-  由於性能原因，僅當非 private 方法的名稱很少出現在專案中時，才會對其進行檢查。
+  <b>注意</b>：由於性能原因，在編輯器中高亮顯示時可能不會報告某些異常。
   要查看所有結果，請從主選單中選擇<b>程式碼 | 檢查程式碼</b>或<b>程式碼 | 分析程式碼 | 按名稱執行檢查</b>來執行檢查。
 </p>
 <!-- tooltip end -->
-<p>使用<b>忽略由入口點方法拋出的異常</b>選項可以忽略由入口點方法拋出的異常。
-  入口點方法在以下檢查中設定：<b>編輯器 | 檢查 | Java | 宣告冗餘 | 未使用的宣告</b>。</p>
+<p>使用<b>忽略由入口點方法拋出的異常</b>選項可以不報告由 <code>main()</code> 等方法拋出的異常。
+  可以在 <a href="settings://Errors?Unused%20Declaration%20entry%20point">Java | 宣告冗餘 | 未使用的宣告</a>檢查的設定中設定入口點方法。
+  <br><br></p>
 </body>
 </html>

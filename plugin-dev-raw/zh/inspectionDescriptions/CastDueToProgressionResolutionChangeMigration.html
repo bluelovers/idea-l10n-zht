@@ -1,0 +1,39 @@
+<html>
+<body>
+<p>
+    報告實參需要顯式轉換才能解析為正確宣告的多載函數調用。
+    當前的編譯器警告（從 Kotlin 1.6.20 開始提供）將成為 Kotlin 1.8 中的錯誤。
+</p>
+<p>
+    進度和範圍類型 (<code>kotlin.ranges</code>) 將在 1.9 及更高版本中開始實作 <code>Collection</code> 接口。 此更新將導致多載函數的解析發生變化。 例如，在下面的範例中，<code>test(1..5)</code> 調用將在 Kotlin 1.8 及更早版本中被解析為 <code>test(t: Any)</code>，而在 Kotlin 1.9 及更高版本中被解析為 <code>test(t: Collection&lt;*&gt;)</code>。
+</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+  fun invoke() {
+    test(1..5) // 在 1.9 版中 IntRange 會變成 Collection
+  }
+</code></pre>
+
+<p>提供的快速修復會捕獲 1.8 版及更早版本的編譯器特有的行為：</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+
+  fun invoke() {
+    test(1..5) // 在 Kotlin 1.9 之前的版本中解析為 'test(t: T)'
+  }
+</code></pre>
+
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+
+  fun invoke() {
+    test((1..5) as Iterable&lt;Int&gt;) // 在 Kotlin 1.9 版中解析為 'test(t: T)'
+  }
+</code></pre>
+<p>從 1.6 版開始，可對 Kotlin 語言級別進行檢查。</p>
+</body>
+</html>

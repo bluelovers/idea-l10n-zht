@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>報告會在 Kotlin 1.8 及更高版本中導致編譯錯誤的 <code>when</code> 分支中的模糊邏輯表達式。</p>
+<pre><code>
+  fun Int.matches(strict: Boolean): Boolean = when (strict) {
+      true -> this == 6
+      this in (4..7) -> true // 模糊
+      else -> false
+  }
+</code></pre>
+
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun Int.matches(strict: Boolean): Boolean = when (strict) {
+      true -> this == 6
+      (this in (4..7)) -> true // 包裝在圓括號中
+      else -> false
+  }
+</code></pre>
+<p>從 1.7 版開始，可對 Kotlin 語言級別進行檢查。</p>
+</body>
+</html>

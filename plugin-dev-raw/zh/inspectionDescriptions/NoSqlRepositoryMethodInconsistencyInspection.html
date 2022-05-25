@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>
+  報告建置器無法為其生成相應查詢的 Jakarta No SQL 儲存庫方法。
+</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+interface PersonRepository extends Repository&lt;Person, Long&gt; {
+  List&lt;Person&gt; findByEmailAndLastname(String email, String lastname);
+  List&lt;Person&gt; findBy<strong>Unknown</strong>AndLastname(EmailAddress emailAddress, String lastname); // 無法解析 'Unknown' 屬性
+  List&lt;Person&gt; <strong>findByAndLastname</strong>(String email, String lastname); // 缺少屬性名稱
+
+  List&lt;Person&gt; findByLastnameOrderByFirstnameAsc(String lastname);
+  List&lt;Person&gt; findByLastnameOrderBy<strong>Unknown</strong>Desc(String lastname);  // 無法解析 'Unknown' 屬性
+}
+</code></pre>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,7 +1,11 @@
 <html>
 <body>
-報告不是 <code>abstract</code> 且不公開 public <code>no-arg</code> 構造函數或將單個字串作為實參的 public 構造函數的 JUnit 測試用例。
-大多數 JUnit 測試執行程序都無法執行此類測試用例。
+報告無法由標準的 JUnit 測試執行程序建置的 JUnit 測試類。
+<p>
+  JUnit 4 測試類需要為 <code>public</code> 並包含一個 <code>public</code> 無實參構造函數或完全不包含構造函數（隱式的預設構造函數），且沒有其他 <code>public</code> 構造函數。
+  JUnit 3 測試類需要為 <code>public</code>，並且需要包含一個 <code>public</code> 無實參構造函數
+或是帶有單個 <code>String</code> 類型參數的 <code>public</code> 構造函數，以調用符合的 super 構造函數。
+  否則，測試類無法由標準的 JUnit 測試執行程序執行。
 <p><b>範例：</b></p>
 <pre><code>
 public class MyTest {

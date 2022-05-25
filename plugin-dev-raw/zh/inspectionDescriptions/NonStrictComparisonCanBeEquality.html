@@ -1,0 +1,16 @@
+<html>
+<body>
+報告根據數據流分析只能對單個操作數值滿足的不等條件。
+此類條件可以取代為相等條件，以使程式碼更清晰。
+<p>範例：</p>
+<pre>
+  if (x >= 10) {
+    ...
+    if (x <= 10) { // can be replaced with 'x == 10'
+    }
+  }
+</pre>
+<!-- tooltip end -->
+<p><small>2022.2 最新變化</small></p>
+</body>
+</html>

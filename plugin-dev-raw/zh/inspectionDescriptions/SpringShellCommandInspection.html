@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>
+  Reports incorrect Spring Shell command declarations:
+</p>
+<ul>
+  <li>Missing command description</li>
+  <li>Command is not inside <code>org.springframework.shell.standard.@ShellComponent</code></li>
+</ul>
+<p>範例：</p>
+<pre><code>
+// all methods will be reported due to missing @ShellComponent
+class MathCommands {
+
+  @ShellMethod("")
+  public int sum(int a, int b) { // method will be reported due to empty description
+    return a + b;
+  }
+
+  @ShellMethod
+  public int mul(int a, int b) { // method will be reported due to missing description
+    return a * b;
+  }
+}
+</code></pre>
+</body>
+</html>

@@ -16,13 +16,6 @@
     <option name="explain" path="ActionManager" hit="Explain analyse" />
     <option name="jdbc" path="ActionManager" hit="JDBC 日誌設定" />
     <option name="日誌設定" path="ActionManager" hit="JDBC 日誌設定" />
-    <option name="execution" path="ActionManager" hit="Open Query Execution Settings…" />
-    <option name="open" path="ActionManager" hit="Open Query Execution Settings…" />
-    <option name="query" path="ActionManager" hit="Open Query Execution Settings…" />
-    <option name="settings" path="ActionManager" hit="Open Query Execution Settings…" />
-    <option name="object" path="ActionManager" hit="Refresh Selected Object" />
-    <option name="refresh" path="ActionManager" hit="Refresh Selected Object" />
-    <option name="selected" path="ActionManager" hit="Refresh Selected Object" />
     <option name="sql" path="ActionManager" hit="SQL 生成器…" />
     <option name="生成器" path="ActionManager" hit="SQL 生成器…" />
     <option name="sql" path="ActionManager" hit="SQL 腳本" />
@@ -35,6 +28,7 @@
     <option name="為所選列添加單獨的索引" path="ActionManager" hit="為所選列添加單獨的索引" />
     <option name="為所選列添加新索引" path="ActionManager" hit="為所選列添加新索引" />
     <option name="主鍵" path="ActionManager" hit="主鍵" />
+    <option name="事務" path="ActionManager" hit="事務" />
     <option name="從剪貼簿匯入" path="ActionManager" hit="從剪貼簿匯入" />
     <option name="從所選列中刪除外鍵" path="ActionManager" hit="從所選列中刪除外鍵" />
     <option name="從所選檔案創建新資料來源" path="ActionManager" hit="從所選檔案創建新資料來源" />
@@ -44,6 +38,7 @@
     <option name="從選區添加資料來源" path="ActionManager" hit="從選區添加資料來源…" />
     <option name="從專案檔案匯入資料來源" path="ActionManager" hit="從專案檔案匯入資料來源" />
     <option name="以文本顯示模型物件" path="ActionManager" hit="以文本顯示模型物件" />
+    <option name="會話" path="ActionManager" hit="會話" />
     <option name="作為表編輯" path="ActionManager" hit="作為表編輯" />
     <option name="lob" path="ActionManager" hit="儲存 LOB…" />
     <option name="儲存" path="ActionManager" hit="儲存 LOB…" />
@@ -62,7 +57,6 @@
     <option name="關閉會話" path="ActionManager" hit="關閉會話" />
     <option name="關閉所有會話" path="ActionManager" hit="關閉所有會話" />
     <option name="關閉所選會話" path="ActionManager" hit="關閉所選會話" />
-    <option name="關閉表檢視" path="ActionManager" hit="關閉表檢視" />
     <option name="內省級別" path="ActionManager" hit="內省級別" />
     <option name="準備內省器診斷" path="ActionManager" hit="準備內省器診斷" />
     <option name="p" path="ActionManager" hit="準備內省診斷資訊(_P)" />
@@ -86,6 +80,7 @@
     <option name="刪除資料庫物件或移除資料來源" path="ActionManager" hit="刪除資料庫物件或移除資料來源" />
     <option name="重新整理" path="ActionManager" hit="重新整理" />
     <option name="重新整理所選具體化檢視" path="ActionManager" hit="重新整理所選具體化檢視" />
+    <option name="重新整理所選物件" path="ActionManager" hit="重新整理所選物件" />
     <option name="重新整理物化檢視" path="ActionManager" hit="重新整理物化檢視" />
     <option name="重新整理快取資料庫結構中的所選物件" path="ActionManager" hit="重新整理快取資料庫結構中的所選物件" />
     <option name="重新整理快取的資料庫結構" path="ActionManager" hit="重新整理快取的資料庫結構" />
@@ -122,6 +117,9 @@
     <option name="複製資料來源" path="ActionManager" hit="複製資料來源" />
     <option name="複製聚合結果" path="ActionManager" hit="複製聚合結果" />
     <option name="外鍵" path="ActionManager" hit="外鍵" />
+    <option name="ddl" path="ActionManager" hit="存儲的 DDL 編輯器" />
+    <option name="存儲的" path="ActionManager" hit="存儲的 DDL 編輯器" />
+    <option name="編輯器" path="ActionManager" hit="存儲的 DDL 編輯器" />
     <option name="匯入到資料庫" path="ActionManager" hit="匯入到資料庫" />
     <option name="匯入到資料庫" path="ActionManager" hit="匯入到資料庫…" />
     <option name="匯入資料來源" path="ActionManager" hit="匯入資料來源…" />
@@ -155,6 +153,7 @@
     <option name="所有相關行" path="ActionManager" hit="所有相關行" />
     <option name="開啟資料檢視設定" path="ActionManager" hit="開啟資料檢視設定…" />
     <option name="開啟新查詢主控台" path="ActionManager" hit="開啟新查詢主控台" />
+    <option name="開啟查詢執行設定" path="ActionManager" hit="開啟查詢執行設定…" />
     <option name="開啟查詢主控台" path="ActionManager" hit="開啟查詢主控台" />
     <option name="執行" path="ActionManager" hit="執行" />
     <option name="執行" path="ActionManager" hit="執行(2)" />
@@ -166,12 +165,15 @@
     <option name="擴展所選內容" path="ActionManager" hit="擴展所選內容" />
     <option name="批量修改索引" path="ActionManager" hit="批量修改索引" />
     <option name="排序" path="ActionManager" hit="排序" />
+    <option name="主控台工具欄" path="ActionManager" hit="主控台工具欄" />
     <option name="提交" path="ActionManager" hit="提交" />
+    <option name="提取程序" path="ActionManager" hit="提取程序" />
     <option name="搜尋資料中的文本符合項" path="ActionManager" hit="搜尋資料中的文本符合項" />
     <option name="收縮選區" path="ActionManager" hit="收縮選區" />
     <option name="資料庫工具" path="ActionManager" hit="資料庫工具" />
     <option name="資料庫腳本" path="ActionManager" hit="資料庫腳本" />
     <option name="資料庫資源管理器" path="ActionManager" hit="資料庫資源管理器" />
+    <option name="資料庫資源管理器工具欄" path="ActionManager" hit="資料庫資源管理器工具欄" />
     <option name="資料來源屬性" path="ActionManager" hit="資料來源屬性" />
     <option name="文本" path="ActionManager" hit="文本" />
     <option name="新建" path="ActionManager" hit="新建" />
@@ -220,10 +222,10 @@
     <option name="查詢結果" path="ActionManager" hit="查詢結果" />
     <option name="樹" path="ActionManager" hit="樹" />
     <option name="每列的索引" path="ActionManager" hit="每列的索引" />
-    <option name="比較" path="ActionManager" hit="比較…" />
     <option name="比較內容" path="ActionManager" hit="比較內容" />
     <option name="比較單元" path="ActionManager" hit="比較單元…" />
-    <option name="比較物件" path="ActionManager" hit="比較物件…" />
+    <option name="比較資料" path="ActionManager" hit="比較資料" />
+    <option name="比較結構" path="ActionManager" hit="比較結構…" />
     <option name="瀏覽查詢歷史記錄" path="ActionManager" hit="瀏覽查詢歷史記錄" />
     <option name="添加列" path="ActionManager" hit="添加列" />
     <option name="添加升序" path="ActionManager" hit="添加升序" />
@@ -235,6 +237,9 @@
     <option name="清除映射" path="ActionManager" hit="清除映射" />
     <option name="清除快取的資料庫架構" path="ActionManager" hit="清除快取的資料庫架構" />
     <option name="清除快取的架構並從頭重新整理" path="ActionManager" hit="清除快取的架構並從頭重新整理" />
+    <option name="ddl" path="ActionManager" hit="生成的 DDL 編輯器" />
+    <option name="生成的" path="ActionManager" hit="生成的 DDL 編輯器" />
+    <option name="編輯器" path="ActionManager" hit="生成的 DDL 編輯器" />
     <option name="禁用" path="ActionManager" hit="禁用" />
     <option name="禁用所有聚合器" path="ActionManager" hit="禁用所有聚合器" />
     <option name="禁用所選物件" path="ActionManager" hit="禁用所選物件" />
@@ -255,6 +260,9 @@
     <option name="跳過源" path="ActionManager" hit="級別 2: 跳過源" />
     <option name="所有內容" path="ActionManager" hit="級別 3: 所有內容" />
     <option name="級別" path="ActionManager" hit="級別 3: 所有內容" />
+    <option name="結果單元格編輯器彈出視窗" path="ActionManager" hit="結果單元格編輯器彈出視窗" />
+    <option name="結果彈出視窗" path="ActionManager" hit="結果彈出視窗" />
+    <option name="結果標題彈出視窗" path="ActionManager" hit="結果標題彈出視窗" />
     <option name="編輯" path="ActionManager" hit="編輯" />
     <option name="by" path="ActionManager" hit="編輯 ORDER BY 子句" />
     <option name="order" path="ActionManager" hit="編輯 ORDER BY 子句" />
@@ -265,6 +273,8 @@
     <option name="編輯所選單元" path="ActionManager" hit="編輯所選單元" />
     <option name="編輯所選參數" path="ActionManager" hit="編輯所選參數" />
     <option name="編輯資料" path="ActionManager" hit="編輯資料" />
+    <option name="編輯最大化的值" path="ActionManager" hit="編輯最大化的值" />
+    <option name="編輯最大化的聚合器" path="ActionManager" hit="編輯最大化的聚合器" />
     <option name="編輯篩選條件" path="ActionManager" hit="編輯篩選條件" />
     <option name="編輯篩選條件文本" path="ActionManager" hit="編輯篩選條件文本" />
     <option name="縮小所選列的範圍" path="ActionManager" hit="縮小所選列的範圍" />
@@ -299,6 +309,8 @@
     <option name="偵錯操作" path="ActionManager" hit="偵錯操作" />
     <option name="路徑中的資料來源" path="ActionManager" hit="路徑中的資料來源" />
     <option name="跳轉到查詢主控台" path="ActionManager" hit="跳轉到查詢主控台…" />
+    <option name="跳過生成的列" path="ActionManager" hit="跳過生成的列" />
+    <option name="跳過計算的列" path="ActionManager" hit="跳過計算的列" />
     <option name="ddl" path="ActionManager" hit="轉儲到 DDL 資料來源" />
     <option name="資料來源" path="ActionManager" hit="轉儲到 DDL 資料來源" />
     <option name="轉儲到" path="ActionManager" hit="轉儲到 DDL 資料來源" />
