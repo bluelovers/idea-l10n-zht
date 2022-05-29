@@ -8,6 +8,8 @@ export default Bluebird.mapSeries([
 	] as const, lazyImport)
 	.then(async () =>
 	{
+		const { __plugin_zh_cn_version } = await import('../../lib/const/link-of-zh-cn');
+
 		const list = [
 			'./plugin-dev-out',
 		] as const;
@@ -15,7 +17,7 @@ export default Bluebird.mapSeries([
 		await lazyCommitFiles([
 			'./original-plugin',
 			'./original-plugin-raw',
-		], 'build(original): update original', {
+		], `build(original): update original source ( ${__plugin_zh_cn_version} )`, {
 			addFlags: ['--all'],
 		}).catch(() => void 0);
 
@@ -38,7 +40,7 @@ export default Bluebird.mapSeries([
 			addFlags: ['--all'],
 		}).catch(() => void 0);
 
-		return lazyCommitFiles(list, 'build(release): update build', {
+		return lazyCommitFiles(list, `build(release): update build ( ${__plugin_zh_cn_version} )`, {
 			addFlags: ['--all'],
 		})
 	})
