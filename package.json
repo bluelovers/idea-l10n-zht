@@ -29,7 +29,7 @@
     "build:microbundle": "ynpx microbundle --target node",
     "build:sort": "ts-node scripts/sort-static-files.ts",
     "build:tsdx": "ynpx @bluelovers/tsdx build --target node --name index",
-    "postbuild": "yarn run test",
+    "postbuild": "yarn run test && ts-node ./scripts/jetbrains/create-jetbrains-update-plugins-xml.ts",
     "ci:test": "yarn run test",
     "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest@27 ts-jest ts-node ynpx lerna yarn-tool",
     "ci:build": "yarn run plugin:build && yarn run build:commit",
