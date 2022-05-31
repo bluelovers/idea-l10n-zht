@@ -19,7 +19,7 @@ export default Bluebird.resolve()
 	{
 		const commit = logs[0];
 
-		const bool = commit.subject === `build(changelog): update CHANGELOG`;
+		const bool = commit.subject.startsWith(`build(changelog): update CHANGELOG`);
 		const bool2 = match(commit.files, 'CHANGELOG.md').length > 0;
 
 		console.cyan.info(commit.abbrevHash, `${commit.subject}`);

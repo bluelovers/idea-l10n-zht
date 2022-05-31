@@ -5,9 +5,12 @@ import Bluebird from 'bluebird';
 import micromatch, { not, match } from 'micromatch';
 import { updateChangelogByCwd } from '@yarn-tool/changelog';
 import { console } from 'debug-color2';
-import { crossSpawnGitSync, crossSpawnGitAsync, ISpawnGitAsyncOptions, ISpawnGitSyncOptions } from '@git-lazy/spawn';
-import { opts } from '../lib/git/_config';
 import { getGitLogs } from '../lib/git/git-logs';
+import { lazyCommitFiles } from '../lib/git/commit';
+import { outputFile, outputJSON, readJSON } from 'fs-extra';
+import { __file_publish_tags_json } from '../lib/const';
+import { array_unique_overwrite } from 'array-hyper-unique';
+import { LF } from 'crlf-normalize';
 
 export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 	.then((from) =>
@@ -92,15 +95,14 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 		{
 			let _files: string[];
 
-			if (files.length && micromatch(files, [
-				'plugin-dev-out/*.jar',
-			]).length)
+			if (files.length)
 			{
-				_files = files
+				if (includeJar(files))
+				{
+					_files = files
+				}
 			}
-			else if (isBuildCommit && !files.length && micromatch(latestLog.files, [
-				'plugin-dev-out/*.jar',
-			]).length)
+			else if (isBuildCommit && includeJar(latestLog.files))
 			{
 				_files = latestLog.files
 			}
@@ -125,12 +127,31 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 				type: 'independent',
 			});
 
-			await crossSpawnGitAsync('git', [
-				'commit',
-				'-m',
-				`build(changelog): update CHANGELOG`,
+			const { __plugin_zh_cn_version } = await import('../lib/const/link-of-zh-cn');
+
+			await readJSON(__file_publish_tags_json)
+				.catch(e => [])
+				.then((tags: string[]) =>
+				{
+					if (!tags.includes(__plugin_zh_cn_version))
+					{
+						tags.push(__plugin_zh_cn_version);
+					}
+					return array_unique_overwrite(tags)
+				})
+				.then(tags =>
+				{
+					return outputJSON(__file_publish_tags_json, tags, {
+						spaces: 2,
+						EOL: LF,
+					})
+				})
+			;
+
+			await lazyCommitFiles([
 				'./CHANGELOG.md',
-			], opts);
+				'./lib/const/publish-tags.json',
+			], `build(changelog): update CHANGELOG ( ${__plugin_zh_cn_version} )`);
 		}
 		else
 		{
@@ -141,3 +162,10 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 	})
 //.tap(console.dir)
 ;
+
+function includeJar(files: string[])
+{
+	return micromatch(files, [
+		'plugin-dev-out/*.jar',
+	]).length > 0
+}

@@ -43,3 +43,8 @@ export const __dict_properties_lazy = join(__root, 'lib/static/lazy.properties')
  * lib/const/version-map.json
  */
 export const __file_version_map_json = join(__root, 'lib/const/version-map.json');
+
+/**
+ * lib/const/publish-tags.json
+ */
+export const __file_publish_tags_json = join(__root, 'lib/const/publish-tags.json');

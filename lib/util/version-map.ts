@@ -44,7 +44,7 @@ export function getLatestVersion(data?: IVersionMap)
 export function _getVersion(series: string, data?: IVersionMap)
 {
 	data ??= _versionMap();
-	return data.series_latest_map[series]
+	return data.series_latest_map[series] ?? data.series_latest_map[series.split('.')[0]]
 }
 
 export function getVersionLatestInfo(data?: IVersionMap)
