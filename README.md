@@ -38,6 +38,7 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 - 解除版本安裝上限範圍的限制 *until-build*
 - 忽略部分官方版檔案
 - 部分翻譯差異統一化
+- [需使用自訂 plugin repo 才能夠在版本編號變化時得到更新](https://github.com/bluelovers/idea-l10n-zht/discussions/25)
 
 ### Git Commit Message Convention
 
