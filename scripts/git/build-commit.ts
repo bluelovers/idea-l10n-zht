@@ -10,10 +10,6 @@ export default Bluebird.mapSeries([
 	{
 		const { __plugin_zh_cn_version } = await import('../../lib/const/link-of-zh-cn');
 
-		const list = [
-			'./plugin-dev-out',
-		] as const;
-
 		await lazyCommitFiles([
 			'./original-plugin',
 			'./original-plugin-raw',
@@ -23,22 +19,31 @@ export default Bluebird.mapSeries([
 
 		await lazyCommitFiles([
 			'./lib/static',
+		], `build(cache): update static cache`, {
+			addFlags: ['--all'],
+		}).catch(() => void 0);
+
+		await lazyCommitFiles([
 			'./lib/const/link-of-zh-cn.ts',
-		], 'build(cache): update cache', {
+		], `build(cache): update version info cache ( ${__plugin_zh_cn_version} )`, {
 			addFlags: ['--all'],
 		}).catch(() => void 0);
 
 		await lazyCommitFiles([
 			'./test/__snapshots__',
-		], 'build(test): update snapshots', {
+		], `build(test): update snapshots ( ${__plugin_zh_cn_version} )`, {
 			addFlags: ['--all'],
 		}).catch(() => void 0);
 
 		await lazyCommitFiles([
 			'./plugin-dev-raw',
-		], 'build(release): update dev build files', {
+		], `build(release): update dev build files ( ${__plugin_zh_cn_version} )`, {
 			addFlags: ['--all'],
 		}).catch(() => void 0);
+
+		const list = [
+			'./plugin-dev-out',
+		] as const;
 
 		return lazyCommitFiles(list, `build(release): update build ( ${__plugin_zh_cn_version} )`, {
 			addFlags: ['--all'],
