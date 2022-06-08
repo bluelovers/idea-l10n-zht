@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-06-08)
+
+
+### 🐛　Bug Fixes
+
+* **jetbrains:** 修正為只顯示已經推送過的 tag ([12e9ccf](https://github.com/bluelovers/idea-l10n-zht/commit/12e9ccfa6c64350b97654a68c3b69b65a5a0ef82))
+* **official:** Space is `Space` not `空格` ([5d9324b](https://github.com/bluelovers/idea-l10n-zht/commit/5d9324be5c0cf8eaa143ccb426cff53afeeb9c9d))
+
+
+### ✨　Features
+
+* **jetbrains:** 支援非最新版 IDE 版本 ([88a4cc9](https://github.com/bluelovers/idea-l10n-zht/commit/88a4cc94088158f207d005a557e62d2a83f03971))
+* **jetbrains:** 嘗試支援透過 jetbrains plugin eap channel 來安裝此語言包 ([4dc5acb](https://github.com/bluelovers/idea-l10n-zht/commit/4dc5acba826dc52db1727a677a187bc569b95a1e))
+
+
+### 🛠　Build System
+
+* **cache:** update cache ([a6a711c](https://github.com/bluelovers/idea-l10n-zht/commit/a6a711c766d169ef8940fb46a3583f949f7b23f6))
+* **cache:** update version-map ([c6bf5e9](https://github.com/bluelovers/idea-l10n-zht/commit/c6bf5e9b0fa7cc5364cac5f079237932f7d770e4))
+* **cache:** update version-map ([dc7b907](https://github.com/bluelovers/idea-l10n-zht/commit/dc7b9072833ab49631b84d5823ed6a14e4e29e52))
+* **cache:** update version-map ([abb75ca](https://github.com/bluelovers/idea-l10n-zht/commit/abb75cacb6f339da64272ba358f0984ac3cd48fb))
+* **cache:** update version-map ([c4dc197](https://github.com/bluelovers/idea-l10n-zht/commit/c4dc1974b53f5c3836a1857df5d4cbce06594f77))
+* **cache:** update version-map ([e2fcfc5](https://github.com/bluelovers/idea-l10n-zht/commit/e2fcfc5e6393adafe42d923c62f71c45d14d720c))
+* **cache:** update version-map ([2318dcf](https://github.com/bluelovers/idea-l10n-zht/commit/2318dcfdc32c46d545a979f26603392bc226efd5))
+* **release:** update build ( 222.84 ) ([3515617](https://github.com/bluelovers/idea-l10n-zht/commit/3515617f2d0b3b247e124ddc1cd146159f1670f8))
+* **release:** update dev build files ([92e83ed](https://github.com/bluelovers/idea-l10n-zht/commit/92e83ede5d8db7114e55e149d1c4d1b72580990a))
+* **release:** update build ( 222.84 ) ([7d5a582](https://github.com/bluelovers/idea-l10n-zht/commit/7d5a582a20a51b7f83bb69e4b05a7ae990db72cf))
+
+
+### ⚙️　Continuous Integration
+
+* **git:** 增加基於版本系列的 GIT TAG ([e083caf](https://github.com/bluelovers/idea-l10n-zht/commit/e083caf1e5021d069628339dcd3dae81c842e07b))
+
+
+### ♻️　Chores
+
+* **git:** 改善提交訊息 ([29abb54](https://github.com/bluelovers/idea-l10n-zht/commit/29abb54a02659ac89a5d14e9870849b75021d02c))
+
+
+### 🔖　Miscellaneous
+
+* 支援 jetbrains plugin repo url ([af3d25d](https://github.com/bluelovers/idea-l10n-zht/commit/af3d25da28838132dbb285e42b6628fa13a625df))
+
+
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-05-25)
 
 
