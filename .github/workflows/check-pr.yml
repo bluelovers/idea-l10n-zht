@@ -37,7 +37,7 @@ jobs:
       - name: install deps
         run: |
           yarn install --frozen-lockfile
-          yarn add -W typescript@next jest@27 ts-jest ts-node ynpx lerna
+          yarn run ci:install
       - name: run script
         if: success()
 #        env:
