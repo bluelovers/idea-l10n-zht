@@ -1,7 +1,20 @@
 <html>
 <body>
 报告可以用 <code>@FunctionalInterface</code> 注解的接口（自 JDK 1.8 起提供）。
-<p>使用 <code>@FunctionalInterface</code> 对接口进行注解表明该接口为功能性接口，不能再有其他 <code>abstract</code> 方法。</p>
+<p>使用 <code>@FunctionalInterface</code> 对接口进行注解表明该接口为功能性接口，不能再向其添加其他 <code>abstract</code> 方法。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  interface FileProcessor {
+    void execute(File file);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  @FunctionalInterface
+  interface FileProcessor {
+    void execute(File file);
+  }
+</code></pre>
 <!-- tooltip end -->
 <p>仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。</p>
 </body>

@@ -1,8 +1,7 @@
 <html>
 <body>
 <p>
-  Reports invalid references inside Spring Shell
-  <code>org.springframework.shell.standard.ShellMethodAvailability</code> annotations.
+  报告 Spring Shell <code>org.springframework.shell.standard.ShellMethodAvailability</code> 注解内的无效引用。
 </p>
 <p>示例：</p>
 <pre><code>
@@ -10,12 +9,12 @@
 public class MyCommands {
 
     @ShellMethod("sum")
-    @ShellMethodAvailability("sumAvailability") // annotation value will be highlighted as unresolved symbol
+    @ShellMethodAvailability("sumAvailability") // 注解值将高亮显示为未解析的符号
     public int sum(int a, int b) {
         return a + b;
     }
 
-    @ShellMethodAvailability("sumMethod") // annotation value will be highlighted as unresolved symbol
+    @ShellMethodAvailability("sumMethod") // 注解值将高亮显示为未解析的符号
     public Availability isSumAvailable() {
         return Availability.available();
     }

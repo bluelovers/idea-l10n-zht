@@ -1,0 +1,25 @@
+<html>
+<body>
+报告用英语编写的与方法声明冲突的方法规范部分。 这包括：
+<ul>
+  <li>方法被指定为返回 <code>true</code> 或 <code>false</code>，但其返回类型不是布尔。</li>
+  <li>方法被指定为返回 <code>null</code>，但被注解为 <code>@NotNull</code> 或其返回类型为基元类型。</li>
+  <li>方法被指定为返回列表，但其返回类型为集合或数组。</li>
+  <li>以此类推。</li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+  /**
+   * @如果找到用户，则返回 true，否则返回 false
+   */
+  User findUser(String name);
+</code></pre>
+<p>
+  请注意，误报是可能的，因为此检查会试图解释一种人类语言。 然而，如果检查报告不正确，描述仍然可能令人困惑，应该重写。
+</p>
+<!-- tooltip end -->
+<p>
+  <small>2022.3 最新变化</small>
+</p>
+</body>
+</html>

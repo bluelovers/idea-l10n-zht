@@ -1,15 +1,11 @@
 <html>
 <body>
-报告除非抛出异常否则无限调用自身的方法。
-<p>
-  此检查报告的方法不能正常返回。
-  虽然此类行为可能是有意为之，但在许多情况下，可能纯属疏忽。
-</p>
+报告具有无限递归的方法和函数。
 <p><b>示例：</b></p>
-<pre><code>  int baz() {
-      return baz();
-  }</code></pre>
-<!-- tooltip end -->
-
+<pre><code>
+  int factorial(int n) {
+    return n * factorial(n - 1);
+  }
+</code></pre>
 </body>
 </html>

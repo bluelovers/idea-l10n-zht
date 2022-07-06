@@ -1,0 +1,18 @@
+<html>
+<body>
+报告由于其影响的编译器诊断在此上下文中不再适用而可以安全移除的 <code>@Suppress</code> 注解。
+<p><b>示例：</b></p>
+<pre><code>
+  fun doSmth(@Suppress("UNUSED_PARAMETER") used: Int) {
+    println(used)
+  }
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun doSmth(used: Int) {
+    println(used)
+  }
+</code></pre>
+</body>
+</html>
