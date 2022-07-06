@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-07-06)
+
+
+### 🛠　Build System
+
+* **cache:** update link-of-zh-cn.ts ([2050ff2](https://github.com/bluelovers/idea-l10n-zht/commit/2050ff2cfc9fd263796f721bc743040e531ef34d))
+* **cache:** update version-map ([e69997c](https://github.com/bluelovers/idea-l10n-zht/commit/e69997c58453edf0e2e44b358d064a5a2513cf7c))
+* **cache:** update version-map ([f463494](https://github.com/bluelovers/idea-l10n-zht/commit/f463494f57b34e6e97e87e72d9a5389191d53654))
+* **cache:** update version-map ([aa86522](https://github.com/bluelovers/idea-l10n-zht/commit/aa865222caeb28363ff93e806e9034e247994395))
+* **original:** update original source ( 223.35 ) ([f05fb95](https://github.com/bluelovers/idea-l10n-zht/commit/f05fb95f04b20c6a59e50556a9bd7ef5138653c1))
+* **release:** update build ( 223.35 ) ([afad08f](https://github.com/bluelovers/idea-l10n-zht/commit/afad08fbaf524878fb8f3580d2b1179ab8ea6978))
+* **release:** update dev build files ( 223.35 ) ([047e400](https://github.com/bluelovers/idea-l10n-zht/commit/047e4004277d01780ea76060638cca15d8aa3e98))
+* **release:** update build ( 223.35 ) ([67fa882](https://github.com/bluelovers/idea-l10n-zht/commit/67fa882aff6e52ebeec4c39be7b5385dd6a5c376))
+* **test:** update snapshots ( 223.35 ) ([393e483](https://github.com/bluelovers/idea-l10n-zht/commit/393e483978cb81f3d97822ae89b1cc7c28093445))
+
+
+### ⚙️　Continuous Integration
+
+* update deps and tweak commit msg ([baa0743](https://github.com/bluelovers/idea-l10n-zht/commit/baa07436c26448565169f41c72bf04bc24eb3f87))
+
+
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-06-08)
 
 
