@@ -5,16 +5,20 @@
     <title>非局部 return 語句</title>
 </head>
 <body>
-<p>在匿名函數中使用 <code>return</code> 關鍵字可以提早跳出該函數。 這可能會導致不直觀的控制流並降低可讀性。 範例： </p>
+<p>報告在匿名函數中使用 <code>return</code> 關鍵字可以提早跳出該函數的情況。
+    非本地返回通過拋出和捕獲 <code>scala.runtime.NonLocalReturnException</code>-s 來實作。
+    這通常不是程序員的本意。 由於拋出和捕獲異常的隱藏性能開銷，這可能會帶來問題。 </p>
+<p>此外，它是一個有漏洞的實作：一個捕獲所有異常的處理程序可以攔截 <code>NonLocalReturnException</code>。</p>
+
 <pre><code>
 def foo(numbers: Seq[Int]): Int =
   numbers.map { n =>
-    if (n > 5) return 0 // 高亮顯示
+    if (n > 5)
+      return 0 // highlighted
     n * 2
   }.sum
 </code></pre>
 
-<p>此外，只有在 Scala 編譯器選項 <code>-Xlint:nonlocal-return</code> 存在的情況下，才可以使用下面的複選框來進行檢查。</p>
 <!-- tooltip end -->
 </body>
 </html>
