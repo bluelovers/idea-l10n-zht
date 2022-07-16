@@ -8,7 +8,7 @@ import { packPluginJar } from '../lib/build/pack-plugin-jar';
 export default _lazyImportCore(import('./download-series'))
 	.then(async (result) => {
 
-		const name = basename(result.file, '.zip');
+		const name = result.name ?? basename(result.file, '.zip');
 
 		await unzipLang(name);
 		await convertLang(name);
