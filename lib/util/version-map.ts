@@ -193,12 +193,14 @@ export async function generateVersionMap(data: IVersionApiResult)
 			const {
 				id,
 				cdate,
+				since,
 			} = version_map_record_extra[version];
 
 			version_map_record_extra[version] = {
 				id,
 				version,
 				cdate,
+				since,
 			} as any;
 
 			version_map_record[version] ??= version_map_record_extra[version];
