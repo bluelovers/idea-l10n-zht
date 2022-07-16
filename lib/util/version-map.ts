@@ -6,22 +6,35 @@ import { array_unique_overwrite } from 'array-hyper-unique';
 import { maxSatisfying } from 'semver';
 import { createNew } from '@bluelovers/string-natural-compare';
 import { sortObjectKeys } from 'sort-object-keys2';
+import { defaultsDeep } from 'lodash';
+import moment from 'moment';
 
 let versionMap: IVersionMap;
 
-export function _loadVersionMapSync(): IVersionMap
+export function _loadVersionMapSync(file?: string): IVersionMap
 {
-	return readJSONSync(__file_version_map_json)
+	return readJSONSync(file ?? __file_version_map_json)
 }
 
-export function _loadVersionMapAsync(): Promise<IVersionMap>
+export function _loadVersionMapAsync(file?: string): Promise<IVersionMap>
 {
-	return readJSON(__file_version_map_json)
+	return readJSON(file ?? __file_version_map_json)
+}
+
+export function _mergeVersionMap(...maps: [IVersionMap, IVersionMap, ...IVersionMap[]]): IVersionMap
+{
+	return defaultsDeep(...maps)
 }
 
 export function _versionMap(): IVersionMap
 {
 	return versionMap ??= _loadVersionMapSync()
+}
+
+export function _getAllVersions(data?: IVersionMap)
+{
+	data ??= _versionMap();
+	return Object.keys(data.version_download_map)
 }
 
 export function _getSeries(data?: IVersionMap)
@@ -93,21 +106,24 @@ export function generateDownloadLink(id: string | number)
 	return `https://plugins.jetbrains.com/plugin/download?rel=true&updateId=${id}`
 }
 
+export function _initVersionMap<T extends IVersionMap>(map: T)
+{
+	// @ts-ignore
+	map ??= {} as IVersionMap;
+
+	map.version_map_record ??= {};
+	map.version_download_map ??= {};
+	map.series ??= [];
+	map.series_latest_map ??= {};
+
+	return map
+}
+
 export async function generateVersionMap(data: IVersionApiResult)
 {
 	const oldMap: IVersionMap = await _loadVersionMapAsync()
 		.catch(() => void 0)
-		.then((map: IVersionMap) =>
-		{
-			// @ts-ignore
-			map ??= {} as IVersionMap;
-			map.version_map_record ??= {};
-			map.version_download_map ??= {};
-			map.series ??= [];
-			map.series_latest_map ??= {};
-
-			return map
-		})
+		.then(_initVersionMap)
 	;
 
 	const _version_map_list2: IVersionApiResult = array_unique_overwrite(data.concat(Object.values(oldMap.version_map_record))).map(_handleVersionApiResultRow);
@@ -123,6 +139,9 @@ export async function generateVersionMap(data: IVersionApiResult)
 	const _myNaturalCompare = createNew({
 		desc: true,
 	});
+
+	const version_map_record_extra = version_map_record;
+	const version_download_map: IVersionMap["version_download_map"] = {};
 
 	let series_latest_map = Object.keys(version_map_record)
 		.sort(_myNaturalCompare)
@@ -142,14 +161,14 @@ export async function generateVersionMap(data: IVersionApiResult)
 
 			series_latest_map[sv] = version;
 
+			version_download_map[v] = generateDownloadLink(version_map_record[v].id);
+
 			return series_latest_map
 		}, {} as IVersionMap["series_latest_map"]);
 
 	const series: IVersionMap["series"] = Object.keys(series_latest_map)
 		.sort(_myNaturalCompare)
 	;
-
-	const version_download_map: IVersionMap["version_download_map"] = {};
 
 	version_map_record = series
 		.reduce((a, sv) =>
@@ -159,12 +178,32 @@ export async function generateVersionMap(data: IVersionApiResult)
 
 			const row = version_map_record[version];
 
-			version_download_map[row.version] = generateDownloadLink(row.id);
-
 			a[version] = row;
+
+			delete version_map_record_extra[version];
 
 			return a
 		}, {} as IVersionMap["version_map_record"])
+	;
+
+	Object.keys(version_map_record_extra)
+		.forEach(version =>
+		{
+
+			const {
+				id,
+				cdate,
+			} = version_map_record_extra[version];
+
+			version_map_record_extra[version] = {
+				id,
+				version,
+				cdate,
+			} as any;
+
+			version_map_record[version] ??= version_map_record_extra[version];
+
+		})
 	;
 
 	const record: IVersionMap = {
@@ -183,7 +222,7 @@ export async function generateVersionMap(data: IVersionApiResult)
 
 export function _handleVersionApiResultRow(row: IVersionApiResultRow)
 {
-	sortObjectKeys(row.compatibleVersions, {
+	row.compatibleVersions && sortObjectKeys(row.compatibleVersions, {
 		useSource: true,
 		keys: [
 			"IDEA",
@@ -195,4 +234,14 @@ export function _handleVersionApiResultRow(row: IVersionApiResultRow)
 	delete row.downloads;
 
 	return row;
+}
+
+export function _infoDateToMoment(cdate: string | number)
+{
+	return moment(+cdate)
+}
+
+export function _infoDateToString(cdate: string | number)
+{
+	return _infoDateToMoment(cdate).format()
 }
