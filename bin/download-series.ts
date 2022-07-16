@@ -18,6 +18,7 @@ import { prompt } from 'enquirer';
 import yargs from 'yargs';
 
 export default yargs
+	.version(false)
 	.option('series', {
 		alias: ['s'],
 		desc: `IDE 版本系列`,
