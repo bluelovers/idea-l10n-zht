@@ -11,6 +11,7 @@ import { outputFile, outputJSON, readJSON } from 'fs-extra';
 import { __file_publish_tags_json } from '../lib/const';
 import { array_unique_overwrite } from 'array-hyper-unique';
 import { LF } from 'crlf-normalize';
+import { getSourceInfoSync } from '../lib/build/get-source-info';
 
 export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 	.then((from) =>
@@ -127,15 +128,15 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 				type: 'independent',
 			});
 
-			const { __plugin_zh_cn_version } = await import('../lib/const/link-of-zh-cn');
+			const __pluginVersion = getSourceInfoSync().pluginMeta.version;
 
 			await readJSON(__file_publish_tags_json)
 				.catch(e => [])
 				.then((tags: string[]) =>
 				{
-					if (!tags.includes(__plugin_zh_cn_version))
+					if (!tags.includes(__pluginVersion))
 					{
-						tags.push(__plugin_zh_cn_version);
+						tags.push(__pluginVersion);
 					}
 					return array_unique_overwrite(tags)
 				})
@@ -151,7 +152,7 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 			await lazyCommitFiles([
 				'./CHANGELOG.md',
 				'./lib/const/publish-tags.json',
-			], `build(changelog): update CHANGELOG ( ${__plugin_zh_cn_version} )`);
+			], `build(changelog): update CHANGELOG ( ${__pluginVersion} )`);
 		}
 		else
 		{
