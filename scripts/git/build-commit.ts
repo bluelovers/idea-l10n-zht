@@ -1,6 +1,7 @@
 import { lazyCommitFiles } from '../../lib/git/commit';
 import { _lazyImportWithDelay } from '../../lib/util/import';
 import Bluebird from 'bluebird';
+import { getSourceInfoSync } from '../../lib/build/get-source-info';
 
 export default Bluebird.mapSeries([
 		'./commit-version-map',
@@ -8,12 +9,12 @@ export default Bluebird.mapSeries([
 	] as const, lazyImport)
 	.then(async () =>
 	{
-		const { __plugin_zh_cn_version } = await import('../../lib/const/link-of-zh-cn');
+		const __pluginVersion = getSourceInfoSync().pluginMeta.version;
 
 		await lazyCommitFiles([
 			'./original-plugin',
 			'./original-plugin-raw',
-		], `build(original): update original source ( ${__plugin_zh_cn_version} )`, {
+		], `build(original): update original source ( ${__pluginVersion} )`, {
 			addFlags: ['--all'],
 		}).catch(() => void 0);
 
@@ -25,19 +26,19 @@ export default Bluebird.mapSeries([
 
 		await lazyCommitFiles([
 			'./lib/const/link-of-zh-cn.ts',
-		], `build(cache): update version info cache ( ${__plugin_zh_cn_version} )`, {
+		], `build(cache): update version info cache ( ${__pluginVersion} )`, {
 			addFlags: ['--all'],
 		}).catch(() => void 0);
 
 		await lazyCommitFiles([
 			'./test/__snapshots__',
-		], `build(test): update snapshots ( ${__plugin_zh_cn_version} )`, {
+		], `build(test): update snapshots ( ${__pluginVersion} )`, {
 			addFlags: ['--all'],
 		}).catch(() => void 0);
 
 		await lazyCommitFiles([
 			'./plugin-dev-raw',
-		], `build(release): update dev build files ( ${__plugin_zh_cn_version} )`, {
+		], `build(release): update dev build files ( ${__pluginVersion} )`, {
 			addFlags: ['--all'],
 		}).catch(() => void 0);
 
@@ -45,7 +46,7 @@ export default Bluebird.mapSeries([
 			'./plugin-dev-out',
 		] as const;
 
-		return lazyCommitFiles(list, `build(release): update build ( ${__plugin_zh_cn_version} )`, {
+		return lazyCommitFiles(list, `build(release): update build ( ${__pluginVersion} )`, {
 			addFlags: ['--all'],
 		})
 	})

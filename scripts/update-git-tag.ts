@@ -7,6 +7,7 @@ import { opts } from '../lib/git/_config';
 import { getGitLogs } from '../lib/git/git-logs';
 import { join } from 'upath2';
 import { updatePluginTag, updateRepoTag } from '../lib/git/git-tag';
+import { getSourceInfoSync } from '../lib/build/get-source-info';
 
 export default Bluebird.resolve()
 	.then(() =>
@@ -15,7 +16,7 @@ export default Bluebird.resolve()
 	})
 	.then(async (logs) =>
 	{
-		const { __plugin_zh_cn_series, __plugin_zh_cn_version } = await import('../lib/const/link-of-zh-cn');
+		const __pluginVersion = getSourceInfoSync().pluginMeta.version;
 
 		const commit = logs[0];
 
@@ -30,11 +31,9 @@ export default Bluebird.resolve()
 		{
 			console.info(`更新 git tag`);
 
-			const { name, version } = await import(join(__root, 'package.json'));
-
 			await updateRepoTag();
 
-			return updatePluginTag(__plugin_zh_cn_version)
+			return updatePluginTag(__pluginVersion)
 		}
 
 		console.warn(`略過本次 git tag 更新`)

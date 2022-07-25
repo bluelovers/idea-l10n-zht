@@ -53,3 +53,13 @@ export const enum EnumVersion
 {
 	latest = 'latest',
 }
+
+/**
+ * plugin-dev-raw/zh/META-INF/plugin.xml
+ */
+export const __file_plugin_dev_meta_xml = join(__plugin_dev_raw_dir, 'zh', 'META-INF/plugin.xml');
+
+/**
+ * original-plugin-raw/zh/META-INF/plugin.xml
+ */
+export const __file_plugin_src_meta_xml = join(__plugin_downloaded_dir_unzip, 'zh', 'META-INF/plugin.xml');
