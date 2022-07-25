@@ -59,6 +59,11 @@ export function _getSeriesFromVersionString(versionOrSeries: string)
 	return versionOrSeries.split('.')[0]
 }
 
+export function _isSeries(versionOrSeries: string)
+{
+	return versionOrSeries === _getSeriesFromVersionString(versionOrSeries)
+}
+
 export function _getVersion(series: string, data?: IVersionMap)
 {
 	data ??= _versionMap();

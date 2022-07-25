@@ -5,6 +5,7 @@ import {
 	_getVersionInfoBySeries,
 	_getVersionInfoByVersion,
 	getLatestSeries,
+	getLatestVersion,
 } from '../util/version-map';
 import { prompt } from 'enquirer';
 import { chalkByConsole, console } from 'debug-color2';
@@ -35,9 +36,14 @@ export function _handleArgv(argv: ITSResolvable<IArgvDownload>)
 
 			if (version?.length)
 			{
-				if (_getVersionDownloadByVersion(version)?.length)
+				if (version === EnumVersion.latest)
 				{
-					series = void 0
+					version = getLatestVersion();
+					series = void 0;
+				}
+				else if (_getVersionDownloadByVersion(version)?.length)
+				{
+					series = void 0;
 				}
 				else
 				{
@@ -55,6 +61,7 @@ export function _handleArgv(argv: ITSResolvable<IArgvDownload>)
 				if (series === EnumVersion.latest)
 				{
 					series = getLatestSeries();
+					version = void 0;
 				}
 				else if (!_getVersion(series)?.length)
 				{
@@ -63,11 +70,12 @@ export function _handleArgv(argv: ITSResolvable<IArgvDownload>)
 						throw new RangeError(`目標系列 ${series} 不存在！`)
 					}
 
-					series = void 0
+					series = void 0;
+					version = void 0;
 				}
 			}
 
-			if (!series?.length)
+			if (!series?.length && !version?.length)
 			{
 				if (disableInteractive)
 				{
@@ -223,7 +231,7 @@ export function _handleArgvResult(argv: ITSResolvable<Awaited<ReturnType<typeof 
 
 				console.warn(chalkByConsole((chalk) =>
 				{
-					return `複製 ${chalk.cyan(basename(file))}\n　　=> ${chalk.cyan(basename(target))}`
+					return `複製 ${chalk.cyan(basename(file))} => ${chalk.cyan(basename(target))}`
 				}, console))
 
 				await copy(ret.file, target, {
