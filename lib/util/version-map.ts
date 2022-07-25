@@ -54,10 +54,15 @@ export function getLatestVersion(data?: IVersionMap)
 	return _getVersion(getLatestSeries(data), data)
 }
 
+export function _getSeriesFromVersionString(versionOrSeries: string)
+{
+	return versionOrSeries.split('.')[0]
+}
+
 export function _getVersion(series: string, data?: IVersionMap)
 {
 	data ??= _versionMap();
-	return data.series_latest_map[series] ?? data.series_latest_map[series.split('.')[0]]
+	return data.series_latest_map[_getSeriesFromVersionString(series)]
 }
 
 export function getVersionLatestInfo(data?: IVersionMap)
@@ -147,8 +152,7 @@ export async function generateVersionMap(data: IVersionApiResult)
 		.sort(_myNaturalCompare)
 		.reduce((series_latest_map, v) =>
 		{
-
-			const sv = v.split('.')[0];
+			const sv = _getSeriesFromVersionString(v);
 
 			const version = series_latest_map[sv] = maxSatisfying([
 					v + '.0',
