@@ -36,20 +36,24 @@ export default Bluebird.resolve(fetch('https://plugins.jetbrains.com/api/plugins
 			return outputFile(join(__root, 'lib/const/link-of-zh-cn.ts'), `
 /**
  * @default '${id}'
+ * @deprecated
  */
 export const __plugin_zh_cn_id: string = '${id}';
 
 /**
  * @default '${sv}'
+ * @deprecated
  */
 export const __plugin_zh_cn_series: string = '${sv}';
 /**
  * @default '${version}'
+ * @deprecated
  */
 export const __plugin_zh_cn_version: string = '${version}';
 
 /**
  * @see ${__plugin_zh_cn_download}
+ * @deprecated
  */
 export const __plugin_zh_cn_download: string = '${__plugin_zh_cn_download}';
 
