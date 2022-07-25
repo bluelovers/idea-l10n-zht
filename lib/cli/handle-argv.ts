@@ -1,4 +1,4 @@
-import { argvDownload } from './argv-download';
+import { parseArgvDownload } from './parse-argv-download';
 import {
 	_getVersion,
 	_getVersionDownloadByVersion,
@@ -17,7 +17,7 @@ import { copy, pathExists } from 'fs-extra';
 import { downloadPlugin, generateDownloadMessage } from '../util/download-plugin';
 import { cli_logger } from '../cli-progress';
 
-export type IArgvDownload = Awaited<ReturnType<typeof argvDownload>>;
+export type IArgvDownload = Awaited<ReturnType<typeof parseArgvDownload>>;
 
 export function _handleArgv(argv: ITSResolvable<IArgvDownload>)
 {
