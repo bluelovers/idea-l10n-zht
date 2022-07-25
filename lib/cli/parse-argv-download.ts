@@ -1,7 +1,7 @@
 import yargs from 'yargs';
 import isInteractive from 'is-interactive';
 
-export function argvDownload()
+export function parseArgvDownload()
 {
 	return yargs
 		.version(false)

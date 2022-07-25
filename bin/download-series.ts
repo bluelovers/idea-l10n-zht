@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import { argvDownload } from '../lib/cli/argv-download';
+import { parseArgvDownload } from '../lib/cli/parse-argv-download';
 import { _handleArgv, _handleArgvResult } from '../lib/cli/handle-argv';
 
-export default argvDownload()
+export default parseArgvDownload()
 	.then(_handleArgv)
 	.then(_handleArgvResult)
 ;
