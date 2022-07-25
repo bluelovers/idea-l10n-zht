@@ -48,3 +48,8 @@ export const __file_version_map_json = join(__root, 'lib/const/version-map.json'
  * lib/const/publish-tags.json
  */
 export const __file_publish_tags_json = join(__root, 'lib/const/publish-tags.json');
+
+export const enum EnumVersion
+{
+	latest = 'latest',
+}
