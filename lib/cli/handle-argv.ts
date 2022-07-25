@@ -96,8 +96,22 @@ export function _handleArgv(argv: ITSResolvable<IArgvDownload>)
 					return result.all;
 				});
 
+				source = source ?? await prompt<{
+					bool: boolean,
+				}>({
+					name: 'bool',
+					type: 'confirm',
+					message: chalkByConsole((chalk) =>
+					{
+						return chalk.red(`下載後作為語言包版本控制模式？`)
+					}, console),
+				}).then(result =>
+				{
+					return result.bool;
+				});
+
 				return (all ? cliSelectVersion : cliSelectSeries)()
-					.then(result =>
+					.then(async (result) =>
 					{
 						return {
 							...result,
