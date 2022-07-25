@@ -11,7 +11,7 @@ import { chalkByConsole, console } from 'debug-color2';
 import { cliSelectSeries, cliSelectVersion } from './version-map';
 import { ITSResolvable } from 'ts-type';
 import { basename, join } from 'upath2';
-import { __plugin_downloaded_dir } from '../const';
+import { __plugin_downloaded_dir, EnumVersion } from '../const';
 import { copy, pathExists } from 'fs-extra';
 import { downloadPlugin, generateDownloadMessage } from '../util/download-plugin';
 import { cli_logger } from '../cli-progress';
@@ -52,7 +52,7 @@ export function _handleArgv(argv: ITSResolvable<IArgvDownload>)
 
 			if (series?.length)
 			{
-				if (series === 'latest')
+				if (series === EnumVersion.latest)
 				{
 					series = getLatestSeries();
 				}
