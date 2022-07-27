@@ -2,7 +2,7 @@
 <body>
 報告其中的保護欄位不是 <code>final</code> 的 <code>@GuardedBy</code> 註解。
 <p>在非 final 欄位上進行保護可能會導致意外的競爭條件，因為該欄位的值會被鎖定（可能會變化），而不是鎖定欄位本身。</p>
-<p>範例:</p>
+<p>範例：</p>
 <pre><code>
     private ReadWriteLock lock = new ReentrantReadWriteLock(); //非 final 保護欄位
     private Object state;

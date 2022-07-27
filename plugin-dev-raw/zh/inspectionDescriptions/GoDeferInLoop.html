@@ -18,7 +18,7 @@
 <body>
 報告迴圈內的 <code>defer</code> 語句。
 <p>在迴圈中使用 <code>defer</code> 會導致資源泄漏或語句的執行順序不可預測。</p>
-<p>範例:</p>
+<p>範例：</p>
 <pre><code>func main() {
  for {
   field, err := db.Query("SELECT 1")

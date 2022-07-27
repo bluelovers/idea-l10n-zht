@@ -1,11 +1,15 @@
 <html>
 <body>
-    <p>報告遞歸 <code>equals</code>(<code>==</code>) 調用。</p>
+<p>報告遞歸 <code>equals</code>(<code>==</code>) 調用。</p>
 <p>
-    <code>==</code> （Kotlin 的結構比較）可能會被 Java 開發者錯誤地解釋為引用比較。
-    因此，該檢查會報告此類情況，並建議將 <code>==</code> 取代為 <code>===</code>（Kotlin 的引用比較）。
+    在 Kotlin 中，<code>==</code> 會通過在背景調用 <code>equals</code> 方法來比較物件值。
+    另一方面，<code>===</code> 則通過引用來比較物件。
 </p>
-<p><b>範例:</b></p>
+<p>
+    <code>===</code> 通常用於 <code>equals</code> 方法實作。
+    但 <code>===</code> 可能會錯誤地與 <code>==</code> 混淆，從而導致無限遞歸。
+</p>
+<p><b>範例：</b></p>
 <pre><code>
   class X {
       override fun equals(other: Any?): Boolean {

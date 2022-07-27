@@ -2,21 +2,21 @@
 <body>
 報告在物件構造期間對無實參超類構造函數的調用。
 <p>此類調用不必要，可以移除。</p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   class Foo {
     Foo() {
       super();
     }
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   class Foo {
     Foo() {
     }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

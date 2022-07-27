@@ -1,27 +1,14 @@
 <html>
-<head>
-  <style type="text/css">
-    body, table {
-      font-family: Verdana, sans-serif;
-      font-size: 100%;
-      padding-left: 2mm;
-    }
-
-    #footer {
-      font-size: 95%;
-      padding-top: 10px;
-    }
-  </style>
-</head>
-
 <body>
-<p>
-  報告在預定義的 XPath 類型 <code>STRING</code>、<code>NUMBER</code>、<code>BOOLEAN</code> 和 <code>NODESET</code> 之間進行隱式轉換。 有助於編寫類型表現更明確的XSLT腳本，且避免難以捉摸的錯誤。
-</p>
-<p>範例:</p>
-<p>
-  <code>&lt;xsl:if test="<b>foo</b>" /></code> 與 <code>&lt;xsl:if test="<b>string(foo)</b>" /></code> 不一樣
-</p>
+報告在預定義的 XPath 類型 <code>STRING</code>、<code>NUMBER</code>、<code>BOOLEAN</code> 和 <code>NODESET</code> 之間進行的隱式轉換。 有助於編寫類型表現更明確的XSLT腳本，且避免難以捉摸的錯誤。
+<p><b>範例：</b></p>
+<pre><code>
+  &lt;xsl:if test="<b>foo</b>" />
+</code></pre>
+不同於
+<pre><code>
+  &lt;xsl:if test="<b>string(foo)</b>" />
+</code></pre>
 
 <p>
 第一個測試檢查元素 “ foo” 是否存在(<code>count(foo) > 0)</code>，而第二個測試僅當元素包含文本時 (<code>string-length(foo) > 0</code>)，才會為 “true”。 建議使 
@@ -29,14 +16,13 @@
 </p>
 
 <p>
-使用以下控制來自定義檢查：
+  使用以下選項設定檢查：
 </p>
 <ul><li>啟用或禁用某些類型之間的隱式轉換</li>
 <li>總是報告沒有導致實際預期類型的顯式轉換，例如， 
  <code>&lt;xsl:if test="number(foo)" /></code></li> 
 <li>忽略使用 <code>string()</code> 函數作為編寫 <code>string-length() > 0</code> 的快捷方式而造成的從 <code>NODESET</code>
   到 <code>BOOLEAN</code> 的轉換。</li></ul>
-</p>
-<p id="footer">由 XPathView + XSLT-Support 提供技術支援</p>
+<small>由 XPathView + XSLT-Support 提供技術支援</small>
 </body>
 </html>

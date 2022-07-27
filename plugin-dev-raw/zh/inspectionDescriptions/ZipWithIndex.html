@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>報告索引的手動壓縮，而不是使用 <code>zipWithIndex</code>。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.zip(seq.indices)
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.zipWithIndex
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

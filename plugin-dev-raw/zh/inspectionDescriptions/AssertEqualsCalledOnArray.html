@@ -1,9 +1,9 @@
 <html>
 <body>
-報告採用陣列類型參數的 JUnit <code>assertEquals()</code> 方法的調用。
+報告帶有陣列類型實參的 JUnit <code>assertEquals()</code> 調用。
 此類方法會比較陣列的標識，而不是陣列的內容。
-<p>建議使用 其中一種 <code>assertArrayEquals()</code> 方法來比較陣列的內容。</p>
-<p><b>範例:</b></p>
+應使用 <code>assertArrayEquals()</code> 方法檢查陣列內容。
+<p><b>範例：</b></p>
 <pre><code>
   @Test
   <b>public void</b> testSort() {

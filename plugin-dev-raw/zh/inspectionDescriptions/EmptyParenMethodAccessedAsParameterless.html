@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>報告沒有實參子句且引用帶有空參數子句的方法的方法。</p>
+
+<p>如果一個方法有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>，則在方法中使用圓括號是一個常見的慣例。
+    雖然可以在方法調用中省略實參子句（以適應 Java 的<a href="https://en.wikipedia.org/wiki/Uniform_access_principle">統一存取原則</a>），但建議使用者在調用的方法表示多個屬性時添加一個空實參子句。</p>
+
+<p>該快速修復會添加一個空實參子句。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+  def test(): Int = ???
+
+  test
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  def test(): Int = ???
+
+  test()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

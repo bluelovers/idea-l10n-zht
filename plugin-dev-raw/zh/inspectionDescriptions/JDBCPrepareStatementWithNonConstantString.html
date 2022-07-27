@@ -4,17 +4,17 @@
 <p>
   構造的 SQL 語句是安全漏洞的常見來源。 預設情況下，此檢查會忽略編譯時常量。
 </p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   String bar() { return "bar"; }
 
   Connection connection = DriverManager.getConnection("", "", "");
   connection.("SELECT * FROM user WHERE name='" + bar() + "'");
-</pre>
+</code></pre>
 <!-- tooltip end -->
 使用檢查設定可以將任何 <code>static</code> <code>final</code> 欄位視為常數。 請小心，因為啟用該選項時，像下面這樣的字串將被忽略：
-<pre>
+<pre><code>
   static final String SQL = "SELECT * FROM user WHERE name='" + getUserInput() + "'";
-</pre>
+</code></pre>
 </body>
 </html>

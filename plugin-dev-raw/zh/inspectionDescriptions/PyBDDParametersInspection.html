@@ -1,7 +1,7 @@
 <html>
 <body>
-<p>報告步驟定義函數中不正確的參數。</p>
-<p><b>範例:</b></p>
+<p>報告步驟定義函數中不正確的實參。</p>
+<p><b>範例：</b></p>
 <pre style="font-family: monospace">
 from behave import *
 
@@ -10,6 +10,6 @@ from behave import *
 def step_impl(context,a):
     raise NotImplementedError(u'STEP: Given I\'m ready')
 </pre>
-<p>高亮顯示不當的 <code>a</code> 參數。 快速修復會將其移除。</p>
+<p>高亮顯示不當的 <code>a</code> 實參。 快速修復會將其移除。</p>
 </body>
 </html>

@@ -1,8 +1,8 @@
 <html>
 <body>
 報告可以具有 <code>in</code> 或 <code>out</code> 差異的類型參數。
-<p>使用 <code>in</code> 和 <code>out</code> 差異可以在 Kotlin 中提供更精確的類型推理和更清晰的程式碼語意。</p>
-<p><b>範例:</b></p>
+<p>使用 <code>in</code> 和 <code>out</code> 差異可以在 Kotlin 中提供更精確的類型推斷以及更清晰的程式碼語意。</p>
+<p><b>範例：</b></p>
 <pre><code>
   class Box&lt;T&gt;(val obj: T)
 
@@ -14,7 +14,7 @@
       consumeCharSequence(box) // 編譯時錯誤
   }
 </code></pre>
-<p>建議通過快速修復添加符合的差異修飾符：</p>
+<p>該快速修復會添加符合的差異修飾符：</p>
 <pre><code>
   class Box&lt;out T&gt;(val obj: T)
 

@@ -1,0 +1,21 @@
+<html>
+<body>
+報告可以與基礎軟體套件（<b>設定 | 語言和框架 | Scala | 基礎軟體套件</b>）相關的完全限定匯入。
+<p>僅當在<b>設定 | 編輯器 | 程式碼樣式 | Scala | 匯入</b>中啟用<b>對基礎軟體套件例外</b>選項時才適用。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  package org.example.application
+  package ui
+
+  import org.example.application.model.Data
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  package org.example.application
+  package ui
+
+  import model.Data
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

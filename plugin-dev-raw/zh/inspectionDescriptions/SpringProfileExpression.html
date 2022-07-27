@@ -3,23 +3,23 @@
 <p>報告不正確的 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Profile.html">@Profile</a> 表達式：</p>
 
 <ul>
-  <li>Spring 設定檔案不能為空</li>
-  <li>'&' 和 '|' 在 Spring 設定檔案表達式中，不得在沒有括號的情況下混合使用運算符</li>
+  <li>Spring 設定檔案不得為空</li>
+  <li>在 Spring 設定檔案表達式中，'&' 和 '|' 運算符不得在沒有圓括號的情況下混用</li>
 </ul>
 
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   <!-- correctly configured -->
   @Configuration
   @Profile("a & (b | c)")
   public class MyConfiguration {...}
 
-  <!-- 空  -->
+  <!-- empty  -->
   @Configuration
   @Profile() // 報告 "設定檔案表達式必須包含文本"
   public class MyConfiguration {...}
 
-  <!-- 不帶括號的混合運算符 -->
+  <!-- mixed operators without  parentheses -->
   @Configuration
   @Profile("a & b | c") // 報告 "格式不正確的設定檔案表達式"
   public class MyConfiguration {...}

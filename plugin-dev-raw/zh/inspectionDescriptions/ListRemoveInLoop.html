@@ -2,7 +2,7 @@
 <body>
 報告在迴圈中調用的可以取代為 <code>List.subList().clear()</code> 的 <code>List.remove(index)</code>。
 <p>在刪除多個元素的情況下，此取代對於大多數  <code>List</code> 實作更有效。</p>
-<p>範例:</p>
+<p>範例：</p>
 <pre><code>
   void removeRange(List&lt;String&gt; list, int from, int to) {
     for (int i = from; i &lt; to; i++) {
@@ -11,17 +11,17 @@
   }
 </code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   void removeRange(List&lt;String&gt; list, int from, int to) {
     if (to &gt; from) {
       list.subList(from, to).clear();
     }
   }
-</pre>
+</code></pre>
 <p>
   該快速修復會自動添加範圍檢查，以防止在最小值大於最大值時可能出現的 <code>IndexOutOfBoundsException</code>。 如果程式碼中不可能出現這種情況，則可將其移除。
 </p>
 <!-- tooltip end -->
-<p><small>2018.2 的新功能</small></p>
+<p><small>2018.2 最新變化</small></p>
 </body>
 </html>

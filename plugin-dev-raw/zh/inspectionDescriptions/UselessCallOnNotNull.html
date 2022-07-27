@@ -3,7 +3,7 @@
 報告非 null 接收器上僅對可 null 接收器有意義的調用。
 <p>只有在可 null 類型的接收器上調用時，標準庫中 <code>orEmpty()</code> 或 <code>isNullOrEmpty</code> 之類的幾個函數才有意義。 在其他情況下，可以忽略它們，因為結果將相同。</p>
 <p><b>移除冗餘調用</b>和<b>將調用更改為 …</b> 快速修復可用於自動修正程式碼。</p>
-<p>範例:</p>
+<p>範例：</p>
 <pre><code>
   fun test(s: String) {
       val x = s.orEmpty() // 快速修復會簡化為 's'

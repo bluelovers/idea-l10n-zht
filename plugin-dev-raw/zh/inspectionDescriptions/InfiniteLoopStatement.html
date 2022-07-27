@@ -1,22 +1,22 @@
 <html>
 <body>
-報告只能通過拋出異常退出的 <code>for</code>、<code>while</code> 或 <code>do</code> 語句。 雖然這樣的語句可能是正確的，但它們經常由於編碼錯誤而發生。
-<p>範例:</p>
-<pre>
+報告只能通過拋出異常退出的 <code>for</code>、<code>while</code> 或 <code>do</code> 語句。 雖然此類語句可能是正確的，但它們經常由編碼錯誤導致。
+<p>範例：</p>
+<pre><code>
   for (;;) {
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
 使用 <b>放置在 Thread.run 中時忽略</b> 選項忽略 <code>Thread.run</code> 中的無限迴圈語句。
 它可能對守護執行緒有用。
-<p>範例:</p>
-<pre>
+<p>範例：</p>
+<pre><code>
   new Thread(() -&gt; {
     while (true) {
     }
   }).start();
-</pre>
+</code></pre>
 <p>
 </body>
 </html>

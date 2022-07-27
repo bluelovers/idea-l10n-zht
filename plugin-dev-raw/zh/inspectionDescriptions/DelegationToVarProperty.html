@@ -2,11 +2,11 @@
 <body>
 報告至 <code>var</code> 屬性的接口委託
 <p>僅使用屬性的初始值進行委託，任何後續的賦值都不會影響它。</p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Example(var text: CharSequence): CharSequence by text
 </code></pre>
-<p>建議通過快速修復將屬性變為不可變的屬性：</p>
+<p>快速修復可將屬性取代為不可變的屬性：</p>
 <pre><code>
   class Example(val text: CharSequence): CharSequence by text
 </code></pre>

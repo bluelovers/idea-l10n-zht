@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>報告傳遞給 <code>print</code> 或 <code>println</code> 的陣列，並建議將它們轉換為正確的字串</p>.
+<p><b>範例：</b></p>
+<pre><code>
+  var x: Array[Int]
+  print(x)
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  var x: Array[Int]
+  print(x.mkString("Array(", ", ", ")"))
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

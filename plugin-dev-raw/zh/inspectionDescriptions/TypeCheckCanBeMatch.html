@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>報告在一系列 if-else 語句中的類型檢查和類型轉換，並將其取代為模式符合。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  val value = 0
+  if (value.isInstanceOf[Int]) {
+    val x = value.asInstanceOf[Int] + 1
+    val y = value.asInstanceOf[Int] + 2
+  } else if (value.isInstanceOf[Long]) {
+    val x = value.asInstanceOf[Long]
+    println(x)
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  val value = 0
+  value match {
+    case i: Int =>
+      val x = i + 1
+      val y = i + 2
+    case x: Long =>
+      println(x)
+    case _ =>
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

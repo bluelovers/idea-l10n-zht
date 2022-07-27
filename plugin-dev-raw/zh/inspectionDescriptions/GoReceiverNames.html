@@ -17,7 +17,7 @@
 <html>
 <body>
 報告類似於 <code>me</code>、<code>this</code>、<code>self</code> 或與此類型的其他接收器名稱不同的接收器名稱。
-<p>範例:</p>
+<p>範例：</p>
 <pre><code>func (self *MeterSnapshot) Rate5() float64 { return math.Float64frombits(self.rate5) }</code></pre>
 <p>根據 <a href="https://golang.org/wiki/CodeReviewComments#receiver-names">golang.org 上的 Receiver Names</a>頁面，您不應使用通用名稱，例如 "me"、"this" 或 "self"。 這些關鍵字在面向物件的語言中很典型，並且可能會賦予方法特殊的含義。</p>
 </body>

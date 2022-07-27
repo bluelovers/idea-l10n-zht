@@ -1,8 +1,8 @@
 <html>
 <body>
 報告對未使用封閉類名稱限定的內部類的引用。
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   import foo.Foo.Bar;
 
   class Foo {
@@ -12,9 +12,9 @@
   class Baz {
     void f(Bar bar) {}
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   class Foo {
     class Bar {}
   }
@@ -22,7 +22,7 @@
   class Baz {
     void f(Foo.Bar bar) {}
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   使用檢查設定可以忽略對同一類中的內部類的引用，因此這些類不需要匯入。

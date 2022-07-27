@@ -4,18 +4,18 @@
 <p>
   這些運算符確定引用相等，而不是比較內容。
   在大多數情況下，應使用 <code>equals()</code> 對字串進行比較，當字串為不同的物件時，會逐字符進行比較。</p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   void foo(String s, String t) {
     final boolean b = t == s;
   }
-</pre>
+</code></pre>
 <p>如果已知 <code>t</code> 為非 null 值，則可以安全地套用“不安全”的快速修復，並獲得類似於以下的結果：</p>
-<pre>
+<pre><code>
   void foo(String s, String t) {
     final boolean b = t.equals(s);
   }
-</pre>
+</code></pre>
 
 <!-- tooltip end -->
 <p>

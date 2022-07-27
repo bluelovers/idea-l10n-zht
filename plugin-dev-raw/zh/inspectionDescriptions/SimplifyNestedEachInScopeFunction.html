@@ -2,7 +2,7 @@
 <body>
 報告 <code>also</code> 或 <code>apply</code> 等範圍函數中可以簡化的 <code>forEach</code> 函數。
 <p><b>將 forEach 調用轉換為 onEach</b> 快速修復可用於自動修正程式碼。</p>
-<p>範例:</p>
+<p>範例：</p>
 <pre><code>
   fun test(list: List&lt;Int&gt;) {
       val x = list.also { it.forEach { it + 4 } }.toString()

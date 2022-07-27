@@ -1,33 +1,33 @@
 <html>
 <body>
-報告對超類中從構造函數宣告的欄位的賦值。
+報告對超類中從子類構造函數中宣告的欄位的賦值或修改。
 <p>最好在其自己的構造函數中初始化超類的欄位，並在子類中委託給該構造函數。 如果它在構造後沒有改變，這還將允許宣告一個欄位 <code>final</code>。</p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
-class Super {
-  int x;
-}
-class Sub extends Super {
-  Sub(int _x) {
-    // 警告：x 在超類中宣告
-    x = _x;
+  class Super {
+    int x;
   }
-}
+  class Sub extends Super {
+    Sub(int _x) {
+      // Warning: x is declared in a superclass
+      x = _x;
+    }
+  }
 </code></pre>
 <p>要避免此問題，請宣告超類構造函數：</p>
 <pre><code>
-class Super {
-  final int x;
+  class Super {
+    final int x;
 
-  Super(int _x) {
-    x = _x;
+    Super(int _x) {
+      x = _x;
+    }
   }
-}
-class Sub extends Super {
-  Sub(int _x) {
-    super(_x);
+  class Sub extends Super {
+    Sub(int _x) {
+      super(_x);
+    }
   }
-}
 </code></pre>
 <!-- tooltip end -->
 </body>

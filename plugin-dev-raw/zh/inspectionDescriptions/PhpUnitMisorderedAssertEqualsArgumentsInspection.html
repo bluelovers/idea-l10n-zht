@@ -1,6 +1,7 @@
 <html>
 <body>
-報告任何對 PHPUnit <code>assertEquals</code> 和 <code>assertNotEquals</code> 的調用，其中預期結果參數為非文字，實際結果參數為文字。 這樣的調用對於通過的斷言將表現良好，但是如果它們的預期參數和實際參數不同，則可能給出令人困惑的錯誤報告。
+報告對 PHPUnit 相等斷言方法（如 <code>assertEquals()</code>、<code>assertNotEquals()</code>、<code>assertSame()</code> 等）的調用，這些方法的預期結果實參為非文字，實際結果實參為文字。 此類調用對於通過的斷言將表現良好，但是如果它們的預期實參和實際實參不同，則可能產生令人困惑的錯誤報告。
+<!-- tooltip end -->
 <p>
   有關詳細資訊，請參閱 <a href="https://phpunit.readthedocs.io/en/8.4/assertions.html#assertequals">assertEquals</a>。
 </p>

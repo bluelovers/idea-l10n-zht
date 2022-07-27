@@ -2,18 +2,18 @@
 <body>
 報告不檢查其參數類型的 <code>equals()</code> 方法。
 <p>無法檢查 <code>equals()</code> 方法中參數的類型時，如果在無類型集合中使用該物件，可能會導致潛在錯誤。</p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   class MyClass {
     int x;
-    
+
     @Override
     public boolean equals(Object obj) {
-      // 如果 obj 不是 MyClass，equals 方法應返回 false
+      // 如果 obj 不為 MyClass，equals 方法應返回 false
       return ((MyClass)obj).x == x;
     }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

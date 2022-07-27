@@ -2,33 +2,33 @@
 <body>
 報告不以調用 "super" 構造函數或同一類的另一個構造函數開頭的構造函數。
 <p>可以認為是此類構造函數隱式地從調用 <code>super()</code> 開始。 某些編碼標準傾向於顯式地調用 <code>super()</code>。</p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   class Foo {
     Foo() {}
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   class Foo {
     Foo() {
       super();
     }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   使用檢查設定可以忽略直接從 <code>Object</code> 擴展的類。
   例如：
 </p>
-<pre>
+<pre><code>
   class Foo {
-    Foo() {} // Not reported
+    Foo() {} // 未報告
   }
 
   class Bar extends Foo {
     Bar() {} // 對 'super()' 的隱式調用
   }
-</pre>
+</code></pre>
 </body>
 </html>

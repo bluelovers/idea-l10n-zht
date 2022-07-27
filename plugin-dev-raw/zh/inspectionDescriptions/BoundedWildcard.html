@@ -1,25 +1,25 @@
 <html>
 <body>
 報告可以使用<a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">有界萬用字元</a>的通用方法參數。
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   void process(Consumer&lt;Number&gt; consumer);
-</pre>
+</code></pre>
 <p>應取代為：</p>
-<pre>
+<pre><code>
   void process(Consumer&lt;? super Number&gt; consumer);
-</pre>
+</code></pre>
 <p>
   此方法簽名更靈活，因為它接受更多類型：不僅是 <code>Consumer&lt;Number&gt;</code>，還有 <code>Consumer&lt;Object&gt;</code>。
 </p>
 <p>同樣，在協變位置輸入參數：</p>
-<pre>
+<pre><code>
   T produce(Producer&lt;T&gt; p);
-</pre>
+</code></pre>
 <p>應取代為：</p>
-<pre>
+<pre><code>
   T produce(Producer&lt;? extends T&gt; p);
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   引用 <em>Effective Java</em> 第三版中的 <a href="https://en.wikipedia.org/wiki/Joshua_Bloch#Effective_Java">Joshua Bloch</a>：

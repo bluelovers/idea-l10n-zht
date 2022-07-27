@@ -1,17 +1,14 @@
 <html>
 <body>
 報告 <code>java.lang.StringBuffer</code> 或 <code>java.lang.StringBuilder</code> 類型的欄位。
-此類欄位可以無限增長，並且往往會導致記憶體泄漏。
-<p><b>範例:</b></p>
-<pre>
-  <code>
-public class Example {
-  StringBuilder builder = new StringBuilder();
+此類欄位可以無限增長，並且通常會導致記憶體泄漏。
+<p><b>範例：</b></p>
+<pre><code>
+  public class Example {
+    private StringBuilder builder = new StringBuilder();
 
-  ...
-}
-  </code>
-</pre>
+  }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

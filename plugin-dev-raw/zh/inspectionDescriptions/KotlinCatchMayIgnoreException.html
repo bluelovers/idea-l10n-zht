@@ -1,0 +1,32 @@
+<html>
+<body>
+報告空的或可能忽略異常的 <code>catch</code> 塊。
+<p>雖然偶爾是有意為之，但空的 <code>catch</code> 塊可能導致偵錯復雜化。
+    此外，忽略 <code>catch</code> 參數可能是錯誤的。</p>
+
+<p>
+    該檢查不會報告任何命名為 <code>ignore</code>、<code>ignored</code> 或 <code>_</code> 的 <code>catch</code> 參數。
+</p>
+<p>
+    您可以使用快速修復將異常名稱更改為 <code>_</code>。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+  try {
+    throwingMethod()
+  } catch (ex: IOException) {
+
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  try {
+    throwingMethod()
+  } catch (_: IOException) {
+
+  }
+</code></pre>
+<!-- tooltip end -->
+使用<b>當 'catch' 塊包含註釋時不發出警告</b>選項可以忽略包含註釋的 <code>catch</code> 塊。
+</body>
+</html>

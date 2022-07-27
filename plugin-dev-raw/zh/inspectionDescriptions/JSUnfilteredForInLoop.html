@@ -2,10 +2,10 @@
 <body>
 報告未篩選的 <code>for-in</code> 迴圈。
 <br/><br/>
-使用這種結構導致不僅處理物件自身的屬性，還會處理物件原型的屬性。
+使用此結構不僅會處理物件自身的屬性，還會處理物件原型的屬性。
 在某些特定情況下可能出人意料，例如，在複製或修改所有屬性的實用程序方法中
 或者 <code>Object</code> 的原型可能被錯誤修改時。
-例如，以下程式碼將列印 <b>42</b> 和 <b>myMethod</b>:
+例如，以下程式碼將列印 <b>42</b> 和 <b>myMethod</b>：
 <br/><br/>
 <pre><code>
 Object.prototype.myMethod = function myMethod() {};
@@ -15,7 +15,7 @@ for (let i in a) {
 }
 </code></pre>
 
-<p>建議將整個迴圈取代為 <code>Object.keys()</code> 方法，或添加 <code>hasOwnProperty()</code> 檢查。 套用快速修復後，程式碼如下所示:</p>
+<p>建議將整個迴圈取代為 <code>Object.keys()</code> 方法，或添加 <code>hasOwnProperty()</code> 檢查。 套用快速修復後，程式碼如下所示：</p>
 <pre><code>
 for (let i in a) {
   if (a.hasOwnProperty(i)) {

@@ -2,11 +2,11 @@
 <body>
 報告以下 JPA 規範錯誤：<br/>
 <ul>
-  <li>沒有 public 無參數構造函數的實體監聽器類</li>
-  <li>具有不正確簽名的實體監聽器方法</li>
+  <li>沒有 public 無實參構造函數的實體偵聽器類</li>
+  <li>具有不正確簽名的實體偵聽器方法</li>
 </ul><br/>
 
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   @Entity
   @EntityListeners(value = JavaEntityListener.class)
@@ -15,7 +15,7 @@
   class JavaEntityListener {
 
     @PostLoad
-    void postLoad(String parameter) { ... } // 錯誤：方法 ‘postLoad’ 應在此處採用 ’Object‘ 類型的參數
+    void postLoad(String parameter) { ... } // 錯誤：方法 'postLoad' 應在此處採用 'Object' 類型的參數
   }
 </code></pre>
 </body>

@@ -6,14 +6,14 @@
   由於操作涉及讀寫，並且在此之間可能發生其他修改，因此可能損壞資料。
   使用 <code>synchronized</code> 塊進行環繞，或使用 <code>java.util.concurrent.atomic</code> 軟體套件中的一個類，可以使該項操作成為原子操作。
 </p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   private volatile int v = 1;
 
   void foo() {
     v = 2 * v;
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>報告 <code>Serializable</code> 和 <code>Externalizable</code> 類中不適合使用 <code>java.io.Serial</code> 註解進行批注的方法和欄位。</p>
-<p><b>範例:</b></p>
+報告 <code>Serializable</code> 和 <code>Externalizable</code> 類中不適合使用 <code>java.io.Serial</code> 註解進行註解的方法和欄位。
+<p><b>範例：</b></p>
 <pre><code>
 class Test implements Serializable {
-  @Serial // 批注欄位不是序列化機制的一部分，因為它並非 final
+  @Serial // 註解的欄位不是序列化機制的一部分，因為它並非 final
   private static long serialVersionUID = 7874493593505141603L;
 
-  @Serial // 批注方法不是序列化機制的一部分，因為它並非 private
+  @Serial // 註解的方法不是序列化機制的一部分，因為它並非 private
   void writeObject(ObjectOutputStream out) throws IOException {
   }
 }
@@ -21,7 +21,7 @@ class Test implements Externalizable {
 </code></pre>
 <p>有關所有有效情況的資訊，請參閱 <code>java.io.Serial</code> 的文檔。</p>
 <!-- tooltip end -->
-<p>僅當專案或模組的語言級別為 14 級或更高級別時，才適用此檢查。</p>
-<p><small>2020.3 的新功能</small></p>
+<p>僅當專案或模組的語言級別為 14 或更高時，此檢查才會報告。
+<p><small>2020.3 最新變化</small></p>
 </body>
 </html>

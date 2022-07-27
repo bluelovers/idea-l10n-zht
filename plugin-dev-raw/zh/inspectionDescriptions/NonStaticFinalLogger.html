@@ -1,9 +1,9 @@
 <html>
 <body>
-報告未宣告為 static 和 final 的類的記錄器欄位。
-確保每個類記錄器都是有效的常數並綁定到該類可以簡化為應用程式提供統一日誌記錄實作的任務。 此檢查不報告接口、枚舉、註解和內部類。
+報告未被宣告為 <code>static</code> 和/或 <code>final</code> 的記錄器欄位。
+確保每個類記錄器都是有效的常數並綁定到該類可以簡化為應用程式提供統一日誌記錄實作的任務。
 <p>提供了一個快速修復來將記錄器修飾符更改為 <code>static final</code>。</p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   <b>public class</b> Significant {
     <b>private</b> Logger LOG = Logger.getLogger(Critical.class);

@@ -1,12 +1,12 @@
 <html>
 <body>
 <p>報告在無效 Spring Bean 的類中注入或自動裝配的欄位/方法：
-<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>、<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a> 等等。</p>
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>、<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a> 等。</p>
 
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 public class FooBeanClass {
-  @Autowired   // 報告“必須在有效 Spring Bean 中定義自動裝配成員：@Component、@Service 等”
+  @Autowired   // 報告 '必須在有效 Spring Bean 中定義自動裝配成員：@Component、@Service 等'
   ServiceBean bean;
   }
 </code></pre>

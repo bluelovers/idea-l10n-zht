@@ -1,13 +1,13 @@
 <html>
 <body>
-報告 <code>*.properties</code> 檔案中未解析的屬性。
+報告 <code>*.properties</code> 檔案中的未解析屬性。
 
 <p><b>範例 JSP 檔案：</b></p>
 <pre><code>
 &lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
 &lt;%@ taglib uri="/tags/fmt" prefix="fmt" %&gt;
 
-&lt;fmt:message bundle="bundle.properties" key="unknown.property"/&gt; // 錯誤：引用的檔案中沒有這樣的屬性
+&lt;fmt:message bundle="bundle.properties" key="unknown.property"/&gt; // 錯誤：引用的檔案中沒有此類屬性
 </code></pre>
 </body>
 </html>

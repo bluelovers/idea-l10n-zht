@@ -1,7 +1,7 @@
 <html>
 <body>
-報告將受概念約束的表達式分配給宣告為 <code>auto</code> 的變數的情況，並建議添加類型約束。
-<p><b>範例:</b></p>
+報告將受概念約束的表達式分配給被宣告為 <code>auto</code> 的變數的情況，並建議添加類型約束。
+<p><b>範例：</b></p>
 <pre><code>
   template<class T>
   concept Foo = true;
@@ -9,10 +9,10 @@
   Foo auto func() { return true; }
 
   void bar() {
-      auto f = func(); //在此處警告需要添加約束 "Foo"。
+      auto f = func(); //在此處警告需要添加約束 'Foo'
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2020.2 的新功能</small></p>
+<p><small>2020.2 最新變化</small></p>
 </body>
 </html>

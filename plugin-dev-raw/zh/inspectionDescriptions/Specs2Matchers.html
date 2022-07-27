@@ -1,0 +1,36 @@
+<html>
+<body>
+<p>報告可以使用 <b>specs2</b> 中的內建匹配器。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  class TestSpec extends Specification { def is = s2"""
+    This is a spec
+    opt
+      should contain 1                                  $e1
+                                                        """
+    def e1 = {
+
+      val opt = Some(1)
+
+      opt must equalTo (Some(1))
+    }
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  class TestSpec extends Specification { def is = s2"""
+    This is a spec
+    opt
+      should contain 1                                  $e1
+                                                        """
+    def e1 = {
+
+      val opt = Some(1)
+
+      opt must beSome(1)
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

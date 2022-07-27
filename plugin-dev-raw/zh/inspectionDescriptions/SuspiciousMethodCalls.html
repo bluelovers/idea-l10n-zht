@@ -1,19 +1,19 @@
 <html>
 <body>
 報告實際實參類型與集合的元素類型不一致的參數化集合的方法調用。
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   List&lt;Integer&gt; list = getListOfElements();
-  list.remove(""); //高亮顯示移除
-</pre>
+  list.remove(""); //remove 被高亮顯示
+</code></pre>
 <!-- tooltip end -->
 <p>
   在檢查設定中，可以禁用對可能正確的程式碼發出警告，如下所示：
 </p>
-<pre>
+<pre><code>
   public boolean accept(Map&lt;Integer, String&gt; map, Object key) {
     return map.containsKey(key);
   }
-</pre>
+</code></pre>
 </body>
 </html>

@@ -4,27 +4,25 @@
 <p>
   如果實例初始設定式不引用其類的任何非 static 成員，則可以為 static。
   static 初始設定式在類解析後執行，而實例初始設定式對此類的每個實例化執行。</p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   class A {
      public static String CONSTANT;
      {
         CONSTANT = "Hello";
      }
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   class A {
      public static String CONSTANT;
      static {
-        CONSTANT = "Hello"; //現在每個類僅實例化一次
+        CONSTANT = "Hello"; // 現在每個類僅實例化一次
      }
   }
-</pre>
+</code></pre>
 
 <!-- tooltip end -->
-<p>
-
 </body>
 </html>

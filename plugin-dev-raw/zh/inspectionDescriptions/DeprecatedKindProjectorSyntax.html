@@ -1,0 +1,17 @@
+<html>
+<body>
+報告 kind-projector 語法中 <code>?</code> 關鍵字的用法。
+<p><code>?</code> 關鍵字將用於 Scala 3 中類型中的萬用字元實參（請參閱<a href="https://dotty.epfl.ch/docs/reference/changed-features/wildcards.html">類型中的萬用字元實參</a>）。
+    它在 kind-projector 類型 lambda 中的用法已被棄用，並將被 <code>*</code> 取代。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  List[?]
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  List[*]
+</code></pre>
+<!-- tooltip end -->
+<p><small>此檢查在 <b>Kind Projector</b> 延伸模組啟用時執行。</small></p>
+</body>
+</html>

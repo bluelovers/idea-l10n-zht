@@ -1,18 +1,18 @@
 <html>
 <body>
 報告包含 <code>if</code> 語句並且以 <code>break</code> 結尾但又不改變語意的迴圈。
-<p>這可以防止冗餘的迴圈迭代。</p>
-<p><b>範例:</b></p>
-<pre>
+這可以防止冗餘的迴圈迭代。
+<p><b>範例：</b></p>
+<pre><code>
   boolean found = false;
   for (int i = 0; i &lt; arr.length; i++) {
     if (Objects.equals(value, arr[i])) {
       found = true;
     }
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   boolean found = false;
   for (int i = 0; i &lt; arr.length; i++) {
     if (Objects.equals(value, arr[i])) {
@@ -20,8 +20,8 @@
       break;
     }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
-<small>2019.2 的新功能</small>
+<p><small>2019.2 最新變化</small></p>
 </body>
 </html>

@@ -4,18 +4,18 @@
 <p>
   <b>注意</b>：與<i>冗餘類型轉換</i>檢查非常相似，如果您有意使用過強的轉換來生成 <code>ClassCastException</code>，則對此檢查套用修正可能會改變程序的語意。
 </p>
-<p>範例:</p>
-<pre>
+<p>範例：</p>
+<pre><code>
   interface Super {
     void doSmth();
   }
   interface Sub extends Super { }
 
   void use(Object obj) {
-    // 警告: 可以使用 ((Super)obj).doSmth()
+    // 警告：可以使用 ((Super)obj).doSmth()
     ((Sub)obj).doSmth();
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   在程式碼中有符合的 <code>instanceof</code> 檢查時，使用下面的複選框可忽略轉換。

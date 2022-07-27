@@ -2,8 +2,8 @@
 <body>
 報告 SQL 例程中的非法游標狀態。
 <ul>
-  <li>例程具有 CLOSE 或 FETCH 語句，但游標可能已關閉。</li>
-  <li>例程具有 OPEN 語句，但可能會開啟游標。</li>
+  <li>例程具有 CLOSE 或 FETCH 語句，但游標可能已被關閉。</li>
+  <li>例程具有 OPEN 語句，但游標可能已被開啟。</li>
 </ul>
 <p>範例（Microsoft SQL 伺服器）：</p>
 <pre><code>CREATE TABLE t(col INT);
@@ -15,7 +15,7 @@ DECLARE a INT;
 FETCH my_cursor INTO a;
 CLOSE my_cursor;
 END;</code></pre>
-<p>根據 <a href="https://docs.microsoft.com/en-us/sql/t-sql/language-elements/close-transact-sql">docs.microsoft.com 上的 CLOSE (Transact-SQL)</a> 頁面，必須為開啟的游標執行 CLOSE，並且不允許對僅宣告或已經關閉的游標執行 CLOSE。 因此，我們需要開啟游標來修復警告。</p>
+<p>根據 <a href="https://docs.microsoft.com/en-us/sql/t-sql/language-elements/close-transact-sql">docs.microsoft.com 上的 CLOSE (Transact-SQL)</a> 頁面，必須為開啟的游標執行 CLOSE，並且不允許對僅宣告或已經關閉的游標執行 CLOSE。 因此，我們需要開啟游標來修正警告。</p>
 <pre><code>CREATE PROCEDURE foo() AS
 BEGIN
 DECLARE my_cursor CURSOR FOR SELECT * FROM t;

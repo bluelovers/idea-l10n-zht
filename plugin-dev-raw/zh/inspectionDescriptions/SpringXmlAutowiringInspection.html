@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>報告在 XML 應用程式上下文中設定的 Spring bean 的錯誤自動裝配。</p>
+<p>報告在 XML 應用程式上下文中設定的 Spring Bean 的不正確自動裝配。</p>
 
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre>
 public interface FooInterface {...}
 @Component public class FooBean implements FooInterface {...}
@@ -19,7 +19,7 @@ public class MyComponent {
 	&lt;bean class="beans.OtherBean" id="otherBean"/&gt;
 	&lt;bean class="beans.FooBean" id="fooBean"/&gt;
 
-	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; // 報告 "無法自動裝配。 有不止一種 'FooInterface' 類型的 bean。
+	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; // 報告 "無法自動裝配。 有不止一種 'FooInterface' 類型的 Bean。
                                                                //          Beans: otherBean,fooBean. Properties: 'fooInterface' "
 &lt;/beans&gt;
 </pre>

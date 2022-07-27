@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告比較不同類別的 Scala 集合的情況。</p>
+<p>不同類別（Set、Seq、Map 或 Iterator）的 Scala 集合不能相等，也不應與陣列進行比較。 此檢查建議將其中一個集合轉換為同一類別。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  seq == iterator
+  seq != array
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  seq.toIterator == iterator or seq == iterator.toSeq
+  seq != array.toSeq
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

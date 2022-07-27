@@ -2,18 +2,32 @@
 <body>
 報告其中的參數似乎總是同一個常數的方法。
 
-<p>範例:</p>
-<pre>
-<code>static void printPoint(int x, int y) { // x is always 0
-  System.out.println(x + ", " + y);
-}
+<p>範例：</p>
+<pre><code>
+  static void printPoint(int x, int y) { // x 始終為 0
+    System.out.println(x + ", " + y);
+  }
 
-public static void main(String[] args) {
-  printPoint(0, 1);
-  printPoint(0, 2);
-}
-</code>
-</pre>
+  public static void main(String[] args) {
+    printPoint(0, 1);
+    printPoint(0, 2);
+  }
+</code></pre>
 <p>該快速修復會內聯常量值。 這可能會簡化方法實作。</p>
+<!-- tooltip end -->
+<p>
+  在以下情況下，使用<b>內聯參數初始設定式不成功時忽略</b>選項來禁止檢查：
+</p>
+<ul>
+  <li>參數在方法內部被修改。</li>
+  <li>傳遞的參數值引用了不可存取的欄位（僅在 Java 中）。</li>
+  <li>參數為 vararg（僅在 Java 中）。</li>
+</ul>
+<p>
+  使用<b>報告方法最大可見性</b>選項可以控制要報告的方法的最大可見性。
+</p>
+<p>
+  使用<b>報告方法最小使用計數</b>欄位可以指定具有相同參數值的最小方法使用數。
+</p>
 </body>
 </html>

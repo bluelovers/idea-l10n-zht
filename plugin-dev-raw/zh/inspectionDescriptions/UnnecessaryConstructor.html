@@ -4,14 +4,16 @@
 <p>
   如果構造函數是類的唯一構造函數，沒有參數，與其包含類具有相同的存取修飾符，並且除了顯式或隱式調用不帶實參的超類構造函數外，不執行任何初始化，則不需要構造函數。
   此類構造函數可以安全地移除，因為即使沒有指定，它也會由編譯器生成。</p>
-<p><b>範例:</b></p>
-<pre>
-  public class Foo { public Foo() {} }
-</pre>
+<p><b>範例：</b></p>
+<pre><code>
+  public class Foo {
+    public Foo() {}
+  }
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   public class Foo {}
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
 使用檢查設定可以忽略具有註解的不必要的構造函數。

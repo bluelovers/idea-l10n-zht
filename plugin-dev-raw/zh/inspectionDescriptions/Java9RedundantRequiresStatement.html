@@ -1,13 +1,13 @@
 <html>
 <body>
 報告這樣一種情況： Java 9 模組 <code>A</code> 需要 Java 9 模組 <code>B</code>，
-但是 <code>A</code> 不使用 <code>B</code> 中的任何包。
+但是 <code>A</code> 不使用 <code>B</code> 中的任何軟體套件。
 此外，需要 <code>java.base</code> 模組的指令是冗餘的。
 <!-- tooltip end -->
 <p>
   該修復刪除了此類冗餘依賴項的 <code>requires</code> 指令。
   如果刪除的依賴項重新匯出了實際使用的模組，則修復程序會為這些模組添加 <code>requires</code> 指令。
 </p>
-<small>2017.1 的新功能</small>
+<small>2017.1 最新變化</small>
 </body>
 </html>

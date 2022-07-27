@@ -1,14 +1,14 @@
 <html>
 <body>
-報告沒有任何實體監聽器方法的實體監聽器類。
+報告沒有任何實體偵聽器方法的實體偵聽器類。
 
-<p><b>範例:</b></p><br/>
+<p><b>範例：</b></p><br/>
 <pre><code>
   @Entity
   @EntityListeners(value = JavaEntityListener.class)
   public class JavaEntity { ... }
 
-  class JavaEntityListener { // 錯誤：未找到特定於實體監聽器的方法
+  class JavaEntityListener { // 錯誤：找不到特定於實體偵聽器的方法
 
   }
 </code></pre>

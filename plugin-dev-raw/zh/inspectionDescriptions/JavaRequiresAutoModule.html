@@ -5,13 +5,13 @@
 <p>對應於 <code>-Xlint:requires-automatic</code> 和 <code>-Xlint:requires-transitive-automatic</code> Javac 選項。
 第一個選項增加了對何時使用自動模組的了解。
 第二個選項則是警示模組的作者，建立自動模組的隱含可讀性將使該模組的使用者面臨風險。
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   //module-info.java
   module org.printer {
-    requires transitive drivers.corp.org; // 'drivers.corp.org' 為自動模組時報告
+    requires transitive drivers.corp.org; // 在 'drivers.corp.org' 為自動模組時報告
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   使用<b>僅高亮顯示傳遞依賴</b>選項，可僅對傳遞依賴發出警告。

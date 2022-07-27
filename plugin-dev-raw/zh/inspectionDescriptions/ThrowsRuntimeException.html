@@ -1,13 +1,13 @@
 <html>
 <body>
-報告方法 <code>throws</code> 子句中未經檢查的異常的宣告（<code>java.lang.RuntimeException</code> 或其子類之一）。
-<p>未經檢查的異常的宣告不是必需的，可以刪除或移動到 Javadoc <code>@throws</code> 標記。</p>
-<p><b>範例:</b></p>
+報告方法 <code>throws</code> 子句中未檢查的異常的宣告（<code>java.lang.RuntimeException</code> 或其子類之一）。
+<p>未檢查的異常的宣告不是必需的，可以刪除或移動到 Javadoc <code>@throws</code> 標記。</p>
+<p><b>範例：</b></p>
 <pre><code>
   public class InvalidDataException extends RuntimeException {}
 
   class TextEditor {
-    void readSettings() throws InvalidDataException {} // 警告：在 'throws' 子句中宣告了未經檢查的異常 'InvalidDataException'
+    void readSettings() throws InvalidDataException {} // 警告：在 'throws' 子句中宣告了未檢查的異常 'InvalidDataException'
   }
 </code></pre>
 <!-- tooltip end -->

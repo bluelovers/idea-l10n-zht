@@ -10,8 +10,8 @@
     陣列實參的類型與集合宣告中的類型參數不符合。
   </li>
 </ul>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
 void m1(List list) {
   Number[] ns = (Number[]) list.toArray(new String[0]);
 }
@@ -19,7 +19,7 @@ void m1(List list) {
 void m2(List&lt;Number&gt; list) {
   Number[] ns = list.toArray(new String[0]);
 }
-</pre>
+</code></pre>
 
 
 </body>

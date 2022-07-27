@@ -1,7 +1,7 @@
 <html>
 <body>
-<p>報告不是任何 <code>break</code> 或 <code>continue</code> 語句目標的標籤。</p>
-<p><b>範例:</b></p>
+報告不是任何 <code>break</code> 或 <code>continue</code> 語句目標的標籤。
+<p><b>範例：</b></p>
 <pre><code>
   label: <b>for</b> (int i = 0; i &lt; 10; i++) {
     <b>if</b> (i == 3) {
@@ -9,7 +9,7 @@
     }
   }
 </code></pre>
-<p>套用快速修復後，將移除該標籤:</p>
+<p>套用快速修復後，該標籤將被移除：</p>
 <pre><code>
   <b>for</b> (int i = 0; i &lt; 10; i++) {
     <b>if</b> (i == 3) {

@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>在 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Lookup.html">@Lookup</a> 註解的 <code>value</code> 參數中報告不正確的 bean 引用。</p>
+<p>報告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Lookup.html">@Lookup</a> 註解的 <code>value</code> 參數中不正確的 Bean 引用。</p>
 
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   @Component public class FooBean {...}
   @Component public class OtherBean {...}
@@ -14,7 +14,7 @@
   @Lookup("fooBean") // 報告 "Bean 必須為 'OtherBean' 類型"
   public OtherBean otherBean() {...}
 
-  @Lookup("unknown") // 報告 "無法解析 bean 'unknown'"
+  @Lookup("unknown") // 報告 "無法解析 Bean 'unknown'"
   public OtherBean fooBean() {...}
   }
 </code></pre>

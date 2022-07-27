@@ -1,7 +1,7 @@
 <html>
 <body>
-<p>報告宣告的參數和實際實參之間的差異，也報告不正確的實參(例如重複的命名實參和不正確的實參順序)。</p>
-<p><b>範例:</b></p>
+<p>報告宣告的參數和實際實參之間的差異，也報告不正確的實參（例如重複的命名實參）和不正確的實參順序。</p>
+<p><b>範例：</b></p>
 <pre style="font-family: monospace">
 class Foo:
     def __call__(self, p1: int, *, p2: str = "%"):
@@ -12,7 +12,7 @@ bar = Foo()
 bar.__call__() # 參數未填
 bar(5, "#") # 非預期實參
 </pre>
-<p>正確的程式碼段如下所示:</p>
+<p>正確的程式碼段如下所示：</p>
 <pre style="font-family: monospace">
 class Foo:
     def __call__(self, p1: int, *, p2: str = "%"):

@@ -1,23 +1,6 @@
-<!--
-  ~ Copyright 2000-2012 JetBrains s.r.o.
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~ http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
 <html>
 <body>
-當分支之一為常數 true 或 false 時，此意圖簡化條件運算符 <b><font color="#000080">?:</font></b>。
-<br>
-因此，<code>a ? b : false</code> 將變成 <code>a && b</code> and <code>a ? true : b</code> 將變成 <code>a || b</code>。 <br>
-雖然您通常不會編寫這樣的程式碼，但可能因其他重構而出現這樣的程式碼。
+當分支之一為常數 true 或 false 時，簡化條件運算符 <b>?:</b>。
+<p>因此，<code>a ? b : false</code> 將變成 <code>a && b</code> and <code>a ? true : b</code> 將變成 <code>a || b</code>。</p>
 </body>
 </html>

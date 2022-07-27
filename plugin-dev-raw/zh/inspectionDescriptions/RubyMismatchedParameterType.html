@@ -1,17 +1,5 @@
 <html>
 <body>
-報告實參的推斷類型與參數的預期類型不相符的方法調用。 預期的參數類型取自其中任意一種:
-<ul>
-  <li>RBS 類型簽名</li>
-  <li>YARD <code>@param</code> 標記</li>
-</ul>
-<p>範例:</p>
-<pre>
-<code># @param [Integer] param
-def method(param) end
-
-method([1, 2])
-</code>
-</pre>
+報告推斷類型與參數的預期類型不符合的預設方法和塊參數賦值。 預期的參數類型取自 RBS 類型簽名。
 </body>
 </html>

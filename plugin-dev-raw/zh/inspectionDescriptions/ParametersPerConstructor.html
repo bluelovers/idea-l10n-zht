@@ -1,17 +1,22 @@
 <html>
 <body>
-報告參數過多的構造函數。
-<p>這樣的物件很難實例化，特別是在某些參數是可選的情況下。 構造函數參數過多可能表明有必要重構。 例如，請考慮套用建置器模式。
-<p><b>範例:</b></p>
+報告參數數量超過指定最大值的構造函數。
+此類物件很難實例化，特別是在某些參數是可選參數的情況下。
+構造函數的參數過多可能表明有必要重構。
+例如，請考慮套用建置器模式。
+<p><b>範例：</b></p>
 <pre><code>
-  public BankAccount(long accountNumber, String owner, double balance, double interestRate) {
-    // 欄位初始化
+  public BankAccount(long accountNumber,
+                     String owner,
+                     double balance,
+                     double interestRate) {
+    // fields initialization
   }
 </code></pre>
 <!-- tooltip end -->
 <p>設定檢查：</p>
 <ul>
-  <li>使用<b>參數限制</b>欄位可指定構造函數中允許的最大參數數量。</li>
+  <li>使用<b>參數限制</b>欄位可以指定構造函數中允許的最大參數數量。</li>
   <li>使用<b>忽略具有以下可見性的構造函數</b>列表可指定檢查是否應忽略具有特定可見性的構造函數。</li>
 </ul>
 </body>

@@ -1,5 +1,13 @@
 <html>
 <body>
-報告具有隱式 <b>Nothing?</b> 類型的變數/函數。
+報告具有隱式 <b>Nothing?</b> 類型的變數和函數。
+<p><b>範例：</b></p>
+<pre><code>
+  fun foo() = null
+</code></pre>
+<p>該快速修復會顯式指定返回類型：</p>
+<pre><code>
+  fun foo(): Nothing? = null
+</code></pre>
 </body>
 </html>

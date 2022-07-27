@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>報告隱藏在封閉範圍內定義的穩定關鍵字的變數模式。</p>
+<p>要對該值執行相等測試，請使用反引號。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  val foo = 0
+  0 match {
+    case foo =>
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  val foo = 0
+  0 match {
+    case `foo` =>
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

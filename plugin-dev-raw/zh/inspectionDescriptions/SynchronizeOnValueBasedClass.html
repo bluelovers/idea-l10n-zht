@@ -1,14 +1,14 @@
 <html>
 <body>
-嘗試在基於值的類的實例上進行同步，從 Java16 開始，這些實例會生成編譯時警告並引發執行時異常。
+報告嘗試在基於值的類的實例上進行同步的情況，從 Java 16 開始，這些實例會生成編譯時警告並引發執行時異常。
 <p>
-  例如，java.lang.Double 用 <code>jdk.internal.ValueBased</code> 註解，因此以下程式碼會產生編譯時警告：
+  例如，<code>java.lang.Double</code> 用 <code>jdk.internal.ValueBased</code> 註解，因此以下程式碼會產生編譯時警告：
 </p>
-<pre>
+<pre><code>
 Double d = 20.0;
 synchronized (d) { ... } // javac 警告
-</pre>
+</code></pre>
 <!-- tooltip end -->
-<p>自從 2021.1</p>
+<p><small>2021.1 最新變化</small></p>
 </body>
 </html>

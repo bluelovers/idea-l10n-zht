@@ -1,15 +1,15 @@
 <html>
 <body>
-<p>報告 Spring bean 注入點的自動裝配問題：</p>
+<p>報告 Spring Bean 注入點的自動裝配問題：</p>
 
 <ul>
-  <li>不止一種 'concrete' 類型的 bean</li>
-  <li>沒有 'concrete' 類型的 bean</li>
-  <li>沒有帶限定符的 bean</li>
+  <li>不止一種 'concrete' 類型的 Bean</li>
+  <li>沒有 'concrete' 類型的 Bean</li>
+  <li>沒有帶限定符的 Bean</li>
   <li>沒有參數的自動裝配方法或構造函數</li>
 </ul>
 
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre>
 public interface FooInterface {...}
   @Component public class FooBean implements FooInterface {...}
@@ -18,7 +18,7 @@ public interface FooInterface {...}
 @Component
 public class MyComponent {
 	@Autowired
-	FooInterface foo;  // 無法自動裝配 有不止一種 'FooInterface' 類型的 bean。
+	FooInterface foo;  // 無法自動裝配。 有不止一種 'FooInterface' 類型的 Bean。
                      // Beans: fooBean(FooBean.java), otherBean(OtherBean.java)"
 }
 </pre>

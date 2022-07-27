@@ -7,15 +7,13 @@
   根據網絡的可用性和 DNS 伺服器的速度，這可能會導致顯著延遲。
 </p>
 <p>該問題很可能可以通過改為使用 <code>java.net.URI</code> 加以解決。</p>
-<p><b>範例:</b></p>
-<pre>
-  <code>
-    int f(URL url1, URL url2) {
-      if (url1.equals(url2)) return url1.hashCode();
-      else return url2.hashCode();
-    }
-  </code>
-</pre>
+<p><b>範例：</b></p>
+<pre><code>
+  int f(URL url1, URL url2) {
+    if (url1.equals(url2)) return url1.hashCode();
+    else return url2.hashCode();
+  }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

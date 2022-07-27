@@ -14,8 +14,8 @@ public class ExampleAction {
 <pre><code>
 &lt;jsp:useBean id="example" scope="request" type="org.example.ExampleAction"/&gt;
 &lt;f:view&gt;
-  &lt;h:commandButton action="#{example.goodAction}"/&gt; // 優良：方法接受零參數並返回 `void`
-  &lt;h:commandButton action="#{example.badAction}"/&gt; // 錯誤：方法 `void badAction(String)` 返回 `java.lang.String` 類型而不是`void`
+  &lt;h:commandButton action="#{example.goodAction}"/&gt; // 優良：方法接受零實參並返回 `void`
+  &lt;h:commandButton action="#{example.badAction}"/&gt; // 錯誤：方法 `void badAction(String)` 返回 `java.lang.String` 類型而不是 `void`
 &lt;/f:view&gt;
 </code></pre>
 </body>

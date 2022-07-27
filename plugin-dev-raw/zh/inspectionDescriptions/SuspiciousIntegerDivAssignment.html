@@ -1,29 +1,30 @@
 <html>
 <body>
 報告其右側是不應截斷為整數的除法的賦值。
-<p>雖然偶爾是有意為之，但這種結構通常表明有錯誤。</p>
-<p><b>範例:</b></p>
-<pre>
+<p>雖然偶爾是有意為之，但此結構通常表明有錯誤。</p>
+<p><b>範例：</b></p>
+<pre><code>
   int x = 18;
   x *= 3/2; // 不會因為整數除法的結果而改變 x
-</pre>
+</code></pre>
 <p>
 此程式碼應取代為：
-<pre>
+<pre><code>
   int x = 18;
   x *= 3.0/2;
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   在檢查選項中，可以禁用對可疑但可能正確的除法的警告，例如不能靜態計算被除數時。
-<pre><code>  void calc(int d) {
+<pre><code>
+  void calc(int d) {
      int x = 18;
      x *= d/2;
   }
 </code></pre>
 
 <p>
-  <small>2019.2 的新功能</small>
+  <small>2019.2 最新變化</small>
 </p>
 </body>
 </html>

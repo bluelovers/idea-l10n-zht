@@ -4,7 +4,7 @@
     報告具有隱式返回類型的 <code>public</code> 和 <code>protected</code> 函數和屬性。
     出於 API 穩定性的原因，建議顯式指定此種類型。
 </p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   fun publicFunctionWhichAbusesTypeInference() =
       otherFunctionWithNotObviousReturnType() ?: yetAnotherFunctionWithNotObviousReturnType()

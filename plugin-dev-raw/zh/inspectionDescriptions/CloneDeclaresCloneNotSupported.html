@@ -1,12 +1,12 @@
 <html>
 <body>
-報告那些不宣告 <code>CloneNotSupportedException</code> 的 <code>clone()</code> 方法。
-<p>如果沒有宣告<code>CloneNotSupportedException</code>，該方法的子類將不能以標準方式禁止克隆。 此檢查不會報告宣告為 <code>final</code> 的 <code>clone()</code> 方法和 <code>final</code> 類內的 <code>clone()</code> 方法。</p>
+報告不宣告 <code>throws CloneNotSupportedException</code> 的 <code>clone()</code> 方法。
+<p>如果沒有宣告 <code>throws CloneNotSupportedException</code>，該方法的子類將不能以標準方式禁止克隆。 此檢查不會報告宣告為 <code>final</code> 的 <code>clone()</code> 方法和 <code>final</code> 類內的 <code>clone()</code> 方法。</p>
 <!-- tooltip end -->
 <p>設定檢查：</p>
-<p>使用 <b>僅對 'protected' 克隆方法發出警告</b> 選項，表示該檢查也應該警告 <code>public clone()</code> 方法。
-<i>Effective Java</i> 一書（第二版和第三版）建議在 <code>public</code> 方法上省略 <code>CloneNotSupportedException</code> 宣告，因為不拋出檢查異常的方法更容易使用。
-<p>範例:</p>
+<p>使用<b>僅對 'protected' 克隆方法發出警告</b>選項可以指示此檢查僅對 <code>protected clone()</code> 方法發出警告。
+<i>Effective Java</i> 一書（第二版和第三版）建議在 <code>public</code> 方法上省略 <code>CloneNotSupportedException</code> 宣告，因為不拋出已檢查的異常的方法更容易使用。
+<p>範例：</p>
 <pre><code>
   <b>public class</b> Example <b>implements</b> Cloneable {
     // 方法未宣告 ’throws CloneNotSupportedException‘

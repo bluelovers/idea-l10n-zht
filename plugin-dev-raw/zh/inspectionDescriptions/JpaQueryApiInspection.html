@@ -1,12 +1,12 @@
 <html>
 <body>
-報告命名和本機查詢以及相關 API 方法中未解析的符號：
+報告命名和原生查詢以及相關 API 方法中的未解析符號：
 <ul>
   <li>未知命名查詢</li>
-  <li>未知的查詢參數</li>
+  <li>未知查詢參數</li>
 </ul>
 
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   @Entity
   @NamedQuery(name = "SelectByConditionQuery", query = "...")
@@ -16,7 +16,7 @@
     public static void executeQuery() {
       Persistence.createEntityManagerFactory("")
         .createEntityManager()
-        .createNamedQuery("SelectAllQuery") // 錯誤：未知的查詢名稱
+        .createNamedQuery("SelectAllQuery") // 錯誤：未知查詢名稱
         ...
     }
   }

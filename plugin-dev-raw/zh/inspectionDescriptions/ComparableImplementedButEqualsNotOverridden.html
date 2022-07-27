@@ -4,7 +4,7 @@
 <p>
   如果未覆寫 <code>equals()</code>，<code>equals()</code> 實作與 <code>compareTo()</code> 實作將不一致。 如果將這種類的物件添加到 <code>java.util.SortedSet</code> 等集合，該集合將違反根據 <code>equals()</code> 定義的 <code>java.util.Set</code> 的約定。
 </p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Length implements Comparable&lt;Length> {
     private int cm = 0;
@@ -12,7 +12,7 @@
     @Override
     public int compareTo(@NotNull Length o) {
       if (cm == o.cm) return 0;
-      return cm < o.cm ? -1 : 1;
+      return cm &lt; o.cm ? -1 : 1;
     }
   }
 </code></pre>
@@ -24,7 +24,7 @@
     @Override
     public int compareTo(@NotNull Length o) {
       if (cm == o.cm) return 0;
-      return cm < o.cm ? -1 : 1;
+      return cm &lt; o.cm ? -1 : 1;
     }
 
     @Override

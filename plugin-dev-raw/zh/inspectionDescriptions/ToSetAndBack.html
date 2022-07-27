@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>報告序列到 <code>Set</code> 和反向的鏈式轉換，並建議將其取代為 <code>.distinct</code> 調用。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  Seq(1).toSet.toSeq
+  List(1).toSet.toList
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  Seq(1).distinct
+  List(1).distinct
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,6 +1,6 @@
 <html>
 <body>
-在 Persistence QL 查詢中報告以下錯誤：
+報告 Persistence QL 查詢中的以下錯誤：
 <ul>
   <li>不符合的表達式類型</li>
   <li>參數不正確</li>
@@ -12,7 +12,7 @@
 <pre><code>
 SELECT OBJECT(e) FROM JavaEntity e WHERE TRUE // 警告：常數條件
 
-SELECT OBJECT(e) FROM JavaEntity e WHERE e.id BETWEEN 0 AND '2' // 錯誤：預期一個數值但得到一個字串
+SELECT OBJECT(e) FROM JavaEntity e WHERE e.id BETWEEN 0 AND '2' // 錯誤：應為數值，但得到字串
 
 SELECT e from JavaEntity e where e.id=?1 and e.name=?3 // 錯誤：只有 2 個實際查詢參數
 </code></pre>

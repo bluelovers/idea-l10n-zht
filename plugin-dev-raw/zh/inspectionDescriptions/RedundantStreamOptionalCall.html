@@ -1,9 +1,9 @@
 <html>
 <body>
-<p>報告冗餘的 Stream 或 Optional 調用，例如 <code>map(x -&gt; x)</code> 或 <code>filter(x -&gt; true)</code>、冗餘的 <code>sorted</code> 或 <code>distinct</code>。</p>
+報告冗餘的 Stream 或 Optional 調用，例如 <code>map(x -&gt; x)</code> 或 <code>filter(x -&gt; true)</code>、冗餘的 <code>sorted</code> 或 <code>distinct</code>。
 <!-- tooltip end -->
-<p>注意，<code>streamOfIntegers.map(Integer::valueOf)</code> 之類程式碼中的映射操作效果與 <code>requireNonNull</code> 檢查相同:
-如果此流包含 <code>null</code>，它將拋出 <code>NullPointerException</code>，因此並非絕對冗餘。
+<p>請注意，<code>streamOfIntegers.map(Integer::valueOf)</code> 之類程式碼中的映射操作效果與 <code>requireNonNull</code> 檢查相同：
+如果該流包含 <code>null</code>，它將拋出 <code>NullPointerException</code>，因此並非絕對冗餘。
   如果不希望報告此類情況，請禁用<b>報告 Stream.map 中冗餘的裝箱</b>選項。</p>
 <p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>
 </body>

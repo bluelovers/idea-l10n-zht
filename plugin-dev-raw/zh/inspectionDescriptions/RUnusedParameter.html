@@ -1,14 +1,14 @@
 <html>
 <body>
 <p>報告函數體中未使用的函數參數。</p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 my_fahrenheit_to_celsius  &lt;- function(f_temp) {
   return((temp - 32) * 5 / 9)
 }
 </code></pre>
-<p>修改高亮顯示的程式碼片段以確保使用或刪除該參數。</p>
-<p><b>可能的解決方案:</b></p>
+<p>修改高亮顯示的程式碼段以確保使用或刪除該參數。</p>
+<p><b>可能的解決方案：</b></p>
 <pre><code>
 my_fahrenheit_to_celsius  &lt;- function(f_temp) {
   return((f_temp - 32) * 5 / 9)

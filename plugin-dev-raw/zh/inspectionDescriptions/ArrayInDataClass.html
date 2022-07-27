@@ -3,13 +3,13 @@
 報告 <code>data</code> 類中類型為 <code>Array</code> 但沒有被覆寫的 <code>equals()</code> 或 <code>hashCode()</code> 的屬性。
 <p>
     陣列參數通過引用相等進行了比較，這可能是一種意外行為。
-    因此，在此類情況下，強烈建議覆寫 <code>equals()</code> 和 <code>hashCode()</code>。
+    在此類情況下，強烈建議覆寫 <code>equals()</code> 和 <code>hashCode()</code>。
 </p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   data class Text(val lines: Array&lt;String&gt;)
 </code></pre>
-<p>建議通過快速修復生成缺失的 <code>equals()</code> 和 <code>hashCode()</code> 實作：</p>
+<p>該快速修復會生成缺失的 <code>equals()</code> 和 <code>hashCode()</code> 實作：</p>
 <pre><code>
   data class Text(val lines: Array&lt;String&gt;) {
       override fun equals(other: Any?): Boolean {

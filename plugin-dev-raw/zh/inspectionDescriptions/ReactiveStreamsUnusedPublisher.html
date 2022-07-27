@@ -2,24 +2,25 @@
 <body>
 <p>報告未使用的 <code>Publisher</code> 實例。</p>
 <p>
-  要使用運算符（返回 Mono/Flux/Flowable 的 Mono/Flux/Flowable 物件的方法）來生成新的 <code>Publisher</code> 實例，您必須通過  <code>subscribe()</code> 訂閱創建的 <code>Publisher</code>。
+  要使用生成新的 <code>Publisher</code> 實例的運算符（返回 Mono/Flux/Flowable 的 Mono/Flux/Flowable 物件的方法），您必須通過 <code>subscribe()</code> 訂閱創建的 <code>Publisher</code>。
 </p>
 <p>
   使用工廠（例如，<code>Mono.just()</code>）而不訂閱返回的 <code>Publisher</code>，會創建一個從未使用的物件，並被視為不必要的記憶體分配。
 </p>
 <p>
-  例如，<code>Mono.just(1, 2, 3).map(i -> i + 3)</code> 不會被執行，除非您訂閱了這個 <code>Publisher</code>，或者除非您通過套用運算符生成新的 <code>Publisher</code> 並訂閱它。
+  例如，<code>Mono.just(1, 2, 3).map(i -> i + 3)</code> 不會被執行，除非您訂閱了此 <code>Publisher</code>，或者除非您通過套用運算符生成新的 <code>Publisher</code> 並訂閱它。
 </p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <p>未使用的 <code>Flux</code> 實例：</p>
 <pre><code>
 Flux.just(1, 2, 3);
 </code></pre>
-<p>消費者使用的 <code>Flux</code> 實例：</p>
+<p>使用者使用的 <code>Flux</code> 實例：</p>
 <pre><code>
 Flux.just(1, 2, 3).subscribe(System.out::println);
 </code></pre>
+<p>不會報告對使用 Error Prone 或 AssertJ 的 <code>@CanIgnoreReturnValue</code> 註解進行註解的方法的調用。
 <!-- tooltip end -->
-<p><small>2019.3 的新功能</small></p>
+<p><small>2019.3 最新變化</small></p>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>報告在集合的集合上模擬 <code>.flatten</code> 的程式碼。</p>
+
+<p><b>範例：</b>
+<pre><code>
+  Seq(seq1, seq2).flatMap(identity)
+  Seq(seq1, seq2).flatMap(x => identity(x))
+  Seq(seq1, seq2).flatMap(x => x)
+
+  val nestedOption = Option(Some(10))
+  nestedOption.getOrElse(None)
+  nestedOption.map(_.get)
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  Seq(seq1, seq2).flatten
+  Seq(seq1, seq2).flatten
+  Seq(seq1, seq2).flatten
+
+  val nestedOption = Option(Some(10))
+  nestedOption.flatten
+  nestedOption.flatten
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

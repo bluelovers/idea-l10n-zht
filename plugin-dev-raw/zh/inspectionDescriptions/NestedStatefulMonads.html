@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>報告可能導致架構錯誤的嵌套有狀態單體。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  import scala.concurrent.Future
+  val a = Future { }
+  Future { a }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

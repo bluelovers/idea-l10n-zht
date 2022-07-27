@@ -1,0 +1,15 @@
+<html>
+<body><p>報告對可以取代為語法糖的 FunctionN 和 TupleN 的顯式引用。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  val func: Function1[Int, Int] =
+    a => a + 4
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  val func: (Int) => Int =
+    a => a + 4
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,18 +1,17 @@
 <html>
 <body>
-<p>在調用 <code>ReactorDebugAgent.init()</code> 時報告 <code>Hooks.onOperatorDebug()</code> 的用法。</p>
+<p>報告調用 <code>ReactorDebugAgent.init()</code> 時 <code>Hooks.onOperatorDebug()</code> 的用法。</p>
 <p>
-  如果 <code>ReactorDebugAgent</code> 在類路徑中，並且 <code>spring.reactor.debug-agent.enabled</code>
-   為 <code>true</code>（預設值），啟動時自動調用 <code>ReactorDebugAgent.init()</code>。
-  同時使用 <code>Hooks.onOperatorDebug()</code> 和 <code>ReactorDebugAgent.init()</code> 會導致 Reactor 生成雙倍的偵錯堆疊框架。
+  如果 <code>ReactorDebugAgent</code> 在類路徑中，並且 <code>spring.reactor.debug-agent.enabled</code> 為 <code>true</code>（預設值），啟動時自動調用 <code>ReactorDebugAgent.init()</code>。
+  同時使用 <code>Hooks.onOperatorDebug()</code> 和 <code>ReactorDebugAgent.init()</code> 會導致 Reactor 生成雙倍的偵錯堆疊幀。
   此外，<code>Hooks.onOperatorDebug()</code> 會導致性能開銷。
 </p>
 
-<p>快速修復刪除了對 <code>Hooks.onOperatorDebug()</code> 的調用。</p>
-<p><b>範例:</b></p>
+<p>該快速修復會移除對 <code>Hooks.onOperatorDebug()</code> 的調用。</p>
+<p><b>範例：</b></p>
 <pre><code>
   public void hook() {
-    Hooks.onOperatorDebug(); // 報告 "初始化 ReactorDebugAgent 時調用 Hooks.onOperatorDebug()"
+    Hooks.onOperatorDebug(); // 報告 '初始化 ReactorDebugAgent 時調用 Hooks.onOperatorDebug()'
   }
 </code></pre>
 <p>在套用快速修復後：</p>

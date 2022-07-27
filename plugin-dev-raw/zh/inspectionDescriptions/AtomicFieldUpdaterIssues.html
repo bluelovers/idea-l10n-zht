@@ -2,21 +2,21 @@
 <body>
 報告 <code>AtomicLongFieldUpdater</code>、<code>AtomicIntegerFieldUpdater</code> 或 <code>AtomicReferenceFieldUpdater</code> 欄位（<code>java.util.concurrent.atomic</code> 軟體套件）的問題。
 <p>報告的問題與原子欄位更新程序可能發生的執行時問題相同：找不到指定欄位、指定欄位不可存取、指定欄位類型錯誤等。</p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <ul>
-  <li><pre>
+  <li><pre><code>
   class A {
     private static volatile int value = 0;
     private static final AtomicIntegerFieldUpdater updater =
     AtomicIntegerFieldUpdater.newUpdater((A.class), "value"); // 警告：欄位 'value' 具有 'static' 修飾符
   }
-  </pre></li>
-  <li><pre>
+  </code></pre></li>
+  <li><pre><code>
   class B {
     private static final AtomicIntegerFieldUpdater updater =
       AtomicIntegerFieldUpdater.newUpdater(B.class, "value"); // 警告：在類 'B' 中找不到名為 'Value' 的欄位
   }
-  </pre></li>
+  </code></pre></li>
 </ul>
 <!-- tooltip end -->
 <p>

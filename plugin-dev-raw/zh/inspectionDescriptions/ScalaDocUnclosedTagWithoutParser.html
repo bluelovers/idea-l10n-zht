@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>在 Scaladoc 中報告未關閉的標記。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  /**
+   * ''
+   *
+   * [[
+   *
+   * `
+   */
+  class A
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  /**
+   * &#39;&#39;
+   *
+   * &#91;&#91;
+   *
+   * &#96;
+   */
+  class A
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

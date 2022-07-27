@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>報告 <code>sameElements</code> 和 <code>corresponds</code> 與未排序集合的用法。</p>
+
+<p>方法 <code>sameElements</code> 和 <code>corresponds</code> 使用給定集合的迭代器根據元素在集合中的位置順序來比較元素。
+    因此，如果元素的順序沒有明確定義，結果是不可預測的，就像無序 Set 或 Map 的情況一樣。</p>
+<p>要解決此問題，請考慮使用 <code>==</code>、<code>subsetOf</code>，或按某種順序排序元素。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+  Set(3,2,1) sameElements Set(1, 2, 3) // 為 false
+
+  // 但
+
+  Set(1, 2, 3, 4, 5) sameElements Set(5, 4, 3, 2, 1) // 為 true
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -2,14 +2,14 @@
 <body>
 報告可通過同一屬性名稱存取的布爾方法。
 <p>存取此類屬性可能產生意外的結果。</p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class X {
       boolean isFoo() { true }
       boolean getFoo() { false }
   }
 
-  // getFoo() will be called
+  // 將調用 getFoo()
   new X().foo
 </code></pre>
 </body>

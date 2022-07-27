@@ -2,12 +2,16 @@
 <body>
 報告 vararg 方法調用中 <code>Collection</code> 或 <code>Iterable</code> 的可疑用法。
 <p>例如，在以下方法中：</p>
-  <pre>&lt;T&gt; boolean contains(T needle, T... haystack) {...}</pre> 
+<pre><code>
+  &lt;T&gt; boolean contains(T needle, T... haystack) {...}
+</code></pre>
 <p>像下面這樣的調用</p>
-  <pre>if(contains("item", listOfStrings)) {...}</pre> 
+<pre><code>
+  if(contains("item", listOfStrings)) {...}
+</code></pre>
 <p>看起來很可疑，因為列表將被包裝成一個元素陣列。
   此類程式碼可以被成功編譯並且很可能會無異常地執行，但它可能被錯誤地使用。</p>
 <!-- tooltip end -->
-<p><small>2019.2 的新功能</small></p>
+<p><small>2019.2 最新變化</small></p>
 </body>
 </html>

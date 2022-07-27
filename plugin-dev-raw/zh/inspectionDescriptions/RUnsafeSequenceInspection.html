@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>報告由冒號 (<code>:</code>) 生成的不安全序列，並建議用安全調用取代它們。</p>
-<p><b>範例:</b></p>
+<p>報告由冒號 (<code>:</code>) 生成的不安全序列，並建議將其取代為安全調用。</p>
+<p><b>範例：</b></p>
 <pre><code>
     a &lt;- 1:length(c)
     b &lt;- 1:nrow(data.frame())
 </code></pre>
 <p>
-  當您套用快速修復時，程式碼更改為：
+  當您套用快速修復時，程式碼變為：
 </p>
 <pre><code>
     a &lt;- seq_along(c)

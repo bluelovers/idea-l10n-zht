@@ -4,21 +4,21 @@
 <p>
   對新分配物件的引用不能指向現有物件，因此比較結果始終為 <code>false</code>。 該檢查還可以報告從簡單方法返回的新建物件。
 </p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   void test(Object obj) {
     if (new Object() == obj) {...}
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   void test(Object obj) {
     if (new Object().equals(obj)) {...}
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
-  <small>2018.3 的新功能</small>
+  <small>2018.3 最新變化</small>
 </p>
 </body>
 </html>

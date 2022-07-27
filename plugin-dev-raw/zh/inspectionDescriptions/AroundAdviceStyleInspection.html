@@ -1,14 +1,14 @@
 <html>
 <body>
-<p>在使用 <code>@Around</code> 建議時，切記兩點:
+<p>在使用 <code>@Around</code> 建議時，請記住兩點：
 <ul>
   <li>需要調用 <code>org.aspectj.lang.ProceedingJoinPoint#proceed</code>，否則調用將無法到達目標。</li>
-  <li>需要返回此調用的結果值(類型化 <code>java.lang.Object</code>)，否則返回值永遠不會到達原始調用方。</li>
+  <li>需要返回該調用的結果值（類型化 <code>java.lang.Object</code>），否則返回值永遠不會到達原始調用方。</li>
 </ul>
-<p>不過，以下兩種狀況幾乎都表明存在編碼錯誤:<p>
+<p>不過，以下兩種狀況幾乎始終表明存在編碼錯誤：<p>
 <ul>
-  <li><code>@Around</code> 方法的簽名未使用 <code>ProceedingJoinPoint</code> 作為第一個參數: 在這種情況下，調用無法到達目標。</li>
-  <li><code>@Around</code> 方法的簽名未使用 <code>Object</code> 作為返回類型: 在這種情況下，總是丟失目標方法的返回值。</li>
+  <li><code>@Around</code> 方法的簽名未使用 <code>ProceedingJoinPoint</code> 作為第一個實參：在這種情況下，調用無法到達目標。</li>
+  <li><code>@Around</code> 方法的簽名未使用 <code>Object</code> 作為返回類型：在這種情況下，目標方法的返回值總是丟失。</li>
 </ul>
 </body>
 </html>

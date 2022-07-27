@@ -1,14 +1,15 @@
 <html>
 <body>
-報告資料類中的 private 主構造函數。
+報告資料類中的 <code>private</code> 主構造函數。
 <p>
-    <code>data</code> 類具有 <code>copy()</code> 工廠方法，可以像構造函數一樣使用，因此將構造函數設為 <code>private</code> 並不能提供足夠的安全性。
+    <code>data</code> 類擁有 <code>copy()</code> 工廠方法，可以像構造函數一樣使用。
+    為了提供足夠的安全性，構造函數不應被標記為 <code>private</code>。
 </p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   data class User private constructor(val name: String)
 </code></pre>
-<p>建議通過快速修復將構造函數設為 <code>public</code>：</p>
+<p>快速修復可將構造函數可見性修飾符更改為 <code>public</code>：</p>
 <pre><code>
   data class User(val name: String)
 </code></pre>

@@ -7,7 +7,7 @@
 <p>
   任何在正常物件構造過程中未被初始化的 <code>transient</code> 欄位都被視為使用預設初始化，並且不會被此檢查報告。
 </p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Person implements Serializable {
     transient String name = "Default"; //警告，反序列化後實際上可能為 null

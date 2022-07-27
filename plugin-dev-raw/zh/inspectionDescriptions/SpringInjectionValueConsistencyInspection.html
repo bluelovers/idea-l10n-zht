@@ -1,26 +1,26 @@
 <html>
 <body>
-<p>報告 XML 應用程式上下文中注入點的不一致標籤和屬性。</p>
+<p>報告 XML 應用程式上下文中注入點的不一致標記和特性。</p>
 
 <ul>
   <li><code>&lt;property&gt;</code> 和 <code>&lt;constructor-arg&gt;</code> 必須指定 <code>ref</code>、<code>value</code> 或子元素</li>
   <li><code>&lt;property&gt;</code> 和 <code>&lt;constructor-arg&gt;</code> 不能包含多個子元素</li>
-  <li><code>&lt;ref&gt;</code> 可以包含 <code>bean</code> 屬性、<code>local</code> 屬性或 <code>parent</code> 屬性</li>
-  <li><code>&lt;ref&gt;</code> 必須指定一個 bean</li>
-  <li><code>&lt;idref&gt;</code> 可以包含 <code>bean</code> 屬性或 <code>local</code> 屬性</li>
-  <li><code>&lt;idref&gt;</code> 必須指定一個 bean</li>
+  <li><code>&lt;ref&gt;</code> 可以包含 <code>bean</code> 特性、<code>local</code> 特性或 <code>parent</code> 特性</li>
+  <li><code>&lt;ref&gt;</code> 必須指定一個 Bean</li>
+  <li><code>&lt;idref&gt;</code> 可以包含 <code>bean</code> 特性或 <code>local</code> 特性</li>
+  <li><code>&lt;idref&gt;</code> 必須指定一個 Bean</li>
   <li><code>&lt;map&gt;</code> 必須指定一個鍵</li>
-  <li><code>&lt;idref&gt;</code> 可以包含 <code>key</code> 屬性、<code>key-ref</code> 屬性或 <code>&lt;key&gt;</code> 子元素</li>
+  <li><code>&lt;idref&gt;</code> 可以包含 <code>key</code> 特性、<code>key-ref</code> 特性或 <code>&lt;key&gt;</code> 子元素</li>
 </ul>
 
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   &lt;beans&gt;
 
-  <em>&lt;!-- 1.  屬性只允許包含 “ref” 屬性或 “value” 屬性或子元素 --&gt;</em>
+  <em>&lt;!-- 1.  屬性只允許包含 "ref" 特性或 "value" 特性或子元素 --&gt;</em>
   &lt;bean class="MyClass"&gt;
     &lt;property name="bean" ref="myBean" value="foo"/&gt;
-    // 屬性只允許包含 “ref” 屬性或 “value” 屬性或子元素
+    // 屬性只允許包含 "ref" 特性或 "value" 特性或子元素
   &lt;/bean&gt;
 
   <em>&lt;!--  2.  屬性不得包含多個子元素 --&gt;</em>

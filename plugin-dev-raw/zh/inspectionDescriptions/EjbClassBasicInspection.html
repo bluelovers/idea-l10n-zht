@@ -2,18 +2,18 @@
 <body>
 報告以下 EJB 規範違規：
 <ul>
-  <li>類沒有實作預期的接口（EJBLocalObject、EJBObject 等）</li>
-  <li>類未定義 public 無參數構造函數</li>
-  <li>使用類而不是接口，反之亦然</li>
+  <li>類未實作預期接口（EJBLocalObject、EJBObject 等）</li>
+  <li>類未定義 public 無實參構造函數</li>
+  <li>使用類而不是接口或者使用接口而不是類</li>
   <li>EJB 方法為 static</li>
-  <li>無狀態會話 Bean 類定義了幾個 `ejbCreate` 方法</li>
+  <li>無狀態會話 Bean 類定義了多個 `ejbCreate` 方法</li>
   <li>會話 Bean 類的方法返回類型不正確</li>
   <li>EJB 定義了 `finalize` 方法</li>
 </ul>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
 public class SessionEJB implements java.io.Serializable { // 錯誤：類應該擴展 `SessionBean`
-  private SessionEJB() {} // 錯誤：類應該定義 public 無參數構造函數
+  private SessionEJB() {} // 錯誤：類應該定義 public 無實參構造函數
 }
 </code></pre>
 </body>

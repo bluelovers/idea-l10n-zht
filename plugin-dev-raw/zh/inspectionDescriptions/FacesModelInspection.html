@@ -1,18 +1,18 @@
 <html>
 <body>
-<p>在 Java Server Faces <code>faces-config.xml</code> 檔案中報告不正確的元素：</p>
+<p>報告 Java Server Faces <code>faces-config.xml</code> 檔案中不正確的元素：</p>
 
 <ul>
   <li>對不可實例化類的引用</li>
   <li>對不擴展所需類的類的引用</li>
   <li>對範圍不適當的類的引用</li>
-  <li>空標記和屬性值</li>
-  <li>與所需模式不符合的標記和屬性值（例如，Java 關鍵字）</li>
-  <li>不包含必需的子標籤或屬性的標籤</li>
+  <li>空標記和特性值</li>
+  <li>與所需模式不符合的標記和特性值（例如，Java 關鍵字）</li>
+  <li>不包含必需子標記或特性的標記</li>
   <li>定義具有重複名稱的物件的標記</li>
 </ul>
 
-<p><strong>範例:</strong></p>
+<p><strong>範例：</strong></p>
 <pre><code>
   &lt;faces-config &gt;
      &lt;application&gt;
@@ -21,7 +21,7 @@
     &lt;navigation-rule&gt;
         &lt;from-view-id&gt;myView.xhtml&lt;/from-view-id&gt;
         &lt;navigation-case&gt;
-            &lt;to-view-id&gt;<strong>unknown.xhtml</strong>&lt;/to-view-id&gt;  &lt;!-- 無法解決 'unknown.xhtml'  --&gt;
+            &lt;to-view-id&gt;<strong>unknown.xhtml</strong>&lt;/to-view-id&gt;  &lt;!-- 無法解析 'unknown.xhtml'  --&gt;
         &lt;/navigation-case&gt;
     &lt;/navigation-rule&gt;
   &lt;/faces-config&gt;

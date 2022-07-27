@@ -1,23 +1,23 @@
 <html>
 <body>
-報告具有 <code>kotlinx.coroutines.Deferred</code> 結果的函數。
+報告具有 <code>kotlinx.coroutines.Deferred</code> 返回類型的函數。
 <p>
     使用 <code>Deferred</code> 作為返回類型的函數其名稱應帶有 <code>Async</code> 後綴。
-    否則，建議將函數轉換為 <code>suspend</code> 並在其中解開 <code>Deferred</code>。
+    否則，建議將函數標記為 <code>suspend</code> 並在其中解包 <code>Deferred</code>。
 </p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   fun calcEverything(): Deferred&lt;Int&gt; {
       return CompletableDeferred(42)
   }
 </code></pre>
-<p>套用修正後（添加 <code>Async</code> 後綴）：</p>
+<p>套用添加 <code>Async</code> 後綴的快速修復之後：</p>
 <pre><code>
   fun calcEverythingAsync(): Deferred&lt;Int&gt; {
       return CompletableDeferred(42)
   }
 </code></pre>
-<p>套用修正後（將功能變為 <code>suspend</code> 功能）：</p>
+<p>套用將函數轉換為 <code>suspend</code> 的快速修復之後：</p>
 <pre><code>
   suspend fun calcEverything(): Int {
       return CompletableDeferred(42).await()

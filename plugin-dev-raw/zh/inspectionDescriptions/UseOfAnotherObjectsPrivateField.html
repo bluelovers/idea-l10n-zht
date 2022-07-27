@@ -1,25 +1,19 @@
 <html>
 <body>
-報告使用另一個物件的 <code>private</code> 或 <code>protected</code> 欄位的物件。
-<p>Java 允許將此類欄位用於與當前物件屬於同一類的物件，但某些程式碼樣式不鼓勵這種用法。 此外，這種對 <code>private</code> 欄位的直接存取在面向組件的體系結構中可能會失敗，例如 Spring 或 Hibernate，它們期望對其他物件的所有存取都通過方法調用進行，以便框架可以使用代理來調解存取。</p>
-<p><b>範例:</b></p>
+報告對另一個物件的 <code>private</code> 或 <code>protected</code> 欄位的存取。
+Java 允許存取與當前物件屬於同一類的物件的此類欄位，但某些編碼樣式不鼓勵這種用法。 此外，這種對 <code>private</code> 欄位的直接存取在面向組件的架構（例如 Spring 或 Hibernate）中可能會失敗，它們期望對其他物件的所有存取都通過方法調用進行，以便框架可以使用代理調解存取。
+<p><b>範例：</b></p>
 <pre><code>
-public class Base {
+  public class Base {
     protected int bar;
 
-    class Inside {
-        int f(Base base) {
-            return base.bar;  // 警告：直接存取非 public 欄位
-        }
+    void increment(Base base) {
+      bar++;
+      base.bar++; // warning: direct access to another object's non-public field
     }
-}
-
-class SomewhereElse {
-    void m(Base base) {
-        base.bar = 1; // 警告：直接存取非 public 欄位
-    }
-}
+  }
 </code></pre>
+可以通過快速修復封裝該欄位。
 <!-- tooltip end -->
 <p>設定檢查：</p>
 <ul>

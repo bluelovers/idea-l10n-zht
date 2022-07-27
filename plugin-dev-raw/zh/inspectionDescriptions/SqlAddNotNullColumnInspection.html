@@ -1,6 +1,6 @@
 <html>
 <body>
-報告嘗試創建沒有 DEFAULT 值的 NOT NULL 列。
+報告創建沒有 DEFAULT 值的 NOT NULL 列的嘗試。
 <p>範例（Microsoft SQL 伺服器）：</p>
 <pre><code>CREATE TABLE foo (a INT, b  INT)
 
@@ -9,6 +9,6 @@ ALTER TABLE foo ADD c INT NOT NULL;</code></pre>
   如果我們禁止使用 NULL 值，則必須設定 SQL 在創建新記錄時可以使用的 DEFAULT 值。
 </p>
 <pre><code>ALTER TABLE foo ADD c INT NOT NULL DEFAULT 42;</code></pre>
-<p>您可以使用<b>添加預設值</b>快速修復快速添加 DEFAULT 值。</p>
+<p>您可以使用<b>添加 DEFAULT 值</b>快速修復快速添加 DEFAULT 值。</p>
 </body>
 </html>

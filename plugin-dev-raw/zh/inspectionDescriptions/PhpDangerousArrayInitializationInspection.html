@@ -2,7 +2,7 @@
 <body>
 報告危險的陣列初始化（如 <code>$arr[] = value</code>）。
 <p>
-  不建議採取這種做法，因為如果 <code>$arr</code> 已包含某些值(例如來自請求變數的字串)，此值將被保留，並且 <code>[]</code> 實際上可能代表字串存取運算符。 最好通過直接賦值來初始化變數。
+  不建議採取這種做法，因為如果 <code>$arr</code> 已包含某些值（例如來自請求變數的字串），此值將保留，並且 <code>[]</code> 實際上可能代表字串存取運算符。 最好始終通過直接賦值來初始化變數。
 </p>
 <p>有關詳細資訊，請參閱 <a href="https://www.php.net/manual/en/language.types.array.php#language.types.array.syntax.modifying">Creating/modifying with square bracket syntax (php.net)</a>。
 </p>

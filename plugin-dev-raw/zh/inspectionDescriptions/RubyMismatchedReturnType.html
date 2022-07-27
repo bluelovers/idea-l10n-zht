@@ -1,11 +1,12 @@
 <html>
 <body>
-報告推斷的類型與該方法的預期返回類型不符合的方法返回值。 預期的返回類型取自其中任意一種:
+報告推斷類型與方法的預期返回類型不符合的方法和塊的返回值。 預期的返回類型取自其中任意一種：
 <ul>
   <li>RBS 類型簽名</li>
+  <li>Sorbet 類型簽名</li>
   <li>YARD <code>@return</code> 標記</li>
 </ul>
-<p>範例:</p>
+<p>範例：</p>
 <pre>
 <code># @return [Integer]
 def method

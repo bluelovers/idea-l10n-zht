@@ -1,32 +1,33 @@
 <html>
 <body>
 報告不屬於任何類、方法或欄位的 Javadoc 註釋。
-<p>Javadoc 工具忽略懸空的 Javadoc 註釋，並且不會將它們包含在生成的 HTML 文檔中。</p>
-<p><b>範例:</b></p>
+Javadoc 工具會忽略懸空的 Javadoc 註釋，並且不會將它們包含在其生成的 HTML 文檔中。
+<p><b>範例：</b></p>
 <pre><code>
   class A {
     /**
      * Dangling comment
      */
-     /**
-      * Method javadoc
-      */
-      public void m(){}
+    /**
+     * Method javadoc
+     */
+     public void m(){}
   }
 </code></pre>
-<p>通過快速修復可完全移除這樣的註釋或將它們轉換為塊註釋。 在套用快速修復後：</p>
+<p>可以通過快速修復完全刪除此類註釋或將它們轉換為塊註釋。 在套用快速修復後：</p>
 <pre><code>
   class A {
-  /*
-    Dangling comment
-   */
-  /**
-   * Method javadoc
-   */
-  public void m(){}
-}
+    /*
+      Dangling comment
+    */
+    /**
+     * Method javadoc
+     */
+    public void m(){}
+  }
 </code></pre>
 <!-- tooltip end -->
-<p>
+<p>使用<b>忽略 JavaDoc 格式的檔案頭註釋</b>選項可以忽略 Java 檔案開頭的註釋。
+這些通常是版權訊息。
 </body>
 </html>

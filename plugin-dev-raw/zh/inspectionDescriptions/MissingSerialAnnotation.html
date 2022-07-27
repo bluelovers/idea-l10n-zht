@@ -1,7 +1,7 @@
 <html>
 <body>
-<p>報告 <code>Serializable</code> 和 <code>Externalizable</code> 類中適合使用 <code>java.io.Serial</code> 註解進行批注的方法和欄位。 通過快速修復添加註解。</p>
-<p><b>範例:</b></p>
+報告 <code>Serializable</code> 和 <code>Externalizable</code> 類中適合使用 <code>java.io.Serial</code> 註解進行註解的方法和欄位。 該快速修復會添加註解。
+<p><b>範例：</b></p>
 <pre><code>
 class Main implements Serializable {
   private static final long serialVersionUID = 7874493593505141603L;
@@ -21,7 +21,7 @@ class Main implements Serializable {
     }
 }
 </code></pre>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   class Main implements Externalizable {
     protected Object readResolve() throws ObjectStreamException {
@@ -40,7 +40,7 @@ class Main implements Serializable {
 </code></pre>
 <!-- tooltip end -->
 <p>有關所有可能情況的更多資訊，請參閱 <code>java.io.Serial</code> 的文檔。</p>
-<p>僅當專案或模組的語言級別為 14 級或更高級別時，才適用此檢查。</p>
-<p><small>2020.3 的新功能</small></p>
+<p>此檢查適用於專案或模組的語言級別為 14 或更高級別的情況。</p>
+<p><small>2020.3 最新變化</small></p>
 </body>
 </html>

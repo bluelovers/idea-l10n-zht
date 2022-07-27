@@ -1,0 +1,19 @@
+<html>
+<body>
+報告可以取代為現有匯入別名的完全限定名稱。
+<p><b>範例：</b></p>
+<pre><code>
+import foo.Foo as Bar
+fun main() {
+    foo.Foo()
+}
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+import foo.Foo as Bar
+fun main() {
+    Bar()
+}
+</code></pre>
+</body>
+</html>

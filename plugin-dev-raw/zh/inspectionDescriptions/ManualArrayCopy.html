@@ -1,16 +1,16 @@
 <html>
 <body>
 報告可以取代為 <code>System.arraycopy()</code> 的陣列內容的手動複製。
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   for (int i = 0; i &lt; array.length; i++) {
-    new_array[i] = array[i];
+    newArray[i] = array[i];
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
-  System.arraycopy(array, 0, new_array, 0, array.length);
-</pre>
+<pre><code>
+  System.arraycopy(array, 0, newArray, 0, array.length);
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

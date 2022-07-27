@@ -1,6 +1,6 @@
 <html>
 <body>
-報告 CASE 和 COALESCE 調用可以互換的情況。 這個檢查有以下意圖操作：<b>用 'COALESCE' 調用取代</b> 和相反的 <b>用 CASE 表達式取代</b>。
+報告 CASE 和 COALESCE 調用可以互換的情況。 此檢查具有以下意圖操作：<b>取代為 'COALESCE' 調用</b>和相反的 <b>取代為 CASE 表達式</b>。
 <p>範例（MySQL）：</p>
 <pre><code>SELECT
   -- this CASE may be replaced by COALESCE
@@ -10,6 +10,6 @@
 		END
 FROM dual;</code></pre>
 <p>在該範例中，CASE 語句可以取代為 <code>SELECT COALESCE(C1, 0)</code>，這會產生相同的結果。</p>
-<p>如果您更喜歡使用 CASE 表達式，請在檢查頁面上選擇<b>CASE 表達式優先於 COALESCE 函數</b>選項。</p>
+<p>如果您更喜歡使用 CASE 表達式，請在檢查頁面上選擇 <b>CASE 表達式優先於 COALESCE 函數</b>選項。</p>
 </body>
 </html>

@@ -1,11 +1,11 @@
 <html>
 <body>
-報告宣告為 <code>public</code> 的 abstract 類的構造函數。
+報告 <code>abstract</code> 類的 <code>public</code> 構造函數。
 <p>
-  abstract 類的構造函數只能在其子類的構造函數中調用。 因此，令 abstract 類的構造函數為 public 可能會使人混淆。
+  <code>abstract</code> 類的構造函數只能從其子類的構造函數進行調用，將其宣告為 <code>public</code> 可能令人困惑。
 </p>
 <p>該快速修復會將此類構造函數設為 protected。</p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   <b>public abstract class</b> Foo {
     <b>public</b> Foo () { // 警告：有 'public' 修飾符

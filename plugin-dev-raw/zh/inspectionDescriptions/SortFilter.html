@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>報告可以通過交換 <code>sort</code> 和 <code>filter</code> 來提高性能的情況。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.sortWith(lessThan).filter(p)
+  seq.sortBy(f).filter(p)
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.filter(p).sortWith(lessThan)
+  seq.filter(p).sortBy(f)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

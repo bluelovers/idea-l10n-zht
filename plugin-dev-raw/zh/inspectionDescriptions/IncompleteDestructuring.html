@@ -1,5 +1,17 @@
 <html>
 <body>
 報告不完整的析構宣告。
+<p><b>範例：</b></p>
+<pre><code>
+  data class Person(val name: String, val age: Int)
+  val person = Person("", 0)
+  val (name) = person
+</code></pre>
+<p>該快速修復會使用新變數完成析構宣告：</p>
+<pre><code>
+  data class Person(val name: String, val age: Int)
+  val person = Person("", 0)
+  val (name, age) = person
+</code></pre>
 </body>
 </html>

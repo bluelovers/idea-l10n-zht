@@ -4,24 +4,24 @@
 <p>
   使用 <code> this </code> 來消除程式碼引用的歧義在許多編碼樣式中都不受鼓勵，並且很容易通過自動重構變得不必要。
 </p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   class Foo {
     int x;
     void foo() {
       this.x = 2;
     }
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   class Foo {
     int x;
     void foo() {
       x = 2;
     }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   使用檢查設定可以忽略對欄位的賦值。

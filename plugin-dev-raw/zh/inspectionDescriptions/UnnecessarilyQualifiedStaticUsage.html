@@ -4,8 +4,8 @@
 <p>
   此類限定不必要，並且可以安全移除。
 </p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   class Foo {
     static void foo() {}
     static int x;
@@ -17,9 +17,9 @@
 
     static void baz() { Foo.foo(); }
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   class Foo {
     static void foo() {}
     static int x;
@@ -31,7 +31,7 @@
 
     static void baz() { foo(); }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   使用檢查選項可以切換以下各項的報告：

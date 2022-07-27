@@ -2,7 +2,7 @@
 <body>
 報告使用 <code>java.nio.file.Files</code> 以字節形式讀取或寫入 <code>String</code> 的程式碼段。
 <p>這些程式碼段可以取代為對 Java 11 中引入的 <code>Files.readString()</code> 和 <code>Files.writeString()</code> 方法的調用。</p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   String s = "example";
   Files.write(Paths.get("out.txt"), s.getBytes(StandardCharsets.UTF_8), StandardOpenOption.WRITE);
@@ -15,6 +15,6 @@
   s = Files.readString(Paths.get("in.txt"), StandardCharsets.ISO_8859_1);
 </code></pre>
 <!-- tooltip end -->
-<p><small>2018.3 的新功能</small></p>
+<p><small>2018.3 最新變化</small></p>
 </body>
 </html>

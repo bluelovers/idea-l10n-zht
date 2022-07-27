@@ -4,22 +4,22 @@
 <p>
   由於每個 String 串聯都會複製整個字串，因此通常最好將其取代為對 <code>StringBuilder.append()</code> 或 <code>StringBuffer.append()</code> 的顯式調用。
 </p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   String str = "";
   for(int i=0; i&lt;10; i++) {
     str += i;
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   String str = "";
   StringBuilder strBuilder = new StringBuilder(str);
   for(int i = 0; i&lt;10; i++) {
     strBuilder.append(i);
   }
   str = strBuilder.toString();
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   有時，通過該快速修復可將 <code>String</code> 變數轉換為 <code>StringBuilder</code> 或引入新的 <code>StringBuilder</code>。 原始程式碼專門處理 <code>null</code> 值時應小心，因為取代可能會改變語意。 如果可能為 <code>null</code>，建議進行 null 安全修正，生成必要的 null 檢查。 此外，也不能保證自動取代總是性能更好。

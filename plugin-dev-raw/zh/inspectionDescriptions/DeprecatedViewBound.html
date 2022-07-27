@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>報告檢視邊界的用法並建議將其取代為隱式參數。</p>
+<p>檢視邊界已被棄用：<a href="https://issues.scala-lang.org/browse/SI-7629">SI-7629</a>。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  class Sample[A <% Int]
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  class Sample[A]()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

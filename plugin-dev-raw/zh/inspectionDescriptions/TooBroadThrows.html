@@ -1,7 +1,7 @@
 <html>
 <body>
-報告其中的異常比該方法實際拋出的異常更通用的 <code>throws</code> 子句。
-<p><b>範例:</b></p>
+報告異常比方法實際拋出的異常更通用的 <code>throws</code> 子句。
+<p><b>範例：</b></p>
 <pre><code>
   public void createFile() throws Exception { // 警告：'throws Exception' 範圍過廣，屏蔽異常 'IOException'
     File file = new File("pathToFile");
@@ -13,6 +13,7 @@
   public void createFile() throws IOException {
     File file = new File("pathToFile");
     file.createNewFile();
+  }
 </code></pre>
 <!-- tooltip end -->
 <p>設定檢查：</p>

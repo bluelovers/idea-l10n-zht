@@ -5,7 +5,7 @@
   這意味著還報告在 try-with-resources 可用前使用的“在 <code>try</code> 前面/中開啟資源，在 <code>finally</code> 中關閉資源”的樣式。
   在 Java 7 及更高版本中開發時，此檢查意在取代所有<i>已開啟但未安全關閉</i>的檢查。
 </p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   private static void foo() throws IOException {
     InputStream profile = Thread.currentThread().getContextClassLoader().getResourceAsStream("/someFile");

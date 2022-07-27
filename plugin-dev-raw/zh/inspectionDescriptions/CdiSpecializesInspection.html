@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>報告 <code>@Specializes</code> 註解的錯誤用法。</p>
+<p>報告 <code>@Specializes</code> 註解的不正確用法。</p>
 
 <ul>
   <li>專用化 Bean 必須擴展另一個 Bean</li>
-  <li>專用化方法必須覆寫直接超類上的 <code>@Produces</code> 方法</li>
+  <li>專用化方法必須覆寫其直接超類的 <code>@Produces</code> 方法</li>
   <li><code>@Named</code> 註解不能用於專用化類和專用類</li>
-  <li>兩個或多個類不能特化同一個超類</li>
-  <li>專門化方法不能為 static</li>
+  <li>兩個或多個類不能專用化同一個超類</li>
+  <li>專用化方法不能為 static</li>
 </ul>
 </body>
 </html>

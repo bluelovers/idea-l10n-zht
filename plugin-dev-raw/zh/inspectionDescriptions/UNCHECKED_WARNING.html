@@ -1,16 +1,16 @@
 <html>
 <body>
-報告編譯器發出未經檢查警告的程式碼。
-<p>每個未經檢查的警告都可能在執行時觸發 <code>ClassCastException</code>。</p>
-<p>範例:</p>
+報告 javac 編譯器發出未檢查的警告的程式碼。
+每個未檢查的警告都可能在執行時觸發 <code>ClassCastException</code>。
+<p>範例：</p>
 <pre><code>
   List items = Arrays.asList("string", "string");
-  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items);
+  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // 未檢查的賦值
 </code></pre>
-<p>快速修復試圖使程式碼更通用，並將所有缺少的類型放到當前檔案中：</p>
+<p>該快速修復會嘗試泛化該包含檔案，此舉可能會揭示編輯器中以及編譯期間以前僅在執行時出現的問題：</p>
 <pre><code>
   List&lt;String&gt; items = Arrays.asList("string", "string");
-  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items);
+  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // 不相容的類型
 </code></pre>
 </body>
 </html>

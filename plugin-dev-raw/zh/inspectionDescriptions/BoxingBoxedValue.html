@@ -5,15 +5,16 @@
   這是冗餘的操作，因為任何裝箱的值都會先自動拆箱，然後再次對該值裝箱。 如果在內部迴圈中進行，此類程式碼可能會導致性能問題。
 </p>
 <!-- tooltip end -->
-<p><b>範例:</b></p>
-<pre>  Integer value = 1;
+<p><b>範例：</b></p>
+<pre><code>
+  Integer value = 1;
   method(Integer.valueOf(value));
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   Integer value = 1;
   method(value);
-</pre>
+</code></pre>
 <p>
 </body>
 </html>

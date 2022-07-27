@@ -3,18 +3,18 @@
 報告對 <code>java.lang.String.concat()</code> 的調用。
 <p>
   如果在帶有常數實參的常數上調用該方法，可以將此類調用取代為 <code>+</code> 運算符，以提高清晰度和性能。</p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   String foo(String name) {
     return name.concat("foo");
   }
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   String foo(String name) {
     return name + "foo";
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

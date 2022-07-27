@@ -1,19 +1,19 @@
 <html>
 <body>
-報告以下 JPA 註解和 API 方法中未解析的符號：
+報告以下 JPA 註解和 API 方法中的未解析符號：
 <ul>
   <li><code>AttributeOverride</code></li>
   <li><code>AssociationOverride</code></li>
   <li><code>MapsId</code></li>
   <li><code>MapKey</code></li>
-  <li><code>Criteria API methods</code></li>
+  <li><code>Criteria API 方法</code></li>
 </ul>
 
-<p><b>範例:</b></p><br/>
+<p><b>範例：</b></p><br/>
 <pre><code>
   @Entity
   @AssociationOverrides({
-    @AssociationOverride(name = "missingAttribute", joinColumns = { ... }), // 錯誤：未解析的屬性
+    @AssociationOverride(name = "missingAttribute", joinColumns = { ... }), // 錯誤：未解析的特性
     @AssociationOverride(name = "existingAttribute", joinColumns = { ... })
   })
   public class JavaEntity {

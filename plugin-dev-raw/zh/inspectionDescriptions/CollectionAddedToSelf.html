@@ -1,15 +1,14 @@
 <html>
 <body>
 報告對 <code>java.util.Collection</code>
-或 <code>java.util.Map</code> 的方法調用參數是集合或映射本身的情況。
-這包括向自身添加集合，例如在自包含集合上調用 <code>hashCode()</code>，這可能導致 <code>java.lang.StackOverflowError</code>。
-由於複製貼上，原始類型的程式碼中可能會出現這種情況。
+或 <code>java.util.Map</code> 的方法調用的實參是集合或映射本身的情況。
+由於複製貼上，原始類型的程式碼中可能會出現此類情況。
 
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   ArrayList list = new ArrayList&lt;&gt;();
-  list.add(list);
-  return list.hashCode(); // 拋出 StackOverflowException
+  list.add(list); // 此處為警告
+  return list.hashCode(); // 拋出 StackOverflowError
 </code></pre>
 <!-- tooltip end -->
 </body>

@@ -3,7 +3,7 @@
 報告已知為常數的變數的所有用法。
 <p>如果（讀取）使用的變數被 <code>if</code>、<code>while</code> 或 <code>for</code> 語句包圍，且存在該變數與常數相比較的 <code>==</code> 條件時，就會發生這種情況。
   在這種情況下，使用的已知為常數的變數可以取代為實際常數。</p>
-<p>範例:</p>
+<p>範例：</p>
 <pre><code>
     private static void foo(double number) {
         if (number == 1.0) {

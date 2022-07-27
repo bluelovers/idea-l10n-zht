@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>報告用作捆綁屬性鍵的非字串文字。</p>
+<p>這很難維護。 建議直接傳遞已經解析的自然語言字串。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  val key =
+    if (???) "property.key.1"
+    else "property.key.2"
+
+  Bundle.message(key)
+</code></pre>
+<p>改用：</p>
+<pre><code>
+  val string =
+    if (???) Bundle.message("property.key.1")
+    else Bundle.message("property.key.2")
+
+  string
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

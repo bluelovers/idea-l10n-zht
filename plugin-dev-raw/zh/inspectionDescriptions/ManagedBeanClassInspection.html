@@ -3,14 +3,14 @@
 在以下情況下報告錯誤定義的托管 Bean 類：
 <ul>
   <li>類不為 final</li>
-  <li>Blass 為 abstract</li>
+  <li>類為 abstract</li>
   <li>Bean 為非 static 內部類</li>
 </ul>
 
-<p><b>範例:</b></p><br/>
+<p><b>範例：</b></p><br/>
 <pre><code>
   @ManagedBean
-  public final class JavaManagedBean { // 錯誤：托管的 bean 不應為 final
+  public final class JavaManagedBean { // 錯誤：托管 Bean 不應為 final
     ...
   }
 </code></pre>

@@ -3,7 +3,7 @@
 報告可以取代為 <code>s.dropLast(x)</code> 的 <code>s.substring(0, s.length - x)</code> 等調用。
 <p>使用相應函數可使程式碼更簡單。</p>
 <p>該快速修復會將 <code>substring</code> 調用取代為 <code>dropLast</code>。</p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
   fun foo(s: String) {
       s.substring(0, s.length - 5)

@@ -1,14 +1,14 @@
 <html>
 <body>
 報告從 <code>String</code> 轉換為基元類型時創建的不必要的臨時物件。
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   new Integer("3").intValue()
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   Integer.valueOf("3")
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
 

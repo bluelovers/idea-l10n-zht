@@ -1,6 +1,6 @@
 <html>
 <body>
-報告對未指定 <code>java.util.Locale</code> 的 <code>String</code> 物件的 <code>toUpperCase()</code> 或 <code>toLowerCase()</code> 調用。 這些情況下使用預設的系統區域設定，可能會在國際化環境中導致問題。
+報告未指定 <code>java.util.Locale</code> 的 <code>String</code> 物件上的 <code>toUpperCase()</code> 或 <code>toLowerCase()</code> 調用。 這些情況下使用預設的系統區域設定，可能會在國際化環境中導致問題。
 <p>
   例如，程式碼 <code>"i".toUpperCase().equals("I")</code> 在土耳其語和阿塞拜疆語區域設定中返回 <code>false</code>，其中帶點和無點的 'i' 是單獨的字母。 在土耳其語區域設定中執行時，對包含 'i' 的英文字串調用 <code>toUpperCase()</code> 將返回不正確的結果。 或者，在處理應被視為與區域設定無關的字串（如 HTML 標記）時，可能會導致錯誤。
 </p>

@@ -1,15 +1,13 @@
 <html>
 <body>
-報告任何對包含可變參數的方法的調用，其中該調用在可變參數位置有一個參數，該參數或則是 <code>null</code>，或則是可變參數的子類型陣列。
+報告對可變 arity 方法的調用，該調用在 vararg 參數位置有一個實參，這個實參要麼是 <code>null</code>，要麼是 vararg 參數子類型的陣列。
 此類實參可能令人困惑，因為不清楚需要 vararg 調用還是非 vararg 調用。
-<p><b>範例:</b></p>
-<pre>
-  <code>
+<p><b>範例：</b></p>
+<pre><code>
   String[] ss = new String[]{"foo", "bar"};
   System.out.printf("%s", ss);
-  </code>
-</pre>
-<p>在本例中，將只列印陣列的第一個元素。</p>
+</code></pre>
+<p>在本例中，不會列印整個陣列，而是只列印陣列的第一個元素。</p>
 <!-- tooltip end -->
 
 </body>

@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告陣列和迭代器上 "equals" 的用法。</p>
+<p>陣列和迭代器上的相等會檢查引用相等性（很少有用）。
+    此檢查建議通過 <code>sameElements</code> 比較內容。</p>
+<pre><code>
+  Array(1) == Array(1) //false
+  Iterator(1) == Iterator(1) //false
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  Array(1) sameElements Array(1) //true
+  Iterator(1) sameElements Iterator(1) //true
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

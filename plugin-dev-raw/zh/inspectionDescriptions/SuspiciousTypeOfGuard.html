@@ -1,13 +1,13 @@
 <html>
 <body>
 報告 <code>typeof</code> 或 <code>instanceof</code> 不健全的類型防護檢查。
-在以下兩種情況下，<code>typeof x</code> 類型防護可能不健全:
+在以下兩種情況下，<code>typeof x</code> 類型防護可能不健全：
 <ul>
-<li><code>typeof x</code> 不對應於指定的值 (例如，當 <code>x</code> 為 'string | boolean' 類型時，<code>typeof x === 'number'</code>)</li>
-<li><code>typeof x</code> 始終對應於指定的值 (例如，當 <code>x</code> 為 'string' 類型時，<code>typeof x === 'string'</code>)</li>
+<li><code>typeof x</code> 不對應於指定的值（例如，當 <code>x</code> 為 'string | boolean' 類型時，<code>typeof x === 'number'</code>）</li>
+<li><code>typeof x</code> 始終對應於指定的值（例如，當 <code>x</code> 為 'string' 類型時，<code>typeof x === 'string'</code>）</li>
 </ul>
 <br>
-在以下兩種情況下，<code>x instanceof A</code> 類型防護可能不健全:
+在以下兩種情況下，<code>x instanceof A</code> 類型防護可能不健全：
 <ul>
   <li><code>x</code> 的類型與 <code>A</code> 不相關</li>
   <li><code>x</code> 的類型是 <code>A</code> 或 <code>A</code> 的子類型</li>

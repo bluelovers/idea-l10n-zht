@@ -4,12 +4,12 @@
 <p>
   使用此類同步時，很難保證正確的運算。
   可以改進此類程式碼，例如，通過使用 synchronized 包裝器類控制存取或通過在欄位上進行同步。</p>
-<p><b>範例:</b></p>
-<pre>
+<p><b>範例：</b></p>
+<pre><code>
   void bar() {
     final Object lock = new Object();
     synchronized (lock) { }
   }
-</pre>
+</code></pre>
 </body>
 </html>

@@ -1,0 +1,13 @@
+<html>
+<body><p>報告可以簡化的類型。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  def test: ({type l[a] = Either[String, a]})#l[Int] = ???
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  def test: Either[String, Int] = ???
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

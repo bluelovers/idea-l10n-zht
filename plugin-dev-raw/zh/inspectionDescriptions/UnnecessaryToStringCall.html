@@ -8,14 +8,14 @@
   <li>在 <code>org.slf4j.Logger</code> 的方法中</li>
 </ul>
 <p>在這些情況下，轉換為字串將由底層庫方法處理，不需要顯式調用 <code>toString()</code>。</p>
-<p>範例:</p>
-<pre>
+<p>範例：</p>
+<pre><code>
   System.out.println(this.toString())
-</pre>
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre>
+<pre><code>
   System.out.println(this)
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   請注意，沒有 <code>toString()</code> 調用，程式碼語意可能會有所不同：如果表達式為 null，則將使用 <code>null</code> 字串，而不是拋出 <code>NullPointerException</code>。</p>

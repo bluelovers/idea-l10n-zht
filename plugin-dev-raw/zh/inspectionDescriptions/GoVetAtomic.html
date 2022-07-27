@@ -1,8 +1,8 @@
 <html>
 <body>
 報告 <code>x = atomic.AddUint64(&x, 1)</code> 形式的賦值語句。
-<p>這樣的操作非原子的，這是 <code> sync/atomic </code> API 中的常見誤用。 要使其原子化，請刪除賦值並直接調用它，如 <code> atomic.AddUint64(& x, 1) </code>。 在這種情況下，<code>x</code> 的值由地址原子更新。</p>
-<p>範例:</p>
+<p>此類操作為非原子操作，這是 <code> sync/atomic </code> API 中的常見誤用。 要使其原子化，請刪除賦值並直接調用它，如 <code> atomic.AddUint64(& x, 1) </code>。 在這種情況下，<code>x</code> 的值由地址以原子方式更新。</p>
+<p>範例：</p>
 <pre><code>import (
  "sync/atomic"
 )

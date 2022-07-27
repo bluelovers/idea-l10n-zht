@@ -1,22 +1,20 @@
 <html>
 <body>
-報告在非 <code>volatile</code> 欄位值上自旋，等待它被另一個執行緒更改的 <code>while</code> 迴圈。
+<p>報告在非 <code>volatile</code> 欄位值上自旋，等待它被另一個執行緒更改的 <code>while</code> 迴圈。</p>
 <p>
-除了在迴圈內完成少量工作時可能會非常耗費 CPU 資源外，
-這樣的迴圈很可能具有與預期不同的語意。 即便另一個執行緒改變了該欄位的值，
-Java 記憶體模型也允許這樣的迴圈永不完成。
+除了在迴圈內完成少量工作時可能會非常耗費 CPU 之外，此類迴圈很可能具有與預期不同的語意。 即便另一個執行緒改變了該欄位的值，Java 記憶體模型也允許該迴圈永不完成。
 </p>
-<p><b>範例</b>：</p>
+<p><b>範例：</b></p>
 <pre><code>
   class SpinsOnField {
       boolean ready = false;
 
       void run() {
-          // the loop may never complete even after
-          // markAsReady call from the other thread
+          // 即使在從其他執行緒調用 markAsReady 後，
+          // 該迴圈也可能永不完成
           while (!ready) {
           }
-          // do some work
+          // 執行某些工作
       }
 
       void markAsReady() {
@@ -25,11 +23,11 @@ Java 記憶體模型也允許這樣的迴圈永不完成。
   }
 </code></pre>
 <p>
-此外，自 Java 9 起，建議在 <code>volatile</code> 欄位的自旋迴圈中調用 <code>Thread.onSpinWait()</code>，這可能會顯著提高某些硬體上的性能。
+此外，自 Java 9 起，建議在 <code>volatile</code> 欄位的自旋迴圈中調用 <code>Thread.onSpinWait()</code>，這可能會顯著提高在某些硬體上的性能。
 </p>
 <!-- tooltip end -->
 <p>
-要讓此檢查僅報告空的 <code>while</code> 迴圈，請使用下面的複選框。
+使用下面的複選框可使此檢查僅報告空 <code>while</code> 迴圈。
 <p>
 </body>
 </html>

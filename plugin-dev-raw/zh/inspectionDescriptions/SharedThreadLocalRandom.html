@@ -9,7 +9,7 @@
   <code>ThreadLocalRandom</code> 的用法通常應類似於<code>ThreadLocalRandom.current().nextInt(...)</code>（或 <code>nextDouble(...)</code> 等）。
   當所有用法都採取這種形式時，<code>ThreadLocalRandom</code> 實例就不會被多個執行緒誤用。
 </p>
-<p><b>範例:</b></p>
+<p><b>範例：</b></p>
 <pre><code>
     class Main {
       void printRandomNumbersAsync() {
