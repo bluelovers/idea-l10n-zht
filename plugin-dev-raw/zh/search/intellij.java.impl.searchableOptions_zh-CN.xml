@@ -1,12 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="" path="ActionManager" hit="@TestDataPath 檔案" />
-    <option name="testdatapath" path="ActionManager" hit="@TestDataPath 檔案" />
-    <option name="檔案" path="ActionManager" hit="@TestDataPath 檔案" />
-    <option name="" path="ActionManager" hit="@TestDataPath 方法" />
-    <option name="testdatapath" path="ActionManager" hit="@TestDataPath 方法" />
-    <option name="方法" path="ActionManager" hit="@TestDataPath 方法" />
     <option name="afterclass" path="ActionManager" hit="AfterClass 方法" />
     <option name="方法" path="ActionManager" hit="AfterClass 方法" />
     <option name="beforeclass" path="ActionManager" hit="BeforeClass 方法" />
@@ -52,7 +46,6 @@
     <option name="package" path="ActionManager" hit="創建新的 package-info.java" />
     <option name="創建新的" path="ActionManager" hit="創建新的 package-info.java" />
     <option name="取消標記生成的原始碼根目錄" path="ActionManager" hit="取消標記生成的原始碼根目錄" />
-    <option name="基本工具組" path="ActionManager" hit="基本工具組" />
     <option name="實作方法" path="ActionManager" hit="實作方法" />
     <option name="從方法層次結構" path="ActionManager" hit="實作方法(從方法層次結構)" />
     <option name="實作方法" path="ActionManager" hit="實作方法(從方法層次結構)" />
@@ -64,6 +57,7 @@
     <option name="新組" path="ActionManager" hit="新組(1)" />
     <option name="顯示包含符號同級內容的彈出視窗" path="ActionManager" hit="顯示包含符號同級內容的彈出視窗" />
     <option name="顯示同級" path="ActionManager" hit="顯示同級" />
+    <option name="顯示快速列表" path="ActionManager" hit="顯示快速列表" />
     <option name="構造函數" path="ActionManager" hit="構造函數" />
     <option name="測試方法" path="ActionManager" hit="測試方法" />
     <option name="瀏覽迴圈中使用的程式碼所選分析條目" path="ActionManager" hit="瀏覽迴圈中使用的程式碼所選分析條目" />
@@ -105,10 +99,15 @@
   <configurable id="editor.preferences.folding" configurable_name="程式碼折疊">
     <option name="" hit="  SuppressWarnings" />
     <option name="suppresswarnings" hit="  SuppressWarnings" />
+    <option name="" hit=" I  n字串" />
+    <option name="i" hit=" I  n字串" />
+    <option name="n字串" hit=" I  n字串" />
     <option name="" hit=" 一行方法" />
     <option name="一行方法" hit=" 一行方法" />
     <option name="" hit=" 簡單屬性存取器" />
     <option name="簡單屬性存取器" hit=" 簡單屬性存取器" />
+    <option name="" hit=" 行尾註釋序列" />
+    <option name="行尾註釋序列" hit=" 行尾註釋序列" />
     <option name="" hit=" 通用構造函數和方法參數" />
     <option name="通用構造函數和方法參數" hit=" 通用構造函數和方法參數" />
     <option name="" hit=" 閉包   在 Java   前 實作一個方法的匿名類 " />
@@ -117,8 +116,6 @@
     <option name="在" hit=" 閉包   在 Java   前 實作一個方法的匿名類 " />
     <option name="實作一個方法的匿名類" hit=" 閉包   在 Java   前 實作一個方法的匿名類 " />
     <option name="閉包" hit=" 閉包   在 Java   前 實作一個方法的匿名類 " />
-    <option name="i" hit="I  n字串" />
-    <option name="n字串" hit="I  n字串" />
     <option name="java" hit="Java" />
     <option name="var" hit="使用推斷類型取代  var " />
     <option name="使用推斷類型取代" hit="使用推斷類型取代  var " />
@@ -126,7 +123,6 @@
     <option name="匿名類" hit="匿名類" />
     <option name="多行註釋" hit="多行註釋" />
     <option name="註解" hit="註解" />
-    <option name="行尾註釋序列" hit="行尾註釋序列" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.Java" configurable_name="Java">
     <option name="java" hit="Java" />
@@ -636,14 +632,10 @@
     <option name="強制換行位置" path="換行和大括號" hit="強制換行位置:" />
     <option name="參數描述在新行" path="JavaDoc" hit="參數描述在新行" />
     <option name="參數註解" path="換行和大括號" hit="參數註解" />
-    <option name="permits" path="換行和大括號" hit="擴展/實施/permits 關鍵字" />
-    <option name="關鍵字" path="換行和大括號" hit="擴展/實施/permits 關鍵字" />
-    <option name="實施" path="換行和大括號" hit="擴展/實施/permits 關鍵字" />
-    <option name="擴展" path="換行和大括號" hit="擴展/實施/permits 關鍵字" />
-    <option name="permits" path="換行和大括號" hit="擴展/實作/permits 列表" />
-    <option name="列表" path="換行和大括號" hit="擴展/實作/permits 列表" />
-    <option name="實作" path="換行和大括號" hit="擴展/實作/permits 列表" />
-    <option name="擴展" path="換行和大括號" hit="擴展/實作/permits 列表" />
+    <option name="實作關鍵字" path="換行和大括號" hit="擴展/實作關鍵字" />
+    <option name="擴展" path="換行和大括號" hit="擴展/實作關鍵字" />
+    <option name="實作列表" path="換行和大括號" hit="擴展/實作列表" />
+    <option name="擴展" path="換行和大括號" hit="擴展/實作列表" />
     <option name="括號之前" path="空格" hit="括號之前" />
     <option name="按位運算符" path="空格" hit="按位運算符(&amp;、|、^)" />
     <option name="換行符" path="換行和大括號" hit="換行符" />
@@ -664,8 +656,6 @@
     <option name="方法調用實參" path="換行和大括號" hit="方法調用實參" />
     <option name="無效標籤" path="JavaDoc" hit="無效標籤" />
     <option name="建置器方法" path="換行和大括號" hit="建置器方法" />
-    <option name="析構列表" path="空格" hit="析構列表" />
-    <option name="析構模式" path="換行和大括號" hit="析構模式" />
     <option name="枚舉常數" path="換行和大括號" hit="枚舉常數" />
     <option name="註解圓括號" path="空格" hit="註解圓括號" />
     <option name="註解參數" path="換行和大括號" hit="註解參數" />

@@ -7,7 +7,9 @@
   <li>使用 <code>@Nested</code> 註解的 static 內部類</li>
   <li>在沒有源的情況下定義的參數化測試。</li>
   <li>具有未知、非 static 或無實參目標的 <code>@MethodSource</code> 的參數化測試。</li>
-  <li>參數化測試方法形參與指定的 <code>@ValueSource</code> 或 <code>@EnumSource</code> 值之間的類型不符合</li>
+  <li>
+    具有無法轉換為方法參數的 <code>@ValueSource</code> 或 <code>@EnumSource</code> 的參數化測試。
+  </li>
   <li>由 <code>@Test</code>、<code>@ParameterizedTest</code> 或 <code>@RepeatedTest</code> 中的多個註解的測試</li>
   <li>非 public 的 <code>setup()</code> 或 <code>tearDown()</code>方法，其返回類型不是 void 或接受實參。</li>
   <li>為 private，接受實參或為非 static 的 <code>suite()</code> 方法</li>

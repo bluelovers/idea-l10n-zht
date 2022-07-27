@@ -45,6 +45,7 @@
     <option name="僅按下" hit="僅按下 ALT 時拖放" />
     <option name="時拖放" hit="僅按下 ALT 時拖放" />
     <option name="使用對比度滾動條" hit="使用對比度滾動條" />
+    <option name="使用自訂字體" hit="使用自訂字體 " />
     <option name="右側並排布局" hit="右側並排布局" />
     <option name="在控件中啟用助記鍵" hit="在控件中啟用助記鍵" />
     <option name="在樹中使用較小的縮排" hit="在樹中使用較小的縮排" />
@@ -55,7 +56,6 @@
     <option name="大小" hit="大小 " />
     <option name="始終在視窗標題中顯示完整路徑" hit="始終在視窗標題中顯示完整路徑" />
     <option name="子像素" hit="子像素" />
-    <option name="字體" hit="字體 " />
     <option name="字體大小" hit="字體大小 " />
     <option name="寬屏工具視窗布局" hit="寬屏工具視窗布局" />
     <option name="工具視窗" hit="工具視窗" />
@@ -74,7 +74,6 @@
     <option name="背景圖像" hit="背景圖像 " />
     <option name="獲取更多主題" hit="獲取更多主題" />
     <option name="運作方式" hit="運作方式" />
-    <option name="重置為預設設定" hit="重置為預設設定" />
     <option name="綠色覺缺陷調整顏色" hit="針對紅 綠色覺缺陷調整顏色" />
     <option name="針對紅" hit="針對紅 綠色覺缺陷調整顏色" />
   </configurable>
@@ -100,7 +99,9 @@
     <option name="esc" path="ActionManager" hit="Esc" />
     <option name="explain" path="ActionManager" hit="Explain Plan" />
     <option name="plan" path="ActionManager" hit="Explain Plan" />
-    <option name="filter" path="ActionManager" hit="Filter" />
+    <option name="chooser" path="ActionManager" hit="File Chooser Toolbar" />
+    <option name="file" path="ActionManager" hit="File Chooser Toolbar" />
+    <option name="toolbar" path="ActionManager" hit="File Chooser Toolbar" />
     <option name="ide" path="ActionManager" hit="IDE 和專案設定" />
     <option name="和專案設定" path="ActionManager" hit="IDE 和專案設定" />
     <option name="lf" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
@@ -108,22 +109,16 @@
     <option name="n" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
     <option name="unix" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
     <option name="和" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
+    <option name="left" path="ActionManager" hit="Left Side (Xamarin)" />
+    <option name="side" path="ActionManager" hit="Left Side (Xamarin)" />
+    <option name="xamarin" path="ActionManager" hit="Left Side (Xamarin)" />
     <option name="mq" path="ActionManager" hit="MQ" />
-    <option name="left" path="ActionManager" hit="Main Toolbar Left" />
-    <option name="main" path="ActionManager" hit="Main Toolbar Left" />
-    <option name="toolbar" path="ActionManager" hit="Main Toolbar Left" />
-    <option name="left" path="ActionManager" hit="Move to Left" />
-    <option name="move" path="ActionManager" hit="Move to Left" />
-    <option name="to" path="ActionManager" hit="Move to Left" />
-    <option name="open" path="ActionManager" hit="Open Settings..." />
-    <option name="settings" path="ActionManager" hit="Open Settings..." />
     <option name="devkit" path="ActionManager" hit="Plugin DevKit" />
     <option name="plugin" path="ActionManager" hit="Plugin DevKit" />
-    <option name="project" path="ActionManager" hit="Project" />
-    <option name="resizable" path="ActionManager" hit="Resizable" />
+    <option name="right" path="ActionManager" hit="Right Side (Xamarin)" />
+    <option name="side" path="ActionManager" hit="Right Side (Xamarin)" />
+    <option name="xamarin" path="ActionManager" hit="Right Side (Xamarin)" />
     <option name="space" path="ActionManager" hit="Space" />
-    <option name="minimap" path="ActionManager" hit="Toggle Minimap" />
-    <option name="toggle" path="ActionManager" hit="Toggle Minimap" />
     <option name="wsl" path="ActionManager" hit="WSL 中的主目錄" />
     <option name="中的主目錄" path="ActionManager" hit="WSL 中的主目錄" />
     <option name="xml" path="ActionManager" hit="XML 設定檔案" />
@@ -285,8 +280,6 @@
     <option name="另存為基於目錄的格式" path="ActionManager" hit="另存為基於目錄的格式…" />
     <option name="只儲存在當前編輯器中開啟的檔案" path="ActionManager" hit="只儲存在當前編輯器中開啟的檔案" />
     <option name="右" path="ActionManager" hit="右" />
-    <option name="xamarin" path="ActionManager" hit="右側(Xamarin)" />
-    <option name="右側" path="ActionManager" hit="右側(Xamarin)" />
     <option name="右到左" path="ActionManager" hit="右到左" />
     <option name="合併所有專案視窗" path="ActionManager" hit="合併所有專案視窗" />
     <option name="同時切換免打擾和全屏模式" path="ActionManager" hit="同時切換免打擾和全屏模式" />
@@ -537,7 +530,7 @@
     <option name="將選擇範圍擴展到父節點" path="ActionManager" hit="將選擇範圍擴展到父節點" />
     <option name="將選擇範圍擴展到第一個節點" path="ActionManager" hit="將選擇範圍擴展到第一個節點" />
     <option name="將選擇範圍擴展到第一行" path="ActionManager" hit="將選擇範圍擴展到第一行" />
-    <option name="展開摺疊的節點或將子節點添加到選區" path="ActionManager" hit="展開摺疊的節點或將子節點添加到選區。" />
+    <option name="展開摺疊的節點或將子節點添加到選擇範圍" path="ActionManager" hit="展開摺疊的節點或將子節點添加到選擇範圍。" />
     <option name="展開摺疊的節點或選擇子節點" path="ActionManager" hit="展開摺疊的節點或選擇子節點。" />
     <option name="展開樹節點" path="ActionManager" hit="展開樹節點" />
     <option name="展開組件" path="ActionManager" hit="展開組件" />
@@ -549,8 +542,6 @@
     <option name="工具視窗檢視模式" path="ActionManager" hit="工具視窗檢視模式" />
     <option name="左" path="ActionManager" hit="左" />
     <option name="左側" path="ActionManager" hit="左側" />
-    <option name="xamarin" path="ActionManager" hit="左側(Xamarin)" />
-    <option name="左側" path="ActionManager" hit="左側(Xamarin)" />
     <option name="左到右" path="ActionManager" hit="左到右" />
     <option name="幫助" path="ActionManager" hit="幫助" />
     <option name="平滑滾動選項" path="ActionManager" hit="平滑滾動選項" />
@@ -621,7 +612,6 @@
     <option name="檔案編碼" path="ActionManager" hit="檔案編碼" />
     <option name="檔案路徑" path="ActionManager" hit="檔案路徑" />
     <option name="檔案選擇器列表" path="ActionManager" hit="檔案選擇器列表" />
-    <option name="檔案選擇器工具欄" path="ActionManager" hit="檔案選擇器工具欄" />
     <option name="新建檔案" path="ActionManager" hit="新建檔案…" />
     <option name="新建目錄" path="ActionManager" hit="新建目錄..." />
     <option name="新建專案組" path="ActionManager" hit="新建專案組" />
@@ -777,7 +767,6 @@
     <option name="無障礙功能" path="ActionManager" hit="焦點間距(無障礙功能)" />
     <option name="焦點間距" path="ActionManager" hit="焦點間距(無障礙功能)" />
     <option name="父目錄" path="ActionManager" hit="父目錄" />
-    <option name="狀態文本" path="ActionManager" hit="狀態文本" />
     <option name="狀態欄" path="ActionManager" hit="狀態欄" />
     <option name="狀態欄微件" path="ActionManager" hit="狀態欄微件" />
     <option name="用於檢查哪些延伸模組和子系統消耗大多數資源的工具" path="ActionManager" hit="用於檢查哪些延伸模組和子系統消耗大多數資源的工具" />
@@ -841,7 +830,6 @@
     <option name="自動換行" path="ActionManager" hit="自動換行" />
     <option name="自動換行預覽編輯器" path="ActionManager" hit="自動換行預覽編輯器" />
     <option name="自動顯示" path="ActionManager" hit="自動顯示" />
-    <option name="自訂選單與工具欄" path="ActionManager" hit="自訂選單與工具欄…" />
     <option name="行分隔符" path="ActionManager" hit="行分隔符" />
     <option name="表" path="ActionManager" hit="表" />
     <option name="符號" path="ActionManager" hit="表情 &amp; 符號" />
@@ -858,7 +846,6 @@
     <option name="跳轉到上一個工具視窗" path="ActionManager" hit="跳轉到上一個工具視窗" />
     <option name="跳轉到源" path="ActionManager" hit="跳轉到源" />
     <option name="轉儲可聚焦組件層次結構" path="ActionManager" hit="轉儲可聚焦組件層次結構" />
-    <option name="轉儲執行緒" path="ActionManager" hit="轉儲執行緒" />
     <option name="vm" path="ActionManager" hit="轉到 WSL VM 中的主目錄" />
     <option name="wsl" path="ActionManager" hit="轉到 WSL VM 中的主目錄" />
     <option name="中的主目錄" path="ActionManager" hit="轉到 WSL VM 中的主目錄" />
@@ -880,7 +867,6 @@
     <option name="轉換檔案或所選塊中的縮排" path="ActionManager" hit="轉換檔案或所選塊中的縮排，以使用空格代替制表符" />
     <option name="轉換縮排" path="ActionManager" hit="轉換縮排" />
     <option name="轉置" path="ActionManager" hit="轉置" />
-    <option name="執行記憶體測試程序" path="ActionManager" hit="執行記憶體測試程序" />
     <option name="執行快取診斷並嘗試恢復其狀態" path="ActionManager" hit="執行快取診斷並嘗試恢復其狀態" />
     <option name="執行設定" path="ActionManager" hit="執行設定" />
     <option name="連接行" path="ActionManager" hit="連接行" />
@@ -1131,15 +1117,24 @@
     <option name="檢查延伸模組更新" hit="檢查延伸模組更新" />
     <option name="c" hit="檢查更新 C  " />
     <option name="檢查更新" hit="檢查更新 C  " />
+    <option name="jetbrains" hit="自動獲取更新 一鍵開啟專案  了解其他 JetBrains 產品及更多資訊" />
+    <option name="一鍵開啟專案" hit="自動獲取更新 一鍵開啟專案  了解其他 JetBrains 產品及更多資訊" />
+    <option name="了解其他" hit="自動獲取更新 一鍵開啟專案  了解其他 JetBrains 產品及更多資訊" />
+    <option name="產品及更多資訊" hit="自動獲取更新 一鍵開啟專案  了解其他 JetBrains 產品及更多資訊" />
+    <option name="自動獲取更新" hit="自動獲取更新 一鍵開啟專案  了解其他 JetBrains 產品及更多資訊" />
   </configurable>
   <configurable id="editor.preferences.fonts.default" configurable_name="字體">
     <option name="" hit="  在配色方案中定義" />
     <option name="在配色方案中定義" hit="  在配色方案中定義" />
+    <option name="主要粗細" hit="主要粗細 " />
+    <option name="加粗" hit="加粗 " />
     <option name="啟用連字" hit="啟用連字" />
+    <option name="回滾字體" hit="回滾字體 " />
     <option name="大小" hit="大小 " />
     <option name="字體" hit="字體" />
     <option name="字體" hit="字體 " />
     <option name="恢復預設設定" hit="恢復預設設定" />
+    <option name="版式設定" hit="版式設定" />
     <option name="行高" hit="行高 " />
     <option name="輸入要預覽的任何文本" hit="輸入要預覽的任何文本" />
   </configurable>
@@ -1176,43 +1171,14 @@
   <configurable id="advanced.settings" configurable_name="進階設定">
     <option name="" hit="  符號" />
     <option name="符號" hit="  符號" />
-    <option name="database" hit="Database Explorer" />
-    <option name="explorer" hit="Database Explorer" />
     <option name="docker" hit="Docker" />
-    <option name="action" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="after" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="copied" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="copy" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="don" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="invoking" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="line" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="no" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="select" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="selection" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="t" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="the" hit="Don t select the copied line after invoking the Copy action with no selection" />
-    <option name="with" hit="Don t select the copied line after invoking the Copy action with no selection" />
     <option name="ide" hit="IDE" />
     <option name="kotlin" hit="Kotlin" />
     <option name="markdown" hit="Markdown" />
-    <option name="as" hit="Open Diff as Editor Tab" />
-    <option name="diff" hit="Open Diff as Editor Tab" />
-    <option name="editor" hit="Open Diff as Editor Tab" />
-    <option name="open" hit="Open Diff as Editor Tab" />
-    <option name="tab" hit="Open Diff as Editor Tab" />
     <option name="openssh" hit="OpenSSH" />
     <option name="openssh" hit="OpenSSH 工具的自訂路徑 " />
     <option name="工具的自訂路徑" hit="OpenSSH 工具的自訂路徑 " />
-    <option name="filter" hit="Remember whether the filter is ON" />
-    <option name="is" hit="Remember whether the filter is ON" />
-    <option name="on" hit="Remember whether the filter is ON" />
-    <option name="remember" hit="Remember whether the filter is ON" />
-    <option name="the" hit="Remember whether the filter is ON" />
-    <option name="whether" hit="Remember whether the filter is ON" />
     <option name="ssh" hit="SSH" />
-    <option name="application" hit="Show application title" />
-    <option name="show" hit="Show application title" />
-    <option name="title" hit="Show application title" />
     <option name="textconv" hit="TextConv" />
     <option name="個字符" hit="個字符" />
     <option name="臨時設定限制" hit="臨時設定限制 " />
@@ -1224,6 +1190,7 @@
     <option name="讀取時套用內容轉換" hit="從 Git 讀取時套用內容轉換 " />
     <option name="程式碼元素鏈接的語法高亮顯示" hit="程式碼元素鏈接的語法高亮顯示" />
     <option name="以較低優先級執行編譯" hit="以較低優先級執行編譯" />
+    <option name="作為編輯器頁籤開啟差異" hit="作為編輯器頁籤開啟差異" />
     <option name="escape" hit="使用 Escape 將焦點移動到編輯器" />
     <option name="使用" hit="使用 Escape 將焦點移動到編輯器" />
     <option name="將焦點移動到編輯器" hit="使用 Escape 將焦點移動到編輯器" />
@@ -1442,8 +1409,6 @@
     <option name="彈出視窗和提示" hit="彈出視窗和提示//工具提示" />
     <option name="彈出視窗和提示" hit="彈出視窗和提示//推廣窗格" />
     <option name="推廣窗格" hit="彈出視窗和提示//推廣窗格" />
-    <option name="彈出視窗和提示" hit="彈出視窗和提示//提示邊框" />
-    <option name="提示邊框" hit="彈出視窗和提示//提示邊框" />
     <option name="彈出視窗和提示" hit="彈出視窗和提示//文檔" />
     <option name="文檔" hit="彈出視窗和提示//文檔" />
     <option name="彈出視窗和提示" hit="彈出視窗和提示//最近位置選擇" />
@@ -1477,12 +1442,14 @@
     <option name="頁籤" hit="文本//頁籤" />
     <option name="文本" hit="文本//預設文本" />
     <option name="預設文本" hit="文本//預設文本" />
-    <option name="關鍵字" hit="關鍵字//重新分配的局部變數" />
-    <option name="重新分配的局部變數" hit="關鍵字//重新分配的局部變數" />
     <option name="書籤" hit="編輯器//書籤" />
     <option name="編輯器" hit="編輯器//書籤" />
     <option name="分隔線" hit="編輯器//分隔線" />
     <option name="編輯器" hit="編輯器//分隔線" />
+    <option name="分隔線以上" hit="編輯器//分隔線以上" />
+    <option name="編輯器" hit="編輯器//分隔線以上" />
+    <option name="分隔線以下" hit="編輯器//分隔線以下" />
+    <option name="編輯器" hit="編輯器//分隔線以下" />
     <option name="分隔線選擇" hit="編輯器//分隔線選擇" />
     <option name="編輯器" hit="編輯器//分隔線選擇" />
     <option name="符合的大括號參考線" hit="編輯器//參考線//符合的大括號參考線" />
@@ -1604,8 +1571,7 @@
     <option name="" hit=" 用於主字體 不支持的符號" />
     <option name="不支持的符號" hit=" 用於主字體 不支持的符號" />
     <option name="用於主字體" hit=" 用於主字體 不支持的符號" />
-    <option name="jetbrains" hit="JetBrains Mono   " />
-    <option name="mono" hit="JetBrains Mono   " />
+    <option name="monospaced" hit="Monospaced   " />
     <option name="僅顯示等寬字體" hit="僅顯示等寬字體" />
     <option name="使用主控台字體" hit="使用主控台字體 而不是" />
     <option name="而不是" hit="使用主控台字體 而不是" />
@@ -1622,8 +1588,7 @@
     <option name="" hit=" 用於主字體 不支持的符號" />
     <option name="不支持的符號" hit=" 用於主字體 不支持的符號" />
     <option name="用於主字體" hit=" 用於主字體 不支持的符號" />
-    <option name="jetbrains" hit="JetBrains Mono   " />
-    <option name="mono" hit="JetBrains Mono   " />
+    <option name="monospaced" hit="Monospaced   " />
     <option name="僅顯示等寬字體" hit="僅顯示等寬字體" />
     <option name="使用配色方案字體" hit="使用配色方案字體 而不是" />
     <option name="而不是" hit="使用配色方案字體 而不是" />

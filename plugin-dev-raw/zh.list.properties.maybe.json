@@ -28,10 +28,14 @@
     "action.GenerateCreateUI.text": "createUI(...)",
     "action.Actions.ActionsPlugin.GenerateToString.text": "to_String()",
     "group.VcsGroups.text": "Git(_G)",
-    "action.Debugger.MarkObject.description": "Mark/unmark the object so that it can be visually distinguished in debugger views",
+    "action.CheckForUpdate.description.plugins": "Checks for available plugin updates (IDE updates are managed externally)",
     "group.Internal.UI.text": "UI(&U)",
+    "group.FileChooserToolbar.text": "File Chooser Toolbar",
     "action.SearchEverywhereToolbarHotKey.hotkey": "Shift+Shift",
-    "action.TextSearchAction.text": "Text..."
+    "action.Debugger.ShowCollectionHistory.text": "Show Collection History",
+    "action.TextSearchAction.text": "Text...",
+    "group.LeftToolbarSideGroupXamarin.text": "Left Side (Xamarin)",
+    "group.RightToolbarSideGroupXamarin.text": "Right Side (Xamarin)"
   },
   "messages/AnalysisBundle.properties": {
     "inspection.export.results.capitalized.abstract.class": "Abstract\\&nbsp;class"
@@ -52,9 +56,23 @@
     "android.ddms.actions.layoutinspector.notification.title": "Layout Inspector",
     "android.9patch.file.type.description": "Android 9-Patch",
     "configurable.SdkUpdaterConfigurable.display.name": "Android SDK",
-    "configurable.AndroidProjectStructureConfigurableForIdea.redirect.text": "Please use <a>Android Project Structure</a> configuration page.",
-    "live.edit": "Live Edit",
-    "live.edit.configurable.display.name": "Compose Live Edit"
+    "checkbox.use.custom.formatting.settings.for.android.xml.files": "Use custom formatting settings for Android XML files",
+    "checkbox.group.tags.with.the.same.name": "Group tags with the same name",
+    "checkbox.insert.line.breaks.around.style.declaration": "Insert line breaks around style declaration",
+    "configurable.name.device.file.explorer": "Device File Explorer",
+    "configurable.name.android.device.file.explorer": "Android Device File Explorer"
+  },
+  "messages/AndroidLintBundle.properties": {
+    "android.lint.inspections.always.show.action": "Usage of showAsAction=always",
+    "android.lint.inspections.appbundle.locales": "Android App Bundle with runtime locale changes",
+    "android.lint.inspections.data.extraction.rules": "Missing data extraction rules",
+    "android.lint.inspections.intent.filter.unique.data.attributes": "Data tags should only declare unique attributes",
+    "android.lint.inspections.redundant.label": "Redundant label on activity",
+    "android.lint.inspections.view.binding.type": "tools:viewBindingType issues",
+    "android.lint.inspections.web.view.client.on.received.ssl.error": "Proceeds with the HTTPS connection despite SSL errors",
+    "android.lint.inspections.custom.splash.screen": "Application-defined Launch Screen",
+    "android.lint.inspections.motion.layout.missing.id": "Views inside MotionLayout require an id",
+    "android.lint.inspections.wearable.configuration.action": "Wear configuration action metadata must match an activity"
   },
   "messages/Angular2Bundle.properties": {
     "angular.action.goto-related.inline": "<inline>",
@@ -63,11 +81,18 @@
     "angular.description.angular-cli": "Angular CLI",
     "angular.description.unknown-class": "<unknown class>",
     "angular.description.unnamed": "<unnamed>",
-    "angular.inspection.cyclic-module-dependency.message.separator": "->"
+    "angular.inspection.cyclic-module-dependency.message.separator": "->",
+    "angular.inspection.undefined-binding.message.attribute-directive-out-of-scope": "Directive that provides attribute {0} is out of scope of the current template",
+    "angular.inspection.undefined-tag.message.out-of-scope": "Component or directive matching {0} element is out of scope of the current template",
+    "angular.quickfix.ngmodule.import.name.choice": "Import Angular entity...",
+    "angular.quickfix.ngmodule.import.select.module": "Angular Entity to Import",
+    "angular.inspection.wrong-entity-type.message.not-importable": "Class {0} cannot be imported (neither an Angular module nor a standalone declarable)",
+    "angular.inspection.wrong-entity-type.message.standalone-declarable": "Class {0} is standalone, and cannot be declared in an Angular module. Did you mean to import it instead?"
   },
   "messages/AppCodeBundle.properties": {
     "sdk.type.name": "Apple SDK",
     "project.settings.multiple.values": "<Multiple values>",
+    "dialog.title.new.launch.image": "New Launch Image",
     "retina.4": "Retina 4",
     "retina.hd.4.7": "Retina HD 4.7",
     "retina.hd.5.5": "Retina HD 5.5",
@@ -95,6 +120,11 @@
     "configurable.AppEngineModulesConfigurable.display.name": "Google App Engine",
     "python.app.engine.project.name": "Google App Engine"
   },
+  "messages/AppInspectionBundle.properties": {
+    "inspection.is.running": "<b>App Inspection</b> is running in the background.<br>You can either <a href=\"stop\">stop</a> it, or leave it running and resume your session later.",
+    "inspector.stopped": "{0} has stopped running.",
+    "inspector.forcefully.stopped": "{0} has been replaced by a different instance launched by another project."
+  },
   "messages/AppServersCommonBundle.properties": {
     "ServerInstance.exception.message": "{0}: {1}"
   },
@@ -112,9 +142,13 @@
     "arquillian.testng.configuration.name": "Arquillian TestNG"
   },
   "messages/AspectJBundle.properties": {
+    "maven.importer.aspect.library": "<html>Could not resolve aspect library ''{0}:{1}'' in a module ''{2}''.</html>",
+    "parser.message.type.def.expected": "Aspect or class declaration expected",
     "highlighting.tooltip.link": "<a href=\"#navigation/{0}:{1}\">{2}</a>",
     "highlighting.tooltip.html": "<html><body>{0}</body></html>",
-    "action.create.aspect.kind.annotation": "@Aspect"
+    "action.create.aspect.kind.annotation": "@Aspect",
+    "facet.validation.stray.entry": "Aspect path entry ''{0}'' is not in module''s classpath",
+    "aspect.path.add.title": "Chose Aspect Path Entries"
   },
   "messages/BVBundle.properties": {
     "label.unknown": "@unknown"
@@ -126,11 +160,32 @@
     "custom.file.watcher.name.placeholder": "<custom>",
     "command.name.file.watcher.0": "File Watcher: {0}",
     "actions.on.save.page.checkbox.file.watcher.0": "File Watcher: {0}",
-    "actions.on.save.page.label.file.watcher": "File Watcher"
+    "actions.on.save.page.label.file.watcher": "File Watcher",
+    "actions.on.save.page.file.watcher.label": "File Watcher"
+  },
+  "messages/BookmarkBundle.properties": {
+    "bookmark.group.create.action.text": "Create Bookmark List...",
+    "bookmark.group.delete.action.text": "Delete Bookmark List",
+    "bookmark.group.rename.action.text": "Rename Bookmark List...",
+    "dialog.group.create.title": "Create Bookmark List",
+    "dialog.group.rename.title": "Rename Bookmark List",
+    "dialog.group.select.title": "Select Bookmark List",
+    "dialog.group.message.label": "Bookmark list:",
+    "view.confirm.deleting.lists": "Ask Before Deleting Lists",
+    "dialog.message.delete.single.list.title": "Delete Bookmark List",
+    "dialog.message.delete.multiple.lists.title": "Delete Bookmark Lists",
+    "dialog.message.delete.single.node.title": "Delete Bookmark Node",
+    "dialog.message.delete.multiple.nodes.title": "Delete Bookmark Nodes",
+    "dialog.message.delete.single.list": "Are you sure you want to delete ''{0}'' bookmark list? This action can''t be undone.",
+    "dialog.message.delete.multiple.lists": "Are you sure you want to delete the selected bookmark lists? This action can't be undone.",
+    "dialog.message.delete.single.node": "Are you sure you want to delete {0} bookmarks in ''{1}''? This action can''t be undone.",
+    "dialog.message.delete.multiple.nodes": "Are you sure you want to delete the selected bookmark nodes? This action can't be undone."
   },
   "messages/CLionCMakeBundle.properties": {
     "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options",
-    "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options"
+    "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options",
+    "notification.preset.cannot.be.loaded": "{0,choice, 1#Preset|2#Presets} {1} cannot be loaded due to configuration error.",
+    "notification.profiles.were.removed": "{0,choice, 1#Profile|2#Profiles} {1} {0,choice, 1#was|2#were} removed due to configuration error."
   },
   "messages/CLionExecutionBundle.properties": {
     "cpp.build.description.1": "====================[ {0} ]====",
@@ -151,6 +206,9 @@
   },
   "messages/CPPBundle.properties": {
     "language.cpp.settings.description": "C/C++"
+  },
+  "messages/CPPProfilerBundle.properties": {
+    "perf.profiler.wsl.not.support": "Perf profiler for WSL is not yet supported"
   },
   "messages/CdiBundle.properties": {
     "actions.show.named": "@Named",
@@ -187,6 +245,9 @@
     "debug.exception.breakpoint.when.objc.fragment": "Objective-C",
     "debug.exception.breakpoint.when.kn.fragment": "Kotlin/Native"
   },
+  "messages/CidrDockerBundle.properties": {
+    "docker.message.server.not.supported": "Remote docker server is not supported"
+  },
   "messages/CidrDoctestBundle.properties": {
     "doctest.test.noname": "<Anonymous>"
   },
@@ -211,7 +272,6 @@
     "clang.tidy.status.bar.widget.title": ".clang-tidy"
   },
   "messages/ClionEmbeddedPlatformioBundle.properties": {
-    "platformio.support": "PlatformIO support",
     "run.config.uploadfs": "PlatformIO Uploadfs"
   },
   "messages/CloudBundle.properties": {
@@ -250,7 +310,15 @@
     "livetemplate.description.prsf": "private static final",
     "livetemplate.description.psfi": "public static final int",
     "livetemplate.description.psfs": "public static final String",
-    "action.presentation.LookupUi.text": "action.presentation.LookupUi.text"
+    "action.presentation.LookupUi.text": "action.presentation.LookupUi.text",
+    "non.ascii.chars.inspection.example.characters.in.any.other.word.label": "e.g.: <code>\\&lt;<font color=red>ТЭГ-ШМЭГ</font>\\&gt;0\\&lt;/<font color=red>ТЭГ-ШМЭГ</font>\\&gt;</code>",
+    "non.ascii.chars.inspection.example.characters.in.identifiers.label": "e.g.: <code>int <font color=red>Поле</font> = 0;</code>",
+    "non.ascii.chars.inspection.example.characters.in.comments.label": "e.g.: <code>// <font color=red>გენაცვალი</font></code>",
+    "non.ascii.chars.inspection.example.characters.in.strings.label": "e.g.: <code>println(\"<font color=red>გენაცვალი</font>\")</code>",
+    "non.ascii.chars.inspection.example.mixed.languages.in.any.other.word.label": "e.g.: <code>\\&lt;t<font color=red>а</font>g\\&gt;Значение\\&lt;/t<font color=red>а</font>g\\&gt;</code> (cyrillic '<font color=red>а</font> in an english word')",
+    "non.ascii.chars.inspection.example.mixed.languages.in.identifiers.label": "e.g.: <code>void print<font color=red>ナンセンス</font>()</code> (japanese chars in an english word)",
+    "non.ascii.chars.inspection.example.mixed.languages.in.comments.label": "e.g.: <code>//c<font color=red>о</font>unts bugs</code> (cyrillic '<font color=red>o</font>' in an english word)",
+    "non.ascii.chars.inspection.example.mixed.languages.in.string.label": "e.g.: <code>foo(\"<font color=red>Со</font>re винт\");</code> (cyrillic '<font color=red>Со</font>' in an english word)"
   },
   "messages/CodeStyleBundle.properties": {
     "arrangement.settings.text.entry.type.static.init": "static init",
@@ -261,7 +329,10 @@
   },
   "messages/CodeWithMeGuestBundle.properties": {
     "code.with.me.tm": "Code With Me:",
-    "status.bar.text.ping.ui": "Ping (UI): {0} ({1})"
+    "status.bar.text.ping.ui": "Ping (UI): {0} ({1})",
+    "forward.server.side.port.0.to.client.side": "Forward server-side port {0} to client side",
+    "dialog.title.change.forwarded.port": "Change Forwarded Port",
+    "list.item.change.forwarded.port": "Change Forwarded Port..."
   },
   "messages/CodeWithMePlatformBundle.properties": {
     "product.name": "Code With Me",
@@ -279,31 +350,45 @@
   "messages/CodeWithMePluginBundle.properties": {
     "permission.dialog.toolWindow.access.tooltip": "Gradle、Ant、Maven、Messages",
     "permission.dialog.toolWindow.access.tooltip.clion": "Gradle、Ant、Maven、Messages、CMake",
-    "backend.control.center.heap": "MiB -Xmx"
-  },
-  "messages/CommanderBundle.properties": {
-    "group.ImagesCommanderActions2.text": "Images Commander Actions (2)",
-    "group.ImagesCommanderActions1.text": "Images Commander Actions (1)"
+    "backend.control.center.heap": "MiB -Xmx",
+    "converters.convert.failed": "Impossible to convert this part of UI: {0}",
+    "converters.fileYoutrackIssue": "File an issue in YouTrack",
+    "notification.text.file.too.large": "the file is too large"
   },
   "messages/CommonProfilerBundle.properties": {
+    "run.profiler.data.ready": "Profiler data is ready",
     "ui.what.if.tab": "What-If",
-    "profiler.eventtracer.error.on.reading": "Cannot read profiling information\nFile doesn't exist"
+    "run.profiler.stopRecordingAndShow": "Stop Recording and Show Results",
+    "run.profiler.waiting": "Waiting for profiler to connect"
   },
   "messages/CompDBBundle.properties": {
     "compdb.url": "http://clang.llvm.org/docs/JSONCompilationDatabase.html"
   },
-  "messages/CompilerIntegrationBundle.properties": {
-    "jdk": "JDK(&J):"
-  },
   "messages/ComposePreviewBundle.properties": {
-    "animation.inspector.prop.keys.title": "Prop Keys"
+    "action.animation.inspector.title": "Start Animation Inspection",
+    "action.animation.inspector.description": "<html>Inspect animations defined using the Compose Animation framework frame-by-frame.<br/><br/>Currently, the following APIs are supported:<br/><ul><li><code>updateTransition</code></li><li><code>AnimatedVisibility</code></li></ul></html>",
+    "action.animation.inspector.unavailable.title": "<html>No animations available for inspection.<br/><br/>Currently, the following APIs are supported:<br/><ul><li><code>updateTransition</code></li><li><code>AnimatedVisibility</code></li></ul></html>",
+    "action.stop.animation.inspector.title": "Stop Animation Inspection",
+    "action.interactive.title": "Start Interactive Mode",
+    "action.interactive.description": "Live preview to test gestures",
+    "animation.inspector.animated.visibility.combobox.placeholder.message": "Visibility...",
+    "animation.inspector.tab.animated.visibility.default.title": "Animated Visibility",
+    "action.live.edit.refresh.title": "Fast Build \\&\\& Refresh",
+    "action.live.edit.refresh.description.needs.build": "Fast Build \\&\\& Refresh needs a successful full build to be available",
+    "event.log.live.edit.build.successful": "Compose Preview build completed successfully in {0}",
+    "event.log.live.edit.build.failed": "Compose Preview build failed in {0}",
+    "action.run.title": "Run Preview",
+    "action.run.description": "Run this preview in isolation on the emulator or running device",
+    "picker.preview.annotator.fix.family": "Compose Preview quick fixes",
+    "picker.preview.annotator.lint.error.type": "Bad value type for",
+    "picker.preview.annotator.lint.error.missing": "Missing parameter",
+    "picker.preview.annotator.lint.error.repeated": "Parameters should not be repeated",
+    "picker.preview.annotator.lint.error.type.integer": "should have Integer value.",
+    "picker.preview.annotator.lint.error.type.options": "should be one of: {0}.",
+    "inspection.preview.device.spec.name": "Preview device parameter must have valid syntax"
   },
   "messages/ComposeProjectWizardBundle.properties": {
     "module.presentation.name": "Compose Multiplatform"
-  },
-  "messages/CoverageBundle.properties": {
-    "coverage.data.show.selected.button": "Show Selected",
-    "coverage.flatten.packages": "Flatten packages"
   },
   "messages/CsBundle.properties": {
     "surrounder.if.else": "if/else",
@@ -314,6 +399,10 @@
     "color.display.name.heredoc.id": "Heredoc id"
   },
   "messages/CssBundle.properties": {
+    "css.id.selector": "Id selector",
+    "css.unicode.range": "Unicode range",
+    "css.pseudo.selector": "Pseudo selector",
+    "css.pseudo.selector.label": "Pseudo selector",
     "name.value.presentable.name": "<identifier>",
     "custom.property.name.value.presentable.name": "<custom property name>",
     "integer.value.presentable.name": "<integer>",
@@ -337,7 +426,9 @@
     "selector.value.presentable.name": "<selector>",
     "url.value.presentable.name": "<url>",
     "id.value.presentable.name": "<id>",
-    "css.stylelint.message.prefix": "Stylelint:"
+    "css.stylelint.message.prefix": "Stylelint:",
+    "settings.show.css.color.preview.as.background": "Show CSS color preview as background",
+    "settings.comma.separated.list.of.css.properties.without.vendor.prefix": "Comma-separated list of CSS properties without vendor prefix"
   },
   "messages/CucumberBundle.properties": {
     "step.definition.0.1": "{0} {1}"
@@ -353,6 +444,29 @@
     "import.popup.text": "{0}?"
   },
   "messages/DartBundle.properties": {
+    "dart.color.settings.description.fat.arrow": "Fat arrow",
+    "dart.color.settings.description.symbol.literal": "Symbol literal",
+    "dart.color.settings.description.dynamic.local.variable.reference": "Dynamic local variable reference",
+    "dart.color.settings.description.function.type.alias": "Function type alias",
+    "dart.color.settings.description.instance.field.declaration": "Instance field declaration",
+    "dart.color.settings.description.instance.field.reference": "Instance field reference",
+    "dart.color.settings.description.instance.getter.declaration": "Instance getter declaration",
+    "dart.color.settings.description.instance.getter.reference": "Instance getter reference",
+    "dart.color.settings.description.instance.method.declaration": "Instance method declaration",
+    "dart.color.settings.description.instance.method.reference": "Instance method reference",
+    "dart.color.settings.description.instance.setter.declaration": "Instance setter declaration",
+    "dart.color.settings.description.instance.setter.reference": "Instance setter reference",
+    "dart.color.settings.description.library.name": "Library name",
+    "dart.color.settings.description.local.function.reference": "Local function reference",
+    "dart.color.settings.description.local.variable.reference": "Local variable reference",
+    "dart.color.settings.description.static.method.reference": "Static method reference",
+    "dart.color.settings.description.top.level.function.reference": "Top level function reference",
+    "dart.color.settings.description.top.level.getter.declaration": "Top level getter declaration",
+    "dart.color.settings.description.top.level.getter.reference": "Top level getter reference",
+    "dart.color.settings.description.top.level.setter.declaration": "Top level setter declaration",
+    "dart.color.settings.description.top.level.setter.reference": "Top level setter reference",
+    "dart.color.settings.description.top.level.variable.declaration": "Top level variable declaration",
+    "dart.color.settings.description.unresolved.instance.member.reference": "Unresolvable dynamic reference",
     "webdev.debug.configuration.name": "Dart Web",
     "dart.surround.with.brackets": "[expr]",
     "dart.surround.with.parenthesis": "(expr)",
@@ -374,20 +488,28 @@
     "action.Dart.pub.upgrade.text": "Pub Upgrade",
     "action.Dart.pub.get.text": "Pub Get",
     "action.Generate.ToString.Dart.text": "toString()",
+    "action.Dart.Analyzer.Diagnostics.text": "Dart Analyzer Diagnostics",
+    "action.Dart.Reanalyze.description": "Reanalyze all Dart source files",
+    "action.Dart.NewDartFile.description": "Create new Dart file",
     "action.text.pub.build": "Pub Build…",
     "action.text.webdev.build": "Webdev Build…",
     "dart.problems.view.status.0.and.1": "{0}、{1}",
     "dart.problems.view.status.0.and.1.and.2": "{0}、{1}、{2}",
     "dart.problems.view.status.0.and.filters.1": "{0} ({1})",
-    "debugger.asynchronous.gap.frame": "<asynchronous gap>",
-    "notification.group.dart.webdev": "Dart webdev"
+    "debugger.asynchronous.gap.frame": "<asynchronous gap>"
   },
   "messages/DataGridBundle.properties": {
-    "Console.TableResult.n.bytes.of.m.bytes.loaded": "{0}/{1}",
-    "csv.format.settings.quotation.policy.escape.duplicate": "<duplicate>",
-    "count.rows.action.of.text": "/{0}"
+    "Console.TableResult.n.bytes.of.m.bytes.loaded": "{0}/{1}"
+  },
+  "messages/DataGripBundle.properties": {
+    "action.StatementUp.text": "Prev_ious Statement",
+    "action.StatementDown.text": "N_ext Statement"
   },
   "messages/DatabaseBundle.properties": {
+    "settings.data.modification": "Data Modification",
+    "settings.submit.changes.immediately": "Submit changes immediately",
+    "settings.enable.in.string.literals.with.sql.injection": "Enable in string literals with SQL injection",
+    "settings.add.row.prefix.suffix": "Add row prefix/suffix",
     "group.Console.Jdbc.ExplainGroup.text": "Explain Plan",
     "action.Console.Jdbc.ExplainAnalyse.Raw.text": "Explain Analyse (Raw)",
     "action.Console.Jdbc.ExplainAnalyse.Raw.description": "Explain Analyse (Raw)",
@@ -404,7 +526,14 @@
     "action.tx.text": "Tx: {0}",
     "choose.session.action.placeholder": "<session>",
     "choose.session.action.empty.placeholder": "<empty>",
+    "count.rows.action.of.text": "/{0}",
     "data.source.scope.editor.tree.unnamed.node.name": "<Unnamed>",
+    "csv.format.settings.quotation.policy.escape.duplicate": "<duplicate>",
+    "TypeDescriptor.param.oauthserviceacctemail": "Service account email",
+    "TypeDescriptor.param.oauthpvtkeypath": "Key file",
+    "TypeDescriptor.param.oauthaccesstoken": "Access token",
+    "TypeDescriptor.param.oauthrefreshtoken": "Refresh token",
+    "TypeDescriptor.param.oauthclientid": "Client ID",
     "scriptGen.option.RestrictDeleteTriggers.text": "RESTRICT WHEN DELETE TRIGGERS",
     "ChangeDialectToolbarAction.action.dialect.text": "<dialect>",
     "unknown.in.angleBraces": "<unknown>",
@@ -417,6 +546,7 @@
     "dialog.message.ssh": "SSH: {0}",
     "no.driver": "<No driver>",
     "namespace.fraction": "{0}/{1}",
+    "excel.xlsx": "Excel (xlsx)",
     "azure.active.directory.interactive": "Azure Active Directory Interactive",
     "DatabaseScriptRunConfigurationSettingsEditor.unknown.target": "<unknown>",
     "label.auto.detect": "<auto detect>",
@@ -430,16 +560,15 @@
     "deactivate.data.source.notification.title": "{0} [{1}]",
     "group.PlanViewGroup.text": "Explain Plan",
     "status.text.different.values": "<different values>",
-    "scriptGen.option.DumpTask.text": "Dump generation task",
-    "scriptGen.option.DumpTask.description": "Dump generation task to report reproducible generation problems",
-    "settings.show.preview.of.valid.script.when.updating.source.text": "Show preview of valid script when updating source text",
-    "settings.when.caret.inside.statement.execute": "When caret inside statement execute:",
-    "settings.when.caret.outside.statement.execute": "When caret outside statement execute:",
-    "action.DatabaseView.ClearSrcStorage.text": "Clear Stored Sources",
-    "action.DatabaseView.ClearSrcStorage.description": "Clear stored sources and local modifications"
+    "delete.field": "Delete Field",
+    "clone.field": "Clone Field",
+    "add.new.field": "Add New Field",
+    "action.insert.field.dialog.title": "New Field Name"
   },
   "messages/DatabaseInspectorBundle.properties": {
-    "export.notification.success.message.reveal": "<a href=reveal>{0}</a>"
+    "action.export.button.tooltip.title": "Export as File...",
+    "export.notification.success.message.reveal": "<a href=reveal>{0}</a>",
+    "export.dialog.file.already.exists.overwrite.title": "Export as File..."
   },
   "messages/DatagenBundle.properties": {
     "test.data.generator.lorem.ipsum": "Lorem Ipsum",
@@ -448,9 +577,6 @@
   "messages/DataloreDSBundle.properties": {
     "Datalore.remote.url": "Notebook URL:",
     "filetype.Datalore.description": "Datalore Notebook"
-  },
-  "messages/DebuggerBundle.properties": {
-    "lazy.val.not.initialized": "<not initialized>"
   },
   "messages/DenoBundle.properties": {
     "deno.run.configuration.default.name": "Deno: {0}",
@@ -462,29 +588,23 @@
   },
   "messages/DevKitBundle.properties": {
     "error.plugin.xml.tag.invalid": "<Invalid>",
+    "new.menu.module.component.text": "Module Component",
+    "new.menu.project.component.text": "Project Component",
     "inspections.group.name": "Plugin DevKit",
     "inspections.group.path": "Plugin DevKit",
     "group.DevkitNewActions.text": "Plugin DevKit",
     "plugin.xml.convert.action.or.group.invalid.name": "<invalid name>",
-    "plugin.xml.convert.language.id.any.language.display.name": "<any language>"
+    "plugin.xml.convert.language.id.any.language.display.name": "<any language>",
+    "dom.generator.dialog.label.javadoc.author": "@author:",
+    "inspection.message.field.may.prevent.intention.preview.to.work.properly": "Field may prevent intention preview from working properly",
+    "inspection.action.is.not.preview.friendly.display.name": "Field blocks intention preview",
+    "inspection.message.unnecessary.safe.field.annotation": "Unnecessary @SafeFieldForPreview annotation: the field type is considered to be safe already"
   },
   "messages/DevKitImagesBundle.properties": {
     "action.darcula.hidpi.theme.text": "Darcula HiDPI"
   },
   "messages/DevKitWorkspaceModelBundle.properties": {
-    "inspections.group.path": "Plugin DevKit",
-    "progress.text.removing.old.code": "Removing old code",
-    "progress.text.writing.code": "Writing code",
-    "progress.text.formatting.generated.code": "Formatting generated code",
-    "command.name.generate.code.for.workspace.entities.in": "Generate Code for Workspace Entities in ''{0}''"
-  },
-  "messages/DeviceExplorerBundle.properties": {
-    "configurable.name.device.file.explorer": "Device File Explorer",
-    "configurable.name.android.device.file.explorer": "Android Device File Explorer"
-  },
-  "messages/DeviceMonitorBundle.properties": {
-    "configurable.name.device.file.explorer": "Device File Explorer",
-    "configurable.name.android.device.file.explorer": "Android Device File Explorer"
+    "inspections.group.path": "Plugin DevKit"
   },
   "messages/DiagnosticBundle.properties": {
     "error.list.message.index.count": "{0}/{1}"
@@ -504,12 +624,12 @@
   },
   "messages/DiffBundle.properties": {
     "diff.utf.charset.name.bom.suffix": "{0} BOM",
-    "blank.diff.recent.content.summary.text.date": "{0} ({1})",
-    "advanced.setting.show.diff.as.editor.tab": "Open Diff as Editor Tab"
+    "blank.diff.recent.content.summary.text.date": "{0} ({1})"
   },
   "messages/DjangoBundle.properties": {
     "manage.run.tab.name": "Django: manage.py",
     "inspection.url_tag_arguments.named_arg_string": "''{0}''",
+    "inspection.django-orm-inspection.disabled-m2m-interm": "Method ''{0}'' has to have ''through_defaults'' argument because it''s used on many-to-many relation with an intermediate model. Consider calling it on intermediate model''s own manager.",
     "magic_literals.django_url_name": "Django url",
     "django.manage.name": "manage.py@{0}"
   },
@@ -527,6 +647,7 @@
     "ChooseImportedUnitsDialog.item.text": "{0} {1}"
   },
   "messages/DockerBundle.properties": {
+    "InspectDockerAction.description.container": "Inspect the selected container",
     "DockerCloudConfigurable.docker.for.mac.radio.title": "Docker for Mac",
     "DockerCloudConfigurable.docker.for.windows.radio.title": "Docker for Windows",
     "DockerBuildSettingsUI.dockerfile.text": "Dockerfile:",
@@ -552,6 +673,7 @@
     "DockerComposeDeploymentEditor.group.up": "docker-compose up",
     "DockerComposeDeploymentEditor.down.remove.images.all.desc": "--rmi all",
     "DockerComposeDeploymentEditor.down.remove.images.local.desc": "--rmi local",
+    "settings.docker.machine.executable": "Docker Machine executable:",
     "DockerComposeCredentialsEditor.no.service.placeholder": "<Select service>",
     "DockerComposeSettingsEditor.form.name": "Docker Compose",
     "DockerComposeCredentialsType.name": "Docker Compose",
@@ -566,19 +688,28 @@
   "messages/DockerComposeBundle.properties": {
     "ComposeFileRunLineMarkerProvider.ServiceLineMarkerInfo.up.tooltip": "docker-compose up {0}",
     "ComposeFileRunLineMarkerProvider.ServiceLineMarkerInfo.restart.tooltip": "docker-compose restart {0}",
-    "ComposeFileRunLineMarkerProvider.AllServicesLineMarkerInfo.tooltip": "docker-compose up",
-    "ComposeStrictStringType.quick.fix": "Surround with quotes"
+    "ComposeFileRunLineMarkerProvider.AllServicesLineMarkerInfo.tooltip": "docker-compose up"
   },
   "messages/DownburstBundle.properties": {
     "external.system.name": "Docker Compose",
-    "tool.window.title": "Docker Compose"
+    "tool.window.title": "Docker Compose",
+    "action.Downburst.Deploy.Down.RemoveVolumes.text": "Down and Remove Volumes",
+    "action.Downburst.Deploy.Up.Build.text": "Build and Up",
+    "action.Downburst.Deploy.Up.BuildForceRecreate.text": "Build, Force Recreate and Up",
+    "action.Downburst.Run.Prompt.title": "Run command in new container",
+    "action.Downburst.Exec.Prompt.title": "Exec command in container",
+    "action.Downburst.Command.Recreate.text": "Build, Force Recreate and Up",
+    "action.Downburst.Command.OpenTerminal.text": "Open Terminal",
+    "action.Downburst.Command.StopAndDelete.text": "Stop and Delete",
+    "action.Downburst.Command.BuildPull.text": "Build(Pull new base image)",
+    "action.Downburst.Command.RebuildAndRecreate.text": "Rebuild & Recreate",
+    "action.Downburst.Command.Exec.text": "Exec command in container",
+    "action.Downburst.Command.RunOneOff.text": "Run command in new container"
   },
   "messages/DvcsBundle.properties": {
     "clone.repository.url.label": "URL:",
-    "sync.setting": "Execute Branch Operations on All Roots",
-    "action.BranchActionGroupPopup.Anonymous.text.restore.size": "Restore Popup Size",
-    "multi.message.line.prefix.form": "{0}：{1}",
-    "action.text.branch.group.by.prefix": "Group by Prefix"
+    "sync.setting.description": "If selected, you will be able to check out, compare, delete, or create new branches in all {0} roots with a single action. It will also affect the behavior of the push dialog.",
+    "multi.message.line.prefix.form": "{0}：{1}"
   },
   "messages/EJBHighlightingBundle.properties": {
     "ejb.enterprise.java.beans": "EJB: Enterprise Java Beans",
@@ -597,33 +728,12 @@
     "usage.node.text": "{0} {1}",
     "usage.node.unknown": "<unknown node>"
   },
-  "messages/EduCoreBundle.properties": {
-    "action.Educational.RefreshTask.text": "Reset Content",
-    "check.no.tests": "No tests have run",
-    "codeforces.anti.crawler.start": "Codeforces.com activated anti-crawler protection.",
-    "codeforces.anti.crawler.end1": "Please solve contests on the <a href=\"codeforces.com\">website</a> until the problem is resolved (2-3 days).",
-    "codeforces.anti.crawler.end2": "Please solve contests on the website until the problem is resolved (2-3 days).",
-    "codeforces.error.failed.to.get.contest.information": "Failed to get contest information: {1}\nPlease check contest on {0} site: {2}",
-    "error.failed.to.launch.checking.with.reload.gradle.message": "Failed to launch checking. <a href=\"{0}\">Reload Gradle project</a>. For more information, see <a href=\"{1}\">the Troubleshooting guide</a>",
-    "error.failed.to.post.solution": "Failed to post solution",
-    "error.failed.to.refresh.tokens": "Failed to refresh tokens",
-    "exception.message.http.info": "HTTP {0} {1}",
-    "marketplace.see.whats.new": "See What's New",
-    "stepik.url": "Stepik URL:",
-    "ui.dialog.create.answer.placeholder.path.pattern": "[sectionName#]lessonName#taskName#filePath#placeholderIndex"
-  },
-  "messages/EduFormatBundle.properties": {
-    "check.no.tests.with.help.guide": "No tests have run. For more information, see <a href=\"{0}\">the Troubleshooting guide</a>",
-    "error.failed.to.launch.checking.with.help.guide": "Failed to launch checking. For more information, see <a href=\"{0}\">the Troubleshooting guide</a>",
-    "help.use.guide": "For more information, see <a href=\"{0}\">the Troubleshooting guide</a>"
-  },
   "messages/EjbBundle.properties": {
     "action.CreateServletAction.text": "Servlet(_S)",
     "action.GenerateServletAction.text": "Servlet(&S)…",
     "label.edit.relationship.ejb": "EJB:"
   },
   "messages/EmbeddedBundle.properties": {
-    "stm32.cube.mx.project.generation.failure": "Project generation failure",
     "svd.write.only": "<Write-Only>",
     "non.readable": "<Non-readable>",
     "freertos.task.table.id.column": "TCB №",
@@ -658,6 +768,10 @@
     "jsf.facelets": "JSF/Facelets",
     "list.item.jsf.facelets": "JSF/Facelets"
   },
+  "messages/FeatureSuggesterBundle.properties": {
+    "configurable.name": "Features Suggester",
+    "notification.title": "IDE Features Suggester"
+  },
   "messages/FindBundle.properties": {
     "find.context.presentation.scope.label": " ({0})",
     "emptyText.used.option": "{0}"
@@ -681,32 +795,16 @@
     "framework.zend2.name.zend.tool.framework": "Zend Framework 2 Tool",
     "symfony.component.version.2": "2.*.*"
   },
-  "messages/FreeMarkerBundle.properties": {
-    "quickfix.convert.to.instance": "Convert type to instance one",
-    "choose.external.definitions.file": "Choose External Implicit Definitions File"
+  "messages/GDBBundle.properties": {
+    "error.unexpected.response": "Unexpected response: {0}"
   },
   "messages/GatewayBundle.properties": {
     "connector.cwm.dialog.title": "Code With Me",
-    "ssh.ide.and.project": "Choose IDE and Project",
-    "ssh.jetbrains.installer": "Use JetBrains installer",
-    "ssh.deploy.host.exited.unexpectedly": "Host process terminated unexpectedly with error: {0}",
-    "ssh.credentials.error": "Invalid credentials",
-    "internal.linked.proxy.button.request.focus.on.client": "Request focus on client",
-    "wsl.connector.action.text": "Connect to WSL",
-    "wsl.connector.description": "Work with a project on a local WSL instance",
-    "wsl.connector.view.choose.wsl.instance": "Choose WSL instance:",
-    "wsl.open.project.prepare.collectWslConfigInfo": "Collecting info about existing WSL config",
-    "wsl.recent.connections.prompt.line.2": "a WSL instance",
-    "wsl.recent.projects.title": "Recent WSL Projects",
-    "ssh.open.settings": "Open Settings...",
-    "ssh.deploy.file.locking.check": "The file system used by backend needs to support file locking.\nError:\n{0}",
-    "ssh.deploy.file.locking.check.test": "Checking file locking support",
-    "ssh.deploy.minimal.requirements.memory.message": "<html>The host does not have enough memory to run the remote IDE Backend.\nMinimal size: {0} GB\nTotal size: {1} GB\nSee <a href=\"{2}\">minimal requirements</a> for more info</html>",
-    "ssh.deploy.minimal.requirements.title": "The host doesn't meet the minimal requirements",
-    "install.google.cloud.title": "Google Cloud",
-    "install.google.cloud.description": "Provides a way to connect to Google Cloud workstations",
-    "ssh.deploy.host.exited.unexpectedly.error.unknown": "Host process terminated unexpectedly with unknown error. See logs for more details",
-    "ssh.stop.ide.backend": "Stop IDE Backend..."
+    "welcome.tab.all.providers": "All Providers",
+    "codeWithMeConnector.description": "Join a Code With Me session, connect to a running IDE backend, with an HTTP or Gateway link",
+    "ssh.download.and.connect": "Download IDE and Connect",
+    "ssh.start.and.connect": "Start IDE and Connect",
+    "ssh.upload.and.connect": "Upload IDE and Connect"
   },
   "messages/GaugeBundle.properties": {
     "form.gauge.home": "GAUGE_HOME:",
@@ -728,13 +826,9 @@
     "label.credential.store.key.http.password": "Git HTTP",
     "stash.editor.diff.preview.id.change.title": "{0}：{1}"
   },
-  "messages/GitLabBundle.properties": {
-    "title.merge.requests": "Merge Requests",
-    "view.merge.requests.button": "View Merge Requests"
-  },
   "messages/GithubBundle.properties": {
-    "action.Github.Share.Vcs.Toolbar.Widget.text": "GitHub…",
-    "action.Github.Copy.Link.To.GitHub.text": "Copy Link to GitHub Repository"
+    "pull.request.list.item.info": "#{0,number,#} {1}，{2}",
+    "action.Github.Share.Vcs.Toolbar.Widget.text": "GitHub…"
   },
   "messages/GlassfishBundle.properties": {
     "descriptor.pattern.name": "{0} ({1})",
@@ -745,33 +839,53 @@
     "go.app.engine.wizard.name": "App Engine",
     "go.libraries.configurable.path.source.prefix.gopath": "[GOPATH]",
     "go.intention.run.go.generate.text": "Go generate ''{0}''",
+    "go.settings.build.tags.custom.tags.hint": "<html><body><p>Space-separated list of additional tags. <a href=\"https://www.jetbrains.com/help/go/configuring-build-constraints-and-vendoring.html\">Can be used</a> in the 'go build' command.</p></body></html>",
     "go.executable.file.empty.value": "<Empty>",
     "go.debugger.thread.dump.n.goroutines": "{0} {0,choice,0#goroutines|1#goroutine|2#goroutine}",
+    "go.execution.before.run.task.executing.presentable.name": "Executing ''{0}''",
     "go.execution.remote.run.configuration.display.name": "Go Remote",
     "go.execution.remote.run.configuration.description": "Go Remote",
     "go.run.target.gopath.label": "GOPATH: ",
+    "go.refactoring.split.declarations.with.iota.warning": "Declaration initializers will have different values after split because of 'iota'",
+    "go.refactoring.merge.declarations.with.iota.warning": "Declaration initializers will have different values after merge because of 'iota'",
     "go.wizard.name": "Go (GOPATH)",
     "action.com.goide.vgo.actions.VgoVendorAction.text": "Go Mod Vendor",
     "go.quick.doc.keyword.resource.effective.go.label": "Effective Go",
-    "go.quick.doc.too.large.to.render": "too large to render",
-    "go.debugger.unsupported.wsl1": "Debugging on WSL1 is not supported, use WSL2",
-    "go.command.line.inspection.project.configurator.description": "Configures Go project",
-    "go.test.creator.progress.title.searching.for.functions.for.test": "Searching for functions for test…",
-    "go.test.creator.progress.title.searching.for.tests.for.function": "Searching for tests for function…",
-    "action.Vgo.NewVgoWorkspaceFile.description": "Create a Go workspace file",
-    "action.Vgo.NewVgoWorkspaceFile.text": "Go Workspace File"
+    "go.inspection.problem.irregular.iota.usage": "Irregular usage of 'iota'",
+    "go.quick.doc.empty.interface.hint": "An empty interface 'interface{}' stands for a set of all types. A variable of the empty interface type can store a value of any type.",
+    "go.quick.doc.type.alias.hint": "Type {0} is an alias of type {1}. These types are identical. For more information, see {2}",
+    "go.quick.doc.type.definition.hint": "Type {0} is a new type with the underlying type {1}. These types are different. For more information, see {2}",
+    "go.quick.doc.type.alias.and.definition.hint.link.text": "Go Spec: Type identity",
+    "go.inspection.problem.fuzzing.is.not.supported": "Fuzzing is supported starting with Go 1.18"
   },
   "messages/GoLessonsBundle.properties": {
-    "go.completion.for.functions.press.twice": "To find all functions which accept an element as the first argument press {0} <strong>twice</strong>. Notice that the dot makes it look like a method while it''s not."
+    "go.completion.for.functions.lesson.name": "Basic completion: suitable functions for a value",
+    "go.support.for.table.tests.call.context.menu": "In <ide/>, you can run all the tests in the function or only some of them.\nFor example, click the run icon in the gutter near the {0} function and select {1}. You will run all the tests in this function.",
+    "go.support.for.table.tests.run.subtest": "You can run individual subtests by using the same approach. Click the gutter icon near the {0} subtest and select {1}. \nCurrently, this approach has several limitations, you can read about them in <a href=\"{2}\">the GoLand documentation</a>.",
+    "go.generics.inspections.title": "Inspections for type parameters",
+    "go.generics.inspections.delete.type.parameters": "<ide/> 2022.2 introduced new inspections that might help you to catch errors that you did not notice.\nFor example, the {0} function has square brackets to use type parameters but inside these brackets we see an empty parameter list. To fix that error, press {1} and select {2}.",
+    "go.generics.inspections.union.interfaces.with.methods": "According to <a href=\"{0}\">the Go team</a>, you cannot use interfaces with methods in a union. So, the {1} cannot be used as a term among the union elements.\nDelete the group including the vertical bar and the space after it ({2}).",
+    "go.generics.inspections.unused.type.parameter": "Type parameters are grayed out because we do not use them anywhere in our code. Let''s fix it by replacing the {0} type in the parameters section with {1}.",
+    "go.quick.documentation.title": "Using quick documentation",
+    "go.quick.documentation.iota": "You can get quick information for any symbol right from the editor. For example, to see {0} values, invoke the {1} action.\nPress {2} to get the value of the {3} constant.",
+    "go.quick.documentation.iota.methods.pointer.and.value.fix": "<a href=\"{0}\">The Go documentation</a> recommends that all methods on a given type should have either value or pointer receivers. <ide/> found that the {1} struct has methods on both value and pointer receivers. You can rewrite the {2} method or delete it.\nClick the following link to proceed to the next step.",
+    "go.quick.documentation.convert.to.pointer.receiver": "We can update the {0} method to follow the convention. Type {1} before {2} to convert it from a value receiver to a pointer receiver.",
+    "go.generics.inspections.change.interface.to.any": "Before going further, let''s refactor one more thing. We use an empty interface that can be replaced with {0}.\nPress {1} and select {2}. ",
+    "go.support.fuzz.testing.title": "Fuzz testing",
+    "go.support.fuzz.testing.run": "Fuzz testing is a way to automate your tests by continuously submitting various input. Let''s run our fuzz test to check our function against the various generated data.\nTo run fuzz testing, click the blinking icon in the gutter and select {0}.",
+    "go.support.fuzz.testing.check.failing": "Oops, the fuzz testing has failed! To find out the reason, scroll down the output in the {0} tool window and click the link that leads to the {1} directory.",
+    "go.generics.running.code.click.link": "Now click the resulted link to open your code in a browser.\nTo run your code with type parameters just click the {0} button."
+  },
+  "messages/GoTemplateBundle.properties": {
+    "go.template.inspection.problem.duplicate.variable": "Duplicate variable: <code>#ref</code> #loc",
+    "go.template.inspection.problem.unknown.variable": "Unknown variable: <code>#ref</code> #loc"
   },
   "messages/GraalVmBundle.properties": {
-    "debugger.display.name": "GDB/GraalVM",
-    "graalvm.runconfig.attach.name": "Attach string (host:port):",
-    "graalvm.runconfig.mapping-label": "Source mappings:",
-    "graalvm.runconfig.table.remote": "Remote source:",
-    "graalvm.runconfig.table.local": "Local source:",
-    "graalvm.runconfig.system-root": "System root:",
-    "graalvm.runconfig.system-root-path": "System root:"
+    "graalvm.debugger.extension.off": "Graal VM extensions are not enabled",
+    "enum.notsupported": "enum isn't supported",
+    "static.write.notsupported": "write to static isn't supported",
+    "method.invoke.notsupported": "class method invoke is not supported",
+    "newinstance.notsupported": "class instantiation isn't supported"
   },
   "messages/GradleBundle.properties": {
     "gradle.settings.text.jvm.path": "Gradle JVM：",
@@ -822,7 +936,8 @@
     "module.name.0.and.groovy.version.1": "{0} ({1})",
     "groovy.version.0": "Groovy {0}",
     "label.groovy.sdk": "Groovy SDK:",
-    "non.sealed.visibility.presentation": "non-sealed"
+    "non.sealed.visibility.presentation": "non-sealed",
+    "declared.type.0.extends.1.which.is.circular.inheritance": "Declared type ''{0}'' extends ''{1}'', which is a circular inheritance"
   },
   "messages/GroovyJpsBundle.properties": {
     "compiler.name.greclipse": "Groovy-Eclipse",
@@ -842,7 +957,6 @@
     "file.template.group.title.gwt": "Google Web Toolkit",
     "action.group.gwt.title": "Google Web Toolkit",
     "action.group.gwt.description": "Google Web Toolkit",
-    "problem.description.instance.methods.in.overlay.type.must.be.final": "Instance methods in overlay type must be final",
     "gwt.intention.category": "Google Web Toolkit",
     "exportable.GwtSdkManager.presentable.name": "GWT SDK",
     "group.GWT.text": "Google Web Toolkit",
@@ -879,13 +993,15 @@
     "browsers.explorer": "Internet Explorer",
     "task.browser.url": "URL:",
     "about.box.vm": "VM: {0}，{1}",
-    "checkbox.show.tips.on.startup": "Don't show tips on startup",
     "label.text.antialiasing.scope.ide": "IDE:",
     "configurable.AppEngineFacetEditor.display.name": "Google App Engine",
     "settings.menus.group.touch.bar": "Touch Bar",
+    "action.Anonymous.text.delete.hook": "Delete Hook",
     "label.version.any": "<any>",
     "list.item.temporary.file.0": "<temporary file>{0}",
+    "notification.content.more.shortcut.conflict": "{0} and {1} more shortcut conflict with macOS shortcuts. Modify these shortcuts or change macOS system settings.",
     "icon.nodes.c_plocal.tooltip": "package-local",
+    "label.certificate.will.be.saved": "The accepted certificate will be saved in truststore {0} with the default password {1}",
     "colorpicker.label.red": "R:",
     "colorpicker.label.green": "G:",
     "colorpicker.label.blue": "B:",
@@ -900,44 +1016,11 @@
     "notification.manager.content.height.linebreak": "<br>\n",
     "start.browser.panel.url.label": "URL(&U):",
     "login.dialog.title": "{0}",
-    "notification.title.jcef.measureFPS": "OSR JCEF FPS Meter",
-    "tip.of.the.day.feedback.question": "Did you find this tip useful?",
-    "plugin.manager.on.demand.plugin.not.loaded": "On-demand plugin is not loaded by default",
-    "plugins.advertiser.enabled.on.demand": "{0,choice,1#Plugin|2#Plugins} {1} {0,choice,1#has|2#have} been enabled.",
-    "plugins.configurable.enabled.on.demand": "Enabled on-demand",
-    "action.reset.font.size.all.editors": "Reset to {0}pt in all editors",
-    "project.widget.open.projects": "Open Projects",
-    "dumb.balloon.this.action.is.not.available.during.indexing": "This action is not available during indexing",
-    "dumb.balloon.none.of.the.following.actions.are.available.during.indexing.0": "None of the following actions are available during indexing: {0}",
-    "tab.vertical.split": "Vertical split",
-    "tab.horizontal.split": "Horizontal split",
-    "tab.view.modes": "View Modes"
+    "notification.title.jcef.measureFPS": "OSR JCEF FPS Meter"
   },
   "messages/ImagesBundle.properties": {
     "icon.dimensions": "{0,number}x{1,number}x{2,number}",
     "image.description": "{0}×{1}, {2}bpp"
-  },
-  "messages/InspectionGadgetsBundle.properties": {
-    "string.replaceable.by.string.buffer.problem.descriptor": "Non-constant String <code>#ref</code> should probably be declared as 'StringBuilder' #loc",
-    "inspection.redundant.string.constructor.message": "<code>new #ref()</code> is redundant #loc",
-    "inspection.redundant.string.option.do.not.report.string.constructors": "Do not report String constructor calls",
-    "inspection.x.call.can.be.replaced.with.y": "<code>#ref()</code> call can be replaced with ''{0}()''",
-    "array.hash.code.fix.family.name": "Replace with 'Arrays.hashCode()' call",
-    "replace.field.reference.fix.text": "Replace field reference with ''{0}''",
-    "replace.method.call.fix.text": "Replace method call with ''{0}''",
-    "inspection.incorrect.date.format.display.name": "Incorrect 'DateTimeFormat' pattern",
-    "inspection.incorrect.date.format.message.unsupported": "Illegal pattern letter ''{0}''",
-    "inspection.incorrect.date.format.message.unpaired": "Closing <code>#ref</code> without previous opening ''{0}''",
-    "inspection.incorrect.date.format.message.padding": "Padding modifier ''{0}'' without consecutive pattern letters",
-    "inspection.incorrect.date.format.message.reserved.character": "Use of reserved character ''{0}''",
-    "inspection.incorrect.date.format.too.many.letters": "Too many consecutive pattern letters ''{0}''; maximum: {1}; specified: {2}",
-    "inspection.incorrect.date.format.too.few.letters": "Too few consecutive pattern letters ''{0}''; minimum: {1}; specified: {2}",
-    "inspection.incorrect.date.format.wrong.number.of.letters": "Wrong number of consecutive pattern letters ''{0}''; allowed: {1}; specified: {2}",
-    "inspection.incorrect.date.format.message.literal": "Opening single quote ({0}) without following closing single quote",
-    "redundant.escape.in.regex.replacement.display.name": "Redundant escape in regex replacement string",
-    "redundant.escape.in.regex.replacement.problem.descriptor": "Redundant escape of ''{0}''",
-    "inspection.common.subexpression.in.switch.display.name": "Common subexpression can be extracted from 'switch'",
-    "inspection.common.subexpression.in.switch.fix.family.name": "Push down 'switch' expression"
   },
   "messages/InspectionJSBundle.properties": {
     "add.require.amd.module.group.name": "Node.js"
@@ -952,14 +1035,10 @@
     "group.names.language.level.specific.issues.and.migration.aids11": "Java 11",
     "group.names.language.level.specific.issues.and.migration.aids14": "Java 14",
     "group.names.language.level.specific.issues.and.migration.aids15": "Java 15",
-    "long.range.set.presentation.range.with.mod": "{0}；{1}",
-    "group.names.language.level.specific.issues.and.migration.aids16": "Java 16"
+    "long.range.set.presentation.range.with.mod": "{0}；{1}"
   },
   "messages/IntelliLangBundle.properties": {
     "language.label.id": "ID(&I):"
-  },
-  "messages/IntentionPowerPackBundle.properties": {
-    "show.example.date.time.output.intention.family.name": "Show example date time output"
   },
   "messages/J2EEBundle.properties": {
     "project.view.pane.title.j2ee": "Java EE",
@@ -986,15 +1065,25 @@
   },
   "messages/JavaAnalysisBundle.properties": {
     "feature.try.with.resources": "Try-with-resources",
-    "remove.block.marker.comments": "Remove block marker comment",
+    "inspection.redundant.cast.problem.descriptor": "Casting <code>{0}</code> to <code>#ref</code> #loc is redundant",
+    "contract.return.validator.too.few.parameters": "not applicable for method that has {0, choice, 0#no parameters|1#one parameter|2#{0} parameters}",
     "dfa.find.cause.special.field.of.something": "{0}/{1}",
     "inspection.reference.lambda.name": "lambda ({0})",
-    "intention.name.make.variable.effectively.final": "Make variable effectively final"
+    "inspection.message.scheduled.for.removal.annotation.can.be.replaced.by.attribute": "@ScheduledForRemoval annotation can be replaced with 'forRemoval' attribute in @Deprecated annotation ",
+    "inspection.message.scheduled.for.removal.annotation.can.be.removed": "@ScheduledForRemoval annotation can be removed",
+    "inspection.fix.name.remove.scheduled.for.removal.annotation.by.attribute": "Replace @ScheduledForRemoval with 'forRemoval' attribute in @Deprecated annotation  ",
+    "inspection.name.redundant.scheduled.for.removal.annotation": "Redundant @ScheduledForRemoval annotation",
+    "intention.family.name.remove.repeating.call": "Remove repeating call",
+    "intention.name.remove.repeating.call": "Remove repeating call ''{0}()''"
   },
   "messages/JavaBundle.properties": {
     "action.create.new.module-info.title": "module-info.java",
     "action.create.new.package-info.title": "package-info.java",
     "checkbox.collapse.suppress.warnings": "<html>@SuppressWarnings</html>",
+    "inspection.unused.assignment.problem.descriptor1": "Variable <code>#ref</code> #loc is never used",
+    "inspection.unused.assignment.problem.descriptor2": "Variable <code>{0}</code> initializer <code>#ref</code> #loc is redundant",
+    "inspection.unused.assignment.problem.descriptor3": "The value <code>{0}</code> assigned to <code>#ref</code> #loc is never used",
+    "inspection.unused.assignment.problem.descriptor4": "The value changed at <code>#ref</code> #loc is never used",
     "inspection.unused.symbol.check.accessors": "Getter/Setter",
     "intention.create.test.dialog.setUp": "set&Up/@Before",
     "intention.create.test.dialog.tearDown": "tear&Down/@After",
@@ -1016,11 +1105,9 @@
     "title.code.vision": "Code Vision",
     "null.check.surrounder.description": "if (expr != null) {…}",
     "switch.stmt.template.description": "switch (expr) {…}",
-    "intention.category.junit": "Java/JUnit",
+    "intention.category.i18n": "Java/I18N",
     "title.code.vision.inlay.hints": "Code Vision",
-    "inspection.conditional.break.in.infinite.loop.suggest.conversion.when.if.is.single.stmt.in.loop": "Suggest conversion when 'if' is a single statement in loop",
-    "inspection.redundant.stream.optional.call.explanation.parallel.source": "the stream was created via 'parallelStream()', so it's already parallel",
-    "inspection.redundant.stream.optional.call.explanation.sequential.source": "the stream was created via 'stream()', so it's already sequential"
+    "intention.category.junit": "Java/JUnit"
   },
   "messages/JavaCompilerBundle.properties": {
     "error.jdk.module.names.overflow.element.ellipsis": "…"
@@ -1037,13 +1124,7 @@
     "label.thread.node": "\"{0}\"@{1}: {2}",
     "instances.window.show.history": "InstancesWindow.ShowHistory",
     "surround.with.runtime.type.template": "((RuntimeType)expr)",
-    "memory.view.constructor.tracker.name": "MemoryViewConstructorTracker: {0}",
-    "error.unable.to.evaluate.children.expression": "Unable to evaluate the children renderer expression",
-    "label.base.renderer.configurable.dfa.assist.gray.out": "Gray out blocks of code that are predicted to be unreachable"
-  },
-  "messages/JavaErrorBundle.properties": {
-    "error.raw.deconstruction": "Raw deconstruction patterns are not allowed",
-    "when.expression.is.false": "This case label has a guard that is a constant expression with value 'false'"
+    "memory.view.constructor.tracker.name": "MemoryViewConstructorTracker: {0}"
   },
   "messages/JavaFXBundle.properties": {
     "javafx.edit.certificates.dialog.keypass": "Keypass(&E):",
@@ -1054,10 +1135,32 @@
   "messages/JavaFXJpsBundle.properties": {
     "java.fx.packager": "Java FX Packager"
   },
+  "messages/JavaGoogleAppEngineBundle.properties": {
+    "sdk.browse.folder.action.title": "Google App Engine SDK",
+    "plugin.name": "Google App Engine",
+    "label.google.app.engine.sdk": "Google App Engine SDK:",
+    "app.engine.inspection.group.name": "Google App Engine",
+    "server.editor.app.engine.sdk.label.text": "App Engine SDK:"
+  },
+  "messages/JavaGoogleAppEngineJpsBundle.properties": {
+    "google.appengine.enhancer": "Google AppEngine Enhancer",
+    "persistence.api.item.name.jdo": "JDO 2",
+    "persistence.api.item.name.jdo3": "JDO 3",
+    "persistence.api.item.name.jpa": "JPA 1",
+    "persistence.api.item.name.jpa2": "JPA 2"
+  },
+  "messages/JavaLessonsBundle.properties": {
+    "java.onboarding.run.sample": "For now, let''s run the current file, click {0} or press {1}.",
+    "java.onboarding.temporary.configuration.description": "You have opened the demo sample. Now, let's run it! In the highlighted area of the toolbar, you can see popular running actions for the selected configuration.",
+    "java.onboarding.feedback.system.jdk.at.start": "JDK at start:",
+    "java.onboarding.run.options.community": "For example, you can run your code {0}, debug it {1}, and run with coverage {2}.",
+    "java.onboarding.run.options.ultimate": "For example, you can run your code {0}, debug it {1}, profile {2}, and run with coverage {3}."
+  },
   "messages/JavaPsiBundle.properties": {
     "aux.context.display": "/ {0}",
     "filetype.jshell.description": "JShell snippet files",
-    "element.kind.and.name": "{0} {1}"
+    "element.kind.and.name": "{0} {1}",
+    "jdk.19.preview.language.level.description": "19 (Preview) - Record patterns, pattern matching for switch (third preview)"
   },
   "messages/JavaRefactoringBundle.properties": {
     "encapsulate.fields..package.local.radio": "Package local(&C)",
@@ -1100,8 +1203,6 @@
     "macro.js.component.type.of": "jsComponentTypeOf(Array)",
     "macro.js.suggest.default.variable.kind": "jsSuggestDefaultVariableKind(Boolean)",
     "es6.auto.import.options.title": "TypeScript / JavaScript",
-    "es6.import.options.paths.help": "This option configures the style of paths used in the import statements.<br><br>With \"Always\", the IDE always uses aliases from webpack, vite, or jsconfig.json configuration.<br><br>With \"Only in files outside specified paths\", the IDE uses relative paths for imports between the files for which an alias is defined. In all other files, path mappings are used. <br><br>With \"Never\", aliases are never used.",
-    "typescipt.import.options.paths.help": "This option configures the style of paths used in the import statements.<br><br>With \"Always\", the IDE always uses aliases from tsconfig.json configuration. <br><br>With \"Only\" in files outside specified paths, the IDE uses relative paths for imports between the files for which an alias is defined. In all other files, path mappings are used.<br><br>With \"Never\", aliases are never used.",
     "bower.json": "bower.json (&O)：",
     "js.language.version.combo.es5": "ECMAScript 5.1",
     "js.language.version.combo.js185": "JavaScript 1.8.5",
@@ -1130,15 +1231,7 @@
     "filetype.yarn.lock.description": "Yarn lock",
     "intention.category.ecmascript6": "JavaScript/ECMAScript 6",
     "flow.js.widget.display.name": "Flow JS",
-    "notification.group.linters": "JavaScript linter",
-    "web.inspection.message.deprecated.symbol": "#ref is deprecated, consult docs for better alternative",
-    "javascript.create.variable.holding.arrow.function.intention.name": "Create variable ''{0}'' holding arrow function",
-    "javascript.create.constant.holding.arrow.function.intention.name": "Create constant ''{0}'' holding arrow function",
-    "javascript.create.field.holding.arrow.function.intention.name": "Create field ''{0}'' holding arrow function",
-    "javascript.create.property.holding.arrow.function.intention.name": "Create property ''{0}'' holding arrow function",
-    "es6.import.options.exts.help": "This option configures extensions in import statements. <br><br>With \"Auto\", the IDE adds extensions to the names of vue files, of files from projects that have \"type\": \"module\" in package.json, and of files with the .mjs or .cjs extensions. <br><br>With \"Always\", the IDE always adds extensions to file names. <br><br>With \"Never\", the IDE always uses file names without extensions.",
-    "es6.import.options.not.import.help": "This option configures exact paths that IDE skips during automatic import of a symbol. Instead, IDE will look for alternative paths to import the symbol.",
-    "typescript.import.options.exts.help": "This option configures extensions in import statements. <br><br>With \"Auto\" selected, the IDE always adds extensions to the names of vue files, of files from projects that have \"module\": \"node16\" or \"module\": \"nodenext\" in tsconfig.json and \"type\": \"module\" in package.json, and of files with the .mts extension. <br><br>With \"Always\", the IDE always adds the .js extension to TypeScript file names. <br><br>With \"Never\", the IDE always uses file names without extensions."
+    "notification.group.linters": "JavaScript linter"
   },
   "messages/JavaScriptIntentionBundle.properties": {
     "plugin.category.flowjs": "Flow JS",
@@ -1156,7 +1249,6 @@
     "project.roots.classpath.format.default.descr": "IntelliJ IDEA (.iml)",
     "label.project.wizard.new.project.jdk": "JDK:",
     "repository.library.type.maven.description": "Maven: {0}",
-    "analyze.module.dependency.replace.dialog.message": "No direct code dependencies have been found.{0}\n{1}\n{2}",
     "label.maven": "Maven:",
     "checkbox.javadocs": "JavaDoc(&D)",
     "project.structure.sdk": "SDK:",
@@ -1165,6 +1257,9 @@
   "messages/JavaeeJspBaseBundle.properties": {
     "dialog.edit.template.checkbox.jsp": "JSP (&P)"
   },
+  "messages/JavaeeJspBundle.properties": {
+    "jsp.documentation.message.description": "Description:\\&nbsp;{0}"
+  },
   "messages/JetBrainsTeamAuthBundle.properties": {
     "notification.title.failed": "JetBrains.team"
   },
@@ -1172,11 +1267,11 @@
     "joomla.title": "Joomla!",
     "inspection.php.group.joomla": "Joomla!"
   },
-  "messages/JpaBundle.properties": {
-    "action.Jpa.OpenInJpaView": "Select in Persistence View"
-  },
   "messages/JpaQlBundle.properties": {
     "options.xml.display.name": "JPA QL"
+  },
+  "messages/JpsBuildBundle.properties": {
+    "progress.text.local.build.is.quicker": "Building the project locally is quicker than downloading caches"
   },
   "messages/JsonBundle.properties": {
     "unnamed.desc": "<unnamed>",
@@ -1187,74 +1282,90 @@
     "Jupyter.servers.managed.server.dynamic.port": "<Dynamic>",
     "jupyter.cell.type.raw": "Raw NBConvert",
     "Jupyter.hub.login.dialog.description.instruction.link.href": "https://jupyterhub.readthedocs.io/en/stable/reference/rest.html#create-an-api-token",
-    "notebook.collapsed.web.output.text": "Web: {0}x{1} px",
-    "jupyter.pandas.completion.type.text": "DataFrame: {0}",
-    "jupyter.corrupted.file.message": "The file is corrupted and cannot be opened",
-    "notification.content.remove.connection": "Remove connection"
-  },
-  "messages/JupyterDSBundle.properties": {
-    "notification.group.jupyter": "Jupyter Notebook"
+    "notebook.collapsed.web.output.text": "Web: {0}x{1} px"
   },
   "messages/JupyterKotlinBundle.properties": {
-    "kotlin.jupyter.action.create.notebook.text": "Kotlin Jupyter Notebook",
-    "kotlin.jupyter.settings.title": "Kotlin Notebook",
-    "kotlin.jupyter.toolbar.title": "Kotlin Kernel: {0}",
-    "kotlin.jupyter.toolbar.actions.stop": "Stop Kernel"
+    "kotlin.jupyter.action.create.notebook.text": "Kotlin Jupyter Notebook"
   },
   "messages/JvmAnalysisBundle.properties": {
-    "jvm.inspections.junit.malformed.no.arg.descriptor": "Method <code>#ref</code> should be {0}, {1}{2, choice, 0# and have no parameters|1#, have no parameters and of type void}",
-    "jvm.inspections.junit.malformed.annotated.single.descriptor": "{0, choice, 0#Field|1#Method} <code>#ref</code> annotated with ''@{1}'' should be {2}",
-    "jvm.inspections.junit.malformed.annotated.double.descriptor": "{0, choice, 0#Field|1#Method} <code>#ref</code> annotated with ''@{1}'' should be {2} and {3}",
-    "jvm.inspections.junit.malformed.annotated.typed.descriptor": "{0, choice, 0#Field|1#Method} <code>#ref</code> annotated with ''@{1}'' should be of type ''{2}''",
-    "jvm.inspections.junit.malformed.annotated.single.typed.descriptor": "{0, choice, 0#Field|1#Method} <code>#ref</code> annotated with ''@{1}'' should be {2} and of type ''{3}''",
-    "jvm.inspections.junit.malformed.annotated.double.typed.descriptor": "{0, choice, 0#Field|1#Method} <code>#ref</code> annotated with ''@{1}'' should be {2}, {3} and of type ''{4}''"
+    "jvm.inspections.junit.malformed.declaration.name": "JUnit malformed declaration",
+    "jvm.inspections.junit.malformed.option.ignore.test.parameter.if.annotated.by": "Ignore test parameter if it is annotated by:",
+    "jvm.inspections.junit.malformed.test.combination.descriptor": "Suspicious combination of {0} and ''@{1}''",
+    "jvm.inspections.junit.malformed.nested.class.descriptor": "Only non-static nested classes can serve as '@Nested' test classes",
+    "jvm.inspections.junit.malformed.extension.registration.descriptor": "''{0}'' should implement ''{1}''",
+    "jvm.inspections.junit.malformed.extension.class.level.descriptor": "{0} should be registered at the class level",
+    "jvm.inspections.junit.malformed.param.method.source.assignable.descriptor": "No implicit conversion found to convert ''{0}'' to ''{1}''",
+    "jvm.inspections.junit.malformed.method.no.arg.void.descriptor": "Method <code>#ref</code> should be a {0}, {1}, have no parameters and be of type void",
+    "jvm.inspections.junit.malformed.annotated.field.single.descriptor": "Field <code>#ref</code> annotated with ''@{0}'' should be {1}",
+    "jvm.inspections.junit.malformed.annotated.field.double.descriptor": "Field <code>#ref</code> annotated with ''@{0}'' should be {1} and {2}",
+    "jvm.inspections.junit.malformed.annotated.field.typed.descriptor": "Field <code>#ref</code> annotated with ''@{0}'' should be of type ''{1}''",
+    "jvm.inspections.junit.malformed.annotated.field.single.typed.descriptor": "Field <code>#ref</code> annotated with ''@{0}'' should be {1} and be of type ''{2}''",
+    "jvm.inspections.junit.malformed.annotated.field.double.typed.descriptor": "Field <code>#ref</code> annotated with ''@{0}'' should be {1} and {2} and be of type ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}",
+    "jvm.inspections.junit.malformed.annotated.method.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1} and {2}",
+    "jvm.inspections.junit.malformed.annotated.method.typed.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be of type ''{1}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.typed.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1} and of type ''{2}''",
+    "jvm.inspections.junit.malformed.annotated.method.double.typed.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, {2} and of type ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should not declare parameter ''{1}''",
+    "jvm.inspections.junit.malformed.annotated.method.typed.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be of type ''{1}'' and not declare parameter ''{2}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1} and not declare parameter ''{2}''",
+    "jvm.inspections.junit.malformed.annotated.method.double.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, {2} and not declare parameter ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.typed.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, of type ''{2}'' and not declare parameter ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.double.typed.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, {2}, of type ''{3}'' and not declare parameter ''{4}''",
+    "jvm.inspections.junit.malformed.annotated.method.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should not declare parameters {1} and ''{2}''",
+    "jvm.inspections.junit.malformed.annotated.method.typed.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be of type ''{1}'' and not declare parameters {2} and ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1} and not declare parameters ''{2}'' and ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.double.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, {2} and not declare parameters ''{3}'' and ''{4}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.typed.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, of type ''{2}'' and not declare parameters {3} and ''{4}''",
+    "jvm.inspections.junit.malformed.annotated.method.double.typed.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, {2}, of type ''{3}'' and not declare parameters {4} and ''{5}''",
+    "jvm.inspections.junit.malformed.fix.field.signature": "Fix field signature",
+    "jvm.inspections.junit.malformed.fix.field.signature.descriptor": "Fix ''{0}'' field signature",
+    "jvm.inspections.junit.malformed.method.no.arg.descriptor": "Method <code>#ref</code> should be a {0}, {1} and have no parameters",
+    "jvm.inspections.junit.malformed.annotated.suspend.function.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should not be a suspending function",
+    "jvm.inspections.junit.malformed.suspend.function.descriptor": "Method <code>#ref</code> should not be a suspending function"
   },
   "messages/KeyMapBundle.properties": {
-    "dialog.mouse.pad.shortcut.text": "<html><center> <br>{0}<br><br>"
+    "dialog.mouse.pad.shortcut.text": "<html><center> <br>{0}<br><br>",
+    "experimental.toolbar.xamarin.title": "Toolbar (Xamarin) "
   },
-  "messages/KotlinBaseFe10HighlightingBundle.properties": {
-    "highlighter.name.dsl": "Dsl//",
-    "i.for.i.br.0": "<i> for </i><br/>{0}",
-    "declaration.name.0.of.1": "{0}/{1}",
-    "declaration.name.anonymous": "<anonymous>",
-    "html.javascript.0.html": "JavaScript: {0}"
-  },
-  "messages/KotlinBaseProjectStructureBundle.properties": {
-    "sdk.0": "<sdk {0}>"
+  "messages/KotlinBasePluginBundle.properties": {
+    "notification.content.bundled.version.0.will.be.used.reason.1": "Version ({0}) of the Kotlin JPS plugin will be used<br>The reason: {1}",
+    "failed.to.download.unbundled.jps.maven.artifact": "Failed to download Kotlin Compiler Maven artifact ({0}). The search was performed in the following repos:<br>{1}",
+    "suggested.solutions": "Suggested solutions:<br>{0}",
+    "you.can.delegate.to.maven": "You can delegate IDE build/run actions to Maven in 'File | Settings | Build, Execution, Deployment | Build Tools | Maven | Runner | Delegate IDE build/run actions to Maven'",
+    "you.can.delegate.to.gradle": "You can delegate IDE build/run actions to Gradle in 'File | Settings | Build, Execution, Deployment | Build Tools | Gradle | Build and run using'",
+    "you.can.use.kotlin.compiler.which.is.bundled.into.your.ide": "You can use Kotlin compiler which is bundled into your IDE. Select 'Bundled' version in 'File | Settings | Build, Execution, Deployment | Compiler | Kotlin Compiler | Kotlin Compiler version'"
   },
   "messages/KotlinBundle.properties": {
+    "hints.ranges.rangeTo.left": "≤",
+    "hints.ranges.rangeTo.right": "≤",
+    "hints.ranges.until.left": "≤",
+    "hints.ranges.until.right": "<",
+    "hints.ranges.downTo.left": "≥",
+    "hints.ranges.downTo.right": "≥",
     "presentation.text.paren": "({0})",
+    "highlighter.name.dsl": "Dsl//",
+    "update.name.android.studio": "Android Studio",
     "column.name.val.var": "Val/Var",
     "member.info.abstract.0": "abstract {0}",
-    "add.val.var.to.parameter.0": "Add ''val'' or ''var'' to parameter ''{0}''",
-    "add.val.var.to.primary.constructor.parameter": "Add 'val' or 'var' to a primary constructor parameter",
     "version": "{version}",
     "action.KotlinGenerateToString.text": "toString()",
-    "kotlin.script.in.project.sources": "<html>This script is not supposed to be inside source root. After Kotlin 1.9 it will be ignored during the module compilation.</html>",
-    "kotlin.script.in.project.sources.link": "https://youtrack.jetbrains.com/issue/KT-52735",
-    "kotlin.script.in.beta.stage.link": "https://kotlinlang.org/docs/components-stability.html#stability-levels-explained",
+    "inspection.main.function.return.unit.display.name": "Main function should return 'Unit'",
     "hints.title.codevision": "Code Vision",
     "usage.provider.text.property.of.0": "{0}/{1}",
-    "hints.ranges.lessOrEqual": "≤",
-    "hints.ranges.less": "<",
-    "hints.ranges.greaterOrEqual": "≥",
-    "ssr.modifier.match.call.semantically": "Match call semantically",
-    "text.extension.property": "extension property",
-    "convert.to.trim.indent": "Convert to 'trimIndent()' call",
-    "convert.to.trim.margin": "Convert to 'trimMargin()' call",
-    "fix.import.kind.0.name.1": "Import {0} ''{1}''",
-    "presentation.text.paren.no.brackets": "{0}",
-    "object.private.property": "Object private property",
-    "inspection.object.private.property.name.display.name": "Object private property naming convention",
-    "inspection.message.object.with.manual.tostring.can.be.converted.to.data.object": "'object' with manual 'toString' can be converted to 'data object'",
-    "serializable.object.must.be.marked.with.data": "Serializable 'object' must be marked with 'data' to properly support serialization",
-    "convert.to.data.object": "Convert to 'data object' (may change semantic)",
-    "inspection.convert.object.to.data.object.display.name": "Convert 'object' to 'data object'",
-    "kotlin.script.in.project.sources.move": "Move to...",
-    "kotlin.script.in.project.sources.allow": "Allow..."
+    "kotlin.script.in.project.sources.link": "https://youtrack.jetbrains.com/issue/KTIJ-19432",
+    "kotlin.script.in.beta.stage.link": "https://kotlinlang.org/docs/components-stability.html#stability-levels-explained",
+    "kotlin.eap.survey.notification.link": "https://surveys.jetbrains.com/s3/kotlin-eaps-survey"
   },
   "messages/KotlinDebuggerCoreBundle.properties": {
     "message.variables.property.get": "... get()"
+  },
+  "messages/KotlinIdeaAnalysisBundle.properties": {
+    "html.javascript.0.html": "JavaScript: {0}",
+    "sdk.0": "<sdk {0}>",
+    "declaration.name.0.of.1": "{0}/{1}",
+    "i.for.i.br.0": "<i> for </i><br/>{0}",
+    "framework.name.kotlin.sdk": "Kotlin SDK"
   },
   "messages/KotlinIdeaCompletionBundle.properties": {
     "presentation.tail.for.0": "，{0}",
@@ -1273,9 +1384,6 @@
     "presentable.name.kotlin.js": "Kotlin/​JS",
     "presentable.name.kotlin.jvm": "Kotlin/JVM"
   },
-  "messages/KotlinMigrationBundle.properties": {
-    "kotlin.eap.survey.notification.link": "https://surveys.jetbrains.com/s3/kotlin-eaps-survey"
-  },
   "messages/KotlinNewProjectWizardBundle.properties": {
     "buildsystem.type.gradle.groovy": "Gradle Groovy",
     "buildsystem.type.gradle.kotlin": "Gradle Kotlin",
@@ -1290,28 +1398,26 @@
     "module.configurator.js.node": "Node.js",
     "module.configurator.tests.setting.framework.junit4": "JUnit 4",
     "module.configurator.tests.setting.framework.junit5": "JUnit 5",
-    "module.configurator.tests.setting.framework.kotlin.test": "Kotlin Test",
-    "module.configurator.js.target.settings.use.js.legacy.title": "Use deprecated JS legacy compiler"
+    "module.configurator.tests.setting.framework.kotlin.test": "Kotlin Test"
   },
   "messages/KotlinNewProjectWizardUIBundle.properties": {
     "generator.title": "Kotlin Multiplatform"
   },
-  "messages/KotlinPluginUpdaterBundle.properties": {
-    "update.name.android.studio": "Android Studio",
-    "kotlin.eap.notification.group.name": "Kotlin EAP",
-    "kotlin.eap.advertisement.notification.link": "https://kotlinlang.org/docs/whatsnew-eap.html?utm_source=ide&utm_medium=notification&utm_campaign=1-7-20-beta"
-  },
-  "messages/KotlinPreferencesBundle.properties": {
-    "version": "{version}"
-  },
   "messages/KubernetesBundle.properties": {
+    "KubernetesMissingKeysInspection.kustomize.missing.patch.name.message": "Missing Kustomize resource patch name in its metadata",
     "HelmLintAction.task.title": "Helm Lint",
     "KubernetesResourceMapper.resourceDisplayableName.template": "{0} ''{1}''",
     "KubernetesViewConfigurable.podShellRow.title": "Pod Shell",
     "KubernetesPodContent.shell.title": "Shell: {0}",
     "group.KUBERNETES_ACTIONS.text": "Kubernetes(&K)",
     "action.Kubernetes.HelmLint.text": "Helm Lint(&L)",
-    "KubectlExecutor.BaseProcessListener.progressTitle.template": "Kubernetes: {0}"
+    "KubectlExecutor.BaseProcessListener.progressTitle.template": "Kubernetes: {0}",
+    "action.intercept.service.with.telepresence.text": "Intercept Service",
+    "action.creates.telepresence.interception.description": "Creates Telepresence interception",
+    "dialog.title.telepresence.intercept.options": "Telepresence Intercept Options",
+    "dialog.message.specify.ports.to.intercept": "Specify ports to intercept",
+    "text.specify.ports.to.intercept.html": "<p>Specify ports to intercept, separated by space or comma. Example: <code>8080, 8443:grpc</code></p>",
+    "text.specify.additional.options.for.telepresence.html": "<p>Specify any additional options for `telepresence intercept` command. Example: <code>--mechanism tcp</code></p>"
   },
   "messages/LangBundle.properties": {
     "label.export.plugin.url": "URL:",
@@ -1321,24 +1427,36 @@
   "messages/LangCoreBundle.properties": {
     "shorten.command.line.method.argfile": "@argfile (Java 9+)"
   },
-  "messages/LearnBundle.properties": {
-    "tip.and.trick.promotion.label": "Interactive lesson available",
-    "tip.and.trick.promotion.open.lesson": "Start learning",
-    "notification.group.feature.trainer": "IDE Features Trainer",
-    "welcome.promo.close.hint": "You can find the onboarding tour under <b>{0} > {1}</b>, where you can choose the <b>{2}</b> lesson."
+  "messages/LayoutInspectorBundle.properties": {
+    "activity.restart": "The activity was restarted. This can be avoided by enabling \"Connect without restarting activity\" in the run configuration options.",
+    "activity.restart.action": "Open Run Configuration"
   },
   "messages/LintBundle.properties": {
-    "android.lint.inspections.group.name": "Android Lint"
+    "android.lint.inspections.group.name": "Android Lint",
+    "android.lint.inspections.file.ends.with.ext": "File endsWith on file extensions",
+    "android.lint.inspections.discouraged.api": "Using discouraged APIs",
+    "android.lint.inspections.assertion.side.effect": "Assertions with Side Effects",
+    "android.lint.inspections.uast.implementation": "Avoid using UAST implementation",
+    "android.lint.inspections.bidi.spoofing": "Bidirectional text spoofing",
+    "android.lint.inspections.not.constructor": "Not a Constructor"
   },
   "messages/LiveEditBundle.properties": {
     "configurable.displayName": "Live Edit",
     "update.application.ws.suffix": "(Live Edit)"
   },
   "messages/LogcatBundle.properties": {
-    "logcat.settings.buffer.kb": " KB",
-    "logcat.color.page.name": "Android Logcat",
-    "logcat.device.combo.version": " Android {0}，API {1}",
-    "logcat.device.combo.offline": " [OFFLINE]"
+    "logcat.header.options.description": "Configure header formatting options",
+    "logcat.header.options.show.timestamp": "Show timestamp",
+    "logcat.header.options.show.date": "Show date",
+    "logcat.header.options.show.tid": "Show thread id",
+    "logcat.header.options.show.pids": "Show process ids",
+    "logcat.header.options.hide.duplicate.tags": "Hide duplicate tags",
+    "logcat.header.options.show.tag": "Show tag",
+    "logcat.header.options.tag.width": "Tag width:",
+    "logcat.scroll.to.end.text": "Scroll to the end. Clicking on a particular line stops scrolling and keeps that line visible.",
+    "logcat.clear.log.description": "Clears Logcat buffer on the device and the log console.",
+    "logcat.stacktrace.folding.hint": "<{0} more...>",
+    "logcat.filter.project.apps": "Project app only"
   },
   "messages/LombokBundle.properties": {
     "action.delombokData.text": "@Data",
@@ -1365,11 +1483,7 @@
     "action.run.target.description": "make {0}"
   },
   "messages/MarkdownBundle.properties": {
-    "markdown.header.level.popup.heading.action.secondary.text": "(H{0})",
-    "markdown.outdated.table.of.contents.inspection.name": "Outdated table of contents section",
-    "markdown.outdated.table.of.contents.quick.fix.name": "Update table of contents section",
-    "markdown.outdated.table.of.contents.inspection.description": "This TOC section does not correspond to the actual structure of the document",
-    "markdown.style.settings.format.tables": "Format tables"
+    "markdown.header.level.popup.heading.action.secondary.text": "(H{0})"
   },
   "messages/MavenConfigurableBundle.properties": {
     "maven.settings.testrun.argline": "<html><i>argLine(&A)</i></html>",
@@ -1377,6 +1491,7 @@
     "maven.settings.testrun.env.variables": "<html><i>environmentVariables(&E)</i></html>",
     "maven.settings.runner.jre": "JRE:",
     "maven.settings.generated.folder.targerdir": "target/generated-sources",
+    "maven.settings.vm.options.tooltip": "Options specified in this field override the ones in .mvn/.jvm.config files",
     "maven.run.configuration.bundled.distribution.name": "Maven {0}",
     "maven.run.configuration.jre.label": "JRE(&J):",
     "maven.run.configuration.jre.name": "JRE(&J)"
@@ -1400,8 +1515,7 @@
     "micronaut.data.inspections.group": "Micronaut Data",
     "micronaut.inspections.config.yaml": "Micronaut application.yaml",
     "micronaut.starter.version.label": "Micronaut:",
-    "micronaut.data.ql": "Micronaut Data QL",
-    "micronaut.data.mongodb.gutter.name": "Micronaut Data MongoDB mapping"
+    "micronaut.data.ql": "Micronaut Data QL"
   },
   "messages/MicroservicesBundle.properties": {
     "http.code.description.101": "Switching Protocols",
@@ -1457,14 +1571,6 @@
     "run.configuration.name": "Kotlin Mobile",
     "sdk.sync.missing.sdk.title": "Android SDK"
   },
-  "messages/MyBundle.properties": {
-    "settings": "Integration Tests Settings",
-    "hello": "Hello, world!",
-    "action.integrationTestsAction.text": "My Action"
-  },
-  "messages/NextJsBundle.properties": {
-    "create.next.app.name": "Next.js"
-  },
   "messages/NoSqlBundle.properties": {
     "nosql.inspections.group": "Jakarta NoSQL",
     "nosql.id": "NoSQL ID"
@@ -1479,10 +1585,7 @@
   "messages/OCBundle.properties": {
     "create.class.objc": "Objective-C (.m)",
     "create.class.objcpp": "Objective-C++ (.mm)",
-    "color.global.variable": "Variables//Global",
-    "color.extern.variable": "Variables//Extern",
     "color.struct.union.oc": "Struct/enum/union",
-    "color.this.keywords.oc": "Keywords//'self','super','this'",
     "include.cpp.url": "https://www.includecpp.org/",
     "action.CIDR.Lang.ObjC.GenerateSharedInstance.text": "+sharedInstance",
     "action.CIDR.Lang.ObjC.GenerateDescription.text": "-description…",
@@ -1497,8 +1600,7 @@
     "surround.with.if.else.template": "if / else",
     "surround.with.not.expr.template": "!(expr)",
     "surround.with.parenthesis.template": "(expr)",
-    "surround.with.if.respondsToSelector.template": "if respondsToSelector",
-    "color.local.variable": "Variables//Local"
+    "surround.with.if.respondsToSelector.template": "if respondsToSelector"
   },
   "messages/OCInspectionsBundle.properties": {
     "intentions.group.objc": "Objective-C"
@@ -1512,86 +1614,8 @@
     "bnd.configuration.name": "Bnd OSGi",
     "bnd.resolve.tree.via": "VIA:"
   },
-  "messages/PackageManagerBundle.properties": {
-    "cmake.hints.view.window.name": "Insert It To CMakeLists.txt",
-    "cmake.hints.view.action.name": "Insert It To CMakeLists.txt",
-    "full.error.output.view.action.name": "Open Full Output",
-    "remove.package.manager.window.name": "Remove Package Manager",
-    "to.change.progress.title.modification.baseline.json": "Modification baseline.json",
-    "to.change.progress.title.modification.baseline.file": "Modification {0} baseline file",
-    "vcpkg.toolwindow.button.check.for.update.name": "Check for update",
-    "vcpkg.toolwindow.button.check.for.update.description": "Checks if it is true that the Git repository has an update",
-    "vcpkg.toolwindow.button.update.repository.description": "Checks if it is true that the current version of VCPKG can update any installed packages from the current version of the Git repository. \nNote: This does not guarantee you the newest versions of packages, as you also need to update the Git repository for a full update",
-    "vcpkg.toolwindow.button.upgrade.repository.description": "Updates all the packages that can be updated for the current version of the Git repository. \nNote: This does not guarantee you the newest versions of packages, as you also need to update the Git repository for a full update",
-    "vcpkg.toolwindow.button.update.git.repository.description": "Updates the Git repository to the latest version",
-    "vcpkg.toolwindow.button.remove.repository.description": "Deletes this repository from CLion. When uninstalling, you will be able to choose whether to remove it along with the files on disk or not",
-    "vcpkg.toolwindow.package.triplet.no.triplets.found": "Package not installed",
-    "vcpkg.toolwindow.package.triplet.installed.triplets": "Installed triplets:",
-    "vcpkg.toolwindow.package.triplet.lets.cmake.decide": "Let VCPKG Decide",
-    "vcpkg.toolwindow.task.check.for.update.label": "Check for update",
-    "vcpkg.toolwindow.task.check.for.update.successful.can.be.updated": "Repository can be updated",
-    "vcpkg.toolwindow.task.check.for.update.successful.updated": "Repository is updated",
-    "vcpkg.toolwindow.task.check.for.update.failed": "Can't check for updates",
-    "toolwindow.not.selected.package.manager": "No package manager selected. Please, select package manager",
-    "toolwindow.button.edit.package.manager.description": "Edit selected package manager",
-    "toolwindow.list.no.repositories": "There is no repositories",
-    "toolwindow.list.root.packages": "Package Managers",
-    "vcpkg.toolwindow.task.start.package.manager": "Start package manager",
-    "vcpkg.toolwindow.task.start.package.manager.failed": "Failed to start package manager",
-    "vcpkg.return.status.failed.parse.result": "Failed parse result",
-    "vcpkg.add.new.package.manager.window.name": "Add VCPKG Package Manager",
-    "vcpkg.add.new.package.manager.path.must.exists": "The path must exist",
-    "vcpkg.add.new.package.manager.path.already.exists": "Directory {0} already exists",
-    "vcpkg.registry.toolwindow.on.not.existing.vcpkg.package.manager": "Install at least one package manager",
-    "vcpkg.registry.toolwindow.wrap.on.start": "Checking for the correctness of the repository",
-    "vcpkg.registry.toolwindow.wrap.installing": "Installing the repository",
-    "vcpkg.registry.toolwindow.wrap.failed": "A problem occurred while checking/installing the repository",
-    "vcpkg.registry.toolwindow.wrap.not.installed": "Repository not installed",
-    "vcpkg.registry.task.install.package.manager": "Install VCPKG Register",
-    "vcpkg.registry.task.install.package.manager.successful": "Successful created register",
-    "vcpkg.registry.task.install.package.manager.failed": "Failed creating register",
-    "vcpkg.registry.task.get.baseline": "Get baseline",
-    "vcpkg.registry.add.new.package.manager.window.name": "New VCPKG Registry Package Manager",
-    "vcpkg.registry.add.new.package.manager.path.must.exists": "The path must exist",
-    "vcpkg.registry.add.new.package.manager.path.already.exists": "Directory {0} already exists",
-    "to.change.package.manager.name.vcpkg.repository": "VCPKG Registry",
-    "vcpkg.registry.task.install.package.manager.failed.ioexception": "Problems with creating directories or access to them",
-    "vcpkg.registry.task.install.package.manager.failed.streamwrite": "Problems with creating json file or access to it",
-    "vcpkg.registry.task.check.for.install.package.manager.failed.ioexception": "Problems with creating directories or access to them",
-    "vcpkg.registry.task.check.for.install.package.manager.failed.securityexception": "Problems with access to files",
-    "toolwindow.problem.notification.profile.not.found": "No profile found",
-    "toolwindow.problem.notification.profile.cant.found.toolchain": "Profile with name {0}\nCan''t find toolchain parameter",
-    "toolwindow.problem.notification.profile.cant.find.package.manager": "Profile with name {0}\nCan''t find package manager for toolchain parameter path",
-    "toolwindow.install.multiply.action.name": "See Candidates To Install",
-    "toolwindow.install.multiply.window.name": "Install Packages",
-    "toolwindow.install.multiple.window.label.choose.one": "Choose one package from list",
-    "toolwindow.install.multiply.window.notification.can't.find.package.manager": "Can't find toolwindow content for package manager",
-    "toolwindow.install.multiply.window.notification.broken.package.manager": "Current package manager is not available: installing or error state",
-    "toolwindow.install.multiply.window.task.find.packages": "Find packages in repository",
-    "vcpkg.add.new.package.manager.table.profile.already.enabled": "({0} as toolchain)",
-    "vcpkg.edit.package.manager.window.name": "Edit VCPKG Package Manager",
-    "vcpkg.registry.toolwindow.select.package.manager": "Select package manager",
-    "vcpkg.registry.edit.package.manager.window.name": "Edit VCPKG Registry Package Manager",
-    "vcpkg.registry.configurator.task.name": "VCPKG port project file modification",
-    "toolwindow.problem.cmake.description": "Package {0} not found",
-    "toolwindow.problem.solve.by.installing.one.package": "Profile with name {0}\n{1}\nBut this problem can be solved by installing {2}",
-    "toolwindow.problem.solve.by.installing.many.packages": "Profile with name {0}\n{1}\nBut this problem can be solved by installing one of candidates",
-    "toolwindow.problem.solve.by.installing.another.package.manager": "{0}\nBit this problem can be solved by installing package manager with type \"{1}\".\nSet package manager of this type by toolchain in Edit section\nof Package Manager toolwindow",
-    "vcpkg.registry.edit.package.manager.loading.text": "Waiting for loading casts",
-    "vcpkg.registry.edit.package.manager.no.packages.to.add.text": "You have no packages to add.\nIf you want to add them, you need to add a directory\nwith the name of the package in the ports' directory,\nthen inside this directory a directory with\nthe version of this package, and vcpkg.json\nfiles in it.",
-    "vcpkg.registry.edit.package.manager.version.name.already.exists": "Baseline with this name already exists",
-    "vcpkg.registry.edit.package.manager.failed.not.installed.package.manager.notification": "Can't edit failed or not installed package manager",
-    "vcpkg.registry.edit.package.manager.table.add.to.registry": "Add to Registry",
-    "vcpkg.registry.edit.package.manager.old.registry.get": "Old versions",
-    "vcpkg.registry.edit.package.manager.old.registry.name": "Old Registry Version",
-    "vcpkg.registry.edit.package.manager.old.registry.is.add": "Add to current project",
-    "toolwindow.name": "Package Manager",
-    "vcpkg.toolwindow.package.info.install.vcpkg.to.install.package": "To install this package, create VCPKG Repository and select it on second window",
-    "remove.package.manager.window.task.remove.from.disk": "Remove from disk",
-    "toolwindow.button.new.package.manager.button.name": "Add New Package Manager",
-    "vcpkg.add.new.package.manager.name.of.triselect": "Add vcpkg integration to existing CMake profiles",
-    "vcpkg.toolwindow.packages.table.installed.not.found": "Installed packages not found",
-    "vcpkg.toolwindow.packages.table.possible.not.found": "Packages not found. Try to change search query"
+  "messages/PageflowBundle.properties": {
+    "seam.pageflow.new.pageflow.component.dialog.name": "New Name"
   },
   "messages/PagesBundle.properties": {
     "action.Seam.Create.Pages.Xml.text": "Seam pages.xml"
@@ -1600,7 +1624,8 @@
     "progress.text2.p4.status": "p4 {0}",
     "group.PerforceDirect.Menu.text": "Perforce(_P)",
     "perforce.name.with.mnemonic": "Perforce(_P)",
-    "change.list.decoration": " - Perforce #{0}"
+    "change.list.decoration": " - Perforce #{0}",
+    "error.invalid.file.fstat.mapping": "Invalid file<->fstat mapping; fstat={0}; map={1}"
   },
   "messages/PerformanceTestingBundle.properties": {
     "summary.link": "https://intellij-support.jetbrains.com/anonymous_requests/new",
@@ -1615,17 +1640,12 @@
   "messages/PhoneGapBundle.properties": {
     "exportable.PhoneGapSettings.presentable.name": "PhoneGap/Cordova"
   },
-  "messages/PhpArchitectureBundle.properties": {
-    "show.extract.members.to.class.dialog": "Show 'extract members to class' dialog",
-    "show.pull.members.up.dialog": "Show 'pull members up' dialog",
-    "shows.extract.members.to.class.dialog": "Shows 'extract members to class' dialog",
-    "shows.move.instance.method.dialog": "Shows 'move instance method' dialog"
-  },
   "messages/PhpBundle.properties": {
     "0": " ({0})",
     "action.PhpGenerateSetters.text": "setter…",
     "action.PhpGenerateGetters.text": "getter…",
     "color.settings.heredoc_id": "Heredoc//Heredoc ID",
+    "color.settings.magic.member": "Identifiers//Magic Member Access",
     "folding.checkbox.collapse.heredocs.and.nowdocs": "HEREDOC\\NOWDOC",
     "quality.tool.phpcbf.name": "PHP Code Beautifier and Fixer",
     "refactoring.extract.field.visibility.public": "public(&U)",
@@ -1653,7 +1673,20 @@
     "PhpLanguageLevel.8.0.0.presentable.name": "8.0",
     "filetype.phar.description": "Php Phar",
     "filetype.phar.display.name": "Php Phar",
+    "phpdoc.code.style.sort.doc.blocks": "PHPDoc tags order",
+    "phpdoc.code.style.in.beginning.position": "In the beginning",
+    "phpdoc.code.style.in.end.position": "In the end",
+    "phpdoc.code.style.convert.null.to": "Convert Null constant to:",
+    "php.code.style.convert.lower.case": "Lower case",
+    "php.code.style.convert.upper.case": "Upper case",
+    "php.code.style.sort.by.length": "By length",
     "phpdoc.code.style.convert.else.if.separate": "else if",
+    "phpdoc.code.style.param.spaces.between.tag.and.type": "Between tag and type:",
+    "phpdoc.code.style.param.spaces.between.type.and.name": "Between type and name:",
+    "phpdoc.code.style.param.spaces.between.name.and.description": "Between name and description:",
+    "auto.import.in.namespace.scope": "Enable auto-import in namespace scope",
+    "remote.connection.settings.default.remote.interpreter": "Default Remote Interpreter",
+    "settings.smart.keys.select.variable.name.without.dollar.sign.on.double.click": "Select variable name without '$' sign on double click",
     "composer.label.phar": "composer.phar",
     "php.run.label.https": "HTTPS:",
     "php.run.label.url": "URL:",
@@ -1676,34 +1709,10 @@
     "fluent.setters": "Fluent setter",
     "label.lt.no.server": "<no server>",
     "PhpLanguageLevel.8.1.0.presentable.name": "8.1",
-    "external.formatter.phpcsfixer": "PHP CS Fixer",
-    "external.formatter.phpcbf": "PHP Code Beautifier and Fixer",
-    "PhpLanguageLevel.8.2.0.presentable.name": "8.2",
-    "intention.family.name.show.example.date.time.output": "Show example date time output",
-    "refactoring.move.members.enum.0.already.contains.case.with.name.0": "Enum {0} already contains case with name ''{1}''",
-    "refactoring.move.members.enum.0.already.contains.case.with.value.1": "Enum {0} already contains case with value ''{1}''",
-    "refactoring.move.members.properties.can.not.be.moved.to.enum": "Properties can't be moved to enum",
-    "refactoring.php.extract.enum": "Extract Enum",
-    "php.debug.action.include.return.value.breakpoint.step.description": "Enables extra 'return from function' debug step",
-    "php.debug.action.watches.method.return.value.enable": "Enable Function Return Value Debugging",
-    "php.debug.action.watches.method.return.value.unavailable.reason": "Return Value Debugging Is Supported Only from XDebug 3.2",
-    "enable.return.function.value.debugging.xdebug.3.2": "Enable return function value debugging (Xdebug 3.2+)",
-    "shows.list.of.child.classes.without.without.resolved.member": "Shows list of child classes without resolved member",
-    "shows.list.of.child.classes.with.inaccessible.methods": "Shows list of child classes with inaccessible methods",
-    "add.slash.to.the.start": "Add '/' to the start",
-    "classes.can.not.have.backed.type": "Classes can't have backed type",
-    "set.the.following.option": "Set the following option: ",
-    "enables.inspection.0": "Enables inspection ''{0}''",
-    "show.0.settings.window": "Show ''{0}'' settings window",
-    "reformats.file.with.0": "Reformats file with ''{0}''",
-    "enable.the.following.extension": "Enables the following extension stub in PHP Runtime options:",
-    "shows.0.dialog": "Shows ''{0}'' dialog",
-    "suppress.unused.preview": "Suppresses ''Unused declaration'' inspection for entities annotated with ''{0}''",
-    "navigate": "... Navigate",
-    "enable.navigate.links.for.class.and.member.references": "Enable '... Navigate' links for class and member references",
-    "code.style.option.align.enum.cases": "Align enum cases",
-    "code.style.option.around.enum.cases": "Around enum cases:",
-    "refactoring.move.members.move.as.enum.cases": "Move as enum cases"
+    "inspection.php.unit.invalid.mocking.target": "Invalid PHPUnit mocking target",
+    "inspection.php.mockery.invalid.mocking.target": "Invalid Mockery mocking target",
+    "inspection.mockery.protected.method.cannot.be.mocked": "'protected' methods cannot be mocked without calling 'Mock.shouldAllowMockingProtectedMethods' ",
+    "intention.family.name.add.should.allow.mocking.protected.methods.call": "Add 'shouldAllowMockingProtectedMethods' call"
   },
   "messages/PhpRemoteSdkBundle.properties": {
     "remote.interpreter.default.interpreter.path": "/usr/bin/php",
@@ -1739,8 +1748,7 @@
     "framework.support.python.sdk.combobox.label": "Python SDK:",
     "python.toolwindow.packages.load.more.start": "…",
     "python.console.command.queue.got.it.tooltip.id": "python.console.command.queue.show",
-    "python.sdk.action.add.interpreter.based.on.target.text": "{0}…",
-    "python.packaging.create.setup.author.email": "Author Email"
+    "python.sdk.action.add.interpreter.based.on.target.text": "{0}…"
   },
   "messages/PyDockerBundle.properties": {
     "python.add.sdk.panel.name.docker.compose": "Docker Compose",
@@ -1749,7 +1757,10 @@
   "messages/PyPsiBundle.properties": {
     "filetype.python.docstring.description": "Python docstring",
     "find.usages.unnamed": "<unnamed>",
-    "element.presentation.location.string.module": "({0})"
+    "element.presentation.location.string.module": "({0})",
+    "INSP.typeddict.required.notrequired.cannot.be.used.outside.typeddict.definition": "''{0}'' can be used only in a TypedDict definition",
+    "INSP.typeddict.cannot.be.required.and.not.required.at.the.same.time": "Key cannot be required and not required at the same time",
+    "INSP.typeddict.required.notrequired.must.have.exactly.one.type.argument": "''{0}'' must have exactly one type argument"
   },
   "messages/PySshInterpreterBundle.properties": {
     "ssh.connection.wizard.remote.interpreter.default.interpreter.path": "/usr/bin/python"
@@ -1757,6 +1768,9 @@
   "messages/PythonProBundle.properties": {
     "python.debug.text.pane.text": "<html><head></head><body></body></html>",
     "configurable.PyScientificConfigurable.display.name": "Python Scientific",
+    "fastapi.run.no.app.in.file": "<html>Did not find a valid FastAPI app in {0} <br/><a href=\"edit\">Add explicit app name…</a></html>",
+    "fastapi.run.invalid.file.error.notification": "<html>FastAPI application has to be a valid .py file.<br/><a href=\"edit\">Change in run configuration…</a></html>",
+    "fastapi.run.options.app.name": "Application name:",
     "fastapi.run.options.autodetect": "<detect automatically>"
   },
   "messages/PythonProfilerBundle.properties": {
@@ -1765,7 +1779,8 @@
   },
   "messages/QodanaBundle.properties": {
     "qodana.problem.description.with.level": "[{0}] Qodana: {1}",
-    "qodana.problem.description.without.level": "Qodana: {0}"
+    "qodana.problem.description.without.level": "Qodana: {0}",
+    "text.qodana.result": "[{0}] Qodana: {1}"
   },
   "messages/QuarkusBundle.properties": {
     "quarkus.starter.version.label": "Quarkus:"
@@ -1777,8 +1792,6 @@
     "run.configuration.messages.runner.version": "''{0}'' gem:",
     "cucumber.jruby.run.configuration.type.name": "JRuby Cucumber",
     "run.configuration.tests.display.name": "Test::Unit/Shoulda/Minitest",
-    "run.configuration.script.port.bad.format": "Incorrect 'Port' value",
-    "run.configuration.script.ip.bad.format": "Incorrect 'IP address' value",
     "minitest.run.configuration.prefix": "Minitest: {0}",
     "rspec.run.configuration.prefix": "RSpec: {0}",
     "cucumber.run.configuration.prefix": "Cucumber: {0}",
@@ -1795,6 +1808,12 @@
     "dialog.generate.cucumber.tframework.testunit": "Test::Unit(&T)",
     "dialog.generate.cucumber.sframework.capybara": "Capybara(&C)",
     "dialog.generate.cucumber.sframework.webrat": "Webrat(&W)",
+    "color.settings.rhtml.scriptlet.start": "Scriptlet start",
+    "color.settings.rhtml.scriptlet.end": "Scriptlet end",
+    "color.settings.rhtml.expr.start": "Expression start",
+    "color.settings.rhtml.expr.end": "Expression end",
+    "color.settings.rhtml.scripting.bkg": "Ruby injection background",
+    "color.settings.rhtml.omit.new.line": "Omit new line modifier",
     "module.rails.create.app.presentable.name": "Rails API",
     "rails.project.module.view.nodes.minitest.shoulda.presentable": "Minitest/Shoulda",
     "jruby.framework.configurable.select.sdk.text": "JRuby SDK:",
@@ -1805,10 +1824,22 @@
     "ruby.project.wizard.tab.project.generator.ruby.sdk": "Ruby SDK(&S):",
     "gem.build.options.dialog.title": "{0} Gem {1}",
     "refactoring.extract.module.context.static": "static (extend)(&E)",
+    "ruby.debugger.verbose.output": "Verbose debugger output",
+    "ruby.debugger.ignore.non.project": "Ignore non-project sources",
+    "ruby.debugger.attach.to.subprocesses.automatically.text": "Attach to subprocesses automatically while debugging",
+    "ruby.debugger.read.frames.of.non.suspended.threads.text": "Read frames of non-suspended threads (not supported for Ruby 2.0)",
     "ruby.ide.sdk.configurable.create.rvm.gemset.sdk.label": "Ruby SDK(&S):",
     "ruby.ide.sdk.configurable.create.rvm.gemset.text.edit": "RVM Gemset(&G):",
     "ruby.rbenv.gemset.name": "Rbenv gemset",
     "ruby.action.create.new.test.dialog.kind.testUnit": "Test::Unit",
+    "ruby.code.style.indent.when.cases": "Indent when cases",
+    "ruby.code.style.spaces.around.braces": "Curly braces in hashes",
+    "ruby.code.style.spaces.around.braces.blocks": "Curly braces in blocks",
+    "ruby.code.style.spaces.around.arrows": "Hash rockets",
+    "ruby.code.style.spaces.around.operators.range": "Range operators",
+    "ruby.code.style.spaces.around.operators.other": "Other operators",
+    "ruby.code.style.force.newlines.around.visibility.modifiers": "Force newlines around visibility modifiers",
+    "ruby.code.style.convert.brace.block.by.enter": "Convert {} blocks to do..end by Enter",
     "dialog.rails.i18n.create.property.translation.example": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "test.frameworks.names.testunit": "Test::Unit",
     "remote.interpreter.default.interpreter.path": "/usr/bin/ruby",
@@ -1816,32 +1847,22 @@
     "rails.action.cable.gutter.title": "Action cable",
     "run.anything.rvm.use.undefined": "<undefined>",
     "run.anything.select.rbenv.shell.completion.group": "rbenv shell",
+    "ruby.smart.keys.option.interpolation": "Start ruby interpolation in strings on #",
     "ruby.presentation.invalid": "<invalid>",
     "ruby.presentation.unknown": "<unknown>",
     "action.rspec.LetIntroduce.text": "RSpec 'let'",
     "group.ROR_TOOLS.text": "Ruby on Rails",
+    "action.org.jetbrains.plugins.ruby.gem.bundler.actions.RunBundlerInitAction.text": "I&nit",
     "group.BUNDLER_ACTIONS.text": "Bundler(&B)",
     "group.GEM_BUILD_ACTION.text": "Gem (&G)",
+    "settings.highlight.rdoc.and.ruby.syntax.in.comments": "Highlight RDoc and ruby syntax in comments",
     "parsing.error.ruby": "[RUBY] {0}",
-    "show.migration.fields": "Database Attributes",
     "class.anonymous": "<anonymous>",
-    "migration.fields": "Database attributes",
     "border.title.ruby.i18n": "Ruby i18n",
     "ruby.intentions.category.erb": "Ruby/ERB",
     "ruby.intentions.category.i18n": "Ruby/I18n",
     "sdk.ruby.new.wizard.label": "Ruby SDK:",
-    "rails.wizard.project.sdk": "Ruby SDK:",
-    "advanced.setting.editor.comment.remove.remove.empty.by.enter": "Delete empty line comment with Enter",
-    "run.configuration.script.port.missing": "'Port' is required",
-    "run.configuration.script.ip.missing": "'IP address' is required",
-    "run.configuration.script.browser.url.missing": "'Browser URL' is required",
-    "rails.wizard.project.select.new.rails.version.to.install.title": "Select Rails Version",
-    "rails.wizard.project.rails.version.tooltip": "<html>The <b>rails</b> gem will be installed upon project creation</html>",
-    "advanced.setting.ruby.project.view.show.primary.declaration": "Show a file's matching declaration instead of the file in the Project View",
-    "advanced.setting.ruby.project.view.show.primary.declaration.description": "Presents a file in the Project View using the name and icon of the matching (by name) class, module, or constant",
-    "rails.wizard.project.rails.name.format.error.number": "The name should not begin with a number",
-    "rails.wizard.project.rails.name.format.error.reserved.words": "\"{0}\" is a reserved keyword",
-    "rails.wizard.project.rails.name.format.error.app.name": "\"{0}\" is a reserved constant name"
+    "rails.wizard.project.sdk": "Ruby SDK:"
   },
   "messages/RCovBundle.properties": {
     "rcov.support.disabled.info.link": "https://youtrack.jetbrains.com/issue/RUBY-29645"
@@ -1863,12 +1884,7 @@
     "debugger.global.stack.frame": "[global]",
     "create.new.r.markdown.file.notebook": "HTML Notebook",
     "dataframe.viewer.page.count": "/{0}",
-    "rstudioapi.show.dialog.message": "{0}\n<a href=\"{1}\">{1}</a>",
-    "r.colors.document.comment": "Document Comment",
-    "r.colors.local.variable": "Variables//Local Variable",
-    "r.colors.variable.access": "Variables//Variable Access",
-    "r.colors.closure.variable": "Variables//Closure Variable",
-    "r.colors.named.argument": "Named Argument"
+    "rstudioapi.show.dialog.message": "{0}\n<a href=\"{1}\">{1}</a>"
   },
   "messages/RSBundle.properties": {
     "webservices.file.templates.group.name": "JAX-RS"
@@ -1891,9 +1907,8 @@
     "visibility.protected": "protected(&O)",
     "visibility.private": "private(&V)",
     "visibility.package.local": "Package local(&K)",
-    "extract.superclass.command.name": "Extracting Superclass {0} from {1}",
     "rename.target.text.0.1": "{0} → ''{1}''",
-    "rename.0.and.its.usages.preview.text": "Renames {0} and its usages"
+    "progress.title.collecting.suggested.names": "Collecting suggested names"
   },
   "messages/RelaxngBundle.properties": {
     "relaxng.convert-schema.advanced-options.dtd.checkbox.generate-start": "generate-start(&G)",
@@ -1926,11 +1941,7 @@
     "rest.client.request.response.body.empty": "<Response body is empty>",
     "http.request.diff.compare.with.dialog.title": "{0} vs {1} ({2})",
     "rest.client.0.of.1.kb.indicator.text": "{0}/{1}Kb",
-    "http.client.code.style.inspection.space.in.url.inspection.name": "Whitespace in URL",
-    "http.client.code.style.inspection.in.path.text": "Whitespace inside URL path segment. Use Split Line action for splitting URL correctly: {0}",
-    "http.client.code.style.inspection.in.query.name.text": "Whitespace inside query parameter name segment. Use Split Line action for splitting URL correctly: {0}",
-    "http.client.code.style.inspection.in.query.value.text": "Whitespace inside query parameter value segment. Use Split Line action for splitting URL correctly: {0}",
-    "http.client.code.style.inspection.remove.space.fix.text": "Remove inappropriate space from URL"
+    "http.request.select.before.run.action.text": "<Select Environment Before Run>"
   },
   "messages/RubyDockerBundle.properties": {
     "ruby.docker.compose.up.project": "\"docker-compose up\"",
@@ -1943,28 +1954,40 @@
   },
   "messages/SASSBundle.properties": {
     "color.settings.sass.name": "Sass/SCSS",
-    "inspections.group.name": "Sass/SCSS"
+    "inspections.group.name": "Sass/SCSS",
+    "parsing.error.unexpected.variable": "Unexpected variable"
   },
   "messages/SSRBundle.properties": {
+    "import.template.script.warning": "Note that the imported template contains {1,choice,1#a Groovy Script modifier|1<{1} Groovy Script modifiers} and any script has access to the complete {0} internals. Make sure that the script does not cause damage before using this template.",
     "reference.0.label": "Reference={0}",
     "script.0.label": "Script={0}",
     "text.0.label": "Text={0}",
     "type.0.label": "Type={0}",
+    "no.filters.whole.template.label": "No modifiers added\nfor the whole template",
+    "no.filters.for.0.label": "No modifiers added\nfor ${0}$",
+    "no.script.for.0.label": "No script added\nfor ${0}$",
+    "filters.for.whole.template.title": "Modifiers for the whole template:",
+    "filters.for.0.title": "Modifiers for ${0}$:",
+    "script.filter.match.variable.help.text": "<p>Use the GroovyScript IntelliJ API to modifier the search results. When the specified script returns <code>false</code>, the found element will not be in the search results. Non-boolean script results will be converted to boolean. <p>Available variables: {0}",
+    "invert.filter": "Invert modifier",
     "xml_html.category": "XML/HTML",
     "j2ee.category": "Java/Java EE",
     "min.occurs.tooltip.message": "[{0},{1}]",
     "file.type.pattern.context": "{0} - {1}",
-    "replace.configuration.display.text": "{0} ⇨ {1}"
+    "replace.configuration.display.text": "{0} ⇨ {1}",
+    "filter.button": "Toggle Modifier Panel",
+    "filter.button.description": "Toggle the variable modifiers panel"
   },
   "messages/ScalaAkkaBundle.properties": {
     "intention.category.scala.akka": "Scala/Akka"
   },
   "messages/ScalaBundle.properties": {
     "import.hint.text": "{0}? {1} Alt+Enter",
+    "jdk": "JDK(&J):",
     "scala.console.actions.scala.repl": "Scala REPL",
     "scalarepl.menu.action.text": "Scala REPL…",
     "scala.console.config.display.name": "Scala REPL",
-    "auto.import.find.more.configuration.options": "Find more configuration options in <a>Code Style</a>",
+    "lazy.val.not.initialized": "<not initialized>",
     "method.of.containingclass": "{0}/{1}",
     "scala3.panel.title": "Scala 3",
     "def.name": "def {0}",
@@ -1978,7 +2001,6 @@
   },
   "messages/ScalaCodeInsightBundle.properties": {
     "generate.tostring.method.action.text": "toString()",
-    "change.access.modifier.preview": "Changes modifier of ''{0}'' to {1}",
     "macro.annotated": "annotated(\"annotation qname\")",
     "macro.implicit.value.class.name": "implicitValueClassName(TYPE_TEXT)",
     "macro.method.returnType": "methodReturnType()",
@@ -1988,11 +2010,7 @@
     "marco.typeParameters.without.bounds": "typeParamsWithoutBounds(CLASS)"
   },
   "messages/ScalaInspectionBundle.properties": {
-    "fix.nonlocal.return.check.compiler.option": "Only with -Xlint:nonlocal-return",
-    "family.name.scala.scaladoc": "Scala: Scaladoc",
-    "fix.private.shadow.compiler.option.label": "Show only with -Xlint:private-shadow",
-    "fix.private.shadow.fatal.warnings.label": "Show as error if -Xlint:fatal-warnings present",
-    "access.modifier.can.be.weaker": "Access modifier can be weaker"
+    "family.name.scala.scaladoc": "Scala: Scaladoc"
   },
   "messages/ScalaPlay2Bundle.properties": {
     "play.2": "Play 2",
@@ -2008,6 +2026,12 @@
     "sbt.shell.title": "sbt shell",
     "sbt.shell.ctrl.d.eof": "Ctrl+D EOF"
   },
+  "messages/ScalarBundle.properties": {
+    "install.general.error": "Could not extract Scalar",
+    "install.success.message": "Successfully downloaded and set Scalar",
+    "register.general.error": "Could not change repo registration in Scalar",
+    "action.Git.Scalar.Install.text": "Download and Install Scalar"
+  },
   "messages/SeamBundle.properties": {
     "action.Seam.Create.Components.Xml.text": "Seam components.xml"
   },
@@ -2016,8 +2040,8 @@
   },
   "messages/SeleniumSharedBundle.properties": {
     "page.object.items.add.by.type": "{0}",
-    "page.object.analyser.title": "Add Important Page Elements",
-    "page.object.analyser.locators": "Locators:"
+    "page.object.unresolved.link.fix": "Create Selenium Page Object ''{0}''",
+    "selenium.page.object.url": "URL (optional):"
   },
   "messages/SerialMonitorBundle.properties": {
     "uart.stopbits.1.5": "1.5",
@@ -2037,16 +2061,19 @@
     "review.chat.editor.tab.tooltip": "{0}：{1}",
     "review.at.time": "{0} {1}",
     "review.by.author.at.time": "{0}，{1} {2}",
+    "space.promo.text.full": "A complete platform for software development integrated with your favorite JetBrains IDEs. Combine Git hosting, code review, CI/CD, packages, issues, docs, and chats – all in one place",
     "column.name.commit.status": "Space Automation"
   },
   "messages/SpaceGatewayBundle.properties": {
     "connector.title": "JetBrains Space",
     "login.page.title": "JetBrains Space",
+    "welcome.screen.tab.empty.state.description": "<html><center>A complete platform for software development<br>integrated with your favorite JetBrains IDEs</center></html>",
+    "dialog.message.env.name.cannot.be.empty": "Enter an environment name",
     "label.dev.env.ide": "IDE:",
     "label.dev.file": "Devfile:",
-    "create.rd.rider.select.solution.file.dialog.title": "Select Solution File",
-    "create.env.creating.environment": "Creating environment…",
-    "create.env.dialog.title.cannot.create.dev.environment": "Cannot Create Dev Environment"
+    "label.some.environment.variables.are.missing": "Environment variables are missing. <a href='configure'>Configure them…</a>",
+    "text.user.secrets.and.parameters.description": "User secrets and parameters can be created on the <a href='https://user-env'>Environment Variables</a> page",
+    "dialog.message.repository.has.no.branches": "Repository has no branches"
   },
   "messages/SpaceVcsBundle.properties": {
     "action.com.intellij.space.vcs.share.SpaceShareProjectAction.Vcs.Toolbar.Widget.text": "Space..."
@@ -2071,6 +2098,8 @@
   },
   "messages/SpringBootApiBundle.properties": {
     "spring.boot.name": "Spring Boot",
+    "configuration.properties.prefix.must.be.specified": "Prefix not specified",
+    "configuration.properties.prefix.must.be.non.empty": "Prefix is empty",
     "icon.icons.SpringBoot.tooltip": "Spring Boot",
     "icon.icons.SpringBoot_Overlay.tooltip": "Spring Boot",
     "spring.boot.intention.category": "Spring Boot"
@@ -2088,11 +2117,8 @@
     "spring.bean": "Spring Bean",
     "facet.context.edit.parent.none.selected": "<none>",
     "framework.title.spring": "Spring(&S)",
-    "model.qualifiers.in.class.inspection.display.name": "Incorrect autowiring in Spring bean components",
     "action.Spring.Beans.Generate.Action.text": "Spring Bean",
-    "spring.beans.select.in.target": "Spring Bean",
-    "spring.bean.class.tooltip.show.in.description": "Select in Spring View",
-    "model.add.constructor.args.for.method.quickfix.description": "Generate missing 'constructor-arg' tags"
+    "spring.beans.select.in.target": "Spring Bean"
   },
   "messages/SpringCloudBundle.properties": {
     "spring.cloud.inspection.group.name": "Spring Cloud"
@@ -2166,18 +2192,32 @@
     "ide.service.view.local.port.forwarding.text": "{0} → {1}",
     "ide.service.view.remote.port.forwarding.text": "{0} ← {1}"
   },
+  "messages/StaticAnalysisBundle.properties": {
+    "eap.license.message": "By using this Docker image, you agree to\n- JetBrains Privacy Policy (https://jb.gg/jetbrains-privacy-policy)\n- JETBRAINS EAP USER AGREEMENT (https://jb.gg/jetbrains-user-eap)\n\nThe Docker image includes an evaluation license.\nThe license will expire in {0} days.\nPlease ensure you pull a new image on time.",
+    "release.license.message": "By using this Docker image, you agree to\n- JetBrains Privacy Policy (https://jb.gg/jetbrains-privacy-policy)\n- Qodana Community Linters Agreement (https://jb.gg/qodana-community-linters)",
+    "eap.license.message.with.expiration.date": "By using this Docker image, you agree to\n- JetBrains Privacy Policy (https://jb.gg/jetbrains-privacy-policy)\n- JETBRAINS EAP USER AGREEMENT (https://jb.gg/jetbrains-user-eap)\n\nThe Docker image includes an evaluation license.\nThe license will expire on {0}.\nPlease ensure you pull a new image on time.",
+    "usage.help.description": "inspect.sh qodana [OPTIONS] PROJECT_PATH RESULT_PATH\nRun inspections on PROJECT_PATH directory.\nResults and logs are stored in RESULT_PATH.\nOptions:"
+  },
   "messages/Struts2Bundle.properties": {
     "struts2": "Struts 2",
     "dom.extendable.class.converter.type.spring": "Spring Bean",
     "inspections.group.display.name": "Struts 2",
-    "intentions.family.name": "Struts 2",
-    "notification.group.struts2": "Struts 2"
+    "intentions.family.name": "Struts 2"
   },
   "messages/SvnBundle.properties": {
     "group.SubversionFilePopupGroup.text": "Subversion(_S)",
+    "label.text.delete.stored.credentials": "Delete all stored credentials for 'http', 'svn' and 'svn+ssh' protocols",
+    "ssh.settings.subversion.config.choice.title": "Subversion config",
     "label.update.url": "URL:",
     "label.working.copy.url": "URL:",
+    "use.idea.proxy.as.default.label.text": "Only HTTP proxy can be used as default",
+    "navigate.to.idea.proxy.settings": "Navigate to general proxy settings",
     "value.patch.file.name": "TheirsChanges.patch",
+    "settings.check.mergeinfo": "Check svn:mergeinfo in target subtree when preparing for merge",
+    "settings.maximum.revisions.number": "Maximum number of revisions to look back in annotations:",
+    "settings.HTTP.timeout": "HTTP timeout:",
+    "settings.SSH.connection.timeout": "SSH connection timeout:",
+    "settings.SSH.read.timeout": "SSH read timeout:",
     "svn.short.name.with.mnemonic": "SVN(_S)"
   },
   "messages/SwaggerBundle.properties": {
@@ -2195,6 +2235,7 @@
     "openapi.3.json.schema.remote.url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/schemas/v3.0/schema.json",
     "settings.remote.specification.add.from.hub": "Swagger Hub",
     "settings.hub.title": "Swagger Hub",
+    "settings.hub.custom.host.info.url": "https://app.swaggerhub.com/help/enterprise/index",
     "settings.swagger.ui.title": "Swagger UI",
     "run.configuration.codegen.display.name": "Swagger Codegen",
     "run.configuration.bundled.swagger.codegen.2": "Swagger Codegen 2",
@@ -2208,32 +2249,11 @@
   "messages/SwiftBundle.properties": {
     "action.Swift.Generate.Description.text": "description…",
     "action.Swift.Generate.DebugDescription.text": "debugDescription…",
-    "change.info.async.throws.label": "async/throws:",
-    "intention.extract.conformance.to.extension.familyName": "Extract conformance to extension",
-    "intention.extract.members.to.extension.familyName": "Extract members to extension",
-    "inline.error.unexpected.error": "Unexpected error when inlining a function",
-    "intention.extract.from.extension.to.type.declaration.familyName": "Extract members to type declaration",
-    "intention.extract.from.extension.to.type.declaration.original.type.not.found": "Original type declaration not found",
-    "intention.extract.from.extension.to.type.declaration.original.type.not.in.same.file": "Original type declaration is not in the same file",
-    "code.style.code.generation.doc.comment.tag.delimiter": "List item delimiter",
-    "intention.extract.struct.0.to.extension": "Extract struct ''{0}'' to extension",
-    "intention.extract.class.0.to.extension": "Extract class ''{0}'' to extension",
-    "intention.extract.enum.0.to.extension": "Extract enum ''{0}'' to extension",
-    "intention.extract.property.0.to.extension": "Extract property ''{0}'' to extension",
-    "intention.extract.function.0.to.extension": "Extract function ''{0}'' to extension",
-    "intention.extract.subscript.to.extension": "Extract subscript to extension",
-    "intention.extract.initializer.to.extension": "Extract initializer to extension",
-    "intention.extract.typealias.0.to.extension": "Extract typealias ''{0}'' to extension",
-    "intention.extract.multiple.members.to.extension": "Extract members to extension",
-    "inline.function.description": "Replaces a function call with its body",
-    "inline.error.cannot.access.symbol.0": "Cannot access symbol {0}"
+    "change.info.async.throws.label": "async/throws:"
   },
   "messages/SwiftPackageManagerBundle.properties": {
     "swift.package.manager": "Swift Package Manager",
     "group.Swift.PackageManager.Menu.text": "Swift Package Manager"
-  },
-  "messages/TailwindCssBundle.properties": {
-    "notification.group.tailwind": "Tailwind CSS"
   },
   "messages/TaskBundle.properties": {
     "jira.default.query": "assignee = currentUser() and resolution = Unresolved order by updated"
@@ -2244,9 +2264,6 @@
     "additionalDeploymentSettings.editorTitle": "Spring tc Server",
     "serverEditor.editorTitle": "Spring tc Server",
     "configurationType.displayName": "Spring tc Server"
-  },
-  "messages/TerminalBundle.properties": {
-    "advanced.setting.terminal.show.application.title": "Show application title"
   },
   "messages/TideBundle.properties": {
     "tms.connection.url": "URL:"
@@ -2277,6 +2294,7 @@
     "memory.usage.panel.message.text": "{0,number,####}/{1,number,####}M"
   },
   "messages/UIDesignerBundle.properties": {
+    "title.add.component": "Add Component",
     "bind.to.bean.ismodified.checkbox": "isModified()",
     "bind.to.bean.setdata.checkbox": "setData()",
     "bind.to.bean.getdata.checkbox": "getData()",
@@ -2289,8 +2307,7 @@
     "hprof.stub.first.results": "<shown first %,d results>",
     "hprof.object.view.static": "statically from",
     "hprof.object.view.of": "/",
-    "jfr.ui.timeline.cpu.load.label": "CPU {0}",
-    "settings.async.profiler.collect.native.calls": "Collect native calls (GC threads, JNI calls, etc.)"
+    "jfr.ui.timeline.cpu.load.label": "CPU {0}"
   },
   "messages/UsageViewBundle.properties": {
     "find.file.size.megabytes": "{0} MB",
@@ -2301,58 +2318,29 @@
   },
   "messages/VcsBundle.properties": {
     "group.name.version.control": "VCS(&V)",
-    "searching.for.code.smells.freezing.process": "Before Check-in Code Analysis",
     "commit.dialog.default.commit.operation.name": "Comm&it",
-    "patch.binary.decoder.line.error": "Cannot encode binary file patch: wrong line size",
-    "patch.binary.decoder.char.error": "Cannot decode binary file patch: wrong char-size symbol",
-    "patch.binary.decoder.decompress.error": "Cannot decode binary file patch: cannot decompress data",
-    "patch.creation.can.not.write.patch.error": "Cannot write patch to specified file: {0}",
-    "patch.import.additional.info.error": "Cannot import additional patch info: {0}",
-    "shelve.show.already.unshelved.action": "Already Unshelved",
-    "settings.issue.navigation.patterns": "{0} will search for the specified patterns in check-in comments and link them to issues in your issue tracker",
-    "message.read.only.status.title": "{0}: cannot see read-only status",
-    "message.read.only.status.content": "You are logged as <b>root</b>, that''s why:<br><br>- {0} cannot see read-only status of files.<br>- All files are treated as writeable.<br>- Automatic file checkout on modification is impossible.",
     "vcs.generic.name.with.mnemonic": "VCS(_S)",
     "vcs.common.labels.vcs": "VCS:",
     "vcs.common.labels.url": "URL:",
-    "error.cant.perform.operation.now": "Cannot {0} Now",
     "file.history.details.hash.author.on.date.at.time": "{0} {1}，{2} {3}",
-    "selection.history.can.not.load.message": "Cannot load revision contents",
-    "show.diff.from.annotation.action.error.can.not.load.data.to.show.diff": "Cannot load data to show diff",
-    "changes.can.not.find.patch.for.path.in.patch.file": "Cannot find patch for {0} in patch file.",
+    "plugins.configurable.show": "status.text.Show",
     "change.dialog.title.change.list.name": "{0} [{1}]",
-    "checkin.can.not.load.current.revision": "Cannot load current revision",
-    "checkin.can.not.load.previous.revision": "Cannot load previous revision",
     "sequence.concatenation.separator": ", ",
     "label.multi.author.modified.code": "{0} +{1} *",
     "label.multi.author.not.modified.code": "{0} +{1}",
-    "label.single.author.modified.code": "{0} *",
-    "action.description.refresh.compare.with.local.panel": "Refresh changes",
-    "label.commit.checks.failed.unknown.reason": "Checks failed",
-    "commit.checks.error.indexing": "Code Analysis Is Not Possible Right Now",
-    "commit.checks.error.indexing.message": "Commit checks cannot be performed while {0} updates indexes in the background.\nYou can commit the changes without running checks, or you can wait until indexes are built.",
-    "checkin.commit.checks.failed": "Commit Check Failed",
-    "checkin.commit.checks.failed.with.error.message": "Commit check failed: {0}",
-    "vcs.preview.panel.last.commit.modified.line": "Line modified in last commit",
-    "error.adding.files.notification.title": "Failed to add files"
+    "label.single.author.modified.code": "{0} *"
   },
   "messages/VcsLogBundle.properties": {
     "vcs.log.action.intellisort.title": "IntelliSort: {0}",
-    "vcs.log.filter.accessible.name": "{0}：{1}",
-    "vcs.log.failed.loading.details": "Cannot load details for commit {0} in {1}"
+    "vcs.log.filter.accessible.name": "{0}：{1}"
   },
   "messages/VisualizationBundle.properties": {
     "paginator.of": "/{0}"
   },
-  "messages/ViteBundle.properties": {
-    "vite.project.generator.presentable.package.name": "&Vite(&V):"
-  },
   "messages/VueBundle.properties": {
     "vue.project.generator.name": "Vue.js",
     "vue.project.generator.presentable.package.name": "Vue CLI(&C)",
-    "vue.symbol.presentation": "Vue {0} {1}",
-    "vue.inspection.display.name.unrecognized.slot": "Unrecognized slot",
-    "vue.inspection.display.name.unrecognized.directive": "Unrecognized directive"
+    "vue.symbol.presentation": "Vue {0} {1}"
   },
   "messages/W3ValidatorsBundle.properties": {
     "inspection.message.w3c": "W3C: {0}"
@@ -2379,6 +2367,9 @@
     "glassfish.jax.ws.2.x.ri.metro.1.x.jwsdp.2.0": "Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2",
     "websphere.platform.name": "WebSphere 6.X",
     "axis2.display.name": "Apache Axis 2",
+    "settings.external.engines": "External engines:",
+    "settings.prefix.path.for.web.services.url": "Prefix path for web services URL:",
+    "settings.maximum.vm.heap.size.when.launching.tools.mb": "Maximum VM heap size when launching tools (Mb):",
     "group.JAXB.text": "JAXB(_X)",
     "jaxb.generation.dialog.sdk.label": "SDK:",
     "jaxb.generation.dialog.xjc.label": "XJC:",
@@ -2439,9 +2430,6 @@
     "label.xpath": "XPath:",
     "tab.title.xpath": "XPath ''{0}''"
   },
-  "messages/XmlAnalysisBundle.properties": {
-    "xml.quickfix.change.attribute.value": "Change value to {0}"
-  },
   "messages/XmlBundle.properties": {
     "web.editor.configuration.title": "HTML/CSS",
     "xml.editor.options.misc.title": "XML/HTML",
@@ -2451,8 +2439,7 @@
     "xml.schemas.radio.button.html.5": "HTML 5",
     "dialog.edit.template.checkbox.html": "HTML (&H)",
     "dialog.edit.template.checkbox.xml": "XML (&X)",
-    "configurable.name.html.css": "HTML/CSS",
-    "html.inspections.wrong.attribute.value": "Wrong attribute value"
+    "configurable.name.html.css": "HTML/CSS"
   },
   "messages/packageSearchBundle.properties": {
     "packagesearch.repository.copyableInfo.id": "ID: {0}",

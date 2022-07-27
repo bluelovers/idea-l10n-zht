@@ -2,13 +2,15 @@
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
     <option name="kotlin" path="ActionManager" hit="Kotlin" />
-    <option name="kotlin" path="ActionManager" hit="Kotlin 工作表" />
-    <option name="工作表" path="ActionManager" hit="Kotlin 工作表" />
+    <option name="kotlin" path="ActionManager" hit="Kotlin 工作表(測試版)" />
+    <option name="工作表" path="ActionManager" hit="Kotlin 工作表(測試版)" />
+    <option name="測試版" path="ActionManager" hit="Kotlin 工作表(測試版)" />
     <option name="kotlin" path="ActionManager" hit="Kotlin 類/檔案" />
     <option name="檔案" path="ActionManager" hit="Kotlin 類/檔案" />
     <option name="類" path="ActionManager" hit="Kotlin 類/檔案" />
-    <option name="kotlin" path="ActionManager" hit="Kotlin 腳本" />
-    <option name="腳本" path="ActionManager" hit="Kotlin 腳本" />
+    <option name="kotlin" path="ActionManager" hit="Kotlin 腳本(測試版)" />
+    <option name="測試版" path="ActionManager" hit="Kotlin 腳本(測試版)" />
+    <option name="腳本" path="ActionManager" hit="Kotlin 腳本(測試版)" />
     <option name="kotlin" path="ActionManager" hit="Kotlin 重構測試" />
     <option name="重構測試" path="ActionManager" hit="Kotlin 重構測試" />
     <option name="setup" path="ActionManager" hit="SetUp 函數" />
@@ -33,6 +35,7 @@
     <option name="kotlin" path="ActionManager" hit="創建新的 Kotlin 腳本" />
     <option name="創建新的" path="ActionManager" hit="創建新的 Kotlin 腳本" />
     <option name="腳本" path="ActionManager" hit="創建新的 Kotlin 腳本" />
+    <option name="啟用遷移檢測" path="ActionManager" hit="啟用遷移檢測" />
     <option name="在開啟的專案上測試移動重構" path="ActionManager" hit="在開啟的專案上測試移動重構" />
     <option name="java" path="ActionManager" hit="將 Java 檔案轉換為 Kotlin 檔案" />
     <option name="kotlin" path="ActionManager" hit="將 Java 檔案轉換為 Kotlin 檔案" />
@@ -48,6 +51,7 @@
     <option name="類型別名" path="ActionManager" hit="類型別名…" />
     <option name="類型參數" path="ActionManager" hit="類型參數…" />
     <option name="輔助構造函數" path="ActionManager" hit="輔助構造函數" />
+    <option name="執行程式碼遷移" path="ActionManager" hit="執行程式碼遷移" />
     <option name="kotlin" path="ActionManager" hit="設定 Kotlin 延伸模組更新" />
     <option name="延伸模組更新" path="ActionManager" hit="設定 Kotlin 延伸模組更新" />
     <option name="設定" path="ActionManager" hit="設定 Kotlin 延伸模組更新" />
@@ -203,6 +207,38 @@
     <option name="類和接口" hit="類和接口//類型別名" />
     <option name="類型別名" hit="類和接口//類型別名" />
     <option name="語意高亮顯示" hit="語意高亮顯示" />
+  </configurable>
+  <configurable id="preferences.language.Kotlin" configurable_name="Kotlin">
+    <option name="kotlin" hit="Kotlin" />
+    <option name="k" hit="再次檢查 K " />
+    <option name="再次檢查" hit="再次檢查 K " />
+    <option name="分析器版本" hit="分析器版本 " />
+    <option name="dsl" hit="在 Gradle 專案匯入期間載入 Gradle Kotlin DSL 腳本設定" />
+    <option name="gradle" hit="在 Gradle 專案匯入期間載入 Gradle Kotlin DSL 腳本設定" />
+    <option name="kotlin" hit="在 Gradle 專案匯入期間載入 Gradle Kotlin DSL 腳本設定" />
+    <option name="在" hit="在 Gradle 專案匯入期間載入 Gradle Kotlin DSL 腳本設定" />
+    <option name="腳本設定" hit="在 Gradle 專案匯入期間載入 Gradle Kotlin DSL 腳本設定" />
+    <option name="專案匯入期間載入" hit="在 Gradle 專案匯入期間載入 Gradle Kotlin DSL 腳本設定" />
+    <option name="i" hit="安裝 I " />
+    <option name="安裝" hit="安裝 I " />
+    <option name="實驗性功能" hit="實驗性功能" />
+    <option name="kotlin" hit="當前 Kotlin 延伸模組版本 " />
+    <option name="當前" hit="當前 Kotlin 延伸模組版本 " />
+    <option name="延伸模組版本" hit="當前 Kotlin 延伸模組版本 " />
+    <option name="搶先體驗預覽" hit="搶先體驗預覽" />
+    <option name="java" hit="新 Java 到 Kotlin 轉換器" />
+    <option name="kotlin" hit="新 Java 到 Kotlin 轉換器" />
+    <option name="到" hit="新 Java 到 Kotlin 轉換器" />
+    <option name="新" hit="新 Java 到 Kotlin 轉換器" />
+    <option name="轉換器" hit="新 Java 到 Kotlin 轉換器" />
+    <option name="c" hit="更新通道 C  " />
+    <option name="更新通道" hit="更新通道 C  " />
+    <option name="穩定" hit="穩定" />
+    <option name="kotlin" hit="適用於 Kotlin 的 ML 補全" />
+    <option name="ml" hit="適用於 Kotlin 的 ML 補全" />
+    <option name="的" hit="適用於 Kotlin 的 ML 補全" />
+    <option name="補全" hit="適用於 Kotlin 的 ML 補全" />
+    <option name="適用於" hit="適用於 Kotlin 的 ML 補全" />
   </configurable>
   <configurable id="preferences.sourceCode.Kotlin" configurable_name="Kotlin">
     <option name="" path="Import" hit=" 使用的名稱" />
@@ -405,14 +441,10 @@
     <option name="強制加大括號" path="換行和大括號" hit="強制加大括號" />
     <option name="強制換行位置" path="換行和大括號" hit="強制換行位置:" />
     <option name="參數註解" path="換行和大括號" hit="參數註解" />
-    <option name="permits" path="換行和大括號" hit="擴展/實施/permits 關鍵字" />
-    <option name="關鍵字" path="換行和大括號" hit="擴展/實施/permits 關鍵字" />
-    <option name="實施" path="換行和大括號" hit="擴展/實施/permits 關鍵字" />
-    <option name="擴展" path="換行和大括號" hit="擴展/實施/permits 關鍵字" />
-    <option name="permits" path="換行和大括號" hit="擴展/實作/permits 列表" />
-    <option name="列表" path="換行和大括號" hit="擴展/實作/permits 列表" />
-    <option name="實作" path="換行和大括號" hit="擴展/實作/permits 列表" />
-    <option name="擴展" path="換行和大括號" hit="擴展/實作/permits 列表" />
+    <option name="實作關鍵字" path="換行和大括號" hit="擴展/實作關鍵字" />
+    <option name="擴展" path="換行和大括號" hit="擴展/實作關鍵字" />
+    <option name="實作列表" path="換行和大括號" hit="擴展/實作列表" />
+    <option name="擴展" path="換行和大括號" hit="擴展/實作列表" />
     <option name="括號之前" path="空格" hit="括號之前" />
     <option name="換行符" path="換行和大括號" hit="換行符" />
     <option name="換行第一個調用" path="換行和大括號" hit="換行第一個調用" />
@@ -446,7 +478,7 @@
     <option name="case" path="換行和大括號" hit="縮排 'case' 分支" />
     <option name="分支" path="換行和大括號" hit="縮排 'case' 分支" />
     <option name="縮排" path="換行和大括號" hit="縮排 'case' 分支" />
-    <option name="範圍運算符" path="空格" hit="範圍運算符 (.., ..&lt;)" />
+    <option name="範圍運算符" path="空格" hit="範圍運算符 (..)" />
     <option name="表達式主體函數" path="換行和大括號" hit="表達式主體函數" />
     <option name="視覺參考線" path="換行和大括號" hit="視覺參考線" />
     <option name="賦值符號置於下一行" path="換行和大括號" hit="賦值符號置於下一行" />
@@ -458,6 +490,70 @@
     <option name="重新格式化時保持" path="換行和大括號" hit="重新格式化時保持" />
     <option name="鏈式方法調用" path="換行和大括號" hit="鏈式方法調用" />
     <option name="鍵入時換行" path="換行和大括號" hit="鍵入時換行" />
+  </configurable>
+  <configurable id="project.kotlinCompiler" configurable_name="Kotlin 編譯器">
+    <option name="" hit="     deprecated " />
+    <option name="deprecated" hit="     deprecated " />
+    <option name="" hit="     已棄用 " />
+    <option name="已棄用" hit="     已棄用 " />
+    <option name="amd" hit="AMD" />
+    <option name="api" hit="API 版本 I " />
+    <option name="i" hit="API 版本 I " />
+    <option name="版本" hit="API 版本 I " />
+    <option name="commonjs" hit="CommonJS" />
+    <option name="kotlin" hit="Kotlin 編譯器" />
+    <option name="編譯器" hit="Kotlin 編譯器" />
+    <option name="k" hit="Kotlin 編譯器版本 K " />
+    <option name="kotlin" hit="Kotlin 編譯器版本 K " />
+    <option name="編譯器版本" hit="Kotlin 編譯器版本 K " />
+    <option name="kotlin" hit="Kotlin 腳本 測試版 " />
+    <option name="測試版" hit="Kotlin 腳本 測試版 " />
+    <option name="腳本" hit="Kotlin 腳本 測試版 " />
+    <option name="jvm" hit="Kotlin 至 JVM" />
+    <option name="kotlin" hit="Kotlin 至 JVM" />
+    <option name="至" hit="Kotlin 至 JVM" />
+    <option name="javascript" hit="Kotlin 至 JavaScript" />
+    <option name="kotlin" hit="Kotlin 至 JavaScript" />
+    <option name="至" hit="Kotlin 至 JavaScript" />
+    <option name="latest" hit="Latest stable      " />
+    <option name="stable" hit="Latest stable      " />
+    <option name="amd" hit="UMD  如果可以 檢測 AMD 或 CommonJS 回退到普通 " />
+    <option name="commonjs" hit="UMD  如果可以 檢測 AMD 或 CommonJS 回退到普通 " />
+    <option name="umd" hit="UMD  如果可以 檢測 AMD 或 CommonJS 回退到普通 " />
+    <option name="回退到普通" hit="UMD  如果可以 檢測 AMD 或 CommonJS 回退到普通 " />
+    <option name="如果可以" hit="UMD  如果可以 檢測 AMD 或 CommonJS 回退到普通 " />
+    <option name="或" hit="UMD  如果可以 檢測 AMD 或 CommonJS 回退到普通 " />
+    <option name="檢測" hit="UMD  如果可以 檢測 AMD 或 CommonJS 回退到普通 " />
+    <option name="從不" hit="從不" />
+    <option name="從包含嵌入式源的其他模組內聯函數時" hit="從包含嵌入式源的其他模組內聯函數時" />
+    <option name="使編譯器行程在調用之間保持活動" hit="使編譯器行程在調用之間保持活動" />
+    <option name="啟用增量編譯" hit="啟用增量編譯" />
+    <option name="p" hit="在生成的程式碼前添加檔案 P  " />
+    <option name="在生成的程式碼前添加檔案" hit="在生成的程式碼前添加檔案 P  " />
+    <option name="c" hit="複製庫執行時檔案 C " />
+    <option name="複製庫執行時檔案" hit="複製庫執行時檔案 C " />
+    <option name="始終" hit="始終" />
+    <option name="將原始碼嵌入源映射" hit="將原始碼嵌入源映射 " />
+    <option name="w" hit="報告編譯器警告 W " />
+    <option name="報告編譯器警告" hit="報告編譯器警告 W " />
+    <option name="應用於全域" hit="普通  應用於全域 " />
+    <option name="普通" hit="普通  應用於全域 " />
+    <option name="k" hit="模組種類 K  " />
+    <option name="模組種類" hit="模組種類 K  " />
+    <option name="s" hit="生成源映射 S " />
+    <option name="生成源映射" hit="生成源映射 S " />
+    <option name="j" hit="目標 JVM 版本 J " />
+    <option name="jvm" hit="目標 JVM 版本 J " />
+    <option name="版本" hit="目標 JVM 版本 J " />
+    <option name="目標" hit="目標 JVM 版本 J " />
+    <option name="d" hit="目標目錄 D " />
+    <option name="目標目錄" hit="目標目錄 D " />
+    <option name="o" hit="要附加到生成的程式碼的檔案 O  " />
+    <option name="要附加到生成的程式碼的檔案" hit="要附加到生成的程式碼的檔案 O  " />
+    <option name="l" hit="語言版本 L " />
+    <option name="語言版本" hit="語言版本 L " />
+    <option name="a" hit="附加命令行參數 A  " />
+    <option name="附加命令行參數" hit="附加命令行參數 A  " />
   </configurable>
   <configurable id="preferences.language.Kotlin.scripting" configurable_name="Kotlin 腳本">
     <option name="dsl" hit="Gradle Kotlin DSL 腳本" />
