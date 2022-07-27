@@ -141,11 +141,11 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 
 			await lazyCommitFiles([
 				'./CHANGELOG.md',
-			], `build(changelog): update CHANGELOG ( ${__pluginVersion} )`);
+			], `build(changelog): update CHANGELOG ( ${__pluginVersion} )`).catch(() => void 0);
 
 			await lazyCommitFiles([
 				'./lib/const/publish-tags.json',
-			], `build(cache): update publish tags`);
+			], `build(cache): update publish tags`).catch(() => void 0);
 		}
 		else
 		{
