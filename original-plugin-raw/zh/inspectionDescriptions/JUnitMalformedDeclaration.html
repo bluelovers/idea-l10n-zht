@@ -7,7 +7,9 @@
   <li>使用 <code>@Nested</code> 注解的 static 内部类</li>
   <li>在没有源的情况下定义的形参化测试。</li>
   <li>具有未知、非 static 或无实参目标的 <code>@MethodSource</code> 的形参化测试。</li>
-  <li>形参化测试方法形参与指定的 <code>@ValueSource</code> 或 <code>@EnumSource</code> 值之间的类型不匹配</li>
+  <li>
+    具有无法转换为方法形参的 <code>@ValueSource</code> 或 <code>@EnumSource</code> 的形参化测试。
+  </li>
   <li>由 <code>@Test</code>、<code>@ParameterizedTest</code> 或 <code>@RepeatedTest</code> 中的多个注解的测试</li>
   <li>非 public 的 <code>setup()</code> 或 <code>tearDown()</code>方法，其返回类型不是 void 或接受实参。</li>
   <li>为 private，接受实参或为非 static 的 <code>suite()</code> 方法</li>
