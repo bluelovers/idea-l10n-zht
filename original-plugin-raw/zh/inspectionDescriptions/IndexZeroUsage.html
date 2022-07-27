@@ -1,14 +1,32 @@
 <html>
+<head>
+  <style type="text/css">
+    body, table {
+      font-family: Verdana, sans-serif;
+      font-size: 100%;
+      padding-left: 2mm;
+    }
+
+    #footer {
+      font-size: 95%;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
 <body>
-报告 <code>0</code> 在谓词索引中或者与函数 <code>position()</code> 的
-比较中的用法。 此类用法几乎在所有情况下都是错误，因为在 XPath 中，索引从 <code>1</code> 而<em>不是</em> <code>0</code> 开始。
+<p>
+  报告在谓词索引中或在与函数 <code>position()</code> 的比较中的意外使用零的情况。 这样的用法在几乎所有情况下都是错误，因为在 XPath 中，索引从 "1" 开始，而<em>不是</em> "0"。
+</p>
 
-<p><b>示例：</b></p>
+<p>
+  示例:
+</p>
 
-<pre><code>
-  //someelement[<b>position() = 0</b>]</code> or <code>//something[<b>0</b>]
-</code></pre>
+<p>
+  <code>//someelement[<b>position() = 0</b>]</code> or <code>//something[<b>0</b>]</code>
+</p>
 
-<p><small>由 XPathView + XSLT-Support 提供技术支持</small></p>
+<p id="footer">由 XPathView + XSLT-Support 提供技术支持</p>
 </body>
 </html>

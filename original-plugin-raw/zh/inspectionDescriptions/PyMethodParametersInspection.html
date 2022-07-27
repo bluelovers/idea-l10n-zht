@@ -1,14 +1,14 @@
 <html>
 <body>
-<p>报告缺少通常命名为 <code>self</code> 的第一个形参的方法。</p>
-<p><b>示例：</b></p>
+<p>报告缺少通常命名为 <code>self</code> 的第一个参数的方法。</p>
+<p><b>示例:</b></p>
 <pre style="font-family: monospace">
 class Movie:
 
    def show():
        pass
 </pre>
-<p>应用快速修复后，代码变为：</p>
+<p>应用快速修复后，代码变为:</p>
 <pre style="font-family: monospace">
 class Movie:
 
@@ -16,13 +16,13 @@ class Movie:
        pass
 </pre>
 <p>检查还报告类方法中的命名问题。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre style="font-family: monospace">
 class Movie:
     @classmethod
     def show(abc):
         pass
 </pre>
-<p>由于类方法的第一个形参应当为 <code>cls</code>，所以 IDE 提供了快速修复来对其重命名。</p>
+<p>由于类方法的第一个参数应当为 <code>cls</code>，所以 IDE 提供了快速修复来对其重命名。</p>
 </body>
 </html>

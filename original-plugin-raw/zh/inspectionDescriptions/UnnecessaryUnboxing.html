@@ -2,7 +2,7 @@
 <body>
 报告取消装箱，即显式解包已包装的基元值。
 <p>对于 Java 5 和更高版本，不必要进行拆箱，并且可以安全移除。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <ul>
   <li><code>Integer i = Integer.valueOf(42).intValue();</code> &rarr; <code>Integer i = Integer.valueOf(42);</code></li>
   <li><code>int k = Integer.valueOf(42).intValue();</code> &rarr; <code>int k = Integer.valueOf(42);</code>
@@ -12,6 +12,6 @@
 <p>
   使用<b>仅报告真正多余的拆箱表达式</b>选项，可仅报告真正多余的拆箱，其中的拆箱值立即隐式或显式地装箱。
   在本例中，可以移除整个拆箱-装箱步骤。 该检查不报告简单的显式拆箱。</p>
-<p>仅当项目或模块的语言级别为 5 或更高时，此检查才会报告。</p>
+<p>仅当项目或模块的语言级别为 5 级或更高级别时，该检查才会进行报告。</p>
 </body>
 </html>

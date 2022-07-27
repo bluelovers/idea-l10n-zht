@@ -6,16 +6,16 @@
 <p>特别是，无实参的 <code>Collections.emptyList()</code> 和 <code>List.of()</code> 总是返回共享实例，而无实参的 <code>Arrays.asList()</code> 每次调用时都会创建一个新对象。</p>
 <p>注意：<code>Collections.singletonList()</code> 和 <code>List.of()</code> 返回的列表不可变，而列表返回的 <code>Arrays.asList()</code> 允许调用 <code>set()</code> 方法。
 这在极少数情况下可能会破坏代码。</p>
-<p><b>示例：</b></p>
-<pre><code>
+<p><b>示例:</b></p>
+<pre>
   List&lt;String&gt; empty = Arrays.asList();
   List&lt;String&gt; one = Arrays.asList("one");
-</code></pre>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre>
   List&lt;String&gt; empty = Collections.emptyList();
   List&lt;String&gt; one = Collections.singletonList("one");
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>
 </body>

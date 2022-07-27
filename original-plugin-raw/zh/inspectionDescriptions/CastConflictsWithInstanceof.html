@@ -4,22 +4,24 @@
 <p>
   尽管这可能是有意为之，但此类结构很可能是错误，在运行时将导致 <code>java.lang.ClassCastException</code>。
 </p>
-<p><b>示例：</b></p>
-<pre><code>
-  class Main {
-    int whenCharSequenceCastToNumber(Object o){
-      if (o instanceof CharSequence) {
-        return ((Number) o).intValue();
+<p><b>示例:</b></p>
+<pre>
+  <code>
+    class Main {
+      int whenCharSequenceCastToNumber(Object o){
+        if (o instanceof CharSequence) {
+          return ((Number) o).intValue();
+        }
+        return 0;
       }
-      return 0;
-    }
 
-    int earlyReturnWhenNotCharSequence(Object o){
-      if (!(o instanceof CharSequence)) return 0;
-      return ((Number)o).intValue();
+      int earlyReturnWhenNotCharSequence(Object o){
+        if (!(o instanceof CharSequence)) return 0;
+        return ((Number)o).intValue();
+      }
     }
-  }
-</code></pre>
+  </code>
+</pre>
 <!-- tooltip end -->
 
 </body>

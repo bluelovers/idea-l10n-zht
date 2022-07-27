@@ -1,23 +1,23 @@
 <html>
 <body>
-报告具有基元 <code>long</code>、<code>integer</code>、<code>short</code> 或 <code>byte</code> 实参的新 <code>Long</code>、<code>Integer</code>、<code>Short</code> 或 <code>Byte</code> 对象的实例化。
-<p>建议使用 Java 5 中引入的 static 方法 <code>valueOf()</code> 默认情况下，此方法缓存值介于 -128 到 127（包含）之间的对象。
-<p><b>示例：</b></p>
+<p>报告任何从 <code>long</code>、<code>integer</code>、<code>short</code> 或 <code>byte</code> 基元参数实例化新的 <code>Long</code>、<code>Integer</code>、<code>Short</code> 或 <code>Byte</code> 对象的尝试。</p>
+<p>建议使用 Java 5 中引入的静态方法 <code>valueOf()</code> 默认情况下，此方法缓存值介于 -128 到 127 (包含在内)之间的对象。
+<p><b>示例:</b></p>
 <pre><code>
   Integer i = new Integer(1);
   Long l = new Long(1L);
 </code></pre>
-<p>应用快速修复后，代码变为：</p>
+<p>应用快速修复后，代码变为:</p>
 <pre><code>
   Integer i = Integer.valueOf(1);
   Long l = Long.valueOf(1L);
 </code></pre>
 <!-- tooltip end -->
-<p>仅当项目或模块的语言级别为 5 或更高时，此检查才会报告。</p>
+<p>仅当项目或模块的语言级别为 5 级或更高级别时，此检查才进行报告。</p>
 <p>
-  使用<b>忽略具有字符串实参的新数字表达式</b>选项可以忽略对包含 <code>String</code> 实参的数字构造函数的调用。</p>
+  使用<b>忽略具有字符串参数的新数字表达式</b>选项，可以忽略对包含 <code>String</code> 参数的数字构造函数的调用。</p>
 <p>
   使用<b>仅在构造函数为 @Deprecated 时报告</b>选项，仅报告对弃用的构造函数的调用。
-  <code>Long</code>、<code>Integer</code>、<code>Short</code> 和 <code>Byte</code> 构造函数自 JDK 9 起已被弃用。</p>
+  自 JDK 9 起已弃用 <code>Long</code>、<code>Integer</code>、<code>Short</code> 和 <code>Byte</code> 构造函数。</p>
 </body>
 </html>

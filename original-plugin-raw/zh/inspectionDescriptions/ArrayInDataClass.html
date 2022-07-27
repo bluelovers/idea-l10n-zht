@@ -3,13 +3,13 @@
 报告 <code>data</code> 类中类型为 <code>Array</code> 但没有被重写的 <code>equals()</code> 或 <code>hashCode()</code> 的属性。
 <p>
     数组形参通过引用相等进行了比较，这可能是一种意外行为。
-    在此类情况下，强烈建议重写 <code>equals()</code> 和 <code>hashCode()</code>。
+    因此，在此类情况下，强烈建议重写 <code>equals()</code> 和 <code>hashCode()</code>。
 </p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   data class Text(val lines: Array&lt;String&gt;)
 </code></pre>
-<p>该快速修复会生成缺失的 <code>equals()</code> 和 <code>hashCode()</code> 实现：</p>
+<p>建议通过快速修复生成缺失的 <code>equals()</code> 和 <code>hashCode()</code> 实现：</p>
 <pre><code>
   data class Text(val lines: Array&lt;String&gt;) {
       override fun equals(other: Any?): Boolean {

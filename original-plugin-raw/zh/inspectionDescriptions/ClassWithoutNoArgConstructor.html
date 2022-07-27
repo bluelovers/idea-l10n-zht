@@ -1,20 +1,12 @@
 <html>
 <body>
-Reports classes without a constructor that takes no arguments (i.e. has no parameters).
-No-arg constructors are necessary in some contexts. 例如，如果需要使用反射来创建类。
-<p><b>示例：</b></p>
-<pre><code>
-  public class Bean {
-    private String name;
-
-    public Bean(String name) {
-      this.name = name;
-    }
-  }
-</code></pre>
+报告没有无实参构造函数的类。
+<p>此类构造函数在某些上下文中是必要的。 举个例子，如果需要使用反射来创建类。</p>
 <!-- tooltip end -->
 <p>
   使用下面的复选框可忽略没有显式构造函数的类。
-  The compiler provides a default no-arg constructor to such classes.
+  编译器为这种类提供了默认的无实参构造函数。
+<p>
+
 </body>
 </html>

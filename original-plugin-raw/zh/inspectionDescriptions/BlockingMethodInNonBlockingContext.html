@@ -2,34 +2,27 @@
 <body>
 报告不应阻塞线程的代码段中的线程阻塞方法调用。
 
-<p><b>示例（项目 Reactor）：</b></p>
+<p>示例 (Reactor)：</p>
 <pre><code>
 Flux.just("1").flatMap(f -&gt; {
-    Flux&lt;String&gt; just = loadUsersFromDatabase();
-    just.toIterable(); // 错误：在非阻塞范围内调用阻塞运算符
+    Flux&lt;String&gt; just = Flux.just(f);
+    just.toIterable(); // Error: blocking operator call in non-blocking scope
     return just;
   }
 );
 </code></pre>
 
-<p>考虑使用<a href="https://projectreactor.io/docs/core/release/reference/#faq.wrap-blocking">适当的计划程序</a>（例如 <code>Schedulers.boundedElastic()</code>）运行阻塞代码，或者尝试寻找替代的非阻塞 API。</p>
-
-<br/>
-
-<p><b>示例（Kotlin 协同程序）：</b></p>
+<p>示例（Kotlin 协同程序）：</p>
 <pre><code>
 suspend fun exampleFun() {
-    Thread.sleep(100); // 错误：在挂起函数中调用阻塞方法
+    Thread.sleep(100); // Error: inappropriate blocking method call inside suspend function
 }
 </code></pre>
-
-<p>考虑<a href="https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html">使用特殊调度程序</a>（例如 <code>Dispatchers.IO</code>）运行阻塞代码，或尝试寻找替代的非阻塞 API。</p>
-
 <!-- tooltip end -->
 <p>配置检查：</p>
 <ul>
-  <li>在<b>阻塞注解</b>列表中，指定标记线程阻塞方法的注解。</li>
-  <li>在<b>无阻塞注解</b>列表中，指定标记非阻塞方法的注解。</li>
+  <li>在<b>阻塞注解</b>列表中指定标记线程阻塞方法的注解。</li>
+  <li>在<b>无阻塞注解</b>列表中，指定标记无阻塞方法的注解。</li>
 </ul>
 <p>指定的注解可用作<a href="https://www.jetbrains.com/help/idea/external-annotations.html">外部注解</a></p>
 </body>

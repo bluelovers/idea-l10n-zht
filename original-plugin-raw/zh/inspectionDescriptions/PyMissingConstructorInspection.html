@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>报告类中缺少对 <code>super</code> 构造函数进行调用的情况。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre style="font-family: monospace">
 class Fruit:
     def __init__(self):
@@ -13,7 +13,7 @@ class Pear(Fruit):
         pass
 </pre>
 <p><code>Pear</code> 类在 <code>__init__</code> 方法中应有 <code>super</code> 调用。</p>
-<p>应用快速修复后，代码变为：</p>
+<p>应用快速修复后，代码变为:</p>
 <pre style="font-family: monospace">
 class Fruit:
     def __init__(self):

@@ -1,8 +1,8 @@
 <html>
 <body>
-报告 <code>&amp;&amp;</code> 和 <code>||</code> 表达式以及 <code>if</code> 语句分支中的重复条件。
-这些重复的条件有时是有意为之，但通常是因为疏忽大意所致。
-<p>示例：</p>
+报告 &amp;&amp; 和 || 表达式以及 if 语句的分支中的重复条件。
+这些重复的条件表达式有时是故意使用的，但通常因疏忽大意所致。
+<p>示例:</p>
 <pre><code>
   boolean result = digit1 != digit2 || digit1 != digit2;
 </code></pre>
@@ -11,9 +11,9 @@
   要忽略可能产生副作用的条件，请使用<b>忽略有副作用的条件</b> 选项。
 禁用此选项可能会导致误报，例如，当同一方法在后续调用中返回不同的值时。
 </p>
-<p>示例：</p>
+<p>示例:</p>
 <pre><code>
-  if (iterator.next() != null || iterator.next() != null) {
+  if (iterator.next() != null || iterator.next() != null)
     System.out.println("Got it");
   }
 </code></pre>

@@ -3,7 +3,7 @@
 如果 <code>Java Stream API</code> 可用，则报告伪函数代码的用法。
 <p>虽然 <code>guava Iterable API</code> 提供类似于 <code>Java Streams API</code> 的功能，但它略有不同，可能会缺少某些功能。
   特别是，<code>IntStream</code> 等基元专门化的流变体比一般变体的性能更好。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
 List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTransformFunction);//警告：伪函数样式代码
 </code></pre>
@@ -14,9 +14,9 @@ List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTrans
 </p>
 <!-- tooltip end -->
 <p>
-  使用<b>转换为 'Stream' API 的 static 方法调用</b>选项，配置应转换为 <code>stream</code> API 的 static 方法调用。
+  使用<b>静态方法调用转换为 'Stream' API</b> 选项，配置应转换为 <code>stream</code> API 的静态方法调用。
 </p>
 
-<p>仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。</p>
+<p>仅当项目或模块的语言级别为 8 级或更高级别时，该检查才会进行报告。</p>
 </body>
 </html>

@@ -1,7 +1,9 @@
 <html>
 <body>
 报告可以替换为显式类型的 <code>var</code> 类型的局部变量。
-<p><b>示例：</b></p>
+<p>在降级的情况下，该检查有助于发现和消除隐式类型的用法。</p>
+<!-- tooltip end -->
+<p><b>示例:</b></p>
 <pre><code>
   var str = "Hello";
 </code></pre>
@@ -9,10 +11,6 @@
 <pre><code>
   String str = "Hello";
 </code></pre>
-<!-- tooltip end -->
-<p>
-  <code>var</code> <i>关键字</i>出现在 Java 10 中。
-  此检查有助于为向后兼容早期 Java 版本而降级。
-</p>
+<p>仅当项目或模块的语言级别为 10 级或更高级别时，该检查才会进行报告。</p>
 </body>
 </html>

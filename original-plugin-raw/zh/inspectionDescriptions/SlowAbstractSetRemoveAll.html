@@ -5,7 +5,7 @@
   当实参大小大于或等于集合大小，并且集合是 <code>java.util.AbstractSet</code> 的子类时，此类调用可能会很慢。
   在本例中，对集合中的每个元素调用了 <code>List.contains()</code>，将执行线性搜索。
 </p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>  public void check(String... ss) {
     // 可能的 O(n^2) 复杂度
     mySet.removeAll(List.of(ss));
@@ -18,6 +18,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2020.3 最新变化</small></p>
+<p><small>2020.3 的新功能</small></p>
 </body>
 </html>

@@ -2,14 +2,14 @@
 <body>
 报告不正确的 <a href="https://spring.io/projects/spring-integration">Spring Integration</a> 端点方法声明。
 
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
 class MyEndpoints {
   @InboundChannelAdapter("channel")
   public void <strong>cannotBeVoid</strong>() {...} // 使用 @InboundChannelAdapter 注解的方法必须具有返回类型
 
   @InboundChannelAdapter("channel")
-  public String <strong>cannotHaveParams</strong>(String s) {..} // 使用 @InboundChannelAdapter 注解的方法不能有实参
+  public String <strong>cannotHaveParams</strong>(String s) {..} // 使用 @InboundChannelAdapter 注解的方法不能有参数
 
   @<strong>Filter</strong>(inputChannel = "channel", // 端点只能具有一个轮询器
     outputChannel = "channel2",

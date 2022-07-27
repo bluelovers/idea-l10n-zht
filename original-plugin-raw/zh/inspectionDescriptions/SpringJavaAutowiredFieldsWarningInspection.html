@@ -2,9 +2,9 @@
 <body>
 <p>报告 Spring 组件中注入或自动装配的字段。</p>
 
-<p>该快速修复会在 Bean 和断言中为强制字段建议基于构造函数的推荐依赖项注入。</p>
+<p>快速修复建议在 bean 中使用推荐的基于构造函数的依赖注入，并对必填字段进行断言。</p>
 
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
 class MyComponent {
   @Inject MyCollaborator collaborator; // 注入字段

@@ -1,15 +1,16 @@
 <html>
 <body>
 报告 <code>assert</code> 语句并建议将它们替换为抛出 <code>java.lang.AssertionError</code> 的 <code>if</code> 语句。
-<p>示例：</p>
-<pre><code>
+<p>示例:</p>
+<pre>
   assert param != null;
-</code></pre>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre>
   if (param == null) throw new AssertionError();
-</code></pre>
+</pre>
 <!-- tooltip end -->
+<p>
 
 </body>
 </html>

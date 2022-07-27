@@ -1,8 +1,8 @@
 <html>
 <body>
-报告为扩展 <code>final</code> 类而声明的类型形参。
-<p>由于无法扩展 <code>final</code> 类，建议将类型形参替换为指定的 <code>final</code> 类的类型。</p>
-<p><b>示例：</b></p>
+报告为扩展 final 类而声明的类型参数。
+<p>由于 final 类无法扩展，因此建议将类型参数替换为指定的 final 类的类型。</p>
+<p><b>示例:</b></p>
 <pre><code>
   <b>void</b> foo() {
     List&lt;? <b>extends</b> Integer&gt; list; // 警告：Integer 类为 final 类

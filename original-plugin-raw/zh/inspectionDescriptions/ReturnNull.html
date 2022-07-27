@@ -1,11 +1,11 @@
 <html>
 <body>
 报告返回值为 <code>null</code> 的 <code>return</code> 语句。
-虽然偶尔有用，但此结构可能导致代码因更容易出现 <code>NullPointerException</code> 而失败。
+虽然这种结构偶尔有用，但可能导致代码因更容易出现 <code>NullPointerException</code> 而失败。
 <p>
   如果方法设计为返回 <code>null</code>，建议使用 <code>@Nullable</code> 注解来标记 - 此类方法将被此检查忽略。
 </p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   class Person {
     public String getName () {
@@ -23,7 +23,7 @@
   }
 </code></pre>
 <p>
-  如果返回类型为 <code>java.util.Optional</code>，建议使用另一个快速修复将 <code>null</code> 转换为 <code>Optional.empty()</code>。
+  如果返回类型为 <code>java.util.Optional</code>，建议使用另外的快速修复将 <code>null</code> 转换为 <code>Otional.empty()</code>。
 </p>
 <!-- tooltip end -->
 <p>

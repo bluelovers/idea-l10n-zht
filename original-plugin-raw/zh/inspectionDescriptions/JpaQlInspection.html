@@ -1,9 +1,9 @@
 <html>
 <body>
-报告 Persistence QL 查询中的以下错误：
+在 Persistence QL 查询中报告以下错误：
 <ul>
   <li>不匹配的表达式类型</li>
-  <li>形参不正确</li>
+  <li>参数不正确</li>
   <li>空或常量条件</li>
   <li>未解析的符号</li>
 </ul>
@@ -12,9 +12,9 @@
 <pre><code>
 SELECT OBJECT(e) FROM JavaEntity e WHERE TRUE // 警告：常量条件
 
-SELECT OBJECT(e) FROM JavaEntity e WHERE e.id BETWEEN 0 AND '2' // 错误：应为数值，但得到字符串
+SELECT OBJECT(e) FROM JavaEntity e WHERE e.id BETWEEN 0 AND '2' // 错误：预期一个数值但得到一个字符串
 
-SELECT e from JavaEntity e where e.id=?1 and e.name=?3 // 错误：只有 2 个实际查询形参
+SELECT e from JavaEntity e where e.id=?1 and e.name=?3 // 错误：只有 2 个实际查询参数
 </code></pre>
 </body>
 </html>

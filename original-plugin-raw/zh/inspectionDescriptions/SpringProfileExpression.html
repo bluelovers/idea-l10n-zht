@@ -3,11 +3,11 @@
 <p>报告不正确的 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Profile.html">@Profile</a> 表达式：</p>
 
 <ul>
-  <li>Spring 配置文件不得为空</li>
-  <li>在 Spring 配置文件表达式中，'&' 和 '|' 运算符不得在没有圆括号的情况下混用</li>
+  <li>Spring 配置文件不能为空</li>
+  <li>'&' 和 '|' 在 Spring 配置文件表达式中，不得在没有括号的情况下混合使用运算符</li>
 </ul>
 
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   <!-- correctly configured -->
   @Configuration
@@ -19,7 +19,7 @@
   @Profile() // 报告 "配置文件表达式必须包含文本"
   public class MyConfiguration {...}
 
-  <!-- 不带圆括号的混合运算符 -->
+  <!-- 不带括号的混合运算符 -->
   @Configuration
   @Profile("a & b | c") // 报告 "格式不正确的配置文件表达式"
   public class MyConfiguration {...}

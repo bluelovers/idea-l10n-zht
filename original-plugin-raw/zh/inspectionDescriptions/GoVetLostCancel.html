@@ -5,8 +5,8 @@
   调用 <code>CancelFunc</code> 可以取消子项及其子项，删除父项对该子项的引用，并停止任何
   相关的定时器。
   如果不调用 CancelFunc，就会泄漏子项和其子项，直到父项被取消或定时器启动。</p>
-<p>有关 <code>context</code> 软件包的更多信息，请参见 <a href="https://golang.org/pkg/context/">golang.org 上的 Package context</a> 页面。</p>
-<p>示例：</p>
+<p>有关 <code>context</code> 包的更多信息，请参见 <a href="https://golang.org/pkg/context/">golang.org 上的 Package context</a> 页面。</p>
+<p>示例:</p>
 <pre><code>func _(ctx context.Context, cancel func()) {
  var ctx2 context.Context
  ctx2, cancel = context.WithCancel(ctx)

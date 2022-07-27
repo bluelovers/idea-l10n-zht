@@ -1,15 +1,15 @@
 <html>
 <body>
-报告属性值中形参两旁错误的引号数量。
+报告属性值中参数两旁错误的引号数量。
 <p>
-  如果属性值中存在形参，则必须将该值作为模式传递给 <code>java.text.MessageFormat</code>。
-  也就是说为转义使用单引号。 因此，要让引号可见，必须使用重复的引号：
+  如果属性值中存在参数，则必须将该值作为模式传递给 <code>java.text.MessageFormat</code>。
+  也就是说要使用单引号进行转义。 因此，要让引号可见，必须使用重复的引号：
 <ul>
   <li><code>'{0}'</code> &rarr; <code>{0}</code></li>
   <li><code>''{0}''</code> &rarr; <code>'$value$'</code></li>
 </ul>
 <p>
-  使用 choice 格式时，会将嵌套格式评估为格式本身，因此必须添加第二个双引号。
+  使用 choice 格式时会将嵌套格式评估为格式本身，因此必须添加第二个双引号。
   传递 <code>1</code> 时：
 <ul>
   <li><code>{0, choice, 0#no|#1''{0}'' file}</code> &rarr; <code>{0} files</code></li>

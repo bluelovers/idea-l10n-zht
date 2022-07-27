@@ -1,21 +1,5 @@
 <html>
 <body>
 报告与元素的默认模态匹配的模态修饰符（对于大多数元素来说是 <code>final</code>，对于具有 <code>override</code> 的成员来说是 <code>open</code>）。
-<p><b>示例：</b></p>
-<pre><code>
-  <b>final</b> class Foo
-
-  open class Bar : Comparable&lt;Bar&gt; {
-      <b>open</b> override fun compareTo(other: Bar): Int = 0
-  }
-</code></pre>
-<p>在应用快速修复后：</p>
-<pre><code>
-  class Foo
-
-  open class Bar : Comparable&lt;Bar&gt; {
-      override fun compareTo(other: Bar): Int = 0
-  }
-</code></pre>
 </body>
 </html>

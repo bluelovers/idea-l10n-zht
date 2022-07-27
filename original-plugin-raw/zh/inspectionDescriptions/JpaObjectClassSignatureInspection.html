@@ -3,13 +3,13 @@
 在以下情况下报告错误定义的持久对象类：
 
 <ul>
-  <li>类不是顶级类</li>
+  <li>类不是顶级的</li>
   <li>类为 final</li>
   <li>类被多次注解</li>
-  <li>类被定义为持久实体和实体侦听器</li>
+  <li>类被定义为持久实体和实体监听器</li>
 </ul>
 
-<p><b>示例：</b></p><br/>
+<p><b>示例:</b></p><br/>
 <pre><code>
   @Entity
   @EntityListeners(value = JavaEntity.class) // 错误：@Entity 和 @EntityListener 注解都指向同一个类

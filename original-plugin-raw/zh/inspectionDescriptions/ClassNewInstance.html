@@ -7,7 +7,7 @@
 <p>
   建议通过快速修复将该调用替换为对 <code>java.lang.reflect.Constructor.newInstance()</code> 方法的调用，这种方式将构造函数抛出的任何异常包装在（已检查的）<code>java.lang.reflect.InvocationTargetException</code> 中，从而可以避免这个问题。
 </p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   clazz.newInstance()
 </code></pre>

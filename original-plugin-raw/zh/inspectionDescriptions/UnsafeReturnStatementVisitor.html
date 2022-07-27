@@ -2,10 +2,11 @@
 <body>
 报告 <code>JavaRecursiveElementVisitor.visitReturnStatement()</code> 的不安全用法。
 <p>
-  即使 <code>PsiReturnStatement</code> 属于另一个 <code>PsiClass</code>，也进行处理，否则在大多数情况下，<code>PsiLambdaExpression</code> 会成为错误。
+  即使 <code>PsiReturnStatement</code> 属于另一个 <code>PsiClass</code>，
+  也进行处理，否则在大多数情况下，<code>PsiLambdaExpression</code> 会成为错误。
 </p>
 <p>
-  该快速修复会插入必要的显式 <code>visitClass()/visitLambdaExpression()</code> 方法。
+  快速修复会插入必要的显式 <code>visitClass()/visitLambdaExpression()</code> 方法。
 </p>
 </body>
 </html>

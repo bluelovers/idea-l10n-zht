@@ -2,9 +2,9 @@
 <body>
 报告 <code>final</code> 类中的 <code>protected</code> 成员。
 <p>由于无法继承 <code>final</code> 类，将方法标记为 <code>protected</code> 可能令人困惑。 最好将此类成员声明为 <code>private</code> 或软件包可见。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>record Bar(int a, int b) {
-  protected int sum() { 
+  protected sum() { 
      return a + b;
   }
 }
@@ -12,7 +12,7 @@
 </pre>
 <p>在应用快速修复后：</p>
 <pre><code>record Bar(int a, int b) {
-  int sum() { 
+  sum() { 
      return a + b;
   }
 }

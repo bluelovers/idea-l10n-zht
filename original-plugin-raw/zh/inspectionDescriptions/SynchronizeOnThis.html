@@ -15,7 +15,7 @@
   </li>
 </ol>
 <p>替代做法是考虑在 <code>private final</code> 锁定对象上同步，可以完全控制对该对象的访问。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   public void print() {
     synchronized(this) { // 警告：对 'this' 的锁定操作可能会产生不可预见的副作用

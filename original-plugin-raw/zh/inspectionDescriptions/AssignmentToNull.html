@@ -1,9 +1,9 @@
 <html>
 <body>
-报告在声明外被赋值给 <code>null</code> 的变量。
-<p>Java 中 <code>null</code> 的主要用途是表示未初始化的引用变量。 在极少数情况下，将变量显式赋值给 <code>null</code> 有助于垃圾回收。 但是，使用 <code>null</code> 来表示缺失、未指定、无效值或找不到的元素被认为是一种不好的做法，可能会使您的代码更容易出现 <code>NullPointerExceptions</code>。
+报告在声明之外赋值给 <code>null</code> 的变量。
+<p>Java 中 <code>null</code> 的主要用途是表示未初始化的引用变量。 在极少数情况下，将变量显式赋值给 <code>null</code> 有助于垃圾回收。 但是，使用 <code>null</code> 来表示缺失的、未指定的、无效的值或未找到的元素被认为是不良做法，可能会使您的代码更容易出现 <code>NullPointerExceptions</code>。
   请改为考虑定义具有预期语义的 sentinel 对象或使用像 <code>Optional</code> 这样的库类型来表示没有值。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   Integer convert(String s) {
     Integer value;

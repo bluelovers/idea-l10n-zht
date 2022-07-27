@@ -3,8 +3,7 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      在生成被重写属性（例如，使用<b>代码 | 生成 | 重写方法</b>操作）时填充属性的主体。<br>
-      模板是可编辑的。 除了 Swift 表达式和注释外，您还可以使用预定义变量，这些变量随后将被扩展为相应值。
+      填充生成的重写属性的主体，例如，调用 <b>代码 | 生成 | 重写方法</b> 操作时。<br>模板是可编辑的。 除了 Swift 表达式和注释，您可以使用预定义的变量，然后将这些变量扩展为相应的值。
     </font></td>
   </tr>
 </table>
@@ -15,12 +14,12 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">super 属性调用：<code>super.propertyName</code></font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">超类属性调用：<code>super.propertyName</code></font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">创建的属性的返回类型</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">创建属性的返回类型</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
@@ -40,12 +39,7 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_SUPER_SET}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">当被重写属性有 setter 时，为 <b>"true"</b></font></td>
-  </tr>
-  <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${GETTER_EFFECTS}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">属性 getter 的 getter 效果（<code>async</code>、<code>throws</code>）</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">当重写属性有 setter 时，为 <b>"true"</b></font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${GET_ATTRIBUTES}</b></font></nobr></td>

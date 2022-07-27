@@ -2,17 +2,17 @@
 <body>
 报告用作另一个方法调用的形参的方法调用。
 <p>该快速修复会引入一个变量，使代码更简单，也更易于调试。</p>
-<p><b>示例：</b></p>
-<pre><code>
+<p><b>示例:</b></p>
+<pre>
   public int y() { return 1; }
   public int f(int x) { return 2 * x; }
 
   public void foo() {
       int x = f(y());
   }
-</code></pre>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre>
   public int y() { return 1; }
   public int f(int x) { return 2 * x; }
 
@@ -20,7 +20,7 @@
       int y = y();
       int x = f(y);
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>
 使用检查选项可以切换以下各项的报告：

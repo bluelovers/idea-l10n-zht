@@ -1,9 +1,9 @@
 <html>
 <body>
-报告在视图、内联函数、派生表、子查询和通用表表达式中使用 <code>ORDER BY</code> 子句而不使用 <code>TOP</code>、<code>OFFSET</code> 或 <code>FOR XML</code> 的用法。
+报告在视图、内联函数、派生表、子查询和通用表表达式中使用 <code>ORDER BY</code> 子句而不使用 <code>TOP</code>、<code>OFFSET</code> 或 <code>FOR XML</code> 的用法 。
 <p>有关 <code>ORDER BY</code> 用法的详细信息，请参阅 <a
     href="https://docs.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql">docs.microsoft.com 上的 SELECT - ORDER BY 子句 (Transact-SQL)</a> 页面。</p>
-<p>示例（Microsoft SQL Server）：</p>
+<p>示例（Microsoft SQL 服务器）：</p>
 <pre><code>CREATE TABLE foo (a INT NOT NULL, b  INT NOT NULL);
 
 SELECT *
@@ -12,8 +12,8 @@ FROM foo A
 WHERE a &lt; 89
 ORDER BY b) ALIAS;
 </code></pre>
-<p>在子查询中，ORDER BY 将被高亮显示为错误。 您可以将 TOP、OFFSET 或 FOR XML 添加到子查询。
-  或者，使用<b>删除元素</b>快速修复来删除 ORDER BY 部分。</p>
+<p>在子查询中，ORDER BY 将高亮显示为错误。 您可以将 TOP、OFFSET 或 FOR XML 添加到子查询。
+  或者，使用 <b>删除元素</b> 快速修复来删除 ORDER BY 部分。</p>
 <p>在应用快速修复后：</p>
 <pre><code>SELECT *
 FROM (SELECT a, b

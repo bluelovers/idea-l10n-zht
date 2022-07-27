@@ -1,7 +1,7 @@
 <html>
 <body>
 报告错误字符串的格式问题。
-<p>示例：</p>
+<p>示例:</p>
 <pre><code>err := fmt.Errorf("Cannot read the file!")
 log.Printf("Reading %s: %v", file, err)</code></pre>
 <p>根据 <a href="https://golang.org/wiki/CodeReviewComments#error-strings">golang.org 上的 Error Strings</a> 页面，错误字符串不应大写或以标点符号结尾，因为它们可能会出现在其他上下文中。

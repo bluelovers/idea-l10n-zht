@@ -1,9 +1,9 @@
 <html>
 <body>
-报告对循环体内 <code>for</code> 循环形参的赋值或修改。
-<p>虽然偶尔是有意为之，但此结构可能令人困惑，通常是由拼写错误或使用错误变量引起。</p>
+报告对 <code>for</code> 语句参数的赋值或其在 <code>for</code> 循环体内的修改。
+<p>虽然有时是有意为之，但这种结构可能令人困惑，通常由拼写错误或使用了错误变量引起。</p>
 <p>该快速修复会添加新变量的声明。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   for (String s : list) {
     // 警告：s 在循环内被更改
@@ -20,7 +20,7 @@
 </code></pre>
 <p>不报告没有 update 语句的基本 <code>for</code> 循环中的赋值。
   在此类情况下，赋值很可能是预期的，不能轻易移动到 <code>for</code> 循环的更新部分。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   for (int i = 0; i &lt; list.size(); ) {
     if (element.equals(list.get(i))) {

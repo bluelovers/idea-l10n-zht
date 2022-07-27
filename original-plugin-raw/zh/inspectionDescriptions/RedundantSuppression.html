@@ -1,16 +1,16 @@
 <html>
 <body>
-报告由于它们所影响的检查在此上下文中不再适用而可以安全移除的下列元素：
+报告由于它们所影响的检查在这种情况下不再适用因而可以安全移除的下列元素:
 <ul>
   <li><code>@SuppressWarning</code> 注解或</li>
   <li><code>// noinspection</code> 行注释，或</li>
   <li><code>/** noinspection */</code> JavaDoc 注释</li>
 </ul>
-<p>示例：</p>
+<p>示例:</p>
 <pre><code>
 <b><font color="#000080">public class</font></b> C {
  // 符号已经为 private，
- // 但周围仍有注解
+ // 但注解仍然环绕
   @SuppressWarnings({"WeakerAccess"})
  <b><font color="#000080">private boolean</font></b> CONST = <b><font color="#000080">true</font></b>;
  <b><font color="#000080">void</font></b> f() {

@@ -3,13 +3,13 @@
 <p>报告 <a href="https://spring.io/projects/spring-integration">Spring Integration</a> 基于 XML 的应用程序上下文的问题：</p>
 <ul>
   <li>未解析的 Bean 引用</li>
-  <li>缺少必需的标记或特性</li>
+  <li>缺少必需的标签或特性</li>
   <li>属性类型不正确</li>
   <li><code>enum</code> 属性不一致</li>
   <li>引用 Bean 的类型不正确</li>
 </ul>
 
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   &lt;beans ... &gt;
   &lt;int:channel id="channel"&gt; &lt;!-- 'dispatcher' 和 'queue' 不能一起使用  --&gt;
@@ -33,7 +33,7 @@
   &lt;int:delayer
     default-delay="INVALID_VALUE"  &lt;!--Cannot convert string 'INVALID_VALUE' to target class 'java.lang.Integer' --&gt;
                message-store="dummyBean" &lt;!-- Bean 必须为 'org.springframework.integration.store.MessageStore' 类型--&gt;
-               scheduler="dummyBean" &lt;!-- Bean 必须为以下一种类型：java.util.concurrent.ScheduledExecutorService,org.springframework.scheduling.TaskScheduler--&gt;
+               scheduler="dummyBean" &lt;!-- Bean 必须为以下一种类型: java.util.concurrent.ScheduledExecutorService,org.springframework.scheduling.TaskScheduler--&gt;
                wait-for-tasks-to-complete-on-shutdown="INVALID_VALUE"/&gt; &lt;!-- 无法解析符号 'INVALID_VALUE' --&gt;
 
   &lt;bean id="dummyBean" class="java.lang.String"/&gt;

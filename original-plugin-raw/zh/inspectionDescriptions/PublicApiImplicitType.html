@@ -4,7 +4,7 @@
     报告具有隐式返回类型的 <code>public</code> 和 <code>protected</code> 函数和属性。
     出于 API 稳定性的原因，建议显式指定此种类型。
 </p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   fun publicFunctionWhichAbusesTypeInference() =
       otherFunctionWithNotObviousReturnType() ?: yetAnotherFunctionWithNotObviousReturnType()

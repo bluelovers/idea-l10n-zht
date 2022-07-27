@@ -1,10 +1,10 @@
 <html>
 <body>
-<p>报告使用基于构造函数的依赖项注入的 Spring <code>&lt;bean&gt;</code>。</p>
+<p>使用基于构造函数的依赖注入报告 Spring <code>&lt;bean&gt;</code>。</p>
 
-<p>当使用配置的 <code>&lt;constructor-arg&gt;</code> 标记和定义的 <code>autowire</code> 策略找不到 <code>&lt;bean&gt;</code> 的合适构造函数或工厂方法时，将触发检查。</p>
+<p>当使用配置的 <code>&lt;constructor-arg&gt;</code> 标签和定义的 <code>autowire</code> 策略找不到 <code>&lt;bean&gt;</code> 的合适构造函数或工厂方法时，将触发检查。</p>
 
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
     public class MyComponent {
     // constructor
@@ -13,12 +13,12 @@
     public static MyComponent getInstance(String name, int port) {
     }
     &lt;beans&gt;
-      &lt;bean class="beans.MyComponent" id="foo"&gt; // 报告 "在类 'MyComponent' 中找不到匹配的构造函数"
+      &lt;bean class="beans.MyComponent" id="foo"&gt; // 报告 "在类 'MyComponent' 中未找到匹配的构造函数"
          &lt;constructor-arg ref="myBean"/&gt;
          &lt;constructor-arg value="123"/&gt;
       &lt;/bean&gt;
 
-      &lt;bean class="beans.MyComponent" factory-method="getInstance"&gt; // 报告 "在类中找不到匹配的工厂方法"
+      &lt;bean class="beans.MyComponent" factory-method="getInstance"&gt; // 报告 "在类中未找到匹配的工厂方法"
          &lt;constructor-arg value="123"/&gt;
       &lt;/bean&gt;
     &lt;/beans&gt;

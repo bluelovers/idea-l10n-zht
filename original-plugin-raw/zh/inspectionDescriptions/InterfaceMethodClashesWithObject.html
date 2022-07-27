@@ -1,10 +1,10 @@
 <html>
 <body>
-报告与 <code>java.lang.Object</code> 类中的 <b>protected</b> 方法 <code>clone()</code> 和 <code>finalize()</code> 冲突的接口方法。
+报告与 <code>java.lang.Object</code> 中带有 <code>protected</code> 访问修饰符的 <code>clone()</code> 和 <code>finalize()</code> 方法冲突的接口方法。
 <p>在接口中，可以使用与 <code>java.lang.Object</code> 方法不兼容的返回类型来声明这些方法。
-  实现此类接口的类不可编译。
-  当接口正常工作时，虽然仍可根据它创建 lambda，但不建议这样做。</p>
-<p>示例：</p>
+这允许创建一个实现此类接口的类。
+  当该接口可用时，您可以使用它来创建 lambda，但代码可能仍然令人困惑。</p>
+<p>示例:</p>
 <pre><code>
   // // 警告：此接口不能由任何类实现，
   // 只能由 lambda 或方法引用实现
@@ -13,5 +13,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
+<p><small>2016.1 的新功能</small>
 </body>
 </html>

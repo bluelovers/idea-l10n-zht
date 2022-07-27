@@ -1,26 +1,26 @@
 <html>
 <body>
-报告在方法签名中声明但方法本身或其实现和重写方法从未抛出的异常。
-<p>该检查会忽略与序列化相关的方法，例如方法 <code>readObject()</code> 和 <code>writeObject()</code>。</p>
-<p><b>示例：</b></p>
+<p>报告在方法签名中声明但方法本身或其实现和派生从未抛出的异常。</p>
+<p>该检查忽略与序列化相关的方法，例如方法 <code>readObject()</code> 或 <code>writeObject()</code>。</p>
+<p><b>示例:</b></p>
 <pre><code>
   void method() throws InterruptedException {
     System.out.println();
   }
 </code></pre>
-<p>该快速修复会移除声明中不必要的异常，并规范化冗余的 <code>try</code>-<code>catch</code> 语句：</p>
-<pre><code>
+<p>快速修复移除了声明中不必要的异常，并规范化冗余的 <code>try</code>-<code>catch</code> 语句:</p>
+<pre>
   void method() {
     System.out.println();
   }
-</code></pre>
+</pre>
 <p>
-  <b>注意</b>：由于性能原因，在编辑器中高亮显示时可能不会报告某些异常。
-  要查看所有结果，请从主菜单中选择<b>代码 | 检查代码</b>或<b>代码 | 分析代码 | 按名称运行检查</b>来运行检查。
+  <b>注意:</b> 在编辑器中高亮显示时可能不会报告某些异常。
+  由于性能原因，仅当非 private 方法的名称很少出现在项目中时，才会对其进行检查。
+  要查看所有结果，请从主菜单中选择<b>分析 | 检查代码...</b> 或<b>分析 | 按名称运行检查...</b>来运行检查。
 </p>
 <!-- tooltip end -->
-<p>使用<b>忽略由入口点方法抛出的异常</b>选项可以不报告由 <code>main()</code> 等方法抛出的异常。
-  可以在 <a href="settings://Errors?Unused%20Declaration%20entry%20point">Java | 声明冗余 | 未使用的声明</a>检查的设置中配置入口点方法。
-  <br><br></p>
+<p>使用<b>忽略由入口点方法抛出的异常</b>选项，可忽略由入口点方法抛出的异常。
+  入口点方法配置如下检查: <b>编辑器 | 检查 | Java | 声明冗余 | 未使用的声明</b>。</p>
 </body>
 </html>

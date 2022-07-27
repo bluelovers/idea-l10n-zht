@@ -1,11 +1,11 @@
 <html>
 <body>
 <p>报告类型提示的无效用法。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre style="font-family: monospace">
 from typing import TypeVar
 
-T0 = TypeVar('T1') # 'TypeVar' 的实参必须为 'T0'
+T0 = TypeVar('T1') # 'TypeVar' 的参数必须为 'T0'
 
 
 def b(p: int) -> int:  # 注释和注解中都指定了类型
@@ -13,7 +13,7 @@ def b(p: int) -> int:  # 注释和注解中都指定了类型
     pass
 
 
-def c(p1, p2): # 类型签名的实参太多
+def c(p1, p2): # 类型签名的参数太多
     # type: (int) -> int
     pass
 </pre>

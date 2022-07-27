@@ -16,15 +16,15 @@
 
 <html>
 <body>
-报告以软件包名称开头的导出名称。 此检查不会在 <code>main</code> 软件包中报告此类名称。
-<p>示例：</p>
+报告以包名称开头的导出名称。 此检查不会在 <code>main</code> 包中报告此类名称。
+<p>示例:</p>
 <pre><code>package myPackage
 
 func MyPackageGetIP() {
 
 }</code></pre>
-<p><code>MyPackageGetIP</code> 名称将高亮显示，因为它以软件包名称开头。</p>
+<p><code>MyPackageGetIP</code> 名称将高亮显示，因为它以包名称开头。</p>
 <p>根据 <a href="https://golang.org/wiki/CodeReviewComments#package-names">golang.org 上的 Package Names</a> 页面，对软件包中名称的所有引用都将使用软件包名称完成，因此可以从标识符中省略该名称。
-  例如，如果您在软件包 <code>foo</code> 中，则不需要类型 <code>FooFile</code>，客户端将其写为 <code>foo.FooFile</code>。 相反，我们将类型命名为 <code>File</code>，客户端将其写为 <code>foo.File</code>。</p>
+  例如，如果您在包 <code>foo</code> 中，则不需要类型 <code>FooFile</code>，客户端将其写为 <code>foo.FooFile</code>。 相反，我们将类型命名为 <code>File</code>，客户端将其写为 <code>foo.File</code>。</p>
 </body>
 </html>

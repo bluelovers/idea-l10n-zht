@@ -1,14 +1,14 @@
 <html>
 <body>
-报告非首选样式的 <code>Collection.toArray()</code> 调用，并建议应用首选样式。
-<p>将集合转换为数组有两种样式：</p>
-<ul>
+<p>根据不同的样式报告 <code>Collection.toArray()</code> 调用的用法，并建议应用首选样式。</p>
+<p>将集合转换为数组有两种样式:</p>
+<list>
   <li>预先确定大小的数组，例如 <code>c.toArray(new String[c.size()])</code></li>
   <li>空数组，例如 <code>c.toArray(new String[0])</code></li>
-</ul>
+</list>
 <p>在旧的 Java 版本中，建议使用预先确定大小的数组，因为创建适当大小的数组所需的反射调用非常慢。</p>
-<p>不过，自 OpenJDK 6 的最新更新以来，此调用已被添加，使得空数组版本的性能与预先确定大小的版本相同，有时甚至更高一筹。 此外，传递预先确定大小的数组对于并发集合或同步集合很危险，因为 <code>size</code> 和 <code>toArray</code> 调用之间可能会发生数据竞争。 如果在运算过程中并发收缩该集合，可能导致数组末尾出现额外的 <code>null</code>。</p>
+<p>不过，自 OpenJDK 6 的最新更新以来，该调用内在化，使得空数组版本的性能与预先确定大小的版本相同，有时甚至更高一筹。 此外，传递预先确定大小的数组对于并发集合或同步集合很危险，因为 <code>size</code> 和 <code>toArray</code> 调用之间可能会发生数据竞争。 如果在操作过程中并发收缩该集合，可能导致数组末尾出现额外的 null。</p>
 <!-- tooltip end -->
-<p>使用检查选项可以选择首选样式。</p>
+<p>使用检查选项选择首选样式。</p>
 </body>
 </html>

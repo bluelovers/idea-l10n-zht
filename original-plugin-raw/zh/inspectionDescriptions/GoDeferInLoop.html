@@ -18,7 +18,7 @@
 <body>
 报告循环内的 <code>defer</code> 语句。
 <p>在循环中使用 <code>defer</code> 会导致资源泄漏或语句的执行顺序不可预测。</p>
-<p>示例：</p>
+<p>示例:</p>
 <pre><code>func main() {
  for {
   field, err := db.Query("SELECT 1")

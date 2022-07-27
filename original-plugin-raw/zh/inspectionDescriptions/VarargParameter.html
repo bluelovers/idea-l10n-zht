@@ -1,7 +1,9 @@
 <html>
 <body>
 报告接受任意数量形参的方法（也称为 vararg 方法）。
-<p><b>示例：</b></p>
+<p>Java 1.4 或更早版本的 JVM 不支持此类方法。</p>
+<!-- tooltip end -->
+<p><b>示例:</b></p>
 <pre><code>
   enum EnumConstants {
   A(null), B, C;
@@ -18,10 +20,5 @@
   EnumConstants(String[] ss) {}
 }
 </code></pre>
-<!-- tooltip end -->
-<p>
-  <i>Varargs 方法</i>出现在 Java 5 中。
-  此检查有助于为向后兼容早期 Java 版本而降级。
-</p>
 </body>
 </html>

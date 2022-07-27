@@ -1,8 +1,8 @@
 <html>
 <body>
 <p>报告函数调用表达式、目标和返回值中的类型错误。 在动态类型语言中，少数情况下可能会这样。 </p>
-<p>在 docstring 或 Python 3 函数注解中可以指定函数形参的类型。</p>
-<p><b>示例：</b></p>
+<p>在 docstring 或 Python 3 函数注解中可以指定函数参数的类型。</p>
+<p><b>示例:</b></p>
 <pre style="font-family: monospace">
 def foo() -> int:
     return "abc" # 应为 int，得到的是 str
@@ -11,7 +11,7 @@ def foo() -> int:
 a: str
 a = foo() # 应为 str，得到的是 int
 </pre>
-<p>进行快速修复可以修改有问题的类型：</p>
+<p>进行快速修复可以修改有问题的类型:</p>
 <pre style="font-family: monospace">
 def foo() -> str:
     return "abc"

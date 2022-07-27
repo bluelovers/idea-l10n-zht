@@ -1,18 +1,18 @@
 <html>
 <body>
 报告包含 <code>if</code> 语句并且以 <code>break</code> 结尾但又不改变语义的循环。
-这可以防止冗余的循环迭代。
-<p><b>示例：</b></p>
-<pre><code>
+<p>这可以防止冗余的循环迭代。</p>
+<p><b>示例:</b></p>
+<pre>
   boolean found = false;
   for (int i = 0; i &lt; arr.length; i++) {
     if (Objects.equals(value, arr[i])) {
       found = true;
     }
   }
-</code></pre>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre>
   boolean found = false;
   for (int i = 0; i &lt; arr.length; i++) {
     if (Objects.equals(value, arr[i])) {
@@ -20,8 +20,8 @@
       break;
     }
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
-<p><small>2019.2 最新变化</small></p>
+<small>2019.2 的新功能</small>
 </body>
 </html>

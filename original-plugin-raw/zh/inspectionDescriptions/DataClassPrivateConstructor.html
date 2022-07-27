@@ -1,15 +1,14 @@
 <html>
 <body>
-报告数据类中的 <code>private</code> 主构造函数。
+报告数据类中的 private 主构造函数。
 <p>
-    <code>data</code> 类拥有 <code>copy()</code> 工厂方法，可以像构造函数一样使用。
-    为了提供足够的安全性，构造函数不应被标记为 <code>private</code>。
+    <code>data</code> 类具有 <code>copy()</code> 工厂方法，可以像构造函数一样使用，因此将构造函数设为 <code>private</code> 并不能提供足够的安全性。
 </p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   data class User private constructor(val name: String)
 </code></pre>
-<p>快速修复可将构造函数可见性修饰符更改为 <code>public</code>：</p>
+<p>建议通过快速修复将构造函数设为 <code>public</code>：</p>
 <pre><code>
   data class User(val name: String)
 </code></pre>

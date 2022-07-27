@@ -1,11 +1,11 @@
 <html>
 <body>
-报告 <code>abstract</code> 类的 <code>public</code> 构造函数。
+报告声明为 <code>public</code> 的 abstract 类的构造函数。
 <p>
-  <code>abstract</code> 类的构造函数只能从其子类的构造函数进行调用，将其声明为 <code>public</code> 可能令人困惑。
+  abstract 类的构造函数只能在其子类的构造函数中调用。 因此，令 abstract 类的构造函数为 public 可能会使人混淆。
 </p>
 <p>该快速修复会将此类构造函数设为 protected。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   <b>public abstract class</b> Foo {
     <b>public</b> Foo () { // 警告：有 'public' 修饰符
@@ -23,6 +23,6 @@
 </code></pre>
 <!-- tooltip end -->
 <p>配置检查：</p>
-<p>使用下面的<b>忽略非 public 类</b>选项可以忽略非 public 类中的 <code>public</code> 构造函数。</p>
+<p>使用下面的选项可以忽略非 public 类。</p>
 </body>
 </html>

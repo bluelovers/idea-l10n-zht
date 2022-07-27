@@ -1,12 +1,10 @@
 <html>
 <body>
-报告包含字符串 <code>$needle</code> 和 <code>$ignoreCase</code> 实参的已弃用 <code>assertContains()</code> 和 <code>assertNotContains()</code> 调用。
+报告包含字符串 <code>$needle</code> 和 <code>$ignoreCase</code> 参数的 <code>assertContains</code> 和 <code>assertNotContains</code> 函数弃用的用法。
 <!-- tooltip end -->
+<p>字符串 <code>$needle</code> 以及 <code>assertContains</code> 和 <code>assertNotContains</code> 函数的 <code>$ignoreCase</code> 可选布尔参数已弃用，在 PHPUnit 9 中将会移除。</p>
 <p>
-  字符串 <code>$needle</code> 以及 <code>assertContains()</code> 和 <code>assertNotContains()</code> 函数的 <code>$ignoreCase</code> 可选布尔形参已弃用，并且已在 PHPUnit 9 中移除。 对于在字符串上进行操作的断言，应该使用 <code>assertStringContainsString()</code>、<code>assertStringContainsStringIgnoringCase()</code>、<code>assertStringNotContainsString()</code> 和 <code>assertStringNotContainsStringIgnoringCase()</code> 这些特定的方法。
-</p>
-<p>
-  有关详细信息，请参阅 <a href="https://phpunit.readthedocs.io/en/stable/assertions.html">Usage of the assertEquals function (phpunit.readthedocs.io)</a>。
+  有关详细信息，请参阅 <a href="https://phpunit.readthedocs.io/en/8.4/assertions.html#assertstringcontainsstring">Usage of the assertEquals function (phpunit.readthedocs.io)</a>。
 </p>
 </body>
 </html>

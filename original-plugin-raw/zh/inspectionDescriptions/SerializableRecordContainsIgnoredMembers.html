@@ -1,9 +1,8 @@
 <html>
 <body>
-报告在 <code>record</code> 类中定义的序列化方法或字段。
-序列化方法包括 <code>writeObject()</code>、<code>readObject()</code>、<code>readObjectNoData()</code>、<code>writeExternal()</code> 和 <code>readExternal()</code>，以及字段 <code>serialPersistentFields</code>。
-  这些成员不用于记录的序列化或反序列化，因此不必要使用。
-<p><b>示例：</b></p>
+<p>报告 <code>record</code> 类中定义的方法 <code>writeObject()</code>、<code>readObject()</code>、<code>readObjectNoData()</code>、 <code>writeExternal()</code>、<code>readExternal()</code> 或字段 <code>serialPersistentFields</code>。
+  这些成员不用于记录的序列化或反序列化。</p>
+<p><b>示例:</b></p>
 <pre><code>
   record R1() implements Serializable {
     // 该字段在记录序列化期间被忽略
@@ -30,7 +29,7 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p>仅当项目或模块的语言级别为 14 或更高时，此检查才会报告。</p>
-<p><small>2020.3 最新变化</small></p>
+<p>该检查仅适用于 14 级或更高的语言级别。</p>
+<p><small>2020.3 的新功能</small></p>
 </body>
 </html>

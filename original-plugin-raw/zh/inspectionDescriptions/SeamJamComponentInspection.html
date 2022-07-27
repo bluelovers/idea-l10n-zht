@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>报告注解的 Seam 类的配置问题</p>
+<p>报告带注解的 Seam 类的配置问题</p>
 <!-- tooltip end -->
-<p><strong>示例：</strong></p>
+<p><strong>示例:</strong></p>
 <pre><code>
 @Name("authenticator")
 class SeanComponent {
@@ -18,7 +18,7 @@ class SeanComponent {
    <strong>@Factory</strong> // 应为 public
    private Map getUniverse2() {...}
 
-   <strong>@Unwrap</strong> // 必须没有形参
+   <strong>@Unwrap</strong> // 必须没有参数
    private static Map createUniverse(int days) { ... }
 }</code></pre>
 </body>

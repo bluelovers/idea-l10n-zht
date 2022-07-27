@@ -1,10 +1,10 @@
 <html>
 <body>
-<p>报告 JUnit 5 <code>@RepeatedTest</code> 的以下问题：</p>
+<p>报告 JUnit 5 <code>@RepeatedTest</code> 的以下问题:</p>
 <ul>
   <li>在同一个方法中使用 <code>@Test</code> 和 <code>@RepeatedTest</code>。 即便允许使用它们，结合使用也不会产生其他效果。</li>
-  <li><code>RepetitionInfo</code> 形参在 <code>@BeforeAll</code> 和 <code>@AfterAll</code> 方法中使用。 该形参未注入到这些方法中。</li>
-  <li><code>RepetitionInfo</code> 形参在包含 <code>@Test</code> 方法的类中的 <code>@BeforeEach</code> 和 <code>@AfterEach</code> 方法中使用。 在本例中，此形参不会被注入 <code>@Test</code> 方法中。</li>
+  <li>在 <code>@BeforeAll</code> 和 <code>@AfterAll</code> 方法中使用 <code>RepetitionInfo</code> 参数。 该参数未注入到这些方法中。</li>
+  <li>包含 <code>@Test</code> 方法的类的 <code>@BeforeEach</code> 和 <code>@AfterEach</code> 方法中使用了 <code>RepetitionInfo</code> 参数。 在本例中，此参数不会注入 <code>@Test</code> 方法中。</li>
 </ul>
 <!-- tooltip end -->
 </body>

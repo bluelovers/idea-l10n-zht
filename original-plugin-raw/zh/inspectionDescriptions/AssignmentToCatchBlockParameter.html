@@ -1,16 +1,17 @@
 <html>
 <body>
-报告对 <code>catch</code> 块形参的赋值。
+报告对声明为 <code>catch</code> 块参数的变量的赋值。
 <p>更改 <code>catch</code> 块形参很容易令人困惑，不建议使用。</p>
 <p>该快速修复会添加新变量的声明。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   void processFile(String fileName) throws Exception {
     try {
       doProcessFile(fileName);
-    } catch(Exception ex) {
+    }
+    catch(Exception ex) {
       if (ex instanceof UncheckedIOException) {
-        // Warning: catch block parameter reassigned
+        // 警告：catch 块形参被重新赋值
         ex = ((UncheckedIOException) ex).getCause();
       }
       throw ex;
@@ -19,10 +20,7 @@
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
-  void processFile(String fileName) throws Exception {
-    try {
-      doProcessFile(fileName);
-    } catch(Exception ex) {
+    catch(Exception ex) {
       Exception unwrapped = ex;
       if (unwrapped instanceof UncheckedIOException) {
         unwrapped = ((UncheckedIOException)
@@ -30,8 +28,8 @@
       }
       throw unwrapped;
     }
-  }
 </code></pre>
+<p>不报告多 catch 块的参数，因为此类参数为隐式 <code>final</code> 并且为它们重新赋值会导致编译错误。</p>
 <!-- tooltip end -->
 </body>
 </html>

@@ -1,9 +1,10 @@
 <html>
 <body>
-报告其中的 <code>default</code> 分支位于另一个 case 前面的 <code>switch</code> 语句或表达式。
-此结构会引起不必要的混淆。
-如果可能，可以通过快速修复将 <code>default</code> 分支移到最后位置。
-<p><b>示例：</b></p>
+报告其中的 <code>default</code> case 位于另一个 case 前面的 <code>switch</code> 语句或表达式。
+<p>此结构造成不必要的困惑。
+可以通过快速修复将 <code>default</code> case 移到最后位置。
+  只有给定分支的结尾有 <code>break</code>/<code>yield</code> 时，才能进行修正。</p>
+<p>示例:</p>
 <pre><code>
   switch (n) {
       default:

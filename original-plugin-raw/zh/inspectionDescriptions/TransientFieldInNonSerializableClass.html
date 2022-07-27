@@ -1,12 +1,13 @@
 <html>
 <body>
 报告未实现 <code>java.io.Serializable</code> 的类中的 <code>transient</code> 字段。
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   public class NonSerializableClass {
-    private transient String password;
+    private transient String password; // 警告：字段 'password' 被标记为 'transient'，位于不可序列化类中
   }
-</code></pre>
+  </code>
+</pre>
 <p>在应用快速修复后：</p>
 <pre><code>
   public class NonSerializableClass {

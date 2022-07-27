@@ -1,16 +1,16 @@
 <html>
 <body>
-报告可以替换为 <code>System.arraycopy()</code> 调用的数组内容的手动复制。
-<p><b>示例：</b></p>
-<pre><code>
+报告可以替换为 <code>System.arraycopy()</code> 的数组内容的手动复制。
+<p><b>示例:</b></p>
+<pre>
   for (int i = 0; i &lt; array.length; i++) {
-    newArray[i] = array[i];
+    new_array[i] = array[i];
   }
-</code></pre>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
-  System.arraycopy(array, 0, newArray, 0, array.length);
-</code></pre>
+<pre>
+  System.arraycopy(array, 0, new_array, 0, array.length);
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

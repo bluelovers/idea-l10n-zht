@@ -8,19 +8,5 @@
 <p>
     使用检查选项可指定此检查识别的记录器工厂类和方法。
 </p>
-<p><b>示例：</b></p>
-<pre><code>
-class AnotherService
-class MyService {
-    private val logger = LoggerFactory.getLogger(AnotherService::class.java)
-}
-</code></pre>
-<p>在应用快速修复后：</p>
-<pre><code>
-class MyService {
-    private val logger = LoggerFactory.getLogger(MyService::class.java)
-}
-</code></pre>
-
 </body>
 </html>

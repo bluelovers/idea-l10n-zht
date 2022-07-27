@@ -4,8 +4,8 @@
 <p>
 如果 static 成员在同一个类中，是合法的，但可能令人困惑。
 </p>
-<p><b>示例：</b></p>
-<pre><code>
+<p><b>示例:</b></p>
+<pre>
   class Foo {
     static void foo() {}
     static int x;
@@ -17,9 +17,9 @@
 
     static void baz() { foo(); }
   }
-</code></pre>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre>
   class Foo {
     static void foo() {}
     static int x;
@@ -31,7 +31,7 @@
 
     static void baz() { Foo.foo(); }
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>使用检查设置可以切换以下各项的报告：</p>
 <ul>

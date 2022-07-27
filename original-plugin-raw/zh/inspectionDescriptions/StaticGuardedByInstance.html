@@ -2,7 +2,7 @@
 <body>
 报告其中的保护符为非 static 字段或 <code>this</code> 的 <code>static</code> 字段或方法上的 <code>@GuardedBy</code> 注解。
 <p>使用非 static 元素保护 static 元素可能会导致过度并发，多个线程可能在不同的对象上下文中锁定，以同时访问保护字段。</p>
-<p>示例：</p>
+<p>示例:</p>
 <pre><code>
     private ReadWriteLock lock = new ReentrantReadWriteLock();
 

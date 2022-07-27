@@ -1,7 +1,7 @@
 <html>
 <body>
-报告可以自动转换为经典循环的 Stream API 链、<code>Iterable.forEach()</code> 和 <code>Map.forEach()</code> 调用。
-<p><b>示例：</b></p>
+报告可以自动转换为经典循环的 Stream API 链、<code>Iterable.forEach</code> 和 <code>Map.forEach</code> 调用。
+<p>示例:</p>
 <pre><code>
   String joinNonEmpty(List&lt;String&gt; list) {
     return list.stream() // 流可以转换为循环
@@ -28,10 +28,6 @@
   必须特别注意短路，因为流短路未指定读取的实际元素数。
 </p>
 <!-- tooltip end -->
-<p>
-  <i>Stream API</i> 出现在 Java 8 中。
-  此检查有助于为向后兼容早期 Java 版本而降级。
-</p>
 <p>配置检查：</p>
 <p>使用 <b>通过 Stream.iterator() 迭代未知的流源</b> 选项来建议转换来源无法识别的流。
   在这种情况下，迭代器将从流中创建。
@@ -46,6 +42,6 @@
     handles.add(allProcess);
   }
 </code></pre>
-<p><small>2017.1 最新变化</small></p>
+<p><small>2017.1 的新功能</small></p>
 </body>
 </html>

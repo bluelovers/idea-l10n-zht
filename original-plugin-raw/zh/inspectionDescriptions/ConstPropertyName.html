@@ -3,13 +3,13 @@
 报告不遵循推荐命名惯例的 <code>const</code> 属性名称。
 <p>
     一致的命名会让阅读和理解代码变得更容易。
-    根据 <a href="https://kotlinlang.org/docs/coding-conventions.html#property-names">Kotlin 官方样式指南</a>，<code>const</code> 属性应使用大写下划线分隔的名称。
+    根据 <a href="https://kotlinlang.org/docs/coding-conventions.html#property-names">Kotlin 官方样式指南</a>，<code>const</code> 属性应该以 CAPITAL_CASE 拼写法命名。
 </p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   const val Planck: Double = 6.62607015E-34
 </code></pre>
-<p>该快速修复会重命名属性：</p>
+<p>建议提供快速修复重命名该属性：</p>
 <pre><code>
   const val PLANCK: Double = 6.62607015E-34
 </code></pre>

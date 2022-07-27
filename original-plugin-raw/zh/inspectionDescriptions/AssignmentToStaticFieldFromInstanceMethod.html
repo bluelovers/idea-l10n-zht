@@ -1,8 +1,8 @@
 <html>
 <body>
-报告对实例方法中 <code>static</code> 字段的赋值或修改。
+从实例方法中报告对 <code>static</code> 字段的赋值，包括递增和递减。
 <p>虽然合法，但此类赋值很难安全完成，并且通常是无意中将字段标记为 <code>static</code> 的结果。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   class Counter {
     private static int count = 0;

@@ -6,7 +6,7 @@
   <li>签名与对应接口方法的签名不匹配</li>
 </ul>
 <p>此类方法可能表明接收器类型旨在满足标准库中的接口，但由于方法签名中的错误而无法满足。</p>
-<p>示例：</p>
+<p>示例:</p>
 <pre><code>type MyReader []byte
 
 func (r MyReader) ReadByte(data []byte) (byte, error) {

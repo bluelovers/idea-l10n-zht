@@ -2,14 +2,14 @@
 <body>
 报告现有的 Javac 问题、性能问题和不兼容性。
 例如，当需要处理许多嵌套调用时，类型推断会变慢。
-<p>以下代码会触发警告，因为 vararg 方法调用包含 50 个以上的多态实参：</p>
+<p>以下代码触发警告，因为 vararg 方法调用包含 50 种以上的多态参数：</p>
 <pre><code>
   Arrays.asList(
       Arrays.asList("a", "b"),
       ...
       Arrays.asList("a100", "b100"));
 </code></pre>
-<p>快速修复程序添加了显式类型实参，可以加快编译和 IDE 的速度。</p>
+<p>快速修复程序添加了显式类型参数，可以加快编译和 IDE 的速度。</p>
 <pre><code>
   //noinspection RedundantTypeArguments
   Arrays.&lt;List&lt;String&gt;&gt;asList(

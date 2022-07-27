@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>报告在 XML 应用程序上下文中定义的自定义架构 Bean 注入的不正确类型。</p>
+<p>报告在 XML 应用程序上下文中定义的自定义架构 bean 注入的错误类型。</p>
 
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   public class SimpleBean{}
 
@@ -10,7 +10,7 @@
     &lt;bean class="SimpleBean" id="simpleBean"/&gt;
        &lt;mvc:annotation-driven
          conversion-service="simpleBean"      &lt;!-- reports "Bean must be of 'org.springframework.core.convert.ConversionService' type" --&gt;
-         message-codes-resolver="simpleBean"  &lt;!-- 报告 "Bean 必须为 'org.springframework.validation.MessageCodesResolver' 类型" --&gt;
+         message-codes-resolver="simpleBean"  &lt;!-- 报告 “Bean 必须为 ‘org.springframework.validation.MessageCodesResolver' 类型" --&gt;
          validator="simpleBean"               &lt;!-- 报告 "Bean 必须为 'org.springframework.validation.Validator' 类型" --&gt;
     /&gt;
   &lt;/beans&gt;

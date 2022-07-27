@@ -1,26 +1,8 @@
 <html>
 <body>
 报告违反<a href="https://en.wikipedia.org/wiki/Law_of_Demeter">迪米特法则</a>的情况。
-<p>迪米特法则并非真正的法则，但它指定了一种样式准则：绝不调用从另一个调用中获取的对象的方法。
-遵循此准则的代码更容易维护、调整和重构，方法之间的耦合更少，重复更少，信息隐藏得更好。 另一方面，您可能需要编写许多包装器方法才能满足这一准则。</p>
-<p><b>示例：</b></p>
-<pre><code>
-  boolean pay(Customer c, Invoice invoice) {
-    int dollars = c.getWallet().getDollars(); // 违规
-    if (dollars >= invoice.getAmount()) {
-      Wallet w = c.getWallet();
-      w.subtract(invoice.getAmount()); // 违规
-      return true;
-    }
-    return false;
-  }
-</code></pre>
-上面的示例可以更好地实现为 <code>Customer</code> 中的 <code>payInvoice(Invoice invoice)</code> 方法。
-<p><b>示例：</b></p>
-<pre><code>
-  Engine engine = car.getEngine();
-  int cylinders = engine.getNumberOfCylinders();
-</code></pre>
+<p>迪米特法则指定了一种样式准则：绝不调用从另一个调用中获取的对象的方法。
+遵循此准则的代码更容易维护、调整和重构，方法之间的耦合更少，重复更少，信息隐藏得更好。 另一方面，为满足这一准则，您可能需要编写许多包装器方法。</p>
 <!-- tooltip end -->
 <p>
 </body>

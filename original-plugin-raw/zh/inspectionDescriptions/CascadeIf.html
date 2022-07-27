@@ -1,7 +1,7 @@
 <html>
 <body>
 报告有三个以上分支并且可以替换为 <code>when</code> 表达式的 <code>if</code> 语句。
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   fun checkIdentifier(id: String) {
       fun Char.isIdentifierStart() = this in 'A'..'z'
@@ -16,7 +16,7 @@
       }
   }
 </code></pre>
-<p>快速修复会将 <code>if</code> 表达式转换为 <code>when</code>：</p>
+<p>建议通过快速修复将 <code>if</code> 表达式转换为 <code>when</code> 表达式：</p>
 <pre><code>
   fun checkIdentifier(id: String) {
       fun Char.isIdentifierStart() = this in 'A'..'z'

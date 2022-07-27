@@ -2,7 +2,7 @@
 <body>
 报告其中的保护字段不是 <code>final</code> 的 <code>@GuardedBy</code> 注解。
 <p>在非 final 字段上进行保护可能会导致意外的竞争条件，因为该字段的值会被锁定（可能会变化），而不是锁定字段本身。</p>
-<p>示例：</p>
+<p>示例:</p>
 <pre><code>
     private ReadWriteLock lock = new ReentrantReadWriteLock(); //非 final 保护字段
     private Object state;

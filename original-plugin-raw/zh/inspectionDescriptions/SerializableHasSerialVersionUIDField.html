@@ -4,18 +4,21 @@
 <p>
   如果没有 <code>serialVersionUID</code> 字段，对该类做出的任何更改都将导致以前序列化的版本不可读。
 </p>
-<p><b>示例：</b></p>
-<pre><code>
-  class Main implements Serializable {
-  }
-</code></pre>
+<p><b>示例:</b></p>
+<pre>
+  <code>
+    class Main implements Serializable {
+    }
+  </code>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
-  class Main implements Serializable {
+<pre>
+  <code>
+    class Main implements Serializable {
       private static final long serialVersionUID = -1446398935944895849L;
-  }
-</code></pre>
-当使用 JDK 14 或更高版本的语言级别时，该快速修复还将添加 <code>java.io.Serial</code> 注解。
+    }
+  </code>
+</pre>
 <!-- tooltip end -->
 <p>使用以下选项配置检查：</p>
 <ul>

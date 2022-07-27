@@ -1,42 +1,14 @@
 <html>
 <body>
-报告可以安全地设为 <code>final</code> 的字段。
-所有 <code>final</code> 字段都应具有一个不会更改的值，从而使代码更易于推理。
-<p>为避免分析开销过大，此检查仅报告字段是否具有 <code>private</code> 修饰符或者是否在局部类或匿名类中定义。
-  如果满足以下条件，字段可以为 <code>final</code>：
+报告可以安全地设为 <code>final</code> 的任何字段。
+<p>使用 <code>final</code> 变量会使代码更不容易出错。 它还可以通过优化编译器来帮助加速您的程序。</p>
+<p>只有当一个字段具有 <code>private</code> 访问修饰符才可以安全地设为 <code> final </code>（或者它在本地/匿名类中定义），并且：<p>
 <ul>
-  <li>字段为 <code>static</code>，并在其声明或 <code>static</code> 初始值设定项中进行了一次初始化。</li>
-  <li>字段为非 <code>static</code>，并在其声明、实例初始值设定项或每个构造函数中进行了一次初始化</li>
+  <li>它是 <code>static</code>，并在其声明或 static 的类初始化程序之一中进行初始化。</li>
+  <li>它是非 static 的，并在其声明、非 static 的类初始化程序或所有构造函数中初始化。</li>
 </ul>
-并且字段未在其他任何地方进行修改。
-<p><b>示例：</b></p>
-<pre><code>
-  public class Person {
-    private String name; // 可以为 final
-
-    Person(String name) {
-      this.name = name;
-    }
-
-    public String getName() {
-      return name;
-    }
-  }
-</code></pre>
-<p>在应用快速修复后：</p>
-<pre><code>
-  public class Person {
-    private final String name;
-
-    Person(String name) {
-      this.name = name;
-    }
-
-    public String getName() {
-      return name;
-    }
-  }
-</code></pre>
 <!-- tooltip end -->
+
+
 </body>
 </html>

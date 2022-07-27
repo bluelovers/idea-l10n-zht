@@ -1,11 +1,11 @@
 <html>
 <body>
 报告使用 <code>==</code> 或 <code>!=</code> 而不是 <code>equals()</code> 来测试 <code>Object</code> 相等性的代码。
-<p>使用 <code>==</code> 或 <code>!=</code> 比较对象通常是错误的，因为它不是通过相等性而是通过同一性来比较对象。
+<p>使用 <code>==</code> 或 <code>!=</code> 比较对象往往是错误的，因为它不是通过相等性而是通过同一性来比较对象。
   不报告与 <code>null</code> 的比较。
   数组、<code>String</code> 和 <code>Number</code> 比较由单独的检查报告。
 </p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>  <b>if</b> (list1 == list2) {
     <b>return</b>;
   }

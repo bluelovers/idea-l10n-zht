@@ -10,8 +10,8 @@
     数组实参的类型与集合声明中的类型形参不匹配。
   </li>
 </ul>
-<p><b>示例：</b></p>
-<pre><code>
+<p><b>示例:</b></p>
+<pre>
 void m1(List list) {
   Number[] ns = (Number[]) list.toArray(new String[0]);
 }
@@ -19,7 +19,7 @@ void m1(List list) {
 void m2(List&lt;Number&gt; list) {
   Number[] ns = list.toArray(new String[0]);
 }
-</code></pre>
+</pre>
 
 
 </body>

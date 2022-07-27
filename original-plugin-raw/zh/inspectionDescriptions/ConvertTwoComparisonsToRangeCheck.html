@@ -2,13 +2,13 @@
 <body>
 报告可转换为范围检查的两个连续比较。
 <p>通过移除测试主体重复，针对范围进行检查使代码更简单。</p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   fun checkMonth(month: Int): Boolean {
-      return month >= 1 && month &lt;= 12
+      return month >= 1 && month <= 12
   }
 </code></pre>
-<p>快速修复可将基于比较的检查替换为针对范围的检查：</p>
+<p>建议通过快速修复将基于比较的检查替换为基于范围的检查：</p>
 <pre><code>
   fun checkMonth(month: Int): Boolean {
       return month in 1..12

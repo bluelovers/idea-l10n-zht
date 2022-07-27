@@ -1,21 +1,21 @@
 <html>
 <body>
 <p>
-  报告 <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation">Spring Data Query</a> 构建器无法为其生成相应查询的 Spring Data CRUD 仓库方法。
+  报告 <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation">Spring Data Query</a> 构建器无法为其生成相应查询的 Spring Data CRUD 存储库方法。
 </p>
 
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
 interface PersonRepository extends Repository&lt;Person, Long&gt; {
   List&lt;Person&gt; findByEmailAddressAndLastname(EmailAddress emailAddress, String lastname);
-  List&lt;Person&gt; findByEmail<strong>Unknown</strong>AndLastname(EmailAddress emailAddress, String lastname); // 无法解析 'Unknown' 属性
+  List&lt;Person&gt; findByEmail<strong>Unknown</strong>AndLastname(EmailAddress emailAddress, String lastname); // 无法解析 ‘Unknown' 属性
   List&lt;Person&gt; <strong>findByAndLastname</strong>(EmailAddress emailAddress, String lastname); // 缺少属性名称
 
   List&lt;Person&gt; findDistinctPeopleByLastnameOrFirstname(String lastname, String firstname);
-  List&lt;Person&gt; findPeopleDistinctBy<strong>Unknown</strong>OrFirstname(String lastname, String firstname); // 无法解析 'Unknown' 属性
+  List&lt;Person&gt; findPeopleDistinctBy<strong>Unknown</strong>OrFirstname(String lastname, String firstname); // 无法解析 ‘Unknown' 属性
 
   List&lt;Person&gt; findByLastnameOrderByFirstnameAsc(String lastname);
-  List&lt;Person&gt; findByLastnameOrderBy<strong>Unknown</strong>Desc(String lastname);  // 无法解析 'Unknown' 属性
+  List&lt;Person&gt; findByLastnameOrderBy<strong>Unknown</strong>Desc(String lastname);  // 无法解析 ‘Unknown' 属性
 }
 </code></pre>
 </body>

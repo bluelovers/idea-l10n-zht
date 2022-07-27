@@ -1,15 +1,15 @@
 <html>
 <body>
-<p>报告 <code>parameters</code> 特性的值包含未定义方法形参名称的 Micronaut Cache 注解。</p>
+<p>报告 Micronaut Cache 注解，其中 <code>parameters</code> 属性的值包含未定义方法参数的名称。</p>
 <p>支持以下注解：</p>
 <ul>
   <li><code>io.micronaut.cache.annotation.Cacheable</code></li>
   <li><code>io.micronaut.cache.annotation.CachePut</code></li>
   <li><code>io.micronaut.cache.annotation.CacheInvalidate</code></li>
 </ul>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
-  @CachePut(parameters = "myParameter") // 错误：无法解析符号 'myParameter'
+  @CachePut(parameters = "myParameter") // 错误：无法解析符号“myParameter”
   public String cachedMethod(String name_is_not_equal_to_myParameter) {
     return "...";
   }

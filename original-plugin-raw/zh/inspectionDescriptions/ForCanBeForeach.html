@@ -2,7 +2,7 @@
 <body>
 报告迭代集合或数组并且可以自动替换为增强型 <code>for</code> 循环（foreach 迭代语法）的 <code>for</code> 循环。
 <!--  'foreach' still used in this description so that the inspection continues to be found using this keyword -->
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   for (Iterator&lt;String&gt; iterator = list.iterator(); iterator.hasNext(); ) {
     String item = iterator.next();
@@ -24,6 +24,6 @@
 <p>
   使用<b>不报告无类型集合上的迭代</b>选项可忽略没有类型形参的集合。
   这将防止创建 <code>java.lang.Object</code> 类型的增强型 <code>for</code> 循环变量以及在使用循环变量的位置插入转换。</p>
-<p>仅当项目或模块的语言级别为 5 或更高时，此检查才会报告。</p>
+<p>仅当项目或模块的语言级别为 5 级或更高级别时，该检查才会进行报告。</p>
 </body>
 </html>

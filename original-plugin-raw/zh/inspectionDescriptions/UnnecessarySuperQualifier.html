@@ -4,8 +4,8 @@
 <p>
   当超类的字段或方法在调用类中未被隐藏/重写时，不需要 <code>super</code> 限定符。
 </p>
-<p><b>示例：</b></p>
-<pre><code>
+<p><b>示例:</b></p>
+<pre>
   class Foo {
     void foo() {}
   }
@@ -15,9 +15,9 @@
       super.foo();
     }
   }
-</code></pre>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre>
   class Foo {
     void foo() {}
   }
@@ -27,7 +27,7 @@
       foo();
     }
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>
   使用检查设置可以忽略有助于区分超类成员访问与外部类的同名成员的限定符。

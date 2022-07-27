@@ -4,25 +4,27 @@
 <p>
   如果实例初始值设定项不引用其类的任何非 static 成员，则可以为 static。
   static 初始值设定项在类解析后执行，而实例初始值设定项对此类的每个实例化执行。</p>
-<p><b>示例：</b></p>
-<pre><code>
+<p><b>示例:</b></p>
+<pre>
   class A {
      public static String CONSTANT;
      {
         CONSTANT = "Hello";
      }
   }
-</code></pre>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre>
   class A {
      public static String CONSTANT;
      static {
-        CONSTANT = "Hello"; // 现在每个类仅实例化一次
+        CONSTANT = "Hello"; //现在每个类仅实例化一次
      }
   }
-</code></pre>
+</pre>
 
 <!-- tooltip end -->
+<p>
+
 </body>
 </html>

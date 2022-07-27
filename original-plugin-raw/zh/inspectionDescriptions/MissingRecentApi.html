@@ -1,14 +1,15 @@
 <html>
 <body>
-报告在比 <code>&lt;idea-version></code> <code>@since-build</code> (<code>plugin.xml</code>) 中指定的版本<em>更新</em>的版本中引入的 IntelliJ Platform API 的用法。
+报告在比 <code>&lt;idea-version></code> 中指定的版本<em>更新</em>的版本中引入的 IntelliJ Platform API 的用法 （<code>plugin.xml</code> 的 <code>@since-build</code> 中）中指定的版本更新。
 <p>
-  使用此类 API 可能导致插件与旧的 IDE 版本不兼容。
+  使用此 API 可能导致插件与旧的 IDE 版本不兼容。
 </p>
 <p>
-  为了避免在旧 IDE 版本中运行插件时可能出现的问题，请相应地提高 <code>since-build</code>，或移除此 API 的用法。
+  为了避免在旧的 IDE 版本中运行插件时可能出现的问题，请相应地提高 <code>since-build</code>，
+  或移除此 API 的用法。
 </p>
 <!-- tooltip end -->
 <p>配置检查：</p>
-如果 <code>&lt;idea-version></code> <code>@since/until-build</code> 特性在 <code>plugin.xml</code> 中未指定，请显式设置 <b>Since</b>/<b>Until</b>。
+如果 <code>&lt;idea-version></code> <code>@since/until-build</code> 特性在 <code>plugin.xml</code> 中未指定，请显式设置<b>自从</b>/<b>直到</b>。
 </body>
 </html>

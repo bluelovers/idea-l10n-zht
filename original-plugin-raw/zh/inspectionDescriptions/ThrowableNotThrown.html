@@ -1,15 +1,18 @@
 <html>
 <body>
-当创建的 <code>Throwable</code> 从未真正抛出时，报告 <code>Throwable</code> 或其子类的实例化。
-此外，当方法调用的结果未抛出时，此检查会报告返回 <code>Throwable</code> 或其子类实例的方法调用。
-<p>不会报告对使用 Error Prone 或 AssertJ 的 <code>@CanIgnoreReturnValue</code> 注解进行注解的方法的调用。</p>
-<p><b>示例：</b></p>
-<pre><code>
+<p>当创建的 <code>Throwable</code> 从未实际抛出时，报告 <code>Throwable</code> 或其子类的实例化。</p>
+<p>这些报告指出了测试中难以捕获的错误。</p>
+<p>此外，当方法调用的结果未抛出时，此检查会报告返回 <code>Throwable</code> 或其子类实例的方法调用。</p>
+<p>不会报告对使用 Error Prone 或 AssertJ 的 <code>@CanIgnoreReturnValue</code> 注解进行批注的方法的调用。</p>
+<p><b>示例:</b></p>
+<pre>
+<code>
     void leftBehind() throws Throwable {
-        RuntimeException e = new RuntimeException("throw me");
+        RuntimeException e = new RuntimeException(""throw me"");
         // ...
     }
-</code></pre>
+</code>
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

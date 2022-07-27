@@ -7,7 +7,7 @@
 <p>
   任何在正常对象构造过程中未被初始化的 <code>transient</code> 字段都被视为使用默认初始化，并且不会被此检查报告。
 </p>
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   class Person implements Serializable {
     transient String name = "Default"; //警告，反序列化后实际上可能为 null

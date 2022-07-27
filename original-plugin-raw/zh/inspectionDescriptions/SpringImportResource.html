@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>报告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html">@ImportResource</a> 注解的 <code>locations</code> 特性和 <code>@ImportResource</code> 元注解的相应别名特性中的未解析文件和目录。</p>
+<p>报告 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html">@ImportResource</a> 注解的 <code>locations</code> 属性中未解析的文件和目录以及 <code>@ImportResource</code> 元注解的相应别名属性。</p>
 
-<p><b>示例：</b></p>
+<p><b>示例:</b></p>
 <pre><code>
   @Configuration
   @ImportResource(locations = "classpath:META-INF/unknown-context.xml") // 报告 "无法解析文件 'unknown-context.xml'"

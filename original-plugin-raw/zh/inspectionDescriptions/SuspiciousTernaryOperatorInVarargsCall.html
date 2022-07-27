@@ -8,8 +8,8 @@
 该快速修复会将非数组分支包装在数组中以防止编译器执行转换。
 </p>
 <!-- tooltip end -->
-<p><b>示例：</b></p>
-<pre><code>
+<p><b>示例:</b></p>
+<pre>
     static void bar(boolean flag) {
         Object[] a = {1, 2};
         Object b = "hello";
@@ -17,10 +17,10 @@
     }
     static void foo(Object... obj) {
     }
-</code></pre>
+</pre>
 
 <p>应用该快速修复后： </p>
-<pre><code>
+<pre>
     static void bar(boolean flag) {
         Object[] a = {1, 2};
         Object b = "hello";
@@ -28,8 +28,8 @@
     }
     static void foo(Object... obj) {
     }
-</code></pre>
+</pre>
 
-<p><small>2020.3 最新变化</small></p>
+<p><small>2020.3 的新功能</small></p>
 </body>
 </html>

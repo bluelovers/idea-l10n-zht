@@ -1,10 +1,10 @@
 <html>
 <body>
-<p>报告无效组件类型上的 Seam 注解用法。</p>
+<p>报告有关无效组件类型的 Seam 注解用法。</p>
 
 <p>只有属于 Seam 组件的类才允许使用 Seam 注解
 （<code>@Around</code>、<code>@Within</code>、<code>@DataBinderClass</code> 和 <code>@DataSelectorClass</code> 除外）。<br>
-此外，许多注解仅对特定组件类型有效，例如，实体 Bean 不支持双向注入、上下文划分或事务划分。</p>
+此外，许多注解仅对特定组件类型有效，例如，实体 Bean 不支持双向注入、上下文分界或事务分界。</p>
 
 <p>Seam 注解允许使用以下组件类型：</p>
 <table border="1">
@@ -85,7 +85,7 @@
   <td></td><td>@Observer</td><td>X</td><td>X</td><td>X</td><td>X</td>
   </tr>
   <tr>
-  <td>上下文<br>划分</td><td>@Begin</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  <td>上下文<br>分界</td><td>@Begin</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
   </tr>
   <tr>
   <td></td><td>@BeginTask</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
@@ -106,7 +106,7 @@
   <td></td><td>@CreateProcess</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
   </tr>
   <tr>
-  <td>事务<br>划分</td><td>@Transactional</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>X</td>
+  <td>事务<br>分界</td><td>@Transactional</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>X</td>
   </tr>
   <tr>
   <td></td><td>@Rollback</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
@@ -115,7 +115,7 @@
   <td>验证</td><td>@IfInvalid</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
   </tr>
   <tr>
-  <td>远程处理</td><td>@Remote</td><td>本地接口上的<br>X</td><td>本地接口上的<br>X</td><td>&nbsp;</td><td>X</td>
+  <td>远程处理</td><td>@Remote</td><td>X<br>在本地接口上</td><td>X<br>在本地接口上</td><td>&nbsp;</td><td>X</td>
   </tr>
   <tr>
   <td>JSF 数据表</td><td>@DataModel</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>

@@ -22,22 +22,26 @@
   替代做法是考虑在 <code>private final</code> 锁定对象上同步，可以完全控制对该对象的访问。
 </p>
 <p>可以通过快速修复使用 <code>synchronized(this)</code> 包装方法体。</p>
-<p><b>示例：</b></p>
-<pre><code>
-  class Main {
-    public synchronized void fooBar() {
-    }
-  }
-</code></pre>
-<p>在应用快速修复后：</p>
-<pre><code>
-  class Main {
-    public void fooBar() {
-      synchronized (this) {
+<p><b>示例:</b></p>
+<pre>
+  <code>
+    class Main {
+      public synchronized void fooBar() {
       }
     }
-  }
-</code></pre>
+  </code>
+</pre>
+<p>在应用快速修复后：</p>
+<pre>
+  <code>
+    class Main {
+      public void fooBar() {
+        synchronized (this) {
+        }
+      }
+    }
+  </code>
+</pre>
 
 <!-- tooltip end -->
 <p>您可以为此检查配置以下选项：</p>

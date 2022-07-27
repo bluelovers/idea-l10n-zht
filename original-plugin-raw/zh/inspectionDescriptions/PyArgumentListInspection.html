@@ -1,7 +1,7 @@
 <html>
 <body>
-<p>报告声明的形参和实际实参之间的差异，也报告不正确的实参（例如重复的命名实参）和不正确的实参顺序。</p>
-<p><b>示例：</b></p>
+<p>报告声明的形参和实际实参之间的差异，也报告不正确的实参(例如重复的命名实参和不正确的实参顺序)。</p>
+<p><b>示例:</b></p>
 <pre style="font-family: monospace">
 class Foo:
     def __call__(self, p1: int, *, p2: str = "%"):
@@ -12,7 +12,7 @@ bar = Foo()
 bar.__call__() # 形参未填
 bar(5, "#") # 非预期实参
 </pre>
-<p>正确的代码段如下所示：</p>
+<p>正确的代码段如下所示:</p>
 <pre style="font-family: monospace">
 class Foo:
     def __call__(self, p1: int, *, p2: str = "%"):

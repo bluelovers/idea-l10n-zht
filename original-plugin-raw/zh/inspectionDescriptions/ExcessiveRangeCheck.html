@@ -2,23 +2,23 @@
 <body>
 报告检查值范围的条件链，这些条件链可以简化为单个检查。
 <p>该快速修复会将条件链替换为简化的表达式：</p>
-<p>示例：</p>
-<pre><code>
+<p>示例:</p>
+<pre>
   x > 2 && x &lt; 4
-</code></pre>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre>
   x == 3
-</code></pre>
-<p>示例：</p>
-<pre><code>
+</pre>
+<p>示例:</p>
+<pre>
   arr.length == 0 || arr.length > 1
-</code></pre>
+</pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre>
   arr.length != 1
-</code></pre>
+</pre>
 <!-- tooltip end -->
-<p><small>2019.1 最新变化</small></p>
+<p><small>2019.1 的新功能</small></p>
 </body>
 </html>

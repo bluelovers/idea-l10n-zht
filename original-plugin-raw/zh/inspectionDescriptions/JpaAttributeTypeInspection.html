@@ -1,14 +1,14 @@
 <html>
 <body>
-报告 JPA 特性的属性类型不匹配。
+报告 JPA 属性的属性类型不匹配。
 
-<p><b>示例：</b></p><br/>
+<p><b>示例:</b></p><br/>
 <pre><code>
   @Entity
   public class JavaEntity {
 
     @OneToOne
-    Map<Integer, AnotherEntity> incorrectRelationship; // 错误：'One To One' 特性类型应该是 Entity，而不是 Map
+    Map<Integer, AnotherEntity> incorrectRelationship; // 错误：'One To One' 属性类型应该是实体，而不是映射
 
     @ManyToMany
     Map<Integer, AnotherEntity> correctRelationship;

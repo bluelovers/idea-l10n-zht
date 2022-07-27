@@ -1,8 +1,8 @@
 <html>
 <body>
-报告定义为可以使用 <code>Comparator.comparing()</code> 调用表示的 lambda 表达式的 <code>Comparator</code> 实例。
-还会报告可以替换为 <code>Comparator.thenComparing()</code> 表达式的链式比较。
-<p>示例：</p>
+报告将 <code>Comparator</code> 定义为可以使用 <code>Comparator.comparing()</code> 等方法表达的 lambda 表达式的情况。
+<p>此检查还报告可以由 <code>Comparator.thenComparing()</code> 替换的链比较。</p>
+<p>示例:</p>
 <pre><code>
   myList.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
 
@@ -22,5 +22,6 @@
                          .thenComparingInt(Person::third));
 </code></pre>
 <!-- tooltip end -->
+<p><small>2016.3 的新功能</small></p>
 </body>
 </html>
