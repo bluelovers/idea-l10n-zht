@@ -1,23 +1,21 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
+    <option name="ask" path="ActionManager" hit="Ask Before Deleting Lists" />
+    <option name="before" path="ActionManager" hit="Ask Before Deleting Lists" />
+    <option name="deleting" path="ActionManager" hit="Ask Before Deleting Lists" />
+    <option name="lists" path="ActionManager" hit="Ask Before Deleting Lists" />
+    <option name="bookmark" path="ActionManager" hit="Create Bookmark List..." />
+    <option name="create" path="ActionManager" hit="Create Bookmark List..." />
+    <option name="list" path="ActionManager" hit="Create Bookmark List..." />
     <option name="emacs" path="ActionManager" hit="Emacs 选项卡" />
     <option name="选项卡" path="ActionManager" hit="Emacs 选项卡" />
     <option name="ide" path="ActionManager" hit="IDE 脚本控制台" />
     <option name="脚本控制台" path="ActionManager" hit="IDE 脚本控制台" />
     <option name="include" path="ActionManager" hit="Include 文件…" />
     <option name="文件" path="ActionManager" hit="Include 文件…" />
-    <option name="and" path="ActionManager" hit="Show Scratches and Consoles" />
-    <option name="consoles" path="ActionManager" hit="Show Scratches and Consoles" />
-    <option name="scratches" path="ActionManager" hit="Show Scratches and Consoles" />
-    <option name="show" path="ActionManager" hit="Show Scratches and Consoles" />
-    <option name="and" path="ActionManager" hit="Show scratches and consoles" />
-    <option name="consoles" path="ActionManager" hit="Show scratches and consoles" />
-    <option name="scratches" path="ActionManager" hit="Show scratches and consoles" />
-    <option name="show" path="ActionManager" hit="Show scratches and consoles" />
     <option name="todo" path="ActionManager" hit="TODO" />
     <option name="text" path="ActionManager" hit="Text..." />
-    <option name="touchbar" path="ActionManager" hit="Touchbar" />
     <option name="ui" path="ActionManager" hit="UI 调试器…" />
     <option name="调试器" path="ActionManager" hit="UI 调试器…" />
     <option name="一键导航" path="ActionManager" hit="一键导航" />
@@ -48,7 +46,6 @@
     <option name="可用于补全非导入类名" path="ActionManager" hit="与双击基本补全快捷键相同(可用于补全非导入类名)" />
     <option name="与所选语言创建新的临时文件" path="ActionManager" hit="与所选语言创建新的临时文件" />
     <option name="与文件类型关联" path="ActionManager" hit="与文件类型关联…" />
-    <option name="严重性" path="ActionManager" hit="严重性" />
     <option name="临时文件" path="ActionManager" hit="临时文件" />
     <option name="为" path="ActionManager" hit="为“查找用法”操作选择范围和编辑选项" />
     <option name="操作选择范围和编辑选项" path="ActionManager" hit="为“查找用法”操作选择范围和编辑选项" />
@@ -110,6 +107,8 @@
     <option name="使用行注释注释" path="ActionManager" hit="使用行注释注释/取消注释当前行或所选块" />
     <option name="取消注释当前行或所选块" path="ActionManager" hit="使用行注释注释/取消注释当前行或所选块" />
     <option name="使用行注释进行注释" path="ActionManager" hit="使用行注释进行注释" />
+    <option name="使用视觉嵌入和折叠" path="ActionManager" hit="使用视觉嵌入和折叠，根据您的代码样式采用空格" />
+    <option name="根据您的代码样式采用空格" path="ActionManager" hit="使用视觉嵌入和折叠，根据您的代码样式采用空格" />
     <option name="保存为实时模板" path="ActionManager" hit="保存为实时模板…" />
     <option name="保留此文档" path="ActionManager" hit="保留此文档" />
     <option name="修正文档注释" path="ActionManager" hit="修正文档注释" />
@@ -124,6 +123,7 @@
     <option name="全部展开" path="ActionManager" hit="全部展开" />
     <option name="全部展开到级别" path="ActionManager" hit="全部展开到级别" />
     <option name="全部收起" path="ActionManager" hit="全部收起" />
+    <option name="全部添加到收藏夹" path="ActionManager" hit="全部添加到收藏夹" />
     <option name="使下一个操作调用打开新的选项卡" path="ActionManager" hit="关闭当前选项卡中的所有更新，使下一个操作调用打开新的选项卡" />
     <option name="关闭当前选项卡中的所有更新" path="ActionManager" hit="关闭当前选项卡中的所有更新，使下一个操作调用打开新的选项卡" />
     <option name="关闭浮动导航栏" path="ActionManager" hit="关闭浮动导航栏" />
@@ -219,7 +219,7 @@
     <option name="弹出窗口" path="ActionManager" hit="切换是否应在工具窗口之前显示“文档”弹出窗口" />
     <option name="文档" path="ActionManager" hit="切换是否应在工具窗口之前显示“文档”弹出窗口" />
     <option name="切换渲染视图" path="ActionManager" hit="切换渲染视图" />
-    <option name="创建书签列表" path="ActionManager" hit="创建书签列表…" />
+    <option name="切换视觉格式化层" path="ActionManager" hit="切换视觉格式化层" />
     <option name="创建所选类" path="ActionManager" hit="创建所选类、文件或目录的副本" />
     <option name="文件或目录的副本" path="ActionManager" hit="创建所选类、文件或目录的副本" />
     <option name="创建新文件" path="ActionManager" hit="创建新文件" />
@@ -229,7 +229,6 @@
     <option name="文件或目录" path="ActionManager" hit="创建新的类、接口、文件或目录" />
     <option name="创建新目录或软件包" path="ActionManager" hit="创建新目录或软件包" />
     <option name="删除" path="ActionManager" hit="删除" />
-    <option name="删除列表前询问" path="ActionManager" hit="删除列表前询问" />
     <option name="删除所选类" path="ActionManager" hit="删除所选类、方法或字段，并检查使用" />
     <option name="并检查使用" path="ActionManager" hit="删除所选类、方法或字段，并检查使用" />
     <option name="方法或字段" path="ActionManager" hit="删除所选类、方法或字段，并检查使用" />
@@ -248,13 +247,13 @@
     <option name="或移至所选文本的上一个匹配项" path="ActionManager" hit="反方向重复上一次查找/替换操作，或移至所选文本的上一个匹配项" />
     <option name="替换操作" path="ActionManager" hit="反方向重复上一次查找/替换操作，或移至所选文本的上一个匹配项" />
     <option name="反转布尔值" path="ActionManager" hit="反转布尔值…" />
+    <option name="发送至收藏夹" path="ActionManager" hit="发送至收藏夹" />
     <option name="ide" path="ActionManager" hit="取消所选目录的排除，使其文件可以被 IDE 的操作处理" />
     <option name="使其文件可以被" path="ActionManager" hit="取消所选目录的排除，使其文件可以被 IDE 的操作处理" />
     <option name="取消所选目录的排除" path="ActionManager" hit="取消所选目录的排除，使其文件可以被 IDE 的操作处理" />
     <option name="的操作处理" path="ActionManager" hit="取消所选目录的排除，使其文件可以被 IDE 的操作处理" />
     <option name="取消标记" path="ActionManager" hit="取消标记" />
     <option name="取消选择匹配项" path="ActionManager" hit="取消选择匹配项" />
-    <option name="名称" path="ActionManager" hit="名称" />
     <option name="后退" path="ActionManager" hit="后退" />
     <option name="向上拉取成员" path="ActionManager" hit="向上拉取成员…" />
     <option name="向上查找" path="ActionManager" hit="向上查找" />
@@ -323,6 +322,7 @@
     <option name="基于此类" path="ActionManager" hit="基于此类" />
     <option name="基于预期类型补全代码" path="ActionManager" hit="基于预期类型补全代码" />
     <option name="基本" path="ActionManager" hit="基本" />
+    <option name="基本工具组" path="ActionManager" hit="基本工具组" />
     <option name="填充段落" path="ActionManager" hit="填充段落" />
     <option name="增量搜索" path="ActionManager" hit="增量搜索" />
     <option name="复制" path="ActionManager" hit="复制/粘贴特殊" />
@@ -385,6 +385,7 @@
     <option name="将所选代码段转换为包含的文件" path="ActionManager" hit="将所选代码段转换为包含的文件" />
     <option name="将所选文件关联到某种文件类型" path="ActionManager" hit="将所选文件关联到某种文件类型" />
     <option name="将所选文本保存为实时模板" path="ActionManager" hit="将所选文本保存为实时模板" />
+    <option name="将所选节点添加到收藏夹" path="ActionManager" hit="将所选节点添加到收藏夹" />
     <option name="将所选行向上移动一行" path="ActionManager" hit="将所选行向上移动一行" />
     <option name="将所选行向下移动一行" path="ActionManager" hit="将所选行向下移动一行" />
     <option name="将所选表达式替换为常量" path="ActionManager" hit="将所选表达式替换为常量" />
@@ -486,13 +487,16 @@
     <option name="tab" path="ActionManager" hit="按 Tab 展开实时模板" />
     <option name="展开实时模板" path="ActionManager" hit="按 Tab 展开实时模板" />
     <option name="按" path="ActionManager" hit="按 Tab 展开实时模板" />
+    <option name="按严重程度排序" path="ActionManager" hit="按严重程度排序" />
     <option name="按名称快速导航到类" path="ActionManager" hit="按名称快速导航到类" />
+    <option name="按名称排序" path="ActionManager" hit="按名称排序" />
     <option name="助记键切换" path="ActionManager" hit="按数字/助记键切换" />
     <option name="按数字" path="ActionManager" hit="按数字/助记键切换" />
     <option name="助记键转到" path="ActionManager" hit="按数字/助记键转到" />
     <option name="按数字" path="ActionManager" hit="按数字/助记键转到" />
     <option name="按文件将行书签分组" path="ActionManager" hit="按文件将行书签分组" />
     <option name="按检查分组" path="ActionManager" hit="按检查分组" />
+    <option name="按模式生成" path="ActionManager" hit="按模式生成…" />
     <option name="按类型和名称对书签进行排序" path="ActionManager" hit="按类型和名称对书签进行排序" />
     <option name="按类型排序" path="ActionManager" hit="按类型排序" />
     <option name="排列规则" path="ActionManager" hit="排列规则" />
@@ -514,6 +518,7 @@
     <option name="撤消" path="ActionManager" hit="撤消“重写文件类型”操作并恢复旧文件类型" />
     <option name="操作并恢复旧文件类型" path="ActionManager" hit="撤消“重写文件类型”操作并恢复旧文件类型" />
     <option name="重写文件类型" path="ActionManager" hit="撤消“重写文件类型”操作并恢复旧文件类型" />
+    <option name="收藏夹视图弹出窗口菜单" path="ActionManager" hit="收藏夹视图弹出窗口菜单" />
     <option name="收起" path="ActionManager" hit="收起" />
     <option name="收起所有折叠区域" path="ActionManager" hit="收起所有折叠区域(选区中)" />
     <option name="选区中" path="ActionManager" hit="收起所有折叠区域(选区中)" />
@@ -612,7 +617,9 @@
     <option name="浏览所选方法的方法层次结构" path="ActionManager" hit="浏览所选方法的方法层次结构" />
     <option name="浏览所选方法的调用层次结构" path="ActionManager" hit="浏览所选方法的调用层次结构" />
     <option name="浏览所选类的层次结构" path="ActionManager" hit="浏览所选类的层次结构" />
+    <option name="添加到收藏夹" path="ActionManager" hit="添加到收藏夹" />
     <option name="添加快捷键" path="ActionManager" hit="添加快捷键…" />
+    <option name="添加新收藏夹列表" path="ActionManager" hit="添加新收藏夹列表" />
     <option name="添加新的排列规则" path="ActionManager" hit="添加新的排列规则" />
     <option name="添加新部分排列规则" path="ActionManager" hit="添加新部分排列规则" />
     <option name="添加服务" path="ActionManager" hit="添加服务" />
@@ -833,6 +840,7 @@
     <option name="重命名书签" path="ActionManager" hit="重命名书签…" />
     <option name="重命名所选文件" path="ActionManager" hit="重命名所选文件" />
     <option name="重命名所选符号并更正所有引用" path="ActionManager" hit="重命名所选符号并更正所有引用" />
+    <option name="重命名收藏夹列表" path="ActionManager" hit="重命名收藏夹列表" />
     <option name="重命名文件" path="ActionManager" hit="重命名文件…" />
     <option name="或移至所选文本的下一个匹配项" path="ActionManager" hit="重复上一次查找/替换操作，或移至所选文本的下一个匹配项" />
     <option name="替换操作" path="ActionManager" hit="重复上一次查找/替换操作，或移至所选文本的下一个匹配项" />
@@ -861,17 +869,6 @@
     <option name="文档" path="ActionManager" hit="首先显示“文档”弹出窗口" />
     <option name="首先显示" path="ActionManager" hit="首先显示“文档”弹出窗口" />
     <option name="高亮显示文件中的用法" path="ActionManager" hit="高亮显示文件中的用法" />
-  </configurable>
-  <configurable id="reference.settings.ide.settings.new.ui" configurable_name="新 UI 预览">
-    <option name="主要变更和已知问题" hit="主要变更和已知问题" />
-    <option name="ui" hit="启用新 UI" />
-    <option name="启用新" hit="启用新 UI" />
-    <option name="在单独的工具栏中显示主菜单" hit="在单独的工具栏中显示主菜单" />
-    <option name="提交反馈" hit="提交反馈 " />
-    <option name="ui" hit="新 UI 预览" />
-    <option name="新" hit="新 UI 预览" />
-    <option name="预览" hit="新 UI 预览" />
-    <option name="设置" hit="设置" />
   </configurable>
   <configurable id="preferences.editor" configurable_name="常规">
     <option name="classic" hit="Classic Light" />
@@ -986,6 +983,14 @@
     <option name="退格时取消缩进" hit="退格时取消缩进 " />
   </configurable>
   <configurable id="editor.preferences.appearance" configurable_name="外观">
+    <option name="android" hit="Android 编辑器" />
+    <option name="编辑器" hit="Android 编辑器" />
+    <option name="as" hit="Show CSS color preview as background" />
+    <option name="background" hit="Show CSS color preview as background" />
+    <option name="color" hit="Show CSS color preview as background" />
+    <option name="css" hit="Show CSS color preview as background" />
+    <option name="preview" hit="Show CSS color preview as background" />
+    <option name="show" hit="Show CSS color preview as background" />
     <option name="使用块文本光标" hit="使用块文本光标" />
     <option name="内部" hit="内部" />
     <option name="前导" hit="前导" />
@@ -993,11 +998,9 @@
     <option name="xml" hit="启用 HTML XML 标记树高亮显示" />
     <option name="启用" hit="启用 HTML XML 标记树高亮显示" />
     <option name="标记树高亮显示" hit="启用 HTML XML 标记树高亮显示" />
+    <option name="启用语言标志" hit="启用语言标志" />
     <option name="外观" hit="外观" />
     <option name="对嵌入提示使用编辑器字体" hit="对嵌入提示使用编辑器字体" />
-    <option name="css" hit="将 CSS 颜色预览显示为背景" />
-    <option name="将" hit="将 CSS 颜色预览显示为背景" />
-    <option name="颜色预览显示为背景" hit="将 CSS 颜色预览显示为背景" />
     <option name="尾随" hit="尾随" />
     <option name="悬停在滚动栏上时显示代码透镜" hit="悬停在滚动栏上时显示代码透镜" />
     <option name="ms" hit="文本光标闪烁 ms  " />
@@ -1178,6 +1181,7 @@
     <option name="之前" hit="之前 " />
     <option name="之后" hit="之后 " />
     <option name="意图" hit="意图" />
+    <option name="技术支持" hit="技术支持 " />
   </configurable>
   <configurable id="editing.templates" configurable_name="实时模板">
     <option name="enter" hit="Enter" />
@@ -1437,6 +1441,11 @@
     <option name="嵌入提示" hit="嵌入提示" />
   </configurable>
   <configurable id="preferences.sourceCode" configurable_name="代码样式">
+    <option name="" path="常规" hit=" EditorConfig 可能会重写 IDE 代码样式设置" />
+    <option name="editorconfig" path="常规" hit=" EditorConfig 可能会重写 IDE 代码样式设置" />
+    <option name="ide" path="常规" hit=" EditorConfig 可能会重写 IDE 代码样式设置" />
+    <option name="代码样式设置" path="常规" hit=" EditorConfig 可能会重写 IDE 代码样式设置" />
+    <option name="可能会重写" path="常规" hit=" EditorConfig 可能会重写 IDE 代码样式设置" />
     <option name="" path="格式化程序" hit=" 基于范围的排除仅出于向后兼容保留  日后的版本可能不支持 请考虑改为定义模式 " />
     <option name="基于范围的排除仅出于向后兼容保留" path="格式化程序" hit=" 基于范围的排除仅出于向后兼容保留  日后的版本可能不支持 请考虑改为定义模式 " />
     <option name="日后的版本可能不支持" path="格式化程序" hit=" 基于范围的排除仅出于向后兼容保留  日后的版本可能不支持 请考虑改为定义模式 " />
@@ -1565,8 +1574,6 @@
     <option name="在阅读器模式中显示" hit="在阅读器模式中显示 " />
     <option name="增大行高" hit="增大行高" />
     <option name="字体连写" hit="字体连写" />
-    <option name="显示视觉格式化层" hit="显示视觉格式化层" />
-    <option name="格式化方案" hit="格式化方案 " />
     <option name="渲染的文档注释" hit="渲染的文档注释" />
     <option name="用法" hit="用法 继承者和相关问题的代码视觉提示" />
     <option name="继承者和相关问题的代码视觉提示" hit="用法 继承者和相关问题的代码视觉提示" />
@@ -1608,8 +1615,14 @@
     <option name="下使用" hit="在 Windows 下使用 BOM 否则不使用 BOM" />
     <option name="否则不使用" hit="在 Windows 下使用 BOM 否则不使用 BOM" />
     <option name="在" hit="在 Windows 下使用 BOM 否则不使用 BOM" />
+    <option name="properties" hit="属性文件    properties " />
+    <option name="属性文件" hit="属性文件    properties " />
     <option name="属性文件的默认编码" hit="属性文件的默认编码 " />
     <option name="文件编码" hit="文件编码" />
+    <option name="bom" hit="新 UTF   文件的 BOM" />
+    <option name="utf" hit="新 UTF   文件的 BOM" />
+    <option name="文件的" hit="新 UTF   文件的 BOM" />
+    <option name="新" hit="新 UTF   文件的 BOM" />
     <option name="ascii" hit="自动转换成 Ascii 但显示原生的内容" />
     <option name="但显示原生的内容" hit="自动转换成 Ascii 但显示原生的内容" />
     <option name="自动转换成" hit="自动转换成 Ascii 但显示原生的内容" />

@@ -1,13 +1,9 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="already" path="ActionManager" hit="Already Unshelved" />
-    <option name="unshelved" path="ActionManager" hit="Already Unshelved" />
     <option name="git" path="ActionManager" hit="Git" />
     <option name="vcs" path="ActionManager" hit="VCS 操作" />
     <option name="操作" path="ActionManager" hit="VCS 操作" />
-    <option name="vcs" path="ActionManager" hit="VCS 操作弹出窗口…" />
-    <option name="操作弹出窗口" path="ActionManager" hit="VCS 操作弹出窗口…" />
     <option name="vcs" path="ActionManager" hit="VCS 标签" />
     <option name="标签" path="ActionManager" hit="VCS 标签" />
     <option name="vcs" path="ActionManager" hit="VCS 组" />
@@ -43,6 +39,7 @@
     <option name="创建补丁" path="ActionManager" hit="创建补丁…" />
     <option name="删除" path="ActionManager" hit="删除" />
     <option name="删除变更列表" path="ActionManager" hit="删除变更列表" />
+    <option name="删除已取消搁置的变更列表" path="ActionManager" hit="删除已取消搁置的变更列表" />
     <option name="删除所选搁置" path="ActionManager" hit="删除所选搁置" />
     <option name="刷新" path="ActionManager" hit="刷新" />
     <option name="vcs" path="ActionManager" hit="刷新 VCS 变更" />
@@ -121,22 +118,24 @@
     <option name="显示" path="ActionManager" hit="显示 Shelf" />
     <option name="显示" path="ActionManager" hit="显示/隐藏已取消搁置变更" />
     <option name="隐藏已取消搁置变更" path="ActionManager" hit="显示/隐藏已取消搁置变更" />
+    <option name="显示" path="ActionManager" hit="显示/隐藏已应用的搁置变更" />
+    <option name="隐藏已应用的搁置变更" path="ActionManager" hit="显示/隐藏已应用的搁置变更" />
     <option name="显示历史记录" path="ActionManager" hit="显示历史记录" />
     <option name="显示当前修订" path="ActionManager" hit="显示当前修订" />
     <option name="显示当前所选变更的弹出窗口" path="ActionManager" hit="显示当前所选变更的弹出窗口" />
-    <option name="显示所选行的差异" path="ActionManager" hit="显示所选行的差异" />
     <option name="显示提交消息历史记录" path="ActionManager" hit="显示提交消息历史记录" />
     <option name="显示提交选项" path="ActionManager" hit="显示提交选项" />
     <option name="显示文件修改信息" path="ActionManager" hit="显示文件修改信息" />
     <option name="显示文件的历史记录" path="ActionManager" hit="显示文件的历史记录" />
     <option name="显示文件的历史记录" path="ActionManager" hit="显示文件的历史记录，直到所选修订版本" />
     <option name="直到所选修订版本" path="ActionManager" hit="显示文件的历史记录，直到所选修订版本" />
+    <option name="显示最近删除的搁置" path="ActionManager" hit="显示最近删除的搁置" />
+    <option name="显示最近删除项" path="ActionManager" hit="显示最近删除项" />
     <option name="显示本地变更" path="ActionManager" hit="显示本地变更" />
     <option name="也称为" path="ActionManager" hit="显示每行的最新修改日期和作者(也称为“追溯”)" />
     <option name="显示每行的最新修改日期和作者" path="ActionManager" hit="显示每行的最新修改日期和作者(也称为“追溯”)" />
     <option name="追溯" path="ActionManager" hit="显示每行的最新修改日期和作者(也称为“追溯”)" />
     <option name="显示编辑器选择的历史记录" path="ActionManager" hit="显示编辑器选择的历史记录" />
-    <option name="显示行的差异" path="ActionManager" hit="显示行的差异" />
     <option name="显示详细信息" path="ActionManager" hit="显示详细信息" />
     <option name="显示选择的历史记录" path="ActionManager" hit="显示选择的历史记录" />
     <option name="更改导航操作" path="ActionManager" hit="更改导航操作" />
@@ -158,6 +157,7 @@
     <option name="添加" path="ActionManager" hit="添加" />
     <option name="vcs" path="ActionManager" hit="添加到 VCS" />
     <option name="添加到" path="ActionManager" hit="添加到 VCS" />
+    <option name="清理已取消搁置变更" path="ActionManager" hit="清理已取消搁置变更…" />
     <option name="清除" path="ActionManager" hit="清除" />
     <option name="清除缓存的修订版本" path="ActionManager" hit="清除缓存的修订版本" />
     <option name="版本控制" path="ActionManager" hit="版本控制" />
@@ -175,7 +175,6 @@
     <option name="编辑源" path="ActionManager" hit="编辑源" />
     <option name="获取" path="ActionManager" hit="获取" />
     <option name="补丁文件" path="ActionManager" hit="补丁文件" />
-    <option name="视图选项" path="ActionManager" hit="视图选项" />
     <option name="设置" path="ActionManager" hit="设置" />
     <option name="设置活动变更列表" path="ActionManager" hit="设置活动变更列表" />
     <option name="设置默认情况下放置新变更的变更列表" path="ActionManager" hit="设置默认情况下放置新变更的变更列表" />
@@ -298,6 +297,11 @@
     <option name="目录映射" hit="目录映射" />
   </configurable>
   <configurable id="project.propVCSSupport.Issue.Navigation" configurable_name="问题导航">
+    <option name="" hit=" IntelliJ IDEA 将在签入注释中搜索指定的模式 并将它们链接到问题跟踪器中的问题 " />
+    <option name="idea" hit=" IntelliJ IDEA 将在签入注释中搜索指定的模式 并将它们链接到问题跟踪器中的问题 " />
+    <option name="intellij" hit=" IntelliJ IDEA 将在签入注释中搜索指定的模式 并将它们链接到问题跟踪器中的问题 " />
+    <option name="将在签入注释中搜索指定的模式" hit=" IntelliJ IDEA 将在签入注释中搜索指定的模式 并将它们链接到问题跟踪器中的问题 " />
+    <option name="并将它们链接到问题跟踪器中的问题" hit=" IntelliJ IDEA 将在签入注释中搜索指定的模式 并将它们链接到问题跟踪器中的问题 " />
     <option name="问题导航" hit="问题导航" />
   </configurable>
   <configurable id="project.propVCSSupport.ChangelistConflict" configurable_name="变更列表">
@@ -328,9 +332,17 @@
     <option name="使用非模式提交界面" hit="使用非模式提交界面" />
     <option name="a" hit="分析代码 A " />
     <option name="分析代码" hit="分析代码 A " />
+    <option name="否" hit="否" />
     <option name="在commit之前" hit="在Commit之前" />
+    <option name="在提交失败时创建变更列表" hit="在提交失败时创建变更列表 " />
+    <option name="t" hit="建议将未提交的变更移至其他变更列表 T " />
+    <option name="建议将未提交的变更移至其他变更列表" hit="建议将未提交的变更移至其他变更列表 T " />
+    <option name="e" hit="强制非空提交注释 E " />
+    <option name="强制非空提交注释" hit="强制非空提交注释 E " />
     <option name="提交" hit="提交" />
     <option name="提交消息检查" hit="提交消息检查" />
+    <option name="是" hit="是" />
+    <option name="显示未进行版本管理的文件" hit="显示未进行版本管理的文件" />
     <option name="更新版权" hit="更新版权" />
     <option name="r" hit="格式化代码 R " />
     <option name="格式化代码" hit="格式化代码 R " />
@@ -341,6 +353,7 @@
     <option name="清理" hit="清理 L " />
     <option name="i" hit="清除初始提交消息 I " />
     <option name="清除初始提交消息" hit="清除初始提交消息 I " />
+    <option name="询问" hit="询问" />
     <option name="运行测试" hit="运行测试" />
     <option name="选择配置" hit="选择配置" />
     <option name="选择配置文件" hit="选择配置文件" />
