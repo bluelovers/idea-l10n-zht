@@ -1,0 +1,21 @@
+<html>
+<body>
+报告可以折叠为单个 <code>List.replaceAll()</code> 调用的循环。
+<p><b>示例：</b></p>
+<pre><code>
+  for (int i = 0; i &lt; strings.size(); i++) {
+    String str = strings.get(i).toLowerCase();
+    strings.set(i, str);
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  strings.replaceAll(String::toLowerCase);
+</code></pre>
+<!-- tooltip end -->
+<p>
+  仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。
+</p>
+<p><small>2022.1 最新变化</small></p>
+</body>
+</html>

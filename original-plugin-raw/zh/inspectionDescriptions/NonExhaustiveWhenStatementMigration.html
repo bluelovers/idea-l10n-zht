@@ -1,0 +1,67 @@
+<html>
+<body>
+报告从 1.7 版开始会导致编译错误的非详尽 <code>when</code> 语句。
+<p>动机类型：</p>
+<ul>
+    <li>
+        需要劝阻/阻止的有问题/无意义的用法模式（例如反直觉的行为）
+        <ul>
+            <li>
+                代码容易出错
+            </li>
+        </ul>
+    </li>
+    <li>
+        设计中的不一致（在不同的上下文中存在不同的处理方式）
+    </li>
+</ul>
+<p>影响类型：</p>
+<ul>
+    <li>
+        编译。 一些过去可以编译的代码已无法编译
+        <ul>
+            <li>
+                在某些情况下，此类代码可以无异常地工作
+                <ul>
+                    <li>
+                        某些此类代码可以在没有任何警告的情况下编译
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p><b>更多详细信息：</b> <a href="https://youtrack.jetbrains.com/issue/KT-47709">KT-47709：默认情况下使带有 enum、sealed 和 Boolean 对象的 when 语句详尽</a></p>
+<p>快速修复会添加缺少的 <code>else -> {}</code> 分支。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  sealed class <b>Base</b> {
+      class <b>A</b> : <b>Base</b>()
+      class <b>B</b> : <b>Base</b>()
+  }
+
+  fun test(base: <b>Base</b>) {
+      when (base) {
+          is <b>Base</b>.<b>A</b> -> ""
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  sealed class <b>Base</b> {
+      class <b>A</b> : <b>Base</b>()
+      class <b>B</b> : <b>Base</b>()
+  }
+
+  fun test(base: <b>Base</b>) {
+      when (base) {
+          is <b>Base</b>.<b>A</b> -> ""
+          else -> {}
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的 Kotlin 语言级别为 1.6 或更高时，此检查才会报告。</p>
+</body>
+</html>

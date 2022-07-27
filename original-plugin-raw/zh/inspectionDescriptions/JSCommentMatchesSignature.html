@@ -1,5 +1,22 @@
 <html>
 <body>
 报告 JSDoc 注释中形参的名称和数量与函数的实际形参之间不匹配的情况。
+建议更新 JSDoc 注释中的形参。
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code>
+/**
+ * @param height Height in pixels
+ */
+function sq(height, width) {} // 宽度未记录
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+/**
+ * @param height Height in pixels
+ * @param width
+ */
+function sq(height, width) {}
+</code></pre>
 </body>
 </html>

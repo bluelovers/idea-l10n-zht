@@ -1,35 +1,41 @@
 <html>
 <body>
-报告使用 catch 块屏蔽的断言语句和测试框架断言。
-此类断言永远不会失败，因为将捕获并无提示地忽略 <code>AssertionError</code>。
+报告被周围的 catch 块禁止的 <code>assert</code> 语句和测试框架断言。
+此类断言永远不会失败，因为将捕获并无提示地忽略抛出的 <code>AssertionError</code>。
 <p><b>示例 1：</b></p>
 <pre><code>
-void javaAssertion() {
-  try {
-    ...
-    assert 1 == 2; // 断言被无提示忽略
-  } catch (AssertionError e) {}
-}
+  void javaAssertion() {
+    try {
+      ...
+      assert 1 == 2;
+    } catch (AssertionError e) {
+      // 该断言被无提示地忽略
+    }
+  }
 </code></pre>
 <p><b>示例 2：</b></p>
 <pre><code>
-@Test
-void testWithAssertJ() {
-  try {
-    ...
-    assertThat(1).as("test").isEqualTo(2); // 断言被无提示忽略
-  } catch (AssertionError e) {}
-}
+  @Test
+  void testWithAssertJ() {
+    try {
+      ...
+      assertThat(1).as("test").isEqualTo(2);
+    } catch (AssertionError e) {
+      // 该断言被无提示地忽略
+    }
+  }
 </code></pre>
 <p><b>示例 3：</b></p>
 <pre><code>
-@Test
-void testWithJunit() {
-  try {
-    ...
-    assertEquals(1, 2); // 断言被无提示忽略
-  } catch (AssertionError e) {}
-}
+  @Test
+  void testWithJunit() {
+    try {
+      ...
+      assertEquals(1, 2);
+    } catch (AssertionError e) {
+      // 该断言被无提示地忽略
+    }
+  }
 </code></pre>
 <!-- tooltip end -->
 <p><small>2020.3 最新变化</small></p>

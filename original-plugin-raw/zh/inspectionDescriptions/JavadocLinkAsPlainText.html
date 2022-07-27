@@ -1,0 +1,28 @@
+<html>
+<body>
+报告在 Javadoc 注释中指定为纯文本的链接。
+<p>
+  该快速修复会建议用 &lt;a&gt; 标记包装链接。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Main {
+   /**
+    * https://en.wikipedia.org/
+    */
+    void foo() {}
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Main {
+   /**
+    * &lt;a href="https://en.wikipedia.org/"&gt;https://en.wikipedia.org/&lt;/a&gt;
+    */
+    void foo() {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.1 最新变化</small></p>
+</body>
+</html>

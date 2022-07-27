@@ -1,9 +1,26 @@
 <html>
 <body>
-  报告重写没有 <code>@java.lang.Override</code> 注解的超类方法的方法。
-<p>
-  由于表明了意图，注解方法提高了代码可读性。 此外，在重写方法的签名与超类方法不匹配时，编译器会报错。
-</p>
+  报告重写超类方法但未使用 <code>@java.lang.Override</code> 注解的方法。
+  <p>
+  由于表明了意图，具有 <code>@java.lang.Override</code> 的注解方法提高了代码可读性。
+  此外，在重写方法的签名与超类方法不匹配时，编译器会报错。
+  <p><b>示例：</b></p>
+  <pre><code>
+    class X {
+      public String toString() {
+        return "hello world";
+      }
+    }
+  </code></pre>
+  <p>在应用快速修复后：</p>
+  <pre><code>
+    class X {
+      @Override
+      public String toString() {
+        return "hello world";
+      }
+    }
+  </code></pre>
 <!-- tooltip end -->
 <p>配置检查：</p>
 <ul>
@@ -14,8 +31,11 @@
   <li>
     使用<b>忽略匿名类中的方法</b>选项可以忽略匿名类中的方法。
   </li>
+  <li>
+    禁用<b>当方法的重写方法并非全部具有 '@Override' 注解时，高亮显示该方法</b>选项，可以仅就缺少 <code>@Override</code> 注解的方法发出警告，而不就其一个或多个后代缺少 <code>@Override</code> 注解的被重写方法发出警告。
+  </li>
 </ul>
-<p>此检查适用于项目或模块的语言级别为 5 或更高级别的情况。</p>
+<p>仅当项目或模块的语言级别为 5 或更高时，此检查才会报告。</p>
 
 </body>
 </html>

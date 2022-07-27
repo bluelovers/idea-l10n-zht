@@ -1,8 +1,8 @@
 <html>
 <body>
 报告任何可以移动到更小范围的变量声明。
-<p>这种检查对于方法开头的 <i>Pascal 样式</i>声明特别有用。 此外，范围太广的变量在重构后也经常保留。</p>
-<p><code>sb</code> 移动的示例：</p>
+<p>这种检查对于方法开头的 <i>Pascal 样式</i>声明特别有用。 此外，范围太广的变量在重构后也通常会被留下。</p>
+<p><b>示例：</b></p>
 <pre><code>
   StringBuilder sb = new StringBuilder();
   System.out.println();
@@ -18,7 +18,8 @@
 <p>配置检查：</p>
 <ul>
   <li>使用<b>仅报告可移入内部块的变量</b>选项可只报告那些可以移动到更深代码块中的变量。
-    例如，当启用该选项时，将建议对 <code>sb</code> 变量进行移动，但不建议对以下代码进行移动：
+    例如，启用该选项时，将不建议对上面的 <code>sb</code> 变量进行移动。
+    但是，建议将其用于以下代码：
 <pre><code>
   StringBuilder sb = new StringBuilder(a);
   if (flag) {
@@ -26,7 +27,7 @@
   }
 </code></pre></li>
   <li>使用<b>报告使用新表达式作为初始值设定项的变量(可能不安全)</b> 选项可以报告使用新表达式初始化的变量。 这使得当构造函数具有非本地副作用时，检查可能会不安全。 例如，启用该选项时，将建议对 <code>foo</code> 变量进行移动：
-  <pre><code>
+<pre><code>
   class Foo {
     static List&lt;Foo&gt; fooList = new ArrayList&lt;&gt;();
     String bar;
@@ -37,7 +38,8 @@
     }
 
     public static void main(String[] args) {
-      Foo foo = new Foo("bar"); // 虽不安全，但也可以移动
+      // 虽不安全，但也可以移动
+      Foo foo = new Foo("bar");
       System.out.println(fooList.size());
       System.out.println(foo.bar);
     }

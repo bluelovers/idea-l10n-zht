@@ -16,7 +16,8 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  Java 1.4 中引入了 <code>Double.compare()</code> 和 <code>Float.compare()</code> 方法。 其他基元类型的方法自 Java 1.7 起即可使用。
+  请注意，<code>Double.compare</code> 和 <code>Float.compare</code> 会略微更改代码语义。 特别是，它们会使 <code>-0.0</code> 和 <code>0.0</code> 可以区分（<code>Double.compare(-0.0, 0.0)</code> 生成 -1）。
+  此外，它们会一致地处理 <code>NaN</code> 值。 在大多数情况下，这种语义更改实际上会改进代码。 如果您的情况无法接受语义更改，请使用复选框禁用此项对浮点数的检查。
 </p>
 <p><small>2017.2 最新变化</small></p>
 </body>

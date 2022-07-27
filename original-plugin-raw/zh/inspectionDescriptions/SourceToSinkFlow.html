@@ -29,7 +29,7 @@
     String s = safe();
     String s1 = "other";
     s1 = foo();
-    if (b) s1 = s;
+    if (b) s = s1;
     sink(s);        // 此处为警告
   }
   

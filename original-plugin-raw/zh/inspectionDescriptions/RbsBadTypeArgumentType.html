@@ -1,0 +1,12 @@
+<html>
+<body>
+报告传递给泛型类型并且不是预期上限的子类型的类型实参。 类型实参必须是任意指定上限的子类型。
+<p>示例：</p>
+<pre><code>class Example[A &lt; Numeric]
+end
+
+# 'String' 不是 'Numeric' 的子类型
+type example = Example[String]
+</code></pre>
+</body>
+</html>

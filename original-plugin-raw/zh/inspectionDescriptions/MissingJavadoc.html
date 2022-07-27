@@ -1,0 +1,27 @@
+<html>
+<body>
+报告缺少 Javadoc 注释和标记。
+<p>示例：</p>
+<pre><code>
+  /**
+   * 报告缺少 "@param"（如果配置）。
+   */
+  public void sample(int param){
+  }
+</code></pre>
+<p>该快速修复会添加缺少的标记或缺少的 Javadoc 注释：</p>
+<pre><code>
+  /**
+   * 报告缺少 "@param"（如果配置）。
+   * @param param
+   */
+  public void sample(int param){
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+可以将检查配置为忽略弃用的元素或简单的访问器方法，如 <code>getField()</code> 或 <code>setField()</code>。
+</p>
+您还可以使用以下选项为方法、字段、类、软件包、模块等特定代码元素配置必需标记和最低要求的可见性。
+</body>
+</html>

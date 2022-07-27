@@ -1,6 +1,15 @@
 <html>
 <body>
-报告无效的方法重载 (<code>...</code>)。
-<p>方法重载只有在该方法恰好有一个其他非重载定义时才有效。</p>
+报告无效的方法重载 (<code>...</code>)。 方法重载只有在该方法恰好有一个其他非重载定义时才有效。
+<p>可以通过快速修复移除无效的方法重载。</p>
+<p>示例：</p>
+<pre><code>class Example
+  # 找不到 'Example' 类的 'call' 方法的非重载声明
+  def call: -> untyped | ...
+end</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>class Example
+  def call: -> untyped
+end</code></pre>
 </body>
 </html>

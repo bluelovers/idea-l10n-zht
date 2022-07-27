@@ -1,0 +1,39 @@
+<html>
+<body>
+检测可解释为 OpenAPI/Swagger 规范一部分的 JSON 文件。
+<p>
+  此类文件不包含显式的规范特性，但它们引用自附近的主规范文件。
+</p>
+<!-- tooltip end -->
+
+<p>
+  下面的示例包含位于同一目录中的两个文件。 第一个是一个普通的主规范文件。
+  第二个引用自第一个，因此建议将其视为一个规范。
+</p>
+
+<p><b>主规范文件 `openapi.yaml`：</b></p>
+<pre><code>
+openapi: 3.1.0
+components:
+  schemas:
+    CustomSchema:
+      description: Custom schema object
+      properties:
+        foo:
+          $ref: 'common.components.json#/components/schemas/CommonSchema'
+</code></pre>
+
+<p><b>规范文件候选项 `common.components.json`：</b></p>
+<pre><code>
+{
+  "components": { # 'Mark file as OpenAPI specification' highlighting
+    "schemas": {
+      "CommonSchema": {
+        "description": "Common schema object reused in several specifications"
+      }
+    }
+  }
+}
+</code></pre>
+</body>
+</html>

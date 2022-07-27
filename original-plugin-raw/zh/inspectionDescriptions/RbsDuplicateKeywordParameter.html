@@ -1,0 +1,10 @@
+<html>
+<body>
+报告方法、块和 proc 类型中的重复关键字形参。 只识别每个关键字形参的第一个声明；所有其他声明将被忽略。
+<p>示例：</p>
+<pre><code>class Example
+  # 重复的关键字形参
+  def call: (keyword: untyped, keyword: untyped) -> untyped
+end</code></pre>
+</body>
+</html>

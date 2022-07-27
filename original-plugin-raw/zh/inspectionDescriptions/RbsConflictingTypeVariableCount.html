@@ -1,0 +1,20 @@
+<html>
+<body>
+报告由于类型变量数量不匹配而导致的部分容器声明冲突。 使用数量不同的类型变量声明部分容器会出错。
+<p>可以通过快速修复更正声明的类型变量数量或导航到冲突的声明。</p>
+<p>示例：</p>
+<pre><code># 'Example' 类有 1 个类型变量，这与其他声明冲突
+class Example[A]
+end
+
+# 'Example' 类有 2 个类型变量，这与其他声明冲突
+class Example[Y, Z]
+end</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>class Example[A, B]
+end
+
+class Example[Y, Z]
+end</code></pre>
+</body>
+</html>

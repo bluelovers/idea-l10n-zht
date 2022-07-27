@@ -1,0 +1,12 @@
+<html>
+<body>
+报告对 <code>String</code> 方法 <code>replace()</code>、<code>replaceAll()</code> 或 <code>replaceFirst()</code> 的无效调用。 当限定符和搜索字符串均为编译时常量，且在限定符中找不到搜索字符串时，可以保证此类调用无效。 这是冗余代码，可能表示存在错误。
+<p><b>示例：</b></p>
+<pre><code>
+  // 替换不起任何作用
+  "hello".replace("$value$", value);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.1 最新变化</small></p>
+</body>
+</html>

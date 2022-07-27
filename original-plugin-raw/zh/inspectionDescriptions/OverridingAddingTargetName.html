@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>报告具有 <code>@targetName</code> 注解的定义，这些定义重写没有 <code>@targetName</code> 注解的定义。</p>
+
+<p>请参阅 <a href="https://docs.scala-lang.org/scala3/reference/other-new-features/targetName.html">@targetName 注解</a>。</p>
+
+<p>该快速修复会移除 <code>@targetName</code> 注解。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  class A:
+    def foo: Int = 1
+
+  class B extends A:
+    @targetName("overriddenFoo")
+    override def foo: Int = 2
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class A:
+    def foo: Int = 1
+
+  class B extends A:
+    override def foo: Int = 2
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>
