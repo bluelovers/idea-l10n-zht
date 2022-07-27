@@ -1,0 +1,26 @@
+<html>
+<body>
+报告常量声明内 <code>iota</code> 的不规律用法。
+<p><code>iota</code> 标识符会为每个常量声明重置，并为每个常量规范自动递增。
+  在某一个常量规范内，标识符会保留其值。 显示引用 <code>iota</code> 不会重置计数器。</p>
+<p>有关详细信息，请参阅 Go 规范中的 <a href="https://go.dev/ref/spec#Iota">Iota</a>。</p>
+<p>如果两个常量规范具有文本相同的表达式列表，其中至少包含一个对 <code>iota</code> 的引用，并且两个常量规范之间只有常量规范，而没有表达式列表，则会触发此检查。</p>
+<p>考虑省略冗余的表达式列表，或者每次都写出表达式列表。</p>
+<p>示例：</p>
+<pre><code>const (
+  a = iota  // 0
+  b         // 1
+  c = iota  // 2
+)
+</code></pre>
+<p>由于 <code>c</code> 的定义中的 <code>iota</code> 冗余，触发检查。</p>
+<p>示例：</p>
+<pre><code>const (
+  a, aa = iota, iota       // 0, 0
+  b, bb                    // 1, 1
+  c, cc = iota + 40, iota  // 42, 2
+)
+</code></pre>
+<p>不会触发检查，因为没有一个表达式列表是冗余的。</p>
+</body>
+</html>

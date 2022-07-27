@@ -1,24 +1,24 @@
 <html>
 <body>
 <p>
-  Reports incorrect Spring Shell command declarations:
+  报告不正确的 Spring Shell 命令声明：
 </p>
 <ul>
-  <li>Missing command description</li>
-  <li>Command is not inside <code>org.springframework.shell.standard.@ShellComponent</code></li>
+  <li>缺少命令描述</li>
+  <li>命令不在 <code>org.springframework.shell.standard.@ShellComponent</code> 内</li>
 </ul>
 <p>示例：</p>
 <pre><code>
-// all methods will be reported due to missing @ShellComponent
+// 由于缺少 @ShellComponent，将报告所有方法
 class MathCommands {
 
   @ShellMethod("")
-  public int sum(int a, int b) { // method will be reported due to empty description
+  public int sum(int a, int b) { // 由于描述为空，将报告方法
     return a + b;
   }
 
   @ShellMethod
-  public int mul(int a, int b) { // method will be reported due to missing description
+  public int mul(int a, int b) { // 由于缺少描述，将报告方法
     return a * b;
   }
 }
