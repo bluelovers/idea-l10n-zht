@@ -109,7 +109,6 @@ inspection.progress.title=正在檢查程式碼…
 inspection.redirect.template=<html><body>注入元素存在問題: {0} (在<a href=\\"#navigation/{1}:{2}\\">{3}</a> 中)。</body></html>
 inspection.reference.anonymous=匿名
 inspection.reference.invalid=元素不再存在
-jar.modification.not.supported.error=不能修改jar或zip檔案{0}。
 local.scopes.node.text=局部範圍
 package.dependencies.progress.text=正在分析軟體套件依賴項
 pass.syntax=語法分析
@@ -136,7 +135,7 @@ suppress.inspection.file=對檔案禁止
 suspicious.name.combination.add.title=添加名稱組
 suspicious.name.combination.display.name=可疑的變數/參數名稱組合
 suspicious.name.combination.edit.title=編輯群名稱
-suspicious.name.combination.options.prompt=輸入一個逗號分隔的列表的名稱:
+suspicious.name.combination.options.prompt=輸入一個逗號分隔的名稱列表:
 suspicious.name.combination.options.title=組名稱:
 
 #filters
@@ -159,9 +158,6 @@ inspections.settings.profile.file.chooser.description=選擇設定檔案
 
 #details
 inspections.settings.empty.text=找不到檢查
-inspections.settings.empty.text.filters.link=清除篩選器
-inspections.settings.empty.text.inspection.link=創建檢查…
-inspections.settings.popup.title.create.inspection=創建檢查
 inspections.settings.options.title=選項
 inspections.settings.options.title.specific.scope=''{0}'' 的選項
 inspections.settings.disable.new.inspections.by.default.checkbox=預設禁用新檢查
@@ -213,7 +209,14 @@ intention.name.apply.all.fixes.in.file=在檔案中套用所有 ''{0}'' 修正
 file.read.error=無法從檔案 {0} 讀取。
 file.write.error=檔案{0}無法寫入。
 file.delete.root.error=無法刪除根檔案{0}。
-"
+
+inspections.settings.empty.text.filters.link=清除篩選器
+inspections.settings.empty.text.inspection.link=創建檢查…
+inspections.settings.popup.title.create.inspection=創建檢查
+jar.modification.not.supported.error=不能修改jar或zip檔案{0}。
+documentation.settings.inline.code.highlighting.mode.no.highlighting=無高亮顯示
+documentation.settings.inline.code.highlighting.mode.as.default.code=作為普通程式碼
+documentation.settings.inline.code.highlighting.mode.semantic.highlighting=高亮顯示關鍵字"
 `;
 
 exports[`messages/AnalysisBundle.properties handlePropertiesFile 1`] = `
@@ -325,7 +328,6 @@ inspection.progress.title=正在检查代码…
 inspection.redirect.template=<html><body>注入元素存在问题: {0} (在<a href=\\"#navigation/{1}:{2}\\">{3}</a> 中)。</body></html>
 inspection.reference.anonymous=匿名
 inspection.reference.invalid=元素不再存在
-jar.modification.not.supported.error=不能修改jar或zip文件{0}。
 local.scopes.node.text=局部范围
 package.dependencies.progress.text=正在分析软件包依赖项
 pass.syntax=语法分析
@@ -352,7 +354,7 @@ suppress.inspection.file=对文件禁止
 suspicious.name.combination.add.title=添加名称组
 suspicious.name.combination.display.name=可疑的变量/形参名称组合
 suspicious.name.combination.edit.title=编辑群名称
-suspicious.name.combination.options.prompt=输入一个逗号分隔的列表的名称:
+suspicious.name.combination.options.prompt=输入一个逗号分隔的名称列表:
 suspicious.name.combination.options.title=组名称:
 
 # filters
@@ -375,9 +377,6 @@ inspections.settings.profile.file.chooser.description=选择配置文件
 
 # details
 inspections.settings.empty.text=找不到检查
-inspections.settings.empty.text.filters.link=清除筛选器
-inspections.settings.empty.text.inspection.link=创建检查…
-inspections.settings.popup.title.create.inspection=创建检查
 inspections.settings.options.title=选项
 inspections.settings.options.title.specific.scope=''{0}'' 的选项
 inspections.settings.disable.new.inspections.by.default.checkbox=默认禁用新检查
@@ -428,5 +427,13 @@ intention.name.apply.all.fixes.in.file=在文件中应用所有 ''{0}'' 修正
 
 file.read.error=无法从文件 {0} 读取。
 file.write.error=文件{0}无法写入。
-file.delete.root.error=无法删除根文件{0}。"
+file.delete.root.error=无法删除根文件{0}。
+
+inspections.settings.empty.text.filters.link=清除筛选器
+inspections.settings.empty.text.inspection.link=创建检查…
+inspections.settings.popup.title.create.inspection=创建检查
+jar.modification.not.supported.error=不能修改jar或zip文件{0}。
+documentation.settings.inline.code.highlighting.mode.no.highlighting=无高亮显示
+documentation.settings.inline.code.highlighting.mode.as.default.code=作为普通代码
+documentation.settings.inline.code.highlighting.mode.semantic.highlighting=高亮显示关键字"
 `;
