@@ -13,6 +13,7 @@ import { array_unique_overwrite } from 'array-hyper-unique';
 import { LF } from 'crlf-normalize';
 import { getSourceInfoSync } from '../lib/build/get-source-info';
 import { getBranchInfo } from '../lib/git/branch-info';
+import { updatePublishTags } from '../lib/git/update-publish-tags';
 
 export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 	.then((from) =>
@@ -136,29 +137,15 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 
 			const __pluginVersion = getSourceInfoSync().pluginMeta.version;
 
-			await readJSON(__file_publish_tags_json)
-				.catch(e => [])
-				.then((tags: string[]) =>
-				{
-					if (!tags.includes(__pluginVersion))
-					{
-						tags.push(__pluginVersion);
-					}
-					return array_unique_overwrite(tags)
-				})
-				.then(tags =>
-				{
-					return outputJSON(__file_publish_tags_json, tags, {
-						spaces: 2,
-						EOL: LF,
-					})
-				})
-			;
+			await updatePublishTags();
 
 			await lazyCommitFiles([
 				'./CHANGELOG.md',
-				'./lib/const/publish-tags.json',
 			], `build(changelog): update CHANGELOG ( ${__pluginVersion} )`);
+
+			await lazyCommitFiles([
+				'./lib/const/publish-tags.json',
+			], `build(cache): update publish tags`);
 		}
 		else
 		{

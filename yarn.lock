@@ -66,21 +66,21 @@
   resolved "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
-"@git-lazy/branch@^1.0.38":
-  version "1.0.38"
-  resolved "https://registry.npmjs.org/@git-lazy/branch/-/branch-1.0.38.tgz#4a892e896d1260befafe561609b9da5b6a7a636d"
-  integrity sha512-B8fI9jXWIFhRoFdVi/d86m8Bay32gxS9qdxb4fSS41oBqMOE0lef9vnw70H4eEhDhjOs25cUU6dwKUvurG9CTw==
+"@git-lazy/branch@^1.0.39":
+  version "1.0.39"
+  resolved "https://registry.npmjs.org/@git-lazy/branch/-/branch-1.0.39.tgz#17bfd1452c879a31c9d990a5937f84ed1944cd9a"
+  integrity sha512-1v2rQ3UIkbLMWeC3XJVvSXGbMZRBHxcDZD3PW2rT1baJO3YPEyUdkylprQ28ghFNc+IDhlPA3nds7eVzv6JoYQ==
   dependencies:
-    "@git-lazy/util" "^1.0.35"
-    "@lazy-spawn/stringify" "^1.0.1"
-    git-root2 "^1.0.31"
-    gitlog2 "^5.0.27"
+    "@git-lazy/util" "^1.0.36"
+    "@lazy-spawn/stringify" "^1.0.2"
+    git-root2 "^1.0.32"
+    gitlog2 "^5.0.28"
     tslib "^2"
 
-"@git-lazy/const@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/@git-lazy/const/-/const-1.0.2.tgz#fb13a2ba9798068335c436ab3f937f4212510946"
-  integrity sha512-nTDHLt4qF2RqYErG5VxnGJQXO0+M74hnHIZ/ZEtSfUFAmGpMDihmHneHEd3uqq29flr11eDj/Bi0a8ubnk452Q==
+"@git-lazy/const@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/@git-lazy/const/-/const-1.0.3.tgz#8b9c09fe6ee4bd9a9213ac2b57cca5ab3b1acd8f"
+  integrity sha512-Hva+p3UFwhkKXKmInLv4c42Xjw4e0LCaoYefrRlnxKTV7Nqkt2a999G+d9pPPj/X5JTI3vwnTnkt4Cr7ZfDpdg==
 
 "@git-lazy/debug@^1.0.13":
   version "1.0.13"
@@ -91,14 +91,14 @@
     debug-color2 "^1.2.7"
     tslib "^2"
 
-"@git-lazy/spawn@^1.0.33":
-  version "1.0.33"
-  resolved "https://registry.npmjs.org/@git-lazy/spawn/-/spawn-1.0.33.tgz#88cbf75b48a7d210a92e7ddf5f5f426c108c5fbf"
-  integrity sha512-O4G9aPs5bdN138vpg8jCPtS1eYn8ae+F7cK+jGE8K71KlQc0PbjmgX0NUBdqqcemsY9+WGUUpSBJBPHmKR3eyw==
+"@git-lazy/spawn@^1.0.34":
+  version "1.0.34"
+  resolved "https://registry.npmjs.org/@git-lazy/spawn/-/spawn-1.0.34.tgz#158f1603222454cd73cf3044e158ca70337cdda8"
+  integrity sha512-dVGhafx1hUTPUmsuA2CVtdDVPABIbpe5cg9C1Wjc5KMb/1JUuKiztw8q2C+NnmrIFNW5arUQil04jxyFUrsi+g==
   dependencies:
     "@git-lazy/debug" "^1.0.13"
     "@lazy-glob/sort-tree" "^1.0.9"
-    "@lazy-spawn/stringify" "^1.0.1"
+    "@lazy-spawn/stringify" "^1.0.2"
     "@lazy-spawn/strip-ansi" "^1.0.1"
     array-hyper-unique "^2.0.8"
     bluebird "^3.7.2"
@@ -108,30 +108,30 @@
     promise-tap-then-catch "^1.0.3"
     tslib "^2"
 
-"@git-lazy/tag-list@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/@git-lazy/tag-list/-/tag-list-1.0.4.tgz#9dcddcf89efb494e3fb35c56bcaff697761ec4f1"
-  integrity sha512-9SlvIbOZm6YdisVuEbZZYIUKwcwv+2BfUE7pGNQGFP90rDvDNe45D/s+/hNSG1E8h8UqMmqN21BBckZhg/JRzA==
+"@git-lazy/tag-list@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/@git-lazy/tag-list/-/tag-list-1.0.5.tgz#11d6290841588157ddd127ea1aca7b90dda8ddfe"
+  integrity sha512-1G2g+CKtD7FIitWo/dqI0K9A3pcBuWma7Qo9l8uBB1fwAy4uxE7aNofjjeK+QXXJKhPO9cVEnznoouduERdTJw==
   dependencies:
-    "@git-lazy/spawn" "^1.0.33"
+    "@git-lazy/spawn" "^1.0.34"
     ts-type "^2.1.8"
     tslib "^2"
 
-"@git-lazy/tag@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.npmjs.org/@git-lazy/tag/-/tag-1.0.14.tgz#e17ec939036dc9674740d3be87faec7f59b2fe2f"
-  integrity sha512-+Fe6r1452rE950zH+ixC8CTLNO6804hmTiAqjP4cOkPbFE48bWhB/+JQk6hDoHtOrGcMIo8UkPQs5RR4oJuS6g==
+"@git-lazy/tag@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.npmjs.org/@git-lazy/tag/-/tag-1.0.15.tgz#8fb4c56f666808c03522da9b88ba64ee252ff27c"
+  integrity sha512-JgjNoiCc/DD1UeZwKbHm+owb3Yd3edQuL/DfBInNFpV629ta5mPansQ1d1eGz0hrNlGD+FRCsYgXlEZQxJT2rw==
   dependencies:
-    "@git-lazy/spawn" "^1.0.33"
+    "@git-lazy/spawn" "^1.0.34"
     tslib "^2"
 
-"@git-lazy/util@^1.0.35":
-  version "1.0.35"
-  resolved "https://registry.npmjs.org/@git-lazy/util/-/util-1.0.35.tgz#ecf2a2041978f1a582a7504b6ede5c9bda361a65"
-  integrity sha512-smotaClDmRmLOpvAjJjgJp3osTAz8hssoZOoNZAgTTuc1UTSAHwI7Ead8D+YcKqCnvpd4Z8xLfA+s8E90E/jlA==
+"@git-lazy/util@^1.0.36":
+  version "1.0.36"
+  resolved "https://registry.npmjs.org/@git-lazy/util/-/util-1.0.36.tgz#9f9989a1deb7a90f80fb0371fe168e3b4c3d3244"
+  integrity sha512-yzCsr07CNXp0mE7NFBSWq88fEcH4K7/Cj3WMxnCkBXIDP5RBF2ZRA1yF7ErWNOqT8BwMHlkt0GXhLz+82t/2kA==
   dependencies:
     "@git-lazy/debug" "^1.0.13"
-    "@git-lazy/spawn" "^1.0.33"
+    "@git-lazy/spawn" "^1.0.34"
     micromatch "^4.0.5"
     tslib "^2"
 
@@ -357,10 +357,10 @@
   dependencies:
     tslib "^2"
 
-"@lazy-spawn/stringify@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@lazy-spawn/stringify/-/stringify-1.0.1.tgz#d72ba7e0e40d7ee00aa2cf0f60aa145d71d62d7a"
-  integrity sha512-Hx7QrGpyViTnZHr6MO5iurHAGNcnfbKq1Co2vwbPO65FCizsTCPy689kvfLthg2HjOzY49Laye4c91kpv9bRKg==
+"@lazy-spawn/stringify@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/@lazy-spawn/stringify/-/stringify-1.0.2.tgz#3dff721c889b08ee3a12a3be2d88a37a48d0bd33"
+  integrity sha512-pYL3Xl0ZqbcMxt1e6dJrslSNwAzQmdN4ewJQVDqTWwQ3auz0j5nTxkhZIACpJnopjgUido/XeYp4yE4XzSEuOw==
   dependencies:
     "@lazy-spawn/strip-ansi" "^1.0.1"
     ts-type "^2.1.8"
@@ -1137,9 +1137,9 @@ ansi-styles@^5.0.0:
   integrity sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==
 
 are-we-there-yet@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/are-we-there-yet/-/are-we-there-yet-3.0.0.tgz#ba20bd6b553e31d62fc8c31bd23d22b95734390d"
-  integrity sha512-0GWpv50YSOcLXaN6/FAKY3vfRbllXWV2xvfA/oKJF8pzFhWXPV+yjhJXDBbjscDYowv7Yw1A3uigpzn5iEGTyw==
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/are-we-there-yet/-/are-we-there-yet-3.0.1.tgz#679df222b278c64f2cdba1175cdc00b0d96164bd"
+  integrity sha512-QZW4EDmGwlYur0Yyf/b2uGucHQMa8aFUP7eu9ddR73vvhFyt4V0Vl3QHPcTNJ8l6qYOBdxgXdnBXQrHilfRQBg==
   dependencies:
     delegates "^1.0.0"
     readable-stream "^3.6.0"
@@ -2159,16 +2159,16 @@ git-decode@^1.0.14:
     tslib "^2"
     uni-string "^1.1.12"
 
-git-diff-from@^1.1.31:
-  version "1.1.31"
-  resolved "https://registry.npmjs.org/git-diff-from/-/git-diff-from-1.1.31.tgz#dde698c16ba72af108617ed981e3be61279fa0e1"
-  integrity sha512-IQKKGFtGgQuQKxRzDluw265wfi2HnpclfR/38YrGEnA40AVrLjBky2ardrEUGsHd2oW9oYLFyo+Qc2ObdSf3fg==
+git-diff-from@^1.1.32:
+  version "1.1.32"
+  resolved "https://registry.npmjs.org/git-diff-from/-/git-diff-from-1.1.32.tgz#4583bae9815f6997c2b43c6db2b36eb6b66e64dc"
+  integrity sha512-KwBdB5WU7GhrxYzLa9hCtvVTXsEtWuKC0p/bkrjWtzG2NnvyHmPVw6cVzJMlvpmE5PbwyWPyF3x5e0N2Mdcicw==
   dependencies:
-    "@git-lazy/spawn" "^1.0.33"
+    "@git-lazy/spawn" "^1.0.34"
     crlf-normalize "^1.0.7"
     git-decode "^1.0.14"
-    git-rev-range "^1.1.28"
-    git-root2 "^1.0.31"
+    git-rev-range "^1.1.29"
+    git-root2 "^1.0.32"
     tslib "^2"
     upath2 "^3.1.13"
 
@@ -2191,21 +2191,21 @@ git-remote-origin-url@^2.0.0:
     gitconfiglocal "^1.0.0"
     pify "^2.3.0"
 
-git-rev-range@^1.1.28:
-  version "1.1.28"
-  resolved "https://registry.npmjs.org/git-rev-range/-/git-rev-range-1.1.28.tgz#e029d4e39f92706b898e02731feda745ae90dd39"
-  integrity sha512-zpbof2dJR7mQeJviww0d8qnWxWj89+U5yVBNzkm1N6GiM4y+/FdBv0xi90baaR7S7a+vNf3gxF1xnQhP2kN+yg==
+git-rev-range@^1.1.29:
+  version "1.1.29"
+  resolved "https://registry.npmjs.org/git-rev-range/-/git-rev-range-1.1.29.tgz#88916df0fe1a7d32b9f39aa3347a3e1acdd45820"
+  integrity sha512-IaNtga4Y8bO7Ilp8m0FsAZ42pyyIbxPxidR1dX7eF7DJ09oNWTnm+UJAaW5vPU0DN9wDH5SrYfHx9ZMS7AJQrQ==
   dependencies:
-    gitlog2 "^5.0.27"
+    gitlog2 "^5.0.28"
     tslib "^2"
 
-git-root2@^1.0.31:
-  version "1.0.31"
-  resolved "https://registry.npmjs.org/git-root2/-/git-root2-1.0.31.tgz#452529be0a986d6e557af6b998ebe29f7f1f2959"
-  integrity sha512-Vp1NbG1dnxJc2JsdqEFJuTdXUIIzqviuU50CkhdgD79mlN2KMalEzuRAmQVDBHOdoajQyR29HyvSHe+0dafPRQ==
+git-root2@^1.0.32:
+  version "1.0.32"
+  resolved "https://registry.npmjs.org/git-root2/-/git-root2-1.0.32.tgz#dd9390bed942dcae6cdab6ae1341cea781d11565"
+  integrity sha512-lITgxyw+XRlUOyUfV1GKczVXTROrTt8pnbEfCPbTa20Gfu+DUVPmLrEjPbjmxz5+PN9np3uAAwEWOr9aELo91g==
   dependencies:
-    "@git-lazy/spawn" "^1.0.33"
-    "@lazy-spawn/stringify" "^1.0.1"
+    "@git-lazy/spawn" "^1.0.34"
+    "@lazy-spawn/stringify" "^1.0.2"
     path-is-same "^1.0.18"
     tslib "^2"
     upath2 "^3.1.13"
@@ -2225,14 +2225,14 @@ gitconfiglocal@^1.0.0:
   dependencies:
     ini "^1.3.2"
 
-gitlog2@^5.0.27:
-  version "5.0.27"
-  resolved "https://registry.npmjs.org/gitlog2/-/gitlog2-5.0.27.tgz#0ea97145fc1e8c09c7a0350b3b7820e69d8c51fc"
-  integrity sha512-/fg3NzkOMpmqSTU4xMuW5Agb/yYV8T8n5JCX9bqoxyCiCbdx+pMP82zioWSuGMaZJ7vgHMH5eHb1aeGCitl1hA==
+gitlog2@^5.0.28:
+  version "5.0.28"
+  resolved "https://registry.npmjs.org/gitlog2/-/gitlog2-5.0.28.tgz#a1667fbc3736b91a96719553a2d31aade8e1cf0e"
+  integrity sha512-spasMKPvK1Sk5XwIol/1Rzb4RdRyNCzC3D2+rMMEJv/5LOtQV4PrPGR5V5VDmI2jcLCAV5fkrcRZ4MY6ucDM/g==
   dependencies:
-    "@git-lazy/const" "^1.0.2"
-    "@git-lazy/spawn" "^1.0.33"
-    "@lazy-spawn/stringify" "^1.0.1"
+    "@git-lazy/const" "^1.0.3"
+    "@git-lazy/spawn" "^1.0.34"
+    "@lazy-spawn/stringify" "^1.0.2"
     array-hyper-unique "^2.0.8"
     bluebird "^3.7.2"
     crlf-normalize "^1.0.7"
