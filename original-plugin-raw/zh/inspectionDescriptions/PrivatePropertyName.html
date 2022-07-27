@@ -1,5 +1,19 @@
 <html>
 <body>
-报告不遵循推荐命名惯例的 private 属性名称。
+<p>报告不遵循推荐命名惯例的 private 属性名称。</p>
+<p>
+    一致的命名会让阅读和理解代码变得更容易。
+    根据 <a href="https://kotlinlang.org/docs/coding-conventions.html#naming-rules">Kotlin 官方样式指南</a>，private 属性名称应以小写字母开头并使用驼峰拼写法。
+    或者，允许使用下划线前缀，但仅限于 <b>private</b> 属性。
+</p>
+<p>可以通过更改“模式”正则表达式来引入其他命名规则。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val _My_Cool_Property = ""
+</code></pre>
+<p>该快速修复会根据 Kotlin 命名惯例重命名类：</p>
+<pre><code>
+  val _myCoolProperty = ""
+</code></pre>
 </body>
 </html>

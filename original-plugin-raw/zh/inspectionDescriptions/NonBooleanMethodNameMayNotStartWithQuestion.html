@@ -2,9 +2,12 @@
 <body>
 报告名称以疑问词开头的非布尔方法。 此类方法名称可能令人困惑。
 <p>此检查将忽略重写库方法的非布尔方法。</p>
-<p><b>示例:</b> <pre>
-  <code>public void hasName(String name) { assert names.contains(name); }</code>
-</pre>
+<p><b>示例：</b>
+<pre><code>
+  public void hasName(String name) {
+    assert names.contains(name);
+  }
+</code></pre>
 <p>只能在编辑器中使用重命名此类方法的快速修复。</p>
 <!-- tooltip end -->
 <p>配置检查：</p>

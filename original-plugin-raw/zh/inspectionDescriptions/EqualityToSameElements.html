@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告数组和迭代器上 "equals" 的用法。</p>
+<p>数组和迭代器上的相等会检查引用相等性（很少有用）。
+    此检查建议通过 <code>sameElements</code> 比较内容。</p>
+<pre><code>
+  Array(1) == Array(1) //false
+  Iterator(1) == Iterator(1) //false
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Array(1) sameElements Array(1) //true
+  Iterator(1) sameElements Iterator(1) //true
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,18 +1,16 @@
 <html>
 <body>
-<p>报告未声明 <code>public</code> 和 <code>static</code>、不返回 <code>void</code> 或包含参数的 JUnit 4.0 <code>@BeforeClass</code> 或 <code>@AfterClass</code> 方法。</p>
-<p>这样的方法很容易无意间创建，但是 JUnit 测试运行程序不会执行这些方法。</p>
-<p><b>示例:</b></p>
-<pre>
-<code>
+报告未被声明为 <code>public</code> 和 <code>static</code>、不返回 <code>void</code> 或接受实参的 JUnit 4.0 <code>@BeforeClass</code> 或 <code>@AfterClass</code> 方法。
+此类方法很容易无意间创建，但是 JUnit 测试运行程序不会执行这些方法。
+<p><b>示例：</b></p>
+<pre><code>
   public class MainTest {
     @BeforeClass
     String beforeClass(int i) {
     }
   }
-</code>
-</pre>
-<p>应用快速修复后，该方法变为:</p>
+</code></pre>
+<p>应用快速修复后，该方法变为：</p>
 <pre><code>
   class MainTest {
     @BeforeClass

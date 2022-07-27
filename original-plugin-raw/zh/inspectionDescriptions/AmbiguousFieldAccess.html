@@ -1,22 +1,20 @@
 <html>
 <body>
-报告对匿名类中的超类字段的模糊访问，其中环绕的代码中有同名的局部变量、参数或字段。
+如果在类周围的代码中存在同名的局部变量、形参或字段，则报告从匿名类、内部类或局部类对超类字段的访问。
+在这种情况下，看似访问了来自周围代码的元素，而实际上访问的是来自超类的字段。
 <p>
-  在本例中，看似访问了环绕的代码中的一个元素，实则访问了匿名类扩展的超类中的一个字段。
+  为阐明代码的意图，建议对字段访问添加显式 <code>super</code> 限定符。
 </p>
-<p>
-  为阐明代码的意图，建议对字段访问添加显式的 <code>super</code> 限定符。
-</p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
     class First {
-      protected String test;
+      protected String ambiguous;
     }
     class Second {
-      void foo(String test) {
+      void foo(String ambiguous) {
         new First() {
           {
-            System.out.println(test); // 访问了此字段，而不是此参数
+            System.out.println(ambiguous); // 访问的是字段，而不是形参
           }
         };
       }
@@ -25,13 +23,13 @@
 <p>在应用快速修复后：</p>
 <pre><code>
     class First {
-      protected String test;
+      protected String ambiguous;
     }
     class Second {
-      void foo(String test) {
+      void foo(String ambiguous) {
         new First() {
           {
-            System.out.println(super.test);
+            System.out.println(super.ambiguous);
           }
         };
       }

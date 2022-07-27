@@ -4,8 +4,8 @@
 <p>
 除了在循环内完成少量工作时可能会非常耗费 CPU 之外，此类循环很可能具有与预期不同的语义。 即便另一个线程改变了该字段的值，Java 内存模型也允许此类循环永不完成。
 </p>
-<p><b>示例:</b></p>
-<pre>
+<p><b>示例：</b></p>
+<pre><code>
   class SpinsOnField {
     boolean ready = false;
 
@@ -20,7 +20,7 @@
       ready = true;
     }
   }
-</pre>
+</code></pre>
 <p>
 此外，自 Java 9 起，建议在 <code>volatile</code> 字段上的自旋循环中调用 <code>Thread.onSpinWait()</code>，这可能会显著提高某些硬件上的性能。
 </p>

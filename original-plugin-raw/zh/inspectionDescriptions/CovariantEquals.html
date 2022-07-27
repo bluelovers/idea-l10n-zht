@@ -4,7 +4,7 @@
 <p>
   <code>equals()</code> 的协变版本不会重写 <code>Object.equals(Object)</code> 方法。 它可能会在运行时导致意外行为。 例如，如果该类用于构造一个标准集合类，该集合类预期会重写 <code>Object.equals(Object)</code> 方法。
 </p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   class Foo {
       public boolean equals(Foo foo) {  // 警告

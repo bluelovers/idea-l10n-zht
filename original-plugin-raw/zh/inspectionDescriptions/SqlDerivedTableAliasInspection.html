@@ -9,7 +9,7 @@ SELECT id AS ID, name, cats, age
 FROM (SELECT table1.id, name, cats, age
 FROM table1
 JOIN table2 ON table1.id = table2.id);</code></pre>
-<p>根据 <a href="https://dev.mysql.com/doc/refman/8.0/en/derived-tables.html">dev.mysql.com 上的 Derived Tables</a> 页面，别名是必需的。 您可以使用<b>引入别名</b>快速修复来添加别名。</p>
+<p>根据 <a href="https://dev.mysql.com/doc/refman/8.0/en/derived-tables.html">dev.mysql.com 上的 Derived Tables</a> 页面，别名是强制的。 您可以使用<b>引入别名</b>快速修复来添加别名。</p>
 <p>在应用快速修复后：</p>
 <pre><code>SELECT id AS ID, name, cats, age
 FROM (SELECT table1.id, name, cats, age

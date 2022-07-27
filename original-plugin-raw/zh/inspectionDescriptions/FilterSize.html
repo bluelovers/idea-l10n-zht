@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>报告 <code>filter</code> 和 <code>size</code>（或 <code>length</code>）的用法，并建议将其替换为 <code>count</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  var x: Seq[Int]
+  x.filter(p).size
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  var x: Seq[Int]
+  x.count(p)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>
+  报告文档注释中的形参与函数的实际形参之间的不匹配。
+</p>
+<!-- tooltip end -->
+<p>
+  <b>示例：</b>
+</p>
+<pre><code>
+  /// - Parameters:
+  ///   - a:
+  func foo(a: Int, b: Int) {}
+</code></pre>
+<p>
+  在应用快速修复后：
+</p>
+<pre><code>
+  /// - Parameters:
+  ///   - a:
+  ///   - b:
+  func foo(a: Int, b: Int) {}
+</code></pre>
+</body>
+</html>

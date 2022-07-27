@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>报告用作捆绑属性键的非字符串文字。</p>
+<p>这很难维护。 建议直接传递已经解析的自然语言字符串。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val key =
+    if (???) "property.key.1"
+    else "property.key.2"
+
+  Bundle.message(key)
+</code></pre>
+<p>改用：</p>
+<pre><code>
+  val string =
+    if (???) Bundle.message("property.key.1")
+    else Bundle.message("property.key.2")
+
+  string
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

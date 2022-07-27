@@ -4,8 +4,8 @@
 <p>
   在没有相应 <code>Condition.signal()</code> 的线程中调用 <code>Condition.await()</code> 可能导致该线程被禁用，直到它被中断或发生“可疑唤醒”为止。
 </p>
-<p>此检查仅报告针对当前类的目标字段的调用。</p>
-<p><b>示例:</b></p>
+<p>此检查仅报告以当前类的目标字段为目标的调用。</p>
+<p><b>示例：</b></p>
 <pre><code>
   class Queue {
     private final Condition isEmpty = ...;

@@ -5,19 +5,19 @@
 <p>
 此检查仅在建议的替换不会导致现代 JVM 的性能显著下降时报告。 在许多情况下，<code>String</code> 串联可能执行效果更好。
 </p>
-<p><b>示例:</b></p>
-<pre>
+<p><b>示例：</b></p>
+<pre><code>
   StringBuilder result = new StringBuilder();
   result.append("i = ");
   result.append(i);
   result.append(";");
   return result.toString();
-</pre>
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre>
+<pre><code>
   String result = "i = " + i + ";";
   return result;
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

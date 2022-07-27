@@ -4,7 +4,7 @@
 <p>
   <code>synchronized</code> 块中的 <code>sleep()</code> 可能导致性能下降，可扩展性变差，甚至可能导致死锁。 不妨改用 <code>wait()</code>，因为它将释放持有的锁定。
 </p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   synchronized (lock) {
     Thread.sleep(100);

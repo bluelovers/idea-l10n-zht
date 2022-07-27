@@ -11,7 +11,7 @@
 <p>配置检查：</p>
 <ul>
   <li>
-    使用<b>对普通 'finalize()' 实现忽略</b>选项，可以忽略方法体为空或方法体中唯一包含的 <code>if</code> 语句的条件在编译时求值为 <code>false</code> 的 <code>finalize()</code> 实现。 出于性能原因，使用子类中的空实现重写非普通的 <code>finalize()</code> 可能有好处。 空的 final <code>finalize()</code> 实现也可以用来防止子类被重写。
+    使用<b>对普通 'finalize()' 实现忽略</b>选项可以忽略具有空方法体或仅包含具有计算结果为 <code>false</code> 的条件并且是编译时常量的 <code>if</code> 语句的方法体的 <code>finalize()</code> 实现。 出于性能原因，在子类中使用空实现重写非普通 <code>finalize()</code> 可能会有好处。 空的 final <code>finalize()</code> 实现也可以用来防止子类被重写。
   </li>
 </ul>
 </body>

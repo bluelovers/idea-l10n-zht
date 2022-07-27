@@ -1,13 +1,13 @@
 <html>
 <body>
 <p>报告不符合三个双引号引用字符串格式的 docstring。</p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre style="font-family: monospace">
 def calc(self, balance=0):
     'param: balance'
     self.balance = balance
 </pre>
-<p>应用快速修复后，代码变为:</p>
+<p>应用快速修复后，代码变为：</p>
 <pre style="font-family: monospace">
 def calc(self, balance=0):
     """param: balance"""

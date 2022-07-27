@@ -1,15 +1,15 @@
 <html>
 <body>
-<p>报告通过 <code>&lt;value&gt;</code> 或 <code>&lt;ref&gt;</code> 子元素配置的属性，并提供用相应的属性替换它们。</p>
+<p>报告通过 <code>&lt;value&gt;</code> 或 <code>&lt;ref&gt;</code> 子元素配置的属性，并建议将其替换为相应的特性。</p>
 
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   &lt;beans&gt;
     &lt;bean class="MyBean" id="myBean"/&gt;
 
     &lt;bean class="MyFactory"&gt;
       &lt;property name="bean"&gt;
-        &lt;ref bean="myBean"/&gt; // 报告 “使用了显式 &lt;ref&gt; 元素”
+        &lt;ref bean="myBean"/&gt; // 报告 "使用了显式 &lt;ref&gt; 元素"
       &lt;/property&gt;
     &lt;/bean&gt;
   &lt;/beans&gt;

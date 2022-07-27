@@ -3,7 +3,7 @@
 报告冗余的 <code>String</code> 构造函数和对可以替换为简化表达式的 <code>toString()</code> 或 <code>substring()</code> 等方法的调用。
 <p>例如，在 <code>"string".substring(0)</code>、<code>"string".toString()</code> 或
 <code>new StringBuilder().toString().substring(1,3)</code> 等情况下，可以安全移除对这些方法的调用。</p>
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>
   System.out.println(new String("message"));
 </code></pre>
@@ -13,9 +13,9 @@
 </code></pre>
 <p>
   请注意，该快速修复会移除冗余构造函数，这可能会影响 <code>String</code> 引用相等。
-  即使被认为是不良做法，如果您仍需要保留，请禁止警告或将设置配置为忽略冗余的 <code>String</code> 构造函数。
+  即使被认为是一种不好的做法，如果您仍需要保留，请禁止警告或将设置配置为忽略冗余的 <code>String</code> 构造函数。
 </p>
 <!-- tooltip end -->
-<p><small>2018.1 的新功能</small></p>
+<p><small>2018.1 最新变化</small></p>
 </body>
 </html>

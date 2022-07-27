@@ -1,13 +1,13 @@
 <html>
 <body>
-报告需要延迟表达式的动态表达式，反之亦然。
+报告需要延迟表达式的动态表达式或需要动态表达式的延迟表达式。
 
-<p><b>示例:</b></p><br/>
+<p><b>示例：</b></p><br/>
 <pre><code>
 &lt;jsp:useBean id="exampleBean" scope="request" type="java.util.Date"/&gt;
 
-&lt;h:outputText id="${exampleBean.day}" value="#{exampleBean.day}" /&gt; // 优良
-&lt;h:outputText id="#{exampleBean.day}" value="${exampleBean.day}" /&gt; // 错误：`id` 属性需要动态表达式，`value` - 推迟 
+&lt;h:outputText id="${exampleBean.day}" value="#{exampleBean.day}" /&gt; // OK
+&lt;h:outputText id="#{exampleBean.day}" value="${exampleBean.day}" /&gt; // 错误：`id` 特性需要动态表达式，`value` - 延迟 
 </code></pre>
 </body>
 </html>

@@ -2,11 +2,11 @@
 <body>
 报告至 <code>var</code> 属性的接口委托
 <p>仅使用属性的初始值进行委托，任何后续的赋值都不会影响它。</p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   class Example(var text: CharSequence): CharSequence by text
 </code></pre>
-<p>建议通过快速修复将属性变为不可变的属性：</p>
+<p>快速修复可将属性替换为不可变的属性：</p>
 <pre><code>
   class Example(val text: CharSequence): CharSequence by text
 </code></pre>

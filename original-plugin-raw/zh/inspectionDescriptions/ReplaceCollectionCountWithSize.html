@@ -8,7 +8,7 @@
     <code>.size</code> 形式可以确保运算是 O(1) 并且不会分配额外的对象，而 <code>count()</code> 可能与 <code>Iterable&lt;T&gt;.count()</code> 混淆，后者是 O(n) 和分配。
     <br>
 </p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>  fun foo() {
       var list = listOf(1,2,3)
       list.count() // 可替换的 'count()'

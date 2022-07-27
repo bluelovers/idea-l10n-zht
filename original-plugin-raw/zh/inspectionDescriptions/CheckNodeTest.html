@@ -1,35 +1,18 @@
 <html>
-<head>
-  <style type="text/css">
-    body, table {
-      font-family: Verdana, sans-serif;
-      font-size: 100%;
-      padding-left: 2mm;
-    }
-
-    #footer {
-      font-size: 95%;
-      padding-top: 10px;
-    }
-  </style>
-</head>
-
 <body>
-<p>
-  报告在 XPath 表达式中使用的元素或属性的名称，但在相关的 XML 文件中缺少，也没有在引用的架构中定义。 这可以防止平常在运行脚本时会出现并可能没有被立即识别的 XPath 表达式拼写错误问题。
-</p>
+报告在 XPath 表达式中使用但在关联的 XML 文件中缺少并且也没有在引用的架构中定义的元素或特性的名称。
+此类名称通常是拼写错误所致，否则可能只会在运行时被发现。
 
-<p>示例:</p>
-
-<p>
-  <code>&lt;xsl:template match="<b>h:txtarea</b>" /></code>
-</p>
+<p><b>示例：</b></p>
+<pre><code>
+  &lt;xsl:template match="<b>h:txtarea</b>" />
+</code></pre>
 
 <p>
   如果 <code>h</code> 被绑定到 XHTML 命名空间，检查会将 <code>match</code> 表达式的这一部分报告为未知元素名称，因为该元素的正确名称是 "textarea"。
 </p>
 
 
-<p id="footer">由 XPathView + XSLT-Support 提供技术支持</p>
+<p><small>由 XPathView + XSLT-Support 提供技术支持</small></p>
 </body>
 </html>

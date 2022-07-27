@@ -1,10 +1,10 @@
 <html>
 <body>
-报告用 <code>@RunWith(Parameterized.class)</code> 注解，但要么不包括用 <code>@Parameterized.Parameters</code> 注解的数据提供程序方法，要么此方法的签名不正确的 JUnit 4 <a href="https://github.com/junit-team/junit4/wiki/parameterized-tests">参数化测试</a>类。 这种测试类无法运行。
+报告使用 <code>@RunWith(Parameterized.class)</code> 注解，但要么不包括使用 <code>@Parameterized.Parameters</code> 注解的数据提供程序方法，要么此方法的签名不正确的 JUnit 4 <a href="https://github.com/junit-team/junit4/wiki/parameterized-tests">形参化测试</a>类。 这种测试类无法运行。
 数据提供程序方法应为 <code>public</code> 和 <code>static</code> 并具有 <code>Iterable</code> 或 <code>Object[]</code> 的返回类型。
-<p>建议创建一个空参数提供程序方法。</p>
+<p>建议创建一个空的形参提供程序方法或更改不正确的数据提供程序方法的签名。</p>
 
-<p><b>示例:</b><p>
+<p><b>示例：</b><p>
 <pre><code>
   @RunWith(Parameterized.class)
   <b>public class</b> ImportantTest {

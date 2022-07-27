@@ -1,9 +1,9 @@
 <html>
 <body>
-<p>报告可以简化的流 API 调用链。
-  它有助于您避免在遍历集合时创建冗余的临时对象。</p>
+报告可以简化的流 API 调用链。
+简化通常会在集合遍历期间避免一些临时对象创建操作。
 <p>
-  该检查将替换以下调用链:
+  该检查将替换以下调用链：
 </p>
 <ul>
   <li><code>collection.stream().forEach()</code> &rarr; <code>collection.forEach()</code></li>
@@ -31,9 +31,7 @@
   <li><code>optional.orElseGet(() -> { throw new ...; })</code> &rarr; <code>optional.orElseThrow()</code></li>
 </ul>
 <p>
-  注意，在某些情况下，替换语义可能略有差异。 例如，
-  <code>Collections.synchronizedList(...).stream().forEach()</code> 不同步，而
-  <code>Collections.synchronizedList(...).forEach()</code> 同步。
+  请注意，在某些情况下，替换语义可能略有差异。 例如，<code>Collections.synchronizedList(...).stream().forEach()</code> 不同步，而 <code>Collections.synchronizedList(...).forEach()</code> 同步。
   另外，如果得到的元素为 <code>null</code>，而 <code>Stream.max()</code> 在本例中抛出 <code>NullPointerException</code>，则 <code>collect(Collectors.maxBy())</code> 返回空的 <code>Optional</code>。
 </p>
 </body>

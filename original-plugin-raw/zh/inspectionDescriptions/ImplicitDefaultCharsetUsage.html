@@ -1,7 +1,7 @@
 <html>
 <body>
 报告隐式使用平台默认字符集的方法和构造函数调用。 在使用不同默认字符集的系统上，这些调用可能产生不同的结果。 这可能会导致意外的行为。
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>void foo(byte[] bytes) {
   String s = new String(bytes);
 }</code>

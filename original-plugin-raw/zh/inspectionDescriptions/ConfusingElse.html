@@ -2,9 +2,9 @@
 <body>
 在 <code>if</code>&mdash;<code>else</code> 语句和语句链中报告冗余的 <code>else</code> 关键字。
 <p>
-<code>else</code> 关键字因为之前分支中的代码以 <code>return</code>、<code>throw</code>、<code>break</code> 或 <code>continue</code> 语句结尾而无法到达，这样的关键字是冗余的。 在这种情况下，来自 <code>else</code> 分支的语句可以放在 <code>if</code> 语句之后，并且 <code>else</code> 关键字可以删除。
+如果 <code>else</code> 关键字因为之前分支中的代码以 <code>return</code>、<code>throw</code>、<code>break</code> 或 <code>continue</code> 语句结尾而无法到达，则它是冗余的。 在这种情况下，来自 <code>else</code> 分支的语句可以放在 <code>if</code> 语句之后，并且 <code>else</code> 关键字可以删除。
 </p>
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>
   if (name == null) {
       throw new IllegalArgumentException();

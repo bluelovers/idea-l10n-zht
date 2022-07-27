@@ -11,20 +11,20 @@
 
 <p>使更新程序为 <code>final</code>，JVM 就能优化访问以提高性能。</p>
 
-<p><b>示例:</b></p>
-<pre>
+<p><b>示例：</b></p>
+<pre><code>
   class Main {
     private volatile int id;
     private AtomicIntegerFieldUpdater&lt;Main&gt; idFieldUpdater = AtomicIntegerFieldUpdater.newUpdater(Main.class, "id");
   }
-</pre>
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre>
+<pre><code>
   class Main {
     private volatile int id;
     private static final AtomicIntegerFieldUpdater&lt;Main&gt; idFieldUpdater = AtomicIntegerFieldUpdater.newUpdater(Main.class, "id");
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

@@ -1,13 +1,12 @@
 <html>
 <body>
-报告其中的参数比相应的 <code>try</code> 块抛出的异常更通用的 <code>catch</code> 块。
-<p><b>示例:</b></p>
+报告形参比相应的 <code>try</code> 块抛出的异常更通用的 <code>catch</code> 块。
+<p><b>示例：</b></p>
 <pre><code>
   try  {
     File file = new File(pathToFile);
     return file.getAbsolutePath();
-  }
-  catch (Exception ex) { // 警告：'Exception' 的 'catch' 范围过广，屏蔽异常 'RuntimeException'
+  } catch (Exception ex) { // warning: 'catch' of 'Exception' is too broad, masking exceptions 'RuntimeException'
     return defaultFilePath;
   }
 </code></pre>
@@ -16,8 +15,7 @@
   try  {
     File file = new File(pathToFile);
     return file.getAbsolutePath();
-  }
-  catch (RuntimeException ex) {
+  } catch (RuntimeException ex) {
     return defaultFilePath;
   }
 </code></pre>

@@ -1,32 +1,32 @@
 <html>
 <body>
-报告具有重复模式的表达式，可替换为 <i>Stream API</i> 或 <code>String#join</code>。
-<p>示例:</p>
-<pre>
+报告所具有的重复模式可以替换为 <i>Stream API</i> 或 <code>String.join()</code> 的表达式。
+<p>示例：</p>
+<pre><code>
   boolean allStartWith(String a, String b, String c, String d, String prefix) {
     return a.startsWith(prefix) && b.startsWith(prefix) && c.startsWith(prefix) && d.startsWith(prefix);
   }
-</pre>
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre>
+<pre><code>
   boolean foo(String a, String b, String c, String d, String prefix) {
     return Stream.of(a, b, c, d).allMatch(s -> s.startsWith(prefix));
   }
-</pre>
-<p>示例:</p>
-<pre>
+</code></pre>
+<p>示例：</p>
+<pre><code>
   String joinAll(String a, String b, String c, String d) {
     return a + "," + b + "," + c + "," + d;
   }
-</pre>
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre>
+<pre><code>
   String joinAll(String a, String b, String c, String d) {
     return String.join(",", a, b, c, d);
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。</p>
-<p><small>2018.2 的新功能</small></p>
+<p><small>2018.2 最新变化</small></p>
 </body>
 </html>

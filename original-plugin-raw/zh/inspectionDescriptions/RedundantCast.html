@@ -2,13 +2,20 @@
 <body>
 报告不必要的转换表达式。
 
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>
-  static void foo() {
-        String o = null;
-        Object o2 = (Object) o;
+  static Object toObject(String s) {
+    return (Object) s;
   }
 </code></pre>
+<!-- tooltip end -->
+<p>
+  使用下面的复选框可以忽略澄清转换，例如应为 <code>Object</code> 的集合调用中的转换：
+<pre><code>
+  static void removeFromList(List&lt;String&gt; l, Object o) {
+    l.remove((String)o);
+  } 
+</code></pre>
+
 </body>
 </html>
-<!-- tooltip end -->

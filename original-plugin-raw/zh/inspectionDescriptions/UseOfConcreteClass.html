@@ -1,13 +1,13 @@
 <html>
 <body>
-报告具体类而非接口的用法。
+报告使用具体类而非接口的情况。
 此类声明可能代表抽象失败，并可能使测试更加困难。
 <p>
 此检查不会报告其类来自系统或第三方库的声明。
 <code>equals()</code> 方法实现中不会报告转换、instanceof 和局部变量。
 此外，<code>clone()</code> 方法实现中不会报告转换。
 </p>
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>
   interface Entity {}
   class EntityImpl implements Entity {}
@@ -26,8 +26,7 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  使用下面的第一个复选框忽略对抽象类的强制转换。</p>
-<p>
-  使用后续复选框来控制报告问题的上下文。</p>
+  使用<b>忽略抽象类类型</b>选项可以忽略对抽象类的转换。</p>
+<p>使用后续选项可控制报告问题的上下文。</p>
 </body>
 </html>

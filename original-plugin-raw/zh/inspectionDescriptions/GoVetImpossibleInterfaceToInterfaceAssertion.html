@@ -1,9 +1,9 @@
 <html>
 <body>
 报告不可能的接口到接口类型断言。
-<p>检查类型断言 <code>v.(T)</code> 和相应的类型切换情况，其中 <code>v</code> 的静态类型 <code>V</code> 是不可能实现目标接口的接口 <code>T</code>。 当 <code>V</code> 和 <code>T</code> 包含名称相同但签名不同的方法时，会发生这种情况。</p>
+<p>检查类型断言 <code>v.(T)</code> 和相应的类型切换 case，其中 <code>v</code> 的静态类型 <code>V</code> 是不可能实现目标接口的接口 <code>T</code>。 当 <code>V</code> 和 <code>T</code> 包含名称相同但签名不同的方法时，会发生这种情况。</p>
 
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>var v interface {
   Read()
 }

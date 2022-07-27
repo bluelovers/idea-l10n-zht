@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告可以 eta 扩展的匿名函数，也报告可以从 eta 扩展中移除的占位符。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def f(x: Any, y: Int): Unit = ()
+  val x = f(_, _)
+  val y: (Int, Int) => Unit = f _
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def f(x: Any, y: Int): Unit = ()
+  val x = f _
+  val y: (Int, Int) => Unit = f
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告并建议命名布尔形参。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  def execute(optionA: Boolean, optionB: Boolean): Unit = ???
+  execute(true, false)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def execute(optionA: Boolean, optionB: Boolean): Unit = ???
+  execute(optionA = true, optionB = false)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

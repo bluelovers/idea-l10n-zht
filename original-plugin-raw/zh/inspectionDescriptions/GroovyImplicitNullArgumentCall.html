@@ -1,12 +1,12 @@
 <html>
 <body>
 报告对只有一个形参的方法的无实参调用。
-这等效于使用 <code>null</code> 进行调用，但这种行为通常会造成混乱并导致意外的结果。
-<p><b>示例:</b></p>
+这等效于使用 <code>null</code> 进行调用，但这种行为通常令人困惑并且是无意为之。
+<p><b>示例：</b></p>
 <pre>
 <code>
 def foo(String s){}
-foo() // this call is actually 'foo(null)' call
+foo() // 此调用实际上为 'foo(null)' 调用
 </code>
 </pre>
 </body>

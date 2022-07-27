@@ -5,8 +5,8 @@
   尾递归总是可以替换为循环，循环的速度快得多。
   有些 JVM 执行尾调用优化，而其他一些 JVM 则不执行。 因此，尾递归解决方案在不同的虚拟机上可能有截然不同的性能特征。
 </p>
-<p>示例:</p>
-<pre>
+<p>示例：</p>
+<pre><code>
   int factorial(int val, int runningVal) {
     if (val == 1) {
       return runningVal;
@@ -14,9 +14,9 @@
       return factorial(val - 1, runningVal * val);
     }
   }
-</pre>
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre>
+<pre><code>
   int factorial(int val, int runningVal) {
     while (true) {
       if (val == 1) {
@@ -27,7 +27,7 @@
       }
     }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 
 </body>

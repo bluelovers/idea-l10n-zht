@@ -1,16 +1,16 @@
 <html>
 <body>
 报告可以替换为“魔术”常量的表达式。
-<p>示例 1:</p>
-<pre>
-  // 使用了裸文字“2”，警告:
+<p>示例 1：</p>
+<pre><code>
+  // 使用了裸文字 "2"，警告：
   Font font = new Font("Arial", 2)
-</pre>
-<p>示例 2:</p>
-<pre>
-  // 使用了预定义常量，良好:
+</code></pre>
+<p>示例 2：</p>
+<pre><code>
+  // 使用了预定义常量，良好：
   Font font = new Font("Arial", Font.ITALIC)
-</pre>
+</code></pre>
 <p>
   如果可能，该快速修复会插入相应的预定义常量。
 </p>

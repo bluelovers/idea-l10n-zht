@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>报告 <code>__new__</code> 和 <code>__init__</code> 方法不兼容的签名。</p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre style="font-family: monospace">
 class MyClass(object):
     def __new__(cls, arg1):
@@ -10,7 +10,7 @@ class MyClass(object):
     def __init__(self):
         pass
 </pre>
-<p>如果 <code>__new__</code> 和 <code>__init__</code> 有不同的参数，则无法实例化 <code>MyClass</code>。</p>
+<p>如果 <code>__new__</code> 和 <code>__init__</code> 有不同的实参，则无法实例化 <code>MyClass</code>。</p>
 <p>IDE 提议的修复方法是应用“更改签名”重构。</p>
 </body>
 </html>

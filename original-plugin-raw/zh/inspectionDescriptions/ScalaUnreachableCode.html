@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告不可到达的代。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def test(): Unit = {
+    throw new Exception()
+    println("this will never be reached")
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def test(): Unit = {
+    throw new Exception()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

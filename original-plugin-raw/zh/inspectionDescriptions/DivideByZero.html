@@ -1,11 +1,9 @@
 <html>
 <body>
-<p>报告除 0 或 对 0 取余。</p>
-<p>在本例中，对于双精度数或浮点数，用户将获得 <code>Nan</code>; 对于整数，将获得 <code>ArithmeticException</code>。
-  注意，除数未必是零文字，而是静态已知的求值为零的表达式。
-  对于浮点类型，该修复建议将除法表达式替换为 <code>Nan</code> 常量。</p>
+报告除以 0 或对 0 取余。
+对于双精度或浮点数，此类表达式将产生 <code>Infinity</code>、<code>-Infinity</code> 或 <code>NaN</code> 结果；对于整数，则抛出 <code>ArithmeticException</code>。
+<p>当表达式的结果为 <code>NaN</code> 时，该修正会建议将除法表达式替换为 <code>NaN</code> 常量。
 <!-- tooltip end -->
-<p>
 
 </body>
 </html>

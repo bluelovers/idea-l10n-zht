@@ -1,0 +1,13 @@
+<html>
+<body><p>报告 <code>case class</code> 形参上的冗余 <code>val</code> 修饰符。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  case class W (val x: Int)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  case class W (x: Int)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

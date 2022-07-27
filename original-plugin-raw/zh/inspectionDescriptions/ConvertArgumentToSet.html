@@ -4,14 +4,14 @@
 
 <p>
     当实参为集合时，'minus' 或 'intersect' 等运算更高效。
-    将 <code>Iterable&lt;T&gt;</code> 或 <code>Array&lt;T&gt;</code> 显式转换为 <code>Set&lt;T&gt;</code> 往往可以提高代码效率。
+    将 <code>Iterable&lt;T&gt;</code> 或 <code>Array&lt;T&gt;</code> 显式转换为 <code>Set&lt;T&gt;</code> 通常可以提高代码效率。
 </p>
 
 <p>
     该快速修复会向函数调用添加显式转换。
 </p>
 
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   fun &lt;T&gt; f(a: Iterable&lt;T&gt;, b: Iterable&lt;T&gt;): Int =
       a.intersect(b).size

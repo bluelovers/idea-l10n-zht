@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>报告可将动态调用替换为构造函数调用的情况。</p>
+<p><b>示例：</b></p>    
+<pre><code>
+  import akka.actor._
+  
+  class Foo(foo: String, bar: Int) extends AbstractActor
+  
+  object Foo {
+    def props(foo: String, bar: Int): Props = Props(classOf[Foo], foo, bar)
+  }
+  
+  Foo.props("foo", 42)
+</code></pre>
+<p>在应用快速修复后：</p>    
+<pre><code>
+  import akka.actor._
+  
+  class Foo(foo: String, bar: Int) extends AbstractActor
+  
+  object Foo {
+    def props(foo: String, bar: Int): Props = Props(new Foo(foo, bar))
+  }
+  
+  Foo.props("foo", 42)
+</code></pre>  
+<!-- tooltip end -->
+</body>
+</html>

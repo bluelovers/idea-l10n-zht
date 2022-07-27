@@ -1,24 +1,24 @@
 <html>
 <body>
-报告可以使用 <code>Math.max()</code> 或 <code>Math.min()</code> 而不是手动计算两个数字的最小值或最大值的情况。
-<p>示例:</p>
-<pre>
+报告可以使用 <code>Math.max()</code> 或 <code>Math.min()</code> 调用而不是手动计算两个数字的最小值或最大值的情况。
+<p>示例：</p>
+<pre><code>
   public int min(int a, int b) {
     return b &lt; a ? b : a;
   }
-</pre>
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre>
+<pre><code>
   public int min(int a, int b) {
     return Math.min(a, b);
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   使用<b>禁用 float 和 double</b> 选项，可对 <code>double</code> 和 <code>float</code> 禁用此检查。
   由于该快速修复在处理 <code>NaN</code> 时可能会略微破坏 <code>float</code>/
   <code>double</code> 的语义，因此这很有用。 不过，如果用户不在意 <code>NaN</code>，那么在大多数情况下它其实会修正难以捉摸的错误。
 </p>
-<p><small>2019.2 的新功能</small></p>
+<p><small>2019.2 最新变化</small></p>
 </body>
 </html>

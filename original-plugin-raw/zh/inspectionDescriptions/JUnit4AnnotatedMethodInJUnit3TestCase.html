@@ -1,7 +1,7 @@
 <html>
 <body>
-<p>报告 <code>junit.framework.TestCase</code> 继承者中的 JUnit 4 <code>@Test</code> 批注方法。 混合 JUnit 的 API 会导致运行测试出现问题。</p>
-<p><b>示例:</b></p>
+报告 <code>junit.framework.TestCase</code> 继承者中的 JUnit 4 <code>@Test</code> 注解方法。 混合 JUnit 的 API 会导致运行测试出现问题。
+<p><b>示例：</b></p>
 <pre><code>
   public class MyTest extends TestCase {
       @Test //名称不是以 "test" 开头，因此将被忽略
@@ -12,7 +12,7 @@
       public void testWouldBeExecuted() {}
   }
 </code></pre>
-<p><b>提供的修复:</b></p>
+<p><b>提供的修正：</b></p>
 <ul>
   <li>移除 <code>@Ignore</code> 注解并重命名测试方法，使名称不以“test”开头。</li>
   <li>将 JUnit 3 测试类转换为 JUnit 4。</li>

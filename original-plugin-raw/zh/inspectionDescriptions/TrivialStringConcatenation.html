@@ -1,13 +1,11 @@
 <html>
 <body>
+报告其中一个实参为空字符串的字符串串联。
+此类连接是不必要且低效的，特别是当用作将非 <code>String</code> 对象或基元格式化为 <code>String</code> 的习惯用法时。
 <p>
-  报告其中一个参数为空字符串的字符串串联。
-  这种连接是不必要且低效的，特别是当用作将非 <code>String</code> 对象或基元格式化为 <code>String</code> 的习惯用法时。
+  建议通过快速修复来简化串联。
 </p>
-<p>
-  建议使用快速修复来简化串联。
-</p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   void foo(int x, int y) {
     String s = "" + x + " ; " + y;

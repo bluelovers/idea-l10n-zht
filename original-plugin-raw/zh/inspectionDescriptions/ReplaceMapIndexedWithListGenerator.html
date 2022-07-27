@@ -1,0 +1,17 @@
+<html>
+<body>
+报告可以替换为 <code>List</code> 生成器的 <code>mapIndexed</code> 调用。
+<p><b>示例：</b></p>
+<pre><code>
+  val a = listOf(1, 2, 3).mapIndexed { i, _ ->
+      i + 42
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val a = List(listOf(1, 2, 3).size) { i ->
+          i + 42
+  }
+</code></pre>
+</body>
+</html>

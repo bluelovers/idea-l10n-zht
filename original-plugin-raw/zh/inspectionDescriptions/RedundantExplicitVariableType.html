@@ -2,7 +2,7 @@
 <body>
 报告冗余局部变量类型。
 <p>这些类型可以从上下文中推断出来，因此替换为 <code>var</code>。</p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   void test(InputStream s) {
     try (InputStream in = s) {}

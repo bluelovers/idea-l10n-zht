@@ -1,8 +1,9 @@
 <html>
 <body>
-报告任何 <b>while</b>、<b>do-while</b> 和 <b>for</b> 循环，它们唯一条件为常量 <b>true</b>，但仍然可以由可以跳出循环的包含 <b>if</b> 的语句终止。
-这个 <b>if</b> 语句必须是 <b>while</b> 或 <b>for</b> 循环中的第一个或唯一的语句，也必须是 <b>do-while</b> 循环中的最后一个或唯一的语句。
-如果删除 if 语句并将其条件设为显式循环条件，则这样的循环会更清晰。
+报告任何以 <code>true</code> 常量作为其唯一条件的 <code>while</code>、<code>do-while</code> 和 <code>for</code> 循环。 同时，此类循环仍然能够被可以跳出循环的包含 <code>if</code> 语句终止。
+<p>此类 <code>if</code> 语句必须是 <code>while</code> 或 <code>for</code> 循环中的第一个或唯一语句，也必须是 <code>do-while</code> 循环中的最后一个或唯一语句。</p>
+
+<p>移除 <code>if</code> 语句并将其条件设为显式循环条件可简化循环。</p>
 <!-- tooltip end -->
 <p>
 

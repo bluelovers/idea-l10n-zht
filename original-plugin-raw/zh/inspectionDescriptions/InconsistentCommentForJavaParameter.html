@@ -1,0 +1,24 @@
+<html>
+<body>
+报告注释块中指定的 <b>java</b> 方法的不一致形参名称。
+<p><b>示例：</b></p>
+<pre><code>
+  // Java
+  public class JavaService {
+      public void invoke(String command) {}
+  }
+</code></pre>
+<pre><code>
+  // Kotlin
+  fun main() {
+      JavaService().invoke(/* name = */ "fix")
+  }
+</code></pre>
+<p>该快速修复会更正注释块中的形参名称：</p>
+<pre><code>
+  fun main() {
+      JavaService().invoke(/* command = */ "fix")
+  }
+</code></pre>
+</body>
+</html>

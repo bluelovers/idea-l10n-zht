@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告可以转换为模式匹配匿名函数的 match 语句。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  iterable.map(value => value match {
+      case Some(value) => whenValue(value)
+      case None => whenNothing()
+  })
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  iterable.map {
+      case Some(value) => whenValue(value)
+      case None => whenNothing()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

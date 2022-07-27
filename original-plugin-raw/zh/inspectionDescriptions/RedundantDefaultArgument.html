@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告与默认值具有相同值的实参。</p>
+
+<p>该快速修复将移除冗余转换。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  def f(x: Int, y: Int = 0, z: Int) {}
+  f(1, y = 0, z = 1)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def f(x: Int, y: Int = 0, z: Int) {}
+  f(1, z = 1)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

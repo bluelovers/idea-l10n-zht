@@ -2,11 +2,11 @@
 <body>
 报告以下 JPA 规范错误：<br/>
 <ul>
-  <li>没有 public 无参数构造函数的实体监听器类</li>
-  <li>具有不正确签名的实体监听器方法</li>
+  <li>没有 public 无实参构造函数的实体侦听器类</li>
+  <li>具有不正确签名的实体侦听器方法</li>
 </ul><br/>
 
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   @Entity
   @EntityListeners(value = JavaEntityListener.class)
@@ -15,7 +15,7 @@
   class JavaEntityListener {
 
     @PostLoad
-    void postLoad(String parameter) { ... } // 错误：方法 ‘postLoad’ 应在此处采用 ’Object‘ 类型的参数
+    void postLoad(String parameter) { ... } // 错误：方法 'postLoad' 应在此处采用 'Object' 类型的形参
   }
 </code></pre>
 </body>

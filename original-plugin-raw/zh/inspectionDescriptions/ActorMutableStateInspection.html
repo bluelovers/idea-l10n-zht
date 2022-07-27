@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>报告 actor 具有可变状态的情况。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  import akka.actor._
+
+  class ActorImpl(private var counter: Int = 0) extends AbstractActor {
+    override def receive = {
+      case _ => counter += 1
+    }
+  }    
+</code></pre>
+<p>在应用快速修复后：</p>  
+<pre><code>
+  import akka.actor._
+  
+  class ActorImpl(private val counter: Int = 0) extends AbstractActor {
+    override def receive = onMessage(counter)
+  
+    private def onMessage(counter: Int): Receive = {
+      case _ => context.become(onMessage(counter + 1))
+    }
+  }
+</code></pre>  
+<!-- tooltip end -->
+</body>
+</html>

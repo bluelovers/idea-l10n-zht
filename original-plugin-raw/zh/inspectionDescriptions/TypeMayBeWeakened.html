@@ -2,9 +2,9 @@
 <body>
 报告可以更改为更抽象（更弱）类型的变量和方法返回类型。
 这使代码更抽象，因此可重用性更高。
-<p>示例:</p>
-<pre>
-  // 参数类型可以削弱为 java.util.List
+<p>示例：</p>
+<pre><code>
+  // 形参类型可以削弱为 java.util.List
   void processList(ArrayList&lt;String&gt; list) {
     if (list.isEmpty()) return;
     System.out.println("Processing");
@@ -12,7 +12,7 @@
       System.out.println("String: " + s);
     }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   启用下面的<b>使用右侧类型</b>复选框可防止在右侧并非类型转换或新表达式时削弱赋值的左侧。 在变量中存储方法调用结果时，保留方法调用结果的类型不会不必要地削弱它，反而会很有用。

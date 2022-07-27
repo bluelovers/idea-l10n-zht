@@ -1,5 +1,20 @@
 <html>
 <body>
 报告从弃用成员继承的声明。
+<p><b>示例：</b></p>
+<pre><code>
+open class BaseService {
+  @Deprecated("obsolete", replaceWith = ReplaceWith("connection"))
+  open fun connect() {}
+
+  open fun connection() {}
+} 
+
+class SomeService: BaseService() {
+  override fun connect() {
+    super.connect()
+  }
+}
+</code></pre>
 </body>
 </html>

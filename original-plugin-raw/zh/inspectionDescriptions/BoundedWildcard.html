@@ -1,25 +1,25 @@
 <html>
 <body>
 报告可以使用<a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">有界通配符</a>的通用方法形参。
-<p><b>示例:</b></p>
-<pre>
+<p><b>示例：</b></p>
+<pre><code>
   void process(Consumer&lt;Number&gt; consumer);
-</pre>
+</code></pre>
 <p>应替换为：</p>
-<pre>
+<pre><code>
   void process(Consumer&lt;? super Number&gt; consumer);
-</pre>
+</code></pre>
 <p>
   此方法签名更灵活，因为它接受更多类型：不仅是 <code>Consumer&lt;Number&gt;</code>，还有 <code>Consumer&lt;Object&gt;</code>。
 </p>
 <p>同样，在协变位置输入形参：</p>
-<pre>
+<pre><code>
   T produce(Producer&lt;T&gt; p);
-</pre>
+</code></pre>
 <p>应替换为：</p>
-<pre>
+<pre><code>
   T produce(Producer&lt;? extends T&gt; p);
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
   引用 <em>Effective Java</em> 第三版中的 <a href="https://en.wikipedia.org/wiki/Joshua_Bloch#Effective_Java">Joshua Bloch</a>：

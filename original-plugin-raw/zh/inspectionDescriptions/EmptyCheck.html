@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>报告检查集合和 <code>Options</code> 是否为空的不同方法，并建议将它们替换为 <code>.isEmpty</code>、<code>.nonEmpty</code> 或 <code>.isDefined</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  !Seq(1).isEmpty
+  Seq(1).size == 0
+  Seq(1).size != 0
+  !(Seq(1).length > 0)
+  Seq(1).exists(_ => true)
+  import scala.Function.const
+  Seq(1).exists(const(true))
+  !Option(0).isEmpty
+  Option(0) == None
+  Option(0) != None
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Seq(1).nonEmpty
+  Seq(1).isEmpty
+  Seq(1).nonEmpty
+  Seq(1).isEmpty
+  Seq(1).nonEmpty
+  import scala.Function.const
+  Seq(1).nonEmpty
+  Option(0).isDefined
+  Option(0).isEmpty
+  Option(0).isDefined
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

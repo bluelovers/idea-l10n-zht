@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>报告对 <code>unary_!</code>、<code>unary_~</code> 等的非前缀调用。 建议将其替换为前缀运算符。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val x = true.unary_!;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val x = !true
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

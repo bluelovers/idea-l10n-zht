@@ -1,15 +1,14 @@
 <html>
 <body>
-报告可以安全地替换为 static 内部类的匿名类。
-如果某个匿名类没有从其周围方法中显式引用其封闭实例或局部类，则它可能是 static 内部类。
+报告可以安全地替换为 <code>static</code> 内部类的匿名类。
+如果某个匿名类没有从周围方法显式引用其封闭实例或局部类，则它可能是 <code>static</code> 内部类。
 <p>
-静态内部类不保留对其封闭实例的隐式引用。
+<code>static</code> 内部类不保留对其封闭实例的隐式引用。
 这可以防止常见的内存泄漏，并减少每个类实例使用的内存。
 </p>
-<p>快速修复会将匿名类提取到命名的 static 内部类中。</p>
-<p><b>示例:</b></p>
-<pre>
-  <code>
+<p>该快速修复会将匿名类提取到命名的 <code>static</code> 内部类中。</p>
+<p><b>示例：</b></p>
+<pre><code>
   void sample(){
     Thread thread = new Thread(new Runnable() {
       @Override
@@ -17,12 +16,10 @@
       }
     });
   }
-  </code>
-</pre>
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre>
-  <code>
-  void sample(){
+<pre><code>
+  void sample() {
     Thread thread = new Thread(new Task());
   }
 
@@ -31,8 +28,7 @@
     public void run() {
     }
   }
-  </code>
-</pre>
+</code></pre>
   <!-- tooltip end -->
 </body>
 </html>

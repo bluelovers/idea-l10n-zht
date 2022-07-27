@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>为 XML 应用程序上下文中的 Bean 报告不正确的 <strong>&lt;lookup-method&gt;</strong>。</p>
+<p>报告 XML 应用程序上下文中 Bean 的不正确 <strong>&lt;lookup-method&gt;</strong>。</p>
 
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   public abstract class FooLookupBean {
     protected abstract FooBean createCommand();
@@ -16,15 +16,15 @@
     &lt;bean class="FooLookupBean" id="lookupTest"&gt;
       &lt;lookup-method bean="fooBean" name="createCommand"/&gt;
       &lt;!-- private --&gt;
-      &lt;lookup-method bean="fooBean" name="createCommand"/&gt;// “方法必须为 public 或 protected”
+      &lt;lookup-method bean="fooBean" name="createCommand"/&gt;// "方法必须为 public 或 protected"
       &lt;!-- static --&gt;
       &lt;lookup-method bean="fooBean" name="createCommandStatic"/&gt; // 此处不允许使用 static 方法
-      &lt;!-- 有参数 --&gt;
-      &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt;// 方法必须没有参数
+      &lt;!-- 有实参 --&gt;
+      &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt;// 方法必须没有形参
       &lt;!-- 不存在 --&gt;
       &lt;lookup-method bean="fooBean" name="unknown"/&gt;  // 未知方法
       &lt;!-- 不匹配 --&gt;
-      &lt;lookup-method bean="fooBean" name="createOtherBean"/&gt; // 查找方法返回类型与 “FooBean” Bean 类不匹配
+      &lt;lookup-method bean="fooBean" name="createOtherBean"/&gt; // 查找方法返回类型与 'FooBean' Bean 类不匹配
     &lt;/bean&gt;
 
     &lt;bean class="FooBean" id="fooBean"/&gt;

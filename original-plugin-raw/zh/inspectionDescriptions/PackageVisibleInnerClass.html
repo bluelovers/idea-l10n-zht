@@ -1,9 +1,9 @@
 <html>
 <body>
-报告没有任何访问修饰符（也称为 package-private）声明的嵌套类。
-<p><b>示例:</b></p>
+报告在没有任何访问修饰符（也称为 package-private）的情况下声明的嵌套类。
+<p><b>示例：</b></p>
 <pre><code>
- public class Outer {
+  public class Outer {
     static class Nested {}  // 警告
     class Inner {}          // 警告
     enum Mode {}            // 警告取决于设置

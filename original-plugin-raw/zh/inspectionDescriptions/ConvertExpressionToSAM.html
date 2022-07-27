@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>报告可以转换为 SAM（单一抽象方法）的表达式。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  new Thread(new Runnable {
+      override def run() = println()
+  })
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  new Thread(() => println())
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

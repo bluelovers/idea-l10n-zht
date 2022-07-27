@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>通过键从映射中获取值时，报告对 <code>Map.get</code>/<code>Option.get</code> 的不必要调用</p>.
+<p><b>示例：</b></p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.get(k).get
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map(k)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,9 +1,9 @@
 <html>
 <body>
-报告传递来的用来存储结果的参数不是指针或接口的 <code>json.Unmarshal</code> 和类似函数的调用。
+如果传递以存储结果的实参不是指针或接口，则报告对 <code>json.Unmarshal</code> 和类似函数的调用。
 <p>这些调用将失败并返回错误。</p>
 <p>有关 <code> Unmarshal </code> 的更多信息，请参见 <a href="https://golang.org/pkg/encoding/json/#Unmarshal">golang.org 的 func Unmarshal</a> 页面。</p>
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>var animals []Animal
 err := json.Unmarshal(jsonData, animals) // 总是返回错误</code></pre>
 <p>在应用<b>在前面追加 '&amp;'</b>快速修复后：</p>

@@ -2,8 +2,8 @@
 <body>
 报告用其包含类名限定的静态导入成员的用法。
 <p>此类限定不必要且可移除，因为可以通过成员名称直接访问静态导入成员。</p>
-<p><b>示例:</b></p>
-<pre>
+<p><b>示例：</b></p>
+<pre><code>
   import static foo.Test.WIDTH;
 
   class Bar {
@@ -11,9 +11,9 @@
       System.out.println(Test.WIDTH);
     }
   }
-</pre>
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre>
+<pre><code>
   import static foo.Test.WIDTH;
 
   class Bar {
@@ -21,7 +21,7 @@
       System.out.println(WIDTH);
     }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

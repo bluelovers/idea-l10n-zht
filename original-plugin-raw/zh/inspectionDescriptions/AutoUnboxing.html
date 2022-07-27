@@ -2,7 +2,7 @@
 <body>
 报告受拆箱转换（自动将对象解开为基元值）影响的表达式。
 尽量不使用对象，而是使用基元。 它可能会显著影响性能。
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>int x = new Integer(42);</code></pre>
 <p>该快速修复会将转换设为显式：</p>
 <pre><code>int x = new Integer(42).intValue();</code></pre>

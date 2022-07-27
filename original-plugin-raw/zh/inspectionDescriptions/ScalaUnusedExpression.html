@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告值未被使用的表达式。</p>
+
+<p>不会报告具有副作用或转移控制流的表达式。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  def test(): Int = {
+    3 // 未使用
+    3
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def test(): Int = {
+    3
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

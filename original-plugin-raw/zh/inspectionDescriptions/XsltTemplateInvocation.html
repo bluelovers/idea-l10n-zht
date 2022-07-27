@@ -1,29 +1,11 @@
 <html>
-<head>
-  <style type="text/css">
-    body, table {
-      font-family: Verdana, sans-serif;
-      font-size: 100%;
-      padding-left: 2mm;
-    }
-
-    #footer {
-      font-size: 95%;
-      padding-top: 10px;
-    }
-  </style>
-</head>
-
 <body>
-<p>
-  报告在调用命名为 XSLT 的模板时发生的以下问题之一：缺少实参、传递
-  未在模板中声明的实参，或为特定形参多次传递实参。
-</p>
+报告缺少实参、传递未被声明的实参，以及在命名 XSLT 模板调用中多次传递形参的实参。
 
 <p>
-用默认值声明的参数是可选的，因此被忽略。
+使用默认值声明的形参是可选形参，不会被报告为缺失。
 </p>
 
-<p id="footer">由 XPathView + XSLT-Support 提供技术支持</p>
+<p><small>由 XPathView + XSLT-Support 提供技术支持</small></p>
 </body>
 </html>

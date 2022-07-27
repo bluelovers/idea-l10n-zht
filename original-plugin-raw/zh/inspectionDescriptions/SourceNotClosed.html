@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>报告未关闭的 <code>scala.io.Source</code>。</p>
+
+<p>直接在由 <code>fromFile</code>、<code>fromURL</code> 或 <code>fromURI</code> 打开的 <code>Source</code> 上使用 <code>.mkString</code> 或 <code>.getLines</code> 之类的函数将泄漏底层文件句柄。</p>
+
+<p>考虑使用 <code>.close()</code> 和 <code>try</code>/<code>finally</code> 来管理资源的生命周期或使用 <a href="https://scala-lang.org/files/archive/api/2.13.0/scala/util/Using$.html">Scala 2.13 的 <code>Using</code></a>。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  Source.fromFile("file.txt").getLines()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

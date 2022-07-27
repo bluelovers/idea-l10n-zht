@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告 <code>find</code> 和空性检查，并建议改用 <code>exists</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  var x: Seq[Int]
+  x.find(p).isDefined
+  x.find(p) != None
+  x.find(p).isEmpty
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  var x: Seq[Int]
+  x.exists(p)
+  x.exists(p)
+  !x.exists(p)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

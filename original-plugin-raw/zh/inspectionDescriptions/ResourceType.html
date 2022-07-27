@@ -1,0 +1,17 @@
+<html>
+<body>
+此检查会查看使用各种支持注解（如 RequiresPermission 或 UiThread）进行注解的 Android API 调用，并标记未按照注解指定的方式正确使用 API 的任何调用。
+<br><br>
+由此检查标记的错误示例：
+<ul>
+  <li>将错误类型的资源整数（如 R.string）传递给需要不同类型（如 R.dimen）的 API。</li>
+  <li>忘记在需要它的方法中调用被重写的方法（通过 super）</li>
+  <li>调用需要权限但未在清单中声明该权限的方法</li>
+  <li>将资源颜色引用传递给需要 RGB 整数值的方法。</li>
+</ul>
+…以及更多。
+<br><br>
+有关详细信息，请参阅 
+<a href="http://developer.android.com/tools/debugging/annotations.html">http://developer.android.com/tools/debugging/annotations.html</a> 下的文档
+</body>
+</html>

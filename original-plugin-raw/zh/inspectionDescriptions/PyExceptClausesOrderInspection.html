@@ -4,7 +4,7 @@
 <p>
   如果不修复顺序，最具体的处理程序可能无法捕获某些异常。
 </p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre style="font-family: monospace">
 try:
     call()
@@ -13,7 +13,7 @@ except ValueError:
 except UnicodeError:
     pass
 </pre>
-<p>IDE 建议将该子句上移。 应用快速修复后，代码变为:</p>
+<p>IDE 建议将该子句上移。 应用快速修复后，代码变为：</p>
 <pre style="font-family: monospace">
 try:
     call()

@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>报告 <code>map</code> 与不产生结果的表达式的搭配使用。</p>
+<p>如果可能，此检查会建议将此类 <code>map</code> 调用替换为 <code>foreach</code> 调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Seq(1, 2).map(println)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Seq(1, 2).foreach(println)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

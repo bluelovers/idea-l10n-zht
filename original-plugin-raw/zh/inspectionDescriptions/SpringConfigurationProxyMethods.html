@@ -1,16 +1,16 @@
 <html>
 <body>
-报告有关错误使用的代理方法的警告。
+报告有关不正确使用的代理方法的警告。
 
-Spring Framework 5.2 引入了对 @Configuration 类处理的优化，可以通过属性 @Configuration(proxyBeanMethods = false) 启用该优化。
+Spring Framework 5.2 引入了对 @Configuration 类处理的优化，可以通过 @Configuration(proxyBeanMethods = false) 特性启用该优化。
 <br><br>
 如果您禁用
 <pre><code>proxyBeanMethods</code></pre>
-代理将不会被实例化，但您可以调用该方法并重新启动它（每次都会返回一个新实例）。
-因此，您无法保证您确实在上下文中注入了相应的 bean。
+将不再创建代理实例，调用该方法可以重新启动（每次返回一个新实例）。
+因此，您无法保证您确实在上下文中注入相应的 Bean。
 <!-- tooltip end -->
 <br><br>
-<strong>错误的 bean 方法调用示例：</strong><br><br>
+<strong>不正确的 Bean 方法调用示例</strong>：<br><br>
 <pre>
 @Configuration(proxyBeanMethods = false)
 class TestConfiguration {
@@ -21,7 +21,7 @@ class TestConfiguration {
 
   @Bean
   public SecondBean secondBean() {
-    return new SecondBean(firstBean()); // -> <strong>错误的调用</strong>
+    return new SecondBean(firstBean()); // -> <strong>不正确的调用</strong>
   }
 }
 </pre>
@@ -30,7 +30,7 @@ class TestConfiguration {
 <hr>
 <strong>您可以将
   <pre><code>proxyBeanMethods</code></pre>
-  设置为 true 或重写代码如下：</strong><br><br>
+  设置为 true 或按如下所示重写代码</strong>：<br><br>
 <pre>
 @Configuration(proxyBeanMethods = false)
 class TestConfiguration {
@@ -48,7 +48,7 @@ class TestConfiguration {
 <br>
 
 <hr>
-<strong>此外，检查还会检查没有 @Configuration 构造型的类中的 @Bean 方法调用（在 “bean lite mode” 下）：</strong><br><br>
+<strong>此外，该检查还会检查没有 @Configuration 构造型的类中的 @Bean 方法调用（在 "Bean lite mode" 下）</strong>：<br><br>
 <pre>
 @Component
 class TestComponent {
@@ -59,7 +59,7 @@ class TestComponent {
 
   @Bean
   public SecondBean secondBean() {
-    return new SecondBean(firstBean()); // -> <strong>错误的调用</strong>
+    return new SecondBean(firstBean()); // -> <strong>不正确的调用</strong>
   }
 }
 </pre>

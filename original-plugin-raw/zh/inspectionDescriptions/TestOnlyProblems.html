@@ -1,14 +1,14 @@
 <html>
 <body>
-报告生产代码中使用的 <code>@TestOnly</code> 和 <code>@VisibleForTesting</code> 批注的方法和类。 还报告将 <code>@TestOnly</code> <code>@VisibleForTesting</code> 应用于同一元素的用法。
+报告生产代码中使用的 <code>@TestOnly</code> 和 <code>@VisibleForTesting</code> 注解的方法和类。 还报告将 <code>@TestOnly</code> <code>@VisibleForTesting</code> 应用于同一元素的用法。
 
-<p>如果引用了以下位置中的方法或类，则不报告这些问题:</p>
+<p>如果引用了以下位置中的方法或类，则不报告这些问题：</p>
 <ul>
   <li><b>Test Sources</b> 文件夹下的代码
-  <li>测试类(JUnit/TestNG)
-  <li>另一个由 <code>@TestOnly</code> 批注的方法
+  <li>测试类 (JUnit/TestNG)
+  <li>另一个 <code>@TestOnly</code> 注解的方法
 </ul>
-<p><b>(生产代码中的)示例:</b></p>
+<p><b>（生产代码中的）示例：</b></p>
 <pre><code>
   @TestOnly
   fun foo() { ... }

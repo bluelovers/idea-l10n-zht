@@ -1,10 +1,10 @@
 <html>
 <body>
-报告 <code>MethodHandle</code> 的签名或 <code>VarHandle</code> 的类型与实际方法或字段不匹配的情况。
-<p>它还会检查提供给 <code>MethodHandle.invoke()</code>、<code>VarHandle.set()</code> 等等的参数是否与方法签名或字段类型相匹配，否则将导致异常。
+报告不匹配任何方法或字段的 <code>MethodHandle</code> 和 <code>VarHandle</code> 工厂方法调用。
+<p>也报告不匹配 <code>MethodHandle</code> 签名的 <code>MethodHandle.invoke()</code> 和类似方法的实参以及不匹配 <code>VarHandle</code> 类型的 <code>VarHandle.set()</code> 的实参
   <!-- tooltip end -->
 
-<p>示例:</p>
+<p>示例：</p>
 <pre>
   MethodHandle mh = MethodHandles.lookup().findVirtual(
       MyClass.class, "foo", MethodType.methodType(void.class, int.class));
@@ -25,7 +25,7 @@
   vh.set(myObj, <b>42</b>);
 </pre>
 <p>
-  <small>2017.2 的新功能</small>
+  <small>2017.2 最新变化</small>
 </p>
 </body>
 </html>

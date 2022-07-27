@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>报告可以替换为普通函数的部分函数。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Seq(1).foreach {
+    case _ => 3
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Seq(1).foreach(_ => 3)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

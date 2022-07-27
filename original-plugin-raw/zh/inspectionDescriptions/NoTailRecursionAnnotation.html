@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告没有 <code>@tailrec</code> 注解的尾递归方法，该注解验证方法将使用尾调用优化进行编译。</p>
+
+<p>请注意，方法必须是有效的 <code>final</code>，此检查才会被显示。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  def factorial(n: Long, acc: Long = 1): Long =
+    if (n <= 1) acc else factorial(n - 1, acc * n)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  @tailrec
+  def factorial(n: Long, acc: Long = 1): Long =
+    if (n <= 1) acc else factorial(n - 1, acc * n)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

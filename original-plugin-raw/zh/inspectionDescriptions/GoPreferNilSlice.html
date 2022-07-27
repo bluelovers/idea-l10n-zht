@@ -2,7 +2,7 @@
 <body>
 报告使用空文字初始值设定项而不是 <code>nil</code> 的切片声明。
 <p>空切片可以用 <code>nil</code> 或空切片文字表示。 最好使用第一种方法，因为它不会导致内存分配。 有关空切片的更多信息，请参阅 <a href="https://golang.org/wiki/CodeReviewComments#declaring-empty-slices">golang.org 上的 Declaring Empty Slices</a> 页面。</p>
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>s := []string{}</code></pre>
 <p>要更改声明，请使用 <b>替换为 nil 切片声明 (更改语义)</b> 快速修复。
   在应用快速修复后：</p>

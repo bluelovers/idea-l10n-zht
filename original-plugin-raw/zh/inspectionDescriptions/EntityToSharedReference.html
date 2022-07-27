@@ -1,0 +1,26 @@
+<html>
+<body>
+报告从 <code>Entity</code> 到 <code>SharedEntity</code> 的无效引用。
+<p>
+  不能从 <code>SharedEntity</code> 引用 <code>Entity</code>。
+  仅当属性为可 null 或具有 <code>@CascadeDeleteBy</code> 注解时，才能从 <code>Entity</code> 引用 <code>SharedEntity</code>。
+  否则，可能会导致运行时异常。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  interface A: Entity {
+    var x: SharedEntity
+    var y: SharedEntity
+  }
+</code></pre>
+<p>可以通过快速修复来生成注解或使类型为可 null</p>
+<pre><code>
+  interface A: Entity {
+    var x: SharedEntity?
+    @CascadeDeleteBy
+    var y: SharedEntity
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

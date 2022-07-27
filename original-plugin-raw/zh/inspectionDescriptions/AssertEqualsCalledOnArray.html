@@ -1,9 +1,9 @@
 <html>
 <body>
-报告采用数组类型参数的 JUnit <code>assertEquals()</code> 方法的调用。
+报告带有数组类型实参的 JUnit <code>assertEquals()</code> 调用。
 此类方法会比较数组的标识，而不是数组的内容。
-<p>建议使用 其中一种 <code>assertArrayEquals()</code> 方法来比较数组的内容。</p>
-<p><b>示例:</b></p>
+应使用 <code>assertArrayEquals()</code> 方法检查数组内容。
+<p><b>示例：</b></p>
 <pre><code>
   @Test
   <b>public void</b> testSort() {

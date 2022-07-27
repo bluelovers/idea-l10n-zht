@@ -1,9 +1,9 @@
 <html>
 <body>
-<p>报告具有不在默认 <code>@Dependent</code> 范围内的 public 实例字段的托管 bean。
-  根据 CDI 规范，上下文范围（<code>@RequestScoped</code>、<code>@ApplicationScoped</code>、<code>@SessionScoped</code> 和 <code>ConversationScoped</code>）不允许用于具有 public 实例字段的托管  bean。
+<p>报告具有不在默认 <code>@Dependent</code> 范围内的 public 实例字段的托管 Bean。
+  根据 CDI 规范，上下文范围（<code>@RequestScoped</code>、<code>@ApplicationScoped</code>、<code>@SessionScoped</code> 和 <code>ConversationScoped</code>）不允许用于具有 public 实例字段的托管  Bean。
 </p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   @ApplicationScoped // 警告：具有非默认范围的 Bean 不得具有 public 字段
   class Car {

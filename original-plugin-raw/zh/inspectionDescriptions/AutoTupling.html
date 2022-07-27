@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告可以转换为元组的逗号分隔实参。</p>
+<p>如果没有合适的多实参方法但有一个合适的单实参方法，Scala 编译器会尝试将逗号分隔的实参转换为元组。 这种转换可能会破坏类型安全并导致意外结果。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def foo(a: Any) = {}
+  foo(1, 2)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def foo(a: Any) = {}
+  foo((1, 2))
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

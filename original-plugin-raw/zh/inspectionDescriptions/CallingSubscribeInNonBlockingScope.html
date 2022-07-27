@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>报告 “reactive” 方法中的 <code>subscribe()</code> 调用。</p>
-<p>返回 <code>Publisher</code> 类型（包括 <code>Flux</code> 和 <code>Mono</code>）的方法不应直接调用 <code>subscribe()</code> 方法，因为它可以打破反应式调用链。</p>
-<p>不要使用 <code>subscribe()</code>，而是考虑使用合成运算符，例如 <code>flatMap()</code>、<code>zip()</code>、<code>then()</code> > 等等。</p>
-<p><b>示例:</b></p>
+<p>报告 "reactive" 方法中的 <code>subscribe()</code> 调用。</p>
+<p>返回 <code>Publisher</code> 类型（包括 <code>Flux</code> 和 <code>Mono</code>）的方法不应直接调用 <code>subscribe()</code> 方法，因为它可能破坏反应式调用链。</p>
+<p>不要使用 <code>subscribe()</code>，而是考虑使用组合运算符，例如 <code>flatMap()</code>、<code>zip()</code>、<code>then()</code> > 等。</p>
+<p><b>示例：</b></p>
 <pre><code>
   Flux&lt;String&gt; stringFlux(){
     Flux&lt;String&gt; flux = Flux.just("abc");
-    flux.subscribe(); // &lt;- 不适当的 `subscribe` 调用
+    flux.subscribe(); // &lt;- 在非阻塞上下文中阻塞 'subscribe' 调用
     return flux;
   }
 </code></pre>

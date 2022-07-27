@@ -2,11 +2,11 @@
 <body>
 <p>报告 <code>ARG</code>、<code>ENV</code> 和 <code>LABEL</code> 命令中键值对的不正确间距。</p>
 <p>
-  尽管 <a href="https://docs.docker.com/engine/reference/builder/#arg">Dockerfile 规范</a> 中没有明确指定，但不允许使用键值对的某些间距组合。
+  尽管 <a href="https://docs.docker.com/engine/reference/builder/#arg">Dockerfile 规范</a>中没有明确指定，但不允许使用键值对的某些间距组合。
   到达问题指令后，Docker 构建将失败。
 </p>
 <!-- tooltip end -->
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <ul>
   <li><code>ARG</code> 命令不允许在 '=' 周围有任何空格</li>
   <li><code>ENV</code> 和 <code>LABEL</code> 在 '=' 后不允许有空格</li>

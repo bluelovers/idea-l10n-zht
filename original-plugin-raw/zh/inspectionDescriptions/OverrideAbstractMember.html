@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>报告重写 abstract 成员但没有 override 修饰符的函数。</p>
+<p>Scala 不要求开发者对实现 abstract 成员的方法使用 <code>override</code>。
+    尽管如此，最好用 <code>override</code> 标记此类方法，以便在重写关系被损坏时（例如，通过后续重构）由编译器通知。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  trait Base {
+    def fun(): Int
+  }
+
+  class Impl extends Base {
+    def fun(): Int = 42
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  trait Base {
+    def fun(): Int
+  }
+
+  class Impl extends Base {
+    override def fun(): Int = 42
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

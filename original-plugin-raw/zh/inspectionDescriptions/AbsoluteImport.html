@@ -1,0 +1,21 @@
+<html>
+<body>
+报告可以与基础软件包（<b>设置 | 语言和框架 | Scala | 基础软件包</b>）相关的完全限定导入。
+<p>仅当在<b>设置 | 编辑器 | 代码样式 | Scala | 导入</b>中启用<b>对基础软件包例外</b>选项时才适用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  package org.example.application
+  package ui
+
+  import org.example.application.model.Data
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  package org.example.application
+  package ui
+
+  import model.Data
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -2,13 +2,13 @@
 <body>
 报告以下 JPA 规范错误：
 <ul>
-  <li>为一个方法或字段配置了几个属性</li>
-  <li>可嵌入对象中使用了非法属性 (JPA 1.0)</li>
-  <li>持久属性元数据未在字段或属性 getter 上指定</li>
+  <li>为一个方法或字段配置了多个特性</li>
+  <li>Embeddable 对象中使用了非法特性 (JPA 1.0)</li>
+  <li>持久特性元数据不在字段或属性 getter 上指定</li>
   <li>没有基于属性访问的 setter 或 getter</li>
 </ul>
 
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   @Entity
   @Table(name = "TABLE")

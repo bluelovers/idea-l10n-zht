@@ -1,10 +1,10 @@
 <html>
 <body>
-如果注解形参分配为其 <code>default</code> 值，则报告该分配。
-<p>示例:</p>
+报告被赋值给其 <code>default</code> 值的注解形参。
+<p>示例：</p>
 <pre><code>
   @interface Test {
-      Class<?> expected() default Throwable.class;
+      Class&lt;?> expected() default Throwable.class;
   }
 
   @Test(expected = Throwable.class)

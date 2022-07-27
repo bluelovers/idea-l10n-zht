@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>报告在相等检查中 <code>NA</code> 常量的用法，并建议将其替换为 <code>is.na</code> 函数。</p>
-<p><b>示例:</b></p>
+<p>报告 <code>NA</code> 常量在相等检查中的用法，并建议将其替换为 <code>is.na</code> 函数。</p>
+<p><b>示例：</b></p>
 <pre><code>
 if (a==NA){
   print ("a is not available!")
 }
 </code></pre>
-<p>当您应用快速修复时，代码更改为：</p>
+<p>当您应用该快速修复时，代码变为：</p>
 <pre><code>
 if (is.na(a)){
   print ("a is not available!")

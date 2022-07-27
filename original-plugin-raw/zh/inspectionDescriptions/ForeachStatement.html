@@ -1,20 +1,20 @@
 <html>
 <body>
-报告增强的 <code>for</code> 语句。
-Java 1.4 或更早版本不支持这样的 <code>for</code> 语句。
-<p>示例:</p>
-<pre>
+报告增强型 <code>for</code> 语句。
+1.4 及更早版本的 Java 不支持此类 <code>for</code> 语句。
+<p>示例：</p>
+<pre><code>
   for (int x: Arrays.asList(1, 2, 3)) {
     System.out.println(x);
   }
-</pre>
-<p>应用快速修复后，结果如下所示:  </p>
-<pre>
+</code></pre>
+<p>在应用快速修复后： </p>
+<pre><code>
   for (Iterator&lt;Integer&gt; iterator = Arrays.asList(1, 2, 3).iterator(); iterator.hasNext(); ) {
     final int x = iterator.next();
     System.out.println(x);
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
 

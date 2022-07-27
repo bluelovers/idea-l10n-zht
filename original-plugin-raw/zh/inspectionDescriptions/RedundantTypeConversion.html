@@ -1,24 +1,10 @@
 <html>
-<head>
-  <style type="text/css">
-    body, table {
-      font-family: Verdana, sans-serif;
-      font-size: 100%;
-      padding-left: 2mm;
-    }
-
-    #footer {
-      font-size: 95%;
-      padding-top: 10px;
-    }
-  </style>
-</head>
-
 <body>
-<p>
-  报告参数的类型与函数的返回类型相同的 <code>string()</code>、<code>number()</code> 或 <code>boolean()</code> 函数的类型转换，或者预期的表达式类型为 <code>any</code> 的类型转换。 建议移除不必要的转换。
-</p>
+报告不必要的类型转换。
+当 <code>string()</code>、<code>number()</code> 或
+<code>boolean()</code> 函数的实参类型已经与函数的返回类型相同时，或者如果
+预期表达式类型为 <code>any</code>，无需类型转换。 建议移除不必要的转换。
 
-<p id="footer">由 XPathView + XSLT-Support 提供技术支持</p>
+<p><small>由 XPathView + XSLT-Support 提供技术支持</small></p>
 </body>
 </html>

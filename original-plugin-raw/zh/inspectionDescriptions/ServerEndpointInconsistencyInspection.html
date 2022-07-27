@@ -5,7 +5,7 @@
   根据 JSR 356 规范，WebSocket 端点对于每种消息类型必须只有一个 <code>@OnMessage</code> 方法：text、message 和 pong
 </p>
 <p>
-  <code>javax.websocket.server.ServerEndpoint</code> 注解的端点类可以为每个生命周期注解包含一个方法：
+  使用 <code>javax.websocket.server.ServerEndpoint</code> 注解的端点类只能具有一个带有以下三种生命周期注解之一的方法：
 </p>
 <ul>
   <li><code>@OnOpen</code></li>

@@ -1,0 +1,11 @@
+<html>
+<body>
+报告始终为 true、false 或 null 的条件和表达式。
+<p>示例（MySQL）：</p>
+<pre><code>CREATE TABLE t1 (a TEXT, b INT, c BOOLEAN);
+SELECT a FROM t1 WHERE 'Cat' = 'Cat';
+SELECT a FROM t1 WHERE 'Cat' = null;</code></pre>
+<p><code>'Cat' = 'Cat'</code> 始终为 true，将被报告。</p>
+<p><code>'Cat' = null</code> 始终为 null，将被报告。</p>
+</body>
+</html>

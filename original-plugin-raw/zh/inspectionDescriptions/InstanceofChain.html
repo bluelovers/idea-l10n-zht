@@ -1,8 +1,8 @@
 <html>
 <body>
-报告所有语句条件均为 <code>instanceof</code> 表达式或类相等表达式（例如与 <code>String.class</code> 比较）的 <code>if</code>-<code>else</code> 语句的任何链。
+报告所有语句条件均为 <code>instanceof</code> 表达式或类等式表达式（例如与 <code>String.class</code> 比较）的 <code>if</code>-<code>else</code> 语句的任何链。
 此类结构通常表明面向对象的设计失败，面向对象的设计要求此类基于类型的调度应通过多态方法调用而不是类型测试的显式链来完成。
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>
   double getArea(Shape shape) {
     // 警告：抽象失败。

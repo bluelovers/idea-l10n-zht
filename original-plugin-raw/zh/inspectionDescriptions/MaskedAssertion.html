@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>报告使用 catch 块屏蔽的断言语句和测试框架断言。</p>
-<p>这样的断言永远不会失败，因为将捕获并无提示地忽略 <code>AssertionError</code>。</p>
-<p><b>示例 1:</b></p>
+报告使用 catch 块屏蔽的断言语句和测试框架断言。
+此类断言永远不会失败，因为将捕获并无提示地忽略 <code>AssertionError</code>。
+<p><b>示例 1：</b></p>
 <pre><code>
 void javaAssertion() {
   try {
@@ -11,7 +11,7 @@ void javaAssertion() {
   } catch (AssertionError e) {}
 }
 </code></pre>
-<p><b>示例 2:</b></p>
+<p><b>示例 2：</b></p>
 <pre><code>
 @Test
 void testWithAssertJ() {
@@ -21,7 +21,7 @@ void testWithAssertJ() {
   } catch (AssertionError e) {}
 }
 </code></pre>
-<p><b>示例 3:</b></p>
+<p><b>示例 3：</b></p>
 <pre><code>
 @Test
 void testWithJunit() {
@@ -32,6 +32,6 @@ void testWithJunit() {
 }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2020.3 的新功能</small></p>
+<p><small>2020.3 最新变化</small></p>
 </body>
 </html>

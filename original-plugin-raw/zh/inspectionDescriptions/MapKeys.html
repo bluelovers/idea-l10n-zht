@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告从 <code>Map</code> 中提取键的非标准方法。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.map(_._1)
+  map.map(_._1).toSet
+  map.map(_._1).toIterator
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.keys
+  map.keySet
+  map.keysIterator
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

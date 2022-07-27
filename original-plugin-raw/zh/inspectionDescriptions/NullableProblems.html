@@ -1,7 +1,7 @@
 <html>
 <body>
 报告与可 null 性注解相关的问题。
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <ul>
   <li>重写方法未注解：
     <pre><code>
@@ -13,7 +13,7 @@ class B extends A {
 }
     </code></pre>
   </li>
-  <li>进行了注解的基元类型：<code>@NotNull int myFoo;</code> </li>
+  <li>注解的基元类型：<code>@NotNull int myFoo;</code> </li>
   <li><code>@Nullable</code> 和 <code>@NotNull</code> 位于同一成员上：<code>@Nullable @NotNull String myFooString;</code></li>
   <li>可 null 元素的集合被分配到非 null 元素的集合中：
     <pre><code>

@@ -1,14 +1,14 @@
 <html>
 <body>
-报告没有任何实体监听器方法的实体监听器类。
+报告没有任何实体侦听器方法的实体侦听器类。
 
-<p><b>示例:</b></p><br/>
+<p><b>示例：</b></p><br/>
 <pre><code>
   @Entity
   @EntityListeners(value = JavaEntityListener.class)
   public class JavaEntity { ... }
 
-  class JavaEntityListener { // 错误：未找到特定于实体监听器的方法
+  class JavaEntityListener { // 错误：找不到特定于实体侦听器的方法
 
   }
 </code></pre>

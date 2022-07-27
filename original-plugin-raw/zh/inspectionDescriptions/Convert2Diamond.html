@@ -1,7 +1,7 @@
 <html>
 <body>
 报告所有 <code>new</code> 表达式，其类型实参可以替换为 Diamond 类型 <code>&lt;&gt;</code>。
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>
   List&lt;String&gt; list = new ArrayList&lt;String&gt;(); // 报告数组列表类型实参
 </code></pre>
@@ -9,6 +9,6 @@
 <pre><code>
   List&lt;String&gt; list = new ArrayList&lt;&gt;();
 </code></pre>
-<p><code>&lt;&gt;</code> 语法在 Java 1.6 和更早的 JVM 中不受支持。</p>
+<p>仅当项目或模块的语言级别为 7 或更高时，此检查才会报告。</p>
 </body>
 </html>

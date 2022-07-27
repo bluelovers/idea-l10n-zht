@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>报告不平衡的 wiki 语法标题和 Scaladocs 中此类标题后被忽略的文本。</p>
+<p>在以下示例中，标记了 <code>====</code>：</p>
+<pre><code>
+  /**
+   * == I'm a wiki style header ====
+   */
+  def test(i: Int): Unit = {
+
+  }
+</code></pre>
+<p>在以下示例中，标记了 <code>Ignored text</code>：</p>
+<pre><code>
+  /**
+   * == I'm a wiki style header == Ignored text
+   */
+  def test(i: Int): Unit = {
+
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

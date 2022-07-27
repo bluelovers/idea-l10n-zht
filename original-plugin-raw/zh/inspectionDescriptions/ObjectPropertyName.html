@@ -8,5 +8,20 @@
 </ul>
 <p>您可以在检查选项中指定所需的模式。</p>
 <p><a href="https://kotlinlang.org/docs/coding-conventions.html#naming-rules">建议的命名惯例</a>：必须以大写字母开头，使用驼峰拼写法并且没有下划线。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  // 顶级属性
+  val USER_NAME_FIELD = "UserName"
+  // 包含对单例对象的引用的顶级属性
+  val PersonComparator: Comparator&lt;Person&gt; = /*...*/
+
+  class Person {
+    companion object {
+      // 伴生对象中的属性
+      val NO_NAME = Person()
+    }
+  }
+</code></pre>
+
 </body>
 </html>

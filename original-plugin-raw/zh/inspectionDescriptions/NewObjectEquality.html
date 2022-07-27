@@ -4,21 +4,21 @@
 <p>
   对新分配对象的引用不能指向现有对象，因此比较结果始终为 <code>false</code>。 该检查还可以报告从简单方法返回的新建对象。
 </p>
-<p><b>示例:</b></p>
-<pre>
+<p><b>示例：</b></p>
+<pre><code>
   void test(Object obj) {
     if (new Object() == obj) {...}
   }
-</pre>
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre>
+<pre><code>
   void test(Object obj) {
     if (new Object().equals(obj)) {...}
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
-  <small>2018.3 的新功能</small>
+  <small>2018.3 最新变化</small>
 </p>
 </body>
 </html>

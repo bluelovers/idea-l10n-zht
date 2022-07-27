@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>报告排序和使用 <code>head</code> 或 <code>last</code> 并建议将其替换为 <code>max</code> 或 <code>min</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Seq("abc", "defg", "h").sorted.head
+  Seq("abc", "defg", "h").sortBy(_.length).last
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Seq("abc", "defg", "h").min
+  Seq("abc", "defg", "h").maxBy(_.length)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

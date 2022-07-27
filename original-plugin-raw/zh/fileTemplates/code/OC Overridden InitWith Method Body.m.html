@@ -3,10 +3,8 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      创建生成时已改写 <b><code>-init</code></b> 方法的方法体，
-      例如，调用<b>代码 | 改写方法</b>或<b>代码 | 生成 | -initWith</b> 操作时。<br>
-      此模板可编辑。 除了 Objective-C 表达式和注释，您还可以使用预定义的变量，
-      然后将这些变量扩展为相应的值。</font>
+      生成（例如，调用<b>代码 | 重写方法</b>或<b>代码 | 生成 | -initWith</b> 操作）时创建被重写 <b><code>-init</code></b> 方法的主体。<br>
+      模板是可编辑的。 除了 Objective-C 表达式和注释外，您还可以使用预定义变量，这些变量随后将被扩展为相应值。</font>
     </td>
   </tr>
 </table>
@@ -17,14 +15,14 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">超类方法调用，用于 <b>void</b> 方法 — <code>[<b>super</b> <i>methodName</i>]</code> 带或不带参数；
-      对于其他方法 — <code><b>return</b> [<b>super</b> <i>methodName</i>]</code> 带或不带参数
+    <td width="100%" valign="top"><font face="verdana" size="-1">super 方法调用，对于 <b>void</b> 方法 — <code>[<b>super</b> <i>methodName</i>]</code>，带或不带形参；
+      对于其他方法 — <code><b>return</b> [<b>super</b> <i>methodName</i>]</code>，带或不带形参
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">创建方法的返回类型</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">创建的方法的返回类型</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
@@ -34,17 +32,15 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CONTAINING_CLASS}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">方法被改写的类的名称</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在其中重写方法的类的名称</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CUSTOM_CODE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">生成的主体</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">生成方法的主体</font></td>
   </tr>
   <tr>
-    <td colspan="3"><font face="verdana" size="-1"><b>C 头文件</b>模板（<b>包含</b>选项卡）也可用
-      （<font face="verdana" size="-2"><b>${USER}</b></font>、
-      <font face="verdana" size="-2"><b>${DATE}</b></font> 等）</font>
+    <td colspan="3"><font face="verdana" size="-1"><b>C 文件标头</b>模板（<b>包含</b>选项卡）中的所有预定义变量也可用（<font face="verdana" size="-2"><b>${USER}</b></font>、<font face="verdana" size="-2"><b>${DATE}</b></font> 等）</font>
     </td>
   </tr>
 </table>

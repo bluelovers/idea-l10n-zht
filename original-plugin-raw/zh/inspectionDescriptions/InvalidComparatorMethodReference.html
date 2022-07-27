@@ -5,7 +5,7 @@
 某些方法引用，例如 <code>Integer::max</code>，可以映射到 <code>Comparator</code> 接口。
 但是，将它们用作 <code>Comparator</code> 是没有意义的，结果可能是不可预测的。
 </p>
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>
   ArrayList&lt;Integer&gt; ints = foo();
   ints.sort(Math::min);
@@ -16,6 +16,5 @@
   ints.sort(Comparator.reverseOrder());
 </code></pre>
 <!-- tooltip end -->
-<p><small>2016.3 的新功能</small></p>
 </body>
 </html>

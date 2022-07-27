@@ -4,7 +4,7 @@
 <p>应该使用适当的同步构造来完成 <code>static</code> 变量的延迟初始化，以防止不同的线程执行冲突的初始化。</p>
 <p>如果适用，建议使用引入<a href="https://en.wikipedia.org/wiki/Initialization_on_demand_holder_idiom">延迟初始化容器类习惯用法</a>的快速修复。
   这个习惯用法利用了 JVM 会保证类在使用之前不会被初始化的事实。
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   class X {
     private static List&lt;String&gt; list;

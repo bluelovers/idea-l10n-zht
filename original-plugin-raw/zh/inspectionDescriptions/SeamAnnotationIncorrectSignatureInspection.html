@@ -4,22 +4,22 @@
 
 <ul>
   <li>
-    <p><code>@Name</code> 在接口和 abstract 类上无效。 在带注解的类中需要一个无参数的构造函数。</p>
+    <p><code>@Name</code> 在接口和 abstract 类上无效。 在注解的类中要求一个无实参构造函数。</p>
   </li>
   <li>
-    <p><code>@In</code> 必须出现在字段或 setter 方法中，例如 <code>void setUser(User user)</code>。</p>
+    <p><code>@In</code> 必须出现在字段或 setter 方法上，例如 <code>void setUser(User user)</code>。</p>
     <ul>
       <li>void 返回类型</li>
-      <li>一个参数</li>
+      <li>一个实参</li>
       <li>非 static</li>
       <li>名称必须以 <code>set</code> 开头</li>
     </ul>
   </li>
   <li>
-    <p><code>@Out</code> 必须出现在字段或 getter 方法中，例如 <code>User getUser()</code>.</p>
+    <p><code>@Out</code> 必须出现在字段或 getter 方法上，例如 <code>User getUser()</code>。</p>
     <ul>
       <li>非 void 返回类型</li>
-      <li>没有参数</li>
+      <li>无实参</li>
       <li>非 static</li>
       <li>名称必须以 <code>get</code> 开头，如果返回类型为 <code>boolean</code>，则可选 <code>is</code></li>
     </ul>
@@ -34,23 +34,23 @@
     </ul>
   </li>
   <li>
-    <p><code>@DataModelSelection</code> 必须出现在 setter 方法中。</p>
+    <p><code>@DataModelSelection</code> 必须出现在 setter 方法上。</p>
   </li>
   <li>
-    <p><code>@DataModelSelectionIndex</code> 必须出现在 setter 方法中。</p>
+    <p><code>@DataModelSelectionIndex</code> 必须出现在 setter 方法上。</p>
   </li>
   <li>
-    <p><code>@Factory</code> 和 <code>@Unwrap</code> 必须出现在具有以下签名的方法中：</p>
+    <p><code>@Factory</code> 和 <code>@Unwrap</code> 必须出现在具有以下签名的方法上：</p>
     <ul>
       <li>非 void 返回类型</li>
-      <li>没有参数或单个 <code>org.jboss.seam.Component</code> 参数（或其超类型）</li>
+      <li>没有形参或单个 <code>org.jboss.seam.Component</code> 形参（或其超类型）</li>
       <li>非 static</li>
     </ul>
   </li>
   <li>
     <p><code>@Create</code> 必须出现在具有以下签名的方法上：</p>
     <ul>
-      <li>没有参数或单个 <code>org.jboss.seam.Component</code> 参数（或其超类型）</li>
+      <li>没有形参或单个 <code>org.jboss.seam.Component</code> 形参（或其超类型）</li>
       <li>非 static</li>
     </ul>
   </li>
@@ -58,7 +58,7 @@
     <p><code>@Destroy</code> 必须出现在具有以下签名的方法上：</p>
     <ul>
       <li>void 返回类型</li>
-      <li>无参数</li>
+      <li>无形参</li>
       <li>非 static</li>
     </ul>
   </li>

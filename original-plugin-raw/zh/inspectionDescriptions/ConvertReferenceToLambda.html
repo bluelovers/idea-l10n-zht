@@ -5,7 +5,7 @@
     有时，传递 lambda 会更直接，并且与代码的其余部分更一致。
     此外，如果需要将简单的调用替换为更复杂的调用，该修正可能很方便。
 </p>
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   fun Int.isEven() = this % 2 == 0
 
@@ -14,7 +14,7 @@
       val evenNumbers = numbers.filter(Int::isEven)
   }
 </code></pre>
-<p>应用修正后：</p>
+<p>在应用快速修复后：</p>
 <pre><code>
   fun Int.isEven() = this % 2 == 0
 

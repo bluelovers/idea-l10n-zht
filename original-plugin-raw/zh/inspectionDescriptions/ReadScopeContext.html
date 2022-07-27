@@ -1,0 +1,20 @@
+<html>
+<body>
+报告来自挂起或操作上下文的无效 <code>ReadScope</code> 调用。
+<p>
+  不能从协同程序或操作调用 <code>ReadScope</code> 函数。
+  否则，可能会导致运行时异常。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun ReadScope.kernel(/*...*/) { /*...*/ }
+
+  fun ReadScope.foo() {
+      readEditorAction { ac ->
+          kernel() // 不正确
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

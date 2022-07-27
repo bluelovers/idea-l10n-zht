@@ -2,13 +2,13 @@
 <body>
 报告既不包含初始化也不包含更新组件的
 <code>for</code> 循环。 建议将该循环替换为更简单的 <code>while</code> 语句。
-<p>示例:</p>
+<p>示例：</p>
 <pre><code>
   for(; exitCondition(); ) {
     process();
   }
 </code></pre>
-<p>应用快速修复后，结果如下所示:</p>
+<p>应用快速修复后，结果如下所示：</p>
 <pre><code>
   while(exitCondition()) {
     process();

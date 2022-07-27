@@ -2,8 +2,8 @@
 <body>
 报告 <code>java.util.Collections</code> 字段的用法：<code>EMPTY_LIST</code>、<code>EMPTY_MAP</code>
 或 <code>EMPTY_SET</code>。 这些字段用法可以替换为以下方法调用：<code>emptyList()</code>、<code>emptyMap()</code> 或 <code>emptySet()</code>。
-此类方法调用会防止编译器发出未经检查的警告，因为可以推断出类型形参。
-<p><b>示例:</b></p>
+此类方法调用会防止编译器发出未检查的警告，因为可以推断出类型形参。
+<p><b>示例：</b></p>
 <pre><code>List&lt;Integer&gt; emptyList = Collections.EMPTY_LIST;</code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>List&lt;Integer&gt; emptyList = Collections.emptyList();</code></pre>

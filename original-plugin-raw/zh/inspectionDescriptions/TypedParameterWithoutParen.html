@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>报告未被圆括号包围的函数文字形参。</p>
+
+<p>在 Scala 3 中，只有一个形参的函数文字不能省略形参周围的圆括号。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  call { a: Int => a }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  call { (a: Int) => a }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

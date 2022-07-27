@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>报告使用 <code>@Deployment</code> 注解的方法的错误返回类型。</p>
+<p>报告使用 <code>@Deployment</code> 注解的方法的不正确返回类型。</p>
 <p>
-  根据 <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/en-US/html/gettingstarted.html#d0e451">Arquillian 文档</a>，使用 <code>@Deployment</code> 注解的方法必须具有从 ShrinkWrap 存档继承的返回类型。
+  根据 <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/en-US/html/gettingstarted.html#d0e451">Arquillian 文档</a>，使用 <code>@Deployment</code> 注解的方法必须具有从 ShrinkWrap Archive 继承的返回类型。
 </p>
 
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
-  // 这个测试用例不能被 Arquillian 启动
+  // 此测试用例无法被 Arquillian 启动
   @RunWith(Arquillian.class)
   public class SomeTest {
     @Deployment

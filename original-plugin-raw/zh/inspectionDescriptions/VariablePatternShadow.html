@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告隐藏在封闭范围内定义的稳定标识符的变量模式。</p>
+<p>要对该值执行相等测试，请使用反引号。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val foo = 0
+  0 match {
+    case foo =>
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val foo = 0
+  0 match {
+    case `foo` =>
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

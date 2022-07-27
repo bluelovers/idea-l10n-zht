@@ -2,7 +2,7 @@
 <body>
 报告后面紧跟 <code>getOrThrow</code> 的 <code>runCatching</code> 调用。
 此类调用可以仅替换为 <code>run</code>。
-<p><b>示例:</b></p>
+<p><b>示例：</b></p>
 <pre><code>
   fun foo() = runCatching { doSomething() }.getOrThrow()
 </code></pre>

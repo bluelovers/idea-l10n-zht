@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告 <code>exists</code> 或 <code>forall</code> 调用中的双重否定。</p>
+
+<p>该快速修复会移除双重否定。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def condition(x: Int): Boolean = ???
+  !Seq(1, 2).exists(x => !condition(x))
+  !Seq(1, 2).forall(x => !condition(x))
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  def condition(x: Int): Boolean = ???
+  Seq(1, 2).forall(x => condition(x))
+  Seq(1, 2).exists(x => condition(x))
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

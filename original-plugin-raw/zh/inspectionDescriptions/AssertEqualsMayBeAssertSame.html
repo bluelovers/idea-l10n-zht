@@ -1,9 +1,9 @@
 <html>
 <body>
-报告可以替换为等效的 <code>assertSame()</code> 方法的 JUnit 的 <code>assertEquals()</code> 方法的调用。
-当参数是不重写 <code>Object.equals()</code> 方法并显式比较对象标识的 final 类的实例时，这是可能的。
-<p>建议用 <code>assertEquals()</code> 替换 </p> <code>assertSame()</code>。</p>
-<p><b>示例:</b></p>
+报告可以替换为等效 <code>assertSame()</code> 调用的 JUnit <code>assertEquals()</code> 调用。
+当实参是不重写 <code>Object.equals()</code> 方法并显式比较对象标识的 <code>final</code> 类的实例时，可能发生这种情况。
+<p>建议将 <code>assertEquals()</code> 替换为 <code>assertSame()</code>。</p>
+<p><b>示例：</b></p>
 <pre><code>
   @Test
   <b>public void</b> testObjectType() {

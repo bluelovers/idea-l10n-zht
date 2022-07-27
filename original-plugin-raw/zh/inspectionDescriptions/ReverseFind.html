@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>在调用 <code>find</code> 之前显式反转集合时报告。</p>
+
+<p> 该快速修复将使用 <code>xs.findLast(f)</code>，这在某些情况下可能更有效。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  Seq(1, 2).reverse.find(_ == 2)
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Seq(1, 2).findLast(_ == 2)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

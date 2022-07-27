@@ -1,0 +1,34 @@
+<html>
+<body>
+报告使用 <code>new</code> 或 <code>getOrCreate</code> 函数在 <code>ChangeScope</code> 中创建时 <code>Entity</code> 的未分配属性。
+<p>
+  必须分配 <code>Entity</code> 的所有非可 null 属性，或者使用 <code>@Many</code> 注解对其进行标记。
+  否则，可能会导致运行时异常。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  interface A: Entity {
+    var x: Int
+    var y: Int?
+    @Many var z: Int
+    var p: Int
+  }
+
+  fun ChangeScope.foo() {
+    new(A::class) {
+      this.p = 0
+    }
+  }
+</code></pre>
+<p>可以通过快速修复来为缺失的必需属性生成赋值</p>
+<pre><code>
+  fun ChangeScope.foo() {
+    new(A::class) {
+      this.x = x
+      this.p = 0
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

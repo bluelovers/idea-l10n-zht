@@ -1,25 +1,19 @@
 <html>
 <body>
-报告使用另一个对象的 <code>private</code> 或 <code>protected</code> 字段的对象。
-<p>Java 允许将此类字段用于与当前对象属于同一类的对象，但某些代码样式不鼓励这种用法。 此外，这种对 <code>private</code> 字段的直接访问在面向组件的体系结构中可能会失败，例如 Spring 或 Hibernate，它们期望对其他对象的所有访问都通过方法调用进行，以便框架可以使用代理来调解访问。</p>
-<p><b>示例:</b></p>
+报告对另一个对象的 <code>private</code> 或 <code>protected</code> 字段的访问。
+Java 允许访问与当前对象属于同一类的对象的此类字段，但某些编码样式不鼓励这种用法。 此外，这种对 <code>private</code> 字段的直接访问在面向组件的架构（例如 Spring 或 Hibernate）中可能会失败，它们期望对其他对象的所有访问都通过方法调用进行，以便框架可以使用代理调解访问。
+<p><b>示例：</b></p>
 <pre><code>
-public class Base {
+  public class Base {
     protected int bar;
 
-    class Inside {
-        int f(Base base) {
-            return base.bar;  // 警告：直接访问非 public 字段
-        }
+    void increment(Base base) {
+      bar++;
+      base.bar++; // warning: direct access to another object's non-public field
     }
-}
-
-class SomewhereElse {
-    void m(Base base) {
-        base.bar = 1; // 警告：直接访问非 public 字段
-    }
-}
+  }
 </code></pre>
+可以通过快速修复封装该字段。
 <!-- tooltip end -->
 <p>配置检查：</p>
 <ul>

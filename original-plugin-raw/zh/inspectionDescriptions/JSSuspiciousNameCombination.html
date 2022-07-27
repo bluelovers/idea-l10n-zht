@@ -1,8 +1,8 @@
 <!-- Copied from community/java/java-impl/src/inspectionDescriptions/SuspiciousNameCombination.html -->
 <html>
 <body>
-报告目标变量或函数参数的名称与赋给它的值的名称不匹配的赋值或函数调用。
-<p>示例:</p>
+报告目标变量或函数形参的名称与分配给它的值的名称不匹配的赋值或函数调用。
+<p>示例：</p>
 <pre><code>
   <b>var</b> x = 0;
   <b>var</b> y = x;
@@ -12,8 +12,6 @@
   <b>var</b> x = 0, y = 0;
   <b>var</b> rc = <b>new</b> Rectangle(y, x, 20, 20);
 </code></pre>
-<p>指定不应一起使用的名称。 如果参数名称或赋值目标名称包含一个组中的词语，
-  而赋值或传递的变量的名称包含另一个组中的词语，
-  则会报告错误。</p>
+<p>指定不应一起使用的名称。 如果形参名称或赋值目标名称包含一个组中的词语，而赋值或传递的变量的名称包含另一个组中的词语，则会报告错误。</p>
 </body>
 </html>

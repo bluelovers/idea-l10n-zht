@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>报告可将动态构造函数调用安全替换为工厂方法调用的情况。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  import akka.actor._
+  
+  class Foo extends AbstractActor
+  
+  object Foo {
+    def props(): Props = Props(new Foo())
+  }
+  
+  Props(classOf[Foo])
+</code></pre>
+<p>在应用快速修复后：</p>    
+<pre><code>
+  import akka.actor._
+  
+  class Foo extends AbstractActor
+  
+  object Foo {
+    def props(): Props = Props(new Foo())
+  }
+  
+  Foo.props()
+</code></pre>  
+<!-- tooltip end -->
+</body>
+</html>

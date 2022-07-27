@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>报告未使用 <code>@Nls</code> 注解并被传递给需要 <code>@Nls</code> 字符串的形参的表达式。</p>
+<p>这意味着普通字符串被不必要地转换为自然语言字符串。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  def setTitle(@Nls title: String) = ???
+
+  setTitle("Hardcoded title") // 这应该被提取到一个包中
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>
