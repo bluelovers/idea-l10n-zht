@@ -1,0 +1,15 @@
+<html>
+<body>
+報告索引可能超出陣列或分配的緩衝區邊界的陣列或指針變數存取表達式。
+<p><b>範例：</b></p>
+<pre><code>
+  void foo() {
+      int buffer[100];
+
+      for (int i = 0; i &lt;= 100; i ++)
+          buffer[i] = 0; // buffer overflow when <i>i</i> is equal to <i>100</i>
+  }
+</code></pre>
+<p><small>2022.2 最新變化</small></p>
+</body>
+</html>
