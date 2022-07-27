@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>報告具有不明確依賴項的 Bean 類中的注入點。</p>
+<p>報告具有不明確依賴關係的 bean 類中的注入點。</p>
 <!-- tooltip end -->
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   interface Engine {}
 
@@ -14,7 +14,7 @@
 
   @Singleton
   class Car {
-    @Inject Engine <b>engine</b>; // 依賴項不明確：有多個 Bean 符合注入點
+    @Inject Engine <b>engine</b>; // 依賴項不明確：有多個 bean 符合注入點
   }
 </code></pre>
 </body>

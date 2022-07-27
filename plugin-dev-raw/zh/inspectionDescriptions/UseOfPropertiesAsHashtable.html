@@ -1,37 +1,40 @@
 <html>
 <body>
-報告對 <code>java.util.Properties</code> 物件上的以下方法的調用：
+報告對 <code>java.util.Properties</code> 類物件的以下方法的調用:
 <ul>
-  <li><code>put()</code></li>
-  <li><code>putIfAbsent()</code></li>
-  <li><code>putAll()</code></li>
-  <li><code>get()</code></li>
+  <li><code>java.util.Hashtable#put</code></li>
+  <li><code>java.util.Hashtable#putIfAbsent</code></li>
+  <li><code>java.util.Hashtable#putAll</code></li>
+  <li><code>java.util.Hashtable#get</code></li>
 </ul>
 <p>
-  由於歷史原因，<code>java.util.Properties</code> 繼承自 <code>java.util.Hashtable</code>，但為防止污染 <code>String</code> 以外類型的屬性值，不建議使用這些方法。
+  由於歷史原因，<code>java.util.Properties</code> 繼承 <code>java.util.Hashtable</code>，但為防止破壞 <code>String</code> 以外類型的屬性值，不建議使用這些方法。
 </p>
 <p>
-  當映射中的鍵和值參數都為 <code>String</code> 類型時，不會報告對 <code>java.util.Properties.putAll()</code> 的調用。
-  此類調用是安全的，且沒有更好的選擇。
+  儘管 <code>java.util.Properties#putAll</code> 會覆寫 <code>java.util.Hashtable#putAll</code>，但當映射中的鍵值參數都為 <code>String</code> 類型時，就不會對它報告。
 </p>
-<p><b>範例：</b></p>
-<pre><code>
-  Object f(Properties props) {
-    props.put("hello", "world");
-    props.putIfAbsent("hello", "world");
-    props.putAll(new HashMap&lt;&gt;());
-    return props.get("Hello");
-  }
-</code></pre>
+<p><b>範例:</b></p>
+<pre>
+  <code>
+    Object f(Properties props) {
+      props.put("hello", "world");
+      props.putIfAbsent("hello", "world");
+      props.putAll(new HashMap&lt;&gt;());
+      return props.get("Hello");
+    }
+  </code>
+</pre>
 <p>在套用快速修復後：</p>
-<pre><code>
-  Object f(Properties props) {
-    props.setProperty("hello", "world");
-    props.putIfAbsent("hello", "world");
-    props.putAll(new HashMap&lt;&gt;());
-    return props.getProperty("hello");
-  }
-</code></pre>
+<pre>
+  <code>
+    Object f(Properties props) {
+      props.setProperty("hello", "world");
+      props.putIfAbsent("hello", "world");
+      props.putAll(new HashMap&lt;&gt;());
+      return props.getProperty("hello");
+    }
+  </code>
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

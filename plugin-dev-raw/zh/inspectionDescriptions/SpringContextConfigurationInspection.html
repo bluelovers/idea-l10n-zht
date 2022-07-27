@@ -1,15 +1,15 @@
 <html>
 <body>
-<p>報告不正確的 Spring 上下文設定。</p>
+<p>報告錯誤的 Spring 上下文設定。</p>
 <ul>
-  <li><code>locations</code> 特性和 <code>@ContextConfiguration</code> 元註解的相應別名特性中的未解析檔案和目錄
+  <li><code>locations</code> 屬性中未解析的檔案和目錄以及 <code>@ContextConfiguration</code> 元註解的相應別名屬性
   </li>
   <li>缺少預設應用程式上下文檔案</li>
 </ul>
 
 <p>有關詳細資訊，請參閱 <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/ContextConfiguration.html>@ContextConfiguration</a>。</p>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   @ContextConfiguration(locations = "classpath:META-INF/unknown-context.xml") // 報告 "無法解析檔案'unknown-context.xml'"
   class MyTests {...}

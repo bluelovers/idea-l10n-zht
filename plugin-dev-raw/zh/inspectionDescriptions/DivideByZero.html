@@ -1,9 +1,11 @@
 <html>
 <body>
-報告除以 0 或對 0 取余。
-對於雙精度或浮點數，此類表達式將產生 <code>Infinity</code>、<code>-Infinity</code> 或 <code>NaN</code> 結果；對於整數，則拋出 <code>ArithmeticException</code>。
-<p>當表達式的結果為 <code>NaN</code> 時，該修正會建議將除法表達式取代為 <code>NaN</code> 常數。
+<p>報告除 0 或 對 0 取余。</p>
+<p>在本例中，對於雙精度數或浮點數，使用者將獲得 <code>Nan</code>; 對於整數，將獲得 <code>ArithmeticException</code>。
+  注意，除數未必是零文字，而是靜態已知的求值為零的表達式。
+  對於浮點類型，該修復建議將除法表達式取代為 <code>Nan</code> 常數。</p>
 <!-- tooltip end -->
+<p>
 
 </body>
 </html>

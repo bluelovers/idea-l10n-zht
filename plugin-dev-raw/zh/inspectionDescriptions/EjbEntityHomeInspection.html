@@ -1,17 +1,17 @@
 <html>
 <body>
-報告以下實體 EJB 相關條目的不正確定義：
+報告以下實體 EJB 相關項的錯誤定義：
 <ul>
-  <li>類未實作預期接口（EJBLocalObject、EJBObject 等）</li>
+  <li>類沒有實作預期的接口（EJBLocalObject、EJBObject 等）</li>
   <li>EJB 類修飾符不正確</li>
-  <li>類未定義 public 無實參構造函數</li>
-  <li>使用類而不是接口或者使用接口而不是類</li>
+  <li>類未定義 public 無參數構造函數</li>
+  <li>使用類而不是接口，反之亦然</li>
 </ul>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
 public final class SessionEJB implements javax.ejb.SessionBean {
-  private SessionEJB() {} // 錯誤：類應該定義 public 無實參構造函數
+  private SessionEJB() {} // 錯誤：類應該定義 public 無參數構造函數
 }
 </code></pre>
 </body>

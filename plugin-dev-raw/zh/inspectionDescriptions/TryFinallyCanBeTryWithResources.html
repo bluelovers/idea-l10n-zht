@@ -2,7 +2,7 @@
 <body>
 報告可能使用 Java 7 Automatic Resource Management（這樣不容易出錯）的 <code>try</code>-<code>finally</code> 語句。
 <p>可以通過快速修復將 <code>try</code>-<code>finally</code> 語句轉換為 <code>try</code>-with-resources 語句。</p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   PrintStream printStream = new PrintStream(fileName);
   try {
@@ -12,12 +12,12 @@
   }
 </code></pre>
 <p>通過快速修復將原因傳遞給構造函數：</p>
-<pre><code>
+<pre>
   try (PrintStream printStream = new PrintStream(fileName)) {
     printStream.print(true);
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
-<p>僅當專案或模組的語言級別為 7 或更高時，此檢查才會報告。</p>
+<p>僅當專案或模組的語言級別為 7 級或更高級別時，該檢查才會進行報告。</p>
 </body>
 </html>

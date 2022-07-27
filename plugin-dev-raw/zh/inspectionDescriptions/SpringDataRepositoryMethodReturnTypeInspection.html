@@ -1,20 +1,20 @@
 <html>
 <body>
-<p>報告返回類型不正確的 Spring Data CRUD 儲存庫方法。</p>
+<p>報告返回類型不正確的 Spring Data CRUD 存儲庫方法。</p>
 <p>支援以下返回類型：</p>
 <list>
   <li><code>void</code></li>
   <li>基元類型</li>
   <li>包裝器類型</li>
-  <li><code>T</code>（當查詢方法應最多返回一個結果時）。 如果沒有結果，則返回 <code>null</code>，如果有多個結果，則拋出 <code>IncorrectResultSizeDataAccessException</code>。
+  <li><code>T</code> 當查詢方法最多返回一個結果時。 如果沒有結果，則返回 <code>null</code>，如果有多個結果，則拋出 <code>IncorrectResultSizeDataAccessException</code>。
   </li>
-  <li><code>java.util.List </code> 或任何常見的 <code> Iterable</code> 類型</li>
+  <li><code> java.util.List </code> 或任何常見的 <code> Iterable </code> 類型</li>
   <li><code>java.util.stream.Stream</code></li>
-  <li><code>java.util.Optional</code> 或 <code>scala.Option</code>（當查詢方法應最多返回一個結果時）。 如果沒有結果，則返回 <code>Optional.empty()</code> 或 <code>Optional.absent()</code>，如果有多個結果，則拋出 <code>IncorrectResultSizeDataAccessException</code>。
+  <li><code>java.util.Optional</code> 或 <code>scala.Option</code> 當查詢方法最多返回一個結果時。 如果沒有結果，則返回 <code>Optional.empty()</code> 或 <code>Optional.absent()</code>，如果有多個結果，則拋出 <code>IncorrectResultSizeDataAccessException</code>。
   </li>
   <li><code>io.micronaut.data.model.Page</code></li>
   <li><code>io.micronaut.data.model.Slice</code></li>
-  <li><code>java.util.concurrent.Future</code>、<code>java.util.concurrent.CompletableFuture</code> 或 <code>ListenableFuture</code>（如果該方法使用 <code>@Async</code> 進行註解並啟用 Spring 異步方法執行）
+  <li><code>java.util.concurrent.Future</code>、<code>java.util.concurrent.CompletableFuture</code> 或 <code>ListenableFuture</code>（如果該方法使用 <code>@Async</code> 進行註解並啟用 Spring 異步方法執行)
   </li>
   <li><code>GeoResults&lt;T&gt;</code>、<code>GeoResult&lt;T&gt;</code> 或 <code>GeoPage&lt;T&gt;</code></li>
 </list>

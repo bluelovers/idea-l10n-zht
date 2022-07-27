@@ -1,13 +1,9 @@
 <html>
 <body>
 <p>報告永遠不會產生積極的性能影響的冗餘 <code>asSequence()</code> 調用。</p>
-<p>
-    <code>asSequence()</code> 會加速包含多個運算的集合處理，因為它會延遲執行運算並且不會創建中間集合。
-</p>
-<p>
-    但是，如果在 <code>asSequence()</code> 之後立即使用終端運算（例如 <code>toList()</code>），則不會帶來任何積極的性能效果。
-</p>
-<p><b>範例：</b></p>
+<p>通常，<code>asSequence</code> 通過延遲執行來加速包含多個運算的集合處理。
+但是，如果在 <code>asSequence()</code> 之後立即使用終端運算（例如 <code>toList()</code>），則不會帶來任何積極的性能效果。</p>
+<p><b>範例:</b></p>
 <pre><code>
   fun test(list: List&lt;String&gt;) {
       list.<b>asSequence()</b>.last()

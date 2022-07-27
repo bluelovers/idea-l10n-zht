@@ -4,7 +4,7 @@
 <p>這通常是一個錯誤，因為結果總是等同於 <code>Class.class</code>。
 如果是錯誤，那麼最好移除 <code>getClass()</code> 調用並直接使用限定符。
   如果行為是故意的，最好顯式編寫 <code>Class.class</code> 以避免混淆。</p>
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>
   void test(Class&lt;?&gt; clazz) {
     String name = clazz.getClass().getName();
@@ -17,6 +17,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2018.2 最新變化</small></p>
+<p><small>2018.2 的新功能</small></p>
 </body>
 </html>

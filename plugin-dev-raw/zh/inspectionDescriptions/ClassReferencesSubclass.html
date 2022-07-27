@@ -2,18 +2,18 @@
 <body>
 報告包含對其中一個子類進行了引用的類。
 此類引用可能令人困惑，並違反物件導向設計的多條規則。
-<p>範例：</p>
-<pre><code>
+<p>範例:</p>
+<pre>
   class Entity {
-    // 警告：該類引用了其子類
+    // 警告: 此類引用了其子類
     void compare(SimpleEntity entity) {
-      ...
+      ...    
     }
   }
   class SimpleEntity extends Entity {
     ...
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

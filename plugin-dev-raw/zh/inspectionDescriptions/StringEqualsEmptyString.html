@@ -2,7 +2,7 @@
 <body>
 報告 <code>equals()</code> 被調用以將 <code>String</code> 與空字串進行比較的情況。
 在這種情況下，使用 <code>.isEmpty()</code> 更好，因為它可以準確顯示您正在檢查的內容。
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   void checkString(String s){
     if ("".equals(s)) throw new IllegalArgumentException();

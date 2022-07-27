@@ -1,9 +1,9 @@
 <html>
 <body>
 報告未使用的 <code>@DelegatesTo.Target</code> 註解和未解析的 <code>@DelegatedTo.target</code> 註解特性值。
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
-  // 未使用的目標 't1' 和未解析的目標 't2'
+  // unused target 't1' and unresolved target 't2'
   def m(
       @DelegatesTo.Target('t1') target,
       @DelegatesTo(target = 't2') Closure c

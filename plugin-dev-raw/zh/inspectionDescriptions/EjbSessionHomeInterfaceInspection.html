@@ -6,7 +6,7 @@
   <li>不允許 <code>finder()</code></li>
 </ul>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
 public interface SessionHome extends javax.ejb.EJBHome {
   Session create() throws java.rmi.RemoteException; // 錯誤：也應該拋出 `javax.ejb.CreateException`

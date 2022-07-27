@@ -1,8 +1,8 @@
 <html>
 <body>
 報告任何可以移動到更小範圍的變數宣告。
-<p>這種檢查對於方法開頭的 <i>Pascal 樣式</i>宣告特別有用。 此外，範圍太廣的變數在重構後也通常會被留下。</p>
-<p><b>範例：</b></p>
+<p>這種檢查對於方法開頭的 <i>Pascal 樣式</i>宣告特別有用。 此外，範圍太廣的變數在重構後也經常保留。</p>
+<p><code>sb</code> 移動的範例：</p>
 <pre><code>
   StringBuilder sb = new StringBuilder();
   System.out.println();
@@ -18,8 +18,7 @@
 <p>設定檢查：</p>
 <ul>
   <li>使用<b>僅報告可移入內部塊的變數</b>選項可只報告那些可以移動到更深程式碼塊中的變數。
-    例如，啟用該選項時，將不建議對上面的 <code>sb</code> 變數進行移動。
-    但是，建議將其用於以下程式碼：
+    例如，當啟用該選項時，將建議對 <code>sb</code> 變數進行移動，但不建議對以下程式碼進行移動：
 <pre><code>
   StringBuilder sb = new StringBuilder(a);
   if (flag) {
@@ -27,7 +26,7 @@
   }
 </code></pre></li>
   <li>使用<b>報告使用新表達式作為初始設定式的變數(可能不安全)</b> 選項可以報告使用新表達式初始化的變數。 這使得當構造函數具有非本地副作用時，檢查可能會不安全。 例如，啟用該選項時，將建議對 <code>foo</code> 變數進行移動：
-<pre><code>
+  <pre><code>
   class Foo {
     static List&lt;Foo&gt; fooList = new ArrayList&lt;&gt;();
     String bar;
@@ -38,8 +37,7 @@
     }
 
     public static void main(String[] args) {
-      // 雖不安全，但也可以移動
-      Foo foo = new Foo("bar");
+      Foo foo = new Foo("bar"); // 雖不安全，但也可以移動
       System.out.println(fooList.size());
       System.out.println(foo.bar);
     }

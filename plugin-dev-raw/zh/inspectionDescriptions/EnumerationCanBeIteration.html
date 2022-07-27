@@ -1,20 +1,18 @@
 <html>
 <body>
 報告對集合使用的可以取代為等效 <code>Iterator</code> 結構的 <code>Enumeration</code> 方法的調用。
-<p><b>範例：</b></p>
-<pre><code>
-  Enumeration&lt;String&gt; keys = map.keys();
+<p><b>範例:</b></p>
+<pre><code>Enumeration&lt;String&gt; keys = map.keys();
   while (keys.hasMoreElements()) {
     String name = keys.nextElement();
-  }
-</code></pre>
+  }</code>
+</pre>
 <p>在套用快速修復後：</p>
-<pre><code>
-  Iterator&lt;String&gt; iterator = map.keySet().iterator();
+<pre><code>Iterator&lt;String&gt; iterator = map.keySet().iterator();
   while (iterator.hasNext()) {
     String name = iterator.next();
-  }
-</code></pre>
+  }</code>
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

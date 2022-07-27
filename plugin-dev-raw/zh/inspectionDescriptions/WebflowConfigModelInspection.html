@@ -4,13 +4,13 @@
 
 <ul>
   <li>未解析的 Bean 引用</li>
-  <li>缺少必需的標記或特性</li>
+  <li>缺少必需的標籤或特性</li>
   <li>屬性類型不正確</li>
   <li><code>enum</code> 屬性不一致</li>
   <li>引用 Bean 的類型不正確</li>
 </ul>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   &lt;beans ...
     xmlns:webflow="http://www.springframework.org/schema/webflow-config ..."&gt;
@@ -18,14 +18,14 @@
     &lt;webflow:flow-executor id="flowExecutorWithoutFlowRegistryRef"/&gt; &lt;!-- 找不到預設 ID 為 'flowRegistry' 的 &lt;flow-registry&gt; --&gt;
     &lt;webflow:flow-executor
       id=""  &lt;!--Value must not be empty--&gt;
-      flow-registry="INVALID_VALUE"  &lt;!-- 無法解析 Bean INVALID_VALUE --&gt;
+      flow-registry="INVALID_VALUE"  &lt;!-- 無法解析 bean INVALID_VALUE --&gt;
            &lt;webflow:flow-execution-repository
                    conversation-manager="dummyBean" &lt;!-- Bean must be of 'org.springframework.webflow.conversation.ConversationManager' type"--&gt;
-                    max-executions="INVALID_VALUE" &lt;!-- 值應為整數--&gt;
-                    max-execution-snapshots="INVALID_VALUE"/&gt;  &lt;!-- 值應為整數--&gt;
+                    max-executions="INVALID_VALUE" &lt;!-- 值為整數--&gt;
+                    max-execution-snapshots="INVALID_VALUE"/&gt;  &lt;!-- 值為整數--&gt;
            &lt;webflow:flow-execution-listeners&gt;
 			&lt;webflow:listener criteria="*"
-                           ref="dummyBean" /&gt; &lt;!-- Bean 必須為 'org.springframework.webflow.execution.FlowExecutionListener' 類型 --&gt;
+                           ref="dummyBean" /&gt; &lt;!-- Bean 必須為 ‘org.springframework.webflow.execution.FlowExecutionListener' 類型 --&gt;
            &lt;/webflow:flow-execution-listeners&gt;
     &lt;/webflow:flow-executor&gt;
     &lt;webflow:flow-executor id="dummy"

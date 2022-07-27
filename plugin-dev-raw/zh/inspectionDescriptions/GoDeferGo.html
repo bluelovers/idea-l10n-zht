@@ -22,8 +22,8 @@
 <ul>
   <li><code>go panic()</code>：一個新啟動的 goroutine 會立即 panic。</li>
   <li><code>defer panic()</code>：帶有這個語句的函數在退出時總是會 panic。</li>
-  <li><code>go recovery()</code>：沒有效果，因為新啟動的 goroutine 不能 panic。</li>
-  <li><code>defer recovery()</code>：帶有這個語句的函數將默默地停止 panic。 這種用法可能有效，但一種慣用的方法是檢查 <code>recover()</code> 返回的值：
+  <li><code>go recovery()</code>: 沒有效果，因為新啟動的 goroutine 不能 panic。</li>
+  <li><code>defer recovery()</code>: 帶有這個語句的函數將默默地停止 panic。 這種用法可能有效，但一種慣用的方法是檢查 <code>recover()</code> 返回的值：
     <pre><code>defer func() {
   if r := recover(); r != nil {
     fmt.Println("Recovered from: ", r)

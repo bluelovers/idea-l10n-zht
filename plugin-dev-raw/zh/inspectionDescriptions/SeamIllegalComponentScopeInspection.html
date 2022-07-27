@@ -10,7 +10,7 @@
 <body>
 <p>報告 <code>@Scope</code>、<code>@Role</code> 和 <code>@DataModel</code> 註解，為特定組件指定不受支援的範圍。</p>
 
-<p>下表列出了每種組件類型的支援範圍（粗體為預設範圍）：</p>
+<p>下表列出了每種組件類型支援的範圍（粗體的預設範圍）：</p>
 <table border="1">
     <tr>
         <th></th>
@@ -71,7 +71,8 @@
 
 </table>
 
-<p><code>@DataModel</code> 上下文變數對其範圍有不同的限制：如果未指定範圍，則範圍與封閉組件的範圍相同（如果組件在 STATELESS 範圍內，則為 EVENT）。
+<p><code>@DataModel</code> 上下文變數對其作用域有不同的限制：
+如果未指定範圍，則範圍與封閉組件的範圍相同（如果組件在 STATELESS 範圍內，則為 EVENT）。
 或者，為 <code>@DataModel</code> 上下文變數指定 PAGE 範圍。</p>
 
 </body>

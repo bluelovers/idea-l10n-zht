@@ -1,8 +1,8 @@
 <html>
 <body>
-報告為擴展 <code>final</code> 類而宣告的類型參數。
-<p>由於無法擴展 <code>final</code> 類，建議將類型參數取代為指定的 <code>final</code> 類的類型。</p>
-<p><b>範例：</b></p>
+報告為擴展 final 類而宣告的類型參數。
+<p>由於 final 類無法擴展，因此建議將類型參數取代為指定的 final 類的類型。</p>
+<p><b>範例:</b></p>
 <pre><code>
   <b>void</b> foo() {
     List&lt;? <b>extends</b> Integer&gt; list; // 警告：Integer 類為 final 類

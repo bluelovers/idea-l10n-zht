@@ -1,15 +1,14 @@
 <html>
 <body>
-報告可修改的 <code>public</code> <code>static</code> 集合欄位。
-<p>儘管這些欄位經常用於存儲常數值集合，但它們仍然代表著安全隱患，因為即使欄位被宣告為 <code>final</code>，它們的內容仍可能被修改。</p>
-<p><b>範例：</b></p>
+報告可修改的 <code>public</code> <code>static</code> 集合欄位。 這些欄位經常用於存儲常數值集合，但它們仍然代表著安全隱患，因為即使欄位被宣告為 <code>final</code>，它們的內容仍可能被修改。
+<p><b>範例:</b></p>
 <pre><code>
   public static final List&lt;String&gt; EVENTS = new ArrayList&lt;&gt;();
   </code>
 </pre>
 <!-- tooltip end -->
 <p>
-  使用<b>選項</b>部分中的表可指定返回不可修改集合的方法。
-  將不會報告使用這些方法初始化的 <code>public</code> <code>static</code> 集合欄位。
+  使用下面的表來指定返回不可修改集合的方法。
+  使用這些方法初始化的 <code>public</code> <code>static</code> 集合欄位將不會被報告。
 </body>
 </html>

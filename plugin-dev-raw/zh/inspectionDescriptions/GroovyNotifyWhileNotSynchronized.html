@@ -1,9 +1,11 @@
 <html>
 <body>
-報告不是在相應的 synchronized 語句或 synchronized 方法中進行的 <code>notify()</code> 和 <code>notifyAll()</code> 調用。
+報告對不是在相應的 synchronized 語句或 synchronized 方法中
+進行 <code>notify()</code> 和 <code>notifyAll()</code> 的調用。
 <p>
-  在沒有持有鎖定的物件上調用這些方法會導致拋出 <code>IllegalMonitorStateException</code>。
-  此類結構不一定錯誤，因為在調用該包含方法前可能已獲取必要的鎖定，但即便如此，還是要仔細查看。
+  在一個物件上調用這些方法但該物件上沒有持有鎖，
+  則會導致拋出 <code>IllegalMonitorStateException</code>。
+  此類結構不一定錯誤，因為在調用該包含方法前可能已獲取必要的鎖定，但即便如此，還是要仔細了解。
 </p>
 </body>
 </html>

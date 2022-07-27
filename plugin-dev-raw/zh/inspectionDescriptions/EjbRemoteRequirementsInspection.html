@@ -3,11 +3,11 @@
 報告以下 EJB 規範違規：
 <ul>
   <li>方法未宣告它拋出 <code>java.rmi.RemoteException</code></li>
-  <li>方法返回類型或實參與 RMI/IIOP 不相容</li>
+  <li>方法返回類型或參數與 RMI/IIOP 不相容</li>
   <li>EJB 服務端點接口具有常數宣告</li>
 </ul>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
 public interface EntityRemote extends javax.ejb.EJBObject{
   public int businessExample(String value) throws java.lang.RuntimeException; // 錯誤：應改為宣告 'RemoteException'

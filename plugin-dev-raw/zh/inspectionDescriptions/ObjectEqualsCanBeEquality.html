@@ -1,9 +1,9 @@
 <html>
 <body>
-報告對可以取代為 <code>==</code> 或 <code>!=</code> 表達式而又不改變語意的 <code>equals()</code> 的調用。
-<p>當這些調用用於比較沒有自身的 <code>equals()</code> 實作但使用預設 <code>Object.equals()</code> 的<code>final</code> 類時，可以取代這些調用。
-此取代可能會提升性能。</p>
-<p>對 <code>enum</code> 值上的 <code>equals()</code> 調用進行單獨檢查：對 Enum 值調用 'equals()'。</p>
+<p>報告對可以取代為 <code>==</code> 或 <code>!=</code> 表達式而又不改變語意的 <code>equals()</code> 的調用。</p>
+<p>當這些調用用於比較沒有自身的 <code>equals()</code> 實作但使用預設 <code>Object.equals()</code> 的<code>final</code> 類時，可以取代這些調用。</p>
+<p>這樣的取代可能會提升性能。</p>
+<p>對 <code>enum</code> 值的 <code>equals()</code> 調用進行單獨檢查: 對 Enum 值調用 'equals()'。</p>
 <!-- tooltip end -->
 <!--<p><small>New in 2017.3</small>-->
 </body>

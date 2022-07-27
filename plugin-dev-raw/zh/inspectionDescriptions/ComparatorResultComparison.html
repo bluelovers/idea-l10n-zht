@@ -1,8 +1,8 @@
 <html>
 <body>
-報告 <code>Comparator.compare()</code> 或 <code>Comparable.compareTo()</code> 調用結果與非零常數的比較。
-根據約定，這些方法可以返回任何整數（不只是 -1、0 或 1），因此與特定數字比較是一種不好的做法。 某些廣泛使用的比較方法（例如 <code>String.compareTo()</code>）實際上返回 [-1..1] 範圍之外的值，此類比較可能會導致不正確的程序行為。
-<p>範例：</p>
+報告將 <code>Comparator.compare</code> 或 <code>Comparable.compareTo</code> 的結果與特定的非零常數進行比較的情況。
+<p>根據約定，這些方法可以返回任何正數（不僅僅是 1）或任何負數（不僅僅是 -1），因此與特定數字進行比較是不良做法。 一些廣泛使用的比較方法（例如 <code>String.compareTo</code>）實際上返回 [-1..1] 範圍之外的值，因此這樣的比較可能會導致錯誤的程序行為。</p>
+<p>範例:</p>
 <pre><code>
   void validate(String s1, String s2) {
     // 與 1 比較不正確
@@ -20,6 +20,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2017.2 最新變化</small></p>
+<p><small>2017.2 的新功能</small></p>
 </body>
 </html>

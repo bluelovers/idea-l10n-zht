@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>報告預設軟體套件中的<code>@SpringBootApplication</code> 和冗餘的<code>@EnableAutoConfiguration</code> 或 <code>@ComponentScan</code> 註解。</p>
-<p>該快速修復會移除冗餘註解。</p>
+<p>報告預設包中的<code>@SpringBootApplication</code> 和冗餘的<code>@EnableAutoConfiguration</code> 或<code>@ComponentScan</code> 註解。</p>
+<p>快速修復刪除了冗餘的註解。</p>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
 @SpringBootApplication
-@ComponentScan // 報告 '冗餘宣告: @SpringBootApplication 已暗示 @ComponentScan'
+@ComponentScan // 報告“冗餘宣告："@SpringBootApplication 已經暗示 @ComponentScan"
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
@@ -23,6 +23,6 @@ public class DemoApplication {
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2018.2 最新變化</small></p>
+<p><small>2018.2 的新功能</small></p>
 </body>
 </html>

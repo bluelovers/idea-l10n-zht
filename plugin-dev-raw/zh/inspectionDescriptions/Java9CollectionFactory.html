@@ -11,7 +11,7 @@
 </ul>
 <p>當這些情況被違反時，會拋出異常。
   這可以在遷移後更改程式碼的語意。</p>
-<p>範例：
+<p>範例:
 <pre><code>
   List&lt;Integer> even = Collections.unmodifiableList(
     Arrays.asList(2, 4, 6, 8, 10, 2));
@@ -31,6 +31,6 @@
 這減少了行為改變的機會，因為並不總是可以靜態檢查原始元素是否唯一且為非 <code>null</code>。
 <p>
   使用<b>建議 'Map.ofEntries'</b> 選項可建議使用 <code>Map.ofEntries()</code> 取代超過 10 個條目的不可修改的映射。
-<p><small>2017.2 最新變化</small>
+<p><small>2017.2 的新功能</small>
 </body>
 </html>

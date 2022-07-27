@@ -7,30 +7,6 @@
 <p>
     因此，在 Kotlin 1.2 之前的版本中，不使用擴展接收器不可為 null 這一事實的函數是危險的，建議使此類函數具有可為 null 的接收器。
 </p>
-<p><b>範例：</b></p>
-<pre><code>
-  inline fun String.greet() {
-      println("Hello, $this!")
-  }
-
-  fun main() {
-      // `System.getProperty` 返回不可表示的 `String!` 類型
-      val user = System.getProperty("user.name")
-      user.greet()
-  }
-</code></pre>
-<p>在套用快速修復後：</p>
-<pre><code>
-  inline fun String.greet() {
-      println("Hello, $this!")
-  }
-
-  fun main() {
-      // `System.getProperty` 返回不可表示的 `String!` 類型
-      val user = System.getProperty("user.name")
-      user.greet()
-  }
-</code></pre>
 <!-- tooltip end -->
 <p>僅當專案或模組的 Kotlin 語言級別低於 1.2 時，此檢查才會報告。</p>
 </body>

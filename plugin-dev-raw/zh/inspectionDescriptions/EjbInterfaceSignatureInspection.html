@@ -2,11 +2,11 @@
 <body>
 報告以下 EJB 規範違規：
 <ul>
-  <li>EJB 接口未擴展正確的 EJB 接口</li>
-  <li>EJB 接口不是 public 或者不是 final</li>
+  <li>EJB 接口沒有擴展正確的 EJB 接口</li>
+  <li>EJB 接口不是 public 的或不是 final</li>
 </ul>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
 public interface EntityRemote extends Runnable {} // 錯誤：類應該擴展 `javax.ejb.EJBObject`
 </code></pre>

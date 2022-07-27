@@ -1,13 +1,5 @@
 <html>
 <body>
 報告具有可為 null 的返回類型的函數和變數，這些函數和變數永遠不會返回或變為 <code>null</code>。
-<p><b>範例：</b></p>
-<pre><code>
-  fun greeting(user: String): String? = "Hello, $user!"
-</code></pre>
-<p>在套用快速修復後：</p>
-<pre><code>
-  fun greeting(user: String): String = "Hello, $user!"
-</code></pre>
 </body>
 </html>

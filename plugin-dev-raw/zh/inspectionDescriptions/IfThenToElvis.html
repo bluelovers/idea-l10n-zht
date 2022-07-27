@@ -1,19 +1,5 @@
 <html>
 <body>
-報告可以折疊到 elvis (<code>?:</code>) 表達式中的 <code>if-then</code> 表達式。
-<p><b>範例：</b></p>
-<pre><code>
-  fun maybeFoo(): String? = "foo"
-
-  var foo = maybeFoo()
-  val bar = if (foo == null) "hello" else foo
-</code></pre>
-<p>該快速修復會將 <code>if-then</code> 表達式轉換為 elvis (<code>?:</code>) 表達式：</p>
-<pre><code>
-  fun maybeFoo(): String? = "foo"
-
-  var foo = maybeFoo()
-  val bar = foo ?: "hello"
-</code></pre>
+報告可以折疊到 elvis (<b>?:</b>) 表達式中的 <b>if-then</b> 表達式。
 </body>
 </html>

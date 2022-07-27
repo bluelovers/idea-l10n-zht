@@ -2,14 +2,14 @@
 <body>
 報告對 <code>Collections</code> 類中不可修改的集合包裝器的冗餘調用。
 <p>如果傳遞給不可修改的集合包裝器的實參已不可變，此類包裝會變得冗餘。</p>
-<p>範例：</p>
-<pre><code>
+<p>範例:</p>
+<pre>
   Collections.unmodifiableList(Collections.singletonList("abc"));
-</code></pre>
+</pre>
 <p>為了檢測返回不可修改集合的方法，該檢查使用 <code>org.jetbrains.annotations.Unmodifiable</code>
 和 <code>org.jetbrains.annotations.UnmodifiableView</code> 註解。
 使用它們將檢查擴展為您自己的不可修改的集合包裝器。</p>
 <!-- tooltip end -->
-<p><small>2020.3 最新變化</small></p>
+<p><small>2020.3 的新功能</small></p>
 </body>
 </html>

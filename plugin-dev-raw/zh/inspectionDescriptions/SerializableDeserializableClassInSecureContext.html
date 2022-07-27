@@ -4,7 +4,7 @@
 <p>
   如果一個類支援 <code>Serializable</code> 接口，並且它的 <code>readObject()</code> 和 <code>writeObject()</code> 方法未被定義為總是拋出異常，那麼就可以被序列化。 在供安全使用的程式碼中，可序列化的類可能比較危險。
 </p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   class DeserializableClass implements Serializable { // 該類不包含拋出異常的 'writeObject()' 方法
     private int sensitive = 736326;

@@ -2,13 +2,13 @@
 <body>
 報告既不包含初始化也不包含更新組件的
 <code>for</code> 迴圈。 建議將該迴圈取代為更簡單的 <code>while</code> 語句。
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>
   for(; exitCondition(); ) {
     process();
   }
 </code></pre>
-<p>套用快速修復後，結果如下所示：</p>
+<p>套用快速修復後，結果如下所示:</p>
 <pre><code>
   while(exitCondition()) {
     process();

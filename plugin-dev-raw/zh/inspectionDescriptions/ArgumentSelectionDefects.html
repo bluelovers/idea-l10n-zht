@@ -3,19 +3,20 @@
 報告實參關鍵字名稱和參數名稱之間的不符合。
 這可以幫助檢測編程錯誤，例如，當您意外切換同一類型的實參時。
 原始研究論文可在<a href="https://static.googleusercontent.com/media/research.google.com/ru//pubs/archive/46317.pdf">此處</a>找到。
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   const User* get_User(int64_t company_id, int64_t user_id) {
     return new User{company_id, user_id, "foo"};
   }
 
   void call_User(int64_t company_id, int64_t user_id) {
-    const User* user = get_User(user_id, company_id); // 此處有潛在問題
+    const User* user = get_User(user_id, company_id); // potential issue here
     //...
   }
 </code></pre>
 <!-- tooltip end -->
-<p>使用下面的複選框可以檢查名稱少於三個符號的實參。</p>
+<p>使用下面的複選框可檢查名稱少於三個符號的實參。</p>
 <p><small><a href="https://www.jetbrains.com/help/clion/argument-selection-defects-inspection.html">了解更多。</a></small></p>
+<p><small>2018.2 的新功能</small></p>
 </body>
 </html>

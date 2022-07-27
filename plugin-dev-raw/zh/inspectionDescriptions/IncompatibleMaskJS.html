@@ -1,15 +1,15 @@
 <!-- Copied from community/plugins/InspectionGadgets/src/inspectionDescriptions/IncompatibleMask.html -->
 <html>
 <body>
-報告確定評估為 <code>true</code> 或 <code>false</code>
-的位元遮罩表達式。
+報告確定評估為 <code> true</code> 或 <code>false</code>
+的逐位運算遮罩表達式。
 表達式的形式為 <code>(var & constant1) == constant2</code> 或
 <code>(var | constant1) == constant2</code>，其中 <code>constant1</code> 
 和 <code>constant2</code> 是不相容的位元遮罩常數。
-<p>範例：</p>
+<p>範例:</p>
 <pre>
-// 不相容的遮罩：由於遮罩中的最後一個字節為零，
-// 因此 0x1200 是可能的，但 0x1234 不可能
+//不相容的遮罩: 由於遮罩中的最後一個字節為零，
+//因此 0x1200 是可能的，但 0x1234 不可能
 if ((mask & 0xFF00) == 0x1234) {...}
 </pre>
 <!-- tooltip end -->

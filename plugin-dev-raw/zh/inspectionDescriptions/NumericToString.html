@@ -1,20 +1,6 @@
 <html>
 <body>
-報告擴展 <code>Number</code> 的類的物件上的 <code>toString()</code> 調用。
-此類調用在國際化環境中通常是不正確的，應該使用一些特定於區域設定的格式。
-<p><b>範例：</b></p>
-<pre><code>
-  void print(Double d) {
-    System.out.println(d.toString());
-  }
-</code></pre>
-修正此問題的一種可能方式是：
-<pre><code>
-  void print(Double d) {
-    System.out.printf("%f%n", d);
-  }
-</code></pre>
-這將使用預設區域設定來格式化數字，該預設區域設定在 JVM 啟動期間進行設定，並且基於主機環境。
+報告對數值物件的 <code>toString()</code> 調用。 在國際化環境中，此類調用通常是不正確的。
 <!-- tooltip end -->
 </body>
 </html>

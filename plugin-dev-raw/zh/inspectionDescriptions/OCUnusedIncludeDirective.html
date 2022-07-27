@@ -1,15 +1,16 @@
 <html>
 <body>
-報告未使用或不需要且可以安全移除的 include 指令。
+報告未使用或不需要且可以安全刪除的 include 指令。
 <dl>
   <dt><b>檢測完全未使用的 include 指令</b></dt>
-  <dd>如果在翻譯單元中從未使用過 include 指令的宣告，則認為該指令未使用。</dd>
+  <dd>如果在翻譯單元中從未使用過 include 指令的宣告，則認為該指令完全未使用。</dd>
   <dt><b>檢測未直接使用的 include 指令</b></dt>
-  <dd>如果未直接在檔案中使用 include 指令的宣告，則認為該指令未使用。 搭配“包括您使用的內容”策略時效果最佳。</dd>
+  <dd>如果未直接在檔案中使用 include 指令的宣告，則認為該指令未使用。 這最適合“包括您使用的內容（Include What You Use）”策略。</dd>
   <dt><b>檢測不需要的 include 指令</b></dt>
-  <dd>檢測要編譯的檔案的最少 include 指令集。 所有其他 #include 指令都被視為未使用。</dd>
+  <dd>檢測要編譯的檔案的最少包含指令集。 所有其他 #include 指令都被視為未使用。</dd>
 </dl>
 <p>使用下面的複選框在標頭檔中執行檢查。</p>
 <!-- tooltip end -->
+<p><small>2019.2 的新功能</small></p>
 </body>
 </html>

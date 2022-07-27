@@ -2,33 +2,22 @@
 <body>
 報告帶有太少 <code>case</code> 標籤的 <code>switch</code> 語句和表達式，並建議將它們覆寫為 <code>if</code> 和 <code>else if</code> 語句。
 <p>範例 (minimum branches == 3)：</p>
-<pre><code>
+<pre>
   switch (expression) {
     case "foo" -&gt; foo();
     case "bar" -&gt; bar();
   }
-</code></pre>
+</pre>
 <p>在套用快速修復後：</p>
-<pre><code>
+<pre>
   if ("foo".equals(expression)) {
     foo();
   } else if ("bar".equals(expression)) {
     bar();
   }
-</code></pre>
-<p>不報告詳盡的 switch 表達式 (Java 14+) 或不帶 'default' 分支的模式 switch 語句（Java 17 預覽版）。
-  這是因為當 <code>switch</code> 轉換為 <code>if</code> 後，編譯時詳盡性檢查將丟失（可能是不希望發生的結果）。
-</p>
+</pre>
 <!-- tooltip end -->
 <p>設定檢查：</p>
 <p>使用<b>最小分支數</b> 欄位指定 <code>case</code> 標籤的最小預期數量。</p>
-<p>使用<b>不報告模式 switch 語句</b>選項可避免報告具有模式分支的 switch 語句和表達式。 例如：</p>
-<pre><code>
-  String result = switch(obj) {
-    case String str -> str.trim();
-    default -> "none";
-  };
-</code></pre>
-<p>即使只有一個模式分支，也應該保留 switch，而不是使用 <code>instanceof</code> 語句。</p>
 </body>
 </html>

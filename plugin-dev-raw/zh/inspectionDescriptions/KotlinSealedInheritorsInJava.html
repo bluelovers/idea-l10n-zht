@@ -1,20 +1,5 @@
 <html>
 <body>
 報告從 Java 程式碼中的 Kotlin sealed 接口或類進行繼承的嘗試。
-<p><b>範例：</b></p>
-<pre><code>
-// Kotlin 檔案：MathExpression.kt
-
-sealed class MathExpression
-
-data class Const(val number: Double) : MathExpression()
-data class Sum(val e1: MathExpression, val e2: MathExpression) : MathExpression()
-</code></pre>
-<pre><code>
-// Java 檔案：NotANumber.java
-
-public class NotANumber extends MathExpression {
-}
-</code></pre>
 </body>
 </html>

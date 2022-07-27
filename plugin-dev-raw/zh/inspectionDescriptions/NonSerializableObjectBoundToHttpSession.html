@@ -1,14 +1,14 @@
 <html>
 <body>
-報告未實作用作 <code>javax.servlet.http.HttpSession.setAttribute()</code> 或 <code>javax.servlet.http.HttpSession.putValue()</code> 實參的 <code>java.io.Serializable</code> 的類物件。
+報告未實作 <code>java.io.Serializable</code> 來用作 <code>javax.servlet.http.HttpSession.setAttribute()</code> 或 <code>javax.servlet.http.HttpSession.putValue()</code> 參數的物件。
 <p>
-  如果 <code>HttpSession</code> 被鈍化或遷移，則不會序列化此類物件，並且可能導致難以診斷的錯誤。
+  如果 HttpSession 被鈍化或遷移，則不會序列化這樣的物件，並且可能導致難以診斷的錯誤。
 </p>
 <p>
   此檢查假定 <code>java.util.Collection</code> 和
 <code>java.util.Map</code> 類型的物件為 <code>Serializable</code>，除非類型參數為非 <code>Serializable</code>。
 </p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   void foo(HttpSession session) {
       session.setAttribute("foo", new NonSerializable());

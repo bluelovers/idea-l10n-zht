@@ -2,22 +2,22 @@
 <body>
 報告常量值在錯誤一側的比較運算。
 <p>某些編碼慣例會指定常數應該位於比較的特定一側，要麼左側，要麼右側。</p>
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   boolean compare(int x) {
     return 1 &gt; x; // 位於比較左側的常數 '1'
   }
-</code></pre>
+</pre>
 <p>在套用快速修復後：</p>
-<pre><code>
+<pre>
   boolean compare(int x) {
     return x &lt; 1;
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>
-  使用檢查設定可以選擇比較中的常數一側，並選擇 <code>null</code> 文字位於錯誤一側時是否發出警告。
+  使用檢查設定在比較中選擇常數的一側。
 </p>
-<p><small>2019.2 最新變化</small></p>
+<small>2019.2 的新功能</small>
 </body>
 </html>

@@ -1,24 +1,22 @@
 <html>
 <body>
-報告增強型 <code>for</code> 語句。
-<p>範例：</p>
-<pre><code>
+報告增強的 <code>for</code> 語句。
+Java 1.4 或更早版本不支持這樣的 <code>for</code> 語句。
+<p>範例:</p>
+<pre>
   for (int x: Arrays.asList(1, 2, 3)) {
     System.out.println(x);
   }
-</code></pre>
-<p>在套用快速修復後： </p>
-<pre><code>
+</pre>
+<p>套用快速修復後，結果如下所示:  </p>
+<pre>
   for (Iterator&lt;Integer&gt; iterator = Arrays.asList(1, 2, 3).iterator(); iterator.hasNext(); ) {
     final int x = iterator.next();
     System.out.println(x);
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>
-  <i>增強型</i> <code>for</code> <i>語句</i>出現在 Java 5 中。
-  此檢查有助於為向後相容早期 Java 版本而降級。
-</p>
 
 </body>
 </html>

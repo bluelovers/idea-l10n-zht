@@ -14,6 +14,6 @@ CREATE UNIQUE INDEX aaaa ON test_index (col, col2);
 
 ALTER TABLE test_index
 DROP COLUMN col;</code></pre>
-<p>您不能刪除 <code>col</code> 列，因為它在索引表中。 要刪除該列，您需要先刪除 <code>aaaa</code> 索引（例如 DROP INDEX aaaa）。</p>
+<p>您不能刪除 <code>col</code> 列，因為它在索引表中。 要刪除列，需要先刪除 <code>aaaa</code> 索引（例如 DROP INDEX aaaa）。</p>
 </body>
 </html>

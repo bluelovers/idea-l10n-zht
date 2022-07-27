@@ -2,7 +2,7 @@
 <body>
 報告三元條件運算符的用法並建議將它們轉換為 <code>if</code>/<code>else</code> 語句。
 <p>一些程式碼標準禁止使用條件運算符。</p>
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>
   Object result = (condition) ? foo() : bar();
 </code></pre>
@@ -19,9 +19,9 @@
 <!-- tooltip end -->
 <p>設定檢查：</p>
 <p>使用 <b>對簡單賦值和返回值忽略</b> 選項忽略簡單的賦值和返回並允許以下結構：</p>
-<pre><code>
+<pre>
   String s = (foo == null) ? "" : foo.toString();
-</code></pre>
+</pre>
 <p>
   在不可能用 if 語句自動取代的上下文中（例如，當條件表達式用作 <code>super()</code> 構造函數調用），使用 <b>忽略無法使用 if 語句的位置</b> 選項來忽略條件表達式。
 </p>

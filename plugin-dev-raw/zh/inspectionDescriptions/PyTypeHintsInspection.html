@@ -1,11 +1,11 @@
 <html>
 <body>
 <p>報告類型提示的無效用法。</p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre style="font-family: monospace">
 from typing import TypeVar
 
-T0 = TypeVar('T1') # 'TypeVar' 的實參必須為 'T0'
+T0 = TypeVar('T1') # 'TypeVar' 的參數必須為 'T0'
 
 
 def b(p: int) -> int:  # 註釋和註解中都指定了類型
@@ -13,7 +13,7 @@ def b(p: int) -> int:  # 註釋和註解中都指定了類型
     pass
 
 
-def c(p1, p2): # 類型簽名的實參太多
+def c(p1, p2): # 類型簽名的參數太多
     # type: (int) -> int
     pass
 </pre>

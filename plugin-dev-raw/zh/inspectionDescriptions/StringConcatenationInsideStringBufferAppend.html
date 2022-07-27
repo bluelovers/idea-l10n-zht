@@ -5,13 +5,13 @@
   此類調用可以有利地轉變為現有 <code>StringBuffer/Builder/Appendable</code> 中的鏈式追加調用，從而節省額外的 <code>StringBuffer/Builder</code> 分配成本。
   此檢查將忽略編譯時求值的 <code>String</code> 串聯，在這種情況下，轉換只會降低性能。
 </p>
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   void bar(StringBuilder builder, String name) {
     builder.append("Hello," + name);    //警告
     builder.append("Hello," + "world"); //無警告
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>
 

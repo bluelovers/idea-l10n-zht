@@ -1,13 +1,13 @@
 <html>
 <body>
-報告包含兩個具有自動增量的列的表。 在 MySQL、Microsoft SQL Server 和 Db2 方言中，一個表只能有一個帶有自動增量選項的欄位，並且此欄位必須是鍵。
+報告包含具有自動增量的兩列的表。 在 MySQL、Microsoft SQL Server 和 Db2 方言中，一個表只能有一個帶有自動增量選項的欄位，並且該欄位必須是鍵。
 <p>範例（MySQL）：</p>
 <pre><code>CREATE TABLE my_table
 (
     id INT AUTO_INCREMENT,
     c2 INT AUTO_INCREMENT,
 );</code></pre>
-<p><code>c2</code> 的 AUTO_INCREMENT 約束將被高亮顯示，因為 <code>c1</code> 已經具有此約束。 要修正警告，您可以將 <code>id</code> 設為主鍵並刪除 <code>c2</code> 的 AUTO_INCREMENT。</p>
+<p><code>c2</code> 的 AUTO_INCREMENT 約束將突出顯示，因為 <code>c1</code> 已經具有此約束。 要修復警告，您可以將 <code>id</code> 設為主鍵並刪除 <code>c2</code> 的 AUTO_INCREMENT。</p>
 <pre><code>CREATE TABLE my_table
 (
     id INT AUTO_INCREMENT PRIMARY KEY,

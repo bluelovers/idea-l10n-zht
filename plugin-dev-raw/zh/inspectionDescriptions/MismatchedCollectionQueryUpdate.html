@@ -9,21 +9,21 @@
   使用檢查設定可以指定與更新/查詢方法相對應的名稱模式。
   返回元素的查詢方法會被自動檢測，並且只需指定將資料寫入輸出參數的查詢方法（例如 <code>OutputStream</code>）。
 <p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <p>假設您有一個包含方法 <code>store()</code> 的自訂 <code>FixedStack</code> 類：
-<pre><code>
+<pre>
   public class FixedStack&lt;T&gt; extends Collection&lt;T&gt; {
     public T store(T t) {
       // 實作
     }
   }
-</code></pre>
+</pre>
 <p>您可以將 <code>store</code> 添加到更新方法表中，以報告不符合的查詢，例如：
-<pre><code>
+<pre>
   void test(int i) {
     FixedStack&lt;Integer&gt; stack = new FixedStack&lt;&gt;();
     stack.store(i);
   }
-</code></pre>
+</pre>
 </body>
 </html>

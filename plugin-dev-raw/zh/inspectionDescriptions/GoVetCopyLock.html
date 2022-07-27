@@ -2,7 +2,7 @@
 <body>
 報告鎖錯誤地通過值傳遞。
 <p>不小心複製包含鎖的值可能會導致兩個副本均無法正常工作。 通常，此類值應通過指針引用。 這裡的鎖表示實作 <code>sync.Locker</code> 的類型，例如 <code>sync.Mutex</code> 或 <code>sync.WaitGroup</code>。</p>
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>type SafeInt struct {
   m sync.Mutex
   i int

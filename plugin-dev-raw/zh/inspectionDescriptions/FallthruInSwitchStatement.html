@@ -2,12 +2,12 @@
 <body>
 報告 <code>switch</code> 語句中的直落。
 <p>當 <code>case</code> 標籤後面的一系列可執行語句不能保證在下一個 <code>case</code> 標籤前轉移控制權時，就會發生直落。 例如，如果分支缺少 <code>break</code> 語句，就可能發生這種情況。
-在這種情況下，即便 <code>switch</code> 表達式不等於被直落標籤的值，控制權也會直落到 <code>switch</code> 標籤後面的語句。 雖然偶爾是有意為之，但此結構令人困惑，並且通常是由拼寫錯誤所致。</p>
+在這種情況下，即便 <code>switch</code> 表達式不等於被直落標籤的值，控制權也會直落到 <code>switch</code> 標籤後面的語句。 雖然偶爾是有意為之，但這種結構令人困惑，並且通常由拼寫錯誤所致。</p>
 <p>
 此檢查將忽略任何使用與正則表達式模式 <code>(?i)falls?\s*thro?u</code> 相符合的文本註釋的直落。
 </p>
 <p>可以通過修正向可能直落到下一個分支的分支添加 <code>break</code>。</p>
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>
     switch(x) {
       case (4):

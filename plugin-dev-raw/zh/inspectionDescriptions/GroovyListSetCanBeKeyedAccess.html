@@ -1,14 +1,14 @@
 <html>
 <body>
-報告對 <code>java.util.List.set()</code> 方法的調用。 此類調用可由更簡短明確的鍵控存取形式替代。
-<p><b>範例：</b></p>
+報告對 <code>java.util.List.set()</code> 方法的調用。 此類調用可由更簡短明確的鍵控形式替代。
+<p><b>範例:</b></p>
 <pre>
 <code>
 def list = ["foo"]
-list.set(0, "bar") // list.set(0, "bar") 可以取代為 list[0] = "bar"
+list.set(0, "bar") // list.set(0, "bar") could be replaced with list[0] = "bar"
 </code>
 </pre>
-<p>在套用快速修復後：</p>
+<p>套用快速修復後，結果如下所示: </p>
 <pre>
 <code>
 def list = ["foo"]

@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>報告與顯式類型宣告一起使用時不必要的 <code>def</code> 修飾符。</p>
-<p><b>範例：</b></p>
+報告與顯示宣告一起使用時不必要的 <b>def</b> 修飾符。
+<p><b>範例:</b></p>
 <pre><code>
-  <b>def</b> boolean foo() {} // 修飾符不必要
-  <b>def</b> Object bar // 修飾符不必要
+  <b>def</b> boolean foo() {} // modifier is unnecessary
+  <b>def</b> Object bar // modifier is unnecessary
 
-  // 修飾符是必要的，因此未高亮顯示
+  // modifier is required and therefore not highlighted
   <b>def</b> (int a, String b) = []
 </code></pre>
 </body>

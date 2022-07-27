@@ -1,13 +1,13 @@
 <html>
 <body>
-報告使用具體類而非接口的情況。
+報告具體類而非接口的用法。
 此類宣告可能代表抽象失敗，並可能使測試更加困難。
 <p>
 此檢查不會報告其類來自系統或第三方庫的宣告。
 <code>equals()</code> 方法實作中不會報告轉換、instanceof 和局部變數。
 此外，<code>clone()</code> 方法實作中不會報告轉換。
 </p>
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>
   interface Entity {}
   class EntityImpl implements Entity {}
@@ -26,7 +26,8 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  使用<b>忽略抽象類類型</b>選項可以忽略對抽象類的轉換。</p>
-<p>使用後續選項可控制報告問題的上下文。</p>
+  使用下面的第一個複選框忽略對抽象類的強制轉換。</p>
+<p>
+  使用後續複選框來控制報告問題的上下文。</p>
 </body>
 </html>

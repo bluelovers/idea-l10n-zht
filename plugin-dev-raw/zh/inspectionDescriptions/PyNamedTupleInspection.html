@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>報告 <a href="https://docs.python.org/3/library/typing.html#typing.NamedTuple">typing.NamedTuple</a> 的無效定義。</p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre style="font-family: monospace">
 import typing
 
@@ -11,7 +11,7 @@ class FullName(typing.NamedTuple):
     last: str = ""
     middle: str
 </pre>
-<p>修復方法是將有預設值的欄位放在沒有預設值的欄位後面：</p>
+<p>修復方法是將有預設值的欄位放在沒有預設值的欄位後面:</p>
 <pre style="font-family: monospace">
 import typing
 

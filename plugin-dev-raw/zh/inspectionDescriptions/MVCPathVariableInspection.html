@@ -1,15 +1,15 @@
 <html>
 <body>
-<p>報告在方法簽名中宣告但在 URL 路徑中不存在或者在 URL 路徑中宣告但在方法簽名中不存在的 <code>@PathVariable</code> 參數。
-  該快速修復會添加缺失的參數。</p>
-<p><b>範例：</b></p>
+<p>報告在方法簽名中宣告但在 URL 路徑中不存在的 <code>@PathVariable</code> 參數，反之亦然。
+  快速修復添加了缺失的參數。</p>
+<p><b>範例:</b></p>
 <pre><code>
   @RequestMapping("/path/{myVariable}/")
   public String handler(@PathVariable String name_is_not_equal_to_myVariable) {
     return "...";
   }
 </code></pre>
-<p>套用快速修復後，結果如下所示：</p>
+<p>套用快速修復後，結果如下所示:</p>
 <pre><code>
   @RequestMapping("/path/{myVariable}/")
   public String handler(@PathVariable String myVariable) {

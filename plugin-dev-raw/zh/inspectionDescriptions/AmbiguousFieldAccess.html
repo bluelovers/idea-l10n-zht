@@ -1,20 +1,22 @@
 <html>
 <body>
-如果在類周圍的程式碼中存在同名的局部變數、參數或欄位，則報告從匿名類、內部類或局部類對超類欄位的存取。
-在這種情況下，看似存取了來自周圍程式碼的元素，而實際上存取的是來自超類的欄位。
+報告對匿名類中的超類欄位的模糊存取，其中環繞的程式碼中有同名的局部變數、參數或欄位。
 <p>
-  為闡明程式碼的意圖，建議對欄位存取添加顯式 <code>super</code> 限定符。
+  在本例中，看似存取了環繞的程式碼中的一個元素，實則存取了匿名類擴展的超類中的一個欄位。
 </p>
-<p><b>範例：</b></p>
+<p>
+  為闡明程式碼的意圖，建議對欄位存取添加顯式的 <code>super</code> 限定符。
+</p>
+<p><b>範例:</b></p>
 <pre><code>
     class First {
-      protected String ambiguous;
+      protected String test;
     }
     class Second {
-      void foo(String ambiguous) {
+      void foo(String test) {
         new First() {
           {
-            System.out.println(ambiguous); // 存取的是欄位，而不是參數
+            System.out.println(test); // 存取了此欄位，而不是此參數
           }
         };
       }
@@ -23,13 +25,13 @@
 <p>在套用快速修復後：</p>
 <pre><code>
     class First {
-      protected String ambiguous;
+      protected String test;
     }
     class Second {
-      void foo(String ambiguous) {
+      void foo(String test) {
         new First() {
           {
-            System.out.println(super.ambiguous);
+            System.out.println(super.test);
           }
         };
       }

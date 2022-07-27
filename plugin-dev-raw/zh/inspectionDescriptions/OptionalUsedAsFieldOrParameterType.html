@@ -3,7 +3,7 @@
 報告 <code>java.util.Optional&lt;T&gt;</code>、<code>java.util.OptionalDouble</code>、<code>java.util.OptionalInt</code>、<code>java.util.OptionalLong</code> 或 <code>com.google.common.base.Optional</code> 用為欄位或參數的類型的任何情況。
 <p><code>Optional</code> 設計為在需要一個明確的方式來表示 "沒有結果"的情況下，為庫方法的返回類型提供有限的機制。</p>
 <p>如果類需要 <code>Serializable</code>，則使用 <code>java.util.Optional</code> 類型的欄位也有問題，因為 <code>java.util.Optional</code> 不可序列化。</p>
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>
   class MyClass {
     Optional&lt;String&gt; name; // Optional 欄位
@@ -15,5 +15,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
+<p><small>2016.1 的新功能</small></p>
 </body>
 </html>

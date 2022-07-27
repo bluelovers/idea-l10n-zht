@@ -1,27 +1,23 @@
 <html>
 <body>
 報告使用 <code>+</code> 一元運算符的情況。 一元加號通常為 null 運算，它的存在可能代表編碼錯誤。 例如，與遞增運算符（如 <code>+++</code> 中）或相等運算符（如 <code>=+</code> 中）結合使用。
-<p><b>範例：</b></p>
-<pre><code>
-  void unaryPlus(int i) {
+<p><b>範例:</b></p>
+<pre>
+  <code>void unaryPlus(int i) {
     int x = + +i;
-  }
-</code></pre>
+  }</code>
+</pre>
 <p>建議使用以下快速修復：</p>
 <ul>
   <li><p>移除 <code>i</code> 變數前的 <code>+</code> 運算符：</p>
-<pre><code>
-  void unaryPlus(int i) {
+    <pre><code>void unaryPlus(int i) {
     int x = i;
-  }
-</code></pre>
+  }</code></pre>
   </li>
   <li><p>使用前綴遞增運算符取代 <code>+</code> 運算符：</p>
-<pre><code>
-  void unaryPlus(int i) {
+    <pre><code>void unaryPlus(int i) {
     int x = ++i;
-  }
-</code></pre>
+  }</code></pre>
   </li>
 </ul>
 <!-- tooltip end -->

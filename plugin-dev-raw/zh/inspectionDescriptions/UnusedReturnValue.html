@@ -1,11 +1,11 @@
 <html>
 <body>
 報告調用時從不使用其返回值的方法。
-此類方法的返回類型可以設定為 <code>void</code>。
-<p>不會報告使用 Error Prone 或 AssertJ 的 <code>@CanIgnoreReturnValue</code> 註解進行註解的方法。
-  該快速修復會更新方法簽名，並移除方法中的 <code>return</code> 語句。</p>
-<p><b>範例：</b></p>
-<pre><code>
+<p>這類方法的返回類型可以設定為 <code>void</code>。
+不會報告使用 Error Prone 或 AssertJ 的 <code>@CanIgnoreReturnValue</code> 註解進行批注的方法。
+  通過快速修復更新方法簽名，並移除方法中的 <code>return</code> 語句。</p>
+<p><b>範例:</b></p>
+<pre>
   // 可見性設定為 Protected 或 Public 時報告
   protected String myToUpperCase(String s) {
     return s.toUpperCase();
@@ -21,9 +21,9 @@
     setStr("value");          // 未使用返回值
     myToUpperCase("result");  // 未使用返回值
   }
-</code></pre>
+</pre>
 <p>對這兩種方法套用該快速修復後：</p>
-<pre><code>
+<pre>
     protected void myToUpperCase(String s) {
       // 完全移除了 'return'
       // 因為 's.toUpperCase()' 沒有任何副作用
@@ -34,10 +34,10 @@
       // 移除了 'return'
     }
   ...
-</code></pre>
+</pre>
 <p>
   <b>注意</b>：由於性能原因，在編輯器中高亮顯示時可能不會報告某些方法。
-  要查看所有結果，請通過<b>程式碼 | 檢查程式碼</b>或<b>程式碼 | 分析程式碼 | 按名稱執行檢查</b>來執行檢查>
+  要查看所有結果，請通過<b>分析 | 檢查程式碼…</b> 或<b>分析 | 按名稱執行檢查…</b> 來執行檢查
 </p>
 <!-- tooltip end -->
 <p>使用<b>忽略簡單的 setter</b> 選項可以忽略簡單 setter 調用中未使用的返回值。</p>

@@ -1,44 +1,15 @@
 <html>
 <body>
-報告沒有大括號的 <code>if</code>、<code>while</code>、<code>do</code> 或 <code>for</code> 語句。
-一些程式碼樣式，例如 <a href="https://google.github.io/styleguide/javaguide.html">Google Java 樣式指南</a>，要求所有控制語句都要帶大括號。
-<p>
-  在向不帶大括號的控制語句添加更多語句時，重要的是不要忘記添加大括號。
-  在註釋掉一行程式碼時，在不使用大括號時也必須更加小心，以免無意中使下一條語句成為控制流語句的一部分。
-  始終使用大括號可以更安全地插入或註釋掉一行程式碼。
-<p>
-  如果始終遵循使用大括號的程式碼樣式，則很可能不會發生 <a href="https://www.imperialviolet.org/2014/02/22/applebug.html">goto fail 漏洞</a>。
-  帶大括號的控制語句使控制流更易於查看，而無需依賴於可能不正確的縮排。</p>
-<p>範例：</p>
+報告任何不帶大括號的 <code>if</code>、<code>while</code> 或 <code>for</code> 語句。
+<p>大括號使程式碼更易於閱讀並有助於防止錯誤。</p>
+<p>範例:</p>
 <pre><code>
-  class Strange {
-    void x(boolean one, boolean two) {
-      if(one)
-        if(two)
-          foo();
-      else
-        bar();
-    }
-
-    void foo() {}
-    void bar() {}
-  }
+  if (x &gt; 0) System.out.println("x is positive");
 </code></pre>
 <p>快速修復用大括號包裝語句體：</p>
 <pre><code>
-  class Strange {
-    void x(boolean one, boolean two) {
-      if(one) {
-        if(two) {
-          foo();
-        } else {
-          bar();
-        }
-      }
-    }
-
-    void foo() {}
-    void bar() {}
+  if (x &gt; 0) {
+    System.out.println("x is positive");
   }
 </code></pre>
 </body>

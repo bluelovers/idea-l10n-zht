@@ -1,12 +1,12 @@
 <html>
 <body>
-報告 SQL 例程中不可到達的語句。
+報告 SQL 例程中無法存取的語句。
 <p>範例（Microsoft SQL 伺服器）：</p>
 <pre><code>CREATE FUNCTION foo() RETURNS INT AS
 BEGIN
     THROW;
     RETURN 1;
 END;</code></pre>
-<p>在 Microsoft SQL Server 中，<code>THROW</code> 語句會引發異常並將執行轉移到 TRY...CATCH 結構的 CATCH 塊。 因此，<code>RETURN 1;</code> 部分將永遠不會被執行。</p>
+<p>在 Microsoft SQL Server 中，<code>THROW</code> 語句引發異常並將執行轉移到 TRY...CATCH 構造的 CATCH 塊。 因此，<code>RETURN 1;</code> 部分將永遠不會被執行。</p>
 </body>
 </html>

@@ -1,7 +1,9 @@
 <html>
 <body>
 報告可以取代為顯式類型的 <code>var</code> 類型的局部變數。
-<p><b>範例：</b></p>
+<p>在降級的情況下，該檢查有助於發現和消除隱式類型的用法。</p>
+<!-- tooltip end -->
+<p><b>範例:</b></p>
 <pre><code>
   var str = "Hello";
 </code></pre>
@@ -9,10 +11,6 @@
 <pre><code>
   String str = "Hello";
 </code></pre>
-<!-- tooltip end -->
-<p>
-  <code>var</code> <i>關鍵字</i>出現在 Java 10 中。
-  此檢查有助於為向後相容早期 Java 版本而降級。
-</p>
+<p>僅當專案或模組的語言級別為 10 級或更高級別時，該檢查才會進行報告。</p>
 </body>
 </html>

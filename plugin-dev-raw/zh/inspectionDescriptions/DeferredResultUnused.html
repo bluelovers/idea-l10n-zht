@@ -1,8 +1,8 @@
 <html>
 <body>
-如果未使用返回值，則報告具有 <code>Deferred</code> 結果類型的函數調用。
-<p>如果未使用 <code>Deferred</code> 返回值，則調用站點不會等待補全此函數。</p>
-<p><b>範例：</b></p>
+如果未使用返回值，則報告具有 <code>Deferred</code> 結果類型的調用。
+<p>如果有返回值，函數將不會等到它完成。</p>
+<p><b>範例:</b></p>
 <pre><code>
   fun calcEverythingAsync() = CompletableDeferred(42)
 
@@ -10,7 +10,7 @@
       calcEverythingAsync()
   }
 </code></pre>
-<p>該快速修復會提供具有 <code>Deferred</code> 初始設定式的變數：</p>
+<p>建議通過快速修復引入具有 <code>Deferred</code> 初始設定式的變數：</p>
 <pre><code>
   fun calcEverythingAsync() = CompletableDeferred(42)
 

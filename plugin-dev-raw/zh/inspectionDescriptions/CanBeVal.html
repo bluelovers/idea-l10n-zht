@@ -2,7 +2,7 @@
 <body>
 報告使用 <code>var</code> 關鍵字宣告但從未被修改的局部變數。
 <p>Kotlin 鼓勵使用 <code>val</code> 關鍵字宣告幾乎不可變的變數，以確保它們的值永遠不會改變。</p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   fun example() {
       var primeNumbers = listOf(1, 2, 3, 5, 7, 11, 13)
@@ -10,7 +10,7 @@
       print("Same numbers: " + primeNumbers.intersect(fibonacciNumbers))
   }
 </code></pre>
-<p>快速修復會將 <code>var</code> 關鍵字取代為 <code>val</code>：</p>
+<p>建議通過快速修復將 <code>var</code> 關鍵字取代為 <code>val</code>：</p>
 <pre><code>
   fun example() {
       val primeNumbers = listOf(1, 2, 3, 5, 7, 11, 13)

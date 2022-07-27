@@ -1,11 +1,11 @@
 <html>
 <body>
-報告 ISNULL 函數中字串實參的截斷。
+報告 ISNULL 函數中字串參數的截斷。
 
 <p>ISNULL 語法是 <code>ISNULL(check_expression, replacement_value)</code>。
 </p>
 
-<p>根據 <a href="https://docs.microsoft.com/en-us/sql/t-sql/functions/isnull-transact-sql" target="_blank">docs.microsoft.com 上的 ISNULL</a>，如果 <code>replacement_value</code> 比 <code>check_expression</code> 長，<code>replacement_value</code> 將被截斷。
+<p>根據 <a href="https://docs.microsoft.com/en-us/sql/t-sql/functions/isnull-transact-sql" target="_blank">docs.microsoft.com 上的 ISNULL</a>，如果 <code>replacement_value</code> 長於 <code>check_expression</code>，<code>replacement_value</code> 將被截斷。
 </p>
 
 <p>範例（Microsoft SQL 伺服器）：</p>
@@ -17,7 +17,7 @@ DECLARE @name3 VARCHAR(2) = 'Hi';
   -- `@name2` 是 VARCHAR(10) 並且將被截斷
 SELECT ISNULL(@name1, @name2);
 
-  -- `@name3` 是 VARCHAR(2)（作為 `@name1`）並且不會被截斷
+  -- `@name3` 是 VARCHAR(2) （為 `@name1`） 並且不會被截斷
 SELECT ISNULL(@name1, @name3);</code></pre>
 
 </body>

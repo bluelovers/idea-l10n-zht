@@ -2,8 +2,8 @@
 <body>
 報告簽名與超類的 <code>static</code> 方法相同的 <code>static</code> 方法。
 此類方法可能看似覆寫，但實則它對超類隱藏了該方法，因為 Java 中的 <code>static</code> 方法不能被覆寫。
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   class Parent {
     static void method(){}
   }
@@ -11,7 +11,7 @@
   class Example extends Parent {
     static void method(){} //警告
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

@@ -1,8 +1,8 @@
 <html>
 <body>
 報告對同一實例上未使用 <code>this</code> 限定的非 <code>static</code> 方法的調用。
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   class Foo {
     void bar() {}
 
@@ -10,9 +10,9 @@
       bar();
     }
   }
-</code></pre>
+</pre>
 <p>在套用快速修復後：</p>
-<pre><code>
+<pre>
   class Foo {
     void bar() {}
 
@@ -20,7 +20,7 @@
       this.bar();
     }
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

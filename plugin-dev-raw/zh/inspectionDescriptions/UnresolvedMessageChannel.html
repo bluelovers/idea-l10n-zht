@@ -1,11 +1,11 @@
 <html>
 <body>
-<p>報告端點方法註解中不正確的通道特性：
-<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Gateway.html">@Gateway</a>、
-<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/ServiceActivator.html">@ServiceActivator、</a>
-<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Filter.html">@Filter</a> 等。</p>
+<p>在端點方法註解中報告不正確的通道屬性：
+<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Gateway.html">@網關</a>，
+<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/ServiceActivator.html">@ServiceActivator，</a>
+<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Filter.html">@Filter</a>，依此類推。</p>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 
 <pre><code>
   @Component
@@ -14,7 +14,7 @@
      public void gateway() {...}
 
      @Gateway(
-        requestChannel ="<strong>simpleBean</strong>",   // Bean 必須為以下一種類型：org.springframework.integration.MessageChannel,org.springframework.messaging.MessageChannel
+        requestChannel ="<strong>simpleBean</strong>",   // Bean 必須為以下一種類型: org.springframework.integration.MessageChannel,org.springframework.messaging.MessageChannel
         replyChannel = "<strong>unknownChannel</strong>")   // 找不到通道
      public void errors() {...}
 

@@ -2,18 +2,18 @@
 <body>
 報告鏈式相等比較。
 <p>此類比較可能令人困惑：<code>a == b == c</code> 表示 <code>(a == b) == c</code>，但可能 <code>a == b && a == c</code> 是有意為之。</p>
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   boolean chainedEquality(boolean a, boolean b, boolean c) {
     return a == b == c;
   }
-</code></pre>
+</pre>
 <p>您可以使用圓括號使比較不那麼令人困惑：</p>
-<pre><code>
+<pre>
   boolean chainedEquality(boolean a, boolean b, boolean c) {
     return (a == b) == c;
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

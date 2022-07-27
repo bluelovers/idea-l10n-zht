@@ -1,17 +1,5 @@
 <html>
 <body>
 報告某些平台模組中沒有實際註解的可選預期註解。
-<p><b>範例：</b></p>
-<pre><code>// 通用程式碼
-@OptionalExpectation
-expect annotation class JvmName(val name: String)
-
-@JvmName(name = "JvmFoo")
-fun foo() { }
-
-// jvm 程式碼
-actual annotation class JvmName(val name: String)
-</code></pre>
-<p>該檢查還會報告對非 JVM 平台（例如 Native）省略 <code>actual annotation class JvmName</code> 的情況。</p>
 </body>
 </html>

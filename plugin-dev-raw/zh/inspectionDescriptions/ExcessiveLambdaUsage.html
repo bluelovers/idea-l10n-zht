@@ -2,15 +2,15 @@
 <body>
 報告一個普通的 lambda 表達式被用在另一種方法中的情況，這種方法以相同方式執行，但只接受一個具體的值而不是 lambda。
 <p>此檢查有助於簡化程式碼。</p>
-<p>範例：</p>
-<pre><code>
+<p>範例:</p>
+<pre>
   Optional.orElseGet(() -> null)
-</code></pre>
+</pre>
 <p>在套用快速修復後：</p>
-<pre><code>
+<pre>
   Optional.orElse(null)
-</code></pre>
+</pre>
 <!-- tooltip end -->
-<p><small>2017.1 最新變化</small></p>
+<small>2017.1 的新功能</small>
 </body>
 </html>

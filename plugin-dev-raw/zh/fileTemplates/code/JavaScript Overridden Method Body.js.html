@@ -4,7 +4,7 @@
   <tr>
     <td colspan="3">
       <font face="verdana" size="-1">
-        此內建模板用於在每次生成被覆寫方法（例如，調用<code>程式碼 | 覆寫方法…</code> 功能）時填寫方法體。<br>
+        這個內建模板用於在每次生成覆寫方法時填寫該方法的主體，例如，當 <code>程式碼 | 覆寫方法...</code> 功能被調用時。<br>
          模板是可編輯的。 除了 Javascript 表達式和註釋，您還可以使用預定義變數。 
         當模板被應用時，這些變數將被取代成相應的值。
       </font>
@@ -18,14 +18,14 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">super 方法調用，對於 <b>void</b> 方法 - <code><b>super</b>.<i>method_name</i>();</code> 帶或不帶參數；
+    <td width="100%" valign="top"><font face="verdana" size="-1">超類方法調用，用於 <b>void</b> 方法 - <code><b>super</b>.<i>method_name</i>();</code> 帶或不帶參數；
       對於其他方法 - <code><b>return</b> <b>super</b>.<i>method_name</i>();</code> 帶或不帶參數
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PLAIN_CALL_SUPER}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">super 方法調用，<code><b>super</b>.<i>method_name</i>();</code> 帶或不帶參數；
+    <td width="100%" valign="top"><font face="verdana" size="-1">超類方法調用，<code><b>super</b>.<i>method_name</i>();</code>帶或不帶參數；
     </font></td>
   </tr>
   <tr>
@@ -45,10 +45,10 @@
   </tr>
   <tr>
     <td colspan="3"><font face="verdana" size="-1">所有來自 <i>檔案頭</i> 模板（<i>包含</i>頁籤）的預定義變數也可用。
-      （例如：
+      (例如：
       <font face="verdana" size="-2"><b>${USER}</b></font>、
       <font face="verdana" size="-2"><b>${DATE}</b></font>
-      等。）</font>
+      等。)</font>
     </td>
   </tr>
 </table>

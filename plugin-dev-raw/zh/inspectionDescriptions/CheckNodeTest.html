@@ -1,18 +1,35 @@
 <html>
-<body>
-報告在 XPath 表達式中使用但在關聯的 XML 檔案中缺少並且也沒有在引用的架構中定義的元素或特性的名稱。
-此類名稱通常是拼寫錯誤所致，否則可能只會在執行時被發現。
+<head>
+  <style type="text/css">
+    body, table {
+      font-family: Verdana, sans-serif;
+      font-size: 100%;
+      padding-left: 2mm;
+    }
 
-<p><b>範例：</b></p>
-<pre><code>
-  &lt;xsl:template match="<b>h:txtarea</b>" />
-</code></pre>
+    #footer {
+      font-size: 95%;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<p>
+  報告在 XPath 表達式中使用的元素或屬性的名稱，但在相關的 XML 檔案中缺少，也沒有在引用的架構中定義。 這可以防止平常在執行腳本時會出現並可能沒有被立即識別的 XPath 表達式拼寫錯誤問題。
+</p>
+
+<p>範例:</p>
+
+<p>
+  <code>&lt;xsl:template match="<b>h:txtarea</b>" /></code>
+</p>
 
 <p>
   如果 <code>h</code> 被綁定到 XHTML 命名空間，檢查會將 <code>match</code> 表達式的這一部分報告為未知元素名稱，因為該元素的正確名稱是 "textarea"。
 </p>
 
 
-<p><small>由 XPathView + XSLT-Support 提供技術支援</small></p>
+<p id="footer">由 XPathView + XSLT-Support 提供技術支援</p>
 </body>
 </html>

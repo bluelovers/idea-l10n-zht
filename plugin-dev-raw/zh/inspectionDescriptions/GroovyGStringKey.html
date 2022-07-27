@@ -3,16 +3,16 @@
 報告將 <code>groovy.lang.GString</code> 物件用作映射鍵的語句。
 通常，<code>GString</code> 物件是可變的，可能不應用作鍵。
 此外，使用具有相同值的 <code>java.lang.String</code> 物件無法存取 <code>GString</code> 條目。
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre>
 <code>
 def map = [:]
 def key = 'foo'
 map &lt&lt ["${key}": 'bar']
-assert map[key] == null // 令人困惑的比較 'true' 結果
+assert map[key] == null // confusing 'true' result of comparison
 </code>
 </pre>
 <!-- tooltip end -->
-<p><small>2017.1 最新變化</small></p>
+<small>2017.1 的新功能</small>
 </body>
 </html>

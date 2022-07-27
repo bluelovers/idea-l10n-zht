@@ -2,13 +2,13 @@
 <body>
 報告建置標記的格式錯誤和放置在錯誤位置的建置標記。 <code>go</code> 工具要求將建置標記放置在特定位置並以特殊語法編寫。 如果不滿足這些要求，則可能會忽略建置標記或可能會意外地從建置中刪除檔案。
 <p>請參閱 <a href="https://golang.org/pkg/go/build/#hdr-Build_Constraints">golang.org 上的 Build Constraints</a> 頁面。</p>
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>package main
 
 // +build ignore
 
 func main() {}</code></pre>
-<p><code>// +build ignore</code> 部分應該在軟體套件宣告之前。 要解決此問題，您可以套用<b>在軟體套件前面放置建置標籤</b>快速修復。 在套用快速修復後：</p>
+<p><code>// +build ignore</code> 部分應該在包宣告之前。 要解決此問題，您可以套用<b>在包前面放置建置標籤</b>快速修復。 在套用快速修復後：</p>
 <pre><code>// +build ignore
 
 package main

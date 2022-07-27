@@ -1,20 +1,20 @@
 <html>
 <body>
-<p>報告 Spring Bean 構造函數上不正確的 <code>@Autowired</code> 用法：多個 <code>@Autowired</code> 構造函數、沒有符合的 <code>@Autowired</code> 構造函數，等等。</p>
+<p>報告 <code>@Autowired</code> 在 Spring bean 構造函數上的錯誤用法：多個 <code>@Autowired</code> 構造函數、沒有符合的 <code>@Autowired</code> 構造函數，等等。</p>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
 @Component
 public class MyComponent {
 	@Autowired
-	public MyComponent(BarBean bean) {...} // 報告 '只允許一個 @Autowired 構造函數'
+	public MyComponent(BarBean bean) {...} // 報告 ‘只允許一個 @Autowired 構造函數’
 
 	@Autowired
-	public MyComponent(FooBean bean) {...} // 報告 '只允許一個 @Autowired 構造函數'
+	public MyComponent(FooBean bean) {...} // 報告 “只允許一個 @Autowired 構造函數”
 }
 
 @Component
-public class MyFactory {  // 報告 '沒有符合的 @Autowired 構造函數'
+public class MyFactory {  // 報告 “沒有符合的 @Autowired 構造函數”
 	public MyFactory(String str) {...}
 	public MyFactory(int count) {...}
 }

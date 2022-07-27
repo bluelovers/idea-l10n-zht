@@ -1,6 +1,6 @@
 <html>
 <body>
-報告在同一軟體套件但在不同模組中宣告的 package-private 成員的用法。
+報告使用或覆寫在同一個軟體套件的另一個模組中宣告的 package-private 成員的程式碼片段。
 <p>如果宣告類由不同的載入器載入，則存取 package-private 成員的程式碼將在執行時失敗，並顯示 <code>IllegalAccessError</code>。</p>
 <p>如果某個方法覆寫了由不同載入器載入的類中的 package-private 方法，那麼在實作類的實例上調用 super 方法時，它將不會被調用。</p>
 <p>如果某個方法從由不同載入器載入的類中實作了 abstract package-private 方法，則在實作類的實例上調用 super 方法將失敗並顯示 <code>AbstractMethodError</code>。</p>

@@ -1,8 +1,8 @@
 <html>
 <body>
-報告對實例方法中 <code>static</code> 欄位的賦值或修改。
+從實例方法中報告對 <code>static</code> 欄位的賦值，包括遞增和遞減。
 <p>雖然合法，但此類賦值很難安全完成，並且通常是無意中將欄位標記為 <code>static</code> 的結果。</p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   class Counter {
     private static int count = 0;

@@ -8,18 +8,21 @@
   <li>未解析的組件/操作實作類 (<code>plugin.xml</code>)</li>
   <li>未解析的組件接口類 (<code>plugin.xml</code>)</li>
   <li>無法將組件實作類分配給其接口類 (<code>plugin.xml</code>)</li>
-  <li>組件註冊不正確，例如，將 <code>ProjectComponent</code> 註冊為應用程式組件，或者類完全沒有實作任何組件接口（<code>plugin.xml</code> 和 Java 程式碼）
+  <li>組件註冊不正確，例如，將 <code>ProjectComponent</code> 註冊為應用程式組件，
+    或者類完全沒有實作任何組件接口（<code>plugin.xml</code> 和 Java 程式碼）
   </li>
-  <li>類修飾符不正確：操作類必須為 <code>public</code>，並且必須有 public 無實參構造函數。 此外，操作和組件實作類不得為 abstract（<code>plugin.xml</code> 和 Java 程式碼）
+  <li>類修飾符不正確：操作類必須為 <code>public</code>，並且必須有公共
+    無參數構造函數。 此外，操作和組件實作類
+    不能是抽象的（<code>plugin.xml</code> 和 Java 程式碼）
   </li>
   <li>接口類重複：只能將類用作接口類一次 (<code>plugin.xml</code>)</li>
 </ul>
 <!-- tooltip end -->
 <p>設定檢查：</p>
 <ul>
-  <li>使用<b>檢查延伸模組描述符(plugin.xml)</b> 選項可以禁用 <code>plugin.xml</code> 描述符中的檢查。</li>
-  <li>使用<b>檢查 Java 操作</b>選項可以禁用操作程式碼中的檢查。</li>
-  <li>使用<b>檢查 Java 程式碼</b>選項可以禁用程式碼中的所有檢查。</li>
+  <li>使用<b>檢查延伸模組描述符 (plugin.xml)</b> 選項可禁用 <code>plugin.xml</code> 描述符中的檢查。</li>
+  <li>使用<b>檢查 Java 操作</b>選項可禁用操作模式下的檢查。</li>
+  <li>使用<b>檢查 Java 程式碼</b>選項可禁用程式碼中的所有檢查。</li>
 </ul>
 </body>
 </html>

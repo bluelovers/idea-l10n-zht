@@ -4,8 +4,8 @@
 <p>
   在實用程序類中，所有欄位和方法均為 <code>static</code>。
   這種類的實例化很可能不必要，並且表明存在錯誤。</p>
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   class MyUtils {
     public static double cube(double x) {
       return x * x * x;
@@ -17,7 +17,7 @@
       MyUtils utils = new MyUtils();
     }
   }
-</code></pre>
+</pre>
 <p>
   為防止實用程序類被實例化，建議使用 <code>private</code> 構造函數。
 </p>

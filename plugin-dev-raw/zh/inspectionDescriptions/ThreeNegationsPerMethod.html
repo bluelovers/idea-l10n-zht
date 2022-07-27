@@ -1,8 +1,8 @@
 <html>
 <body>
-報告有三個或更多否定的方法。
-此類方法可能令人困惑。
-<p><b>範例：</b></p>
+報告具有三個或更多取反運算符 <code>!</code> 或 <code>!=</code> 的方法。
+<p>此類方法可能會引起混淆。</p>
+<p><b>範例:</b></p>
 <pre><code>
   void doSmth(int a, int b, boolean flag1, boolean flag2) {
     if (!flag && !flag2) {
@@ -12,7 +12,7 @@
     }
   }
 </code></pre>
-<p>沒有否定，該方法變得更容易理解：</p>
+<p>沒有取反，該方法變得更容易理解：</p>
 <pre><code>
   void doSmth(int a, int b, boolean flag1, boolean flag2) {
     if (flag1 || flag2 || a == b) return;

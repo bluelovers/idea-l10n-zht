@@ -1,9 +1,9 @@
 <html>
 <body>
-報告用作 <b>SLF4J</b> 和 <b>Log4j 2</b> 日誌記錄方法實參的非常數字串串聯。
+報告用作 <code>SLF4J</code> 和 <code>Log4j 2</code> 日誌記錄方法參數的非常數字串串聯。
 即使未記錄日誌訊息，也會在執行時評估非常數串聯；這會對性能產生負面影響。
 建議改用參數化日誌訊息，禁用日誌記錄時不會對其進行評估。
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   <b>public class</b> Vital {
     <b>private static final</b> Logger LOG = LoggerFactory.getLogger(Vital.class);
@@ -20,7 +20,7 @@
     <b>private static final</b> Logger LOG = LoggerFactory.getLogger(Vital.class);
 
     <b>public void</b> saveTheWorld(<b>int</b> i, String s, <b>boolean</b> b) {
-      LOG.info("saveTheWorld({}, {}, {})", i, s, b);
+		  LOG.info("saveTheWorld({}, {}, {})", i, s, b);
       // todo
     }
   }

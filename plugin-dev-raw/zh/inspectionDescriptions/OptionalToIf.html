@@ -1,7 +1,7 @@
 <html>
 <body>
 報告可取代為 <code>if</code> 語句序列的 <code>Optional</code> 調用鏈。
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>
   return Optional.ofNullable(name)
     .map(this::extractInitials)
@@ -17,10 +17,7 @@
   return getDefault();
 </code></pre>
 <!-- tooltip end -->
-<p>
-  <code>java.util.Optional</code> 出現在 Java 8 中。
-  此檢查有助於為向後相容早期 Java 版本而降級。
-</p>
-<p><small>2020.2 最新變化</small></p>
+<p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>
+<p><small>2020.2 的新功能</small></p>
 </body>
 </html>

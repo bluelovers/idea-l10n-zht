@@ -3,8 +3,8 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      在生成已實作下標（例如，使用<b>程式碼 | 生成 | 實作方法</b>操作）時填充下標的主體。<br>
-      模板是可編輯的。 除了 Swift 表達式和註釋外，您還可以使用預定義變數，這些變數隨後將被擴展為相應值。
+      填充生成的已實作下標的主體，例如，調用 <b>程式碼 | 生成 | 實作方法</b> 操作時。<br>
+模板是可編輯的。 除了 Swift 表達式和註釋，您可以使用預定義的變數，然後將這些變數擴展為相應的值。
     </font></td>
   </tr>
 </table>
@@ -15,7 +15,7 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">創建的下標的返回類型</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">創建下標的返回類型</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
@@ -33,19 +33,14 @@
     <td width="100%" valign="top"><font face="verdana" size="-1">當下標有 setter 時，為 <b>"true"</b></font></td>
   </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${GETTER_EFFECTS}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">屬性 getter 的 getter 效果（<code>async</code>、<code>throws</code>）</font></td>
-  </tr>
-  <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${GET_ATTRIBUTES}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">下標 getter 的特性</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">下標 getter 的屬性</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SET_ATTRIBUTES}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">下標 setter 的特性</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">下標 setter 的屬性</font></td>
   </tr>
   <tr>
     <td colspan="3"><font face="verdana" size="-1">

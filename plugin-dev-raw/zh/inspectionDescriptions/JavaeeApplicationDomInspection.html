@@ -1,20 +1,20 @@
 <html>
 <body>
-報告 `application.xml` 設定檔案中的以下問題：
+報告 `application.xml` 設定檔案中存在以下問題：
 <ul>
   <li>對不可實例化類的引用</li>
   <li>對不擴展所需類的類的引用</li>
   <li>對範圍不適當的類的引用</li>
-  <li>與所需模式不符合的標記和特性值（例如，Java 關鍵字）</li>
-  <li>不包含必需子標記或特性的標記</li>
+  <li>與所需模式不符合的標記和屬性值（例如，Java 關鍵字）</li>
+  <li>不包含必需的子標籤或屬性的標籤</li>
   <li>定義具有重複名稱的物件的標記</li>
 </ul>
 
-<p><b>範例：</b></p><br/>
+<p><b>範例:</b></p><br/>
 <pre><code>
 &lt;application&gt;
     &lt;module id="ExampleWebModule"&gt;
-      &lt;web&gt; // 錯誤：應定義 “web-uri” 子標記
+      &lt;web&gt; // 錯誤：應定義 “web-uri” 子標籤
         &lt;context-root&gt;ExampleWebApp&lt;/context-root&gt;
       &lt;/web&gt;
     &lt;/module&gt;

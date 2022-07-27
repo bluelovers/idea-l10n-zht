@@ -3,8 +3,8 @@
 報告不符合 TLD 主體內容規範的 JSP 標記主體內容。
 <p>如果指定了空的主體內容，則標記的主體應為空。</p>
 <p>如果指定了無腳本主體內容，該標記的主體不應包含 JSP scriptlet。</p>
-<p>對於空內容類型，該快速修復將移除標記的主體，如果指定了無腳本內容類型，則移除 scriptlet。</p>
-<p><b>範例：</b></p>
+<p>對於空內容類型，快速修復將移除標記的主體，如果指定了無腳本內容類型，則移除 scriptlet。</p>
+<p><b>範例:</b></p>
 <pre><code>
 &lt;s:empty&gt;body not allowed here&lt;/s:empty&gt;
 &lt;s:scriptless&gt;say: &lt;% System.out.println(&quot;hey&quot;); %&gt;&lt;/s:scriptless&gt;

@@ -1,21 +1,21 @@
 <html>
 <body>
-報告可以簡化為其“單個元素”或“標記”速記形式的註解。
+報告可以簡化為其“單個元素”或“標記”簡寫形式的註解。
 <p>還會報告在 @ 符號和註解名稱之間包含空格的註解。</p>
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   @interface Foo { String[] value(); }
 
   @ Foo({"foo"})
   public String name;
-</code></pre>
+</pre>
 <p>在套用快速修復後：</p>
-<pre><code>
+<pre>
   @interface Foo { String[] value(); }
 
   @Foo("foo")
   public String name;
-</code></pre>
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

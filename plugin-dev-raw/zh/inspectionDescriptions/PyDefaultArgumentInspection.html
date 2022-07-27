@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>報告在實參的預設值中檢測到列表或字典形式可變值的問題。 <br/>
-  預設實參值僅在函數定義時進行一次求值，這意味著修改該實參的預設值將影響此函數的所有後續調用。</p>
-<p><b>範例：</b></p>
+<p>報告在參數的預設值中檢測到列表或字典形式可變值的問題。 <br/>
+  預設參數值僅在函數定義時進行一次求值，這意味著修改該參數的預設值將影響此函數的所有後續調用。</p>
+<p><b>範例:</b></p>
 <pre style="font-family: monospace">
 def func(s, cache={}):
     cache[s] = None
 </pre>
-<p>套用快速修復後，程式碼變為：</p>
+<p>套用快速修復後，程式碼變為:</p>
 <pre style="font-family: monospace">
 def func(s, cache=None):
     if cache is None:

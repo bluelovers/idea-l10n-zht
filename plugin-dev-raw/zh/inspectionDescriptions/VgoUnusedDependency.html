@@ -4,12 +4,12 @@
 <p>對於當前 <i>go.mod</i> 檔案中的每個依賴項，此檢查會搜尋所有 Go 檔案中以依賴項名稱開頭的任何匯入語句。
   如果未找到此類匯入，則該依賴項被視為未使用。
   此檢查等效於 <a href="https://golang.org/ref/mod#go-mod-why"><code>go mod why</code> 指令</a>。</p>
-<p>該檢查會處理 <code>require</code> 和 <code>replace</code> 指令。
-  帶有 <code>// indirect</code> 註釋的 <code>require</code> 指令也會被處理。</p>
-<p>在以下情況下，該檢查可能無法準確確定是否未使用取代或間接要求的依賴項：</p>
+<p>檢查過程<code>require</code> 和<code>replace</code> 指令。
+  帶有<code>// indirect</code> 註釋的<code>require</code> 指令也被處理。</p>
+<p>在以下情況下，該檢查可能無法準確地確定是否未使用取代的或間接要求的依賴項：</p>
 <ul>
-  <li>已啟用 vendoring 模式</li>
-  <li>未下載某些依賴項</li>
+  <li>供應商模式已啟用</li>
+  <li>未下載一些依賴</li>
 </ul>
 </body>
 </html>

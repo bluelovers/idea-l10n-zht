@@ -4,19 +4,19 @@
 <p>
   構造的庫名稱字串是安全漏洞的常見來源。
   預設情況下，此檢查會忽略編譯時常量。</p>
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   void test(int i) {
     System.loadLibrary("foo" + i);
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>
 使用檢查設定可以將任何 <code>static final</code> 欄位視為常數。
 請小心，因為啟用該選項時，像下面這樣的字串將被忽略：
 </p>
-<pre><code>
+<pre>
   private static final String LIBRARY = getUserInput();
-</code></pre>
+</pre>
 </body>
 </html>

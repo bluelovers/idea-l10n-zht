@@ -1,18 +1,14 @@
 <html>
 <body>
-報告對以下各項的調用：
+報告對以下各項的調用:
 <ul>
   <li><code>equals()</code></li>
   <li><code>equalsIgnoreCase()</code></li>
   <li><code>compareTo()</code></li>
-  <li><code>compareToIgnoreCase()</code> 和</li>
-  <li><code>trim()</code></li>
+  <li><code>compareToIgnoreCase()</code></li>
 </ul>
 <p>
-  （發生在 <code>String</code> 物件上）。
-  國際化字串的比較可能應改用 <code>java.text.Collator</code>。
-  <code>String.trim()</code> 只會移除 0x00 和 0x20 之間的控制字符。
-  Java 11 中引入的 <code>String.strip()</code> 方法對 Unicode 的感知更好，可以作為替代。
+  （發生在 <code>String</code> 物件上）。 在國際化環境中，此類調用通常是不正確的。
 </p>
 <!-- tooltip end -->
 </body>

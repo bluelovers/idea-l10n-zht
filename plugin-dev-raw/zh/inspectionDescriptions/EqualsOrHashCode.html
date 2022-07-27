@@ -1,49 +1,7 @@
 <html>
 <body>
-報告覆寫 <code>equals()</code> 但不覆寫 <code>hashCode()</code>（或者相反操作）的類。
-同時還報告覆寫 <code>equals()</code> 或 <code>hashCode()</code> 的物件宣告。
-<p>這可能會導致在將類添加到 <code>Collection</code> 時產生不良行為</p>
-<p><b>範例：</b></p>
-<pre><code>
-  class C1 {
-      override fun equals(other: Any?) = true
-  }
-
-  class C2 {
-      override fun hashCode() = 0
-  }
-
-  object O1 {
-      override fun equals(other: Any?) = true
-  }
-
-  object O2 {
-      override fun hashCode() = 0
-  }
-</code></pre>
-<p>該快速修復會為類覆寫 <code>equals()</code> 或 <code>hashCode()</code> 方法並為物件刪除這些方法：</p>
-<pre><code>
-   class C1 {
-       override fun equals(other: Any?) = true
-       override fun hashCode(): Int {
-           return javaClass.hashCode()
-       }
-   }
-
-   class C2 {
-       override fun hashCode() = 0
-       override fun equals(other: Any?): Boolean {
-           if (this === other) return true
-           if (javaClass != other?.javaClass) return false
-           return true
-       }
-   }
-
-   object O1 {
-   }
-
-   object O2 {
-   }
-</code></pre>
+報告覆寫 <b>equals()</b> 但不覆寫 <b>hashCode()</b>（或者相反操作）的類。
+還會報告覆寫 <b>equals()</b> 或 <b>hashCode()</b> 的物件宣告。
+<p>這可能會導致在將類添加到 <b>Collection</b> 時產生不良行為</p>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <p>不建議這種轉換，因為它們返回 Unicode 程式碼點 <code>x</code> 的 UTF-8 表示，而不是人們可能預期的返回 <code>x</code> 的十進制字串表示。 此外，如果 <code>x</code> 表示無效的程式碼點，轉換不能被靜態拒絕。</p>
 
 <p>對於打算使用程式碼點的轉換，請考慮使用 <code>string(rune(x))</code> 取代它們。 否則， <code>strconv.Itoa</code> 或其等效函數可以返回基於所需基數值的字串表示。</p>
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>func main() {
  a := 1
  _ = string(a)

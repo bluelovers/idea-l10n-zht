@@ -1,9 +1,9 @@
 <html>
 <body>
-報告對循環體內 <code>for</code> 迴圈參數的賦值或修改。
-<p>雖然偶爾是有意為之，但此結構可能令人困惑，通常是由拼寫錯誤或使用錯誤變數引起。</p>
+報告對 <code>for</code> 語句參數的賦值或其在 <code>for</code> 迴圈體內的修改。
+<p>雖然有時是有意為之，但這種結構可能令人困惑，通常由拼寫錯誤或使用了錯誤變數引起。</p>
 <p>該快速修復會添加新變數的宣告。</p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   for (String s : list) {
     // 警告：s 在迴圈內被更改
@@ -20,7 +20,7 @@
 </code></pre>
 <p>不報告沒有 update 語句的基本 <code>for</code> 迴圈中的賦值。
   在此類情況下，賦值很可能是預期的，不能輕易移動到 <code>for</code> 迴圈的更新部分。</p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   for (int i = 0; i &lt; list.size(); ) {
     if (element.equals(list.get(i))) {

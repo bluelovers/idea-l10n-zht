@@ -3,8 +3,7 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      在生成被覆寫屬性（例如，使用<b>程式碼 | 生成 | 覆寫方法</b>操作）時填充屬性的主體。<br>
-      模板是可編輯的。 除了 Swift 表達式和註釋外，您還可以使用預定義變數，這些變數隨後將被擴展為相應值。
+      填充生成的覆寫屬性的主體，例如，調用 <b>程式碼 | 生成 | 覆寫方法</b> 操作時。<br>模板是可編輯的。 除了 Swift 表達式和註釋，您可以使用預定義的變數，然後將這些變數擴展為相應的值。
     </font></td>
   </tr>
 </table>
@@ -15,12 +14,12 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">super 屬性調用：<code>super.propertyName</code></font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">超類屬性調用：<code>super.propertyName</code></font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">創建的屬性的返回類型</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">創建屬性的返回類型</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
@@ -40,12 +39,7 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_SUPER_SET}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">當被覆寫屬性有 setter 時，為 <b>"true"</b></font></td>
-  </tr>
-  <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${GETTER_EFFECTS}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">屬性 getter 的 getter 效果（<code>async</code>、<code>throws</code>）</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當覆寫屬性有 setter 時，為 <b>"true"</b></font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${GET_ATTRIBUTES}</b></font></nobr></td>

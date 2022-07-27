@@ -2,15 +2,14 @@
 <body>
 報告覆蓋 <code>Map</code> 鍵、<code>Set</code> 元素或 <code>add</code>/<code>put</code> 調用序列中的陣列元素或使用類似於 <code>Set.of</code> 的 Java 9 工廠方法（將導致執行時異常）的程式碼。
 <p>這通常是複製貼上錯誤所致。</p>
-<p><b>範例：</b></p>
-<pre><code>
-  map.put("A", 1);
+<p><b>範例:</b></p>
+<pre>  map.put("A", 1);
   map.put("B", 2);
   map.put("C", 3);
   map.put("D", 4);
-  map.put("A", 5); // 鍵 "A" 重複，覆蓋以前寫入的條目
-</code></pre>
+  map.put("A", 5); // 複製鍵 "A"，覆蓋以前寫入的條目
+</pre>
 <!-- tooltip end -->
-<p><small>2017.3 最新變化</small></p>
+<p><small>2017.3 的新功能</small></p>
 </body>
 </html>

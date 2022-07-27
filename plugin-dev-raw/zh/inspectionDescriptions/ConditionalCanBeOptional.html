@@ -1,7 +1,7 @@
 <html>
 <body>
 報告 null 檢查條件並建議用 <code>Optional</code> 鏈取代它們。
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>
   return str == null ? "" : str.trim();
 </code></pre>
@@ -12,6 +12,6 @@
 <p>請注意，當條件的非 null 分支返回 null 值時，相應的映射步驟將產生一個空的 <code>Optional</code>，可能會改變語意。 如果不能靜態證明保留語意，則快速修復操作名稱將包含 “（可能更改語意）” 通知，並關閉檢查高亮顯示。</p>
 <!-- tooltip end -->
 <p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>
-<p><small>2018.1 最新變化</small></p>
+<p><small>2018.1 的新功能</small></p>
 </body>
 </html>

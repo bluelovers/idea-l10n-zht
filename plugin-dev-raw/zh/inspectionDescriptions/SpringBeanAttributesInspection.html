@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>報告 <code>&lt;bean&gt;</code> 特性的設定衝突。</p>
+<p>報告 <code>&lt;bean&gt;</code> 屬性的設定衝突。</p>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   &lt;beans&gt;
     &lt;bean class="java.lang.String" factory-bean="factoryBean"/&gt;
@@ -11,7 +11,7 @@
 
     &lt;bean abstract="false" id="superfluousDefaultAttributeAbstract"/&gt;
 
-    &lt;!-- 具有預設值 'false' 的特性 abstract 是多餘的 --&gt;/
+    &lt;!-- 具有預設值 ‘false’ 的特性 abstract 是多餘的 --&gt;/
     &lt;bean id="superfluousDefaultAttributeScope" scope="singleton"/&gt;
 
     &lt;!-- 具有預設值 'singleton' 的特性範圍是多餘的 --&gt;/

@@ -1,8 +1,8 @@
 <html>
 <body>
-報告“幻數”：未通過常數宣告來命名的數值文字。
-<p>使用幻數會導致程式碼不清晰，並且如果幻數在一個位置更改但在另一個位置保持不變，則會導致錯誤。 此檢查不會報告數字 0、1、2、3、4、5、6、7、8、9、10、100、1000、0L、1L、2L、0.0、1.0、0.0F 和 1.0F。</p>
-<p>範例：</p>
+報告作為數字文字未通過常數宣告來命名的“魔法數字”。
+魔法數字可能導致程式碼意圖不明確，如果一個程式碼位置中的魔法數字進行了更改，但在另一個程式碼位置未加更改，則可能導致錯誤。 數字 0、1、2、3、4、5、6、7、8、9、10、100、1000、0L、1L、2L、0.0、1.0、0.0F 和 1.0F 不在此檢查中報告。
+<p>範例:</p>
 <pre><code>
   void checkFileSize(long bytes) {
     if (bytes > 1_048_576) {
@@ -10,7 +10,7 @@
     }
   }
 </code></pre>
-<p>快速修復引入了一個新常數：</p>
+<p>建議通過快速修復引入一個新常數：</p>
 <pre><code>
   static final int MAX_SUPPORTED_FILE_SIZE = 1_048_576;
 
@@ -21,12 +21,13 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p>設定檢查：</p>
-<ul>
-  <li>使用<b>忽略 'hashCode()' 方法中的常數</b>選項可在 <code>hashCode()</code> 方法中禁用此檢查。</li>
-  <li>使用<b>在註解中忽略</b>選項可以忽略註解中的幻數。</li>
-  <li>在構造 <code>Collection</code>、<code>Map</code>、<code>StringBuilder</code> 或 <code>StringBuffer</code> 物件時，使用<b>忽略 StringBuilders 和 Collections 的初始容量</b>選項可以忽略用作初始容量的幻數。</li>
-</ul>
+<p>
+  使用下面的第一個複選框在 <code>hashCode()</code> 方法中禁用此檢查。
+<p>
+  使用下面的第二個複選框忽略註解中的幻數。
+<p>
+  在構造 <code>Collection</code>、<code>Map</code>、<code>StringBuilder</code> 或 <code>StringBuffer</code> 物件時，使用下面第三複選框來忽略用作初始容量的幻數。
+<p>
 
 </body>
 </html>

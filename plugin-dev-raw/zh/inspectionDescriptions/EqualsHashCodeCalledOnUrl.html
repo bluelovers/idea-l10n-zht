@@ -1,17 +1,21 @@
 <html>
 <body>
-報告在 <code>java.net.URL</code> 物件上的 <code>hashCode()</code> 和 <code>equals()</code> 調用。
+報告在 <code>java.net.URL</code> 物件上調用的 <code>hashCode()</code> 和 <code>equals()</code>。
 <p>
-  <code>URL</code> 的 <code>equals()</code> 和 <code>hashCode()</code> 方法可以執行 DNS 尋找來解析主機名。
-  這可能會導致重大延遲，具體取決於網絡和 DNS 伺服器的可用性和速度。
-  使用 <code>java.net.URI</code> 代替 <code>java.net.URL</code> 將避免 DNS 尋找。
+  <code>java.net.URL</code> 類會在內部使用 <code>java.net.URLStreamHandler</code> 的實例來執行 <code>hashCode()</code> 和 <code>equals() </code>。
+  這會導致性能問題，因為 <code>java.net.URLStreamHandler</code> 會執行 DNS 尋找。
+  根據網絡的可用性和 DNS 伺服器的速度，這可能會導致顯著延遲。
 </p>
-<p><b>範例：</b></p>
-<pre><code>
-  int equalsHashCode(URL url1, URL url2) {
-    return url1.hashCode() == url2.hashCode();
-  }
-</code></pre>
+<p>該問題很可能可以通過改為使用 <code>java.net.URI</code> 加以解決。</p>
+<p><b>範例:</b></p>
+<pre>
+  <code>
+    int f(URL url1, URL url2) {
+      if (url1.equals(url2)) return url1.hashCode();
+      else return url2.hashCode();
+    }
+  </code>
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

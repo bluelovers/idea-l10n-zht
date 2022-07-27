@@ -2,7 +2,7 @@
 <body>
 報告非 <code>java.lang.String</code> 類型的 <code>assert</code> 訊息。
 <p>使用字串可以提供更多資訊，有助於診斷失敗或斷言原因。</p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   void foo(List&lt;Integer&gt; myList) {
     assert myList.isEmpty() : false;
@@ -12,5 +12,7 @@
 <p>
 使用<b>僅當 <code>assert</code> 訊息為 'boolean' 或 'java.lang.Boolean' 時發出警告</b>選項可以僅在 <code>assert</code> 訊息類型為 <code>boolean</code> 或 <code>java.lang.Boolean</code> 時發出警告。
 <code>boolean</code> 詳細訊息不太可能提供有關斷言失敗的其他資訊，可能是由於錯誤輸入 <code>:</code> 而不是 <code>&</code> 所致。
+<p>
+<small>15 的新功能</small>
 </body>
 </html>

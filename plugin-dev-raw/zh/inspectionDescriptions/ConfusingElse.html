@@ -2,9 +2,9 @@
 <body>
 在 <code>if</code>&mdash;<code>else</code> 語句和語句鏈中報告冗餘的 <code>else</code> 關鍵字。
 <p>
-當所有之前的分支以 <code>return</code>、<code>throw</code>、<code>break</code> 或 <code>continue</code> 語句結尾時，<code>else</code> 關鍵字冗餘。 在這種情況下，來自 <code>else</code> 分支的語句可以放在 <code>if</code> 語句之後，並且 <code>else</code> 關鍵字可以刪除。
+<code>else</code> 關鍵字因為之前分支中的程式碼以 <code>return</code>、<code>throw</code>、<code>break</code> 或 <code>continue</code> 語句結尾而無法到達，這樣的關鍵字是冗餘的。 在這種情況下，來自 <code>else</code> 分支的語句可以放在 <code>if</code> 語句之後，並且 <code>else</code> 關鍵字可以刪除。
 </p>
-<p><b>範例：</b></p>
+<p>範例:</p>
 <pre><code>
   if (name == null) {
       throw new IllegalArgumentException();
@@ -20,7 +20,7 @@
   System.out.println(name);
 </code></pre>
 <!-- tooltip end -->
-<p>禁用<b>當 'if' 語句之後沒有其他語句時報告</b>選項，以忽略 <code>if</code>&mdash;<code>else</code> 語句是程式碼塊中最後一條語句的情況。</p>
+<p>禁用 <b>當 'if' 語句之後沒有其他語句時報告</b> 選項以忽略 <code>if</code>&mdash;<code>else</code> 語句是程式碼塊中最後一條語句的情況。</p>
 
 </body>
 </html>

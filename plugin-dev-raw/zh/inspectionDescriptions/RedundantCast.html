@@ -1,5 +1,14 @@
 <html>
 <body>
 報告不必要的轉換表達式。
+
+<p>範例:</p>
+<pre><code>
+  static void foo() {
+        String o = null;
+        Object o2 = (Object) o;
+  }
+</code></pre>
 </body>
 </html>
+<!-- tooltip end -->

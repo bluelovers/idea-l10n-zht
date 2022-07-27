@@ -1,8 +1,8 @@
 <html>
 <body>
 報告僅從包含該方法的類的內部類調用的 <code>private</code> 方法。 此類方法可以安全地移到該內部類中。
-<p>範例：</p>
-<pre><code>
+<p>範例:</p>
+<pre>
 public class Outer {
   public static void main(String[] args) {
     new Inner().run(args[0]);
@@ -10,8 +10,8 @@ public class Outer {
 
   static class Inner {
     void run(String arg) {
-      // 方法 isEmpty() 僅從內部類使用
-      // 考慮將其移到內部類
+      // 方法 isEmpty() 僅從 Inner 類使用
+      // 考慮將其移到 Inner 類
       if (!isEmpty(arg)) {
         System.out.println("Argument is supplied");
       }
@@ -22,7 +22,7 @@ public class Outer {
     return s != null && s.trim().isEmpty();
   }
 }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>
 使用下面的第一個複選框可忽略從匿名類或本地類調用的 <code>private</code> 方法。

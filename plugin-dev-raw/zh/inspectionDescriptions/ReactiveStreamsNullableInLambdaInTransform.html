@@ -1,24 +1,28 @@
 <html>
 <body>
-<p>報告可能在 Reactive Streams 鏈中返回 <code>null</code> 的轉換操作。</p>
-
-<p>
-  Reactive Streams 不支持可 null 值，因為這些值會導致此類程式碼失敗。
-  該快速修復會建議將 <code>map()</code> 取代為 <code>mapNotNull</code>，從而忽略異常。
-</p>
-
-<p><b>範例：</b></p>
+<p>報告可能在 Reactive Stream 鏈中返回 <code>null</code> 的轉換操作。</p>
+<p>Reactive Streams 不支持 <code>null</code> 值，因為這些值會導致此類程式碼失敗。</p>
+<p><b>範例:</b></p>
 <pre><code>repository.findWithTailableCursorBy()
     .map(e -> (Person)null)
     .doOnNext(System.out::println)
 </code></pre>
-
+<!-- tooltip end -->
+<p>
+  最好不要在 Reactive Stream 鏈程式碼內使用可 null 值，但如果需要如此，請使用特殊運算，如 Reactor 的 <code>mapNotNull</code>。
+</p>
+<p>有一個快速修復可用於將 <code>map</code> 取代為 <code>mapNotNull</code>。 它會忽略異常，因為 <code>mapNotNull</code> 允許 <code>null</code> 值。
+</p>
+<p>快速修復之前:</p>
+<pre><code>repository.findWithTailableCursorBy()
+    .map(e -> (Person)null)
+    .doOnNext(System.out::println)
+</code></pre>
 <p>在套用快速修復後：</p>
 <pre><code>repository.findWithTailableCursorBy()
     .mapNotNull(e -> (Person)null)
     .doOnNext(System.out::println)
 </code></pre>
-
-<p><small>2019.3 最新變化</small></p>
+<p><small>2019.3 的新功能</small></p>
 </body>
 </html>

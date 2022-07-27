@@ -1,7 +1,7 @@
 <html>
 <body>
 報告可以取代為方法引用的 lambda。 方法引用比 lambda 更容易理解和閱讀，儘管它們通常取決於您的喜好。
-<p>範例：</p>
+<p>範例:</p>
 <pre><code>
   Runnable r = () -> System.out.println();
 </code></pre>
@@ -12,7 +12,7 @@
 <!-- tooltip end -->
 <p>
   即使 lambda 不調用任何方法，該檢查也可能會建議方法引用，例如將 <code>obj -> obj != null</code> 取代為 <code>Objects::nonNull</code>。 
-  使用<a href="settings://preferences.sourceCode.Java?Lambda%20Body">設定 | 編輯器 | 程式碼樣式 | Java | 程式碼生成</a>設定來設定特殊方法引用。
+  使用<a href="settings://preferences.sourceCode.Java?Lambda%20Body">設定 | 編輯 | 程式碼樣式 | Java | 程式碼生成</a>設定來設定特殊方法引用。
 </p>
 <p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>
 </body>

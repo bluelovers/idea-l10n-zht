@@ -1,18 +1,18 @@
 <html>
 <body>
-<p>報告 Spring XML 應用程式上下文中的停用設定檔案。</p>
+<p>報告 Spring XML 應用程式上下文中的非活動設定檔案。</p>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
-  &lt;!-- 為此應用程式上下文選擇有效設定檔案 <strong>'DEV'</strong> --&gt;
+  &lt;!-- 為該套用程序上下文選擇了活動設定檔案 <strong>'DEV'</strong> --&gt;
   &lt;beans profile="<strong>DEV</strong>"&gt;
     &lt;bean class="MyFactory" factory-method="createBean"/&gt;
   &lt;/beans&gt;
-  &lt;!--  此標記的內容高亮顯示為 'unused' --&gt;
+  &lt;!--  此標籤的內容高亮顯示為 ‘unused’ --&gt;
   <em>&lt;beans profile="<strong>TESTS</strong>"&gt;
     &lt;bean class="MyTestFactory" factory-method="createBean"/&gt;
   &lt;/beans&gt;</em>
-  &lt;!--  'unused' 部分的結尾 --&gt;
+  &lt;!--  ‘unused’ 部分的結尾 --&gt;
   &lt;/beans&gt;
 </code></pre>
 </body>

@@ -1,13 +1,8 @@
 <html>
 <body>
-<p>報告在屬性存取器上重複使用非 <code>@Repeatable</code> 註解的情況。</p>
-<p>
-    由於多次使用非 <code>@Repeatable</code> 註解，這兩種註解的使用都會出現在字節碼中，從而導致反射調用中的歧義。
-</p>
-<p>
-    從 Kotlin 1.4 開始，必須將註解標記為 <code>@Repeatable</code> 或不重複註解，否則會導致編譯錯誤。
-</p>
-<p><b>範例：</b></p>
+<p>報告在屬性存取器上重複使用非 <code>@Repeatable</code> 註解而沒有 <code>SOURCE</code> 保留。</p>
+<p>因此，兩種註解用法都將出現在字節碼中，從而導致反射調用中出現歧義。</p>
+<p><b>範例:</b></p>
 <pre><code>
   annotation class Foo(val x: Int)
 

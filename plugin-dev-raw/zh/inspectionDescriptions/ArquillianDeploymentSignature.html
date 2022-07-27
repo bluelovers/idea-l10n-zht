@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>報告使用 <code>@Deployment</code> 註解的方法的不正確簽名。</p>
+<p>報告用 <code>@Deployment</code> 註解的方法簽名不正確。</p>
 <p>
-  根據 <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/en-US/html/gettingstarted.html#d0e451">Arquillian 文檔</a>，Arquillian 測試類應該使用具有特定簽名的 public static 方法定義部署歸檔，並使用 <code>@Deployment</code> 註解。
+  根據 <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/en-US/html/gettingstarted.html#d0e451">Arquillian 文檔</a>，Arquillian 測試類應該使用具有特定簽名的 public static 方法定義部署存檔，並使用 <code>@Deployment</code>。
 </p>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
-  //此測試用例無法被 Arquillian 啟動，Deployment 方法不為 static
+  //這個測試用例不能被 Arquillian 啟動，Deployment 方法不為 static
   @RunWith(Arquillian.class)
   public class SomeTest {
     @Deployment

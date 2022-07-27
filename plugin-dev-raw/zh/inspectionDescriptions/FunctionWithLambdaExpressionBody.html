@@ -1,13 +1,10 @@
 <html>
 <body>
-報告具有 <code>= { ... }</code> 和推斷返回類型的函數。
-<p><b>範例：</b></p>
-<pre><code>
-  fun sum(a: Int, b: Int) = { a + b } // 此函數的返回類型為 '() -> Int'。
-</code></pre>
-<p>該快速修復會移除大括號：</p>
-<pre><code>
-  fun sum(a: Int, b: Int) = a + b
-</code></pre>
+報告具有 `<b>= { ... }</b>` 和推斷返回類型的函數。
+
+<pre>
+fun sum(a: Int, b: Int) = { a + b } // 此函數的返回類型為 '() -> Int'。
+</pre>
+
 </body>
 </html>

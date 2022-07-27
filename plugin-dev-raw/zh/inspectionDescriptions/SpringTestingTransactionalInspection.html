@@ -1,10 +1,10 @@
 <html>
 <body>
-<p>報告在註解為 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html">@Transactional</a> 的測試類中使用 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/transaction/BeforeTransaction.html">@BeforeTransaction</a> 和 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/transaction/AfterTransaction.html">@AfterTransaction</a> 註解的無效事務生命周期方法宣告。</p>
+<p>報告在註解為 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html">@Transactional</a> 的測試類中用 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/transaction/BeforeTransaction.html">@BeforeTransaction</a> 和 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/transaction/AfterTransaction.html">@AfterTransaction</a> 註解的無效事務生命周期方法宣告。</p>
 
-<p>註解的方法必須沒有實參和返回類型。</p>
+<p>帶註解的方法必須沒有參數和返回類型。</p>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   @ContextConfiguration
   @Transactional
@@ -12,7 +12,7 @@
     @BeforeTransaction // 方法返回類型應為 'void'
     public boolean setupData() {...}
 
-    @AfterTransaction // 實參數量錯誤
+    @AfterTransaction // 參數數量錯誤
     public void disposeData(boolean a) throws Exception {...}
   }
 </code></pre>

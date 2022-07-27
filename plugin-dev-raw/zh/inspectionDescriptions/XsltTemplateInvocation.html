@@ -1,11 +1,29 @@
 <html>
-<body>
-報告缺少實參、傳遞未被宣告的實參，以及在命名 XSLT 模板調用中多次傳遞參數的實參。
+<head>
+  <style type="text/css">
+    body, table {
+      font-family: Verdana, sans-serif;
+      font-size: 100%;
+      padding-left: 2mm;
+    }
 
+    #footer {
+      font-size: 95%;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
 <p>
-使用預設值宣告的參數是可選參數，不會被報告為缺失。
+  報告在調用命名為 XSLT 的模板時發生的以下問題之一：缺少實參、傳遞
+  未在模板中宣告的實參，或為特定參數多次傳遞實參。
 </p>
 
-<p><small>由 XPathView + XSLT-Support 提供技術支援</small></p>
+<p>
+用預設值宣告的參數是可選的，因此被忽略。
+</p>
+
+<p id="footer">由 XPathView + XSLT-Support 提供技術支援</p>
 </body>
 </html>

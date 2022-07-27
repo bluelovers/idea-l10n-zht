@@ -1,21 +1,21 @@
 <html>
 <body>
-報告具有非 <b>void</b> 返回類型的方法結尾缺少 <code>return</code> 語句。
-方法的執行流應該可以執行到方法結尾。
-<p><b>範例：</b></p>
+報告具有非 <b>void</b> 返回類型的方法末尾缺少 <code>return</code> 語句。
+方法的執行流應該可以執行到方法末尾。
+<p><b>範例:</b></p>
 <pre>
 <code>
 String foo(int a) {
   if (a > 0) {
     return "more than zero"
   }
-} // foo(-1) 將返回 'null'
+} // foo(-1) will return 'null'
 
 int bar(int a) {
   if (a > 0) {
     return a
   }
-} // bar(-1) 將失敗並引發執行時異常
+} // bar(-1) will fall with runtime exception
 </code>
 </pre>
 </body>

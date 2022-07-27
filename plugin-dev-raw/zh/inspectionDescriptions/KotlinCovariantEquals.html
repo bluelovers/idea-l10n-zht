@@ -1,14 +1,5 @@
 <html>
 <body>
-報告當該類沒有另一個採用 <code>Any?</code> 作為其實參類型的 <code>equals()</code> 時，採用除 <code>Any?</code> 以外的實參類型的 <code>equals()</code>。
-<p><b>範例：</b></p>
-<pre><code>
-  class Foo {
-      fun equals(other: Foo?): Boolean {
-          return true
-      }
-  }
-</code></pre>
-<p>要修正此問題，請創建採用 <code>Any?</code> 類型實參的 <code>equals()</code> 方法。</p>
+報告當包含類沒有另一個接受 <b>Any?</b> 作為其實參類型的 <b>equals()</b> 方法時，接受除 <b>Any?</b> 以外的實參類型的 <b>equals()</b> 方法。
 </body>
 </html>

@@ -1,22 +1,22 @@
 <html>
 <body>
 報告引用擁有註釋的方法、擁有註釋的方法的 super 方法或包含註釋的類的 Javadoc <code>@see</code>、<code>{@link}</code> 和 <code>{@linkplain}</code> 標記。
-<p>此類鏈接不必要，可以通過此檢查的快速修復安全移除。 如果標記是唯一內容，快速修復將移除整個 Javadoc 註釋。</p>
-<p><b>範例：</b></p>
-<pre><code>
+<p>此類鏈接不必要，可以通過此檢查的快速修復安全移除。 如果 Javadoc 註釋引用它自己的內容，快速修復將移除整個 Javadoc 註釋。</p>
+<p><b>範例:</b></p>
+<pre>
   class Example {
     /**
      * @see Example#method
      */
     public void method() { }
   }
-</code></pre>
+</pre>
 <p>在套用快速修復後：</p>
-<pre><code>
+<pre>
 class Example {
   public void method() { }
 }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>
 使用下面的複選框可以忽略指向 super 方法的內聯鏈接（<code>{@link}</code> 和 <code>{@linkplain}</code>）。 儘管 Javadoc 工具會自動添加指向所有 super 方法的鏈接，但有時在 Javadoc 註釋的文本中可能需要指向 super 方法的內聯鏈接。

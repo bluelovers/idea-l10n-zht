@@ -2,7 +2,7 @@
 <body>
 報告顯式裝箱，即將基元值包裝到物件中。
 <p>對於 Java 5 和更高版本，不必要進行顯式手動裝箱，並且可以安全移除。</p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <ul>
   <li><code>Integer i = new Integer(1);</code> &rarr; <code>Integer i = Integer.valueOf(1);</code></li>
   <li><code>int i = Integer.valueOf(1);</code> &rarr; <code>int i = 1;</code></li>
@@ -12,6 +12,6 @@
 <p>
 使用<b>僅報告真正多餘的裝箱表達式</b>選項，可僅報告真正多餘的裝箱，其中的裝箱值立即隱式或顯式地拆箱。
 在本例中，可以移除整個裝箱-拆箱步驟。 該檢查不報告簡單的顯式裝箱。
-<p>僅當專案或模組的語言級別為 5 或更高時，此檢查才會報告。</p>
+<p>僅當專案或模組的語言級別為 5 級或更高級別時，該檢查才會進行報告。</p>
 </body>
 </html>

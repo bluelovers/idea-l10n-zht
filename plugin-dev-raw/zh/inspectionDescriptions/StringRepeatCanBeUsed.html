@@ -1,7 +1,7 @@
 <html>
 <body>
 報告可以取代為單一 <code>String.repeat()</code> 方法的迴圈（自 Java 11 起提供）。
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   void append(StringBuilder sb, int count, Object obj) {
     for (int i = 0; i &lt; count; i++) {
@@ -22,6 +22,6 @@
   <p>同樣，如果不知道要重複的字串能否為 <code>null</code>，可將其包裝在 <code>String.valueOf</code> 中，以防止可能發生的 <code>NullPointerException</code>。
 </p>
 <p>僅當專案或模組的語言級別為 11 或更高時，此檢查才會報告。</p>
-<p><small>2019.1 最新變化</small></p>
+<p><small>2019.1 的新功能</small></p>
 </body>
 </html>

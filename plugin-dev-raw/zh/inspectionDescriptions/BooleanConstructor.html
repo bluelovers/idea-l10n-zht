@@ -3,16 +3,16 @@
 報告 <code>Boolean</code> 物件的創建情況。
 <p>
   基本不必要創建新的 <code>Boolean</code> 物件，如果經常這樣做，可能會導致性能問題。 此外，<code>Boolean</code> 構造函數自 Java 9 起已棄用，在未來的 Java 版本中可能會被移除或變得無法存取。</p>
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   Boolean b1 = new Boolean(true);
   Boolean b2 = new Boolean(str);
-</code></pre>
+</pre>
 <p>在套用快速修復後：</p>
-<pre><code>
+<pre>
   Boolean b1 = Boolean.TRUE;
   Boolean b2 = Boolean.valueOf(str);
-</code></pre>
+</pre>
 <!-- tooltip end -->
 </body>
 </html>

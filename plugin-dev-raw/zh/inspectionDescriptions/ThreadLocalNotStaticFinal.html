@@ -4,12 +4,12 @@
 <p>
   在最常見的情況下，<code>java.lang.ThreadLocal</code> 實例會將狀態與執行緒關聯。
   非 static、非 final <code>java.lang.ThreadLocal</code> 欄位會將狀態與實例執行緒組合關聯。
-  這通常是不必要的，而且通常是可能導致記憶體泄漏和行為不正確的錯誤。
+  這通常是不必要的，而且往往是可能導致記憶體泄漏和行為不正確的錯誤。
 </p>
 <p>
   建議通過快速修復將該欄位設為 <code>static final</code>。
 <p>
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   private ThreadLocal tl = ThreadLocal.withInitial(() -> Boolean.TRUE);
 </code></pre>

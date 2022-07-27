@@ -1,17 +1,5 @@
 <html>
 <body>
 報告可以設為 <code>private</code> 以遵循封裝原則的宣告。
-<p><b>範例：</b></p>
-<pre><code>
-class Service(val url: String) {
-    fun connect(): URLConnection = URL(url).openConnection()
-}
-</code></pre>
-<p>套用快速修復後（考慮到 <code>Service</code> 類之外沒有使用 <code>url</code> 的情況）：</p>
-<pre><code>
-class Service(private val url: String) {
-    fun connect(): URLConnection = URL(url).openConnection()
-}
-</code></pre>
 </body>
 </html>

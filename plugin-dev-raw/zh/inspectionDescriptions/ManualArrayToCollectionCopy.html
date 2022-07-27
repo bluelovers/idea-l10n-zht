@@ -6,21 +6,21 @@
 </p>
 <p>
 <p>僅報告內部沒有附加語句的迴圈。</p>
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   void addAll(List&lt;String&gt; list, String[] arr) {
     for (int i = 0; i &lt; arr.length; i++) {
       String s = arr[i];
       list.add(s);
     }
   }
-</code></pre>
+</pre>
 <p>在套用快速修復後：</p>
-<pre><code>
+<pre>
   void addAll(List&lt;String&gt; list, String[] arr) {
     Collections.addAll(list, arr);
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
 <p>
 

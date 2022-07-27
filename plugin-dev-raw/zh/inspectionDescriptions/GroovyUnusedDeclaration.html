@@ -1,18 +1,20 @@
 <html>
 <body>
-<p>報告未使用的類、方法和欄位。</p>
-<p><b>範例：</b></p>
+報告未使用的類、方法和欄位。
+<p><b>範例:</b></p>
 <pre><code>
   public class Department {
       private Organization myOrganization;
   }
 </code></pre>
-<p>在這裡，<code>Department</code> 顯式引用 <code>Organization</code>，但如果 <code>Department</code> 類未使用，則此檢查將報告這兩個類。 
+<p>在本例中，<code>Department</code> 顯式引用 <code>Organization</code>，
+但如果未使用 <code>Department</code> 類，則此檢查將報告這兩個類。 
 
 <p>
-該檢查還會報告其方法、所有方法實作/覆寫器未使用的參數，以及已宣告但未使用的局部變數。
+該檢查還會報告其方法、所有方法實作/覆寫器未使用的參數，
+以及已宣告但未使用的局部變數。
 </p>
 <!-- tooltip end -->
-<p>有關更多資訊，請參閱 Java 中的相同檢查。</p>
+<p>有關更多資訊，請參閱 Java 中的同一檢查。</p>
 </body>
 </html>

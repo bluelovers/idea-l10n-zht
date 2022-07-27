@@ -1,18 +1,10 @@
 <html>
 <body>
-報告 <code>await</code> 的冗餘用法，例如 <code>await await</code> 或等待非 promise 結果。
-<!-- tooltip end -->
-<p>
-  選擇“報告 promise”選項時，建議在適用時（在 <code>return</code> 語句中以及包含 <code>Promise.resolve/reject</code> 時）移除 promise 前面的 <code>await</code>。
-</p>
-<p>在此類上下文中移除 <code>await</code> 會導致兩個問題。</p>
-<ul>
-  <li>
-    用 <code>try-catch </code> 環繞程式碼並且忘記添加 <code>await</code> 會改變程式碼語意，而您可能沒有注意到這一點。
-  </li>
-  <li>
-    採用顯式的 <code>await</code> 可能會阻止 V8 執行時提供<a href="http://bit.ly/v8-zero-cost-async-stack-traces">異步堆疊跟踪</a>。
-  </li>
-</ul>
+報告 <code>await</code> 的冗餘用法，例如 <code>await await</code> 或等待非 promise 結果。<br/><br/>
+
+在選中“報告 promise”複選框的情況下，建議在適用時 (在 <code>return</code> 語句中以及包含 <code>Promise.resolve/reject</code> 時) 移除 promise 前面的 <code>await</code>。<br/>
+在這樣的上下文中移除 <code>await</code> 會導致兩個問題。<br/><ul>
+<li>用 <code>try-catch <code> 環繞程式碼並且忘記添加 <code>await</code> 會改變程式碼語意，而您可能沒有注意到這一點。</li>
+<li>採用顯式的 <code>await</code> 可能會阻止 V8 執行時提供<a href="http://bit.ly/v8-zero-cost-async-stack-traces">異步堆疊跟踪</a>。</li></ul>
 </body>
 </html>

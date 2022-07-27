@@ -3,15 +3,15 @@
 報告對空集合、映射或陣列的冗餘操作。
 <p>
   在空集合上迭代、移除元素、排序和某些其他操作沒有任何效果，可以移除。 此外，它們可能表明存在錯誤。</p>
-<p><b>範例：</b></p>
-<pre><code>
+<p><b>範例:</b></p>
+<pre>
   if (numbers.isEmpty()){
-    //由於缺少否定，因此出現錯誤
+    //由於缺少求反，因此錯誤
     int max = numbers.stream().max(Comparator.naturalOrder()).get();
     ...
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
-<p><small>2019.1 最新變化</small></p>
+<p><small>2019.1 的新功能</small></p>
 </body>
 </html>

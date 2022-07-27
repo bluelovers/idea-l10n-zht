@@ -3,13 +3,13 @@
 在以下情況下報告錯誤定義的持久物件類：
 
 <ul>
-  <li>類不是頂級類</li>
+  <li>類不是頂級的</li>
   <li>類為 final</li>
   <li>類被多次註解</li>
-  <li>類被定義為持久實體和實體偵聽器</li>
+  <li>類被定義為持久實體和實體監聽器</li>
 </ul>
 
-<p><b>範例：</b></p><br/>
+<p><b>範例:</b></p><br/>
 <pre><code>
   @Entity
   @EntityListeners(value = JavaEntity.class) // 錯誤：@Entity 和 @EntityListener 註解都指向同一個類

@@ -3,30 +3,30 @@
 <p>
   報告 <code>additional-spring-configuration-metadata.json</code> 設定檔案中缺失和棄用的屬性、未解析的引用和無效值。</p>
 
-<p><b>範例：</b></p>
+<p><b>範例:</b></p>
 <pre><code>
   {
     "properties": [
       {
         "name": "old.key",
-        "type": "com.Unknown", // 報告 '無法解析 'Unknown' 類'
-        "description": "Description for old.key", // 報告 '文本應以 '.' 結尾'
+        "type": "com.Unknown", // 報告 ‘無法解析類 ’Unknown‘”
+        "description": "Description for old.key", // 報告"文本應以 '.' 結尾"
         "deprecation": {
-          "replacement": "new.key", // 報告 '無法解析設定鍵引用 'new.key''
-          "reason": "Reason", // 報告 '文本應以 '.' 結尾'
+          "replacement": "new.key", // Reports “無法解析設定鍵引用 'new.key‘”
+          "reason": "Reason", // 報告“文本應以 '.' 結尾”
           "level": "warning"
          }
       },
       {
-        "name": "duplicate", // 報告 'duplicate' 的重複條目'
+        "name": "duplicate", // 報告 "'duplicate' 的重複條目"
         "type": "java.lang.String"
       },
       {
-        "name": "duplicate", // 報告 'duplicate' 的重複條目'
+        "name": "duplicate", // 報告 "'duplicate' 的重複條目"
         "type": "java.lang.String"
       },
       {
-        // 報告 '缺少必要的 'name''
+        // 報告 “缺失必要的 'name'"
         "type": "java.lang.String"
       }
     ]

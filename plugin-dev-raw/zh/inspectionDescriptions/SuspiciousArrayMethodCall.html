@@ -1,14 +1,16 @@
 <html>
 <body>
-報告對 <code>Arrays.fill()</code> 等實參類型不符合的非泛型陣列操作方法的調用。
-此類調用不會執行任何有用的工作，很可能是錯誤的。
-<p><b>範例：</b></p>
-<pre><code>
+報告對 <code>Arrays.fill()</code> 等參數類型不符合的非泛型陣列操作方法的調用。
+<p>
+  這樣的調用不會執行任何有用的工作，很可能是錯誤的。
+</p>
+<p><b>範例:</b></p>
+<pre>
   int foo(String[] strings) {
     return Arrays.binarySearch(strings, 1);
   }
-</code></pre>
+</pre>
 <!-- tooltip end -->
-<p><small>2017.2 最新變化</small></p>
+<p><small>2017.2 的新功能</small></p>
 </body>
 </html>
