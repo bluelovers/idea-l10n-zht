@@ -1,5 +1,30 @@
 {
-  "ActionsBundle.properties": {
+  "defaultBundleActions/DefaultActionsBundle.properties": {
+    "action.NewPrivateEnvironmentFile.text": "http-client.private.env.json",
+    "action.ActivateJavaEnterpriseToolWindow.text": "Java Enterprise",
+    "action.GenerateServletAction.text": "Servlet…",
+    "action.ConvertToMacLineSeparators.text": "CR - Classic Mac OS (\n)",
+    "action.Ant_6117483dJSON": "Schemas Update.text=<default target>",
+    "group.DevkitNewActions.text": "Plugin DevKit",
+    "action.NewPublicEnvironmentFile.text": "http-client.env.json",
+    "group.Console.Jdbc.ExplainGroup.text": "Explain Plan",
+    "action.Android.TransportDemo.text": "Transport Pipeline",
+    "action.NewAndroidVectorAsset.text": "Vector Asset",
+    "action.ConvertToWindowsLineSeparators.text": "CRLF - Windows (\n)",
+    "group.Spring.Beans.Generate.Action.text": "Spring Bean",
+    "action.CreateJavaeeWebPageAction.text": "JSP/JSPX",
+    "action.KotlinGenerateMavenTestCompileExecutionAction.description": "kotlin-maven-execution-provider",
+    "action.KotlinGenerateMavenCompileExecutionAction.description": "kotlin-maven-execution-provider",
+    "action.NewPackageInfo.text": "package-info.java",
+    "action.Github.PullRequest.Review.Submit.text": "…",
+    "action.NewModuleInfo.text": "module-info.java",
+    "action.Android.RunLayoutInspector.text": "Layout Inspector",
+    "action.KotlinGenerateMavenPluginAction.description": "kotlin-maven-plugin-provider",
+    "action.Faces.CreateJsfAction.text": "JSF/Facelets",
+    "action.Ant_6117483dBuild": "GroovyResetAgent.text=<default target>",
+    "action.ActivateLayoutValidationToolWindow.text": "Layout Validation"
+  },
+  "messages/ActionsBundle.properties": {
     "action.GenerateCreateUI.text": "createUI(...)",
     "action.Actions.ActionsPlugin.GenerateToString.text": "to_String()",
     "group.VcsGroups.text": "Git(_G)",
@@ -7,20 +32,21 @@
     "group.Internal.UI.text": "UI(&U)",
     "group.FileChooserToolbar.text": "File Chooser Toolbar",
     "action.SearchEverywhereToolbarHotKey.hotkey": "Shift+Shift",
-    "action.TextSearchAction.text": "Text..."
+    "action.Debugger.ShowCollectionHistory.text": "Show Collection History",
+    "action.TextSearchAction.text": "Text...",
+    "group.LeftToolbarSideGroupXamarin.text": "Left Side (Xamarin)",
+    "group.RightToolbarSideGroupXamarin.text": "Right Side (Xamarin)"
   },
-  "AnalysisBundle.properties": {
+  "messages/AnalysisBundle.properties": {
     "inspection.export.results.capitalized.abstract.class": "Abstract\\&nbsp;class"
   },
-  "AndroidBundle.properties": {
-    "action.Android.RunAndroidAvdManager.text": "AVD Manager",
+  "messages/AndroidBundle.properties": {
     "android.logcat.color.page.name": "Android Logcat",
     "android.test.run.configuration.type.name": "Android Instrumented Tests",
     "android.wizard.module.new.wear": "Wear OS",
     "android.wizard.module.new.tv": "Android TV",
     "android.wizard.module.new.google.cloud": "Google Cloud",
     "android.wizard.module.config.new.base.missing": "<No Base Module found>",
-    "android.dex.compiler.configurable.display.name": "Android Compilers",
     "android.sdk.presentable.name": "Android SDK",
     "android.extended.device.chooser.avd.label": "Android Virtual Device(&A):",
     "android.logcat.new.filter.dialog.pid.label": "PID(&P):",
@@ -33,29 +59,37 @@
     "checkbox.use.custom.formatting.settings.for.android.xml.files": "Use custom formatting settings for Android XML files",
     "checkbox.group.tags.with.the.same.name": "Group tags with the same name",
     "checkbox.insert.line.breaks.around.style.declaration": "Insert line breaks around style declaration",
-    "label.each.android.sdk.platform.package": "<html>Each Android SDK Platform package includes the Android platform and sources pertaining to an API level by default. Once installed, IDE will automatically check for updates. Check \"show package details\" to display individual SDK components.</html>",
     "configurable.name.device.file.explorer": "Device File Explorer",
     "configurable.name.android.device.file.explorer": "Android Device File Explorer"
   },
-  "AndroidLintBundle.properties": {
+  "messages/AndroidLintBundle.properties": {
     "android.lint.inspections.always.show.action": "Usage of showAsAction=always",
     "android.lint.inspections.appbundle.locales": "Android App Bundle with runtime locale changes",
     "android.lint.inspections.data.extraction.rules": "Missing data extraction rules",
     "android.lint.inspections.intent.filter.unique.data.attributes": "Data tags should only declare unique attributes",
     "android.lint.inspections.redundant.label": "Redundant label on activity",
     "android.lint.inspections.view.binding.type": "tools:viewBindingType issues",
-    "android.lint.inspections.web.view.client.on.received.ssl.error": "Proceeds with the HTTPS connection despite SSL errors"
+    "android.lint.inspections.web.view.client.on.received.ssl.error": "Proceeds with the HTTPS connection despite SSL errors",
+    "android.lint.inspections.custom.splash.screen": "Application-defined Launch Screen",
+    "android.lint.inspections.motion.layout.missing.id": "Views inside MotionLayout require an id",
+    "android.lint.inspections.wearable.configuration.action": "Wear configuration action metadata must match an activity"
   },
-  "Angular2Bundle.properties": {
+  "messages/Angular2Bundle.properties": {
     "angular.action.goto-related.inline": "<inline>",
     "angular.action.new-project.name": "Angular CLI",
     "angular.action.new-project.presentable-package-name": "Angular CLI(&C):",
     "angular.description.angular-cli": "Angular CLI",
     "angular.description.unknown-class": "<unknown class>",
     "angular.description.unnamed": "<unnamed>",
-    "angular.inspection.cyclic-module-dependency.message.separator": "->"
+    "angular.inspection.cyclic-module-dependency.message.separator": "->",
+    "angular.inspection.undefined-binding.message.attribute-directive-out-of-scope": "Directive that provides attribute {0} is out of scope of the current template",
+    "angular.inspection.undefined-tag.message.out-of-scope": "Component or directive matching {0} element is out of scope of the current template",
+    "angular.quickfix.ngmodule.import.name.choice": "Import Angular entity...",
+    "angular.quickfix.ngmodule.import.select.module": "Angular Entity to Import",
+    "angular.inspection.wrong-entity-type.message.not-importable": "Class {0} cannot be imported (neither an Angular module nor a standalone declarable)",
+    "angular.inspection.wrong-entity-type.message.standalone-declarable": "Class {0} is standalone, and cannot be declared in an Angular module. Did you mean to import it instead?"
   },
-  "AppCodeBundle.properties": {
+  "messages/AppCodeBundle.properties": {
     "sdk.type.name": "Apple SDK",
     "project.settings.multiple.values": "<Multiple values>",
     "dialog.title.new.launch.image": "New Launch Image",
@@ -77,7 +111,7 @@
     "colorscheme.xcode.prefix": "Xcode - {0}",
     "execution.mac.rosetta": "(Rosetta)"
   },
-  "AppEngineBundle.properties": {
+  "messages/AppEngineBundle.properties": {
     "group.PythonAppEngine.text": "Google App Engine",
     "app-engine": "Google App Engine",
     "app-engine-python": "Google App Engine (Python)",
@@ -86,10 +120,15 @@
     "configurable.AppEngineModulesConfigurable.display.name": "Google App Engine",
     "python.app.engine.project.name": "Google App Engine"
   },
-  "AppServersCommonBundle.properties": {
+  "messages/AppInspectionBundle.properties": {
+    "inspection.is.running": "<b>App Inspection</b> is running in the background.<br>You can either <a href=\"stop\">stop</a> it, or leave it running and resume your session later.",
+    "inspector.stopped": "{0} has stopped running.",
+    "inspector.forcefully.stopped": "{0} has been replaced by a different instance launched by another project."
+  },
+  "messages/AppServersCommonBundle.properties": {
     "ServerInstance.exception.message": "{0}: {1}"
   },
-  "ApplicationBundle.properties": {
+  "messages/ApplicationBundle.properties": {
     "wrapping.try.resources": "'try-with-resources'",
     "combobox.crlf.windows": "Windows (\\r\\n)",
     "combobox.crlf.mac": "Classic Mac OS (\\r)",
@@ -98,11 +137,12 @@
     "settings.hints.group.code.vision": "Code Vision",
     "settings.hints.new.group.code.vision": "Code Vision"
   },
-  "ArquillianBundle.properties": {
+  "messages/ArquillianBundle.properties": {
     "arquillian.junit.configuration.name": "Arquillian JUnit",
     "arquillian.testng.configuration.name": "Arquillian TestNG"
   },
-  "AspectJBundle.properties": {
+  "messages/AspectJBundle.properties": {
+    "maven.importer.aspect.library": "<html>Could not resolve aspect library ''{0}:{1}'' in a module ''{2}''.</html>",
     "parser.message.type.def.expected": "Aspect or class declaration expected",
     "highlighting.tooltip.link": "<a href=\"#navigation/{0}:{1}\">{2}</a>",
     "highlighting.tooltip.html": "<html><body>{0}</body></html>",
@@ -110,23 +150,44 @@
     "facet.validation.stray.entry": "Aspect path entry ''{0}'' is not in module''s classpath",
     "aspect.path.add.title": "Chose Aspect Path Entries"
   },
-  "BVBundle.properties": {
+  "messages/BVBundle.properties": {
     "label.unknown": "@unknown"
   },
-  "BackgroundTaskBundle.properties": {
+  "messages/BackgroundTaskBundle.properties": {
     "settings.name": "File Watcher",
     "inspections.group.name": "File Watcher",
     "editor.notification.question.text.part.that.becomes.link.to.settings": "File Watcher",
     "custom.file.watcher.name.placeholder": "<custom>",
     "command.name.file.watcher.0": "File Watcher: {0}",
     "actions.on.save.page.checkbox.file.watcher.0": "File Watcher: {0}",
-    "actions.on.save.page.label.file.watcher": "File Watcher"
+    "actions.on.save.page.label.file.watcher": "File Watcher",
+    "actions.on.save.page.file.watcher.label": "File Watcher"
   },
-  "CLionCMakeBundle.properties": {
+  "messages/BookmarkBundle.properties": {
+    "bookmark.group.create.action.text": "Create Bookmark List...",
+    "bookmark.group.delete.action.text": "Delete Bookmark List",
+    "bookmark.group.rename.action.text": "Rename Bookmark List...",
+    "dialog.group.create.title": "Create Bookmark List",
+    "dialog.group.rename.title": "Rename Bookmark List",
+    "dialog.group.select.title": "Select Bookmark List",
+    "dialog.group.message.label": "Bookmark list:",
+    "view.confirm.deleting.lists": "Ask Before Deleting Lists",
+    "dialog.message.delete.single.list.title": "Delete Bookmark List",
+    "dialog.message.delete.multiple.lists.title": "Delete Bookmark Lists",
+    "dialog.message.delete.single.node.title": "Delete Bookmark Node",
+    "dialog.message.delete.multiple.nodes.title": "Delete Bookmark Nodes",
+    "dialog.message.delete.single.list": "Are you sure you want to delete ''{0}'' bookmark list? This action can''t be undone.",
+    "dialog.message.delete.multiple.lists": "Are you sure you want to delete the selected bookmark lists? This action can't be undone.",
+    "dialog.message.delete.single.node": "Are you sure you want to delete {0} bookmarks in ''{1}''? This action can''t be undone.",
+    "dialog.message.delete.multiple.nodes": "Are you sure you want to delete the selected bookmark nodes? This action can't be undone."
+  },
+  "messages/CLionCMakeBundle.properties": {
     "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options",
-    "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options"
+    "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options",
+    "notification.preset.cannot.be.loaded": "{0,choice, 1#Preset|2#Presets} {1} cannot be loaded due to configuration error.",
+    "notification.profiles.were.removed": "{0,choice, 1#Profile|2#Profiles} {1} {0,choice, 1#was|2#were} removed due to configuration error."
   },
-  "CLionExecutionBundle.properties": {
+  "messages/CLionExecutionBundle.properties": {
     "cpp.build.description.1": "====================[ {0} ]====",
     "cpp.build.description.2": "====================[ {0} | {1} ]====",
     "cpp.build.description.3": "====================[ {0} | {1} | {2} ]====",
@@ -136,39 +197,42 @@
     "gdbRemote.toolchain.debuggerDoesNotExist.brief": "{0}",
     "coredump.sysroot": "Sysroot:"
   },
-  "CLionProfilingBundle.properties": {
+  "messages/CLionProfilingBundle.properties": {
     "dynamic.analysis.tools.memcheck.border.title": "Valgrind Memcheck",
     "sanitizers.llvmSymbolizer.notification.title": "Google Sanitizers"
   },
-  "CMakeBundle.properties": {
+  "messages/CMakeBundle.properties": {
     "cmake.action.newCMakeLists.title": "CMakeLists.txt"
   },
-  "CPPBundle.properties": {
+  "messages/CPPBundle.properties": {
     "language.cpp.settings.description": "C/C++"
   },
-  "CdiBundle.properties": {
+  "messages/CPPProfilerBundle.properties": {
+    "perf.profiler.wsl.not.support": "Perf profiler for WSL is not yet supported"
+  },
+  "messages/CdiBundle.properties": {
     "actions.show.named": "@Named",
     "category.name.produces": "@Produces",
     "category.name.inject": "@Inject",
     "category.name.decorator": "@Decorator"
   },
-  "ChefBundle.properties": {
+  "messages/ChefBundle.properties": {
     "chef.sdk.name": "Chef DK: {0}"
   },
-  "CidrBoostBundle.properties": {
+  "messages/CidrBoostBundle.properties": {
     "boost.test.configuration.name": "Boost.Test"
   },
-  "CidrCTestBundle.properties": {
+  "messages/CidrCTestBundle.properties": {
     "ctest.test.number.column.header": "#"
   },
-  "CidrCoverageBundle.properties": {
+  "messages/CidrCoverageBundle.properties": {
     "gcov.llvm.name": "gcov/llvm",
     "gcov.name": "gcov/llvm-cov",
     "gcov.binary.row.title": "gcov:",
     "llvm.cov.binary.row.title": "llvm-cov:",
     "llvm.profdata.binary.row.title": "llvm-profdata:"
   },
-  "CidrDebuggerBundle.properties": {
+  "messages/CidrDebuggerBundle.properties": {
     "debug.memory.view.name.pattern": "{0} ({1})",
     "debug.address.breakpoint": "{0}",
     "debug.symbolic.breakpoint.emptySymbolName.title": "<Empty>",
@@ -181,18 +245,21 @@
     "debug.exception.breakpoint.when.objc.fragment": "Objective-C",
     "debug.exception.breakpoint.when.kn.fragment": "Kotlin/Native"
   },
-  "CidrDoctestBundle.properties": {
+  "messages/CidrDockerBundle.properties": {
+    "docker.message.server.not.supported": "Remote docker server is not supported"
+  },
+  "messages/CidrDoctestBundle.properties": {
     "doctest.test.noname": "<Anonymous>"
   },
-  "CidrGoogleBundle.properties": {
+  "messages/CidrGoogleBundle.properties": {
     "gtest.test.configuration.name": "Google Test"
   },
-  "CidrLangBundle.properties": {
+  "messages/CidrLangBundle.properties": {
     "objective.c": "Objective-C",
     "c.cpp": "C/C++",
     "language.cpp.configurable.name": "C/C++"
   },
-  "ClangdBundle.properties": {
+  "messages/ClangdBundle.properties": {
     "language.cpp.clangd.quick.fix": "Clangd fix-it",
     "action.ClangdXRefAction.text": "clangd: XRef",
     "clangd.crash.reason.clion.clang.tidy": "clang-tidy",
@@ -204,25 +271,25 @@
     "inspection.clazy.message": "Clazy: {0}",
     "clang.tidy.status.bar.widget.title": ".clang-tidy"
   },
-  "ClionEmbeddedPlatformioBundle.properties": {
+  "messages/ClionEmbeddedPlatformioBundle.properties": {
     "run.config.uploadfs": "PlatformIO Uploadfs"
   },
-  "CloudBundle.properties": {
+  "messages/CloudBundle.properties": {
     "run.configuration.name": "{0} - {1}",
     "editor.pane.text.empty.text": "<html><head>{0}<style>body '{'text-align: center; white-space: normal;background: #{1};color: #{2};'}'</style></head><body>{3}</body></html>"
   },
-  "CloudFormationBundle.properties": {
+  "messages/CloudFormationBundle.properties": {
     "aws.cloudformation.inspections.group.name": "AWS CloudFormation",
     "aws.cloudformation.template.context.type.json": "AWS CloudFormation (JSON)",
     "aws.cloudformation.template.context.type.yaml": "AWS CloudFormation (YAML)",
     "filetype.aws.cloudformation.templates.json.display.name": "\"AWS CloudFormation (JSON)\"",
     "filetype.aws.cloudformation.templates.yaml.display.name": "AWS CloudFormation (YAML)"
   },
-  "CloudFoundryBundle.properties": {
+  "messages/CloudFoundryBundle.properties": {
     "CFIntegration.name": "Cloud Foundry",
     "AppSettingsEditor.memory.item.default": "<Default>"
   },
-  "CodeInsightBundle.properties": {
+  "messages/CodeInsightBundle.properties": {
     "surround.with.cast.template": "((Type)expr)",
     "surround.with.ifelse.template": "if / else",
     "surround.with.if.expression.template": "if (expr) {...}",
@@ -253,18 +320,21 @@
     "non.ascii.chars.inspection.example.mixed.languages.in.comments.label": "e.g.: <code>//c<font color=red>о</font>unts bugs</code> (cyrillic '<font color=red>o</font>' in an english word)",
     "non.ascii.chars.inspection.example.mixed.languages.in.string.label": "e.g.: <code>foo(\"<font color=red>Со</font>re винт\");</code> (cyrillic '<font color=red>Со</font>' in an english word)"
   },
-  "CodeStyleBundle.properties": {
+  "messages/CodeStyleBundle.properties": {
     "arrangement.settings.text.entry.type.static.init": "static init",
     "arrangement.settings.text.modifier.package.private": "package private"
   },
-  "CodeVisionBundle.properties": {
+  "messages/CodeVisionBundle.properties": {
     "CodeVisionConfigurable.configurable.name.code.vision": "Code Vision"
   },
-  "CodeWithMeGuestBundle.properties": {
+  "messages/CodeWithMeGuestBundle.properties": {
     "code.with.me.tm": "Code With Me:",
-    "status.bar.text.ping.ui": "Ping (UI): {0} ({1})"
+    "status.bar.text.ping.ui": "Ping (UI): {0} ({1})",
+    "forward.server.side.port.0.to.client.side": "Forward server-side port {0} to client side",
+    "dialog.title.change.forwarded.port": "Change Forwarded Port",
+    "list.item.change.forwarded.port": "Change Forwarded Port..."
   },
-  "CodeWithMePlatformBundle.properties": {
+  "messages/CodeWithMePlatformBundle.properties": {
     "product.name": "Code With Me",
     "circle.control.tooltip": "<html><div>{0}</div><font color={1}>{2}</font></html>",
     "code.with.me.learn.more.link": "https://www.jetbrains.com/code-with-me/",
@@ -273,28 +343,54 @@
     "license.buy.link": "http://www.jetbrains.com/code-with-me/buy",
     "toolwindow.factory.title.code.with.me": "Code With Me",
     "wire.stats.status.bar.text": "({0}) ↑{1}/s / ↓{2}/s",
-    "metrics.cpu.label": "CPU {0}%",
     "metrics.server.ram.label": "RAM {0}%",
-    "metrics.jvm.ram.label": "JVM RAM {0}%"
+    "metrics.jvm.ram.label": "JVM RAM {0}%",
+    "metrics.cpu.label": "CPU {0}%"
   },
-  "CodeWithMePluginBundle.properties": {
+  "messages/CodeWithMePluginBundle.properties": {
     "permission.dialog.toolWindow.access.tooltip": "Gradle、Ant、Maven、Messages",
     "permission.dialog.toolWindow.access.tooltip.clion": "Gradle、Ant、Maven、Messages、CMake",
-    "backend.control.center.heap": "MiB -Xmx"
+    "backend.control.center.heap": "MiB -Xmx",
+    "converters.convert.failed": "Impossible to convert this part of UI: {0}",
+    "converters.fileYoutrackIssue": "File an issue in YouTrack",
+    "notification.text.file.too.large": "the file is too large"
   },
-  "CommonProfilerBundle.properties": {
-    "ui.what.if.tab": "What-If"
+  "messages/CommonProfilerBundle.properties": {
+    "run.profiler.data.ready": "Profiler data is ready",
+    "ui.what.if.tab": "What-If",
+    "run.profiler.stopRecordingAndShow": "Stop Recording and Show Results",
+    "run.profiler.waiting": "Waiting for profiler to connect"
   },
-  "CompDBBundle.properties": {
+  "messages/CompDBBundle.properties": {
     "compdb.url": "http://clang.llvm.org/docs/JSONCompilationDatabase.html"
   },
-  "ComposeBundle.properties": {
-    "import.get.value": "Import getValue"
+  "messages/ComposePreviewBundle.properties": {
+    "action.animation.inspector.title": "Start Animation Inspection",
+    "action.animation.inspector.description": "<html>Inspect animations defined using the Compose Animation framework frame-by-frame.<br/><br/>Currently, the following APIs are supported:<br/><ul><li><code>updateTransition</code></li><li><code>AnimatedVisibility</code></li></ul></html>",
+    "action.animation.inspector.unavailable.title": "<html>No animations available for inspection.<br/><br/>Currently, the following APIs are supported:<br/><ul><li><code>updateTransition</code></li><li><code>AnimatedVisibility</code></li></ul></html>",
+    "action.stop.animation.inspector.title": "Stop Animation Inspection",
+    "action.interactive.title": "Start Interactive Mode",
+    "action.interactive.description": "Live preview to test gestures",
+    "animation.inspector.animated.visibility.combobox.placeholder.message": "Visibility...",
+    "animation.inspector.tab.animated.visibility.default.title": "Animated Visibility",
+    "action.live.edit.refresh.title": "Fast Build \\&\\& Refresh",
+    "action.live.edit.refresh.description.needs.build": "Fast Build \\&\\& Refresh needs a successful full build to be available",
+    "event.log.live.edit.build.successful": "Compose Preview build completed successfully in {0}",
+    "event.log.live.edit.build.failed": "Compose Preview build failed in {0}",
+    "action.run.title": "Run Preview",
+    "action.run.description": "Run this preview in isolation on the emulator or running device",
+    "picker.preview.annotator.fix.family": "Compose Preview quick fixes",
+    "picker.preview.annotator.lint.error.type": "Bad value type for",
+    "picker.preview.annotator.lint.error.missing": "Missing parameter",
+    "picker.preview.annotator.lint.error.repeated": "Parameters should not be repeated",
+    "picker.preview.annotator.lint.error.type.integer": "should have Integer value.",
+    "picker.preview.annotator.lint.error.type.options": "should be one of: {0}.",
+    "inspection.preview.device.spec.name": "Preview device parameter must have valid syntax"
   },
-  "ComposeProjectWizardBundle.properties": {
+  "messages/ComposeProjectWizardBundle.properties": {
     "module.presentation.name": "Compose Multiplatform"
   },
-  "CsBundle.properties": {
+  "messages/CsBundle.properties": {
     "surrounder.if.else": "if/else",
     "surrounder.try.catch": "try/catch",
     "surrounder.try.finally": "try/finally",
@@ -302,7 +398,7 @@
     "color.display.name.heregex.id": "Heregex id",
     "color.display.name.heredoc.id": "Heredoc id"
   },
-  "CssBundle.properties": {
+  "messages/CssBundle.properties": {
     "css.id.selector": "Id selector",
     "css.unicode.range": "Unicode range",
     "css.pseudo.selector": "Pseudo selector",
@@ -334,20 +430,20 @@
     "settings.show.css.color.preview.as.background": "Show CSS color preview as background",
     "settings.comma.separated.list.of.css.properties.without.vendor.prefix": "Comma-separated list of CSS properties without vendor prefix"
   },
-  "CucumberBundle.properties": {
+  "messages/CucumberBundle.properties": {
     "step.definition.0.1": "{0} {1}"
   },
-  "CucumberJavaBundle.properties": {
+  "messages/CucumberJavaBundle.properties": {
     "run.configuration.form.glue": "Glue(&G)",
     "cucumber.java.run.configuration.type.name": "Cucumber Java"
   },
-  "CucumberJavaScriptBundle.properties": {
+  "messages/CucumberJavaScriptBundle.properties": {
     "notification.name.cucumber.js": "Cucumber.js"
   },
-  "DaemonBundle.properties": {
+  "messages/DaemonBundle.properties": {
     "import.popup.text": "{0}?"
   },
-  "DartBundle.properties": {
+  "messages/DartBundle.properties": {
     "dart.color.settings.description.fat.arrow": "Fat arrow",
     "dart.color.settings.description.symbol.literal": "Symbol literal",
     "dart.color.settings.description.dynamic.local.variable.reference": "Dynamic local variable reference",
@@ -400,17 +496,16 @@
     "dart.problems.view.status.0.and.1": "{0}、{1}",
     "dart.problems.view.status.0.and.1.and.2": "{0}、{1}、{2}",
     "dart.problems.view.status.0.and.filters.1": "{0} ({1})",
-    "debugger.asynchronous.gap.frame": "<asynchronous gap>",
-    "notification.group.dart.webdev": "Dart webdev"
+    "debugger.asynchronous.gap.frame": "<asynchronous gap>"
   },
-  "DataGridBundle.properties": {
+  "messages/DataGridBundle.properties": {
     "Console.TableResult.n.bytes.of.m.bytes.loaded": "{0}/{1}"
   },
-  "DataGripBundle.properties": {
+  "messages/DataGripBundle.properties": {
     "action.StatementUp.text": "Prev_ious Statement",
     "action.StatementDown.text": "N_ext Statement"
   },
-  "DatabaseBundle.properties": {
+  "messages/DatabaseBundle.properties": {
     "settings.data.modification": "Data Modification",
     "settings.submit.changes.immediately": "Submit changes immediately",
     "settings.enable.in.string.literals.with.sql.injection": "Enable in string literals with SQL injection",
@@ -464,55 +559,34 @@
     "notification.content.oracle.home.should.be.defined.action": "<a href='$ACTION0'>Set ORACLE_HOME</a>",
     "deactivate.data.source.notification.title": "{0} [{1}]",
     "group.PlanViewGroup.text": "Explain Plan",
-    "status.text.different.values": "<different values>"
+    "status.text.different.values": "<different values>",
+    "delete.field": "Delete Field",
+    "clone.field": "Clone Field",
+    "add.new.field": "Add New Field",
+    "action.insert.field.dialog.title": "New Field Name"
   },
-  "DatabaseInspectorBundle.properties": {
+  "messages/DatabaseInspectorBundle.properties": {
     "action.export.button.tooltip.title": "Export as File...",
     "export.notification.success.message.reveal": "<a href=reveal>{0}</a>",
     "export.dialog.file.already.exists.overwrite.title": "Export as File..."
   },
-  "DatagenBundle.properties": {
+  "messages/DatagenBundle.properties": {
     "test.data.generator.lorem.ipsum": "Lorem Ipsum",
     "test.data.generator.web.url": "Web URL"
   },
-  "DataloreDSBundle.properties": {
+  "messages/DataloreDSBundle.properties": {
     "Datalore.remote.url": "Notebook URL:",
     "filetype.Datalore.description": "Datalore Notebook"
   },
-  "DefaultActionsBundle.properties": {
-    "action.NewPrivateEnvironmentFile.text": "http-client.private.env.json",
-    "action.ActivateJavaEnterpriseToolWindow.text": "Java Enterprise",
-    "action.GenerateServletAction.text": "Servlet…",
-    "action.ConvertToMacLineSeparators.text": "CR - Classic Mac OS (\n)",
-    "action.Ant_6117483dJSON": "Schemas Update.text=<default target>",
-    "group.DevkitNewActions.text": "Plugin DevKit",
-    "action.NewPublicEnvironmentFile.text": "http-client.env.json",
-    "group.Console.Jdbc.ExplainGroup.text": "Explain Plan",
-    "action.Android.TransportDemo.text": "Transport Pipeline",
-    "action.NewAndroidVectorAsset.text": "Vector Asset",
-    "action.ConvertToWindowsLineSeparators.text": "CRLF - Windows (\n)",
-    "group.Spring.Beans.Generate.Action.text": "Spring Bean",
-    "action.CreateJavaeeWebPageAction.text": "JSP/JSPX",
-    "action.KotlinGenerateMavenTestCompileExecutionAction.description": "kotlin-maven-execution-provider",
-    "action.KotlinGenerateMavenCompileExecutionAction.description": "kotlin-maven-execution-provider",
-    "action.NewPackageInfo.text": "package-info.java",
-    "action.Github.PullRequest.Review.Submit.text": "…",
-    "action.NewModuleInfo.text": "module-info.java",
-    "action.Android.RunLayoutInspector.text": "Layout Inspector",
-    "action.KotlinGenerateMavenPluginAction.description": "kotlin-maven-plugin-provider",
-    "action.Faces.CreateJsfAction.text": "JSF/Facelets",
-    "action.Ant_6117483dBuild": "GroovyResetAgent.text=<default target>",
-    "action.ActivateLayoutValidationToolWindow.text": "Layout Validation"
-  },
-  "DenoBundle.properties": {
+  "messages/DenoBundle.properties": {
     "deno.run.configuration.default.name": "Deno: {0}",
     "deno.inspection.message.prefix": "Deno: {0}",
     "deno.path": "Deno:"
   },
-  "DesignerBundle.properties": {
+  "messages/DesignerBundle.properties": {
     "palette.item.deprecated.tooltip": "<html><body><center><b>{0}</b>{1}</center><p style=''width: 300px''>{2}{3}</p></body></html>"
   },
-  "DevKitBundle.properties": {
+  "messages/DevKitBundle.properties": {
     "error.plugin.xml.tag.invalid": "<Invalid>",
     "new.menu.module.component.text": "Module Component",
     "new.menu.project.component.text": "Project Component",
@@ -522,18 +596,20 @@
     "plugin.xml.convert.action.or.group.invalid.name": "<invalid name>",
     "plugin.xml.convert.language.id.any.language.display.name": "<any language>",
     "dom.generator.dialog.label.javadoc.author": "@author:",
+    "inspection.message.field.may.prevent.intention.preview.to.work.properly": "Field may prevent intention preview from working properly",
+    "inspection.action.is.not.preview.friendly.display.name": "Field blocks intention preview",
     "inspection.message.unnecessary.safe.field.annotation": "Unnecessary @SafeFieldForPreview annotation: the field type is considered to be safe already"
   },
-  "DevKitImagesBundle.properties": {
+  "messages/DevKitImagesBundle.properties": {
     "action.darcula.hidpi.theme.text": "Darcula HiDPI"
   },
-  "DevKitWorkspaceModelBundle.properties": {
+  "messages/DevKitWorkspaceModelBundle.properties": {
     "inspections.group.path": "Plugin DevKit"
   },
-  "DiagnosticBundle.properties": {
+  "messages/DiagnosticBundle.properties": {
     "error.list.message.index.count": "{0}/{1}"
   },
-  "DiagramBundle.properties": {
+  "messages/DiagramBundle.properties": {
     "action.UML.SaveDiagram.text": "IDEA .uml",
     "visibility.level.package": "public + package",
     "visibility.level.protected": "public + package + protected",
@@ -546,17 +622,18 @@
     "action.Diagram.ExportToFileGroup.Mermaid.text": "Mermaid .md",
     "action.Diagram.OpenInOnlineEditorGroup.Mermaid.text": "Mermaid Live"
   },
-  "DiffBundle.properties": {
+  "messages/DiffBundle.properties": {
     "diff.utf.charset.name.bom.suffix": "{0} BOM",
     "blank.diff.recent.content.summary.text.date": "{0} ({1})"
   },
-  "DjangoBundle.properties": {
+  "messages/DjangoBundle.properties": {
     "manage.run.tab.name": "Django: manage.py",
     "inspection.url_tag_arguments.named_arg_string": "''{0}''",
+    "inspection.django-orm-inspection.disabled-m2m-interm": "Method ''{0}'' has to have ''through_defaults'' argument because it''s used on many-to-many relation with an intermediate model. Consider calling it on intermediate model''s own manager.",
     "magic_literals.django_url_name": "Django url",
     "django.manage.name": "manage.py@{0}"
   },
-  "DmServerBundle.properties": {
+  "messages/DmServerBundle.properties": {
     "WithModulePackagingElementPresentation.presentable.name": "ModuleRef: {0}",
     "DMBundleSupportProvider.server.library.name": "dmServer API",
     "DMServerHelper.server.info.default.name": "dmServer ({0})",
@@ -569,7 +646,7 @@
     "ImportedUnitsPanel.list.item": "{0} {1}",
     "ChooseImportedUnitsDialog.item.text": "{0} {1}"
   },
-  "DockerBundle.properties": {
+  "messages/DockerBundle.properties": {
     "InspectDockerAction.description.container": "Inspect the selected container",
     "DockerCloudConfigurable.docker.for.mac.radio.title": "Docker for Mac",
     "DockerCloudConfigurable.docker.for.windows.radio.title": "Docker for Windows",
@@ -608,12 +685,12 @@
     "DockerDeleteProvider.smart.delete.compose": "Compose: {0}",
     "DockerSshConnectionConfigurator.label": "SSH:"
   },
-  "DockerComposeBundle.properties": {
+  "messages/DockerComposeBundle.properties": {
     "ComposeFileRunLineMarkerProvider.ServiceLineMarkerInfo.up.tooltip": "docker-compose up {0}",
     "ComposeFileRunLineMarkerProvider.ServiceLineMarkerInfo.restart.tooltip": "docker-compose restart {0}",
     "ComposeFileRunLineMarkerProvider.AllServicesLineMarkerInfo.tooltip": "docker-compose up"
   },
-  "DownburstBundle.properties": {
+  "messages/DownburstBundle.properties": {
     "external.system.name": "Docker Compose",
     "tool.window.title": "Docker Compose",
     "action.Downburst.Deploy.Down.RemoveVolumes.text": "Down and Remove Volumes",
@@ -629,2217 +706,10 @@
     "action.Downburst.Command.Exec.text": "Exec command in container",
     "action.Downburst.Command.RunOneOff.text": "Run command in new container"
   },
-  "DvcsBundle.properties": {
-    "clone.repository.url.label": "URL:",
-    "multi.message.line.prefix.form": "{0}：{1}"
-  },
-  "EJBHighlightingBundle.properties": {
-    "ejb.enterprise.java.beans": "EJB: Enterprise Java Beans",
-    "ejb.label.name": "<ejb-name>(&N):"
-  },
-  "EclipseBundle.properties": {
-    "eclipse.classpath.storage.description": "Eclipse (.classpath)"
-  },
-  "EditorBundle.properties": {
-    "print.page.width.x.height.unit.template": "{0} x {1} {2}",
-    "intellij.light.color.scheme.name": "IntelliJ Light"
-  },
-  "EditorConfigBundle.properties": {
-    "usage.type.unknown": "<unknown type>",
-    "usage.descriptive.name.unknown": "<unknown name>",
-    "usage.node.text": "{0} {1}",
-    "usage.node.unknown": "<unknown node>"
-  },
-  "EjbBundle.properties": {
-    "action.CreateServletAction.text": "Servlet(_S)",
-    "action.GenerateServletAction.text": "Servlet(&S)…",
-    "label.edit.relationship.ejb": "EJB:"
-  },
-  "EmbeddedBundle.properties": {
-    "svd.write.only": "<Write-Only>",
-    "non.readable": "<Non-readable>",
-    "freertos.task.table.id.column": "TCB №",
-    "label.jlink.gdb.server": "Segger J-Link",
-    "label.st.util.gdb.server": "st-util",
-    "reset.strategy.pre_reset": "Pre-Reset",
-    "reset.strategy.under_reset": "Init-Under-Reset",
-    "jlink.gdb.server.displayname": "Segger JLink",
-    "pemicro.gdb.server.displayname": "PE Micro (OpenSDA)",
-    "stutil.displayname": "st-util"
-  },
-  "EvaluationPluginBundle.properties": {
-    "evaluation.settings.filters.static.title": "static:"
-  },
-  "ExecutionBundle.properties": {
-    "run.configuration.jre.name": "JRE(&J)",
-    "run.configuration.jre.label": "JRE(&J):",
-    "env.vars.system.title": "System environment variables:",
-    "settings.console.kb": " KB",
-    "combo.java.version.5.to.8": "JDK 5 - 8",
-    "combo.java.version.1.4": "JDK 1.4.x",
-    "run.on.targets.label.new.target.of.type": "{0}…",
-    "targets.details.action.new.target.of.type.text": "{0}…",
-    "wsl.folding.placeholder": "{0}: {1}",
-    "run.toolbar.started": "{0}: {1}",
-    "run.toolbar.widget.run.tooltip.text": "{0} ''{1}''"
-  },
-  "ExternalSystemBundle.properties": {
-    "progress.update.text": "{0}：{1}",
-    "external.system.dependency.analyzer.editor.tab.name": "Dependency Analyzer"
-  },
-  "FacesBundle.properties": {
-    "jsf.facelets": "JSF/Facelets",
-    "list.item.jsf.facelets": "JSF/Facelets"
-  },
-  "FeatureSuggesterBundle.properties": {
-    "configurable.name": "Features Suggester",
-    "notification.title": "IDE Features Suggester"
-  },
-  "FindBundle.properties": {
-    "find.no.usages.at.cursor.error": "Cannot search for usages from this location.\nPlace the caret on the element to find usages for and try again.",
-    "find.context.presentation.scope.label": " ({0})",
-    "emptyText.used.option": "{0}"
-  },
-  "FlexBundle.properties": {
-    "flash.builder": "Flash Builder",
-    "dialog.edit.template.checkbox.mxml": "MXML(&M)",
-    "flex.sdk.presentable.name": "Flex/AIR SDK",
-    "can.not.package.bc": "<html><b>{0}</b>: {1}</html>",
-    "autodetected.source.root.type": "ActionScript/Flex",
-    "javascript.uml.visibility.package_local": "protected \\&\\& internal",
-    "actionscript.template.context.type": "ActionScript(&I)",
-    "js.uml.presentable.name": "ActionScript/Flex"
-  },
-  "FrameworkBundle.properties": {
-    "framework.commands.form.messages.title.command.line.tools": "Command Line Tools",
-    "framework.settings.table.interpreter.unknown": "<Uknown interpreter>",
-    "framework.settings.table.interpreter.default": "<Default project interpreter>",
-    "framework.zend1.name.zend.tool.framework": "Zend Framework 1 Tool",
-    "framework.run.anything.value.patten.help.description": "{0}<value> {1}",
-    "framework.zend2.name.zend.tool.framework": "Zend Framework 2 Tool",
-    "symfony.component.version.2": "2.*.*"
-  },
-  "GDBBundle.properties": {
-    "error.unexpected.response": "Unexpected response: {0}"
-  },
-  "GatewayBundle.properties": {
-    "connector.cwm.dialog.title": "Code With Me"
-  },
-  "GaugeBundle.properties": {
-    "form.gauge.home": "GAUGE_HOME:",
-    "gauge.manifest.json.schema": "Gauge 1.0 Manifest"
-  },
-  "GitBundle.properties": {
-    "git4idea.vcs.name.with.mnemonic": "&Git",
-    "abort.operation.indicator.text": "git {0} --abort{1}",
-    "errors.message.item": "\n{0}",
-    "local.changes.freeze.message.git.operation.prefix": "Git {0}",
-    "init.warning.title": "Git Init",
-    "rebase.confirmation.dialog.published.commits.message.second": "Rebasing them would duplicate commits, which is not recommended and most likely unwanted.",
-    "git.add.to.exclude.file.action.text": ".git/info/exclude",
-    "group.Git.ContextMenu.text": "&Git",
-    "group.Git.Menu.text": "&Git",
-    "action.Git.ResolveConflicts.text": "Resolve Conflicts...",
-    "action.Git.Fixup.To.Commit.text": "Fixup...",
-    "action.Git.Rename.Local.Branch.description": "Rename a local branch",
-    "action.Git.New.Branch.description": "Select only one branch to proceed create a new branch",
-    "action.Git.Update.Selected.text": "Update Selected",
-    "action.Git.Checkout.Branch.text": "Checkout Selected...",
-    "action.Git.Checkout.Branch.description": "Checkout selected branch",
-    "settings.crlf": "Warn if CRLF line separators are about to be committed",
-    "settings.update.method": "Update method:",
-    "settings.auto.update.on.push.rejected": "Auto-update if push of the current branch was rejected",
-    "settings.push.dialog": "Show Push dialog for Commit and Push",
-    "settings.clean.working.tree": "Clean working tree using:",
-    "push.rejected.merge": "Merge(&M)",
-    "git.light.status.bar.text": "Git: {0}",
-    "remotes.define.remote.url": "URL:",
-    "label.credential.store.key.http.password": "Git HTTP",
-    "notification.content.fetch.cancelled.by.user": "Fetch was canceled by user",
-    "stash.editor.diff.preview.id.change.title": "{0}：{1}",
-    "group.git4idea.actions.ShareLogIndexData.text": "Shared Git Log Index Data",
-    "vcs.log.use.log.index.data": "Use Shared Git Log Index Data",
-    "vcs.log.status.bar.extracting.log.index.data": "Extracting Git Log index data…",
-    "vcs.log.create.archive.with.log.index.data": "Dump Git Log Index Data",
-    "vcs.log.archiving.log.index.data": "Archiving Git Log index data…"
-  },
-  "GithubBundle.properties": {
-    "pull.request.list.item.info": "#{0,number,#} {1}，{2}",
-    "pull.request.list.filter.review.no.short": "No reviews",
-    "pull.request.list.filter.review.no.full": "No reviews",
-    "pull.request.list.filter.review.required.short": "Review required",
-    "pull.request.list.filter.review.required.full": "Review required",
-    "pull.request.list.filter.review.approved.short": "Approved review",
-    "pull.request.list.filter.review.approved.full": "Approved review",
-    "pull.request.list.filter.review.change.requested.short": "Changes requested",
-    "pull.request.list.filter.review.change.requested.full": "Changes requested",
-    "pull.request.list.filter.review.reviewed.full": "Reviewed by you",
-    "pull.request.list.filter.review.not.short": "Not reviewed",
-    "pull.request.list.filter.review.not.full": "Not reviewed by you",
-    "pull.request.list.filter.review.awaiting.short": "Awaiting review",
-    "pull.request.list.filter.review.awaiting.full": "Awaiting review from you",
-    "action.Github.Share.Vcs.Toolbar.Widget.text": "GitHub…"
-  },
-  "GlassfishBundle.properties": {
-    "descriptor.pattern.name": "{0} ({1})",
-    "GlassfishIntegration.presentable.name": "Glassfish Server"
-  },
-  "GoBundle.properties": {
-    "action.com.goide.vgo.actions.VgoTidyAction.text": "Go Mod Tidy",
-    "go.app.engine.wizard.name": "App Engine",
-    "go.libraries.configurable.path.source.prefix.gopath": "[GOPATH]",
-    "go.intention.run.go.generate.text": "Go generate ''{0}''",
-    "go.executable.file.empty.value": "<Empty>",
-    "go.debugger.thread.dump.n.goroutines": "{0} {0,choice,0#goroutines|1#goroutine|2#goroutine}",
-    "go.execution.remote.run.configuration.display.name": "Go Remote",
-    "go.execution.remote.run.configuration.description": "Go Remote",
-    "go.run.target.gopath.label": "GOPATH: ",
-    "go.wizard.name": "Go (GOPATH)",
-    "action.com.goide.vgo.actions.VgoVendorAction.text": "Go Mod Vendor",
-    "go.quick.doc.keyword.resource.effective.go.label": "Effective Go"
-  },
-  "GoLessonsBundle.properties": {
-    "go.completion.for.functions.lesson.name": "Basic completion: suitable functions for a value"
-  },
-  "GradleBundle.properties": {
-    "gradle.settings.text.jvm.path": "Gradle JVM：",
-    "gradle.filetype.display.name": "Groovy Gradle DSL",
-    "gradle.dsl.new.project.wizard": "Gradle DSL:"
-  },
-  "GrailsBundle.properties": {
-    "action.Grails.NewTagLib.text": "Grails TagLib",
-    "domain.classes.relations.has.many": "1..*",
-    "domain.classes.relations.belongs.to": "1..1",
-    "domain.classes.relations.strong": "*..1",
-    "domain.classes.relations.strong.strong": "1..1",
-    "domain.classes.relations.has.many.to.many": "*..*",
-    "checkbox.tooltip.text.html.nbsp.0.html": "<html>&nbsp;{0}</html>",
-    "forge.module.builder.title": "Grails App Forge",
-    "project.view.application.node.version.label": "(Grails {0})",
-    "wizard.form.checkbox.create.app": "create-app(&A)",
-    "wizard.form.checkbox.create.plugin": "create-plugin(&P)",
-    "relation.form.checkbox.belongsto": "belongsTo(&B)",
-    "relation.form.checkbox.hasmany": "hasMany(&H)",
-    "mvc.plugins.form.description.default": "<html>  <head> </head>  <body> <p style=\"margin-top: 0\"></p></body></html>",
-    "new.project.wizard.project.sdk": "JDK:"
-  },
-  "GroovyBundle.properties": {
-    "filetype.logback.display.name": "Groovy Logback DSL",
-    "filetype.gdsl.display.name": "Groovy DSL",
-    "action.org.jetbrains.plugins.groovy.actions.generate.missing.GroovyGeneratePropertyMissingAction.text": "propertyMissing()",
-    "action.org.jetbrains.plugins.groovy.actions.generate.missing.GroovyGenerateMethodMissingAction.text": "methodMissing()",
-    "action.org.jetbrains.plugins.groovy.actions.generate.tostring.GroovyGenerateToStringAction.text": "to_String()",
-    "inspection.display.name.delegates.to": "@DelegatesTo",
-    "expression.type.unknown": "<unknown>",
-    "framework.0.sdk.chooser.title": "{0} SDK",
-    "getter.kind.getter.0": "Getter {0}",
-    "surround.with.if.else": "if / else",
-    "surround.with.if.expr": "if (expr)",
-    "surround.with.if.else.expr": "if (expr) / else",
-    "surround.with.parentheses": "(expr)",
-    "surround.with.closure": "{ -> ... }.call()",
-    "surround.with.try.catch": "try / catch",
-    "surround.with.try.finally": "try / finally",
-    "surround.with.try.catch.finally": "try / catch / finally",
-    "surround.with.while.expr": "while (expr)",
-    "surround.with.cast": "((Type) expr)",
-    "surround.with.with": "with () {...}",
-    "surround.with.with.expr": "with (expr)",
-    "surround.with.shouldFail": "shouldFail () {...}",
-    "dynamic.dialog.static.checkbox": "static(&S)",
-    "module.name.0.and.groovy.version.1": "{0} ({1})",
-    "groovy.version.0": "Groovy {0}",
-    "label.groovy.sdk": "Groovy SDK:",
-    "non.sealed.visibility.presentation": "non-sealed"
-  },
-  "GroovyJpsBundle.properties": {
-    "compiler.name.greclipse": "Groovy-Eclipse",
-    "status.0.chunk.name.1": "{0} [{1}]"
-  },
-  "GroovyRefactoringBundle.properties": {
-    "visibility.public.choice": "public(&B)",
-    "visibility.protected.choice": "Protected(&O)"
-  },
-  "GuiceBundle.properties": {
-    "action.group.guice.title": "Google Guice"
-  },
-  "GwtBundle.properties": {
-    "google.web.toolkit.title": "Google Web Toolkit",
-    "dialog.title.google.web.toolkit": "Google Web Toolkit",
-    "group.gwt.inspections.name": "Google Web Toolkit",
-    "file.template.group.title.gwt": "Google Web Toolkit",
-    "action.group.gwt.title": "Google Web Toolkit",
-    "action.group.gwt.description": "Google Web Toolkit",
-    "gwt.intention.category": "Google Web Toolkit",
-    "exportable.GwtSdkManager.presentable.name": "GWT SDK",
-    "group.GWT.text": "Google Web Toolkit",
-    "label.none.facet.selected": "<none>",
-    "label.gwt.sdk": "GWT SDK:"
-  },
-  "GwtJpsBundle.properties": {
-    "compiler.message.stderr.0": "[stderr]: {0}"
-  },
-  "HbBundle.properties": {
-    "filetype.hb.description": "Handlebars/Mustache",
-    "hb.pages.options.title": "Handlebars/Mustache",
-    "inspections.group.name": "Handlebars/Mustache",
-    "border.title.handlebars.mustache": "Handlebars/Mustache"
-  },
-  "HelidonBundle.properties": {
-    "helidon.inspections.config.properties": "Helidon application.properties",
-    "helidon.inspections.config.yaml": "Helidon application.yaml"
-  },
-  "HgBundle.properties": {
-    "hg4idea.vcs.short.name.with.mnemonic": "Hg(_G)",
-    "action.hg4idea.pull.update.merge": "&Merge"
-  },
-  "HibernateBundle.properties": {
-    "framework.title.hibernate": "Hibernate(&H)"
-  },
-  "HunspellBundle.properties": {
-    "hunspell.type": "hunspell-jni"
-  },
-  "IcsBundle.properties": {
-    "readonly.sources.configuration.url.label": "URL:"
-  },
-  "IdeBundle.properties": {
-    "browsers.explorer": "Internet Explorer",
-    "task.browser.url": "URL:",
-    "about.box.vm": "VM: {0}，{1}",
-    "label.text.antialiasing.scope.ide": "IDE:",
-    "configurable.AppEngineFacetEditor.display.name": "Google App Engine",
-    "settings.menus.group.touch.bar": "Touch Bar",
-    "action.Anonymous.text.delete.hook": "Delete Hook",
-    "label.version.any": "<any>",
-    "list.item.temporary.file.0": "<temporary file>{0}",
-    "notification.content.more.shortcut.conflict": "{0} and {1} more shortcut conflict with macOS shortcuts. Modify these shortcuts or change macOS system settings.",
-    "icon.nodes.c_plocal.tooltip": "package-local",
-    "label.certificate.will.be.saved": "The accepted certificate will be saved in truststore {0} with the default password {1}",
-    "colorpicker.label.red": "R:",
-    "colorpicker.label.green": "G:",
-    "colorpicker.label.blue": "B:",
-    "colorpicker.label.hue": "H:",
-    "colorpicker.label.saturation": "S:",
-    "colorpicker.label.brightness": "B:",
-    "colorpicker.recent.color.tooltip": "R: {0} G: {1} B: {2} A: {3}",
-    "colorpanel.label.alpha.percent": "A%",
-    "colorpanel.label.hue": "H°",
-    "colorpanel.label.saturation": "S%",
-    "colorpanel.label.brightness": "B%",
-    "notification.manager.content.height.linebreak": "<br>\n",
-    "start.browser.panel.url.label": "URL(&U):",
-    "login.dialog.title": "{0}",
-    "notification.title.jcef.measureFPS": "OSR JCEF FPS Meter"
-  },
-  "ImagesBundle.properties": {
-    "icon.dimensions": "{0,number}x{1,number}x{2,number}",
-    "image.description": "{0}×{1}, {2}bpp"
-  },
-  "InspectionGadgetsBundle.properties": {
-    "class.unconnected.to.package.display.name": "Class independent of its package"
-  },
-  "InspectionJSBundle.properties": {
-    "add.require.amd.module.group.name": "Node.js"
-  },
-  "InspectionsBundle.properties": {
-    "custom.severity.count.message": "{0} {1}",
-    "group.names.language.level.specific.issues.and.migration.aids7": "Java 7",
-    "group.names.language.level.specific.issues.and.migration.aids8": "Java 8",
-    "group.names.language.level.specific.issues.and.migration.aids9": "Java 9",
-    "group.names.language.level.specific.issues.and.migration.aids5": "Java 5",
-    "group.names.language.level.specific.issues.and.migration.aids10": "Java 10",
-    "group.names.language.level.specific.issues.and.migration.aids11": "Java 11",
-    "group.names.language.level.specific.issues.and.migration.aids14": "Java 14",
-    "group.names.language.level.specific.issues.and.migration.aids15": "Java 15",
-    "long.range.set.presentation.range.with.mod": "{0}；{1}"
-  },
-  "IntelliLangBundle.properties": {
-    "language.label.id": "ID(&I):"
-  },
-  "IntentionPowerPackBundle.properties": {
-    "intention.category.junit": "Java/JUnit"
-  },
-  "J2EEBundle.properties": {
-    "project.view.pane.title.j2ee": "Java EE",
-    "group.names.javaee.issues": "Java EE",
-    "starter.web.application.hint": "Servlet、web.xml、index.jsp"
-  },
-  "JBossBundle.properties": {
-    "JBossIntegration.name": "JBoss/WildFly"
-  },
-  "JSDebuggerBundle.properties": {
-    "javascript.debugger.settings.url": "URL(&U):",
-    "js.debug.firefox.config.name": "Firefox Remote",
-    "react.native.config.name": "React Native",
-    "react.native.project.generator.package.name": "React Native:"
-  },
-  "JUnitBundle.properties": {
-    "default.junit.config.name.category": "@Category({0})"
-  },
-  "JadeBundle.properties": {
-    "color.settings.name": "Pug/Jade",
-    "pug.code.style.configurable.name": "Pug/Jade",
-    "pug.inspections.group.name": "Pug/Jade",
-    "pug.template.context.name": "Pug/Jade"
-  },
-  "JavaAnalysisBundle.properties": {
-    "feature.try.with.resources": "Try-with-resources",
-    "inspection.redundant.cast.problem.descriptor": "Casting {0} to {1} is redundant",
-    "contract.return.validator.too.few.parameters": "not applicable for method that has {0, choice, 0#no parameters|1#one parameter|2#{0} parameters} ",
-    "dfa.find.cause.special.field.of.something": "{0}/{1}",
-    "inspection.reference.lambda.name": "lambda ({0})"
-  },
-  "JavaBundle.properties": {
-    "action.create.new.module-info.title": "module-info.java",
-    "action.create.new.package-info.title": "package-info.java",
-    "checkbox.collapse.suppress.warnings": "<html>@SuppressWarnings</html>",
-    "inspection.unused.symbol.check.accessors": "Getter/Setter",
-    "intention.create.test.dialog.setUp": "set&Up/@Before",
-    "intention.create.test.dialog.tearDown": "tear&Down/@After",
-    "intention.surround.with.ARM.block.template": "try-with-resources",
-    "java.terms.variable.of.method": "{0}/{1}",
-    "jrt.node.short": "[JRT]",
-    "macro.array.variable": "arrayVariable()",
-    "macro.component.type.of.array": "componentTypeOf(Array)",
-    "macro.descendant.classes.enum": "descendantClassesEnum(String)",
-    "macro.expression.type": "expressionType(Expression)",
-    "macro.guess.element.type.of.container": "guessElementType(Container)",
-    "macro.iterable.component.type": "iterableComponentType(ArrayOrIterable)",
-    "macro.iterable.variable": "iterableVariable()",
-    "macro.variable.of.type": "variableOfType(Type)",
-    "surround.with.dowhile.template": "do / while",
-    "surround.with.ifelse.expression.template": "if (expr) {...} else {...}",
-    "surround.with.try.catch.finally.template": "try / catch / finally",
-    "surround.with.try.catch.template": "try / catch",
-    "title.code.vision": "Code Vision",
-    "null.check.surrounder.description": "if (expr != null) {…}",
-    "switch.stmt.template.description": "switch (expr) {…}",
-    "title.code.vision.inlay.hints": "Code Vision"
-  },
-  "JavaCompilerBundle.properties": {
-    "error.jdk.module.names.overflow.element.ellipsis": "…"
-  },
-  "JavaDebuggerBundle.properties": {
-    "label.debugger.launching.configurable.socket": "&Socket ",
-    "threads.export.attribute.label.priority": "prio={0}",
-    "threads.export.attribute.label.tid": "tid=0x{0}",
-    "threads.export.attribute.label.object-id": "<0x{0}> ({1})",
-    "label.generic.debugger.parameters.patcher.configurable.shmem": "Shared &memory ()",
-    "breakpoint.exception.breakpoint.display.name": "''{0}''",
-    "exception.breakpoint.console.message.location.info": "{0}:{1,number,#}",
-    "message.node.toString": "… toString()",
-    "label.thread.node": "\"{0}\"@{1}: {2}",
-    "instances.window.show.history": "InstancesWindow.ShowHistory",
-    "surround.with.runtime.type.template": "((RuntimeType)expr)",
-    "memory.view.constructor.tracker.name": "MemoryViewConstructorTracker: {0}"
-  },
-  "JavaFXBundle.properties": {
-    "javafx.edit.certificates.dialog.keypass": "Keypass(&E):",
-    "javafx.edit.certificates.dialog.keystore": "Keystore(&Y):",
-    "javafx.edit.certificates.dialog.signed.storepass": "Storepass(&P):",
-    "scene.builder.editor.tab.name": "Scene Builder"
-  },
-  "JavaFXJpsBundle.properties": {
-    "java.fx.packager": "Java FX Packager"
-  },
-  "JavaGoogleAppEngineBundle.properties": {
-    "sdk.browse.folder.action.title": "Google App Engine SDK",
-    "plugin.name": "Google App Engine",
-    "label.google.app.engine.sdk": "Google App Engine SDK:",
-    "app.engine.inspection.group.name": "Google App Engine",
-    "server.editor.app.engine.sdk.label.text": "App Engine SDK:"
-  },
-  "JavaGoogleAppEngineJpsBundle.properties": {
-    "google.appengine.enhancer": "Google AppEngine Enhancer",
-    "persistence.api.item.name.jdo": "JDO 2",
-    "persistence.api.item.name.jdo3": "JDO 3",
-    "persistence.api.item.name.jpa": "JPA 1",
-    "persistence.api.item.name.jpa2": "JPA 2"
-  },
-  "JavaPsiBundle.properties": {
-    "aux.context.display": "/ {0}",
-    "filetype.jshell.description": "JShell snippet files",
-    "element.kind.and.name": "{0} {1}"
-  },
-  "JavaRefactoringBundle.properties": {
-    "encapsulate.fields..package.local.radio": "Package local(&C)",
-    "encapsulate.fields.protected.radio": "protected(&T)",
-    "extract.method.object.inner.visibility.package.local": "package local(&K)",
-    "extract.method.object.inner.visibility.private": "private(&V)",
-    "extract.method.object.inner.visibility.protected": "protected(&O)",
-    "extract.method.object.inner.visibility.public": "public(&B)"
-  },
-  "JavaScriptBundle.properties": {
-    "filetype.typescript.jsx.description": "TypeScript JSX",
-    "filetype.ecmascript6.description": "ECMAScript 6",
-    "filetype.jsx.description": "React JSX",
-    "filetype.jsx.display.name": "React JSX",
-    "filetype.flow.description": "Flow JS",
-    "filetype.flow.display.name": "Flow JS",
-    "javascript.surround.with.do.while": "do / while",
-    "javascript.surround.with.if.else": "if / else",
-    "javascript.surround.with.if.cond": "if (cond)",
-    "javascript.surround.with.if.else.cond": "if (cond) / else",
-    "javascript.surround.with.parenthesis": "(expr)",
-    "javascript.surround.with.not.parenthesis": "!(expr)",
-    "javascript.surround.with.cast": "Type(expr)",
-    "javascript.surround.with.try.catch": "try / catch",
-    "javascript.surround.with.try.finally": "try / finally",
-    "javascript.surround.with.try.catch.finally": "try / catch / finally",
-    "node.js.inspection.group.name": "Node.js",
-    "javascript.label.visibility.package_local": "internal(&I)",
-    "javascript.label.visibility.private": "private(&V)",
-    "javascript.label.visibility.protected": "protected(&O)",
-    "introduce.variable.const": "const(&C)",
-    "introduce.variable.let": "let(&L)",
-    "introduce.variable.var": "var(&V)",
-    "livetemplate.description.console.log": "console.log()",
-    "livetemplate.description.console.warn": "console.warn()",
-    "livetemplate.description.console.error": "console.error()",
-    "livetemplate.description.console.info": "console.info()",
-    "livetemplate.description.console.trace": "console.trace()",
-    "livetemplate.description.console.assert": "console.assert()",
-    "macro.js.component.type.of": "jsComponentTypeOf(Array)",
-    "macro.js.suggest.default.variable.kind": "jsSuggestDefaultVariableKind(Boolean)",
-    "es6.auto.import.options.title": "TypeScript / JavaScript",
-    "bower.json": "bower.json (&O)：",
-    "js.language.version.combo.es5": "ECMAScript 5.1",
-    "js.language.version.combo.js185": "JavaScript 1.8.5",
-    "js.language.version.combo.es6": "ECMAScript 6+",
-    "js.language.version.combo.nashorn": "Nashorn JS",
-    "element.name.anonymous": "<anonymous>",
-    "jshint.progress.title": "JSHint {0}",
-    "jshint.inspection.message.prefix": "JSHint:",
-    "jshint.option.esnext.description.short": "EcmaScript.next",
-    "jshint.option.wsh.description.short": "Windows Script Host",
-    "jsx.html.context.type": "JSX HTML",
-    "gulp.rc.gulpfile.label": "Gulpfile (&F)：",
-    "grunt.rc.gruntfile.label": "Gruntfile (&F)：",
-    "settings.nodejs.name": "Node.js",
-    "npm.rc.packageJson.label": "package.json (&P)：",
-    "typescript.compiler.configurable.options.version": "TypeScript:",
-    "js.language.feature.async.await": "async/await",
-    "action.JasmineGenerateNewSuiteAction.text": "Jasmine Suite",
-    "action.JasmineGenerateNewSpecAction.text": "Jasmine Spec",
-    "action.JasmineGenerateBeforeEachMethodAction.text": "Jasmine beforeEach",
-    "action.JasmineGenerateAfterEachMethodAction.text": "Jasmine afterEach",
-    "action.QUnitGenerateNewTestAction.text": "QUnit Test",
-    "action.QUnitGenerateSetupAction.text": "QUnit Setup",
-    "action.QUnitGenerateTearDownAction.text": "QUnit TearDown",
-    "filetype.yarn.lock.display.name": "Yarn Lock",
-    "filetype.yarn.lock.description": "Yarn lock",
-    "intention.category.ecmascript6": "JavaScript/ECMAScript 6",
-    "flow.js.widget.display.name": "Flow JS",
-    "notification.group.linters": "JavaScript linter"
-  },
-  "JavaScriptIntentionBundle.properties": {
-    "plugin.category.flowjs": "Flow JS",
-    "plugin.category.javascript.jsx": "JavaScript/JSX"
-  },
-  "JavaStartersBundle.properties": {
-    "title.project.java.version.label": "Java:"
-  },
-  "JavaUiBundle.properties": {
-    "facet.banner.text": "Facet ''{0}''",
-    "project.roots.jdk.banner.text": "SDK ''{0}''",
-    "multiple.facets.banner.0.1.facets": "{0} {1} facet",
-    "project.roots.library.banner.text": "{1} ''{0}''",
-    "facet.type.banner.text": "''{0}''Facets",
-    "project.roots.classpath.format.default.descr": "IntelliJ IDEA (.iml)",
-    "label.project.wizard.new.project.jdk": "JDK:",
-    "repository.library.type.maven.description": "Maven: {0}",
-    "label.maven": "Maven:",
-    "checkbox.javadocs": "JavaDoc(&D)",
-    "project.structure.sdk": "SDK:",
-    "class.file.decompiled.sdk.version.text": "(Java {0})"
-  },
-  "JavaeeJspBaseBundle.properties": {
-    "dialog.edit.template.checkbox.jsp": "JSP (&P)"
-  },
-  "JavaeeJspBundle.properties": {
-    "jsp.documentation.message.description": "Description:\\&nbsp;{0}"
-  },
-  "JetBrainsTeamAuthBundle.properties": {
-    "notification.title.failed": "JetBrains.team"
-  },
-  "JoomlaBundle.properties": {
-    "joomla.title": "Joomla!",
-    "inspection.php.group.joomla": "Joomla!"
-  },
-  "JpaQlBundle.properties": {
-    "options.xml.display.name": "JPA QL"
-  },
-  "JsonBundle.properties": {
-    "unnamed.desc": "<unnamed>",
-    "schema.widget.prefix.json.files": "JSON:"
-  },
-  "JupyterBundle.properties": {
-    "Jupyter.action.create.notebook.text": "Jupyter Notebook",
-    "Jupyter.servers.managed.server.dynamic.port": "<Dynamic>",
-    "jupyter.cell.type.raw": "Raw NBConvert",
-    "Jupyter.hub.login.dialog.description.instruction.link.href": "https://jupyterhub.readthedocs.io/en/stable/reference/rest.html#create-an-api-token",
-    "notebook.collapsed.web.output.text": "Web: {0}x{1} px"
-  },
-  "JupyterDSBundle.properties": {
-    "notification.group.jupyter": "Jupyter Notebook"
-  },
-  "JupyterKotlinBundle.properties": {
-    "kotlin.jupyter.action.create.notebook.text": "Kotlin Jupyter Notebook"
-  },
-  "KeyMapBundle.properties": {
-    "dialog.mouse.pad.shortcut.text": "<html><center> <br>{0}<br><br>"
-  },
-  "KotlinBaseFe10HighlightingBundle.properties": {
-    "highlighter.name.dsl": "Dsl//",
-    "i.for.i.br.0": "<i> for </i><br/>{0}",
-    "declaration.name.0.of.1": "{0}/{1}",
-    "declaration.name.anonymous": "<anonymous>",
-    "html.javascript.0.html": "JavaScript: {0}"
-  },
-  "KotlinBaseProjectStructureBundle.properties": {
-    "sdk.0": "<sdk {0}>"
-  },
-  "KotlinBundle.properties": {
-    "hints.ranges.rangeTo.left": "≤",
-    "hints.ranges.rangeTo.right": "≤",
-    "hints.ranges.until.left": "≤",
-    "hints.ranges.until.right": "<",
-    "hints.ranges.downTo.left": "≥",
-    "hints.ranges.downTo.right": "≥",
-    "presentation.text.paren": "({0})",
-    "update.name.android.studio": "Android Studio",
-    "column.name.val.var": "Val/Var",
-    "member.info.abstract.0": "abstract {0}",
-    "version": "{version}",
-    "action.KotlinGenerateToString.text": "toString()",
-    "hints.title.codevision": "Code Vision",
-    "usage.provider.text.property.of.0": "{0}/{1}",
-    "kotlin.script.in.project.sources.link": "https://youtrack.jetbrains.com/issue/KTIJ-19432",
-    "kotlin.script.in.beta.stage.link": "https://kotlinlang.org/docs/components-stability.html#stability-levels-explained",
-    "kotlin.eap.survey.notification.link": "https://surveys.jetbrains.com/s3/kotlin-eaps-survey"
-  },
-  "KotlinDebuggerCoreBundle.properties": {
-    "message.variables.property.get": "... get()"
-  },
-  "KotlinIdeaCompletionBundle.properties": {
-    "presentation.tail.for.0": "，{0}",
-    "find.usage.provider.0.of.1": "{0}/{1}",
-    "find.usage.provider.0": "{0}"
-  },
-  "KotlinIdeaGradleBundle.properties": {
-    "display.name.kotlin.multiplatform": "Kotlin/Multiplatform",
-    "display.name.kotlin.jvm": "Kotlin/JVM",
-    "framework.support.provider.kotlin.jvm.display.name": "Kotlin/JVM"
-  },
-  "KotlinJavascriptBundle.properties": {
-    "configuration.type.description.protractor.kotlin": "Protractor (Kotlin)"
-  },
-  "KotlinJvmBundle.properties": {
-    "presentable.name.kotlin.js": "Kotlin/​JS",
-    "presentable.name.kotlin.jvm": "Kotlin/JVM"
-  },
-  "KotlinNewProjectWizardBundle.properties": {
-    "buildsystem.type.gradle.groovy": "Gradle Groovy",
-    "buildsystem.type.gradle.kotlin": "Gradle Kotlin",
-    "module.configuration.group.windows.mingw": "Windows (MinGW)",
-    "project.kind.kotlin.js": "Kotlin/JS",
-    "plugin.android.setting.sdk": "Android SDK",
-    "module.type.jvm": "Kotlin/JVM",
-    "module.type.js": "Kotlin/JS",
-    "module.type.native": "Kotlin/Native",
-    "module.configurator.android.setting.android.plugin.application": "com.android.application",
-    "module.configurator.android.setting.android.plugin.library": "com.android.library",
-    "module.configurator.js.node": "Node.js",
-    "module.configurator.tests.setting.framework.junit4": "JUnit 4",
-    "module.configurator.tests.setting.framework.junit5": "JUnit 5",
-    "module.configurator.tests.setting.framework.kotlin.test": "Kotlin Test"
-  },
-  "KotlinNewProjectWizardUIBundle.properties": {
-    "generator.title": "Kotlin Multiplatform"
-  },
-  "KubernetesBundle.properties": {
-    "HelmLintAction.task.title": "Helm Lint",
-    "KubernetesResourceMapper.resourceDisplayableName.template": "{0} ''{1}''",
-    "KubernetesViewConfigurable.podShellRow.title": "Pod Shell",
-    "KubernetesPodContent.shell.title": "Shell: {0}",
-    "group.KUBERNETES_ACTIONS.text": "Kubernetes(&K)",
-    "action.Kubernetes.HelmLint.text": "Helm Lint(&L)",
-    "KubectlExecutor.BaseProcessListener.progressTitle.template": "Kubernetes: {0}"
-  },
-  "LangBundle.properties": {
-    "label.export.plugin.url": "URL:",
-    "image.preview.label": "{0}x{1}，{2}bpp，{3}",
-    "build.event.message.with": "{0}，{1}"
-  },
-  "LangCoreBundle.properties": {
-    "shorten.command.line.method.argfile": "@argfile (Java 9+)"
-  },
-  "LearnBundle.properties": {
-    "notification.group.feature.trainer": "IDE Features Trainer"
-  },
-  "LintBundle.properties": {
-    "android.lint.inspections.group.name": "Android Lint"
-  },
-  "LiveEditBundle.properties": {
-    "configurable.displayName": "Live Edit",
-    "update.application.ws.suffix": "(Live Edit)"
-  },
-  "LombokBundle.properties": {
-    "action.delombokData.text": "@Data",
-    "action.delombokValue.text": "@Value",
-    "action.delombokWither.text": "@Wither",
-    "action.delombokDelegate.text": "@Delegate",
-    "action.delombokBuilder.text": "@Builder",
-    "action.delombokSuperBuilder.text": "@SuperBuilder",
-    "action.delombokConstructor.text": "@Constructors",
-    "action.delombokGetter.text": "@Getter",
-    "action.delombokSetter.text": "@Setter",
-    "action.delombokEqualsAndHashCode.text": "@EqualsAndHashCode",
-    "action.delombokToString.text": "@ToString",
-    "action.delombokFieldNameCostants.text": "@FieldNameConstants",
-    "action.delombokUtilityClass.text": "@UtilityClass",
-    "inspection.redundant.slf.4.j.definition.display.name": "@Slf4j",
-    "intention.category.lombok": "Java/Lombok",
-    "action.delombokStandardException.text": "@StandardException"
-  },
-  "MakefileLangBundle.properties": {
-    "filetype.makefile.description": "GNU Makefile",
-    "run.configuration.editor.filename.label": "Makefile(&M)",
-    "action.run.target.text": "make {0}",
-    "action.run.target.description": "make {0}"
-  },
-  "MarkdownBundle.properties": {
-    "action.Markdown.Extensions.CleanupExternalFiles.text": "Clean Up Markdown Extensions External Files…",
-    "action.Markdown.Extensions.CleanupExternalFiles.description": "Cleans up external files for all Markdown extensions",
-    "Markdown.Extensions.CleanupExternalFiles.task.title": "Cleaning Up Extensions External Files",
-    "Markdown.Extensions.CleanupExternalFiles.notification.title": "External Files Clean Up",
-    "Markdown.Extensions.CleanupExternalFiles.notification.text": "Extensions external files have been successfully cleaned up",
-    "markdown.browse.external.link.open.confirmation.dialog.title": "Open Link",
-    "markdown.browse.external.link.open.confirmation.dialog.text": "Are you sure you want to open {0}?",
-    "markdown.browse.external.link.open.confirmation.dialog.do.not.ask.again.text": "Don''t ask again for ''{0}://'' links",
-    "markdown.browse.external.link.failed.notification.title": "Open external link",
-    "markdown.browse.external.link.failed.notification.content": "Failed to open external link: {0}",
-    "advanced.setting.markdown.hide.floating.toolbar": "Hide floating toolbar",
-    "markdown.header.level.popup.heading.action.text": "Heading {0}",
-    "markdown.header.level.popup.heading.action.secondary.text": "(H{0})",
-    "markdown.create.list.popup.unordered.action.text": "Unordered List",
-    "markdown.create.list.popup.ordered.action.text": "Ordered List",
-    "markdown.create.list.popup.checkmark.action.text": "Checkmark List",
-    "action.Markdown.Styling.SetHeaderLevel.text": "Set Header Style",
-    "action.Markdown.Styling.CreateOrChangeList.text": "Create Or Change List",
-    "markdown.floating.toolbar.customizable.group.name": "Markdown Editor Floating Toolbar",
-    "markdown.table.inlay.kind.description": "Horizontal and vertical bars around the table. Provides column and row actions.",
-    "markdown.settings.extension.enable.searchable.option.text": "Enable {0} Extension",
-    "markdown.runner.launch.block": "Run Block",
-    "markdown.runner.launch.line": "Run Line",
-    "markdown.settings.pandoc.executable.run.in.safe.mode": "Can't run Pandoc command in the safe mode",
-    "markdown.editor.colors.definition_list": "Definition list//Definition list",
-    "markdown.editor.colors.definition_list_marker": "Definition list//Definition marker",
-    "markdown.editor.colors.definition": "Definition list//Definition",
-    "markdown.editor.colors.term": "Definition list//Term",
-    "action.Markdown.GenerateTableOfContents.text": "Generate Table Of Contents",
-    "action.Markdown.GenerateTableOfContents.insert.popup.text": "Table Of Contents",
-    "action.Markdown.GenerateTableOfContents.update.text": "Update Table Of Contents",
-    "markdown.incorrectly.numbered.list.item.inspection.name": "Incorrectly numbered list item",
-    "markdown.incorrectly.numbered.list.item.inspection.text": "Item is not correctly numbered. Expected item number {0}, but got {1}.",
-    "markdown.fix.list.items.numbering,quick.fix.text": "Fix list items numbering"
-  },
-  "MavenConfigurableBundle.properties": {
-    "maven.settings.testrun.argline": "<html><i>argLine(&A)</i></html>",
-    "maven.settings.testrun.system.property": "<html><i>systemPropertyVariables(&S)</i></html>",
-    "maven.settings.testrun.env.variables": "<html><i>environmentVariables(&E)</i></html>",
-    "maven.settings.runner.jre": "JRE:",
-    "maven.settings.generated.folder.targerdir": "target/generated-sources",
-    "maven.run.configuration.bundled.distribution.name": "Maven {0}",
-    "maven.run.configuration.jre.label": "JRE(&J):",
-    "maven.run.configuration.jre.name": "JRE(&J)"
-  },
-  "MavenIndicesBundle.properties": {
-    "maven.dependency.completion.presentable": "{0}:{1}"
-  },
-  "MavenProjectBundle.properties": {
-    "maven.before.build.of.count": "{2} ({1}/{0})",
-    "maven.parent.label.none": "<none>"
-  },
-  "MavenWizardBundle.properties": {
-    "maven.new.project.wizard.archetype.generator.name": "Maven Archetype",
-    "maven.new.project.wizard.archetype.label": "Archetype:"
-  },
-  "MeteorBundle.properties": {
-    "settings.meteor.configurable.executable.generator": "Meteor:",
-    "ui.filetype.spacebars.description": "Meteor Spacebars"
-  },
-  "MicronautBundle.properties": {
-    "micronaut.data.inspections.group": "Micronaut Data",
-    "micronaut.inspections.config.yaml": "Micronaut application.yaml",
-    "micronaut.starter.version.label": "Micronaut:",
-    "micronaut.data.ql": "Micronaut Data QL"
-  },
-  "MicroservicesBundle.properties": {
-    "http.code.description.101": "Switching Protocols",
-    "http.code.description.203": "Non-Authoritative Information",
-    "http.code.description.204": "No Content",
-    "http.code.description.205": "Reset Content",
-    "http.code.description.206": "Partial Content",
-    "http.code.description.207": "Multi-Status",
-    "http.code.description.300": "Multiple Choices",
-    "http.code.description.301": "Moved Permanently",
-    "http.code.description.303": "See Other",
-    "http.code.description.304": "Not Modified",
-    "http.code.description.305": "Use Proxy",
-    "http.code.description.307": "Temporary Redirect",
-    "http.code.description.308": "Permanent Redirect",
-    "http.code.description.400": "Bad Request",
-    "http.code.description.402": "Payment Required",
-    "http.code.description.404": "Not Found",
-    "http.code.description.405": "Method Not Allowed",
-    "http.code.description.406": "Not Acceptable",
-    "http.code.description.407": "Proxy Authentication Required",
-    "http.code.description.408": "Request Timeout",
-    "http.code.description.411": "Length Required",
-    "http.code.description.412": "Precondition Failed",
-    "http.code.description.413": "Request Entity Too Large",
-    "http.code.description.414": "Request-URI Too Long",
-    "http.code.description.415": "Unsupported Media Type",
-    "http.code.description.416": "Requested Range Not Satisfiable",
-    "http.code.description.417": "Expectation Failed",
-    "http.code.description.421": "Misdirected Request",
-    "http.code.description.422": "Unprocessable Entity",
-    "http.code.description.424": "Failed Dependency",
-    "http.code.description.425": "Unordered Collection",
-    "http.code.description.426": "Upgrade Required",
-    "http.code.description.428": "Precondition Required",
-    "http.code.description.429": "Too Many Requests",
-    "http.code.description.431": "Request Header Fields Too Large",
-    "http.code.description.500": "Internal Server Error",
-    "http.code.description.501": "Not Implemented",
-    "http.code.description.502": "Bad Gateway",
-    "http.code.description.503": "Service Unavailable",
-    "http.code.description.504": "Gateway Timeout",
-    "http.code.description.505": "HTTP Version Not Supported",
-    "http.code.description.506": "Variant Also Negotiates",
-    "http.code.description.507": "Insufficient Storage",
-    "http.code.description.510": "Not Extended",
-    "http.code.description.511": "Network Authentication Required"
-  },
-  "MicroservicesUiBundle.properties": {
-    "endpoints.accessibility.filter.label": "{0}: {1}"
-  },
-  "MobileBundle.properties": {
-    "run.configuration.name": "Kotlin Mobile",
-    "sdk.sync.missing.sdk.title": "Android SDK"
-  },
-  "NoSqlBundle.properties": {
-    "nosql.inspections.group": "Jakarta NoSQL",
-    "nosql.id": "NoSQL ID"
-  },
-  "NodeJSBundle.properties": {
-    "npm.init.generator.name": "Node.js",
-    "profile.cpu.milliseconds.text": "{0}ms",
-    "profile.table.unreachable_or_hidden.text": "<unreachable or hidden>",
-    "profile.table.root.text": "<root>",
-    "profile.cpu.line.total.text": "<total>"
-  },
-  "OCBundle.properties": {
-    "create.class.objc": "Objective-C (.m)",
-    "create.class.objcpp": "Objective-C++ (.mm)",
-    "color.struct.union.oc": "Struct/enum/union",
-    "include.cpp.url": "https://www.includecpp.org/",
-    "action.CIDR.Lang.DropPsiForOpenedFiles.text": "Drop PSI for opened files",
-    "action.CIDR.Lang.ObjC.GenerateSharedInstance.text": "+sharedInstance",
-    "action.CIDR.Lang.ObjC.GenerateDescription.text": "-description…",
-    "action.CIDR.Lang.ObjC.GenerateCopy.text": "-copyWithZone:…",
-    "action.CIDR.Lang.ObjC.GenerateEncode.text": "-init/encodeWithCoder:…",
-    "action.CIDR.Lang.ObjC.GenerateInitWith.text": "-initWith…",
-    "action.CIDR.Lang.ObjC.Synthesize.text": "@synthesize…",
-    "action.CIDR.Lang.IntroduceTypedef.text": "Typedef…",
-    "action.CIDR.Lang.SwitchHeaderSource.text": "Header/Source",
-    "action.CIDR.Lang.Wrap.By.Pragma.Region": "#pragma region...endregion",
-    "surround.with.block.expression.template": "^{ return expr; }",
-    "surround.with.do.while.template": "do / while",
-    "surround.with.if.else.template": "if / else",
-    "surround.with.not.expr.template": "!(expr)",
-    "surround.with.parenthesis.template": "(expr)",
-    "surround.with.if.respondsToSelector.template": "if respondsToSelector"
-  },
-  "OCInspectionsBundle.properties": {
-    "intentions.group.objc": "Objective-C"
-  },
-  "OptionsBundle.properties": {
-    "exportable.ShortcutPromoterManager.presentable.name": "Shortcut Promoter"
-  },
-  "OsgiJpsBundle.properties": {
-    "session.progress.local": "Calculating local packages"
-  },
-  "OsmorcBundle.properties": {
-    "facet.library.name": "OSGi Core API",
-    "bnd.importer.name": "Bnd/Bndtools",
-    "bnd.configuration.name": "Bnd OSGi",
-    "bnd.resolve.tree.via": "VIA:"
-  },
-  "PageflowBundle.properties": {
-    "seam.pageflow.new.pageflow.component.dialog.name": "New Name"
-  },
-  "PagesBundle.properties": {
-    "action.Seam.Create.Pages.Xml.text": "Seam pages.xml"
-  },
-  "PerforceBundle.properties": {
-    "progress.text2.p4.status": "p4 {0}",
-    "group.PerforceDirect.Menu.text": "Perforce(_P)",
-    "perforce.name.with.mnemonic": "Perforce(_P)",
-    "change.list.decoration": " - Perforce #{0}",
-    "error.invalid.file.fstat.mapping": "Invalid file<->fstat mapping; fstat={0}; map={1}"
-  },
-  "PerformanceTestingBundle.properties": {
-    "summary.link": "https://intellij-support.jetbrains.com/anonymous_requests/new",
-    "cached.value.profiler.column.avg.use.count": "Used÷N",
-    "cached.value.profiler.column.avg.cost": "Cost÷N",
-    "summary.link.rider": "https://rider-support.jetbrains.com/hc/en-us/requests/new"
-  },
-  "PhingBundle.properties": {
-    "phing.0.milliseconds": "{0} ms",
-    "phing.not.selected": "<not selected>"
-  },
-  "PhoneGapBundle.properties": {
-    "exportable.PhoneGapSettings.presentable.name": "PhoneGap/Cordova"
-  },
-  "PhpBundle.properties": {
-    "0": " ({0})",
-    "action.PhpGenerateSetters.text": "Setter…",
-    "action.PhpGenerateGetters.text": "Getter…",
-    "color.settings.heredoc_id": "Heredoc//Heredoc ID",
-    "color.settings.magic.member": "Identifiers//Magic Member Access",
-    "folding.checkbox.collapse.heredocs.and.nowdocs": "HEREDOC\\NOWDOC",
-    "quality.tool.phpcbf.name": "PHP Code Beautifier and Fixer",
-    "refactoring.extract.field.visibility.public": "public(&U)",
-    "refactoring.extract.field.visibility.protected": "protected(&O)",
-    "refactoring.extract.field.visibility.private": "private(&I)",
-    "PhpExtractMethodDialog.public": "public(&B)",
-    "PhpExtractMethodDialog.protected": "protected(&T)",
-    "PhpExtractMethodDialog.private": "private(&V)",
-    "actions.mark.directory.as.psr.0.root": "<i>{0}</i>",
-    "debug.composite.value.presentation": "[{0}]",
-    "profiler.measurement.unit.microsecond.short": "µs",
-    "php.web.server.validation.xdebug.remote.log": "<b>{0}:</b> {1}",
-    "xdebug.initializing.connection.xdebug.cloud": "Xdebug Cloud",
-    "XdebugCloudConfigurable.display.name": "Xdebug Cloud",
-    "XdebugCloudConfigurable.cloud.id": "Cloud ID:",
-    "PhpLanguageLevel.5.3.0.presentable.name": "5.3",
-    "PhpLanguageLevel.5.4.0.presentable.name": "5.4",
-    "PhpLanguageLevel.5.5.0.presentable.name": "5.5",
-    "PhpLanguageLevel.5.6.0.presentable.name": "5.6",
-    "PhpLanguageLevel.7.0.0.presentable.name": "7.0",
-    "PhpLanguageLevel.7.1.0.presentable.name": "7.1",
-    "PhpLanguageLevel.7.2.0.presentable.name": "7.2",
-    "PhpLanguageLevel.7.3.0.presentable.name": "7.3",
-    "PhpLanguageLevel.7.4.0.presentable.name": "7.4",
-    "PhpLanguageLevel.8.0.0.presentable.name": "8.0",
-    "filetype.phar.description": "Php Phar",
-    "filetype.phar.display.name": "Php Phar",
-    "phpdoc.code.style.sort.doc.blocks": "PHPDoc tags order",
-    "phpdoc.code.style.in.beginning.position": "In the beginning",
-    "phpdoc.code.style.in.end.position": "In the end",
-    "phpdoc.code.style.convert.null.to": "Convert Null constant to:",
-    "php.code.style.convert.lower.case": "Lower case",
-    "php.code.style.convert.upper.case": "Upper case",
-    "php.code.style.sort.by.length": "By length",
-    "phpdoc.code.style.convert.else.if.separate": "else if",
-    "phpdoc.code.style.param.spaces.between.tag.and.type": "Between tag and type:",
-    "phpdoc.code.style.param.spaces.between.type.and.name": "Between type and name:",
-    "phpdoc.code.style.param.spaces.between.name.and.description": "Between name and description:",
-    "auto.import.in.namespace.scope": "Enable auto-import in namespace scope",
-    "remote.connection.settings.default.remote.interpreter": "Default Remote Interpreter",
-    "settings.smart.keys.select.variable.name.without.dollar.sign.on.double.click": "Select variable name without '$' sign on double click",
-    "composer.label.phar": "composer.phar",
-    "php.run.label.https": "HTTPS:",
-    "php.run.label.url": "URL:",
-    "radio.button.const": "const(&C)",
-    "radio.button.public": "public(&U)",
-    "radio.button.private": "private(&I)",
-    "radio.button.protected": "protected(&O)",
-    "label.server.document.root": "$_SERVER['DOCUMENT_ROOT']",
-    "inspection.php.separate.else.if.inspection.display.name": "Else if",
-    "inspection.php.group.psr.12": "PSR-12",
-    "property.write": "@property-write",
-    "property.read": "@property-read",
-    "0.1": "{0}，{1}",
-    "inspection.php.illegal.array.key.type.description": "{0} {1}",
-    "0.12": "{0}:{1}",
-    "02": "{0}::",
-    "03": "({0})",
-    "04": "{0}:",
-    "all.scripts": "<All scripts>",
-    "fluent.setters": "Fluent setter",
-    "label.lt.no.server": "<no server>",
-    "PhpLanguageLevel.8.1.0.presentable.name": "8.1",
-    "quality.tool.cs.fixer.name": "PHP CS Fixer"
-  },
-  "PhpRemoteSdkBundle.properties": {
-    "remote.interpreter.default.interpreter.path": "/usr/bin/php",
-    "remote.interpreter.wsl.default.interpreter.path": "/usr/bin/php"
-  },
-  "PlayBundle.properties": {
-    "play.download.page": "http://www.playframework.org/download"
-  },
-  "PrettierBundle.properties": {
-    "prettier.formatter.hint.0": "Prettier: {0}"
-  },
-  "ProjectBundle.properties": {
-    "sdk.configure.add.sdkType.subAction": "{0}...",
-    "dialog.text.resolving.sdks.item": "{0}“{1}”"
-  },
-  "PropertiesBundle.properties": {
-    "structure.view.empty.property.presentation": "<property>"
-  },
-  "PuppetBundle.properties": {
-    "language.settings.code.style.sample": "service { 'sshd':\n  subscribe => File['sshdconfig'],\n}",
-    "puppet.module.name": "{0} {1}",
-    "puppet.module.name.unnamed": "<Unnamed>"
-  },
-  "PyBundle.properties": {
-    "QFIX.bold.html.text": "<b>{0}</b>",
-    "runcfg.trial.display_name": "Twisted Trial",
-    "python.sdk.environment.yml.label": "environment.yml",
-    "remote.interpreter.default.interpreter.path": "/usr/bin/python",
-    "remote.interpreter.wsl.default.interpreter.path": "/usr/bin/python",
-    "configurable.PythonSdkEditorTab.display.name": "Python SDK",
-    "debugger.dataviewer.header.filter.hint": "{0}: {1}",
-    "python.packaging.dialog.description.attempt.to.uninstall.for.several.dependent.packages.single.package.description": "{0} -> {1}",
-    "framework.support.python.sdk.combobox.label": "Python SDK:",
-    "python.toolwindow.packages.load.more.start": "…",
-    "python.console.command.queue.got.it.tooltip.id": "python.console.command.queue.show",
-    "python.sdk.action.add.interpreter.based.on.target.text": "{0}…"
-  },
-  "PyDockerBundle.properties": {
-    "python.add.sdk.panel.name.docker.compose": "Docker Compose",
-    "remote.sdk.exception.message.with.cause": "{0}:\n{1}"
-  },
-  "PyPsiBundle.properties": {
-    "filetype.python.docstring.description": "Python docstring",
-    "find.usages.unnamed": "<unnamed>",
-    "element.presentation.location.string.module": "({0})"
-  },
-  "PySshInterpreterBundle.properties": {
-    "ssh.connection.wizard.remote.interpreter.default.interpreter.path": "/usr/bin/python"
-  },
-  "PythonProBundle.properties": {
-    "python.debug.text.pane.text": "<html><head></head><body></body></html>",
-    "configurable.PyScientificConfigurable.display.name": "Python Scientific"
-  },
-  "PythonProfilerBundle.properties": {
-    "call.graph.add.time.milliseconds.label.text": "{0}ms",
-    "profiler.time.ms": "{0} ms"
-  },
-  "QodanaBundle.properties": {
-    "qodana.problem.description.with.level": "[{0}] Qodana: {1}",
-    "qodana.problem.description.without.level": "Qodana: {0}"
-  },
-  "QuarkusBundle.properties": {
-    "quarkus.starter.version.label": "Quarkus:"
-  },
-  "RBundle.properties": {
-    "sdk.ruby.title": "Ruby SDK",
-    "sdk.jruby.title": "JRuby SDK",
-    "run.configuration.messages.select.sdk.bound": "Ruby SDK:",
-    "run.configuration.messages.runner.version": "''{0}'' gem:",
-    "cucumber.jruby.run.configuration.type.name": "JRuby Cucumber",
-    "run.configuration.tests.display.name": "Test::Unit/Shoulda/Minitest",
-    "minitest.run.configuration.prefix": "Minitest: {0}",
-    "rspec.run.configuration.prefix": "RSpec: {0}",
-    "cucumber.run.configuration.prefix": "Cucumber: {0}",
-    "spork.run.settings.rspec": "RSpec(&S)",
-    "spork.run.settings.cucumber": "Cucumber(&C)",
-    "spork.run.settings.testunit": "TestUnit/Shoulda/Minitest(&U)",
-    "spork.server.run.configuration.type.name": "Spork DRb",
-    "pry.console": "Pry: {0}",
-    "irb.console": "IRB: {0}",
-    "rake.action.title": "Rake ''{0}''",
-    "dialog.generate.common.checkBox.svn.text": "Svn(&V)",
-    "dialog.generate.common.checkBox.git.text": "Git(&G)",
-    "dialog.generate.cucumber.tframework.spec": "RSpec(&R)",
-    "dialog.generate.cucumber.tframework.testunit": "Test::Unit(&T)",
-    "dialog.generate.cucumber.sframework.capybara": "Capybara(&C)",
-    "dialog.generate.cucumber.sframework.webrat": "Webrat(&W)",
-    "color.settings.rhtml.scriptlet.start": "Scriptlet start",
-    "color.settings.rhtml.scriptlet.end": "Scriptlet end",
-    "color.settings.rhtml.expr.start": "Expression start",
-    "color.settings.rhtml.expr.end": "Expression end",
-    "color.settings.rhtml.scripting.bkg": "Ruby injection background",
-    "color.settings.rhtml.omit.new.line": "Omit new line modifier",
-    "module.rails.create.app.presentable.name": "Rails API",
-    "rails.project.module.view.nodes.minitest.shoulda.presentable": "Minitest/Shoulda",
-    "jruby.framework.configurable.select.sdk.text": "JRuby SDK:",
-    "jruby.framework.configurable.sdk": "JRuby SDK:",
-    "rails.facet": "Ruby on Rails",
-    "jrails.facet": "JRuby on Rails",
-    "rails.application.api.generator.name": "Rails API",
-    "ruby.project.wizard.tab.project.generator.ruby.sdk": "Ruby SDK(&S):",
-    "gem.build.options.dialog.title": "{0} Gem {1}",
-    "refactoring.extract.module.context.static": "static (extend)(&E)",
-    "ruby.debugger.verbose.output": "Verbose debugger output",
-    "ruby.debugger.ignore.non.project": "Ignore non-project sources",
-    "ruby.debugger.attach.to.subprocesses.automatically.text": "Attach to subprocesses automatically while debugging",
-    "ruby.debugger.read.frames.of.non.suspended.threads.text": "Read frames of non-suspended threads (not supported for Ruby 2.0)",
-    "ruby.ide.sdk.configurable.create.rvm.gemset.sdk.label": "Ruby SDK(&S):",
-    "ruby.ide.sdk.configurable.create.rvm.gemset.text.edit": "RVM Gemset(&G):",
-    "ruby.rbenv.gemset.name": "Rbenv gemset",
-    "ruby.action.create.new.test.dialog.kind.testUnit": "Test::Unit",
-    "ruby.code.style.indent.when.cases": "Indent when cases",
-    "ruby.code.style.spaces.around.braces": "Curly braces in hashes",
-    "ruby.code.style.spaces.around.braces.blocks": "Curly braces in blocks",
-    "ruby.code.style.spaces.around.arrows": "Hash rockets",
-    "ruby.code.style.spaces.around.operators.range": "Range operators",
-    "ruby.code.style.spaces.around.operators.other": "Other operators",
-    "ruby.code.style.force.newlines.around.visibility.modifiers": "Force newlines around visibility modifiers",
-    "ruby.code.style.convert.brace.block.by.enter": "Convert {} blocks to do..end by Enter",
-    "dialog.rails.i18n.create.property.translation.example": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "test.frameworks.names.testunit": "Test::Unit",
-    "remote.interpreter.default.interpreter.path": "/usr/bin/ruby",
-    "remote.interpreter.wsl.default.interpreter.path": "/usr/bin/ruby",
-    "rails.action.cable.gutter.title": "Action cable",
-    "run.anything.rvm.use.undefined": "<undefined>",
-    "run.anything.select.rbenv.shell.completion.group": "rbenv shell",
-    "ruby.smart.keys.option.interpolation": "Start ruby interpolation in strings on #",
-    "ruby.presentation.invalid": "<invalid>",
-    "ruby.presentation.unknown": "<unknown>",
-    "action.rspec.LetIntroduce.text": "RSpec 'let'",
-    "group.ROR_TOOLS.text": "Ruby on Rails",
-    "action.org.jetbrains.plugins.ruby.gem.bundler.actions.RunBundlerInitAction.text": "I&nit",
-    "group.BUNDLER_ACTIONS.text": "Bundler(&B)",
-    "group.GEM_BUILD_ACTION.text": "Gem (&G)",
-    "settings.highlight.rdoc.and.ruby.syntax.in.comments": "Highlight RDoc and ruby syntax in comments",
-    "parsing.error.ruby": "[RUBY] {0}",
-    "class.anonymous": "<anonymous>",
-    "border.title.ruby.i18n": "Ruby i18n",
-    "ruby.intentions.category.erb": "Ruby/ERB",
-    "ruby.intentions.category.i18n": "Ruby/I18n",
-    "sdk.ruby.new.wizard.label": "Ruby SDK:",
-    "rails.wizard.project.sdk": "Ruby SDK:"
-  },
-  "RCovBundle.properties": {
-    "rcov.support.disabled.info.link": "https://youtrack.jetbrains.com/issue/RUBY-29645"
-  },
-  "RPluginBundle.properties": {
-    "project.setting.rcpp.email": "your@email.com",
-    "project.setting.rcpp.license": "GPL (>= 2)",
-    "interpreter.status.bar.local.interpreter.representation": "R {0}",
-    "interpreter.status.bar.current.interpreter.name": "R {0}",
-    "rx.presentation.utils.environment.unnamed": "[environment]",
-    "rx.presentation.utils.list.element.name": "[[{0}]]",
-    "rx.presentation.utils.vector.element.name": "[{0}]",
-    "rx.presentation.utils.list.text": "List[1:{0}]",
-    "rx.presentation.utils.empty.list.text": "list()",
-    "import.data.dialog.encoding.utf": "UTF-8",
-    "import.data.dialog.encoding.latin": "Latin-1",
-    "inlay.hints.function.return.expression.explicit.prefix": "^",
-    "inlay.hints.function.return.expression.implicit.prefix": "<n>^",
-    "debugger.global.stack.frame": "[global]",
-    "create.new.r.markdown.file.notebook": "HTML Notebook",
-    "dataframe.viewer.page.count": "/{0}",
-    "rstudioapi.show.dialog.message": "{0}\n<a href=\"{1}\">{1}</a>"
-  },
-  "RSBundle.properties": {
-    "webservices.file.templates.group.name": "JAX-RS"
-  },
-  "RbsBundle.properties": {
-    "rbs.actions.run.anything.help.placeholder": "rbs <command>",
-    "steep.actions.run.anything.help.placeholder": "steep <command>",
-    "rbs.rubysigs.name": "rbs ({0}) [bundled]",
-    "rbs.rubysigs.name.with.version": "rbs (v{0}, {1}) [bundled]"
-  },
-  "ReactiveStreamsBundle.properties": {
-    "setting.display.name": "Reactive Streams",
-    "settings.initialization.method.hooks": "Hooks.onOperatorDebug()",
-    "settings.initialization.method.agent": "ReactorDebugAgent.init()",
-    "settings.initialization.method.hooks.link": "https://projectreactor.io/docs/core/release/reference/#debug-activate",
-    "settings.initialization.method.agent.link": "https://projectreactor.io/docs/core/release/reference/#reactor-tools-debug"
-  },
-  "RefactoringBundle.properties": {
-    "visibility.public": "public(&B)",
-    "visibility.protected": "protected(&O)",
-    "visibility.private": "private(&V)",
-    "visibility.package.local": "Package local(&K)",
-    "rename.target.text.0.1": "{0} → ''{1}''",
-    "progress.title.collecting.suggested.names": "Collecting suggested names"
-  },
-  "RelaxngBundle.properties": {
-    "relaxng.convert-schema.advanced-options.dtd.checkbox.generate-start": "generate-start(&G)",
-    "relaxng.convert-schema.advanced-options.dtd.checkbox.inline-attlist": "inline-attlist(&I)",
-    "relaxng.convert-schema.advanced-options.dtd.checkbox.strict-any": "strict-any(&S)",
-    "relaxng.convert-schema.advanced-options.dtd.label.any-name": "any-name(&N):",
-    "relaxng.convert-schema.advanced-options.dtd.label.annotation-prefix": "annotation-prefix(&O):",
-    "relaxng.convert-schema.advanced-options.dtd.label.attlist-define": "attlist-define(&A):",
-    "relaxng.convert-schema.advanced-options.dtd.label.colon-replacement": "colon-replacement(&C):",
-    "relaxng.convert-schema.advanced-options.dtd.label.element-define": "element-define(&E):",
-    "relaxng.convert-schema.advanced-options.xsd.checkbox.disable-abstract-elements": "disable-abstract-elements(&D)",
-    "relaxng.convert-schema.advanced-options.xsd.label.any-attribute-process-contents": "any-attribute-process-contents(&N)",
-    "relaxng.convert-schema.advanced-options.xsd.label.any-process-contents": "any-process-contents(&A)",
-    "relaxng.convert-schema.settings.radio-button.dtd": "DTD(&D)",
-    "relaxng.inspection.group-name": "RELAX NG"
-  },
-  "RemoteSdkBundle.properties": {
-    "action.system.default.text": "<System Default>",
-    "project.root.placeholder": "<Project root>",
-    "wrapped.project.root": "&lt;Project root&gt;"
-  },
-  "ResinBundle.properties": {
-    "resin.version.prefix": "Resin {0}",
-    "resin.version.fallback.v2": "2.x",
-    "resin.version.fallback.v3": "3.x",
-    "ResinDeploymentProvider.deploy.method.conf.name": "resin.xml",
-    "RemoteRunConfigurationEditor.message.ping.operation-name": "Ping Resin"
-  },
-  "RestClientBundle.properties": {
-    "rest.client.request.response.body.empty": "<Response body is empty>",
-    "http.request.diff.compare.with.dialog.title": "{0} vs {1} ({2})",
-    "rest.client.0.of.1.kb.indicator.text": "{0}/{1}Kb",
-    "notification.group.http.generation": "HTTP client request generation failed",
-    "notification.group.http.client": "HTTP client request execution failed",
-    "http.request.select.before.run.action.text": "<Select Environment Before Run>"
-  },
-  "RubyDockerBundle.properties": {
-    "ruby.docker.compose.up.project": "\"docker-compose up\"",
-    "ruby.docker.compose.command.type.run.name": "docker-compose run",
-    "ruby.docker.compose.command.type.up.name": "docker-compose up",
-    "ruby.docker.compose.command.type.exec.name": "docker-compose exec",
-    "configurable.internal.command.mode.run": "'docker-compose run'",
-    "configurable.gems.copy.docker.dp.mode.caption": "'docker cp'",
-    "border.title.docker.compose": "docker-compose"
-  },
-  "SASSBundle.properties": {
-    "color.settings.sass.name": "Sass/SCSS",
-    "inspections.group.name": "Sass/SCSS",
-    "parsing.error.unexpected.variable": "Unexpected variable"
-  },
-  "SSRBundle.properties": {
-    "filter.button": "Toggle Filter Panel",
-    "filter.button.description": "Toggle the variable filters panel",
-    "import.template.script.warning": "Note that the imported template contains {1,choice,1#a Groovy Script filter|1<{1} Groovy Script filters} and any script has access to the complete {0} internals. Please make sure that the script does not cause damage before using this template.",
-    "add.filter.title": "Add Filter",
-    "add.filter.label": "Add filter",
-    "reference.0.label": "Reference={0}",
-    "script.0.label": "Script={0}",
-    "text.0.label": "Text={0}",
-    "type.0.label": "Type={0}",
-    "no.filters.whole.template.label": "No filters added for the whole template.",
-    "no.filters.for.0.label": "No filters added for ${0}$.",
-    "no.script.for.0.label": "No script added for ${0}$.",
-    "filters.for.whole.template.title": "Filters for the whole template:",
-    "filters.for.0.title": "Filters for ${0}$:",
-    "script.filter.match.variable.help.text": "<p>Use the GroovyScript IntelliJ API to filter the search results. When the specified script returns <code>false</code>, the found element will not be in the search results. Non-boolean script results will be converted to boolean. <p>Available variables: {0}",
-    "invert.filter": "Invert filter",
-    "xml_html.category": "XML/HTML",
-    "j2ee.category": "Java/Java EE",
-    "min.occurs.tooltip.message": "[{0},{1}]",
-    "file.type.pattern.context": "{0} - {1}",
-    "replace.configuration.display.text": "{0} ⇨ {1}"
-  },
-  "SeamBundle.properties": {
-    "action.Seam.Create.Components.Xml.text": "Seam components.xml"
-  },
-  "SeamInspectionBundle.properties": {
-    "model.inspection.group.name": "JBoss Seam"
-  },
-  "SeleniumSharedBundle.properties": {
-    "page.object.items.add.by.type": "{0}"
-  },
-  "SerialMonitorBundle.properties": {
-    "uart.stopbits.1.5": "1.5",
-    "uart.newline.crlf": "CR/LF"
-  },
-  "ShBundle.properties": {
-    "sh.unnamed.element.presentable.name": "<unnamed>"
-  },
-  "SharedIndexesBundle.properties": {
-    "progress.message.permanent.auth.testing": "{0}",
-    "configuration.section.jdk": "JDK:",
-    "configuration.combobox.comment.with.url": "{0}"
-  },
-  "SpaceBundle.properties": {
-    "product.name.jetbrains.space": "JetBrains Space",
-    "auth.page.jetbrains.space.header.text": "JetBrains Space",
-    "review.chat.editor.tab.tooltip": "{0}：{1}",
-    "review.at.time": "{0} {1}",
-    "review.by.author.at.time": "{0}，{1} {2}",
-    "column.name.commit.status": "Space Automation",
-    "review.label.discussions.count": "{0,choice,0#There are no discussions|1#There is {0} discussion|2#There are {0} discussions}"
-  },
-  "SpaceGatewayBundle.properties": {
-    "connector.title": "JetBrains Space",
-    "login.page.title": "JetBrains Space",
-    "label.dev.env.ide": "IDE:",
-    "label.dev.file": "Devfile:"
-  },
-  "SpaceVcsBundle.properties": {
-    "action.com.intellij.space.vcs.share.SpaceShareProjectAction.Vcs.Toolbar.Widget.text": "Space..."
-  },
-  "SpellCheckerBundle.properties": {
-    "0.in.quotes": "''{0}''"
-  },
-  "SpringAopBundle.properties": {
-    "aop.inspection.group": "Spring AOP",
-    "SpringAopAnnotator.annotator.name": "AOP (XML)"
-  },
-  "SpringApiBundle.properties": {
-    "inspection.group.core": "Spring Core",
-    "spring.bean.with.unknown.name": "<anonymous bean>",
-    "create.spring.context.file.dtd.1.0": "Spring 1.x DTD",
-    "create.spring.context.file.dtd.2.0": "Spring 2.x DTD",
-    "create.spring.context.file.schema.2.0": "Spring XSD"
-  },
-  "SpringBatchBundle.properties": {
-    "inspection.group.name": "Spring Batch",
-    "framework.name": "Spring Batch"
-  },
-  "SpringBootApiBundle.properties": {
-    "spring.boot.name": "Spring Boot",
-    "icon.icons.SpringBoot.tooltip": "Spring Boot",
-    "icon.icons.SpringBoot_Overlay.tooltip": "Spring Boot",
-    "spring.boot.intention.category": "Spring Boot"
-  },
-  "SpringBootInitializrBundle.properties": {
-    "label.spring.boot.version": "Spring Boot:",
-    "icon.icons.SpringInitializr.tooltip": "Spring Initializr"
-  },
-  "SpringBootRunBundle.properties": {
-    "spring.boot.application.run.configuration.framework.section": "Spring Boot(&G)",
-    "spring.boot.run.config.type.name": "Spring Boot",
-    "spring.boot.run.config.fragment.framework.group": "Spring Boot"
-  },
-  "SpringBundle.properties": {
-    "spring.bean": "Spring Bean",
-    "facet.context.edit.parent.none.selected": "<none>",
-    "framework.title.spring": "Spring(&S)",
-    "action.Spring.Beans.Generate.Action.text": "Spring Bean",
-    "spring.beans.select.in.target": "Spring Bean"
-  },
-  "SpringCloudBundle.properties": {
-    "spring.cloud.inspection.group.name": "Spring Cloud"
-  },
-  "SpringCloudStreamBundle.properties": {
-    "spring.cloud.stream.inspection.group.name": "Spring Cloud Stream",
-    "spring.binders.file.type": "Spring Binder"
-  },
-  "SpringDataBundle.properties": {
-    "data.inspection.group.name": "Spring Data",
-    "spring.data.framework.name": "Spring Data JPA",
-    "spring.data.ql": "Spring Data QL",
-    "spring.data.jpa": "Spring Data JPA",
-    "named.query.type.title": "@NamedQuery"
-  },
-  "SpringELBundle.properties": {
-    "spring.el.name": "Spring EL"
-  },
-  "SpringGraphBundle.properties": {
-    "spring.bean.dependency.graph.edge.anno.autowired": "@Autowired",
-    "spring.bean.dependency.graph.edge.anno.resource.autowired": "@Resource",
-    "spring.bean.dependency.graph.edge.anno.inject.autowired": "@Inject",
-    "spring.bean.dependency.graph.edge.anno.imported": "@Import",
-    "spring.bean.dependency.graph.edge.anno.java.bean": "@Bean",
-    "spring.diagrams.autowired": "@Autowired"
-  },
-  "SpringIntegrationBundle.properties": {
-    "el.location.name": "Spring Integration",
-    "inspection.group.name": "Spring Integration",
-    "spring.integration.framework.name": "Spring Integration"
-  },
-  "SpringMvcBundle.properties": {
-    "mvc.inspection.group.name": "Spring MVC",
-    "mvc.goto.related.item.group.name": "Spring MVC",
-    "mvc.framework.name": "Spring MVC",
-    "spring.reactive.web.client.endpoints.view.title": "Spring Reactive WebClient",
-    "spring.reactive.web.test.client.endpoints.view.title": "Spring WebTestClient",
-    "spring.rest.operations.endpoints.view.title": "Spring RestOperations",
-    "spring.test.rest.template.endpoints.view.title": "Spring TestRestTemplate",
-    "spring.test.mock.mvc.endpoints.view.title": "Spring MockMvc"
-  },
-  "SpringOsgiBundle.properties": {
-    "osgi.inspection.group.name": "Spring OSGi"
-  },
-  "SpringSecurityBundle.properties": {
-    "inspections.group.path.name": "Spring Security"
-  },
-  "SpringShellBundle.properties": {
-    "inspection.group.name": "Spring Shell"
-  },
-  "SpringWebServicesBundle.properties": {
-    "spring.ws.framework.name": "Spring WebService",
-    "spring.ws.model.inspection.group.name": "Spring Web Services"
-  },
-  "SpringWebSocketBundle.properties": {
-    "inspection.group.name": "Spring WebSocket"
-  },
-  "SqlBundle.properties": {
-    "sql.inspections.group.name.mssql": "SQL Server",
-    "settings.code.style.table.create": "CREATE TABLE",
-    "settings.code.style.table.alter": "ALTER TABLE",
-    "settings.code.style.create.schema": "CREATE SCHEMA",
-    "settings.code.style.if.then.else": "IF … THEN … ELSE",
-    "code.style.predefined.JoeCelko": "Joe Celko",
-    "SqlJoinCardinalityInlayHintsProvider.hint.settings.case.inner.join": "INNER JOIN",
-    "SqlJoinCardinalityInlayHintsProvider.hint.settings.case.left.join": "LEFT JOIN",
-    "SqlJoinCardinalityInlayHintsProvider.hint.settings.case.right.join": "RIGHT JOIN",
-    "SqlJoinCardinalityInlayHintsProvider.hint.settings.case.full.join": "FULL JOIN"
-  },
-  "SshBundle.properties": {
-    "ide.service.view.local.port.forwarding.text": "{0} → {1}",
-    "ide.service.view.remote.port.forwarding.text": "{0} ← {1}"
-  },
-  "Struts2Bundle.properties": {
-    "struts2": "Struts 2",
-    "dom.extendable.class.converter.type.spring": "Spring Bean",
-    "inspections.group.display.name": "Struts 2",
-    "intentions.family.name": "Struts 2",
-    "structure.view.filter.params": "Hide params"
-  },
-  "SvnBundle.properties": {
-    "group.SubversionFilePopupGroup.text": "Subversion(_S)",
-    "label.text.delete.stored.credentials": "Delete all stored credentials for 'http', 'svn' and 'svn+ssh' protocols",
-    "ssh.settings.subversion.config.choice.title": "Subversion config",
-    "label.update.url": "URL:",
-    "label.working.copy.url": "URL:",
-    "use.idea.proxy.as.default.label.text": "Only HTTP proxy can be used as default",
-    "navigate.to.idea.proxy.settings": "Navigate to general proxy settings",
-    "value.patch.file.name": "TheirsChanges.patch",
-    "settings.check.mergeinfo": "Check svn:mergeinfo in target subtree when preparing for merge",
-    "settings.maximum.revisions.number": "Maximum number of revisions to look back in annotations:",
-    "settings.HTTP.timeout": "HTTP timeout:",
-    "settings.SSH.connection.timeout": "SSH connection timeout:",
-    "settings.SSH.read.timeout": "SSH read timeout:",
-    "svn.short.name.with.mnemonic": "SVN(_S)"
-  },
-  "SwaggerBundle.properties": {
-    "swagger.yaml.live.templates.presentable.name": "OpenAPI/Swagger [.yaml]",
-    "swagger.json.live.templates.presentable.name": "OpenAPI/Swagger [.json]",
-    "specification.swagger.yaml.title": "Swagger 2 (.yaml)",
-    "specification.swagger.json.title": "Swagger 2 (.json)",
-    "specification.openapi.yaml.title": "OpenAPI 3 (.yaml)",
-    "specification.openapi.json.title": "OpenAPI 3 (.json)",
-    "swagger.2.0.json.schema": "Swagger 2.0",
-    "openapi.3.json.schema": "OpenAPI 3.0",
-    "swagger.2.0.specification.file.presentation": "Swagger 2.0",
-    "openapi.3.0.specification.file.presentation": "OpenAPI 3.0",
-    "swagger.2.0.json.schema.remote.url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/schemas/v2.0/schema.json",
-    "openapi.3.json.schema.remote.url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/schemas/v3.0/schema.json",
-    "settings.remote.specification.add.from.hub": "Swagger Hub",
-    "settings.hub.title": "Swagger Hub",
-    "settings.hub.custom.host.info.url": "https://app.swaggerhub.com/help/enterprise/index",
-    "settings.swagger.ui.title": "Swagger UI",
-    "run.configuration.codegen.display.name": "Swagger Codegen",
-    "run.configuration.bundled.swagger.codegen.2": "Swagger Codegen 2",
-    "run.configuration.bundled.swagger.codegen.3": "Swagger Codegen 3",
-    "run.configuration.bundled.openapi.generator.4": "OpenAPI Generator 4",
-    "run.configuration.bundled.openapi.generator.5": "OpenAPI Generator 5",
-    "openapi.3.1.json.schema": "OpenAPI 3.1",
-    "openapi.3.1.specification.file.presentation": "OpenAPI 3.1",
-    "openapi.3.1.json.schema.remote.url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json"
-  },
-  "SwiftBundle.properties": {
-    "action.Swift.Generate.Description.text": "description…",
-    "action.Swift.Generate.DebugDescription.text": "debugDescription…",
-    "intention.split.nested.if": "Split into nested 'if's",
-    "change.info.async.throws.label": "async/throws:",
-    "intention.simplifyifelse.collapse.guard": "Collapse 'guard'",
-    "intention.simplifyifelse.simplify.guard": "Simplify 'guard'",
-    "intention.simplifyifelse.replace.guard.with.0": "Replace ''guard'' with ''{0}''",
-    "intention.simplifyifelse.familyName": "Simplify if-else",
-    "intention.simplifyifelse.collapse.conditional.expression": "Collapse conditional expression",
-    "intention.simplifyifelse.collapse.ifelse": "Collapse 'if else'",
-    "intention.simplifyifelse.simplify.if.else": "Simplify 'if else'",
-    "intention.simplifyifelse.replace.if.else.with.0": "Replace ''if else'' with ''{0}''",
-    "notification.group.plugin.errors": "Swift language service failed"
-  },
-  "SwiftPackageManagerBundle.properties": {
-    "swift.package.manager": "Swift Package Manager",
-    "group.Swift.PackageManager.Menu.text": "Swift Package Manager"
-  },
-  "TaskBundle.properties": {
-    "jira.default.query": "assignee = currentUser() and resolution = Unresolved order by updated"
-  },
-  "TcServerBundle.properties": {
-    "tc_server": "tc Server",
-    "spring_tc_server": "Spring tc Server",
-    "additionalDeploymentSettings.editorTitle": "Spring tc Server",
-    "serverEditor.editorTitle": "Spring tc Server",
-    "configurationType.displayName": "Spring tc Server"
-  },
-  "TideBundle.properties": {
-    "tms.connection.url": "URL:"
-  },
-  "TomcatBundle.properties": {
-    "TomcatRemoteModel.target.definition.context": "context.xml"
-  },
-  "ToolchainsBundle.properties": {
-    "msvc": "Visual Studio",
-    "mingw64": "MinGW-w64",
-    "cpp.toolchains.toolset.cmake.title": "{0} CMake",
-    "cpp.toolchains.toolset.gdb.title": "{0} GDB"
-  },
-  "TraceBundle.properties": {
-    "configuration.name": "Spy-js",
-    "configuration.node.name": "Spy-js for Node.js",
-    "console.trace.doubleSpace": "  ",
-    "console.trace.timeSuffix": " ms",
-    "console.trace.unknown": "...",
-    "console.trace.events.eventTooltipTemplate.fileEntryTemplate": "<br/>%s<span>%s</span>",
-    "fileDependency.details.event.unknown": "<deleted>",
-    "label.s.s": "''{0}'' -> ''{1}''"
-  },
-  "TsLintBundle.properties": {
-    "tslint.package.label": "TSLint package:",
-    "tslint.notification.content": "TSLint: {0}"
-  },
-  "UIBundle.properties": {
-    "memory.usage.panel.message.text": "{0,number,####}/{1,number,####}M"
-  },
-  "UIDesignerBundle.properties": {
-    "title.add.component": "Add Component",
-    "bind.to.bean.ismodified.checkbox": "isModified()",
-    "bind.to.bean.setdata.checkbox": "setData()",
-    "bind.to.bean.getdata.checkbox": "getData()",
-    "resize.feedback": "{0}: {1} R x {2} C"
-  },
-  "UltimateProfilerBundle.properties": {
-    "hprof.stub.unknown": "<unknown>",
-    "hprof.stub.unknown.class": "<unknown class>",
-    "hprof.stub.unknown.type": "<unknown type>",
-    "hprof.stub.first.results": "<shown first %,d results>",
-    "hprof.object.view.static": "statically from",
-    "hprof.object.view.of": "/",
-    "jfr.ui.timeline.cpu.load.label": "CPU {0}"
-  },
-  "UsageViewBundle.properties": {
-    "find.file.size.megabytes": "{0} MB",
-    "usage.view.results.node.prefix": "[{0}] {1}"
-  },
-  "VagrantBundle.properties": {
-    "vagrant.add.box.url": "Box URL:"
-  },
-  "VcsBundle.properties": {
-    "group.name.version.control": "VCS(&V)",
-    "commit.dialog.default.commit.operation.name": "Comm&it",
-    "vcs.generic.name.with.mnemonic": "VCS(_S)",
-    "vcs.common.labels.vcs": "VCS:",
-    "vcs.common.labels.url": "URL:",
-    "file.history.details.hash.author.on.date.at.time": "{0} {1}，{2} {3}",
-    "plugins.configurable.show": "status.text.Show",
-    "change.dialog.title.change.list.name": "{0} [{1}]",
-    "sequence.concatenation.separator": ", ",
-    "label.multi.author.modified.code": "{0} +{1} *",
-    "label.multi.author.not.modified.code": "{0} +{1}",
-    "label.single.author.modified.code": "{0} *"
-  },
-  "VcsLogBundle.properties": {
-    "vcs.log.action.intellisort.title": "IntelliSort: {0}",
-    "vcs.log.filter.accessible.name": "{0}：{1}"
-  },
-  "VisualizationBundle.properties": {
-    "inlay.output.table.notification.group.name": "Notebook table",
-    "paginator.of": "/{0}",
-    "clipboard.utils.copy.load.limit": "The table is too big. Only first {0} rows were copied.",
-    "action.NotebookOutputCollapseAllInSelectedCellsAction.text": "Collapse Outputs of Selected Cells"
-  },
-  "VueBundle.properties": {
-    "vue.project.generator.name": "Vue.js",
-    "vue.project.generator.presentable.package.name": "Vue CLI(&C)",
-    "vue.symbol.presentation": "Vue {0} {1}"
-  },
-  "W3ValidatorsBundle.properties": {
-    "inspection.message.w3c": "W3C: {0}"
-  },
-  "WDBundle.properties": {
-    "transfer.bit.p.s": " ({0,number,#} b/s)",
-    "transfer.kilobit.p.s": " ({0,number,#.#} Kb/s)",
-    "transfer.mega.bit.p.s": " ({0,number,#.#} Mb/s)",
-    "size.kilobyte": "{0,number,#.#} kB",
-    "size.megabyte": "{0,number,#.#} MB",
-    "remote.diff.title.0.on.server.1": "{0} ({1})",
-    "composite.diff.element.name": "<multiple {0, choice, 1#directories|2#files|3#directories and files}{1, choice, 0#|1# under project root}>",
-    "path.in.root.0.1": "<{0}>/{1}",
-    "0.in.angle.brackets": "<{0}>",
-    "choose.web.path.step.url.preview": "http://",
-    "permissions.read": "&R",
-    "permissions.write": "&W",
-    "permissions.execute": "&X",
-    "advanced.tls": "TLS:",
-    "server.form.html.0.html": "<html>{0}</html>",
-    "trouble.info.web.url": "Web URL"
-  },
-  "WSBundle.properties": {
-    "glassfish.jax.ws.2.x.ri.metro.1.x.jwsdp.2.0": "Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2",
-    "websphere.platform.name": "WebSphere 6.X",
-    "axis2.display.name": "Apache Axis 2",
-    "settings.external.engines": "External engines:",
-    "settings.prefix.path.for.web.services.url": "Prefix path for web services URL:",
-    "settings.maximum.vm.heap.size.when.launching.tools.mb": "Maximum VM heap size when launching tools (Mb):",
-    "group.JAXB.text": "JAXB(_X)",
-    "jaxb.generation.dialog.sdk.label": "SDK:",
-    "jaxb.generation.dialog.xjc.label": "XJC:",
-    "jaxb.generation.dialog.jxc.label": "JXC:"
-  },
-  "WebBundle.properties": {
-    "web.xml.validator.description": "Web.xml",
-    "action.CreateServletAction.text": "Servlet(_S)",
-    "action.GenerateServletAction.text": "Servlet(&S)…",
-    "create.jsp.action.jsp.jspx": "JSP/JSPX",
-    "web.group.names.javaee.issues": "Java EE",
-    "web.project.structure.root.type.name.java.web": "Java Web"
-  },
-  "WebSphereBundle.properties": {
-    "websphere.integration.presentable.name": "WebSphere/Liberty"
-  },
-  "WebflowBundle.properties": {
-    "inspections.group.path.name": "Spring Web Flow",
-    "spring.webflow.framework.name": "Spring Web Flow",
-    "compiler.validator.flow.name": "Spring Web Flow",
-    "el.location.name": "Spring Web Flow",
-    "flow.new.file": "Spring Web Flow",
-    "action.Webflow.Create.Context.File.text": "Spring Web Flow",
-    "spring.webflow": "Spring Web Flow",
-    "spring.web.flow.xml": "Spring Web Flow (XML)"
-  },
-  "WeblogicBundle.properties": {
-    "deployment.method.name.weblogic.deployer": "Weblogic.Deployer",
-    "template.group.title.version.6.x": "6.x",
-    "template.group.title.version.7.x": "7.x",
-    "template.group.title.version.8.x": "8.x",
-    "template.group.title.version.9.x": "9.x",
-    "template.group.title.version.10.x": "10.x",
-    "template.group.title.version.12.x.1.1": "12.x (1.1)",
-    "template.group.title.version.12.x.1.2": "12.x (1.2)",
-    "template.group.title.version.12.x.1.3": "12.x (1.3)",
-    "template.group.title.version.12.x.1.4": "12.x (1.4)",
-    "template.group.title.version.12.x.1.5": "12.x (1.5)",
-    "template.group.title.version.12.x.1.6": "12.x (1.6)",
-    "template.group.title.version.12.x.1.7": "12.x (1.7)",
-    "template.group.title.version.12.x.1.8": "12.x (1.8)",
-    "template.group.title.version.12.x.1.9": "12.x (1.9)",
-    "weblogic.appc.name": "WebLogic APPC",
-    "weblogic.ejbc.name": "WebLogic EJBC"
-  },
-  "WordPressBundle.properties": {
-    "wp.cli.title": "WP-CLI"
-  },
-  "XDebuggerBundle.properties": {
-    "xdebugger.attach.pid": "pid {0,number,#}",
-    "xbreakpoint.default.display.text": "{1}:{0,number,#}",
-    "action.Anonymous.text.breakpointdialog.gotosource": "BreakpointDialog.GoToSource",
-    "action.Anonymous.text.breakpointdialog.showsource": "BreakpointDialog.ShowSource"
-  },
-  "XPathBundle.properties": {
-    "dialog.title.xslt": "XSLT - {0}",
-    "label.uri": "URI(&U):",
-    "label.xpath": "XPath:",
-    "tab.title.xpath": "XPath ''{0}''"
-  },
-  "XmlBundle.properties": {
-    "web.editor.configuration.title": "HTML/CSS",
-    "xml.editor.options.misc.title": "XML/HTML",
-    "xml.external.resource.label.uri": "URI:",
-    "xml.map.resource.dialog.label.uri": "URI(&U):",
-    "xml.schemas.radio.button.html.4.http.www.w3.org.tr.html4.loose.dtd": "HTML 4 (\"http://www.w3.org/TR/html4/loose.dtd\")",
-    "xml.schemas.radio.button.html.5": "HTML 5",
-    "dialog.edit.template.checkbox.html": "HTML (&H)",
-    "dialog.edit.template.checkbox.xml": "XML (&X)",
-    "configurable.name.html.css": "HTML/CSS"
-  },
-  "defaultBundleActions/DefaultActionsBundle.properties": {
-    "action.NewPrivateEnvironmentFile.text": "http-client.private.env.json",
-    "action.Dart.pub.get.text": "Pub Get",
-    "action.Console.Jdbc.ExplainAnalyse.text": "Explain Analyse",
-    "action.Console.Jdbc.ExplainAnalyse.description": "Explain analyse",
-    "action.org.jetbrains.plugins.groovy.actions.generate.tostring.GroovyGenerateToStringAction.text": "toString()",
-    "action.QUnitGenerateNewTestAction.text": "QUnit Test",
-    "action.Generate.ToString.Dart.text": "toString()",
-    "action.JasmineGenerateBeforeEachMethodAction.text": "Jasmine beforeEach",
-    "action.delombokGetter.text": "@Getter",
-    "action.delombokWither.text": "@Wither",
-    "action.Dart.build.text": "Pub Build…",
-    "action.delombokFieldNameCostants.text": "@FieldNameConstants",
-    "action.KotlinGenerateToString.text": "toString()",
-    "action.GuiceActionGroup.text": "Google Guice",
-    "action.JasmineGenerateNewSuiteAction.text": "Jasmine Suite",
-    "action.delombokConstructor.text": "@Constructors",
-    "action.JupyterCreateFileAction.text": "Jupyter Notebook",
-    "action.GenerateServletAction.text": "Servlet…",
-    "action.delombokEqualsAndHashCode.text": "@EqualsAndHashCode",
-    "action.Add.Webflow.text": "Web Flow",
-    "action.org.jetbrains.plugins.groovy.actions.generate.missing.GroovyGenerateMethodMissingAction.text": "methodMissing()",
-    "action.delombokDelegate.text": "@Delegate",
-    "action.ConvertToMacLineSeparators.text": "CR - Classic Mac OS (\n)",
-    "action.Webflow.Create.Context.File.text": "Spring Web Flow",
-    "action.delombokBuilder.text": "@Builder",
-    "action.Console.Jdbc.ExplainPlan.Raw.text": "Explain Plan (Raw)",
-    "action.Console.Jdbc.ExplainPlan.Raw.description": "Explain Plan (Raw)",
-    "action.DevkitNewActions.text": "Plugin DevKit",
-    "action.PythonAppEngine.text": "Google App Engine",
-    "action.NewPublicEnvironmentFile.text": "http-client.env.json",
-    "action.QUnitGenerateTearDownAction.text": "QUnit TearDown",
-    "action.Console.Jdbc.ExplainGroup.text": "Explain Plan",
-    "action.delombokValue.text": "@Value",
-    "action.KotlinConsoleREPL.text": "Kotlin REPL",
-    "action.JasmineGenerateNewSpecAction.text": "Jasmine Spec",
-    "action.Git.Fixup.To.Commit.text": "Fixup…",
-    "action.org.jetbrains.plugins.groovy.actions.generate.missing.GroovyGeneratePropertyMissingAction.text": "propertyMissing()",
-    "action.Generate.TearDown.Actionscript.text": "tearDown()",
-    "action.delombokSuperBuilder.text": "@SuperBuilder",
-    "action.Console.Jdbc.ExplainPlan.text": "Explain Plan",
-    "action.Console.Jdbc.ExplainPlan.description": "Explain Plan",
-    "action.ConvertToWindowsLineSeparators.text": "CRLF - Windows (\n)",
-    "action.com.goide.vgo.actions.VgoTidyAction.text": "Go Mod Tidy",
-    "action.Spring.Beans.Generate.Action.text": "Spring Bean",
-    "action.delombokData.text": "@Data",
-    "action.CreateJavaeeWebPageAction.text": "JSP/JSPX",
-    "action.KotlinGenerateMavenTestCompileExecutionAction.text": "kotlin-maven-execution-provider",
-    "action.KotlinGenerateMavenTestCompileExecutionAction.description": "kotlin-maven-execution-provider",
-    "action.ROR_TOOLS.text": "Ruby on Rails",
-    "action.VcsToolbarLabelAction.text": "VCS:",
-    "action.Kubernetes.HelmLint.text": "Helm Lint",
-    "action.Console.Jdbc.ExplainAnalyse.Raw.text": "Explain Analyse (Raw)",
-    "action.Console.Jdbc.ExplainAnalyse.Raw.description": "Explain Analyse (Raw)",
-    "action.QUnitGenerateSetupAction.text": "QUnit Setup",
-    "action.delombokSetter.text": "@Setter",
-    "action.GWT.text": "Google Web Toolkit",
-    "action.GWT.description": "Google Web Toolkit",
-    "action.rspec.LetIntroduce.text": "RSpec 'let'",
-    "action.PhpGenerateGetters.text": "getter…",
-    "action.Dart.pub.outdated.text": "Pub Outdated",
-    "action.GenerateCreateUI.text": "createUI(...)",
-    "action.KotlinGenerateMavenCompileExecutionAction.text": "kotlin-maven-execution-provider",
-    "action.KotlinGenerateMavenCompileExecutionAction.description": "kotlin-maven-execution-provider",
-    "action.NewPackageInfo.text": "package-info.java",
-    "action.Dart.pub.cache.repair.text": "Pub Cache Repair…",
-    "action.Github.PullRequest.Review.Submit.text": "…",
-    "action.AddAsSwcLib.text": "com.intellij.AbstractBundle$$Lambda$381/0x00000008004bc440@463a0da...",
-    "action.NewModuleInfo.text": "module-info.java",
-    "action.KotlinGenerateMavenPluginAction.text": "kotlin-maven-plugin-provider",
-    "action.KotlinGenerateMavenPluginAction.description": "kotlin-maven-plugin-provider",
-    "action.Actions.ActionsPlugin.GenerateToString.text": "toString()",
-    "action.PhpGenerateSetters.text": "setter…",
-    "action.JasmineGenerateAfterEachMethodAction.text": "Jasmine afterEach",
-    "action.Faces.CreateJsfAction.text": "JSF/Facelets",
-    "action.delombokUtilityClass.text": "@UtilityClass",
-    "action.Generate.ToString.Actionscript.text": "toString()",
-    "action.Dart.pub.upgrade.text": "Pub Upgrade",
-    "action.Generate.SetUp.Actionscript.text": "setUp()",
-    "action.delombokToString.text": "@ToString",
-    "action.ActivateJavaEnterpriseToolWindow.text": "Java Enterprise",
-    "action.Ant_6117483dJSON": "Schemas Update.text=<default target>",
-    "group.DevkitNewActions.text": "Plugin DevKit",
-    "group.Console.Jdbc.ExplainGroup.text": "Explain Plan",
-    "action.Android.TransportDemo.text": "Transport Pipeline",
-    "action.NewAndroidVectorAsset.text": "Vector Asset",
-    "group.Spring.Beans.Generate.Action.text": "Spring Bean",
-    "action.Android.RunLayoutInspector.text": "Layout Inspector",
-    "action.Ant_6117483dBuild": "GroovyResetAgent.text=<default target>",
-    "action.ActivateLayoutValidationToolWindow.text": "Layout Validation"
-  },
-  "messages/ActionsBundle.properties": {
-    "action.GenerateCreateUI.text": "createUI(...)",
-    "action.Actions.ActionsPlugin.GenerateToString.text": "to_String()",
-    "group.VcsGroups.text": "Git(_G)",
-    "group.Internal.UI.text": "UI(&U)",
-    "action.SearchEverywhereToolbarHotKey.hotkey": "Shift+Shift",
-    "action.TextSearchAction.text": "Text..."
-  },
-  "messages/AnalysisBundle.properties": {
-    "inspection.export.results.capitalized.abstract.class": "Abstract\\&nbsp;class"
-  },
-  "messages/AndroidBundle.properties": {
-    "android.logcat.color.page.name": "Android Logcat",
-    "android.test.run.configuration.type.name": "Android Instrumented Tests",
-    "android.wizard.module.new.wear": "Wear OS",
-    "android.wizard.module.new.tv": "Android TV",
-    "android.wizard.module.new.google.cloud": "Google Cloud",
-    "android.wizard.module.config.new.base.missing": "<No Base Module found>",
-    "android.sdk.presentable.name": "Android SDK",
-    "android.extended.device.chooser.avd.label": "Android Virtual Device(&A):",
-    "android.logcat.new.filter.dialog.pid.label": "PID(&P):",
-    "android.ddms.nodevices": "[none]",
-    "android.ddms.actions.layoutinspector.title": "Layout Inspector",
-    "android.ddms.actions.layoutinspector.notification.group": "Layout Inspector",
-    "android.ddms.actions.layoutinspector.notification.title": "Layout Inspector",
-    "android.9patch.file.type.description": "Android 9-Patch",
-    "configurable.SdkUpdaterConfigurable.display.name": "Android SDK",
-    "configurable.name.device.file.explorer": "Device File Explorer",
-    "configurable.name.android.device.file.explorer": "Android Device File Explorer"
-  },
-  "messages/Angular2Bundle.properties": {
-    "angular.action.goto-related.inline": "<inline>",
-    "angular.action.new-project.name": "Angular CLI",
-    "angular.action.new-project.presentable-package-name": "Angular CLI(&C):",
-    "angular.description.angular-cli": "Angular CLI",
-    "angular.description.unknown-class": "<unknown class>",
-    "angular.description.unnamed": "<unnamed>",
-    "angular.inspection.cyclic-module-dependency.message.separator": "->"
-  },
-  "messages/AppCodeBundle.properties": {
-    "sdk.type.name": "Apple SDK",
-    "project.settings.multiple.values": "<Multiple values>",
-    "retina.4": "Retina 4",
-    "retina.hd.4.7": "Retina HD 4.7",
-    "retina.hd.5.5": "Retina HD 5.5",
-    "38mm.2x": "38mm 2x",
-    "42mm.2x": "42mm 2x",
-    "apple.watch": "Apple Watch",
-    "apple.tv": "Apple TV",
-    "iphone.spotlight": "iPhone Spotlight",
-    "ipad.spotlight": "iPad Spotlight",
-    "ipad.spotlight.ios.5.6": "iPad Spotlight (iOS 5,6)",
-    "apple.watch.long.look": "Apple Watch Long Look",
-    "apple.watch.short.look": "Apple Watch Short Look",
-    "ios.5.6": "(iOS 5,6)",
-    "execution.ppc": "(ppc)",
-    "execution.mac.catalyst": "(Mac Catalyst)",
-    "colorscheme.xcode.prefix": "Xcode - {0}",
-    "execution.mac.rosetta": "(Rosetta)"
-  },
-  "messages/AppEngineBundle.properties": {
-    "group.PythonAppEngine.text": "Google App Engine",
-    "app-engine": "Google App Engine",
-    "app-engine-python": "Google App Engine (Python)",
-    "app-engine-sdk": "Google App Engine SDK",
-    "configurable.AppEngineFacet.display.name": "Google App Engine",
-    "configurable.AppEngineModulesConfigurable.display.name": "Google App Engine",
-    "python.app.engine.project.name": "Google App Engine"
-  },
-  "messages/AppServersCommonBundle.properties": {
-    "ServerInstance.exception.message": "{0}: {1}"
-  },
-  "messages/ApplicationBundle.properties": {
-    "wrapping.try.resources": "'try-with-resources'",
-    "combobox.crlf.windows": "Windows (\\r\\n)",
-    "combobox.crlf.mac": "Classic Mac OS (\\r)",
-    "editorsearch.current.cursor.position": "{0}/{1}",
-    "editorsearch.toomuch": "{0}+",
-    "settings.hints.group.code.vision": "Code Vision",
-    "settings.hints.new.group.code.vision": "Code Vision"
-  },
-  "messages/ArquillianBundle.properties": {
-    "arquillian.junit.configuration.name": "Arquillian JUnit",
-    "arquillian.testng.configuration.name": "Arquillian TestNG"
-  },
-  "messages/AspectJBundle.properties": {
-    "highlighting.tooltip.link": "<a href=\"#navigation/{0}:{1}\">{2}</a>",
-    "highlighting.tooltip.html": "<html><body>{0}</body></html>",
-    "action.create.aspect.kind.annotation": "@Aspect"
-  },
-  "messages/BVBundle.properties": {
-    "label.unknown": "@unknown"
-  },
-  "messages/BackgroundTaskBundle.properties": {
-    "settings.name": "File Watcher",
-    "inspections.group.name": "File Watcher",
-    "editor.notification.question.text.part.that.becomes.link.to.settings": "File Watcher",
-    "custom.file.watcher.name.placeholder": "<custom>",
-    "command.name.file.watcher.0": "File Watcher: {0}",
-    "actions.on.save.page.label.file.watcher": "File Watcher"
-  },
-  "messages/CLionCMakeBundle.properties": {
-    "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options",
-    "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options"
-  },
-  "messages/CLionExecutionBundle.properties": {
-    "cpp.build.description.1": "====================[ {0} ]====",
-    "cpp.build.description.2": "====================[ {0} | {1} ]====",
-    "cpp.build.description.3": "====================[ {0} | {1} | {2} ]====",
-    "gdbRemote.lldb.command": "'process connect' url:",
-    "gdbRemote.sysroot": "Sysroot:",
-    "gdbRemote.toolchain.incompatibleToolset.brief": "{0}",
-    "gdbRemote.toolchain.debuggerDoesNotExist.brief": "{0}",
-    "coredump.sysroot": "Sysroot:"
-  },
-  "messages/CLionProfilingBundle.properties": {
-    "dynamic.analysis.tools.memcheck.border.title": "Valgrind Memcheck",
-    "sanitizers.llvmSymbolizer.notification.title": "Google Sanitizers"
-  },
-  "messages/CMakeBundle.properties": {
-    "cmake.action.newCMakeLists.title": "CMakeLists.txt"
-  },
-  "messages/CPPBundle.properties": {
-    "language.cpp.settings.description": "C/C++"
-  },
-  "messages/CdiBundle.properties": {
-    "actions.show.named": "@Named",
-    "category.name.produces": "@Produces",
-    "category.name.inject": "@Inject",
-    "category.name.decorator": "@Decorator"
-  },
-  "messages/ChefBundle.properties": {
-    "chef.sdk.name": "Chef DK: {0}"
-  },
-  "messages/CidrBoostBundle.properties": {
-    "boost.test.configuration.name": "Boost.Test"
-  },
-  "messages/CidrCTestBundle.properties": {
-    "ctest.test.number.column.header": "#"
-  },
-  "messages/CidrCoverageBundle.properties": {
-    "gcov.llvm.name": "gcov/llvm",
-    "gcov.name": "gcov/llvm-cov",
-    "gcov.binary.row.title": "gcov:",
-    "llvm.cov.binary.row.title": "llvm-cov:",
-    "llvm.profdata.binary.row.title": "llvm-profdata:"
-  },
-  "messages/CidrDebuggerBundle.properties": {
-    "debug.memory.view.name.pattern": "{0} ({1})",
-    "debug.address.breakpoint": "{0}",
-    "debug.symbolic.breakpoint.emptySymbolName.title": "<Empty>",
-    "debug.symbolic.breakpoint.moduleAndSymbol.title": "{0}: {1}",
-    "debug.settings.name.objective.c": "Objective-C",
-    "debug.settings.name.c.cpp": "C/C++",
-    "debug.frames.unknownFunction": "<unknown>",
-    "debug.exception.breakpoint.when.objc.label": "Objective-C",
-    "debug.exception.breakpoint.when.kn.label": "Kotlin/Native",
-    "debug.exception.breakpoint.when.objc.fragment": "Objective-C",
-    "debug.exception.breakpoint.when.kn.fragment": "Kotlin/Native"
-  },
-  "messages/CidrDoctestBundle.properties": {
-    "doctest.test.noname": "<Anonymous>"
-  },
-  "messages/CidrGoogleBundle.properties": {
-    "gtest.test.configuration.name": "Google Test"
-  },
-  "messages/CidrLangBundle.properties": {
-    "objective.c": "Objective-C",
-    "c.cpp": "C/C++",
-    "language.cpp.configurable.name": "C/C++"
-  },
-  "messages/ClangdBundle.properties": {
-    "language.cpp.clangd.quick.fix": "Clangd fix-it",
-    "action.ClangdXRefAction.text": "clangd: XRef",
-    "clangd.crash.reason.clion.clang.tidy": "clang-tidy",
-    "clangd.crash.reason.clang.tidy": "clang-tidy",
-    "language.cpp.clang-tidy.configurable.name": "Clang-Tidy",
-    "clang.tidy.schema.name": "Clang-Tidy",
-    "inspection.clangTidy.name": "Clang-Tidy",
-    "inspection.clangTidy.message": "Clang-Tidy: {0}",
-    "inspection.clazy.message": "Clazy: {0}",
-    "clang.tidy.status.bar.widget.title": ".clang-tidy"
-  },
-  "messages/ClionEmbeddedPlatformioBundle.properties": {
-    "run.config.uploadfs": "PlatformIO Uploadfs"
-  },
-  "messages/CloudBundle.properties": {
-    "run.configuration.name": "{0} - {1}",
-    "editor.pane.text.empty.text": "<html><head>{0}<style>body '{'text-align: center; white-space: normal;background: #{1};color: #{2};'}'</style></head><body>{3}</body></html>"
-  },
-  "messages/CloudFormationBundle.properties": {
-    "aws.cloudformation.inspections.group.name": "AWS CloudFormation",
-    "aws.cloudformation.template.context.type.json": "AWS CloudFormation (JSON)",
-    "aws.cloudformation.template.context.type.yaml": "AWS CloudFormation (YAML)",
-    "filetype.aws.cloudformation.templates.json.display.name": "\"AWS CloudFormation (JSON)\"",
-    "filetype.aws.cloudformation.templates.yaml.display.name": "AWS CloudFormation (YAML)"
-  },
-  "messages/CloudFoundryBundle.properties": {
-    "CFIntegration.name": "Cloud Foundry"
-  },
-  "messages/CodeInsightBundle.properties": {
-    "surround.with.cast.template": "((Type)expr)",
-    "surround.with.ifelse.template": "if / else",
-    "surround.with.if.expression.template": "if (expr) {...}",
-    "surround.with.not.template": "!(expr)",
-    "surround.with.parenthesis.template": "(expr)",
-    "surround.with.try.finally.template": "try / finally",
-    "n.of.m": "{0}/{1}",
-    "macro.capitalize.string": "capitalize(String)",
-    "macro.decapitalize.string": "decapitalize(String)",
-    "macro.firstWord.string": "firstWord(String)",
-    "macro.underscoresToSpaces.string": "underscoresToSpaces(String)",
-    "macro.spacesToUnderscores.string": "spacesToUnderscores(String)",
-    "macro.underscoresToCamelCase.string": "underscoresToCamelCase(String)",
-    "macro.capitalizeAndUnderscore.string": "capitalizeAndUnderscore(String)",
-    "macro.enum": "enum(...)",
-    "macro.groovy.script": "groovyScript(\"groovy code\")",
-    "livetemplate.description.psf": "public static final",
-    "livetemplate.description.prsf": "private static final",
-    "livetemplate.description.psfi": "public static final int",
-    "livetemplate.description.psfs": "public static final String",
-    "action.presentation.LookupUi.text": "action.presentation.LookupUi.text",
-    "non.ascii.chars.inspection.example.characters.in.any.other.word.label": "e.g.: <code>\\&lt;<font color=red>ТЭГ-ШМЭГ</font>\\&gt;0\\&lt;/<font color=red>ТЭГ-ШМЭГ</font>\\&gt;</code>",
-    "non.ascii.chars.inspection.example.characters.in.identifiers.label": "e.g.: <code>int <font color=red>Поле</font> = 0;</code>",
-    "non.ascii.chars.inspection.example.characters.in.comments.label": "e.g.: <code>// <font color=red>გენაცვალი</font></code>",
-    "non.ascii.chars.inspection.example.characters.in.strings.label": "e.g.: <code>println(\"<font color=red>გენაცვალი</font>\")</code>",
-    "non.ascii.chars.inspection.example.mixed.languages.in.any.other.word.label": "e.g.: <code>\\&lt;t<font color=red>а</font>g\\&gt;Значение\\&lt;/t<font color=red>а</font>g\\&gt;</code> (cyrillic '<font color=red>а</font> in an english word')",
-    "non.ascii.chars.inspection.example.mixed.languages.in.identifiers.label": "e.g.: <code>void print<font color=red>ナンセンス</font>()</code> (japanese chars in an english word)",
-    "non.ascii.chars.inspection.example.mixed.languages.in.comments.label": "e.g.: <code>//c<font color=red>о</font>unts bugs</code> (cyrillic '<font color=red>o</font>' in an english word)",
-    "non.ascii.chars.inspection.example.mixed.languages.in.string.label": "e.g.: <code>foo(\"<font color=red>Со</font>re винт\");</code> (cyrillic '<font color=red>Со</font>' in an english word)"
-  },
-  "messages/CodeStyleBundle.properties": {
-    "arrangement.settings.text.entry.type.static.init": "static init",
-    "arrangement.settings.text.modifier.package.private": "package private"
-  },
-  "messages/CodeVisionBundle.properties": {
-    "CodeVisionConfigurable.configurable.name.code.vision": "Code Vision"
-  },
-  "messages/CodeWithMeGuestBundle.properties": {
-    "code.with.me.tm": "Code With Me:",
-    "status.bar.text.ping.ui": "Ping (UI): {0} ({1})"
-  },
-  "messages/CodeWithMePlatformBundle.properties": {
-    "product.name": "Code With Me",
-    "circle.control.tooltip": "<html><div>{0}</div><font color={1}>{2}</font></html>",
-    "code.with.me.learn.more.link": "https://www.jetbrains.com/code-with-me/",
-    "action.CWMHostShowPopupAction.text": "Code With Me",
-    "action.CWMThinClientShowPopupAction.text": "Code With Me",
-    "license.buy.link": "http://www.jetbrains.com/code-with-me/buy",
-    "toolwindow.factory.title.code.with.me": "Code With Me",
-    "wire.stats.status.bar.text": "({0}) ↑{1}/s / ↓{2}/s",
-    "metrics.cpu.label": "CPU {0}%",
-    "metrics.server.ram.label": "RAM {0}%",
-    "metrics.jvm.ram.label": "JVM RAM {0}%"
-  },
-  "messages/CodeWithMePluginBundle.properties": {
-    "permission.dialog.toolWindow.access.tooltip": "Gradle、Ant、Maven、Messages",
-    "permission.dialog.toolWindow.access.tooltip.clion": "Gradle、Ant、Maven、Messages、CMake",
-    "backend.control.center.heap": "MiB -Xmx"
-  },
-  "messages/CommanderBundle.properties": {
-    "group.ImagesCommanderActions2.text": "Images Commander Actions (2)",
-    "group.ImagesCommanderActions1.text": "Images Commander Actions (1)"
-  },
-  "messages/CommonProfilerBundle.properties": {
-    "ui.what.if.tab": "What-If"
-  },
-  "messages/CompDBBundle.properties": {
-    "compdb.url": "http://clang.llvm.org/docs/JSONCompilationDatabase.html"
-  },
-  "messages/ComposeProjectWizardBundle.properties": {
-    "module.presentation.name": "Compose Multiplatform"
-  },
-  "messages/CsBundle.properties": {
-    "surrounder.if.else": "if/else",
-    "surrounder.try.catch": "try/catch",
-    "surrounder.try.finally": "try/finally",
-    "surrounder.try.catch.finally": "try/catch/finally",
-    "color.display.name.heregex.id": "Heregex id",
-    "color.display.name.heredoc.id": "Heredoc id"
-  },
-  "messages/CssBundle.properties": {
-    "name.value.presentable.name": "<identifier>",
-    "custom.property.name.value.presentable.name": "<custom property name>",
-    "integer.value.presentable.name": "<integer>",
-    "java.script.value.presentable.name": "<java script>",
-    "angle.value.presentable.name": "<angle>",
-    "frequency.value.presentable.name": "<frequency>",
-    "position.value.presentable.name": "<position>",
-    "resolution.value.presentable.name": "<resolution>",
-    "length.value.presentable.name": "<length>",
-    "number.value.presentable.name": "<number>",
-    "time.value.presentable.name": "<time>",
-    "decibel.value.presentable.name": "<decibel>",
-    "semitones.value.presentable.name": "<semitones>",
-    "flex.value.presentable.name": "<flexible length>",
-    "urange.value.presentable.name": "<urange>",
-    "percentage.value.presentable.name": "<percentage>",
-    "color.value.presentable.name": "<color>",
-    "any.value.presentable.name": "<any>",
-    "string.value.presentable.name": "<string>",
-    "expression.value.presentable.name": "<expression>",
-    "selector.value.presentable.name": "<selector>",
-    "url.value.presentable.name": "<url>",
-    "id.value.presentable.name": "<id>",
-    "css.stylelint.message.prefix": "Stylelint:"
-  },
-  "messages/CucumberBundle.properties": {
-    "step.definition.0.1": "{0} {1}"
-  },
-  "messages/CucumberJavaBundle.properties": {
-    "run.configuration.form.glue": "Glue(&G)",
-    "cucumber.java.run.configuration.type.name": "Cucumber Java"
-  },
-  "messages/CucumberJavaScriptBundle.properties": {
-    "notification.name.cucumber.js": "Cucumber.js"
-  },
-  "messages/DaemonBundle.properties": {
-    "import.popup.text": "{0}?"
-  },
-  "messages/DartBundle.properties": {
-    "webdev.debug.configuration.name": "Dart Web",
-    "dart.surround.with.brackets": "[expr]",
-    "dart.surround.with.parenthesis": "(expr)",
-    "dart.surround.with.not.parenthesis": "!(expr)",
-    "dart.pub.get.title": "Pub Get",
-    "dart.pub.upgrade.title": "Pub Upgrade",
-    "dart.pub.outdated.title": "Pub Outdated",
-    "dart.pub.build.title": "Pub Build",
-    "dart.webdev.build.title": "Webdev Build",
-    "dart.pub.cache.repair.title": "Pub Repair Cache",
-    "pub.get": "Pub get",
-    "pub.upgrade": "Pub upgrade",
-    "pub.outdated": "Pub outdated",
-    "webdev.build": "Webdev build…",
-    "dart.feedback.url": "https://github.com/dart-lang/sdk/issues/new?title={0}\\&body=",
-    "action.Dart.pub.cache.repair.text": "Pub Cache Repair…",
-    "action.Dart.build.text": "Webdev Build…",
-    "action.Dart.pub.outdated.text": "Pub Outdated",
-    "action.Dart.pub.upgrade.text": "Pub Upgrade",
-    "action.Dart.pub.get.text": "Pub Get",
-    "action.Generate.ToString.Dart.text": "toString()",
-    "action.text.pub.build": "Pub Build…",
-    "action.text.webdev.build": "Webdev Build…",
-    "dart.problems.view.status.0.and.1": "{0}、{1}",
-    "dart.problems.view.status.0.and.1.and.2": "{0}、{1}、{2}",
-    "dart.problems.view.status.0.and.filters.1": "{0} ({1})",
-    "debugger.asynchronous.gap.frame": "<asynchronous gap>",
-    "notification.group.dart.webdev": "Dart webdev"
-  },
-  "messages/DataGridBundle.properties": {
-    "Console.TableResult.n.bytes.of.m.bytes.loaded": "{0}/{1}"
-  },
-  "messages/DatabaseBundle.properties": {
-    "group.Console.Jdbc.ExplainGroup.text": "Explain Plan",
-    "action.Console.Jdbc.ExplainAnalyse.Raw.text": "Explain Analyse (Raw)",
-    "action.Console.Jdbc.ExplainAnalyse.Raw.description": "Explain Analyse (Raw)",
-    "action.Console.Jdbc.ExplainPlan.Raw.text": "Explain Plan (Raw)",
-    "action.Console.Jdbc.ExplainPlan.Raw.description": "Explain Plan (Raw)",
-    "action.Console.Jdbc.ExplainAnalyse.text": "Explain Analyse",
-    "action.Console.Jdbc.ExplainAnalyse.description": "Explain analyse",
-    "action.Console.Jdbc.ExplainPlan.text": "Explain Plan",
-    "action.Console.Jdbc.ExplainPlan.description": "Explain Plan",
-    "data.source.from.url.url": "URL(&U):",
-    "DataSourceConfigurable.tab.ssh.ssl": "SSH/SSL",
-    "DatabaseScriptRunConfigurationSettingsEditor.Text.emptyText": "<Script text>",
-    "data.source.editor.url.label": "URL:",
-    "action.tx.text": "Tx: {0}",
-    "choose.session.action.placeholder": "<session>",
-    "choose.session.action.empty.placeholder": "<empty>",
-    "count.rows.action.of.text": "/{0}",
-    "data.source.scope.editor.tree.unnamed.node.name": "<Unnamed>",
-    "csv.format.settings.quotation.policy.escape.duplicate": "<duplicate>",
-    "scriptGen.option.RestrictDeleteTriggers.text": "RESTRICT WHEN DELETE TRIGGERS",
-    "ChangeDialectToolbarAction.action.dialect.text": "<dialect>",
-    "unknown.in.angleBraces": "<unknown>",
-    "progress.title.anonymous": "<Anonymous>",
-    "notification.content.missing.error.message": "<missing error message>",
-    "label.unnamed": "<unnamed {0}>",
-    "label.none": "<none>",
-    "label.unnamed1": "<unnamed>",
-    "value": "<value>",
-    "dialog.message.ssh": "SSH: {0}",
-    "no.driver": "<No driver>",
-    "namespace.fraction": "{0}/{1}",
-    "excel.xlsx": "Excel (xlsx)",
-    "azure.active.directory.interactive": "Azure Active Directory Interactive",
-    "DatabaseScriptRunConfigurationSettingsEditor.unknown.target": "<unknown>",
-    "label.auto.detect": "<auto detect>",
-    "DbObjectGrantsEditor.label.no.grants": "<No grants>",
-    "DbObjectGrantsEditor.state.label.not.granted": "<Not granted>",
-    "DbObjectGrantsEditor.label.no.grantee": "<No grantee>",
-    "DbObjectGrantsEditor.label.unknown": "<Not introspected>",
-    "column.0": "<Column {0}>",
-    "do.not.set": "<Do not set>",
-    "notification.content.oracle.home.should.be.defined.action": "<a href='$ACTION0'>Set ORACLE_HOME</a>",
-    "deactivate.data.source.notification.title": "{0} [{1}]",
-    "group.PlanViewGroup.text": "Explain Plan",
-    "status.text.different.values": "<different values>"
-  },
-  "messages/DatagenBundle.properties": {
-    "test.data.generator.lorem.ipsum": "Lorem Ipsum",
-    "test.data.generator.web.url": "Web URL"
-  },
-  "messages/DataloreDSBundle.properties": {
-    "Datalore.remote.url": "Notebook URL:",
-    "filetype.Datalore.description": "Datalore Notebook"
-  },
-  "messages/DenoBundle.properties": {
-    "deno.run.configuration.default.name": "Deno: {0}",
-    "deno.inspection.message.prefix": "Deno: {0}",
-    "deno.path": "Deno:"
-  },
-  "messages/DesignerBundle.properties": {
-    "palette.item.deprecated.tooltip": "<html><body><center><b>{0}</b>{1}</center><p style=''width: 300px''>{2}{3}</p></body></html>"
-  },
-  "messages/DevKitImagesBundle.properties": {
-    "action.darcula.hidpi.theme.text": "Darcula HiDPI"
-  },
-  "messages/DevKitWorkspaceModelBundle.properties": {
-    "inspections.group.path": "Plugin DevKit"
-  },
-  "messages/DiagnosticBundle.properties": {
-    "error.list.message.index.count": "{0}/{1}"
-  },
-  "messages/DiagramBundle.properties": {
-    "action.UML.SaveDiagram.text": "IDEA .uml",
-    "visibility.level.package": "public + package",
-    "visibility.level.protected": "public + package + protected",
-    "action.Diagram.ExportToFileGroup.Dot.text": "Graphviz .dot",
-    "action.Diagram.ExportToFileGroup.Mxgraph.text": "JGraph .drawio",
-    "action.Diagram.ExportToFileGroup.Graphml.text": "YEd .graphml",
-    "action.Diagram.OpenInOnlineEditorGroup.Dot.text": "Graphviz Online",
-    "action.Diagram.OpenInOnlineEditorGroup.Mxgraph.text": "JGraph diagrams.net",
-    "action.Diagram.OpenInOnlineEditorGroup.Graphml.text": "yEd Live",
-    "action.Diagram.ExportToFileGroup.Mermaid.text": "Mermaid .md",
-    "action.Diagram.OpenInOnlineEditorGroup.Mermaid.text": "Mermaid Live"
-  },
-  "messages/DiffBundle.properties": {
-    "diff.utf.charset.name.bom.suffix": "{0} BOM",
-    "blank.diff.recent.content.summary.text.date": "{0} ({1})"
-  },
-  "messages/DjangoBundle.properties": {
-    "manage.run.tab.name": "Django: manage.py",
-    "inspection.url_tag_arguments.named_arg_string": "''{0}''",
-    "magic_literals.django_url_name": "Django url",
-    "django.manage.name": "manage.py@{0}"
-  },
-  "messages/DmServerBundle.properties": {
-    "WithModulePackagingElementPresentation.presentable.name": "ModuleRef: {0}",
-    "DMBundleSupportProvider.server.library.name": "dmServer API",
-    "DMServerHelper.server.info.default.name": "dmServer ({0})",
-    "DMServerRunConfigurationType.display.name": "Spring dmServer",
-    "DmShellToolWindowPanel.ServerHandler.invitation": "dm>",
-    "DMServerIntegration.name": "Spring dmServer",
-    "DMTemplateGroupDescriptorFactory.template.group.name": "Spring DM",
-    "Form.DMServerSupportConfigurable.facet": "Facet:",
-    "DownloadBundlesEditor.status.chain": "{0}、{1}",
-    "ImportedUnitsPanel.list.item": "{0} {1}",
-    "ChooseImportedUnitsDialog.item.text": "{0} {1}"
-  },
-  "messages/DockerBundle.properties": {
-    "DockerCloudConfigurable.docker.for.mac.radio.title": "Docker for Mac",
-    "DockerCloudConfigurable.docker.for.windows.radio.title": "Docker for Windows",
-    "DockerBuildSettingsUI.dockerfile.text": "Dockerfile:",
-    "DockerComposeDeploymentSourceType.name": "Docker-compose",
-    "DockerComposeDeploymentSourceType.deploymentName": "Compose: {0}",
-    "DockerFileDeploymentSourceType.deploymentName": "{0} Dockerfile: {1}",
-    "DockerFileDeploymentSourceType.suggestRunConfigurationName": "{0}",
-    "DockerComposeDeploymentEditor.up.build.desc": "--build",
-    "DockerComposeDeploymentEditor.up.scale.desc": "--scale",
-    "DockerComposeDeploymentEditor.up.exit.code.from.desc": "--exit-code-from",
-    "DockerComposeDeploymentEditor.up.timeout.desc": "--timeout",
-    "DockerComposeDeploymentEditor.up.detach.desc": "--detach",
-    "DockerComposeDeploymentEditor.no.deps.desc": "--no-deps",
-    "DockerComposeDeploymentEditor.up.force.recreate.desc": "--force-recreate",
-    "DockerComposeDeploymentEditor.up.always.recreate.desc": "--always-recreate-deps",
-    "DockerComposeDeploymentEditor.up.no.recreate.desc": "--no-recreate",
-    "DockerComposeDeploymentEditor.up.no.build.desc": "--no-build",
-    "DockerComposeDeploymentEditor.up.no.start.desc": "--no-start",
-    "DockerComposeDeploymentEditor.up.abort.on.exit.desc": "--abort-on-container-exit",
-    "DockerComposeDeploymentEditor.up.attach.deps.desc": "--attach-dependencies",
-    "DockerComposeDeploymentEditor.up.renew.anon.volumes.desc": "--renew-anon-volumes",
-    "DockerComposeDeploymentEditor.up.remove.orphans.desc": "--remove-orphans",
-    "DockerComposeDeploymentEditor.group.up": "docker-compose up",
-    "DockerComposeDeploymentEditor.down.remove.images.all.desc": "--rmi all",
-    "DockerComposeDeploymentEditor.down.remove.images.local.desc": "--rmi local",
-    "DockerComposeCredentialsEditor.no.service.placeholder": "<Select service>",
-    "DockerComposeSettingsEditor.form.name": "Docker Compose",
-    "DockerComposeCredentialsType.name": "Docker Compose",
-    "DockerTargetConfigurable.dockerfile.row.label": "Dockerfile:",
-    "DockerExtraHostConfigurable.ip.text": "IP:",
-    "DockerSingletonDeploymentSourceType.unknown.node.text": "<unknown>",
-    "ComposeApplicationRuntime.notification.group": "docker-compose",
-    "RegistryRuntimeTask.current.of.total": "{0}/{1}",
-    "DockerDeleteProvider.smart.delete.compose": "Compose: {0}",
-    "DockerSshConnectionConfigurator.label": "SSH:"
-  },
-  "messages/DockerComposeBundle.properties": {
-    "ComposeFileRunLineMarkerProvider.ServiceLineMarkerInfo.up.tooltip": "docker-compose up {0}",
-    "ComposeFileRunLineMarkerProvider.ServiceLineMarkerInfo.restart.tooltip": "docker-compose restart {0}",
-    "ComposeFileRunLineMarkerProvider.AllServicesLineMarkerInfo.tooltip": "docker-compose up"
-  },
   "messages/DvcsBundle.properties": {
     "clone.repository.url.label": "URL:",
-    "multi.message.line.prefix.form": "{0}: {1}"
+    "sync.setting.description": "If selected, you will be able to check out, compare, delete, or create new branches in all {0} roots with a single action. It will also affect the behavior of the push dialog.",
+    "multi.message.line.prefix.form": "{0}：{1}"
   },
   "messages/EJBHighlightingBundle.properties": {
     "ejb.enterprise.java.beans": "EJB: Enterprise Java Beans",
@@ -2925,8 +795,16 @@
     "framework.zend2.name.zend.tool.framework": "Zend Framework 2 Tool",
     "symfony.component.version.2": "2.*.*"
   },
+  "messages/GDBBundle.properties": {
+    "error.unexpected.response": "Unexpected response: {0}"
+  },
   "messages/GatewayBundle.properties": {
-    "connector.cwm.dialog.title": "Code With Me"
+    "connector.cwm.dialog.title": "Code With Me",
+    "welcome.tab.all.providers": "All Providers",
+    "codeWithMeConnector.description": "Join a Code With Me session, connect to a running IDE backend, with an HTTP or Gateway link",
+    "ssh.download.and.connect": "Download IDE and Connect",
+    "ssh.start.and.connect": "Start IDE and Connect",
+    "ssh.upload.and.connect": "Upload IDE and Connect"
   },
   "messages/GaugeBundle.properties": {
     "form.gauge.home": "GAUGE_HOME:",
@@ -2941,8 +819,8 @@
     "git.add.to.exclude.file.action.text": ".git/info/exclude",
     "group.Git.ContextMenu.text": "&Git",
     "group.Git.Menu.text": "&Git",
-    "action.Git.Fixup.To.Commit.text": "Fixup...",
-    "push.rejected.merge": "&Merge",
+    "action.Git.Fixup.To.Commit.text": "Fixup…",
+    "push.rejected.merge": "Merge(&M)",
     "git.light.status.bar.text": "Git: {0}",
     "remotes.define.remote.url": "URL:",
     "label.credential.store.key.http.password": "Git HTTP",
@@ -2961,14 +839,53 @@
     "go.app.engine.wizard.name": "App Engine",
     "go.libraries.configurable.path.source.prefix.gopath": "[GOPATH]",
     "go.intention.run.go.generate.text": "Go generate ''{0}''",
+    "go.settings.build.tags.custom.tags.hint": "<html><body><p>Space-separated list of additional tags. <a href=\"https://www.jetbrains.com/help/go/configuring-build-constraints-and-vendoring.html\">Can be used</a> in the 'go build' command.</p></body></html>",
     "go.executable.file.empty.value": "<Empty>",
     "go.debugger.thread.dump.n.goroutines": "{0} {0,choice,0#goroutines|1#goroutine|2#goroutine}",
+    "go.execution.before.run.task.executing.presentable.name": "Executing ''{0}''",
     "go.execution.remote.run.configuration.display.name": "Go Remote",
     "go.execution.remote.run.configuration.description": "Go Remote",
     "go.run.target.gopath.label": "GOPATH: ",
+    "go.refactoring.split.declarations.with.iota.warning": "Declaration initializers will have different values after split because of 'iota'",
+    "go.refactoring.merge.declarations.with.iota.warning": "Declaration initializers will have different values after merge because of 'iota'",
     "go.wizard.name": "Go (GOPATH)",
     "action.com.goide.vgo.actions.VgoVendorAction.text": "Go Mod Vendor",
-    "go.quick.doc.keyword.resource.effective.go.label": "Effective Go"
+    "go.quick.doc.keyword.resource.effective.go.label": "Effective Go",
+    "go.inspection.problem.irregular.iota.usage": "Irregular usage of 'iota'",
+    "go.quick.doc.empty.interface.hint": "An empty interface 'interface{}' stands for a set of all types. A variable of the empty interface type can store a value of any type.",
+    "go.quick.doc.type.alias.hint": "Type {0} is an alias of type {1}. These types are identical. For more information, see {2}",
+    "go.quick.doc.type.definition.hint": "Type {0} is a new type with the underlying type {1}. These types are different. For more information, see {2}",
+    "go.quick.doc.type.alias.and.definition.hint.link.text": "Go Spec: Type identity",
+    "go.inspection.problem.fuzzing.is.not.supported": "Fuzzing is supported starting with Go 1.18"
+  },
+  "messages/GoLessonsBundle.properties": {
+    "go.completion.for.functions.lesson.name": "Basic completion: suitable functions for a value",
+    "go.support.for.table.tests.call.context.menu": "In <ide/>, you can run all the tests in the function or only some of them.\nFor example, click the run icon in the gutter near the {0} function and select {1}. You will run all the tests in this function.",
+    "go.support.for.table.tests.run.subtest": "You can run individual subtests by using the same approach. Click the gutter icon near the {0} subtest and select {1}. \nCurrently, this approach has several limitations, you can read about them in <a href=\"{2}\">the GoLand documentation</a>.",
+    "go.generics.inspections.title": "Inspections for type parameters",
+    "go.generics.inspections.delete.type.parameters": "<ide/> 2022.2 introduced new inspections that might help you to catch errors that you did not notice.\nFor example, the {0} function has square brackets to use type parameters but inside these brackets we see an empty parameter list. To fix that error, press {1} and select {2}.",
+    "go.generics.inspections.union.interfaces.with.methods": "According to <a href=\"{0}\">the Go team</a>, you cannot use interfaces with methods in a union. So, the {1} cannot be used as a term among the union elements.\nDelete the group including the vertical bar and the space after it ({2}).",
+    "go.generics.inspections.unused.type.parameter": "Type parameters are grayed out because we do not use them anywhere in our code. Let''s fix it by replacing the {0} type in the parameters section with {1}.",
+    "go.quick.documentation.title": "Using quick documentation",
+    "go.quick.documentation.iota": "You can get quick information for any symbol right from the editor. For example, to see {0} values, invoke the {1} action.\nPress {2} to get the value of the {3} constant.",
+    "go.quick.documentation.iota.methods.pointer.and.value.fix": "<a href=\"{0}\">The Go documentation</a> recommends that all methods on a given type should have either value or pointer receivers. <ide/> found that the {1} struct has methods on both value and pointer receivers. You can rewrite the {2} method or delete it.\nClick the following link to proceed to the next step.",
+    "go.quick.documentation.convert.to.pointer.receiver": "We can update the {0} method to follow the convention. Type {1} before {2} to convert it from a value receiver to a pointer receiver.",
+    "go.generics.inspections.change.interface.to.any": "Before going further, let''s refactor one more thing. We use an empty interface that can be replaced with {0}.\nPress {1} and select {2}. ",
+    "go.support.fuzz.testing.title": "Fuzz testing",
+    "go.support.fuzz.testing.run": "Fuzz testing is a way to automate your tests by continuously submitting various input. Let''s run our fuzz test to check our function against the various generated data.\nTo run fuzz testing, click the blinking icon in the gutter and select {0}.",
+    "go.support.fuzz.testing.check.failing": "Oops, the fuzz testing has failed! To find out the reason, scroll down the output in the {0} tool window and click the link that leads to the {1} directory.",
+    "go.generics.running.code.click.link": "Now click the resulted link to open your code in a browser.\nTo run your code with type parameters just click the {0} button."
+  },
+  "messages/GoTemplateBundle.properties": {
+    "go.template.inspection.problem.duplicate.variable": "Duplicate variable: <code>#ref</code> #loc",
+    "go.template.inspection.problem.unknown.variable": "Unknown variable: <code>#ref</code> #loc"
+  },
+  "messages/GraalVmBundle.properties": {
+    "graalvm.debugger.extension.off": "Graal VM extensions are not enabled",
+    "enum.notsupported": "enum isn't supported",
+    "static.write.notsupported": "write to static isn't supported",
+    "method.invoke.notsupported": "class method invoke is not supported",
+    "newinstance.notsupported": "class instantiation isn't supported"
   },
   "messages/GradleBundle.properties": {
     "gradle.settings.text.jvm.path": "Gradle JVM：",
@@ -2991,12 +908,6 @@
     "relation.form.checkbox.hasmany": "hasMany(&H)",
     "mvc.plugins.form.description.default": "<html>  <head> </head>  <body> <p style=\"margin-top: 0\"></p></body></html>",
     "new.project.wizard.project.sdk": "JDK:"
-  },
-  "messages/GraphBundle.properties": {
-    "action.Graph.LayoutOrientation.BottomToTop.text": " Bottom to Top",
-    "action.Graph.LayoutOrientation.TopToBottom.text": " Top to Bottom",
-    "action.Graph.LayoutOrientation.LeftToRight.text": " Left to Right",
-    "action.Graph.LayoutOrientation.RightToLeft.text": " Right to Left"
   },
   "messages/GroovyBundle.properties": {
     "filetype.logback.display.name": "Groovy Logback DSL",
@@ -3025,7 +936,8 @@
     "module.name.0.and.groovy.version.1": "{0} ({1})",
     "groovy.version.0": "Groovy {0}",
     "label.groovy.sdk": "Groovy SDK:",
-    "non.sealed.visibility.presentation": "non-sealed"
+    "non.sealed.visibility.presentation": "non-sealed",
+    "declared.type.0.extends.1.which.is.circular.inheritance": "Declared type ''{0}'' extends ''{1}'', which is a circular inheritance"
   },
   "messages/GroovyJpsBundle.properties": {
     "compiler.name.greclipse": "Groovy-Eclipse",
@@ -3084,9 +996,12 @@
     "label.text.antialiasing.scope.ide": "IDE:",
     "configurable.AppEngineFacetEditor.display.name": "Google App Engine",
     "settings.menus.group.touch.bar": "Touch Bar",
+    "action.Anonymous.text.delete.hook": "Delete Hook",
     "label.version.any": "<any>",
     "list.item.temporary.file.0": "<temporary file>{0}",
+    "notification.content.more.shortcut.conflict": "{0} and {1} more shortcut conflict with macOS shortcuts. Modify these shortcuts or change macOS system settings.",
     "icon.nodes.c_plocal.tooltip": "package-local",
+    "label.certificate.will.be.saved": "The accepted certificate will be saved in truststore {0} with the default password {1}",
     "colorpicker.label.red": "R:",
     "colorpicker.label.green": "G:",
     "colorpicker.label.blue": "B:",
@@ -3125,9 +1040,6 @@
   "messages/IntelliLangBundle.properties": {
     "language.label.id": "ID(&I):"
   },
-  "messages/IntentionPowerPackBundle.properties": {
-    "intention.category.junit": "Java/JUnit"
-  },
   "messages/J2EEBundle.properties": {
     "project.view.pane.title.j2ee": "Java EE",
     "group.names.javaee.issues": "Java EE",
@@ -3153,13 +1065,25 @@
   },
   "messages/JavaAnalysisBundle.properties": {
     "feature.try.with.resources": "Try-with-resources",
+    "inspection.redundant.cast.problem.descriptor": "Casting <code>{0}</code> to <code>#ref</code> #loc is redundant",
+    "contract.return.validator.too.few.parameters": "not applicable for method that has {0, choice, 0#no parameters|1#one parameter|2#{0} parameters}",
     "dfa.find.cause.special.field.of.something": "{0}/{1}",
-    "inspection.reference.lambda.name": "lambda ({0})"
+    "inspection.reference.lambda.name": "lambda ({0})",
+    "inspection.message.scheduled.for.removal.annotation.can.be.replaced.by.attribute": "@ScheduledForRemoval annotation can be replaced with 'forRemoval' attribute in @Deprecated annotation ",
+    "inspection.message.scheduled.for.removal.annotation.can.be.removed": "@ScheduledForRemoval annotation can be removed",
+    "inspection.fix.name.remove.scheduled.for.removal.annotation.by.attribute": "Replace @ScheduledForRemoval with 'forRemoval' attribute in @Deprecated annotation  ",
+    "inspection.name.redundant.scheduled.for.removal.annotation": "Redundant @ScheduledForRemoval annotation",
+    "intention.family.name.remove.repeating.call": "Remove repeating call",
+    "intention.name.remove.repeating.call": "Remove repeating call ''{0}()''"
   },
   "messages/JavaBundle.properties": {
     "action.create.new.module-info.title": "module-info.java",
     "action.create.new.package-info.title": "package-info.java",
     "checkbox.collapse.suppress.warnings": "<html>@SuppressWarnings</html>",
+    "inspection.unused.assignment.problem.descriptor1": "Variable <code>#ref</code> #loc is never used",
+    "inspection.unused.assignment.problem.descriptor2": "Variable <code>{0}</code> initializer <code>#ref</code> #loc is redundant",
+    "inspection.unused.assignment.problem.descriptor3": "The value <code>{0}</code> assigned to <code>#ref</code> #loc is never used",
+    "inspection.unused.assignment.problem.descriptor4": "The value changed at <code>#ref</code> #loc is never used",
     "inspection.unused.symbol.check.accessors": "Getter/Setter",
     "intention.create.test.dialog.setUp": "set&Up/@Before",
     "intention.create.test.dialog.tearDown": "tear&Down/@After",
@@ -3181,7 +1105,9 @@
     "title.code.vision": "Code Vision",
     "null.check.surrounder.description": "if (expr != null) {…}",
     "switch.stmt.template.description": "switch (expr) {…}",
-    "title.code.vision.inlay.hints": "Code Vision"
+    "intention.category.i18n": "Java/I18N",
+    "title.code.vision.inlay.hints": "Code Vision",
+    "intention.category.junit": "Java/JUnit"
   },
   "messages/JavaCompilerBundle.properties": {
     "error.jdk.module.names.overflow.element.ellipsis": "…"
@@ -3223,10 +1149,18 @@
     "persistence.api.item.name.jpa": "JPA 1",
     "persistence.api.item.name.jpa2": "JPA 2"
   },
+  "messages/JavaLessonsBundle.properties": {
+    "java.onboarding.run.sample": "For now, let''s run the current file, click {0} or press {1}.",
+    "java.onboarding.temporary.configuration.description": "You have opened the demo sample. Now, let's run it! In the highlighted area of the toolbar, you can see popular running actions for the selected configuration.",
+    "java.onboarding.feedback.system.jdk.at.start": "JDK at start:",
+    "java.onboarding.run.options.community": "For example, you can run your code {0}, debug it {1}, and run with coverage {2}.",
+    "java.onboarding.run.options.ultimate": "For example, you can run your code {0}, debug it {1}, profile {2}, and run with coverage {3}."
+  },
   "messages/JavaPsiBundle.properties": {
     "aux.context.display": "/ {0}",
     "filetype.jshell.description": "JShell snippet files",
-    "element.kind.and.name": "{0} {1}"
+    "element.kind.and.name": "{0} {1}",
+    "jdk.19.preview.language.level.description": "19 (Preview) - Record patterns, pattern matching for switch (third preview)"
   },
   "messages/JavaRefactoringBundle.properties": {
     "encapsulate.fields..package.local.radio": "Package local(&C)",
@@ -3254,7 +1188,6 @@
     "javascript.surround.with.try.finally": "try / finally",
     "javascript.surround.with.try.catch.finally": "try / catch / finally",
     "node.js.inspection.group.name": "Node.js",
-    "javascript.label.visibility.public": "public(&B)",
     "javascript.label.visibility.package_local": "internal(&I)",
     "javascript.label.visibility.private": "private(&V)",
     "javascript.label.visibility.protected": "protected(&O)",
@@ -3324,6 +1257,9 @@
   "messages/JavaeeJspBaseBundle.properties": {
     "dialog.edit.template.checkbox.jsp": "JSP (&P)"
   },
+  "messages/JavaeeJspBundle.properties": {
+    "jsp.documentation.message.description": "Description:\\&nbsp;{0}"
+  },
   "messages/JetBrainsTeamAuthBundle.properties": {
     "notification.title.failed": "JetBrains.team"
   },
@@ -3333,6 +1269,9 @@
   },
   "messages/JpaQlBundle.properties": {
     "options.xml.display.name": "JPA QL"
+  },
+  "messages/JpsBuildBundle.properties": {
+    "progress.text.local.build.is.quicker": "Building the project locally is quicker than downloading caches"
   },
   "messages/JsonBundle.properties": {
     "unnamed.desc": "<unnamed>",
@@ -3345,24 +1284,57 @@
     "Jupyter.hub.login.dialog.description.instruction.link.href": "https://jupyterhub.readthedocs.io/en/stable/reference/rest.html#create-an-api-token",
     "notebook.collapsed.web.output.text": "Web: {0}x{1} px"
   },
-  "messages/JupyterDSBundle.properties": {
-    "notification.group.jupyter": "Jupyter Notebook"
-  },
   "messages/JupyterKotlinBundle.properties": {
     "kotlin.jupyter.action.create.notebook.text": "Kotlin Jupyter Notebook"
   },
+  "messages/JvmAnalysisBundle.properties": {
+    "jvm.inspections.junit.malformed.declaration.name": "JUnit malformed declaration",
+    "jvm.inspections.junit.malformed.option.ignore.test.parameter.if.annotated.by": "Ignore test parameter if it is annotated by:",
+    "jvm.inspections.junit.malformed.test.combination.descriptor": "Suspicious combination of {0} and ''@{1}''",
+    "jvm.inspections.junit.malformed.nested.class.descriptor": "Only non-static nested classes can serve as '@Nested' test classes",
+    "jvm.inspections.junit.malformed.extension.registration.descriptor": "''{0}'' should implement ''{1}''",
+    "jvm.inspections.junit.malformed.extension.class.level.descriptor": "{0} should be registered at the class level",
+    "jvm.inspections.junit.malformed.param.method.source.assignable.descriptor": "No implicit conversion found to convert ''{0}'' to ''{1}''",
+    "jvm.inspections.junit.malformed.method.no.arg.void.descriptor": "Method <code>#ref</code> should be a {0}, {1}, have no parameters and be of type void",
+    "jvm.inspections.junit.malformed.annotated.field.single.descriptor": "Field <code>#ref</code> annotated with ''@{0}'' should be {1}",
+    "jvm.inspections.junit.malformed.annotated.field.double.descriptor": "Field <code>#ref</code> annotated with ''@{0}'' should be {1} and {2}",
+    "jvm.inspections.junit.malformed.annotated.field.typed.descriptor": "Field <code>#ref</code> annotated with ''@{0}'' should be of type ''{1}''",
+    "jvm.inspections.junit.malformed.annotated.field.single.typed.descriptor": "Field <code>#ref</code> annotated with ''@{0}'' should be {1} and be of type ''{2}''",
+    "jvm.inspections.junit.malformed.annotated.field.double.typed.descriptor": "Field <code>#ref</code> annotated with ''@{0}'' should be {1} and {2} and be of type ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}",
+    "jvm.inspections.junit.malformed.annotated.method.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1} and {2}",
+    "jvm.inspections.junit.malformed.annotated.method.typed.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be of type ''{1}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.typed.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1} and of type ''{2}''",
+    "jvm.inspections.junit.malformed.annotated.method.double.typed.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, {2} and of type ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should not declare parameter ''{1}''",
+    "jvm.inspections.junit.malformed.annotated.method.typed.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be of type ''{1}'' and not declare parameter ''{2}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1} and not declare parameter ''{2}''",
+    "jvm.inspections.junit.malformed.annotated.method.double.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, {2} and not declare parameter ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.typed.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, of type ''{2}'' and not declare parameter ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.double.typed.param.single.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, {2}, of type ''{3}'' and not declare parameter ''{4}''",
+    "jvm.inspections.junit.malformed.annotated.method.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should not declare parameters {1} and ''{2}''",
+    "jvm.inspections.junit.malformed.annotated.method.typed.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be of type ''{1}'' and not declare parameters {2} and ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1} and not declare parameters ''{2}'' and ''{3}''",
+    "jvm.inspections.junit.malformed.annotated.method.double.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, {2} and not declare parameters ''{3}'' and ''{4}''",
+    "jvm.inspections.junit.malformed.annotated.method.single.typed.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, of type ''{2}'' and not declare parameters {3} and ''{4}''",
+    "jvm.inspections.junit.malformed.annotated.method.double.typed.param.double.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should be {1}, {2}, of type ''{3}'' and not declare parameters {4} and ''{5}''",
+    "jvm.inspections.junit.malformed.fix.field.signature": "Fix field signature",
+    "jvm.inspections.junit.malformed.fix.field.signature.descriptor": "Fix ''{0}'' field signature",
+    "jvm.inspections.junit.malformed.method.no.arg.descriptor": "Method <code>#ref</code> should be a {0}, {1} and have no parameters",
+    "jvm.inspections.junit.malformed.annotated.suspend.function.descriptor": "Method <code>#ref</code> annotated with ''@{0}'' should not be a suspending function",
+    "jvm.inspections.junit.malformed.suspend.function.descriptor": "Method <code>#ref</code> should not be a suspending function"
+  },
   "messages/KeyMapBundle.properties": {
-    "dialog.mouse.pad.shortcut.text": "<html><center> <br>{0}<br><br>"
+    "dialog.mouse.pad.shortcut.text": "<html><center> <br>{0}<br><br>",
+    "experimental.toolbar.xamarin.title": "Toolbar (Xamarin) "
   },
-  "messages/KotlinBaseFe10HighlightingBundle.properties": {
-    "highlighter.name.dsl": "Dsl//",
-    "i.for.i.br.0": "<i> for </i><br/>{0}",
-    "declaration.name.0.of.1": "{0}/{1}",
-    "declaration.name.anonymous": "<anonymous>",
-    "html.javascript.0.html": "JavaScript: {0}"
-  },
-  "messages/KotlinBaseProjectStructureBundle.properties": {
-    "sdk.0": "<sdk {0}>"
+  "messages/KotlinBasePluginBundle.properties": {
+    "notification.content.bundled.version.0.will.be.used.reason.1": "Version ({0}) of the Kotlin JPS plugin will be used<br>The reason: {1}",
+    "failed.to.download.unbundled.jps.maven.artifact": "Failed to download Kotlin Compiler Maven artifact ({0}). The search was performed in the following repos:<br>{1}",
+    "suggested.solutions": "Suggested solutions:<br>{0}",
+    "you.can.delegate.to.maven": "You can delegate IDE build/run actions to Maven in 'File | Settings | Build, Execution, Deployment | Build Tools | Maven | Runner | Delegate IDE build/run actions to Maven'",
+    "you.can.delegate.to.gradle": "You can delegate IDE build/run actions to Gradle in 'File | Settings | Build, Execution, Deployment | Build Tools | Gradle | Build and run using'",
+    "you.can.use.kotlin.compiler.which.is.bundled.into.your.ide": "You can use Kotlin compiler which is bundled into your IDE. Select 'Bundled' version in 'File | Settings | Build, Execution, Deployment | Compiler | Kotlin Compiler | Kotlin Compiler version'"
   },
   "messages/KotlinBundle.properties": {
     "hints.ranges.rangeTo.left": "≤",
@@ -3372,16 +1344,28 @@
     "hints.ranges.downTo.left": "≥",
     "hints.ranges.downTo.right": "≥",
     "presentation.text.paren": "({0})",
+    "highlighter.name.dsl": "Dsl//",
     "update.name.android.studio": "Android Studio",
     "column.name.val.var": "Val/Var",
     "member.info.abstract.0": "abstract {0}",
     "version": "{version}",
     "action.KotlinGenerateToString.text": "toString()",
+    "inspection.main.function.return.unit.display.name": "Main function should return 'Unit'",
     "hints.title.codevision": "Code Vision",
     "usage.provider.text.property.of.0": "{0}/{1}",
     "kotlin.script.in.project.sources.link": "https://youtrack.jetbrains.com/issue/KTIJ-19432",
     "kotlin.script.in.beta.stage.link": "https://kotlinlang.org/docs/components-stability.html#stability-levels-explained",
     "kotlin.eap.survey.notification.link": "https://surveys.jetbrains.com/s3/kotlin-eaps-survey"
+  },
+  "messages/KotlinDebuggerCoreBundle.properties": {
+    "message.variables.property.get": "... get()"
+  },
+  "messages/KotlinIdeaAnalysisBundle.properties": {
+    "html.javascript.0.html": "JavaScript: {0}",
+    "sdk.0": "<sdk {0}>",
+    "declaration.name.0.of.1": "{0}/{1}",
+    "i.for.i.br.0": "<i> for </i><br/>{0}",
+    "framework.name.kotlin.sdk": "Kotlin SDK"
   },
   "messages/KotlinIdeaCompletionBundle.properties": {
     "presentation.tail.for.0": "，{0}",
@@ -3420,13 +1404,20 @@
     "generator.title": "Kotlin Multiplatform"
   },
   "messages/KubernetesBundle.properties": {
+    "KubernetesMissingKeysInspection.kustomize.missing.patch.name.message": "Missing Kustomize resource patch name in its metadata",
     "HelmLintAction.task.title": "Helm Lint",
     "KubernetesResourceMapper.resourceDisplayableName.template": "{0} ''{1}''",
     "KubernetesViewConfigurable.podShellRow.title": "Pod Shell",
     "KubernetesPodContent.shell.title": "Shell: {0}",
     "group.KUBERNETES_ACTIONS.text": "Kubernetes(&K)",
     "action.Kubernetes.HelmLint.text": "Helm Lint(&L)",
-    "KubectlExecutor.BaseProcessListener.progressTitle.template": "Kubernetes: {0}"
+    "KubectlExecutor.BaseProcessListener.progressTitle.template": "Kubernetes: {0}",
+    "action.intercept.service.with.telepresence.text": "Intercept Service",
+    "action.creates.telepresence.interception.description": "Creates Telepresence interception",
+    "dialog.title.telepresence.intercept.options": "Telepresence Intercept Options",
+    "dialog.message.specify.ports.to.intercept": "Specify ports to intercept",
+    "text.specify.ports.to.intercept.html": "<p>Specify ports to intercept, separated by space or comma. Example: <code>8080, 8443:grpc</code></p>",
+    "text.specify.additional.options.for.telepresence.html": "<p>Specify any additional options for `telepresence intercept` command. Example: <code>--mechanism tcp</code></p>"
   },
   "messages/LangBundle.properties": {
     "label.export.plugin.url": "URL:",
@@ -3436,12 +1427,36 @@
   "messages/LangCoreBundle.properties": {
     "shorten.command.line.method.argfile": "@argfile (Java 9+)"
   },
-  "messages/LearnBundle.properties": {
-    "notification.group.feature.trainer": "IDE Features Trainer"
+  "messages/LayoutInspectorBundle.properties": {
+    "activity.restart": "The activity was restarted. This can be avoided by enabling \"Connect without restarting activity\" in the run configuration options.",
+    "activity.restart.action": "Open Run Configuration"
+  },
+  "messages/LintBundle.properties": {
+    "android.lint.inspections.group.name": "Android Lint",
+    "android.lint.inspections.file.ends.with.ext": "File endsWith on file extensions",
+    "android.lint.inspections.discouraged.api": "Using discouraged APIs",
+    "android.lint.inspections.assertion.side.effect": "Assertions with Side Effects",
+    "android.lint.inspections.uast.implementation": "Avoid using UAST implementation",
+    "android.lint.inspections.bidi.spoofing": "Bidirectional text spoofing",
+    "android.lint.inspections.not.constructor": "Not a Constructor"
   },
   "messages/LiveEditBundle.properties": {
     "configurable.displayName": "Live Edit",
     "update.application.ws.suffix": "(Live Edit)"
+  },
+  "messages/LogcatBundle.properties": {
+    "logcat.header.options.description": "Configure header formatting options",
+    "logcat.header.options.show.timestamp": "Show timestamp",
+    "logcat.header.options.show.date": "Show date",
+    "logcat.header.options.show.tid": "Show thread id",
+    "logcat.header.options.show.pids": "Show process ids",
+    "logcat.header.options.hide.duplicate.tags": "Hide duplicate tags",
+    "logcat.header.options.show.tag": "Show tag",
+    "logcat.header.options.tag.width": "Tag width:",
+    "logcat.scroll.to.end.text": "Scroll to the end. Clicking on a particular line stops scrolling and keeps that line visible.",
+    "logcat.clear.log.description": "Clears Logcat buffer on the device and the log console.",
+    "logcat.stacktrace.folding.hint": "<{0} more...>",
+    "logcat.filter.project.apps": "Project app only"
   },
   "messages/LombokBundle.properties": {
     "action.delombokData.text": "@Data",
@@ -3476,6 +1491,7 @@
     "maven.settings.testrun.env.variables": "<html><i>environmentVariables(&E)</i></html>",
     "maven.settings.runner.jre": "JRE:",
     "maven.settings.generated.folder.targerdir": "target/generated-sources",
+    "maven.settings.vm.options.tooltip": "Options specified in this field override the ones in .mvn/.jvm.config files",
     "maven.run.configuration.bundled.distribution.name": "Maven {0}",
     "maven.run.configuration.jre.label": "JRE(&J):",
     "maven.run.configuration.jre.name": "JRE(&J)"
@@ -3598,6 +1614,9 @@
     "bnd.configuration.name": "Bnd OSGi",
     "bnd.resolve.tree.via": "VIA:"
   },
+  "messages/PageflowBundle.properties": {
+    "seam.pageflow.new.pageflow.component.dialog.name": "New Name"
+  },
   "messages/PagesBundle.properties": {
     "action.Seam.Create.Pages.Xml.text": "Seam pages.xml"
   },
@@ -3605,7 +1624,8 @@
     "progress.text2.p4.status": "p4 {0}",
     "group.PerforceDirect.Menu.text": "Perforce(_P)",
     "perforce.name.with.mnemonic": "Perforce(_P)",
-    "change.list.decoration": " - Perforce #{0}"
+    "change.list.decoration": " - Perforce #{0}",
+    "error.invalid.file.fstat.mapping": "Invalid file<->fstat mapping; fstat={0}; map={1}"
   },
   "messages/PerformanceTestingBundle.properties": {
     "summary.link": "https://intellij-support.jetbrains.com/anonymous_requests/new",
@@ -3622,9 +1642,10 @@
   },
   "messages/PhpBundle.properties": {
     "0": " ({0})",
-    "action.PhpGenerateSetters.text": "Setter…",
-    "action.PhpGenerateGetters.text": "Getter…",
+    "action.PhpGenerateSetters.text": "setter…",
+    "action.PhpGenerateGetters.text": "getter…",
     "color.settings.heredoc_id": "Heredoc//Heredoc ID",
+    "color.settings.magic.member": "Identifiers//Magic Member Access",
     "folding.checkbox.collapse.heredocs.and.nowdocs": "HEREDOC\\NOWDOC",
     "quality.tool.phpcbf.name": "PHP Code Beautifier and Fixer",
     "refactoring.extract.field.visibility.public": "public(&U)",
@@ -3652,7 +1673,20 @@
     "PhpLanguageLevel.8.0.0.presentable.name": "8.0",
     "filetype.phar.description": "Php Phar",
     "filetype.phar.display.name": "Php Phar",
+    "phpdoc.code.style.sort.doc.blocks": "PHPDoc tags order",
+    "phpdoc.code.style.in.beginning.position": "In the beginning",
+    "phpdoc.code.style.in.end.position": "In the end",
+    "phpdoc.code.style.convert.null.to": "Convert Null constant to:",
+    "php.code.style.convert.lower.case": "Lower case",
+    "php.code.style.convert.upper.case": "Upper case",
+    "php.code.style.sort.by.length": "By length",
     "phpdoc.code.style.convert.else.if.separate": "else if",
+    "phpdoc.code.style.param.spaces.between.tag.and.type": "Between tag and type:",
+    "phpdoc.code.style.param.spaces.between.type.and.name": "Between type and name:",
+    "phpdoc.code.style.param.spaces.between.name.and.description": "Between name and description:",
+    "auto.import.in.namespace.scope": "Enable auto-import in namespace scope",
+    "remote.connection.settings.default.remote.interpreter": "Default Remote Interpreter",
+    "settings.smart.keys.select.variable.name.without.dollar.sign.on.double.click": "Select variable name without '$' sign on double click",
     "composer.label.phar": "composer.phar",
     "php.run.label.https": "HTTPS:",
     "php.run.label.url": "URL:",
@@ -3675,7 +1709,10 @@
     "fluent.setters": "Fluent setter",
     "label.lt.no.server": "<no server>",
     "PhpLanguageLevel.8.1.0.presentable.name": "8.1",
-    "quality.tool.cs.fixer.name": "PHP CS Fixer"
+    "inspection.php.unit.invalid.mocking.target": "Invalid PHPUnit mocking target",
+    "inspection.php.mockery.invalid.mocking.target": "Invalid Mockery mocking target",
+    "inspection.mockery.protected.method.cannot.be.mocked": "'protected' methods cannot be mocked without calling 'Mock.shouldAllowMockingProtectedMethods' ",
+    "intention.family.name.add.should.allow.mocking.protected.methods.call": "Add 'shouldAllowMockingProtectedMethods' call"
   },
   "messages/PhpRemoteSdkBundle.properties": {
     "remote.interpreter.default.interpreter.path": "/usr/bin/php",
@@ -3688,7 +1725,7 @@
     "prettier.formatter.hint.0": "Prettier: {0}"
   },
   "messages/ProjectBundle.properties": {
-    "sdk.configure.add.sdkType.subAction": "{0}…",
+    "sdk.configure.add.sdkType.subAction": "{0}...",
     "dialog.text.resolving.sdks.item": "{0}“{1}”"
   },
   "messages/PropertiesBundle.properties": {
@@ -3720,14 +1757,21 @@
   "messages/PyPsiBundle.properties": {
     "filetype.python.docstring.description": "Python docstring",
     "find.usages.unnamed": "<unnamed>",
-    "element.presentation.location.string.module": "({0})"
+    "element.presentation.location.string.module": "({0})",
+    "INSP.typeddict.required.notrequired.cannot.be.used.outside.typeddict.definition": "''{0}'' can be used only in a TypedDict definition",
+    "INSP.typeddict.cannot.be.required.and.not.required.at.the.same.time": "Key cannot be required and not required at the same time",
+    "INSP.typeddict.required.notrequired.must.have.exactly.one.type.argument": "''{0}'' must have exactly one type argument"
   },
   "messages/PySshInterpreterBundle.properties": {
     "ssh.connection.wizard.remote.interpreter.default.interpreter.path": "/usr/bin/python"
   },
   "messages/PythonProBundle.properties": {
     "python.debug.text.pane.text": "<html><head></head><body></body></html>",
-    "configurable.PyScientificConfigurable.display.name": "Python Scientific"
+    "configurable.PyScientificConfigurable.display.name": "Python Scientific",
+    "fastapi.run.no.app.in.file": "<html>Did not find a valid FastAPI app in {0} <br/><a href=\"edit\">Add explicit app name…</a></html>",
+    "fastapi.run.invalid.file.error.notification": "<html>FastAPI application has to be a valid .py file.<br/><a href=\"edit\">Change in run configuration…</a></html>",
+    "fastapi.run.options.app.name": "Application name:",
+    "fastapi.run.options.autodetect": "<detect automatically>"
   },
   "messages/PythonProfilerBundle.properties": {
     "call.graph.add.time.milliseconds.label.text": "{0}ms",
@@ -3735,7 +1779,8 @@
   },
   "messages/QodanaBundle.properties": {
     "qodana.problem.description.with.level": "[{0}] Qodana: {1}",
-    "qodana.problem.description.without.level": "Qodana: {0}"
+    "qodana.problem.description.without.level": "Qodana: {0}",
+    "text.qodana.result": "[{0}] Qodana: {1}"
   },
   "messages/QuarkusBundle.properties": {
     "quarkus.starter.version.label": "Quarkus:"
@@ -3763,6 +1808,12 @@
     "dialog.generate.cucumber.tframework.testunit": "Test::Unit(&T)",
     "dialog.generate.cucumber.sframework.capybara": "Capybara(&C)",
     "dialog.generate.cucumber.sframework.webrat": "Webrat(&W)",
+    "color.settings.rhtml.scriptlet.start": "Scriptlet start",
+    "color.settings.rhtml.scriptlet.end": "Scriptlet end",
+    "color.settings.rhtml.expr.start": "Expression start",
+    "color.settings.rhtml.expr.end": "Expression end",
+    "color.settings.rhtml.scripting.bkg": "Ruby injection background",
+    "color.settings.rhtml.omit.new.line": "Omit new line modifier",
     "module.rails.create.app.presentable.name": "Rails API",
     "rails.project.module.view.nodes.minitest.shoulda.presentable": "Minitest/Shoulda",
     "jruby.framework.configurable.select.sdk.text": "JRuby SDK:",
@@ -3773,10 +1824,22 @@
     "ruby.project.wizard.tab.project.generator.ruby.sdk": "Ruby SDK(&S):",
     "gem.build.options.dialog.title": "{0} Gem {1}",
     "refactoring.extract.module.context.static": "static (extend)(&E)",
+    "ruby.debugger.verbose.output": "Verbose debugger output",
+    "ruby.debugger.ignore.non.project": "Ignore non-project sources",
+    "ruby.debugger.attach.to.subprocesses.automatically.text": "Attach to subprocesses automatically while debugging",
+    "ruby.debugger.read.frames.of.non.suspended.threads.text": "Read frames of non-suspended threads (not supported for Ruby 2.0)",
     "ruby.ide.sdk.configurable.create.rvm.gemset.sdk.label": "Ruby SDK(&S):",
     "ruby.ide.sdk.configurable.create.rvm.gemset.text.edit": "RVM Gemset(&G):",
     "ruby.rbenv.gemset.name": "Rbenv gemset",
     "ruby.action.create.new.test.dialog.kind.testUnit": "Test::Unit",
+    "ruby.code.style.indent.when.cases": "Indent when cases",
+    "ruby.code.style.spaces.around.braces": "Curly braces in hashes",
+    "ruby.code.style.spaces.around.braces.blocks": "Curly braces in blocks",
+    "ruby.code.style.spaces.around.arrows": "Hash rockets",
+    "ruby.code.style.spaces.around.operators.range": "Range operators",
+    "ruby.code.style.spaces.around.operators.other": "Other operators",
+    "ruby.code.style.force.newlines.around.visibility.modifiers": "Force newlines around visibility modifiers",
+    "ruby.code.style.convert.brace.block.by.enter": "Convert {} blocks to do..end by Enter",
     "dialog.rails.i18n.create.property.translation.example": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "test.frameworks.names.testunit": "Test::Unit",
     "remote.interpreter.default.interpreter.path": "/usr/bin/ruby",
@@ -3784,12 +1847,15 @@
     "rails.action.cable.gutter.title": "Action cable",
     "run.anything.rvm.use.undefined": "<undefined>",
     "run.anything.select.rbenv.shell.completion.group": "rbenv shell",
+    "ruby.smart.keys.option.interpolation": "Start ruby interpolation in strings on #",
     "ruby.presentation.invalid": "<invalid>",
     "ruby.presentation.unknown": "<unknown>",
     "action.rspec.LetIntroduce.text": "RSpec 'let'",
     "group.ROR_TOOLS.text": "Ruby on Rails",
+    "action.org.jetbrains.plugins.ruby.gem.bundler.actions.RunBundlerInitAction.text": "I&nit",
     "group.BUNDLER_ACTIONS.text": "Bundler(&B)",
     "group.GEM_BUILD_ACTION.text": "Gem (&G)",
+    "settings.highlight.rdoc.and.ruby.syntax.in.comments": "Highlight RDoc and ruby syntax in comments",
     "parsing.error.ruby": "[RUBY] {0}",
     "class.anonymous": "<anonymous>",
     "border.title.ruby.i18n": "Ruby i18n",
@@ -3841,7 +1907,8 @@
     "visibility.protected": "protected(&O)",
     "visibility.private": "private(&V)",
     "visibility.package.local": "Package local(&K)",
-    "rename.target.text.0.1": "{0} → ''{1}''"
+    "rename.target.text.0.1": "{0} → ''{1}''",
+    "progress.title.collecting.suggested.names": "Collecting suggested names"
   },
   "messages/RelaxngBundle.properties": {
     "relaxng.convert-schema.advanced-options.dtd.checkbox.generate-start": "generate-start(&G)",
@@ -3887,18 +1954,29 @@
   },
   "messages/SASSBundle.properties": {
     "color.settings.sass.name": "Sass/SCSS",
-    "inspections.group.name": "Sass/SCSS"
+    "inspections.group.name": "Sass/SCSS",
+    "parsing.error.unexpected.variable": "Unexpected variable"
   },
   "messages/SSRBundle.properties": {
+    "import.template.script.warning": "Note that the imported template contains {1,choice,1#a Groovy Script modifier|1<{1} Groovy Script modifiers} and any script has access to the complete {0} internals. Make sure that the script does not cause damage before using this template.",
     "reference.0.label": "Reference={0}",
     "script.0.label": "Script={0}",
     "text.0.label": "Text={0}",
     "type.0.label": "Type={0}",
+    "no.filters.whole.template.label": "No modifiers added\nfor the whole template",
+    "no.filters.for.0.label": "No modifiers added\nfor ${0}$",
+    "no.script.for.0.label": "No script added\nfor ${0}$",
+    "filters.for.whole.template.title": "Modifiers for the whole template:",
+    "filters.for.0.title": "Modifiers for ${0}$:",
+    "script.filter.match.variable.help.text": "<p>Use the GroovyScript IntelliJ API to modifier the search results. When the specified script returns <code>false</code>, the found element will not be in the search results. Non-boolean script results will be converted to boolean. <p>Available variables: {0}",
+    "invert.filter": "Invert modifier",
     "xml_html.category": "XML/HTML",
     "j2ee.category": "Java/Java EE",
     "min.occurs.tooltip.message": "[{0},{1}]",
     "file.type.pattern.context": "{0} - {1}",
-    "replace.configuration.display.text": "{0} ⇨ {1}"
+    "replace.configuration.display.text": "{0} ⇨ {1}",
+    "filter.button": "Toggle Modifier Panel",
+    "filter.button.description": "Toggle the variable modifiers panel"
   },
   "messages/ScalaAkkaBundle.properties": {
     "intention.category.scala.akka": "Scala/Akka"
@@ -3932,7 +2010,6 @@
     "marco.typeParameters.without.bounds": "typeParamsWithoutBounds(CLASS)"
   },
   "messages/ScalaInspectionBundle.properties": {
-    "displayname.unused.global.declaration": "Unused global declaration",
     "family.name.scala.scaladoc": "Scala: Scaladoc"
   },
   "messages/ScalaPlay2Bundle.properties": {
@@ -3949,6 +2026,12 @@
     "sbt.shell.title": "sbt shell",
     "sbt.shell.ctrl.d.eof": "Ctrl+D EOF"
   },
+  "messages/ScalarBundle.properties": {
+    "install.general.error": "Could not extract Scalar",
+    "install.success.message": "Successfully downloaded and set Scalar",
+    "register.general.error": "Could not change repo registration in Scalar",
+    "action.Git.Scalar.Install.text": "Download and Install Scalar"
+  },
   "messages/SeamBundle.properties": {
     "action.Seam.Create.Components.Xml.text": "Seam components.xml"
   },
@@ -3956,7 +2039,9 @@
     "model.inspection.group.name": "JBoss Seam"
   },
   "messages/SeleniumSharedBundle.properties": {
-    "page.object.items.add.by.type": "{0}"
+    "page.object.items.add.by.type": "{0}",
+    "page.object.unresolved.link.fix": "Create Selenium Page Object ''{0}''",
+    "selenium.page.object.url": "URL (optional):"
   },
   "messages/SerialMonitorBundle.properties": {
     "uart.stopbits.1.5": "1.5",
@@ -3973,16 +2058,22 @@
   "messages/SpaceBundle.properties": {
     "product.name.jetbrains.space": "JetBrains Space",
     "auth.page.jetbrains.space.header.text": "JetBrains Space",
-    "review.chat.editor.tab.tooltip": "{0}: {1}",
+    "review.chat.editor.tab.tooltip": "{0}：{1}",
     "review.at.time": "{0} {1}",
     "review.by.author.at.time": "{0}，{1} {2}",
+    "space.promo.text.full": "A complete platform for software development integrated with your favorite JetBrains IDEs. Combine Git hosting, code review, CI/CD, packages, issues, docs, and chats – all in one place",
     "column.name.commit.status": "Space Automation"
   },
   "messages/SpaceGatewayBundle.properties": {
     "connector.title": "JetBrains Space",
     "login.page.title": "JetBrains Space",
+    "welcome.screen.tab.empty.state.description": "<html><center>A complete platform for software development<br>integrated with your favorite JetBrains IDEs</center></html>",
+    "dialog.message.env.name.cannot.be.empty": "Enter an environment name",
     "label.dev.env.ide": "IDE:",
-    "label.dev.file": "Devfile:"
+    "label.dev.file": "Devfile:",
+    "label.some.environment.variables.are.missing": "Environment variables are missing. <a href='configure'>Configure them…</a>",
+    "text.user.secrets.and.parameters.description": "User secrets and parameters can be created on the <a href='https://user-env'>Environment Variables</a> page",
+    "dialog.message.repository.has.no.branches": "Repository has no branches"
   },
   "messages/SpaceVcsBundle.properties": {
     "action.com.intellij.space.vcs.share.SpaceShareProjectAction.Vcs.Toolbar.Widget.text": "Space..."
@@ -4007,6 +2098,8 @@
   },
   "messages/SpringBootApiBundle.properties": {
     "spring.boot.name": "Spring Boot",
+    "configuration.properties.prefix.must.be.specified": "Prefix not specified",
+    "configuration.properties.prefix.must.be.non.empty": "Prefix is empty",
     "icon.icons.SpringBoot.tooltip": "Spring Boot",
     "icon.icons.SpringBoot_Overlay.tooltip": "Spring Boot",
     "spring.boot.intention.category": "Spring Boot"
@@ -4099,6 +2192,12 @@
     "ide.service.view.local.port.forwarding.text": "{0} → {1}",
     "ide.service.view.remote.port.forwarding.text": "{0} ← {1}"
   },
+  "messages/StaticAnalysisBundle.properties": {
+    "eap.license.message": "By using this Docker image, you agree to\n- JetBrains Privacy Policy (https://jb.gg/jetbrains-privacy-policy)\n- JETBRAINS EAP USER AGREEMENT (https://jb.gg/jetbrains-user-eap)\n\nThe Docker image includes an evaluation license.\nThe license will expire in {0} days.\nPlease ensure you pull a new image on time.",
+    "release.license.message": "By using this Docker image, you agree to\n- JetBrains Privacy Policy (https://jb.gg/jetbrains-privacy-policy)\n- Qodana Community Linters Agreement (https://jb.gg/qodana-community-linters)",
+    "eap.license.message.with.expiration.date": "By using this Docker image, you agree to\n- JetBrains Privacy Policy (https://jb.gg/jetbrains-privacy-policy)\n- JETBRAINS EAP USER AGREEMENT (https://jb.gg/jetbrains-user-eap)\n\nThe Docker image includes an evaluation license.\nThe license will expire on {0}.\nPlease ensure you pull a new image on time.",
+    "usage.help.description": "inspect.sh qodana [OPTIONS] PROJECT_PATH RESULT_PATH\nRun inspections on PROJECT_PATH directory.\nResults and logs are stored in RESULT_PATH.\nOptions:"
+  },
   "messages/Struts2Bundle.properties": {
     "struts2": "Struts 2",
     "dom.extendable.class.converter.type.spring": "Spring Bean",
@@ -4107,9 +2206,18 @@
   },
   "messages/SvnBundle.properties": {
     "group.SubversionFilePopupGroup.text": "Subversion(_S)",
+    "label.text.delete.stored.credentials": "Delete all stored credentials for 'http', 'svn' and 'svn+ssh' protocols",
+    "ssh.settings.subversion.config.choice.title": "Subversion config",
     "label.update.url": "URL:",
     "label.working.copy.url": "URL:",
+    "use.idea.proxy.as.default.label.text": "Only HTTP proxy can be used as default",
+    "navigate.to.idea.proxy.settings": "Navigate to general proxy settings",
     "value.patch.file.name": "TheirsChanges.patch",
+    "settings.check.mergeinfo": "Check svn:mergeinfo in target subtree when preparing for merge",
+    "settings.maximum.revisions.number": "Maximum number of revisions to look back in annotations:",
+    "settings.HTTP.timeout": "HTTP timeout:",
+    "settings.SSH.connection.timeout": "SSH connection timeout:",
+    "settings.SSH.read.timeout": "SSH read timeout:",
     "svn.short.name.with.mnemonic": "SVN(_S)"
   },
   "messages/SwaggerBundle.properties": {
@@ -4174,7 +2282,7 @@
     "configuration.node.name": "Spy-js for Node.js",
     "console.trace.doubleSpace": "  ",
     "console.trace.timeSuffix": " ms",
-    "console.trace.unknown": "…",
+    "console.trace.unknown": "...",
     "console.trace.events.eventTooltipTemplate.fileEntryTemplate": "<br/>%s<span>%s</span>",
     "fileDependency.details.event.unknown": "<deleted>",
     "label.s.s": "''{0}'' -> ''{1}''"
@@ -4186,6 +2294,7 @@
     "memory.usage.panel.message.text": "{0,number,####}/{1,number,####}M"
   },
   "messages/UIDesignerBundle.properties": {
+    "title.add.component": "Add Component",
     "bind.to.bean.ismodified.checkbox": "isModified()",
     "bind.to.bean.setdata.checkbox": "setData()",
     "bind.to.bean.getdata.checkbox": "getData()",
@@ -4216,14 +2325,17 @@
     "file.history.details.hash.author.on.date.at.time": "{0} {1}，{2} {3}",
     "plugins.configurable.show": "status.text.Show",
     "change.dialog.title.change.list.name": "{0} [{1}]",
-    "sequence.concatenation.separator": "、",
+    "sequence.concatenation.separator": ", ",
     "label.multi.author.modified.code": "{0} +{1} *",
     "label.multi.author.not.modified.code": "{0} +{1}",
     "label.single.author.modified.code": "{0} *"
   },
   "messages/VcsLogBundle.properties": {
     "vcs.log.action.intellisort.title": "IntelliSort: {0}",
-    "vcs.log.filter.accessible.name": "{0}: {1}"
+    "vcs.log.filter.accessible.name": "{0}：{1}"
+  },
+  "messages/VisualizationBundle.properties": {
+    "paginator.of": "/{0}"
   },
   "messages/VueBundle.properties": {
     "vue.project.generator.name": "Vue.js",
@@ -4255,6 +2367,9 @@
     "glassfish.jax.ws.2.x.ri.metro.1.x.jwsdp.2.0": "Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2",
     "websphere.platform.name": "WebSphere 6.X",
     "axis2.display.name": "Apache Axis 2",
+    "settings.external.engines": "External engines:",
+    "settings.prefix.path.for.web.services.url": "Prefix path for web services URL:",
+    "settings.maximum.vm.heap.size.when.launching.tools.mb": "Maximum VM heap size when launching tools (Mb):",
     "group.JAXB.text": "JAXB(_X)",
     "jaxb.generation.dialog.sdk.label": "SDK:",
     "jaxb.generation.dialog.xjc.label": "XJC:",
@@ -4327,37 +2442,6 @@
     "configurable.name.html.css": "HTML/CSS"
   },
   "messages/packageSearchBundle.properties": {
-    "packagesearch.repository.copyableInfo.id": "ID: {0}",
-    "packagesearch.repository.copyableInfo.url": "URL: {0}",
-    "packagesearch.terminology.kotlinMultiplatform.platform.android_jvm": "Android JVM",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_arm32": "Android (arm32)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_arm64": "Android (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_x64": "Android (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.android_x86": "Android (x86)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.ios_arm32": "iOS (arm32)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.ios_arm64": "iOS (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.ios_x64": "iOS (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_arm32_hfp": "Linux (arm32_hfp)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_arm64": "Linux (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_mips32": "Linux (mips32)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_mipsel32": "Linux (mips32 little endian)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.linux_x64": "Linux (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.macos_arm64": "macOS (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.macos_x64": "macOS (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.mingw_x64": "mingw (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.mingw_x86": "mingw (x86)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.node": "Node.js",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.tvos_arm64": "tvOS (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.tvos_x64": "tvOS (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.wasm32": "WebAssembly (wasm32)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_arm32": "watchOS (arm32)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_arm64": "watchOS (arm64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_x64": "watchOS (x64)",
-    "packagesearch.terminology.kotlinMultiplatform.platform.target.watchos_x86": "watchOS (x86)",
-    "packagesearch.terminology.kotlinMultiplatform.tooltip": "Kotlin Multiplatform",
-    "packagesearch.ui.util.numberWithThousandsSymbol": "{0}k"
-  },
-  "packageSearchBundle.properties": {
     "packagesearch.repository.copyableInfo.id": "ID: {0}",
     "packagesearch.repository.copyableInfo.url": "URL: {0}",
     "packagesearch.terminology.kotlinMultiplatform.platform.android_jvm": "Android JVM",
