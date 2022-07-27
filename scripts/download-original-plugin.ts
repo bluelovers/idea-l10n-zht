@@ -10,7 +10,7 @@ export default Bluebird.resolve()
 
 		if (name?.length > 0)
 		{
-			let m = /^v(\d+)(?:\.(?:\d+))?$/.exec(name);
+			let m = /^(?:releases\/)?v(\d+)(?:\.(?:\d+))?$/.exec(name);
 
 			return internalDownload(m?.[1])
 		}
