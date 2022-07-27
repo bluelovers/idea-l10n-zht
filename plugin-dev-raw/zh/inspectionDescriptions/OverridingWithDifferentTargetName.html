@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>報告具有 <code>@targetName</code> 註解的定義，這些定義覆寫具有 <code>@targetName</code> 註解的定義，但具有不同的外部名稱。</p>
+
+<p>請參閱 <a href="https://docs.scala-lang.org/scala3/reference/other-new-features/targetName.html">@targetName 註解</a>。</p>
+
+<p>該快速修復會將 <code>@targetName</code> 註解的外部名稱取代為被覆寫定義的外部名稱。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+  trait A:
+    @targetName("multiply")
+    def *(i: Int): A
+
+  class B extends A:
+    @targetName("times")
+    override def *(i: Int): A = ???
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  trait A:
+    @targetName("multiply")
+    def *(i: Int): A
+
+  class B extends A:
+    @targetName("multiply")
+    override def *(i: Int): A = ???
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

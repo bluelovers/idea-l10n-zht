@@ -1,6 +1,11 @@
 <html>
 <body>
-報告可取代為 <code>bool</code> 的 <code>true | false</code> 用法。
-<p><code>bool</code> 關鍵字是 <code>true | false</code> 的速記形式，有助於提高可讀性。</p>
+報告可取代為 <code>bool</code> 的 <code>true | false</code> 用法。 <code>bool</code> 關鍵字是有助於提高可讀性的速記形式。
+<p>可以通過快速修復將 <code>true | false</code> 的任意組合轉換為 <code>bool</code>。</p>
+<p>範例：</p>
+<pre><code># 可以簡化 'true | false'
+type example = true | false</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>type example = bool</code></pre>
 </body>
 </html>

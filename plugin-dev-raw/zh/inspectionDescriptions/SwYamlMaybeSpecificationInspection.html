@@ -1,0 +1,34 @@
+<html>
+<body>
+檢測可解釋為 OpenAPI/Swagger 規範一部分的 YAML 檔案。
+<p>
+  此類檔案不包含顯式的規範特性，但它們引用自附近的主規範檔案。
+</p>
+<!-- tooltip end -->
+
+<p>
+  下面的範例包含位於同一目錄中的兩個檔案。 第一個是一個普通的主規範檔案。
+  第二個引用自第一個，因此建議將其視為一個規範。
+</p>
+
+<p><b>主規範檔案 `openapi.yaml`：</b></p>
+<pre><code>
+openapi: 3.1.0
+components:
+  schemas:
+    CustomSchema:
+      description: Custom schema object
+      properties:
+        foo:
+          $ref: 'common.components.yaml#/components/schemas/CommonSchema'
+</code></pre>
+
+<p><b>規範檔案候選項 `common.components.yaml`：</b></p>
+<pre><code>
+components: # 'Mark file as OpenAPI specification' highlighting
+  schemas:
+    CommonSchema:
+      description: Common schema object reused in several specifications
+</code></pre>
+</body>
+</html>

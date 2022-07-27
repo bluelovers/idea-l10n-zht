@@ -1,13 +1,14 @@
 <html>
 <body>
-報告這樣一種情況： Java 9 模組 <code>A</code> 需要 Java 9 模組 <code>B</code>，
-但是 <code>A</code> 不使用 <code>B</code> 中的任何軟體套件。
-此外，需要 <code>java.base</code> 模組的指令是冗餘的。
-<!-- tooltip end -->
+報告 Java Platform Module System <code>module-info.java</code> 檔案中的冗餘 <code>requires</code> 指令。
+當模組 <code>A</code> 需要模組 <code>B</code>，但模組 <code>A</code> 中的程式碼不從 <code>B</code> 匯入任何軟體套件或類時，則 <code>requires</code> 指令冗餘。
+此外，所有模組都具有對 <code>java.base</code> 模組的隱式宣告依賴，因此 <code>requires java.base;</code> 指令始終冗餘。
 <p>
-  該修復刪除了此類冗餘依賴項的 <code>requires</code> 指令。
-  如果刪除的依賴項重新匯出了實際使用的模組，則修復程序會為這些模組添加 <code>requires</code> 指令。
+  該快速修復會刪除冗餘的 <code>requires</code> 指令。
+  如果刪除的依賴項重新匯出了實際使用的模組，則修復會為這些模組添加 <code>requires</code> 指令。
 </p>
-<small>2017.1 最新變化</small>
+<!-- tooltip end -->
+<p>僅當專案或模組的語言級別為 9 或更高時，此檢查才會報告。</p>
+<p><small>2017.1 最新變化</small>
 </body>
 </html>

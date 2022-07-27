@@ -1,0 +1,15 @@
+<html>
+<body>
+報告使用 <code>@RegisterExtension</code> 註解的欄位，它們的類型錯誤或者在需要時未宣告為 static。
+此類擴展將無法正確註冊，並可能導致測試啟動失敗。
+<p><b>範例：</b></p>
+<pre><code>
+  public class MyTest {
+    @RegisterExtension
+    private JUnit4Rule rule;
+  }
+</code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>

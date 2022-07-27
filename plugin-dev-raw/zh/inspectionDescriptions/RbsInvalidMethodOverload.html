@@ -1,6 +1,15 @@
 <html>
 <body>
-報告無效的方法多載 (<code>...</code>)。
-<p>方法多載只有在該方法恰好有一個其他非多載定義時才有效。</p>
+報告無效的方法多載 (<code>...</code>)。 方法多載只有在該方法恰好有一個其他非多載定義時才有效。
+<p>可以通過快速修復移除無效的方法多載。</p>
+<p>範例：</p>
+<pre><code>class Example
+  # 找不到 'Example' 類的 'call' 方法的非多載宣告
+  def call: -> untyped | ...
+end</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>class Example
+  def call: -> untyped
+end</code></pre>
 </body>
 </html>

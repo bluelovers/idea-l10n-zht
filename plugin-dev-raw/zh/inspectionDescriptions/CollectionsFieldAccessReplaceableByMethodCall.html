@@ -4,12 +4,15 @@
 或 <code>EMPTY_SET</code>。 這些欄位用法可以取代為以下方法調用：<code>emptyList()</code>、<code>emptyMap()</code> 或 <code>emptySet()</code>。
 此類方法調用會防止編譯器發出未檢查的警告，因為可以推斷出類型參數。
 <p><b>範例：</b></p>
-<pre><code>List&lt;Integer&gt; emptyList = Collections.EMPTY_LIST;</code></pre>
+<pre><code>
+  List&lt;Integer&gt; emptyList = Collections.EMPTY_LIST;
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre><code>List&lt;Integer&gt; emptyList = Collections.emptyList();</code></pre>
+<pre><code>
+  List&lt;Integer&gt; emptyList = Collections.emptyList();
+</code></pre>
 <!-- tooltip end -->
-<p>該檢查僅在專案或模組的語言級別為 5 或更高時有效。</p>
+<p>僅當專案或模組的語言級別為 5 或更高時，此檢查才會報告。</p>
 <p>
-
 </body>
 </html>

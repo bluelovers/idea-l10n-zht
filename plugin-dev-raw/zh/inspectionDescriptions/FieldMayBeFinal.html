@@ -1,14 +1,42 @@
 <html>
 <body>
-報告可以安全地設為 <code>final</code> 的任何欄位。
-<p>使用 <code>final</code> 變數會使程式碼更不容易出錯。 它還可以通過最佳化編譯器來幫助加速您的程序。</p>
-<p>只有當一個欄位具有 <code>private</code> 存取修飾符才可以安全地設為 <code> final </code>（或者它在本地/匿名類中定義），並且：<p>
+報告可以安全地設為 <code>final</code> 的欄位。
+所有 <code>final</code> 欄位都應具有一個不會更改的值，從而使程式碼更易於推理。
+<p>為避免分析開銷過大，此檢查僅報告欄位是否具有 <code>private</code> 修飾符或者是否在局部類或匿名類中定義。
+  如果滿足以下條件，欄位可以為 <code>final</code>：
 <ul>
-  <li>它是 <code>static</code>，並在其宣告或 static 的類初始化程序之一中進行初始化。</li>
-  <li>它是非 static 的，並在其宣告、非 static 的類初始化程序或所有構造函數中初始化。</li>
+  <li>欄位為 <code>static</code>，並在其宣告或 <code>static</code> 初始設定式中進行了一次初始化。</li>
+  <li>欄位為非 <code>static</code>，並在其宣告、實例初始設定式或每個構造函數中進行了一次初始化</li>
 </ul>
+並且欄位未在其他任何地方進行修改。
+<p><b>範例：</b></p>
+<pre><code>
+  public class Person {
+    private String name; // 可以為 final
+
+    Person(String name) {
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  public class Person {
+    private final String name;
+
+    Person(String name) {
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
-
-
 </body>
 </html>

@@ -1,0 +1,35 @@
+<html>
+<body>
+報告 <code>LocalQuickFix</code> 實作中阻止意圖預覽操作正常執行的欄位。
+<p>
+  意圖預覽是 IntelliJ 平台的一項功能，可以顯示在套用快速修復或意圖操作後對當前檔案所做的更改。 為了實作這一功能，需要使用指向當前檔案的非物理副本的自訂 <code>ProblemDescriptor</code> 來調用 <code>LocalQuickFix.generatePreview()</code>。
+  通常，此實作委託給 <code>LocalQuickFix.applyFix()</code>。 但是，某些快速修復可能會直接或間接引用物理元素並將其用於寫入。 由於快速修復試圖更新的是物理 PSI 而不是非物理 PSI，預覽不起作用。
+  為避免這種情況，<code>generatePreview()</code> 的預設實作僅在快速修復類的所有實例欄位均具有安全類型（基元、字串等）的情況下進行委託。
+</p>
+<p>
+  您可以通過多種方式修正此問題：
+</p>
+<ol>
+  <li>
+    如果該欄位其實未存儲任何 PSI 引用，或者該 PSI 僅用於讀取，
+您可以使用 <code>@SafeFieldForPreview</code> 註解該欄位
+  </li>
+  <li>
+    您可以覆寫 <code>getFileModifierForPreview()</code> 方法，然後創建一個快速修復副本，將其重新綁定至作為參數提供的非物理檔案副本。 使用 <code>PsiTreeUtil.findSameElementInCopy()</code> 可以在提供的非物理副本中找到相應的 PSI 元素。
+  </li>
+  <li>
+    不要在欄位中存儲 PSI 引用，而應盡量從 <code>ProblemDescriptor.getPsiElement()</code> 中提取所有必要資訊。
+  </li>
+  <li>
+    您可以覆寫 <code>generatePreview()</code> 方法並提供完全自訂的預覽行為。
+    例如，可以顯示自訂 HTML 文檔而不是實際預覽，只要您在修改當前檔案之外還進行了相應操作。
+  </li>
+</ol>
+<p>
+  此檢查不會報告 <code>getFileModifierForPreview()</code> 或 <code>generatePreview()</code> 的自訂實作是否存在。 但是，這並不意味著實現正確且預覽有效。
+  請進行測試。 另請注意，預覽結果是在背景執行緒中計算的，因此您無法在預覽期間啟動寫入操作或執行任何需要寫入操作的運算。 最後，如果 <code>startInWriteAction()</code> 返回 <code>false</code>，則不會自動生成預覽。 在這種情況下，需要有自訂的 <code>generatePreview()</code> 實作。
+</p>
+<!-- tooltip end -->
+<p><small>2022.1 最新變化</small></p>
+</body>
+</html>

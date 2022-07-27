@@ -19,5 +19,13 @@
 <!-- tooltip end -->
 <p>設定檢查：</p>
 <p>使用<b>最小分支數</b> 欄位指定 <code>case</code> 標籤的最小預期數量。</p>
+<p>使用<b>不報告模式 switch 語句</b>選項可避免報告具有模式分支的 switch 語句和表達式。 例如：</p>
+<pre><code>
+  String result = switch(obj) {
+    case String str -> str.trim();
+    default -> "none";
+  };
+</code></pre>
+<p>即使只有一個模式分支，也應該保留 switch，而不是使用 <code>instanceof</code> 語句。</p>
 </body>
 </html>

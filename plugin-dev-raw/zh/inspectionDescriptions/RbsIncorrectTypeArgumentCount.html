@@ -1,6 +1,17 @@
 <html>
 <body>
-報告對類型實參數量不正確的泛型類型的引用。
-<p>在沒有傳遞正確數量的類型實參的情況下使用泛型類型是錯誤的，可以通過添加適當數量的類型實參或移除多餘的類型實參來修正。</p>
+報告對類型實參數量不正確的泛型類型的引用。 在沒有傳遞正確數量的類型實參的情況下使用泛型類型是錯誤的。
+<p>可以通過快速修復更正傳遞的類型實參數量。</p>
+<p>範例：</p>
+<pre><code>class Example[A]
+end
+
+# 提供的類型實參過多
+type example = Example[untyped, untyped]</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>class Example[A]
+end
+
+type example = Example[untyped]</code></pre>
 </body>
 </html>
