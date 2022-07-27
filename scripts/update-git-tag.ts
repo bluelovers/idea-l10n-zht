@@ -8,6 +8,7 @@ import { getGitLogs } from '../lib/git/git-logs';
 import { join } from 'upath2';
 import { updatePluginTag, updateRepoTag } from '../lib/git/git-tag';
 import { getSourceInfoSync } from '../lib/build/get-source-info';
+import { getBranchInfo } from '../lib/git/branch-info';
 
 export default Bluebird.resolve()
 	.then(() =>
@@ -16,11 +17,13 @@ export default Bluebird.resolve()
 	})
 	.then(async (logs) =>
 	{
+		const { isMasterBranch, isVersionBranch } = getBranchInfo();
+
 		const __pluginVersion = getSourceInfoSync().pluginMeta.version;
 
 		const commit = logs[0];
 
-		const bool = commit.subject.startsWith(`build(changelog): update CHANGELOG`);
+		const bool = commit.subject.startsWith(`build(changelog): update CHANGELOG`) || isVersionBranch && commit.subject.startsWith(`build(release): update build`);
 		const bool2 = match(commit.files, 'CHANGELOG.md').length > 0;
 
 		console.cyan.info(commit.abbrevHash, `${commit.subject}`);
@@ -31,7 +34,10 @@ export default Bluebird.resolve()
 		{
 			console.info(`更新 git tag`);
 
-			await updateRepoTag();
+			if (isMasterBranch)
+			{
+				await updateRepoTag();
+			}
 
 			return updatePluginTag(__pluginVersion)
 		}

@@ -12,6 +12,7 @@ import { __file_publish_tags_json } from '../lib/const';
 import { array_unique_overwrite } from 'array-hyper-unique';
 import { LF } from 'crlf-normalize';
 import { getSourceInfoSync } from '../lib/build/get-source-info';
+import { getBranchInfo } from '../lib/git/branch-info';
 
 export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 	.then((from) =>
@@ -124,9 +125,14 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 
 		if (_do)
 		{
-			await updateChangelogByCwd(__root, {
-				type: 'independent',
-			});
+			const { isMasterBranch } = getBranchInfo();
+
+			if (isMasterBranch)
+			{
+				await updateChangelogByCwd(__root, {
+					type: 'independent',
+				});
+			}
 
 			const __pluginVersion = getSourceInfoSync().pluginMeta.version;
 
