@@ -7,6 +7,12 @@ import { _getVersionInfoBySeries, _getVersionInfoByVersion } from '../../lib/uti
 import { array_unique, array_unique_overwrite } from 'array-hyper-unique';
 import { __file_publish_tags_json } from '../../lib/const';
 import { updatePublishTags } from '../../lib/git/update-publish-tags';
+import { getSourceInfoSync } from '../../lib/build/get-source-info';
+import { createNew } from '@bluelovers/string-natural-compare';
+
+const _myNaturalCompare = createNew({
+	desc: true,
+});
 
 /**
  * @see https://plugins.jetbrains.com/docs/intellij/update-plugins-format.html#format-of-updatepluginsxml-file
@@ -18,6 +24,8 @@ export default Bluebird.resolve()
 	{
 		const tags = await updatePublishTags();
 
+		const __pluginVersion = getSourceInfoSync().pluginMeta.version;
+
 		const { __plugin_zh_cn_version } = await import('../../lib/const/link-of-zh-cn');
 
 		const lines: string[] = [];
@@ -28,7 +36,9 @@ export default Bluebird.resolve()
 		array_unique([
 			__plugin_zh_cn_version,
 			...tags,
+			__pluginVersion,
 		])
+			.sort(_myNaturalCompare)
 			.forEach((version) =>
 			{
 
