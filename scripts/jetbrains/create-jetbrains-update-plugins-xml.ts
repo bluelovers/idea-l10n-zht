@@ -6,6 +6,7 @@ import { LF } from 'crlf-normalize';
 import { _getVersionInfoBySeries, _getVersionInfoByVersion } from '../../lib/util/version-map';
 import { array_unique, array_unique_overwrite } from 'array-hyper-unique';
 import { __file_publish_tags_json } from '../../lib/const';
+import { updatePublishTags } from '../../lib/git/update-publish-tags';
 
 /**
  * @see https://plugins.jetbrains.com/docs/intellij/update-plugins-format.html#format-of-updatepluginsxml-file
@@ -15,7 +16,7 @@ import { __file_publish_tags_json } from '../../lib/const';
 export default Bluebird.resolve()
 	.then(async () =>
 	{
-		const tags = await readJSON(__file_publish_tags_json).catch(e => []) as string[];
+		const tags = await updatePublishTags();
 
 		const { __plugin_zh_cn_version } = await import('../../lib/const/link-of-zh-cn');
 

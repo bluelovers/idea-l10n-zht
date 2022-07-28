@@ -43,7 +43,7 @@ export function updatePublishTags()
 			return outputJSON(__file_publish_tags_json, tags, {
 				spaces: 2,
 				EOL: LF,
-			})
+			}).then(() => tags)
 		})
 		;
 }
