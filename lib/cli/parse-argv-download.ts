@@ -26,9 +26,11 @@ export function parseArgvDownload()
 			boolean: true,
 		})
 		.option('source', {
+			desc: `下載後作為語言包版本控制模式`,
 			boolean: true,
 		})
 		.option('disable-interactive', {
+			desc: `禁用互動式詢問介面`,
 			boolean: true,
 			default: !isInteractive(),
 		})
