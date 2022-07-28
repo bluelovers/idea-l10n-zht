@@ -6,9 +6,14 @@ import { LF } from 'crlf-normalize';
 import { buildCmd, gitTagList } from '@git-lazy/tag-list';
 import { console } from 'debug-color2';
 import { __root } from '../../test/__root';
+import { createNew } from '@bluelovers/string-natural-compare';
 
 export function updatePublishTags()
 {
+	const _myNaturalCompare = createNew({
+		desc: true,
+	});
+
 	return readJSON(__file_publish_tags_json)
 		.catch(e => [])
 		.then(async (tags: string[]) =>
@@ -36,7 +41,7 @@ export function updatePublishTags()
 				})
 			;
 
-			return array_unique_overwrite(tags.filter(v => v))
+			return array_unique_overwrite(tags.filter(v => v)).sort(_myNaturalCompare)
 		})
 		.then(tags =>
 		{
