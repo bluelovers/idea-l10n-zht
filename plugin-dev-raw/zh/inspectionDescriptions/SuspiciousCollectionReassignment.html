@@ -1,13 +1,13 @@
 <html>
 <body>
 報告唯讀 <code>Collection</code> 上的增強型賦值 (<code>+=</code>) 表達式。
-<p>唯讀<code>集合</code>上的增強型賦值 (<code>+=</code>) 表達式臨時分配新集合，這可能會影響性能。</p>
+<p>唯讀 <code>Collection</code> 上的增強型賦值 (<code>+=</code>) 表達式不會修改目標集合，它會在背景創建一個新集合，這可能有誤導性並產生性能問題。</p>
 <p><b>將類型更改為可變</b>快速修復可用於自動修正程式碼。</p>
 <p>範例：</p>
 <pre><code>
   fun test() {
       var list = listOf(0)
-      list += 42 // 此處分配了一個新列表，相當於 list = list + 42
+      list += 42 // 創建新列表，變數 'list' 仍僅包含 '0'
   }
 </code></pre>
 <p>在套用快速修復後：</p>
