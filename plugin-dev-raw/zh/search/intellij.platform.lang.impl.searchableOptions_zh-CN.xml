@@ -1,13 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="ask" path="ActionManager" hit="Ask Before Deleting Lists" />
-    <option name="before" path="ActionManager" hit="Ask Before Deleting Lists" />
-    <option name="deleting" path="ActionManager" hit="Ask Before Deleting Lists" />
-    <option name="lists" path="ActionManager" hit="Ask Before Deleting Lists" />
-    <option name="bookmark" path="ActionManager" hit="Create Bookmark List..." />
-    <option name="create" path="ActionManager" hit="Create Bookmark List..." />
-    <option name="list" path="ActionManager" hit="Create Bookmark List..." />
     <option name="emacs" path="ActionManager" hit="Emacs 頁籤" />
     <option name="頁籤" path="ActionManager" hit="Emacs 頁籤" />
     <option name="ide" path="ActionManager" hit="IDE 腳本控制台" />
@@ -220,6 +213,7 @@
     <option name="文檔" path="ActionManager" hit="切換是否應在工具視窗之前顯示“文檔”彈出視窗" />
     <option name="切換渲染檢視" path="ActionManager" hit="切換渲染檢視" />
     <option name="切換視覺格式化層" path="ActionManager" hit="切換視覺格式化層" />
+    <option name="創建書籤列表" path="ActionManager" hit="創建書籤列表…" />
     <option name="創建所選類" path="ActionManager" hit="創建所選類、檔案或目錄的副本" />
     <option name="檔案或目錄的副本" path="ActionManager" hit="創建所選類、檔案或目錄的副本" />
     <option name="創建新檔案" path="ActionManager" hit="創建新檔案" />
@@ -229,6 +223,7 @@
     <option name="檔案或目錄" path="ActionManager" hit="創建新的類、接口、檔案或目錄" />
     <option name="創建新目錄或軟體套件" path="ActionManager" hit="創建新目錄或軟體套件" />
     <option name="刪除" path="ActionManager" hit="刪除" />
+    <option name="刪除列表前詢問" path="ActionManager" hit="刪除列表前詢問" />
     <option name="刪除所選類" path="ActionManager" hit="刪除所選類、方法或欄位，並檢查使用" />
     <option name="並檢查使用" path="ActionManager" hit="刪除所選類、方法或欄位，並檢查使用" />
     <option name="方法或欄位" path="ActionManager" hit="刪除所選類、方法或欄位，並檢查使用" />
@@ -985,12 +980,6 @@
   <configurable id="editor.preferences.appearance" configurable_name="外觀">
     <option name="android" hit="Android 編輯器" />
     <option name="編輯器" hit="Android 編輯器" />
-    <option name="as" hit="Show CSS color preview as background" />
-    <option name="background" hit="Show CSS color preview as background" />
-    <option name="color" hit="Show CSS color preview as background" />
-    <option name="css" hit="Show CSS color preview as background" />
-    <option name="preview" hit="Show CSS color preview as background" />
-    <option name="show" hit="Show CSS color preview as background" />
     <option name="使用塊文字游標" hit="使用塊文字游標" />
     <option name="內部" hit="內部" />
     <option name="前導" hit="前導" />
@@ -1001,6 +990,9 @@
     <option name="啟用語言標誌" hit="啟用語言標誌" />
     <option name="外觀" hit="外觀" />
     <option name="對嵌入提示使用編輯器字體" hit="對嵌入提示使用編輯器字體" />
+    <option name="css" hit="將 CSS 顏色預覽顯示為背景" />
+    <option name="將" hit="將 CSS 顏色預覽顯示為背景" />
+    <option name="顏色預覽顯示為背景" hit="將 CSS 顏色預覽顯示為背景" />
     <option name="尾隨" hit="尾隨" />
     <option name="懸停在滾動欄上時顯示程式碼透鏡" hit="懸停在滾動欄上時顯示程式碼透鏡" />
     <option name="ms" hit="文字游標閃爍 ms  " />
