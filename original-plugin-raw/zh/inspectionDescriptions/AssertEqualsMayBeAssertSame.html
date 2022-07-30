@@ -6,17 +6,17 @@
 <p><b>示例：</b></p>
 <pre><code>
   @Test
-  public void testObjectType() {
+  <b>public void</b> testObjectType() {
     Object o = getObject();
-    Assert.assertEquals(String.class, o.getClass());
+    Assert.assertEquals(String.<b>class</b>, o.getClass());
   }
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
   @Test
-  public void testSort() {
+  <b>public void</b> testSort() {
     Object o = getObject();
-    Assert.assertSame(String.class, o.getClass());
+    Assert.assertSame(String.<b>class</b>, o.getClass());
   }
 </code></pre>
 <!-- tooltip end -->
