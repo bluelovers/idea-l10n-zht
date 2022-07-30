@@ -42,6 +42,12 @@ export default Bluebird.mapSeries([
 			addFlags: ['--all'],
 		}).catch(() => void 0);
 
+		await lazyCommitFiles([
+			'./plugin-dev-out/updatePlugins.xml',
+		], `build(release): updatePlugins.xml`, {
+			addFlags: ['--all'],
+		}).catch(() => void 0);
+
 		const list = [
 			'./plugin-dev-out',
 		] as const;
