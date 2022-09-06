@@ -558,6 +558,19 @@
     "usage.node.text": "{0} {1}",
     "usage.node.unknown": "<unknown node>"
   },
+  "messages/EduCoreBundle.properties": {
+    "action.Educational.RefreshTask.text": "Reset Content",
+    "check.no.tests": "No tests have run",
+    "error.failed.to.launch.checking.with.reload.gradle.message": "Failed to launch checking. <a href=\"{0}\">Reload Gradle project</a>. For more information, see <a href=\"{1}\">the Troubleshooting guide</a>",
+    "exception.message.http.info": "HTTP {0} {1}",
+    "stepik.url": "Stepik URL:",
+    "ui.dialog.create.answer.placeholder.path.pattern": "[sectionName#]lessonName#taskName#filePath#placeholderIndex"
+  },
+  "messages/EduFormatBundle.properties": {
+    "check.no.tests.with.help.guide": "No tests have run. For more information, see <a href=\"{0}\">the Troubleshooting guide</a>",
+    "error.failed.to.launch.checking.with.help.guide": "Failed to launch checking. For more information, see <a href=\"{0}\">the Troubleshooting guide</a>",
+    "help.use.guide": "For more information, see <a href=\"{0}\">the Troubleshooting guide</a>"
+  },
   "messages/EjbBundle.properties": {
     "action.CreateServletAction.text": "Servlet(_S)",
     "action.GenerateServletAction.text": "Servlet(&S)…",
@@ -597,10 +610,6 @@
   "messages/FacesBundle.properties": {
     "jsf.facelets": "JSF/Facelets",
     "list.item.jsf.facelets": "JSF/Facelets"
-  },
-  "messages/FeatureSuggesterBundle.properties": {
-    "configurable.name": "Features Suggester",
-    "notification.title": "IDE Features Suggester"
   },
   "messages/FindBundle.properties": {
     "find.context.presentation.scope.label": " ({0})",
@@ -668,10 +677,11 @@
     "go.run.target.gopath.label": "GOPATH: ",
     "go.wizard.name": "Go (GOPATH)",
     "action.com.goide.vgo.actions.VgoVendorAction.text": "Go Mod Vendor",
-    "go.quick.doc.keyword.resource.effective.go.label": "Effective Go"
+    "go.quick.doc.keyword.resource.effective.go.label": "Effective Go",
+    "go.quick.doc.too.large.to.render": "too large to render"
   },
   "messages/GraalVmBundle.properties": {
-    "graalvm.unsupported.platform": "GraalVM debugging isn't supported on macOS and Windows"
+    "debugger.display.name": "GDB/GraalVM"
   },
   "messages/GradleBundle.properties": {
     "gradle.settings.text.jvm.path": "Gradle JVM：",
@@ -1039,6 +1049,9 @@
     "jupyter.cell.type.raw": "Raw NBConvert",
     "Jupyter.hub.login.dialog.description.instruction.link.href": "https://jupyterhub.readthedocs.io/en/stable/reference/rest.html#create-an-api-token",
     "notebook.collapsed.web.output.text": "Web: {0}x{1} px"
+  },
+  "messages/JupyterDSBundle.properties": {
+    "notification.group.jupyter": "Jupyter Notebook"
   },
   "messages/JupyterKotlinBundle.properties": {
     "kotlin.jupyter.action.create.notebook.text": "Kotlin Jupyter Notebook"
@@ -1636,6 +1649,8 @@
   },
   "messages/ScalaSbtBundle.properties": {
     "sbt.settings.shell.title": "sbt shell",
+    "sbt.settings.remoteDebug.tooltip": "Starts the sbt shell as debuggable process. Allows debugging sbt plugin code and tests running in sbt shell",
+    "sbt.settings.allowSbtVersionOverride.tooltip": "Run sbt shell with the latest compatible version of sbt, if newer than the one configured in project build.properties. Allows the sbt shell integration to take advantage of newer features and fixes",
     "sbt.settings.sbt": "sbt(&S):",
     "sbt.settings.scala": "Scala(&C):",
     "sbt.shell.title": "sbt shell",
