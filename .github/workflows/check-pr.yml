@@ -36,6 +36,7 @@ jobs:
           git config --local user.name "GitHub Action"
       - name: install deps
         run: |
+          yarn config set ignore-engines true
           yarn install --frozen-lockfile
           yarn run ci:install
       - name: run script

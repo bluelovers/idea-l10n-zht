@@ -72,6 +72,7 @@ jobs:
           git fetch origin 'refs/tags/*:refs/tags/*' --depth=20
       - name: install deps
         run: |
+          yarn config set ignore-engines true
           yarn install --frozen-lockfile
           yarn run ci:install
       - name: run ci:build
