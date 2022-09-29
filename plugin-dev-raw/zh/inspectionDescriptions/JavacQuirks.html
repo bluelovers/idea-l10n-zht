@@ -5,7 +5,8 @@
 <p>以下程式碼會觸發警告，因為 vararg 方法調用包含 50 個以上的多態實參：</p>
 <pre><code>
   Arrays.asList(
-      Arrays.asList("a", "b"),
+      Arrays.asList("a1", "b1"),
+      Arrays.asList("a2", "b2"),
       ...
       Arrays.asList("a100", "b100"));
 </code></pre>
@@ -13,7 +14,8 @@
 <pre><code>
   //noinspection RedundantTypeArguments
   Arrays.&lt;List&lt;String&gt;&gt;asList(
-      Arrays.asList("a", "b"),
+      Arrays.asList("a1", "b1"),
+      Arrays.asList("a2", "b2"),
       ...
       Arrays.asList("a100", "b100"));
 </code></pre>

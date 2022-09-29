@@ -1,6 +1,6 @@
 <html>
 <body>                                            
-<p>檢測不正確的依賴項表示法。 <br>
+<p>檢測不正確的依賴項表示法。 </p>
   Gradle 支援以下類型/格式：
   <ul>
   <li> <code>Dependency</code> 的實例； </li>
@@ -13,6 +13,12 @@
   <li> (Gradle 7.0+) <a href="https://docs.gradle.org/current/userguide/platforms.html">版本目錄存取器</a>，例如 <code>libs.groovy.core</code>。 </li>
 </ul>
   <a href="https://docs.gradle.org/current/userguide/declaring_dependencies.html#sec:dependency-types">請參閱 Gradle 文檔</a>
-</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+dependencies {
+  implementation(1) // reports '1'
+}
+</code></pre>
 </body>
 </html>

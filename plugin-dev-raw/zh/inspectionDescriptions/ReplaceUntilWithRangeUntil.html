@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>報告可取代為 <code>..&lt;</code> 運算符的 <code>until</code>。</p>
+<p>每個 <code>until</code> 到 <code>..&lt;</code> 的取代都不會以任何方式更改語意。</p>
+<p>UX 研究表明，與 <code>until</code> 相比，開發者在讀取包含 <code>..&lt;</code> 的程式碼時的錯誤減少了約 20-30%。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  fun main(args: Array&lt;String&gt;) {
+      for (index in 0 until args.size) {
+          println(index)
+      }
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun main(args: Array&lt;String&gt;) {
+      for (index in 0..&lt;args.size) {
+          println(index)
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>此檢查僅在專案或模組的 Kotlin 語言級別為 1.7 或更高時報告，並且提供了 <code>-opt-in=kotlin.ExperimentalStdlibApi</code> 編譯器標誌。</p>
+</body>
+</html>

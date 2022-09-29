@@ -2,14 +2,12 @@
 <body>
 報告<a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">雙重檢查鎖定</a>。
 <p>
-  雙重檢查鎖定嘗試以執行緒安全的方式按需初始化欄位，同時避免同步的開銷。
+  雙重檢查鎖定會嘗試以執行緒安全的方式按需初始化欄位，同時避免同步的開銷。
   遺憾的是，在未被宣告為 <code>volatile</code> 的欄位上使用時，它不具備執行緒安全。
   在使用 Java 1.4 或更早的版本時，雙重檢查鎖定即便對 <code>volatile</code> 欄位也不起作用。
   閱讀上面的鏈接文章，了解對該問題的詳細說明。
 </p>
-<p>
-  不正確的雙重檢查鎖定範例：
-</p>
+<p>不正確的雙重檢查鎖定範例：</p>
 <pre><code>
   class Foo {
     private Helper helper = null;

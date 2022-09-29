@@ -3,8 +3,8 @@
 <p>報告具有覆寫 Java 存取器方法的空參數子句的方法。</p>
 
 <p>符合存取器 <a href="https://en.wikipedia.org/wiki/JavaBean">JavaBean</a> 命名協定的方法預計不會有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>。
-    推薦的慣例是，在沒有參數且方法沒有副作用時使用無參數方法。
-    該慣例促進了<a href="https://en.wikipedia.org/wiki/Uniform_access_principle">統一存取原則</a>，即客戶端程式碼不應受到將特性實作為欄位或方法的決定的影響。</p>
+    推薦的約定是，在沒有參數且方法沒有副作用時使用無參數方法。
+    該約定促進了<a href="https://en.wikipedia.org/wiki/Uniform_access_principle">統一存取原則</a>，即客戶端程式碼不應受到將特性實作為欄位或方法的決定的影響。</p>
 
 <p>問題是 Java 沒有實作統一存取原則，不允許沒有參數子句的方法。
     為了填補這一空白，Scala 允許您使用沒有參數子句的方法來覆寫帶有空參數子句的方法。</p>

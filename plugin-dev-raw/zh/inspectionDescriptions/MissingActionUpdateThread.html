@@ -1,0 +1,17 @@
+<html>
+<body>
+報告隱式宣告已棄用且開銷很大的 <code>ActionUpdateThread.OLD_EDT</code> 模式的操作、操作組和其他 <code>ActionUpdateThreadAware<code>。
+
+<p>
+  當一個操作或一個操作組定義自己的 <code>update</code> 方法時，IntelliJ 平台會試圖模仿在 UI 執行緒中調用 <code>update</code> 和 <code>getChildren</code> 方法的舊同步方式，並向其提供 <code>AnActionEvent.dataContext</code> 中的所有資料。
+  為此，它會預先在背景執行緒上快取所有可能的資料（即使不需要）。
+</p>
+<p>
+  通過覆寫 <code>getActionUpdateThread</code> 方法，提供兩種新模式：<code>ActionUpdateThread.EDT</code> 或 <code>ActionUpdateThread.BGT</code>。
+</p>
+<p>
+  有關更多資訊，請參閱 <code>ActionUpdateThread</code> 文檔。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

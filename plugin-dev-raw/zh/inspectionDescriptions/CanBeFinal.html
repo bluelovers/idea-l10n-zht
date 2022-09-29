@@ -1,7 +1,43 @@
 <html>
 <body>
-報告在指定檢查範圍內發現的，可在其宣告中添加 <code>final</code> 修飾符的所有欄位、方法或類。
+報告可能在其宣告中添加了 <code>final</code> 修飾符的欄位、方法或類。
 <p>final 類不能被擴展，final 方法不能被覆寫，final 欄位不能被重新分配。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  public class Person {
+    private String name;
+
+    Person(String name) {
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+
+    public String toString() {
+      return getName();
+    }
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  public final class Person {
+    private final String name;
+
+    Person(String name) {
+      this.name = name;
+    }
+
+    public final String getName() {
+      return name;
+    }
+
+    public final String toString() {
+      return getName();
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
 <p>使用<b>報告類</b>和<b>報告方法</b>選項可定義要報告的宣告。</p>
 </body>

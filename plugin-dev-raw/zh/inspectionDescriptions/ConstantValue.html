@@ -1,0 +1,29 @@
+<html>
+<body>
+報告始終產生相同結果的表達式和條件，如 true、false、null 或零。
+此類表達式可以取代為相應的常量值。 但通常情況下，它們表示程式碼中存在錯誤。
+<p>範例：</p>
+<pre><code>  // 始終為 true
+  // 根本原因：使用了 ||，而非 &&
+  if (x &gt; 0 || x &lt; 10) {}
+
+  System.out.println(str.trim());
+  // 始終為 false
+  // 根本原因：在 null 檢查之前取消了引用變數
+  if (str == null) {}
+</code></pre>
+<p>
+  檢查行為可能由許多註解控制，例如<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">可 null 性</a>註解、<code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 註解、<code>@Range</code> 註解等。
+</p>
+<!-- tooltip end -->
+<p>設定檢查：</p>
+<ul>
+  <li>使用<b>不報告條件靜態證明始終為 true 的斷言</b>選項可避免報告靜態證明始終為 true 的斷言。 這還包括 <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code> 等條件。</li>
+  <li>使用<b>忽略 assert 語句</b>選項可控制檢查如何處理 <code>assert</code> 語句。 預設情況下，該選項被禁用，這意味著斷言視為被執行（-ea 模式）。 如果啟用該選項，斷言將被完全忽略（-da 模式）。</li>
+  <li>使用<b>當常數存儲在變數中時發出警告</b>選項可以在使用變數（已知其值為常數）時顯示警告。</li>
+</ul>
+<p>
+  在 IntelliJ IDEA 2022.3 版本之前，此檢查為“常數條件和異常”檢查的一部分。 現在，它被拆分成了兩個檢查：“常量值”和“可空性和數據流問題”。
+</p>
+</body>
+</html>

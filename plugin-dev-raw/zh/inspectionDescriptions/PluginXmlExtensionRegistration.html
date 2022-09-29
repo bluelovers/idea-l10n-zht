@@ -1,0 +1,19 @@
+<html>
+<body>
+報告 <code>plugin.xml</code> 中的擴展註冊問題。
+<p>
+  報告的問題如下：
+<ul>
+  <li>缺少 <code>language</code> 宣告。
+    如果擴展不針對特定語言，請使用快速修復為“任何語言”創建顯式宣告。
+  </li>
+  <li>Inspections: missing attributes</li>
+  <li>Services: redundant <code>serviceInterface</code> declaration</li>
+  <li>沒有 <code>externalIdPrefix</code> 的 <code>com.intellij.stubElementTypeHolder</code>，請參閱<a
+    href='https://plugins.jetbrains.com/docs/intellij/stub-indexes.html?from=?from=DevkitPluginXmlInspectionDescription'>存根索引</a>
+  </li>
+</ul>
+</p>
+<p><small>2022.3 最新變化</small>
+</body>
+</html>

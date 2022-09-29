@@ -1,0 +1,23 @@
+<html>
+<body>                                            
+<p>檢測已棄用的設定方法的使用情況。</p>
+
+  設定方法可能因為以下兩個可能的原因而被棄用：
+  <ul>
+  <li>Gradle API 已經發展，所以應該避免選擇舊的方法；</li>
+  <li>一些延伸模組提供了已棄用設定方法的更好版本。</li>
+  </ul>
+  最有可能的是，將會有替代已棄用方法的替代方法。
+<p><b>範例：</b></p>
+<pre><code>
+plugins {
+  id 'java'
+}
+
+dependencies {
+  archive 'org.gradle.api:gradle:1.0' // reports 'archive'
+}
+</code></pre>
+
+</body>
+</html>
