@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules
 /.pnp
 .pnp.js
 
@@ -213,6 +213,15 @@ jest.config.js.map
 _snowpack
 web_modules
 tsc-multi.json.tpl
+
+dist/*.umd.*.*s
+
+/__root_ws.d.ts
+/__root_ws.js
+
+!/.yarnrc.yml
+.turbo
+
 !/original-plugin-raw/**/*
 /.github/
 !/.run/

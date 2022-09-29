@@ -35,12 +35,18 @@ node_modules
 /bin/**/*.d.cts
 /bin/*.d.cts
 
+!/src/**/*.ts
+!/src/**/*.cts
+!/src/**/*.mts
+!/src/**/*.tsx
+
 /src/**/*.d.ts
 /src/**/*.js
 /src/**/*.d.cts
 /src/**/*.d.mts
 /src/**/*.cjs
 /src/**/*.mjs
+/src/**/*.jsx
 
 *.tgz
 /tsconfig.json.tpl
@@ -84,6 +90,7 @@ tsconfig.esm.json.tpl
 .mocharc.yml
 jest.config.js
 jest.config.*
+/jest-preset.*
 /report.*.json
 now.json
 /Makefile
@@ -99,7 +106,9 @@ now.json
 *.spec.mjs
 *.spec.mts
 
+*.spec.d.tsx
 *.spec.tsx
+
 __mocks__
 __tests__
 __snapshots__
@@ -120,3 +129,14 @@ cz-adapter
 
 tsc-multi.json.tpl
 tsc-multi.json
+
+changelog-option.js
+
+bin/tsconfig.json
+bin/tsconfig.*.json
+
+.yarnrc.yml
+.turbo
+__file_snapshots__
+__fixtures__
+/fixture/

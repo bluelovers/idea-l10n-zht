@@ -5,6 +5,14 @@
   "keywords": [
     "create-by-yarn-tool"
   ],
+  "homepage": "https://github.com/bluelovers/idea-l10n-zht#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/idea-l10n-zht/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/idea-l10n-zht.git"
+  },
   "license": "ISC",
   "author": "bluelovers",
   "main": "index.js",
@@ -17,7 +25,10 @@
     "lint:eslint": "ynpx eslint --ext .ts,.tsx,.mts,.cts ./",
     "test": "jest --passWithNoTests -u",
     "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
+    "test:tsd": "ynpx tsd",
     "test:tsdx": "ynpx @bluelovers/tsdx test --passWithNoTests",
     "posttest": "yarn run build:sort",
     "prebuild": "ts-node scripts/update-meta.ts",
@@ -31,7 +42,7 @@
     "build:tsdx": "ynpx @bluelovers/tsdx build --target node --name index",
     "postbuild": "yarn run test && ts-node ./scripts/jetbrains/create-jetbrains-update-plugins-xml.ts",
     "ci:test": "yarn run test",
-    "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest ts-jest ts-node ynpx lerna yarn-tool",
+    "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest ts-jest ts-node ynpx lerna yarn-tool @bluelovers/jest-config",
     "ci:build": "yarn run plugin:build && yarn run build:commit",
     "ci:build:sub": "yarn run plugin:build:core && yarn run build:commit && yarn run ci:postpublish",
     "ci:postpublish": "ts-node scripts/ci-postpublish.ts && yarn run postpublish:git:tag && echo ci:postpublish",
@@ -62,9 +73,9 @@
     "ncu": "yarn-tool ncu -u",
     "plugin:build": "yarn run test && yarn run plugin:build:core",
     "plugin:build:core": "yarn run plugin:handle-source && yarn run build",
-    "plugin:series:download": "ts-node ./bin/download-series",
-    "plugin:series:build": "ts-node ./bin/build-series",
     "plugin:handle-source": "ts-node scripts/plugin-handle-source.ts",
+    "plugin:series:build": "ts-node ./bin/build-series",
+    "plugin:series:download": "ts-node ./bin/download-series",
     "plugin:zht": "ts-node scripts/to-zht.ts && ts-node scripts/properties-replace.ts",
     "sort-package-json": "yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
