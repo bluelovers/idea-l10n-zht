@@ -1,7 +1,43 @@
 <html>
 <body>
-报告在指定检查范围内发现的，可在其声明中添加 <code>final</code> 修饰符的所有字段、方法或类。
+报告可能在其声明中添加了 <code>final</code> 修饰符的字段、方法或类。
 <p>final 类不能被扩展，final 方法不能被重写，final 字段不能被重新分配。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public class Person {
+    private String name;
+
+    Person(String name) {
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+
+    public String toString() {
+      return getName();
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  public final class Person {
+    private final String name;
+
+    Person(String name) {
+      this.name = name;
+    }
+
+    public final String getName() {
+      return name;
+    }
+
+    public final String toString() {
+      return getName();
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
 <p>使用<b>报告类</b>和<b>报告方法</b>选项可定义要报告的声明。</p>
 </body>

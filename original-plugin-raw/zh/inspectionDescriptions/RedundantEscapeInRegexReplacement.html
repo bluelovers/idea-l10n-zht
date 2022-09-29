@@ -1,0 +1,16 @@
+<html>
+<body>
+报告正则表达式方法的替换字符串中的冗余转义。
+可以转义正则表达式替换字符串中的任何字符，但如果需要文字 <code>$</code> 或 <code>\</code>，则转义是必要的。
+<p><b>示例：</b></p>
+<pre><code>
+  string.replaceAll("a", "\\b");
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  string.replaceAll("a", "b");
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.3 最新变化</small>
+</body>
+</html>

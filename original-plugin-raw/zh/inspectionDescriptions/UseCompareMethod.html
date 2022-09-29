@@ -1,7 +1,7 @@
 <html>
 <body>
-报告可以不使用更详细或效率较低的结构，而是使用 static <code>Integer.compare()</code> 方法或类似方法的情况。
-<p>如果 <code>x</code> 和 <code>y</code> 已是装箱的整数，则建议使用 <code>x.compareTo(y)</code>。</p>
+报告可以替换为对 <code>Integer.compare()</code> 方法或来自 <code>Long</code>、<code>Short</code>、<code>Byte</code>、<code>Double</code> 或 <code>Float</code> 类的类似方法（而非更冗长或更低效结构）的调用的表达式。
+<p>如果 <code>x</code> 和 <code>y</code> 是已装箱整数，则建议使用 <code>x.compareTo(y)</code>；如果它们是基元，则建议使用 <code>Integer.compare(x, y)</code>。</p>
 <p><b>示例：</b></p>
 <pre><code>
   public int compare(int x, int y) {

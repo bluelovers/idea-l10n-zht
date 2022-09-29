@@ -1,0 +1,23 @@
+<!-- Copyright 2000-2022 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+报告错误的日期时间格式模式。
+<p>报告以下错误：</p>
+<ul>
+  <li>不支持的模式字母，如 "TT"</li>
+  <li>使用保留字符，如 "#"</li>
+  <li>不正确的填充用法</li>
+  <li>不平衡的中括号</li>
+  <li>连续模式字母的数量不正确</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+  DateTimeFormatter.ofPattern("[][]]"); // 右 ']' 之前没有左 '['
+  DateTimeFormatter.ofPattern("TT"); // 非法的模式字母 'T'
+  DateTimeFormatter.ofPattern("{"); // 使用了保留字符 '{'
+  DateTimeFormatter.ofPattern("MMMMMM"); // 过多的连续模式字母 'M'
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.3 最新变化</small>
+</body>
+</html>

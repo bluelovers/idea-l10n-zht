@@ -1,7 +1,7 @@
 <html>
 <body>
 报告可以简化的收集器。
-<p>特别是，一些级联的 <code>groupingBy</code> 收集器可以使用更简单的 <code>toMap</code> 收集器来表示，这也可能会提高性能。</p>
+<p>特别是，一些级联的 <code>groupingBy()</code> 收集器可以使用更简单的 <code>toMap()</code> 收集器来表示，这也可能会提高性能。</p>
 <p>示例：</p>
 <pre><code>
   Collectors.groupingByConcurrent(String::length, Collectors.collectingAndThen(Collectors.maxBy(String::compareTo), Optional::get));

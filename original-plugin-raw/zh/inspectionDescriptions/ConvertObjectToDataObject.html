@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告可转换为 <code>data object</code> 的 <code>object</code></p>
+<p>如果 <code>object</code> 使用 <code>java.io.Serializable</code> 进行注解，则 <code>data object</code> 会自动生成 <code>toString</code>、<code>equals</code>、<code>hashCode</code> 和 <code>readResolve</code></p>
+<p>主要在两种情况下，您应该考虑将 <code>object</code> 转换为 <code>data object</code>。 第一种情况是当自定义 <code>toString</code> 返回类的名称时。 第二种情况是当 <code>object</code> 实现 <code>java.io.Serializable</code> 时</p>
+<p><b>示例：</b></p>
+<pre><code>
+    class Foo {
+        override fun toString(): String = "Foo"
+    }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+    data class Foo
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的 Kotlin 语言级别为 1.8 或更高时，此检查才会报告</p>
+</body>
+</html>

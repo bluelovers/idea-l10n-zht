@@ -1,0 +1,19 @@
+<html>
+<body>                                            
+<p>(Gradle 4.9+) 检测预先与任务进行交互的 API 的使用情况。</p>
+  与任务预先交互意味着很多困难：
+  <ul>
+  <li>用户应该手动设置任务之间的所有依赖关系；</li>
+  <li> 在<a href="https://docs.gradle.org/current/userguide/build_lifecycle.html#sec:build_phases">配置阶段</a>，所有通过预先 API 访问的任务都会被配置，即使它们没有在之后执行。 这会导致性能下降。</li>
+  </ul>
+  最终， 预先 API 将被弃用，取而代之的是延迟 API。<br>
+  <a href="https://docs.gradle.org/current/userguide/task_configuration_avoidance.html">有关迁移指南，请参阅 Gradle 文档。</a>
+
+<p><b>示例：</b></p>
+<pre><code>
+task foo { // 报告 'task'，建议将其替换为 'task.register'
+  // ...
+}
+</code></pre>
+</body>
+</html>

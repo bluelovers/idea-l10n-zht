@@ -1,0 +1,23 @@
+<html>
+<body>
+报告从 1.9 版开始会导致编译错误的 Enum 上的 'declaringClass' 属性调用。
+<p>'Enum.getDeclaringClass' 是一种 "hidden" Java 函数，通常无法通过解析可见。 然而，它可通过合成属性可见，这是一个前端错误。</p>
+<p><b>更多详细信息：</b><a href="https://youtrack.jetbrains.com/issue/KT-49653">KT-49653 弃用并移除 Enum.declaringClass 合成属性</a></p>
+<p>快速修复会将调用替换为 'declaringJavaClass'。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun &lt;E: Enum&lt;E&gt;&gt; foo(values: Array&lt;E&gt;) {
+    EnumSet.noneOf(values.first().declaringClass)
+  }
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun &lt;E: Enum&lt;E&gt;&gt; foo(values: Array&lt;E&gt;) {
+    EnumSet.noneOf(values.first().declaringJavaClass)
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的 Kotlin 语言级别为 1.7 或更高时，此检查才会报告。</p>
+</body>
+</html>

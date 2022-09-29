@@ -1,0 +1,22 @@
+<html>
+<body>
+报告 JVM 平台上应替换为 <code>StringBuilder.appendRange(CharArray, startIndex, endIndex)</code> 函数调用的 <code>StringBuilder.append(CharArray, offset, len)</code> 函数调用。
+<p><code>append</code> 函数在 JVM、JS 和 Native 平台上的行为不同，因此推荐使用 <code>appendRange</code> 函数。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun f(charArray: CharArray, offset: Int, len: Int): String {
+      return buildString {
+          append(charArray, offset, len)
+      }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun f(charArray: CharArray, offset: Int, len: Int): String {
+      return buildString {
+          appendRange(charArray, offset, offset + len)
+      }
+  }
+</code></pre>
+</body>
+</html>

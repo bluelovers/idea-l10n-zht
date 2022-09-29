@@ -3,8 +3,8 @@
 <p>报告具有重写 Java 访问器方法的空形参子句的方法。</p>
 
 <p>符合访问器 <a href="https://en.wikipedia.org/wiki/JavaBean">JavaBean</a> 命名协定的方法预计不会有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>。
-    推荐的惯例是，在没有形参且方法没有副作用时使用无形参方法。
-    该惯例促进了<a href="https://en.wikipedia.org/wiki/Uniform_access_principle">统一访问原则</a>，即客户端代码不应受到将特性实现为字段或方法的决定的影响。</p>
+    推荐的约定是，在没有形参且方法没有副作用时使用无形参方法。
+    该约定促进了<a href="https://en.wikipedia.org/wiki/Uniform_access_principle">统一访问原则</a>，即客户端代码不应受到将特性实现为字段或方法的决定的影响。</p>
 
 <p>问题是 Java 没有实现统一访问原则，不允许没有形参子句的方法。
     为了填补这一空白，Scala 允许您使用没有形参子句的方法来重写带有空形参子句的方法。</p>

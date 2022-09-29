@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 <code>plugin.xml</code> 中的扩展注册问题。
+<p>
+  报告的问题如下：
+<ul>
+  <li>缺少 <code>language</code> 声明。
+    如果扩展不针对特定语言，请使用快速修复为“任何语言”创建显式声明。
+  </li>
+  <li>Inspections: missing attributes</li>
+  <li>Services: redundant <code>serviceInterface</code> declaration</li>
+  <li>没有 <code>externalIdPrefix</code> 的 <code>com.intellij.stubElementTypeHolder</code>，请参阅<a
+    href='https://plugins.jetbrains.com/docs/intellij/stub-indexes.html?from=?from=DevkitPluginXmlInspectionDescription'>存根索引</a>
+  </li>
+</ul>
+</p>
+<p><small>2022.3 最新变化</small>
+</body>
+</html>

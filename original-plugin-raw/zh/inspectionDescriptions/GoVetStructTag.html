@@ -16,9 +16,9 @@
 
 <html>
 <body>
-报告不符合 <a href="https://golang.org/pkg/reflect/#StructTag">Go 结构标签惯例</a> 的结构标签。
+报告不符合 <a href="https://golang.org/pkg/reflect/#StructTag">Go 结构标签约定</a> 的结构标签。
 
-<p>根据这些惯例，标记字符串是可选的空格分隔的<code>键:"值"</code> 对的串联。 每个键为<code>空格 (U+0020 ' ')</code>、<code>引号 (U+0022 '"')</code> 和 <code>冒号 (U+003A ':')</code> 以外的非控制字符组成的非空字符串。 每个值都使用 <code>U+0022 '"'</code> 字符和 Go 字符串文字语法引用。</p>
+<p>根据这些约定，标记字符串是可选的空格分隔的<code>键:"值"</code> 对的串联。 每个键为<code>空格 (U+0020 ' ')</code>、<code>引号 (U+0022 '"')</code> 和 <code>冒号 (U+003A ':')</code> 以外的非控制字符组成的非空字符串。 每个值都使用 <code>U+0022 '"'</code> 字符和 Go 字符串文字语法引用。</p>
 
 <p>此外，检查还会检查带有标签的字段是否已导出。</p>
 

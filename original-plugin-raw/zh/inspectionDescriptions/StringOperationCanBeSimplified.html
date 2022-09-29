@@ -1,8 +1,8 @@
 <html>
 <body>
-报告冗余的 <code>String</code> 构造函数和对可以替换为简化表达式的 <code>toString()</code> 或 <code>substring()</code> 等方法的调用。
+报告对 <code>toString()</code> 或 <code>substring()</code> 等可替换为更简单表达式的 <code>String</code> 构造函数和方法的冗余调用。
 <p>例如，在 <code>"string".substring(0)</code>、<code>"string".toString()</code> 或
-<code>new StringBuilder().toString().substring(1,3)</code> 等情况下，可以安全移除对这些方法的调用。</p>
+<code>new StringBuilder().toString().substring(1,3)</code> 等代码中，可以安全移除对这些方法的调用。</p>
 <p>示例：</p>
 <pre><code>
   System.out.println(new String("message"));
@@ -12,10 +12,14 @@
   System.out.println("message");
 </code></pre>
 <p>
-  请注意，该快速修复会移除冗余构造函数，这可能会影响 <code>String</code> 引用相等。
-  即使被认为是一种不好的做法，如果您仍需要保留，请禁止警告或将设置配置为忽略冗余的 <code>String</code> 构造函数。
+  请注意，该快速修复会移除冗余的构造函数调用，这可能会影响 <code>String</code> 引用相等。
+  即使被认为是一种不好的做法，如果您仍需要保留，请禁止警告或使用检查设置来忽略冗余的 <code>String</code> 构造函数调用。
 </p>
 <!-- tooltip end -->
+<p>
+  请使用下方的<b>不报告 String 构造函数调用</b>选项来不报告代码（如上例所示）。
+  这将避免在使用 <code>new String()</code> 调用保证不同对象相等性的代码中应用快速修复后改变与 <code>==</code> 或 <code>!=</code> 进行字符串比较的结果。
+</p>
 <p><small>2018.1 最新变化</small></p>
 </body>
 </html>

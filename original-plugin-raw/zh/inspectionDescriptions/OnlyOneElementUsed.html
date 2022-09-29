@@ -1,0 +1,16 @@
+<html>
+<body>
+报告其中有且只有一个元素在创建时被查询的列表、数组和字符串。
+此类表达式可能会在重构之后出现，并且通常可以用已访问的元素替换。
+<p>示例：</p>
+<pre><code>
+  System.out.println(new int[] {1,2,3,4,5}[2]);
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  System.out.println(3);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.3 最新变化</small></p>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<html>
+<body>
+报告其结果被显式使用时，<code>var_export()</code> 和 <code>print_r()</code> 调用没有 <code>return</code> 实参的情况。
+此类调用很可能由错误导致，因为如果未指定 <code>argument</code>，<code>var_export</code>/<code>print_r</code> 将始终返回 <code>null</code>/<code>true</code>。
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+报告 <code>call_user_func($callable)</code> 支持但 <code>$callable()</code> 不支持的 callable 的已弃用用法。
+<!-- tooltip end -->
+<p>从 PHP 8.2 开始，已弃用以下 callable：</p>
+<pre><code>"self::method"</code>
+<code>"parent::method"</code>
+<code>"static::method"</code>
+<code>["self", "method"]</code>
+<code>["parent", "method"]</code>
+<code>["static", "method"]</code>
+<code>["Foo", "Bar::method"]</code>
+<code>[new Foo, "Bar::method"]</code></pre>
+<p>
+  有关详细信息，请参阅<a href="https://wiki.php.net/rfc/deprecate_partially_supported_callables">弃用部分支持的 callable (php.net)</a>。
+</p>
+
+</body>
+</html>

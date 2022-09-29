@@ -1,10 +1,14 @@
 <html>
 <body>
-报告对 <code>Collections</code> 类中不可修改的集合包装器的冗余调用。
+报告从 <code>Collections</code> 类对不可修改的集合包装器的冗余调用。
 <p>如果传递给不可修改的集合包装器的实参已不可变，此类包装会变得冗余。</p>
 <p>示例：</p>
 <pre><code>
-  Collections.unmodifiableList(Collections.singletonList("abc"));
+  List&lt;String&gt; x = Collections.unmodifiableList(Collections.singletonList("abc"));
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  List&lt;String&gt; x = Collections.singletonList("abc");
 </code></pre>
 <p>为了检测返回不可修改集合的方法，该检查使用 <code>org.jetbrains.annotations.Unmodifiable</code>
 和 <code>org.jetbrains.annotations.UnmodifiableView</code> 注解。

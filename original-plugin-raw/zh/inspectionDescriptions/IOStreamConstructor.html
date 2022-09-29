@@ -1,15 +1,15 @@
 <html>
 <body>
-在可以将 <code>FileInputStream</code> 或 <code>FileOutputStream</code> 构造函数相应地替换为 <code>Files.newInputStream()</code> 或 <code>Files.newOutputStream()</code> 时报告。
+报告可以分别替换为 <code>Files.newInputStream()</code> 或 <code>Files.newOutputStream()</code> 调用的 <code>new FileInputStream()</code> 或 <code>new FileOutputStream()</code> 表达式。
 <br>
 使用 <code>Files</code> 方法创建的流通常比使用流构造函数创建的流更有效。
 <p>示例：</p>
 <pre><code>
-InputStream is = new BufferedInputStream(new FileInputStream(file));
+  InputStream is = new BufferedInputStream(new FileInputStream(file));
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
-InputStream is = new BufferedInputStream(Files.newInputStream(file.toPath()));
+  InputStream is = new BufferedInputStream(Files.newInputStream(file.toPath()));
 </code></pre>
 <!-- tooltip end -->
 <p>如果语言级别为 10 或更高，则此检查不会显示警告，但快速修复仍然可用。</p>

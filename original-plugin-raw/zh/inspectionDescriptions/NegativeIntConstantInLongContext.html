@@ -1,0 +1,14 @@
+<html>
+<body>
+报告长上下文中的负 int 十六进制常量。 此类常量会为隐式加宽为 long，意味着它们的高位将为 1，而不是 0（例如，0xFFFF_FFFF 将变成 0xFFFF_FFFF_FFFF_FFFFL）。
+这不太可能是有意为之，即使是有意为之，使用显式的 long 常量也不会那么容易引起混淆。
+<p><b>示例：</b></p>
+<pre><code>
+  // 警告：这是 int 常量 -1，它被加宽为 long
+  // 成为 0xFFFF_FFFF_FFFF_FFFFL.
+  long mask = 0xFFFF_FFFF;
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.3 最新变化</small></p>
+</body>
+</html>

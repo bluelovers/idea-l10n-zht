@@ -1,0 +1,29 @@
+<html>
+<body>
+报告始终产生相同结果的表达式和条件，如 true、false、null 或零。
+此类表达式可以替换为相应的常量值。 但通常情况下，它们表示代码中存在错误。
+<p>示例：</p>
+<pre><code>  // 始终为 true
+  // 根本原因：使用了 ||，而非 &&
+  if (x &gt; 0 || x &lt; 10) {}
+
+  System.out.println(str.trim());
+  // 始终为 false
+  // 根本原因：在 null 检查之前取消了引用变量
+  if (str == null) {}
+</code></pre>
+<p>
+  检查行为可能由许多注解控制，例如<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">可 null 性</a>注解、<code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 注解、<code>@Range</code> 注解等。
+</p>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>不报告条件静态证明始终为 true 的断言</b>选项可避免报告静态证明始终为 true 的断言。 这还包括 <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code> 等条件。</li>
+  <li>使用<b>忽略 assert 语句</b>选项可控制检查如何处理 <code>assert</code> 语句。 默认情况下，该选项被禁用，这意味着断言视为被执行（-ea 模式）。 如果启用该选项，断言将被完全忽略（-da 模式）。</li>
+  <li>使用<b>当常量存储在变量中时发出警告</b>选项可以在使用变量（已知其值为常量）时显示警告。</li>
+</ul>
+<p>
+  在 IntelliJ IDEA 2022.3 版本之前，此检查为“常量条件和异常”检查的一部分。 现在，它被拆分成了两个检查：“常量值”和“可空性和数据流问题”。
+</p>
+</body>
+</html>

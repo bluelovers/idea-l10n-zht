@@ -6,13 +6,15 @@
   在本例中，对集合中的每个元素调用了 <code>List.contains()</code>，将执行线性搜索。
 </p>
 <p><b>示例：</b></p>
-<pre><code>  public void check(String... ss) {
+<pre><code>
+  public void check(String... ss) {
     // 可能的 O(n^2) 复杂度
     mySet.removeAll(List.of(ss));
   }
 </code></pre>
 <p>在应用快速修复后：</p>
-<pre><code>  public void check(String... ss) {
+<pre><code>
+  public void check(String... ss) {
     // O(n) 复杂度
     List.of(ss).forEach(mySet::remove);
   }
