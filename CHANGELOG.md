@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-10-07)
+
+
+
+### 🐛　Bug Fixes
+
+* 修正官方版 inlay.hints.usages.text 錯誤格式的翻譯 ([f082aee](https://github.com/bluelovers/idea-l10n-zht/commit/f082aeef34bf24372e5b3f6084f2d1db241ee764))
+
+
+### 🛠　Build System
+
+* **cache:** update static cache ([79b1815](https://github.com/bluelovers/idea-l10n-zht/commit/79b181545e266534999b0c9ba8e1551b531ad0e9))
+* **cache:** update version-map ([aa44537](https://github.com/bluelovers/idea-l10n-zht/commit/aa44537f5596ae402aff327e797f2173a294dc8a))
+* **release:** update build ( 223.143 ) ([907c89b](https://github.com/bluelovers/idea-l10n-zht/commit/907c89b08bde616b364897e6b01f8b8cb9dee1c3))
+* **release:** update dev build files ( 223.143 ) ([3962474](https://github.com/bluelovers/idea-l10n-zht/commit/3962474df21f54bec500d4be293c5e88c5beac7b))
+* **test:** update snapshots ( 223.143 ) ([6a0afd2](https://github.com/bluelovers/idea-l10n-zht/commit/6a0afd2f82329d433ff82dc1169a1f54670d98c3))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-09-30)
 
 
