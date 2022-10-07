@@ -10155,9 +10155,9 @@ js.arrow.function.braces.can.be.removed.fix.family.name=移除箭頭函數體周
 js.convert.to.anonymous.function.family.name=箭頭函數轉換為匿名函數
 js.convert.to.anonymous.function=轉換為匿名函數
 js.named.to.anonymous.family.name=轉換為函數表達式
-js.named.to.function.expression.text = 轉換為包含變數的函數表達式
+js.named.to.function.expression.text=轉換為包含變數的函數表達式
 js.named.to.function.hoisting.conflict.text=函數在宣告之前使用。轉換為變數後，將中斷使用
-js.named.to.arrow.text = 轉換為含有 {0} 的箭頭函數
+js.named.to.arrow.text=轉換為含有 {0} 的箭頭函數
 js.split.into.multiple.declarations=拆分為多個宣告
 js.remove.digit.separators=移除數字分隔符
 js.copy.qualified.to.clipboard=將限定名稱複製到剪貼簿
@@ -10375,8 +10375,8 @@ js.await.promise.double.await.inspection=冗餘 'await await'
 js.await.promise.return.await.inspection=冗餘 'return await'
 js.await.promise.trivial.await.inspection=非 promise 類型的冗餘 'await'
 js.await.promise.resolve.fix=取代為 ''{0}''
-js.top.level.await.expression.inspection= 頂層 'await' 表達式
-js.top.level.await.expression.inspection.description= 使用了頂層 'await' 表達式
+js.top.level.await.expression.inspection=頂層 'await' 表達式
+js.top.level.await.expression.inspection.description=使用了頂層 'await' 表達式
 js.possibly.async.function.inspection=非異步函數中的 'await'
 js.await.in.synchronous.function='await' 運算符只能在 'async' 函數中使用
 js.possibly.async.function.quick.fix=令函數 {0} 為異步函數
@@ -10577,8 +10577,8 @@ javascript.validation.message.interface.property.not.implemented=未實作接口
 javascript.validation.message.interface.get.accessor.not.implemented=未實作接口 {1} 的屬性 get 存取器 {0}
 javascript.validation.message.interface.set.accessor.not.implemented=未實作接口 {1} 的屬性 set 存取器 {0}
 
-javascript.validation.message.class.method.incompatible= ''{1}'' 類中的方法 ''{0}'' 不可分配給基類 ''{2}'' 中的同一方法
-javascript.validation.message.class.property.incompatible= ''{1}'' 類中的屬性 ''{0}'' 不可分配給基類 ''{2}'' 中的同一屬性
+javascript.validation.message.class.method.incompatible=''{1}'' 類中的方法 ''{0}'' 不可分配給基類 ''{2}'' 中的同一方法
+javascript.validation.message.class.property.incompatible=''{1}'' 類中的屬性 ''{0}'' 不可分配給基類 ''{2}'' 中的同一屬性
 javascript.validation.message.class.method.not.implemented=未實作類 {1} 的方法 {0}
 javascript.validation.message.class.property.not.implemented=未實作類 {1} 的屬性 {0}
 javascript.validation.message.interface.call.signature.not.implemented=未實作接口 {0} 的調用簽名
@@ -11546,7 +11546,7 @@ jshint.option.white.description.short=不允許使用雜亂的空格
 jshint.option.maxerr.description.short=最大錯誤數
 jshint.option.predef.description.short=預定義(以 , 分隔)
 
-#common linters
+# common linters
 javascript.linter.import.error.timeout.processing.configuration.file=處理設定檔案時超時
 javascript.linter.import.error.generic=套用設定檔案中的程式碼樣式規則時出錯，可能是設定檔案無效。
 javascript.linter.import.error.package.not.found=無法找到 ''{0}'' 軟體套件
@@ -11630,7 +11630,7 @@ eslint.inspections.error.messages.not.array=訊息不是陣列: {0}
 eslint.inspections.error.unexpected.language.service.response=意外的語言服務響應: {0}
 eslint.inspections.error.unknown.message.severity=未知的訊息嚴重程度: {0}\\n主體:\\n{1}
 
-#standardJS
+# standardJS
 standardjs.name=標準程式碼樣式
 standardjs.editor.notification.can.be.enabled.text=為此專案使用 JavaScript 標準程式碼樣式？
 standardjs.editor.notification.action=是
@@ -11722,7 +11722,7 @@ grunt.before.run.task.descr=執行 Grunt {0, choice, 0#任務|1#任務 |2#任務
 grunt.unspecified.gruntfile=未指定 Gruntfile
 grunt.gruntfile.not.found=未找到 Gruntfile
 
-#node
+# node
 settings.nodejs.name=Node.js
 settings.nodejs.coding.assistance.label=Node.js 編碼協助 (&A)：
 settings.nodejs.coding.assistance.manage.scopes.label=管理範圍…
@@ -11792,7 +11792,7 @@ buildTools.failed.to.list.tasks=無法列出任務
 buildTools.failed.to.list.tasks.details.reference=詳細資訊
 buildTools.tooltip.click.to.show.error.details=點擊以顯示錯誤詳細資訊
 
-#npm modules
+# npm modules
 npm.modules.inspection.content.of.require.not.in.dependencies.warning=package.json 依賴關係中未列出模組
 npm.modules.inspection.content.of.require.module.not.installed.warning=未安裝模組
 npm.modules.install.global.types.fix.name=安裝 TypeScript 定義以提供更好的類型資訊
@@ -12497,7 +12497,7 @@ js.language.feature.enums=枚舉
 web.bundler.failed.to.load=無法載入 {0}
 web.bundler.analyzing.configs.progress=正在分析 Web Bundler 的設定檔案
 web.bundler.cannot.analyze=無法分析 {0}: 編碼輔助將忽略此檔案中的模組解析規則。\\n可能的原因: 此檔案不是有效的設定檔案，或者 IDE 目前不支持其格式。
-inlay.hints.usages.text={0,choice, 0#無用法|1#1 個用法|2#{0,number}''{1,choice, |1#+}'' 個用法}
+inlay.hints.usages.text={0,choice, 0#無用法|1#1 個用法|2#{0,number} 個用法}
 choose.overriding.method=<html><body>選擇 <b>{0}</b> 的覆寫方法(找到了 {1} 個)</body></html>
 choose.overriding.function=<html><body>選擇 <b>{0}</b> 的覆寫函數(找到了 {1} 個)</body></html>
 code.vision.implementations.hint={0, choice, 1#1 個實作|2#{0,number} 個實作}
