@@ -8,7 +8,8 @@ const cwd = join(__plugin_downloaded_dir, 'xliff');
 const target_out = join(__plugin_dev_output_dir, 'xliff');
 
 export default FastGlob([
-	'*.zh-cn.xliff'
+	'*.zh-cn.xliff',
+	//'*intellij.zh-cn.xliff',
 ], {
 	cwd,
 }).mapSeries(xliff_file => {

@@ -18,7 +18,9 @@ export enum EnumTranslationApproved
 export interface ITransUnit
 {
 	'@id': `${number}`,
+	'@resname': string,
 	'@approved': ITSTypeAndStringLiteral<EnumTranslationApproved>,
+	'@translate': ITSTypeAndStringLiteral<EnumTranslationApproved>,
 	source: string,
 	target: {
 		'@state': ITSTypeAndStringLiteral<EnumTranslationState>,
