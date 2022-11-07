@@ -25,5 +25,7 @@ export function updateMeta(content_new: string)
 	obj.description = html;
 	obj.changeNnotes = `See <a href="https://github.com/bluelovers/idea-l10n-zht/commits/master">https://github.com/bluelovers/idea-l10n-zht/commits/master</a> or <a href="https://github.com/bluelovers/idea-l10n-zht/blob/master/CHANGELOG.md">CHANGELOG.md</a>`;
 
+	delete obj.root['incompatible-with'];
+
 	return obj.toString();
 }
