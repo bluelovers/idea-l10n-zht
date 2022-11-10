@@ -1,7 +1,7 @@
 import { async as FastGlob } from "@bluelovers/fast-glob/bluebird";
 import { join } from 'upath2';
 import { __plugin_dev_output_dir, __plugin_downloaded_dir } from '../../lib/const';
-import { handleXLIFF, handleXLIFFFile } from '../../lib/build/xliff/handle-xliff';
+import { handleXLIFF, handleXLIFFFile, openXLIFFFile } from '../../lib/build/xliff/handle-xliff';
 import { outputFile } from "fs-extra";
 import Bluebird from 'bluebird';
 
@@ -20,11 +20,17 @@ export default FastGlob<string>([
 			const new_file = join(target_out, xliff_file.replace('.zh-cn.xliff', '.xliff'));
 			const new_dir = new_file.replace('.xliff', '');
 
+			const old_dir = join(cwd, xliff_file.replace('.zh-cn.xliff', ''));
+
 			return Promise.all([
 				outputFile(new_file, result.obj.toString()),
-				Bluebird.mapSeries(result.obj.splitFiles(), (row) =>
+				Bluebird.each(result.obj.splitFiles(), (row) =>
 				{
 					return outputFile(join(new_dir, `${row.name}.xliff`), row.xml)
+				}),
+				Bluebird.each(openXLIFFFile(xliff_file, cwd).splitFiles(), (row) =>
+				{
+					return outputFile(join(old_dir, `${row.name}.xliff`), row.xml)
 				}),
 			])
 		})
