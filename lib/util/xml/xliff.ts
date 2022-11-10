@@ -1,6 +1,7 @@
 import { XMLSerialized } from './object';
 import { XMLSerializedAsObject, XMLSerializedAsObjectArray } from 'xmlbuilder2/lib/interfaces';
 import { ITSTypeAndStringLiteral } from 'ts-type';
+import { arrayChunkSplit } from 'array-chunk-split';
 
 export enum EnumTranslationState
 {
@@ -53,6 +54,11 @@ interface ICrowdinXLIFFXmlFile
 
 export class CrowdinXLIFFXml extends XMLSerialized
 {
+	override raw: XMLSerializedAsObject & {
+		xliff: XMLSerializedAsObject & {
+			file: ICrowdinXLIFFXmlFile[] | ICrowdinXLIFFXmlFile
+		}
+	};
 
 	constructor(source: Buffer | string)
 	{
@@ -74,6 +80,29 @@ export class CrowdinXLIFFXml extends XMLSerialized
 	{
 		return super.toString()
 			.replace(/^\<\?xml version="1\.0"\?\>/, '<?xml version="1.0" encoding="UTF-8"?>')
+	}
+
+	splitFiles(maxChunkLength: number = 15)
+	{
+		return arrayChunkSplit([this.files].flat(), maxChunkLength).map((files, i) => {
+
+			const id = files.map(file => file['@id']);
+
+			return {
+				name: i.toString().padStart(3, '0'),
+				id,
+				xml: this.toString.call({
+					_headless: this._headless,
+					raw: {
+						...this.raw,
+						xliff: {
+							...this.raw['xliff'],
+							file: files,
+						},
+					},
+				}),
+			}
+		})
 	}
 
 }

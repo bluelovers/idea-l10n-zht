@@ -3,20 +3,26 @@ import { CrowdinXLIFFXml } from '../../util/xml/xliff';
 import { getElementText, setElementText } from '../../util/xml/elem-value';
 import { handleText } from '../../handleText';
 import { readFileSync } from 'fs';
-import { join } from 'upath2';
+import { resolve } from 'upath2';
 import { initIdeaSegmentText } from '../../segment';
-import { SingleBar } from 'cli-progress';
 import { createMultiBar, createSingleBar } from '../../cli-progress';
+
+export function openXLIFFFile(xliff_file: string, cwd: string)
+{
+	return new CrowdinXLIFFXml(readFileSync(resolve(cwd, xliff_file)))
+}
 
 export function handleXLIFFFile(xliff_file: string, cwd: string)
 {
-	return handleXLIFF(readFileSync(join(cwd, xliff_file)), {
+	return handleXLIFF(openXLIFFFile(xliff_file, cwd), {
 		xliff_file,
+		cwd,
 	});
 }
 
-export function handleXLIFF(source: Buffer | string, runtime: {
-	xliff_file: string
+export function handleXLIFF(source: Buffer | string | CrowdinXLIFFXml, runtime: {
+	xliff_file: string,
+	cwd?: string,
 })
 {
 	return Bluebird
@@ -24,6 +30,11 @@ export function handleXLIFF(source: Buffer | string, runtime: {
 		.then(async () =>
 		{
 			await initIdeaSegmentText();
+
+			if (source instanceof CrowdinXLIFFXml)
+			{
+				return source
+			}
 
 			return new CrowdinXLIFFXml(source)
 		})
