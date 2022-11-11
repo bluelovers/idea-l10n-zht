@@ -34,7 +34,7 @@ export interface ITransUnit
 	}
 }
 
-interface ICrowdinXLIFFXmlFile
+export interface ICrowdinXLIFFXmlFile
 {
 	'@id': `${number}`;
 	/**
@@ -82,27 +82,52 @@ export class CrowdinXLIFFXml extends XMLSerialized
 			.replace(/^\<\?xml version="1\.0"\?\>/, '<?xml version="1.0" encoding="UTF-8"?>')
 	}
 
+	chunkFiles(maxChunkLength: number = 15)
+	{
+		return arrayChunkSplit([this.files].flat(), maxChunkLength)
+	}
+
 	splitFiles(maxChunkLength: number = 15)
 	{
-		return arrayChunkSplit([this.files].flat(), maxChunkLength).map((files, i) => {
+		return this._splitFiles(this.chunkFiles(maxChunkLength))
+	}
 
-			const id = files.map(file => file['@id']);
-
+	_splitFiles(chunk: ICrowdinXLIFFXmlFile[][])
+	{
+		return chunk.map((files, i) =>
+		{
 			return {
 				name: i.toString().padStart(3, '0'),
-				id,
-				xml: this.toString.call({
-					_headless: this._headless,
-					raw: {
-						...this.raw,
-						xliff: {
-							...this.raw['xliff'],
-							file: files,
-						},
-					},
-				}),
+				...this._toFakeData(files),
 			}
 		})
+	}
+
+	_fakeRawByFiles(file: ICrowdinXLIFFXmlFile[] | ICrowdinXLIFFXmlFile)
+	{
+		return {
+			...this.raw,
+			xliff: {
+				...this.raw['xliff'],
+				file,
+			},
+		}
+	}
+
+	_toFakeData(file: ICrowdinXLIFFXmlFile[] | ICrowdinXLIFFXmlFile)
+	{
+		const id = Array.isArray(file) ? file.flat().map(file => file['@id']) : [file['@id']];
+
+		const raw = this._fakeRawByFiles(file);
+
+		return {
+			id,
+			raw,
+			xml: this.toString.call({
+				_headless: this._headless,
+				raw,
+			}),
+		}
 	}
 
 }

@@ -7,7 +7,7 @@ import { resolve } from 'upath2';
 import { initIdeaSegmentText } from '../../segment';
 import { createMultiBar, createSingleBar } from '../../cli-progress';
 
-export function openXLIFFFile(xliff_file: string, cwd: string)
+export function openXLIFFFile(xliff_file: string, cwd?: string)
 {
 	return new CrowdinXLIFFXml(readFileSync(resolve(cwd, xliff_file)))
 }
