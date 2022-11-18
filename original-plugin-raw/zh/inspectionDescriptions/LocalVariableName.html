@@ -1,18 +1,18 @@
 <html>
 <body>
-报告不遵循命名约定的局部变量。
+报告不遵循命名惯例的局部变量。
 <p>您可以在检查选项中指定所需的模式。</p>
-<p><a href="https://kotlinlang.org/docs/coding-conventions.html#function-names">建议的命名约定</a>：必须以小写字母开头，使用驼峰拼写法并且没有下划线。</p>
+<p><a href="https://kotlinlang.org/docs/coding-conventions.html#function-names">建议的命名惯例</a>：必须以小写字母开头，使用驼峰拼写法并且没有下划线。</p>
 <p><b>示例：</b></p>
 <pre><code>
   fun fibonacciNumber(index: Int): Long = when(index) {
       0 -> 0
       else -> {
-          // 未遵循命名约定：包含下划线符号 (`_`)
+          // 未遵循命名惯例：包含下划线符号 (`_`)
           var number_one: Long = 0
-          // 未遵循命名约定：以大写字母开头
+          // 未遵循命名惯例：以大写字母开头
           var NUMBER_TWO: Long = 1
-          // 遵循命名约定：以小写字母开头，使用驼峰拼写法并且没有下划线。
+          // 遵循命名惯例：以小写字母开头，使用驼峰拼写法并且没有下划线。
           var numberThree: Long = number_one + NUMBER_TWO
 
           for(currentIndex in 2..index) {

@@ -6,8 +6,7 @@
   return str == null ? "" : str.trim();
 </code></pre>
 <p>应用快速修复后：</p>
-<pre><code>
-  return Optional.ofNullable(str).map(String::trim).orElse("");
+<pre><code>return Optional.ofNullable(str).map(String::trim).orElse("");
 </code></pre>
 <p>虽然替换并不总是更短，但它可能有助于进一步重构（例如，将方法返回值更改为 <code>Optional</code>）。</p>
 <p>请注意，当条件的非 null 分支返回 null 值时，相应的映射步骤将产生一个空的 <code>Optional</code>，可能会改变语义。 如果不能静态证明保留语义，则快速修复操作名称将包含 “（可能更改语义）” 通知，并关闭检查高亮显示。</p>

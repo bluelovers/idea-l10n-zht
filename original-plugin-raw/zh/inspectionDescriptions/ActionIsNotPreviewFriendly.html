@@ -1,11 +1,11 @@
 <html>
 <body>
-报告 <code>LocalQuickFix</code> 和 <code>IntentionAction</code> 实现中阻止意图预览操作正常运行的字段。 此外，在已知类型是安全的字段上报告了过多的 <code>@SafeFieldForPreview</code> 注解。
+报告 <code>LocalQuickFix</code> 实现中阻止意图预览操作正常运行的字段。
+此外，在已知类型是安全的字段上报告了过多的 <code>@SafeFieldForPreview</code> 注解。
 <p>
-  意图预览是 IntelliJ 平台的一项功能，可以显示在应用快速修复或意图操作后对当前文件所做的更改。 为了在快速修复中实现这一功能，需要使用指向当前文件的非物理副本的自定义 <code>ProblemDescriptor</code> 来调用 <code>LocalQuickFix.generatePreview()</code>。 在意图操作中，使用当前文件的非物理副本和虚部编辑器调用 <code>IntentionAction.generatePreview()</code>
-  通常，这些方法只委托给 <code>LocalQuickFix.applyFix()</code> 或 <code>IntentionAction.invoke()</code>。
-  但是，某些快速修复可能会直接或间接引用物理元素并将其用于写入。 由于快速修复试图更新的是物理 PSI 而不是非物理 PSI，预览不起作用。
-  为避免这种情况，<code>generatePreview()</code> 的默认实现仅在快速修复或意图操作类的所有实例字段均具有安全类型（基元、字符串等）的情况下进行委托。
+  意图预览是 IntelliJ 平台的一项功能，可以显示在应用快速修复或意图操作后对当前文件所做的更改。 为了实现这一功能，需要使用指向当前文件的非物理副本的自定义 <code>ProblemDescriptor</code> 来调用 <code>LocalQuickFix.generatePreview()</code>。
+  通常，此实现委托给 <code>LocalQuickFix.applyFix()</code>。 但是，某些快速修复可能会直接或间接引用物理元素并将其用于写入。 由于快速修复试图更新的是物理 PSI 而不是非物理 PSI，预览不起作用。
+  为避免这种情况，<code>generatePreview()</code> 的默认实现仅在快速修复类的所有实例字段均具有安全类型（基元、字符串等）的情况下进行委托。
 </p>
 <p>
   您可以通过多种方式修正此问题：
@@ -19,9 +19,7 @@
     您可以重写 <code>getFileModifierForPreview()</code> 方法，然后创建一个快速修复副本，将其重新绑定至作为形参提供的非物理文件副本。 使用 <code>PsiTreeUtil.findSameElementInCopy()</code> 可以在提供的非物理副本中找到相应的 PSI 元素。
   </li>
   <li>
-    不要在字段中存储 PSI 引用，而应尽量从快速修复中的 <code>ProblemDescriptor.getPsiElement()</code> 或意图操作中提供的文件/编辑器中提取所有必要的信息。
-    您还可以继承抽象 <code>LocalQuickFixAndIntentionActionOnPsiElement</code> 类并实现其 <code>invoke()</code> 和 <code>isAvailable()</code> 方法，这些方法具有
-<code>startElement</code> 和 <code>endElement</code> 形参。 这些形参会自动映射到非物理文件副本。
+    不要在字段中存储 PSI 引用，而应尽量从 <code>ProblemDescriptor.getPsiElement()</code> 中提取所有必要信息。
   </li>
   <li>
     您可以重写 <code>generatePreview()</code> 方法并提供完全自定义的预览行为。

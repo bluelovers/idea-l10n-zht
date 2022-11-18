@@ -1,19 +1,18 @@
 <html>
 <body>
-报告在其构造函数中具有初始化逻辑的测试用例。
+报告 JUnit 测试用例及其构造函数中的初始化逻辑。
 如果构造函数失败，将不会调用 <code>@After</code> 注解方法或 <code>tearDown()</code> 方法。
 这可能导致测试环境部分初始化，因而对其他测试产生不利影响。
-相反，测试用例初始化应在 <code>setUp()</code> 或 <code>@Before</code> 注解方法中完成。
+相反，JUnit 测试用例初始化应在 <code>setUp()</code> 或 <code>@Before</code> 注解方法中完成。
 <p>不良示例：</p>
 <pre><code>
-  public class ImportantTest {
-    private File file;
-
-    public ImportantTest() throws IOException {
+  <b>public class</b> ImportantTest {
+    <b>private</b> File file;
+    <b>public</b> ImportantTest() <b>throws</b> IOException {
       file = File.createTempFile("xyz", ".tmp");
     }
 
-    // ... tests go here
+    // ... 测试转到此处
   }
 </code></pre>
 <!-- tooltip end -->

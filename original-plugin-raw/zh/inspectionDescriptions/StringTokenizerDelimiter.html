@@ -1,23 +1,5 @@
 <html>
 <body>
-报告在分隔符实参中包含重复字符的 <code>StringTokenizer()</code> 构造函数调用或 <code>nextToken()</code> 方法调用。
-<p><b>示例：</b></p>
-<pre><code>
-  void printTokens(String text) {
-    StringTokenizer tokenizer = new StringTokenizer(text, "\n\n");
-    while (tokenizer.hasMoreTokens()) {
-      System.out.println(tokenizer.nextToken());
-    }
-  }
-</code></pre>
-<p>在应用快速修复后：</p>
-<pre><code>
-  void printTokens(String text) {
-    StringTokenizer tokenizer = new StringTokenizer(text, "\n");
-    while (tokenizer.hasMoreTokens()) {
-      System.out.println(tokenizer.nextToken());
-    }
-  }
-</code></pre>
+报告在分隔符实参中包含重复字符的 <code>StringTokenizer</code> 构造函数或 <code>nextToken</code> 方法调用，例如 <code>tokenizer.nextToken("\n\n")</code>。
 </body>
 </html>

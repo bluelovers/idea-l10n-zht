@@ -1,13 +1,12 @@
 <html>
 <body>
-<p>报告 Spring Bean <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>、<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a> 等注入点上的自动装配问题。</p>
+<p>报告 Spring Bean 注入点的自动装配问题：</p>
 
 <ul>
   <li>不止一种 'concrete' 类型的 Bean</li>
   <li>没有 'concrete' 类型的 Bean</li>
   <li>没有带限定符的 Bean</li>
-  <li><code>@Autowired</code> 在 Spring Bean 构造函数上的用法不正确。</li>
-  <li>在无效 Spring Bean 的类中注入或自动装配的字段/方法</li>
+  <li>没有形参的自动装配方法或构造函数</li>
 </ul>
 
 <p><b>示例：</b></p>
@@ -23,32 +22,5 @@ public class MyComponent {
                      // Beans: fooBean(FooBean.java), otherBean(OtherBean.java)"
 }
 </pre>
-
-<p><b>示例：</b></p>
-<pre><code>
-@Component
-public class MyComponent {
-	@Autowired
-	public MyComponent(BarBean bean) {...} // 报告 '只允许一个 @Autowired 构造函数'
-
-	@Autowired
-	public MyComponent(FooBean bean) {...} // 报告 '只允许一个 @Autowired 构造函数'
-}
-
-@Component
-public class MyFactory {  // 报告 '没有匹配的 @Autowired 构造函数'
-	public MyFactory(String str) {...}
-	public MyFactory(int count) {...}
-}
-</code></pre>
-
-<p><b>示例：</b></p>
-<pre><code>
-public class FooBeanClass {
-  @Autowired   // 报告 '必须在有效 Spring Bean 中定义自动装配成员：@Component、@Service 等'
-  ServiceBean bean;
-  }
-</code></pre>
-
 </body>
 </html>

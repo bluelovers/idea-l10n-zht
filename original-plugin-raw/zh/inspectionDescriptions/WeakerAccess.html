@@ -1,6 +1,6 @@
 <html>
 <body>
-报告可能缩小其访问修饰符范围的字段、方法或类。
+报告在指定检查范围中发现的，可以缩窄其访问修饰符的所有字段、方法或类。
 <p>示例：</p>
 <pre><code>
   class Sample {
@@ -8,15 +8,6 @@
         bar("foo", "foo");
     }
     void bar(String x, String y) { } // 可以为 private
-  }
-</code></pre>
-<p>在应用快速修复后：</p>
-<pre><code>
-  class Sample {
-    void foo() {
-        bar("foo", "foo");
-    }
-    private void bar(String x, String y) { }
   }
 </code></pre>
 <!-- tooltip end -->

@@ -1,13 +1,13 @@
 <html>
 <body>
-报告可被替换为从 <code>Objects</code> 或 <code>Stream</code> 对 static 方法的调用的 <code>null</code> 检查。
+报告可以替换为 <code>Objects</code>/<code>Stream</code> static 方法的 null 检查。
 <p><b>示例：</b></p>
 <pre><code>
-  if (message == null) {
-    application.messageStorage().save(new EmptyMessage());
-  } else {
-    application.messageStorage().save(message);
-  }
+if (message == null) {
+  application.messageStorage().save(new EmptyMessage());
+} else {
+  application.messageStorage().save(message);
+}
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
