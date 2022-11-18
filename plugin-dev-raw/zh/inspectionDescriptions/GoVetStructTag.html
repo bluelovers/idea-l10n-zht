@@ -16,9 +16,9 @@
 
 <html>
 <body>
-報告不符合 <a href="https://golang.org/pkg/reflect/#StructTag">Go 結構標籤約定</a> 的結構標籤。
+報告不符合 <a href="https://golang.org/pkg/reflect/#StructTag">Go 結構標籤慣例</a> 的結構標籤。
 
-<p>根據這些約定，標記字串是可選的空格分隔的<code>鍵:"值"</code> 對的串聯。 每個鍵為<code>空格 (U+0020 ' ')</code>、<code>引號 (U+0022 '"')</code> 和 <code>冒號 (U+003A ':')</code> 以外的非控制字符組成的非空字串。 每個值都使用 <code>U+0022 '"'</code> 字符和 Go 字串文字語法引用。</p>
+<p>根據這些慣例，標記字串是可選的空格分隔的<code>鍵:"值"</code> 對的串聯。 每個鍵為<code>空格 (U+0020 ' ')</code>、<code>引號 (U+0022 '"')</code> 和 <code>冒號 (U+003A ':')</code> 以外的非控制字符組成的非空字串。 每個值都使用 <code>U+0022 '"'</code> 字符和 Go 字串文字語法引用。</p>
 
 <p>此外，檢查還會檢查帶有標籤的欄位是否已匯出。</p>
 

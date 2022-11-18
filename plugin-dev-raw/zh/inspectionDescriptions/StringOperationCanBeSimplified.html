@@ -1,8 +1,8 @@
 <html>
 <body>
-報告對 <code>toString()</code> 或 <code>substring()</code> 等可取代為更簡單表達式的 <code>String</code> 構造函數和方法的冗餘調用。
+報告冗餘的 <code>String</code> 構造函數和對可以取代為簡化表達式的 <code>toString()</code> 或 <code>substring()</code> 等方法的調用。
 <p>例如，在 <code>"string".substring(0)</code>、<code>"string".toString()</code> 或
-<code>new StringBuilder().toString().substring(1,3)</code> 等程式碼中，可以安全移除對這些方法的調用。</p>
+<code>new StringBuilder().toString().substring(1,3)</code> 等情況下，可以安全移除對這些方法的調用。</p>
 <p>範例：</p>
 <pre><code>
   System.out.println(new String("message"));
@@ -12,14 +12,10 @@
   System.out.println("message");
 </code></pre>
 <p>
-  請注意，該快速修復會移除冗餘的構造函數調用，這可能會影響 <code>String</code> 引用相等。
-  即使被認為是一種不好的做法，如果您仍需要保留，請禁止警告或使用檢查設定來忽略冗餘的 <code>String</code> 構造函數調用。
+  請注意，該快速修復會移除冗餘構造函數，這可能會影響 <code>String</code> 引用相等。
+  即使被認為是一種不好的做法，如果您仍需要保留，請禁止警告或將設定設定為忽略冗餘的 <code>String</code> 構造函數。
 </p>
 <!-- tooltip end -->
-<p>
-  請使用下方的<b>不報告 String 構造函數調用</b>選項來不報告程式碼（如上例所示）。
-  這將避免在使用 <code>new String()</code> 調用保證不同物件相等性的程式碼中套用快速修復後改變與 <code>==</code> 或 <code>!=</code> 進行字串比較的結果。
-</p>
 <p><small>2018.1 最新變化</small></p>
 </body>
 </html>

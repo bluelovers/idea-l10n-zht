@@ -3,17 +3,14 @@
 在使用無參構造函數實例化集合後，立即報告 <code>Collection.addAll()</code> 和 <code>Map.putAll()</code> 調用。
 <p>此類結構可以取代為對參數化構造函數的單次調用，從而簡化程式碼。 此外，對於某些集合，取代可能會更高效。</p>
 <p><b>範例：</b></p>
-<pre><code>
-  Set&lt;String&gt; set = new HashSet&lt;&gt;();
+<pre><code>  Set&lt;String&gt; set = new HashSet&lt;&gt;();
   set.addAll(Arrays.asList("alpha", "beta", "gamma"));
 </code></pre>
-<p>在套用快速修復後：</p>
-<pre><code>
-  Set&lt;String&gt; set = new HashSet&lt;&gt;(Arrays.asList("alpha", "beta", "gamma"));
+<p>可以取代為：</p>
+<pre><code>  Set&lt;String&gt; set = new HashSet&lt;&gt;(Arrays.asList("alpha", "beta", "gamma"));
 </code></pre>
 <!-- tooltip end -->
 <p>
-  預設支援 JDK 集合類。
-  此外，還可以使用<b>要檢查的類</b>面板指定其他類。
+預設情況下支援標準的 JDK 集合類。 此外，還可以在檢查選項中指定其他類。
 </body>
 </html>
