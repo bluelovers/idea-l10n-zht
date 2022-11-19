@@ -94,6 +94,9 @@ describe(`segment`, () => {
 
 		[`階`, `或更高级别时`],
 
+		[`案源`, `search.scope.project.source.files=项目源文件`],
+		[`案源`, `search.scope.project.non.source.files=项目非源文件`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
