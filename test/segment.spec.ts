@@ -258,6 +258,9 @@ describe(`should include`, () => {
 
 		[`合併`, `PhpLanguageFeature.coalesce.operator=从 PHP 7.0 起才允许使用合并运算符`],
 
+		[`類型`, `action.TypeHierarchy.Subtypes.text=子类型层次结构`],
+		[`類型`, `action.TypeHierarchy.Supertypes.text=父类型层次结构`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
