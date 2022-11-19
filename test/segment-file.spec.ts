@@ -26,6 +26,7 @@ const words = array_unique_overwrite([
 	`標籤頁`,
 	`文件夾`,
 	`插件`,
+	'別別',
 ].reduce((ls, s) =>
 {
 
