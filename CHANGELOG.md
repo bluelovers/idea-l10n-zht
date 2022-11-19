@@ -7,6 +7,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+### 🐛　Bug Fixes
+
+* **dict:** { 子类 => 子類別 } ([b94b016](https://github.com/bluelovers/idea-l10n-zht/commit/b94b01646ff4876d1db2a66dd19eecb11aa52b23))
+
+
+### 🛠　Build System
+
+* **release:** update build ( 223.143 ) ([c5a0716](https://github.com/bluelovers/idea-l10n-zht/commit/c5a0716364840e3d58eba2cb687c523f7a909221))
+* **release:** update dev build files ( 223.143 ) ([4387561](https://github.com/bluelovers/idea-l10n-zht/commit/43875614fc193dd8b0a2c293e4160096af24cf26))
+* **test:** update snapshots ( 223.143 ) ([c8c98db](https://github.com/bluelovers/idea-l10n-zht/commit/c8c98db6a6821552025561f3c2fd43ff572a0544))
+
+
+
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-11-19)
+
+
+
 ### 📦　Code Refactoring
 
 * **dict:** { 重定向 => 重新導向 } ([088d7e7](https://github.com/bluelovers/idea-l10n-zht/commit/088d7e713050bbe1358555ec70b3215bb9b1bce4))
