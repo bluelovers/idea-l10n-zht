@@ -18,7 +18,7 @@
 </p>
 <ul>
   <li>
-    列出不需關閉並且此檢查應當忽略的 <code>AutoCloseable</code> 的子類。
+    列出不需關閉並且此檢查應當忽略的 <code>AutoCloseable</code> 的子類別。
     <br/>
     <b>注意</b>：即便列出將忽略 <code>java.util.stream.Stream</code>，該檢查仍將報告從 <code>java.nio.file.Files</code> 方法 <code>lines()</code>、<code>walk()</code>、<code>list()</code> 以及 <code>find()</code> 返回的流。
     這些流包含需要關閉的關聯 I/O 資源。

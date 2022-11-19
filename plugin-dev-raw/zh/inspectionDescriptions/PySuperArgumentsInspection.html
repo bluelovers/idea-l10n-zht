@@ -3,7 +3,7 @@
 <p>報告對 <code>super(A, B)</code> 的任何調用不符合以下要求的情況：</p>
 <ul>
   <li><code>B</code> 是 <code>A</code> 的實例</li>
-  <li><code>B</code> 是 <code>A</code> 的子類</li>
+  <li><code>B</code> 是 <code>A</code> 的子類別</li>
 </ul>
 <p><b>範例：</b></p>
 <pre style="font-family: monospace">
@@ -19,7 +19,7 @@ class Rectangle(Figure):
 
 class Square(Figure):
     def color(self):
-        return super(Rectangle, self).color() # Square 不是 Rectangle 的子類
+        return super(Rectangle, self).color() # Square 不是 Rectangle 的子類別
 </pre>
 <p>作為修復，您可以令 <code>Square</code> 為 <code>Rectangle</code> 類別的實例。</p>
 </body>
