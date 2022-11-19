@@ -3,9 +3,9 @@
 報告舊式的構造函數宣告（<code>ClassName()</code>），並建議用新式的構造函數（<code>__construct()</code>）取代它們。
 <!-- tooltip end -->
 <p>
-  在 PHP 8.0 之前，全域命名空間中的類所使用的舊式構造函數語法被視為棄用的，會導致 <code>E_DEPRECATED</code> 錯誤。 如果同時定義了 <code>__construct()</code> 和 <code>ClassName()</code> 方法，<code>__construct()</code> 將被調用。
+  在 PHP 8.0 之前，全域命名空間中的類別所使用的舊式構造函數語法被視為棄用的，會導致 <code>E_DEPRECATED</code> 錯誤。 如果同時定義了 <code>__construct()</code> 和 <code>ClassName()</code> 方法，<code>__construct()</code> 將被調用。
 </p>
-<p>在帶命名空間的類，或者任何 PHP 8.0 的類中，<code>ClassName()</code> 方法從來沒有任何特殊含義，也不會被作為構造函數調用。 因此，如果 PHP 語言級別設定為 8.0 或更高，檢查就不會報告這種情況。
+<p>在帶命名空間的類別，或者任何 PHP 8.0 的類別中，<code>ClassName()</code> 方法從來沒有任何特殊含義，也不會被作為構造函數調用。 因此，如果 PHP 語言級別設定為 8.0 或更高，檢查就不會報告這種情況。
 </p>
 <p>
   有關詳細資訊，請參閱 <a href="https://www.php.net/manual/en/language.oop5.decon.php">Constructors and destructors (php.net)</a>。

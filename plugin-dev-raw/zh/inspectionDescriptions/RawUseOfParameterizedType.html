@@ -1,9 +1,9 @@
 <html>
 <body>
-報告類型參數被忽略的泛型類。 這種對泛型類型的<i>原始</i>使用在 Java 中雖然有效，但它違背了類型參數的用途，並且可能掩蓋錯誤。 此檢查反映出 <code>javac</code> 的 <code>rawtypes</code> 警告。
+報告類型參數被忽略的泛型類別。 這種對泛型類型的<i>原始</i>使用在 Java 中雖然有效，但它違背了類型參數的用途，並且可能掩蓋錯誤。 此檢查反映出 <code>javac</code> 的 <code>rawtypes</code> 警告。
 <p><b>範例：</b></p>
 <pre><code>
-//警告：參數化類 'List' 的原始使用
+//警告：參數化類別 'List' 的原始使用
 List list = new ArrayList&lt;String&gt;();
 //創建了字串列表，但也接受整數
 list.add(1);

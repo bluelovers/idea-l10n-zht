@@ -1,8 +1,8 @@
 <html>
 <body>
-報告可以被序列化或反序列化的類。
+報告可以被序列化或反序列化的類別。
 <p>
-  如果一個類支援 <code>Serializable</code> 接口，並且它的 <code>readObject()</code> 和 <code>writeObject()</code> 方法未被定義為總是拋出異常，那麼就可以被序列化。 在供安全使用的程式碼中，可序列化的類可能比較危險。
+  如果一個類別支援 <code>Serializable</code> 接口，並且它的 <code>readObject()</code> 和 <code>writeObject()</code> 方法未被定義為總是拋出異常，那麼就可以被序列化。 在供安全使用的程式碼中，可序列化的類別可能比較危險。
 </p>
 <p><b>範例：</b></p>
 <pre><code>
@@ -34,12 +34,12 @@
 </p>
 <ul>
   <li>
-    列出此檢查不應報告其繼承者的類。
-    這適用於從超類繼承 <code>Serializable</code> 但不用於序列化的類。
-    請注意，與其忽略這些類，添加始終拋出異常的 <code>readObject()</code> 和 <code>writeObject()</code> 方法可能更安全。
+    列出此檢查不應報告其繼承者的類別。
+    這適用於從超類別繼承 <code>Serializable</code> 但不用於序列化的類別。
+    請注意，與其忽略這些類別，新增始終拋出異常的 <code>readObject()</code> 和 <code>writeObject()</code> 方法可能更安全。
   </li>
   <li>
-    是否忽略可序列化的匿名類。
+    是否忽略可序列化的匿名類別。
   </li>
 </ul>
 </body>

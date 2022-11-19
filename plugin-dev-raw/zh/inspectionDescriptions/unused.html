@@ -1,14 +1,14 @@
 <html>
 <body>
-報告指定檢查範圍中未使用或無法從入口點到達的類、方法或欄位。
-<p> 入口點可以是主方法、測試、指定範圍外提及的類、可從 <code>module-info.java</code> 存取的類，等等。 還可以使用名稱模式或註解來設定自訂入口點。
+報告指定檢查範圍中未使用或無法從入口點到達的類別、方法或欄位。
+<p> 入口點可以是主方法、測試、指定範圍外提及的類別、可從 <code>module-info.java</code> 存取的類別，等等。 還可以使用名稱模式或註解來設定自訂入口點。
 <p><b>範例：</b></p>
 <pre><code>
   public class Department {
     private Organization myOrganization;
   }
 </code></pre>
-<p>在本例中，<code>Department</code> 顯式引用 <code>Organization</code>，但如果 <code>Department</code> 類本身未使用，那麼該檢查將報告這兩個類。 </p>
+<p>在本例中，<code>Department</code> 顯式引用 <code>Organization</code>，但如果 <code>Department</code> 類別本身未使用，那麼該檢查將報告這兩個類別。 </p>
 <p>
   該檢查還會報告其方法、所有方法實作和覆寫器未使用的參數，以及已宣告但未使用的局部變數。
 </p>
@@ -18,14 +18,14 @@
 </p>
 
 <!-- tooltip end -->
-<p>使用下面的可見性設定可以設定要報告的成員。 例如，設定報告 <code>private</code> 方法只表明將報告 <code>private</code> 內部類的 <code>public</code> 方法，頂層類的 <code>protected</code> 方法將被忽略。</p>
+<p>使用下面的可見性設定可以設定要報告的成員。 例如，設定報告 <code>private</code> 方法只表明將報告 <code>private</code> 內部類別的 <code>public</code> 方法，頂層類別的 <code>protected</code> 方法將被忽略。</p>
 <p>
   使用<b>入口點</b>頁籤可以設定檢查執行期間要考慮的入口點。</p>
-<p> 在檢查結果準備就緒後，可以手動添加入口點。</p>
+<p> 在檢查結果準備就緒後，可以手動新增入口點。</p>
 <p> 如果您的程式碼使用不受支援的框架，可以選擇以下幾個選項：</p>
 <ul>
   <li>如果框架依賴於註解，使用<b>註解…</b>按鈕可設定框架註解。</li>
-  <li>如果框架不依賴於註解，可嘗試設定框架應有的類名模式。</li>
+  <li>如果框架不依賴於註解，可嘗試設定框架應有的類別名模式。</li>
 </ul>
 <p>這樣，框架內部項可存取的註解程式碼將被視為已使用。</p>
 </body>

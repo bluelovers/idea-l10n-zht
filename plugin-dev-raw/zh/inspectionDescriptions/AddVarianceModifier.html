@@ -14,7 +14,7 @@
       consumeCharSequence(box) // 編譯時錯誤
   }
 </code></pre>
-<p>該快速修復會添加符合的差異修飾符：</p>
+<p>該快速修復會新增符合的差異修飾符：</p>
 <pre><code>
   class Box&lt;out T&gt;(val obj: T)
 

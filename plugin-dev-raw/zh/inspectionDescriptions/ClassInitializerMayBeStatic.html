@@ -2,8 +2,8 @@
 <body>
 報告可以使之為 <code>static</code> 的實例初始設定式。
 <p>
-  如果實例初始設定式不引用其類的任何非 static 成員，則可以為 static。
-  static 初始設定式在類解析後執行，而實例初始設定式對此類的每個實例化執行。</p>
+  如果實例初始設定式不引用其類別的任何非 static 成員，則可以為 static。
+  static 初始設定式在類別解析後執行，而實例初始設定式對此類別的每個實例化執行。</p>
 <p><b>範例：</b></p>
 <pre><code>
   class A {
@@ -18,7 +18,7 @@
   class A {
      public static String CONSTANT;
      static {
-        CONSTANT = "Hello"; // 現在每個類僅實例化一次
+        CONSTANT = "Hello"; // 現在每個類別僅實例化一次
      }
   }
 </code></pre>

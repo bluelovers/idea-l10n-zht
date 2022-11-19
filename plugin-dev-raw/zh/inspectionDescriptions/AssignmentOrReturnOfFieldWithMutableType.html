@@ -1,7 +1,7 @@
 <html>
 <body>
 報告從方法參數到陣列或可變類型（如 <code>Collection</code>、<code>Date</code>、<code>Map</code>、<code>Calendar</code> 等）的返回或賦值
-<p>由於這種類型是可變的，此結構可能會導致來自所屬類之外的物件狀態發生意外修改。 儘管出於性能原因，此結構可能很有用，但它本質上很容易出現錯誤。</p>
+<p>由於這種類型是可變的，此結構可能會導致來自所屬類別之外的物件狀態發生意外修改。 儘管出於性能原因，此結構可能很有用，但它本質上很容易出現錯誤。</p>
 <p>報告了以下可變類型：</p>
 <ul>
   <li><code>java.util.Date</code></li>
@@ -11,7 +11,7 @@
   <li><code>com.google.common.collect.Multimap</code></li>
   <li><code>com.google.common.collect.Table</code></li>
 </ul>
-<p>該快速修復會添加對欄位的 <code>.clone()</code> 方法的調用。</p>
+<p>該快速修復會新增對欄位的 <code>.clone()</code> 方法的調用。</p>
 <p><b>範例：</b></p>
 <pre><code>
   class Log {

@@ -1,13 +1,13 @@
 <html>
 <body>
 報告在程式碼中缺少實作的過程和函數的宣告。
-<p>在 Oracle 中，您可以宣告一個沒有主體的過程或函數，並在稍後的某個時間編寫實作。 該檢查將報告未實作的此類過程或函數的名稱。</p>
+<p>在 Oracle 中，您可以宣告一個沒有主體的過程或函數，並在稍後的某個時間編寫實作。 該檢查將報告未實作的此類別過程或函數的名稱。</p>
 <p>範例（Oracle）：</p>
 <pre><code>DECLARE PROCEDURE foo(a int, b varchar2);
 BEGIN
     NULL;
 END;</code></pre>
-<p><code>foo</code> 過程已被宣告，但缺少實作。 我們可以添加實作來消除錯誤。</p>
+<p><code>foo</code> 過程已被宣告，但缺少實作。 我們可以新增實作來消除錯誤。</p>
 <pre><code>DECLARE PROCEDURE foo(a int, b varchar2);
   PROCEDURE foo(a int, b varchar2) IS
 BEGIN

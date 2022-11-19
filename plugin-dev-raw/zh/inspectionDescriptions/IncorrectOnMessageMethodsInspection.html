@@ -14,7 +14,7 @@
         如果該方法正在處理文本訊息：
         <ul>
           <li><code>String</code>，用於接收整條訊息</li>
-          <li>Java 基元類型或類等效項，用於接收轉換為該類型的整條訊息</li>
+          <li>Java 基元類型或類別等效項，用於接收轉換為該類型的整條訊息</li>
           <li><code>String</code> 和布爾對，用於按部分接收訊息</li>
           <li><code>Reader</code>，用於以阻塞流的形式接收整條訊息</li>
           <li>端點具有文本解碼器的任何物件參數（<code>Decoder.Text</code> 或 <code>Decoder.TextStream</code>）
@@ -45,7 +45,7 @@
 
 <p>
   如果該方法返回一個值，WebSocket 執行時會將其解釋為返回給對等方的訊息。
-  允許的返回類型是 <code>String</code>、<code>ByteBuffer</code>、<code>byte[]</code>、任何 Java 基元或類等效項，以及任何帶有編碼器的類型。 如果該方法返回一個 Java 基元值，則實作必須使用 Java 基元的標準 Java 字串表示來構造要發送的文本訊息，除非開發者為此端點設定的類型提供了編碼器，在這種情況下必須使用該編碼器。 如果該方法返回 Java 基元的類等效項，則實作必須按照前面所述從 Java 基元等效項構造文本訊息。
+  允許的返回類型是 <code>String</code>、<code>ByteBuffer</code>、<code>byte[]</code>、任何 Java 基元或類別等效項，以及任何帶有編碼器的類型。 如果該方法返回一個 Java 基元值，則實作必須使用 Java 基元的標準 Java 字串表示來構造要發送的文本訊息，除非開發者為此端點設定的類型提供了編碼器，在這種情況下必須使用該編碼器。 如果該方法返回 Java 基元的類別等效項，則實作必須按照前面所述從 Java 基元等效項構造文本訊息。
 </p>
 </body>
 </html>

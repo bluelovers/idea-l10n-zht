@@ -1,15 +1,15 @@
 <html>
 <body>
-報告記錄類並建議將它們轉換為普通類。
+報告記錄類別並建議將它們轉換為普通類別。
 <p>通過將快速修復套用到此記錄，此檢查可以將 Java 記錄移動到使用早期 Java 版本的程式碼庫。</p>
 <p>
-  請注意，生成的類並不完全等同於原始記錄：
+  請注意，生成的類別並不完全等同於原始記錄：
 </p>
 <ul>
-  <li>結果的類不再擴展 <code>java.lang.Record</code>，因此 <code>instanceof Record</code> 返回 <code>false</code>。</li>
+  <li>結果的類別不再擴展 <code>java.lang.Record</code>，因此 <code>instanceof Record</code> 返回 <code>false</code>。</li>
   <li><code>Class.isRecord()</code> 和 <code>Class.getRecordComponents()</code> 等反射方法會產生不同的結果。</li>
   <li>生成的 <code>hashCode()</code> 實作可能會產生不同的結果，因為故意沒有指定計算記錄 <code>hashCode</code> 的公式。</li>
-  <li>記錄序列化機制不同於普通類。
+  <li>記錄序列化機制不同於普通類別。
     有關詳細資訊，請參閱 <i>Java 物件序列化規範</i>。</li>
 </ul>
 <!-- tooltip end -->

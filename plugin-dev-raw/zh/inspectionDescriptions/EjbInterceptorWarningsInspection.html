@@ -2,8 +2,8 @@
 <body>
 <p>報告以下 EJB 規範違規：</p>
 <ul>
-  <li>實作某些 EJB 相關接口的類的名稱以 'ejb' 開頭。</li>
-  <li>偵聽器類未定義任何偵聽器方法</li>
+  <li>實作某些 EJB 相關接口的類別的名稱以 'ejb' 開頭。</li>
+  <li>偵聽器類別未定義任何偵聽器方法</li>
 </ul>
 
 <p><b>範例：</b></p>
@@ -27,7 +27,7 @@ class GoodInterceptor {
   public Object logCreate(InvocationContext context) throws Exception { ... }
 }
 
-class EmptyInterceptor {} // 錯誤：沒有特定方法的偵聽器類
+class EmptyInterceptor {} // 錯誤：沒有特定方法的偵聽器類別
 </code></pre>
 </body>
 </html>

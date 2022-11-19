@@ -1,9 +1,9 @@
 <html>
 <body>
-  報告覆寫超類方法但未使用 <code>@java.lang.Override</code> 註解的方法。
+  報告覆寫超類別方法但未使用 <code>@java.lang.Override</code> 註解的方法。
   <p>
   由於表明了意圖，具有 <code>@java.lang.Override</code> 的註解方法提高了程式碼可讀性。
-  此外，在覆寫方法的簽名與超類方法不符合時，編譯器會報錯。
+  此外，在覆寫方法的簽名與超類別方法不符合時，編譯器會報錯。
   <p><b>範例：</b></p>
   <pre><code>
     class X {
@@ -29,7 +29,7 @@
 <code>toString()</code>。 由於 <code>@Override</code> 註解而使得這些方法消失且程式碼不再編譯的風險相對較小。
   </li>
   <li>
-    使用<b>忽略匿名類中的方法</b>選項可以忽略匿名類中的方法。
+    使用<b>忽略匿名類別中的方法</b>選項可以忽略匿名類別中的方法。
   </li>
   <li>
     禁用<b>當方法的覆寫方法並非全部具有 '@Override' 註解時，高亮顯示該方法</b>選項，可以僅就缺少 <code>@Override</code> 註解的方法發出警告，而不就其一個或多個後代缺少 <code>@Override</code> 註解的被覆寫方法發出警告。

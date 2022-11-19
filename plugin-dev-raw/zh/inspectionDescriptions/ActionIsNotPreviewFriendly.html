@@ -5,7 +5,7 @@
 <p>
   意圖預覽是 IntelliJ 平台的一項功能，可以顯示在套用快速修復或意圖操作後對當前檔案所做的更改。 為了實作這一功能，需要使用指向當前檔案的非物理副本的自訂 <code>ProblemDescriptor</code> 來調用 <code>LocalQuickFix.generatePreview()</code>。
   通常，此實作委託給 <code>LocalQuickFix.applyFix()</code>。 但是，某些快速修復可能會直接或間接引用物理元素並將其用於寫入。 由於快速修復試圖更新的是物理 PSI 而不是非物理 PSI，預覽不起作用。
-  為避免這種情況，<code>generatePreview()</code> 的預設實作僅在快速修復類的所有實例欄位均具有安全類型（基元、字串等）的情況下進行委託。
+  為避免這種情況，<code>generatePreview()</code> 的預設實作僅在快速修復類別的所有實例欄位均具有安全類型（基元、字串等）的情況下進行委託。
 </p>
 <p>
   您可以通過多種方式修正此問題：

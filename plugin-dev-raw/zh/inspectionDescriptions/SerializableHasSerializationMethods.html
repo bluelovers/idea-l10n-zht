@@ -1,6 +1,6 @@
 <html>
 <body>
-報告不實現 <code>readObject()</code> 和 <code>writeObject()</code> 方法的 <code>Serializable</code> 類。
+報告不實現 <code>readObject()</code> 和 <code>writeObject()</code> 方法的 <code>Serializable</code> 類別。
 <p>
   如果沒有實作 <code>readObject()</code> 和 <code>writeObject()</code> 方法，將使用預設的序列化演算法，在許多環境中，這對於性能和兼容性而言或許是次優選擇。
 </p>
@@ -10,14 +10,14 @@
 </p>
 <ul>
   <li>
-    列出此檢查不應報告其繼承者的類。
-    這適用於從超類繼承 <code>Serializable</code> 但不用於序列化的類。
+    列出此檢查不應報告其繼承者的類別。
+    這適用於從超類別繼承 <code>Serializable</code> 但不用於序列化的類別。
   </li>
   <li>
-    是否忽略沒有非 static 欄位的 <code>Serializable</code> 類。
+    是否忽略沒有非 static 欄位的 <code>Serializable</code> 類別。
   </li>
   <li>
-    是否忽略 <code>Serializable</code> 匿名類。
+    是否忽略 <code>Serializable</code> 匿名類別。
   </li>
 </ul>
 </body>

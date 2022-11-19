@@ -1,13 +1,13 @@
 <html>
 <body>
-報告同時定義為 EJB 和偵聽器類的類。
+報告同時定義為 EJB 和偵聽器類別的類別。
 
 <p><b>範例：</b></p>
 <pre><code>
 @Stateless
 public class ExampleBean {
 
-  @Interceptors(ExampleBean.class) // 錯誤：類同時定義為 EJB 和偵聽器
+  @Interceptors(ExampleBean.class) // 錯誤：類別同時定義為 EJB 和偵聽器
   public void getAnotherBean() {
     ...
   }

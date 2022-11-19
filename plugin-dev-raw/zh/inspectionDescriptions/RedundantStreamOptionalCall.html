@@ -3,7 +3,7 @@
 報告冗餘的 <code>Stream</code> 或 <code>Optional</code> 調用（例如 <code>map(x -&gt; x)</code>、<code>filter(x -&gt; true)</code>）或冗餘的 <code>sorted()</code> 或 <code>distinct()</code> 調用。
 <!-- tooltip end -->
 <p>請注意，程式碼中 <code>streamOfIntegers.map(Integer::valueOf)</code> 之類的映射操作效果與 <code>requireNonNull()</code> 檢查相同：如果該流包含 <code>null</code>，它將拋出 <code>NullPointerException</code>，因此並非絕對冗餘。
-  如果不希望報告此類情況，請禁用<b>報告 Stream.map() 中的冗餘裝箱</b>選項。</p>
+  如果不希望報告此類別情況，請禁用<b>報告 Stream.map() 中的冗餘裝箱</b>選項。</p>
 <p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>
 </body>
 </html>

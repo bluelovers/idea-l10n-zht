@@ -1,6 +1,6 @@
 <html>
 <body>
-報告實作 <code>Serializable</code> 且不宣告 <code>serialVersionUID</code> 欄位的類。
+報告實作 <code>Serializable</code> 且不宣告 <code>serialVersionUID</code> 欄位的類別。
 <p>
   如果沒有 <code>serialVersionUID</code> 欄位，對該類做出的任何更改都將導致以前序列化的版本不可讀。
 </p>
@@ -15,16 +15,16 @@
       private static final long serialVersionUID = -1446398935944895849L;
   }
 </code></pre>
-當使用 JDK 14 或更高版本的語言級別時，該快速修復還將添加 <code>java.io.Serial</code> 註解。
+當使用 JDK 14 或更高版本的語言級別時，該快速修復還將新增 <code>java.io.Serial</code> 註解。
 <!-- tooltip end -->
 <p>使用以下選項設定檢查：</p>
 <ul>
   <li>
-    列出此檢查不應報告其繼承者的類。
-    這適用於從超類繼承 <code>Serializable</code> 但不用於序列化的類。
+    列出此檢查不應報告其繼承者的類別。
+    這適用於從超類別繼承 <code>Serializable</code> 但不用於序列化的類別。
   </li>
   <li>
-    是否忽略 <code>Serializable</code> 匿名類。
+    是否忽略 <code>Serializable</code> 匿名類別。
   </li>
 </ul>
 </body>

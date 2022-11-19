@@ -6,10 +6,10 @@
   &lt;beans ... xmlns:util="https://www.springframework.org/schema/util"&gt;
     &lt;bean class="MyBean" id="myBean"/&gt;
     &lt;bean class="ErrTypeBean" id="errTypeBean"/&gt;
-    &lt;util:list list-class="java.lang.String"/&gt; // 報告 "類必須為 'java.util.List' 的繼承者"
+    &lt;util:list list-class="java.lang.String"/&gt; // 報告 "類別必須為 'java.util.List' 的繼承者"
     &lt;util:set value-type="MyBean"&gt;
       &lt;ref bean="fooBean"/&gt;
-      &lt;ref bean="errTypeBean"/&gt; // 報告 "無法添加到 'MyBean' 類型的集合中"
+      &lt;ref bean="errTypeBean"/&gt; // 報告 "無法新增到 'MyBean' 類型的集合中"
     &lt;/util:set&gt;
   &lt;/beans&gt;
 </code></pre>
