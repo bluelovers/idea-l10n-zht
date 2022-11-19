@@ -1,6 +1,6 @@
 <html>
 <body>
-報告被宣告為 <code>volatile</code> 的陣列欄位。 此類宣告可能令人困惑，因為存取陣列本身遵循 <code>volatile</code> 欄位的規則，但存取陣列的內容時並非如此。
+報告被宣告為 <code>volatile</code> 的陣列欄位。 此類別宣告可能令人困惑，因為存取陣列本身遵循 <code>volatile</code> 欄位的規則，但存取陣列的內容時並非如此。
 <p><b>範例：</b></p>
 <pre><code>
   class Data {
@@ -8,7 +8,7 @@
   }
 </code></pre>
 <p>
-  如果需要對陣列內容進行此類可變存取，不妨改用 <code>java.util.concurrent.atomic</code> 類：
+  如果需要對陣列內容進行此類別可變存取，不妨改用 <code>java.util.concurrent.atomic</code> 類別：
 </p>
 <pre><code>
   class Data {

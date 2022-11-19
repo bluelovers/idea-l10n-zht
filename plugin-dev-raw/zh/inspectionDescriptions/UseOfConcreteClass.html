@@ -1,9 +1,9 @@
 <html>
 <body>
-報告使用具體類而非接口的情況。
-此類宣告可能代表抽象失敗，並可能使測試更加困難。
+報告使用具體類別而非接口的情況。
+此類別宣告可能代表抽象失敗，並可能使測試更加困難。
 <p>
-此檢查不會報告其類來自系統或第三方庫的宣告。
+此檢查不會報告其類別來自系統或第三方庫的宣告。
 <code>equals()</code> 方法實作中不會報告轉換、instanceof 和局部變數。
 此外，<code>clone()</code> 方法實作中不會報告轉換。
 </p>
@@ -13,20 +13,20 @@
   class EntityImpl implements Entity {}
 
   void processObject(Object obj) {
-    // 警告：具體類的 instanceof
+    // 警告：具體類別的 instanceof
     if (obj instanceof EntityImpl) {
-      // 警告：轉換為具體類，
+      // 警告：轉換為具體類別，
       // 而不是接口
       processEntity((EntityImpl)obj);
     }
   }
-  // 警告：具體類的參數
+  // 警告：具體類別的參數
   void processEntity(EntityImpl obj) {
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  使用<b>忽略抽象類類型</b>選項可以忽略對抽象類的轉換。</p>
+  使用<b>忽略抽象類別類型</b>選項可以忽略對抽象類別的轉換。</p>
 <p>使用後續選項可控制報告問題的上下文。</p>
 </body>
 </html>

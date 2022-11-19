@@ -1,8 +1,8 @@
 <html>
 <body>
-報告覆寫 <code>equals()</code> 但不覆寫 <code>hashCode()</code>（或者相反操作）的類。
+報告覆寫 <code>equals()</code> 但不覆寫 <code>hashCode()</code>（或者相反操作）的類別。
 同時還報告覆寫 <code>equals()</code> 或 <code>hashCode()</code> 的物件宣告。
-<p>這可能會導致在將類添加到 <code>Collection</code> 時產生不良行為</p>
+<p>這可能會導致在將類別新增到 <code>Collection</code> 時產生不良行為</p>
 <p><b>範例：</b></p>
 <pre><code>
   class C1 {
@@ -21,7 +21,7 @@
       override fun hashCode() = 0
   }
 </code></pre>
-<p>該快速修復會為類覆寫 <code>equals()</code> 或 <code>hashCode()</code> 方法並為物件刪除這些方法：</p>
+<p>該快速修復會為類別覆寫 <code>equals()</code> 或 <code>hashCode()</code> 方法並為物件刪除這些方法：</p>
 <pre><code>
    class C1 {
        override fun equals(other: Any?) = true

@@ -45,7 +45,7 @@
 
 <!-- tooltip end -->
 <p>請注意，如果提取到 lambda 表達式的程式碼修改了相同的 <code>Map</code>，對於某些 <code>Map</code>，取代為 <code>computeIfAbsent()</code> 或 <code>merge()</code> 可能無法正常使用。 在預設情況下，如果這段程式碼有副作用，則不會出現警告。 如有必要，啟用<b>建議取代，即使 lambda 可能有副作用</b>選項，以始終顯示警告。</p>
-<p>此外，由於 <code>put()</code> 等舊方法和 <code>computeIfAbsent()</code> 或 <code>merge()</code> 等新方法中對 <code>null</code> 值的不同處理，語意可能會改變，如果將 <code>null</code> 值存儲到給定的 <code>Map</code> 中很重要，您需要考慮這一點。 當值是靜態已知為 null 時，該檢查不會建議進行取代。但對於可 null 性未知的值，仍然建議進行取代。 在這些情況下，我們建議禁止警告並添加說明註釋。
+<p>此外，由於 <code>put()</code> 等舊方法和 <code>computeIfAbsent()</code> 或 <code>merge()</code> 等新方法中對 <code>null</code> 值的不同處理，語意可能會改變，如果將 <code>null</code> 值存儲到給定的 <code>Map</code> 中很重要，您需要考慮這一點。 當值是靜態已知為 null 時，該檢查不會建議進行取代。但對於可 null 性未知的值，仍然建議進行取代。 在這些情況下，我們建議禁止警告並新增說明註釋。
 </p>
 <p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>
 </body>

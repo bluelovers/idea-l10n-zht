@@ -15,7 +15,7 @@ for (let i in a) {
 }
 </code></pre>
 
-<p>建議將整個迴圈取代為 <code>Object.keys()</code> 方法，或添加 <code>hasOwnProperty()</code> 檢查。 套用快速修復後，程式碼如下所示：</p>
+<p>建議將整個迴圈取代為 <code>Object.keys()</code> 方法，或新增 <code>hasOwnProperty()</code> 檢查。 套用快速修復後，程式碼如下所示：</p>
 <pre><code>
 for (let i in a) {
   if (a.hasOwnProperty(i)) {

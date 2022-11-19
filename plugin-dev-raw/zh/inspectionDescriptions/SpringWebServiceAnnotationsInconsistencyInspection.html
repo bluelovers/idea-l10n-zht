@@ -6,7 +6,7 @@
 <pre><code>
   // 1.  @PayloadRoot on non-endpoint classes
   public class HolidayEndpoint {
-	<strong>@PayloadRoot</strong>(namespace = NAMESPACE_URI, localPart = "HolidayRequest") // @Endpoint 類支援 @PayloadRoot
+	<strong>@PayloadRoot</strong>(namespace = NAMESPACE_URI, localPart = "HolidayRequest") // @Endpoint 類別支援 @PayloadRoot
 	public void handleHolidayRequest(@RequestPayload Element holidayRequest) throws Exception {
      ...
   }

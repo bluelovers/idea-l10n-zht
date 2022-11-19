@@ -1,6 +1,6 @@
 <html>
 <body>
-報告 <code>Serializable</code> 和 <code>Externalizable</code> 類中不適合使用 <code>java.io.Serial</code> 註解進行註解的方法和欄位。
+報告 <code>Serializable</code> 和 <code>Externalizable</code> 類別中不適合使用 <code>java.io.Serial</code> 註解進行註解的方法和欄位。
 <p><b>範例：</b></p>
 <pre><code>
 class Test implements Serializable {
@@ -14,7 +14,7 @@ class Test implements Serializable {
 </code></pre>
 <pre><code>
 class Test implements Externalizable {
-  @Serial // 該註解方法不是序列化機制的一部分，因為它在 Externalizable 類內部
+  @Serial // 該註解方法不是序列化機制的一部分，因為它在 Externalizable 類別內部
   private void writeObject(ObjectOutputStream out) throws IOException {
   }
 }

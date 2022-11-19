@@ -2,7 +2,7 @@
 <body>
 <p>報告可轉換為 <code>data object</code> 的 <code>object</code></p>
 <p>如果 <code>object</code> 使用 <code>java.io.Serializable</code> 進行註解，則 <code>data object</code> 會自動生成 <code>toString</code>、<code>equals</code>、<code>hashCode</code> 和 <code>readResolve</code></p>
-<p>主要在兩種情況下，您應該考慮將 <code>object</code> 轉換為 <code>data object</code>。 第一種情況是當自訂 <code>toString</code> 返回類的名稱時。 第二種情況是當 <code>object</code> 實作 <code>java.io.Serializable</code> 時</p>
+<p>主要在兩種情況下，您應該考慮將 <code>object</code> 轉換為 <code>data object</code>。 第一種情況是當自訂 <code>toString</code> 返回類別的名稱時。 第二種情況是當 <code>object</code> 實作 <code>java.io.Serializable</code> 時</p>
 <p><b>範例：</b></p>
 <pre><code>
     class Foo {

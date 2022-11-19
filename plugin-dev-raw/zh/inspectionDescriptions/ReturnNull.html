@@ -3,7 +3,7 @@
 報告返回值為 <code>null</code> 的 <code>return</code> 語句。
 雖然偶爾有用，但此結構可能導致程式碼因更容易出現 <code>NullPointerException</code> 而失敗。
 <p>
-  如果方法設計為返回 <code>null</code>，建議使用 <code>@Nullable</code> 註解來標記 - 此類方法將被此檢查忽略。
+  如果方法設計為返回 <code>null</code>，建議使用 <code>@Nullable</code> 註解來標記 - 此類別方法將被此檢查忽略。
 </p>
 <p><b>範例：</b></p>
 <pre><code>
@@ -32,7 +32,7 @@
 <ul>
   <li>
     是否忽略 <code>private</code> 方法。
-    這也將忽略從匿名類和 lambda 返回的 <code>null</code>。
+    這也將忽略從匿名類別和 lambda 返回的 <code>null</code>。
   </li>
   <li>
     應報告陣列返回的 <code>null</code> 值、集合物件返回的值、普通物件返回的值還是三者的組合。

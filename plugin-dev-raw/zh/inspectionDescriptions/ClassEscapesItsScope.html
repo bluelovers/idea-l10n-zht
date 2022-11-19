@@ -1,21 +1,21 @@
 <html>
 <body>
-當簽名中類的可見性不如成員本身的可見性時，報告類在欄位或方法簽名中的用法。
-雖然是合法的 Java，但此類成員在可見性範圍之外是無用的。
+當簽名中類別的可見性不如成員本身的可見性時，報告類別在欄位或方法簽名中的用法。
+雖然是合法的 Java，但此類別成員在可見性範圍之外是無用的。
 <p>範例：</p>
 <ul>
   <li>返回 <code>private</code> 內部 <code>class</code> 的 <code>public</code> 方法。</li>
   <li>類型為 package-local <code>class</code> 的 <code>protected</code> 欄位。</li>
 </ul>
 <p>
-在 Java 9 中，模組可能會通過將其軟體套件排除在匯出之外來隱藏某些類。
-因此，如果匯出的 API 的簽名包含非匯出類，此類 API 在模組之外就是無用的。
+在 Java 9 中，模組可能會通過將其軟體套件排除在匯出之外來隱藏某些類別。
+因此，如果匯出的 API 的簽名包含非匯出類別，此類別 API 在模組之外就是無用的。
 <!-- tooltip end -->
 <p>設定檢查：</p>
 <ul>
-  <li>使用<b>模組的 API 公開未匯出的類(Java 9+)</b> 選項可以報告公開未匯出類的模組 API。<br>請注意，專案或模組的語言級別為 9 或更高時，該選項才有效。</li>
-  <li>使用<b>公共 API 公開不可存取的類</b>選項可以報告公開不可存取類的公共 API。</li>
-  <li>使用 <b>Package-local API 公開 private 類</b>選項可以以報告公開 <code>private</code> 類的 package-local API。</li>
+  <li>使用<b>模組的 API 公開未匯出的類別(Java 9+)</b> 選項可以報告公開未匯出類別的模組 API。<br>請注意，專案或模組的語言級別為 9 或更高時，該選項才有效。</li>
+  <li>使用<b>公共 API 公開不可存取的類別</b>選項可以報告公開不可存取類別的公共 API。</li>
+  <li>使用 <b>Package-local API 公開 private 類別</b>選項可以以報告公開 <code>private</code> 類別的 package-local API。</li>
 </ul>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
 <body>
-報告在正常物件構造過程中初始化，但其類沒有 <code>readObject</code> 方法的 <code>transient</code> 欄位。
+報告在正常物件構造過程中初始化，但其類別沒有 <code>readObject</code> 方法的 <code>transient</code> 欄位。
 <p>
   <code>transient</code> 欄位未被序列化，因此在反序列化期間，需要在 <code>readObject()</code> 方法中單獨初始化。
 </p>

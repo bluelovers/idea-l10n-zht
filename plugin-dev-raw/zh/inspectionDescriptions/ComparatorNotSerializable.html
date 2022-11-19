@@ -1,11 +1,11 @@
 <html>
 <body>
-報告實作 <code>java.lang.Comparator</code> 但不實現 <code>java.io.Serializable</code> 的類。
+報告實作 <code>java.lang.Comparator</code> 但不實現 <code>java.io.Serializable</code> 的類別。
 <p>
   如果使用不可序列化的比較器來建置 <code>java.util.TreeMap</code> 或 <code>java.util.TreeSet</code> 之類的有序集合，那麼該集合也將不可序列化。 這可能會導致意外且難以診斷的錯誤。
 </p>
 <p>
-  <code>java.lang.Comparator</code> 的子類通常無狀態，因此只需將它們標記為可序列化，即可輕鬆避免此類問題。
+  <code>java.lang.Comparator</code> 的子類通常無狀態，因此只需將它們標記為可序列化，即可輕鬆避免此類別問題。
 </p>
 <p><b>範例：</b></p>
 <pre><code>

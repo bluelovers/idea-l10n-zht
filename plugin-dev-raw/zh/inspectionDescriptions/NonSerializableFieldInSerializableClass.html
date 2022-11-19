@@ -1,8 +1,8 @@
 <html>
 <body>
-報告實作 <code>java.io.Serializable</code> 的類中的不可序列化欄位。 如果物件被序列化，此類欄位將導致執行時異常。
+報告實作 <code>java.io.Serializable</code> 的類別中的不可序列化欄位。 如果物件被序列化，此類別欄位將導致執行時異常。
 <p>
-  不報告被宣告為 <code>transient</code> 或 <code>static</code> 的欄位，也不報告定義了 <code>writeObject</code> 方法的類的欄位。
+  不報告被宣告為 <code>transient</code> 或 <code>static</code> 的欄位，也不報告定義了 <code>writeObject</code> 方法的類別的欄位。
 </p>
 <p>
   此檢查假定 <code>java.util.Collection</code> 和 <code>java.util.Map</code> 類型的欄位為 <code>Serializable</code>，除非宣告它們的類型為非 <code>Serializable</code>。
@@ -12,7 +12,7 @@
   class NonSerializableClass {}
 
   public class SerializableClass implements Serializable {
-      NonSerializableClass clazz; // //警告：可序列化類中存在不可序列化欄位 'clazz'
+      NonSerializableClass clazz; // //警告：可序列化類別中存在不可序列化欄位 'clazz'
       static NonSerializableClass staticClazz; // 無警告
   }
   </code>
@@ -23,14 +23,14 @@
 </p>
 <ul>
   <li>
-    列出此檢查不應報告其繼承者的類。
-    這適用於從超類繼承 <code>Serializable</code> 但不用於序列化的類。
+    列出此檢查不應報告其繼承者的類別。
+    這適用於從超類別繼承 <code>Serializable</code> 但不用於序列化的類別。
   </li>
   <li>
     列出會使檢查忽略註解欄位的註解。
   </li>
   <li>
-    是否忽略使用匿名類初始化的欄位。
+    是否忽略使用匿名類別初始化的欄位。
   </li>
 </ul>
 

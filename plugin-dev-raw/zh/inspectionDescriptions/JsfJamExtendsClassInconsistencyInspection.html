@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>使用未實作所需接口的特定 JSF 註解的報告類：</p>
+<p>使用未實作所需接口的特定 JSF 註解的報告類別：</p>
 
 <ul>
   <li><code>@FacesComponent</code> 必須擴展 <code>&lt;javax/jakarta&gt;.faces.component.FacesComponent</code></li>
@@ -12,15 +12,15 @@
 <p><strong>範例：</strong></p>
 <pre><code>
 
-<strong>@FacesConverter</strong>(value="...")  // 類必須擴展 'javax.faces.convert.Converter'
+<strong>@FacesConverter</strong>(value="...")  // 類別必須擴展 'javax.faces.convert.Converter'
 public class FooConverter {
 }
 
-<strong>@FacesRenderer</strong>(rendererType="..", componentFamily="..")  // 類必須擴展 'javax.faces.render.Renderer'
+<strong>@FacesRenderer</strong>(rendererType="..", componentFamily="..")  // 類別必須擴展 'javax.faces.render.Renderer'
 public class FooConverter {
 }
 
-<strong>@FacesRenderer</strong>(rendererType="..", componentFamily="..")  // 類必須擴展 'javax.faces.validator.Validator'
+<strong>@FacesRenderer</strong>(rendererType="..", componentFamily="..")  // 類別必須擴展 'javax.faces.validator.Validator'
 public class FooValidator {
 }
 
