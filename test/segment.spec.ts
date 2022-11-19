@@ -254,6 +254,10 @@ describe(`should include`, () => {
 
 		[`新增`, `button.add.separator=添加分隔符 (&S)`],
 
+		[`重新導向`, `<option name="在重定向运算符后添加空格" hit="在重定向运算符后添加空格" />`],
+
+		[`合併`, `PhpLanguageFeature.coalesce.operator=从 PHP 7.0 起才允许使用合并运算符`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
