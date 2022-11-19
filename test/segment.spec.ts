@@ -252,6 +252,8 @@ describe(`should include`, () => {
 		[`上劃線`, `ANN.title.length=上划线长度必须与下划线匹配`],
 		[`下劃線`, `ANN.title.length=上划线长度必须与下划线匹配`],
 
+		[`新增`, `button.add.separator=添加分隔符 (&S)`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
