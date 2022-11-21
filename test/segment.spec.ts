@@ -261,6 +261,9 @@ describe(`should include`, () => {
 		[`類型`, `action.TypeHierarchy.Subtypes.text=子类型层次结构`],
 		[`類型`, `action.TypeHierarchy.Supertypes.text=父类型层次结构`],
 
+		[`新建`, `notification.title.server.restarted=正在重新建立到服务器的连接`],
+		[`新建`, `notification.content.server.restarted=服务器 {0} 没有响应。{1} 正在尝试重新建立与其的连接。某些执行结果可能会丢失。`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
