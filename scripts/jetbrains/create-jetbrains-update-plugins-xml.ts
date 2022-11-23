@@ -24,9 +24,13 @@ export default Bluebird.resolve()
 	{
 		const tags = await updatePublishTags();
 
-		const __pluginVersion = getSourceInfoSync().pluginMeta.version;
+		const pluginMeta = getSourceInfoSync().pluginMeta;
+
+		const __pluginVersion = pluginMeta.version;
 
 		const { __plugin_zh_cn_version } = await import('../../lib/const/link-of-zh-cn');
+
+		const pkg = await import(join(__root, 'package.json'));
 
 		const lines: string[] = [];
 
@@ -56,12 +60,16 @@ export default Bluebird.resolve()
     url="${href}"
     version="${version}">
     <idea-version since-build="${since}" />
+    <name>${pluginMeta.name}</name>
+    <description><![CDATA[${pkg.description}]]></description>
   </plugin>
   <plugin
     id="sc.plugin.com.intellij.zh-tw"
     url="${href}"
     version="${version}">
     <idea-version since-build="${since}" />
+    <name>${pluginMeta.name}</name>
+    <description><![CDATA[${pkg.description}]]></description>
   </plugin>`);
 
 			})
