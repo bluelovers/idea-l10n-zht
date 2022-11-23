@@ -63,14 +63,14 @@ export default Bluebird.resolve()
     <name>${pluginMeta.name}</name>
     <description><![CDATA[${pkg.description}]]></description>
   </plugin>
-  <plugin
+  <!--plugin
     id="sc.plugin.com.intellij.zh-tw"
     url="${href}"
     version="${version}">
     <idea-version since-build="${since}" />
     <name>${pluginMeta.name}</name>
     <description><![CDATA[${pkg.description}]]></description>
-  </plugin>`);
+  </plugin-->`);
 
 			})
 
