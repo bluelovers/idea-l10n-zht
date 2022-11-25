@@ -97,6 +97,8 @@ describe(`segment`, () => {
 		[`案源`, `search.scope.project.source.files=项目源文件`],
 		[`案源`, `search.scope.project.non.source.files=项目非源文件`],
 
+		[`重命名`, `rename.react.hook.variable.title=重命名状态变量`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
