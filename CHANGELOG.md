@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-11-25)
+
+
+### BREAKING CHANGES
+
+* remove `sc.plugin.com.intellij.zh-tw`
+
+
+
+### ✨　Features
+
+* remove `sc.plugin.com.intellij.zh-tw` ([44906e4](https://github.com/bluelovers/idea-l10n-zht/commit/44906e4d516c6d922887e41e6158e77c165cfa6f))
+* add `name` , `description` in `updatePlugin.xml` ([bfdbcd0](https://github.com/bluelovers/idea-l10n-zht/commit/bfdbcd072833a61b0ed506d7f73277950bef8843))
+
+
+### 📦　Code Refactoring
+
+* **dict:** { 重命名 => 重新命名 } ([16f2d9f](https://github.com/bluelovers/idea-l10n-zht/commit/16f2d9f6390691b72a81b1a42a041ca2f1c136dc))
+
+
+### 🛠　Build System
+
+* **cache:** update version-map ([ddc85f8](https://github.com/bluelovers/idea-l10n-zht/commit/ddc85f8ec6775a11eb39bd96ea3910353079455e))
+* **cache:** update version-map ([dcfd5ea](https://github.com/bluelovers/idea-l10n-zht/commit/dcfd5ea4387523529680fb828ae444ace8117050))
+* **cache:** update version-map ([d75de2c](https://github.com/bluelovers/idea-l10n-zht/commit/d75de2c35f1bfec2cf6f6e300d177bbb09d1aaea))
+* **release:** update build ( 223.143 ) ([94be5b7](https://github.com/bluelovers/idea-l10n-zht/commit/94be5b70c092d9a55489c072e9a78651b7bbce18))
+* **release:** update dev build files ( 223.143 ) ([776cfc6](https://github.com/bluelovers/idea-l10n-zht/commit/776cfc68539d48550c47d9b232b70d66be8bfbf4))
+* **test:** update snapshots ( 223.143 ) ([e99b614](https://github.com/bluelovers/idea-l10n-zht/commit/e99b614467341df33cdb4c5e9d5d47794a275077))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-11-21)
 
 
