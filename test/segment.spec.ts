@@ -266,6 +266,12 @@ describe(`should include`, () => {
 		[`新建`, `notification.title.server.restarted=正在重新建立到服务器的连接`],
 		[`新建`, `notification.content.server.restarted=服务器 {0} 没有响应。{1} 正在尝试重新建立与其的连接。某些执行结果可能会丢失。`],
 
+		[`函式`, `array.constructor.too.many.arguments=构造函数数组(Int)的实参过多`],
+
+		[`呼叫`, `equals.called.on.array.display.name=在数组上调用了 'equals()'`],
+		[`呼叫`, `extension.point.analyzer.reason.call.not.loop.value=调用不是循环的迭代值`],
+		[`呼叫`, `js.convert.parameters.to.object.non.call.usage.will.not.be.updated=不更新非调用用法`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
