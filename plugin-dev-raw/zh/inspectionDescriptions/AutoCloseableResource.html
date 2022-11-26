@@ -24,23 +24,23 @@
     這些流包含需要關閉的關聯 I/O 資源。
   </li>
   <li>
-    列出在調用時應被忽略的返回 <code>AutoCloseable</code> 的方法。
+    列出在呼叫時應被忽略的返回 <code>AutoCloseable</code> 的方法。
   </li>
   <li>
-    如果為方法調用的結果時是否忽略 <code>AutoCloseable</code>。
+    如果為方法呼叫的結果時是否忽略 <code>AutoCloseable</code>。
     啟用此選項時，工廠方法的結果也將被忽略。
   </li>
   <li>
-    當 <code>AutoCloseable</code> 實例作為方法調用實參傳遞時，該檢查是否應報告。
-    如果啟用此選項，該檢查將假定所調用方法中的資源已關閉。
-    不會忽略名稱中含有 'close' 的 <code>finally</code> 塊和 <code>AutoCloseable</code> 實參中的方法調用。
+    當 <code>AutoCloseable</code> 實例作為方法呼叫實參傳遞時，該檢查是否應報告。
+    如果啟用此選項，該檢查將假定所呼叫方法中的資源已關閉。
+    不會忽略名稱中含有 'close' 的 <code>finally</code> 塊和 <code>AutoCloseable</code> 實參中的方法呼叫。
   </li>
   <li>
-    是否忽略對資源類別構造函數的方法引用。
+    是否忽略對資源類別構造函式的方法引用。
   </li>
   <li>
     是否忽略返回資源且名稱以 'get' 開頭的方法。
-    這可能會減少誤報，因為大多數 getter 不轉移資源的所有權，並且其調用點不負責關閉資源。
+    這可能會減少誤報，因為大多數 getter 不轉移資源的所有權，並且其呼叫點不負責關閉資源。
   </li>
 </ul>
 </body>

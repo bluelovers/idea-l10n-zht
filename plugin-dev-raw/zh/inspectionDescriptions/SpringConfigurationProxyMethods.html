@@ -6,11 +6,11 @@ Spring Framework 5.2 引入了對 @Configuration 類別處理的最佳化，可�
 <br><br>
 如果您禁用
 <pre><code>proxyBeanMethods</code></pre>
-將不再創建代理實例，調用該方法可以重新啟動（每次返回一個新實例）。
+將不再創建代理實例，呼叫該方法可以重新啟動（每次返回一個新實例）。
 因此，您無法保證您確實在上下文中注入相應的 Bean。
 <!-- tooltip end -->
 <br><br>
-<strong>不正確的 Bean 方法調用範例</strong>：<br><br>
+<strong>不正確的 Bean 方法呼叫範例</strong>：<br><br>
 <pre>
 @Configuration(proxyBeanMethods = false)
 class TestConfiguration {
@@ -21,7 +21,7 @@ class TestConfiguration {
 
   @Bean
   public SecondBean secondBean() {
-    return new SecondBean(firstBean()); // -> <strong>不正確的調用</strong>
+    return new SecondBean(firstBean()); // -> <strong>不正確的呼叫</strong>
   }
 }
 </pre>
@@ -48,7 +48,7 @@ class TestConfiguration {
 <br>
 
 <hr>
-<strong>此外，該檢查還會檢查沒有 @Configuration 構造型的類別中的 @Bean 方法調用（在 "Bean lite mode" 下）</strong>：<br><br>
+<strong>此外，該檢查還會檢查沒有 @Configuration 構造型的類別中的 @Bean 方法呼叫（在 "Bean lite mode" 下）</strong>：<br><br>
 <pre>
 @Component
 class TestComponent {
@@ -59,7 +59,7 @@ class TestComponent {
 
   @Bean
   public SecondBean secondBean() {
-    return new SecondBean(firstBean()); // -> <strong>不正確的調用</strong>
+    return new SecondBean(firstBean()); // -> <strong>不正確的呼叫</strong>
   }
 }
 </pre>

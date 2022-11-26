@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>報告由於某些 ORM 原因而可能沒有調用的幾種方法。</p>
+<p>報告由於某些 ORM 原因而可能沒有呼叫的幾種方法。</p>
 <p><b>範例：</b></p>
 <pre style="font-family: monospace">
 class Choice:
@@ -9,6 +9,6 @@ class Choice:
 
 choice_set = Question.objects.get(id=1).choice_set.remove()
 </pre>
-<p>如果外鍵有 <code>null=False</code>，則無法調用 <code>remove</code> 函數。</p>
+<p>如果外鍵有 <code>null=False</code>，則無法呼叫 <code>remove</code> 函式。</p>
 </body>
 </html>

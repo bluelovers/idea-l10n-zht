@@ -1,6 +1,6 @@
 <html>
 <body>
-報告可以用預定義的 <code>StandardCharsets.UTF_8</code> 程式碼取代其中常數字符集 <code>String</code> 文字（例如，<code>"UTF-8"</code>）的方法和構造函數。
+報告可以用預定義的 <code>StandardCharsets.UTF_8</code> 程式碼取代其中常數字符集 <code>String</code> 文字（例如，<code>"UTF-8"</code>）的方法和構造函式。
 <p>修復後可以加快程式碼的速度，因為字符集尋找變得不必要。
   此外，您可能也不需要捕捉 <code>UnsupportedEncodingException</code>。 在這種情況下，catch 塊將被自動刪除。</p>
 <p>範例：</p>

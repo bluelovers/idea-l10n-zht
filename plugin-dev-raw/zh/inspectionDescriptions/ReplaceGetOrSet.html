@@ -1,15 +1,15 @@
 <html>
 <body>
-報告對可通過索引運算符 <code>[]</code> 取代的 <code>get</code> 或 <code>set</code> 函數的顯式調用。
+報告對可通過索引運算符 <code>[]</code> 取代的 <code>get</code> 或 <code>set</code> 函式的顯式呼叫。
 <p>
     Kotlin 允許對類型的預定義運算符集進行自訂實作。
-    要多載運算符，您可以使用 <code>operator</code> 修飾符標記相應的函數：
+    要多載運算符，您可以使用 <code>operator</code> 修飾符標記相應的函式：
     <pre><code>
   operator fun get(index: Int) {}
   operator fun set(index: Int, value: Int) {}
     </code></pre>
 
-以上函數對應於索引運算符。
+以上函式對應於索引運算符。
 
 <p><b>範例：</b></p>
 <pre><code>  class Test {

@@ -1,11 +1,11 @@
 <html>
 <body>
-如果 <code>Java Stream API</code> 可用，則報告偽函數程式碼的用法。
+如果 <code>Java Stream API</code> 可用，則報告偽函式程式碼的用法。
 <p>雖然 <code>guava Iterable API</code> 提供類似於 <code>Java Streams API</code> 的功能，但它略有不同，可能會缺少某些功能。
   特別是，<code>IntStream</code> 等基元專門化的流變體比一般變體的性能更好。</p>
 <p><b>範例：</b></p>
 <pre><code>
-List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTransformFunction);//警告：偽函數樣式程式碼
+List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTransformFunction);//警告：偽函式樣式程式碼
 </code></pre>
 <p>在套用快速修復後：</p>
 <pre><code>List&lt;String&gt; transformedIterable = someList.stream().map(someTransformFunction).collect(Collectors.toList());</code></pre>
@@ -14,7 +14,7 @@ List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTrans
 </p>
 <!-- tooltip end -->
 <p>
-  使用<b>轉換為 'Stream' API 的 static 方法調用</b>選項，設定應轉換為 <code>stream</code> API 的 static 方法調用。
+  使用<b>轉換為 'Stream' API 的 static 方法呼叫</b>選項，設定應轉換為 <code>stream</code> API 的 static 方法呼叫。
 </p>
 
 <p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。</p>

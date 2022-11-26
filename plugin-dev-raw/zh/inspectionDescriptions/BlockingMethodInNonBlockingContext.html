@@ -1,12 +1,12 @@
 <html>
 <body>
-報告不應阻塞執行緒的程式碼段中的執行緒阻塞方法調用。
+報告不應阻塞執行緒的程式碼段中的執行緒阻塞方法呼叫。
 
 <p><b>範例（專案 Reactor）：</b></p>
 <pre><code>
 Flux.just("1").flatMap(f -&gt; {
     Flux&lt;String&gt; just = loadUsersFromDatabase();
-    just.toIterable(); // 錯誤：在非阻塞範圍內調用阻塞運算符
+    just.toIterable(); // 錯誤：在非阻塞範圍內呼叫阻塞運算符
     return just;
   }
 );
@@ -19,7 +19,7 @@ Flux.just("1").flatMap(f -&gt; {
 <p><b>範例（Kotlin 協同程序）：</b></p>
 <pre><code>
 suspend fun exampleFun() {
-    Thread.sleep(100); // 錯誤：在掛起函數中調用阻塞方法
+    Thread.sleep(100); // 錯誤：在掛起函式中呼叫阻塞方法
 }
 </code></pre>
 

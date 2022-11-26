@@ -7,7 +7,7 @@ WHEN C1 IS NULL THEN 1
 ELSE 0
 END
 FROM dual;</code></pre>
-<p>您可以通過用 IF 取代 CASE 結構來縮短程式碼。 為此，請套用 <b> 取代為 'IF' 調用 </b> 意圖操作。 範例程式碼如下所示：</p>
+<p>您可以通過用 IF 取代 CASE 結構來縮短程式碼。 為此，請套用 <b> 取代為 'IF' 呼叫 </b> 意圖操作。 範例程式碼如下所示：</p>
 <pre><code>SELECT IF(C1 IS NULL, 1, 0)
 FROM dual;</code></pre>
 <p>要將 IF 恢復為 CASE，請點擊 IF 並套用<b>取代為 CASE 表達式</b> 意圖操作。</p>

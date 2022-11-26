@@ -6,7 +6,7 @@
   <li>不止一種 'concrete' 類型的 Bean</li>
   <li>沒有 'concrete' 類型的 Bean</li>
   <li>沒有帶限定符的 Bean</li>
-  <li><code>@Autowired</code> 在 Spring Bean 構造函數上的用法不正確。</li>
+  <li><code>@Autowired</code> 在 Spring Bean 構造函式上的用法不正確。</li>
   <li>在無效 Spring Bean 的類別中注入或自動裝配的欄位/方法</li>
 </ul>
 
@@ -29,14 +29,14 @@ public class MyComponent {
 @Component
 public class MyComponent {
 	@Autowired
-	public MyComponent(BarBean bean) {...} // 報告 '只允許一個 @Autowired 構造函數'
+	public MyComponent(BarBean bean) {...} // 報告 '只允許一個 @Autowired 構造函式'
 
 	@Autowired
-	public MyComponent(FooBean bean) {...} // 報告 '只允許一個 @Autowired 構造函數'
+	public MyComponent(FooBean bean) {...} // 報告 '只允許一個 @Autowired 構造函式'
 }
 
 @Component
-public class MyFactory {  // 報告 '沒有符合的 @Autowired 構造函數'
+public class MyFactory {  // 報告 '沒有符合的 @Autowired 構造函式'
 	public MyFactory(String str) {...}
 	public MyFactory(int count) {...}
 }

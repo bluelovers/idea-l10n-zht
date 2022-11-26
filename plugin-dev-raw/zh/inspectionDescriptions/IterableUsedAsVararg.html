@@ -1,11 +1,11 @@
 <html>
 <body>
-報告 vararg 方法調用中 <code>Collection</code> 或 <code>Iterable</code> 的可疑用法。
+報告 vararg 方法呼叫中 <code>Collection</code> 或 <code>Iterable</code> 的可疑用法。
 <p>例如，在以下方法中：</p>
 <pre><code>
   &lt;T&gt; boolean contains(T needle, T... haystack) {...}
 </code></pre>
-<p>像下面這樣的調用</p>
+<p>像下面這樣的呼叫</p>
 <pre><code>
   if(contains("item", listOfStrings)) {...}
 </code></pre>

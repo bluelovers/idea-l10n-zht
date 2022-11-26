@@ -1,6 +1,6 @@
 <html>
 <body>
-報告對發生在 <code>synchronized</code> 塊或方法中的<code>java.lang.Thread.sleep()</code> 方法的調用。
+報告對發生在 <code>synchronized</code> 塊或方法中的<code>java.lang.Thread.sleep()</code> 方法的呼叫。
 <p>
   <code>synchronized</code> 塊中的 <code>sleep()</code> 可能導致性能下降，可擴展性變差，甚至可能導致死鎖。 不妨改用 <code>wait()</code>，因為它將釋放持有的鎖定。
 </p>

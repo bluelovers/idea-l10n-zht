@@ -16,14 +16,14 @@
 
 <html>
 <body>
-報告直接調用 <code>panic()</code> 或 <code>recover()</code> 的 <code>defer</code> 和 <code>go</code> 語句。
+報告直接呼叫 <code>panic()</code> 或 <code>recover()</code> 的 <code>defer</code> 和 <code>go</code> 語句。
 <p>此類別語句很少有用，可能意味著誤用了 <code>panic()</code> 和 <code>recover()</code> 機制。
   應特別注意以下事項：</p>
 <ul>
   <li><code>go panic()</code>：一個新啟動的 goroutine 會立即 panic。</li>
-  <li><code>defer panic()</code>：帶有這個語句的函數在退出時總是會 panic。</li>
+  <li><code>defer panic()</code>：帶有這個語句的函式在退出時總是會 panic。</li>
   <li><code>go recovery()</code>：沒有效果，因為新啟動的 goroutine 不能 panic。</li>
-  <li><code>defer recovery()</code>：帶有這個語句的函數將默默地停止 panic。 這種用法可能有效，但一種慣用的方法是檢查 <code>recover()</code> 返回的值：
+  <li><code>defer recovery()</code>：帶有這個語句的函式將默默地停止 panic。 這種用法可能有效，但一種慣用的方法是檢查 <code>recover()</code> 返回的值：
     <pre><code>defer func() {
   if r := recover(); r != nil {
     fmt.Println("Recovered from: ", r)

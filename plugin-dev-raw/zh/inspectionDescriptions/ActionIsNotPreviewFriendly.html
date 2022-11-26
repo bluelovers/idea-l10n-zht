@@ -2,7 +2,7 @@
 <body>
 報告 <code>LocalQuickFix</code> 和 <code>IntentionAction</code> 實作中阻止意圖預覽操作正常執行的欄位。 此外，在已知類型是安全的欄位上報告了過多的 <code>@SafeFieldForPreview</code> 註解。
 <p>
-  意圖預覽是 IntelliJ 平台的一項功能，可以顯示在套用快速修復或意圖操作後對當前檔案所做的更改。 為了在快速修復中實作這一功能，需要使用指向當前檔案的非物理副本的自訂 <code>ProblemDescriptor</code> 來調用 <code>LocalQuickFix.generatePreview()</code>。 在意圖操作中，使用當前檔案的非物理副本和虛部編輯器調用 <code>IntentionAction.generatePreview()</code>
+  意圖預覽是 IntelliJ 平台的一項功能，可以顯示在套用快速修復或意圖操作後對當前檔案所做的更改。 為了在快速修復中實作這一功能，需要使用指向當前檔案的非物理副本的自訂 <code>ProblemDescriptor</code> 來呼叫 <code>LocalQuickFix.generatePreview()</code>。 在意圖操作中，使用當前檔案的非物理副本和虛部編輯器呼叫 <code>IntentionAction.generatePreview()</code>
   通常，這些方法只委託給 <code>LocalQuickFix.applyFix()</code> 或 <code>IntentionAction.invoke()</code>。
   但是，某些快速修復可能會直接或間接引用物理元素並將其用於寫入。 由於快速修復試圖更新的是物理 PSI 而不是非物理 PSI，預覽不起作用。
   為避免這種情況，<code>generatePreview()</code> 的預設實作僅在快速修復或意圖操作類別的所有實例欄位均具有安全類型（基元、字串等）的情況下進行委託。

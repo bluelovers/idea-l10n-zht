@@ -1,7 +1,7 @@
 <html>
 <body>
 報告不代理 <code>hashCode()</code>、<code>equals()</code> 和 <code>toString()</code> 等標準 <code>Object</code> 方法的 <code>InvocationHandler</code> 的實作。
-<p>未能處理這些方法可能會在代理實例上調用它們時導致意外問題。</p>
+<p>未能處理這些方法可能會在代理實例上呼叫它們時導致意外問題。</p>
 <p><b>範例：</b></p>
 <pre><code>
   InvocationHandler myHandler = (proxy, method, params) -&gt; {
@@ -15,7 +15,7 @@
 </code></pre>
 <p>
   此程式碼段的宗旨是僅代理 <code>Runnable.run()</code> 方法。
-  但是，也會代理對 <code>hashCode()</code> 等任何 <code>Object</code> 方法的調用。
+  但是，也會代理對 <code>hashCode()</code> 等任何 <code>Object</code> 方法的呼叫。
   這可能導致 <code>NullPointerException</code> 等問題，例如在將 <code>myProxy</code> 新增到 <code>HashSet</code> 時。
 </p>
 <!-- tooltip end -->

@@ -1,7 +1,7 @@
 <html>
 <body>
-報告不以調用 "super" 構造函數或同一類的另一個構造函數開頭的構造函數。
-<p>可以認為是此類別構造函數隱式地從調用 <code>super()</code> 開始。 某些編碼標準傾向於顯式地調用 <code>super()</code>。</p>
+報告不以呼叫 "super" 構造函式或同一類的另一個構造函式開頭的構造函式。
+<p>可以認為是此類別構造函式隱式地從呼叫 <code>super()</code> 開始。 某些編碼標準傾向於顯式地呼叫 <code>super()</code>。</p>
 <p><b>範例：</b></p>
 <pre><code>
   class Foo {
@@ -27,7 +27,7 @@
   }
 
   class Bar extends Foo {
-    Bar() {} // 對 'super()' 的隱式調用
+    Bar() {} // 對 'super()' 的隱式呼叫
   }
 </code></pre>
 </body>

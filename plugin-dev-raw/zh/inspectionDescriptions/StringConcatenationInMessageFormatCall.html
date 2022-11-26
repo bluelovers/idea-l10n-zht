@@ -1,6 +1,6 @@
 <html>
 <body>
-報告用作對 <code>MessageFormat.format()</code> 的調用實參的非常數字串串聯。
+報告用作對 <code>MessageFormat.format()</code> 的呼叫實參的非常數字串串聯。
 <p>
   雖然偶爾是有意為之，但這通常是誤用格式化方法，串聯的字串中包含 <code>{</code> 等特殊字符時，甚至可能導致異常。
 </p>
@@ -15,7 +15,7 @@
 </code></pre>
 <p>
   這裡的 <code>userName</code> 解讀為格式字串的一部分，這可能導致 <code>IllegalArgumentException</code>（例如，如果 <code>userName</code> 為 <code>"{"</code>）。
-  此調用或許應當取代為 <code>MessageFormat.format("Hello, {0}! Your balance is {1}.", userName, balance)</code>。
+  此呼叫或許應當取代為 <code>MessageFormat.format("Hello, {0}! Your balance is {1}.", userName, balance)</code>。
 </p>
 <!-- tooltip end -->
 

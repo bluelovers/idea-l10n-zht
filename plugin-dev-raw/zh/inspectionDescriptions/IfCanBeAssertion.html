@@ -3,7 +3,7 @@
 報告僅從 <code>then</code> 分支拋出 <code>java.lang.Throwable</code> 而沒有 <code>else</code> 分支的 <code>if</code> 語句。 此類別語句可以轉換為更緊湊的 <code>assert</code> 語句。
 <p>
 檢查還報告 Guava 的 <code>Preconditions.checkNotNull()</code>。
-  它們可以取代為不需要庫 <code>Objects.requireNonNull()</code> 調用。</p>
+  它們可以取代為不需要庫 <code>Objects.requireNonNull()</code> 呼叫。</p>
 <p>範例：</p>
 <pre><code>
   <b>if</b> (x == 2) <b>throw new</b> RuntimeException("fail");

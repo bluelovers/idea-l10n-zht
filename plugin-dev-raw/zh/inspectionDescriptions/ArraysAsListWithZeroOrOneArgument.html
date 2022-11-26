@@ -1,10 +1,10 @@
 <html>
 <body>
-報告對最多包含一個實參的 <code>Arrays.asList()</code> 的調用。
+報告對最多包含一個實參的 <code>Arrays.asList()</code> 的呼叫。
 <p>
-  在 JDK 9 及更高版本中，此類別調用可以取代為 <code>Collections.singletonList()</code>、<code>Collections.emptyList()</code> 或 <code>List.of()</code>，從而節省記憶體。</p>
+  在 JDK 9 及更高版本中，此類別呼叫可以取代為 <code>Collections.singletonList()</code>、<code>Collections.emptyList()</code> 或 <code>List.of()</code>，從而節省記憶體。</p>
 <p>特別是，無實參的 <code>Collections.emptyList()</code> 和 <code>List.of()</code> 總是返回共享實例，而無實參的 <code>Arrays.asList()</code> 每次調用時都會創建一個新物件。</p>
-<p>注意：<code>Collections.singletonList()</code> 和 <code>List.of()</code> 返回的列表不可變，而列表返回的 <code>Arrays.asList()</code> 允許調用 <code>set()</code> 方法。
+<p>注意：<code>Collections.singletonList()</code> 和 <code>List.of()</code> 返回的列表不可變，而列表返回的 <code>Arrays.asList()</code> 允許呼叫 <code>set()</code> 方法。
 這在極少數情況下可能會破壞程式碼。</p>
 <p><b>範例：</b></p>
 <pre><code>

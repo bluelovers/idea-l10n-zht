@@ -1,8 +1,8 @@
 <html>
 <body>
-報告非 <code>public</code> 類別中的所有 <code>public</code> 構造函數。
-<p>在存取級別較低的類別中，通常沒有理由創建 <code>public</code> 構造函數。
-  但請注意，此檢查會改變某些反射調用的行為。 特別是，<code>Class.getConstructor()</code> 將無法找到更新的構造函數（應改為使用 <code>Class.getDeclaredConstructor()</code>）。 如果您的程式碼或某些已使用的框架的程式碼通過 <code>getConstructor()</code> 依賴於構造函數的可存取性，請不要使用該檢查。
+報告非 <code>public</code> 類別中的所有 <code>public</code> 構造函式。
+<p>在存取級別較低的類別中，通常沒有理由創建 <code>public</code> 構造函式。
+  但請注意，此檢查會改變某些反射呼叫的行為。 特別是，<code>Class.getConstructor()</code> 將無法找到更新的構造函式（應改為使用 <code>Class.getDeclaredConstructor()</code>）。 如果您的程式碼或某些已使用的框架的程式碼通過 <code>getConstructor()</code> 依賴於構造函式的可存取性，請不要使用該檢查。
 </p>
 <p><b>範例：</b></p>
 <pre><code>

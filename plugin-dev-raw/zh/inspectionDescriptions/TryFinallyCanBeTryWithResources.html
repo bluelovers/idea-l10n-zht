@@ -11,7 +11,7 @@
     printStream.close();
   }
 </code></pre>
-<p>通過快速修復將原因傳遞給構造函數：</p>
+<p>通過快速修復將原因傳遞給構造函式：</p>
 <pre><code>
   try (PrintStream printStream = new PrintStream(fileName)) {
     printStream.print(true);

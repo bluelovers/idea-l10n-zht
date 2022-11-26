@@ -2,7 +2,7 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">一個 PHP 函數的 PHPDoc 註釋的內建模板。 它包含一個程式碼片段，可以在 <b>#parse</b> 指令的幫助下將其包含在檔案模板（<b>Templates</b> 標籤）中。<br>
+    <td colspan="3"><font face="verdana" size="-1">一個 PHP 函式的 PHPDoc 註釋的內建模板。 它包含一個程式碼片段，可以在 <b>#parse</b> 指令的幫助下將其包含在檔案模板（<b>Templates</b> 標籤）中。<br>
       模板是可編輯的。 除了靜態文本、程式碼和註釋外，您還可以使用預定義變數，這些變數將像巨集一樣被擴展為相應值。</font><br>
     </td>
   </tr>
@@ -15,12 +15,12 @@
     <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">函數名稱。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">函式名稱。</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${TYPE_HINT}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">函數返回值的類型提示。 如果沒有推斷出返回類型，則評估為 'void'。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">函式返回值的類型提示。 如果沒有推斷出返回類型，則評估為 'void'。</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_DOC}</b></font></nobr></td>
@@ -45,7 +45,7 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${STATIC}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">如果函數/方法是靜態的，則取值為 'static'，否則為空字串。 例如：
+    <td width="100%" valign="top"><font face="verdana" size="-1">如果函式/方法是靜態的，則取值為 'static'，否則為空字串。 例如：
     <pre>
       #if (${STATIC} == "static") * @static
       #end

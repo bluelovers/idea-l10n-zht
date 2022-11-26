@@ -1,14 +1,14 @@
 <html>
 <body>
-報告在迴圈內發生的對 <code>java.lang.Thread.sleep()</code> 的調用。
-<p>此類別調用表示“忙等待”。 忙等待通常效率低下，並且可能導致意外死鎖，因為忙等待執行緒不會釋放鎖定的資源。</p>
+報告在迴圈內發生的對 <code>java.lang.Thread.sleep()</code> 的呼叫。
+<p>此類別呼叫表示“忙等待”。 忙等待通常效率低下，並且可能導致意外死鎖，因為忙等待執行緒不會釋放鎖定的資源。</p>
 <p><b>範例：</b></p>
 <pre><code>
   class X {
      volatile int x;
      public void waitX() throws Exception {
       while (x &gt; 0) {
-        Thread.sleep(10);// 警告：在迴圈中調用 'Thread.sleep()'，可能處於忙等待
+        Thread.sleep(10);// 警告：在迴圈中呼叫 'Thread.sleep()'，可能處於忙等待
       }
     }
   }

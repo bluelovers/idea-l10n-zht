@@ -2,15 +2,15 @@
 <body>
 報告無法由標準的 JUnit 測試執行程序建置的 JUnit 測試類別。
 <p>
-  JUnit 4 測試類別需要為 <code>public</code> 並包含一個 <code>public</code> 無實參構造函數或完全不包含構造函數（隱式的預設構造函數），且沒有其他 <code>public</code> 構造函數。
-  JUnit 3 測試類別需要為 <code>public</code>，並且需要包含一個 <code>public</code> 無實參構造函數
-或是帶有單個 <code>String</code> 類型參數的 <code>public</code> 構造函數，以調用符合的 super 構造函數。
+  JUnit 4 測試類別需要為 <code>public</code> 並包含一個 <code>public</code> 無實參構造函式或完全不包含構造函式（隱式的預設構造函式），且沒有其他 <code>public</code> 構造函式。
+  JUnit 3 測試類別需要為 <code>public</code>，並且需要包含一個 <code>public</code> 無實參構造函式
+或是帶有單個 <code>String</code> 類型參數的 <code>public</code> 構造函式，以呼叫符合的 super 構造函式。
   否則，測試類別無法由標準的 JUnit 測試執行程序執行。
 <p><b>範例：</b></p>
 <pre><code>
 public class MyTest {
 
-  private MyTest() {} // no-arg 構造函數為 private
+  private MyTest() {} // no-arg 構造函式為 private
 
   @Test
   public void testSomething() {

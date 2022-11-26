@@ -1,25 +1,25 @@
 <html>
 <body>
-報告對從 PHP 8.1 開始棄用的標準 PHP 庫函數的調用。
+報告對從 PHP 8.1 開始棄用的標準 PHP 庫函數的呼叫。
 <!-- tooltip end -->
 <p>
-  報告以下調用：
+  報告以下呼叫：
 </p>
 <ul>
   <li>
-    將物件作為實參的 <code>key()</code>、<code>current()</code>、<code>next()</code>、<code>prev()</code> 和 <code>reset( )</code> 調用。
+    將物件作為實參的 <code>key()</code>、<code>current()</code>、<code>next()</code>、<code>prev()</code> 和 <code>reset( )</code> 呼叫。
   </li>
   <li>
-    不包含實參的 <code>mb_check_encoding()</code> 調用。
+    不包含實參的 <code>mb_check_encoding()</code> 呼叫。
   </li>
   <li>
-    不包含實參的 <code>get_class()</code>、<code>get_parent_class()</code> 和 <code>get_Called_class()</code> 調用。
+    不包含實參的 <code>get_class()</code>、<code>get_parent_class()</code> 和 <code>get_Called_class()</code> 呼叫。
   </li>
   <li>
-    將布林值作為 <code>$value</code> 實參傳遞的 <code>IntlCalendar::roll()</code> 調用。
+    將布林值作為 <code>$value</code> 實參傳遞的 <code>IntlCalendar::roll()</code> 呼叫。
   </li>
   <li>
-    包含非字串實參的 <code>ctype_*()</code> 調用。
+    包含非字串實參的 <code>ctype_*()</code> 呼叫。
   </li>
 </ul>
 <p>

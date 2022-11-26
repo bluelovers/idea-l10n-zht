@@ -3,9 +3,9 @@
 <p>
   安全字串為：
 <ul>
-  <li>標記為 <code>@Untainted</code> 的方法調用</li>
-  <li>未調用非安全方法的局部變數或方法參數</li>
-  <li>標記為 <code>@Untainted</code> 且沒有分配非安全方法調用的欄位、局部變數或參數</li>
+  <li>標記為 <code>@Untainted</code> 的方法呼叫</li>
+  <li>未呼叫非安全方法的局部變數或方法參數</li>
+  <li>標記為 <code>@Untainted</code> 且沒有分配非安全方法呼叫的欄位、局部變數或參數</li>
 </ul>
 <p>
 範例：
@@ -39,7 +39,7 @@
 </code>
 </pre>
 <p>
-這裡有一條警告，因為 <code>s1</code> 在 <code>foo</code> 調用結果賦值後具有未知狀態。
+這裡有一條警告，因為 <code>s1</code> 在 <code>foo</code> 呼叫結果賦值後具有未知狀態。
 <!-- tooltip end -->
 <p><small>2021.2 最新變化</small></p>
 </body></html>

@@ -1,9 +1,9 @@
 <html>
 <body>
-報告沒有在迴圈中調用的 <code>java.util.concurrent.locks.Condition.await()</code>。
+報告沒有在迴圈中呼叫的 <code>java.util.concurrent.locks.Condition.await()</code>。
 <p>
   <code>await()</code> 和相關方法通常用於掛起執行緒，直到某個條件變為 true 為止。
-  執行緒可能出於不同原因而被喚醒，因此應在 <code>await()</code> 調用返回後檢查條件。
+  執行緒可能出於不同原因而被喚醒，因此應在 <code>await()</code> 呼叫返回後檢查條件。
   使用迴圈很容易做到這一點。
 </p>
 <p><b>範例：</b></p>

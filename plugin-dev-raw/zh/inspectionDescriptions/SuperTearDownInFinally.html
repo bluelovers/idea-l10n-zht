@@ -1,7 +1,7 @@
 <html>
 <body>
-報告未在 <code>finally</code> 塊內執行的 JUnit 3 的 <code>super.tearDown()</code> 方法的調用。
-如果 <code>tearDown()</code> 方法中還有可能會在 <code>super.tearDown()</code> 調用之前拋出異常的其他方法調用，這可能會導致不一致和泄漏。
+報告未在 <code>finally</code> 塊內執行的 JUnit 3 的 <code>super.tearDown()</code> 方法的呼叫。
+如果 <code>tearDown()</code> 方法中還有可能會在 <code>super.tearDown()</code> 呼叫之前拋出異常的其他方法呼叫，這可能會導致不一致和泄漏。
 <p><b>範例：</b></p>
 <pre><code>
   <b>public class</b> AnotherTest <b>extends</b> CompanyTestCase {

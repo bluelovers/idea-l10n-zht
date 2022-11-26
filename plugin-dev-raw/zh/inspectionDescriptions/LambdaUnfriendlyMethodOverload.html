@@ -1,7 +1,7 @@
 <html>
 <body>
-報告採用的函數接口存在抽象方法簽名衝突的多載方法。
-<p>此類別多載會引入歧義，並要求調用方將 lambda 轉換為特定類型或顯式指定 lambda 參數類型。
+報告採用的函式接口存在抽象方法簽名衝突的多載方法。
+<p>此類別多載會引入歧義，並要求呼叫方將 lambda 轉換為特定類型或顯式指定 lambda 參數類型。
   最好為多載方法賦予不同的名稱，以消除歧義。</p>
 <p>範例：</p>
 <pre><code>
@@ -11,8 +11,8 @@
   }
 </code></pre>
 <p>
-這裡的 <code>Supplier</code> 和 <code>Callable</code> 為函數接口，其單抽象方法不接受任何參數並返回非 void 值。
-因此，除非使用顯式轉換，否則無法在調用點推斷 lambda 的類型。
+這裡的 <code>Supplier</code> 和 <code>Callable</code> 為函式接口，其單抽象方法不接受任何參數並返回非 void 值。
+因此，除非使用顯式轉換，否則無法在呼叫點推斷 lambda 的類型。
 </p>
 <!-- tooltip end -->
 </body>

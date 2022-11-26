@@ -7,7 +7,7 @@ function Outer() {
   function inner() {
     // 不良，因為 Outer 的 'outerProp' 
     // 不會如預期的那樣
-    // 在調用 'new Outer()' 時在此處進行更新
+    // 在呼叫 'new Outer()' 時在此處進行更新
     this.outerProp = 2;
   }
   inner();

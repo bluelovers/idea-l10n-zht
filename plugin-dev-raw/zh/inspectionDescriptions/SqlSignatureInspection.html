@@ -1,6 +1,6 @@
 <html>
 <body>
-報告內建函數的簽名問題。
+報告內建函式的簽名問題。
 <p>檢查將報告錯誤數量的實參、無效的關鍵字、錯誤的資料類型和其他問題。</p>
 <p>範例（MySQL）：</p>
 <pre><code>CREATE TABLE foo (a INT, b INT, c INT)
@@ -9,6 +9,6 @@ SELECT IFNULL() FROM foo; -- 錯誤
 SELECT IFNULL(a) FROM foo; -- 錯誤
 SELECT IFNULL(a, b) FROM foo; -- 正確
 SELECT IFNULL(a, b, c) FROM foo; -- 錯誤</code></pre>
-<p>在 MySQL 中，<code>IFNULL()</code> 函數嚴格接受兩個實參。 因此，只有 <code>SELECT IFNULL(a, b) FROM foo;</code> 查詢是正確的。</p>
+<p>在 MySQL 中，<code>IFNULL()</code> 函式嚴格接受兩個實參。 因此，只有 <code>SELECT IFNULL(a, b) FROM foo;</code> 查詢是正確的。</p>
 </body>
 </html>

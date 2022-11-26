@@ -15,10 +15,10 @@
 </code></pre>
 <p>
   這裡的 <code>userName</code> 將解釋為格式字串的一部分，從而可能導致 <code>IllegalFormatException</code>（例如，如果 <code>userName</code> 為 <code>"%"</code>）或使用大量記憶體（例如，如果 <code>userName</code> 為 <code>"%2000000000%"</code>）。
-  該調用可能應取代為 <code>String.format("Hello, %s", userName);</code>。
+  該呼叫可能應取代為 <code>String.format("Hello, %s", userName);</code>。
 </p>
 <p>
-  此檢查將檢查對 <code>java.util.Formatter</code>、<code>java.lang.String</code>、<code>java.io.PrintWriter</code> 或 <code>java.io.PrintStream</code> 的格式化方法的調用。
+  此檢查將檢查對 <code>java.util.Formatter</code>、<code>java.lang.String</code>、<code>java.io.PrintWriter</code> 或 <code>java.io.PrintStream</code> 的格式化方法的呼叫。
 </p>
 <!-- tooltip end -->
 </body>

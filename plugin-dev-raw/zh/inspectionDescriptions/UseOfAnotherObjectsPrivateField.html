@@ -1,7 +1,7 @@
 <html>
 <body>
 報告對另一個物件的 <code>private</code> 或 <code>protected</code> 欄位的存取。
-Java 允許存取與當前物件屬於同一類別的物件的此類別欄位，但某些編碼樣式不鼓勵這種用法。 此外，這種對 <code>private</code> 欄位的直接存取在面向組件的架構（例如 Spring 或 Hibernate）中可能會失敗，它們期望對其他物件的所有存取都通過方法調用進行，以便框架可以使用代理調解存取。
+Java 允許存取與當前物件屬於同一類別的物件的此類別欄位，但某些編碼樣式不鼓勵這種用法。 此外，這種對 <code>private</code> 欄位的直接存取在面向組件的架構（例如 Spring 或 Hibernate）中可能會失敗，它們期望對其他物件的所有存取都通過方法呼叫進行，以便框架可以使用代理調解存取。
 <p><b>範例：</b></p>
 <pre><code>
   public class Base {
