@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-11-26)
+
+
+
+### 🐛　Bug Fixes
+
+* **dict:** 在数组上调用了 'equals() ([826ddcc](https://github.com/bluelovers/idea-l10n-zht/commit/826ddcc0d4a6f3394cb374d46f3cf8e4509f8ebf))
+
+
+### 📦　Code Refactoring
+
+* **dict:** { 函数 => 函式 } , { 调用 => 呼叫 } ([2a17e41](https://github.com/bluelovers/idea-l10n-zht/commit/2a17e414c3de55cb40e016fb07a488444aa1b0b1))
+
+
+### 🛠　Build System
+
+* **cache:** update version-map ([2be0926](https://github.com/bluelovers/idea-l10n-zht/commit/2be0926e21c3c49530d9ccfbbc6ec71e8a6a3142))
+* **release:** update build ( 223.143 ) ([6415828](https://github.com/bluelovers/idea-l10n-zht/commit/641582871058d95499fa3c3554c3580094425875))
+* **release:** update dev build files ( 223.143 ) ([d964334](https://github.com/bluelovers/idea-l10n-zht/commit/d9643341b65509ee5baefc031883b872230ee0b8))
+* **test:** update snapshots ( 223.143 ) ([69ad848](https://github.com/bluelovers/idea-l10n-zht/commit/69ad848e59898298d98c7172785c82e3221fb4db))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-11-25)
 
 
