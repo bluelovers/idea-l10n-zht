@@ -272,6 +272,8 @@ describe(`should include`, () => {
 		[`呼叫`, `extension.point.analyzer.reason.call.not.loop.value=调用不是循环的迭代值`],
 		[`呼叫`, `js.convert.parameters.to.object.non.call.usage.will.not.be.updated=不更新非调用用法`],
 
+		[`登入`, `dialog.message.login.empty=登录名为空`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
