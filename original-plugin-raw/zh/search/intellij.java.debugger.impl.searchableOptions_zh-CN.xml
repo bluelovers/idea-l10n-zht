@@ -67,9 +67,9 @@
     <option name="传输" hit="传输 " />
     <option name="m" hit="共享内存 M " />
     <option name="共享内存" hit="共享内存 M " />
-    <option name="jit" hit="关闭 JIT" />
-    <option name="关闭" hit="关闭 JIT" />
     <option name="显示替代源切换器" hit="显示替代源切换器" />
+    <option name="jit" hit="禁用 JIT" />
+    <option name="禁用" hit="禁用 JIT" />
     <option name="立即停止调试进程" hit="立即停止调试进程" />
     <option name="附加内存代理" hit="附加内存代理" />
   </configurable>
@@ -78,17 +78,6 @@
     <option name="v" hit=" val 字段作为局部变量 V " />
     <option name="val" hit=" val 字段作为局部变量 V " />
     <option name="字段作为局部变量" hit=" val 字段作为局部变量 V " />
-    <option name="are" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="be" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="blocks" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="code" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="gray" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="of" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="out" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="predicted" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="that" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="to" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="unreachable" hit="Gray out blocks of code that are predicted to be unreachable" />
     <option name="java" hit="Java" />
     <option name="f" hit="static final 字段 F " />
     <option name="final" hit="static final 字段 F " />
@@ -106,8 +95,10 @@
     <option name="对象视图" hit="启用  toString    对象视图  O  " />
     <option name="e" hit="启用集合类的替代视图  E " />
     <option name="启用集合类的替代视图" hit="启用集合类的替代视图  E " />
-    <option name="n" hit="在数组和集合中隐藏空元素  N " />
-    <option name="在数组和集合中隐藏空元素" hit="在数组和集合中隐藏空元素  N " />
+    <option name="n" hit="在数组和集合中隐藏 null 元素 N " />
+    <option name="null" hit="在数组和集合中隐藏 null 元素 N " />
+    <option name="元素" hit="在数组和集合中隐藏 null 元素 N " />
+    <option name="在数组和集合中隐藏" hit="在数组和集合中隐藏 null 元素 N " />
     <option name="基于数据流分析预测条件值和异常" hit="基于数据流分析预测条件值和异常" />
     <option name="q" hit="完全限定名称  Q " />
     <option name="完全限定名称" hit="完全限定名称  Q " />
@@ -117,6 +108,7 @@
     <option name="方法的所有类" hit="对于覆盖 toString   方法的所有类" />
     <option name="i" hit="对象ID  I " />
     <option name="对象id" hit="对象ID  I " />
+    <option name="将预计无法访问的代码块变灰" hit="将预计无法访问的代码块变灰" />
     <option name="t" hit="已声明类型  T " />
     <option name="已声明类型" hit="已声明类型  T " />
     <option name="显示" hit="显示" />
@@ -132,15 +124,15 @@
     <option name="使用表达式列表" hit="使用表达式列表 " />
     <option name="使用默认呈现器" hit="使用默认呈现器" />
     <option name="呈现器名称" hit="呈现器名称 " />
-    <option name="完全限定名称" hit="将呈现器应用于类型对象  完全限定名称  " />
-    <option name="将呈现器应用于类型对象" hit="将呈现器应用于类型对象  完全限定名称  " />
+    <option name="呈现节点时" hit="呈现节点时" />
+    <option name="完全限定名称" hit="将呈现器应用于以下类型的对象 完全限定名称  " />
+    <option name="将呈现器应用于以下类型的对象" hit="将呈现器应用于以下类型的对象 完全限定名称  " />
     <option name="展开节点时" hit="展开节点时" />
     <option name="按需" hit="按需" />
     <option name="显示类型和对象id" hit="显示类型和对象id" />
     <option name="可选" hit="测试一个节点是否可以扩展  可选  " />
     <option name="测试一个节点是否可以扩展" hit="测试一个节点是否可以扩展  可选  " />
-    <option name="渲染节点时" hit="渲染节点时" />
-    <option name="追加默认子节点" hit="追加默认子节点" />
+    <option name="追加默认子项" hit="追加默认子项" />
   </configurable>
   <configurable id="debugger.stepping" configurable_name="步进">
     <option name="java" hit="Java" />

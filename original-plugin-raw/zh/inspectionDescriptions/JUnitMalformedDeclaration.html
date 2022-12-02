@@ -1,40 +1,40 @@
 <html>
 <body>
-报告格式错误且可能无法被 JUnit测 试框架识别的 JUnit 测试成员声明。
-本次检查报告的问题如下：
+报告格式错误且可能无法被 JUnit 测试框架识别的 JUnit 测试成员声明。
+此检查会报告的问题如下：
 <ul>
-  <li>由 <code>@RegisterExtension</code> 注解的类型错误或在需要时未声明为 static 的字段</li>
-  <li>使用 <code>@Nested</code> 注解的 static 内部类</li>
-  <li>在没有源的情况下定义的形参化测试。</li>
-  <li>具有未知、非 static 或无实参目标的 <code>@MethodSource</code> 的形参化测试。</li>
+  <li>由 <code>@RegisterExtension</code> 注解的类型错误或在需要时未被声明为 static 的字段</li>
+  <li>使用 <code>@Nested</code> 注解的 static 或 private 内部类</li>
+  <li>在没有源的情况下定义的形参化测试</li>
+  <li>具有包含未知、非 static 或无实参目标的 <code>@MethodSource</code> 的形参化测试。</li>
   <li>形参化测试方法形参与指定的 <code>@ValueSource</code> 或 <code>@EnumSource</code> 值之间的类型不匹配</li>
   <li>由 <code>@Test</code>、<code>@ParameterizedTest</code> 或 <code>@RepeatedTest</code> 中的多个注解的测试</li>
-  <li>非 public 的 <code>setup()</code> 或 <code>tearDown()</code>方法，其返回类型不是 void 或接受实参。</li>
+  <li>非 public 的 <code>setup()</code> 或 <code>tearDown()</code>方法，其返回值类型不是 void 或接受实参</li>
   <li>为 private，接受实参或为非 static 的 <code>suite()</code> 方法</li>
   <li>
-    由 <code>@BeforeClass</code>、<code>@AfterClass</code>、<code>@BeforeAll</code> 或 <code>@AfterAll</code> 注解的非 public，非 static 方法，其返回类型不是 void 或没有有效的形参列表。
+    由 <code>@BeforeClass</code>、<code>@AfterClass</code>、<code>@BeforeAll</code> 或 <code>@AfterAll</code> 注解的非 public、非 static 方法，其返回值类型不是 void 或没有有效的形参列表
   </li>
   <li>
-    由 <code>@Before</code>、<code>@After</code>、<code>@BeforeEach</code> 或 <code>@AfterEach</code> 注解的非 public 方法，其返回类型不是 void 或接受实参。
+    由 <code>@Before</code>、<code>@After</code>、<code>@BeforeEach</code> 或 <code>@AfterEach</code> 注解的非 public 方法，其返回值类型不是 void 或接受实参。
   </li>
   <li>在 <code>@BeforeAll</code> 或 <code>@AfterAll</code> 方法中注入的 <code>RepetitionInfo</code></li>
   <li>
-    由 <code>@Test</code> 注解测试使用的，在 <code>@BeforeEach</code> 或 <code>@AfterEach</code>方法中注入的 <code>RepetitionInfo</code>
+    由 <code>@Test</code> 注解测试使用，在 <code>@BeforeEach</code> 或 <code>@AfterEach</code>方法中注入的 <code>RepetitionInfo</code>
   </li>
   <li>由 <code>@DataPoint</code> 或 <code>@DataPoints</code> 注解的非 public 或非 static 字段和方法</li>
   <li>
-    由 <code>@Rule</code> 注解的非 public 或非 <code>TestRule</code> 或 <code>MethodRule</code> 的子类型的字段和方法
+    由 <code>@Rule</code> 注解的非 public 或者非 <code>TestRule</code> 或 <code>MethodRule</code> 的子类型的字段和方法
   </li>
-  <li>由 <code>@ClassRule</code> 注解的非 public，非 static 或非 <code>TestRule</code> 的子类型的字段和方法</li>
+  <li>由 <code>@ClassRule</code> 注解的非 public、非 static 或非 <code>TestRule</code> 的子类型的字段和方法</li>
   <li>
-    <code>TestCase</code> 子类内带有 <code>test</code> 前缀的非 public 方法，其返回类型不是 void，接受实参或为 static。
+    <code>TestCase</code> 子类内带有 <code>test</code> 前缀的非 public 方法，其返回值类型不是 void，接受实参或为 static。
   </li>
   <li>
-    由 <code>@Test</code> 注解的非 public 方法，其返回类型不是 void，接受实参或为 static
+    由 <code>@Test</code> 注解的非 public 方法，其返回值类型不是 void，接受实参或为 static
   </li>
 </ul>
 
-请注意，在 Kotlin 中，挂起函数确实有实参和非 void 返回类型。 因此，它们也不会由 JUnit 测试运行程序执行。 此检查也将报告这一问题。
+请注意，在 Kotlin 中，挂起函数确实有实参和非 void 返回值类型。 因此，它们也不会由 JUnit 测试运行程序执行。 此检查也将报告这一问题。
 
 <p><b>格式错误的 <code>@Before</code> 方法示例 (Java)：</b></p>
 <pre><code>@Before private int foo(int arg) { ... } </code></pre>

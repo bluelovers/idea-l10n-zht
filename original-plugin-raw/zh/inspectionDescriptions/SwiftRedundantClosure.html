@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>
+  报告在同一位置创建和调用的闭包。
+</p>
+<p>
+  用其主体替换闭包调用。
+</p>
+<!-- tooltip end -->
+<p>
+  <b>示例：</b>
+</p>
+<pre><code>
+  { (x: Int) -> () in
+      print(x)
+  }(42)
+</code></pre>
+<p>
+  在应用快速修复后：
+</p>
+<pre><code>
+  print(42)
+</code></pre>
+</body>
+</html>

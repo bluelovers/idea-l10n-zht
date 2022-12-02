@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>
+  报告可以省略的 <code>?</code> 的用法，例如，如果分配的表达式的推断类型为非可 null。
+</p>
+<p>
+  建议移除类型声明中冗余的 <code>?</code>。
+</p>
+<!-- tooltip end -->
+<p>
+  <b>示例：</b>
+</p>
+<pre><code>
+  let x: Int? = 42
+</code></pre>
+<p>
+  在应用快速修复后：
+</p>
+<pre><code>
+  let x: Int = 42
+</code></pre>
+</body>
+</html>

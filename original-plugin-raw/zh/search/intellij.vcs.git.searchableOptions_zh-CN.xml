@@ -1,22 +1,10 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="compare" path="ActionManager" hit="Compare with Tag…" />
-    <option name="tag" path="ActionManager" hit="Compare with Tag…" />
-    <option name="with" path="ActionManager" hit="Compare with Tag…" />
-    <option name="all" path="ActionManager" hit="Execute Branch Operations on All Roots" />
-    <option name="branch" path="ActionManager" hit="Execute Branch Operations on All Roots" />
-    <option name="execute" path="ActionManager" hit="Execute Branch Operations on All Roots" />
-    <option name="on" path="ActionManager" hit="Execute Branch Operations on All Roots" />
-    <option name="operations" path="ActionManager" hit="Execute Branch Operations on All Roots" />
-    <option name="roots" path="ActionManager" hit="Execute Branch Operations on All Roots" />
     <option name="fixup" path="ActionManager" hit="Fixup…" />
     <option name="git" path="ActionManager" hit="Git" />
-    <option name="branch" path="ActionManager" hit="Git branch" />
-    <option name="git" path="ActionManager" hit="Git branch" />
-    <option name="popup" path="ActionManager" hit="Restore Popup Size" />
-    <option name="restore" path="ActionManager" hit="Restore Popup Size" />
-    <option name="size" path="ActionManager" hit="Restore Popup Size" />
+    <option name="git" path="ActionManager" hit="Git 分支" />
+    <option name="分支" path="ActionManager" hit="Git 分支" />
     <option name="vcs" path="ActionManager" hit="VCS 操作" />
     <option name="操作" path="ActionManager" hit="VCS 操作" />
     <option name="head" path="ActionManager" hit="与 HEAD 版本比较" />
@@ -26,6 +14,7 @@
     <option name="与当前分支进行比较" path="ActionManager" hit="与当前分支进行比较" />
     <option name="与暂存版本比较" path="ActionManager" hit="与暂存版本比较" />
     <option name="与本地版本比较" path="ActionManager" hit="与本地版本比较" />
+    <option name="与标记比较" path="ActionManager" hit="与标记比较…" />
     <option name="丢弃所选储藏" path="ActionManager" hit="丢弃所选储藏" />
     <option name="中止优选" path="ActionManager" hit="中止优选" />
     <option name="中止变基" path="ActionManager" hit="中止变基" />
@@ -52,7 +41,7 @@
     <option name="提交" path="ActionManager" hit="创建 fixup 提交" />
     <option name="创建压缩提交" path="ActionManager" hit="创建压缩提交" />
     <option name="创建并签出新分支" path="ActionManager" hit="创建并签出新分支" />
-    <option name="创建指向此提交的新标记" path="ActionManager" hit="创建指向此提交的新标记" />
+    <option name="创建指向此提交的新标签" path="ActionManager" hit="创建指向此提交的新标签" />
     <option name="删除" path="ActionManager" hit="删除" />
     <option name="删除提交" path="ActionManager" hit="删除提交" />
     <option name="刷新储藏" path="ActionManager" hit="刷新储藏" />
@@ -72,6 +61,7 @@
     <option name="在" path="ActionManager" hit="在 Git 日志中显示" />
     <option name="日志中显示" path="ActionManager" hit="在 Git 日志中显示" />
     <option name="在修订版中显示仓库" path="ActionManager" hit="在修订版中显示仓库" />
+    <option name="在所有根上执行分支操作" path="ActionManager" hit="在所有根上执行分支操作" />
     <option name="head" path="ActionManager" hit="在日志中导航到分支 Head" />
     <option name="在日志中导航到分支" path="ActionManager" hit="在日志中导航到分支 Head" />
     <option name="head" path="ActionManager" hit="在日志中导航到所选分支 Head" />
@@ -82,13 +72,11 @@
     <option name="在编辑器中打开" path="ActionManager" hit="在编辑器中打开 .git/info/exclude" />
     <option name="在编辑器中显示当前文件的暂存内容" path="ActionManager" hit="在编辑器中显示当前文件的暂存内容" />
     <option name="在编辑器中显示当前文件的本地内容" path="ActionManager" hit="在编辑器中显示当前文件的本地内容" />
-    <option name="vcs" path="ActionManager" hit="如果选中，您可以使用单个操作在所有 VCS 根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
-    <option name="删除或创建新分支" path="ActionManager" hit="如果选中，您可以使用单个操作在所有 VCS 根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
-    <option name="如果选中" path="ActionManager" hit="如果选中，您可以使用单个操作在所有 VCS 根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
-    <option name="您可以使用单个操作在所有" path="ActionManager" hit="如果选中，您可以使用单个操作在所有 VCS 根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
-    <option name="根中签出" path="ActionManager" hit="如果选中，您可以使用单个操作在所有 VCS 根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
-    <option name="比较" path="ActionManager" hit="如果选中，您可以使用单个操作在所有 VCS 根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
-    <option name="该选项还会影响推送对话框的行为" path="ActionManager" hit="如果选中，您可以使用单个操作在所有 VCS 根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
+    <option name="删除或创建新分支" path="ActionManager" hit="如果选中，您可以使用单个操作在所有VCS根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
+    <option name="如果选中" path="ActionManager" hit="如果选中，您可以使用单个操作在所有VCS根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
+    <option name="您可以使用单个操作在所有vcs根中签出" path="ActionManager" hit="如果选中，您可以使用单个操作在所有VCS根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
+    <option name="比较" path="ActionManager" hit="如果选中，您可以使用单个操作在所有VCS根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
+    <option name="该选项还会影响推送对话框的行为" path="ActionManager" hit="如果选中，您可以使用单个操作在所有VCS根中签出、比较、删除或创建新分支。该选项还会影响推送对话框的行为。" />
     <option name="将当前分支变基到所选分支" path="ActionManager" hit="将当前分支变基到所选分支" />
     <option name="将当前分支重置到此处" path="ActionManager" hit="将当前分支重置到此处…" />
     <option name="将所有未暂存的变更和未跟踪的文件添加到索引" path="ActionManager" hit="将所有未暂存的变更和未跟踪的文件添加到索引" />
@@ -102,6 +90,7 @@
     <option name="带或不带索引" path="ActionManager" hit="弹出或应用选定的储藏作为新分支(带或不带索引)" />
     <option name="弹出或应用选定的储藏作为新分支" path="ActionManager" hit="弹出或应用选定的储藏作为新分支(带或不带索引)" />
     <option name="弹出所选储藏" path="ActionManager" hit="弹出所选储藏" />
+    <option name="恢复弹出窗口大小" path="ActionManager" hit="恢复弹出窗口大小" />
     <option name="exclude" path="ActionManager" hit="打开 .git/info/exclude" />
     <option name="git" path="ActionManager" hit="打开 .git/info/exclude" />
     <option name="info" path="ActionManager" hit="打开 .git/info/exclude" />
@@ -196,12 +185,6 @@
     <option name="高亮显示尚未优选到当前分支的提交" path="ActionManager" hit="高亮显示尚未优选到当前分支的提交" />
   </configurable>
   <configurable id="vcs.Git" configurable_name="Git">
-    <option name="all" hit="Execute Branch Operations on All Roots" />
-    <option name="branch" hit="Execute Branch Operations on All Roots" />
-    <option name="execute" hit="Execute Branch Operations on All Roots" />
-    <option name="on" hit="Execute Branch Operations on All Roots" />
-    <option name="operations" hit="Execute Branch Operations on All Roots" />
-    <option name="roots" hit="Execute Branch Operations on All Roots" />
     <option name="git" hit="Git" />
     <option name="git" hit="Git 可执行文件路径 P  " />
     <option name="p" hit="Git 可执行文件路径 P  " />
@@ -219,6 +202,7 @@
     <option name="变基" hit="变基" />
     <option name="合并" hit="合并" />
     <option name="启用暂存区域" hit="启用暂存区域" />
+    <option name="在所有根上执行分支操作" hit="在所有根上执行分支操作" />
     <option name="cherry" hit="在挑选推送到受保护分支的提交时 添加  cherry picked from    后缀" />
     <option name="from" hit="在挑选推送到受保护分支的提交时 添加  cherry picked from    后缀" />
     <option name="picked" hit="在挑选推送到受保护分支的提交时 添加  cherry picked from    后缀" />

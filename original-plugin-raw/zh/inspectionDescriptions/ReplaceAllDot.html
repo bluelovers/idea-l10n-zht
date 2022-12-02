@@ -6,6 +6,9 @@
   例如，调用 <code>"ab.cd".replaceAll(".", "-")</code> 将生成 <code>"-----"</code>，因为点匹配任意字符。
   很可能本意是转义变体 <code>"\\."</code>。
 </p>
+<p>
+  还报告了将 <code>File.separator</code> 用作正则表达式的情况。 <code>File.separator</code> 具有平台特定的值。 它在 Linux 和 Mac 上等于 <code>/</code>，而在 Windows 上等于 <code>\</code>，这不是一个有效的正则表达式，因此这样的代码无法移植。
+</p>
 
 <p><b>示例：</b></p>
 <pre><code>

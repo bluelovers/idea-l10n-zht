@@ -1,0 +1,15 @@
+<html>
+<body>
+报告以小写声明的类型形参。
+
+<p>根据官方的 Go 示例，使用大写类型形参是一种良好的形式。
+此检查有助于提高代码的可读性。</p>
+<pre><code>func PrintSlice[t any](s []t) {
+    for _, v := range s{
+        print(v)
+    }
+}</code></pre>
+<p>用小写声明了类型形参 <code>t</code>。
+</p>
+</body>
+</html>

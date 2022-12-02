@@ -5,8 +5,10 @@
 <p>不会报告对使用 Error Prone 或 AssertJ 的 <code>@CanIgnoreReturnValue</code> 注解进行注解的方法的调用。</p>
 <p><b>示例：</b></p>
 <pre><code>
-    void leftBehind() throws Throwable {
-        RuntimeException e = new RuntimeException("throw me");
+    void check(String s) {
+        if (s == null) {
+            new NullPointerException("s");
+        }
         // ...
     }
 </code></pre>

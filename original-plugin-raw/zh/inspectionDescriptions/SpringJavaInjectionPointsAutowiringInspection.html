@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>报告 Spring Bean <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>、<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a> 等注入点上的自动装配问题。</p>
+<p>报告 Spring Bean <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>、<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a> 等的注入点上的自动装配问题。</p>
 
 <ul>
   <li>不止一种 'concrete' 类型的 Bean</li>
   <li>没有 'concrete' 类型的 Bean</li>
   <li>没有带限定符的 Bean</li>
-  <li><code>@Autowired</code> 在 Spring Bean 构造函数上的用法不正确。</li>
-  <li>在无效 Spring Bean 的类中注入或自动装配的字段/方法</li>
+  <li><code>@Autowired</code> 在 Spring Bean 构造函数上的不正确用法</li>
+  <li>在不是有效 Spring Bean 的类中注入或自动装配的字段/方法</li>
 </ul>
 
 <p><b>示例：</b></p>

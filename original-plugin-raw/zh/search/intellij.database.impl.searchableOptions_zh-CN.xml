@@ -1,15 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="clear" path="ActionManager" hit="Clear Stored Sources" />
-    <option name="sources" path="ActionManager" hit="Clear Stored Sources" />
-    <option name="stored" path="ActionManager" hit="Clear Stored Sources" />
-    <option name="and" path="ActionManager" hit="Clear stored sources and local modifications" />
-    <option name="clear" path="ActionManager" hit="Clear stored sources and local modifications" />
-    <option name="local" path="ActionManager" hit="Clear stored sources and local modifications" />
-    <option name="modifications" path="ActionManager" hit="Clear stored sources and local modifications" />
-    <option name="sources" path="ActionManager" hit="Clear stored sources and local modifications" />
-    <option name="stored" path="ActionManager" hit="Clear stored sources and local modifications" />
     <option name="ddl" path="ActionManager" hit="DDL" />
     <option name="ddl" path="ActionManager" hit="DDL 编辑器工具栏" />
     <option name="编辑器工具栏" path="ActionManager" hit="DDL 编辑器工具栏" />
@@ -45,7 +36,7 @@
     <option name="从所选列中删除外键" path="ActionManager" hit="从所选列中删除外键" />
     <option name="从所选文件创建新数据源" path="ActionManager" hit="从所选文件创建新数据源" />
     <option name="从所选表中删除主键" path="ActionManager" hit="从所选表中删除主键" />
-    <option name="从文件创建新的数据源" path="ActionManager" hit="从文件创建新的数据源" />
+    <option name="从文件创建新数据源" path="ActionManager" hit="从文件创建新数据源" />
     <option name="从文件导入数据" path="ActionManager" hit="从文件导入数据…" />
     <option name="从选区添加数据源" path="ActionManager" hit="从选区添加数据源…" />
     <option name="从项目文件导入数据源" path="ActionManager" hit="从项目文件导入数据源" />
@@ -63,7 +54,8 @@
     <option name="修改注释" path="ActionManager" hit="修改注释…" />
     <option name="修改索引" path="ActionManager" hit="修改索引" />
     <option name="修正" path="ActionManager" hit="修正" />
-    <option name="值" path="ActionManager" hit="值" />
+    <option name="值编辑器" path="ActionManager" hit="值编辑器" />
+    <option name="值编辑器和聚合视图" path="ActionManager" hit="值编辑器和聚合视图" />
     <option name="停用" path="ActionManager" hit="停用" />
     <option name="全文搜索" path="ActionManager" hit="全文搜索…" />
     <option name="关闭会话" path="ActionManager" hit="关闭会话" />
@@ -116,6 +108,7 @@
     <option name="回滚" path="ActionManager" hit="回滚" />
     <option name="回滚事务" path="ActionManager" hit="回滚事务" />
     <option name="图" path="ActionManager" hit="图" />
+    <option name="在值编辑器中打开" path="ActionManager" hit="在值编辑器中打开" />
     <option name="在当前目录中创建新数据源" path="ActionManager" hit="在当前目录中创建新数据源" />
     <option name="在所选对象上运行扩展脚本" path="ActionManager" hit="在所选对象上运行扩展脚本" />
     <option name="在控制台中执行查询" path="ActionManager" hit="在控制台中执行查询" />
@@ -184,7 +177,6 @@
     <option name="批量修改索引" path="ActionManager" hit="批量修改索引" />
     <option name="控制台工具栏" path="ActionManager" hit="控制台工具栏" />
     <option name="提交" path="ActionManager" hit="提交" />
-    <option name="提取程序" path="ActionManager" hit="提取程序" />
     <option name="搜索数据中的文本匹配项" path="ActionManager" hit="搜索数据中的文本匹配项" />
     <option name="收缩选区" path="ActionManager" hit="收缩选区" />
     <option name="数据库脚本" path="ActionManager" hit="数据库脚本" />
@@ -210,12 +202,12 @@
     <option name="显示变更" path="ActionManager" hit="显示变更" />
     <option name="显示地理位置查看器" path="ActionManager" hit="显示地理位置查看器" />
     <option name="显示或隐藏数据库和架构" path="ActionManager" hit="显示或隐藏数据库和架构" />
+    <option name="显示脚本" path="ActionManager" hit="显示脚本" />
     <option name="显示选项菜单" path="ActionManager" hit="显示选项菜单" />
     <option name="更改事务的隔离级别" path="ActionManager" hit="更改事务的隔离级别" />
     <option name="更改单元类型" path="ActionManager" hit="更改单元类型" />
     <option name="更改类型" path="ActionManager" hit="更改类型" />
     <option name="更改表抽样" path="ActionManager" hit="更改表抽样" />
-    <option name="最大化" path="ActionManager" hit="最大化" />
     <option name="url" path="ActionManager" hit="来自 URL 的数据源" />
     <option name="来自" path="ActionManager" hit="来自 URL 的数据源" />
     <option name="的数据源" path="ActionManager" hit="来自 URL 的数据源" />
@@ -232,15 +224,17 @@
     <option name="比较结构" path="ActionManager" hit="比较结构…" />
     <option name="浏览查询历史记录" path="ActionManager" hit="浏览查询历史记录" />
     <option name="清除字段" path="ActionManager" hit="清除字段" />
+    <option name="清除存储的源" path="ActionManager" hit="清除存储的源" />
+    <option name="清除存储的源和本地修改" path="ActionManager" hit="清除存储的源和本地修改" />
     <option name="清除映射" path="ActionManager" hit="清除映射" />
     <option name="清除缓存的数据库架构" path="ActionManager" hit="清除缓存的数据库架构" />
     <option name="清除缓存的架构并从头刷新" path="ActionManager" hit="清除缓存的架构并从头刷新" />
     <option name="禁用所选对象" path="ActionManager" hit="禁用所选对象" />
     <option name="禁用触发器" path="ActionManager" hit="禁用触发器/约束" />
     <option name="约束" path="ActionManager" hit="禁用触发器/约束" />
-    <option name="移动到文件夹" path="ActionManager" hit="移动到文件夹…" />
     <option name="移至右侧" path="ActionManager" hit="移至右侧" />
     <option name="移至底部" path="ActionManager" hit="移至底部" />
+    <option name="移至文件夹" path="ActionManager" hit="移至文件夹…" />
     <option name="筛选" path="ActionManager" hit="筛选" />
     <option name="筛选依据" path="ActionManager" hit="筛选依据" />
     <option name="管理显示的架构" path="ActionManager" hit="管理显示的架构…" />
@@ -260,16 +254,18 @@
     <option name="order" path="ActionManager" hit="编辑 ORDER BY 子句" />
     <option name="子句" path="ActionManager" hit="编辑 ORDER BY 子句" />
     <option name="编辑" path="ActionManager" hit="编辑 ORDER BY 子句" />
+    <option name="编辑包含外部对象的文件" path="ActionManager" hit="编辑包含外部对象的文件" />
     <option name="编辑器内的结果" path="ActionManager" hit="编辑器内的结果" />
+    <option name="编辑外部对象文件" path="ActionManager" hit="编辑外部对象文件" />
     <option name="编辑形参" path="ActionManager" hit="编辑形参" />
     <option name="编辑所选形参" path="ActionManager" hit="编辑所选形参" />
     <option name="编辑数据" path="ActionManager" hit="编辑数据" />
-    <option name="编辑最大化" path="ActionManager" hit="编辑最大化" />
     <option name="编辑筛选条件" path="ActionManager" hit="编辑筛选条件" />
     <option name="编辑筛选条件文本" path="ActionManager" hit="编辑筛选条件文本" />
     <option name="缩小所选列的范围" path="ActionManager" hit="缩小所选列的范围" />
     <option name="缩短选项卡标题" path="ActionManager" hit="缩短选项卡标题" />
     <option name="聚合视图选项" path="ActionManager" hit="聚合视图选项" />
+    <option name="脚本化扩展程序" path="ActionManager" hit="脚本化扩展程序" />
     <option name="t" path="ActionManager" hit="表(T) (旧 UI)" />
     <option name="ui" path="ActionManager" hit="表(T) (旧 UI)" />
     <option name="旧" path="ActionManager" hit="表(T) (旧 UI)" />
@@ -325,7 +321,6 @@
     <option name="还原所选变更" path="ActionManager" hit="还原所选变更" />
     <option name="选择下一个匹配项" path="ActionManager" hit="选择下一个匹配项" />
     <option name="选择所有匹配项" path="ActionManager" hit="选择所有匹配项" />
-    <option name="选择数据提取程序" path="ActionManager" hit="选择数据提取程序" />
     <option name="选择行" path="ActionManager" hit="选择行" />
     <option name="by" path="ActionManager" hit="通过 ORDER BY 排序" />
     <option name="order" path="ActionManager" hit="通过 ORDER BY 排序" />
@@ -346,6 +341,7 @@
     <option name="重置列宽" path="ActionManager" hit="重置列宽" />
     <option name="链接的数据源" path="ActionManager" hit="链接的数据源" />
     <option name="附加会话" path="ActionManager" hit="附加会话" />
+    <option name="隐藏地理位置查看器" path="ActionManager" hit="隐藏地理位置查看器" />
     <option name="隐藏数据库和架构" path="ActionManager" hit="隐藏数据库和架构" />
     <option name="隐藏架构" path="ActionManager" hit="隐藏架构" />
     <option name="预览挂起的变更" path="ActionManager" hit="预览挂起的变更" />
@@ -379,16 +375,6 @@
   <configurable id="database.query.execution" configurable_name="查询执行">
     <option name="ctrl" hit="Ctrl Enter" />
     <option name="enter" hit="Ctrl Enter" />
-    <option name="caret" hit="When caret inside statement execute " />
-    <option name="execute" hit="When caret inside statement execute " />
-    <option name="inside" hit="When caret inside statement execute " />
-    <option name="statement" hit="When caret inside statement execute " />
-    <option name="when" hit="When caret inside statement execute " />
-    <option name="caret" hit="When caret outside statement execute " />
-    <option name="execute" hit="When caret outside statement execute " />
-    <option name="outside" hit="When caret outside statement execute " />
-    <option name="statement" hit="When caret outside statement execute " />
-    <option name="when" hit="When caret outside statement execute " />
     <option name="从文本光标开始的所有内容" hit="从文本光标开始的所有内容" />
     <option name="b" hit="在新选项卡中打开结果 B " />
     <option name="在新选项卡中打开结果" hit="在新选项卡中打开结果 B " />
@@ -396,6 +382,7 @@
     <option name="完全作为一条语句" hit="完全作为一条语句" />
     <option name="完全作为单独的语句" hit="完全作为单独的语句" />
     <option name="对于所选内容执行" hit="对于所选内容执行 " />
+    <option name="当文本光标位于语句外部时执行" hit="当文本光标位于语句外部时执行  " />
     <option name="快捷键" hit="快捷键 " />
     <option name="执行前检查形参" hit="执行前检查形参" />
     <option name="ansi" hit="拆分成 ANSI SQL 语句" />
@@ -415,6 +402,7 @@
     <option name="按语句分隔符" hit="按语句分隔符" />
     <option name="整个脚本" hit="整个脚本" />
     <option name="文本光标下面的所有内容" hit="文本光标下面的所有内容" />
+    <option name="文本光标位于语句中时执行" hit="文本光标位于语句中时执行 " />
     <option name="无任何内容" hit="无任何内容" />
     <option name="智能扩展到脚本" hit="智能扩展到脚本" />
     <option name="最大语句" hit="最大语句" />
@@ -468,14 +456,6 @@
     <option name="点击" hit=" 点击" />
     <option name="alt" hit="Alt  点击" />
     <option name="点击" hit="Alt  点击" />
-    <option name="custom" hit="Custom Date Time Formats" />
-    <option name="date" hit="Custom Date Time Formats" />
-    <option name="formats" hit="Custom Date Time Formats" />
-    <option name="time" hit="Custom Date Time Formats" />
-    <option name="date" hit="Date" />
-    <option name="datetime" hit="Datetime timestamp" />
-    <option name="timestamp" hit="Datetime timestamp" />
-    <option name="time" hit="Time" />
     <option name="uuid" hit="UUID" />
     <option name="从不" hit="从不" />
     <option name="使用自定义字体" hit="使用自定义字体 " />
@@ -486,14 +466,20 @@
     <option name="始终" hit="始终" />
     <option name="将布尔值显示为" hit="将布尔值显示为 " />
     <option name="将页面大小限制为" hit="将页面大小限制为 " />
-    <option name="技术所限" hit="技术所限" />
+    <option name="带时区的日期时间" hit="带时区的日期时间 时间戳" />
+    <option name="时间戳" hit="带时区的日期时间 时间戳" />
+    <option name="带时区的时间" hit="带时区的时间" />
     <option name="按数字主键对表排序" hit="按数字主键对表排序 " />
     <option name="数据修改" hit="数据修改" />
     <option name="数据排序" hit="数据排序" />
     <option name="数据编辑器和查看器" hit="数据编辑器和查看器" />
     <option name="数据表示" hit="数据表示" />
     <option name="文本" hit="文本" />
+    <option name="日期" hit="日期" />
+    <option name="日期时间" hit="日期时间 时间戳" />
+    <option name="时间戳" hit="日期时间 时间戳" />
     <option name="日期模式" hit="日期模式" />
+    <option name="时间" hit="时间" />
     <option name="显示文档中的前" hit="显示文档中的前" />
     <option name="l" hit="每个值加载的最大字节数 L  " />
     <option name="每个值加载的最大字节数" hit="每个值加载的最大字节数 L  " />
@@ -504,13 +490,19 @@
     <option name="f" hit="结果集预提取大小 F  " />
     <option name="结果集预提取大小" hit="结果集预提取大小 F  " />
     <option name="自动检测二进制值" hit="自动检测二进制值 " />
+    <option name="json" hit="自动检测键值数据库中的 JSON 值" />
+    <option name="值" hit="自动检测键值数据库中的 JSON 值" />
+    <option name="自动检测键值数据库中的" hit="自动检测键值数据库中的 JSON 值" />
     <option name="自动转置表" hit="自动转置表 " />
+    <option name="时间格式" hit="自定义日期 时间格式" />
+    <option name="自定义日期" hit="自定义日期 时间格式" />
     <option name="行高" hit="行高 " />
     <option name="by" hit="通过 ORDER BY 排序" />
     <option name="order" hit="通过 ORDER BY 排序" />
     <option name="排序" hit="通过 ORDER BY 排序" />
     <option name="通过" hit="通过 ORDER BY 排序" />
     <option name="降序" hit="降序" />
+    <option name="限制" hit="限制" />
     <option name="预览中的数据行" hit="预览中的数据行" />
   </configurable>
   <configurable id="database.data.csv.formats" configurable_name="CSV 格式">
@@ -557,23 +549,17 @@
   <configurable id="database.other" configurable_name="其他">
     <option name="ddl" hit="DDL 映射" />
     <option name="映射" hit="DDL 映射" />
-    <option name="of" hit="Show preview of valid script when updating source text" />
-    <option name="preview" hit="Show preview of valid script when updating source text" />
-    <option name="script" hit="Show preview of valid script when updating source text" />
-    <option name="show" hit="Show preview of valid script when updating source text" />
-    <option name="source" hit="Show preview of valid script when updating source text" />
-    <option name="text" hit="Show preview of valid script when updating source text" />
-    <option name="updating" hit="Show preview of valid script when updating source text" />
-    <option name="valid" hit="Show preview of valid script when updating source text" />
-    <option name="when" hit="Show preview of valid script when updating source text" />
     <option name="代码生成" hit="代码生成" />
     <option name="修改对象" hit="修改对象" />
     <option name="其他" hit="其他" />
     <option name="在新控制台中" hit="在新控制台中" />
     <option name="ddl" hit="建议为新的映射转储 DDL" />
     <option name="建议为新的映射转储" hit="建议为新的映射转储 DDL" />
+    <option name="数据库资源管理器" hit="数据库资源管理器" />
+    <option name="更新源文本时显示有效脚本的预览" hit="更新源文本时显示有效脚本的预览" />
     <option name="生成上下文模板" hit="生成上下文模板 " />
     <option name="确认取消修改架构的对话框" hit="确认取消修改架构的对话框" />
+    <option name="记住筛选器是否处于打开状态" hit="记住筛选器是否处于打开状态" />
     <option name="重构" hit="重构" />
     <option name="附加到现有控制台" hit="附加到现有控制台" />
   </configurable>

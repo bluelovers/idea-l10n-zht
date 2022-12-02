@@ -94,19 +94,19 @@
     <option name="局部变量" hit="变量和形参//局部变量" />
     <option name="变量和形参" hit="变量和形参//形参" />
     <option name="形参" hit="变量和形参//形参" />
-    <option name="变量和形参" hit="变量和形参//重新分配的局部变量" />
-    <option name="重新分配的局部变量" hit="变量和形参//重新分配的局部变量" />
-    <option name="变量和形参" hit="变量和形参//重新指定的形参" />
-    <option name="重新指定的形参" hit="变量和形参//重新指定的形参" />
+    <option name="变量和形参" hit="变量和形参//重新赋值的局部变量" />
+    <option name="重新赋值的局部变量" hit="变量和形参//重新赋值的局部变量" />
+    <option name="变量和形参" hit="变量和形参//重新赋值的形参" />
+    <option name="重新赋值的形参" hit="变量和形参//重新赋值的形参" />
     <option name="lambda" hit="大括号和运算符//Lambda 表达式大括号和箭头" />
     <option name="大括号和运算符" hit="大括号和运算符//Lambda 表达式大括号和箭头" />
     <option name="表达式大括号和箭头" hit="大括号和运算符//Lambda 表达式大括号和箭头" />
+    <option name="中括号" hit="大括号和运算符//中括号" />
+    <option name="大括号和运算符" hit="大括号和运算符//中括号" />
     <option name="圆括号" hit="大括号和运算符//圆括号" />
     <option name="大括号和运算符" hit="大括号和运算符//圆括号" />
     <option name="大括号" hit="大括号和运算符//大括号" />
     <option name="大括号和运算符" hit="大括号和运算符//大括号" />
-    <option name="大括号和运算符" hit="大括号和运算符//方括号" />
-    <option name="方括号" hit="大括号和运算符//方括号" />
     <option name="大括号和运算符" hit="大括号和运算符//运算符" />
     <option name="运算符" hit="大括号和运算符//运算符" />
     <option name="大括号和运算符" hit="大括号和运算符//闭合表达式大括号和箭头" />
@@ -148,9 +148,9 @@
     <option name="注解名称" hit="注解//注解名称" />
     <option name="注解" hit="注解//注解特性名称" />
     <option name="注解特性名称" hit="注解//注解特性名称" />
-    <option name="groovydoc" hit="注释//Groovydoc//文本文件" />
-    <option name="文本文件" hit="注释//Groovydoc//文本文件" />
-    <option name="注释" hit="注释//Groovydoc//文本文件" />
+    <option name="groovydoc" hit="注释//Groovydoc//文本" />
+    <option name="文本" hit="注释//Groovydoc//文本" />
+    <option name="注释" hit="注释//Groovydoc//文本" />
     <option name="groovydoc" hit="注释//Groovydoc//标记" />
     <option name="标记" hit="注释//Groovydoc//标记" />
     <option name="注释" hit="注释//Groovydoc//标记" />
@@ -158,11 +158,10 @@
     <option name="注释" hit="注释//块注释" />
     <option name="注释" hit="注释//行注释" />
     <option name="行注释" hit="注释//行注释" />
-    <option name="abstract" hit="类和接口//abstract 类" />
-    <option name="类" hit="类和接口//abstract 类" />
-    <option name="类和接口" hit="类和接口//abstract 类" />
     <option name="匿名类" hit="类和接口//匿名类" />
     <option name="类和接口" hit="类和接口//匿名类" />
+    <option name="抽象类" hit="类和接口//抽象类" />
+    <option name="类和接口" hit="类和接口//抽象类" />
     <option name="接口" hit="类和接口//接口" />
     <option name="类和接口" hit="类和接口//接口" />
     <option name="枚举" hit="类和接口//枚举" />
@@ -177,10 +176,10 @@
   </configurable>
   <configurable id="debugger.stepping" configurable_name="步进">
     <option name="groovy" hit="Groovy" />
-    <option name="groovy" hit="不单步进入特定的 Groovy 类 I " />
-    <option name="i" hit="不单步进入特定的 Groovy 类 I " />
-    <option name="不单步进入特定的" hit="不单步进入特定的 Groovy 类 I " />
-    <option name="类" hit="不单步进入特定的 Groovy 类 I " />
+    <option name="groovy" hit="不步入特定的 Groovy 类 I " />
+    <option name="i" hit="不步入特定的 Groovy 类 I " />
+    <option name="不步入特定的" hit="不步入特定的 Groovy 类 I " />
+    <option name="类" hit="不步入特定的 Groovy 类 I " />
   </configurable>
   <configurable id="debugger.hotswap" configurable_name="热交换">
     <option name="groovy" hit="Groovy" />

@@ -1,6 +1,6 @@
 <html>
 <body>
-报告未使用的类型参数。
+报告未使用的类型形参。
 <pre><code>func main() {
  printAll(
   42,
@@ -16,7 +16,7 @@ func printAll[I int, S string](
  fmt.Println(s)
 }</code></pre>
 <p><b>printAll</b> 函数具有两个类型形参 <code>I</code> 和 <code>S</code>，但是仅使用其中的第一个形参。
-  因此，<code>S string</code> 将显示为灰色。
+  因此，<code>S string</code> 将被灰显。
 </p>
 </body>
 </html>

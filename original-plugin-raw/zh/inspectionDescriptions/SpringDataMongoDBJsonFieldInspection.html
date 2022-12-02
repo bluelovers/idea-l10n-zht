@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>
+  报告在 <code>org.springframework.data.mongodb.repository.Query</code> 注解内指定的未解析的文档字段。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+@Document
+class User {
+  @Field
+  String name;
+}
+
+interface UserRepository extends Repository&lt;User, Long&gt; {
+  @Query("{ age: { $gt: ?0 } }") // 'age' 被高亮显示为未解决
+  List&lt;User&gt; findUsersOlderThan(Integer age);
+}
+</code></pre>
+</body>
+</html>

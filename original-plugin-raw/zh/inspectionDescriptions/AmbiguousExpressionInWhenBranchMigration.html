@@ -4,7 +4,7 @@
 <pre><code>
   fun Int.matches(strict: Boolean): Boolean = when (strict) {
       true -> this == 6
-      this in (4..7) -> true // 模糊
+      this in (4..7) -> true // 不明确
       else -> false
   }
 </code></pre>
