@@ -1,25 +1,14 @@
 <html>
 <body>
-報告程式碼和 <code>plugin.xml</code> 描述符中未正確註冊的延伸模組組件（組件和操作）。
+報告未正確註冊的延伸模組組件（操作和組件）。
 <p>
   報告的問題如下：
 </p>
 <ul>
-  <li>未解析的組件/操作實作類別 (<code>plugin.xml</code>)</li>
-  <li>未解析的組件接口類別 (<code>plugin.xml</code>)</li>
-  <li>無法將組件實作類別分配給其接口類別 (<code>plugin.xml</code>)</li>
-  <li>組件註冊不正確，例如，將 <code>ProjectComponent</code> 註冊為應用程式組件，或者類別完全沒有實作任何組件接口（<code>plugin.xml</code> 和 Java 程式碼）
+  <li>操作/組件實作類別為 abstract。</li>
+  <li>類別在 plugin.xml 中被註冊為操作，但不擴展 <code>AnAction</code> 類別。</li>
+  <li>操作類別沒有 public 無實參構造函式。
   </li>
-  <li>類別修飾符不正確：操作類別必須為 <code>public</code>，並且必須有 public 無實參構造函式。 此外，操作和組件實作類別不得為 abstract（<code>plugin.xml</code> 和 Java 程式碼）
-  </li>
-  <li>接口類別重複：只能將類別用作接口類別一次 (<code>plugin.xml</code>)</li>
-</ul>
-<!-- tooltip end -->
-<p>設定檢查：</p>
-<ul>
-  <li>使用<b>檢查延伸模組描述符(plugin.xml)</b> 選項可以禁用 <code>plugin.xml</code> 描述符中的檢查。</li>
-  <li>使用<b>檢查 Java 操作</b>選項可以禁用操作程式碼中的檢查。</li>
-  <li>使用<b>檢查 Java 程式碼</b>選項可以禁用程式碼中的所有檢查。</li>
 </ul>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>
+  報告在同一位置建立和呼叫的閉包。
+</p>
+<p>
+  用其主體取代閉包呼叫。
+</p>
+<!-- tooltip end -->
+<p>
+  <b>範例：</b>
+</p>
+<pre><code>
+  { (x: Int) -> () in
+      print(x)
+  }(42)
+</code></pre>
+<p>
+  在套用快速修復後：
+</p>
+<pre><code>
+  print(42)
+</code></pre>
+</body>
+</html>

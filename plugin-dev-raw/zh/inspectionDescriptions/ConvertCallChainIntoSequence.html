@@ -1,7 +1,7 @@
 <html>
 <body>
 報告應轉換為 <b>Sequence</b> 的 <code>Collection</code> 上的呼叫鏈。
-<p>每個 <code>Collection</code> 轉換函式（例如 <code>map()</code> 或 <code>filter()</code>）都會在背景創建一個新的
+<p>每個 <code>Collection</code> 轉換函式（例如 <code>map()</code> 或 <code>filter()</code>）都會在背景建立一個新的
      <code>Collection</code>（通常是 <code>List</code> 或 <code>Set</code>）。
     多次後續呼叫以及 <code>Collection</code> 中存在大量條目的情況下，記憶體流量可能會很大。
     這種情況下，最好使用 <code>Sequence</code>。

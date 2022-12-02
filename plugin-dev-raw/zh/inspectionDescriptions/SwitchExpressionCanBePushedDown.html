@@ -1,8 +1,7 @@
 <html>
 <body>
-Reports switch expressions and statements where every branch has common sub-expression, so the switch can be moved inside.
-此操作會縮短程式碼。 In many cases, it's reasonable to extract the resulting switch expression to a separate variable or
-a method.
+報告每個分支都有通用子表達式，因此 switch 可以移動到內部的 <code>switch</code> 表達式和語句。
+此操作會縮短程式碼。 在許多情況下，將得到的 switch 表達式提取到單獨的變數或方法是合理的。
 <p>範例：</p>
 <pre><code>
   switch (value) {
@@ -23,7 +22,7 @@ a method.
 </code></pre>
 <!-- tooltip end -->
 <p>
-  This inspection is applicable only to enhanced switches with arrow syntax.
+  此檢查僅適用於採用箭頭語法的增強的 switch。
 </p>
 <p><small>2022.3 最新變化</small></p>
 </body>

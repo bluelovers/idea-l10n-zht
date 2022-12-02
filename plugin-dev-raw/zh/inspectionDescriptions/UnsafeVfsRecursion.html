@@ -5,5 +5,30 @@
   對迴圈符號鏈接迭代時，這可能導致無限迴圈。
   請改用 <code>VfsUtilCore.visitChildrenRecursively()</code>。
 </p>
+<pre><code>
+void processDirectory(VirtualFile dir) {
+  for (VirtualFile file : dir.getChildren()) { // 不良
+    if (!file.isDirectory()) {
+      processFile(file);
+    } else {
+      processDirectory(file); // 遞歸呼叫
+    }
+  }
+}
+</code>
+</pre>
+<pre><code>
+void processDirectory(VirtualFile dir) {
+  VfsUtilCore.visitChildrenRecursively(dir, new VirtualFileVisitor&lt;Void>() { // 優良
+    @Override
+    public boolean visitFile(@NotNull VirtualFile file) {
+      if (!file.isDirectory()) {
+        processFile(file);
+      }
+      return true;
+    }
+  });
+}
+</code></pre>
 </body>
 </html>

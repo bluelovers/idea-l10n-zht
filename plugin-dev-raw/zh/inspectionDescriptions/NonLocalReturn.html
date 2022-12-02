@@ -5,8 +5,8 @@
     <title>非局部 return 語句</title>
 </head>
 <body>
-<p>報告在匿名函式中使用 <code>return</code> 關鍵字可以提早跳出該函式的情況。
-    非本地返回通過拋出和捕獲 <code>scala.runtime.NonLocalReturnException</code>-s 來實作。
+<p>在匿名函式中使用 <code>return</code> 關鍵字可以提早跳出該函式時報告。
+    非本地返回值通過拋出和捕獲 <code>scala.runtime.NonLocalReturnException</code>-s 來實作。
     這通常不是程序員的本意。 由於拋出和捕獲異常的隱藏性能開銷，這可能會帶來問題。 </p>
 <p>此外，它是一個有漏洞的實作：一個捕獲所有異常的處理程序可以攔截 <code>NonLocalReturnException</code>。</p>
 

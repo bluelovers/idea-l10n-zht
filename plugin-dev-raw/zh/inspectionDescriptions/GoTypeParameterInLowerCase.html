@@ -1,0 +1,15 @@
+<html>
+<body>
+報告以小寫宣告的類型參數。
+
+<p>根據官方的 Go 範例，使用大寫類型參數是一種良好的形式。
+此檢查有助於提高程式碼的可讀性。</p>
+<pre><code>func PrintSlice[t any](s []t) {
+    for _, v := range s{
+        print(v)
+    }
+}</code></pre>
+<p>用小寫宣告了類型參數 <code>t</code>。
+</p>
+</body>
+</html>

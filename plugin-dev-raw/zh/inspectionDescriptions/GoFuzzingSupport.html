@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>報告當 Go SDK 版本低於 1.18 時存在模糊測試</p>
+<p>當 Go SDK 版本低於 1.18 時，報告模糊測試</p>
 
-<p>模糊測試是一種自動化測試方法，它涉及到對可能導致程序崩潰或暴露無效行為的輸入資料的定向搜尋。 Go 從 1.18 開始支援模糊測試。</p>
+<p>模糊測試是一種自動化測試方法，涉及對可能導致程序崩潰或公開無效行為的輸入資料的定向搜尋。 Go 從 1.18 開始支援模糊測試。</p>
 <p>模糊測試範例：</p>
 <pre><code>
 func Div(a, b int) int {
@@ -16,7 +16,7 @@ func FuzzDiv(f *testing.F) {
 }
 </code></pre>
 <p>
-  請參閱<a href="https://go.dev/doc/fuzz/">Go Fuzzing</a>獲取更多資訊。
+  請參閱 <a href="https://go.dev/doc/fuzz/">Go Fuzzing</a> 獲取更多資訊。
 </p>
 </body>
 </html>

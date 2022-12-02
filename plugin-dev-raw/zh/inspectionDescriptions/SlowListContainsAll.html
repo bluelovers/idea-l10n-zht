@@ -2,11 +2,11 @@
 <body>
 報告 <code>java.util.List</code> 上對 <code>containsAll()</code> 的呼叫。
 <p>
-  此方法呼叫的時間復雜度為 O(n&middot;m)，其中 n 是呼叫該方法的列表中的元素數，m 是作為參數傳遞給該方法的集合中的元素數。
+  此方法呼叫的時間復雜度為 O(n&middot;m)，其中 n 是呼叫該方法的列表中的元素數，m 是作為參數傳遞至該方法的集合中的元素數。
   當列表很大時，這可能是一項開銷巨大的操作。
 </p>
 <p>
-  該快速修復會將列表包裝在 <code>new java.util.HashSet&lt;&gt;()</code> 中，因為從 <code>java.util.List</code> 創建 
+  該快速修復會將列表包裝在 <code>new java.util.HashSet&lt;&gt;()</code> 中，因為從 <code>java.util.List</code> 建立 
   <code>java.util.HashSet</code> 並在 <code>java.util.HashSet</code> 上執行 <code>containsAll()</code> 的所需時間為 O(n+m)。
 </p>
 <p><b>範例：</b></p>

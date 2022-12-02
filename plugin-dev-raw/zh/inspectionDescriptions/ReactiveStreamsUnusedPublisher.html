@@ -2,10 +2,10 @@
 <body>
 <p>報告未使用的 <code>Publisher</code> 實例。</p>
 <p>
-  要使用生成新的 <code>Publisher</code> 實例的運算符（返回 Mono/Flux/Flowable 的 Mono/Flux/Flowable 物件的方法），您必須通過 <code>subscribe()</code> 訂閱創建的 <code>Publisher</code>。
+  要使用生成新的 <code>Publisher</code> 實例的運算符（返回 Mono/Flux/Flowable 的 Mono/Flux/Flowable 物件的方法），您必須通過 <code>subscribe()</code> 訂閱建立的 <code>Publisher</code>。
 </p>
 <p>
-  使用工廠（例如，<code>Mono.just()</code>）而不訂閱返回的 <code>Publisher</code>，會創建一個從未使用的物件，並被視為不必要的記憶體分配。
+  使用工廠（例如，<code>Mono.just()</code>）而不訂閱返回的 <code>Publisher</code>，會建立一個從未使用的物件，並被視為不必要的記憶體分配。
 </p>
 <p>
   例如，<code>Mono.just(1, 2, 3).map(i -> i + 3)</code> 不會被執行，除非您訂閱了此 <code>Publisher</code>，或者除非您通過套用運算符生成新的 <code>Publisher</code> 並訂閱它。

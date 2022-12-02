@@ -2,11 +2,11 @@
 <body>
 報告 <code>equals()</code>、<code>hashCode()</code>、<code>compareTo()</code> 和 <code>Comparator.compare()</code> 方法內（臨時）新物件的構造。
 <p>
-  除了構造函式呼叫之外，還可以通過在 <code>foreach</code> 語句中自動裝箱或迭代器創建來創建新物件。
+  除了構造函式呼叫之外，還可以通過在 <code>foreach</code> 語句中自動裝箱或迭代器建立來建立新物件。
   這可能會導致性能問題，例如，將物件新增到 <code>Set</code> 或 <code>Map</code> 時，這些方法將在這些地方被經常呼叫。
 </p>
 <p>
-  當在 <code>throw</code> 或 <code>assert</code> 語句中創建物件時，該檢查將不會報告。
+  當在 <code>throw</code> 或 <code>assert</code> 語句中建立物件時，該檢查將不會報告。
 </p>
 <p><b>範例：</b></p>
 <pre><code>
@@ -24,7 +24,7 @@
   }
 </code></pre>
 <p>
-  在此範例中，在 <code>equals()</code> 內部創建了兩個額外的陣列，<code>age</code> 欄位的用法需要裝箱，而 <code>name + age</code> 隱式地創建了一個新字串。
+  在此範例中，在 <code>equals()</code> 內部建立了兩個額外的陣列，<code>age</code> 欄位的用法需要裝箱，而 <code>name + age</code> 隱式地建立了一個新字串。
 </p>
 <!-- tooltip end -->
 </body>

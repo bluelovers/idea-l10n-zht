@@ -1,0 +1,21 @@
+<html>
+<body>
+報告可以取代為具有相同值的現有局部或模式變數的類型轉換運算。
+<p>範例：</p>
+<pre><code>
+  void foo(Object obj) {
+    String s = (String) obj;
+    System.out.println(((String) obj).trim());
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  void foo(Object obj) {
+    String s = (String) obj;
+    System.out.println(s.trim());
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.3 最新變化</small></p>
+</body>
+</html>

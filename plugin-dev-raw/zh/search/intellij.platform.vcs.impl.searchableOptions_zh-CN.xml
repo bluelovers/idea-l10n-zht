@@ -1,8 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="already" path="ActionManager" hit="Already Unshelved" />
-    <option name="unshelved" path="ActionManager" hit="Already Unshelved" />
     <option name="git" path="ActionManager" hit="Git" />
     <option name="vcs" path="ActionManager" hit="VCS 操作" />
     <option name="操作" path="ActionManager" hit="VCS 操作" />
@@ -24,9 +22,9 @@
     <option name="移除" path="ActionManager" hit="從 VCS 移除" />
     <option name="從儲存庫獲取版本" path="ActionManager" hit="從儲存庫獲取版本" />
     <option name="從剪貼簿套用補丁" path="ActionManager" hit="從剪貼簿套用補丁…" />
-    <option name="從變更創建補丁並將其複製到剪貼簿" path="ActionManager" hit="從變更創建補丁並將其複製到剪貼簿" />
-    <option name="從所選變更創建補丁" path="ActionManager" hit="從所選變更創建補丁" />
-    <option name="從本地更改創建補丁" path="ActionManager" hit="從本地更改創建補丁..." />
+    <option name="從變更建立補丁並將其複製到剪貼簿" path="ActionManager" hit="從變更建立補丁並將其複製到剪貼簿" />
+    <option name="從所選變更建立補丁" path="ActionManager" hit="從所選變更建立補丁" />
+    <option name="從本地更改建立補丁" path="ActionManager" hit="從本地更改建立補丁..." />
     <option name="從版本控制中獲取" path="ActionManager" hit="從版本控制中獲取…" />
     <option name="優選所選變更" path="ActionManager" hit="優選所選變更" />
     <option name="作為補丁複製到剪貼簿" path="ActionManager" hit="作為補丁複製到剪貼簿" />
@@ -39,8 +37,8 @@
     <option name="切換到" path="ActionManager" hit="切換到“提交”對話框" />
     <option name="對話框" path="ActionManager" hit="切換到“提交”對話框" />
     <option name="提交" path="ActionManager" hit="切換到“提交”對話框" />
-    <option name="創建新的變更列表" path="ActionManager" hit="創建新的變更列表" />
-    <option name="創建補丁" path="ActionManager" hit="創建補丁…" />
+    <option name="建立新的變更列表" path="ActionManager" hit="建立新的變更列表" />
+    <option name="建立補丁" path="ActionManager" hit="建立補丁…" />
     <option name="刪除" path="ActionManager" hit="刪除" />
     <option name="刪除變更列表" path="ActionManager" hit="刪除變更列表" />
     <option name="刪除所選擱置" path="ActionManager" hit="刪除所選擱置" />
@@ -85,11 +83,12 @@
     <option name="將所選變更的反向操作應用於工作副本" path="ActionManager" hit="將所選變更的反向操作應用於工作副本" />
     <option name="將所選變更移至另一個變更列表" path="ActionManager" hit="將所選變更移至另一個變更列表" />
     <option name="將所選提交的主題複製到剪貼簿" path="ActionManager" hit="將所選提交的主題複製到剪貼簿" />
-    <option name="將所選行中的變更移動到另一個變更列表" path="ActionManager" hit="將所選行中的變更移動到另一個變更列表…" />
+    <option name="將所選行中的變更移至另一個變更列表" path="ActionManager" hit="將所選行中的變更移至另一個變更列表…" />
     <option name="將行移到另一個變更列表" path="ActionManager" hit="將行移到另一個變更列表…" />
     <option name="將補丁套用到專案的源" path="ActionManager" hit="將補丁套用到專案的源" />
     <option name="將補丁檔案複製到擱置" path="ActionManager" hit="將補丁檔案複製到擱置" />
     <option name="將選定提交的修訂號複製到剪貼簿" path="ActionManager" hit="將選定提交的修訂號複製到剪貼簿" />
+    <option name="已擱置" path="ActionManager" hit="已擱置" />
     <option name="套用" path="ActionManager" hit="套用" />
     <option name="套用所選擱置" path="ActionManager" hit="套用所選擱置" />
     <option name="套用補丁" path="ActionManager" hit="套用補丁…" />
@@ -240,6 +239,8 @@
     <option name="編輯器間距" hit="編輯器間距//已刪除忽略行邊框" />
     <option name="已新增忽略行邊框" hit="編輯器間距//已新增忽略行邊框" />
     <option name="編輯器間距" hit="編輯器間距//已新增忽略行邊框" />
+    <option name="更改的行彈出視窗" hit="編輯器間距//更改的行彈出視窗" />
+    <option name="編輯器間距" hit="編輯器間距//更改的行彈出視窗" />
     <option name="新增的行" hit="編輯器間距//新增的行" />
     <option name="編輯器間距" hit="編輯器間距//新增的行" />
     <option name="空白修改的行" hit="編輯器間距//空白修改的行" />
@@ -256,7 +257,7 @@
     <option name="分鐘" hit="分鐘" />
     <option name="b" hit="切換分支時恢復工作區 B " />
     <option name="切換分支時恢復工作區" hit="切換分支時恢復工作區 B " />
-    <option name="創建補丁時" hit="創建補丁時 " />
+    <option name="建立補丁時" hit="建立補丁時 " />
     <option name="變更" hit="變更" />
     <option name="file" hit="在 File Manager 中顯示" />
     <option name="manager" hit="在 File Manager 中顯示" />
@@ -269,11 +270,11 @@
     <option name="則提示將其解鎖" hit="如果嘗試編輯唯讀檔案 則提示將其解鎖" />
     <option name="如果嘗試編輯唯讀檔案" hit="如果嘗試編輯唯讀檔案 則提示將其解鎖" />
     <option name="將歷史記錄限制為" hit="將歷史記錄限制為" />
-    <option name="idea" hit="應用於在 IntelliJ IDEA 外部創建的檔案" />
-    <option name="intellij" hit="應用於在 IntelliJ IDEA 外部創建的檔案" />
-    <option name="外部創建的檔案" hit="應用於在 IntelliJ IDEA 外部創建的檔案" />
-    <option name="應用於在" hit="應用於在 IntelliJ IDEA 外部創建的檔案" />
-    <option name="當檔案被創建時" hit="當檔案被創建時 " />
+    <option name="idea" hit="應用於在 IntelliJ IDEA 外部建立的檔案" />
+    <option name="intellij" hit="應用於在 IntelliJ IDEA 外部建立的檔案" />
+    <option name="外部建立的檔案" hit="應用於在 IntelliJ IDEA 外部建立的檔案" />
+    <option name="應用於在" hit="應用於在 IntelliJ IDEA 外部建立的檔案" />
+    <option name="當檔案被建立時" hit="當檔案被建立時 " />
     <option name="當檔案被刪除時" hit="當檔案被刪除時 " />
     <option name="無提示新增" hit="無提示新增" />
     <option name="無提示移除" hit="無提示移除" />
@@ -312,8 +313,8 @@
     <option name="無提示移除" hit="無提示移除" />
     <option name="顯示選項" hit="顯示選項" />
     <option name="清除" hit="清除" />
-    <option name="a" hit="自動創建變更列表 A " />
-    <option name="自動創建變更列表" hit="自動創建變更列表 A " />
+    <option name="a" hit="自動建立變更列表 A " />
+    <option name="自動建立變更列表" hit="自動建立變更列表 A " />
     <option name="d" hit="試圖編輯停用變更列表中的檔案時顯示對話框 D " />
     <option name="試圖編輯停用變更列表中的檔案時顯示對話框" hit="試圖編輯停用變更列表中的檔案時顯示對話框 D " />
     <option name="i" hit="高亮顯示停用變更列表中的檔案 I " />
@@ -334,9 +335,7 @@
     <option name="更新版權" hit="更新版權" />
     <option name="r" hit="格式化程式碼 R " />
     <option name="格式化程式碼" hit="格式化程式碼 R " />
-    <option name="todo" hit="檢查 TODO  全部顯示 " />
-    <option name="全部顯示" hit="檢查 TODO  全部顯示 " />
-    <option name="檢查" hit="檢查 TODO  全部顯示 " />
+    <option name="檢查todo" hit="檢查TODO" />
     <option name="l" hit="清理 L " />
     <option name="清理" hit="清理 L " />
     <option name="i" hit="清除初始提交訊息 I " />

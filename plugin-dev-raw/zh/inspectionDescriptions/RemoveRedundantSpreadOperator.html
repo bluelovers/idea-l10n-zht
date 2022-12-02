@@ -7,7 +7,7 @@
   fun foo(vararg s: String) { }
 
   fun bar(ss: Array&lt;String&gt;) {
-      foo(*arrayOf("abc"))       // 對於 'foo' 的兩次呼叫，陣列創建
+      foo(*arrayOf("abc"))       // 對於 'foo' 的兩次呼叫，陣列建立
       foo(*arrayOf(*ss, "zzz"))  // 及其後續分配均冗餘
   }
 </code></pre>

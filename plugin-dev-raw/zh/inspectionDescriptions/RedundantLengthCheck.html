@@ -1,0 +1,26 @@
+<html>
+<body>
+報告陣列迭代後不必要的陣列長度檢查。 當陣列長度為零時。迭代將被跳過，因此沒有必要顯式地檢查長度。
+<p>範例：</p>
+<pre><code>
+  void f(String[] array) {
+    if (array.length != 0) { // 不必要的檢查
+      for (String str : array) {
+        System.out.println(str);
+      }
+    }
+  }
+</code></pre>
+<p>建議使用快速修復來解開或移除長度檢查：</p>
+<pre><code>
+  void f(String[] array) {
+    for (String str : array) {
+      System.out.println(str);
+    }
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>2022.3 最新變化</small></p>
+</body>
+</html>

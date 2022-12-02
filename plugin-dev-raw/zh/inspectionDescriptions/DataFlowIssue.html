@@ -1,6 +1,6 @@
 <html>
 <body>
-根據數據流分析，報告總是違反可空性約定、可能引發異常或只是冗餘的程式碼結構。
+根據數據流分析，報告總是違反可空性約定、可能拋出異常或只是冗餘的程式碼結構。
 <p>範例：</p>
 <pre><code>if (array.length &lt; index) {
   System.out.println(array[index]);
@@ -30,7 +30,8 @@ Integer square(@Nullable Integer input) {
   </li>
 </ul>
 <p>
-  在 IntelliJ IDEA 2022.3 版本之前，此檢查為“常數條件和異常”檢查的一部分。 現在，它被拆分成了兩個檢查：“常量值”和“可空性和數據流問題”。
+  在 IntelliJ IDEA 2022.3 版本之前，此檢查為“常數條件和異常”檢查的一部分。
+  現在，它被拆分成了兩個檢查：“常量值”和“可空性和數據流問題”。
 </p>
 </body>
 </html>

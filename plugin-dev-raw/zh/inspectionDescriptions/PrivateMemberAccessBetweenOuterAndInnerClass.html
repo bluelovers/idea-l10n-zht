@@ -3,7 +3,7 @@
 報告從嵌套類別到外部類的非常數 <code>private</code> 成員的引用。
 對於此類別引用，javac 將生成 package-private 合成存取器方法，這可能會危及安全性，因為看似為 private 的成員實際上可以從整個軟體套件中存取。
 <p>
-  嵌套類別及其外部類會被編譯為單獨的類別檔案。 Java 虛擬機通常會禁止從一個類別存取另一個類別的 private 欄位和方法。 為了實作從嵌套類別存取外部類別的 private 成員，javac 創建了一個 package-private 合成存取器方法。
+  嵌套類別及其外部類會被編譯為單獨的類別檔案。 Java 虛擬機通常會禁止從一個類別存取另一個類別的 private 欄位和方法。 為了實作從嵌套類別存取外部類別的 private 成員，javac 建立了一個 package-private 合成存取器方法。
 </p>
 <p>
   通過將 <code>private</code> 成員設為 package-private，實際的可存取性變成了顯式。

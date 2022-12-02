@@ -10,7 +10,7 @@
     <option name="切換到下一個停止的中斷點" path="ActionManager" hit="切換到下一個停止的中斷點" />
     <option name="切換欄位觀察點" path="ActionManager" hit="切換欄位觀察點" />
     <option name="切換方法中斷點" path="ActionManager" hit="切換方法中斷點" />
-    <option name="創建" path="ActionManager" hit="創建…" />
+    <option name="建立" path="ActionManager" hit="建立…" />
     <option name="單步跳出程式碼塊" path="ActionManager" hit="單步跳出程式碼塊" />
     <option name="啟用具有隱藏記憶體檢視的跟踪" path="ActionManager" hit="啟用具有隱藏記憶體檢視的跟踪" />
     <option name="在單獨的窗格中查看所選節點的文本值" path="ActionManager" hit="在單獨的窗格中查看所選節點的文本值" />
@@ -67,9 +67,9 @@
     <option name="傳輸" hit="傳輸 " />
     <option name="m" hit="共享記憶體 M " />
     <option name="共享記憶體" hit="共享記憶體 M " />
-    <option name="jit" hit="關閉 JIT" />
-    <option name="關閉" hit="關閉 JIT" />
     <option name="顯示替代源切換器" hit="顯示替代源切換器" />
+    <option name="jit" hit="禁用 JIT" />
+    <option name="禁用" hit="禁用 JIT" />
     <option name="立即停止偵錯行程" hit="立即停止偵錯行程" />
     <option name="附加記憶體代理" hit="附加記憶體代理" />
   </configurable>
@@ -78,17 +78,6 @@
     <option name="v" hit=" val 欄位作為局部變數 V " />
     <option name="val" hit=" val 欄位作為局部變數 V " />
     <option name="欄位作為局部變數" hit=" val 欄位作為局部變數 V " />
-    <option name="are" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="be" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="blocks" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="code" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="gray" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="of" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="out" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="predicted" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="that" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="to" hit="Gray out blocks of code that are predicted to be unreachable" />
-    <option name="unreachable" hit="Gray out blocks of code that are predicted to be unreachable" />
     <option name="java" hit="Java" />
     <option name="f" hit="static final 欄位 F " />
     <option name="final" hit="static final 欄位 F " />
@@ -106,8 +95,10 @@
     <option name="物件檢視" hit="啟用  toString    物件檢視  O  " />
     <option name="e" hit="啟用集合類別的替代檢視  E " />
     <option name="啟用集合類別的替代檢視" hit="啟用集合類別的替代檢視  E " />
-    <option name="n" hit="在陣列和集合中隱藏空元素  N " />
-    <option name="在陣列和集合中隱藏空元素" hit="在陣列和集合中隱藏空元素  N " />
+    <option name="n" hit="在陣列和集合中隱藏 null 元素 N " />
+    <option name="null" hit="在陣列和集合中隱藏 null 元素 N " />
+    <option name="元素" hit="在陣列和集合中隱藏 null 元素 N " />
+    <option name="在陣列和集合中隱藏" hit="在陣列和集合中隱藏 null 元素 N " />
     <option name="基於數據流分析預測條件值和異常" hit="基於數據流分析預測條件值和異常" />
     <option name="q" hit="完全限定名稱  Q " />
     <option name="完全限定名稱" hit="完全限定名稱  Q " />
@@ -117,6 +108,7 @@
     <option name="方法的所有類別" hit="對於覆蓋 toString   方法的所有類別" />
     <option name="i" hit="物件ID  I " />
     <option name="物件id" hit="物件ID  I " />
+    <option name="將預計無法存取的程式碼塊變灰" hit="將預計無法存取的程式碼塊變灰" />
     <option name="t" hit="已宣告類型  T " />
     <option name="已宣告類型" hit="已宣告類型  T " />
     <option name="顯示" hit="顯示" />
@@ -132,15 +124,15 @@
     <option name="使用表達式列表" hit="使用表達式列表 " />
     <option name="使用預設呈現器" hit="使用預設呈現器" />
     <option name="呈現器名稱" hit="呈現器名稱 " />
-    <option name="完全限定名稱" hit="將呈現器應用於類型物件  完全限定名稱  " />
-    <option name="將呈現器應用於類型物件" hit="將呈現器應用於類型物件  完全限定名稱  " />
+    <option name="呈現節點時" hit="呈現節點時" />
+    <option name="完全限定名稱" hit="將呈現器應用於以下類型的物件 完全限定名稱  " />
+    <option name="將呈現器應用於以下類型的物件" hit="將呈現器應用於以下類型的物件 完全限定名稱  " />
     <option name="展開節點時" hit="展開節點時" />
     <option name="按需" hit="按需" />
     <option name="顯示類型和物件id" hit="顯示類型和物件id" />
     <option name="可選" hit="測試一個節點是否可以擴展  可選  " />
     <option name="測試一個節點是否可以擴展" hit="測試一個節點是否可以擴展  可選  " />
-    <option name="渲染節點時" hit="渲染節點時" />
-    <option name="追加預設子節點" hit="追加預設子節點" />
+    <option name="追加預設子項" hit="追加預設子項" />
   </configurable>
   <configurable id="debugger.stepping" configurable_name="步進">
     <option name="java" hit="Java" />
