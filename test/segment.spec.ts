@@ -274,6 +274,9 @@ describe(`should include`, () => {
 
 		[`登入`, `dialog.message.login.empty=登录名为空`],
 
+		[`建立`, `action.create.new.directory.or.package=创建新目录或软件包`],
+		[`建立`, `empty.project.generator.description=不带模块的项目。用它来创建自由样式的模块结构。将打开“项目结构”对话框，帮助您构建项目结构。`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
