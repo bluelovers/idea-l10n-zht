@@ -277,6 +277,8 @@ describe(`should include`, () => {
 		[`建立`, `action.create.new.directory.or.package=创建新目录或软件包`],
 		[`建立`, `empty.project.generator.description=不带模块的项目。用它来创建自由样式的模块结构。将打开“项目结构”对话框，帮助您构建项目结构。`],
 
+		[`作業`, `preferred.theme.autodetect.selector=与操作系统同步`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
