@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-12-05)
+
+
+
+### 📦　Code Refactoring
+
+* **dict:** { 操作 => 動作 } ([bd08ece](https://github.com/bluelovers/idea-l10n-zht/commit/bd08ecefae57eb2527f2675d471ab01b799abcb8))
+* **dict:** { 操作系统 => 作業系統 } ([bb6426d](https://github.com/bluelovers/idea-l10n-zht/commit/bb6426d1c948e6a1e8f7ce9ab6e24adddf51cb3f))
+
+
+### 🚨　Tests
+
+* 緩存被字典強制取代前的 properties 來檢測是否有因為版本變動而修正更改內容 ([8a0b426](https://github.com/bluelovers/idea-l10n-zht/commit/8a0b4261bca719dc5d621e240a7bdb8576d82923))
+
+
+### 🛠　Build System
+
+* **cache:** update link-of-zh-cn.ts ([efd185b](https://github.com/bluelovers/idea-l10n-zht/commit/efd185bc971f3db3765c9f79310b4c46b3050515))
+* **cache:** update version-map ([c767a45](https://github.com/bluelovers/idea-l10n-zht/commit/c767a45308bc0cae27818ab0d84e3bc9593048b7))
+* **original:** update original source ( 223.224 ) ([565673b](https://github.com/bluelovers/idea-l10n-zht/commit/565673b29c55b31920ad3bfb4cc03e4f60287233))
+* **release:** update build ( 223.224 ) ([464346a](https://github.com/bluelovers/idea-l10n-zht/commit/464346a66bbd4a729c8a73736345edccefbaa2c4))
+* **release:** updatePlugins.xml ([2ef2750](https://github.com/bluelovers/idea-l10n-zht/commit/2ef2750aafa676032c26381897fcf57c779d1cea))
+* **release:** update dev build files ( 223.224 ) ([7b6844c](https://github.com/bluelovers/idea-l10n-zht/commit/7b6844ce1078c9b07dc3f4201d73dea3fe3b4a99))
+* **test:** update snapshots ( 223.224 ) ([f0d9c1f](https://github.com/bluelovers/idea-l10n-zht/commit/f0d9c1fc90f85c20ff41feca7542d00a41611dc1))
+
+
+### ♻️　Chores
+
+* change icon to `繁` ([d9da59b](https://github.com/bluelovers/idea-l10n-zht/commit/d9da59b76a952718a927ad617b4890951f917157))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-12-02)
 
 
