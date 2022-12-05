@@ -279,6 +279,8 @@ describe(`should include`, () => {
 
 		[`作業`, `preferred.theme.autodetect.selector=与操作系统同步`],
 
+		[`動作`, `title.choose.action.icon=选择操作图标`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
