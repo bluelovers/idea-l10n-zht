@@ -1,7 +1,7 @@
 <html>
 <body>
 報告正在對傳遞給 <code>Cleaner.register()</code> 捕獲引用的 <code>Runnable</code> 進行註冊的情況。
-如果引用被捕獲，它將永遠不是虛可達的，且永遠不會呼叫清理操作。
+如果引用被捕獲，它將永遠不是虛可達的，且永遠不會呼叫清理動作。
 <p>此問題的可能來源：</p>
 <ul>
   <li>使用非 static 方法、欄位或 <code>this</code> 本身的 lambda</li>

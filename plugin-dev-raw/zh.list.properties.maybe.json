@@ -572,7 +572,8 @@
     "not.specified": "<Not Specified>",
     "label.auto": "<Auto>",
     "MongoDB.auth.kerberos": "GSSAPI (Kerberos)",
-    "label.incomplete": "<incomplete>"
+    "label.incomplete": "<incomplete>",
+    "notification.content.forced.local.port.already.occupied.by.ssh.tunnel.to.expected": "Forced local port `{0}` is already occupied by SSH tunnel to `{1}` (expected`{2}`)"
   },
   "messages/DatabaseInspectorBundle.properties": {
     "export.notification.success.message.reveal": "<a href=reveal>{0}</a>"
@@ -841,6 +842,8 @@
   },
   "messages/EduCoreBundle.properties": {
     "exception.message.http.info": "HTTP {0} {1}",
+    "label.full.output.hide": "Hide Full Feedback...",
+    "label.full.output.show": "Show Full Feedback...",
     "stepik.url": "Stepik URL:",
     "ui.dialog.create.answer.placeholder.path.pattern": "[sectionName#]lessonName#taskName#filePath#placeholderIndex"
   },
@@ -2527,13 +2530,14 @@
     "rest.client.0.of.1.kb.indicator.text": "{0}/{1}Kb"
   },
   "messages/RubyDockerBundle.properties": {
-    "ruby.docker.compose.up.project": "\"docker-compose up\"",
+    "ruby.docker.compose.up.project": "docker-compose up",
     "ruby.docker.compose.command.type.run.name": "docker-compose run",
     "ruby.docker.compose.command.type.up.name": "docker-compose up",
     "ruby.docker.compose.command.type.exec.name": "docker-compose exec",
     "configurable.internal.command.mode.run": "'docker-compose run'",
     "configurable.gems.copy.docker.dp.mode.caption": "'docker cp'",
-    "border.title.docker.compose": "docker-compose"
+    "border.title.docker.compose": "docker-compose",
+    "ruby.docker.compose.down.project": "docker-compose down"
   },
   "messages/SASSBundle.properties": {
     "color.settings.sass.name": "Sass/SCSS",
@@ -3120,7 +3124,8 @@
     "paginator.of": "/{0}"
   },
   "messages/ViteBundle.properties": {
-    "vite.project.generator.presentable.package.name": "&Vite(&V):"
+    "vite.project.generator.presentable.package.name": "&Vite(&V):",
+    "vite.editor.notification": "Vite: {0}"
   },
   "messages/VueBundle.properties": {
     "vue.project.generator.name": "Vue.js",

@@ -18,7 +18,7 @@
 <p><b>範例：</b></p>
 <pre><code>
   public void print() {
-    synchronized(this) { // 警告：對 'this' 的鎖定操作可能會產生不可預見的副作用
+    synchronized(this) { // 警告：對 'this' 的鎖定動作可能會產生不可預見的副作用
       System.out.println("synchronized");
     }
   }

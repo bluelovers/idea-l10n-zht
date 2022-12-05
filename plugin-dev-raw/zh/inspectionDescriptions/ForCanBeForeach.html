@@ -20,7 +20,7 @@
   使用<b>報告索引的 'java.util.List' 迴圈</b>選項可尋找涉及 <code>list.get(index)</code> 呼叫的迴圈。
   這些迴圈通常可以取代為增強型 <code>for</code> 迴圈，除非它們修改了行程中的基礎列表，例如通過呼叫 <code>list.remove(index)</code> 進行修改。
   如果是後面這種情況，增強型 <code>for</code> 迴圈可能拋出 <code>ConcurrentModificationException</code>。
-  在某些情況下，<code>list.get(index)</code> 迴圈的操作速度也可能更快一些。</p>
+  在某些情況下，<code>list.get(index)</code> 迴圈的動作速度也可能更快一些。</p>
 <p>
   使用<b>不報告無類型集合上的迭代</b>選項可忽略沒有類型參數的集合。
   這將防止建立 <code>java.lang.Object</code> 類型的增強型 <code>for</code> 迴圈變數以及在使用迴圈變數的位置插入轉換。</p>
