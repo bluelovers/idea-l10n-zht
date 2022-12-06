@@ -281,6 +281,13 @@ describe(`should include`, () => {
 
 		[`動作`, `title.choose.action.icon=选择操作图标`],
 
+		[`解析`, `could.not.resolve.constructor=无法解析构造函数`],
+
+		[`解構`, `可查看所有可用的代码生成选项。使用此菜单，可以快速生成构造函数/析构函数、getter/setter、各种运算符和实现/重写函数。
+在析构声明中添加缺失的组件。`],
+		[`解構`, `在析构声明中添加缺失的组件。`],
+		[`解構`, `在访问端将析构模式转换为一系列的引用或索引器表达式。`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
