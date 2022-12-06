@@ -288,6 +288,8 @@ describe(`should include`, () => {
 		[`解構`, `在析构声明中添加缺失的组件。`],
 		[`解構`, `在访问端将析构模式转换为一系列的引用或索引器表达式。`],
 
+		[`建構`, `action.PhpGenerateConstructor.description=创建构造函数。`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
