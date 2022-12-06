@@ -1,6 +1,6 @@
 <html>
 <body>
-報告在 Java 記錄中宣告的冗餘構造函式。
+報告在 Java 記錄中宣告的冗餘建構函式。
 <p><b>範例 1：</b></p>
 <pre><code>
   record Point(int x, int y) {
@@ -14,10 +14,10 @@
     }
   }
 </code></pre>
-<p>該快速修復會移除冗餘的構造函式。</p>
+<p>該快速修復會移除冗餘的建構函式。</p>
 <p><b>範例 2：</b></p>
 <pre><code>
-   // 可以轉換為壓縮構造函式
+   // 可以轉換為壓縮建構函式
   record Range(int from, int to) {
     public Range(int from, int to) {
       if (from > to) throw new IllegalArgumentException();
@@ -26,7 +26,7 @@
     }
   }
 </code></pre>
-<p>該快速修復會將此程式碼轉換為緊湊構造函式。</p>
+<p>該快速修復會將此程式碼轉換為緊湊建構函式。</p>
 <!-- tooltip end -->
 <p>僅當專案或模組的語言級別為 16 或更高時，此檢查才會報告。</p>
 <p><small>2020.1 最新變化</small></p>

@@ -1,8 +1,8 @@
 <html>
 <body>
-報告 <code>equals()</code>、<code>hashCode()</code>、<code>compareTo()</code> 和 <code>Comparator.compare()</code> 方法內（臨時）新物件的構造。
+報告 <code>equals()</code>、<code>hashCode()</code>、<code>compareTo()</code> 和 <code>Comparator.compare()</code> 方法內（臨時）新物件的建構。
 <p>
-  除了構造函式呼叫之外，還可以通過在 <code>foreach</code> 語句中自動裝箱或迭代器建立來建立新物件。
+  除了建構函式呼叫之外，還可以通過在 <code>foreach</code> 語句中自動裝箱或迭代器建立來建立新物件。
   這可能會導致性能問題，例如，將物件新增到 <code>Set</code> 或 <code>Map</code> 時，這些方法將在這些地方被經常呼叫。
 </p>
 <p>

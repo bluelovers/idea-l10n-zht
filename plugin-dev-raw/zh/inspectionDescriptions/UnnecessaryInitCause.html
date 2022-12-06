@@ -1,7 +1,7 @@
 <html>
 <body>
-報告對 <code>Throwable.initCause()</code> 的呼叫，其中異常構造函式還包含 <code>Throwable cause</code> 實參。
-<p>在本例中，可以移除 <code>initCause()</code> 呼叫，並將其實參新增到對異常構造函式的呼叫中。</p>
+報告對 <code>Throwable.initCause()</code> 的呼叫，其中異常建構函式還包含 <code>Throwable cause</code> 實參。
+<p>在本例中，可以移除 <code>initCause()</code> 呼叫，並將其實參新增到對異常建構函式的呼叫中。</p>
 <p><b>範例：</b></p>
 <pre><code>
   try {
@@ -13,7 +13,7 @@
     throw wrapper;
   }
 </code></pre>
-<p>可通過快速修復將 cause 實參傳遞給構造函式。 在套用快速修復後：</p>
+<p>可通過快速修復將 cause 實參傳遞給建構函式。 在套用快速修復後：</p>
 <pre><code>
   try {
       process();

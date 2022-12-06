@@ -2,10 +2,10 @@
 <body>
 報告對 <code>java.lang.Class.newInstance()</code> 的呼叫。
 <p>
-  此方法會傳播由無實參構造函式拋出的異常，包括已檢查的異常。 使用此方法可以有效地繞過本由編譯器執行的編譯時異常檢查。
+  此方法會傳播由無實參建構函式拋出的異常，包括已檢查的異常。 使用此方法可以有效地繞過本由編譯器執行的編譯時異常檢查。
 </p>
 <p>
-  建議通過快速修復將該呼叫取代為對 <code>java.lang.reflect.Constructor.newInstance()</code> 方法的呼叫，這種方式將構造函式拋出的任何異常包裝在（已檢查的）<code>java.lang.reflect.InvocationTargetException</code> 中，從而可以避免這個問題。
+  建議通過快速修復將該呼叫取代為對 <code>java.lang.reflect.Constructor.newInstance()</code> 方法的呼叫，這種方式將建構函式拋出的任何異常包裝在（已檢查的）<code>java.lang.reflect.InvocationTargetException</code> 中，從而可以避免這個問題。
 </p>
 <p><b>範例：</b></p>
 <pre><code>

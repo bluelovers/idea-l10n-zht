@@ -1,6 +1,6 @@
 <html>
 <body>
-報告最近的不可序列化祖先沒有無實參構造函式的 <code>Serializable</code> 類別。 這種類無法反序列化，將失敗並拋出 <code>InvalidClassException</code>。
+報告最近的不可序列化祖先沒有無實參建構函式的 <code>Serializable</code> 類別。 這種類無法反序列化，將失敗並拋出 <code>InvalidClassException</code>。
 <p><b>範例：</b></p>
 <pre><code>
   class Ancestor {
@@ -11,7 +11,7 @@
   }
 
   //對此類別發出警告，因為超類別並非
-//可序列化，並且其構造函式接受實參
+//可序列化，並且其建構函式接受實參
   class Descendant extends Ancestor implements Serializable {
     Descendant() {
       super("Bob");

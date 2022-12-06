@@ -4,7 +4,7 @@
 <p>註解的參數、欄位或屬性的類型必須滿足以下要求之一：</p>
 <ol>
   <li>為基元類型</li>
-  <li>有一個接受單個 <code>String</code> 實參的構造函式</li>
+  <li>有一個接受單個 <code>String</code> 實參的建構函式</li>
   <li>有一個名為 <code>valueOf()</code> 或 <code>fromString()</code> 的 static 方法，它接受單個 <code>String</code> 實參，例如 <code>Integer.valueOf(String)</code>。
   </li>
   <li>擁有 <code>ParamConverterProvider</code> JAX-RS 擴展 SPI 的註冊實作，它返回一個能夠將字串轉換為特定類型的 <code>ParamConverter</code> 實例。
