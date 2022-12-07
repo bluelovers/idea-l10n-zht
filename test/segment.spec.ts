@@ -302,6 +302,8 @@ describe(`should include`, () => {
 		[`資源根`, `icon.modules.testResourcesRoot.tooltip=测试资源根`],
 		[`資源根`, `resource.root.path.component.title=资源根`],
 
+		[`表單`, `error.form.file.is.invalid=窗体文件无效`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
