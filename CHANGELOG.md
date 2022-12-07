@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-12-07)
+
+
+
+### 📦　Code Refactoring
+
+* **dict:** { 窗体 => 表單 } ([4f532b3](https://github.com/bluelovers/idea-l10n-zht/commit/4f532b3a910642fe79f4d6df1f359581f88baea9))
+* **dict:** { 源根 => 來源根 } ([f8dde85](https://github.com/bluelovers/idea-l10n-zht/commit/f8dde85e7b60892d1279bea16941cdb9d3381fc8))
+* **dict:** { 生成器 => 產生器 } ([64fc7fe](https://github.com/bluelovers/idea-l10n-zht/commit/64fc7fec1f56dc25e7f93d9052cb8b9688fc3bfa))
+* **dict:** { 查看 => 檢視 } ([7af404b](https://github.com/bluelovers/idea-l10n-zht/commit/7af404b961f0d02088395ff7acb1a63946f1d803))
+
+
+### 🛠　Build System
+
+* **release:** update build ( 223.224 ) ([8f3b6c1](https://github.com/bluelovers/idea-l10n-zht/commit/8f3b6c132e40c3ceab0cfb9f861f31cb1a3935e9))
+* **release:** update dev build files ( 223.224 ) ([d3953e0](https://github.com/bluelovers/idea-l10n-zht/commit/d3953e049d1c2c48b9f42736d780e4aa79c4fc96))
+* **test:** update snapshots ( 223.224 ) ([e4ae6d4](https://github.com/bluelovers/idea-l10n-zht/commit/e4ae6d48d93cc602840fcca90acc7d2d95f7fefa))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-12-06)
 
 
