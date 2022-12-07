@@ -290,6 +290,8 @@ describe(`should include`, () => {
 
 		[`建構`, `action.PhpGenerateConstructor.description=创建构造函数。`],
 
+		[`檢視`, `press.completion.shortcut.again.for.more.results=再次按 {0} 可查看更多结果`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
