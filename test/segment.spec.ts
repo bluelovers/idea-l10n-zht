@@ -292,6 +292,8 @@ describe(`should include`, () => {
 
 		[`檢視`, `press.completion.shortcut.again.for.more.results=再次按 {0} 可查看更多结果`],
 
+		[`產生器`, `typescript.validation.generators.overload=重载签名无法被声明为生成器`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
