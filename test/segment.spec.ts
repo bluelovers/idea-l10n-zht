@@ -294,6 +294,14 @@ describe(`should include`, () => {
 
 		[`產生器`, `typescript.validation.generators.overload=重载签名无法被声明为生成器`],
 
+		[`來源`, `javascript.validation.message.file.should.be.under.source.root=对象位于源根目录外的文件中，某些功能不可用`],
+		[
+			`資源根`,
+			`action.Groovy.CheckResources.Rebuild.description=为资源根中的所有 Groovy 文件运行编译器，以检查编译问题`
+		],
+		[`資源根`, `icon.modules.testResourcesRoot.tooltip=测试资源根`],
+		[`資源根`, `resource.root.path.component.title=资源根`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
