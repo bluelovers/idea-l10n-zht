@@ -535,6 +535,7 @@
     "action.Console.Jdbc.ExplainPlan.text": "Explain Plan",
     "action.Console.Jdbc.ExplainPlan.description": "Explain Plan",
     "data.source.from.url.url": "URL(&U):",
+    "action.DatabaseView.Diagnostics.JdbcLog.text": "_Show JDBC Log Settings…",
     "DataSourceConfigurable.tab.ssh.ssl": "SSH/SSL",
     "DatabaseScriptRunConfigurationSettingsEditor.Text.emptyText": "<Script text>",
     "data.source.editor.url.label": "URL:",
@@ -573,7 +574,8 @@
     "label.auto": "<Auto>",
     "MongoDB.auth.kerberos": "GSSAPI (Kerberos)",
     "label.incomplete": "<incomplete>",
-    "notification.content.forced.local.port.already.occupied.by.ssh.tunnel.to.expected": "Forced local port `{0}` is already occupied by SSH tunnel to `{1}` (expected`{2}`)"
+    "notification.content.forced.local.port.already.occupied.by.ssh.tunnel.to.expected": "Forced local port `{0}` is already occupied by SSH tunnel to `{1}` (expected`{2}`)",
+    "action.open.folder.text": "Open Folder"
   },
   "messages/DatabaseInspectorBundle.properties": {
     "export.notification.success.message.reveal": "<a href=reveal>{0}</a>"
@@ -841,9 +843,14 @@
     "usage.node.unknown": "<unknown node>"
   },
   "messages/EduCoreBundle.properties": {
+    "error.failed.login.to.subsystem": "Failed to log in to {0}",
     "exception.message.http.info": "HTTP {0} {1}",
+    "hyperskill.action.post.to.github": "Post project to GitHub...",
+    "jba.relogin.needed.title": "Relogging in to JetBrains Account needed",
+    "jba.relogin.text": "Relog in to JetBrains Account to confirm access to EduTools plugin with 'Manage Licenses...' action. Please make sure that Code With Me plugin is enabled",
     "label.full.output.hide": "Hide Full Feedback...",
     "label.full.output.show": "Show Full Feedback...",
+    "notification.hyperskill.cannot.post.project.to.github": "Cannot post project to GitHub",
     "stepik.url": "Stepik URL:",
     "ui.dialog.create.answer.placeholder.path.pattern": "[sectionName#]lessonName#taskName#filePath#placeholderIndex"
   },
@@ -1072,7 +1079,8 @@
   },
   "messages/GraalVmBundle.properties": {
     "debugger.display.name": "GDB/GraalVM",
-    "graalvm.install.title": "GraalVM Gu"
+    "graalvm.install.title": "GraalVM Gu",
+    "action.GraalVM.Debugger.DisplayPointers.text": "Show memory address of values"
   },
   "messages/GradleBundle.properties": {
     "gradle.settings.text.jvm.path": "Gradle JVM：",
@@ -2555,6 +2563,7 @@
     "replace.configuration.display.text": "{0} ⇨ {1}"
   },
   "messages/SbtBundle.properties": {
+    "sbt.source.sets": "SBT Source Sets",
     "sbt.settings.shell.title": "sbt shell",
     "sbt.settings.sbt": "sbt(&S):",
     "sbt.settings.scala": "Scala(&C):",
@@ -2580,7 +2589,9 @@
     "var.name": "var {0}",
     "library.type.scala.sdk": "Scala SDK",
     "sdk.title": "Scala SDK",
-    "sdkman": "SDKMAN!"
+    "sdkman": "SDKMAN!",
+    "support.back.references.in.shared.sources": "&Support back references in shared sources  (experimental)",
+    "support.back.references.in.shared.sources.tooltip": "With this setting enabled IntelliJ will be able to handle references<br>dfrom shared sourced module to declarations in dependent modules  "
   },
   "messages/ScalaCodeInsightBundle.properties": {
     "generate.tostring.method.action.text": "toString()",
@@ -2593,6 +2604,9 @@
     "marco.typeParameters.without.bounds": "typeParamsWithoutBounds(CLASS)"
   },
   "messages/ScalaInspectionBundle.properties": {
+    "inspection.scaladoc.problem.duplicate.tparam": "Duplicate @tparam tag for type parameter ''{0}''",
+    "inspection.scaladoc.problem.param.not.allowed": "@param tag isn't allowed here",
+    "inspection.scaladoc.problem.tparam.not.allowed": "@tparam tag isn't allowed here",
     "family.name.scala.scaladoc": "Scala: Scaladoc"
   },
   "messages/ScalaPlay2Bundle.properties": {
