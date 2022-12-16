@@ -99,6 +99,9 @@ describe(`segment`, () => {
 
 		[`重命名`, `rename.react.hook.variable.title=重命名状态变量`],
 
+		[`口中`, `action.EditSourceInNewWindow.text=在新窗口中打开源`],
+		[`口中`, `action.EditSourceInNewWindow.description=在新窗口打开所选条目的编辑器并使之获得焦点`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
