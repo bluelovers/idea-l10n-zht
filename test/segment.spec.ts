@@ -307,6 +307,10 @@ describe(`should include`, () => {
 
 		[`表單`, `error.form.file.is.invalid=窗体文件无效`],
 
+		[`導覽列`, `action.EditorToggleShowBreadcrumbs.description=在当前编辑器中切换显示路径导航栏`],
+		[`欄位`, `python.quick.fix.refactoring.set.default.value=您可以使用 {0} 导航字段和复选框。在选中该复选框的情况下，<ide/> 会将默认值内联到其他调用方，或将其设置为新参数的默认值。签名预览有助于您了解区别。现在，将默认值设置为 0。`],
+		[`導覽列`, `action.ViewMembersInNavigationBar.text=导航栏中的成员`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
