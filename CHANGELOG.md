@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-12-17)
+
+
+### FIXME
+
+* **dict:** 程式 , 程序
+
+
+
+### 🐛　Bug Fixes
+
+* **dict:** 修正 `脚本控制台` 判定為 `脚本／控制／台` 的問題 ([9962360](https://github.com/bluelovers/idea-l10n-zht/commit/99623605323e9e218c344694e71d469d85e84e36))
+
+
+### 📦　Code Refactoring
+
+* **dict:** { 连接 => 連線 } , { 连接行 => 合併行 } ([9a11b96](https://github.com/bluelovers/idea-l10n-zht/commit/9a11b96f1a4909b09bea39c75e5fd4e7ffb03fc2))
+* **dict:** { 云 => 雲 } ([4deecc5](https://github.com/bluelovers/idea-l10n-zht/commit/4deecc568f74a8d9596a07765eae0b690ddad6f0))
+* **dict:** { 递归 => 遞迴 } ([38b42c2](https://github.com/bluelovers/idea-l10n-zht/commit/38b42c2278c424a26aa86ff11a34ba1c3fc8cbf1))
+
+
+### 🛠　Build System
+
+* **release:** update build ( 223.228 ) ([b3bd504](https://github.com/bluelovers/idea-l10n-zht/commit/b3bd504446c9179a57f81a071307d255c4d15aaf))
+* **release:** update dev build files ( 223.228 ) ([ab76351](https://github.com/bluelovers/idea-l10n-zht/commit/ab763510a4ee2bffb7afc639c4db7e87cfd8d980))
+* **test:** update snapshots ( 223.228 ) ([6af9123](https://github.com/bluelovers/idea-l10n-zht/commit/6af9123e1ef49fc4210cd63ddfe0821406d3c58f))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-12-16)
 
 
