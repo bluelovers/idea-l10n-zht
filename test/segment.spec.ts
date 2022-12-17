@@ -313,6 +313,19 @@ describe(`should include`, () => {
 
 		[`遞迴`, `recursive.property.accessor=递归属性访问器`],
 
+		/**
+		 * @fixme
+		 */
+		//[`程式`, `运行程序`],
+		//[`程序`, `terminating.process.progress.kill=终止进程`],
+
+		[`連接埠`, `error.no.debug.listen.port=未指定的监听端口`],
+
+		[`合併行`, `action.EditorJoinLines.text=连接行`],
+
+		[`連線`, `string.buffer.to.string.in.concatenation.display.name=连接中的 'StringBuilder.toString()'`],
+		[`連線`, `status.connected=已连接到目标 VM, 地址: ''{0}''`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
