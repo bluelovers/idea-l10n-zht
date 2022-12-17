@@ -326,6 +326,8 @@ describe(`should include`, () => {
 		[`連線`, `string.buffer.to.string.in.concatenation.display.name=连接中的 'StringBuilder.toString()'`],
 		[`連線`, `status.connected=已连接到目标 VM, 地址: ''{0}''`],
 
+		[`主控台`, `action.IdeScriptingConsole.description=打开 IDE 脚本控制台`],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
