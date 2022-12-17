@@ -1,6 +1,6 @@
 <html>
 <body>
-報告遞歸方法中 <code>VirtualFile.getChildren()</code> 的用法。
+報告遞迴方法中 <code>VirtualFile.getChildren()</code> 的用法。
 <p>
   對迴圈符號鏈接迭代時，這可能導致無限迴圈。
   請改用 <code>VfsUtilCore.visitChildrenRecursively()</code>。
@@ -11,7 +11,7 @@ void processDirectory(VirtualFile dir) {
     if (!file.isDirectory()) {
       processFile(file);
     } else {
-      processDirectory(file); // 遞歸呼叫
+      processDirectory(file); // 遞迴呼叫
     }
   }
 }
