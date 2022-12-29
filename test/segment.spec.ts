@@ -353,6 +353,26 @@ describe(`should include`, () => {
 			`inspection.redundant.explicit.variable.type.description=可以省略局部变量的显式类型`
 		],
 
+		[
+			`記憶體`,
+			`附加内存代理`
+		],
+
+		[
+			`記憶體`,
+			`debug.memory.view.process=内存视图`
+		],
+
+		[
+			`記憶體`,
+			`in.memory.storage.presentable.name=内存存储`
+		],
+
+		[
+			`記憶體`,
+			`action.DatabaseView.ForceUnloadModel.text=强制从内存中卸载模型`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
