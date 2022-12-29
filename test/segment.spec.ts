@@ -348,6 +348,11 @@ describe(`should include`, () => {
 			`action.ToggleZenMode.description=同時切換免打擾和全屏模式`
 		],
 
+		[
+			`區域`,
+			`inspection.redundant.explicit.variable.type.description=可以省略局部变量的显式类型`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
