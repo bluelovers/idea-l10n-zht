@@ -331,7 +331,12 @@ describe(`should include`, () => {
 
 		[`主控台`, `action.IdeScriptingConsole.description=打开 IDE 脚本控制台`],
 
-		[`連線`, `there.are.not.selected.module.dependencies.of.the.module.br.b.0.b=没有选择模块的模块依赖项: <br><b>{0}</b>`],
+		[`相依`, `there.are.not.selected.module.dependencies.of.the.module.br.b.0.b=没有选择模块的模块依赖项: <br><b>{0}</b>`],
+
+		[
+			`重設`,
+			`action.reset.font.size=重置为 {0}pt`
+		],
 
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
