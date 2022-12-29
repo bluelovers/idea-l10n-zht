@@ -343,6 +343,11 @@ describe(`should include`, () => {
 			`go.core.dump.dialog.specify.core.dump.validation.message=指定核心转储`
 		],
 
+		[
+			`全螢幕`,
+			`action.ToggleZenMode.description=同時切換免打擾和全屏模式`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
