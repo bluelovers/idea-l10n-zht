@@ -1,8 +1,8 @@
 <html>
 <body>
-報告任何對 <code>Serializable</code> lambda、局部類別和匿名類別外部的非 <code>Serializable</code> 局部變數的引用。
+報告任何對 <code>Serializable</code> lambda、區域類別和匿名類別外部的非 <code>Serializable</code> 區域變數的引用。
 <p>
-  從匿名類別引用局部變數時，它的值存儲在該類的隱式欄位中。 對於局部類別和 lambda 也是如此。 如果變數類型為非 <code>Serializable</code>，序列化將失敗。
+  從匿名類別引用區域變數時，它的值存儲在該類的隱式欄位中。 對於區域類別和 lambda 也是如此。 如果變數類型為非 <code>Serializable</code>，序列化將失敗。
 </p>
 <p><b>範例：</b></p>
 <pre><code>

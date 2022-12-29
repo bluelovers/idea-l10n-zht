@@ -2,10 +2,10 @@
 <body>
 報告 Java Platform Module System <code>module-info.java</code> 檔案中的冗餘 <code>requires</code> 指令。
 當模組 <code>A</code> 需要模組 <code>B</code>，但模組 <code>A</code> 中的程式碼不從 <code>B</code> 匯入任何軟體套件或類別時，則 <code>requires</code> 指令冗餘。
-此外，所有模組都具有對 <code>java.base</code> 模組的隱式宣告依賴，因此 <code>requires java.base;</code> 指令始終冗餘。
+此外，所有模組都具有對 <code>java.base</code> 模組的隱式宣告相依，因此 <code>requires java.base;</code> 指令始終冗餘。
 <p>
   該快速修復會刪除冗餘的 <code>requires</code> 指令。
-  如果刪除的依賴項重新匯出了實際使用的模組，則修復會為這些模組新增 <code>requires</code> 指令。
+  如果刪除的相依項重新匯出了實際使用的模組，則修復會為這些模組新增 <code>requires</code> 指令。
 </p>
 <!-- tooltip end -->
 <p>僅當專案或模組的語言級別為 9 或更高時，此檢查才會報告。</p>

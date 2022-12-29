@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>報告具有缺少的或不明確的依賴項的 Bean 類別中的注入點。</p>
+<p>報告具有缺少的或不明確的相依項的 Bean 類別中的注入點。</p>
 <!-- tooltip end -->
 <p><b>範例：</b></p>
 <pre><code>
@@ -16,7 +16,7 @@
   class Car {
 
     @Inject
-    Engine <b>engine</b>; // 依賴項不明確：有多個 Bean 符合注入點
+    Engine <b>engine</b>; // 相依項不明確：有多個 Bean 符合注入點
   }
 </code></pre>
 </body>
