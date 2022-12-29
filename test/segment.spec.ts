@@ -338,6 +338,11 @@ describe(`should include`, () => {
 			`action.reset.font.size=重置为 {0}pt`
 		],
 
+		[
+			`傾印`,
+			`go.core.dump.dialog.specify.core.dump.validation.message=指定核心转储`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
