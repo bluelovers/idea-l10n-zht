@@ -387,6 +387,46 @@ describe(`should include`, () => {
 			`action.Github.Sync.Fork.description=相对于来源变基 GitHub 复刻仓库`
 		],
 
+		[
+			`框`,
+			`tooltip.close.search.bar.escape=关闭搜索栏(Esc 键)`
+		],
+
+		[
+			`列`,
+			`navigation.bar=导航栏`
+		],
+		[
+			`列`,
+			`checkbox.show.tool.window.bars=显示工具窗口栏`
+		],
+		[
+			`列`,
+			`show.status.bar=显示状态栏`
+		],
+		[
+			`列`,
+			`PhpDebugConfigurable.zero.configuration.install.toolbar.instruction=浏览器工具栏或小书签。`
+		],
+		[
+			`列`,
+			`python.sdk.installing.windows.warning=Windows 可能需要您批准后才能安装 Python。请检查任务栏。`
+		],
+
+		[
+			`側邊列`,
+			`action.RemoveStripeButton.text=从边栏中移除`
+		],
+
+		[
+			`捲軸`,
+			`滚动条`
+		],
+		[
+			`捲軸`,
+			`checkbox.show.editor.preview.popup=悬停在滚动栏上时显示代码透镜`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
