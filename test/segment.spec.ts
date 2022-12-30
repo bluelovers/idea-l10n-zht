@@ -382,6 +382,11 @@ describe(`should include`, () => {
 			`action.DatabaseView.ForceUnloadModel.text=强制从内存中卸载模型`
 		],
 
+		[
+			`複`,
+			`action.Github.Sync.Fork.description=相对于来源变基 GitHub 复刻仓库`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
