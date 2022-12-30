@@ -102,6 +102,15 @@ describe(`segment`, () => {
 		[`口中`, `action.EditSourceInNewWindow.text=在新窗口中打开源`],
 		[`口中`, `action.EditSourceInNewWindow.description=在新窗口打开所选条目的编辑器并使之获得焦点`],
 
+		[
+			`文件`,
+			`settings.s3.profile.name=配置文件名称:`
+		],
+		[
+			`文件`,
+			`export.test.results.output.filename.empty=输出文件名为空`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
