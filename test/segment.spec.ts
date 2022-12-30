@@ -427,6 +427,11 @@ describe(`should include`, () => {
 			`checkbox.show.editor.preview.popup=悬停在滚动栏上时显示代码透镜`
 		],
 
+		[
+			`小工具`,
+			`此意图会用微件包围所选组合代码。`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
