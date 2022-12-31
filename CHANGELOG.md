@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-12-31)
+
+
+
+### 📦　Code Refactoring
+
+* **dict:** { 任务栏 => 工作列 } ([96c0ed2](https://github.com/bluelovers/idea-l10n-zht/commit/96c0ed2f6890d79adfd46959b09800e129fe1c6c))
+
+
+### 🛠　Build System
+
+* **cache:** update static cache ([0a165de](https://github.com/bluelovers/idea-l10n-zht/commit/0a165deaceb9ac257674d7a7377aa3e19b80b23c))
+* **release:** update build ( 223.228 ) ([91b7c37](https://github.com/bluelovers/idea-l10n-zht/commit/91b7c372ba8393e56fe7578bf7e4fe107484f1de))
+* **release:** update dev build files ( 223.228 ) ([8dcaaed](https://github.com/bluelovers/idea-l10n-zht/commit/8dcaaed6f2f366e414e33d3d7fad26fbbd65b289))
+* **test:** update snapshots ( 223.228 ) ([5732757](https://github.com/bluelovers/idea-l10n-zht/commit/57327579f654943a181d4b1ac0dd04013e586697))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2022-12-30)
 
 
