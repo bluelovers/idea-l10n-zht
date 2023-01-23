@@ -432,6 +432,16 @@ describe(`should include`, () => {
 			`此意图会用微件包围所选组合代码。`
 		],
 
+		[
+			`發送`,
+			`action.CIDR.Interactive.SendIncludesToCling.text=将包含的标头发送到 Cling`
+		],
+
+		[
+			`發送`,
+			`action.SendEventLogStatistics.description=将事件日志文件发送到 QA 服务器`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
