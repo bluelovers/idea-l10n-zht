@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>类或特征字段的可疑隐藏</title>
+</head>
+<body>
+<p>最常见的情况是在类中声明一个字段，然后在方法中使用同名的局部值或变量：</p>
+<pre><code>
+class Foo(foo: Int) {
+  def test(): Int = {
+    val foo: Int = 1 // 高亮显示
+    foo
+  }
+}
+</code></pre>
+
+<p>这很容易理解，但如果在另一个文件的超类或特征中声明该字段，则会变得更加麻烦，这样做的话，该字段可能会更不明显，且更容易出错：</p>
+
+<pre><code>
+// TraitA.scala
+trait TraitA {
+  def n: Int = 1
+}
+
+// ObjectA.scala
+object ObjectA extends TraitA {
+  def foo(): Unit = {
+    val n: Int = 0 // 高亮显示
+  }
+}
+</code></pre>
+
+<p>在极端情况下，类定义变量，而子类定义同名的值。 子类值不能重写超类变量，只能隐藏它。 这有时会导致非普通错误。
+    Scala 编译器采用选项 -Xlint:private-shadow，会在这种情况下发出警告。</p>
+<p> “选项”部分中的组合框允许控制如何高亮显示此极端情况。 您可以选择<b>始终</b>高亮显示，以及高亮显示隐藏类或特征字段的局部字段，您可以选择<b>永不</b>高亮显示，并保留其他高亮显示，您可以选择<b>检查编译器选项</b>并让检查做出相应行为，或者您可以选择<b>仅</b>高亮显示极端情况（如果存在编译器选项），而不高亮显示其他隐藏情况。</p>
+
+<pre><code>
+class C(var c: Int)
+
+// `c` shadows `var c` from the `C` class
+class D(c: Int) extends C(c) {
+  def f: Int = c
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

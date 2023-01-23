@@ -1,0 +1,15 @@
+<html>
+<body>
+报告使用 <code>@RegisterExtension</code> 注解的字段，它们的类型错误或者在需要时未声明为 static。
+此类扩展将无法正确注册，并可能导致测试启动失败。
+<p><b>示例：</b></p>
+<pre><code>
+  public class MyTest {
+    @RegisterExtension
+    private JUnit4Rule rule;
+  }
+</code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>

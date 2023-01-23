@@ -16,6 +16,11 @@
     <option name="raw" path="ActionManager" hit="Explain Plan (Raw)" />
     <option name="analyse" path="ActionManager" hit="Explain analyse" />
     <option name="explain" path="ActionManager" hit="Explain analyse" />
+    <option name="data" path="ActionManager" hit="Import Data from File(s)…" />
+    <option name="file" path="ActionManager" hit="Import Data from File(s)…" />
+    <option name="from" path="ActionManager" hit="Import Data from File(s)…" />
+    <option name="import" path="ActionManager" hit="Import Data from File(s)…" />
+    <option name="s" path="ActionManager" hit="Import Data from File(s)…" />
     <option name="sql" path="ActionManager" hit="SQL 生成器…" />
     <option name="生成器" path="ActionManager" hit="SQL 生成器…" />
     <option name="sql" path="ActionManager" hit="SQL 脚本" />
@@ -169,7 +174,9 @@
     <option name="打开查询执行设置" path="ActionManager" hit="打开查询执行设置…" />
     <option name="打开查询控制台" path="ActionManager" hit="打开查询控制台" />
     <option name="执行" path="ActionManager" hit="执行" />
+    <option name="2" path="ActionManager" hit="执行(2)" />
     <option name="执行" path="ActionManager" hit="执行(2)" />
+    <option name="3" path="ActionManager" hit="执行(3)" />
     <option name="执行" path="ActionManager" hit="执行(3)" />
     <option name="执行语句" path="ActionManager" hit="执行语句 (替代)" />
     <option name="替代" path="ActionManager" hit="执行语句 (替代)" />
@@ -204,7 +211,6 @@
     <option name="显示变更" path="ActionManager" hit="显示变更" />
     <option name="显示地理位置查看器" path="ActionManager" hit="显示地理位置查看器" />
     <option name="显示或隐藏数据库和架构" path="ActionManager" hit="显示或隐藏数据库和架构" />
-    <option name="显示脚本" path="ActionManager" hit="显示脚本" />
     <option name="显示选项菜单" path="ActionManager" hit="显示选项菜单" />
     <option name="更改事务的隔离级别" path="ActionManager" hit="更改事务的隔离级别" />
     <option name="更改单元类型" path="ActionManager" hit="更改单元类型" />
@@ -245,10 +251,13 @@
     <option name="ui" path="ActionManager" hit="索引(I) (旧 UI)" />
     <option name="旧" path="ActionManager" hit="索引(I) (旧 UI)" />
     <option name="索引" path="ActionManager" hit="索引(I) (旧 UI)" />
+    <option name="1" path="ActionManager" hit="级别 1: 仅限名称" />
     <option name="仅限名称" path="ActionManager" hit="级别 1: 仅限名称" />
     <option name="级别" path="ActionManager" hit="级别 1: 仅限名称" />
+    <option name="2" path="ActionManager" hit="级别 2: 跳过源" />
     <option name="级别" path="ActionManager" hit="级别 2: 跳过源" />
     <option name="跳过源" path="ActionManager" hit="级别 2: 跳过源" />
+    <option name="3" path="ActionManager" hit="级别 3: 所有内容" />
     <option name="所有内容" path="ActionManager" hit="级别 3: 所有内容" />
     <option name="级别" path="ActionManager" hit="级别 3: 所有内容" />
     <option name="结果单元格编辑器" path="ActionManager" hit="结果单元格编辑器" />
@@ -267,7 +276,6 @@
     <option name="缩小所选列的范围" path="ActionManager" hit="缩小所选列的范围" />
     <option name="缩短选项卡标题" path="ActionManager" hit="缩短选项卡标题" />
     <option name="聚合视图选项" path="ActionManager" hit="聚合视图选项" />
-    <option name="脚本化扩展程序" path="ActionManager" hit="脚本化扩展程序" />
     <option name="t" path="ActionManager" hit="表(T) (旧 UI)" />
     <option name="ui" path="ActionManager" hit="表(T) (旧 UI)" />
     <option name="旧" path="ActionManager" hit="表(T) (旧 UI)" />
@@ -349,6 +357,7 @@
     <option name="预览挂起的变更" path="ActionManager" hit="预览挂起的变更" />
     <option name="驱动程序" path="ActionManager" hit="驱动程序" />
     <option name="驱动程序和数据源" path="ActionManager" hit="驱动程序和数据源" />
+    <option name="0" path="ActionManager" hit="默认({0})" />
     <option name="默认" path="ActionManager" hit="默认({0})" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.数据库" configurable_name="数据库">
@@ -369,8 +378,10 @@
   <configurable id="reference.settingsdialog.IDE.editor.colors.表差异" configurable_name="表差异">
     <option name="表差异" hit="表差异" />
     <option name="已从差异中排除" hit="已从差异中排除" />
+    <option name="-" hit="模糊匹配 - 不匹配" />
     <option name="不匹配" hit="模糊匹配 - 不匹配" />
     <option name="模糊匹配" hit="模糊匹配 - 不匹配" />
+    <option name="-" hit="模糊匹配 - 匹配" />
     <option name="匹配" hit="模糊匹配 - 匹配" />
     <option name="模糊匹配" hit="模糊匹配 - 匹配" />
   </configurable>
@@ -458,6 +469,9 @@
     <option name="点击" hit=" 点击" />
     <option name="alt" hit="Alt  点击" />
     <option name="点击" hit="Alt  点击" />
+    <option name="alternate" hit="Alternate row colors" />
+    <option name="colors" hit="Alternate row colors" />
+    <option name="row" hit="Alternate row colors" />
     <option name="uuid" hit="UUID" />
     <option name="从不" hit="从不" />
     <option name="使用自定义字体" hit="使用自定义字体 " />
@@ -551,6 +565,14 @@
   <configurable id="database.other" configurable_name="其他">
     <option name="ddl" hit="DDL 映射" />
     <option name="映射" hit="DDL 映射" />
+    <option name="consoles" hit="Default resolve mode for consoles " />
+    <option name="default" hit="Default resolve mode for consoles " />
+    <option name="for" hit="Default resolve mode for consoles " />
+    <option name="mode" hit="Default resolve mode for consoles " />
+    <option name="resolve" hit="Default resolve mode for consoles " />
+    <option name="playground" hit="Playground" />
+    <option name="resolution" hit="SQL Resolution" />
+    <option name="sql" hit="SQL Resolution" />
     <option name="代码生成" hit="代码生成" />
     <option name="修改对象" hit="修改对象" />
     <option name="其他" hit="其他" />
@@ -561,6 +583,7 @@
     <option name="更新源文本时显示有效脚本的预览" hit="更新源文本时显示有效脚本的预览" />
     <option name="生成上下文模板" hit="生成上下文模板 " />
     <option name="确认取消修改架构的对话框" hit="确认取消修改架构的对话框" />
+    <option name="脚本" hit="脚本" />
     <option name="记住筛选器是否处于打开状态" hit="记住筛选器是否处于打开状态" />
     <option name="重构" hit="重构" />
     <option name="附加到现有控制台" hit="附加到现有控制台" />

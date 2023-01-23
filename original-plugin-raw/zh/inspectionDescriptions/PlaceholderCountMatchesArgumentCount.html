@@ -2,5 +2,17 @@
 <body>
 报告 SLF4J 或 Log4j 2 日志记录调用，例如 <code>logger.info("{}: {}", key)</code>，其中记录器消息中 <code>{}</code> 占位符的数量与日志调用的其他实参的数量不匹配。
 <!-- tooltip end -->
+<p>
+Use the inspection option to specify which implementation SLF4J uses.
+If <strong>Check automatically</strong> is chosen, then <code>org.apache.logging.slf4j.Log4jLogger</code> is searched in the classpath.
+If this file is founded or <strong>Yes</strong> is chosen, then cases, when the last parameter with an exception type has a placeholder, will
+  not be reported for SLFJ4 API.
+示例：
+<pre><code>
+// will not be reported
+log.error("For id {}: {}", id, new RuntimeException());
+</code></pre>
+此选项仅适用于 SLF4J。
+<p>
 </body>
 </html>

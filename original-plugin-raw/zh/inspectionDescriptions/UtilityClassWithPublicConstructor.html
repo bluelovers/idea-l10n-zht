@@ -2,6 +2,22 @@
 <body>
 报告包含 <code>public</code> 构造函数的实用程序类。
 <p>实用程序类将所有字段和方法声明为 <code>static</code>。 在这种类中创建 <code>public</code> 构造函数令人困惑，并且可能导致类意外实例化。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  public final class UtilityClass {
+    public UtilityClass(){
+    }
+    public static void foo() {}
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  public final class UtilityClass {
+    private UtilityClass(){
+    }
+    public static void foo() {}
+  }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+Reports double-quoted <a href="https://go.dev/ref/spec#String_literals">string literals</a> that can be converted
+into raw string literals and vice versa.
+<p><b>示例：</b></p>
+<pre><code>
+  var s = "Hello\n   \"World\""
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  var s = `Hello
+   "World"`
+</code></pre>
+<!-- tooltip end -->
+<p>There are two caveats in converting double-quoted strings to raw strings:</p>
+<ul>
+  <li>According to the <a href="https://go.dev/ref/spec#String_literals">Go language specification</a>, the carriage return
+    character (<code>'\r'</code>) is discarded from the raw string values. As there is no way to show carriage return in raw strings,
+    we discard carriage return characters when converting a double-quoted string to a raw string.</li>
+  <li>The backtick character (<code>'`'</code>) cannot exist in raw string literals (there is no way to escape it). Therefore, converting
+  double-quoted strings that contain the backtick character to raw strings is not possible and will result in a syntax error. The user can decide to undo the
+  conversion or use some form of concatenation to preserve the backtick in a double-quoted string. For example, <code>"`ab``"</code>
+  will result in <code>`ab``</code>, which is syntactically incorrect. The user can either undo the operation or change the resulting string
+  to <code>`ab` + "`"</code>.</li>
+</ul>
+</body>
+</html>

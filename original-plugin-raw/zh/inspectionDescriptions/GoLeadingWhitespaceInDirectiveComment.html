@@ -1,0 +1,18 @@
+<html>
+<body>
+Reports leading whitespaces before Go directives in comments.
+<p>Go directives are not recognized if there is whitespace between <code>//</code> and
+  the Go directive.</p>
+<p>The quick-fix removes the leading whitespace before the Go directive.</p>
+<p><b>示例：</b></p>
+<pre><code>
+  "//  go:embed file.txt"
+  var File string
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  "//go:embed file.txt"
+  var File string
+</code></pre>
+</body>
+</html>

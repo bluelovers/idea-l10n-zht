@@ -2,6 +2,10 @@
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
     <option name="git" path="ActionManager" hit="Git" />
+    <option name="for" path="ActionManager" hit="Show History for Selection…" />
+    <option name="history" path="ActionManager" hit="Show History for Selection…" />
+    <option name="selection" path="ActionManager" hit="Show History for Selection…" />
+    <option name="show" path="ActionManager" hit="Show History for Selection…" />
     <option name="vcs" path="ActionManager" hit="VCS 操作" />
     <option name="操作" path="ActionManager" hit="VCS 操作" />
     <option name="vcs" path="ActionManager" hit="VCS 操作弹出窗口…" />
@@ -10,6 +14,8 @@
     <option name="标签" path="ActionManager" hit="VCS 标签" />
     <option name="vcs" path="ActionManager" hit="VCS 组" />
     <option name="组" path="ActionManager" hit="VCS 组" />
+    <option name="options" path="ActionManager" hit="View Options" />
+    <option name="view" path="ActionManager" hit="View Options" />
     <option name="上一个变更" path="ActionManager" hit="上一个变更" />
     <option name="下一个变更" path="ActionManager" hit="下一个变更" />
     <option name="与修订比较" path="ActionManager" hit="与修订比较…" />
@@ -137,7 +143,6 @@
     <option name="显示编辑器选择的历史记录" path="ActionManager" hit="显示编辑器选择的历史记录" />
     <option name="显示行的差异" path="ActionManager" hit="显示行的差异" />
     <option name="显示详细信息" path="ActionManager" hit="显示详细信息" />
-    <option name="显示选择的历史记录" path="ActionManager" hit="显示选择的历史记录" />
     <option name="更改导航操作" path="ActionManager" hit="更改导航操作" />
     <option name="更改筛选条件" path="ActionManager" hit="更改筛选条件" />
     <option name="更新" path="ActionManager" hit="更新" />
@@ -214,18 +219,23 @@
     <option name="vcs" hit="VCS 注解//最后一次提交的前景" />
     <option name="最后一次提交的前景" hit="VCS 注解//最后一次提交的前景" />
     <option name="注解" hit="VCS 注解//最后一次提交的前景" />
+    <option name="1" hit="VCS 注解//背景色 #1" />
     <option name="vcs" hit="VCS 注解//背景色 #1" />
     <option name="注解" hit="VCS 注解//背景色 #1" />
     <option name="背景色" hit="VCS 注解//背景色 #1" />
+    <option name="2" hit="VCS 注解//背景色 #2" />
     <option name="vcs" hit="VCS 注解//背景色 #2" />
     <option name="注解" hit="VCS 注解//背景色 #2" />
     <option name="背景色" hit="VCS 注解//背景色 #2" />
+    <option name="3" hit="VCS 注解//背景色 #3" />
     <option name="vcs" hit="VCS 注解//背景色 #3" />
     <option name="注解" hit="VCS 注解//背景色 #3" />
     <option name="背景色" hit="VCS 注解//背景色 #3" />
+    <option name="4" hit="VCS 注解//背景色 #4" />
     <option name="vcs" hit="VCS 注解//背景色 #4" />
     <option name="注解" hit="VCS 注解//背景色 #4" />
     <option name="背景色" hit="VCS 注解//背景色 #4" />
+    <option name="5" hit="VCS 注解//背景色 #5" />
     <option name="vcs" hit="VCS 注解//背景色 #5" />
     <option name="注解" hit="VCS 注解//背景色 #5" />
     <option name="背景色" hit="VCS 注解//背景色 #5" />
@@ -294,6 +304,7 @@
   </configurable>
   <configurable id="project.propVCSSupport.DirectoryMappings" configurable_name="目录映射">
     <option name="" hit="     所有模块的内容根 以及项目基目录的所有直接后代" />
+    <option name="-" hit="     所有模块的内容根 以及项目基目录的所有直接后代" />
     <option name="以及项目基目录的所有直接后代" hit="     所有模块的内容根 以及项目基目录的所有直接后代" />
     <option name="所有模块的内容根" hit="     所有模块的内容根 以及项目基目录的所有直接后代" />
     <option name="目录映射" hit="目录映射" />
@@ -306,21 +317,12 @@
     <option name="停用变更列表" hit="停用变更列表" />
     <option name="p" hit="允许将一个文件中的变更放入不同的变更列表 P " />
     <option name="允许将一个文件中的变更放入不同的变更列表" hit="允许将一个文件中的变更放入不同的变更列表 P " />
-    <option name="冲突" hit="冲突" />
-    <option name="包含忽略冲突的文件" hit="包含忽略冲突的文件 " />
     <option name="变更列表" hit="变更列表" />
     <option name="当空变更列表变为停用状态时" hit="当空变更列表变为停用状态时 " />
     <option name="无提示移除" hit="无提示移除" />
     <option name="显示选项" hit="显示选项" />
-    <option name="清除" hit="清除" />
     <option name="a" hit="自动创建变更列表 A " />
     <option name="自动创建变更列表" hit="自动创建变更列表 A " />
-    <option name="d" hit="试图编辑停用变更列表中的文件时显示对话框 D " />
-    <option name="试图编辑停用变更列表中的文件时显示对话框" hit="试图编辑停用变更列表中的文件时显示对话框 D " />
-    <option name="i" hit="高亮显示停用变更列表中的文件 I " />
-    <option name="高亮显示停用变更列表中的文件" hit="高亮显示停用变更列表中的文件 I " />
-    <option name="h" hit="高亮显示存在变更列表冲突的文件 H " />
-    <option name="高亮显示存在变更列表冲突的文件" hit="高亮显示存在变更列表冲突的文件 H " />
   </configurable>
   <configurable id="project.propVCSSupport.CommitDialog" configurable_name="提交">
     <option name="import" hit="优化 import O " />

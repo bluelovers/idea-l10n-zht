@@ -6,8 +6,5 @@
 log.Printf("Reading %s: %v", file, err)</code></pre>
 <p>根据 <a href="https://golang.org/wiki/CodeReviewComments#error-strings">golang.org 上的 Error Strings</a> 页面，错误字符串不应大写或以标点符号结尾，因为它们可能会出现在其他上下文中。
 </p>
-<p>要修正格式，可以应用<b>修正错误字符串格式</b>快速修复。 应用快速修复后，错误字符串将如下所示：</p>
-<pre><code>err := fmt.Errorf("cannot read the file")
-log.Printf("Reading %s: %v", file, err)</code></pre>
 </body>
 </html>

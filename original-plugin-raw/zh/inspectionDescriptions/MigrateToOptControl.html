@@ -1,0 +1,15 @@
+<html>
+<body>
+报告检查实现中可以自动转换为 <code>getOptionsPane()</code> 的 <code>createOptionsPanel()</code> 方法。
+<p>
+  不建议通过 <code>createOptionsPanel()</code> 创建检查选项控制，而应使用声明性控制描述  <code>getOptionsPane()</code>。
+  该检查会检查 <code>createOptionsPanel()</code> 实现，如果它们使用 InspectionOptionsPanel 或其后代且足够简单，则建议自动转换为新的 API。
+</p>
+<p>
+  此检查目前仅支持 Java 和 Kotlin。
+  它无法转换使用 <code>apply</code> 或 <code>also</code> 等 Kotlin 方法的代码。 请尝试对它们进行内联。
+</p>
+<!-- tooltip end -->
+<p><small>2023.1 最新变化</small></p>
+</body>
+</html>

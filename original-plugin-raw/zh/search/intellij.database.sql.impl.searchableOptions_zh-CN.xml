@@ -23,12 +23,6 @@
     <option name="按" hit="按 Enter 时结束代码块" />
     <option name="时结束代码块" hit="按 Enter 时结束代码块" />
   </configurable>
-  <configurable id="editor.preferences.folding" configurable_name="代码折叠">
-    <option name="sql" hit="SQL" />
-    <option name="位或更长" hit="在数字文字   位或更长 内部添加下划线" />
-    <option name="内部添加下划线" hit="在数字文字   位或更长 内部添加下划线" />
-    <option name="在数字文字" hit="在数字文字   位或更长 内部添加下划线" />
-  </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.SQL" configurable_name="SQL">
     <option name="sql" hit="SQL" />
     <option name="中括号" hit="中括号" />
@@ -61,9 +55,9 @@
     <option name="derby" hit="Apache Derby" />
     <option name="ddl" path="DDL" hit="DDL" />
     <option name="general" hit="General" />
-    <option name="h" hit="H " />
+    <option name="h2" hit="H " />
     <option name="hsqldb" hit="HSQLDB" />
-    <option name="db" hit="IBM Db  LUW" />
+    <option name="db2" hit="IBM Db  LUW" />
     <option name="ibm" hit="IBM Db  LUW" />
     <option name="luw" hit="IBM Db  LUW" />
     <option name="microsoft" hit="Microsoft SQL Server" />
@@ -72,7 +66,7 @@
     <option name="mysql" hit="MySQL" />
     <option name="oracle" hit="Oracle" />
     <option name="postgresql" hit="PostgreSQL" />
-    <option name="sql" hit="SQL    " />
+    <option name="sql2016" hit="SQL    " />
     <option name="sqlite" hit="SQLite" />
     <option name="ase" hit="Sybase ASE" />
     <option name="sybase" hit="Sybase ASE" />
@@ -133,6 +127,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -174,7 +174,6 @@
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在右" path="代码" hit="在右 $$ 的前面换行" />
     <option name="的前面换行" path="代码" hit="在右 $$ 的前面换行" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -335,6 +334,7 @@
   </configurable>
   <configurable id="preferences.sourceCode.SQL:2016, Generic" configurable_name="SQL:2016, Generic">
     <option name="ddl" path="DDL" hit="DDL" />
+    <option name="2016" hit="SQL       Generic" />
     <option name="generic" hit="SQL       Generic" />
     <option name="sql" hit="SQL       Generic" />
     <option name="p" path="代码生成" hit="主键 P  " />
@@ -390,6 +390,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -428,7 +434,6 @@
     <option name="在" path="表达式" hit="在 THEN、ELSE 后换行" />
     <option name="前面添加空格" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -619,6 +624,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -658,7 +669,6 @@
     <option name="在" path="表达式" hit="在 THEN、ELSE 后换行" />
     <option name="前面添加空格" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -814,7 +824,7 @@
   </configurable>
   <configurable id="preferences.sourceCode.Db2" configurable_name="Db2">
     <option name="ddl" path="DDL" hit="DDL" />
-    <option name="db" hit="Db " />
+    <option name="db2" hit="Db " />
     <option name="p" path="代码生成" hit="主键 P  " />
     <option name="主键" path="代码生成" hit="主键 P  " />
     <option name="代码" path="代码" hit="代码" />
@@ -871,6 +881,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -910,7 +926,6 @@
     <option name="在" path="表达式" hit="在 THEN、ELSE 后换行" />
     <option name="前面添加空格" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -1066,7 +1081,7 @@
   </configurable>
   <configurable id="preferences.sourceCode.H2" configurable_name="H2">
     <option name="ddl" path="DDL" hit="DDL" />
-    <option name="h" hit="H " />
+    <option name="h2" hit="H " />
     <option name="p" path="代码生成" hit="主键 P  " />
     <option name="主键" path="代码生成" hit="主键 P  " />
     <option name="代码" path="代码" hit="代码" />
@@ -1120,6 +1135,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -1158,7 +1179,6 @@
     <option name="在" path="表达式" hit="在 THEN、ELSE 后换行" />
     <option name="前面添加空格" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -1345,6 +1365,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -1383,7 +1409,6 @@
     <option name="在" path="表达式" hit="在 THEN、ELSE 后换行" />
     <option name="前面添加空格" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -1576,6 +1601,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -1615,7 +1646,6 @@
     <option name="在" path="表达式" hit="在 THEN、ELSE 后换行" />
     <option name="前面添加空格" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -1831,6 +1861,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -1869,7 +1905,6 @@
     <option name="在" path="表达式" hit="在 THEN、ELSE 后换行" />
     <option name="前面添加空格" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -2077,6 +2112,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -2116,7 +2157,6 @@
     <option name="在" path="表达式" hit="在 THEN、ELSE 后换行" />
     <option name="前面添加空格" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -2330,6 +2370,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -2371,7 +2417,6 @@
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在右" path="代码" hit="在右 $$ 的前面换行" />
     <option name="的前面换行" path="代码" hit="在右 $$ 的前面换行" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -2586,6 +2631,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -2624,7 +2675,6 @@
     <option name="在" path="表达式" hit="在 THEN、ELSE 后换行" />
     <option name="前面添加空格" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
@@ -2815,6 +2865,12 @@
     <option name="语句和" path="查询" hit="INSERT 语句和 VALUES 子句" />
     <option name="select" path="查询" hit="SELECT 子句" />
     <option name="子句" path="查询" hit="SELECT 子句" />
+    <option name="after" path="查询" hit="Space after keyword" />
+    <option name="keyword" path="查询" hit="Space after keyword" />
+    <option name="space" path="查询" hit="Space after keyword" />
+    <option name="parentheses" path="查询" hit="Spaces within parentheses" />
+    <option name="spaces" path="查询" hit="Spaces within parentheses" />
+    <option name="within" path="查询" hit="Spaces within parentheses" />
     <option name="update" path="查询" hit="UPDATE 语句" />
     <option name="语句" path="查询" hit="UPDATE 语句" />
     <option name="having" path="查询" hit="WHERE 和 HAVING 子句" />
@@ -2854,7 +2910,6 @@
     <option name="在" path="表达式" hit="在 THEN、ELSE 后换行" />
     <option name="前面添加空格" path="表达式" hit="在 `(` 前面添加空格" />
     <option name="在" path="表达式" hit="在 `(` 前面添加空格" />
-    <option name="在括号内添加空格" path="查询" hit="在括号内添加空格" />
     <option name="在运算符周围使用空格" path="表达式" hit="在运算符周围使用空格" />
     <option name="声明之间的最多空白行数" path="DDL" hit="声明之间的最多空白行数" />
     <option name="声明之间的最少空白行数" path="DDL" hit="声明之间的最少空白行数" />
