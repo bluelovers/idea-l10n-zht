@@ -1,24 +1,24 @@
 
 /**
- * @default '264957'
+ * @default '281313'
  * @deprecated
  */
-export const __plugin_zh_cn_id: string = '264957';
+export const __plugin_zh_cn_id: string = '281313';
 
 /**
- * @default '223'
+ * @default '231'
  * @deprecated
  */
-export const __plugin_zh_cn_series: string = '223';
+export const __plugin_zh_cn_series: string = '231';
 /**
- * @default '223.228'
+ * @default '231.158'
  * @deprecated
  */
-export const __plugin_zh_cn_version: string = '223.228';
+export const __plugin_zh_cn_version: string = '231.158';
 
 /**
- * @see https://plugins.jetbrains.com/plugin/download?rel=true&updateId=264957
+ * @see https://plugins.jetbrains.com/plugin/download?rel=true&updateId=281313
  * @deprecated
  */
-export const __plugin_zh_cn_download: string = 'https://plugins.jetbrains.com/plugin/download?rel=true&updateId=264957';
+export const __plugin_zh_cn_download: string = 'https://plugins.jetbrains.com/plugin/download?rel=true&updateId=281313';
 
