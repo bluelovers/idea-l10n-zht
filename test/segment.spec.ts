@@ -442,6 +442,11 @@ describe(`should include`, () => {
 			`action.SendEventLogStatistics.description=将事件日志文件发送到 QA 服务器`
 		],
 
+		[
+			`追蹤`,
+			`action.Vcs.CherryPick.description=所选提交由不同的 VCS 跟踪`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
