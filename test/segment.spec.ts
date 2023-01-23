@@ -447,6 +447,21 @@ describe(`should include`, () => {
 			`action.Vcs.CherryPick.description=所选提交由不同的 VCS 跟踪`
 		],
 
+		[
+			`醒目提示`,
+			`options.general.color.descriptor.highlighted.folding.border=文本//包含高亮显示的折叠文本`
+		],
+
+		[
+			`醒目提示`,
+			`options.java.attribute.descriptor.inline.parameter.hint.highlighted=内联提示//参数//高亮`
+		],
+
+		[
+			`醒目提示`,
+			`group.customfiletype.syntax.highlighting=语法高亮显示`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
