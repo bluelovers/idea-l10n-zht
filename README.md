@@ -15,7 +15,7 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 > 注意：請先移除或禁用[官方簡體中文語言包](https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----)
 
-### Other Releases
+### 其他發行版
 
 - [GitHub Tags](https://github.com/bluelovers/idea-l10n-zht/tags)
 
