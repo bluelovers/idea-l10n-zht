@@ -23,12 +23,6 @@
     <option name="按" hit="按 Enter 時結束程式碼塊" />
     <option name="時結束程式碼塊" hit="按 Enter 時結束程式碼塊" />
   </configurable>
-  <configurable id="editor.preferences.folding" configurable_name="程式碼折疊">
-    <option name="sql" hit="SQL" />
-    <option name="位或更長" hit="在數字文字   位或更長 內部新增下劃線" />
-    <option name="內部新增下劃線" hit="在數字文字   位或更長 內部新增下劃線" />
-    <option name="在數字文字" hit="在數字文字   位或更長 內部新增下劃線" />
-  </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.SQL" configurable_name="SQL">
     <option name="sql" hit="SQL" />
     <option name="中括號" hit="中括號" />
@@ -61,9 +55,9 @@
     <option name="derby" hit="Apache Derby" />
     <option name="ddl" path="DDL" hit="DDL" />
     <option name="general" hit="General" />
-    <option name="h" hit="H " />
+    <option name="h2" hit="H " />
     <option name="hsqldb" hit="HSQLDB" />
-    <option name="db" hit="IBM Db  LUW" />
+    <option name="db2" hit="IBM Db  LUW" />
     <option name="ibm" hit="IBM Db  LUW" />
     <option name="luw" hit="IBM Db  LUW" />
     <option name="microsoft" hit="Microsoft SQL Server" />
@@ -72,7 +66,7 @@
     <option name="mysql" hit="MySQL" />
     <option name="oracle" hit="Oracle" />
     <option name="postgresql" hit="PostgreSQL" />
-    <option name="sql" hit="SQL    " />
+    <option name="sql2016" hit="SQL    " />
     <option name="sqlite" hit="SQLite" />
     <option name="ase" hit="Sybase ASE" />
     <option name="sybase" hit="Sybase ASE" />
@@ -91,8 +85,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -133,6 +127,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -174,7 +174,6 @@
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在右" path="程式碼" hit="在右 $$ 的前面換行" />
     <option name="的前面換行" path="程式碼" hit="在右 $$ 的前面換行" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -335,6 +334,7 @@
   </configurable>
   <configurable id="preferences.sourceCode.SQL:2016, Generic" configurable_name="SQL:2016, Generic">
     <option name="ddl" path="DDL" hit="DDL" />
+    <option name="2016" hit="SQL       Generic" />
     <option name="generic" hit="SQL       Generic" />
     <option name="sql" hit="SQL       Generic" />
     <option name="p" path="程式碼生成" hit="主鍵 P  " />
@@ -352,8 +352,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -390,6 +390,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -428,7 +434,6 @@
     <option name="在" path="表達式" hit="在 THEN、ELSE 後換行" />
     <option name="前面新增空格" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -578,8 +583,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -619,6 +624,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -658,7 +669,6 @@
     <option name="在" path="表達式" hit="在 THEN、ELSE 後換行" />
     <option name="前面新增空格" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -814,7 +824,7 @@
   </configurable>
   <configurable id="preferences.sourceCode.Db2" configurable_name="Db2">
     <option name="ddl" path="DDL" hit="DDL" />
-    <option name="db" hit="Db " />
+    <option name="db2" hit="Db " />
     <option name="p" path="程式碼生成" hit="主鍵 P  " />
     <option name="主鍵" path="程式碼生成" hit="主鍵 P  " />
     <option name="程式碼" path="程式碼" hit="程式碼" />
@@ -830,8 +840,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -871,6 +881,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -910,7 +926,6 @@
     <option name="在" path="表達式" hit="在 THEN、ELSE 後換行" />
     <option name="前面新增空格" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -1066,7 +1081,7 @@
   </configurable>
   <configurable id="preferences.sourceCode.H2" configurable_name="H2">
     <option name="ddl" path="DDL" hit="DDL" />
-    <option name="h" hit="H " />
+    <option name="h2" hit="H " />
     <option name="p" path="程式碼生成" hit="主鍵 P  " />
     <option name="主鍵" path="程式碼生成" hit="主鍵 P  " />
     <option name="程式碼" path="程式碼" hit="程式碼" />
@@ -1082,8 +1097,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -1120,6 +1135,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -1158,7 +1179,6 @@
     <option name="在" path="表達式" hit="在 THEN、ELSE 後換行" />
     <option name="前面新增空格" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -1307,8 +1327,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -1345,6 +1365,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -1383,7 +1409,6 @@
     <option name="在" path="表達式" hit="在 THEN、ELSE 後換行" />
     <option name="前面新增空格" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -1535,8 +1560,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -1576,6 +1601,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -1615,7 +1646,6 @@
     <option name="在" path="表達式" hit="在 THEN、ELSE 後換行" />
     <option name="前面新增空格" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -1790,8 +1820,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -1831,6 +1861,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -1869,7 +1905,6 @@
     <option name="在" path="表達式" hit="在 THEN、ELSE 後換行" />
     <option name="前面新增空格" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -2036,8 +2071,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -2077,6 +2112,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -2116,7 +2157,6 @@
     <option name="在" path="表達式" hit="在 THEN、ELSE 後換行" />
     <option name="前面新增空格" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -2289,8 +2329,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -2330,6 +2370,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -2371,7 +2417,6 @@
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在右" path="程式碼" hit="在右 $$ 的前面換行" />
     <option name="的前面換行" path="程式碼" hit="在右 $$ 的前面換行" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -2548,8 +2593,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -2586,6 +2631,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -2624,7 +2675,6 @@
     <option name="在" path="表達式" hit="在 THEN、ELSE 後換行" />
     <option name="前面新增空格" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />
@@ -2774,8 +2824,8 @@
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="查詢" path="查詢" hit="查詢" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
-    <option name="禁用格式設定" hit="禁用格式設定" />
+    <option name="停用" hit="停用" />
+    <option name="停用格式設定" hit="停用格式設定" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
     <option name="i" path="程式碼生成" hit="索引 I  " />
     <option name="索引" path="程式碼生成" hit="索引 I  " />
@@ -2815,6 +2865,12 @@
     <option name="語句和" path="查詢" hit="INSERT 語句和 VALUES 子句" />
     <option name="select" path="查詢" hit="SELECT 子句" />
     <option name="子句" path="查詢" hit="SELECT 子句" />
+    <option name="after" path="查詢" hit="Space after keyword" />
+    <option name="keyword" path="查詢" hit="Space after keyword" />
+    <option name="space" path="查詢" hit="Space after keyword" />
+    <option name="parentheses" path="查詢" hit="Spaces within parentheses" />
+    <option name="spaces" path="查詢" hit="Spaces within parentheses" />
+    <option name="within" path="查詢" hit="Spaces within parentheses" />
     <option name="update" path="查詢" hit="UPDATE 語句" />
     <option name="語句" path="查詢" hit="UPDATE 語句" />
     <option name="having" path="查詢" hit="WHERE 和 HAVING 子句" />
@@ -2854,7 +2910,6 @@
     <option name="在" path="表達式" hit="在 THEN、ELSE 後換行" />
     <option name="前面新增空格" path="表達式" hit="在 `(` 前面新增空格" />
     <option name="在" path="表達式" hit="在 `(` 前面新增空格" />
-    <option name="在括號內新增空格" path="查詢" hit="在括號內新增空格" />
     <option name="在運算符周圍使用空格" path="表達式" hit="在運算符周圍使用空格" />
     <option name="宣告之間的最多空白行數" path="DDL" hit="宣告之間的最多空白行數" />
     <option name="宣告之間的最少空白行數" path="DDL" hit="宣告之間的最少空白行數" />

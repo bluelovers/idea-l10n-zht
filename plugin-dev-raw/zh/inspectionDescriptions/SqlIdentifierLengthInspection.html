@@ -1,0 +1,75 @@
+<html>
+<body>
+報告被認為太長的關鍵字。 不同資料庫的長度限制不同。
+<p>範例（MySQL）：</p>
+<pre><code>CREATE TABLE ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+(
+   ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo int
+);</code></pre>
+<p>在 MySQL 中，關鍵字不得超過 64 個字符。</p>
+<p>請考慮以下不同資料庫的限制：</p>
+<ul>
+  <li><p>Sybase ASE：</p>
+    <ul>
+      <li>帶引號的名稱：253 個字符</li>
+      <li>未加引號的名稱：255 個字符</li>
+    </ul>
+  </li>
+  <li><p>Db2 LUW：</p>
+    <ul>
+      <li>BUFFER POOL、INDEX EXTENSION、TABLESPACE、TRANSFORM、TYPE MAPPING：18 個字符</li>
+      <li>其他物件：128 個字符</li>
+    </ul>
+  </li>
+  <li>Db2 iSeries：128 個字符</li>
+  <li><p>Db2 z/OS：</p>
+    <ul>
+      <li>DATABASE 和 TABLESPACE：8 個字符</li>
+      <li>列和帶有 WITH RETURN 的游標：30 字符</li>
+      <li>其他物件：128 個字符</li>
+    </ul>
+  </li>
+  <li>Derby：128 個字符</li>
+  <li>Exasol：128 個字符</li>
+  <li>HSQLDB：128 個字符</li>
+  <li><p>MySQL：</p>
+    <ul>
+      <li>查詢中的別名： 256 個字符</li>
+      <li>USER 和 ROLE：32 個字符</li>
+      <li>其他物件：64 個字符</li>
+    </ul>
+  </li>
+  <li><p>MariaDB：</p>
+    <ul>
+      <li>USER：80 個字符</li>
+      <li>ROLE： 128 個字符</li>
+      <li>其他物件：與 MySQL 相同</li>
+    </ul>
+  </li>
+  <li>Microsoft SQL Server：128 個字符</li>
+  <li>Vertica：128 個字符</li>
+  <li>SQL 92：128 個字符</li>
+  <li>Snowflake：255 個字符</li>
+  <li>Redshift：127 個字符</li>
+  <li>PostgreSQL/Greenplum/Cockroach：63 個字符</li>
+  <li><p>Oracle：</p>
+    <ul>
+      <li><p>長名稱被啟用（<code>database.oracle.names.long</code> 被指定，Oracle 版本早於 12.2或未知）：</p>
+        <ul>
+          <li>DISKGROUP、ROLLBACK SEGMENT、TABLESPACE、PLUGGABLE DATABASE：30 個字符</li>
+          <li>DATABASE：8 個字符</li>
+          <li>其他物件：128 個字符</li>
+        </ul>
+      </li>
+      <li>長名稱被停用：
+        <ul>
+          <li>DATABASE：8 個字符</li>
+          <li>DATABASE LINK：128 個字符</li>
+          <li>其他物件：30 個字符</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

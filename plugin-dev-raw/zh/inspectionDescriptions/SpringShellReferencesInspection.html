@@ -9,12 +9,12 @@
 public class MyCommands {
 
     @ShellMethod("sum")
-    @ShellMethodAvailability("sumAvailability") // 註解值將被高亮顯示為未解析的符號
+    @ShellMethodAvailability("sumAvailability") // 註解值將被醒目提示為未解析的符號
     public int sum(int a, int b) {
         return a + b;
     }
 
-    @ShellMethodAvailability("sumMethod") // 註解值將被高亮顯示為未解析的符號
+    @ShellMethodAvailability("sumMethod") // 註解值將被醒目提示為未解析的符號
     public Availability isSumAvailable() {
         return Availability.available();
     }

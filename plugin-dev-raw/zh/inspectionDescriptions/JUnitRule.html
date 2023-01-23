@@ -1,0 +1,34 @@
+<html>
+<body>
+報告格式錯誤的 <code>@Rule</code> 或 <code>@ClassRule</code> 註解用法。
+無法執行<a href="https://github.com/junit-team/junit4/wiki/Rules">規則</a>格式錯誤的測試。
+<ul>
+  <li>
+    <code>@Rule</code> 註解成員必須為 <code>public</code> 以及 <code>org.junit.rules.TestRule</code> 或 <code>org.junit.rules.MethodRule</code> 的子類型
+  <li>
+    <code>@ClassRule</code> 註解成員必須為 <code>public</code> 和 <code>static</code> 以及 <code>org.junit.rules.TestRule</code> 的子類型
+</ul>
+<p>範例：</p>
+<pre><code>
+  <b>public class</b> MomentousTest {
+    @Rule
+    <b>private final</b> TemporaryFolder tempFolder =
+      <b>new</b> TemporaryFolder();
+
+    // ... 測試轉到此處
+  }
+</code></pre>
+<p>通過快速修復來修正修飾符：</p>
+<pre><code>
+  <b>public class</b> MomentousTest {
+    @Rule
+    <b>public final</b> TemporaryFolder tempFolder =
+      <b>new</b> TemporaryFolder();
+
+    // ... 測試轉到此處
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

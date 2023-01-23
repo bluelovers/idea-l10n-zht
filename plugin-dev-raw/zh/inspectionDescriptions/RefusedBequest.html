@@ -1,7 +1,7 @@
 <html>
 <body>
 報告覆寫特定方法而不呼叫 <code>super</code> 的方法。
-<p>這也稱作<i>被拒絕的遺贈</i>。 此類別方法可能表明抽象失敗，導致出現難以跟踪的錯誤。</p>
+<p>這也稱作<i>被拒絕的遺贈</i>。 此類別方法可能表明抽象失敗，導致出現難以追蹤的錯誤。</p>
   <p>該檢查不報告預設方法和從 <code>java.lang.Object</code> 覆寫的方法，但對 <code>clone()</code> 除外。
   <code>clone()</code> 方法預計會呼叫其 <code>super</code>，從而自動返回正確類型的物件。</p>
 <p><b>範例：</b></p>
@@ -20,7 +20,7 @@
   }
 
   class A implements I {
-    // 禁用“忽略 'default' super 方法”和“忽略註解”選項時對方法發出警告
+    // 停用“忽略 'default' super 方法”和“忽略註解”選項時對方法發出警告
     @Override
     public void foo(){}
   }

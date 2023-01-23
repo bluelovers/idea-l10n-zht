@@ -6,13 +6,13 @@
     <option name="為文字游標處的欄位切換欄位觀察點" path="ActionManager" hit="為文字游標處的欄位切換欄位觀察點" />
     <option name="為文字游標處的方法切換方法中斷點" path="ActionManager" hit="為文字游標處的方法切換方法中斷點" />
     <option name="僅顯示實例" path="ActionManager" hit="僅顯示實例" />
-    <option name="僅顯示跟踪類別" path="ActionManager" hit="僅顯示跟踪類別" />
+    <option name="僅顯示追蹤類別" path="ActionManager" hit="僅顯示追蹤類別" />
     <option name="切換到下一個停止的中斷點" path="ActionManager" hit="切換到下一個停止的中斷點" />
     <option name="切換欄位觀察點" path="ActionManager" hit="切換欄位觀察點" />
     <option name="切換方法中斷點" path="ActionManager" hit="切換方法中斷點" />
     <option name="建立" path="ActionManager" hit="建立…" />
     <option name="單步跳出程式碼塊" path="ActionManager" hit="單步跳出程式碼塊" />
-    <option name="啟用具有隱藏記憶體檢視的跟踪" path="ActionManager" hit="啟用具有隱藏記憶體檢視的跟踪" />
+    <option name="啟用具有隱藏記憶體檢視的追蹤" path="ActionManager" hit="啟用具有隱藏記憶體檢視的追蹤" />
     <option name="在單獨的窗格中檢視所選節點的文本值" path="ActionManager" hit="在單獨的窗格中檢視所選節點的文本值" />
     <option name="匯出執行緒" path="ActionManager" hit="匯出執行緒…" />
     <option name="將所有更改的類別重新載入到被偵錯的應用程式中" path="ActionManager" hit="將所有更改的類別重新載入到被偵錯的應用程式中 (熱插拔)" />
@@ -20,7 +20,7 @@
     <option name="將所有執行緒資訊儲存到文本檔案或剪貼簿" path="ActionManager" hit="將所有執行緒資訊儲存到文本檔案或剪貼簿" />
     <option name="從堆疊中丟棄當前的方法幀" path="ActionManager" hit="將執行點移回方法呼叫，從堆疊中丟棄當前的方法幀" />
     <option name="將執行點移回方法呼叫" path="ActionManager" hit="將執行點移回方法呼叫，從堆疊中丟棄當前的方法幀" />
-    <option name="異步堆疊跟踪" path="ActionManager" hit="異步堆疊跟踪" />
+    <option name="異步堆疊追蹤" path="ActionManager" hit="異步堆疊追蹤" />
     <option name="return" path="ActionManager" hit="強制方法在到達 return 語句之前返回" />
     <option name="強制方法在到達" path="ActionManager" hit="強制方法在到達 return 語句之前返回" />
     <option name="語句之前返回" path="ActionManager" hit="強制方法在到達 return 語句之前返回" />
@@ -51,8 +51,8 @@
     <option name="獲取執行緒傾印" path="ActionManager" hit="獲取執行緒傾印" />
     <option name="計算保留大小" path="ActionManager" hit="計算保留大小…" />
     <option name="調整範圍" path="ActionManager" hit="調整範圍…" />
-    <option name="跟踪新實例" path="ActionManager" hit="跟踪新實例" />
-    <option name="跟踪呼叫" path="ActionManager" hit="跟踪呼叫" />
+    <option name="追蹤新實例" path="ActionManager" hit="追蹤新實例" />
+    <option name="追蹤呼叫" path="ActionManager" hit="追蹤呼叫" />
     <option name="跳轉到分配位置" path="ActionManager" hit="跳轉到分配位置" />
     <option name="跳轉到類型源" path="ActionManager" hit="跳轉到類型源" />
     <option name="重新載入已更改的類別" path="ActionManager" hit="重新載入已更改的類別" />
@@ -68,8 +68,8 @@
     <option name="m" hit="共享記憶體 M " />
     <option name="共享記憶體" hit="共享記憶體 M " />
     <option name="顯示替代源切換器" hit="顯示替代源切換器" />
-    <option name="jit" hit="禁用 JIT" />
-    <option name="禁用" hit="禁用 JIT" />
+    <option name="jit" hit="停用 JIT" />
+    <option name="停用" hit="停用 JIT" />
     <option name="立即停止偵錯程序" hit="立即停止偵錯程序" />
     <option name="附加記憶體代理" hit="附加記憶體代理" />
   </configurable>
@@ -114,7 +114,7 @@
     <option name="顯示" hit="顯示" />
     <option name="顯示基元的十六進制值" hit="顯示基元的十六進制值" />
     <option name="顯示字串的類型" hit="顯示字串的類型" />
-    <option name="自動填充可拋出物件的堆疊跟踪" hit="自動填充可拋出物件的堆疊跟踪" />
+    <option name="自動填充可拋出物件的堆疊追蹤" hit="自動填充可拋出物件的堆疊追蹤" />
     <option name="l" hit="自動定位到新的區域變數  L " />
     <option name="自動定位到新的區域變數" hit="自動定位到新的區域變數  L " />
   </configurable>
@@ -175,9 +175,9 @@
     <option name="k" hit="詢問  K " />
     <option name="詢問" hit="詢問  K " />
   </configurable>
-  <configurable id="reference.idesettings.debugger.capture" configurable_name="異步堆疊跟踪">
+  <configurable id="reference.idesettings.debugger.capture" configurable_name="異步堆疊追蹤">
     <option name="基於中斷點" hit="基於中斷點 " />
-    <option name="異步堆疊跟踪" hit="異步堆疊跟踪" />
+    <option name="異步堆疊追蹤" hit="異步堆疊追蹤" />
     <option name="可能會大大減慢執行速度" hit="捕獲區域變數  可能會大大減慢執行速度 " />
     <option name="捕獲區域變數" hit="捕獲區域變數  可能會大大減慢執行速度 " />
     <option name="檢測代理" hit="檢測代理  需要偵錯器重啟 " />

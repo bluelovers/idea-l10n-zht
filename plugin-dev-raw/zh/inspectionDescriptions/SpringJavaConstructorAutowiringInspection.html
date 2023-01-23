@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>報告 Spring Bean 建構函式上不正確的 <code>@Autowired</code> 用法：多個 <code>@Autowired</code> 建構函式、沒有符合的 <code>@Autowired</code> 建構函式，等等。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+@Component
+public class MyComponent {
+	@Autowired
+	public MyComponent(BarBean bean) {...} // 報告 '只允許一個 @Autowired 建構函式'
+
+	@Autowired
+	public MyComponent(FooBean bean) {...} // 報告 '只允許一個 @Autowired 建構函式'
+}
+
+@Component
+public class MyFactory {  // 報告 '沒有符合的 @Autowired 建構函式'
+	public MyFactory(String str) {...}
+	public MyFactory(int count) {...}
+}
+</code></pre>
+</body>
+</html>

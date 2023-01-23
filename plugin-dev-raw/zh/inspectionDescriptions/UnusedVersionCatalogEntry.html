@@ -1,0 +1,23 @@
+<html>
+<body>                                            
+<p>檢測版本目錄的 TOML 描述符中未使用的鍵。 </p>
+
+<p><b>範例：</b></p>
+
+<pre><code>
+// build.gradle
+dependencies {
+  implementation libs.foo.bar
+}
+</code></pre>
+
+<pre><code>
+// libs.versions.toml
+[libraries]
+foo-bar = "com.gradle:example:1.0.0"
+bar-baz = "com.gradle:example:2.0.0" // 醒目提示顯示 bar-baz
+</code></pre>
+
+
+</body>
+</html>

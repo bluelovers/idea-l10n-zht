@@ -1,7 +1,19 @@
 <html>
 <body>
 報告沒有任何 <code>abstract</code> 方法的 <code>abstract</code> 類別。
+In most cases it does not make sense to have an <code>abstract</code> class without any <code>abstract</code> methods,
+and the <code>abstract</code> modifier can be removed from the class.
+If the class was declared <code>abstract</code> to prevent instantiation,
+it is often a better option to use a <code>private</code> constructor to prevent instantiation instead.
+<p><b>範例：</b></p>
+<pre><code>
+  abstract class Example {
+    public String getName() {
+      return "IntelliJ IDEA";
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
-
+<p>Use the option to ignore utility classes.
 </body>
 </html>

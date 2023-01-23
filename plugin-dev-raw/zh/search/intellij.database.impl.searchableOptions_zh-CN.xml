@@ -16,6 +16,11 @@
     <option name="raw" path="ActionManager" hit="Explain Plan (Raw)" />
     <option name="analyse" path="ActionManager" hit="Explain analyse" />
     <option name="explain" path="ActionManager" hit="Explain analyse" />
+    <option name="data" path="ActionManager" hit="Import Data from File(s)…" />
+    <option name="file" path="ActionManager" hit="Import Data from File(s)…" />
+    <option name="from" path="ActionManager" hit="Import Data from File(s)…" />
+    <option name="import" path="ActionManager" hit="Import Data from File(s)…" />
+    <option name="s" path="ActionManager" hit="Import Data from File(s)…" />
     <option name="sql" path="ActionManager" hit="SQL 生成器…" />
     <option name="生成器" path="ActionManager" hit="SQL 生成器…" />
     <option name="sql" path="ActionManager" hit="SQL 腳本" />
@@ -169,7 +174,9 @@
     <option name="開啟查詢執行設定" path="ActionManager" hit="開啟查詢執行設定…" />
     <option name="開啟查詢主控台" path="ActionManager" hit="開啟查詢主控台" />
     <option name="執行" path="ActionManager" hit="執行" />
+    <option name="2" path="ActionManager" hit="執行(2)" />
     <option name="執行" path="ActionManager" hit="執行(2)" />
+    <option name="3" path="ActionManager" hit="執行(3)" />
     <option name="執行" path="ActionManager" hit="執行(3)" />
     <option name="執行語句" path="ActionManager" hit="執行語句 (替代)" />
     <option name="替代" path="ActionManager" hit="執行語句 (替代)" />
@@ -204,7 +211,6 @@
     <option name="顯示變更" path="ActionManager" hit="顯示變更" />
     <option name="顯示地理位置檢視器" path="ActionManager" hit="顯示地理位置檢視器" />
     <option name="顯示或隱藏資料庫和架構" path="ActionManager" hit="顯示或隱藏資料庫和架構" />
-    <option name="顯示腳本" path="ActionManager" hit="顯示腳本" />
     <option name="顯示選項選單" path="ActionManager" hit="顯示選項選單" />
     <option name="更改事務的隔離級別" path="ActionManager" hit="更改事務的隔離級別" />
     <option name="更改單元類型" path="ActionManager" hit="更改單元類型" />
@@ -231,9 +237,9 @@
     <option name="清除映射" path="ActionManager" hit="清除映射" />
     <option name="清除快取的資料庫架構" path="ActionManager" hit="清除快取的資料庫架構" />
     <option name="清除快取的架構並從頭重新整理" path="ActionManager" hit="清除快取的架構並從頭重新整理" />
-    <option name="禁用所選物件" path="ActionManager" hit="禁用所選物件" />
-    <option name="禁用觸發器" path="ActionManager" hit="禁用觸發器/約束" />
-    <option name="約束" path="ActionManager" hit="禁用觸發器/約束" />
+    <option name="停用所選物件" path="ActionManager" hit="停用所選物件" />
+    <option name="停用觸發器" path="ActionManager" hit="停用觸發器/約束" />
+    <option name="約束" path="ActionManager" hit="停用觸發器/約束" />
     <option name="移至右側" path="ActionManager" hit="移至右側" />
     <option name="移至底部" path="ActionManager" hit="移至底部" />
     <option name="移至目錄" path="ActionManager" hit="移至目錄…" />
@@ -245,10 +251,13 @@
     <option name="ui" path="ActionManager" hit="索引(I) (舊 UI)" />
     <option name="舊" path="ActionManager" hit="索引(I) (舊 UI)" />
     <option name="索引" path="ActionManager" hit="索引(I) (舊 UI)" />
+    <option name="1" path="ActionManager" hit="級別 1: 僅限名稱" />
     <option name="僅限名稱" path="ActionManager" hit="級別 1: 僅限名稱" />
     <option name="級別" path="ActionManager" hit="級別 1: 僅限名稱" />
+    <option name="2" path="ActionManager" hit="級別 2: 跳過源" />
     <option name="級別" path="ActionManager" hit="級別 2: 跳過源" />
     <option name="跳過源" path="ActionManager" hit="級別 2: 跳過源" />
+    <option name="3" path="ActionManager" hit="級別 3: 所有內容" />
     <option name="所有內容" path="ActionManager" hit="級別 3: 所有內容" />
     <option name="級別" path="ActionManager" hit="級別 3: 所有內容" />
     <option name="結果單元格編輯器" path="ActionManager" hit="結果單元格編輯器" />
@@ -267,7 +276,6 @@
     <option name="縮小所選列的範圍" path="ActionManager" hit="縮小所選列的範圍" />
     <option name="縮短頁籤標題" path="ActionManager" hit="縮短頁籤標題" />
     <option name="聚合檢視選項" path="ActionManager" hit="聚合檢視選項" />
-    <option name="腳本化擴展程序" path="ActionManager" hit="腳本化擴展程序" />
     <option name="t" path="ActionManager" hit="表(T) (舊 UI)" />
     <option name="ui" path="ActionManager" hit="表(T) (舊 UI)" />
     <option name="舊" path="ActionManager" hit="表(T) (舊 UI)" />
@@ -283,7 +291,7 @@
     <option name="設定" path="ActionManager" hit="設定 NULL" />
     <option name="設定當前架構" path="ActionManager" hit="設定當前架構" />
     <option name="設定顏色" path="ActionManager" hit="設定顏色…" />
-    <option name="設定高亮顯示語言" path="ActionManager" hit="設定高亮顯示語言…" />
+    <option name="設定醒目提示顯示語言" path="ActionManager" hit="設定醒目提示顯示語言…" />
     <option name="診斷" path="ActionManager" hit="診斷" />
     <option name="診斷重新整理" path="ActionManager" hit="診斷重新整理" />
     <option name="ddl" path="ActionManager" hit="請求並複製原始 DDL" />
@@ -349,6 +357,7 @@
     <option name="預覽掛起的變更" path="ActionManager" hit="預覽掛起的變更" />
     <option name="驅動程序" path="ActionManager" hit="驅動程序" />
     <option name="驅動程序和資料來源" path="ActionManager" hit="驅動程序和資料來源" />
+    <option name="0" path="ActionManager" hit="預設({0})" />
     <option name="預設" path="ActionManager" hit="預設({0})" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.資料庫" configurable_name="資料庫">
@@ -369,8 +378,10 @@
   <configurable id="reference.settingsdialog.IDE.editor.colors.表差異" configurable_name="表差異">
     <option name="表差異" hit="表差異" />
     <option name="已從差異中排除" hit="已從差異中排除" />
+    <option name="-" hit="模糊符合 - 不符合" />
     <option name="不符合" hit="模糊符合 - 不符合" />
     <option name="模糊符合" hit="模糊符合 - 不符合" />
+    <option name="-" hit="模糊符合 - 符合" />
     <option name="符合" hit="模糊符合 - 符合" />
     <option name="模糊符合" hit="模糊符合 - 符合" />
   </configurable>
@@ -458,6 +469,9 @@
     <option name="點擊" hit=" 點擊" />
     <option name="alt" hit="Alt  點擊" />
     <option name="點擊" hit="Alt  點擊" />
+    <option name="alternate" hit="Alternate row colors" />
+    <option name="colors" hit="Alternate row colors" />
+    <option name="row" hit="Alternate row colors" />
     <option name="uuid" hit="UUID" />
     <option name="從不" hit="從不" />
     <option name="使用自訂字體" hit="使用自訂字體 " />
@@ -551,6 +565,14 @@
   <configurable id="database.other" configurable_name="其他">
     <option name="ddl" hit="DDL 映射" />
     <option name="映射" hit="DDL 映射" />
+    <option name="consoles" hit="Default resolve mode for consoles " />
+    <option name="default" hit="Default resolve mode for consoles " />
+    <option name="for" hit="Default resolve mode for consoles " />
+    <option name="mode" hit="Default resolve mode for consoles " />
+    <option name="resolve" hit="Default resolve mode for consoles " />
+    <option name="playground" hit="Playground" />
+    <option name="resolution" hit="SQL Resolution" />
+    <option name="sql" hit="SQL Resolution" />
     <option name="程式碼生成" hit="程式碼生成" />
     <option name="修改物件" hit="修改物件" />
     <option name="其他" hit="其他" />
@@ -561,6 +583,7 @@
     <option name="更新源文本時顯示有效腳本的預覽" hit="更新源文本時顯示有效腳本的預覽" />
     <option name="生成上下文模板" hit="生成上下文模板 " />
     <option name="確認取消修改架構的對話框" hit="確認取消修改架構的對話框" />
+    <option name="腳本" hit="腳本" />
     <option name="記住篩選器是否處於開啟狀態" hit="記住篩選器是否處於開啟狀態" />
     <option name="重構" hit="重構" />
     <option name="附加到現有主控台" hit="附加到現有主控台" />

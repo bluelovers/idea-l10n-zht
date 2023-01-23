@@ -1,0 +1,20 @@
+<html>
+<body>
+報告從棄用成員繼承的宣告。
+<p><b>範例：</b></p>
+<pre><code>
+open class BaseService {
+  @Deprecated("obsolete", replaceWith = ReplaceWith("connection"))
+  open fun connect() {}
+
+  open fun connection() {}
+} 
+
+class SomeService: BaseService() {
+  override fun connect() {
+    super.connect()
+  }
+}
+</code></pre>
+</body>
+</html>

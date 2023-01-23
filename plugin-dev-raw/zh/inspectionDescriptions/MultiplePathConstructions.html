@@ -1,0 +1,32 @@
+<html>
+<body>
+在可以將連續的多個 <code>java.nio.file.Path</code> 建構 <code>java.nio.file.Paths.get</code> 或 <code>java.nio.file.Path.of</code>
+取代為單個 <code>java.nio.file.Path</code> 變數時報告。
+<p>範例：</p>
+<pre><code>
+if (Files.isRegularFile(Path.of(fileName))) {
+  try(InputStream is = Files.newInputStream(Path.of(fileName))) {
+    // 一些程式碼
+  }
+  catch (IOException e) {
+    throw new UncheckedIOException(e);
+  }
+}
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+Path path = Path.of(fileName);
+if (Files.isRegularFile(path)) {
+  try(InputStream is = Files.newInputStream(path)) {
+    // 一些程式碼
+  }
+  catch (IOException e) {
+    throw new UncheckedIOException(e);
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>僅當專案或模組的語言級別為 7 或更高時，此檢查才會報告。</p>
+<p><small>2022.1 最新變化</small></p>
+</body>
+</html>

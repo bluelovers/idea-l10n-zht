@@ -1,0 +1,20 @@
+<html>
+<body>
+報告對以 <code>int</code> 為實參的 <code>Math</code> 和 <code>StrictMath</code> 的 <code>round()</code>、<code>ceil()</code>、
+<code>floor()</code>、<code>rint()</code> 方法的呼叫。
+<p>這些方法可以在預期實參為 <code>long</code> 或 <code>double</code> 的情況下呼叫，且可能會產生意外結果。</p>
+<p>該檢查提供了一種修復，能夠將此類別表達式（除了 <code>round</code>）簡化為轉換成 <code>double</code>。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  int i = 2;
+  double d1 = Math.floor(i);
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  int i = 2;
+  double d1 = i;
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.1 最新變化</small></p>
+</body>
+</html>

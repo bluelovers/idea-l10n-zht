@@ -18,7 +18,7 @@
 <!-- tooltip end -->
 <p>
   預設情況下，如果不能靜態地證明 <code>count</code> 非負，則該檢查可以使用 <code>Math.max(0, count)</code> 來包裝 <code>count</code>。 這樣做的目的是防止可能發生的語意更改，因為 <code>String.repeat()</code> 拒絕負數。
-  必要時，可使用<b>新增 Math.max(0, count) 以避免可能的語意變更</b>選項禁用此行為。</p>
+  必要時，可使用<b>新增 Math.max(0, count) 以避免可能的語意變更</b>選項停用此行為。</p>
   <p>同樣，如果不知道要重複的字串能否為 <code>null</code>，可將其包裝在 <code>String.valueOf</code> 中，以防止可能發生的 <code>NullPointerException</code>。
 </p>
 <p>僅當專案或模組的語言級別為 11 或更高時，此檢查才會報告。</p>

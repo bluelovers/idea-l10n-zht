@@ -154,8 +154,7 @@
     <option name="重構" path="ActionManager" hit="重構" />
   </configurable>
   <configurable id="MavenSettings" configurable_name="Maven">
-    <option name="" hit=" T 選項" />
-    <option name="t" hit=" T 選項" />
+    <option name="-t" hit=" T 選項" />
     <option name="選項" hit=" T 選項" />
     <option name="" hit=" usr share maven" />
     <option name="maven" hit=" usr share maven" />
@@ -163,6 +162,7 @@
     <option name="usr" hit=" usr share maven" />
     <option name="" hit=" 重新匯入後可能會丟失在其設定中所做的任何更改" />
     <option name="重新匯入後可能會丟失在其設定中所做的任何更改" hit=" 重新匯入後可能會丟失在其設定中所做的任何更改" />
+    <option name="3" hit="Bundled  Maven   " />
     <option name="bundled" hit="Bundled  Maven   " />
     <option name="maven" hit="Bundled  Maven   " />
     <option name="maven" hit="Maven" />
@@ -188,10 +188,10 @@
     <option name="失敗" hit="失敗" />
     <option name="s" hit="始終更新快照 S " />
     <option name="始終更新快照" hit="始終更新快照 S " />
-    <option name="已禁用" hit="已禁用" />
+    <option name="已停用" hit="已停用" />
     <option name="快速失敗" hit="快速失敗" />
-    <option name="e" hit="列印異常堆疊跟踪 E " />
-    <option name="列印異常堆疊跟踪" hit="列印異常堆疊跟踪 E " />
+    <option name="e" hit="列印異常堆疊追蹤 E " />
+    <option name="列印異常堆疊追蹤" hit="列印異常堆疊追蹤 E " />
     <option name="無全域策略" hit="無全域策略" />
     <option name="d" hit="顯示新 Maven 專案的設定對話框 D " />
     <option name="maven" hit="顯示新 Maven 專案的設定對話框 D " />
@@ -217,77 +217,93 @@
     <option name="預設" hit="預設" />
   </configurable>
   <configurable id="reference.settings.project.maven.importing" configurable_name="正在匯入">
-    <option name="" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="api" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="idea" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="intellij" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="maven" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="sdk" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="不會在下次重新匯入時保留" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="中受益" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="中已棄用" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="但由於它仍處於實驗階段" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="例如相依項或更改模組" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="因此並不支援所有功能" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="如果在匯入的專案中遇到問題" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="如果問題消失" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="匯入中也不支持" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="匯入可以從該" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="手動模組自定義" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="更加高效和靈活" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="有新的" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="來處理專案模型" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="模組組在" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="請在問題跟踪器中報告" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
-    <option name="請嘗試禁用此選項" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試禁用此選項  如果問題消失 請在問題跟踪器中報告 " />
+    <option name="" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="api" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="idea" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="intellij" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="maven" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="sdk" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="不會在下次重新匯入時保留" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="中受益" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="中已棄用" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="但由於它仍處於實驗階段" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="例如相依項或更改模組" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="因此並不支援所有功能" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="如果在匯入的專案中遇到問題" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="如果問題消失" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="匯入中也不支持" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="匯入可以從該" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="手動模組自定義" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="更加高效和靈活" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="有新的" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="來處理專案模型" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="模組組在" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="請在問題追蹤器中報告" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
+    <option name="請嘗試停用此選項" hit=" IntelliJ IDEA 有新的 API 來處理專案模型 更加高效和靈活  Maven 匯入可以從該 API 中受益 但由於它仍處於實驗階段 因此並不支援所有功能  手動模組自定義 例如相依項或更改模組 SDK 不會在下次重新匯入時保留  模組組在 IntelliJ IDEA 中已棄用 Maven 匯入中也不支持  如果在匯入的專案中遇到問題 請嘗試停用此選項  如果問題消失 請在問題追蹤器中報告 " />
     <option name="" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
     <option name="idea" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
     <option name="intellij" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
     <option name="maven" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
-    <option name="test" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
+    <option name="test-" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
     <option name="所有" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
     <option name="延伸模組設定的所有原始碼目錄" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
     <option name="請注意" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
     <option name="階段都會先生成並編譯生產原始碼" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
     <option name="需要執行列出的一個階段以發現通過" hit=" IntelliJ IDEA 需要執行列出的一個階段以發現通過 Maven 延伸模組設定的所有原始碼目錄  請注意 所有 test   階段都會先生成並編譯生產原始碼 " />
+    <option name="" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="and" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="api" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="are" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="be" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="consider" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="customizations" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="deprecated" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="disabling" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="folder" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="future" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="idea" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="import" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="imported" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="in" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="internal" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="is" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="it" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="keeps" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="manual" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="migrating" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="module" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="new" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="not" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="option" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="or" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="please" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="project" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="root" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="settings" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="storage" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="stored" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="supported" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="the" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="this" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="to" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="under" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="using" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="while" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="will" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
+    <option name="workspace" hit=" This option is deprecated and will not be supported in the future  Please consider disabling this option or migrating to import using new Workspace API  It keeps imported Module settings in internal storage  while manual customizations are stored in under the project root in  idea folder  " />
     <option name="" hit=" target generated sources 的子目錄" />
-    <option name="generated" hit=" target generated sources 的子目錄" />
-    <option name="sources" hit=" target generated sources 的子目錄" />
+    <option name="generated-sources" hit=" target generated sources 的子目錄" />
     <option name="target" hit=" target generated sources 的子目錄" />
     <option name="的子目錄" hit=" target generated sources 的子目錄" />
-    <option name="" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="api" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="ide" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="workspace" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="它會將匯入的模組設定保留在內部存儲中" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="目錄中" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="未來不再支援" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="此選項已棄用" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="而手動自訂設定則存儲在專案根目錄下的" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="請考慮禁用此選項或遷移以使用新的" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="進行匯入" hit=" 此選項已棄用 未來不再支援  請考慮禁用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中  " />
-    <option name="generate" hit="generate resources" />
-    <option name="resources" hit="generate resources" />
-    <option name="generate" hit="generate sources" />
-    <option name="sources" hit="generate sources" />
-    <option name="generate" hit="generate test resources" />
-    <option name="resources" hit="generate test resources" />
-    <option name="test" hit="generate test resources" />
-    <option name="generate" hit="generate test sources" />
-    <option name="sources" hit="generate test sources" />
-    <option name="test" hit="generate test sources" />
-    <option name="process" hit="process resources" />
-    <option name="resources" hit="process resources" />
-    <option name="process" hit="process sources" />
-    <option name="sources" hit="process sources" />
-    <option name="process" hit="process test resources" />
-    <option name="resources" hit="process test resources" />
-    <option name="test" hit="process test resources" />
-    <option name="process" hit="process test sources" />
-    <option name="sources" hit="process test sources" />
-    <option name="test" hit="process test sources" />
-    <option name="generated" hit="target generated sources" />
-    <option name="sources" hit="target generated sources" />
+    <option name="generate-resources" hit="generate resources" />
+    <option name="generate-sources" hit="generate sources" />
+    <option name="generate-test-resources" hit="generate test resources" />
+    <option name="generate-test-sources" hit="generate test sources" />
+    <option name="process-resources" hit="process resources" />
+    <option name="process-sources" hit="process sources" />
+    <option name="process-test-resources" hit="process test resources" />
+    <option name="process-test-sources" hit="process test sources" />
+    <option name="generated-sources" hit="target generated sources" />
     <option name="target" hit="target generated sources" />
     <option name="不檢測" hit="不檢測" />
     <option name="g" hit="為多模組 Maven 專案建立模組組 G " />
@@ -320,13 +336,12 @@
     <option name="內部執行時將用作回退" hit="內部執行時將用作回退 這不會影響專案 SDK 設定 " />
     <option name="這不會影響專案" hit="內部執行時將用作回退 這不會影響專案 SDK 設定 " />
     <option name="設定" hit="內部執行時將用作回退 這不會影響專案 SDK 設定 " />
+    <option name="在外部存儲生成的專案檔案" hit="在外部存儲生成的專案檔案" />
     <option name="jdk" hit="匯入程序的 JDK " />
     <option name="匯入程序的" hit="匯入程序的 JDK " />
     <option name="vm" hit="匯入程序的 VM 選項 " />
     <option name="匯入程序的" hit="匯入程序的 VM 選項 " />
     <option name="選項" hit="匯入程序的 VM 選項 " />
-    <option name="將生成的專案檔案存儲在專案根目錄下" hit="將生成的專案檔案存儲在專案根目錄下 已棄用 " />
-    <option name="已棄用" hit="將生成的專案檔案存儲在專案根目錄下 已棄用 " />
     <option name="k" hit="將專案檔案保留在 K  " />
     <option name="將專案檔案保留在" hit="將專案檔案保留在 K  " />
     <option name="應匯入的相依項類型的逗號分隔列表" hit="應匯入的相依項類型的逗號分隔列表" />

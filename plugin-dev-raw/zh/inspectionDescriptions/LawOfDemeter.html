@@ -1,27 +1,26 @@
 <html>
 <body>
 報告違反<a href="https://en.wikipedia.org/wiki/Law_of_Demeter">迪米特法則</a>的情況。
-<p>迪米特法則並非真正的法則，但它指定了一種樣式準則：絕不呼叫從另一個呼叫中獲取的物件的方法。
-遵循此準則的程式碼更容易維護、調整和重構，方法之間的耦合更少，重複更少，資訊隱藏得更好。 另一方面，您可能需要編寫許多包裝器方法才能滿足這一准則。</p>
+<p>
+迪米特法則並非真正的法則，但它指定了一種樣式準則：絕不呼叫從另一個呼叫中獲取的物件的方法。
+The code that follows this guideline is easier to maintain, adapt, and refactor, has less coupling between methods, less duplication,
+and better information hiding. 另一方面，您可能需要編寫許多包裝器方法才能滿足這一准則。</p>
 <p><b>範例：</b></p>
 <pre><code>
   boolean pay(Customer c, Invoice invoice) {
-    int dollars = c.getWallet().getDollars(); // 違規
+    int dollars = c.getWallet().contents; // violation
     if (dollars >= invoice.getAmount()) {
       Wallet w = c.getWallet();
-      w.subtract(invoice.getAmount()); // 違規
+      w.subtract(invoice.getAmount()); // violation
       return true;
     }
     return false;
   }
 </code></pre>
 上面的範例可以更好地實作為 <code>Customer</code> 中的 <code>payInvoice(Invoice invoice)</code> 方法。
-<p><b>範例：</b></p>
-<pre><code>
-  Engine engine = car.getEngine();
-  int cylinders = engine.getNumberOfCylinders();
-</code></pre>
 <!-- tooltip end -->
 <p>
+Use the <b>Ignore calls to library method and access of library fields</b> option to ignore Law of Demeter violations
+that can't be fixed without changing a library.
 </body>
 </html>

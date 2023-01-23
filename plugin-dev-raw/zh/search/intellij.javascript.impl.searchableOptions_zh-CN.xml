@@ -1,6 +1,17 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
+    <option name="add" path="ActionManager" hit="Add Enum Explicit Value" />
+    <option name="enum" path="ActionManager" hit="Add Enum Explicit Value" />
+    <option name="explicit" path="ActionManager" hit="Add Enum Explicit Value" />
+    <option name="value" path="ActionManager" hit="Add Enum Explicit Value" />
+    <option name="duplicated" path="ActionManager" hit="Find Duplicated Indexed Files in node_modules" />
+    <option name="files" path="ActionManager" hit="Find Duplicated Indexed Files in node_modules" />
+    <option name="find" path="ActionManager" hit="Find Duplicated Indexed Files in node_modules" />
+    <option name="in" path="ActionManager" hit="Find Duplicated Indexed Files in node_modules" />
+    <option name="indexed" path="ActionManager" hit="Find Duplicated Indexed Files in node_modules" />
+    <option name="modules" path="ActionManager" hit="Find Duplicated Indexed Files in node_modules" />
+    <option name="node" path="ActionManager" hit="Find Duplicated Indexed Files in node_modules" />
     <option name="getter" path="ActionManager" hit="Getter" />
     <option name="getter" path="ActionManager" hit="Getter 和 Setter" />
     <option name="setter" path="ActionManager" hit="Getter 和 Setter" />
@@ -104,12 +115,12 @@
     <option name="javascript" path="ActionManager" hit="選擇要與當前檔案一起使用的 JavaScript 庫" />
     <option name="庫" path="ActionManager" hit="選擇要與當前檔案一起使用的 JavaScript 庫" />
     <option name="選擇要與當前檔案一起使用的" path="ActionManager" hit="選擇要與當前檔案一起使用的 JavaScript 庫" />
+    <option name="--fix" path="ActionManager" hit="通過呼叫 'eslint --fix' 修正 ESLint 問題" />
     <option name="eslint" path="ActionManager" hit="通過呼叫 'eslint --fix' 修正 ESLint 問題" />
-    <option name="fix" path="ActionManager" hit="通過呼叫 'eslint --fix' 修正 ESLint 問題" />
     <option name="修正" path="ActionManager" hit="通過呼叫 'eslint --fix' 修正 ESLint 問題" />
     <option name="通過呼叫" path="ActionManager" hit="通過呼叫 'eslint --fix' 修正 ESLint 問題" />
     <option name="問題" path="ActionManager" hit="通過呼叫 'eslint --fix' 修正 ESLint 問題" />
-    <option name="fix" path="ActionManager" hit="通過呼叫 'stylelint --fix' 修正 Stylelint 問題" />
+    <option name="--fix" path="ActionManager" hit="通過呼叫 'stylelint --fix' 修正 Stylelint 問題" />
     <option name="stylelint" path="ActionManager" hit="通過呼叫 'stylelint --fix' 修正 Stylelint 問題" />
     <option name="修正" path="ActionManager" hit="通過呼叫 'stylelint --fix' 修正 Stylelint 問題" />
     <option name="通過呼叫" path="ActionManager" hit="通過呼叫 'stylelint --fix' 修正 Stylelint 問題" />
@@ -139,17 +150,6 @@
     <option name="貼上到" hit="將 HTML 貼上到 JSX 檔案時轉換特性" />
     <option name="時啟動模板字串內插" hit="鍵入     時啟動模板字串內插" />
     <option name="鍵入" hit="鍵入     時啟動模板字串內插" />
-  </configurable>
-  <configurable id="editor.preferences.folding" configurable_name="程式碼折疊">
-    <option name="javascript" hit="JavaScript" />
-    <option name="javascript" hit="JavaScript 和 TypeScript 中的單行函式" />
-    <option name="typescript" hit="JavaScript 和 TypeScript 中的單行函式" />
-    <option name="中的單行函式" hit="JavaScript 和 TypeScript 中的單行函式" />
-    <option name="和" hit="JavaScript 和 TypeScript 中的單行函式" />
-    <option name="xml" hit="XML 文字" />
-    <option name="文字" hit="XML 文字" />
-    <option name="物件文字" hit="物件文字" />
-    <option name="陣列文字" hit="陣列文字" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.JavaScript" configurable_name="JavaScript">
     <option name="javascript" hit="JavaScript" />
@@ -197,7 +197,7 @@
     <option name="類型別名" hit="類型別名" />
     <option name="行註釋" hit="行註釋" />
     <option name="裝飾器" hit="裝飾器" />
-    <option name="語意高亮顯示" hit="語意高亮顯示" />
+    <option name="語意醒目提示顯示" hit="語意醒目提示顯示" />
     <option name="運算" hit="運算" />
     <option name="逗號" hit="逗號" />
     <option name="錯誤字符" hit="錯誤字符" />
@@ -244,7 +244,7 @@
     <option name="類型參數" hit="類型參數" />
     <option name="行註釋" hit="行註釋" />
     <option name="裝飾器" hit="裝飾器" />
-    <option name="語意高亮顯示" hit="語意高亮顯示" />
+    <option name="語意醒目提示顯示" hit="語意醒目提示顯示" />
     <option name="運算" hit="運算" />
     <option name="逗號" hit="逗號" />
     <option name="錯誤字符" hit="錯誤字符" />
@@ -267,8 +267,7 @@
     <option name="後" path="空行" hit="import 後 " />
     <option name="不使用" path="標點" hit="不使用" />
     <option name="不要完全從此匯入" path="Import" hit="不要完全從此匯入 " />
-    <option name="app" path="程式碼生成" hit="中線命名法  app component " />
-    <option name="component" path="程式碼生成" hit="中線命名法  app component " />
+    <option name="app-component" path="程式碼生成" hit="中線命名法  app component " />
     <option name="中線命名法" path="程式碼生成" hit="中線命名法  app component " />
     <option name="僅在指定路徑以外的檔案中" path="Import" hit="僅在指定路徑以外的檔案中" />
     <option name="從不" path="Import" hit="從不" />
@@ -321,9 +320,8 @@
     <option name="屬性前綴" path="程式碼生成" hit="屬性前綴  P  " />
     <option name="appcomponent" path="程式碼生成" hit="帕斯卡命名法  AppComponent " />
     <option name="帕斯卡命名法" path="程式碼生成" hit="帕斯卡命名法  AppComponent " />
-    <option name="app" path="程式碼生成" hit="帶後綴的中線命名法  my app component " />
     <option name="component" path="程式碼生成" hit="帶後綴的中線命名法  my app component " />
-    <option name="my" path="程式碼生成" hit="帶後綴的中線命名法  my app component " />
+    <option name="my-app" path="程式碼生成" hit="帶後綴的中線命名法  my app component " />
     <option name="帶後綴的中線命名法" path="程式碼生成" hit="帶後綴的中線命名法  my app component " />
     <option name="q" path="標點" hit="引號 Q " />
     <option name="引號" path="標點" hit="引號 Q " />
@@ -344,7 +342,7 @@
     <option name="環繞欄位" path="空行" hit="環繞欄位 " />
     <option name="環繞方法" path="空行" hit="環繞方法 " />
     <option name="環繞類別" path="空行" hit="環繞類別 " />
-    <option name="禁用" hit="禁用" />
+    <option name="停用" hit="停用" />
     <option name="移除" path="標點" hit="移除" />
     <option name="空格" path="空格" hit="空格" />
     <option name="空行" path="空行" hit="空行" />
@@ -448,9 +446,7 @@
     <option name="try" path="換行和大括號" hit="'try' 語句" />
     <option name="語句" path="換行和大括號" hit="'try' 語句" />
     <option name="" path="換行和大括號" hit="'try-with-resources'" />
-    <option name="resources" path="換行和大括號" hit="'try-with-resources'" />
-    <option name="try" path="換行和大括號" hit="'try-with-resources'" />
-    <option name="with" path="換行和大括號" hit="'try-with-resources'" />
+    <option name="try-with-resources" path="換行和大括號" hit="'try-with-resources'" />
     <option name="" path="空格" hit="'while' 關鍵字" />
     <option name="while" path="空格" hit="'while' 關鍵字" />
     <option name="關鍵字" path="空格" hit="'while' 關鍵字" />
@@ -468,16 +464,18 @@
     <option name="語句" path="換行和大括號" hit="'while()' 語句" />
     <option name="" path="標點" hit="(在新程式碼中)" />
     <option name="在新程式碼中" path="標點" hit="(在新程式碼中)" />
-    <option name="es" path="換行和大括號" hit="ES6 匯入/匯出" />
+    <option name="es6" path="換行和大括號" hit="ES6 匯入/匯出" />
     <option name="匯入" path="換行和大括號" hit="ES6 匯入/匯出" />
     <option name="匯出" path="換行和大括號" hit="ES6 匯入/匯出" />
-    <option name="es" path="空格" hit="ES6 匯入/匯出大括號" />
+    <option name="es6" path="空格" hit="ES6 匯入/匯出大括號" />
     <option name="匯入" path="空格" hit="ES6 匯入/匯出大括號" />
     <option name="匯出大括號" path="空格" hit="ES6 匯入/匯出大括號" />
     <option name="throws" path="換行和大括號" hit="Throws 列表" />
     <option name="列表" path="換行和大括號" hit="Throws 列表" />
     <option name="throws" path="換行和大括號" hit="throws 關鍵字" />
     <option name="關鍵字" path="換行和大括號" hit="throws 關鍵字" />
+    <option name="-" path="空格" hit="一元加法運算符 (+,-,++,--)" />
+    <option name="--" path="空格" hit="一元加法運算符 (+,-,++,--)" />
     <option name="一元加法運算符" path="空格" hit="一元加法運算符 (+,-,++,--)" />
     <option name="三元運算" path="換行和大括號" hit="三元運算" />
     <option name="乘法運算符" path="空格" hit="乘法運算符(*、/、%)" />
@@ -497,6 +495,7 @@
     <option name="函式左大括號" path="空格" hit="函式左大括號" />
     <option name="函式呼叫括號" path="空格" hit="函式呼叫括號" />
     <option name="分組圓括號" path="空格" hit="分組圓括號" />
+    <option name="-" path="空格" hit="加法運算符(+、-)" />
     <option name="加法運算符" path="空格" hit="加法運算符(+、-)" />
     <option name="單" path="標點" hit="單" />
     <option name="雙" path="標點" hit="雙" />
@@ -542,12 +541,10 @@
     <option name="在列中對齊簡單的方法" path="換行和大括號" hit="在列中對齊簡單的方法" />
     <option name="在列中對齊賦值" path="換行和大括號" hit="在列中對齊賦值" />
     <option name="在右邊距處換行" path="換行和大括號" hit="在右邊距處換行" />
-    <option name="值分隔符" path="空格" hit="在屬性名稱-值分隔符 ':' 前面" />
     <option name="前面" path="空格" hit="在屬性名稱-值分隔符 ':' 前面" />
-    <option name="在屬性名稱" path="空格" hit="在屬性名稱-值分隔符 ':' 前面" />
-    <option name="值分隔符" path="空格" hit="在屬性名稱-值分隔符 ':' 後面" />
+    <option name="在屬性名稱-值分隔符" path="空格" hit="在屬性名稱-值分隔符 ':' 前面" />
     <option name="後面" path="空格" hit="在屬性名稱-值分隔符 ':' 後面" />
-    <option name="在屬性名稱" path="空格" hit="在屬性名稱-值分隔符 ':' 後面" />
+    <option name="在屬性名稱-值分隔符" path="空格" hit="在屬性名稱-值分隔符 ':' 後面" />
     <option name="在異步箭頭函式中" path="空格" hit="在異步箭頭函式中" />
     <option name="在方法宣告中" path="換行和大括號" hit="在方法宣告中" />
     <option name="前面" path="空格" hit="在產生器中的 '*' 前面 " />
@@ -659,8 +656,7 @@
     <option name="後" path="空行" hit="import 後 " />
     <option name="不使用" path="標點" hit="不使用" />
     <option name="不要完全從此匯入" path="Import" hit="不要完全從此匯入 " />
-    <option name="app" path="程式碼生成" hit="中線命名法  app component " />
-    <option name="component" path="程式碼生成" hit="中線命名法  app component " />
+    <option name="app-component" path="程式碼生成" hit="中線命名法  app component " />
     <option name="中線命名法" path="程式碼生成" hit="中線命名法  app component " />
     <option name="僅在指定路徑以外的檔案中" path="Import" hit="僅在指定路徑以外的檔案中" />
     <option name="從不" path="Import" hit="從不" />
@@ -720,9 +716,8 @@
     <option name="屬性前綴" path="程式碼生成" hit="屬性前綴  P  " />
     <option name="appcomponent" path="程式碼生成" hit="帕斯卡命名法  AppComponent " />
     <option name="帕斯卡命名法" path="程式碼生成" hit="帕斯卡命名法  AppComponent " />
-    <option name="app" path="程式碼生成" hit="帶後綴的中線命名法  my app component " />
     <option name="component" path="程式碼生成" hit="帶後綴的中線命名法  my app component " />
-    <option name="my" path="程式碼生成" hit="帶後綴的中線命名法  my app component " />
+    <option name="my-app" path="程式碼生成" hit="帶後綴的中線命名法  my app component " />
     <option name="帶後綴的中線命名法" path="程式碼生成" hit="帶後綴的中線命名法  my app component " />
     <option name="q" path="標點" hit="引號 Q " />
     <option name="引號" path="標點" hit="引號 Q " />
@@ -745,7 +740,7 @@
     <option name="環繞欄位" path="空行" hit="環繞欄位 " />
     <option name="環繞方法" path="空行" hit="環繞方法 " />
     <option name="環繞類別" path="空行" hit="環繞類別 " />
-    <option name="禁用" hit="禁用" />
+    <option name="停用" hit="停用" />
     <option name="移除" path="標點" hit="移除" />
     <option name="空格" path="空格" hit="空格" />
     <option name="空行" path="空行" hit="空行" />
@@ -849,9 +844,7 @@
     <option name="try" path="換行和大括號" hit="'try' 語句" />
     <option name="語句" path="換行和大括號" hit="'try' 語句" />
     <option name="" path="換行和大括號" hit="'try-with-resources'" />
-    <option name="resources" path="換行和大括號" hit="'try-with-resources'" />
-    <option name="try" path="換行和大括號" hit="'try-with-resources'" />
-    <option name="with" path="換行和大括號" hit="'try-with-resources'" />
+    <option name="try-with-resources" path="換行和大括號" hit="'try-with-resources'" />
     <option name="" path="空格" hit="'while' 關鍵字" />
     <option name="while" path="空格" hit="'while' 關鍵字" />
     <option name="關鍵字" path="空格" hit="'while' 關鍵字" />
@@ -869,16 +862,20 @@
     <option name="語句" path="換行和大括號" hit="'while()' 語句" />
     <option name="" path="標點" hit="(在新程式碼中)" />
     <option name="在新程式碼中" path="標點" hit="(在新程式碼中)" />
-    <option name="es" path="換行和大括號" hit="ES6 匯入/匯出" />
+    <option name="es6" path="換行和大括號" hit="ES6 匯入/匯出" />
     <option name="匯入" path="換行和大括號" hit="ES6 匯入/匯出" />
     <option name="匯出" path="換行和大括號" hit="ES6 匯入/匯出" />
-    <option name="es" path="空格" hit="ES6 匯入/匯出大括號" />
+    <option name="es6" path="空格" hit="ES6 匯入/匯出大括號" />
     <option name="匯入" path="空格" hit="ES6 匯入/匯出大括號" />
     <option name="匯出大括號" path="空格" hit="ES6 匯入/匯出大括號" />
+    <option name="object" path="換行和大括號" hit="Object types" />
+    <option name="types" path="換行和大括號" hit="Object types" />
     <option name="throws" path="換行和大括號" hit="Throws 列表" />
     <option name="列表" path="換行和大括號" hit="Throws 列表" />
     <option name="throws" path="換行和大括號" hit="throws 關鍵字" />
     <option name="關鍵字" path="換行和大括號" hit="throws 關鍵字" />
+    <option name="-" path="空格" hit="一元加法運算符 (+,-,++,--)" />
+    <option name="--" path="空格" hit="一元加法運算符 (+,-,++,--)" />
     <option name="一元加法運算符" path="空格" hit="一元加法運算符 (+,-,++,--)" />
     <option name="三元運算" path="換行和大括號" hit="三元運算" />
     <option name="乘法運算符" path="空格" hit="乘法運算符(*、/、%)" />
@@ -898,6 +895,7 @@
     <option name="函式左大括號" path="空格" hit="函式左大括號" />
     <option name="函式呼叫括號" path="空格" hit="函式呼叫括號" />
     <option name="分組圓括號" path="空格" hit="分組圓括號" />
+    <option name="-" path="空格" hit="加法運算符(+、-)" />
     <option name="加法運算符" path="空格" hit="加法運算符(+、-)" />
     <option name="單" path="標點" hit="單" />
     <option name="雙" path="標點" hit="雙" />
@@ -940,12 +938,10 @@
     <option name="在列中對齊簡單的方法" path="換行和大括號" hit="在列中對齊簡單的方法" />
     <option name="在列中對齊賦值" path="換行和大括號" hit="在列中對齊賦值" />
     <option name="在右邊距處換行" path="換行和大括號" hit="在右邊距處換行" />
-    <option name="值分隔符" path="空格" hit="在屬性名稱-值分隔符 ':' 前面" />
     <option name="前面" path="空格" hit="在屬性名稱-值分隔符 ':' 前面" />
-    <option name="在屬性名稱" path="空格" hit="在屬性名稱-值分隔符 ':' 前面" />
-    <option name="值分隔符" path="空格" hit="在屬性名稱-值分隔符 ':' 後面" />
+    <option name="在屬性名稱-值分隔符" path="空格" hit="在屬性名稱-值分隔符 ':' 前面" />
     <option name="後面" path="空格" hit="在屬性名稱-值分隔符 ':' 後面" />
-    <option name="在屬性名稱" path="空格" hit="在屬性名稱-值分隔符 ':' 後面" />
+    <option name="在屬性名稱-值分隔符" path="空格" hit="在屬性名稱-值分隔符 ':' 後面" />
     <option name="在異步箭頭函式中" path="空格" hit="在異步箭頭函式中" />
     <option name="在方法宣告中" path="換行和大括號" hit="在方法宣告中" />
     <option name="前面" path="空格" hit="在產生器中的 '*' 前面 " />
@@ -1099,14 +1095,23 @@
     <option name="長度" hit="長度 " />
   </configurable>
   <configurable id="settings.typescriptcompiler" configurable_name="TypeScript">
+    <option name="bundled" hit="Locale setting is not supported for bundled TypeScript" />
+    <option name="for" hit="Locale setting is not supported for bundled TypeScript" />
+    <option name="is" hit="Locale setting is not supported for bundled TypeScript" />
+    <option name="locale" hit="Locale setting is not supported for bundled TypeScript" />
+    <option name="not" hit="Locale setting is not supported for bundled TypeScript" />
+    <option name="setting" hit="Locale setting is not supported for bundled TypeScript" />
+    <option name="supported" hit="Locale setting is not supported for bundled TypeScript" />
+    <option name="typescript" hit="Locale setting is not supported for bundled TypeScript" />
+    <option name="i" hit="Node 解釋器 I  " />
+    <option name="node" hit="Node 解釋器 I  " />
+    <option name="解釋器" hit="Node 解釋器 I  " />
     <option name="typescript" hit="TypeScript" />
     <option name="typescript" hit="TypeScript " />
     <option name="typescript" hit="TypeScript 語言服務" />
     <option name="語言服務" hit="TypeScript 語言服務" />
     <option name="在更改時重新編譯" hit="在更改時重新編譯" />
     <option name="顯示專案錯誤" hit="顯示專案錯誤" />
-    <option name="i" hit="節點解釋器 I  " />
-    <option name="節點解釋器" hit="節點解釋器 I  " />
     <option name="選項" hit="選項 " />
   </configurable>
   <configurable id="Settings.JavaScript" configurable_name="JavaScript">
@@ -1114,7 +1119,10 @@
     <option name="flow" hit=" 這樣 Flow 將始終顯示最新的錯誤狀態 " />
     <option name="將始終顯示最新的錯誤狀態" hit=" 這樣 Flow 將始終顯示最新的錯誤狀態 " />
     <option name="這樣" hit=" 這樣 Flow 將始終顯示最新的錯誤狀態 " />
+    <option name="6" hit="ECMAScript   " />
     <option name="ecmascript" hit="ECMAScript   " />
+    <option name="1" hit="ECMAScript    " />
+    <option name="5" hit="ECMAScript    " />
     <option name="ecmascript" hit="ECMAScript    " />
     <option name="flow" hit="Flow" />
     <option name="f" hit="Flow 軟體套件或可執行檔案  F  " />
@@ -1152,10 +1160,10 @@
     <option name="com" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
     <option name="github" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
     <option name="glob" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
+    <option name="glob-primer" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
     <option name="isaacs" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
     <option name="js" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
-    <option name="node" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
-    <option name="primer" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
+    <option name="node-glob" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
     <option name="ts" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
     <option name="使用" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
     <option name="例如" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           js ts " />
@@ -1173,8 +1181,8 @@
     <option name="f" hit="為檔案執行 F  " />
     <option name="為檔案執行" hit="為檔案執行 F  " />
     <option name="儲存時的所有動作" hit="儲存時的所有動作 " />
+    <option name="--fix" hit="儲存時執行 eslint   fix U " />
     <option name="eslint" hit="儲存時執行 eslint   fix U " />
-    <option name="fix" hit="儲存時執行 eslint   fix U " />
     <option name="u" hit="儲存時執行 eslint   fix U " />
     <option name="儲存時執行" hit="儲存時執行 eslint   fix U " />
     <option name="r" hit="其他規則目錄  R  " />
@@ -1185,9 +1193,9 @@
     <option name="m" hit="手動 ESLint 設定  M " />
     <option name="手動" hit="手動 ESLint 設定  M " />
     <option name="設定" hit="手動 ESLint 設定  M " />
-    <option name="d" hit="禁用 ESLint D " />
-    <option name="eslint" hit="禁用 ESLint D " />
-    <option name="禁用" hit="禁用 ESLint D " />
+    <option name="d" hit="停用 ESLint D " />
+    <option name="eslint" hit="停用 ESLint D " />
+    <option name="停用" hit="停用 ESLint D " />
     <option name="a" hit="自動 ESLint 設定  A " />
     <option name="eslint" hit="自動 ESLint 設定  A " />
     <option name="自動" hit="自動 ESLint 設定  A " />
@@ -1209,9 +1217,10 @@
     <option name="js" hit="Node js 編碼協助  A  " />
     <option name="node" hit="Node js 編碼協助  A  " />
     <option name="編碼協助" hit="Node js 編碼協助  A  " />
+    <option name="i" hit="Node 解釋器 I  " />
+    <option name="node" hit="Node 解釋器 I  " />
+    <option name="解釋器" hit="Node 解釋器 I  " />
     <option name="管理範圍" hit="管理範圍 " />
-    <option name="i" hit="節點解釋器 I  " />
-    <option name="節點解釋器" hit="節點解釋器 I  " />
     <option name="m" hit="軟體套件管理器  M  " />
     <option name="軟體套件管理器" hit="軟體套件管理器  M  " />
   </configurable>
@@ -1231,10 +1240,10 @@
     <option name="css" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
     <option name="github" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
     <option name="glob" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
+    <option name="glob-primer" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
     <option name="html" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
     <option name="isaacs" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
-    <option name="node" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
-    <option name="primer" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
+    <option name="node-glob" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
     <option name="使用" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
     <option name="例如" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />
     <option name="模式" hit=" 使用  github com isaacs node glob glob primer   glob 模式 例如           css html " />

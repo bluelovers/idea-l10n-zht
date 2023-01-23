@@ -249,7 +249,7 @@
     <option name="環繞欄位" path="空行" hit="環繞欄位 " />
     <option name="環繞方法" path="空行" hit="環繞方法 " />
     <option name="環繞類別" path="空行" hit="環繞類別 " />
-    <option name="禁用" hit="禁用" />
+    <option name="停用" hit="停用" />
     <option name="空格" path="空格" hit="空格" />
     <option name="空行" path="空行" hit="空行" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
@@ -352,9 +352,7 @@
     <option name="try" path="換行和大括號" hit="'try' 語句" />
     <option name="語句" path="換行和大括號" hit="'try' 語句" />
     <option name="" path="換行和大括號" hit="'try-with-resources'" />
-    <option name="resources" path="換行和大括號" hit="'try-with-resources'" />
-    <option name="try" path="換行和大括號" hit="'try-with-resources'" />
-    <option name="with" path="換行和大括號" hit="'try-with-resources'" />
+    <option name="try-with-resources" path="換行和大括號" hit="'try-with-resources'" />
     <option name="" path="空格" hit="'while' 關鍵字" />
     <option name="while" path="空格" hit="'while' 關鍵字" />
     <option name="關鍵字" path="空格" hit="'while' 關鍵字" />
@@ -380,6 +378,8 @@
     <option name="列表" path="換行和大括號" hit="Throws 列表" />
     <option name="throws" path="換行和大括號" hit="throws 關鍵字" />
     <option name="關鍵字" path="換行和大括號" hit="throws 關鍵字" />
+    <option name="-" path="空格" hit="一元運算符 (!, -, +, ++, --, *)" />
+    <option name="--" path="空格" hit="一元運算符 (!, -, +, ++, --, *)" />
     <option name="一元運算符" path="空格" hit="一元運算符 (!, -, +, ++, --, *)" />
     <option name="三元運算" path="換行和大括號" hit="三元運算" />
     <option name="中括號" path="空格" hit="中括號" />
@@ -401,6 +401,7 @@
     <option name="內部" path="空格" hit="內部" />
     <option name="分組圓括號" path="空格" hit="分組圓括號" />
     <option name="列表和映射文字" path="換行和大括號" hit="列表和映射文字" />
+    <option name="-" path="空格" hit="加法運算符(+、-)" />
     <option name="加法運算符" path="空格" hit="加法運算符(+、-)" />
     <option name="having" path="換行和大括號" hit="包裝 'having' 子句" />
     <option name="包裝" path="換行和大括號" hit="包裝 'having' 子句" />
@@ -569,12 +570,9 @@
     <option name="長度" hit="長度 " />
   </configurable>
   <configurable id="reference.projectsettings.compiler.javacompiler" configurable_name="Java編譯器">
-    <option name="eclipse" hit="Groovy Eclipse 選項" />
-    <option name="groovy" hit="Groovy Eclipse 選項" />
+    <option name="groovy-eclipse" hit="Groovy Eclipse 選項" />
     <option name="選項" hit="Groovy Eclipse 選項" />
-    <option name="batch" hit="Groovy eclipse batch jar 路徑 " />
-    <option name="eclipse" hit="Groovy eclipse batch jar 路徑 " />
-    <option name="groovy" hit="Groovy eclipse batch jar 路徑 " />
+    <option name="groovy-eclipse-batch" hit="Groovy eclipse batch jar 路徑 " />
     <option name="jar" hit="Groovy eclipse batch jar 路徑 " />
     <option name="路徑" hit="Groovy eclipse batch jar 路徑 " />
     <option name="生成偵錯資訊" hit="生成偵錯資訊" />

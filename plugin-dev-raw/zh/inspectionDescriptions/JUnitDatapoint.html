@@ -1,0 +1,44 @@
+<html>
+<body>
+報告使用 <code>@DataPoint</code> 註解並且為非 <code>public</code> 和/或非 <code>static</code> 的欄位或方法。
+不能執行 <code>@DataPoint</code> 成員格式錯誤的 <a href="https://github.com/junit-team/junit4/wiki/Theories">theories</a> 測試類別。
+<p>範例：</p>
+<pre><code>
+  @RunWith(Theories.class)
+  <b>public class</b> SeriousTest {
+    @DataPoint
+    <b>private</b> String dataPoint = "value";
+
+    @DataPoint("generated")
+    <b>private</b> String generatedDataPoint() {
+      <b>return</b> "generated value";
+    }
+
+    @Theory
+    <b>public void</b> theoryMethod(String param) {
+      // ...
+    }
+  }
+</code></pre>
+<p>通過快速修復來修正修飾符：</p>
+<pre><code>
+  @RunWith(Theories.class)
+  <b>public class</b> SeriousTest {
+    @DataPoint
+    <b>public static</b> String dataPoint = "value";
+
+    @DataPoint("generated")
+    <b>public static</b> String generatedDataPoint() {
+      <b>return</b> "generated value";
+    }
+
+    @Theory
+    <b>public void</b> theoryMethod(String param) {
+      // ...
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

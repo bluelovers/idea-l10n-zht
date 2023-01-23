@@ -25,8 +25,8 @@ Integer square(@Nullable Integer input) {
   <li>使用<b>將未註解的成員和參數視為 @Nullable</b> 選項可假設非註解成員可以為 null，因此不得在非 null 上下文中使用。</li>
   <li>使用<b>報告使用 null 文字實參用法的非 null 必需參數</b>>選項可以報告不能為 null（例如在方法體中立即取消引用），但存在傳遞 <code>null</code> 文字的呼叫點的方法參數。</li>
   <li>使用<b>報告始終返回非 null 值的可 null 方法</b>選項，可報告註解為 <code>@Nullable</code> 但始終返回非 null 值的方法。 在這種情況下，建議您將註解更改為 <code>@NotNull</code>。</li>
-  <li>使用<b>忽略 assert 語句</b>選項可控制檢查如何處理 <code>assert</code> 語句。 預設情況下，該選項被禁用，這意味著斷言視為被執行（-ea 模式）。 如果啟用該選項，斷言將被完全忽略（-da 模式）。</li>
-  <li>使用<b>報告僅在某些程式碼路徑上發生的問題</b>選項可控制是否報告僅在某些程式碼路徑上發生的問題。 如果禁用此選項，則不會報告 <i>exception is possible</i> 等警告。 該檢查只會報告類似 <i>exception will definitely occur</i> 的警告。 這種模式可以大大減少誤報的數量，特別是如果程式碼沒有一致地使用可 null 性和約定註解進行註解。 這就是為什麼它對於尋找傳統程式碼庫中最重要的問題很有用。
+  <li>使用<b>忽略 assert 語句</b>選項可控制檢查如何處理 <code>assert</code> 語句。 預設情況下，該選項被停用，這意味著斷言視為被執行（-ea 模式）。 如果啟用該選項，斷言將被完全忽略（-da 模式）。</li>
+  <li>使用<b>報告僅在某些程式碼路徑上發生的問題</b>選項可控制是否報告僅在某些程式碼路徑上發生的問題。 如果停用此選項，則不會報告 <i>exception is possible</i> 等警告。 該檢查只會報告類似 <i>exception will definitely occur</i> 的警告。 這種模式可以大大減少誤報的數量，特別是如果程式碼沒有一致地使用可 null 性和約定註解進行註解。 這就是為什麼它對於尋找傳統程式碼庫中最重要的問題很有用。
   </li>
 </ul>
 <p>

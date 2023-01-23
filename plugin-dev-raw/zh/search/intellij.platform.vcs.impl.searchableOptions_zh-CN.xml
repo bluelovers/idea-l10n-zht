@@ -2,6 +2,10 @@
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
     <option name="git" path="ActionManager" hit="Git" />
+    <option name="for" path="ActionManager" hit="Show History for Selection…" />
+    <option name="history" path="ActionManager" hit="Show History for Selection…" />
+    <option name="selection" path="ActionManager" hit="Show History for Selection…" />
+    <option name="show" path="ActionManager" hit="Show History for Selection…" />
     <option name="vcs" path="ActionManager" hit="VCS 動作" />
     <option name="動作" path="ActionManager" hit="VCS 動作" />
     <option name="vcs" path="ActionManager" hit="VCS 動作彈出視窗…" />
@@ -10,6 +14,8 @@
     <option name="標籤" path="ActionManager" hit="VCS 標籤" />
     <option name="vcs" path="ActionManager" hit="VCS 組" />
     <option name="組" path="ActionManager" hit="VCS 組" />
+    <option name="options" path="ActionManager" hit="View Options" />
+    <option name="view" path="ActionManager" hit="View Options" />
     <option name="上一個變更" path="ActionManager" hit="上一個變更" />
     <option name="下一個變更" path="ActionManager" hit="下一個變更" />
     <option name="與修訂比較" path="ActionManager" hit="與修訂比較…" />
@@ -137,7 +143,6 @@
     <option name="顯示編輯器選擇的歷史記錄" path="ActionManager" hit="顯示編輯器選擇的歷史記錄" />
     <option name="顯示行的差異" path="ActionManager" hit="顯示行的差異" />
     <option name="顯示詳細資訊" path="ActionManager" hit="顯示詳細資訊" />
-    <option name="顯示選擇的歷史記錄" path="ActionManager" hit="顯示選擇的歷史記錄" />
     <option name="更改導覽動作" path="ActionManager" hit="更改導覽動作" />
     <option name="更改篩選條件" path="ActionManager" hit="更改篩選條件" />
     <option name="更新" path="ActionManager" hit="更新" />
@@ -214,18 +219,23 @@
     <option name="vcs" hit="VCS 註解//最後一次提交的前景" />
     <option name="最後一次提交的前景" hit="VCS 註解//最後一次提交的前景" />
     <option name="註解" hit="VCS 註解//最後一次提交的前景" />
+    <option name="1" hit="VCS 註解//背景色 #1" />
     <option name="vcs" hit="VCS 註解//背景色 #1" />
     <option name="註解" hit="VCS 註解//背景色 #1" />
     <option name="背景色" hit="VCS 註解//背景色 #1" />
+    <option name="2" hit="VCS 註解//背景色 #2" />
     <option name="vcs" hit="VCS 註解//背景色 #2" />
     <option name="註解" hit="VCS 註解//背景色 #2" />
     <option name="背景色" hit="VCS 註解//背景色 #2" />
+    <option name="3" hit="VCS 註解//背景色 #3" />
     <option name="vcs" hit="VCS 註解//背景色 #3" />
     <option name="註解" hit="VCS 註解//背景色 #3" />
     <option name="背景色" hit="VCS 註解//背景色 #3" />
+    <option name="4" hit="VCS 註解//背景色 #4" />
     <option name="vcs" hit="VCS 註解//背景色 #4" />
     <option name="註解" hit="VCS 註解//背景色 #4" />
     <option name="背景色" hit="VCS 註解//背景色 #4" />
+    <option name="5" hit="VCS 註解//背景色 #5" />
     <option name="vcs" hit="VCS 註解//背景色 #5" />
     <option name="註解" hit="VCS 註解//背景色 #5" />
     <option name="背景色" hit="VCS 註解//背景色 #5" />
@@ -253,7 +263,7 @@
     <option name="不執行任何動作" hit="不執行任何動作" />
     <option name="不新增" hit="不新增" />
     <option name="不移除" hit="不移除" />
-    <option name="使用不同顏色高亮顯示具有僅空格修改的行" hit="使用不同顏色高亮顯示具有僅空格修改的行" />
+    <option name="使用不同顏色醒目提示具有僅空格修改的行" hit="使用不同顏色醒目提示具有僅空格修改的行" />
     <option name="分鐘" hit="分鐘" />
     <option name="b" hit="切換分支時恢復工作區 B " />
     <option name="切換分支時恢復工作區" hit="切換分支時恢復工作區 B " />
@@ -263,9 +273,9 @@
     <option name="manager" hit="在 File Manager 中顯示" />
     <option name="中顯示" hit="在 File Manager 中顯示" />
     <option name="在" hit="在 File Manager 中顯示" />
-    <option name="在捲軸上的錯誤條紋中高亮顯示修改的行" hit="在捲軸上的錯誤條紋中高亮顯示修改的行" />
-    <option name="在間距中高亮顯示修改的行" hit="在間距中高亮顯示修改的行" />
-    <option name="在專案樹中高亮顯示包含已修改檔案的目錄" hit="在專案樹中高亮顯示包含已修改檔案的目錄" />
+    <option name="在捲軸上的錯誤條紋中醒目提示修改的行" hit="在捲軸上的錯誤條紋中醒目提示修改的行" />
+    <option name="在間距中醒目提示修改的行" hit="在間距中醒目提示修改的行" />
+    <option name="在專案樹中醒目提示包含已修改檔案的目錄" hit="在專案樹中醒目提示包含已修改檔案的目錄" />
     <option name="天" hit="天" />
     <option name="則提示將其解鎖" hit="如果嘗試編輯唯讀檔案 則提示將其解鎖" />
     <option name="如果嘗試編輯唯讀檔案" hit="如果嘗試編輯唯讀檔案 則提示將其解鎖" />
@@ -290,10 +300,11 @@
     <option name="詢問" hit="詢問" />
     <option name="進行以下動作之前顯示選項" hit="進行以下動作之前顯示選項 " />
     <option name="間距" hit="間距" />
-    <option name="高亮顯示以下時間內更改的檔案" hit="高亮顯示以下時間內更改的檔案 " />
+    <option name="醒目提示以下時間內更改的檔案" hit="醒目提示以下時間內更改的檔案 " />
   </configurable>
   <configurable id="project.propVCSSupport.DirectoryMappings" configurable_name="目錄映射">
     <option name="" hit="     所有模組的內容根 以及專案基目錄的所有直接後代" />
+    <option name="-" hit="     所有模組的內容根 以及專案基目錄的所有直接後代" />
     <option name="以及專案基目錄的所有直接後代" hit="     所有模組的內容根 以及專案基目錄的所有直接後代" />
     <option name="所有模組的內容根" hit="     所有模組的內容根 以及專案基目錄的所有直接後代" />
     <option name="目錄映射" hit="目錄映射" />
@@ -306,21 +317,12 @@
     <option name="停用變更列表" hit="停用變更列表" />
     <option name="p" hit="允許將一個檔案中的變更放入不同的變更列表 P " />
     <option name="允許將一個檔案中的變更放入不同的變更列表" hit="允許將一個檔案中的變更放入不同的變更列表 P " />
-    <option name="衝突" hit="衝突" />
-    <option name="包含忽略衝突的檔案" hit="包含忽略衝突的檔案 " />
     <option name="變更列表" hit="變更列表" />
     <option name="當空變更列表變為停用狀態時" hit="當空變更列表變為停用狀態時 " />
     <option name="無提示移除" hit="無提示移除" />
     <option name="顯示選項" hit="顯示選項" />
-    <option name="清除" hit="清除" />
     <option name="a" hit="自動建立變更列表 A " />
     <option name="自動建立變更列表" hit="自動建立變更列表 A " />
-    <option name="d" hit="試圖編輯停用變更列表中的檔案時顯示對話框 D " />
-    <option name="試圖編輯停用變更列表中的檔案時顯示對話框" hit="試圖編輯停用變更列表中的檔案時顯示對話框 D " />
-    <option name="i" hit="高亮顯示停用變更列表中的檔案 I " />
-    <option name="高亮顯示停用變更列表中的檔案" hit="高亮顯示停用變更列表中的檔案 I " />
-    <option name="h" hit="高亮顯示存在變更列表衝突的檔案 H " />
-    <option name="高亮顯示存在變更列表衝突的檔案" hit="高亮顯示存在變更列表衝突的檔案 H " />
   </configurable>
   <configurable id="project.propVCSSupport.CommitDialog" configurable_name="提交">
     <option name="import" hit="最佳化 import O " />

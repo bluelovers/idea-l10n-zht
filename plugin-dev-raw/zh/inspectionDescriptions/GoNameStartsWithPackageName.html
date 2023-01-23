@@ -23,7 +23,7 @@
 func MyPackageGetIP() {
 
 }</code></pre>
-<p><code>MyPackageGetIP</code> 名稱將高亮顯示，因為它以軟體套件名稱開頭。</p>
+<p><code>MyPackageGetIP</code> 名稱將醒目提示，因為它以軟體套件名稱開頭。</p>
 <p>根據 <a href="https://golang.org/wiki/CodeReviewComments#package-names">golang.org 上的 Package Names</a> 頁面，對軟體套件中名稱的所有引用都將使用軟體套件名稱完成，因此可以從關鍵字中省略該名稱。
   例如，如果您在軟體套件 <code>foo</code> 中，則不需要類型 <code>FooFile</code>，客戶端將其寫為 <code>foo.FooFile</code>。 相反，我們將類型命名為 <code>File</code>，客戶端將其寫為 <code>foo.File</code>。</p>
 </body>

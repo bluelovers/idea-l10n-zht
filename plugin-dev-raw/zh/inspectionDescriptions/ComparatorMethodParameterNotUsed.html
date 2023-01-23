@@ -12,7 +12,8 @@
     比較方法從不返回正值或負值。 為了履行約定，如果比較方法返回正值，那麼如果以相反的順序提供實參，它也應該返回負值。
   </li>
   <li>
-    比較方法返回 <code>Integer.MIN_VALUE</code>。 雖然約定允許，但它可能容易出錯，因為一些呼叫站點可能會錯誤地使用一元減號來反轉比較方法的返回值。 在這種情況下，<code>Integer.MIN_VALUE</code> 將保持負值。
+    比較方法返回 <code>Integer.MIN_VALUE</code>。 雖然約定允許，但它可能容易出錯，因為一些呼叫站點可能會錯誤地使用一元減號來反轉比較方法的返回值。
+    <code>Integer.MIN_VALUE</code> 的求反值為 <code>Integer.MIN_VALUE</code>。
   </li>
 </ul>
 <p><b>範例：</b></p>

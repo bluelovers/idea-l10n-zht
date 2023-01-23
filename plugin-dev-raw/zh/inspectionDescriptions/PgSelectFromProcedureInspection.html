@@ -10,7 +10,7 @@ SELECT * FROM produce_a_table() AS s (c1 INT);
 SELECT * FROM produce_a_table() AS s (c1);
 SELECT * FROM DBLINK('dbname=mydb', 'SELECT proname, prosrc FROM pg_proc') AS t1;</code></pre>
 <p><code>AS s (c1 INT)</code> 具有類型別名，而 <code>AS s (c1)</code> 和 <code>AS t1</code> 沒有。
-  在這種情況下，將高亮顯示 <code>produce_a_table()</code> 和 <code>DBLINK()</code> 的第二次呼叫。
+  在這種情況下，將醒目提示 <code>produce_a_table()</code> 和 <code>DBLINK()</code> 的第二次呼叫。
 </p>
 </body>
 </html>

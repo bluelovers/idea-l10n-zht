@@ -1,12 +1,45 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
+    <option name="1" path="ActionManager" hit="1" />
+    <option name="2" path="ActionManager" hit="2" />
+    <option name="3" path="ActionManager" hit="3" />
+    <option name="4" path="ActionManager" hit="4" />
+    <option name="5" path="ActionManager" hit="5" />
+    <option name="disable" path="ActionManager" hit="Disable Inlay Hints" />
+    <option name="hints" path="ActionManager" hit="Disable Inlay Hints" />
+    <option name="inlay" path="ActionManager" hit="Disable Inlay Hints" />
     <option name="emacs" path="ActionManager" hit="Emacs 頁籤" />
     <option name="頁籤" path="ActionManager" hit="Emacs 頁籤" />
     <option name="ide" path="ActionManager" hit="IDE 腳本主控台" />
     <option name="腳本主控台" path="ActionManager" hit="IDE 腳本主控台" />
     <option name="include" path="ActionManager" hit="Include 檔案…" />
     <option name="檔案" path="ActionManager" hit="Include 檔案…" />
+    <option name="and" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes" />
+    <option name="apply" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes" />
+    <option name="cleanup" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes" />
+    <option name="inspections" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes" />
+    <option name="quick-fixes" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes" />
+    <option name="run" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes" />
+    <option name="and" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes with current inspection profile" />
+    <option name="apply" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes with current inspection profile" />
+    <option name="cleanup" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes with current inspection profile" />
+    <option name="current" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes with current inspection profile" />
+    <option name="inspection" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes with current inspection profile" />
+    <option name="inspections" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes with current inspection profile" />
+    <option name="profile" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes with current inspection profile" />
+    <option name="quick-fixes" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes with current inspection profile" />
+    <option name="run" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes with current inspection profile" />
+    <option name="with" path="ActionManager" hit="Run cleanup inspections and apply quick-fixes with current inspection profile" />
+    <option name="quick-fixes" path="ActionManager" hit="Show Quick-Fixes" />
+    <option name="show" path="ActionManager" hit="Show Quick-Fixes" />
+    <option name="a" path="ActionManager" hit="Show available quick-fixes for a selected problem" />
+    <option name="available" path="ActionManager" hit="Show available quick-fixes for a selected problem" />
+    <option name="for" path="ActionManager" hit="Show available quick-fixes for a selected problem" />
+    <option name="problem" path="ActionManager" hit="Show available quick-fixes for a selected problem" />
+    <option name="quick-fixes" path="ActionManager" hit="Show available quick-fixes for a selected problem" />
+    <option name="selected" path="ActionManager" hit="Show available quick-fixes for a selected problem" />
+    <option name="show" path="ActionManager" hit="Show available quick-fixes for a selected problem" />
     <option name="todo" path="ActionManager" hit="TODO" />
     <option name="bar" path="ActionManager" hit="Touch Bar" />
     <option name="touch" path="ActionManager" hit="Touch Bar" />
@@ -19,7 +52,7 @@
     <option name="上一個方法" path="ActionManager" hit="上一個方法" />
     <option name="上一個模板變數" path="ActionManager" hit="上一個模板變數" />
     <option name="上一個專案視窗" path="ActionManager" hit="上一個專案視窗" />
-    <option name="上一個高亮顯示錯誤" path="ActionManager" hit="上一個高亮顯示錯誤" />
+    <option name="上一個醒目提示顯示錯誤" path="ActionManager" hit="上一個醒目提示顯示錯誤" />
     <option name="上一行書籤" path="ActionManager" hit="上一行書籤" />
     <option name="上下文資訊" path="ActionManager" hit="上下文資訊" />
     <option name="上移行" path="ActionManager" hit="上移行" />
@@ -28,8 +61,8 @@
     <option name="下一個方法" path="ActionManager" hit="下一個方法" />
     <option name="下一個模板變數或完成就地重構" path="ActionManager" hit="下一個模板變數或完成就地重構" />
     <option name="下一個專案視窗" path="ActionManager" hit="下一個專案視窗" />
-    <option name="下一個高亮顯示用例" path="ActionManager" hit="下一個高亮顯示用例" />
-    <option name="下一個高亮顯示錯誤" path="ActionManager" hit="下一個高亮顯示錯誤" />
+    <option name="下一個醒目提示用例" path="ActionManager" hit="下一個醒目提示用例" />
+    <option name="下一個醒目提示顯示錯誤" path="ActionManager" hit="下一個醒目提示顯示錯誤" />
     <option name="下一行書籤" path="ActionManager" hit="下一行書籤" />
     <option name="下移行" path="ActionManager" hit="下移行" />
     <option name="不可見時" path="ActionManager" hit="不可見時，顯示當前方法或類別宣告" />
@@ -82,9 +115,8 @@
     <option name="最佳化" path="ActionManager" hit="最佳化 import" />
     <option name="作為文本匯出到新的臨時檔案" path="ActionManager" hit="作為文本匯出到新的臨時檔案" />
     <option name="使方法返回值或變數包含相反的值並更正引用" path="ActionManager" hit="使方法返回值或變數包含相反的值並更正引用" />
-    <option name="catch" path="ActionManager" hit="使用 if/while/try-catch 或其他結構環繞所選程式碼段" />
     <option name="if" path="ActionManager" hit="使用 if/while/try-catch 或其他結構環繞所選程式碼段" />
-    <option name="try" path="ActionManager" hit="使用 if/while/try-catch 或其他結構環繞所選程式碼段" />
+    <option name="try-catch" path="ActionManager" hit="使用 if/while/try-catch 或其他結構環繞所選程式碼段" />
     <option name="while" path="ActionManager" hit="使用 if/while/try-catch 或其他結構環繞所選程式碼段" />
     <option name="使用" path="ActionManager" hit="使用 if/while/try-catch 或其他結構環繞所選程式碼段" />
     <option name="或其他結構環繞所選程式碼段" path="ActionManager" hit="使用 if/while/try-catch 或其他結構環繞所選程式碼段" />
@@ -137,15 +169,25 @@
     <option name="分組依據" path="ActionManager" hit="分組依據" />
     <option name="分組設定" path="ActionManager" hit="分組設定" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤" />
+    <option name="0" path="ActionManager" hit="切換書籤 0" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 0" />
+    <option name="1" path="ActionManager" hit="切換書籤 1" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 1" />
+    <option name="2" path="ActionManager" hit="切換書籤 2" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 2" />
+    <option name="3" path="ActionManager" hit="切換書籤 3" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 3" />
+    <option name="4" path="ActionManager" hit="切換書籤 4" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 4" />
+    <option name="5" path="ActionManager" hit="切換書籤 5" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 5" />
+    <option name="6" path="ActionManager" hit="切換書籤 6" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 6" />
+    <option name="7" path="ActionManager" hit="切換書籤 7" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 7" />
+    <option name="8" path="ActionManager" hit="切換書籤 8" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 8" />
+    <option name="9" path="ActionManager" hit="切換書籤 9" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 9" />
     <option name="a" path="ActionManager" hit="切換書籤 A" />
     <option name="切換書籤" path="ActionManager" hit="切換書籤 A" />
@@ -263,6 +305,8 @@
     <option name="向下移動語句" path="ActionManager" hit="向下移動語句" />
     <option name="向右移動元素" path="ActionManager" hit="向右移動元素" />
     <option name="向左移動元素" path="ActionManager" hit="向左移動元素" />
+    <option name="0" path="ActionManager" hit="啟動增量搜尋(輸入時搜尋字串)，IntelliJ IDEA 6.0 實作。" />
+    <option name="6" path="ActionManager" hit="啟動增量搜尋(輸入時搜尋字串)，IntelliJ IDEA 6.0 實作。" />
     <option name="idea" path="ActionManager" hit="啟動增量搜尋(輸入時搜尋字串)，IntelliJ IDEA 6.0 實作。" />
     <option name="intellij" path="ActionManager" hit="啟動增量搜尋(輸入時搜尋字串)，IntelliJ IDEA 6.0 實作。" />
     <option name="啟動增量搜尋" path="ActionManager" hit="啟動增量搜尋(輸入時搜尋字串)，IntelliJ IDEA 6.0 實作。" />
@@ -298,16 +342,18 @@
     <option name="在新頁籤中開啟每個項" path="ActionManager" hit="在新頁籤中開啟每個項" />
     <option name="在新頁籤中開啟執行設定" path="ActionManager" hit="在新頁籤中開啟執行設定" />
     <option name="在檢視原始碼和文檔註釋的渲染表示之間切換" path="ActionManager" hit="在檢視原始碼和文檔註釋的渲染表示之間切換" />
+    <option name="在樹檢視中顯示" path="ActionManager" hit="在樹檢視中顯示/隱藏額外資訊" />
+    <option name="隱藏額外資訊" path="ActionManager" hit="在樹檢視中顯示/隱藏額外資訊" />
     <option name="在此目錄中建立新的類別" path="ActionManager" hit="在此目錄中建立新的類別、接口、檔案或目錄" />
     <option name="接口" path="ActionManager" hit="在此目錄中建立新的類別、接口、檔案或目錄" />
     <option name="檔案或目錄" path="ActionManager" hit="在此目錄中建立新的類別、接口、檔案或目錄" />
     <option name="在活動編輯器中導覽到上一個方法" path="ActionManager" hit="在活動編輯器中導覽到上一個方法" />
-    <option name="在活動編輯器中導覽到上一個高亮顯示的錯誤" path="ActionManager" hit="在活動編輯器中導覽到上一個高亮顯示的錯誤" />
+    <option name="在活動編輯器中導覽到上一個醒目提示的錯誤" path="ActionManager" hit="在活動編輯器中導覽到上一個醒目提示的錯誤" />
     <option name="在活動編輯器中導覽到下一個方法" path="ActionManager" hit="在活動編輯器中導覽到下一個方法" />
-    <option name="在活動編輯器中導覽到下一個高亮顯示的錯誤" path="ActionManager" hit="在活動編輯器中導覽到下一個高亮顯示的錯誤" />
+    <option name="在活動編輯器中導覽到下一個醒目提示的錯誤" path="ActionManager" hit="在活動編輯器中導覽到下一個醒目提示的錯誤" />
     <option name="在活動編輯器中尋找字串" path="ActionManager" hit="在活動編輯器中尋找字串" />
     <option name="在活動編輯器中尋找文字游標處符號的用法" path="ActionManager" hit="在活動編輯器中尋找文字游標處符號的用法" />
-    <option name="在活動編輯器中高亮顯示文字游標處符號的用法" path="ActionManager" hit="在活動編輯器中高亮顯示文字游標處符號的用法" />
+    <option name="在活動編輯器中醒目提示文字游標處符號的用法" path="ActionManager" hit="在活動編輯器中醒目提示文字游標處符號的用法" />
     <option name="在狀態列中" path="ActionManager" hit="在狀態列中" />
     <option name="在狀態列中顯示導覽列" path="ActionManager" hit="在狀態列中顯示導覽列" />
     <option name="在補全期間自動顯示" path="ActionManager" hit="在補全期間自動顯示" />
@@ -355,9 +401,9 @@
     <option name="匯出到臨時檔案" path="ActionManager" hit="匯出到臨時檔案" />
     <option name="導覽到一個相關或鏈接的符號" path="ActionManager" hit="導覽到一個相關或鏈接的符號" />
     <option name="導覽到上一個符合項" path="ActionManager" hit="導覽到上一個符合項" />
-    <option name="導覽到上一個高亮的元素用法" path="ActionManager" hit="導覽到上一個高亮的元素用法" />
+    <option name="導覽到上一個醒目提示的元素用法" path="ActionManager" hit="導覽到上一個醒目提示的元素用法" />
     <option name="導覽到下一個符合項" path="ActionManager" hit="導覽到下一個符合項" />
-    <option name="導覽到下一個高亮的元素用法" path="ActionManager" hit="導覽到下一個高亮的元素用法" />
+    <option name="導覽到下一個醒目提示的元素用法" path="ActionManager" hit="導覽到下一個醒目提示的元素用法" />
     <option name="導覽到當前方法覆寫或實作的方法的宣告" path="ActionManager" hit="導覽到當前方法覆寫或實作的方法的宣告" />
     <option name="導覽到所選類別或方法的實作" path="ActionManager" hit="導覽到所選類別或方法的實作" />
     <option name="導覽到所選類別的測試" path="ActionManager" hit="導覽到所選類別的測試" />
@@ -407,8 +453,6 @@
     <option name="並更正所有引用" path="ActionManager" hit="將選中類別、方法、包或 static 成員移至另一個軟體套件或類別，並更正所有引用" />
     <option name="成員移至另一個軟體套件或類別" path="ActionManager" hit="將選中類別、方法、包或 static 成員移至另一個軟體套件或類別，並更正所有引用" />
     <option name="方法" path="ActionManager" hit="將選中類別、方法、包或 static 成員移至另一個軟體套件或類別，並更正所有引用" />
-    <option name="將選區向前旋轉" path="ActionManager" hit="將選區向前旋轉" />
-    <option name="將選區向後旋轉" path="ActionManager" hit="將選區向後旋轉" />
     <option name="html" path="ActionManager" hit="將選區複製到剪貼簿作為富文本(以 RTF 和 HTML 格式)" />
     <option name="rtf" path="ActionManager" hit="將選區複製到剪貼簿作為富文本(以 RTF 和 HTML 格式)" />
     <option name="以" path="ActionManager" hit="將選區複製到剪貼簿作為富文本(以 RTF 和 HTML 格式)" />
@@ -553,10 +597,8 @@
     <option name="顯示對話框以設定間距圖標" path="ActionManager" hit="顯示對話框以設定間距圖標" />
     <option name="顯示匯入彈出視窗" path="ActionManager" hit="顯示匯入彈出視窗" />
     <option name="顯示庫內容" path="ActionManager" hit="顯示庫內容" />
-    <option name="顯示快速修復" path="ActionManager" hit="顯示快速修復" />
     <option name="顯示成員" path="ActionManager" hit="顯示成員" />
     <option name="顯示所選表達式的類型" path="ActionManager" hit="顯示所選表達式的類型" />
-    <option name="顯示所選問題的可用快速修復" path="ActionManager" hit="顯示所選問題的可用快速修復" />
     <option name="顯示排除的檔案" path="ActionManager" hit="顯示排除的檔案" />
     <option name="顯示文字游標處方法的參數" path="ActionManager" hit="顯示文字游標處方法的參數" />
     <option name="顯示文字游標處符號的用法" path="ActionManager" hit="顯示文字游標處符號的用法" />
@@ -567,7 +609,7 @@
     <option name="顯示用法" path="ActionManager" hit="顯示用法" />
     <option name="顯示相應根的模組名稱" path="ActionManager" hit="顯示相應根的模組名稱" />
     <option name="顯示類別成員" path="ActionManager" hit="顯示類別成員" />
-    <option name="顯示面板來為當前檔案設定高亮顯示模式" path="ActionManager" hit="顯示面板來為當前檔案設定高亮顯示模式" />
+    <option name="顯示面板來為當前檔案設定醒目提示模式" path="ActionManager" hit="顯示面板來為當前檔案設定醒目提示模式" />
     <option name="顯示專案中模組之間的相依關係" path="ActionManager" hit="顯示專案中模組之間的相依關係" />
     <option name="更改臨時檔案語言" path="ActionManager" hit="更改臨時檔案語言" />
     <option name="更改助記鍵" path="ActionManager" hit="更改助記鍵…" />
@@ -600,6 +642,7 @@
     <option name="檢視外部文檔" path="ActionManager" hit="檢視外部文檔" />
     <option name="檢視離線檢查結果" path="ActionManager" hit="檢視離線檢查結果…" />
     <option name="樹外觀" path="ActionManager" hit="樹外觀" />
+    <option name="樹檢視中的詳細資訊" path="ActionManager" hit="樹檢視中的詳細資訊" />
     <option name="根據程式碼樣式設定縮排當前行或所選塊" path="ActionManager" hit="根據程式碼樣式設定縮排當前行或所選塊" />
     <option name="檢查程式碼" path="ActionManager" hit="檢查程式碼" />
     <option name="檢查程式碼" path="ActionManager" hit="檢查程式碼…" />
@@ -637,11 +680,11 @@
     <option name="生成建構函式" path="ActionManager" hit="生成建構函式、getter 或 setter 方法等" />
     <option name="相關符號" path="ActionManager" hit="相關符號…" />
     <option name="省電模式" path="ActionManager" hit="省電模式" />
-    <option name="省電模式將禁用背景程式碼分析和其他背景動作" path="ActionManager" hit="省電模式將禁用背景程式碼分析和其他背景動作" />
+    <option name="省電模式將停用背景程式碼分析和其他背景動作" path="ActionManager" hit="省電模式將停用背景程式碼分析和其他背景動作" />
     <option name="禁止" path="ActionManager" hit="禁止" />
-    <option name="的提示" path="ActionManager" hit="禁用方法 '' 的提示" />
-    <option name="禁用方法" path="ActionManager" hit="禁用方法 '' 的提示" />
-    <option name="禁用檢查" path="ActionManager" hit="禁用檢查" />
+    <option name="的提示" path="ActionManager" hit="停用方法 '' 的提示" />
+    <option name="停用方法" path="ActionManager" hit="停用方法 '' 的提示" />
+    <option name="停用檢查" path="ActionManager" hit="停用檢查" />
     <option name="移動" path="ActionManager" hit="移動…" />
     <option name="m" path="ActionManager" hit="移動模組(_M)" />
     <option name="移動模組" path="ActionManager" hit="移動模組(_M)" />
@@ -664,8 +707,11 @@
     <option name="編輯" path="ActionManager" hit="編輯" />
     <option name="編輯器中的上一行書籤" path="ActionManager" hit="編輯器中的上一行書籤" />
     <option name="編輯器中的下一行書籤" path="ActionManager" hit="編輯器中的下一行書籤" />
+    <option name="1" path="ActionManager" hit="編輯器彈出視窗選單動作(1)" />
     <option name="編輯器彈出視窗選單動作" path="ActionManager" hit="編輯器彈出視窗選單動作(1)" />
+    <option name="2" path="ActionManager" hit="編輯器彈出視窗選單動作(2)" />
     <option name="編輯器彈出視窗選單動作" path="ActionManager" hit="編輯器彈出視窗選單動作(2)" />
+    <option name="1" path="ActionManager" hit="編輯器頁籤彈出視窗選單動作(1)" />
     <option name="編輯器頁籤彈出視窗選單動作" path="ActionManager" hit="編輯器頁籤彈出視窗選單動作(1)" />
     <option name="編輯所選排列規則" path="ActionManager" hit="編輯所選排列規則" />
     <option name="編輯所選設定" path="ActionManager" hit="編輯所選設定" />
@@ -696,16 +742,26 @@
     <option name="super" path="ActionManager" hit="轉到 Super 方法" />
     <option name="方法" path="ActionManager" hit="轉到 Super 方法" />
     <option name="轉到" path="ActionManager" hit="轉到 Super 方法" />
-    <option name="轉到上一個高亮的元素用法" path="ActionManager" hit="轉到上一個高亮的元素用法" />
+    <option name="轉到上一個醒目提示的元素用法" path="ActionManager" hit="轉到上一個醒目提示的元素用法" />
+    <option name="0" path="ActionManager" hit="轉到書籤 0" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 0" />
+    <option name="1" path="ActionManager" hit="轉到書籤 1" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 1" />
+    <option name="2" path="ActionManager" hit="轉到書籤 2" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 2" />
+    <option name="3" path="ActionManager" hit="轉到書籤 3" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 3" />
+    <option name="4" path="ActionManager" hit="轉到書籤 4" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 4" />
+    <option name="5" path="ActionManager" hit="轉到書籤 5" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 5" />
+    <option name="6" path="ActionManager" hit="轉到書籤 6" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 6" />
+    <option name="7" path="ActionManager" hit="轉到書籤 7" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 7" />
+    <option name="8" path="ActionManager" hit="轉到書籤 8" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 8" />
+    <option name="9" path="ActionManager" hit="轉到書籤 9" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 9" />
     <option name="a" path="ActionManager" hit="轉到書籤 A" />
     <option name="轉到書籤" path="ActionManager" hit="轉到書籤 A" />
@@ -776,8 +832,6 @@
     <option name="執行" path="ActionManager" hit="執行" />
     <option name="執行任何內容" path="ActionManager" hit="執行任何內容" />
     <option name="執行檢查" path="ActionManager" hit="執行檢查…" />
-    <option name="執行清理檢查並使用當前檢查設定檔案套用快速修復" path="ActionManager" hit="執行清理檢查並使用當前檢查設定檔案套用快速修復" />
-    <option name="執行清理檢查並套用快速修復" path="ActionManager" hit="執行清理檢查並套用快速修復" />
     <option name="執行設定類型" path="ActionManager" hit="執行設定類型" />
     <option name="還原檔案類型覆寫" path="ActionManager" hit="還原檔案類型覆寫" />
     <option name="選區變更時自動重新整理文檔" path="ActionManager" hit="選區變更時自動重新整理文檔" />
@@ -840,7 +894,7 @@
     <option name="重複上一次尋找" path="ActionManager" hit="重複上一次尋找/取代動作，或移至所選文本的下一個符合項" />
     <option name="重新排列程式碼" path="ActionManager" hit="重新排列程式碼" />
     <option name="重新格式化程式碼" path="ActionManager" hit="重新格式化程式碼" />
-    <option name="通常為" path="ActionManager" hit="重新格式化字串文字或註釋以適應最大寬度(通常為80)" />
+    <option name="通常為80" path="ActionManager" hit="重新格式化字串文字或註釋以適應最大寬度(通常為80)" />
     <option name="重新格式化字串文字或註釋以適應最大寬度" path="ActionManager" hit="重新格式化字串文字或註釋以適應最大寬度(通常為80)" />
     <option name="重新格式化檔案" path="ActionManager" hit="重新格式化檔案..." />
     <option name="重構" path="ActionManager" hit="重構" />
@@ -848,7 +902,7 @@
     <option name="重設此目錄的捆綁擴展" path="ActionManager" hit="重設此目錄的捆綁擴展" />
     <option name="重設預設擴展" path="ActionManager" hit="重設預設擴展" />
     <option name="錯誤描述" path="ActionManager" hit="錯誤描述" />
-    <option name="錯誤高亮顯示" path="ActionManager" hit="錯誤高亮顯示" />
+    <option name="錯誤醒目提示顯示" path="ActionManager" hit="錯誤醒目提示顯示" />
     <option name="隨處搜尋" path="ActionManager" hit="隨處搜尋" />
     <option name="隱藏導覽列" path="ActionManager" hit="隱藏導覽列" />
     <option name="隱藏空的中間軟體套件" path="ActionManager" hit="隱藏空的中間軟體套件" />
@@ -861,16 +915,16 @@
     <option name="彈出視窗" path="ActionManager" hit="首先顯示“文檔”彈出視窗" />
     <option name="文檔" path="ActionManager" hit="首先顯示“文檔”彈出視窗" />
     <option name="首先顯示" path="ActionManager" hit="首先顯示“文檔”彈出視窗" />
-    <option name="高亮顯示檔案中的用法" path="ActionManager" hit="高亮顯示檔案中的用法" />
+    <option name="醒目提示檔案中的用法" path="ActionManager" hit="醒目提示檔案中的用法" />
   </configurable>
-  <configurable id="reference.settings.ide.settings.new.ui" configurable_name="新增 UI">
+  <configurable id="reference.settings.ide.settings.new.ui" configurable_name="新 UI">
     <option name="主要變更和已知問題" hit="主要變更和已知問題" />
     <option name="ui" hit="啟用新 UI" />
     <option name="啟用新" hit="啟用新 UI" />
     <option name="在單獨的工具列中顯示主選單" hit="在單獨的工具列中顯示主選單" />
     <option name="提交反饋" hit="提交反饋 " />
-    <option name="ui" hit="新增 UI" />
-    <option name="新增" hit="新增 UI" />
+    <option name="ui" hit="新 UI" />
+    <option name="新" hit="新 UI" />
     <option name="設定" hit="設定" />
   </configurable>
   <configurable id="preferences.editor" configurable_name="一般">
@@ -948,15 +1002,11 @@
     <option name="camelhumps" hit="在通過雙擊進行選擇時允許  CamelHumps  單詞" />
     <option name="單詞" hit="在通過雙擊進行選擇時允許  CamelHumps  單詞" />
     <option name="在通過雙擊進行選擇時允許" hit="在通過雙擊進行選擇時允許  CamelHumps  單詞" />
-    <option name="val" hit="將 val 關鍵字自動新增到資料 內聯類別建構函式參數" />
-    <option name="關鍵字自動新增到資料" hit="將 val 關鍵字自動新增到資料 內聯類別建構函式參數" />
-    <option name="內聯類別建構函式參數" hit="將 val 關鍵字自動新增到資料 內聯類別建構函式參數" />
-    <option name="將" hit="將 val 關鍵字自動新增到資料 內聯類別建構函式參數" />
     <option name="java" hit="將貼上的 Java 程式碼轉換為 Kotlin" />
     <option name="kotlin" hit="將貼上的 Java 程式碼轉換為 Kotlin" />
     <option name="程式碼轉換為" hit="將貼上的 Java 程式碼轉換為 Kotlin" />
     <option name="將貼上的" hit="將貼上的 Java 程式碼轉換為 Kotlin" />
-    <option name="已禁用" hit="已禁用" />
+    <option name="已停用" hit="已停用" />
     <option name="home" hit="按 Home 將文字游標移到第一個非空格字符上 " />
     <option name="將文字游標移到第一個非空格字符上" hit="按 Home 將文字游標移到第一個非空格字符上 " />
     <option name="按" hit="按 Home 將文字游標移到第一個非空格字符上 " />
@@ -976,6 +1026,10 @@
     <option name="貼上時重新格式化" hit="貼上時重新格式化 " />
     <option name="縮排塊" hit="縮排塊" />
     <option name="縮排每一行" hit="縮排每一行" />
+    <option name="val" hit="自動將  val  關鍵字新增到資料 值類別建構函式參數" />
+    <option name="值類別建構函式參數" hit="自動將  val  關鍵字新增到資料 值類別建構函式參數" />
+    <option name="關鍵字新增到資料" hit="自動將  val  關鍵字新增到資料 值類別建構函式參數" />
+    <option name="自動將" hit="自動將  val  關鍵字新增到資料 值類別建構函式參數" />
     <option name="時重新格式化塊" hit="輸入     時重新格式化塊" />
     <option name="輸入" hit="輸入     時重新格式化塊" />
     <option name="輸入引號或大括號時環繞選擇範圍" hit="輸入引號或大括號時環繞選擇範圍" />
@@ -989,10 +1043,10 @@
     <option name="使用塊文字游標" hit="使用塊文字游標" />
     <option name="內部" hit="內部" />
     <option name="前導" hit="前導" />
-    <option name="html" hit="啟用 HTML XML 標記樹高亮顯示" />
-    <option name="xml" hit="啟用 HTML XML 標記樹高亮顯示" />
-    <option name="啟用" hit="啟用 HTML XML 標記樹高亮顯示" />
-    <option name="標記樹高亮顯示" hit="啟用 HTML XML 標記樹高亮顯示" />
+    <option name="html" hit="啟用 HTML XML 標記樹醒目提示" />
+    <option name="xml" hit="啟用 HTML XML 標記樹醒目提示" />
+    <option name="啟用" hit="啟用 HTML XML 標記樹醒目提示" />
+    <option name="標記樹醒目提示" hit="啟用 HTML XML 標記樹醒目提示" />
     <option name="外觀" hit="外觀" />
     <option name="對嵌入提示使用編輯器字體" hit="對嵌入提示使用編輯器字體" />
     <option name="css" hit="將 CSS 顏色預覽顯示為背景" />
@@ -1014,7 +1068,7 @@
     <option name="顯示縮排參考線" hit="顯示縮排參考線" />
     <option name="顯示行號" hit="顯示行號" />
     <option name="渲染文檔註釋" hit="渲染文檔註釋" />
-    <option name="要高亮顯示的級別" hit="要高亮顯示的級別 " />
+    <option name="要醒目提示的級別" hit="要醒目提示的級別 " />
     <option name="透明度" hit="透明度 " />
   </configurable>
   <configurable id="editor.preferences.gutterIcons" configurable_name="間距圖標">
@@ -1023,17 +1077,84 @@
     <option name="間距圖標" hit="間距圖標" />
   </configurable>
   <configurable id="editor.preferences.folding" configurable_name="程式碼折疊">
-    <option name="程式碼折疊" hit="程式碼折疊" />
-    <option name="顯示程式碼折疊大綱" hit="顯示程式碼折疊大綱" />
-    <option name="預設折疊" hit="預設折疊 " />
-  </configurable>
-  <configurable id="editor.preferences.folding" configurable_name="程式碼折疊">
+    <option name="" hit="  SuppressWarnings" />
+    <option name="suppresswarnings" hit="  SuppressWarnings" />
+    <option name="" hit=" 一行方法" />
+    <option name="一行方法" hit=" 一行方法" />
+    <option name="" hit=" 簡單屬性存取器" />
+    <option name="簡單屬性存取器" hit=" 簡單屬性存取器" />
+    <option name="" hit=" 通用建構函式和方法參數" />
+    <option name="通用建構函式和方法參數" hit=" 通用建構函式和方法參數" />
+    <option name="" hit=" 閉包   在 Java   前 實作一個方法的匿名類別 " />
+    <option name="8" hit=" 閉包   在 Java   前 實作一個方法的匿名類別 " />
+    <option name="java" hit=" 閉包   在 Java   前 實作一個方法的匿名類別 " />
+    <option name="前" hit=" 閉包   在 Java   前 實作一個方法的匿名類別 " />
+    <option name="在" hit=" 閉包   在 Java   前 實作一個方法的匿名類別 " />
+    <option name="實作一個方法的匿名類別" hit=" 閉包   在 Java   前 實作一個方法的匿名類別 " />
+    <option name="閉包" hit=" 閉包   在 Java   前 實作一個方法的匿名類別 " />
+    <option name="android" hit="Android" />
+    <option name="html" hit="HTML  style  特性" />
+    <option name="style" hit="HTML  style  特性" />
+    <option name="特性" hit="HTML  style  特性" />
+    <option name="i18n字串" hit="I  n字串" />
     <option name="import" hit="Import" />
+    <option name="jpa" hit="JPA QL" />
+    <option name="ql" hit="JPA QL" />
+    <option name="jpa" hit="JPA 查詢" />
+    <option name="查詢" hit="JPA 查詢" />
+    <option name="java" hit="Java" />
+    <option name="javascript" hit="JavaScript" />
+    <option name="javascript" hit="JavaScript 和 TypeScript 中的單行函式" />
+    <option name="typescript" hit="JavaScript 和 TypeScript 中的單行函式" />
+    <option name="中的單行函式" hit="JavaScript 和 TypeScript 中的單行函式" />
+    <option name="和" hit="JavaScript 和 TypeScript 中的單行函式" />
+    <option name="sql" hit="SQL" />
+    <option name="code" hit="Show code folding endings in editor gutter" />
+    <option name="editor" hit="Show code folding endings in editor gutter" />
+    <option name="endings" hit="Show code folding endings in editor gutter" />
+    <option name="folding" hit="Show code folding endings in editor gutter" />
+    <option name="gutter" hit="Show code folding endings in editor gutter" />
+    <option name="in" hit="Show code folding endings in editor gutter" />
+    <option name="show" hit="Show code folding endings in editor gutter" />
+    <option name="references" hit="String References" />
+    <option name="string" hit="String References" />
+    <option name="xml" hit="XML" />
+    <option name="xml" hit="XML 實體" />
+    <option name="實體" hit="XML 實體" />
+    <option name="xml" hit="XML 文字" />
+    <option name="文字" hit="XML 文字" />
+    <option name="xml標籤" hit="XML標籤" />
+    <option name="程式碼折疊" hit="程式碼折疊" />
+    <option name="var" hit="使用推斷類型取代  var " />
+    <option name="使用推斷類型取代" hit="使用推斷類型取代  var " />
+    <option name="內部類別" hit="內部類別" />
+    <option name="匿名類別" hit="匿名類別" />
+    <option name="6" hit="在數字文字   位或更長 內部新增下劃線" />
+    <option name="位或更長" hit="在數字文字   位或更長 內部新增下劃線" />
+    <option name="內部新增下劃線" hit="在數字文字   位或更長 內部新增下劃線" />
+    <option name="在數字文字" hit="在數字文字   位或更長 內部新增下劃線" />
+    <option name="多行註釋" hit="多行註釋" />
+    <option name="物件文字" hit="物件文字" />
+    <option name="0" hit="將                 等佔位符折疊到 Java Kotlin 程式碼中相應的上下文表達式" />
+    <option name="1" hit="將                 等佔位符折疊到 Java Kotlin 程式碼中相應的上下文表達式" />
+    <option name="java" hit="將                 等佔位符折疊到 Java Kotlin 程式碼中相應的上下文表達式" />
+    <option name="kotlin" hit="將                 等佔位符折疊到 Java Kotlin 程式碼中相應的上下文表達式" />
+    <option name="程式碼中相應的上下文表達式" hit="將                 等佔位符折疊到 Java Kotlin 程式碼中相應的上下文表達式" />
+    <option name="將" hit="將                 等佔位符折疊到 Java Kotlin 程式碼中相應的上下文表達式" />
+    <option name="等佔位符折疊到" hit="將                 等佔位符折疊到 Java Kotlin 程式碼中相應的上下文表達式" />
+    <option name="屬性" hit="屬性" />
     <option name="一般" hit="一般" />
+    <option name="uri" hit="資料 URI" />
+    <option name="資料" hit="資料 URI" />
+    <option name="陣列文字" hit="陣列文字" />
     <option name="檔案頭" hit="檔案頭" />
     <option name="文檔註釋" hit="文檔註釋" />
     <option name="方法體" hit="方法體" />
+    <option name="顯示程式碼折疊大綱" hit="顯示程式碼折疊大綱" />
+    <option name="註解" hit="註解" />
     <option name="自訂折疊區域" hit="自訂折疊區域" />
+    <option name="行尾註釋序列" hit="行尾註釋序列" />
+    <option name="預設折疊" hit="預設折疊 " />
   </configurable>
   <configurable id="editor.preferences.completion" configurable_name="程式碼補全">
     <option name="join" hit="JOIN 子句 " />
@@ -1139,13 +1260,13 @@
     <option name="指定重構選項" hit="指定重構選項 " />
     <option name="文字游標處元素的用法" hit="文字游標處元素的用法" />
     <option name="毫秒" hit="毫秒" />
-    <option name="移動文字游標時高亮顯示" hit="移動文字游標時高亮顯示" />
+    <option name="移動文字游標時醒目提示" hit="移動文字游標時醒目提示" />
     <option name="編輯器工具提示" hit="編輯器工具提示" />
     <option name="自動重新解析延遲" hit="自動重新解析延遲 " />
     <option name="轉到高優先級問題" hit="轉到高優先級問題" />
     <option name="重構" hit="重構" />
     <option name="錯誤條紋標記最小高度" hit="錯誤條紋標記最小高度 " />
-    <option name="錯誤高亮顯示" hit="錯誤高亮顯示" />
+    <option name="錯誤醒目提示顯示" hit="錯誤醒目提示顯示" />
     <option name="重新命名" hit="預選擇 重新命名 重構的當前符號名稱" />
     <option name="重構的當前符號名稱" hit="預選擇 重新命名 重構的當前符號名稱" />
     <option name="預選擇" hit="預選擇 重新命名 重構的當前符號名稱" />
@@ -1156,6 +1277,7 @@
     <option name="在主控台中使用自動換行" hit="在主控台中使用自動換行" />
     <option name="主控台" hit="主控台" />
     <option name="主控台指令歷史記錄大小" hit="主控台指令歷史記錄大小 " />
+    <option name="1024" hit="覆寫主控台迴圈緩衝區大小      KB " />
     <option name="kb" hit="覆寫主控台迴圈緩衝區大小      KB " />
     <option name="覆寫主控台迴圈緩衝區大小" hit="覆寫主控台迴圈緩衝區大小      KB " />
     <option name="預設編碼" hit="預設編碼 " />
@@ -1227,9 +1349,9 @@
     <option name="內聯提示" hit="內聯提示//參數//當前" />
     <option name="參數" hit="內聯提示//參數//當前" />
     <option name="當前" hit="內聯提示//參數//當前" />
-    <option name="內聯提示" hit="內聯提示//參數//高亮" />
-    <option name="參數" hit="內聯提示//參數//高亮" />
-    <option name="高亮" hit="內聯提示//參數//高亮" />
+    <option name="內聯提示" hit="內聯提示//參數//醒目提示" />
+    <option name="參數" hit="內聯提示//參數//醒目提示" />
+    <option name="醒目提示" hit="內聯提示//參數//醒目提示" />
     <option name="內聯提示" hit="內聯提示//參數//預設" />
     <option name="參數" hit="內聯提示//參數//預設" />
     <option name="預設" hit="內聯提示//參數//預設" />
@@ -1268,8 +1390,8 @@
     <option name="字串" hit="字串//轉義序列//有效" />
     <option name="有效" hit="字串//轉義序列//有效" />
     <option name="轉義序列" hit="字串//轉義序列//有效" />
-    <option name="字串" hit="字串//高亮顯示的引用" />
-    <option name="高亮顯示的引用" hit="字串//高亮顯示的引用" />
+    <option name="字串" hit="字串//醒目提示的引用" />
+    <option name="醒目提示的引用" hit="字串//醒目提示的引用" />
     <option name="數字" hit="數字" />
     <option name="實體" hit="標記//實體" />
     <option name="標記" hit="標記//實體" />
@@ -1338,7 +1460,7 @@
     <option name="類別名" hit="類別//類別名" />
     <option name="類別" hit="類別//類別引用" />
     <option name="類別引用" hit="類別//類別引用" />
-    <option name="語意高亮顯示" hit="語意高亮顯示" />
+    <option name="語意醒目提示顯示" hit="語意醒目提示顯示" />
     <option name="錯誤字符" hit="錯誤字符" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.主控台顏色" configurable_name="主控台顏色">
@@ -1421,9 +1543,13 @@
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.使用者定義的檔案類型" configurable_name="使用者定義的檔案類型">
     <option name="使用者定義的檔案類型" hit="使用者定義的檔案類型" />
+    <option name="1" hit="關鍵字 1" />
     <option name="關鍵字" hit="關鍵字 1" />
+    <option name="2" hit="關鍵字 2" />
     <option name="關鍵字" hit="關鍵字 2" />
+    <option name="3" hit="關鍵字 3" />
     <option name="關鍵字" hit="關鍵字 3" />
+    <option name="4" hit="關鍵字 4" />
     <option name="關鍵字" hit="關鍵字 4" />
     <option name="塊註釋" hit="塊註釋" />
     <option name="字串" hit="字串" />
@@ -1484,13 +1610,15 @@
     <option name="一般" path="一般" hit="一般" />
     <option name="開" path="格式化程序" hit="開 " />
     <option name="強制換行位置" path="一般" hit="強制換行位置 " />
+    <option name="120" path="一般" hit="指定一條參考線    或多條        " />
+    <option name="80" path="一般" hit="指定一條參考線    或多條        " />
     <option name="或多條" path="一般" hit="指定一條參考線    或多條        " />
     <option name="指定一條參考線" path="一般" hit="指定一條參考線    或多條        " />
     <option name="方案" hit="方案 " />
     <option name="格式化程序" path="格式化程序" hit="格式化程序" />
     <option name="檢測並使用現有的檔案縮排進行編輯" path="一般" hit="檢測並使用現有的檔案縮排進行編輯" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
+    <option name="停用" hit="停用" />
     <option name="行分隔符" path="一般" hit="行分隔符 " />
     <option name="視覺參考線" path="一般" hit="視覺參考線 " />
     <option name="設定自" hit="設定自 " />
@@ -1506,7 +1634,7 @@
     <option name="方案" hit="方案 " />
     <option name="智能制表符" hit="智能制表符" />
     <option name="正在載入" hit="正在載入 " />
-    <option name="禁用" hit="禁用" />
+    <option name="停用" hit="停用" />
     <option name="縮排" hit="縮排 " />
     <option name="設定自" hit="設定自 " />
   </configurable>
@@ -1544,7 +1672,7 @@
     <option name="import" hit="動態新增明確的 import" />
     <option name="動態新增明確的" hit="動態新增明確的 import" />
     <option name="包含自動匯入工具提示" hit="包含自動匯入工具提示" />
-    <option name="es" hit="在程式碼補全時新增 ES  匯入" />
+    <option name="es6" hit="在程式碼補全時新增 ES  匯入" />
     <option name="在程式碼補全時新增" hit="在程式碼補全時新增 ES  匯入" />
     <option name="匯入" hit="在程式碼補全時新增 ES  匯入" />
     <option name="始終" hit="始終" />
@@ -1564,17 +1692,23 @@
     <option name="詢問" hit="詢問" />
   </configurable>
   <configurable id="editor.reader.mode" configurable_name="閱讀器模式">
+    <option name="choose" hit="Choose scheme " />
+    <option name="scheme" hit="Choose scheme " />
+    <option name="according" hit="Format code according to preferred style" />
+    <option name="code" hit="Format code according to preferred style" />
+    <option name="format" hit="Format code according to preferred style" />
+    <option name="preferred" hit="Format code according to preferred style" />
+    <option name="style" hit="Format code according to preferred style" />
+    <option name="to" hit="Format code according to preferred style" />
     <option name="在閱讀器模式中顯示" hit="在閱讀器模式中顯示 " />
     <option name="增大行高" hit="增大行高" />
     <option name="字體連字" hit="字體連字" />
-    <option name="顯示視覺格式化層" hit="顯示視覺格式化層" />
-    <option name="格式設定方案" hit="格式設定方案 " />
     <option name="渲染的文檔註釋" hit="渲染的文檔註釋" />
     <option name="用法" hit="用法 繼承者和相關問題的程式碼視覺提示" />
     <option name="繼承者和相關問題的程式碼視覺提示" hit="用法 繼承者和相關問題的程式碼視覺提示" />
     <option name="進入閱讀器模式" hit="進入閱讀器模式" />
-    <option name="檢查小工具" hit="錯誤和警告高亮顯示 檢查小工具" />
-    <option name="錯誤和警告高亮顯示" hit="錯誤和警告高亮顯示 檢查小工具" />
+    <option name="檢查小工具" hit="錯誤和警告醒目提示 檢查小工具" />
+    <option name="錯誤和警告醒目提示" hit="錯誤和警告醒目提示 檢查小工具" />
     <option name="閱讀器模式" hit="閱讀器模式" />
   </configurable>
   <configurable id="File.Encoding" configurable_name="檔案編碼">
@@ -1596,11 +1730,11 @@
     <option name="要更改" hit=" 要更改 IntelliJ IDEA 為檔案 目錄或整個專案使用的編碼 請根據需要新增其路徑 然後從編碼列表中選擇編碼 內建檔案編碼 例如JSP HTML 或 XML 會覆寫您在此處指定的編碼 如果未指定 檔案和目錄將從父目錄或 專案編碼 繼承編碼設定 " />
     <option name="請根據需要新增其路徑" hit=" 要更改 IntelliJ IDEA 為檔案 目錄或整個專案使用的編碼 請根據需要新增其路徑 然後從編碼列表中選擇編碼 內建檔案編碼 例如JSP HTML 或 XML 會覆寫您在此處指定的編碼 如果未指定 檔案和目錄將從父目錄或 專案編碼 繼承編碼設定 " />
     <option name="專案編碼" hit=" 要更改 IntelliJ IDEA 為檔案 目錄或整個專案使用的編碼 請根據需要新增其路徑 然後從編碼列表中選擇編碼 內建檔案編碼 例如JSP HTML 或 XML 會覆寫您在此處指定的編碼 如果未指定 檔案和目錄將從父目錄或 專案編碼 繼承編碼設定 " />
-    <option name="utf" hit="UTF  " />
+    <option name="utf-8" hit="UTF  " />
     <option name="bom" hit="不含 BOM" />
     <option name="不含" hit="不含 BOM" />
     <option name="全域編碼" hit="全域編碼 " />
-    <option name="utf" hit="建立 UTF   檔案 " />
+    <option name="utf-8" hit="建立 UTF   檔案 " />
     <option name="建立" hit="建立 UTF   檔案 " />
     <option name="檔案" hit="建立 UTF   檔案 " />
     <option name="bom" hit="包含 BOM" />
