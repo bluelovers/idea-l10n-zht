@@ -462,6 +462,11 @@ describe(`should include`, () => {
 			`group.customfiletype.syntax.highlighting=语法高亮显示`
 		],
 
+		[
+			`程式引數`,
+			`cmake.macro.program.arguments.description=当前 CMake 运行配置的程序实参`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
