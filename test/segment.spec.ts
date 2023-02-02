@@ -467,6 +467,11 @@ describe(`should include`, () => {
 			`cmake.macro.program.arguments.description=当前 CMake 运行配置的程序实参`
 		],
 
+		[
+			`重定基底`,
+			`action.hg4idea.pull.rebase.tooltip=将变更集变基到作为目标的分支提示`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
