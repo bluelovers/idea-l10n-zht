@@ -472,6 +472,11 @@ describe(`should include`, () => {
 			`action.hg4idea.pull.rebase.tooltip=将变更集变基到作为目标的分支提示`
 		],
 
+		[
+			`重定基底`,
+			`javascript.validation.message.this.referenced.from.static.context=在 static 上下文中引用了 'this'`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
