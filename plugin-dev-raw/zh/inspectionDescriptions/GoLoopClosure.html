@@ -1,10 +1,10 @@
 <html>
 <body>
-報告在 <code>defer</code> 和 <code>go</code> 語句中的 <code>func</code> 文字內對迴圈變數的引用。
+報告在 <code>defer</code> 和 <code>go</code> 語句中的 <code>func</code> 文字內對迴圈變數的參照。
   此類別變數可能具有意外值，因為它們沒有被複製到 <code>func</code> 文字中，並且 <code>defer</code> 和 <code>go</code> 中的 <code>func</code> 文字不會立即執行。
 
-<p>有關閉包和 goroutine 的更多資訊，請參見 <a href="https://golang.org/doc/go_faq.html#closures_and_goroutines">golang.org 上的 What happens
-  with closures running as goroutines? </a> 頁面。</p>
+<p>有關閉包和 goroutine 的更多資訊，請參見 <a href="https://go.dev/doc/faq#closures_and_goroutines">golang.org 上的 What happens
+  with closures running as goroutines? at go.dev</a>.</p>
 <p>範例：</p>
 <pre><code>for _, v := range []string{"a", "b", "c"} {
   go func() {

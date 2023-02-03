@@ -1,11 +1,10 @@
 <html>
 <body>
 <p>報告可轉換為 <code>data object</code> 的 <code>object</code></p>
-<p>如果 <code>object</code> 使用 <code>java.io.Serializable</code> 進行註解，則 <code>data object</code> 會自動生成 <code>toString</code>、<code>equals</code>、<code>hashCode</code> 和 <code>readResolve</code></p>
+<p><code>data object</code> auto-generates <code>toString</code>, <code>equals</code> and <code>hashCode</code></p>
 <p>檢查會在以下 3 中情況下建議將 <code>object</code> 轉換為 <code>data object</code>：</p>
 <ul>
     <li>當自訂 <code>toString</code> 返回類別的名稱時</li>
-    <li>當 <code>object</code> 實作 <code>java.io.Serializable</code> 時</li>
     <li>當 <code>object</code> 繼承 sealed <code>class</code>/<code>interface</code> 時</li>
 </ul>
 <p><b>範例：</b></p>
@@ -19,6 +18,6 @@
     資料物件 Foo
 </code></pre>
 <!-- tooltip end -->
-<p>僅當專案或模組的 Kotlin 語言級別為 1.8 或更高時，此檢查才會報告</p>
+<p>僅當專案或模組的 Kotlin 語言級別為 1.9 或更高時，此檢查才會報告</p>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <body>
 報告對 <code>Object.finalize()</code> 的呼叫。
 <p>顯式呼叫 <code>Object.finalize()</code> 可能導致物件處於不一致的狀態。
-  垃圾收集器在確定沒有對該物件的引用時，自動對該物件呼叫此方法。</p>
+  垃圾收集器在確定沒有對該物件的參照時，自動對該物件呼叫此方法。</p>
 <p>該檢查不報告 <code>finalize()</code> 實作中對 <code>super.finalize()</code> 的呼叫，因為它們是良性的。</p>
 <p><b>範例：</b></p>
 <pre><code>

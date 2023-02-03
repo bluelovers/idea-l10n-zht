@@ -5,7 +5,7 @@
 <pre><code>
     private Object state;
 
-    @GuardedBy("lock") //未知的保護引用
+    @GuardedBy("lock") //未知的保護參照
     public void bar() {
         state = new Object();
     }

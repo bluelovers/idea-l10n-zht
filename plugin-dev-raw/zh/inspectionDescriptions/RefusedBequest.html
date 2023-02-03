@@ -1,42 +1,46 @@
 <html>
 <body>
-報告覆寫特定方法而不呼叫 <code>super</code> 的方法。
-<p>這也稱作<i>被拒絕的遺贈</i>。 此類別方法可能表明抽象失敗，導致出現難以追蹤的錯誤。</p>
-  <p>該檢查不報告預設方法和從 <code>java.lang.Object</code> 覆寫的方法，但對 <code>clone()</code> 除外。
-  <code>clone()</code> 方法預計會呼叫其 <code>super</code>，從而自動返回正確類型的物件。</p>
-<p><b>範例：</b></p>
-<ul>
-  <li><pre><code>
+Reports methods that override a super method without calling it.
+這也稱作<i>被拒絕的遺贈</i>。
+Such methods may represent a failure of abstraction and cause hard-to-trace bugs.
+<p>
+  The inspection doesn't report methods overridden from <code>java.lang.Object</code>, except for <code>clone()</code>.
+  The <code>clone()</code> method should by convention call its super method,
+  which will return an object of the correct type.</p>
+<p><b>範例 1：</b></p>
+<pre><code>
   class A {
     @Override
-    public Object clone() { // 已報告，因為它不呼叫 'super.clone()'
+    public Object clone() {
+      // does not call 'super.clone()'
       return new A();
     }
   }
-  </code></pre> </li>
-  <li><pre><code>
+</code></pre>
+<p><b>範例 2：</b></p>
+<pre><code>
   interface I {
     default void foo() {}
   }
 
   class A implements I {
-    // 停用“忽略 'default' super 方法”和“忽略註解”選項時對方法發出警告
+    // warning on method when
+    // 'Ignore 'default' super methods' is disabled
     @Override
     public void foo(){}
   }
-    </code></pre></li>
-</ul>
+</code></pre>
 <!-- tooltip end -->
 <p>設定檢查：</p>
 <ul>
   <li>
-    使用<b>僅在通過以下方式註解 super 方法時報告</b>選項，可忽略使用所提供列表中的註解標記的 <code>super</code> 方法。 您可以手動將註解新增到此列表中。
+    使用<b>僅在通過以下方式註解 super 方法時報告</b>選項，可忽略使用所提供列表中的註解標記的 super 方法。 您可以手動將註解新增到此列表中。
   </li>
   <li>
-    使用<b>忽略空 super 方法</b>選項，可忽略僅拋出異常或空的 <code>super</code> 方法。
+    使用<b>忽略空 super 方法</b>選項，可忽略僅拋出異常或空的 super 方法。
   </li>
   <li>
-    使用<b>忽略 'default' super 方法</b>選項，可忽略包含 <code>default</code> 關鍵字的 <code>super</code> 方法。
+    Use the <b>Ignore 'default' super methods</b> option to ignore <code>default</code> super methods from interfaces.
   </li>
 </ul>
 </body>
