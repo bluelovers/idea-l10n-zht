@@ -473,7 +473,7 @@ describe(`should include`, () => {
 		],
 
 		[
-			`重定基底`,
+			`參照`,
 			`javascript.validation.message.this.referenced.from.static.context=在 static 上下文中引用了 'this'`
 		],
 
