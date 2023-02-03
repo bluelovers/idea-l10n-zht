@@ -1,11 +1,13 @@
 <html>
 <body>
 报告命名为 "main" 但没有 <code>public static void main(String[])</code> 签名的方法。
+Additionally main methods located in anonymous or local classes are reported.
+Anonymous and local classes do not have a fully qualified name and thus can't be run.
 <p>此类方法可能令人困惑，因为命名为 "main" 的方法应为应用程序入口点。</p>
 <p><b>示例：</b></p>
 <pre><code>
   class Main {
-    void main(String[] args) {} //此处有警告，因为没有 "public static" 修饰符
+    void main(String[] args) {} // warning here because there are no "public static" modifiers
   }
 </code></pre>
 <p>只能在编辑器中使用重命名此类方法的快速修复。</p>

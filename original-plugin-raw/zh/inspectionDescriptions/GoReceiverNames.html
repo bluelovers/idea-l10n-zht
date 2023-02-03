@@ -19,6 +19,6 @@
 报告类似于 <code>me</code>、<code>this</code>、<code>self</code> 或与此类型的其他接收器名称不同的接收器名称。
 <p>示例：</p>
 <pre><code>func (self *MeterSnapshot) Rate5() float64 { return math.Float64frombits(self.rate5) }</code></pre>
-<p>根据 <a href="https://golang.org/wiki/CodeReviewComments#receiver-names">golang.org 上的 Receiver Names</a>页面，您不应使用通用名称，例如 "me"、"this" 或 "self"。 这些标识符在面向对象的语言中很典型，并且可能会赋予方法特殊的含义。</p>
+<p>根据 <a href="https://github.com/golang/go/wiki/CodeReviewComments#receiver-names">github.com/golang 上的 Receiver Names</a>页面，您不应使用通用名称，例如 "me"、"this" 或 "self"。 这些标识符在面向对象的语言中很典型，并且可能会赋予方法特殊的含义。</p>
 </body>
 </html>
