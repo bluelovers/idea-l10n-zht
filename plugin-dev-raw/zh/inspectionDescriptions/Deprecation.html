@@ -1,6 +1,44 @@
 <html>
 <body>
-報告已棄用的 API（類別、欄位和方法）的用法，例如：<code>new Thread().stop();</code>。
+Reports usages of deprecated classes, fields, and methods.
+A quick-fix is available to automatically convert the deprecated usage,
+when the necessary information can be extracted from the Javadoc of the deprecated member.
+<p><b>範例：</b></p>
+<pre><code>
+  class Interesting {
+
+    /**
+     * @deprecated Use {@link #newHotness()} instead
+     */
+    @Deprecated
+    public void oldAndBusted() {}
+
+    public void newHotness() {}
+  }
+  class ElseWhere {
+    void x(Interesting i) {
+      i.oldAndBusted(); // deprecated warning here
+    }
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  class Interesting {
+
+    /**
+     * @deprecated Use {@link #newHotness()} instead
+     */
+    @Deprecated
+    public void oldAndBusted() {}
+
+    public void newHotness() {}
+  }
+  class ElseWhere {
+    void x(Interesting i) {
+      i.newHotness();
+    }
+  }
+</code></pre>
 <p>預設情況下，如果不可能或很難避免，則檢查不會發出警告。  比如下面的程式碼就不會被報告：</p>
 <pre><code>
   abstract class A { //庫程式碼
@@ -17,7 +55,8 @@
 <!-- tooltip end -->
 <p>設定檢查：</p>
 <p>
-  您可以使用檢查選項在棄用的成員、覆蓋棄用的 abstract 方法、非 static 匯入語句、棄用的類別的方法或相同的頂級類別中停用此檢查。
+  Use the options to disable this inspection inside deprecated members,
+  overrides of abstract deprecated methods, non-static import statements, methods of deprecated classes, or same top-level classes.
 </p>
 
 </body>

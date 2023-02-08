@@ -1,7 +1,6 @@
 <html>
 <body>
-Reports double-quoted <a href="https://go.dev/ref/spec#String_literals">string literals</a> that can be converted
-into raw string literals and raw string literals that can be converted to double-quoted string literals.
+報告可轉換為原始字串文字的雙引號<a href="https://go.dev/ref/spec#String_literals">字串文字</a>，以及可轉換為雙引號字串文字的原始字串文字。
 <p><b>範例：</b></p>
 <pre><code>
   var s = "Hello\n   \"World\""
@@ -12,16 +11,10 @@ into raw string literals and raw string literals that can be converted to double
    "World"`
 </code></pre>
 <!-- tooltip end -->
-<p>There are two notes that you should take into account while converting double-quoted strings to raw strings:</p>
+<p>在將雙引號字串轉換為原始字串時，需要注意兩點：</p>
 <ul>
-  <li>According to the <a href="https://go.dev/ref/spec#String_literals">Go language specification</a>, the carriage return
-    character (<code>'\r'</code>) is discarded from the raw string values. As there is no way to show carriage return in raw strings,
-    we discard carriage return characters when converting a double-quoted string to a raw string.</li>
-  <li>The backtick character (<code>'`'</code>) cannot exist in raw string literals because there is no way to escape it. Therefore, converting
-  double-quoted strings that contain the backtick character to raw strings is not possible and will result in a syntax error. The user can decide to undo the
-  conversion or use some form of concatenation to preserve the backtick in a double-quoted string. For example, <code>"`ab``"</code>
-  will result in <code>`ab``</code>, which is syntactically incorrect. The user can either undo the operation or change the resulting string
-  to <code>`ab` + "`"</code>.</li>
+  <li>根據 <a href="https://go.dev/ref/spec#String_literals">Go 語言規範</a>，回車字符 (<code>'\r'</code>) 會從原始字串值中丟棄。 由於無法在原始字串中顯示回車符，因此在將雙引號字串轉換為原始字串時，我們會丟棄回車符。</li>
+  <li>原始字串文字中不能存在反引號字符 (<code>'`'</code>)，因為無法對其進行轉義。 因此，無法將包含反引號字符的雙引號字串轉換為原始字串，並且將導致語法錯誤。 使用者可以決定撤消轉換或使用某種形式的連線來保留雙引號字串中的反引號。 例如，<code>"`ab``"</code> 將導致 <code>`ab``</code>，這在語法上是錯誤的。 使用者可以撤消動作，也可以將結果字串更改為 <code>`ab` + "`"</code>。</li>
 </ul>
 </body>
 </html>

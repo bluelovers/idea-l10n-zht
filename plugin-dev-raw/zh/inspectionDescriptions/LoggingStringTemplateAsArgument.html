@@ -1,34 +1,33 @@
 <html>
 <body>
-Reports string templates that are used as arguments to <b>SLF4J</b> and <b>Log4j 2</b> logging methods.
-Methods <code>org.apache.logging.log4j.Logger.log()</code> is supported only for <b>all log levels</b> option.
-String templates are evaluated at runtime even when the logging message is not logged; this can negatively impact performance.
+報告用作 <b>SLF4J</b> 和 <b>Log4j 2</b> 日誌記錄方法的實參的字串模板。
+方法 <code>org.apache.logging.log4j.Logger.log()</code> 僅支援<b>所有日誌級別</b>選項。
+即使在沒有記錄日誌訊息的情況下，也會在執行時評估字串模板；這可能會對性能產生負面影響。
 建議改用參數化日誌訊息，停用日誌記錄時不會對其進行評估。
-<p><b>Example (for Kotlin):</b></p>
+<p><b>範例（針對 Kotlin）：</b></p>
 <pre><code>
       val variable1 = getVariable()
       logger.info("variable1: $variable1")
 </code></pre>
-<p><b>After the quick-fix is applied (for Kotlin):</b></p>
+<p><b>在套用了快速修復之後（針對 Kotlin）：</b></p>
 <pre><code>
       val variable1 = getVariable()
       logger.info("variable1: {}", variable1)
 </code></pre>
 <p>
-  Note that, the suggested replacement might not be equivalent to the original code, for example,
+  Note that the suggested replacement might not be equivalent to the original code, for example,
   when string templates contain method calls or assignment expressions.
 </p>
 <!-- tooltip end -->
 <ul>
   <li>
-    使用<b>警告物件</b>列表可以忽略某些更高的日誌記錄級別。 Higher logging levels may be always enabled, and the arguments will always be evaluated.
+    使用<b>警告物件</b>列表可以忽略某些更高的日誌記錄級別。 可以始終啟用更高的日誌記錄級別，並且將始終評估實參。
   </li>
   <li>
-    Use the <b>Do not warn when only expressions with primitive types, their wrappers or String are included</b> options to ignore
+    Use the <b>Do not warn when only expressions with primitive types, their wrappers or String are included</b> option to ignore
     string templates, which contain only expressions with primitive types, their wrappers or String.
-    For example, it could be useful to prevent loading lazy collections.
-    Note that, creating string even only with expressions with primitive types,
-    their wrappers or String at runtime can negatively impact performance.
+    例如，它可能有助於防止載入延遲集合。
+    請注意，即使只使用具有基元類型的表達式建立字串，它們的包裝器或運行時的字串也會對性能產生負面影響。
   </li>
 </ul>
 
