@@ -1,18 +1,17 @@
 <html>
 <body>
-Reports leading whitespaces before Go directives in comments.
-<p>Go directives are not recognized if there is whitespace between <code>//</code> and
-  the Go directive.</p>
-<p>The quick-fix removes the leading whitespace before the Go directive.</p>
+报告注释中 Go 指令之前的前导空格。
+<p>如果 <code>//</code> 和 Go 指令之间有空格，则无法识别 Go 指令。</p>
+<p>快速修复方法会移除 Go 指令之前的前导空格。</p>
 <p><b>示例：</b></p>
 <pre><code>
-  "//  go:embed file.txt"
-  var File string
+//  go:embed file.txt
+var File string
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
-  "//go:embed file.txt"
-  var File string
+//go:embed file.txt
+var File string
 </code></pre>
 </body>
 </html>

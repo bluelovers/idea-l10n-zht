@@ -8,7 +8,8 @@
 此检查的修正会生成一个新的 'go.work' 文件，但不会更改现有文件。
 </p>
 <p>
-  默认情况下，会使用警告严重性。 如果生成的工作区包括原始 'go.mod' 中未替换的 Go 模块，则不会显示任何警告，因为迁移可能会产生副作用，但修正仍然可以手动运行。
+  By default, the 'warning' severity is used. If a generated workspace would include Go modules that were not replaced
+  in the original 'go.mod', no warning is shown due to possible side effects caused by migration. But you can still run the fix manually.
 </p>
 <p>
   有关工作区的详细信息，请参阅 <a href="https://go.dev/ref/mod#workspaces">Go 模块引用</a>。<br>

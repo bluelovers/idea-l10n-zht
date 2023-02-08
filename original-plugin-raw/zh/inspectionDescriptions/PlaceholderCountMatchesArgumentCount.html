@@ -3,13 +3,12 @@
 报告 SLF4J 或 Log4j 2 日志记录调用，例如 <code>logger.info("{}: {}", key)</code>，其中记录器消息中 <code>{}</code> 占位符的数量与日志调用的其他实参的数量不匹配。
 <!-- tooltip end -->
 <p>
-Use the inspection option to specify which implementation SLF4J uses.
-If <strong>Check automatically</strong> is chosen, then <code>org.apache.logging.slf4j.Log4jLogger</code> is searched in the classpath.
-If this file is founded or <strong>Yes</strong> is chosen, then cases, when the last parameter with an exception type has a placeholder, will
-  not be reported for SLFJ4 API.
+使用检查选项指定 SLF4J 使用哪个实现。
+如果选择<strong>自动检查</strong>，则在类路径中搜索 <code>org.apache.logging.slf4j.Log4jLogger</code>。
+如果找到了此文件或选择了<strong>是</strong>，则 SLFJ4 API 不会报告具有异常类型的最后一个形参具有占位符的情况。
 示例：
 <pre><code>
-// will not be reported
+// 不会报告
 log.error("For id {}: {}", id, new RuntimeException());
 </code></pre>
 此选项仅适用于 SLF4J。

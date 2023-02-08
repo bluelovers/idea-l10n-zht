@@ -1,0 +1,41 @@
+<html>
+<body>
+Reports local variable declarations and accessors to record components that can be replaced with pattern variables in enhanced `for` statements, which are usually more compact.
+<p><b>示例：</b></p>
+<pre><code>
+record Record(Integer x, String y) {
+}
+
+public static void test(List&lt;Record&gt; records) {
+    for (Record record : records) {
+        System.out.println(record.y());
+        Integer x = record.x;
+        System.out.println(x);
+    }
+}
+</code></pre>
+<p>可以替换为：</p>
+<pre><code>
+record Record(Integer x, String y) {
+}
+
+public static void test(List&lt;Record&gt; records) {
+    for (Record(Integer x, String y) : records) {
+        System.out.println(y);
+        System.out.println(x);
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 20 或更高时，此检查才会报告。</p>
+
+<ul>
+  <li>Enable the <b>Use 'var' instead of explicit types</b> option to use <code>var</code> in deconstruction patterns</li>
+  <li>Use the <b>Nesting depth limit</b> option to specify the allowed maximum number of nested deconstruction patterns to report</li>
+  <li>Use the <b>Maximum number of record components to deconstruct</b> option to specify the maximum allowed number of components, which a record can contain to be used in deconstruction patterns</li>
+  <li>Use the <b>Maximum number of not-used record components</b> option to specify the allowed maximum number of components, which are not used in <code>for</code> statement</li>
+</ul>
+
+<p><small>2023.1 最新变化</small></p>
+</body>
+</html>

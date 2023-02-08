@@ -1,6 +1,6 @@
 <html>
 <body>
-Reports switch expressions and statements where every branch has a common subexpression, and the <code>switch</code> can be moved inside.
+报告每个分支都有通用子表达式，因此 switch 可以移动到内部的 <code>switch</code> 表达式和语句。
 此操作会缩短代码。 在许多情况下，将得到的 switch 表达式提取到单独的变量或方法是合理的。
 <p>示例：</p>
 <pre><code>
@@ -22,7 +22,7 @@ Reports switch expressions and statements where every branch has a common subexp
 </code></pre>
 <!-- tooltip end -->
 <p>
-  This inspection is applicable only for enhanced switches with arrow syntax.
+  此检查仅适用于采用箭头语法的增强的 switch。
 </p>
 <p><small>2022.3 最新变化</small></p>
 </body>
