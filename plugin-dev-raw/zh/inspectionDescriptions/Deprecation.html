@@ -1,14 +1,13 @@
 <html>
 <body>
-Reports usages of deprecated classes, fields, and methods.
-A quick-fix is available to automatically convert the deprecated usage,
-when the necessary information can be extracted from the Javadoc of the deprecated member.
+報告已棄用類別、欄位和方法的用法。
+當可以從已棄用成員的 Javadoc 中提取必要的資訊時，可以使用快速修復來自動轉換已棄用的用法。
 <p><b>範例：</b></p>
 <pre><code>
   class Interesting {
 
     /**
-     * @deprecated Use {@link #newHotness()} instead
+     * @deprecated 改為使用 {@link #newHotness()}
      */
     @Deprecated
     public void oldAndBusted() {}
@@ -17,7 +16,7 @@ when the necessary information can be extracted from the Javadoc of the deprecat
   }
   class ElseWhere {
     void x(Interesting i) {
-      i.oldAndBusted(); // deprecated warning here
+      i.oldAndBusted(); // 此處為已棄用警告
     }
   }
 </code></pre>
@@ -26,7 +25,7 @@ when the necessary information can be extracted from the Javadoc of the deprecat
   class Interesting {
 
     /**
-     * @deprecated Use {@link #newHotness()} instead
+     * @deprecated 改為使用 {@link #newHotness()}
      */
     @Deprecated
     public void oldAndBusted() {}
@@ -55,8 +54,7 @@ when the necessary information can be extracted from the Javadoc of the deprecat
 <!-- tooltip end -->
 <p>設定檢查：</p>
 <p>
-  Use the options to disable this inspection inside deprecated members,
-  overrides of abstract deprecated methods, non-static import statements, methods of deprecated classes, or same top-level classes.
+  您可以使用檢查選項在棄用的成員、覆蓋棄用的 abstract 方法、非 static 匯入語句、棄用的類別的方法或相同的頂級類別中停用此檢查。
 </p>
 
 </body>

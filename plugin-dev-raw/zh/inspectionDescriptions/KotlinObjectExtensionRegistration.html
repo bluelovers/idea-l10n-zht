@@ -1,0 +1,29 @@
+<html>
+<body>
+報告由 IntelliJ 平台實例化但宣告為 Kotlin 物件的擴展程序。
+<p>
+  擴展程序的生命周期由 IntelliJ 平台管理。
+  使用 Kotlin 物件進行擴展程序註冊可能會導致建立不必要的擴展程序實例，並使延伸模組無法移除。
+</p>
+<h2>範例</h2>
+<p>擴展程序註冊：</p>
+<pre>
+&lt;annotator language="myLang" implementationClass="com.example.MyAnnotator"/&gt;
+</pre>
+
+<p>擴展程序實作：</p>
+<pre>
+// 不正確：
+object MyAnnotator : Annotator {
+  ...
+}
+
+// 正確：
+class MyAnnotator : Annotator {
+  ...
+}
+</pre>
+<!-- tooltip end -->
+<p><small>2023.1 最新變化</small>
+</body>
+</html>

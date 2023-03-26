@@ -1,6 +1,6 @@
 <html>
 <body>
-Reports local variable declarations and accessors to record components that can be replaced with pattern variables in enhanced `for` statements, which are usually more compact.
+報告區域變數宣告和存取器，以記錄可在增強型 'for' 語句中取代為模式變數的組件，這些語句通常更緊湊。
 <p><b>範例：</b></p>
 <pre><code>
 record Record(Integer x, String y) {
@@ -30,10 +30,10 @@ public static void test(List&lt;Record&gt; records) {
 <p>僅當專案或模組的語言級別為 20 或更高時，此檢查才會報告。</p>
 
 <ul>
-  <li>Enable the <b>Use 'var' instead of explicit types</b> option to use <code>var</code> in deconstruction patterns</li>
-  <li>Use the <b>Nesting depth limit</b> option to specify the allowed maximum number of nested deconstruction patterns to report</li>
-  <li>Use the <b>Maximum number of record components to deconstruct</b> option to specify the maximum allowed number of components, which a record can contain to be used in deconstruction patterns</li>
-  <li>Use the <b>Maximum number of not-used record components</b> option to specify the allowed maximum number of components, which are not used in <code>for</code> statement</li>
+  <li>啟用<b>使用 'var' 而不是顯示類型</b>選項，在解構模式中使用 <code>var</code></li>
+  <li>使用<b>嵌套深度限制</b>選項指定要報告的最大嵌套解構模式數</li>
+  <li>使用<b>要解構的記錄組件的最大數量</b>選項指定要在解構模式中使用的記錄可以包含的組件的最大數量</li>
+  <li>使用<b>未使用的記錄組件的最大數量</b>選項指定 <code>for</code> 語句中未使用的組件的最大數量</li>
 </ul>
 
 <p><small>2023.1 最新變化</small></p>

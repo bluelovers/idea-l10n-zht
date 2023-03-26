@@ -1,0 +1,17 @@
+<html>
+<body>
+報告來自按值返回陣列而非按參照返回（不會影響任何內容）的函式的陣列寫入權限
+<p><b>範例：</b></p>
+<pre><code>
+&lt?php
+class A {
+    private $values = [];
+    public function getValues() {
+        return $this->values;
+    }
+}
+$config = new A();
+$config->getValues()['a'] = 'a';
+</code></pre>
+</body>
+</html>
