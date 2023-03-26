@@ -1,24 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="attach" path="ActionManager" hit="Attach dialog settings" />
-    <option name="dialog" path="ActionManager" hit="Attach dialog settings" />
-    <option name="settings" path="ActionManager" hit="Attach dialog settings" />
-    <option name="back" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="call" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="current" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="dropping" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="execution" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="frames" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="from" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="method" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="moves" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="point" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="stack" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="the" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="to" path="ActionManager" hit="Moves execution point back to the method call dropping current method frames from the stack" />
-    <option name="frame" path="ActionManager" hit="Reset Frame" />
-    <option name="reset" path="ActionManager" hit="Reset Frame" />
     <option name="my" path="ActionManager" hit="Show Only My Processes" />
     <option name="only" path="ActionManager" hit="Show Only My Processes" />
     <option name="processes" path="ActionManager" hit="Show Only My Processes" />
@@ -66,10 +48,12 @@
     <option name="将所选节点的值与剪贴板文本进行比较" path="ActionManager" hit="将所选节点的值与剪贴板文本进行比较" />
     <option name="将所选节点的值复制到剪贴板" path="ActionManager" hit="将所选节点的值复制到剪贴板" />
     <option name="将所选节点的名称复制到剪贴板" path="ActionManager" hit="将所选节点的名称复制到剪贴板" />
+    <option name="从堆栈中丢弃当前的方法帧" path="ActionManager" hit="将执行点移回方法调用，从堆栈中丢弃当前的方法帧" />
+    <option name="将执行点移回方法调用" path="ActionManager" hit="将执行点移回方法调用，从堆栈中丢弃当前的方法帧" />
     <option name="强制步入" path="ActionManager" hit="强制步入" />
     <option name="强制步过" path="ActionManager" hit="强制步过" />
     <option name="强制运行到光标" path="ActionManager" hit="强制运行到光标" />
-    <option name="快速评估表达式" path="ActionManager" hit="快速评估表达式" />
+    <option name="快速计算表达式" path="ActionManager" hit="快速计算表达式" />
     <option name="恢复" path="ActionManager" hit="恢复" />
     <option name="恢复上次删除的断点" path="ActionManager" hit="恢复上次删除的断点" />
     <option name="恢复断点" path="ActionManager" hit="恢复断点" />
@@ -85,7 +69,7 @@
     <option name="显示引用对象" path="ActionManager" hit="显示引用对象…" />
     <option name="显示当前程序执行点" path="ActionManager" hit="显示当前程序执行点" />
     <option name="显示执行点" path="ActionManager" hit="显示执行点" />
-    <option name="显示评估表达式字段" path="ActionManager" hit="显示评估表达式字段" />
+    <option name="显示计算表达式字段" path="ActionManager" hit="显示计算表达式字段" />
     <option name="智能步入" path="ActionManager" hit="智能步入" />
     <option name="暂停" path="ActionManager" hit="暂停" />
     <option name="暂停程序" path="ActionManager" hit="暂停程序" />
@@ -108,7 +92,7 @@
     <option name="添加内联监视" path="ActionManager" hit="添加内联监视" />
     <option name="添加到监视" path="ActionManager" hit="添加到监视" />
     <option name="添加断点" path="ActionManager" hit="添加断点" />
-    <option name="添加条件断点" path="ActionManager" hit="添加条件断点..." />
+    <option name="添加条件断点" path="ActionManager" hit="添加条件断点…" />
     <option name="移除当前文件中的所有断点" path="ActionManager" hit="移除当前文件中的所有断点" />
     <option name="移除所有断点" path="ActionManager" hit="移除所有断点" />
     <option name="移除所有监视" path="ActionManager" hit="移除所有监视" />
@@ -116,10 +100,10 @@
     <option name="编辑" path="ActionManager" hit="编辑…" />
     <option name="编辑断点" path="ActionManager" hit="编辑断点" />
     <option name="行号上的断点" path="ActionManager" hit="行号上的断点" />
+    <option name="计算表达式" path="ActionManager" hit="计算表达式…" />
     <option name="设置值" path="ActionManager" hit="设置值…" />
     <option name="评估任意表达式" path="ActionManager" hit="评估任意表达式" />
     <option name="评估所选表达式" path="ActionManager" hit="评估所选表达式" />
-    <option name="评估表达式" path="ActionManager" hit="评估表达式…" />
     <option name="调试" path="ActionManager" hit="调试" />
     <option name="调试器强制步操作" path="ActionManager" hit="调试器强制步操作" />
     <option name="调试器操作" path="ActionManager" hit="调试器操作" />
@@ -131,14 +115,17 @@
     <option name="运行到光标处" path="ActionManager" hit="运行到光标处" />
     <option name="忽略任何断点" path="ActionManager" hit="运行到文本光标所在的行，忽略任何断点" />
     <option name="运行到文本光标所在的行" path="ActionManager" hit="运行到文本光标所在的行，忽略任何断点" />
+    <option name="frame" path="ActionManager" hit="重置 Frame" />
+    <option name="重置" path="ActionManager" hit="重置 Frame" />
     <option name="附加到进程" path="ActionManager" hit="附加到进程…" />
+    <option name="附加对话框设置" path="ActionManager" hit="附加对话框设置" />
     <option name="静音断点" path="ActionManager" hit="静音断点" />
     <option name="在调试会话结束时聚焦此视图" path="ActionManager" hit="默认情况下，在调试会话结束时聚焦此视图" />
     <option name="默认情况下" path="ActionManager" hit="默认情况下，在调试会话结束时聚焦此视图" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.调试器" configurable_name="调试器">
     <option name="调试器" hit="调试器" />
-    <option name="为执行行评估表达式文本" hit="为执行行评估表达式文本" />
+    <option name="为执行行计算表达式文本" hit="为执行行计算表达式文本" />
     <option name="为断点行内联值" hit="为断点行内联值" />
     <option name="内联修改后的值" hit="内联修改后的值" />
     <option name="内联堆栈帧" hit="内联堆栈帧" />
@@ -148,7 +135,7 @@
     <option name="智能单步执行目标" hit="智能单步执行目标" />
     <option name="智能单步执行选区" hit="智能单步执行选区" />
     <option name="没有顶部框架" hit="没有顶部框架" />
-    <option name="评估表达式文本" hit="评估表达式文本" />
+    <option name="计算表达式文本" hit="计算表达式文本" />
   </configurable>
   <configurable id="project.propDebugger" configurable_name="调试器">
     <option name="调试器" hit="调试器" />

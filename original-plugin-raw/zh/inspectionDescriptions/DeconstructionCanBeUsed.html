@@ -1,0 +1,30 @@
+<html>
+<body>
+报告可以用记录模式替换的模式。
+<p>示例：</p>
+<pre><code>
+  record Point(int x, int y) {}
+
+  static void printSum(Object obj) {
+    if (obj instanceof Point p) {
+      int x = p.x();
+      int y = p.y();
+      System.out.println(x + y);
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  record Point(int x, int y) {}
+
+  static void printSum(Object obj) {
+    if (obj instanceof Point(int x, int y)) {
+      System.out.println(x + y);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>仅当项目或模块的语言级别为 19 或更高时，此检查才会报告。</p>
+<p><small>2023.1 最新变化</small></p>
+</body>
+</html>

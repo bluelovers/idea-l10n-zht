@@ -88,8 +88,8 @@
   <configurable id="reference.settingsdialog.IDE.editor.colors.Groovy" configurable_name="Groovy">
     <option name="groovy" hit="Groovy" />
     <option name="关键字" hit="关键字" />
-    <option name="列表" hit="列表/映射到对象的转换" />
-    <option name="映射到对象的转换" hit="列表/映射到对象的转换" />
+    <option name="列表" hit="列表/映射到对象转换" />
+    <option name="映射到对象转换" hit="列表/映射到对象转换" />
     <option name="变量和形参" hit="变量和形参//局部变量" />
     <option name="局部变量" hit="变量和形参//局部变量" />
     <option name="变量和形参" hit="变量和形参//形参" />
@@ -109,8 +109,8 @@
     <option name="大括号和运算符" hit="大括号和运算符//大括号" />
     <option name="大括号和运算符" hit="大括号和运算符//运算符" />
     <option name="运算符" hit="大括号和运算符//运算符" />
-    <option name="大括号和运算符" hit="大括号和运算符//闭合表达式大括号和箭头" />
-    <option name="闭合表达式大括号和箭头" hit="大括号和运算符//闭合表达式大括号和箭头" />
+    <option name="大括号和运算符" hit="大括号和运算符//闭包表达式大括号和箭头" />
+    <option name="闭包表达式大括号和箭头" hit="大括号和运算符//闭包表达式大括号和箭头" />
     <option name="static" hit="字段//static 字段" />
     <option name="字段" hit="字段//static 字段" />
     <option name="字段" hit="字段//实例字段" />
@@ -122,17 +122,17 @@
     <option name="无效字符串转义" hit="字符串//无效字符串转义" />
     <option name="字符串" hit="字符串//有效字符串转义" />
     <option name="有效字符串转义" hit="字符串//有效字符串转义" />
-    <option name="static" hit="引用//Static 属性引用" />
-    <option name="属性引用" hit="引用//Static 属性引用" />
-    <option name="引用" hit="引用//Static 属性引用" />
+    <option name="static" hit="引用//static 属性引用" />
+    <option name="属性引用" hit="引用//static 属性引用" />
+    <option name="引用" hit="引用//static 属性引用" />
     <option name="实例属性引用" hit="引用//实例属性引用" />
     <option name="引用" hit="引用//实例属性引用" />
     <option name="引用" hit="引用//未解析的引用" />
     <option name="未解析的引用" hit="引用//未解析的引用" />
     <option name="数字" hit="数字" />
-    <option name="static" hit="方法//Static 方法调用" />
-    <option name="方法" hit="方法//Static 方法调用" />
-    <option name="方法调用" hit="方法//Static 方法调用" />
+    <option name="static" hit="方法//static 方法调用" />
+    <option name="方法" hit="方法//static 方法调用" />
+    <option name="方法调用" hit="方法//static 方法调用" />
     <option name="实例方法调用" hit="方法//实例方法调用" />
     <option name="方法" hit="方法//实例方法调用" />
     <option name="方法" hit="方法//方法声明" />
@@ -376,6 +376,14 @@
     <option name="箭头" path="空格" hit="Lambda 箭头" />
     <option name="throws" path="换行和大括号" hit="Throws 列表" />
     <option name="列表" path="换行和大括号" hit="Throws 列表" />
+    <option name="extends" path="换行和大括号" hit="extends/implements/permits 关键字" />
+    <option name="implements" path="换行和大括号" hit="extends/implements/permits 关键字" />
+    <option name="permits" path="换行和大括号" hit="extends/implements/permits 关键字" />
+    <option name="关键字" path="换行和大括号" hit="extends/implements/permits 关键字" />
+    <option name="extends" path="换行和大括号" hit="extends/implements/permits 列表" />
+    <option name="implements" path="换行和大括号" hit="extends/implements/permits 列表" />
+    <option name="permits" path="换行和大括号" hit="extends/implements/permits 列表" />
+    <option name="列表" path="换行和大括号" hit="extends/implements/permits 列表" />
     <option name="throws" path="换行和大括号" hit="throws 关键字" />
     <option name="关键字" path="换行和大括号" hit="throws 关键字" />
     <option name="-" path="空格" hit="一元运算符 (!, -, +, ++, --, *)" />
@@ -472,14 +480,6 @@
     <option name="强制加大括号" path="换行和大括号" hit="强制加大括号" />
     <option name="强制换行位置" path="换行和大括号" hit="强制换行位置:" />
     <option name="形参注解" path="换行和大括号" hit="形参注解" />
-    <option name="permits" path="换行和大括号" hit="扩展/实施/permits 关键字" />
-    <option name="关键字" path="换行和大括号" hit="扩展/实施/permits 关键字" />
-    <option name="实施" path="换行和大括号" hit="扩展/实施/permits 关键字" />
-    <option name="扩展" path="换行和大括号" hit="扩展/实施/permits 关键字" />
-    <option name="permits" path="换行和大括号" hit="扩展/实现/permits 列表" />
-    <option name="列表" path="换行和大括号" hit="扩展/实现/permits 列表" />
-    <option name="实现" path="换行和大括号" hit="扩展/实现/permits 列表" />
-    <option name="扩展" path="换行和大括号" hit="扩展/实现/permits 列表" />
     <option name="括号之前" path="空格" hit="括号之前" />
     <option name="按位运算符" path="空格" hit="按位运算符(&amp;、|、^)" />
     <option name="换行符" path="换行和大括号" hit="换行符" />

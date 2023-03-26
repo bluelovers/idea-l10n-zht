@@ -12,9 +12,9 @@
   <configurable id="preferences.general" configurable_name="系统设置">
     <option name="保存前备份文件" hit="保存前备份文件" />
     <option name="关闭具有运行进程的工具窗口时" hit="关闭具有运行进程的工具窗口时 " />
-    <option name="ide" hit="切换到 IDE 窗口或打开编辑器选项卡时同步外部变更" />
-    <option name="切换到" hit="切换到 IDE 窗口或打开编辑器选项卡时同步外部变更" />
-    <option name="窗口或打开编辑器选项卡时同步外部变更" hit="切换到 IDE 窗口或打开编辑器选项卡时同步外部变更" />
+    <option name="ide" hit="切换到 IDE 窗口或打开编辑器选项卡时同步外部更改" />
+    <option name="切换到" hit="切换到 IDE 窗口或打开编辑器选项卡时同步外部更改" />
+    <option name="窗口或打开编辑器选项卡时同步外部更改" hit="切换到 IDE 窗口或打开编辑器选项卡时同步外部更改" />
     <option name="切换到其他应用程序或内置终端时保存文件" hit="切换到其他应用程序或内置终端时保存文件" />
     <option name="启动时重新打开项目" hit="启动时重新打开项目" />
     <option name="在以下位置打开项目" hit="在以下位置打开项目" />
@@ -58,6 +58,10 @@
     <option name="150" hit="    " />
     <option name="175" hit="    " />
     <option name="200" hit="    " />
+    <option name="225" hit="    " />
+    <option name="250" hit="    " />
+    <option name="275" hit="    " />
+    <option name="300" hit="    " />
     <option name="ide" hit="IDE " />
     <option name="each" hit="Remember size for each tool window" />
     <option name="for" hit="Remember size for each tool window" />
@@ -67,13 +71,13 @@
     <option name="window" hit="Remember size for each tool window" />
     <option name="ui" hit="UI 选项" />
     <option name="选项" hit="UI 选项" />
-    <option name="zoom" hit="Zoom " />
     <option name="与操作系统同步" hit="与操作系统同步" />
     <option name="主题" hit="主题 " />
     <option name="alt" hit="仅按下 Alt 时拖放" />
     <option name="仅按下" hit="仅按下 Alt 时拖放" />
     <option name="时拖放" hit="仅按下 Alt 时拖放" />
     <option name="使用对比度滚动条" hit="使用对比度滚动条" />
+    <option name="使用自定义字体" hit="使用自定义字体 " />
     <option name="右侧并排布局" hit="右侧并排布局" />
     <option name="在控件中启用助记键" hit="在控件中启用助记键" />
     <option name="在树中使用较小的缩进" hit="在树中使用较小的缩进" />
@@ -84,7 +88,6 @@
     <option name="大小" hit="大小 " />
     <option name="始终在窗口标题中显示完整路径" hit="始终在窗口标题中显示完整路径" />
     <option name="子像素" hit="子像素" />
-    <option name="字体" hit="字体 " />
     <option name="宽屏工具窗口布局" hit="宽屏工具窗口布局" />
     <option name="工具窗口" hit="工具窗口" />
     <option name="左侧并排布局" hit="左侧并排布局" />
@@ -99,6 +102,7 @@
     <option name="演示模式" hit="演示模式" />
     <option name="灰度" hit="灰度" />
     <option name="编辑器" hit="编辑器 " />
+    <option name="缩放" hit="缩放 " />
     <option name="背景图像" hit="背景图像 " />
     <option name="获取更多主题" hit="获取更多主题" />
     <option name="运作方式" hit="运作方式" />
@@ -118,15 +122,6 @@
     <option name="n" path="ActionManager" hit="CRLF - Windows (\r\n)" />
     <option name="r" path="ActionManager" hit="CRLF - Windows (\r\n)" />
     <option name="windows" path="ActionManager" hit="CRLF - Windows (\r\n)" />
-    <option name="compact" path="ActionManager" hit="Compact Mode" />
-    <option name="mode" path="ActionManager" hit="Compact Mode" />
-    <option name="a" path="ActionManager" hit="Convert a preview tab to a regular editor tab" />
-    <option name="convert" path="ActionManager" hit="Convert a preview tab to a regular editor tab" />
-    <option name="editor" path="ActionManager" hit="Convert a preview tab to a regular editor tab" />
-    <option name="preview" path="ActionManager" hit="Convert a preview tab to a regular editor tab" />
-    <option name="regular" path="ActionManager" hit="Convert a preview tab to a regular editor tab" />
-    <option name="tab" path="ActionManager" hit="Convert a preview tab to a regular editor tab" />
-    <option name="to" path="ActionManager" hit="Convert a preview tab to a regular editor tab" />
     <option name="ddl" path="ActionManager" hit="DDL 映射" />
     <option name="映射" path="ActionManager" hit="DDL 映射" />
     <option name="deployment" path="ActionManager" hit="Deployment" />
@@ -138,42 +133,29 @@
     <option name="esc" path="ActionManager" hit="Esc" />
     <option name="explain" path="ActionManager" hit="Explain Plan" />
     <option name="plan" path="ActionManager" hit="Explain Plan" />
-    <option name="are" path="ActionManager" hit="File Name Widget (when editor tabs are hidden)" />
-    <option name="editor" path="ActionManager" hit="File Name Widget (when editor tabs are hidden)" />
-    <option name="file" path="ActionManager" hit="File Name Widget (when editor tabs are hidden)" />
-    <option name="hidden" path="ActionManager" hit="File Name Widget (when editor tabs are hidden)" />
-    <option name="name" path="ActionManager" hit="File Name Widget (when editor tabs are hidden)" />
-    <option name="tabs" path="ActionManager" hit="File Name Widget (when editor tabs are hidden)" />
-    <option name="when" path="ActionManager" hit="File Name Widget (when editor tabs are hidden)" />
-    <option name="widget" path="ActionManager" hit="File Name Widget (when editor tabs are hidden)" />
-    <option name="ide" path="ActionManager" hit="IDE Scale" />
-    <option name="scale" path="ActionManager" hit="IDE Scale" />
     <option name="ide" path="ActionManager" hit="IDE 和项目设置" />
     <option name="和项目设置" path="ActionManager" hit="IDE 和项目设置" />
-    <option name="keep" path="ActionManager" hit="Keep Tab Open" />
-    <option name="open" path="ActionManager" hit="Keep Tab Open" />
-    <option name="tab" path="ActionManager" hit="Keep Tab Open" />
     <option name="-" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
     <option name="lf" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
     <option name="macos" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
     <option name="n" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
     <option name="unix" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
     <option name="和" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
+    <option name="layouts" path="ActionManager" hit="Layouts" />
     <option name="mq" path="ActionManager" hit="MQ" />
-    <option name="current" path="ActionManager" hit="Move current window to the next display" />
-    <option name="display" path="ActionManager" hit="Move current window to the next display" />
-    <option name="move" path="ActionManager" hit="Move current window to the next display" />
-    <option name="next" path="ActionManager" hit="Move current window to the next display" />
-    <option name="the" path="ActionManager" hit="Move current window to the next display" />
-    <option name="to" path="ActionManager" hit="Move current window to the next display" />
-    <option name="window" path="ActionManager" hit="Move current window to the next display" />
+    <option name="meet" path="ActionManager" hit="Meet the New UI" />
+    <option name="new" path="ActionManager" hit="Meet the New UI" />
+    <option name="the" path="ActionManager" hit="Meet the New UI" />
+    <option name="ui" path="ActionManager" hit="Meet the New UI" />
     <option name="devkit" path="ActionManager" hit="Plugin DevKit" />
     <option name="plugin" path="ActionManager" hit="Plugin DevKit" />
+    <option name="defender" path="ActionManager" hit="Reset Microsoft Defender Notification" />
+    <option name="microsoft" path="ActionManager" hit="Reset Microsoft Defender Notification" />
+    <option name="notification" path="ActionManager" hit="Reset Microsoft Defender Notification" />
+    <option name="reset" path="ActionManager" hit="Reset Microsoft Defender Notification" />
     <option name="space" path="ActionManager" hit="Space" />
     <option name="wsl" path="ActionManager" hit="WSL 中的主目录" />
     <option name="中的主目录" path="ActionManager" hit="WSL 中的主目录" />
-    <option name="screen" path="ActionManager" hit="Welcome Screen" />
-    <option name="welcome" path="ActionManager" hit="Welcome Screen" />
     <option name="xml" path="ActionManager" hit="XML 配置文件" />
     <option name="配置文件" path="ActionManager" hit="XML 配置文件" />
     <option name="idea" path="ActionManager" hit="YouTube 上的 IntelliJ IDEA" />
@@ -210,6 +192,9 @@
     <option name="从磁盘全部重新加载" path="ActionManager" hit="从磁盘全部重新加载" />
     <option name="从磁盘安装插件" path="ActionManager" hit="从磁盘安装插件…" />
     <option name="以新名称存储当前布局" path="ActionManager" hit="以新名称存储当前布局" />
+    <option name="ide" path="ActionManager" hit="使 IDE 可从命令行访问" />
+    <option name="使" path="ActionManager" hit="使 IDE 可从命令行访问" />
+    <option name="可从命令行访问" path="ActionManager" hit="使 IDE 可从命令行访问" />
     <option name="使工具窗口停靠但焦点丢失时自动隐藏" path="ActionManager" hit="使工具窗口停靠但焦点丢失时自动隐藏" />
     <option name="使工具窗口停靠并固定" path="ActionManager" hit="使工具窗口停靠并固定" />
     <option name="使工具窗口滑动并在焦点丢失时自动隐藏" path="ActionManager" hit="使工具窗口滑动并在焦点丢失时自动隐藏" />
@@ -226,6 +211,7 @@
     <option name="保存所有文件和设置" path="ActionManager" hit="保存所有文件和设置" />
     <option name="保存文档" path="ActionManager" hit="保存文档" />
     <option name="保存至终止环" path="ActionManager" hit="保存至终止环" />
+    <option name="保持选项卡打开" path="ActionManager" hit="保持选项卡打开" />
     <option name="ide" path="ActionManager" hit="修复 IDE" />
     <option name="修复" path="ActionManager" hit="修复 IDE" />
     <option name="wsl" path="ActionManager" hit="修正 WSL 防火墙设置" />
@@ -274,6 +260,10 @@
     <option name="zen" path="ActionManager" hit="切换 Zen 模式" />
     <option name="切换" path="ActionManager" hit="切换 Zen 模式" />
     <option name="模式" path="ActionManager" hit="切换 Zen 模式" />
+    <option name="ui" path="ActionManager" hit="切换为经典 UI" />
+    <option name="切换为经典" path="ActionManager" hit="切换为经典 UI" />
+    <option name="ui" path="ActionManager" hit="切换为经典 UI…" />
+    <option name="切换为经典" path="ActionManager" hit="切换为经典 UI…" />
     <option name="切换仅更改的文件" path="ActionManager" hit="切换仅更改的文件" />
     <option name="切换免打扰模式" path="ActionManager" hit="切换免打扰模式" />
     <option name="切换全屏模式" path="ActionManager" hit="切换全屏模式" />
@@ -291,14 +281,14 @@
     <option name="覆盖" path="ActionManager" hit="切换插入/覆盖" />
     <option name="切换演示模式" path="ActionManager" hit="切换演示模式" />
     <option name="切换粘性选区" path="ActionManager" hit="切换粘性选区" />
+    <option name="ide" path="ActionManager" hit="切换缩放 IDE" />
+    <option name="切换缩放" path="ActionManager" hit="切换缩放 IDE" />
     <option name="切换缩略图" path="ActionManager" hit="切换缩略图" />
     <option name="切换路径导航栏设置" path="ActionManager" hit="切换路径导航栏设置" />
     <option name="切换路径输入字段的可见性" path="ActionManager" hit="切换路径输入字段的可见性" />
     <option name="列对齐" path="ActionManager" hit="列对齐" />
     <option name="列表操作" path="ActionManager" hit="列表操作" />
     <option name="列选择模式" path="ActionManager" hit="列选择模式" />
-    <option name="创建一个脚本" path="ActionManager" hit="创建一个脚本，用于从命令行打开文件和项目" />
-    <option name="用于从命令行打开文件和项目" path="ActionManager" hit="创建一个脚本，用于从命令行打开文件和项目" />
     <option name="创建命令行启动器" path="ActionManager" hit="创建命令行启动器…" />
     <option name="创建新文件" path="ActionManager" hit="创建新文件" />
     <option name="创建新目录" path="ActionManager" hit="创建新目录" />
@@ -311,7 +301,6 @@
     <option name="删除到行首" path="ActionManager" hit="删除到行首" />
     <option name="删除到词尾" path="ActionManager" hit="删除到词尾" />
     <option name="删除到词首" path="ActionManager" hit="删除到词首" />
-    <option name="删除布局" path="ActionManager" hit="删除布局" />
     <option name="删除所选条目" path="ActionManager" hit="删除所选条目" />
     <option name="ide" path="ActionManager" hit="删除残留的 IDE 目录…" />
     <option name="删除残留的" path="ActionManager" hit="删除残留的 IDE 目录…" />
@@ -338,8 +327,6 @@
     <option name="另存为基于目录的格式" path="ActionManager" hit="另存为基于目录的格式…" />
     <option name="只保存在当前编辑器中打开的文件" path="ActionManager" hit="只保存在当前编辑器中打开的文件" />
     <option name="右" path="ActionManager" hit="右" />
-    <option name="xamarin" path="ActionManager" hit="右侧(Xamarin)" />
-    <option name="右侧" path="ActionManager" hit="右侧(Xamarin)" />
     <option name="右到左" path="ActionManager" hit="右到左" />
     <option name="合并所有项目窗口" path="ActionManager" hit="合并所有项目窗口" />
     <option name="同时切换免打扰和全屏模式" path="ActionManager" hit="同时切换免打扰和全屏模式" />
@@ -374,6 +361,10 @@
     <option name="启动任何进程时显示后台任务窗口" path="ActionManager" hit="启动任何进程时显示后台任务窗口" />
     <option name="允许通过请求向支持团队提供更多信息" path="ActionManager" hit="启用或禁用额外的日志类别。允许通过请求向支持团队提供更多信息。" />
     <option name="启用或禁用额外的日志类别" path="ActionManager" hit="启用或禁用额外的日志类别。允许通过请求向支持团队提供更多信息。" />
+    <option name="ui" path="ActionManager" hit="启用新 UI" />
+    <option name="启用新" path="ActionManager" hit="启用新 UI" />
+    <option name="ui" path="ActionManager" hit="启用新 UI…" />
+    <option name="启用新" path="ActionManager" hit="启用新 UI…" />
     <option name="回放上一个宏" path="ActionManager" hit="回放上一个宏" />
     <option name="取消固定活动工具窗口" path="ActionManager" hit="固定/取消固定活动工具窗口" />
     <option name="固定" path="ActionManager" hit="固定/取消固定活动工具窗口" />
@@ -382,16 +373,13 @@
     <option name="固定活动编辑器或工具窗口选项卡" path="ActionManager" hit="固定活动编辑器或工具窗口选项卡" />
     <option name="固定活动编辑器选项卡" path="ActionManager" hit="固定活动编辑器选项卡" />
     <option name="固定活动选项卡" path="ActionManager" hit="固定活动选项卡" />
-    <option name="图" path="ActionManager" hit="图" />
     <option name="图表" path="ActionManager" hit="图表" />
-    <option name="file" path="ActionManager" hit="在 File Manager 中显示" />
-    <option name="manager" path="ActionManager" hit="在 File Manager 中显示" />
-    <option name="中显示" path="ActionManager" hit="在 File Manager 中显示" />
-    <option name="在" path="ActionManager" hit="在 File Manager 中显示" />
-    <option name="file" path="ActionManager" hit="在 File Manager 中显示日志" />
-    <option name="manager" path="ActionManager" hit="在 File Manager 中显示日志" />
-    <option name="中显示日志" path="ActionManager" hit="在 File Manager 中显示日志" />
-    <option name="在" path="ActionManager" hit="在 File Manager 中显示日志" />
+    <option name="中显示" path="ActionManager" hit="在 文件管理器 中显示" />
+    <option name="在" path="ActionManager" hit="在 文件管理器 中显示" />
+    <option name="文件管理器" path="ActionManager" hit="在 文件管理器 中显示" />
+    <option name="中显示日志" path="ActionManager" hit="在 文件管理器 中显示日志" />
+    <option name="在" path="ActionManager" hit="在 文件管理器 中显示日志" />
+    <option name="文件管理器" path="ActionManager" hit="在 文件管理器 中显示日志" />
     <option name="在上方克隆文本光标" path="ActionManager" hit="在上方克隆文本光标" />
     <option name="以同时编辑多行代码" path="ActionManager" hit="在上面的行中插入一个辅助光标，以同时编辑多行代码。" />
     <option name="在上面的行中插入一个辅助光标" path="ActionManager" hit="在上面的行中插入一个辅助光标，以同时编辑多行代码。" />
@@ -457,7 +445,7 @@
     <option name="在新窗口中打开源" path="ActionManager" hit="在新窗口中打开源" />
     <option name="在新窗口打开所选条目的编辑器并使之获得焦点" path="ActionManager" hit="在新窗口打开所选条目的编辑器并使之获得焦点" />
     <option name="在新编辑器窗口中打开" path="ActionManager" hit="在新编辑器窗口中打开" />
-    <option name="在最近的变更点中移动" path="ActionManager" hit="在最近的变更点中移动" />
+    <option name="在最近的更改点中移动" path="ActionManager" hit="在最近的更改点中移动" />
     <option name="在活动选项卡组中关闭所有编辑窗口" path="ActionManager" hit="在活动选项卡组中关闭所有编辑窗口" />
     <option name="在浏览器中打开" path="ActionManager" hit="在浏览器中打开" />
     <option name="在浏览器中打开所选文件" path="ActionManager" hit="在浏览器中打开所选文件" />
@@ -469,6 +457,7 @@
     <option name="在预览编辑器中切换使用自动换行" path="ActionManager" hit="在预览编辑器中切换使用自动换行" />
     <option name="在默认浏览器中打开" path="ActionManager" hit="在默认浏览器中打开" />
     <option name="在默认浏览器中打开所选文件" path="ActionManager" hit="在默认浏览器中打开所选文件" />
+    <option name="垂直布局" path="ActionManager" hit="垂直布局" />
     <option name="基于内容" path="ActionManager" hit="基于内容" />
     <option name="增大字体大小" path="ActionManager" hit="增大字体大小" />
     <option name="增大宽度" path="ActionManager" hit="增大宽度" />
@@ -476,12 +465,13 @@
     <option name="复制" path="ActionManager" hit="复制" />
     <option name="url" path="ActionManager" hit="复制 URL" />
     <option name="复制" path="ActionManager" hit="复制 URL" />
+    <option name="复制" path="ActionManager" hit="复制 设置 路径" />
+    <option name="设置" path="ActionManager" hit="复制 设置 路径" />
+    <option name="路径" path="ActionManager" hit="复制 设置 路径" />
     <option name="复制到剪贴板" path="ActionManager" hit="复制到剪贴板" />
-    <option name="复制设置路径" path="ActionManager" hit="复制设置路径" />
     <option name="复制路径" path="ActionManager" hit="复制路径" />
     <option name="复制选定可配置选项的相对路径" path="ActionManager" hit="复制选定可配置选项的相对路径" />
     <option name="外观" path="ActionManager" hit="外观" />
-    <option name="存储布局" path="ActionManager" hit="存储布局" />
     <option name="完全展开树节点" path="ActionManager" hit="完全展开树节点" />
     <option name="宏" path="ActionManager" hit="宏" />
     <option name="宏操作" path="ActionManager" hit="宏操作" />
@@ -591,10 +581,12 @@
     <option name="将选择范围扩展到父节点" path="ActionManager" hit="将选择范围扩展到父节点" />
     <option name="将选择范围扩展到第一个节点" path="ActionManager" hit="将选择范围扩展到第一个节点" />
     <option name="将选择范围扩展到第一行" path="ActionManager" hit="将选择范围扩展到第一行" />
+    <option name="将预览选项卡转换为常规编辑器选项卡" path="ActionManager" hit="将预览选项卡转换为常规编辑器选项卡" />
     <option name="展开收起的节点或将子节点添加到选区" path="ActionManager" hit="展开收起的节点或将子节点添加到选区。" />
     <option name="展开收起的节点或选择子节点" path="ActionManager" hit="展开收起的节点或选择子节点。" />
     <option name="展开树节点" path="ActionManager" hit="展开树节点" />
     <option name="展开组件" path="ActionManager" hit="展开组件" />
+    <option name="工具" path="ActionManager" hit="工具" />
     <option name="工具栏" path="ActionManager" hit="工具栏" />
     <option name="工具栏经典" path="ActionManager" hit="工具栏经典" />
     <option name="工具窗口" path="ActionManager" hit="工具窗口" />
@@ -603,10 +595,7 @@
     <option name="工具窗口视图模式" path="ActionManager" hit="工具窗口视图模式" />
     <option name="左" path="ActionManager" hit="左" />
     <option name="左侧" path="ActionManager" hit="左侧" />
-    <option name="xamarin" path="ActionManager" hit="左侧(Xamarin)" />
-    <option name="左侧" path="ActionManager" hit="左侧(Xamarin)" />
     <option name="左到右" path="ActionManager" hit="左到右" />
-    <option name="左移" path="ActionManager" hit="左移" />
     <option name="布局" path="ActionManager" hit="布局" />
     <option name="帮助" path="ActionManager" hit="帮助" />
     <option name="平滑滚动选项" path="ActionManager" hit="平滑滚动选项" />
@@ -623,7 +612,6 @@
     <option name="用于在外部文件管理器中打开" path="ActionManager" hit="当前文件的弹出窗口路径，用于在外部文件管理器中打开" />
     <option name="快速切换方案" path="ActionManager" hit="快速切换方案…" />
     <option name="恢复上次撤消的导航操作" path="ActionManager" hit="恢复上次撤消的导航操作" />
-    <option name="恢复布局" path="ActionManager" hit="恢复布局" />
     <option name="恢复预览文本" path="ActionManager" hit="恢复预览文本" />
     <option name="打开" path="ActionManager" hit="打开" />
     <option name="打开" path="ActionManager" hit="打开…" />
@@ -647,6 +635,7 @@
     <option name="打开选定项" path="ActionManager" hit="打开选定项" />
     <option name="扩展行选区" path="ActionManager" hit="扩展行选区" />
     <option name="扩展选区" path="ActionManager" hit="扩展选区" />
+    <option name="拆分布局" path="ActionManager" hit="拆分布局" />
     <option name="拆分并下移" path="ActionManager" hit="拆分并下移" />
     <option name="拆分并右移" path="ActionManager" hit="拆分并右移" />
     <option name="拆分模式" path="ActionManager" hit="拆分模式" />
@@ -673,12 +662,15 @@
     <option name="ide" path="ActionManager" hit="放大 IDE" />
     <option name="放大" path="ActionManager" hit="放大 IDE" />
     <option name="文件" path="ActionManager" hit="文件" />
+    <option name="文件名微件" path="ActionManager" hit="文件名微件(隐藏编辑器选项卡时)" />
+    <option name="隐藏编辑器选项卡时" path="ActionManager" hit="文件名微件(隐藏编辑器选项卡时)" />
     <option name="文件属性" path="ActionManager" hit="文件属性" />
     <option name="文件打开操作" path="ActionManager" hit="文件打开操作" />
     <option name="文件编码" path="ActionManager" hit="文件编码" />
     <option name="文件路径" path="ActionManager" hit="文件路径" />
     <option name="文件选择器列表" path="ActionManager" hit="文件选择器列表" />
     <option name="文件选择器工具栏" path="ActionManager" hit="文件选择器工具栏" />
+    <option name="新建图表" path="ActionManager" hit="新建图表" />
     <option name="新建文件" path="ActionManager" hit="新建文件…" />
     <option name="新建目录" path="ActionManager" hit="新建目录..." />
     <option name="新建项目组" path="ActionManager" hit="新建项目组" />
@@ -785,6 +777,8 @@
     <option name="并从磁盘重新加载" path="ActionManager" hit="检测所有外部更改的文件，并从磁盘重新加载" />
     <option name="检测所有外部更改的文件" path="ActionManager" hit="检测所有外部更改的文件，并从磁盘重新加载" />
     <option name="模块设置" path="ActionManager" hit="模块设置" />
+    <option name="欢迎屏幕" path="ActionManager" hit="欢迎屏幕" />
+    <option name="水平布局" path="ActionManager" hit="水平布局" />
     <option name="注册操作" path="ActionManager" hit="注册操作" />
     <option name="活动工具窗口" path="ActionManager" hit="活动工具窗口" />
     <option name="活动监视器" path="ActionManager" hit="活动监视器…" />
@@ -846,8 +840,8 @@
     <option name="状态栏微件" path="ActionManager" hit="状态栏微件" />
     <option name="用于检查哪些插件和子系统消耗大多数资源的工具" path="ActionManager" hit="用于检查哪些插件和子系统消耗大多数资源的工具" />
     <option name="禁用" path="ActionManager" hit="禁用" />
-    <option name="移动" path="ActionManager" hit="移动" />
     <option name="移至" path="ActionManager" hit="移至" />
+    <option name="移至左侧" path="ActionManager" hit="移至左侧" />
     <option name="移至相反的组" path="ActionManager" hit="移至相反的组" />
     <option name="移至组" path="ActionManager" hit="移至组" />
     <option name="bom" path="ActionManager" hit="移除 BOM" />
@@ -867,6 +861,7 @@
     <option name="文字转义等" path="ActionManager" hit="粘贴，不进行格式化、自动导入、文字转义等。" />
     <option name="粘贴" path="ActionManager" hit="粘贴，不进行格式化、自动导入、文字转义等。" />
     <option name="自动导入" path="ActionManager" hit="粘贴，不进行格式化、自动导入、文字转义等。" />
+    <option name="紧凑模式" path="ActionManager" hit="紧凑模式" />
     <option name="终止所选区域" path="ActionManager" hit="终止所选区域" />
     <option name="终止至词尾" path="ActionManager" hit="终止至词尾" />
     <option name="终止至词首" path="ActionManager" hit="终止至词首" />
@@ -1012,6 +1007,7 @@
     <option name="选择选项卡" path="ActionManager" hit="选择选项卡 #9" />
     <option name="选项卡" path="ActionManager" hit="选项卡" />
     <option name="选项卡分组" path="ActionManager" hit="选项卡分组" />
+    <option name="选项卡外观" path="ActionManager" hit="选项卡外观" />
     <option name="选项菜单" path="ActionManager" hit="选项菜单" />
     <option name="通知" path="ActionManager" hit="通知" />
     <option name="和" path="ActionManager" hit="通过编号在编辑器中导航到某一行(和/或列)" />
@@ -1032,10 +1028,6 @@
     <option name="ide" path="ActionManager" hit="重置 IDE 比例" />
     <option name="比例" path="ActionManager" hit="重置 IDE 比例" />
     <option name="重置" path="ActionManager" hit="重置 IDE 比例" />
-    <option name="defender" path="ActionManager" hit="重置 Windows Defender 通知" />
-    <option name="windows" path="ActionManager" hit="重置 Windows Defender 通知" />
-    <option name="通知" path="ActionManager" hit="重置 Windows Defender 通知" />
-    <option name="重置" path="ActionManager" hit="重置 Windows Defender 通知" />
     <option name="重置字体大小" path="ActionManager" hit="重置字体大小" />
     <option name="pdf" path="ActionManager" hit="键盘快捷键 PDF" />
     <option name="键盘快捷键" path="ActionManager" hit="键盘快捷键 PDF" />
@@ -1078,51 +1070,18 @@
     <option name="菜单与工具栏" hit="菜单与工具栏" />
   </configurable>
   <configurable id="reference.settings.ide.settings.notifications" configurable_name="通知">
-    <option name="balloon" hit="Balloon" />
-    <option name="no" hit="No popup" />
-    <option name="popup" hit="No popup" />
-    <option name="balloon" hit="Sticky balloon" />
-    <option name="sticky" hit="Sticky balloon" />
     <option name="不再询问通知" hit="不再询问通知 " />
     <option name="启用系统通知" hit="启用系统通知" />
     <option name="在工具窗口中显示" hit="在工具窗口中显示" />
     <option name="弹出窗口类型" hit="弹出窗口类型 " />
     <option name="播放声音" hit="播放声音" />
+    <option name="无弹出窗口" hit="无弹出窗口" />
     <option name="显示气球通知" hit="显示气球通知" />
+    <option name="气球" hit="气球" />
+    <option name="粘性气球" hit="粘性气球" />
     <option name="通知" hit="通知" />
   </configurable>
   <configurable id="consents" configurable_name="数据共享">
-    <option name="" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="accordance" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="account" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="address" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="any" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="at" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="by" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="can" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="consent" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="email" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="for" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="i" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="in" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="jetbrains" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="my" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="o" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="policy" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="privacy" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="process" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="purpose" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="r" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="s" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="settings" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="subscribing" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="the" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="this" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="time" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="understand" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="will" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="with" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="withdraw" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
     <option name="" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="about" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="and" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
@@ -1174,19 +1133,13 @@
     <option name="used" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="will" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="with" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
-    <option name="and" hit="Send me eap related feedback requests and surveys" />
-    <option name="eap-related" hit="Send me eap related feedback requests and surveys" />
-    <option name="feedback" hit="Send me eap related feedback requests and surveys" />
-    <option name="me" hit="Send me eap related feedback requests and surveys" />
-    <option name="requests" hit="Send me eap related feedback requests and surveys" />
-    <option name="send" hit="Send me eap related feedback requests and surveys" />
-    <option name="surveys" hit="Send me eap related feedback requests and surveys" />
-    <option name="eap" hit="使用 EAP 版本时Send usage statistics" />
-    <option name="statistics" hit="使用 EAP 版本时Send usage statistics" />
-    <option name="usage" hit="使用 EAP 版本时Send usage statistics" />
-    <option name="使用" hit="使用 EAP 版本时Send usage statistics" />
-    <option name="版本时send" hit="使用 EAP 版本时Send usage statistics" />
+    <option name="send" hit="Send usage statistics" />
+    <option name="statistics" hit="Send usage statistics" />
+    <option name="usage" hit="Send usage statistics" />
     <option name="数据共享" hit="数据共享" />
+    <option name="jetbrains" hit="数据共享偏好设置适用于所有已安装的 JetBrains 产品 " />
+    <option name="产品" hit="数据共享偏好设置适用于所有已安装的 JetBrains 产品 " />
+    <option name="数据共享偏好设置适用于所有已安装的" hit="数据共享偏好设置适用于所有已安装的 JetBrains 产品 " />
   </configurable>
   <configurable id="ide.date.format" configurable_name="日期格式">
     <option name="24" hit="使用    小时时间" />
@@ -1208,19 +1161,20 @@
   <configurable id="preferences.updates" configurable_name="更新">
     <option name="ide" hit="IDE 更新后在编辑器中显示新功能" />
     <option name="更新后在编辑器中显示新功能" hit="IDE 更新后在编辑器中显示新功能" />
-    <option name="1" hit="当前版本  IntelliJ IDEA        EAP" />
-    <option name="2023" hit="当前版本  IntelliJ IDEA        EAP" />
-    <option name="eap" hit="当前版本  IntelliJ IDEA        EAP" />
-    <option name="idea" hit="当前版本  IntelliJ IDEA        EAP" />
-    <option name="intellij" hit="当前版本  IntelliJ IDEA        EAP" />
-    <option name="当前版本" hit="当前版本  IntelliJ IDEA        EAP" />
+    <option name="ide" hit="为之检查 IDE 更新 " />
+    <option name="为之检查" hit="为之检查 IDE 更新 " />
+    <option name="更新" hit="为之检查 IDE 更新 " />
+    <option name="1" hit="当前版本  IntelliJ IDEA       " />
+    <option name="2023" hit="当前版本  IntelliJ IDEA       " />
+    <option name="idea" hit="当前版本  IntelliJ IDEA       " />
+    <option name="intellij" hit="当前版本  IntelliJ IDEA       " />
+    <option name="当前版本" hit="当前版本  IntelliJ IDEA       " />
+    <option name="抢先体验计划" hit="抢先体验计划" />
     <option name="更新" hit="更新" />
-    <option name="ide" hit="检查 IDE 更新" />
-    <option name="更新" hit="检查 IDE 更新" />
-    <option name="检查" hit="检查 IDE 更新" />
     <option name="检查插件更新" hit="检查插件更新" />
     <option name="c" hit="检查更新 C  " />
     <option name="检查更新" hit="检查更新 C  " />
+    <option name="稳定版本" hit="稳定版本" />
   </configurable>
   <configurable id="editor.preferences.fonts.default" configurable_name="字体">
     <option name="" hit="  在配色方案中定义" />
@@ -1234,8 +1188,8 @@
     <option name="输入要预览的任何文本" hit="输入要预览的任何文本" />
   </configurable>
   <configurable id="editor.breadcrumbs" configurable_name="路径导航">
-    <option name="位置" hit="位置 " />
     <option name="底部" hit="底部" />
+    <option name="放置" hit="放置 " />
     <option name="显示路径导航" hit="显示路径导航" />
     <option name="管理颜色" hit="管理颜色" />
     <option name="语言" hit="语言 " />
@@ -1246,7 +1200,6 @@
     <option name="web" hit="Web 浏览器和预览" />
     <option name="浏览器和预览" hit="Web 浏览器和预览" />
     <option name="保存时" hit="保存时" />
-    <option name="变更时" hit="变更时" />
     <option name="在内置预览中重新加载页面" hit="在内置预览中重新加载页面 " />
     <option name="在浏览器中重新加载页面" hit="在浏览器中重新加载页面 " />
     <option name="在编辑器中显示浏览器弹出窗口" hit="在编辑器中显示浏览器弹出窗口" />
@@ -1257,6 +1210,7 @@
     <option name="对于" hit="对于 XML 文件" />
     <option name="文件" hit="对于 XML 文件" />
     <option name="已禁用" hit="已禁用" />
+    <option name="更改时" hit="更改时" />
     <option name="系统默认值" hit="系统默认值" />
     <option name="自定义路径" hit="自定义路径" />
     <option name="重新加载行为" hit="重新加载行为" />
@@ -1266,40 +1220,26 @@
   <configurable id="advanced.settings" configurable_name="高级设置">
     <option name="" hit="  符号" />
     <option name="符号" hit="  符号" />
-    <option name="contributors" hit="Contributors waiting timeout  ms  " />
-    <option name="ms" hit="Contributors waiting timeout  ms  " />
-    <option name="timeout" hit="Contributors waiting timeout  ms  " />
-    <option name="waiting" hit="Contributors waiting timeout  ms  " />
     <option name="docker" hit="Docker" />
     <option name="experimental" hit="Experimental Multiplatform" />
     <option name="multiplatform" hit="Experimental Multiplatform" />
     <option name="ide" hit="IDE" />
     <option name="kotlin" hit="Kotlin" />
     <option name="markdown" hit="Markdown" />
-    <option name="configurations" hit="Maximum number of recent run configurations in the new UI " />
-    <option name="in" hit="Maximum number of recent run configurations in the new UI " />
-    <option name="maximum" hit="Maximum number of recent run configurations in the new UI " />
-    <option name="new" hit="Maximum number of recent run configurations in the new UI " />
-    <option name="number" hit="Maximum number of recent run configurations in the new UI " />
-    <option name="of" hit="Maximum number of recent run configurations in the new UI " />
-    <option name="recent" hit="Maximum number of recent run configurations in the new UI " />
-    <option name="run" hit="Maximum number of recent run configurations in the new UI " />
-    <option name="the" hit="Maximum number of recent run configurations in the new UI " />
-    <option name="ui" hit="Maximum number of recent run configurations in the new UI " />
     <option name="openssh" hit="OpenSSH" />
     <option name="openssh" hit="OpenSSH 工具的自定义路径 " />
     <option name="工具的自定义路径" hit="OpenSSH 工具的自定义路径 " />
-    <option name="above" hit="Paste above the caret line" />
-    <option name="caret" hit="Paste above the caret line" />
-    <option name="line" hit="Paste above the caret line" />
-    <option name="paste" hit="Paste above the caret line" />
-    <option name="the" hit="Paste above the caret line" />
-    <option name="at" hit="Paste at the caret position" />
-    <option name="caret" hit="Paste at the caret position" />
-    <option name="paste" hit="Paste at the caret position" />
-    <option name="position" hit="Paste at the caret position" />
-    <option name="the" hit="Paste at the caret position" />
     <option name="ssh" hit="SSH" />
+    <option name="hover" hit="Show tool window icons on hover in the new UI" />
+    <option name="icons" hit="Show tool window icons on hover in the new UI" />
+    <option name="in" hit="Show tool window icons on hover in the new UI" />
+    <option name="new" hit="Show tool window icons on hover in the new UI" />
+    <option name="on" hit="Show tool window icons on hover in the new UI" />
+    <option name="show" hit="Show tool window icons on hover in the new UI" />
+    <option name="the" hit="Show tool window icons on hover in the new UI" />
+    <option name="tool" hit="Show tool window icons on hover in the new UI" />
+    <option name="ui" hit="Show tool window icons on hover in the new UI" />
+    <option name="window" hit="Show tool window icons on hover in the new UI" />
     <option name="based" hit="Sort results in the Classes tab based on machine learning" />
     <option name="classes" hit="Sort results in the Classes tab based on machine learning" />
     <option name="in" hit="Sort results in the Classes tab based on machine learning" />
@@ -1310,42 +1250,27 @@
     <option name="sort" hit="Sort results in the Classes tab based on machine learning" />
     <option name="tab" hit="Sort results in the Classes tab based on machine learning" />
     <option name="the" hit="Sort results in the Classes tab based on machine learning" />
-    <option name="character" hit="Terminal character encoding " />
-    <option name="encoding" hit="Terminal character encoding " />
-    <option name="terminal" hit="Terminal character encoding " />
     <option name="textconv" hit="TextConv" />
-    <option name="if" hit="Trim if pasted middle line" />
-    <option name="line" hit="Trim if pasted middle line" />
-    <option name="middle" hit="Trim if pasted middle line" />
-    <option name="pasted" hit="Trim if pasted middle line" />
-    <option name="trim" hit="Trim if pasted middle line" />
-    <option name="contrast" hit="Use contrast run widget in the new UI" />
-    <option name="in" hit="Use contrast run widget in the new UI" />
-    <option name="new" hit="Use contrast run widget in the new UI" />
-    <option name="run" hit="Use contrast run widget in the new UI" />
-    <option name="the" hit="Use contrast run widget in the new UI" />
-    <option name="ui" hit="Use contrast run widget in the new UI" />
-    <option name="use" hit="Use contrast run widget in the new UI" />
-    <option name="widget" hit="Use contrast run widget in the new UI" />
-    <option name="all" hit="Wait for all contributors to finish before showing results" />
-    <option name="before" hit="Wait for all contributors to finish before showing results" />
-    <option name="contributors" hit="Wait for all contributors to finish before showing results" />
-    <option name="finish" hit="Wait for all contributors to finish before showing results" />
-    <option name="for" hit="Wait for all contributors to finish before showing results" />
-    <option name="results" hit="Wait for all contributors to finish before showing results" />
-    <option name="showing" hit="Wait for all contributors to finish before showing results" />
-    <option name="to" hit="Wait for all contributors to finish before showing results" />
-    <option name="wait" hit="Wait for all contributors to finish before showing results" />
-    <option name="a" hit="When pasting a line copied with no selection " />
-    <option name="copied" hit="When pasting a line copied with no selection " />
-    <option name="line" hit="When pasting a line copied with no selection " />
-    <option name="no" hit="When pasting a line copied with no selection " />
-    <option name="pasting" hit="When pasting a line copied with no selection " />
-    <option name="selection" hit="When pasting a line copied with no selection " />
-    <option name="when" hit="When pasting a line copied with no selection " />
-    <option name="with" hit="When pasting a line copied with no selection " />
+    <option name="automatic" hit="The delay between periodic Docker status checks for automatic reconnection " />
+    <option name="between" hit="The delay between periodic Docker status checks for automatic reconnection " />
+    <option name="checks" hit="The delay between periodic Docker status checks for automatic reconnection " />
+    <option name="delay" hit="The delay between periodic Docker status checks for automatic reconnection " />
+    <option name="docker" hit="The delay between periodic Docker status checks for automatic reconnection " />
+    <option name="for" hit="The delay between periodic Docker status checks for automatic reconnection " />
+    <option name="periodic" hit="The delay between periodic Docker status checks for automatic reconnection " />
+    <option name="reconnection" hit="The delay between periodic Docker status checks for automatic reconnection " />
+    <option name="status" hit="The delay between periodic Docker status checks for automatic reconnection " />
+    <option name="the" hit="The delay between periodic Docker status checks for automatic reconnection " />
     <option name="个字符" hit="个字符" />
     <option name="临时配置限制" hit="临时配置限制 " />
+    <option name="0" hit="为替代屏幕缓冲区使用     行距  mc vim nano 等 " />
+    <option name="1" hit="为替代屏幕缓冲区使用     行距  mc vim nano 等 " />
+    <option name="mc" hit="为替代屏幕缓冲区使用     行距  mc vim nano 等 " />
+    <option name="nano" hit="为替代屏幕缓冲区使用     行距  mc vim nano 等 " />
+    <option name="vim" hit="为替代屏幕缓冲区使用     行距  mc vim nano 等 " />
+    <option name="为替代屏幕缓冲区使用" hit="为替代屏幕缓冲区使用     行距  mc vim nano 等 " />
+    <option name="等" hit="为替代屏幕缓冲区使用     行距  mc vim nano 等 " />
+    <option name="行距" hit="为替代屏幕缓冲区使用     行距  mc vim nano 等 " />
     <option name="书签" hit="书签" />
     <option name="仅在弹出窗口中显示行书签" hit="仅在弹出窗口中显示行书签" />
     <option name="仅显示已修改的内容" hit="仅显示已修改的内容" />
@@ -1372,6 +1297,8 @@
     <option name="也允许自动" hit="即使开发的应用程序当前正在运行 也允许自动 make 启动" />
     <option name="即使开发的应用程序当前正在运行" hit="即使开发的应用程序当前正在运行 也允许自动 make 启动" />
     <option name="启动" hit="即使开发的应用程序当前正在运行 也允许自动 make 启动" />
+    <option name="参与者等待超时" hit="参与者等待超时 毫秒  " />
+    <option name="毫秒" hit="参与者等待超时 毫秒  " />
     <option name="启动" hit="启动" />
     <option name="启用" hit="启用 提交 工具窗口" />
     <option name="工具窗口" hit="启用 提交 工具窗口" />
@@ -1394,6 +1321,7 @@
     <option name="窗口中打开从分离窗口调用的声明源" hit="在主 IDE 窗口中打开从分离窗口调用的声明源" />
     <option name="在列表和树中循环滚动" hit="在列表和树中循环滚动" />
     <option name="在同一个选项卡中打开声明源" hit="在同一个选项卡中打开声明源" />
+    <option name="在显示结果之前等待所有参与者完成" hit="在显示结果之前等待所有参与者完成" />
     <option name="剪切" hit="在未选择任何内容的情况下调用 复制 或 剪切 操作时不复制 剪切当前行" />
     <option name="剪切当前行" hit="在未选择任何内容的情况下调用 复制 或 剪切 操作时不复制 剪切当前行" />
     <option name="在未选择任何内容的情况下调用" hit="在未选择任何内容的情况下调用 复制 或 剪切 操作时不复制 剪切当前行" />
@@ -1403,17 +1331,20 @@
     <option name="在未选择任何内容的情况下调用" hit="在未选择任何内容的情况下调用 复制 操作后不选择已复制的行" />
     <option name="复制" hit="在未选择任何内容的情况下调用 复制 操作后不选择已复制的行" />
     <option name="操作后不选择已复制的行" hit="在未选择任何内容的情况下调用 复制 操作后不选择已复制的行" />
-    <option name="在本地历史记录中存储变更的持续时间" hit="在本地历史记录中存储变更的持续时间 " />
+    <option name="在本地历史记录中存储更改的持续时间" hit="在本地历史记录中存储更改的持续时间 " />
     <option name="vcs" hit="在编辑器中打开文件时加载 VCS 中的文件注解" />
     <option name="中的文件注解" hit="在编辑器中打开文件时加载 VCS 中的文件注解" />
     <option name="在编辑器中打开文件时加载" hit="在编辑器中打开文件时加载 VCS 中的文件注解" />
     <option name="均衡嵌套拆分中的比例" hit="均衡嵌套拆分中的比例" />
-    <option name="全部" hit="基于机器学习对 全部 选项卡中的结果进行排序" />
-    <option name="基于机器学习对" hit="基于机器学习对 全部 选项卡中的结果进行排序" />
-    <option name="选项卡中的结果进行排序" hit="基于机器学习对 全部 选项卡中的结果进行排序" />
+    <option name="基于机器学习对" hit="基于机器学习对 所有 选项卡中的结果进行排序" />
+    <option name="所有" hit="基于机器学习对 所有 选项卡中的结果进行排序" />
+    <option name="选项卡中的结果进行排序" hit="基于机器学习对 所有 选项卡中的结果进行排序" />
+    <option name="包括行距" hit="填充字符背景 包括行距" />
+    <option name="填充字符背景" hit="填充字符背景 包括行距" />
     <option name="增大项目视图中的字号" hit="增大项目视图中的字号" />
     <option name="多行代码块的基本语法高亮显示" hit="多行代码块的基本语法高亮显示" />
     <option name="天" hit="天" />
+    <option name="如果已粘贴中间行则修剪" hit="如果已粘贴中间行则修剪" />
     <option name="md" hit="如果项目启动时没有打开的文件 则打开 README md 文件" />
     <option name="readme" hit="如果项目启动时没有打开的文件 则打开 README md 文件" />
     <option name="则打开" hit="如果项目启动时没有打开的文件 则打开 README md 文件" />
@@ -1433,6 +1364,7 @@
     <option name="将固定的选项卡留在左侧" hit="将固定的选项卡留在左侧" />
     <option name="将配置设为默认固定" hit="将配置设为默认固定" />
     <option name="将鼠标光标放在对话框中的默认按钮上" hit="将鼠标光标放在对话框中的默认按钮上" />
+    <option name="工具窗口" hit="工具窗口" />
     <option name="找不到任何内容" hit="找不到任何内容" />
     <option name="enter" hit="按下 Enter 键时将焦点移至编辑器" />
     <option name="按下" hit="按下 Enter 键时将焦点移至编辑器" />
@@ -1440,6 +1372,9 @@
     <option name="也收起下面所有展开的节点" hit="收起节点时 也收起下面所有展开的节点" />
     <option name="收起节点时" hit="收起节点时 也收起下面所有展开的节点" />
     <option name="文档组件" hit="文档组件" />
+    <option name="ui" hit="新 UI 中最近运行配置的最大数量 " />
+    <option name="中最近运行配置的最大数量" hit="新 UI 中最近运行配置的最大数量 " />
+    <option name="新" hit="新 UI 中最近运行配置的最大数量 " />
     <option name="无" hit="无" />
     <option name="docker" hit="日志选项卡应该是 Docker 容器的第一个选项卡 " />
     <option name="容器的第一个选项卡" hit="日志选项卡应该是 Docker 容器的第一个选项卡 " />
@@ -1470,8 +1405,12 @@
     <option name="确认在进程终止时重新运行" hit="确认在进程终止时重新运行" />
     <option name="禁用双击修改键快捷键" hit="禁用双击修改键快捷键" />
     <option name="筛选器" hit="筛选器" />
+    <option name="粘贴到文本光标位置" hit="粘贴到文本光标位置" />
+    <option name="粘贴到文本光标线上方" hit="粘贴到文本光标线上方" />
+    <option name="粘贴无选定内容的复制行时" hit="粘贴无选定内容的复制行时 " />
     <option name="终端" hit="终端" />
     <option name="终端回滚缓冲区大小" hit="终端回滚缓冲区大小 " />
+    <option name="终端字符编码" hit="终端字符编码 " />
     <option name="编译器" hit="编译器" />
     <option name="编译器引用索引" hit="编译器引用索引" />
     <option name="编辑器" hit="编辑器" />
@@ -1551,11 +1490,6 @@
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.常规" configurable_name="常规">
     <option name="常规" hit="常规" />
-    <option name="and" hit="Popups and Hints//Warning hint" />
-    <option name="hint" hit="Popups and Hints//Warning hint" />
-    <option name="hints" hit="Popups and Hints//Warning hint" />
-    <option name="popups" hit="Popups and Hints//Warning hint" />
-    <option name="warning" hit="Popups and Hints//Warning hint" />
     <option name="todo" hit="代码//TODO 默认值" />
     <option name="代码" hit="代码//TODO 默认值" />
     <option name="默认值" hit="代码//TODO 默认值" />
@@ -1598,6 +1532,8 @@
     <option name="最近位置选择" hit="弹出窗口和提示//最近位置选择" />
     <option name="弹出窗口和提示" hit="弹出窗口和提示//补全" />
     <option name="补全" hit="弹出窗口和提示//补全" />
+    <option name="弹出窗口和提示" hit="弹出窗口和提示//警告提示" />
+    <option name="警告提示" hit="弹出窗口和提示//警告提示" />
     <option name="弹出窗口和提示" hit="弹出窗口和提示//错误提示" />
     <option name="错误提示" hit="弹出窗口和提示//错误提示" />
     <option name="弹出窗口和提示" hit="弹出窗口和提示//问题提示" />

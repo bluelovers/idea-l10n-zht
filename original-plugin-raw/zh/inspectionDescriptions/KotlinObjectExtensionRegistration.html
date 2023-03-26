@@ -1,0 +1,29 @@
+<html>
+<body>
+报告由 IntelliJ 平台实例化但声明为 Kotlin 对象的扩展程序。
+<p>
+  扩展程序的生命周期由 IntelliJ 平台管理。
+  使用 Kotlin 对象进行扩展程序注册可能会导致创建不必要的扩展程序实例，并使插件无法卸载。
+</p>
+<h2>示例</h2>
+<p>扩展程序注册：</p>
+<pre>
+&lt;annotator language="myLang" implementationClass="com.example.MyAnnotator"/&gt;
+</pre>
+
+<p>扩展程序实现：</p>
+<pre>
+// 不正确：
+object MyAnnotator : Annotator {
+  ...
+}
+
+// 正确：
+class MyAnnotator : Annotator {
+  ...
+}
+</pre>
+<!-- tooltip end -->
+<p><small>2023.1 最新变化</small>
+</body>
+</html>

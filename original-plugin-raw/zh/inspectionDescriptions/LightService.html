@@ -1,8 +1,18 @@
 <html>
 <body>
-Reports light service problems.
+报告以下轻量服务问题：
+<ul>
+  <li>使用 <code>@com.intellij.openapi.components.Service</code> 注解的类不是 final。
+  </li>
+  <li>具有接受 <code>com.intellij.openapi.project.Project</code> 形参的构造函数的服务不会被注解为项目级服务。
+  </li>
+  <li>注解为应用程序级服务的服务没有无实参构造函数，也没有接受 <code>kotlinx.coroutines.CoroutineScope</code> 的构造函数。
+  </li>
+  <li>检索服务时不匹配：将项目级服务作为应用程序级服务获取，反之亦然。
+  </li>
+</ul>
 <p>
-  Please see <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html#light-services">Light Services</a> for further reference.
+  有关其他参考，请参阅<a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html#light-services">轻量服务</a>。
 </p>
 <p><small>2023.1 最新变化</small>
 </body>

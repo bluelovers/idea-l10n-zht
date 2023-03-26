@@ -1,5 +1,14 @@
 <html>
 <body>
-报告语言注解器在批处理代码检查运行结果中发现的问题。
+报告批处理代码检查运行结果中对此文件至关重要的问题（例如，语法错误）。
+当您在编辑器中打开文件时，此类问题通常会高亮显示，并且无法配置（与检查不同）。
+以下选项用于控制此检查的分析级别：
+<ul>
+  <li>选项“<b>高亮显示语法错误</b>”允许报告解析器相关问题。</li>
+  <li>选项“<b>运行语言注解器</b>”允许报告由为此语言配置的注解器发现的问题。
+    有关详细信息，请参阅<a href="https://plugins.jetbrains.com/docs/intellij/annotator.html">自定义语言支持：注解器</a>。</li>
+  <li>选项“<b>运行特定语言的高亮显示访问者</b>”允许报告此文件语言固有的问题（例如，类型不匹配或未报告的异常等）。
+    有关详细信息，请参阅<a href="https://plugins.jetbrains.com/docs/intellij/syntax-highlighting-and-error-highlighting.html#semantic-highlighting">自定义语言支持：高亮显示</a></li>
+</ul>
 </body>
 </html>
