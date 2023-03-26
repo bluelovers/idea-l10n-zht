@@ -2,8 +2,8 @@
 
 exports[`cache original properties files defaultBundleActions/DefaultActionsBundle.properties 1`] = `
 {
-  "action.ActivateSpaceToolWindow.text": "Space",
-  "group.CircletGroup.text": "空格",
+  "action.Help.JetBrainsTV.text": "YouTube 上的 IntelliJ IDEA",
+  "action.SpaceGroup.text": "Space",
 }
 `;
 
@@ -73,7 +73,7 @@ exports[`cache original properties files messages/IdeBundle.properties 1`] = `
   "action.AnActionButton.text.uninstall": "卸载",
   "label.welcome.to.0": "欢迎访问 {0}",
   "login.dialog.welcome.to.eap": "欢迎访问 {0} EAP",
-  "memory.snapshot.captured.text": "插件卸载失败时捕获内存快照",
+  "memory.snapshot.captured.text": "在 {0} 的插件卸载失败时捕获内存快照",
   "package.successfully.uninstalled": "已成功卸载软件包 ''{0}''",
   "packages.successfully.uninstalled": "已成功卸载软件包",
   "plugins.configurable.uninstall": "卸载",
@@ -88,13 +88,19 @@ exports[`cache original properties files messages/IdeBundle.properties 1`] = `
 
 exports[`cache original properties files messages/JavaScriptBundle.properties 1`] = `
 {
-  "inlay.hints.usages.text": "{0,choice, 0#无用法|1#1 个用法|2#{0,number}'{1,choice, |1#+}' 个用法}",
+  "inlay.hints.usages.text": "{0,choice, 0#无用法|1#1 个用法|2#{0,number}'{1,choice, |1#+}' 用法}",
 }
 `;
 
 exports[`cache original properties files messages/PhpBundle.properties 1`] = `
 {
-  "inlay.hints.usages.text": "{0,choice, 0#无用法|1#1 个用法|2#{0,number}'{1,choice, |1#+}' 个用法}",
+  "inlay.hints.usages.text": "{0,choice, 0#无用法|1#1 个用法|2#{0,number}'{1,choice, |1#+}' 用法}",
+}
+`;
+
+exports[`cache original properties files messages/PyBundle.properties 1`] = `
+{
+  "inlay.hints.usages.text": "{0,choice, 0#无用法|1#1 个用法|2#{0,number}'{1,choice, |1#+}' 用法}",
 }
 `;
 
@@ -142,7 +148,7 @@ exports[`cache original properties files messages/YeomanBundle.properties 1`] = 
 
 exports[`cache original properties same 1`] = `
 {
-  "action.ActivateSpaceToolWindow.text": "Space",
+  "action.SpaceGroup.text": "Space",
   "group.SpaceGroup.text": "Space",
 }
 `;
