@@ -1,13 +1,10 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="my" path="ActionManager" hit="Show Only My Processes" />
-    <option name="only" path="ActionManager" hit="Show Only My Processes" />
-    <option name="processes" path="ActionManager" hit="Show Only My Processes" />
-    <option name="show" path="ActionManager" hit="Show Only My Processes" />
     <option name="上移監視" path="ActionManager" hit="上移監視" />
     <option name="下移監視" path="ActionManager" hit="下移監視" />
     <option name="與剪貼簿比較值" path="ActionManager" hit="與剪貼簿比較值" />
+    <option name="僅顯示我的程序" path="ActionManager" hit="僅顯示我的程序" />
     <option name="僅顯示非零差異" path="ActionManager" hit="僅顯示非零差異" />
     <option name="alt" path="ActionManager" hit="使用 Alt 鍵的偵錯器" />
     <option name="使用" path="ActionManager" hit="使用 Alt 鍵的偵錯器" />
@@ -30,8 +27,8 @@
     <option name="變數" path="ActionManager" hit="在“變數”頁籤中顯示監視" />
     <option name="在" path="ActionManager" hit="在“變數”頁籤中顯示監視" />
     <option name="頁籤中顯示監視" path="ActionManager" hit="在“變數”頁籤中顯示監視" />
-    <option name="在會話完成時取消靜音中斷點" path="ActionManager" hit="在會話完成時取消靜音中斷點" />
-    <option name="在主控台中評估" path="ActionManager" hit="在主控台中評估" />
+    <option name="在會話完成時取消忽略中斷點" path="ActionManager" hit="在會話完成時取消忽略中斷點" />
+    <option name="在主控台中求值" path="ActionManager" hit="在主控台中求值" />
     <option name="在中斷點時獲取焦點" path="ActionManager" hit="在中斷點時獲取焦點" />
     <option name="在編輯器中顯示變量值" path="ActionManager" hit="在編輯器中顯示變量值" />
     <option name="在編輯器中顯示可用的偵錯器會話值" path="ActionManager" hit="在編輯器中顯示可用的偵錯器會話值" />
@@ -45,6 +42,10 @@
     <option name="複製堆疊" path="ActionManager" hit="複製堆疊" />
     <option name="複製監視" path="ActionManager" hit="複製監視" />
     <option name="完成後聚焦" path="ActionManager" hit="完成後聚焦" />
+    <option name="對任意表達式求值" path="ActionManager" hit="對任意表達式求值" />
+    <option name="對所選表達式求值" path="ActionManager" hit="對所選表達式求值" />
+    <option name="對表達式快速求值" path="ActionManager" hit="對表達式快速求值" />
+    <option name="對表達式求值" path="ActionManager" hit="對表達式求值…" />
     <option name="將所選節點的值與剪貼簿文本進行比較" path="ActionManager" hit="將所選節點的值與剪貼簿文本進行比較" />
     <option name="將所選節點的值複製到剪貼簿" path="ActionManager" hit="將所選節點的值複製到剪貼簿" />
     <option name="將所選節點的名稱複製到剪貼簿" path="ActionManager" hit="將所選節點的名稱複製到剪貼簿" />
@@ -53,10 +54,8 @@
     <option name="強制步入" path="ActionManager" hit="強制步入" />
     <option name="強制步過" path="ActionManager" hit="強制步過" />
     <option name="強制執行到游標" path="ActionManager" hit="強制執行到游標" />
-    <option name="快速計算表達式" path="ActionManager" hit="快速計算表達式" />
+    <option name="忽略中斷點" path="ActionManager" hit="忽略中斷點" />
     <option name="恢復" path="ActionManager" hit="恢復" />
-    <option name="恢復上次刪除的中斷點" path="ActionManager" hit="恢復上次刪除的中斷點" />
-    <option name="恢復中斷點" path="ActionManager" hit="恢復中斷點" />
     <option name="恢復程序" path="ActionManager" hit="恢復程序" />
     <option name="恢復程序執行" path="ActionManager" hit="恢復程序執行" />
     <option name="開啟所選值類型的源" path="ActionManager" hit="開啟所選值類型的源" />
@@ -66,10 +65,12 @@
     <option name="新增監視" path="ActionManager" hit="新增監視…" />
     <option name="顯示" path="ActionManager" hit="顯示/隱藏庫框架" />
     <option name="隱藏庫框架" path="ActionManager" hit="顯示/隱藏庫框架" />
+    <option name="欄位" path="ActionManager" hit="顯示“對表達式求值”欄位" />
+    <option name="對表達式求值" path="ActionManager" hit="顯示“對表達式求值”欄位" />
+    <option name="顯示" path="ActionManager" hit="顯示“對表達式求值”欄位" />
     <option name="顯示參照物件" path="ActionManager" hit="顯示參照物件…" />
     <option name="顯示當前程序執行點" path="ActionManager" hit="顯示當前程序執行點" />
     <option name="顯示執行點" path="ActionManager" hit="顯示執行點" />
-    <option name="顯示計算表達式欄位" path="ActionManager" hit="顯示計算表達式欄位" />
     <option name="智能步入" path="ActionManager" hit="智能步入" />
     <option name="暫停" path="ActionManager" hit="暫停" />
     <option name="暫停程序" path="ActionManager" hit="暫停程序" />
@@ -100,10 +101,7 @@
     <option name="編輯" path="ActionManager" hit="編輯…" />
     <option name="編輯中斷點" path="ActionManager" hit="編輯中斷點" />
     <option name="行號上的中斷點" path="ActionManager" hit="行號上的中斷點" />
-    <option name="計算表達式" path="ActionManager" hit="計算表達式…" />
     <option name="設定值" path="ActionManager" hit="設定值…" />
-    <option name="評估任意表達式" path="ActionManager" hit="評估任意表達式" />
-    <option name="評估所選表達式" path="ActionManager" hit="評估所選表達式" />
     <option name="偵錯" path="ActionManager" hit="偵錯" />
     <option name="偵錯器強制步動作" path="ActionManager" hit="偵錯器強制步動作" />
     <option name="偵錯器動作" path="ActionManager" hit="偵錯器動作" />
@@ -115,27 +113,27 @@
     <option name="執行到游標處" path="ActionManager" hit="執行到游標處" />
     <option name="忽略任何中斷點" path="ActionManager" hit="執行到文字游標所在的行，忽略任何中斷點" />
     <option name="執行到文字游標所在的行" path="ActionManager" hit="執行到文字游標所在的行，忽略任何中斷點" />
-    <option name="frame" path="ActionManager" hit="重設 Frame" />
-    <option name="重設" path="ActionManager" hit="重設 Frame" />
+    <option name="還原上次刪除的中斷點" path="ActionManager" hit="還原上次刪除的中斷點" />
+    <option name="還原中斷點" path="ActionManager" hit="還原中斷點" />
+    <option name="重設幀" path="ActionManager" hit="重設幀" />
     <option name="附加到程序" path="ActionManager" hit="附加到程序…" />
     <option name="附加對話框設定" path="ActionManager" hit="附加對話框設定" />
-    <option name="靜音中斷點" path="ActionManager" hit="靜音中斷點" />
     <option name="在偵錯會話結束時聚焦此檢視" path="ActionManager" hit="預設情況下，在偵錯會話結束時聚焦此檢視" />
     <option name="預設情況下" path="ActionManager" hit="預設情況下，在偵錯會話結束時聚焦此檢視" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.偵錯器" configurable_name="偵錯器">
     <option name="偵錯器" hit="偵錯器" />
-    <option name="為執行行計算表達式文本" hit="為執行行計算表達式文本" />
     <option name="為中斷點行內聯值" hit="為中斷點行內聯值" />
     <option name="內聯修改後的值" hit="內聯修改後的值" />
     <option name="內聯堆疊幀" hit="內聯堆疊幀" />
     <option name="內聯的值" hit="內聯的值" />
     <option name="執行點" hit="執行點" />
+    <option name="執行行的求解表達式文本" hit="執行行的求解表達式文本" />
     <option name="中斷點行" hit="中斷點行" />
     <option name="智能單步執行目標" hit="智能單步執行目標" />
     <option name="智能單步執行選區" hit="智能單步執行選區" />
+    <option name="求解的表達式文本" hit="求解的表達式文本" />
     <option name="沒有頂部框架" hit="沒有頂部框架" />
-    <option name="計算表達式文本" hit="計算表達式文本" />
   </configurable>
   <configurable id="project.propDebugger" configurable_name="偵錯器">
     <option name="偵錯器" hit="偵錯器" />
@@ -162,9 +160,9 @@
     <option name="檢視中啟用自動表達式" hit="在 變數 檢視中啟用自動表達式" />
     <option name="l" hit="按字母順序排列值 L " />
     <option name="按字母順序排列值" hit="按字母順序排列值 L " />
-    <option name="ms" hit="提示延遲值  ms  V  " />
-    <option name="v" hit="提示延遲值  ms  V  " />
-    <option name="提示延遲值" hit="提示延遲值  ms  V  " />
+    <option name="v" hit="提示延遲值  毫秒  V  " />
+    <option name="提示延遲值" hit="提示延遲值  毫秒  V  " />
+    <option name="毫秒" hit="提示延遲值  毫秒  V  " />
     <option name="資料檢視" hit="資料檢視" />
     <option name="顯示值工具提示" hit="顯示值工具提示 " />
     <option name="編輯器" hit="編輯器" />

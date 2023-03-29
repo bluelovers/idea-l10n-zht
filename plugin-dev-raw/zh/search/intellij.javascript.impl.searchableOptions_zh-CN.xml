@@ -1,10 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="add" path="ActionManager" hit="Add Enum Explicit Value" />
-    <option name="enum" path="ActionManager" hit="Add Enum Explicit Value" />
-    <option name="explicit" path="ActionManager" hit="Add Enum Explicit Value" />
-    <option name="value" path="ActionManager" hit="Add Enum Explicit Value" />
     <option name="getter" path="ActionManager" hit="Getter" />
     <option name="getter" path="ActionManager" hit="Getter 和 Setter" />
     <option name="setter" path="ActionManager" hit="Getter 和 Setter" />
@@ -94,6 +90,7 @@
     <option name="腳本" path="ActionManager" hit="顯示 npm 腳本" />
     <option name="顯示錯誤詳情" path="ActionManager" hit="顯示錯誤詳情" />
     <option name="建構函式" path="ActionManager" hit="建構函式" />
+    <option name="新增枚舉顯式值" path="ActionManager" hit="新增枚舉顯式值" />
     <option name="index" path="ActionManager" hit="生成 index.js/index.ts" />
     <option name="js" path="ActionManager" hit="生成 index.js/index.ts" />
     <option name="ts" path="ActionManager" hit="生成 index.js/index.ts" />
@@ -323,6 +320,7 @@
     <option name="始終" path="標點" hit="始終" />
     <option name="f" path="程式碼生成" hit="欄位前綴  F  " />
     <option name="欄位前綴" path="程式碼生成" hit="欄位前綴  F  " />
+    <option name="欄位周圍" path="空行" hit="欄位周圍 " />
     <option name="對匯入的成員排序" path="Import" hit="對匯入的成員排序" />
     <option name="t" path="標點" hit="尾隨逗號 T  " />
     <option name="尾隨逗號" path="標點" hit="尾隨逗號 T  " />
@@ -342,6 +340,7 @@
     <option name="n" path="程式碼生成" hit="檔案命名約定  N  " />
     <option name="檔案命名約定" path="程式碼生成" hit="檔案命名約定  N  " />
     <option name="方案" hit="方案 " />
+    <option name="方法周圍" path="空行" hit="方法周圍 " />
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="最小的空白行" path="空行" hit="最小的空白行" />
     <option name="標點" path="標點" hit="標點" />
@@ -349,14 +348,12 @@
     <option name="此項的首選顯式類型" path="程式碼生成" hit="此項的首選顯式類型 " />
     <option name="註釋" path="程式碼生成" hit="註釋" />
     <option name="註釋塊在第一列" path="程式碼生成" hit="註釋塊在第一列" />
-    <option name="環繞欄位" path="空行" hit="環繞欄位 " />
-    <option name="環繞方法" path="空行" hit="環繞方法 " />
-    <option name="環繞類別" path="空行" hit="環繞類別 " />
     <option name="停用" hit="停用" />
     <option name="移除" path="標點" hit="移除" />
     <option name="空格" path="空格" hit="空格" />
     <option name="空行" path="空行" hit="空行" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
+    <option name="類別周圍" path="空行" hit="類別周圍 " />
     <option name="類型" path="程式碼生成" hit="類型" />
     <option name="縮排" path="制表符和縮排" hit="縮排 " />
     <option name="縮排組中的所有鏈式呼叫" path="制表符和縮排" hit="縮排組中的所有鏈式呼叫" />
@@ -719,6 +716,7 @@
     <option name="始終為" path="Import" hit="始終為   js " />
     <option name="f" path="程式碼生成" hit="欄位前綴  F  " />
     <option name="欄位前綴" path="程式碼生成" hit="欄位前綴  F  " />
+    <option name="欄位周圍" path="空行" hit="欄位周圍 " />
     <option name="對匯入的成員排序" path="Import" hit="對匯入的成員排序" />
     <option name="t" path="標點" hit="尾隨逗號 T  " />
     <option name="尾隨逗號" path="標點" hit="尾隨逗號 T  " />
@@ -740,6 +738,7 @@
     <option name="n" path="程式碼生成" hit="檔案命名約定  N  " />
     <option name="檔案命名約定" path="程式碼生成" hit="檔案命名約定  N  " />
     <option name="方案" hit="方案 " />
+    <option name="方法周圍" path="空行" hit="方法周圍 " />
     <option name="智能制表符" path="制表符和縮排" hit="智能制表符" />
     <option name="最小的空白行" path="空行" hit="最小的空白行" />
     <option name="標點" path="標點" hit="標點" />
@@ -747,14 +746,12 @@
     <option name="此項的首選顯式類型" path="程式碼生成" hit="此項的首選顯式類型 " />
     <option name="註釋" path="程式碼生成" hit="註釋" />
     <option name="註釋塊在第一列" path="程式碼生成" hit="註釋塊在第一列" />
-    <option name="環繞欄位" path="空行" hit="環繞欄位 " />
-    <option name="環繞方法" path="空行" hit="環繞方法 " />
-    <option name="環繞類別" path="空行" hit="環繞類別 " />
     <option name="停用" hit="停用" />
     <option name="移除" path="標點" hit="移除" />
     <option name="空格" path="空格" hit="空格" />
     <option name="空行" path="空行" hit="空行" />
     <option name="空行時保持縮排" path="制表符和縮排" hit="空行時保持縮排" />
+    <option name="類別周圍" path="空行" hit="類別周圍 " />
     <option name="類型" path="程式碼生成" hit="類型" />
     <option name="縮排" path="制表符和縮排" hit="縮排 " />
     <option name="縮排組中的所有鏈式呼叫" path="制表符和縮排" hit="縮排組中的所有鏈式呼叫" />

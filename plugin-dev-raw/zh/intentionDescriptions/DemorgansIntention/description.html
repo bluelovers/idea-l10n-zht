@@ -1,7 +1,21 @@
 <html>
 <body>
-遵循德摩根定律將把合取或析取運算取代為取反的對應運算。
-<p>如果布爾運算在 <code>if</code> 或 <code>unless</code> 語句內部，則可以翻轉語句修飾符
- 以簡化最終結果。</p>
+在布爾表達式中時，將
+<table>
+  <tr>
+    <td> &nbsp;&nbsp;&nbsp;</td>
+    <td>
+      <code>a || b</code> 取代為 <code>!(!a && !b)</code> 或
+    </td>
+  </tr>
+  <tr>
+    <td> &nbsp;&nbsp;&nbsp;</td>
+    <td>
+      <code>a && b</code> 取代為 <code>!(!a || !b)</code>
+    </td>
+  </tr>
+</table>
+
+。
 </body>
 </html>
