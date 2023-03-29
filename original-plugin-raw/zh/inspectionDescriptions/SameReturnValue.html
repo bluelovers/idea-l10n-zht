@@ -2,24 +2,17 @@
 <body>
 报告始终返回相同常量的方法和方法层次结构。
 <p>
-The inspection works differently in batch-mode
-  (from <b>Code | Inspect Code</b> or <b>Code | Analyze Code | Run Inspection by Name</b>)
-  and on-the-fly in the editor:
+该检查在批处理模式（与<b>代码 | 检查代码</b>或<b>代码 | 分析代码 | 按名称运行检查</b>）和在编辑器中动态运行时的工作方式不同：
 <ul>
-  <li>In batch-mode, the inspection reports methods and method hierarchies that always
-    return the same constant.</li>
-  <li>In the editor, the inspection only reports methods that have more than one <code>return</code>
-    statement, do not have super methods, and cannot be overridden. If a method overrides or
-    implements a method, a contract may require it to return a specific constant, but at the
-    same time, we may want to have several exit points. If a method can be overridden, it is
-    possible that a different value will be returned in subclasses.
+  <li>在批处理模式中，该检查会报告始终返回相同常量的方法和方法层次结构。</li>
+  <li>在编辑器中，该检查仅会报告有多个 <code>return</code> 语句、没有 super 方法，和无法被重写的方法。 如果一个方法重写或实现了一个方法，约定可能会要求它返回一个特定的常量，但同时，我们可能希望有多个出口点。 如果一个方法可以被重写，则可能在子类中返回不同的值。
   </li>
 </ul>
 <p><b>示例：</b></p>
 <pre><code>
   class X {
-                // Warn only in batch-mode:
-    int xxx() { // Method 'xxx()' and all its overriding methods always return '0'
+                // 仅在批处理模式下发出警告：
+    int xxx() { // 方法 'xxx()' 及其所有重写方法始终返回 '0'
       return 0;
     }
   }
@@ -30,13 +23,13 @@ The inspection works differently in batch-mode
         return 0;
     }
 
-                // Warn only in batch-mode:
-    int yyy() { // Method 'yyy()' always returns '0'
+                // 仅在批处理模式下发出警告：
+    int yyy() { // 方法 'yyy()' 始终返回 '0'
         return 0;
     }
 
-                                  // Warn both in batch-mode and on-the-fly:
-    final int zzz(boolean flag) { // Method 'zzz()' always returns '0'
+                                  // 在批处理模式下和动态运行时均发出警告：
+    final int zzz(boolean flag) { // 方法 'zzz()' 始终返回 '0'
         if (Math.random() > 0.5) {
             return 0;
         }

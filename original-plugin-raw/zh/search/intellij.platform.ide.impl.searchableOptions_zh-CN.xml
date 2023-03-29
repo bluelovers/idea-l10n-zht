@@ -12,9 +12,9 @@
   <configurable id="preferences.general" configurable_name="系统设置">
     <option name="保存前备份文件" hit="保存前备份文件" />
     <option name="关闭具有运行进程的工具窗口时" hit="关闭具有运行进程的工具窗口时 " />
-    <option name="ide" hit="切换到 IDE 窗口或打开编辑器选项卡时同步外部更改" />
-    <option name="切换到" hit="切换到 IDE 窗口或打开编辑器选项卡时同步外部更改" />
-    <option name="窗口或打开编辑器选项卡时同步外部更改" hit="切换到 IDE 窗口或打开编辑器选项卡时同步外部更改" />
+    <option name="ide" hit="切换到 IDE 窗口或打开编辑器标签页时同步外部更改" />
+    <option name="切换到" hit="切换到 IDE 窗口或打开编辑器标签页时同步外部更改" />
+    <option name="窗口或打开编辑器标签页时同步外部更改" hit="切换到 IDE 窗口或打开编辑器标签页时同步外部更改" />
     <option name="切换到其他应用程序或内置终端时保存文件" hit="切换到其他应用程序或内置终端时保存文件" />
     <option name="启动时重新打开项目" hit="启动时重新打开项目" />
     <option name="在以下位置打开项目" hit="在以下位置打开项目" />
@@ -63,12 +63,6 @@
     <option name="275" hit="    " />
     <option name="300" hit="    " />
     <option name="ide" hit="IDE " />
-    <option name="each" hit="Remember size for each tool window" />
-    <option name="for" hit="Remember size for each tool window" />
-    <option name="remember" hit="Remember size for each tool window" />
-    <option name="size" hit="Remember size for each tool window" />
-    <option name="tool" hit="Remember size for each tool window" />
-    <option name="window" hit="Remember size for each tool window" />
     <option name="ui" hit="UI 选项" />
     <option name="选项" hit="UI 选项" />
     <option name="与操作系统同步" hit="与操作系统同步" />
@@ -105,6 +99,7 @@
     <option name="缩放" hit="缩放 " />
     <option name="背景图像" hit="背景图像 " />
     <option name="获取更多主题" hit="获取更多主题" />
+    <option name="记住每个工具窗口的大小" hit="记住每个工具窗口的大小" />
     <option name="运作方式" hit="运作方式" />
     <option name="重置为默认" hit="重置为默认" />
     <option name="针对红-绿色觉缺陷调整颜色" hit="针对红 绿色觉缺陷调整颜色" />
@@ -143,17 +138,12 @@
     <option name="和" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
     <option name="layouts" path="ActionManager" hit="Layouts" />
     <option name="mq" path="ActionManager" hit="MQ" />
-    <option name="meet" path="ActionManager" hit="Meet the New UI" />
-    <option name="new" path="ActionManager" hit="Meet the New UI" />
-    <option name="the" path="ActionManager" hit="Meet the New UI" />
-    <option name="ui" path="ActionManager" hit="Meet the New UI" />
     <option name="devkit" path="ActionManager" hit="Plugin DevKit" />
     <option name="plugin" path="ActionManager" hit="Plugin DevKit" />
-    <option name="defender" path="ActionManager" hit="Reset Microsoft Defender Notification" />
-    <option name="microsoft" path="ActionManager" hit="Reset Microsoft Defender Notification" />
-    <option name="notification" path="ActionManager" hit="Reset Microsoft Defender Notification" />
-    <option name="reset" path="ActionManager" hit="Reset Microsoft Defender Notification" />
     <option name="space" path="ActionManager" hit="Space" />
+    <option name="layouts" path="ActionManager" hit="Tool Window Layouts" />
+    <option name="tool" path="ActionManager" hit="Tool Window Layouts" />
+    <option name="window" path="ActionManager" hit="Tool Window Layouts" />
     <option name="wsl" path="ActionManager" hit="WSL 中的主目录" />
     <option name="中的主目录" path="ActionManager" hit="WSL 中的主目录" />
     <option name="xml" path="ActionManager" hit="XML 配置文件" />
@@ -207,11 +197,11 @@
     <option name="macos" path="ActionManager" hit="使用 macOS 系统调色板输入特殊字符" />
     <option name="使用" path="ActionManager" hit="使用 macOS 系统调色板输入特殊字符" />
     <option name="系统调色板输入特殊字符" path="ActionManager" hit="使用 macOS 系统调色板输入特殊字符" />
-    <option name="使用包含在单行选项卡布局中不适合屏幕的选项卡列表的下拉列表" path="ActionManager" hit="使用包含在单行选项卡布局中不适合屏幕的选项卡列表的下拉列表" />
+    <option name="使用包含在单行标签页布局中不适合屏幕的标签页列表的下拉列表" path="ActionManager" hit="使用包含在单行标签页布局中不适合屏幕的标签页列表的下拉列表" />
     <option name="保存所有文件和设置" path="ActionManager" hit="保存所有文件和设置" />
     <option name="保存文档" path="ActionManager" hit="保存文档" />
     <option name="保存至终止环" path="ActionManager" hit="保存至终止环" />
-    <option name="保持选项卡打开" path="ActionManager" hit="保持选项卡打开" />
+    <option name="保持标签页打开" path="ActionManager" hit="保持标签页打开" />
     <option name="ide" path="ActionManager" hit="修复 IDE" />
     <option name="修复" path="ActionManager" hit="修复 IDE" />
     <option name="wsl" path="ActionManager" hit="修正 WSL 防火墙设置" />
@@ -227,26 +217,26 @@
     <option name="全选" path="ActionManager" hit="全选" />
     <option name="全部保存" path="ActionManager" hit="全部保存" />
     <option name="关于" path="ActionManager" hit="关于" />
-    <option name="关闭其他选项卡" path="ActionManager" hit="关闭其他选项卡" />
+    <option name="关闭其他标签页" path="ActionManager" hit="关闭其他标签页" />
     <option name="关闭其他项目" path="ActionManager" hit="关闭其他项目" />
     <option name="关闭具有只读文件的所有编辑器" path="ActionManager" hit="关闭具有只读文件的所有编辑器" />
-    <option name="关闭右侧选项卡" path="ActionManager" hit="关闭右侧选项卡" />
+    <option name="关闭右侧标签页" path="ActionManager" hit="关闭右侧标签页" />
     <option name="关闭右边的所有编辑器" path="ActionManager" hit="关闭右边的所有编辑器" />
-    <option name="关闭左侧选项卡" path="ActionManager" hit="关闭左侧选项卡" />
+    <option name="关闭左侧标签页" path="ActionManager" hit="关闭左侧标签页" />
     <option name="关闭左边的所有编辑器" path="ActionManager" hit="关闭左边的所有编辑器" />
     <option name="关闭当前焦点的内容" path="ActionManager" hit="关闭当前焦点的内容" />
     <option name="关闭当前项目" path="ActionManager" hit="关闭当前项目" />
     <option name="关闭所有" path="ActionManager" hit="关闭所有" />
-    <option name="关闭所有只读选项卡" path="ActionManager" hit="关闭所有只读选项卡" />
+    <option name="关闭所有只读标签页" path="ActionManager" hit="关闭所有只读标签页" />
     <option name="关闭所有未固定" path="ActionManager" hit="关闭所有未固定" />
     <option name="关闭所有未固定的编辑窗口" path="ActionManager" hit="关闭所有未固定的编辑窗口" />
-    <option name="关闭所有选项卡" path="ActionManager" hit="关闭所有选项卡" />
+    <option name="关闭所有标签页" path="ActionManager" hit="关闭所有标签页" />
     <option name="关闭所有项目" path="ActionManager" hit="关闭所有项目" />
-    <option name="关闭活动工具窗口选项卡" path="ActionManager" hit="关闭活动工具窗口选项卡" />
+    <option name="关闭标签页" path="ActionManager" hit="关闭标签页" />
+    <option name="关闭活动工具窗口标签页" path="ActionManager" hit="关闭活动工具窗口标签页" />
+    <option name="关闭活动标签页" path="ActionManager" hit="关闭活动标签页" />
     <option name="关闭活动编辑器" path="ActionManager" hit="关闭活动编辑器" />
-    <option name="关闭活动选项卡" path="ActionManager" hit="关闭活动选项卡" />
     <option name="关闭第一个" path="ActionManager" hit="关闭第一个" />
-    <option name="关闭选项卡" path="ActionManager" hit="关闭选项卡" />
     <option name="关闭项目" path="ActionManager" hit="关闭项目" />
     <option name="其他" path="ActionManager" hit="其他" />
     <option name="减小字体大小" path="ActionManager" hit="减小字体大小" />
@@ -335,7 +325,7 @@
     <option name="向上滚动" path="ActionManager" hit="向上滚动" />
     <option name="向上滚动并根据需要移动" path="ActionManager" hit="向上滚动并根据需要移动" />
     <option name="向上滚动页面" path="ActionManager" hit="向上滚动页面" />
-    <option name="向上滚动页面并扩展选择范围" path="ActionManager" hit="向上滚动页面并扩展选择范围" />
+    <option name="向上滚动页面并扩展选区" path="ActionManager" hit="向上滚动页面并扩展选区" />
     <option name="向上滚动页面并选择节点" path="ActionManager" hit="向上滚动页面并选择节点" />
     <option name="向上滚动页面并选择行" path="ActionManager" hit="向上滚动页面并选择行" />
     <option name="向上移动并滚动" path="ActionManager" hit="向上移动并滚动" />
@@ -344,7 +334,7 @@
     <option name="向下滚动" path="ActionManager" hit="向下滚动" />
     <option name="向下滚动并根据需要移动" path="ActionManager" hit="向下滚动并根据需要移动" />
     <option name="向下滚动页面" path="ActionManager" hit="向下滚动页面" />
-    <option name="向下滚动页面并扩展选择范围" path="ActionManager" hit="向下滚动页面并扩展选择范围" />
+    <option name="向下滚动页面并扩展选区" path="ActionManager" hit="向下滚动页面并扩展选区" />
     <option name="向下滚动页面并选择节点" path="ActionManager" hit="向下滚动页面并选择节点" />
     <option name="向下滚动页面并选择行" path="ActionManager" hit="向下滚动页面并选择行" />
     <option name="向下移动并滚动" path="ActionManager" hit="向下移动并滚动" />
@@ -369,10 +359,10 @@
     <option name="取消固定活动工具窗口" path="ActionManager" hit="固定/取消固定活动工具窗口" />
     <option name="固定" path="ActionManager" hit="固定/取消固定活动工具窗口" />
     <option name="固定模式" path="ActionManager" hit="固定模式" />
-    <option name="固定活动工具窗口选项卡" path="ActionManager" hit="固定活动工具窗口选项卡" />
-    <option name="固定活动编辑器或工具窗口选项卡" path="ActionManager" hit="固定活动编辑器或工具窗口选项卡" />
-    <option name="固定活动编辑器选项卡" path="ActionManager" hit="固定活动编辑器选项卡" />
-    <option name="固定活动选项卡" path="ActionManager" hit="固定活动选项卡" />
+    <option name="固定活动工具窗口标签页" path="ActionManager" hit="固定活动工具窗口标签页" />
+    <option name="固定活动标签页" path="ActionManager" hit="固定活动标签页" />
+    <option name="固定活动编辑器或工具窗口标签页" path="ActionManager" hit="固定活动编辑器或工具窗口标签页" />
+    <option name="固定活动编辑器标签页" path="ActionManager" hit="固定活动编辑器标签页" />
     <option name="图表" path="ActionManager" hit="图表" />
     <option name="中显示" path="ActionManager" hit="在 文件管理器 中显示" />
     <option name="在" path="ActionManager" hit="在 文件管理器 中显示" />
@@ -424,8 +414,8 @@
     <option name="在保持选区的情况下将文本光标移至页面底部" path="ActionManager" hit="在保持选区的情况下将文本光标移至页面底部" />
     <option name="在保持选区的情况下将文本光标移至页面顶部" path="ActionManager" hit="在保持选区的情况下将文本光标移至页面顶部" />
     <option name="在右侧拆分部分打开" path="ActionManager" hit="在右侧拆分部分打开" />
-    <option name="在多编辑器文件中选择上一个选项卡" path="ActionManager" hit="在多编辑器文件中选择上一个选项卡" />
-    <option name="在多编辑器文件中选择下一个选项卡" path="ActionManager" hit="在多编辑器文件中选择下一个选项卡" />
+    <option name="在多编辑器文件中选择上一个标签页" path="ActionManager" hit="在多编辑器文件中选择上一个标签页" />
+    <option name="在多编辑器文件中选择下一个标签页" path="ActionManager" hit="在多编辑器文件中选择下一个标签页" />
     <option name="在平台的文件管理器中高亮显示文件" path="ActionManager" hit="在平台的文件管理器中高亮显示文件" />
     <option name="以同时编辑多行代码" path="ActionManager" hit="在当前文件中设置多个光标，以同时编辑多行代码。" />
     <option name="在当前文件中设置多个光标" path="ActionManager" hit="在当前文件中设置多个光标，以同时编辑多行代码。" />
@@ -446,11 +436,11 @@
     <option name="在新窗口打开所选条目的编辑器并使之获得焦点" path="ActionManager" hit="在新窗口打开所选条目的编辑器并使之获得焦点" />
     <option name="在新编辑器窗口中打开" path="ActionManager" hit="在新编辑器窗口中打开" />
     <option name="在最近的更改点中移动" path="ActionManager" hit="在最近的更改点中移动" />
-    <option name="在活动选项卡组中关闭所有编辑窗口" path="ActionManager" hit="在活动选项卡组中关闭所有编辑窗口" />
+    <option name="在活动标签页组中关闭所有编辑窗口" path="ActionManager" hit="在活动标签页组中关闭所有编辑窗口" />
     <option name="在浏览器中打开" path="ActionManager" hit="在浏览器中打开" />
     <option name="在浏览器中打开所选文件" path="ActionManager" hit="在浏览器中打开所选文件" />
+    <option name="在相反的标签页组中打开此编辑器的副本" path="ActionManager" hit="在相反的标签页组中打开此编辑器的副本" />
     <option name="在相反的组中打开" path="ActionManager" hit="在相反的组中打开" />
-    <option name="在相反的选项卡组中打开此编辑器的副本" path="ActionManager" hit="在相反的选项卡组中打开此编辑器的副本" />
     <option name="在编辑器中打开本地文件" path="ActionManager" hit="在编辑器中打开本地文件" />
     <option name="在编辑器中打开项目或文件" path="ActionManager" hit="在编辑器中打开项目或文件" />
     <option name="在项目中打开文件" path="ActionManager" hit="在项目中打开文件…" />
@@ -483,29 +473,29 @@
     <option name="导航到上一个匹配项" path="ActionManager" hit="导航到上一个匹配项" />
     <option name="导航到下一个匹配项" path="ActionManager" hit="导航到下一个匹配项" />
     <option name="导航栏" path="ActionManager" hit="导航栏" />
-    <option name="将上一个节点添加到选择范围" path="ActionManager" hit="将上一个节点添加到选择范围。" />
-    <option name="将上一列添加到选择范围" path="ActionManager" hit="将上一列添加到选择范围。" />
-    <option name="将上一行添加到选择范围" path="ActionManager" hit="将上一行添加到选择范围。" />
-    <option name="将下一个节点添加到选择范围" path="ActionManager" hit="将下一个节点添加到选择范围。" />
-    <option name="将下一列添加到选择范围" path="ActionManager" hit="将下一列添加到选择范围。" />
-    <option name="将下一行添加到选择范围" path="ActionManager" hit="将下一行添加到选择范围。" />
+    <option name="将上一个节点添加到选区" path="ActionManager" hit="将上一个节点添加到选区。" />
+    <option name="将上一列添加到选区" path="ActionManager" hit="将上一列添加到选区。" />
+    <option name="将上一行添加到选区" path="ActionManager" hit="将上一行添加到选区。" />
+    <option name="将下一个节点添加到选区" path="ActionManager" hit="将下一个节点添加到选区。" />
+    <option name="将下一列添加到选区" path="ActionManager" hit="将下一列添加到选区。" />
+    <option name="将下一行添加到选区" path="ActionManager" hit="将下一行添加到选区。" />
     <option name="将与所选文件或目录对应的路径复制到剪贴板" path="ActionManager" hit="将与所选文件或目录对应的路径复制到剪贴板" />
     <option name="将周围的可滚动区域向上滚动一个单位" path="ActionManager" hit="将周围的可滚动区域向上滚动一个单位。" />
     <option name="将周围的可滚动区域向上滚动一页" path="ActionManager" hit="将周围的可滚动区域向上滚动一页。" />
-    <option name="将周围的可滚动区域向上滚动一页" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后将相应的节点添加到选择范围。" />
-    <option name="然后将相应的节点添加到选择范围" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后将相应的节点添加到选择范围。" />
-    <option name="将周围的可滚动区域向上滚动一页" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后将相应的行添加到选择范围。" />
-    <option name="然后将相应的行添加到选择范围" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后将相应的行添加到选择范围。" />
+    <option name="将周围的可滚动区域向上滚动一页" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后将相应的节点添加到选区。" />
+    <option name="然后将相应的节点添加到选区" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后将相应的节点添加到选区。" />
+    <option name="将周围的可滚动区域向上滚动一页" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后将相应的行添加到选区。" />
+    <option name="然后将相应的行添加到选区" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后将相应的行添加到选区。" />
     <option name="将周围的可滚动区域向上滚动一页" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后选择相应的节点。" />
     <option name="然后选择相应的节点" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后选择相应的节点。" />
     <option name="将周围的可滚动区域向上滚动一页" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后选择相应的行。" />
     <option name="然后选择相应的行" path="ActionManager" hit="将周围的可滚动区域向上滚动一页，然后选择相应的行。" />
     <option name="将周围的可滚动区域向下滚动一个单位" path="ActionManager" hit="将周围的可滚动区域向下滚动一个单位。" />
     <option name="将周围的可滚动区域向下滚动一页" path="ActionManager" hit="将周围的可滚动区域向下滚动一页。" />
-    <option name="将周围的可滚动区域向下滚动一页" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后将相应的节点添加到选择范围。" />
-    <option name="然后将相应的节点添加到选择范围" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后将相应的节点添加到选择范围。" />
-    <option name="将周围的可滚动区域向下滚动一页" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后将相应的行添加到选择范围。" />
-    <option name="然后将相应的行添加到选择范围" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后将相应的行添加到选择范围。" />
+    <option name="将周围的可滚动区域向下滚动一页" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后将相应的节点添加到选区。" />
+    <option name="然后将相应的节点添加到选区" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后将相应的节点添加到选区。" />
+    <option name="将周围的可滚动区域向下滚动一页" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后将相应的行添加到选区。" />
+    <option name="然后将相应的行添加到选区" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后将相应的行添加到选区。" />
     <option name="将周围的可滚动区域向下滚动一页" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后选择相应的节点。" />
     <option name="然后选择相应的节点" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后选择相应的节点。" />
     <option name="将周围的可滚动区域向下滚动一页" path="ActionManager" hit="将周围的可滚动区域向下滚动一页，然后选择相应的行。" />
@@ -539,49 +529,49 @@
     <option name="将文本光标移至页面底部" path="ActionManager" hit="将文本光标移至页面底部" />
     <option name="将文本光标移至页面顶部" path="ActionManager" hit="将文本光标移至页面顶部" />
     <option name="将日志和设置压缩到文件中" path="ActionManager" hit="将日志和设置压缩到文件中" />
-    <option name="将模块组转换为限定名称" path="ActionManager" hit="将模块组转换为限定名称..." />
+    <option name="将模块组转换为限定名称" path="ActionManager" hit="将模块组转换为限定名称…" />
     <option name="将活动工具窗口延伸至右侧" path="ActionManager" hit="将活动工具窗口延伸至右侧" />
     <option name="将活动工具窗口延伸至左侧" path="ActionManager" hit="将活动工具窗口延伸至左侧" />
     <option name="将活动工具窗口延伸至底部" path="ActionManager" hit="将活动工具窗口延伸至底部" />
     <option name="将活动工具窗口延伸至顶部" path="ActionManager" hit="将活动工具窗口延伸至顶部" />
-    <option name="2" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件打开到右侧组" />
-    <option name="个选项卡组" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件打开到右侧组" />
-    <option name="将编辑器区域拆分为" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件打开到右侧组" />
-    <option name="然后将当前文件打开到右侧组" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件打开到右侧组" />
-    <option name="2" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件移至右侧组" />
-    <option name="个选项卡组" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件移至右侧组" />
-    <option name="将编辑器区域拆分为" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件移至右侧组" />
-    <option name="然后将当前文件移至右侧组" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件移至右侧组" />
-    <option name="2" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件移至底部组" />
-    <option name="个选项卡组" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件移至底部组" />
-    <option name="将编辑器区域拆分为" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件移至底部组" />
-    <option name="然后将当前文件移至底部组" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前文件移至底部组" />
-    <option name="2" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前选项卡移至右侧组并关闭左侧编辑器" />
-    <option name="个选项卡组" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前选项卡移至右侧组并关闭左侧编辑器" />
-    <option name="将编辑器区域拆分为" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前选项卡移至右侧组并关闭左侧编辑器" />
-    <option name="然后将当前选项卡移至右侧组并关闭左侧编辑器" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前选项卡移至右侧组并关闭左侧编辑器" />
-    <option name="2" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前选项卡移至底部组并关闭顶部编辑器" />
-    <option name="个选项卡组" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前选项卡移至底部组并关闭顶部编辑器" />
-    <option name="将编辑器区域拆分为" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前选项卡移至底部组并关闭顶部编辑器" />
-    <option name="然后将当前选项卡移至底部组并关闭顶部编辑器" path="ActionManager" hit="将编辑器区域拆分为 2 个选项卡组，然后将当前选项卡移至底部组并关闭顶部编辑器" />
+    <option name="2" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件打开到右侧组" />
+    <option name="个标签页组" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件打开到右侧组" />
+    <option name="将编辑器区域拆分为" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件打开到右侧组" />
+    <option name="然后将当前文件打开到右侧组" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件打开到右侧组" />
+    <option name="2" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件移至右侧组" />
+    <option name="个标签页组" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件移至右侧组" />
+    <option name="将编辑器区域拆分为" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件移至右侧组" />
+    <option name="然后将当前文件移至右侧组" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件移至右侧组" />
+    <option name="2" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件移至底部组" />
+    <option name="个标签页组" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件移至底部组" />
+    <option name="将编辑器区域拆分为" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件移至底部组" />
+    <option name="然后将当前文件移至底部组" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前文件移至底部组" />
+    <option name="2" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前标签页移至右侧组并关闭左侧编辑器" />
+    <option name="个标签页组" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前标签页移至右侧组并关闭左侧编辑器" />
+    <option name="将编辑器区域拆分为" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前标签页移至右侧组并关闭左侧编辑器" />
+    <option name="然后将当前标签页移至右侧组并关闭左侧编辑器" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前标签页移至右侧组并关闭左侧编辑器" />
+    <option name="2" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前标签页移至底部组并关闭顶部编辑器" />
+    <option name="个标签页组" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前标签页移至底部组并关闭顶部编辑器" />
+    <option name="将编辑器区域拆分为" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前标签页移至底部组并关闭顶部编辑器" />
+    <option name="然后将当前标签页移至底部组并关闭顶部编辑器" path="ActionManager" hit="将编辑器区域拆分为 2 个标签页组，然后将当前标签页移至底部组并关闭顶部编辑器" />
     <option name="将编辑器延伸至右侧" path="ActionManager" hit="将编辑器延伸至右侧" />
     <option name="将编辑器延伸至左侧" path="ActionManager" hit="将编辑器延伸至左侧" />
     <option name="将编辑器延伸至底部" path="ActionManager" hit="将编辑器延伸至底部" />
     <option name="将编辑器延伸至顶部" path="ActionManager" hit="将编辑器延伸至顶部" />
-    <option name="将编辑器移至相反的选项卡组" path="ActionManager" hit="将编辑器移至相反的选项卡组" />
-    <option name="将选择范围扩展到上一个节点" path="ActionManager" hit="将选择范围扩展到上一个节点" />
-    <option name="将选择范围扩展到上一列" path="ActionManager" hit="将选择范围扩展到上一列" />
-    <option name="将选择范围扩展到上一行" path="ActionManager" hit="将选择范围扩展到上一行" />
-    <option name="将选择范围扩展到下一个节点" path="ActionManager" hit="将选择范围扩展到下一个节点" />
-    <option name="将选择范围扩展到下一列" path="ActionManager" hit="将选择范围扩展到下一列" />
-    <option name="将选择范围扩展到下一行" path="ActionManager" hit="将选择范围扩展到下一行" />
-    <option name="将选择范围扩展到子节点" path="ActionManager" hit="将选择范围扩展到子节点" />
-    <option name="将选择范围扩展到最后一个节点" path="ActionManager" hit="将选择范围扩展到最后一个节点" />
-    <option name="将选择范围扩展到最后一行" path="ActionManager" hit="将选择范围扩展到最后一行" />
-    <option name="将选择范围扩展到父节点" path="ActionManager" hit="将选择范围扩展到父节点" />
-    <option name="将选择范围扩展到第一个节点" path="ActionManager" hit="将选择范围扩展到第一个节点" />
-    <option name="将选择范围扩展到第一行" path="ActionManager" hit="将选择范围扩展到第一行" />
-    <option name="将预览选项卡转换为常规编辑器选项卡" path="ActionManager" hit="将预览选项卡转换为常规编辑器选项卡" />
+    <option name="将编辑器移至相反的标签页组" path="ActionManager" hit="将编辑器移至相反的标签页组" />
+    <option name="将选区扩展到上一个节点" path="ActionManager" hit="将选区扩展到上一个节点" />
+    <option name="将选区扩展到上一列" path="ActionManager" hit="将选区扩展到上一列" />
+    <option name="将选区扩展到上一行" path="ActionManager" hit="将选区扩展到上一行" />
+    <option name="将选区扩展到下一个节点" path="ActionManager" hit="将选区扩展到下一个节点" />
+    <option name="将选区扩展到下一列" path="ActionManager" hit="将选区扩展到下一列" />
+    <option name="将选区扩展到下一行" path="ActionManager" hit="将选区扩展到下一行" />
+    <option name="将选区扩展到子节点" path="ActionManager" hit="将选区扩展到子节点" />
+    <option name="将选区扩展到最后一个节点" path="ActionManager" hit="将选区扩展到最后一个节点" />
+    <option name="将选区扩展到最后一行" path="ActionManager" hit="将选区扩展到最后一行" />
+    <option name="将选区扩展到父节点" path="ActionManager" hit="将选区扩展到父节点" />
+    <option name="将选区扩展到第一个节点" path="ActionManager" hit="将选区扩展到第一个节点" />
+    <option name="将选区扩展到第一行" path="ActionManager" hit="将选区扩展到第一行" />
+    <option name="将预览标签页转换为常规编辑器标签页" path="ActionManager" hit="将预览标签页转换为常规编辑器标签页" />
     <option name="展开收起的节点或将子节点添加到选区" path="ActionManager" hit="展开收起的节点或将子节点添加到选区。" />
     <option name="展开收起的节点或选择子节点" path="ActionManager" hit="展开收起的节点或选择子节点。" />
     <option name="展开树节点" path="ActionManager" hit="展开树节点" />
@@ -612,15 +602,14 @@
     <option name="用于在外部文件管理器中打开" path="ActionManager" hit="当前文件的弹出窗口路径，用于在外部文件管理器中打开" />
     <option name="快速切换方案" path="ActionManager" hit="快速切换方案…" />
     <option name="恢复上次撤消的导航操作" path="ActionManager" hit="恢复上次撤消的导航操作" />
-    <option name="恢复预览文本" path="ActionManager" hit="恢复预览文本" />
     <option name="打开" path="ActionManager" hit="打开" />
     <option name="打开" path="ActionManager" hit="打开…" />
     <option name="打开于" path="ActionManager" hit="打开于" />
     <option name="打开带日志文件的文件夹" path="ActionManager" hit="打开带日志文件的文件夹" />
-    <option name="vm" path="ActionManager" hit="打开带有自定义 VM 选项文件的编辑器选项卡" />
-    <option name="打开带有自定义" path="ActionManager" hit="打开带有自定义 VM 选项文件的编辑器选项卡" />
-    <option name="选项文件的编辑器选项卡" path="ActionManager" hit="打开带有自定义 VM 选项文件的编辑器选项卡" />
-    <option name="打开带有自定义属性文件的编辑器选项卡" path="ActionManager" hit="打开带有自定义属性文件的编辑器选项卡" />
+    <option name="vm" path="ActionManager" hit="打开带有自定义 VM 选项文件的编辑器标签页" />
+    <option name="打开带有自定义" path="ActionManager" hit="打开带有自定义 VM 选项文件的编辑器标签页" />
+    <option name="选项文件的编辑器标签页" path="ActionManager" hit="打开带有自定义 VM 选项文件的编辑器标签页" />
+    <option name="打开带有自定义属性文件的编辑器标签页" path="ActionManager" hit="打开带有自定义属性文件的编辑器标签页" />
     <option name="pdf" path="ActionManager" hit="打开带有默认按键映射参考卡的 PDF 文件。" />
     <option name="打开带有默认按键映射参考卡的" path="ActionManager" hit="打开带有默认按键映射参考卡的 PDF 文件。" />
     <option name="文件" path="ActionManager" hit="打开带有默认按键映射参考卡的 PDF 文件。" />
@@ -645,7 +634,7 @@
     <option name="按添加到模块名称的前缀替换模块组" path="ActionManager" hit="按添加到模块名称的前缀替换模块组" />
     <option name="按键映射" path="ActionManager" hit="按键映射" />
     <option name="排序行" path="ActionManager" hit="排序行" />
-    <option name="控制台选项卡" path="ActionManager" hit="控制台选项卡" />
+    <option name="控制台标签页" path="ActionManager" hit="控制台标签页" />
     <option name="引入" path="ActionManager" hit="提取/引入" />
     <option name="提取" path="ActionManager" hit="提取/引入" />
     <option name="插件" path="ActionManager" hit="插件" />
@@ -662,8 +651,8 @@
     <option name="ide" path="ActionManager" hit="放大 IDE" />
     <option name="放大" path="ActionManager" hit="放大 IDE" />
     <option name="文件" path="ActionManager" hit="文件" />
-    <option name="文件名微件" path="ActionManager" hit="文件名微件(隐藏编辑器选项卡时)" />
-    <option name="隐藏编辑器选项卡时" path="ActionManager" hit="文件名微件(隐藏编辑器选项卡时)" />
+    <option name="文件名微件" path="ActionManager" hit="文件名微件(隐藏编辑器标签页时)" />
+    <option name="隐藏编辑器标签页时" path="ActionManager" hit="文件名微件(隐藏编辑器标签页时)" />
     <option name="文件属性" path="ActionManager" hit="文件属性" />
     <option name="文件打开操作" path="ActionManager" hit="文件打开操作" />
     <option name="文件编码" path="ActionManager" hit="文件编码" />
@@ -672,7 +661,7 @@
     <option name="文件选择器工具栏" path="ActionManager" hit="文件选择器工具栏" />
     <option name="新建图表" path="ActionManager" hit="新建图表" />
     <option name="新建文件" path="ActionManager" hit="新建文件…" />
-    <option name="新建目录" path="ActionManager" hit="新建目录..." />
+    <option name="新建目录" path="ActionManager" hit="新建目录…" />
     <option name="新建项目组" path="ActionManager" hit="新建项目组" />
     <option name="新项目的设置" path="ActionManager" hit="新项目的设置…" />
     <option name="新项目设置" path="ActionManager" hit="新项目设置" />
@@ -696,7 +685,7 @@
     <option name="隐藏状态栏微件" path="ActionManager" hit="显示/隐藏状态栏微件" />
     <option name="显示" path="ActionManager" hit="显示/隐藏路径输入字段" />
     <option name="隐藏路径输入字段" path="ActionManager" hit="显示/隐藏路径输入字段" />
-    <option name="显示一个包含工具窗口选项卡列表的弹出窗口" path="ActionManager" hit="显示一个包含工具窗口选项卡列表的弹出窗口" />
+    <option name="显示一个包含工具窗口标签页列表的弹出窗口" path="ActionManager" hit="显示一个包含工具窗口标签页列表的弹出窗口" />
     <option name="显示上下文菜单" path="ActionManager" hit="显示上下文菜单" />
     <option name="显示在线文档" path="ActionManager" hit="显示在线文档" />
     <option name="显示帮助内容" path="ActionManager" hit="显示帮助内容" />
@@ -709,18 +698,18 @@
     <option name="ide" path="ActionManager" hit="显示有关 IDE 的信息" />
     <option name="显示有关" path="ActionManager" hit="显示有关 IDE 的信息" />
     <option name="的信息" path="ActionManager" hit="显示有关 IDE 的信息" />
+    <option name="显示标签页列表" path="ActionManager" hit="显示标签页列表" />
     <option name="显示源" path="ActionManager" hit="显示源" />
     <option name="显示空格" path="ActionManager" hit="显示空格" />
     <option name="显示编辑器使用的字体" path="ActionManager" hit="显示编辑器使用的字体" />
     <option name="显示缩进参考线" path="ActionManager" hit="显示缩进参考线" />
     <option name="显示行号" path="ActionManager" hit="显示行号" />
     <option name="显示路径导航" path="ActionManager" hit="显示路径导航" />
-    <option name="显示选项卡列表" path="ActionManager" hit="显示选项卡列表" />
     <option name="显示间距图标" path="ActionManager" hit="显示间距图标" />
     <option name="无障碍功能" path="ActionManager" hit="显示间距图标工具提示(无障碍功能)" />
     <option name="显示间距图标工具提示" path="ActionManager" hit="显示间距图标工具提示(无障碍功能)" />
     <option name="显示隐藏的文件和目录" path="ActionManager" hit="显示隐藏的文件和目录" />
-    <option name="显示隐藏的选项卡" path="ActionManager" hit="显示隐藏的选项卡" />
+    <option name="显示隐藏的标签页" path="ActionManager" hit="显示隐藏的标签页" />
     <option name="更多" path="ActionManager" hit="更多" />
     <option name="更多运行" path="ActionManager" hit="更多运行/调试" />
     <option name="调试" path="ActionManager" hit="更多运行/调试" />
@@ -736,8 +725,8 @@
     <option name="更改视图模式" path="ActionManager" hit="更改视图模式" />
     <option name="更改项目图标" path="ActionManager" hit="更改项目图标…" />
     <option name="最后编辑位置" path="ActionManager" hit="最后编辑位置" />
-    <option name="恢复活动对话框" path="ActionManager" hit="最大化/恢复活动对话框" />
-    <option name="最大化" path="ActionManager" hit="最大化/恢复活动对话框" />
+    <option name="最大化" path="ActionManager" hit="最大化/还原活动对话框" />
+    <option name="还原活动对话框" path="ActionManager" hit="最大化/还原活动对话框" />
     <option name="最大化工具窗口" path="ActionManager" hit="最大化工具窗口" />
     <option name="最大化编辑器" path="ActionManager" hit="最大化编辑器/标准化拆分" />
     <option name="标准化拆分" path="ActionManager" hit="最大化编辑器/标准化拆分" />
@@ -748,8 +737,8 @@
     <option name="最近更改的文件" path="ActionManager" hit="最近更改的文件" />
     <option name="最近的位置" path="ActionManager" hit="最近的位置" />
     <option name="最近的文件" path="ActionManager" hit="最近的文件" />
-    <option name="最近的文件" path="ActionManager" hit="最近的文件、选项卡操作等" />
-    <option name="选项卡操作等" path="ActionManager" hit="最近的文件、选项卡操作等" />
+    <option name="最近的文件" path="ActionManager" hit="最近的文件、标签页操作等" />
+    <option name="标签页操作等" path="ActionManager" hit="最近的文件、标签页操作等" />
     <option name="最近的项目" path="ActionManager" hit="最近的项目" />
     <option name="未正确注册的操作" path="ActionManager" hit="未正确注册的操作" />
     <option name="构建" path="ActionManager" hit="构建" />
@@ -766,6 +755,9 @@
     <option name="查看介绍" path="ActionManager" hit="查看介绍 JetBrains 产品功能的简短现场演示。" />
     <option name="查看最近的操作组" path="ActionManager" hit="查看最近的操作组" />
     <option name="标准宏操作" path="ActionManager" hit="标准宏操作" />
+    <option name="标签页" path="ActionManager" hit="标签页" />
+    <option name="标签页分组" path="ActionManager" hit="标签页分组" />
+    <option name="标签页外观" path="ActionManager" hit="标签页外观" />
     <option name="树操作" path="ActionManager" hit="树操作" />
     <option name="根目录" path="ActionManager" hit="根目录" />
     <option name="桌面目录" path="ActionManager" hit="桌面目录" />
@@ -798,40 +790,40 @@
     <option name="添加" path="ActionManager" hit="添加 BOM" />
     <option name="添加或移除文本光标" path="ActionManager" hit="添加或移除文本光标" />
     <option name="清除所有通知" path="ActionManager" hit="清除所有通知" />
-    <option name="清除缓存" path="ActionManager" hit="清除缓存..." />
+    <option name="清除缓存" path="ActionManager" hit="清除缓存…" />
     <option name="滚动" path="ActionManager" hit="滚动" />
     <option name="滚动到中心" path="ActionManager" hit="滚动到中心" />
     <option name="滚动到底部" path="ActionManager" hit="滚动到底部" />
-    <option name="滚动到最后一个节点并将相应的节点添加到选择范围" path="ActionManager" hit="滚动到最后一个节点并将相应的节点添加到选择范围。" />
-    <option name="滚动到最后一行并将相应的行添加到选择范围" path="ActionManager" hit="滚动到最后一行并将相应的行添加到选择范围。" />
-    <option name="滚动到父节点并将相应的节点添加到选择范围" path="ActionManager" hit="滚动到父节点并将相应的节点添加到选择范围。" />
-    <option name="滚动到第一个节点并将相应的节点添加到选择范围" path="ActionManager" hit="滚动到第一个节点并将相应的节点添加到选择范围。" />
-    <option name="滚动到第一行并将相应的行添加到选择范围" path="ActionManager" hit="滚动到第一行并将相应的行添加到选择范围。" />
+    <option name="滚动到最后一个节点并将相应的节点添加到选区" path="ActionManager" hit="滚动到最后一个节点并将相应的节点添加到选区。" />
+    <option name="滚动到最后一行并将相应的行添加到选区" path="ActionManager" hit="滚动到最后一行并将相应的行添加到选区。" />
+    <option name="滚动到父节点并将相应的节点添加到选区" path="ActionManager" hit="滚动到父节点并将相应的节点添加到选区。" />
+    <option name="滚动到第一个节点并将相应的节点添加到选区" path="ActionManager" hit="滚动到第一个节点并将相应的节点添加到选区。" />
+    <option name="滚动到第一行并将相应的行添加到选区" path="ActionManager" hit="滚动到第一行并将相应的行添加到选区。" />
     <option name="滚动到顶部" path="ActionManager" hit="滚动到顶部" />
     <option name="滚动至页尾" path="ActionManager" hit="滚动至页尾" />
     <option name="滚动至页首" path="ActionManager" hit="滚动至页首" />
+    <option name="激活上一个标签页" path="ActionManager" hit="激活上一个标签页" />
     <option name="激活上一个聚焦的工具窗口" path="ActionManager" hit="激活上一个聚焦的工具窗口" />
-    <option name="激活上一个选项卡" path="ActionManager" hit="激活上一个选项卡" />
-    <option name="激活下一个选项卡" path="ActionManager" hit="激活下一个选项卡" />
-    <option name="激活最后一个选项卡" path="ActionManager" hit="激活最后一个选项卡" />
-    <option name="1" path="ActionManager" hit="激活选项卡 #1" />
-    <option name="激活选项卡" path="ActionManager" hit="激活选项卡 #1" />
-    <option name="2" path="ActionManager" hit="激活选项卡 #2" />
-    <option name="激活选项卡" path="ActionManager" hit="激活选项卡 #2" />
-    <option name="3" path="ActionManager" hit="激活选项卡 #3" />
-    <option name="激活选项卡" path="ActionManager" hit="激活选项卡 #3" />
-    <option name="4" path="ActionManager" hit="激活选项卡 #4" />
-    <option name="激活选项卡" path="ActionManager" hit="激活选项卡 #4" />
-    <option name="5" path="ActionManager" hit="激活选项卡 #5" />
-    <option name="激活选项卡" path="ActionManager" hit="激活选项卡 #5" />
-    <option name="6" path="ActionManager" hit="激活选项卡 #6" />
-    <option name="激活选项卡" path="ActionManager" hit="激活选项卡 #6" />
-    <option name="7" path="ActionManager" hit="激活选项卡 #7" />
-    <option name="激活选项卡" path="ActionManager" hit="激活选项卡 #7" />
-    <option name="8" path="ActionManager" hit="激活选项卡 #8" />
-    <option name="激活选项卡" path="ActionManager" hit="激活选项卡 #8" />
-    <option name="9" path="ActionManager" hit="激活选项卡 #9" />
-    <option name="激活选项卡" path="ActionManager" hit="激活选项卡 #9" />
+    <option name="激活下一个标签页" path="ActionManager" hit="激活下一个标签页" />
+    <option name="激活最后一个标签页" path="ActionManager" hit="激活最后一个标签页" />
+    <option name="1" path="ActionManager" hit="激活标签页 #1" />
+    <option name="激活标签页" path="ActionManager" hit="激活标签页 #1" />
+    <option name="2" path="ActionManager" hit="激活标签页 #2" />
+    <option name="激活标签页" path="ActionManager" hit="激活标签页 #2" />
+    <option name="3" path="ActionManager" hit="激活标签页 #3" />
+    <option name="激活标签页" path="ActionManager" hit="激活标签页 #3" />
+    <option name="4" path="ActionManager" hit="激活标签页 #4" />
+    <option name="激活标签页" path="ActionManager" hit="激活标签页 #4" />
+    <option name="5" path="ActionManager" hit="激活标签页 #5" />
+    <option name="激活标签页" path="ActionManager" hit="激活标签页 #5" />
+    <option name="6" path="ActionManager" hit="激活标签页 #6" />
+    <option name="激活标签页" path="ActionManager" hit="激活标签页 #6" />
+    <option name="7" path="ActionManager" hit="激活标签页 #7" />
+    <option name="激活标签页" path="ActionManager" hit="激活标签页 #7" />
+    <option name="8" path="ActionManager" hit="激活标签页 #8" />
+    <option name="激活标签页" path="ActionManager" hit="激活标签页 #8" />
+    <option name="9" path="ActionManager" hit="激活标签页 #9" />
+    <option name="激活标签页" path="ActionManager" hit="激活标签页 #9" />
     <option name="无障碍功能" path="ActionManager" hit="焦点间距(无障碍功能)" />
     <option name="焦点间距" path="ActionManager" hit="焦点间距(无障碍功能)" />
     <option name="父目录" path="ActionManager" hit="父目录" />
@@ -876,9 +868,9 @@
     <option name="编辑器创建" path="ActionManager" hit="编辑器创建/删除操作" />
     <option name="编辑器弹出窗口菜单" path="ActionManager" hit="编辑器弹出窗口菜单" />
     <option name="编辑器操作" path="ActionManager" hit="编辑器操作" />
+    <option name="编辑器标签页" path="ActionManager" hit="编辑器标签页" />
+    <option name="编辑器标签页弹出窗口菜单" path="ActionManager" hit="编辑器标签页弹出窗口菜单" />
     <option name="编辑器选择操作" path="ActionManager" hit="编辑器选择操作" />
-    <option name="编辑器选项卡" path="ActionManager" hit="编辑器选项卡" />
-    <option name="编辑器选项卡弹出窗口菜单" path="ActionManager" hit="编辑器选项卡弹出窗口菜单" />
     <option name="编辑器配色方案" path="ActionManager" hit="编辑器配色方案" />
     <option name="编辑器间距弹出菜单" path="ActionManager" hit="编辑器间距弹出菜单" />
     <option name="编辑宏" path="ActionManager" hit="编辑宏" />
@@ -912,6 +904,8 @@
     <option name="表操作" path="ActionManager" hit="表操作" />
     <option name="视图" path="ActionManager" hit="视图" />
     <option name="视图模式" path="ActionManager" hit="视图模式" />
+    <option name="ui" path="ActionManager" hit="认识新 UI" />
+    <option name="认识新" path="ActionManager" hit="认识新 UI" />
     <option name="设置" path="ActionManager" hit="设置…" />
     <option name="设置操作" path="ActionManager" hit="设置操作" />
     <option name="诊断工具" path="ActionManager" hit="诊断工具" />
@@ -946,6 +940,7 @@
     <option name="运行内存测试程序" path="ActionManager" hit="运行内存测试程序…" />
     <option name="运行缓存诊断并尝试恢复其状态" path="ActionManager" hit="运行缓存诊断并尝试恢复其状态" />
     <option name="运行配置" path="ActionManager" hit="运行配置" />
+    <option name="还原预览文本" path="ActionManager" hit="还原预览文本" />
     <option name="连接行" path="ActionManager" hit="连接行" />
     <option name="迭代最近的文件" path="ActionManager" hit="迭代最近的文件" />
     <option name="退出" path="ActionManager" hit="退出" />
@@ -954,9 +949,9 @@
     <option name="退格" path="ActionManager" hit="退格" />
     <option name="选择上一个同级节点" path="ActionManager" hit="选择上一个同级节点" />
     <option name="选择上一个同级节点" path="ActionManager" hit="选择上一个同级节点。" />
+    <option name="选择上一个标签页" path="ActionManager" hit="选择上一个标签页" />
     <option name="选择上一个节点" path="ActionManager" hit="选择上一个节点" />
     <option name="选择上一个节点" path="ActionManager" hit="选择上一个节点。" />
-    <option name="选择上一个选项卡" path="ActionManager" hit="选择上一个选项卡" />
     <option name="选择上一个问题文件" path="ActionManager" hit="选择上一个问题文件" />
     <option name="选择上一列" path="ActionManager" hit="选择上一列" />
     <option name="选择上一列" path="ActionManager" hit="选择上一列。" />
@@ -964,9 +959,9 @@
     <option name="选择上一行" path="ActionManager" hit="选择上一行。" />
     <option name="选择下一个同级节点" path="ActionManager" hit="选择下一个同级节点" />
     <option name="选择下一个同级节点" path="ActionManager" hit="选择下一个同级节点。" />
+    <option name="选择下一个标签页" path="ActionManager" hit="选择下一个标签页" />
     <option name="选择下一个节点" path="ActionManager" hit="选择下一个节点" />
     <option name="选择下一个节点" path="ActionManager" hit="选择下一个节点。" />
-    <option name="选择下一个选项卡" path="ActionManager" hit="选择下一个选项卡" />
     <option name="选择下一个问题文件" path="ActionManager" hit="选择下一个问题文件" />
     <option name="选择下一列" path="ActionManager" hit="选择下一列" />
     <option name="选择下一列" path="ActionManager" hit="选择下一列。" />
@@ -975,11 +970,29 @@
     <option name="选择子节点" path="ActionManager" hit="选择子节点" />
     <option name="选择打开的文件" path="ActionManager" hit="选择打开的文件" />
     <option name="选择文本光标处的一行" path="ActionManager" hit="选择文本光标处的一行" />
+    <option name="选择最后一个标签页" path="ActionManager" hit="选择最后一个标签页" />
     <option name="选择最后一个节点" path="ActionManager" hit="选择最后一个节点" />
     <option name="选择最后一个节点" path="ActionManager" hit="选择最后一个节点。" />
-    <option name="选择最后一个选项卡" path="ActionManager" hit="选择最后一个选项卡" />
     <option name="选择最后一行" path="ActionManager" hit="选择最后一行" />
     <option name="选择最后一行" path="ActionManager" hit="选择最后一行。" />
+    <option name="1" path="ActionManager" hit="选择标签页 #1" />
+    <option name="选择标签页" path="ActionManager" hit="选择标签页 #1" />
+    <option name="2" path="ActionManager" hit="选择标签页 #2" />
+    <option name="选择标签页" path="ActionManager" hit="选择标签页 #2" />
+    <option name="3" path="ActionManager" hit="选择标签页 #3" />
+    <option name="选择标签页" path="ActionManager" hit="选择标签页 #3" />
+    <option name="4" path="ActionManager" hit="选择标签页 #4" />
+    <option name="选择标签页" path="ActionManager" hit="选择标签页 #4" />
+    <option name="5" path="ActionManager" hit="选择标签页 #5" />
+    <option name="选择标签页" path="ActionManager" hit="选择标签页 #5" />
+    <option name="6" path="ActionManager" hit="选择标签页 #6" />
+    <option name="选择标签页" path="ActionManager" hit="选择标签页 #6" />
+    <option name="7" path="ActionManager" hit="选择标签页 #7" />
+    <option name="选择标签页" path="ActionManager" hit="选择标签页 #7" />
+    <option name="8" path="ActionManager" hit="选择标签页 #8" />
+    <option name="选择标签页" path="ActionManager" hit="选择标签页 #8" />
+    <option name="9" path="ActionManager" hit="选择标签页 #9" />
+    <option name="选择标签页" path="ActionManager" hit="选择标签页 #9" />
     <option name="选择父节点" path="ActionManager" hit="选择父节点" />
     <option name="不收起展开的节点" path="ActionManager" hit="选择父节点(不收起展开的节点)。" />
     <option name="选择父节点" path="ActionManager" hit="选择父节点(不收起展开的节点)。" />
@@ -987,27 +1000,6 @@
     <option name="选择第一个节点" path="ActionManager" hit="选择第一个节点。" />
     <option name="选择第一行" path="ActionManager" hit="选择第一行" />
     <option name="选择第一行" path="ActionManager" hit="选择第一行。" />
-    <option name="1" path="ActionManager" hit="选择选项卡 #1" />
-    <option name="选择选项卡" path="ActionManager" hit="选择选项卡 #1" />
-    <option name="2" path="ActionManager" hit="选择选项卡 #2" />
-    <option name="选择选项卡" path="ActionManager" hit="选择选项卡 #2" />
-    <option name="3" path="ActionManager" hit="选择选项卡 #3" />
-    <option name="选择选项卡" path="ActionManager" hit="选择选项卡 #3" />
-    <option name="4" path="ActionManager" hit="选择选项卡 #4" />
-    <option name="选择选项卡" path="ActionManager" hit="选择选项卡 #4" />
-    <option name="5" path="ActionManager" hit="选择选项卡 #5" />
-    <option name="选择选项卡" path="ActionManager" hit="选择选项卡 #5" />
-    <option name="6" path="ActionManager" hit="选择选项卡 #6" />
-    <option name="选择选项卡" path="ActionManager" hit="选择选项卡 #6" />
-    <option name="7" path="ActionManager" hit="选择选项卡 #7" />
-    <option name="选择选项卡" path="ActionManager" hit="选择选项卡 #7" />
-    <option name="8" path="ActionManager" hit="选择选项卡 #8" />
-    <option name="选择选项卡" path="ActionManager" hit="选择选项卡 #8" />
-    <option name="9" path="ActionManager" hit="选择选项卡 #9" />
-    <option name="选择选项卡" path="ActionManager" hit="选择选项卡 #9" />
-    <option name="选项卡" path="ActionManager" hit="选项卡" />
-    <option name="选项卡分组" path="ActionManager" hit="选项卡分组" />
-    <option name="选项卡外观" path="ActionManager" hit="选项卡外观" />
     <option name="选项菜单" path="ActionManager" hit="选项菜单" />
     <option name="通知" path="ActionManager" hit="通知" />
     <option name="和" path="ActionManager" hit="通过编号在编辑器中导航到某一行(和/或列)" />
@@ -1015,19 +1007,23 @@
     <option name="通过编号在编辑器中导航到某一行" path="ActionManager" hit="通过编号在编辑器中导航到某一行(和/或列)" />
     <option name="配置" path="ActionManager" hit="配置" />
     <option name="配置现有宏" path="ActionManager" hit="配置现有宏" />
-    <option name="配置编辑器选项卡" path="ActionManager" hit="配置编辑器选项卡..." />
-    <option name="行为和顺序" path="ActionManager" hit="配置编辑器选项卡的外观，行为和顺序" />
-    <option name="配置编辑器选项卡的外观" path="ActionManager" hit="配置编辑器选项卡的外观，行为和顺序" />
+    <option name="配置编辑器标签页" path="ActionManager" hit="配置编辑器标签页…" />
+    <option name="行为和顺序" path="ActionManager" hit="配置编辑器标签页的外观，行为和顺序" />
+    <option name="配置编辑器标签页的外观" path="ActionManager" hit="配置编辑器标签页的外观，行为和顺序" />
     <option name="重做" path="ActionManager" hit="重做" />
     <option name="ide" path="ActionManager" hit="重启 IDE…" />
     <option name="重启" path="ActionManager" hit="重启 IDE…" />
     <option name="重复整行" path="ActionManager" hit="重复整行" />
     <option name="重复行或选区" path="ActionManager" hit="重复行或选区" />
-    <option name="重新打开关闭的选项卡" path="ActionManager" hit="重新打开关闭的选项卡" />
+    <option name="重新打开关闭的标签页" path="ActionManager" hit="重新打开关闭的标签页" />
     <option name="重新打开项目" path="ActionManager" hit="重新打开项目" />
     <option name="ide" path="ActionManager" hit="重置 IDE 比例" />
     <option name="比例" path="ActionManager" hit="重置 IDE 比例" />
     <option name="重置" path="ActionManager" hit="重置 IDE 比例" />
+    <option name="defender" path="ActionManager" hit="重置 Microsoft Defender 通知" />
+    <option name="microsoft" path="ActionManager" hit="重置 Microsoft Defender 通知" />
+    <option name="通知" path="ActionManager" hit="重置 Microsoft Defender 通知" />
+    <option name="重置" path="ActionManager" hit="重置 Microsoft Defender 通知" />
     <option name="重置字体大小" path="ActionManager" hit="重置字体大小" />
     <option name="pdf" path="ActionManager" hit="键盘快捷键 PDF" />
     <option name="键盘快捷键" path="ActionManager" hit="键盘快捷键 PDF" />
@@ -1039,7 +1035,7 @@
     <option name="隐藏活动工具窗口" path="ActionManager" hit="隐藏活动工具窗口" />
     <option name="隐藏路径导航栏" path="ActionManager" hit="隐藏路径导航栏" />
     <option name="顶部" path="ActionManager" hit="顶部" />
-    <option name="项目" path="ActionManager" hit="项目" />
+    <option name="项目微件" path="ActionManager" hit="项目微件" />
     <option name="项目目录" path="ActionManager" hit="项目目录" />
     <option name="项目视图弹出窗口菜单设置组" path="ActionManager" hit="项目视图弹出窗口菜单设置组" />
     <option name="饥饿退格" path="ActionManager" hit="饥饿退格" />
@@ -1183,9 +1179,9 @@
     <option name="大小" hit="大小 " />
     <option name="字体" hit="字体" />
     <option name="字体" hit="字体 " />
-    <option name="恢复默认设置" hit="恢复默认设置" />
     <option name="行高" hit="行高 " />
     <option name="输入要预览的任何文本" hit="输入要预览的任何文本" />
+    <option name="还原为默认设置" hit="还原为默认设置" />
   </configurable>
   <configurable id="editor.breadcrumbs" configurable_name="路径导航">
     <option name="底部" hit="底部" />
@@ -1220,9 +1216,17 @@
   <configurable id="advanced.settings" configurable_name="高级设置">
     <option name="" hit="  符号" />
     <option name="符号" hit="  符号" />
+    <option name="always" hit="Always show tool window header icons in the new UI" />
+    <option name="header" hit="Always show tool window header icons in the new UI" />
+    <option name="icons" hit="Always show tool window header icons in the new UI" />
+    <option name="in" hit="Always show tool window header icons in the new UI" />
+    <option name="new" hit="Always show tool window header icons in the new UI" />
+    <option name="show" hit="Always show tool window header icons in the new UI" />
+    <option name="the" hit="Always show tool window header icons in the new UI" />
+    <option name="tool" hit="Always show tool window header icons in the new UI" />
+    <option name="ui" hit="Always show tool window header icons in the new UI" />
+    <option name="window" hit="Always show tool window header icons in the new UI" />
     <option name="docker" hit="Docker" />
-    <option name="experimental" hit="Experimental Multiplatform" />
-    <option name="multiplatform" hit="Experimental Multiplatform" />
     <option name="ide" hit="IDE" />
     <option name="kotlin" hit="Kotlin" />
     <option name="markdown" hit="Markdown" />
@@ -1230,37 +1234,7 @@
     <option name="openssh" hit="OpenSSH 工具的自定义路径 " />
     <option name="工具的自定义路径" hit="OpenSSH 工具的自定义路径 " />
     <option name="ssh" hit="SSH" />
-    <option name="hover" hit="Show tool window icons on hover in the new UI" />
-    <option name="icons" hit="Show tool window icons on hover in the new UI" />
-    <option name="in" hit="Show tool window icons on hover in the new UI" />
-    <option name="new" hit="Show tool window icons on hover in the new UI" />
-    <option name="on" hit="Show tool window icons on hover in the new UI" />
-    <option name="show" hit="Show tool window icons on hover in the new UI" />
-    <option name="the" hit="Show tool window icons on hover in the new UI" />
-    <option name="tool" hit="Show tool window icons on hover in the new UI" />
-    <option name="ui" hit="Show tool window icons on hover in the new UI" />
-    <option name="window" hit="Show tool window icons on hover in the new UI" />
-    <option name="based" hit="Sort results in the Classes tab based on machine learning" />
-    <option name="classes" hit="Sort results in the Classes tab based on machine learning" />
-    <option name="in" hit="Sort results in the Classes tab based on machine learning" />
-    <option name="learning" hit="Sort results in the Classes tab based on machine learning" />
-    <option name="machine" hit="Sort results in the Classes tab based on machine learning" />
-    <option name="on" hit="Sort results in the Classes tab based on machine learning" />
-    <option name="results" hit="Sort results in the Classes tab based on machine learning" />
-    <option name="sort" hit="Sort results in the Classes tab based on machine learning" />
-    <option name="tab" hit="Sort results in the Classes tab based on machine learning" />
-    <option name="the" hit="Sort results in the Classes tab based on machine learning" />
     <option name="textconv" hit="TextConv" />
-    <option name="automatic" hit="The delay between periodic Docker status checks for automatic reconnection " />
-    <option name="between" hit="The delay between periodic Docker status checks for automatic reconnection " />
-    <option name="checks" hit="The delay between periodic Docker status checks for automatic reconnection " />
-    <option name="delay" hit="The delay between periodic Docker status checks for automatic reconnection " />
-    <option name="docker" hit="The delay between periodic Docker status checks for automatic reconnection " />
-    <option name="for" hit="The delay between periodic Docker status checks for automatic reconnection " />
-    <option name="periodic" hit="The delay between periodic Docker status checks for automatic reconnection " />
-    <option name="reconnection" hit="The delay between periodic Docker status checks for automatic reconnection " />
-    <option name="status" hit="The delay between periodic Docker status checks for automatic reconnection " />
-    <option name="the" hit="The delay between periodic Docker status checks for automatic reconnection " />
     <option name="个字符" hit="个字符" />
     <option name="临时配置限制" hit="临时配置限制 " />
     <option name="0" hit="为替代屏幕缓冲区使用     行距  mc vim nano 等 " />
@@ -1279,7 +1253,7 @@
     <option name="读取时应用内容转换" hit="从 Git 读取时应用内容转换 " />
     <option name="代码元素链接的语法高亮显示" hit="代码元素链接的语法高亮显示" />
     <option name="以较低优先级运行编译" hit="以较低优先级运行编译" />
-    <option name="作为编辑器选项卡打开差异" hit="作为编辑器选项卡打开差异" />
+    <option name="作为编辑器标签页打开差异" hit="作为编辑器标签页打开差异" />
     <option name="escape" hit="使用 Escape 将焦点移至编辑器" />
     <option name="使用" hit="使用 Escape 将焦点移至编辑器" />
     <option name="将焦点移至编辑器" hit="使用 Escape 将焦点移至编辑器" />
@@ -1320,7 +1294,7 @@
     <option name="在主" hit="在主 IDE 窗口中打开从分离窗口调用的声明源" />
     <option name="窗口中打开从分离窗口调用的声明源" hit="在主 IDE 窗口中打开从分离窗口调用的声明源" />
     <option name="在列表和树中循环滚动" hit="在列表和树中循环滚动" />
-    <option name="在同一个选项卡中打开声明源" hit="在同一个选项卡中打开声明源" />
+    <option name="在同一个标签页中打开声明源" hit="在同一个标签页中打开声明源" />
     <option name="在显示结果之前等待所有参与者完成" hit="在显示结果之前等待所有参与者完成" />
     <option name="剪切" hit="在未选择任何内容的情况下调用 复制 或 剪切 操作时不复制 剪切当前行" />
     <option name="剪切当前行" hit="在未选择任何内容的情况下调用 复制 或 剪切 操作时不复制 剪切当前行" />
@@ -1336,9 +1310,12 @@
     <option name="中的文件注解" hit="在编辑器中打开文件时加载 VCS 中的文件注解" />
     <option name="在编辑器中打开文件时加载" hit="在编辑器中打开文件时加载 VCS 中的文件注解" />
     <option name="均衡嵌套拆分中的比例" hit="均衡嵌套拆分中的比例" />
-    <option name="基于机器学习对" hit="基于机器学习对 所有 选项卡中的结果进行排序" />
-    <option name="所有" hit="基于机器学习对 所有 选项卡中的结果进行排序" />
-    <option name="选项卡中的结果进行排序" hit="基于机器学习对 所有 选项卡中的结果进行排序" />
+    <option name="基于机器学习对" hit="基于机器学习对 所有 标签页中的结果进行排序" />
+    <option name="所有" hit="基于机器学习对 所有 标签页中的结果进行排序" />
+    <option name="标签页中的结果进行排序" hit="基于机器学习对 所有 标签页中的结果进行排序" />
+    <option name="基于机器学习对" hit="基于机器学习对 类 标签页中的结果进行排序" />
+    <option name="标签页中的结果进行排序" hit="基于机器学习对 类 标签页中的结果进行排序" />
+    <option name="类" hit="基于机器学习对 类 标签页中的结果进行排序" />
     <option name="包括行距" hit="填充字符背景 包括行距" />
     <option name="填充字符背景" hit="填充字符背景 包括行距" />
     <option name="增大项目视图中的字号" hit="增大项目视图中的字号" />
@@ -1350,18 +1327,19 @@
     <option name="则打开" hit="如果项目启动时没有打开的文件 则打开 README md 文件" />
     <option name="如果项目启动时没有打开的文件" hit="如果项目启动时没有打开的文件 则打开 README md 文件" />
     <option name="文件" hit="如果项目启动时没有打开的文件 则打开 README md 文件" />
+    <option name="实验性多平台" hit="实验性多平台" />
     <option name="macos" hit="对 macOS 键盘快捷键使用单词而不是符号" />
     <option name="对" hit="对 macOS 键盘快捷键使用单词而不是符号" />
     <option name="键盘快捷键使用单词而不是符号" hit="对 macOS 键盘快捷键使用单词而不是符号" />
     <option name="对代码行长度超过此值的文档强制进行自动换行" hit="对代码行长度超过此值的文档强制进行自动换行 " />
-    <option name="导航到文件时" hit="导航到文件时 首选在停用拆分窗格中选择现有选项卡" />
-    <option name="首选在停用拆分窗格中选择现有选项卡" hit="导航到文件时 首选在停用拆分窗格中选择现有选项卡" />
+    <option name="导航到文件时" hit="导航到文件时 首选在停用拆分窗格中选择现有标签页" />
+    <option name="首选在停用拆分窗格中选择现有标签页" hit="导航到文件时 首选在停用拆分窗格中选择现有标签页" />
     <option name="selinux" hit="将  z 挂载选项应用于 SELinux 系统的几乎所有绑定卷 " />
     <option name="z" hit="将  z 挂载选项应用于 SELinux 系统的几乎所有绑定卷 " />
     <option name="将" hit="将  z 挂载选项应用于 SELinux 系统的几乎所有绑定卷 " />
     <option name="挂载选项应用于" hit="将  z 挂载选项应用于 SELinux 系统的几乎所有绑定卷 " />
     <option name="系统的几乎所有绑定卷" hit="将  z 挂载选项应用于 SELinux 系统的几乎所有绑定卷 " />
-    <option name="将固定的选项卡留在左侧" hit="将固定的选项卡留在左侧" />
+    <option name="将固定的标签页留在左侧" hit="将固定的标签页留在左侧" />
     <option name="将配置设为默认固定" hit="将配置设为默认固定" />
     <option name="将鼠标光标放在对话框中的默认按钮上" hit="将鼠标光标放在对话框中的默认按钮上" />
     <option name="工具窗口" hit="工具窗口" />
@@ -1376,9 +1354,9 @@
     <option name="中最近运行配置的最大数量" hit="新 UI 中最近运行配置的最大数量 " />
     <option name="新" hit="新 UI 中最近运行配置的最大数量 " />
     <option name="无" hit="无" />
-    <option name="docker" hit="日志选项卡应该是 Docker 容器的第一个选项卡 " />
-    <option name="容器的第一个选项卡" hit="日志选项卡应该是 Docker 容器的第一个选项卡 " />
-    <option name="日志选项卡应该是" hit="日志选项卡应该是 Docker 容器的第一个选项卡 " />
+    <option name="docker" hit="日志标签页应该是 Docker 容器的第一个标签页 " />
+    <option name="容器的第一个标签页" hit="日志标签页应该是 Docker 容器的第一个标签页 " />
+    <option name="日志标签页应该是" hit="日志标签页应该是 Docker 容器的第一个标签页 " />
     <option name="旧版" hit="旧版" />
     <option name="显示应用程序标题" hit="显示应用程序标题" />
     <option name="显示缩放指示器" hit="显示缩放指示器" />
@@ -1389,44 +1367,47 @@
     <option name="最近项目的最大数量" hit="最近项目的最大数量 " />
     <option name="替换" hit="查找 替换" />
     <option name="查找" hit="查找 替换" />
-    <option name="操作" hit="根据机器学习对 操作 选项卡中的结果进行排序" />
-    <option name="根据机器学习对" hit="根据机器学习对 操作 选项卡中的结果进行排序" />
-    <option name="选项卡中的结果进行排序" hit="根据机器学习对 操作 选项卡中的结果进行排序" />
-    <option name="文件" hit="根据机器学习对 文件 选项卡中的结果进行排序" />
-    <option name="根据机器学习对" hit="根据机器学习对 文件 选项卡中的结果进行排序" />
-    <option name="选项卡中的结果进行排序" hit="根据机器学习对 文件 选项卡中的结果进行排序" />
+    <option name="操作" hit="根据机器学习对 操作 标签页中的结果进行排序" />
+    <option name="标签页中的结果进行排序" hit="根据机器学习对 操作 标签页中的结果进行排序" />
+    <option name="根据机器学习对" hit="根据机器学习对 操作 标签页中的结果进行排序" />
+    <option name="文件" hit="根据机器学习对 文件 标签页中的结果进行排序" />
+    <option name="标签页中的结果进行排序" hit="根据机器学习对 文件 标签页中的结果进行排序" />
+    <option name="根据机器学习对" hit="根据机器学习对 文件 标签页中的结果进行排序" />
     <option name="检查传入和传出提交" hit="检查传入和传出提交" />
     <option name="毫秒" hit="毫秒" />
     <option name="水平线" hit="水平线" />
     <option name="版本控制" hit="版本控制" />
     <option name="git" hit="版本控制  Git" />
     <option name="版本控制" hit="版本控制  Git" />
+    <option name="docker" hit="用于自动重新连接的定期 Docker 状态检查之间的延迟 " />
+    <option name="状态检查之间的延迟" hit="用于自动重新连接的定期 Docker 状态检查之间的延迟 " />
+    <option name="用于自动重新连接的定期" hit="用于自动重新连接的定期 Docker 状态检查之间的延迟 " />
     <option name="用户界面" hit="用户界面" />
     <option name="确认在进程终止时重新运行" hit="确认在进程终止时重新运行" />
     <option name="禁用双击修改键快捷键" hit="禁用双击修改键快捷键" />
     <option name="筛选器" hit="筛选器" />
     <option name="粘贴到文本光标位置" hit="粘贴到文本光标位置" />
     <option name="粘贴到文本光标线上方" hit="粘贴到文本光标线上方" />
-    <option name="粘贴无选定内容的复制行时" hit="粘贴无选定内容的复制行时 " />
+    <option name="粘贴复制时未选择内容的行时" hit="粘贴复制时未选择内容的行时 " />
     <option name="终端" hit="终端" />
     <option name="终端回滚缓冲区大小" hit="终端回滚缓冲区大小 " />
     <option name="终端字符编码" hit="终端字符编码 " />
     <option name="编译器" hit="编译器" />
     <option name="编译器引用索引" hit="编译器引用索引" />
     <option name="编辑器" hit="编辑器" />
-    <option name="编辑器选项卡" hit="编辑器选项卡" />
+    <option name="编辑器标签页" hit="编辑器标签页" />
     <option name="行" hit="行" />
     <option name="调试器" hit="调试器" />
     <option name="调试" hit="运行 调试" />
     <option name="运行" hit="运行 调试" />
     <option name="选择包含要推送的新提交的所有仓库" hit="选择包含要推送的新提交的所有仓库" />
     <option name="递归克隆项目中的子模块" hit="递归克隆项目中的子模块" />
-    <option name="最大化编辑器" hit="通过双击编辑器选项卡执行 最大化编辑器   标准化拆分 " />
-    <option name="标准化拆分" hit="通过双击编辑器选项卡执行 最大化编辑器   标准化拆分 " />
-    <option name="通过双击编辑器选项卡执行" hit="通过双击编辑器选项卡执行 最大化编辑器   标准化拆分 " />
-    <option name="还原窗口" hit="通过双击编辑器选项卡执行 隐藏所有工具窗口   还原窗口 " />
-    <option name="通过双击编辑器选项卡执行" hit="通过双击编辑器选项卡执行 隐藏所有工具窗口   还原窗口 " />
-    <option name="隐藏所有工具窗口" hit="通过双击编辑器选项卡执行 隐藏所有工具窗口   还原窗口 " />
+    <option name="最大化编辑器" hit="通过双击编辑器标签页执行 最大化编辑器   标准化拆分 " />
+    <option name="标准化拆分" hit="通过双击编辑器标签页执行 最大化编辑器   标准化拆分 " />
+    <option name="通过双击编辑器标签页执行" hit="通过双击编辑器标签页执行 最大化编辑器   标准化拆分 " />
+    <option name="还原窗口" hit="通过双击编辑器标签页执行 隐藏所有工具窗口   还原窗口 " />
+    <option name="通过双击编辑器标签页执行" hit="通过双击编辑器标签页执行 隐藏所有工具窗口   还原窗口 " />
+    <option name="隐藏所有工具窗口" hit="通过双击编辑器标签页执行 隐藏所有工具窗口   还原窗口 " />
     <option name="将文本光标下移" hit="通过行注释操进行注释后 将文本光标下移" />
     <option name="通过行注释操进行注释后" hit="通过行注释操进行注释后 将文本光标下移" />
     <option name="配置文件解析器" hit="配置文件解析器 " />
@@ -1444,44 +1425,44 @@
     <option name="高亮显示忽略的文件" hit="高亮显示忽略的文件" />
     <option name="高级设置" hit="高级设置" />
   </configurable>
-  <configurable id="editor.preferences.tabs" configurable_name="编辑器选项卡">
-    <option name="" hit=" 右侧选项卡" />
-    <option name="右侧选项卡" hit=" 右侧选项卡" />
-    <option name="" hit=" 左侧选项卡" />
-    <option name="左侧选项卡" hit=" 左侧选项卡" />
-    <option name="" hit=" 最近打开的选项卡" />
-    <option name="最近打开的选项卡" hit=" 最近打开的选项卡" />
+  <configurable id="editor.preferences.tabs" configurable_name="编辑器标签页">
+    <option name="" hit=" 右侧标签页" />
+    <option name="右侧标签页" hit=" 右侧标签页" />
+    <option name="" hit=" 左侧标签页" />
+    <option name="左侧标签页" hit=" 左侧标签页" />
+    <option name="" hit=" 最近打开的标签页" />
+    <option name="最近打开的标签页" hit=" 最近打开的标签页" />
     <option name="为标签使用小字体" hit="为标签使用小字体" />
     <option name="先关闭未修改的文件" hit="先关闭未修改的文件" />
     <option name="关闭不常用的文件" hit="关闭不常用的文件" />
     <option name="关闭按钮位置" hit="关闭按钮位置 " />
     <option name="关闭策略" hit="关闭策略" />
     <option name="右侧" hit="右侧" />
-    <option name="启用预览选项卡" hit="启用预览选项卡" />
-    <option name="在一行中显示选项卡" hit="在一行中显示选项卡" />
-    <option name="在单独的行中显示固定选项卡" hit="在单独的行中显示固定选项卡" />
-    <option name="在当前选项卡关闭时" hit="在当前选项卡关闭时 激活 " />
-    <option name="激活" hit="在当前选项卡关闭时 激活 " />
-    <option name="在结尾打开新选项卡" hit="在结尾打开新选项卡" />
+    <option name="启用预览标签页" hit="启用预览标签页" />
+    <option name="在一行中显示标签页" hit="在一行中显示标签页" />
+    <option name="在单独的行中显示固定标签页" hit="在单独的行中显示固定标签页" />
+    <option name="在当前标签页关闭时" hit="在当前标签页关闭时 激活 " />
+    <option name="激活" hit="在当前标签页关闭时 激活 " />
+    <option name="在结尾打开新标签页" hit="在结尾打开新标签页" />
     <option name="外观" hit="外观" />
-    <option name="如果没有空格则隐藏选项卡" hit="如果没有空格则隐藏选项卡" />
-    <option name="始终在选项卡标题中显示数据库对象的限定名称" hit="始终在选项卡标题中显示数据库对象的限定名称" />
+    <option name="如果没有空格则隐藏标签页" hit="如果没有空格则隐藏标签页" />
+    <option name="始终在标签页标题中显示数据库对象的限定名称" hit="始终在标签页标题中显示数据库对象的限定名称" />
     <option name="左侧" hit="左侧" />
     <option name="底部" hit="底部" />
-    <option name="当选项卡超过限制时" hit="当选项卡超过限制时 " />
+    <option name="当标签页超过限制时" hit="当标签页超过限制时 " />
     <option name="打开策略" hit="打开策略" />
-    <option name="按字母顺序对选项卡排序" hit="按字母顺序对选项卡排序" />
+    <option name="按字母顺序对标签页排序" hit="按字母顺序对标签页排序" />
     <option name="数据库" hit="数据库" />
     <option name="无" hit="无" />
     <option name="显示文件图标" hit="显示文件图标" />
     <option name="显示文件扩展名" hit="显示文件扩展名" />
     <option name="显示非唯一文件名的目录" hit="显示非唯一文件名的目录" />
+    <option name="标签页位置" hit="标签页位置 " />
+    <option name="标签页限制" hit="标签页限制 " />
+    <option name="标签页顺序" hit="标签页顺序" />
     <option name="标记已修改" hit="标记已修改   " />
-    <option name="编辑器选项卡" hit="编辑器选项卡" />
-    <option name="缩短选项卡标题中的数据源和对象名称" hit="缩短选项卡标题中的数据源和对象名称" />
-    <option name="选项卡位置" hit="选项卡位置 " />
-    <option name="选项卡限制" hit="选项卡限制 " />
-    <option name="选项卡顺序" hit="选项卡顺序" />
+    <option name="编辑器标签页" hit="编辑器标签页" />
+    <option name="缩短标签页标题中的数据源和对象名称" hit="缩短标签页标题中的数据源和对象名称" />
     <option name="顶部" hit="顶部" />
     <option name="鼠标悬停时显示完整路径" hit="鼠标悬停时显示完整路径" />
   </configurable>
@@ -1553,12 +1534,12 @@
     <option name="文本" hit="文本//只读片段背景" />
     <option name="折叠的文本" hit="文本//折叠的文本" />
     <option name="文本" hit="文本//折叠的文本" />
+    <option name="文本" hit="文本//标签页" />
+    <option name="标签页" hit="文本//标签页" />
     <option name="文本" hit="文本//空白" />
     <option name="空白" hit="文本//空白" />
     <option name="文本" hit="文本//自动换行符号" />
     <option name="自动换行符号" hit="文本//自动换行符号" />
-    <option name="文本" hit="文本//选项卡" />
-    <option name="选项卡" hit="文本//选项卡" />
     <option name="文本" hit="文本//默认文本" />
     <option name="默认文本" hit="文本//默认文本" />
     <option name="标识符" hit="标识符//重新赋值的局部变量" />
@@ -1594,6 +1575,21 @@
     <option name="编辑器" hit="编辑器//文本光标" />
     <option name="文本光标所在的行" hit="编辑器//文本光标所在的行" />
     <option name="编辑器" hit="编辑器//文本光标所在的行" />
+    <option name="下划线" hit="编辑器//标签页//下划线" />
+    <option name="标签页" hit="编辑器//标签页//下划线" />
+    <option name="编辑器" hit="编辑器//标签页//下划线" />
+    <option name="下划线处于停用状态" hit="编辑器//标签页//下划线处于停用状态" />
+    <option name="标签页" hit="编辑器//标签页//下划线处于停用状态" />
+    <option name="编辑器" hit="编辑器//标签页//下划线处于停用状态" />
+    <option name="修改的图标颜色" hit="编辑器//标签页//修改的图标颜色" />
+    <option name="标签页" hit="编辑器//标签页//修改的图标颜色" />
+    <option name="编辑器" hit="编辑器//标签页//修改的图标颜色" />
+    <option name="标签页" hit="编辑器//标签页//选定标签页" />
+    <option name="编辑器" hit="编辑器//标签页//选定标签页" />
+    <option name="选定标签页" hit="编辑器//标签页//选定标签页" />
+    <option name="标签页" hit="编辑器//标签页//选定标签页处于停用状态" />
+    <option name="编辑器" hit="编辑器//标签页//选定标签页处于停用状态" />
+    <option name="选定标签页处于停用状态" hit="编辑器//标签页//选定标签页处于停用状态" />
     <option name="停用" hit="编辑器//路径导航//停用" />
     <option name="编辑器" hit="编辑器//路径导航//停用" />
     <option name="路径导航" hit="编辑器//路径导航//停用" />
@@ -1613,21 +1609,6 @@
     <option name="选区前景" hit="编辑器//选区前景" />
     <option name="编辑器" hit="编辑器//选区背景" />
     <option name="选区背景" hit="编辑器//选区背景" />
-    <option name="下划线" hit="编辑器//选项卡//下划线" />
-    <option name="编辑器" hit="编辑器//选项卡//下划线" />
-    <option name="选项卡" hit="编辑器//选项卡//下划线" />
-    <option name="下划线处于停用状态" hit="编辑器//选项卡//下划线处于停用状态" />
-    <option name="编辑器" hit="编辑器//选项卡//下划线处于停用状态" />
-    <option name="选项卡" hit="编辑器//选项卡//下划线处于停用状态" />
-    <option name="修改的图标颜色" hit="编辑器//选项卡//修改的图标颜色" />
-    <option name="编辑器" hit="编辑器//选项卡//修改的图标颜色" />
-    <option name="选项卡" hit="编辑器//选项卡//修改的图标颜色" />
-    <option name="编辑器" hit="编辑器//选项卡//选定选项卡" />
-    <option name="选定选项卡" hit="编辑器//选项卡//选定选项卡" />
-    <option name="选项卡" hit="编辑器//选项卡//选定选项卡" />
-    <option name="编辑器" hit="编辑器//选项卡//选定选项卡处于停用状态" />
-    <option name="选定选项卡处于停用状态" hit="编辑器//选项卡//选定选项卡处于停用状态" />
-    <option name="选项卡" hit="编辑器//选项卡//选定选项卡处于停用状态" />
     <option name="编辑器" hit="编辑器//通知背景" />
     <option name="通知背景" hit="编辑器//通知背景" />
     <option name="编辑器" hit="编辑器//间距背景" />

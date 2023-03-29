@@ -1,10 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="add" path="ActionManager" hit="Add Enum Explicit Value" />
-    <option name="enum" path="ActionManager" hit="Add Enum Explicit Value" />
-    <option name="explicit" path="ActionManager" hit="Add Enum Explicit Value" />
-    <option name="value" path="ActionManager" hit="Add Enum Explicit Value" />
     <option name="getter" path="ActionManager" hit="Getter" />
     <option name="getter" path="ActionManager" hit="Getter 和 Setter" />
     <option name="setter" path="ActionManager" hit="Getter 和 Setter" />
@@ -94,6 +90,7 @@
     <option name="脚本" path="ActionManager" hit="显示 npm 脚本" />
     <option name="显示错误详情" path="ActionManager" hit="显示错误详情" />
     <option name="构造函数" path="ActionManager" hit="构造函数" />
+    <option name="添加枚举显式值" path="ActionManager" hit="添加枚举显式值" />
     <option name="index" path="ActionManager" hit="生成 index.js/index.ts" />
     <option name="js" path="ActionManager" hit="生成 index.js/index.ts" />
     <option name="ts" path="ActionManager" hit="生成 index.js/index.ts" />
@@ -323,6 +320,7 @@
     <option name="始终" path="标点" hit="始终" />
     <option name="f" path="代码生成" hit="字段前缀  F  " />
     <option name="字段前缀" path="代码生成" hit="字段前缀  F  " />
+    <option name="字段周围" path="空行" hit="字段周围 " />
     <option name="对导入的成员排序" path="Import" hit="对导入的成员排序" />
     <option name="t" path="标点" hit="尾随逗号 T  " />
     <option name="尾随逗号" path="标点" hit="尾随逗号 T  " />
@@ -342,6 +340,7 @@
     <option name="n" path="代码生成" hit="文件命名约定  N  " />
     <option name="文件命名约定" path="代码生成" hit="文件命名约定  N  " />
     <option name="方案" hit="方案 " />
+    <option name="方法周围" path="空行" hit="方法周围 " />
     <option name="智能制表符" path="制表符和缩进" hit="智能制表符" />
     <option name="最小的空白行" path="空行" hit="最小的空白行" />
     <option name="标点" path="标点" hit="标点" />
@@ -349,14 +348,12 @@
     <option name="此项的首选显式类型" path="代码生成" hit="此项的首选显式类型 " />
     <option name="注释" path="代码生成" hit="注释" />
     <option name="注释块在第一列" path="代码生成" hit="注释块在第一列" />
-    <option name="环绕字段" path="空行" hit="环绕字段 " />
-    <option name="环绕方法" path="空行" hit="环绕方法 " />
-    <option name="环绕类" path="空行" hit="环绕类 " />
     <option name="禁用" hit="禁用" />
     <option name="移除" path="标点" hit="移除" />
     <option name="空格" path="空格" hit="空格" />
     <option name="空行" path="空行" hit="空行" />
     <option name="空行时保持缩进" path="制表符和缩进" hit="空行时保持缩进" />
+    <option name="类周围" path="空行" hit="类周围 " />
     <option name="类型" path="代码生成" hit="类型" />
     <option name="缩进" path="制表符和缩进" hit="缩进 " />
     <option name="缩进组中的所有链式调用" path="制表符和缩进" hit="缩进组中的所有链式调用" />
@@ -719,6 +716,7 @@
     <option name="始终为" path="Import" hit="始终为   js " />
     <option name="f" path="代码生成" hit="字段前缀  F  " />
     <option name="字段前缀" path="代码生成" hit="字段前缀  F  " />
+    <option name="字段周围" path="空行" hit="字段周围 " />
     <option name="对导入的成员排序" path="Import" hit="对导入的成员排序" />
     <option name="t" path="标点" hit="尾随逗号 T  " />
     <option name="尾随逗号" path="标点" hit="尾随逗号 T  " />
@@ -740,6 +738,7 @@
     <option name="n" path="代码生成" hit="文件命名约定  N  " />
     <option name="文件命名约定" path="代码生成" hit="文件命名约定  N  " />
     <option name="方案" hit="方案 " />
+    <option name="方法周围" path="空行" hit="方法周围 " />
     <option name="智能制表符" path="制表符和缩进" hit="智能制表符" />
     <option name="最小的空白行" path="空行" hit="最小的空白行" />
     <option name="标点" path="标点" hit="标点" />
@@ -747,14 +746,12 @@
     <option name="此项的首选显式类型" path="代码生成" hit="此项的首选显式类型 " />
     <option name="注释" path="代码生成" hit="注释" />
     <option name="注释块在第一列" path="代码生成" hit="注释块在第一列" />
-    <option name="环绕字段" path="空行" hit="环绕字段 " />
-    <option name="环绕方法" path="空行" hit="环绕方法 " />
-    <option name="环绕类" path="空行" hit="环绕类 " />
     <option name="禁用" hit="禁用" />
     <option name="移除" path="标点" hit="移除" />
     <option name="空格" path="空格" hit="空格" />
     <option name="空行" path="空行" hit="空行" />
     <option name="空行时保持缩进" path="制表符和缩进" hit="空行时保持缩进" />
+    <option name="类周围" path="空行" hit="类周围 " />
     <option name="类型" path="代码生成" hit="类型" />
     <option name="缩进" path="制表符和缩进" hit="缩进 " />
     <option name="缩进组中的所有链式调用" path="制表符和缩进" hit="缩进组中的所有链式调用" />
