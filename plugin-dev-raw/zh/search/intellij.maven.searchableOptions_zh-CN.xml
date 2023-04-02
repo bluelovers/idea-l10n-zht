@@ -2,8 +2,8 @@
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
     <option name="maven" path="ActionManager" hit="Maven" />
-    <option name="maven" path="ActionManager" hit="Maven 組態" />
-    <option name="組態" path="ActionManager" hit="Maven 組態" />
+    <option name="maven" path="ActionManager" hit="Maven 設定" />
+    <option name="設定" path="ActionManager" hit="Maven 設定" />
     <option name="下載所有相依項的文檔" path="ActionManager" hit="下載所有相依項的文檔" />
     <option name="下載所有相依項的原始碼" path="ActionManager" hit="下載所有相依項的原始碼" />
     <option name="下載所有相依項的原始碼和文檔" path="ActionManager" hit="下載所有相依項的原始碼和文檔" />
@@ -129,9 +129,9 @@
     <option name="生成並顯示有效的" path="ActionManager" hit="生成並顯示有效的 POM" />
     <option name="生成原始碼並更新目錄" path="ActionManager" hit="生成原始碼並更新目錄" />
     <option name="移除執行組態" path="ActionManager" hit="移除執行組態" />
-    <option name="maven" path="ActionManager" hit="編輯當前項目的 Maven 整合組態" />
-    <option name="編輯當前項目的" path="ActionManager" hit="編輯當前項目的 Maven 整合組態" />
-    <option name="整合組態" path="ActionManager" hit="編輯當前項目的 Maven 整合組態" />
+    <option name="maven" path="ActionManager" hit="編輯當前項目的 Maven 整合設定" />
+    <option name="編輯當前項目的" path="ActionManager" hit="編輯當前項目的 Maven 整合設定" />
+    <option name="整合設定" path="ActionManager" hit="編輯當前項目的 Maven 整合設定" />
     <option name="編輯執行組態" path="ActionManager" hit="編輯執行組態…" />
     <option name="maven" path="ActionManager" hit="轉到 Maven 相依項" />
     <option name="相依項" path="ActionManager" hit="轉到 Maven 相依項" />
@@ -175,11 +175,11 @@
     <option name="從不失敗" hit="從不失敗" />
     <option name="g" hit="以遞迴方式執行目標 G " />
     <option name="以遞迴方式執行目標" hit="以遞迴方式執行目標 G " />
-    <option name="config" hit="使用  mvn maven config 中的組態" />
-    <option name="maven" hit="使用  mvn maven config 中的組態" />
-    <option name="mvn" hit="使用  mvn maven config 中的組態" />
-    <option name="中的組態" hit="使用  mvn maven config 中的組態" />
-    <option name="使用" hit="使用  mvn maven config 中的組態" />
+    <option name="config" hit="使用  mvn maven config 中的設定" />
+    <option name="maven" hit="使用  mvn maven config 中的設定" />
+    <option name="mvn" hit="使用  mvn maven config 中的設定" />
+    <option name="中的設定" hit="使用  mvn maven config 中的設定" />
+    <option name="使用" hit="使用  mvn maven config 中的設定" />
     <option name="r" hit="使用延伸模組註冊表 R " />
     <option name="使用延伸模組註冊表" hit="使用延伸模組註冊表 R " />
     <option name="資訊" hit="資訊" />
@@ -193,17 +193,17 @@
     <option name="e" hit="列印異常堆疊追蹤 E " />
     <option name="列印異常堆疊追蹤" hit="列印異常堆疊追蹤 E " />
     <option name="無全域策略" hit="無全域策略" />
-    <option name="d" hit="顯示新 Maven 專案的組態對話框 D " />
-    <option name="maven" hit="顯示新 Maven 專案的組態對話框 D " />
-    <option name="顯示新" hit="顯示新 Maven 專案的組態對話框 D " />
-    <option name="專案的組態對話框" hit="顯示新 Maven 專案的組態對話框 D " />
+    <option name="d" hit="顯示新 Maven 專案的設定對話框 D " />
+    <option name="maven" hit="顯示新 Maven 專案的設定對話框 D " />
+    <option name="顯示新" hit="顯示新 Maven 專案的設定對話框 D " />
+    <option name="專案的設定對話框" hit="顯示新 Maven 專案的設定對話框 D " />
     <option name="最後失敗" hit="最後失敗" />
     <option name="r" hit="本地儲存庫 R  " />
     <option name="本地儲存庫" hit="本地儲存庫 R  " />
     <option name="c" hit="校驗和策略 C  " />
     <option name="校驗和策略" hit="校驗和策略 C  " />
-    <option name="s" hit="使用者組態檔案 S  " />
-    <option name="使用者組態檔案" hit="使用者組態檔案 S  " />
+    <option name="s" hit="使用者設定檔案 S  " />
+    <option name="使用者設定檔案" hit="使用者設定檔案 S  " />
     <option name="執行緒計數" hit="執行緒計數" />
     <option name="o" hit="脫機工作 O " />
     <option name="脫機工作" hit="脫機工作 O " />
@@ -231,17 +231,17 @@
     <option name="generated-sources" hit=" target generated sources 的子目錄" />
     <option name="target" hit=" target generated sources 的子目錄" />
     <option name="的子目錄" hit=" target generated sources 的子目錄" />
-    <option name="" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
-    <option name="api" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
-    <option name="ide" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
-    <option name="workspace" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
-    <option name="它會將匯入的模組組態保留在內部存儲中" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
-    <option name="目錄中" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
-    <option name="未來不再支援" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
-    <option name="此選項已棄用" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
-    <option name="而手動自訂組態則存儲在專案根目錄下的" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
-    <option name="請考慮停用此選項或遷移以使用新的" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
-    <option name="進行匯入" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組組態保留在內部存儲中 而手動自訂組態則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="api" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="ide" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="workspace" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="它會將匯入的模組設定保留在內部存儲中" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="目錄中" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="未來不再支援" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="此選項已棄用" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="而手動自訂設定則存儲在專案根目錄下的" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="請考慮停用此選項或遷移以使用新的" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
+    <option name="進行匯入" hit=" 此選項已棄用 未來不再支援  請考慮停用此選項或遷移以使用新的 Workspace API 進行匯入  它會將匯入的模組設定保留在內部存儲中 而手動自訂設定則存儲在專案根目錄下的  ide 目錄中   " />
     <option name="generate-resources" hit="generate resources" />
     <option name="generate-sources" hit="generate sources" />
     <option name="generate-test-resources" hit="generate test resources" />
