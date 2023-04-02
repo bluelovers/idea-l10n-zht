@@ -9,6 +9,24 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛　Bug Fixes
 
+* **dict:** { Configure => 組態 } , { Settings => 設定 } ([78e27d7](https://github.com/bluelovers/idea-l10n-zht/commit/78e27d7aa96a10c168a30b44d269e1cac6375103))
+
+
+### 🛠　Build System
+
+* **cache:** update static cache ([dd8bfc9](https://github.com/bluelovers/idea-l10n-zht/commit/dd8bfc901aabf3cd622125946ac5c20dcc337800))
+* **release:** update build ( 231.250 ) ([c7ece38](https://github.com/bluelovers/idea-l10n-zht/commit/c7ece38bf23c3e7939f5ed8517083e7e086bef5c))
+* **release:** update dev build files ( 231.250 ) ([9afa949](https://github.com/bluelovers/idea-l10n-zht/commit/9afa949968fb0ba9d1f01ee5d1a184cd7a7163d8))
+* **test:** update snapshots ( 231.250 ) ([a92a2ee](https://github.com/bluelovers/idea-l10n-zht/commit/a92a2ee60d841e2635e594c222d9294651700b62))
+
+
+
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2023-04-02)
+
+
+
+### 🐛　Bug Fixes
+
 * **dict:** { Explorer  => 檔案總管 } ([430f829](https://github.com/bluelovers/idea-l10n-zht/commit/430f829119527ab7d136f6615c2a3bbf53cab691))
 
 
