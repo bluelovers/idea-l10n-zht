@@ -2,7 +2,7 @@
 <body>
 <p>報告使用靈活可 null 的擴展接收器（具有未知可 null 性的平台類型）對內聯函式的潛在不安全呼叫。</p>
 <p>
-    在 Kotlin 1.2 之前，使用靈活的可 null 擴展接收器（具有未知可 null 性的平台類型）對 <code>inline fun</code> 的呼叫不包括字節碼中的可 null 性檢查。 自 Kotlin 1.2 起，字節碼中包含可 null 性檢查（請參閱 <a href="https://youtrack.jetbrains.com/issue/KT-12899">KT-12899</a>）。
+    在 Kotlin 1.2 之前，使用靈活的可 null 擴展接收器（具有未知可 null 性的平台類型）對 <code>inline fun</code> 的呼叫不包括位元組碼中的可 null 性檢查。 自 Kotlin 1.2 起，位元組碼中包含可 null 性檢查（請參閱 <a href="https://youtrack.jetbrains.com/issue/KT-12899">KT-12899</a>）。
 </p>
 <p>
     建議新增要拋出異常的顯式 <code>!!</code>，或者考慮將函式的接收器類型更改為可 null（如果它能夠無異常地執行）。

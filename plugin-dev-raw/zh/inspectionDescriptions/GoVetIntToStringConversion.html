@@ -1,6 +1,6 @@
 <html>
 <body>
-報告類似於 <code>string(x)</code> 表達式的轉換，其中 <code>x</code> 是整數，但不是字節或 rune。
+報告類似於 <code>string(x)</code> 表達式的轉換，其中 <code>x</code> 是整數，但不是位元組或 rune。
 
 <p>不建議這種轉換，因為它們返回 Unicode 程式碼點 <code>x</code> 的 UTF-8 表示，而不是人們可能預期的返回 <code>x</code> 的十進制字串表示。 此外，如果 <code>x</code> 表示無效的程式碼點，轉換不能被靜態拒絕。</p>
 

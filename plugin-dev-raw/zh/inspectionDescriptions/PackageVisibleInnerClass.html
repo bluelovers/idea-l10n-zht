@@ -6,12 +6,12 @@
   public class Outer {
     static class Nested {}  // 警告
     class Inner {}          // 警告
-    enum Mode {}            // 警告取決於設定
-    interface I {}          // 警告取決於設定
+    enum Mode {}            // 警告取決於組態
+    interface I {}          // 警告取決於組態
   }
 </code></pre>
 <!-- tooltip end -->
-<p>設定檢查：</p>
+<p>組態檢查：</p>
 <ul>
   <li>使用<b>忽略軟體套件可見的內部枚舉</b>選項可忽略 package-private 內部枚舉。</li>
   <li>使用<b>忽略軟體套件可見的內部接口</b>選項可忽略 package-private 內部接口。</li>

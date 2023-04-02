@@ -3,7 +3,7 @@
 報告參照中的冗餘反引號。
 <p>
     一些 Kotlin 關鍵字在 Java 中是有效的關鍵字，例如：<code>in</code>、<code>object</code>、<code>is</code>。
-    如果 Java 庫將 Kotlin 關鍵字用於方法，您仍然可以呼叫該方法並使用反引號字符 (<code>`</code>) 對其進行轉義，例如 <code>foo.`is`(bar)</code>。
+    如果 Java 庫將 Kotlin 關鍵字用於方法，您仍然可以呼叫該方法並使用反引號字元 (<code>`</code>) 對其進行轉義，例如 <code>foo.`is`(bar)</code>。
     有時這種轉義是冗餘的，可以安全地省略。 該檢查會發現並報告此類別情況，並與“移除冗餘反引號”快速修復配對，允許您修改醒目提示的程式碼。
 </p>
 <p><b>範例：</b></p>

@@ -2,7 +2,7 @@
 <body>
 <p>報告在屬性存取器上重複使用非 <code>@Repeatable</code> 註解的情況。</p>
 <p>
-    由於多次使用非 <code>@Repeatable</code> 註解，這兩種註解的使用都會出現在字節碼中，從而導致反射呼叫中的歧義。
+    由於多次使用非 <code>@Repeatable</code> 註解，這兩種註解的使用都會出現在位元組碼中，從而導致反射呼叫中的歧義。
 </p>
 <p>
     從 Kotlin 1.4 開始，必須將註解標記為 <code>@Repeatable</code> 或不重複註解，否則會導致編譯錯誤。

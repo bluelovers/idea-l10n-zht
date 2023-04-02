@@ -11,7 +11,7 @@
 @Target(ElementType.METHOD)
 @interface A { }
   
-// 該註解根本不會出現在字節碼中，
+// 該註解根本不會出現在位元組碼中，
 // 因為它應當傳播到存取器，但顯式定義了存取器
 record R(@A int x) {
   public int x() { return x; }

@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>
-  報告 Spring Boot 應用程式 <code>.yaml</code> 設定檔案中未解析和棄用的設定鍵和無效值，它們可能導致執行時錯誤。
+  報告 Spring Boot 應用程式 <code>.yaml</code> 組態檔案中未解析和棄用的組態鍵和無效值，它們可能導致執行時錯誤。
 </p>
 
 <p><b>範例：</b></p>
@@ -10,12 +10,12 @@ server:
   port: invalid # 報告 '無法將 'invalid' 轉換為 java.lang.Integer'
 </code></pre>
 
-<p>如果已棄用的設定鍵有取代鍵，您可以套用 '使用取代鍵' 快速修復。</p>
+<p>如果已棄用的組態鍵有取代鍵，您可以套用 '使用取代鍵' 快速修復。</p>
 
 <p><b>範例：</b></p>
 <pre><code>
 logging:
-  path: ${path} # 報告 '已棄用的設定屬性 'logging.path''
+  path: ${path} # 報告 '已棄用的組態屬性 'logging.path''
 </code></pre>
 
 <p>在套用快速修復後：</p>
@@ -26,12 +26,12 @@ logging:
 </code></pre>
 
 <p>
-  如果 <code>spring-configuration-metadata.json</code> 中未定義設定鍵，您可以套用建立 <code>META-INF/spring-additional-configuration-metadata.json</code> 檔案並定義必要鍵的 '定義設定鍵' 快速修復。</p>
+  如果 <code>spring-configuration-metadata.json</code> 中未定義組態鍵，您可以套用建立 <code>META-INF/spring-additional-configuration-metadata.json</code> 檔案並定義必要鍵的 '定義組態鍵' 快速修復。</p>
 
 <p><b>範例：</b></p>
 <pre><code>
 new:
-  key: value # 報告 '無法解析設定屬性 'new.key''
+  key: value # 報告 '無法解析組態屬性 'new.key''
 </code></pre>
 
 <p>套用快速修復後，以下內容將新增到 <code>META-INF/spring-additional-configuration-metadata.json</code>：</p>
@@ -47,7 +47,7 @@ new:
 </code></pre>
 <!-- tooltip end -->
 <p>
-  使用<b>取代令牌</b>選項定義用於設定檔案中值佔位符的令牌。
+  使用<b>取代令牌</b>選項定義用於組態檔案中值佔位符的令牌。
   這些令牌以 <code>beginToken*endToken</code> 的形式指定。
   如果沒有 <code>*</code>，則假定開始和結束的令牌相同。
 </p>

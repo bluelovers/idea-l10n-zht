@@ -16,7 +16,7 @@
   檢查行為可能由許多註解控制，例如<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">可 null 性</a>註解、<code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 註解、<code>@Range</code> 註解等。
 </p>
 <!-- tooltip end -->
-<p>設定檢查：</p>
+<p>組態檢查：</p>
 <ul>
   <li>使用<b>不報告條件靜態證明始終為 true 的斷言</b>選項可避免報告靜態證明始終為 true 的斷言。 這還包括 <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code> 等條件。</li>
   <li>使用<b>忽略 assert 語句</b>選項可控制檢查如何處理 <code>assert</code> 語句。 預設情況下，該選項被停用，這意味著斷言視為被執行（-ea 模式）。 如果啟用該選項，斷言將被完全忽略（-da 模式）。</li>

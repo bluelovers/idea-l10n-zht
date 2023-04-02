@@ -5,7 +5,7 @@
 <p>報告以下錯誤：</p>
 <ul>
   <li>不支持的模式字母，如 "TT"</li>
-  <li>使用保留字符，如 "#"</li>
+  <li>使用保留字元，如 "#"</li>
   <li>不正確的填充用法</li>
   <li>不平衡的中括號</li>
   <li>連續模式字母的數量不正確</li>
@@ -14,7 +14,7 @@
 <pre><code>
   DateTimeFormatter.ofPattern("[][]]"); // 右 ']' 之前沒有左 '['
   DateTimeFormatter.ofPattern("TT"); // 非法的模式字母 'T'
-  DateTimeFormatter.ofPattern("{"); // 使用了保留字符 '{'
+  DateTimeFormatter.ofPattern("{"); // 使用了保留字元 '{'
   DateTimeFormatter.ofPattern("MMMMMM"); // 過多的連續模式字母 'M'
 </code></pre>
 <!-- tooltip end -->
