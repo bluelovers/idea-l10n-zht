@@ -54,8 +54,9 @@
     <option name="il" path="ActionManager" hit="IL" />
     <option name="il" path="ActionManager" hit="IL Viewer" />
     <option name="viewer" path="ActionManager" hit="IL Viewer" />
-    <option name="il" path="ActionManager" hit="IL 檢視器程式碼類型選擇器" />
-    <option name="檢視器程式碼類型選擇器" path="ActionManager" hit="IL 檢視器程式碼類型選擇器" />
+    <option name="il" path="ActionManager" hit="IL Viewer 程式碼類型選擇器" />
+    <option name="viewer" path="ActionManager" hit="IL Viewer 程式碼類型選擇器" />
+    <option name="程式碼類型選擇器" path="ActionManager" hit="IL Viewer 程式碼類型選擇器" />
     <option name="immediate" path="ActionManager" hit="Immediate Window" />
     <option name="window" path="ActionManager" hit="Immediate Window" />
     <option name="json" path="ActionManager" hit="JSON 檔案" />
@@ -74,6 +75,9 @@
     <option name="還原" path="ActionManager" hit="NuGet 還原" />
     <option name="package所選專案" path="ActionManager" hit="Package所選專案" />
     <option name="pack所選專案" path="ActionManager" hit="Pack所選專案" />
+    <option name="process" path="ActionManager" hit="Reattach to Process" />
+    <option name="reattach" path="ActionManager" hit="Reattach to Process" />
+    <option name="to" path="ActionManager" hit="Reattach to Process" />
     <option name="rider" path="ActionManager" hit="Rider 顯示/隱藏庫框架" />
     <option name="顯示" path="ActionManager" hit="Rider 顯示/隱藏庫框架" />
     <option name="隱藏庫框架" path="ActionManager" hit="Rider 顯示/隱藏庫框架" />
@@ -400,11 +404,13 @@
     <option name="匯出設定" path="ActionManager" hit="匯出設定" />
     <option name="匯出設定" path="ActionManager" hit="匯出設定…" />
     <option name="導覽" path="ActionManager" hit="導覽" />
+    <option name="immediate" path="ActionManager" hit="導覽到 Immediate 視窗" />
+    <option name="導覽到" path="ActionManager" hit="導覽到 Immediate 視窗" />
+    <option name="視窗" path="ActionManager" hit="導覽到 Immediate 視窗" />
     <option name="導覽到" path="ActionManager" hit="導覽到…" />
     <option name="導覽到包含宣告" path="ActionManager" hit="導覽到包含宣告" />
     <option name="導覽到單元測試會話" path="ActionManager" hit="導覽到單元測試會話" />
     <option name="導覽到單元測試資源管理器" path="ActionManager" hit="導覽到單元測試資源管理器" />
-    <option name="導覽到即時視窗" path="ActionManager" hit="導覽到即時視窗" />
     <option name="導覽到所選類別或方法的實作" path="ActionManager" hit="導覽到所選類別或方法的實作" />
     <option name="導覽列" path="ActionManager" hit="導覽列" />
     <option name="config" path="ActionManager" hit="將 packages.config 遷移到 PackageReference" />
@@ -940,7 +946,6 @@
     <option name="重新執行當前會話中所有失效" path="ActionManager" hit="重新執行當前會話中所有失效(失敗、中止、不確定)的測試(將忽略所選篩選器)" />
     <option name="將忽略所選篩選器" path="ActionManager" hit="重新執行當前會話中所有失敗的測試(將忽略所選篩選器)" />
     <option name="重新執行當前會話中所有失敗的測試" path="ActionManager" hit="重新執行當前會話中所有失敗的測試(將忽略所選篩選器)" />
-    <option name="重新附加到程序" path="ActionManager" hit="重新附加到程序…" />
     <option name="鎖定會話" path="ActionManager" hit="鎖定會話" />
     <option name="鎖定可防止向此會話新增新測試" path="ActionManager" hit="鎖定可防止向此會話新增新測試" />
     <option name="錯誤" path="ActionManager" hit="錯誤" />
@@ -2594,8 +2599,8 @@
     <option name="控制轉移關鍵字" hit="關鍵字//控制轉移關鍵字(continue、break、return 等)" />
     <option name="等" hit="關鍵字//控制轉移關鍵字(continue、break、return 等)" />
     <option name="內聯提示" hit="內聯提示//參數//當前" />
-    <option name="參數" hit="內聯提示//參數//當前" />
     <option name="當前" hit="內聯提示//參數//當前" />
+    <option name="參數" hit="內聯提示//參數//當前" />
     <option name="內聯提示" hit="內聯提示//參數//醒目提示" />
     <option name="參數" hit="內聯提示//參數//醒目提示" />
     <option name="醒目提示" hit="內聯提示//參數//醒目提示" />
@@ -2667,8 +2672,6 @@
     <option name="關鍵字" hit="關鍵字//函式宣告" />
     <option name="函式呼叫" hit="關鍵字//函式呼叫" />
     <option name="關鍵字" hit="關鍵字//函式呼叫" />
-    <option name="參數" hit="關鍵字//參數" />
-    <option name="關鍵字" hit="關鍵字//參數" />
     <option name="命名空間" hit="關鍵字//命名空間" />
     <option name="關鍵字" hit="關鍵字//命名空間" />
     <option name="區域變數" hit="關鍵字//區域變數" />
@@ -2677,6 +2680,8 @@
     <option name="關鍵字" hit="關鍵字//屬性" />
     <option name="常數" hit="關鍵字//常數" />
     <option name="關鍵字" hit="關鍵字//常數" />
+    <option name="參數" hit="關鍵字//參數" />
+    <option name="關鍵字" hit="關鍵字//參數" />
     <option name="標籤" hit="關鍵字//標籤" />
     <option name="關鍵字" hit="關鍵字//標籤" />
     <option name="關鍵字" hit="關鍵字//重新分配的參數" />
@@ -3154,13 +3159,13 @@
   </configurable>
   <configurable id="SolutionBuilderGeneralOptionsPage" configurable_name="工具包和建置">
     <option name="" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="03" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="04" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="13" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="1372" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="2023" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="22" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="24" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="38" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="5650" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="23" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="45" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="jetbrainslog" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="log" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="msbuild" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
@@ -3234,12 +3239,12 @@
     <option name="全域屬性" hit="MSBuild 全域屬性 " />
     <option name="msbuild" hit="MSBuild 全域屬性:" />
     <option name="全域屬性" hit="MSBuild 全域屬性:" />
-    <option name="jetbrainslog" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202303241322385650.log" />
-    <option name="log" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202303241322385650.log" />
-    <option name="msbuild" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202303241322385650.log" />
-    <option name="resharperbuild202303241322385650" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202303241322385650.log" />
-    <option name="日誌檔案將寫入每個建置的指定目錄中" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202303241322385650.log" />
-    <option name="範例檔名" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202303241322385650.log" />
+    <option name="jetbrainslog" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202304231322451372.log" />
+    <option name="log" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202304231322451372.log" />
+    <option name="msbuild" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202304231322451372.log" />
+    <option name="resharperbuild202304231322451372" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202304231322451372.log" />
+    <option name="日誌檔案將寫入每個建置的指定目錄中" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202304231322451372.log" />
+    <option name="範例檔名" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202304231322451372.log" />
     <option name="msbuild" hit="MSBuild 版本 " />
     <option name="版本" hit="MSBuild 版本 " />
     <option name="msbuild" hit="MSBuild 版本:" />
@@ -3922,13 +3927,21 @@
     <option name="檔案頭模板" hit="檔案頭模板" />
   </configurable>
   <configurable id="preferences.environmentSetup" configurable_name="環境">
-    <option name="" hit=" 機器上的設定環境組態 安裝或升級對使用 Rider 進行開發至關重要的組件  關閉對話框後 下載和安裝程序將在背景繼續執行" />
-    <option name="rider" hit=" 機器上的設定環境組態 安裝或升級對使用 Rider 進行開發至關重要的組件  關閉對話框後 下載和安裝程序將在背景繼續執行" />
-    <option name="下載和安裝程序將在背景繼續執行" hit=" 機器上的設定環境組態 安裝或升級對使用 Rider 進行開發至關重要的組件  關閉對話框後 下載和安裝程序將在背景繼續執行" />
-    <option name="關閉對話框後" hit=" 機器上的設定環境組態 安裝或升級對使用 Rider 進行開發至關重要的組件  關閉對話框後 下載和安裝程序將在背景繼續執行" />
-    <option name="安裝或升級對使用" hit=" 機器上的設定環境組態 安裝或升級對使用 Rider 進行開發至關重要的組件  關閉對話框後 下載和安裝程序將在背景繼續執行" />
-    <option name="機器上的設定環境組態" hit=" 機器上的設定環境組態 安裝或升級對使用 Rider 進行開發至關重要的組件  關閉對話框後 下載和安裝程序將在背景繼續執行" />
-    <option name="進行開發至關重要的組件" hit=" 機器上的設定環境組態 安裝或升級對使用 Rider 進行開發至關重要的組件  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="components" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="computer" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="development" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="environment" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="external" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="install" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="of" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="on" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="or" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="the" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="this" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="update" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="下載和安裝程序將在背景繼續執行" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
+    <option name="關閉對話框後" hit=" Install or update external components of the development environment on this computer  關閉對話框後 下載和安裝程序將在背景繼續執行" />
     <option name="正在載入" hit="正在載入 " />
     <option name="環境" hit="環境" />
   </configurable>
@@ -4250,6 +4263,11 @@
     <option name="和" hit="++ 和 -- 前/後" />
     <option name="all" path="命名" hit="ALL UPPER" />
     <option name="upper" path="命名" hit="ALL UPPER" />
+    <option name="block" hit="Block under the 'case' label" />
+    <option name="case" hit="Block under the 'case' label" />
+    <option name="label" hit="Block under the 'case' label" />
+    <option name="the" hit="Block under the 'case' label" />
+    <option name="under" hit="Block under the 'case' label" />
     <option name="c" hit="C " />
     <option name="file" hit="File Layout" />
     <option name="layout" hit="File Layout" />
@@ -4579,9 +4597,6 @@
     <option name="在逗號後" hit="在逗號後" />
     <option name="在部分中聯接或分隔特性" hit="在部分中聯接或分隔特性" />
     <option name="在部分格式上使用上一個元素的縮排" hit="在部分格式上使用上一個元素的縮排" />
-    <option name="case" hit="塊在“case”標籤下" />
-    <option name="塊在" hit="塊在“case”標籤下" />
-    <option name="標籤下" hit="塊在“case”標籤下" />
     <option name="基類別和接口列表" hit="基類別和接口列表" />
     <option name="基類型列表冒號前" hit="基類型列表冒號前" />
     <option name="基類型列表冒號後" hit="基類型列表冒號後" />
@@ -4738,7 +4753,7 @@
     <option name="常數欄位" hit="常數欄位(非 private)" />
     <option name="非" hit="常數欄位(非 private)" />
     <option name="套用樣式啟發" hit="套用樣式啟發" />
-    <option name="參照等於" hit="參照等於" />
+    <option name="參照相等性" hit="參照相等性" />
     <option name="using" hit="參照限定和 'using' 指令" />
     <option name="參照限定和" hit="參照限定和 'using' 指令" />
     <option name="指令" hit="參照限定和 'using' 指令" />
@@ -4749,10 +4764,6 @@
     <option name="成員存取表達式的排列" hit="成員存取表達式的排列" />
     <option name="所有其他實體" hit="所有其他實體" />
     <option name="所有其他情況下在開始標記後和結束標記前空格" hit="所有其他情況下在開始標記後和結束標記前空格" />
-    <option name="0" hit="拋出表達式(C# 7.0+)" />
-    <option name="7" hit="拋出表達式(C# 7.0+)" />
-    <option name="c" hit="拋出表達式(C# 7.0+)" />
-    <option name="拋出表達式" hit="拋出表達式(C# 7.0+)" />
     <option name="括號" hit="括號" />
     <option name="按位運算符" hit="按位運算符(&amp;,|,^)" />
     <option name="換行" hit="換行" />
@@ -4797,10 +4808,6 @@
     <option name="標記頭內部" hit="標記頭內部" />
     <option name="樣式" path="命名" hit="樣式  " />
     <option name="模式" hit="模式" />
-    <option name="0" hit="模式符合(C# 7.0+)" />
-    <option name="7" hit="模式符合(C# 7.0+)" />
-    <option name="c" hit="模式符合(C# 7.0+)" />
-    <option name="模式符合" hit="模式符合(C# 7.0+)" />
     <option name="正在載入" hit="正在載入 " />
     <option name="註釋掉程式碼時將註釋置於第一列" hit="註釋掉程式碼時將註釋置於第一列" />
     <option name="新增圓括號以避免不明顯的優先級" hit="新增圓括號以避免不明顯的優先級" />
@@ -5044,6 +5051,11 @@
     <option name="前" path="空格" hit="++ 和 -- 前/後" />
     <option name="後" path="空格" hit="++ 和 -- 前/後" />
     <option name="和" path="空格" hit="++ 和 -- 前/後" />
+    <option name="block" path="大括號布局" hit="Block under the 'case' label" />
+    <option name="case" path="大括號布局" hit="Block under the 'case' label" />
+    <option name="label" path="大括號布局" hit="Block under the 'case' label" />
+    <option name="the" path="大括號布局" hit="Block under the 'case' label" />
+    <option name="under" path="大括號布局" hit="Block under the 'case' label" />
     <option name="file" path="檔案布局" hit="File Layout" />
     <option name="layout" path="檔案布局" hit="File Layout" />
     <option name="linq" path="制表符、縮排、對齊" hit="LINQ 查詢" />
@@ -5341,9 +5353,6 @@
     <option name="在逗號後" path="空格" hit="在逗號後" />
     <option name="在部分中聯接或分隔特性" path="語法樣式" hit="在部分中聯接或分隔特性" />
     <option name="在部分格式上使用上一個元素的縮排" path="制表符、縮排、對齊" hit="在部分格式上使用上一個元素的縮排" />
-    <option name="case" path="大括號布局" hit="塊在“case”標籤下" />
-    <option name="塊在" path="大括號布局" hit="塊在“case”標籤下" />
-    <option name="標籤下" path="大括號布局" hit="塊在“case”標籤下" />
     <option name="基類別和接口列表" path="制表符、縮排、對齊" hit="基類別和接口列表" />
     <option name="基類型列表冒號前" path="空格" hit="基類型列表冒號前" />
     <option name="基類型列表冒號後" path="空格" hit="基類型列表冒號後" />
@@ -5500,7 +5509,7 @@
     <option name="常數欄位" path="命名" hit="常數欄位(非 private)" />
     <option name="非" path="命名" hit="常數欄位(非 private)" />
     <option name="套用樣式啟發" path="語法樣式" hit="套用樣式啟發" />
-    <option name="參照等於" path="Null 檢查" hit="參照等於" />
+    <option name="參照相等性" path="Null 檢查" hit="參照相等性" />
     <option name="using" path="語法樣式" hit="參照限定和 'using' 指令" />
     <option name="參照限定和" path="語法樣式" hit="參照限定和 'using' 指令" />
     <option name="指令" path="語法樣式" hit="參照限定和 'using' 指令" />
@@ -5511,10 +5520,6 @@
     <option name="成員存取表達式的排列" path="換行" hit="成員存取表達式的排列" />
     <option name="所有其他實體" path="命名" hit="所有其他實體" />
     <option name="所有其他情況下在開始標記後和結束標記前空格" path="XML 文檔" hit="所有其他情況下在開始標記後和結束標記前空格" />
-    <option name="0" path="Null 檢查" hit="拋出表達式(C# 7.0+)" />
-    <option name="7" path="Null 檢查" hit="拋出表達式(C# 7.0+)" />
-    <option name="c" path="Null 檢查" hit="拋出表達式(C# 7.0+)" />
-    <option name="拋出表達式" path="Null 檢查" hit="拋出表達式(C# 7.0+)" />
     <option name="括號" path="空格" hit="括號" />
     <option name="按位運算符" path="空格" hit="按位運算符(&amp;,|,^)" />
     <option name="換行" path="XML 文檔" hit="換行" />
@@ -5550,10 +5555,6 @@
     <option name="標記周圍" path="XML 文檔" hit="標記周圍" />
     <option name="標記頭內部" path="XML 文檔" hit="標記頭內部" />
     <option name="模式" path="語法樣式" hit="模式" />
-    <option name="0" path="Null 檢查" hit="模式符合(C# 7.0+)" />
-    <option name="7" path="Null 檢查" hit="模式符合(C# 7.0+)" />
-    <option name="c" path="Null 檢查" hit="模式符合(C# 7.0+)" />
-    <option name="模式符合" path="Null 檢查" hit="模式符合(C# 7.0+)" />
     <option name="註釋掉程式碼時將註釋置於第一列" path="制表符、縮排、對齊" hit="註釋掉程式碼時將註釋置於第一列" />
     <option name="新增圓括號以避免不明顯的優先級" path="語法樣式" hit="新增圓括號以避免不明顯的優先級" />
     <option name="點周圍" path="空格" hit="點周圍" />
@@ -11602,8 +11603,8 @@
     <option name="如果目標類型明顯" hit="如果目標類型明顯，則隱藏" />
     <option name="始終顯示" hit="始終顯示" />
     <option name="對單個呼叫和單行方法鏈隱藏" hit="對單個呼叫和單行方法鏈隱藏" />
-    <option name="對按順序排列的最後一次呼叫顯示提示" hit="對按順序排列的最後一次呼叫顯示提示" />
-    <option name="對按順序排列的第一次呼叫顯示提示" hit="對按順序排列的第一次呼叫顯示提示" />
+    <option name="對序列中的最後一次呼叫顯示提示" hit="對序列中的最後一次呼叫顯示提示" />
+    <option name="對序列中的第一次呼叫顯示提示" hit="對序列中的第一次呼叫顯示提示" />
     <option name="對最後一次呼叫隱藏" hit="當提示不相關時，對最後一次呼叫隱藏" />
     <option name="當提示不相關時" hit="當提示不相關時，對最後一次呼叫隱藏" />
     <option name="內嵌提示設定頁面上設定預設可見性" hit="您可以在編輯器 | 內嵌提示設定頁面上設定預設可見性。" />

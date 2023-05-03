@@ -86,7 +86,16 @@
     "group.VcsGroups.text": "Git(_G)",
     "group.Internal.UI.text": "UI(&U)",
     "action.SearchEverywhereToolbarHotKey.hotkey": "Shift+Shift",
-    "group.TouchBar.text": "Touch Bar"
+    "group.TouchBar.text": "Touch Bar",
+    "action.StoreDefaultLayout.description": "Save changes in the currently selected layout",
+    "action.RestoreDefaultLayout.description": "Restore the currently selected layout",
+    "action.SwitchIdeScaleAction.text": "Zoom IDE",
+    "action.CustomLayoutActionsGroup.Rename.description": "Rename the current layout (\"{0}\")",
+    "action.StoreDefaultLayout.named.description": "Save changes in the currently selected layout (\"{0}\")",
+    "action.RestoreDefaultLayout.named.description": "Restore the currently selected layout (\"{0}\")",
+    "group.CustomLayoutActionsGroup.text": "Tool Window Layout",
+    "group.CustomLayoutsGroup.text": "Tool Window Layouts",
+    "action.GotoTest.text.subject": "Go to Test Subject"
   },
   "messages/AnalysisBundle.properties": {
     "inspection.export.results.capitalized.abstract.class": "Abstract\\&nbsp;class"
@@ -134,7 +143,10 @@
     "livetemplate.description.angular2.a-httpclient-get": "Angular HttpClient.get",
     "livetemplate.description.angular2.a-ngrx-data-entity-collection-data-service": "NgRx Data Entity Collection Data Service",
     "livetemplate.description.angular2.a-ngrx-data-entity-metadata": "NgRx Data Entity Metadata",
-    "livetemplate.description.angular2.a-ngrx-data-store-module": "NgRx Data Store Module"
+    "livetemplate.description.angular2.a-ngrx-data-store-module": "NgRx Data Store Module",
+    "angular.inspection.missing-required-directive-input-binding.message": "Missing binding for required input {0} of directive {1}",
+    "angular.inspection.missing-required-directive-input.name": "Missing required directive input",
+    "angular.inspection.missing-required-directive-input-binding.message.component": "Missing binding for required input {0} of component {1}"
   },
   "messages/AppCodeBundle.properties": {
     "sdk.type.name": "Apple SDK",
@@ -176,7 +188,9 @@
     "editorsearch.current.cursor.position": "{0}/{1}",
     "editorsearch.toomuch": "{0}+",
     "settings.hints.group.code.vision": "Code Vision",
-    "settings.hints.new.group.code.vision": "Code Vision"
+    "settings.hints.new.group.code.vision": "Code Vision",
+    "advanced.setting.ide.always.show.tool.window.header.icons": "Always show tool window header icons in the new UI",
+    "advanced.setting.ide.always.show.tool.window.header.icons.description": "If this option is disabled, tool window header icons are shown only on mouse hover or when the tool window is focused"
   },
   "messages/ArquillianBundle.properties": {
     "arquillian.junit.configuration.name": "Arquillian JUnit",
@@ -187,9 +201,25 @@
     "highlighting.tooltip.html": "<html><body>{0}</body></html>",
     "action.create.aspect.kind.annotation": "@Aspect"
   },
+  "messages/AwsBundle.properties": {
+    "auth.type.direct.name": "Explicit Credentials"
+  },
   "messages/AzureBundle.properties": {
     "custom.bucket.text.empty": "container/folder,container2/folder/subfolder2,…",
-    "empty.subscription": "<Not Selected>"
+    "auth.device.code.dialog.message": "Waiting for signing in with the code...",
+    "settings.auth.status.authenticated": "Logged as {0},<br> Subscription: {1}.<br><a>Logout</a>",
+    "settings.auth.status.authenticate.ready": "Ready to log in as {0},<br> Subscription: {1}.<br><a>Logout</a>",
+    "settings.auth.status.not.authenticated": "Not logged in. <a>Authenticate</a>",
+    "plugin.azure.is.not.installed": "Azure Toolkit Plugin is not installed. <a>Marketplace</a>",
+    "plugin.azure.is.not.enabled": "Azure Toolkit Plugin is disabled. <a>Enable</a>",
+    "auth.select.dialog.title": "Select Azure Authentication Type",
+    "plugin.azure.is.not.found": "Azure Toolkit Plugin is not found for<br>this IDE version. <a>Explore</a>",
+    "exception.azure.auth.operation.with.reason": "Error \"{0}\" while performing operation \"{1}\"",
+    "settings.enable.auth.cache": "Cache authentication",
+    "auth.select.dialog.oauth.label": "OAuth 2.0",
+    "auth.select.dialog.oauth.comment": "Sign in to Azure account in browser.",
+    "auth.select.dialog.device.code.comment": "Enter the device code in browser.",
+    "auth.select.dialog.cli.comment": "Sign in using Azure CLI."
   },
   "messages/BVBundle.properties": {
     "label.unknown": "@unknown"
@@ -214,7 +244,9 @@
     "notification.title.bdt": "Big Data Tools",
     "progress.title.to": "{0} {1}，{2}",
     "metainfo.info.label.etag": "ETag:",
-    "kerberos.settings.principal.empty": "USER@EXAMPLE.COM"
+    "kerberos.settings.principal.empty": "USER@EXAMPLE.COM",
+    "kerberos.settings.jaas.entry.generated.title": "Generated JAAS Entry",
+    "url.format.error.detailed": "URL is malformed:\n{0}"
   },
   "messages/CLionCMakeBundle.properties": {
     "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options",
@@ -278,6 +310,9 @@
     "debug.exception.breakpoint.when.kn.label": "Kotlin/Native",
     "debug.exception.breakpoint.when.objc.fragment": "Objective-C",
     "debug.exception.breakpoint.when.kn.fragment": "Kotlin/Native"
+  },
+  "messages/CidrDockerBundle.properties": {
+    "dialog.message.docker.configuration.is.not.valid": "Docker configuration is not valid"
   },
   "messages/CidrDoctestBundle.properties": {
     "doctest.test.noname": "<Anonymous>"
@@ -425,7 +460,8 @@
     "selector.value.presentable.name": "<selector>",
     "url.value.presentable.name": "<url>",
     "id.value.presentable.name": "<id>",
-    "css.stylelint.message.prefix": "Stylelint:"
+    "css.stylelint.message.prefix": "Stylelint:",
+    "css.inspections.property.mismatched.container.values": "Container query length unit \"{0}\" is not applicable outside @container"
   },
   "messages/CucumberBundle.properties": {
     "step.definition.0.1": "{0} {1}"
@@ -681,10 +717,21 @@
   },
   "messages/EduCoreBundle.properties": {
     "course.creator.create.archive.panel.author": "Author:",
+    "course.dialog.jba.default.card.info": "Log in and select a project based on your proficiency level",
+    "course.dialog.log.in.to.jba.label.text": "<hyperlink>Log in to Hyperskill</hyperlink> to get started",
     "exception.message.http.info": "HTTP {0} {1}",
+    "hyperskill.courses.explanation": "{0} is a project-based learning platform that hosts JetBrains Academy educational content. Our collaboration empowers users to study computer science by creating real-world applications.",
     "inspection.group.path.key": "JetBrains Academy",
+    "marketplace.widget.tooltip": "Click to manage JetBrains account",
+    "marketplace.push.course.failed.text": "Failed to upload course ''{0}'' to Marketplace. Please check internet connection and try again",
+    "stepik.change.host": "Change Stepik Url",
     "stepik.url": "Stepik URL:",
-    "ui.dialog.create.answer.placeholder.path.pattern": "[sectionName#]lessonName#taskName#filePath#placeholderIndex"
+    "submissions.login": "Log in to to view submissions",
+    "ui.dialog.create.answer.placeholder.path.pattern": "[sectionName#]lessonName#taskName#filePath#placeholderIndex",
+    "validation.hyperskill.login.needed": "<a href=\"\">Log in</a> to Hyperskill and select a project based on your proficiency level"
+  },
+  "messages/EduPythonBundle.properties": {
+    "run.configuration.path.to.tests": "Path to test file:"
   },
   "messages/EjbBundle.properties": {
     "action.CreateServletAction.text": "Servlet(_S)",
@@ -735,6 +782,9 @@
     "jsf.facelets": "JSF/Facelets",
     "list.item.jsf.facelets": "JSF/Facelets"
   },
+  "messages/FeatureSuggesterBundle.properties": {
+    "configurable.show.suggestions.checkbox": "Show suggestions for the following actions:"
+  },
   "messages/FindBundle.properties": {
     "find.context.presentation.scope.label": " ({0})",
     "emptyText.used.option": "{0}"
@@ -760,7 +810,6 @@
   },
   "messages/GatewayBundle.properties": {
     "connector.cwm.dialog.title": "Code With Me",
-    "install.google.cloud.title": "Google Cloud",
     "wsl-distribution-chooser.microsoft-store": "Microsoft Store"
   },
   "messages/GaugeBundle.properties": {
@@ -813,6 +862,11 @@
     "action.com.goide.vgo.actions.VgoVendorAction.text": "Go Mod Vendor",
     "go.quick.doc.keyword.resource.effective.go.label": "Effective Go"
   },
+  "messages/GoLessonsBundle.properties": {
+    "go.onboarding.start.typing.balloon": "Start typing {0} to show the completion options",
+    "go.onboarding.invoke.intention.for.warning.balloon": "Press {0} to show all available quick-fixes",
+    "go.onboarding.invoke.intention.for.code.balloon": "Press {0} to show all available intentions"
+  },
   "messages/GraalVmBundle.properties": {
     "debugger.display.name": "GDB/GraalVM",
     "graalvm.install.title": "GraalVM Gu"
@@ -820,7 +874,8 @@
   "messages/GradleBundle.properties": {
     "gradle.settings.text.jvm.path": "Gradle JVM：",
     "gradle.filetype.display.name": "Groovy Gradle DSL",
-    "gradle.dsl.new.project.wizard": "Gradle DSL:"
+    "gradle.dsl.new.project.wizard": "Gradle DSL:",
+    "gradle.project.settings.kotlin.dsl.unsupported.message": "Kotlin DSL has been supported since Gradle {0}.\n\nDo you want to proceed with Kotlin DSL and Gradle {1}?"
   },
   "messages/GrailsBundle.properties": {
     "filetype.gsp.description": "Groovy Server Pages",
@@ -964,12 +1019,16 @@
     "login.dialog.title": "{0}",
     "notification.title.jcef.measureFPS": "OSR JCEF FPS Meter",
     "transfersettings.product.visual.studio.for.mac": "Visual Studio for Mac",
-    "transfersettings.product.visual.studio": "Visual Studio"
+    "transfersettings.product.visual.studio": "Visual Studio",
+    "checkbox.compact.mode.description": "UI elements take up less screen space"
   },
   "messages/ImagesBundle.properties": {
     "icon.dimensions": "{0,number}x{1,number}x{2,number}",
     "image.description": "{0}×{1}, {2}bpp",
     "image.info.svg": "{0}x{1} {2}"
+  },
+  "messages/IndexingBundle.properties": {
+    "progress.text.loading.indexes": "Loading indexes..."
   },
   "messages/InspectionGadgetsBundle.properties": {
     "missing.add.deprecated.javadoc.tag.quickfix": "Add '@deprecated' Javadoc tag explanation"
@@ -1076,9 +1135,18 @@
   "messages/JavaFXJpsBundle.properties": {
     "java.fx.packager": "Java FX Packager"
   },
+  "messages/JavaLessonsBundle.properties": {
+    "java.onboarding.invoke.completion.balloon": "Type a period {0} to show all available completion options",
+    "java.onboarding.invoke.intention.for.warning.balloon": "Press {0} to show available quick-fixes",
+    "java.onboarding.invoke.intention.for.code.balloon": "Press {0} to show available intentions"
+  },
   "messages/JavaPsiBundle.properties": {
     "aux.context.display": "/{0}",
-    "element.kind.and.name": "{0} {1}"
+    "element.kind.and.name": "{0} {1}",
+    "jdk.18.language.level.description": "18 - JavaDoc snippets",
+    "jdk.18.preview.language.level.description": "18 (Preview) - Pattern matching for switch (2nd preview)",
+    "jdk.19.preview.language.level.description": "19 (Preview) - Record patterns, pattern matching for switch (3rd preview)",
+    "jdk.20.preview.language.level.description": "20 (Preview) - Record patterns (2nd preview), pattern matching for switch (4th preview)"
   },
   "messages/JavaRefactoringBundle.properties": {
     "encapsulate.fields..package.local.radio": "Package local(&C)",
@@ -1120,6 +1188,7 @@
     "livetemplate.description.console.assert": "console.assert()",
     "macro.js.component.type.of": "jsComponentTypeOf(Array)",
     "macro.js.suggest.default.variable.kind": "jsSuggestDefaultVariableKind(Boolean)",
+    "settings.javascript.linters.autodetect.configure.automatically.help.text": "{0} will use the {1} package in the node_modules directory and {2} configuration files located in the same folder as the current file or any of its parent folders.",
     "es6.auto.import.options.title": "TypeScript / JavaScript",
     "bower.json": "bower.json (&O)：",
     "js.language.version.combo.es5": "ECMAScript 5.1",
@@ -1149,7 +1218,9 @@
     "filetype.yarn.lock.description": "Yarn lock",
     "intention.category.ecmascript6": "JavaScript/ECMAScript 6",
     "flow.js.widget.display.name": "Flow JS",
-    "notification.group.linters": "JavaScript linter"
+    "notification.group.linters": "JavaScript linter",
+    "code.vision.performance.watcher.notification.title": "Code Vision hints evaluation is slow",
+    "code.vision.performance.watcher.notification.message": "Disabling Code Vision hints may improve performance by reducing CPU load."
   },
   "messages/JavaScriptIntentionBundle.properties": {
     "plugin.category.flowjs": "Flow JS",
@@ -1170,7 +1241,25 @@
     "label.maven": "Maven:",
     "checkbox.javadocs": "JavaDoc(&D)",
     "project.structure.sdk": "SDK:",
-    "class.file.decompiled.sdk.version.text": "(Java {0})"
+    "class.file.decompiled.sdk.version.text": "(Java {0})",
+    "repository.library.utils.progress.title.building.sha256sum": "Maven libraries SHA256 checksums build",
+    "repository.library.utils.progress.title.removing.sha256sum": "Maven libraries SHA256 checksums remove",
+    "repository.library.utils.library.update.title": "Maven library update",
+    "repository.library.utils.notification.content.library.properties.built": "{0, choice, 0#No updates|1#One library updated: extended properties built|2#{0} libraries updated: extended properties built}",
+    "repository.library.utils.notification.content.library.properties.cleared": "{0, choice, 0#No updates|1#One library updated: extended properties cleared|2#{0} libraries updated: extended properties cleared}",
+    "repository.library.utils.notification.content.libraries.resolve.fail": "Cannot resolve libraries:<code>{0}</code>",
+    "repository.library.utils.notification.content.libraries.resolve.fail.before.update": "Update cancelled, cannot resolve libraries. Check library bind repository settings for:<code>{0}</code>",
+    "repository.library.utils.notification.content.libraries.resolve.fail.after.update": "Update complete with error, unable to resolve libraries. Check library bind repository settings for:<code>{0}</code>",
+    "repository.library.utils.progress.title.binding.remote.repos": "Maven libraries remote repositories bind",
+    "repository.library.utils.progress.title.unbinding.remote.repos": "Maven libraries remote repositories unbind",
+    "repository.library.utils.progress.title.resolving.all.libraries": "Resolving all Maven libraries",
+    "repository.library.utils.progress.title.libraries.changed": "Maven libraries update",
+    "repository.library.utils.progress.text.resolving.before.update": "Resolving libraries before update",
+    "repository.library.utils.progress.text.computing.properties": "Computing libraries' extended properties",
+    "repository.library.utils.progress.text.saving.changes": "Saving libraries changes",
+    "repository.library.utils.progress.text.verifying.resolution.after.update": "Verifying libraries resolution after update",
+    "action.ResolveAllRepositoryLibraries.text": "Resolve All Maven Libraries",
+    "repository.library.utils.notification.content.libraries.resolve.success": "{0, choice, 0#Nothing to resolve|1#One library resolved|2#{0} libraries resolved}"
   },
   "messages/JavaeeJspBaseBundle.properties": {
     "dialog.edit.template.checkbox.jsp": "JSP (&P)"
@@ -1195,14 +1284,25 @@
     "Jupyter.servers.managed.server.dynamic.port": "<Dynamic>",
     "jupyter.cell.type.raw": "Raw NBConvert",
     "Jupyter.hub.login.dialog.description.instruction.link.href": "https://jupyterhub.readthedocs.io/en/stable/reference/rest.html#create-an-api-token",
-    "notebook.collapsed.web.output.text": "Web: {0}x{1} px"
+    "notebook.collapsed.web.output.text": "Web: {0}x{1} px",
+    "Jupyter.debugger.remote.waiting.for.notebook.session.to.start": "Waiting for a notebook session to start"
   },
   "messages/JupyterDSBundle.properties": {
+    "Jupyter.notebook.open.project.processor.name": "Don't attach directory when opening a file outside the Workspace",
     "notification.group.jupyter": "Jupyter Notebook"
   },
   "messages/JupyterKotlinBundle.properties": {
     "kotlin.jupyter.action.create.notebook.text": "Kotlin Notebook",
-    "kotlin.jupyter.settings.title": "Kotlin Notebook"
+    "kotlin.jupyter.settings.title": "Kotlin Notebook",
+    "group.KotlinJupyterSettingsActions.text": "Kotlin Notebook Settings",
+    "action.ToggleBuildProjectAction.text": "Allow to Use Project Symbols in the Notebook",
+    "action.ToggleAddProjectLibrariesAction.text": "Add Project Libraries to the Notebook Classpath",
+    "action.ToggleBuildProjectAction.description": "This may cause build to be called before running cells after project files change",
+    "checkbox.should.build.project": "Allow to use project symbols in the notebook",
+    "checkbox.should.build.project.comment": "This may cause build to be called before running cells after project files change"
+  },
+  "messages/JupyterRemoteBundle.properties": {
+    "notification.group.jupyter.remote": "Jupyter remote notebooks"
   },
   "messages/KafkaBundle.properties": {
     "settings.url.text.empty": "server1,server2",
@@ -1316,7 +1416,10 @@
     "KubernetesPodContent.shell.title": "Shell: {0}",
     "action.Kubernetes.HelmLint.text": "Helm Lint(&L)",
     "KubectlExecutor.BaseProcessListener.progressTitle.template": "Kubernetes: {0}",
-    "group.Kubernetes.HelmActions.text": "Helm(&H)"
+    "group.Kubernetes.HelmActions.text": "Helm(&H)",
+    "advanced.setting.kubernetes.config.maxFileSizeMb": "Maximum size of kubeconfig file to load",
+    "advanced.setting.kubernetes.crd.maxFileSizeMb": "Maximum size of CRD YAML file to load",
+    "Kubernetes.ConfigFileJsonSchemaProvider.name": "kubeconfig Schema"
   },
   "messages/LangBundle.properties": {
     "label.export.plugin.url": "URL:",
@@ -1374,7 +1477,9 @@
     "maven.settings.testrun.argline": "<html><i>argLine(&A)</i></html>",
     "maven.settings.testrun.system.property": "<html><i>systemPropertyVariables(&S)</i></html>",
     "maven.settings.testrun.env.variables": "<html><i>environmentVariables(&E)</i></html>",
-    "maven.settings.runner.jre": "\\&JRE:",
+    "maven.settings.runner.run.in.background": "Run in &background",
+    "maven.settings.runner.jre": "JRE(&J):",
+    "maven.settings.runner.skip.tests": "Skip &Tests",
     "maven.settings.generated.folder.targerdir": "target/generated-sources",
     "maven.run.configuration.bundled.distribution.name": "Maven {0}",
     "maven.run.configuration.jre.label": "JRE(&J):",
@@ -1507,7 +1612,8 @@
   },
   "messages/PackageManagerBundle.properties": {
     "vcpkg.add.new.package.manager.field.url": "URL:",
-    "vcpkg.toolwindow.package.triplet.name.and.version": "{0} ({1})"
+    "vcpkg.toolwindow.package.triplet.name.and.version": "{0} ({1})",
+    "vcpkg.scheme.name": "Vcpkg schema"
   },
   "messages/PerforceBundle.properties": {
     "progress.text2.p4.status": "p4 {0}",
@@ -1596,7 +1702,10 @@
     "play.download.page": "http://www.playframework.org/download"
   },
   "messages/PrettierBundle.properties": {
-    "prettier.formatter.hint.0": "Prettier: {0}"
+    "prettier.formatter.hint.0": "Prettier: {0}",
+    "run.on.code.reformat.label": "Run on '&Reformat Code' action",
+    "run.on.save.label": "Run on &save",
+    "run.on.save.auto-mode.tooltip": "Prettier will run on 'Reformat Code' action if such a package is found."
   },
   "messages/ProjectBundle.properties": {
     "sdk.configure.add.sdkType.subAction": "{0}…",
@@ -1626,7 +1735,10 @@
     "debugger.cython.extension.install.python.command": "<code>sudo apt-get install python{0}-dev</code>",
     "debugger.cython.extension.gcc.not.found": "x86_64-linux-gnu-gcc",
     "pandas.completion.type.text": "DataFrame: {0}",
-    "python.sdk.configurable.name": "Python SDK"
+    "python.sdk.configurable.name": "Python SDK",
+    "conda.packaging.exception.timeout": "Time out",
+    "conda.packaging.error.rendering.description": "<html><head></head><body><p class=\"empty_description\">Couldn't retrieve package description.<br/>It can still be installed.</p></body></html>",
+    "remote.interpreter.feature.is.not.available": "Remote interpreter feature is not available"
   },
   "messages/PyDockerBundle.properties": {
     "python.add.sdk.panel.name.docker.compose": "Docker Compose",
@@ -1639,6 +1751,11 @@
   },
   "messages/PySshInterpreterBundle.properties": {
     "ssh.connection.wizard.remote.interpreter.default.interpreter.path": "/usr/bin/python"
+  },
+  "messages/PythonLessonsBundle.properties": {
+    "python.onboarding.invoke.completion.balloon": "Start typing {0} to show all available completion options",
+    "python.onboarding.invoke.intention.for.warning.balloon": "Press {0} to show available quick-fixes",
+    "python.onboarding.invoke.intention.for.code.balloon": "Press {0} to show available intentions"
   },
   "messages/PythonProBundle.properties": {
     "python.debug.text.pane.text": "<html><head></head><body></body></html>",
@@ -1754,6 +1871,9 @@
   "messages/RdClientDotnetBundle.properties": {
     "action.RiderDumpComponentContainersCtorStepsToJsonAction.text": "Dump Component Containers Ctor Steps to Json",
     "memory.usage": "Memory Usage",
+    "progress.title.profiling.in.progress.stop.it.manually": "Profiling {0} in progress. Stop it manually.",
+    "progress.title.internal.measuring.performance.in.progress": "Measuring in progress. Stop it manually.",
+    "notification.content.performance.measuring.missing.structured.logging": "Please add `-Drd.structured.logging.enabled=true` in VM options and restart the IDE ",
     "progress.text.process.workspace.model": "Process Workspace Model…",
     "frontendbulbrenderer.0": "FrontendBulbRenderer {0}",
     "action.wildcard.container.text": "Wildcard Container"
@@ -1812,11 +1932,14 @@
     "action.DecompileAndShowIlViewerAction.text": "IL Viewer",
     "action.RiderShowIlViewerAction.text": "IL Viewer",
     "action.stack.trace.explorer.text": "Stack Trace Explorer",
-    "toolwindow.stripe.IL_Viewer": "IL Viewer"
+    "toolwindow.stripe.IL_Viewer": "IL Viewer",
+    "action.RiderReattach.text": "Reattach to Process"
   },
   "messages/RiderBundle.properties": {
     "settings.completion.ml.csharp.display.name": "C#",
     "action.EntityFrameworkActionBase.text": "Entity Framework:",
+    "EntityFramework.toolWindow.title": "Entity Framework",
+    "EntityFramework.toolWindow.operation.failed": "Operation failed",
     "StacktraceToolWindowFactory.tab.title.stacktrace": "Stack Trace Explorer",
     "configurable.group.inlay.hints.RiderInlayHintsCSharpConfigurableGroup.settings.display.name": "C#",
     "configurable.group.inlay.hints.RiderInlayHintsVBConfigurableGroup.settings.display.name": "VB.NET",
@@ -1827,7 +1950,9 @@
     "action.winform.stack.trace.explorer.text": "Stack Trace Explorer",
     "action.dump.backend.delegating.actions.text": "Dump Backend Delegating Actions",
     "action.dump.color.settings.mappings.text": "Dump Color Settings Mappings",
-    "EntityFramework.toolWindow.title": "Entity Framework"
+    "to.sign.in.use.a.web.browser.to.open.the.following.page": "To sign in, open the following page with your Web browser:",
+    "notification.title.authorization.for.requested": "Authorization for {0} requested",
+    "notification.content.click.on.link.to.authorize": "Click the link to authorize"
   },
   "messages/RiderCppBundle.properties": {
     "configurable.name.clang.tidy": "Clang-Tidy",
@@ -1855,6 +1980,12 @@
     "ResxEditor.editor.name.localization.manager": "Localization Manager",
     "localization.manager": "Localization Manager"
   },
+  "messages/RiderDiagramBundle.properties": {
+    "action.ShowArchitectureDiagramAction.description": "Create a diagram of dependencies between selected projects"
+  },
+  "messages/RiderEnvironmentSetupBundle.properties": {
+    "EnvironmentSetupPanel.setup.environment.configuration.on.the.machine": "Install or update external components of the development environment on this computer."
+  },
   "messages/RiderIdeaInteropBundle.properties": {
     "RiderPluginGroups.group.name.azure.devops": "Azure DevOps"
   },
@@ -1877,7 +2008,9 @@
     "rider.docker.compose.project.file.type.display.name": "Docker Compose",
     "RiderProjectTemplate.ReSharperProjectTemplate.NET.NETCore.name": ".NET/.NET Core",
     "RiderProjectTemplate.ReSharperProjectTemplate.NETFramework.name": ".NET Framework",
-    "RiderProjectTemplate.ReSharperProjectTemplate.CPlPl.name": "C++"
+    "RiderProjectTemplate.ReSharperProjectTemplate.CPlPl.name": "C++",
+    "RiderProjectTemplate.ReSharperProjectTemplateGenerator.ShortName.name": "Short Name",
+    "RiderProjectTemplate.ReSharperProjectTemplateGenerator.GroupIdentity.name": "Group Identity"
   },
   "messages/RiderRazorBundle.properties": {
     "folding.header.dotnet": ".NET",
@@ -1886,6 +2019,7 @@
     "configurable.name.asp.net.c": "ASP.NET (C#)",
     "configurable.name.asp.net.vb": "ASP.NET (VB)",
     "configurable.name.razor.c": "Razor (C#)",
+    "notification.content.chrome.user.data.dir": "Chrome user data directory: {0}",
     "blazor.wasm.debug.hosted.companion.tab.name": "{0} - WASM"
   },
   "messages/RiderRunBundle.properties": {
@@ -1914,6 +2048,13 @@
     "action.RiderUnitTestSessionLaunchOptionActionGroupBase.text.toolbar": "{0}：{1}",
     "RiderDiffLinkPrefix": "Diff in Rider:"
   },
+  "messages/RiderWebBundle.properties": {
+    "iis.errors.site.not.found": "A local IIS web site was not found",
+    "iis.errors.create.site.and.try.again": "Please check the project URL in the settings or create a web site in IIS and try again",
+    "iis.errors.how.to.create.web.site": "How to create a web site?",
+    "iis.errors.internet.information.services.is.not.installed": "The Internet Information Services feature is probably not installed.",
+    "iis.errors.how.to.install.iis": "How to install IIS?"
+  },
   "messages/RiderWizardBundle.properties": {
     "transfersettings.web.support.example": "HTML、CSS、JS"
   },
@@ -1926,6 +2067,10 @@
     "configurable.gems.copy.docker.dp.mode.caption": "'docker cp'",
     "border.title.docker.compose": "docker-compose",
     "ruby.docker.compose.down.project": "docker-compose down"
+  },
+  "messages/RubyLessonsBundle.properties": {
+    "ruby.sdk.not.found.dialog.message": "No Ruby interpreters found. Click Configure interpreter to add an existing interpreter.",
+    "ruby.sdk.not.found.dialog.ok": "Configure interpreter"
   },
   "messages/SASSBundle.properties": {
     "color.settings.sass.name": "Sass/SCSS",
@@ -1997,6 +2142,7 @@
   },
   "messages/SharedIndexesBundle.properties": {
     "progress.message.permanent.auth.testing": "{0}",
+    "progress.title.resolving.shared.indexes": "Checking available shared indexes...",
     "configuration.section.jdk": "JDK:",
     "configuration.combobox.comment.with.url": "{0}"
   },
@@ -2185,6 +2331,9 @@
     "action.Swift.Generate.DebugDescription.text": "debugDescription…",
     "change.info.async.throws.label": "async/throws:"
   },
+  "messages/SwiftLanguageBundle.properties": {
+    "swift.module.cache": "Swift Module Cache"
+  },
   "messages/SwiftPackageManagerBundle.properties": {
     "swift.package.manager": "Swift Package Manager",
     "group.Swift.PackageManager.Menu.text": "Swift Package Manager"
@@ -2197,7 +2346,8 @@
     "settings.page.tailwind": "Tailwind CSS"
   },
   "messages/TaskBundle.properties": {
-    "jira.default.query": "assignee = currentUser() and resolution = Unresolved order by updated"
+    "jira.default.query": "assignee = currentUser() and resolution = Unresolved order by updated",
+    "settings.always.display.task.combo.in.toolbar": "&Display task switch in toolbar"
   },
   "messages/TcServerBundle.properties": {
     "tc_server": "tc Server",
@@ -2240,7 +2390,8 @@
     "tslint.notification.content": "TSLint: {0}"
   },
   "messages/UIBundle.properties": {
-    "memory.usage.panel.message.text": "{0,number,####}/{1,number,####}M"
+    "memory.usage.panel.message.text": "{0,number,####}/{1,number,####}M",
+    "switch.ide.scale.action.format": "Zoom IDE (Current: {0}%)..."
   },
   "messages/UIDesignerBundle.properties": {
     "bind.to.bean.ismodified.checkbox": "isModified()",
@@ -2258,9 +2409,16 @@
     "jfr.ui.timeline.cpu.load.label": "CPU {0}"
   },
   "messages/UnityBundle.properties": {
+    "notification.content.please.follow.href.debugging.in.editor.documentation": "\nPlease follow 'Debug in the Unity Editor' documentation.",
+    "notification.content.please.follow.href.debugging.in.player.documentation": "\nPlease follow 'Debug in the Unity Player' documentation.",
     "appended.android.package": " ({0})",
     "appended.pid.0": " (pid: {0})",
-    "run.configuration.player.label.id": "ID:"
+    "run.configuration.player.label.id": "ID:",
+    "debugging.refreshing.player.list": "Looking for Unity player",
+    "debugging.cannot.find.udp.player": "Cannot connect to Unity player",
+    "debugging.cannot.find.android.player": "Cannot connect to Unity player. Please ensure Android device is connected and the game is running",
+    "debugging.cannot.find.editor": "Cannot connect to Unity editor process. Please ensure the editor is running",
+    "debugging.cannot.find.editor.helper": "Cannot connect to Unity editor helper process"
   },
   "messages/UnityPluginActionsBundle.properties": {
     "action.UnityToolbarLabel.text": "Unity:"
@@ -2303,9 +2461,14 @@
     "vite.editor.notification": "Vite: {0}"
   },
   "messages/VueBundle.properties": {
+    "vue.create.single.file.component.action.name": "Create Vue Component File ''{0}''",
     "vue.project.generator.name": "Vue.js",
     "vue.project.generator.presentable.package.name": "Vue CLI(&C)",
-    "vue.symbol.presentation": "Vue {0} {1}"
+    "vue.symbol.presentation": "Vue {0} {1}",
+    "vue.create.single.file.component.template.class.api": "Class API",
+    "vue.create.single.file.component.template.composition.api": "Composition API",
+    "vue.create.single.file.component.template.options.api": "Options API",
+    "vue.parser.message.generic.component.parameters.only.with.typescript": "Generic component parameters are supported only with TypeScript language."
   },
   "messages/W3ValidatorsBundle.properties": {
     "inspection.message.w3c": "W3C: {0}"
@@ -2395,6 +2558,9 @@
     "label.uri": "URI(&U):",
     "label.xpath": "XPath:",
     "tab.title.xpath": "XPath ''{0}''"
+  },
+  "messages/XamlPreviewBundle.properties": {
+    "tooltip.preview.was.built.with.errors.click.to.see.details": "Preview was built with errors. Click to see details."
   },
   "messages/XmlBundle.properties": {
     "web.editor.configuration.title": "HTML/CSS",
