@@ -20,7 +20,7 @@
     <option name="一键导航" path="ActionManager" hit="一键导航" />
     <option name="一键打开文件" path="ActionManager" hit="一键打开文件" />
     <option name="上一个匹配项" path="ActionManager" hit="上一个匹配项" />
-    <option name="上一个参数" path="ActionManager" hit="上一个参数" />
+    <option name="上一个形参" path="ActionManager" hit="上一个形参" />
     <option name="上一个方法" path="ActionManager" hit="上一个方法" />
     <option name="上一个模板变量" path="ActionManager" hit="上一个模板变量" />
     <option name="上一个项目窗口" path="ActionManager" hit="上一个项目窗口" />
@@ -29,7 +29,7 @@
     <option name="上下文信息" path="ActionManager" hit="上下文信息" />
     <option name="上移行" path="ActionManager" hit="上移行" />
     <option name="下一个匹配项" path="ActionManager" hit="下一个匹配项" />
-    <option name="下一个参数" path="ActionManager" hit="下一个参数" />
+    <option name="下一个形参" path="ActionManager" hit="下一个形参" />
     <option name="下一个方法" path="ActionManager" hit="下一个方法" />
     <option name="下一个模板变量或完成就地重构" path="ActionManager" hit="下一个模板变量或完成就地重构" />
     <option name="下一个项目窗口" path="ActionManager" hit="下一个项目窗口" />
@@ -100,7 +100,7 @@
     <option name="取消代码" path="ActionManager" hit="使用块注释注释/取消代码" />
     <option name="使用块注释进行注释" path="ActionManager" hit="使用块注释进行注释" />
     <option name="使用实时模板包围" path="ActionManager" hit="使用实时模板包围…" />
-    <option name="使用对象替换方法参数列表" path="ActionManager" hit="使用对象替换方法参数列表" />
+    <option name="使用对象替换方法形参列表" path="ActionManager" hit="使用对象替换方法形参列表" />
     <option name="使用编辑器设置检查代码" path="ActionManager" hit="使用编辑器设置检查代码" />
     <option name="e" path="ActionManager" hit="使用编辑器设置检查代码(_E)" />
     <option name="使用编辑器设置检查代码" path="ActionManager" hit="使用编辑器设置检查代码(_E)" />
@@ -404,7 +404,7 @@
     <option name="将所选表达式替换为常量" path="ActionManager" hit="将所选表达式替换为常量" />
     <option name="将所选表达式的结果放入变量中" path="ActionManager" hit="将所选表达式的结果放入变量中" />
     <option name="将所选表达式的结果放入字段中" path="ActionManager" hit="将所选表达式的结果放入字段中" />
-    <option name="将所选表达式转换为方法参数" path="ActionManager" hit="将所选表达式转换为方法参数" />
+    <option name="将所选表达式转换为方法形参" path="ActionManager" hit="将所选表达式转换为方法形参" />
     <option name="将所选语句向上移动一行" path="ActionManager" hit="将所选语句向上移动一行" />
     <option name="将所选语句向下移动一行" path="ActionManager" hit="将所选语句向下移动一行" />
     <option name="将文件另存为模板" path="ActionManager" hit="将文件另存为模板…" />
@@ -462,8 +462,6 @@
     <option name="引入常量" path="ActionManager" hit="引入常量…" />
     <option name="引入形参" path="ActionManager" hit="引入形参…" />
     <option name="引入形参对象" path="ActionManager" hit="引入形参对象…" />
-    <option name="当前文件的弹出窗口结构" path="ActionManager" hit="当前文件的弹出窗口结构，用于快速导航" />
-    <option name="用于快速导航" path="ActionManager" hit="当前文件的弹出窗口结构，用于快速导航" />
     <option name="形参信息" path="ActionManager" hit="形参信息" />
     <option name="循环扩展词" path="ActionManager" hit="循环扩展词" />
     <option name="向后" path="ActionManager" hit="循环扩展词(向后)" />
@@ -565,13 +563,15 @@
     <option name="显示可见性图标" path="ActionManager" hit="显示可见性图标" />
     <option name="显示对话框以配置间距图标" path="ActionManager" hit="显示对话框以配置间距图标" />
     <option name="显示导入弹出窗口" path="ActionManager" hit="显示导入弹出窗口" />
+    <option name="以便快速导航" path="ActionManager" hit="显示带有当前文件结构的弹出窗口，以便快速导航" />
+    <option name="显示带有当前文件结构的弹出窗口" path="ActionManager" hit="显示带有当前文件结构的弹出窗口，以便快速导航" />
     <option name="显示库内容" path="ActionManager" hit="显示库内容" />
     <option name="显示快速修复" path="ActionManager" hit="显示快速修复" />
     <option name="显示成员" path="ActionManager" hit="显示成员" />
     <option name="显示所选表达式的类型" path="ActionManager" hit="显示所选表达式的类型" />
     <option name="显示所选问题的可用快速修复" path="ActionManager" hit="显示所选问题的可用快速修复" />
     <option name="显示排除的文件" path="ActionManager" hit="显示排除的文件" />
-    <option name="显示文本光标处方法的参数" path="ActionManager" hit="显示文本光标处方法的参数" />
+    <option name="显示文本光标处方法的形参" path="ActionManager" hit="显示文本光标处方法的形参" />
     <option name="显示文本光标处符号的用法" path="ActionManager" hit="显示文本光标处符号的用法" />
     <option name="显示文本光标处错误或警告的说明" path="ActionManager" hit="显示文本光标处错误或警告的说明" />
     <option name="显示服务树" path="ActionManager" hit="显示服务树" />
@@ -848,7 +848,7 @@
     <option name="通过将当前单词的所有匹配项添加到选区来设置多个光标" path="ActionManager" hit="通过将当前单词的所有匹配项添加到选区来设置多个光标。" />
     <option name="通过引用转到操作" path="ActionManager" hit="通过引用转到操作" />
     <option name="通过调用新的函数变量来替换所选的语句" path="ActionManager" hit="通过调用新的函数变量来替换所选的语句" />
-    <option name="通过调用新的函数方法参数来替换所选的语句" path="ActionManager" hit="通过调用新的函数方法参数来替换所选的语句" />
+    <option name="通过调用新的函数方法形参来替换所选的语句" path="ActionManager" hit="通过调用新的函数方法形参来替换所选的语句" />
     <option name="配置匹配规则的别名" path="ActionManager" hit="配置匹配规则的别名" />
     <option name="配置当前文件分析" path="ActionManager" hit="配置当前文件分析…" />
     <option name="配置排列匹配规则的别名" path="ActionManager" hit="配置排列匹配规则的别名" />
@@ -1321,15 +1321,15 @@
     <option name="语言默认值" hit="语言默认值" />
     <option name="元数据" hit="元数据" />
     <option name="关键字" hit="关键字" />
-    <option name="内联提示" hit="内联提示//参数//当前" />
-    <option name="参数" hit="内联提示//参数//当前" />
-    <option name="当前" hit="内联提示//参数//当前" />
-    <option name="内联提示" hit="内联提示//参数//高亮" />
-    <option name="参数" hit="内联提示//参数//高亮" />
-    <option name="高亮" hit="内联提示//参数//高亮" />
-    <option name="内联提示" hit="内联提示//参数//默认" />
-    <option name="参数" hit="内联提示//参数//默认" />
-    <option name="默认" hit="内联提示//参数//默认" />
+    <option name="内联提示" hit="内联提示//形参//当前" />
+    <option name="当前" hit="内联提示//形参//当前" />
+    <option name="形参" hit="内联提示//形参//当前" />
+    <option name="内联提示" hit="内联提示//形参//高亮" />
+    <option name="形参" hit="内联提示//形参//高亮" />
+    <option name="高亮" hit="内联提示//形参//高亮" />
+    <option name="内联提示" hit="内联提示//形参//默认" />
+    <option name="形参" hit="内联提示//形参//默认" />
+    <option name="默认" hit="内联提示//形参//默认" />
     <option name="内联提示" hit="内联提示//无背景文本" />
     <option name="无背景文本" hit="内联提示//无背景文本" />
     <option name="内联提示" hit="内联提示//重构选项//悬停" />
@@ -1380,16 +1380,16 @@
     <option name="标识符" hit="标识符//函数声明" />
     <option name="函数调用" hit="标识符//函数调用" />
     <option name="标识符" hit="标识符//函数调用" />
-    <option name="参数" hit="标识符//参数" />
-    <option name="标识符" hit="标识符//参数" />
     <option name="局部变量" hit="标识符//局部变量" />
     <option name="标识符" hit="标识符//局部变量" />
     <option name="常量" hit="标识符//常量" />
     <option name="标识符" hit="标识符//常量" />
+    <option name="形参" hit="标识符//形参" />
+    <option name="标识符" hit="标识符//形参" />
     <option name="标签" hit="标识符//标签" />
     <option name="标识符" hit="标识符//标签" />
-    <option name="标识符" hit="标识符//重新分配的参数" />
-    <option name="重新分配的参数" hit="标识符//重新分配的参数" />
+    <option name="标识符" hit="标识符//重新分配的形参" />
+    <option name="重新分配的形参" hit="标识符//重新分配的形参" />
     <option name="标识符" hit="标识符//重新赋值的局部变量" />
     <option name="重新赋值的局部变量" hit="标识符//重新赋值的局部变量" />
     <option name="标识符" hit="标识符//预定义符号" />
