@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2023-05-03)
+
+
+
+### 🛠　Build System
+
+* **cache:** update link-of-zh-cn.ts ([26dc40c](https://github.com/bluelovers/idea-l10n-zht/commit/26dc40c4a1a3f159915d09c542efe54e5b308c4d))
+* **cache:** update version-map ([21aaec6](https://github.com/bluelovers/idea-l10n-zht/commit/21aaec6a4aeaf058b5a135c6c0d17d608c0a6551))
+* **cache:** update version-map ([fb7bbf2](https://github.com/bluelovers/idea-l10n-zht/commit/fb7bbf2960c15c78be3f566d75c510e795e0b25e))
+* **cache:** update version-map ([0c94592](https://github.com/bluelovers/idea-l10n-zht/commit/0c945926cae5b49253468a996d345309c6e6f617))
+* **cache:** update version-map ([59572ae](https://github.com/bluelovers/idea-l10n-zht/commit/59572aeb3034c783ee878c9c0826ede8935afbd3))
+* **cache:** update version-map ([d79473e](https://github.com/bluelovers/idea-l10n-zht/commit/d79473ef337de647ed643ccddaa70bb5728a6376))
+* **cache:** update version-map ([daaaea2](https://github.com/bluelovers/idea-l10n-zht/commit/daaaea21ddd2a3c7e3f84de608a2132de2d711a8))
+* **cache:** update version-map ([3ed770d](https://github.com/bluelovers/idea-l10n-zht/commit/3ed770db22a778d1295505a9e9e9662cadb5fdb4))
+* **original:** update original source ( 231.282 ) ([80b0639](https://github.com/bluelovers/idea-l10n-zht/commit/80b0639e0a58d0292cd967e2531ba4e86c54f573))
+* **release:** update build ( 231.282 ) ([8042d72](https://github.com/bluelovers/idea-l10n-zht/commit/8042d72cce531161311be7f552a657c6c8ec1065))
+* **release:** updatePlugins.xml ([785764f](https://github.com/bluelovers/idea-l10n-zht/commit/785764fc3fdc89655bf3bb25aede7eb42fed903d))
+* **release:** update dev build files ( 231.282 ) ([2c6a934](https://github.com/bluelovers/idea-l10n-zht/commit/2c6a934c962ad0f1e36e47a40badbb4794b2af35))
+* **test:** update snapshots ( 231.282 ) ([78c9014](https://github.com/bluelovers/idea-l10n-zht/commit/78c901418d1692b8b36e95a029387c631b5f9a81))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2023-04-02)
 
 
