@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>報告註解的 Seam 類別的組態問題</p>
+<!-- tooltip end -->
+<p><strong>範例：</strong></p>
+<pre><code>
+@Name("authenticator")
+class SeanComponent {
+  <strong>@Create</strong> // 不允許使用 static 方法
+  private static void create() {...}
+
+   <strong>@Destroy</strong> // 不允許使用 static 方法
+   private static void destroy() {...}
+
+   <strong>@DataModel</strong> // 非 getter
+   private Map method() {...}
+
+   <strong>@Factory</strong> // 應為 public
+   private Map getUniverse2() {...}
+
+   <strong>@Unwrap</strong> // 必須沒有參數
+   private static Map createUniverse(int days) { ... }
+}</code></pre>
+</body>
+</html>

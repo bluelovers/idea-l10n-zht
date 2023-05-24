@@ -3,8 +3,8 @@
 <p>報告 Spring 不支持的 AspectJ 切入點指示符。</p>
 
 <p><b>範例：</b></p>
-<pre><code>
-&lt;beans &gt;
+<pre><code lang="xml">
+&lt;beans&gt;
   &lt;aop:config &gt;
       &lt;aop:pointcut expression="<strong>@this</strong>(Anno)  &lt;!-- '@this' pointcut designator isn't supported by Spring --&gt;
                   and <strong>adviceexecution</strong>()"/&gt; &lt;!--  Spring 不支持 'adviceexecution' 切入點指示符 --&gt;

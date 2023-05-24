@@ -2,10 +2,10 @@
 <body>
 <p>報告對靜態資源的未解析參照。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code lang="DjangoTemplate">
 {% load staticfiles %}
 &lt;link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" /&gt;
-</pre>
+</code></pre>
 <p>在本例中，如果 <code>static/poll</code> 目錄中沒有 <code>style.css</code> 檔案，
 則醒目提示顯示此檔案。</p>
 </body>

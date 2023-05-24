@@ -3,10 +3,10 @@
 <p>報告程式碼中無法解析的參照。</p>
 <p>在動態類型語言中，少數情況下可能會這樣。 </p>
 <p>如果參照類型未知，其特性不會被醒目提示為未解析，即便它應該被醒目提示:</p>
-<pre style="font-family: monospace">
+<pre><code>
 def print_string(s):
   print(s.abc())
-</pre>
+</code></pre>
 <p>在這段程式碼中，<code>s</code> 始終為字串，<code>abc</code> 應醒目提示為未解析狀態。 但是，<code>s</code> 類型被推斷為 <code>Any</code>，並且未報告任何警告。</p>
 <p>IDE 提供快速修復動作來即時新增缺少的參照。</p>
 </body>

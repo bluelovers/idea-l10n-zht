@@ -20,14 +20,14 @@
   <em>&lt;!-- 1.  屬性只允許包含 "ref" 特性或 "value" 特性或子元素 --&gt;</em>
   &lt;bean class="MyClass"&gt;
     &lt;property name="bean" ref="myBean" value="foo"/&gt;
-    // 屬性只允許包含 "ref" 特性或 "value" 特性或子元素
+    &lt;!-- 屬性只允許包含 "ref" 特性或 "value" 特性或子元素 --&gt;
   &lt;/bean&gt;
 
   <em>&lt;!--  2.  屬性不得包含多個子元素 --&gt;</em>
   &lt;bean class="MyFactory"&gt;
     &lt;property name="bean"&gt;
-    &lt;ref&gt;bean&lt;/ref&gt; // 屬性不得包含多個子元素
-     &lt;value&gt;foo&lt;/value&gt; // 屬性不得包含多個子元素
+    &lt;ref&gt;bean&lt;/ref&gt; &lt;!-- 屬性不得包含多個子元素 --&gt;
+     &lt;value&gt;foo&lt;/value&gt; &lt;!-- 屬性不得包含多個子元素 --&gt;
      &lt;/property&gt;
   &lt;/bean&gt;
 
@@ -35,7 +35,7 @@
   &lt;bean class="MyBean"&gt;
      &lt;property name="map"&gt;
         &lt;map&gt;
-           &lt;entry value="foo"/&gt;  // 映射條目必須指定一個鍵
+           &lt;entry value="foo"/&gt;  &lt;!-- 映射條目必須指定一個鍵 --&gt;
         &lt;/map&gt;
      &lt;/property&gt;
   &lt;/bean&gt;

@@ -2,18 +2,18 @@
 <body>
 <p>報告賦值前參照的區域變數。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 x = 0
 if x > 10:
     b = 3
 print(b)
-</pre>
+</code></pre>
 <p>IDE 報告<code>print(b)</code> 的問題。 可能的修復方法是：</p>
-<pre style="font-family: monospace">
+<pre><code>
 x = 0
 if x > 10:
     b = 3
     print(b)
-</pre>
+</code></pre>
 </body>
 </html>

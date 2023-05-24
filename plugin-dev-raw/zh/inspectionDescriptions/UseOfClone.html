@@ -1,8 +1,21 @@
 <html>
 <body>
-報告 <code>clone()</code> 方法的實作和對它的呼叫以及 <code>java.lang.Cloneable</code> 的使用。
+報告 <code>clone()</code> 方法的實作和對它的呼叫以及 <code>java.lang.Cloneable</code> 接口的使用。
 <p>某些編碼標準禁止使用 <code>clone()</code>，建議改為使用複製建構函式或 <code>static</code> 工廠方法。</p>
 <p>該檢查會忽略在陣列上對 <code>clone()</code> 的呼叫，因為這是一種正確而又緊湊的陣列複製方式。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  class Copy implements Cloneable /*警告*/ {
+
+    public Copy clone() /*警告*/ {
+      try {
+        return (Copy) super.clone(); // 警告
+      } catch (CloneNotSupportedException e) {
+        throw new AssertionError();
+      }
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

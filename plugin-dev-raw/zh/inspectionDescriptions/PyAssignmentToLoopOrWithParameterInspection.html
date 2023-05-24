@@ -1,18 +1,19 @@
 <html>
 <body>
-報告使用內部迴圈覆寫迴圈變數的情況：
-<pre style="font-family: monospace">
+報告使用內部迴圈覆寫迴圈變數的情況.
+<p><b>範例：</b></p>
+<pre><code>
     for i in range(5):
       for i in range(20, 25):
           print("Inner", i)
       print("Outer", i)
-  </pre>
+  </code></pre>
 
 如果在 <code>with</code> 語句中宣告的變數在語句體中重新宣告，它也會向您發出警告：
-<pre style="font-family: monospace">
+<pre><code>
     with open("file") as f:
       f.read()
       with open("file") as f:
-  </pre>
+  </code></pre>
 </body>
 </html>

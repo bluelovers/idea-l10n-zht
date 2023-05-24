@@ -11,7 +11,7 @@
 </ul>
 
 <p><b>範例：</b></p>
-<pre>
+<pre><code lang="java">
 public interface FooInterface {...}
   @Component public class FooBean implements FooInterface {...}
   @Component public class OtherBean implements FooInterface {...}
@@ -22,10 +22,10 @@ public class MyComponent {
 	FooInterface foo;  // 無法自動裝配。 有不止一種 'FooInterface' 類型的 Bean。
                      // Beans: fooBean(FooBean.java), otherBean(OtherBean.java)"
 }
-</pre>
+</code></pre>
 
 <p><b>範例：</b></p>
-<pre><code>
+<pre><code lang="java">
 @Component
 public class MyComponent {
 	@Autowired
@@ -43,7 +43,7 @@ public class MyFactory {  // 報告 '沒有符合的 @Autowired 建構函式'
 </code></pre>
 
 <p><b>範例：</b></p>
-<pre><code>
+<pre><code lang="java">
 public class FooBeanClass {
   @Autowired   // 報告 '必須在有效 Spring Bean 中定義自動裝配成員：@Component、@Service 等'
   ServiceBean bean;

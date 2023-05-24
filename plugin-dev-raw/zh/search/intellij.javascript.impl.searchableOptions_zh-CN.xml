@@ -137,6 +137,8 @@
     <option name="前導星號" hit="在複製和貼上時轉義 JSDoc 前導星號" />
     <option name="在複製和貼上時轉義" hit="在複製和貼上時轉義 JSDoc 前導星號" />
     <option name="在貼上字串文字時轉義文本" hit="在貼上字串文字時轉義文本" />
+    <option name="在輸入" hit="在輸入      時自動將字串文字取代為模板字串" />
+    <option name="時自動將字串文字取代為模板字串" hit="在輸入      時自動將字串文字取代為模板字串" />
     <option name="html" hit="將 HTML 貼上到 JSX 檔案時轉換特性" />
     <option name="jsx" hit="將 HTML 貼上到 JSX 檔案時轉換特性" />
     <option name="將" hit="將 HTML 貼上到 JSX 檔案時轉換特性" />
@@ -263,9 +265,7 @@
     <option name="編輯" hit="編輯 E  " />
   </configurable>
   <configurable id="preferences.sourceCode.JavaScript" configurable_name="JavaScript">
-    <option name="" path="標點" hit="" />
-    <option name="" path="標點" hit=" 在新程式碼中 " />
-    <option name="在新程式碼中" path="標點" hit=" 在新程式碼中 " />
+    <option name="" path="程式碼生成" hit="" />
     <option name="around" path="空行" hit="Around 函式 " />
     <option name="函式" path="空行" hit="Around 函式 " />
     <option name="import" path="Import" hit="Import" />
@@ -292,8 +292,8 @@
     <option name="保持最大的空白行" path="空行" hit="保持最大的空白行" />
     <option name="函式宣告返回" path="程式碼生成" hit="函式宣告返回" />
     <option name="函式表達式返回" path="程式碼生成" hit="函式表達式返回" />
-    <option name="s" path="標點" hit="分號終止語句 S " />
-    <option name="分號終止語句" path="標點" hit="分號終止語句 S " />
+    <option name="" path="標點" hit="分號" />
+    <option name="分號" path="標點" hit="分號" />
     <option name="分組規則" path="排列" hit="分組規則 " />
     <option name="制表符和縮排" path="制表符和縮排" hit="制表符和縮排" />
     <option name="制表符大小" path="制表符和縮排" hit="制表符大小 " />
@@ -303,6 +303,9 @@
     <option name="變數和欄位" path="程式碼生成" hit="變數和欄位" />
     <option name="合併同一模組中成員的匯入" path="Import" hit="合併同一模組中成員的匯入" />
     <option name="命名約定" path="程式碼生成" hit="命名約定" />
+    <option name="ide" path="標點" hit="在 IDE 生成的程式碼中" />
+    <option name="在" path="標點" hit="在 IDE 生成的程式碼中" />
+    <option name="生成的程式碼中" path="標點" hit="在 IDE 生成的程式碼中" />
     <option name="jsdoc" path="程式碼生成" hit="在 JSDoc 中包括類型  T " />
     <option name="t" path="程式碼生成" hit="在 JSDoc 中包括類型  T " />
     <option name="中包括類型" path="程式碼生成" hit="在 JSDoc 中包括類型  T " />
@@ -469,8 +472,6 @@
     <option name="" path="換行和大括號" hit="'while()' 語句" />
     <option name="while" path="換行和大括號" hit="'while()' 語句" />
     <option name="語句" path="換行和大括號" hit="'while()' 語句" />
-    <option name="" path="標點" hit="(在新程式碼中)" />
-    <option name="在新程式碼中" path="標點" hit="(在新程式碼中)" />
     <option name="es6" path="換行和大括號" hit="ES6 匯入/匯出" />
     <option name="匯入" path="換行和大括號" hit="ES6 匯入/匯出" />
     <option name="匯出" path="換行和大括號" hit="ES6 匯入/匯出" />
@@ -541,6 +542,9 @@
     <option name="flow" path="空格" hit="在 Flow 中" />
     <option name="中" path="空格" hit="在 Flow 中" />
     <option name="在" path="空格" hit="在 Flow 中" />
+    <option name="ide" path="標點" hit="在 IDE 生成的程式碼中" />
+    <option name="在" path="標點" hit="在 IDE 生成的程式碼中" />
+    <option name="生成的程式碼中" path="標點" hit="在 IDE 生成的程式碼中" />
     <option name="lambda" path="換行和大括號" hit="在 lambda 宣告中" />
     <option name="在" path="換行和大括號" hit="在 lambda 宣告中" />
     <option name="宣告中" path="換行和大括號" hit="在 lambda 宣告中" />
@@ -652,9 +656,7 @@
     <option name="鍵入時換行" path="換行和大括號" hit="鍵入時換行" />
   </configurable>
   <configurable id="preferences.sourceCode.TypeScript" configurable_name="TypeScript">
-    <option name="" path="標點" hit="" />
-    <option name="" path="標點" hit=" 在新程式碼中 " />
-    <option name="在新程式碼中" path="標點" hit=" 在新程式碼中 " />
+    <option name="" path="程式碼生成" hit="" />
     <option name="around" path="空行" hit="Around 函式 " />
     <option name="函式" path="空行" hit="Around 函式 " />
     <option name="import" path="Import" hit="Import" />
@@ -686,8 +688,8 @@
     <option name="保持最大的空白行" path="空行" hit="保持最大的空白行" />
     <option name="函式宣告返回" path="程式碼生成" hit="函式宣告返回" />
     <option name="函式表達式返回" path="程式碼生成" hit="函式表達式返回" />
-    <option name="s" path="標點" hit="分號終止語句 S " />
-    <option name="分號終止語句" path="標點" hit="分號終止語句 S " />
+    <option name="" path="標點" hit="分號" />
+    <option name="分號" path="標點" hit="分號" />
     <option name="分組規則" path="排列" hit="分組規則 " />
     <option name="制表符和縮排" path="制表符和縮排" hit="制表符和縮排" />
     <option name="制表符大小" path="制表符和縮排" hit="制表符大小 " />
@@ -697,6 +699,9 @@
     <option name="變數和欄位" path="程式碼生成" hit="變數和欄位" />
     <option name="合併同一模組中成員的匯入" path="Import" hit="合併同一模組中成員的匯入" />
     <option name="命名約定" path="程式碼生成" hit="命名約定" />
+    <option name="ide" path="標點" hit="在 IDE 生成的程式碼中" />
+    <option name="在" path="標點" hit="在 IDE 生成的程式碼中" />
+    <option name="生成的程式碼中" path="標點" hit="在 IDE 生成的程式碼中" />
     <option name="jsdoc" path="程式碼生成" hit="在 JSDoc 中包括類型  T " />
     <option name="t" path="程式碼生成" hit="在 JSDoc 中包括類型  T " />
     <option name="中包括類型" path="程式碼生成" hit="在 JSDoc 中包括類型  T " />
@@ -867,8 +872,6 @@
     <option name="" path="換行和大括號" hit="'while()' 語句" />
     <option name="while" path="換行和大括號" hit="'while()' 語句" />
     <option name="語句" path="換行和大括號" hit="'while()' 語句" />
-    <option name="" path="標點" hit="(在新程式碼中)" />
-    <option name="在新程式碼中" path="標點" hit="(在新程式碼中)" />
     <option name="es6" path="換行和大括號" hit="ES6 匯入/匯出" />
     <option name="匯入" path="換行和大括號" hit="ES6 匯入/匯出" />
     <option name="匯出" path="換行和大括號" hit="ES6 匯入/匯出" />
@@ -936,6 +939,9 @@
     <option name="在" path="空格" hit="在 'not' (!) 和 '!!' 後面" />
     <option name="後換行" path="換行和大括號" hit="在 '{' 後換行" />
     <option name="在" path="換行和大括號" hit="在 '{' 後換行" />
+    <option name="ide" path="標點" hit="在 IDE 生成的程式碼中" />
+    <option name="在" path="標點" hit="在 IDE 生成的程式碼中" />
+    <option name="生成的程式碼中" path="標點" hit="在 IDE 生成的程式碼中" />
     <option name="lambda" path="換行和大括號" hit="在 lambda 宣告中" />
     <option name="在" path="換行和大括號" hit="在 lambda 宣告中" />
     <option name="宣告中" path="換行和大括號" hit="在 lambda 宣告中" />
@@ -1148,7 +1154,6 @@
     <option name="位置" hit="位置" />
     <option name="使用組態檔案" hit="使用組態檔案" />
     <option name="啟用" hit="啟用" />
-    <option name="描述" hit="描述 " />
     <option name="v" hit="版本 V  " />
     <option name="版本" hit="版本 V  " />
     <option name="自訂組態檔案" hit="自訂組態檔案" />

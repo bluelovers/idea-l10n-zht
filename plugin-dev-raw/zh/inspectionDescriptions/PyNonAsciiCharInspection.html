@@ -2,19 +2,19 @@
 <body>
 <p>報告 Python 2 中的檔案包含非 ASCII 字元且頂部沒有編碼宣告的情況。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 class A(object):
 # &#8470;5
     def __init__(self):
         pass
-</pre>
+</code></pre>
 <p>在本例中，IDE 報告了註釋中有非 ASCII 符號以及缺少編碼宣告的情況。 套用建議的快速修復以新增缺少的編碼宣告：</p>
-<pre style="font-family: monospace">
+<pre><code>
 # coding=utf-8
 class A(object)
 # &#8470;5
     def __init__(self):
         pass
-</pre>
+</code></pre>
 </body>
 </html>

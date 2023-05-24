@@ -3,16 +3,16 @@
 <p>報告在實參的預設值中檢測到列表或字典形式可變值的問題。 <br/>
   預設實參值僅在函式定義時進行一次求值，這意味著修改該實參的預設值將影響此函式的所有後續呼叫。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 def func(s, cache={}):
     cache[s] = None
-</pre>
+</code></pre>
 <p>套用快速修復後，程式碼變為：</p>
-<pre style="font-family: monospace">
+<pre><code>
 def func(s, cache=None):
     if cache is None:
         cache = {}
     cache[s] = None
-</pre>
+</code></pre>
 </body>
 </html>

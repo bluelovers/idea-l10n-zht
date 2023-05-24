@@ -1,0 +1,51 @@
+<html>
+<body>
+報告從 <code>InputStream.read()</code> 方法返回 <code>byte</code> 類型的可疑返回表達式。
+<p>
+  這很可疑，因為 <code>InputStream.read()</code> 返回的範圍應為 0 到 255。
+  同時，位元組包含 -128 到 127 之間的數字。
+  快速修復會套用位元遮罩 <code>0xFF</code> 將返回值轉換為無符號位元組。
+</p>
+<p><b>範例：</b></p>
+<pre><code lang="java">
+class MyInputStream extends InputStream {
+  int pos = 0;
+  byte[] data;
+
+  MyInputStream(byte[] input) {
+    data = input;
+  }
+
+  @Override
+  public int read() {
+    if (pos == data.length) {
+      return -1;
+    }
+    return data[pos++]; // 將被報告
+  }
+}
+</code></pre>
+<p>套用快速修復後：</p>
+<pre><code>
+class MyInputStream extends InputStream {
+  int pos = 0;
+  byte[] data;
+
+  MyInputStream(byte[] input) {
+    data = input;
+  }
+
+  @Override
+  public int read() {
+    if (pos == data.length) {
+      return -1;
+    }
+    return data[pos++] & 0xFF;
+  }
+}
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>2023.2 最新變化</small></p>
+</body>
+</html>

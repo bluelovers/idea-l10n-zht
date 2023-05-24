@@ -2,22 +2,22 @@
 <body>
 <p>報告 raise 的自訂異常類別不是繼承自<a href="https://docs.python.org/3/library/exceptions.html">內建 Exception 類別</a>的情況。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 class A:
     pass
 
 
 def me_exception():
     raise A()
-</pre>
+</code></pre>
 <p>執行提議的快速修復後，程式碼變為：</p>
-<pre style="font-family: monospace">
+<pre><code>
 class A(Exception):
     pass
 
 
 def me_exception():
     raise A()
-</pre>
+</code></pre>
 </body>
 </html>

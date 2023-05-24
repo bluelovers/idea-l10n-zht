@@ -2,7 +2,7 @@
 <body>
 <p>報告不是所有抽象屬性或方法都在子類別中定義的情況。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 from abc import abstractmethod, ABC
 
 
@@ -16,9 +16,9 @@ class Figure(ABC):
 class Triangle(Figure):
     def do_triangle(self):
         pass
-</pre>
+</code></pre>
 <p>套用快速修復後，IDE 為 <code>Triangle</code> 類別實作抽象方法：</p>
-<pre style="font-family: monospace">
+<pre><code>
 from abc import abstractmethod, ABC
 
 
@@ -35,6 +35,6 @@ class Triangle(Figure):
 
     def do_triangle(self):
         pass
-</pre>
+</code></pre>
 </body>
 </html>

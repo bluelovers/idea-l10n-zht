@@ -2,26 +2,26 @@
 <body>
 <p>報告任何無需建立類別實例並且可以設定為 static 的方法。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 class MyClass(object):
     def my_method(self, x):
         print(x)
-</pre>
+</code></pre>
 <p>如果套用<b>從方法中生成函式</b>快速修復，程式碼將變為：</p>
-<pre style="font-family: monospace">
+<pre><code>
 def my_method(x):
     print(x)
 
 
 class MyClass(object):
     pass
-</pre>
+</code></pre>
 <p>如果選擇<b>將方法設為 static</b> 快速修復，將新增 <code>@staticmethod</code> 裝飾器：</p>
-<pre style="font-family: monospace">
+<pre><code>
 class MyClass(object):
     @staticmethod
     def my_method(x):
         print(x)
-</pre>
+</code></pre>
 </body>
 </html>

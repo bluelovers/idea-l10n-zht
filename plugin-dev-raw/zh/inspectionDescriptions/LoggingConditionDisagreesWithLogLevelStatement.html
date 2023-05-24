@@ -1,0 +1,15 @@
+<html>
+<body>
+報告與包含的日誌記錄呼叫的日誌級別不符合的 <code>if</code> 語句的 <em>is log enabled for</em> 條件。
+<p>
+範例：
+<pre><code lang="java">
+  if (LOG.isTraceEnabled()) {
+    // 已記錄偵錯級別，但已檢查追蹤級別
+    LOG.debug("some log message");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>此檢查能夠理解 <em>java.util.logging</em>、<em>Log4j</em>、<em>Log4j2</em>、<em>Apache Commons Logging</em> 和 <em>SLF4J</em> 日誌記錄框架。
+</body>
+</html>

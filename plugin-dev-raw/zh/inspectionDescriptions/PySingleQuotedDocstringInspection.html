@@ -2,16 +2,16 @@
 <body>
 <p>報告不符合三個雙引號參照字串格式的 docstring。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 def calc(self, balance=0):
     'param: balance'
     self.balance = balance
-</pre>
+</code></pre>
 <p>套用快速修復後，程式碼變為：</p>
-<pre style="font-family: monospace">
+<pre><code>
 def calc(self, balance=0):
     """param: balance"""
     self.balance = balance
-</pre>
+</code></pre>
 </body>
 </html>

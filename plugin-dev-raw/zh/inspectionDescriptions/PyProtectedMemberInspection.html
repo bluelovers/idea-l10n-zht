@@ -1,7 +1,8 @@
 <html>
 <body>
 <p>報告 protected 成員在類別、定義其的類別的後代或模組的外部存取的情況。</p>
-<pre style="font-family: monospace">
+<p><b>範例：</b></p>
+<pre><code>
 class Foo:
     def _protected_method(self):
         pass
@@ -14,6 +15,6 @@ class Bar(Foo):
 
 foo = Foo()
 foo._protected_method() # 存取 protected 方法
-</pre>
+</code></pre>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <p>報告 <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/Sql.html>@Sql</a> 註解的 <code>scripts</code> 特性和 <code>@Sql</code> 元註解的相應別名特性中未解析的檔案參照。</p>
 
 <p><b>範例：</b></p>
-<pre><code>
+<pre><code lang="java">
   @SqlGroup({
      @Sql("not-found"), // 報告 "無法解析檔案 'not-found""
      @Sql("found.sql")

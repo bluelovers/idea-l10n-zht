@@ -1,12 +1,13 @@
 <html>
 <body>
 <p>報告嘗試呼叫屬性等不可呼叫物件的問題：</p>
-<pre  style="font-family: monospace">
+<p><b>範例：</b></p>
+<pre><code>
 class Record:
     @property
     def as_json(self):
 
 json = Record().as_json()
-</pre>
+</code></pre>
 </body>
 </html>

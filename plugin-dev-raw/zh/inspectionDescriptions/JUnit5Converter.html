@@ -4,29 +4,32 @@
 雖然預設執行程序可以自動轉換，但自訂執行程序、方法規則和欄位規則不能自動轉換，需要手動更改。
 <p><b>範例：</b></p>
 <pre><code>
-  import org.junit.Assert;
-  import org.junit.Test;
+  <b>import</b> org.junit.Assert;
+  <b>import</b> org.junit.Test;
 
-  public class RelevantTest {
+  <b>public class</b> RelevantTest {
+
     @Test
-    public void testIt() {
+    <b>public void</b> testIt() {
       Assert.assertEquals("expected", "actual");
     }
   }
 </code></pre>
 <p>在套用快速修復後：</p>
 <pre><code>
-  import org.junit.jupiter.api.Assertions;
-  import org.junit.jupiter.api.Test;
+  <b>import</b> org.junit.jupiter.api.Assertions;
+  <b>import</b> org.junit.jupiter.api.Test;
 
-  public class RelevantTest {
+  <b>public class</b> RelevantTest {
+
     @Test
-    public void testIt() {
+    <b>public void</b> testIt() {
       Assertions.assertEquals("expected", "actual");
     }
   }
 </code></pre>
 <!-- tooltip end -->
 <p>此檢查要求類別路徑中提供 JUnit 5 庫，並且為專案組態了 JDK 1.8 或更高版本。</p>
+<!--<small>New in 2017.1</small>-->
 </body>
 </html>

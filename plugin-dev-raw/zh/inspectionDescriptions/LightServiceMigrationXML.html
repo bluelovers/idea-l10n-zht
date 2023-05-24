@@ -1,0 +1,27 @@
+<html>
+<body>
+報告在 <code>plugin.xml</code> 中註冊的可轉換為輕量服務的服務。
+<p>
+  不打算覆寫的服務無需在 <code>plugin.xml</code> 檔案中註冊。
+  可以改用 <code>@com.intellij.openapi.components.Service</code> 註解來註解服務類別。 對於專案級服務，請指定<code>@Service(Service.Level.PROJECT)</code>。
+<p>
+  要求：
+<ul>
+  <li>IntelliJ Platform 2019.3 或更高版本。</li>
+  <li>服務類別必須為 <code>final</code>。</li>
+  <li>未指定 <code>serviceInterface</code>。</li>
+  <li>如果套用級服務為 <code>com.intellij.openapi.components.PersistentStateComponent</code>，則必須停用漫游 (<code>roamingType = RoamingType.DISABLED</code>)。
+  </li>
+  <li>未指定 <code>preload</code>。</li>
+</ul>
+<p>同時報告在 <code>plugin.xml</code> 中註冊的服務，這些服務的類別已用 <code>@Service</code> 註解。
+<p>
+  更多詳細資訊，請參閱 IntelliJ 平台延伸模組 SDK 文檔中的<a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html">服務</a>。
+</p>
+<p>
+  另請參閱 <code>Plugin DevKit | 程式碼 | 可將服務轉換為輕量服務</code>檢查。
+</p>
+<!-- tooltip end -->
+<p><small>2023.2 最新變化</small>
+</body>
+</html>

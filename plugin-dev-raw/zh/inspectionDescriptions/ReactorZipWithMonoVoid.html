@@ -1,20 +1,20 @@
 <html>
 <body>
-<p>報告可能在 Reactive Stream 鏈內返回 <code>Mono with void value</code> 的 zip 動作。</p>
+<p>報告包含在 Reactor 鏈內具有 <code>Mono&lt;Void&gt;</code> 返回值的實參的 zip 動作 。</p>
 
 <p>
-  帶有 Mono Void 參數的 Reactive Streams zip 轉換方法不會有任何效果。
-  快速修復建議將 <code>zip()、zipWhen()、zipWith()</code> 取代為返回 Mono with Void value 的 <code>when</code>。
+  <code>Zip</code> 在接收到 <code>Mono&lt;Void&gt;</code> 完成信號後立即完成空動作。
+  快速修復建議將 <code>zip()</code>、<code>zipWhen()</code> 和 <code>zipWith()</code> 取代為 <code>when</code>。
 </p>
-
+<!-- tooltip end -->
 <p><b>範例：</b></p>
-<pre><code>Mono.zip(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
+<pre><code lang="java">Mono.zip(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
                 .map(v -> "New value")
                 .doFinally(System.out::println);
 </code></pre>
 
 <p>在套用快速修復後：</p>
-<pre><code>Mono.when(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
+<pre><code lang="java">Mono.when(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
                 .then(Mono.fromCallable(() -> "New value"))
                 .doFinally(System.out::println);
 </code></pre>

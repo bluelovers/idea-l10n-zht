@@ -1,6 +1,7 @@
 <html>
 <body>
-報告枚舉類型中的非 final 欄位，因為很少需要它們，且提供全域可變狀態。
+報告枚舉類型中的非 final 欄位。
+非 final 欄位引入全域可變狀態，這通常會被認為不可取。
 <p><b>範例：</b></p>
 <pre><code>
   enum Enum {
@@ -28,6 +29,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
-組態“在快速修復不可用時忽略欄位”複選框以僅醒目提示可通過該快速修復設為 final 的欄位。
+使用 `Ignore fields that cannot be made 'final'` 選項來僅對可使用快速修復設為 final 的欄位發出警告。
 </body>
 </html>

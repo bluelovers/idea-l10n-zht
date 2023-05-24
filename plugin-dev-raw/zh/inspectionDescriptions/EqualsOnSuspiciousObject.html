@@ -1,12 +1,20 @@
 <html>
 <body>
-報告 <code>StringBuilder</code> 或 <code>StringBuffer</code> 實例上的 <code>equals()</code> 呼叫。
+報告對 <code>StringBuilder</code>、<code>StringBuffer</code> 和 <code>java.util.concurrent.atomic</code> 軟體套件的實例的 <code>equals()</code> 呼叫。
 <p><code>equals()</code> 方法在這些類別中沒有被覆寫，因此即使兩個物件的內容相同，它也可能返回 <code>false</code>。
-如果您打算使用參照相等，我們建議您使用 <code>==</code> 以避免混淆。</p>
+  如果您打算使用參照相等，我們建議您使用 <code>==</code> 以避免混淆。</p>
+<code>StringBuilder</code>、<code>StringBuffer</code>、<code>AtomicBoolean</code>、<code>AtomicInteger</code>、<code>AtomicBoolean</code> 和 <code>AtomicLong</code> 的快速修復可用來轉換為內容的比較。
+當其中一個實例為 null 時，快速修復可能會改變語意。
 <p>範例：</p>
 <pre><code>
   public void test(StringBuilder sb1, StringBuilder sb2) {
     boolean result = sb1.equals(sb2); // 可疑
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  public void test(StringBuilder sb1, StringBuilder sb2) {
+      boolean result = sb1.toString().equals(sb2.toString());
   }
 </code></pre>
 <!-- tooltip end -->

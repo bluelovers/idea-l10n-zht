@@ -1,0 +1,13 @@
+<html>
+<body>
+報告輕量服務級別和建構函式之間的不符合。
+<p>報告的問題如下：</p>
+<ul>
+  <li>具有帶一個類型 <code>com.intellij.openapi.project.Project</code> 參數的建構函式的輕量服務類別不會被註解為專案級服務。
+  </li>
+  <li>註解為應用程式級服務的輕量服務類別沒有無實參建構函式，也沒有帶一個類型 <code>kotlinx.coroutines.CoroutineScope</code> 參數的建構函式。
+  </li>
+</ul>
+<p><small>2023.2 最新變化</small>
+</body>
+</html>

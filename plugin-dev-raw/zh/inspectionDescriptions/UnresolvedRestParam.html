@@ -2,7 +2,7 @@
 <body>
 <p>報告在方法簽名中宣告但在 URL 路徑中缺失或者在 URL 路徑中宣告但在方法簽名中缺失的 <code>@PathParam</code> 參數。</p>
 <p><strong>範例：</strong></p>
-<pre><code>
+<pre><code lang="java">
   @Get("/path/{myVariable}/")
   public String handler(@PathParam("<b>name_is_not_equal_to_myVariable</b>") String myVariable) { // 錯誤
     return "...";

@@ -1,0 +1,19 @@
+<!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+當將 <code>java.time.temporal.ChronoField</code> 和
+<code>java.time.temporal.ChronoUnit</code> 作為實參的 <code>java.time</code> 方法呼叫可以取代為更具體的方法時，則報告這些呼叫。
+<p>範例：</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int minute = localTime.get(ChronoField.MINUTE_OF_HOUR);
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int minute = localTime.getMinute();
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.2 最新變化</small></p>
+</body>
+</html>

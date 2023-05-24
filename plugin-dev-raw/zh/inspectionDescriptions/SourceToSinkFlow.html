@@ -1,30 +1,37 @@
-<html><body>
-報告將非安全字串傳遞給帶有使用註解 <code>org.checkerframework.checker.tainting.qual.Untainted</code> 標記的參數的方法的情況。
+<html>
+<body>
+報告將非安全字串傳遞給帶參數的方法的情況，該方法用 <code>@Untainted</code> 註解，從註解的方法返回，或分配給註解的欄位、參數或區域變數。 不支持將欄位的 `set` 和 `get` 方法作為入口點。
 <p>
-  安全字串為：
+  安全物件為：
 <ul>
-  <li>標記為 <code>@Untainted</code> 的方法呼叫</li>
-  <li>未呼叫非安全方法的區域變數或方法參數</li>
-  <li>標記為 <code>@Untainted</code> 且沒有分配非安全方法呼叫的欄位、區域變數或參數</li>
+  <li>字串文字、接口實例或枚舉物件</li>
+  <li>對標記為 <code>@Untainted</code> 的方法進行呼叫的結果</li>
+  <li>private 欄位，僅使用字串文字賦值，並具有安全的初始設定式</li>
+  <li>final 欄位，具有安全的初始設定式</li>
+  <li>標記為 <code>@Untainted</code> 且不是從非安全物件賦值的區域變數或參數</li>
+  此欄位、區域變數或參數不得作為實參傳遞給方法或用作限定符，或者必須是基元、其包裝器或不可變。
 </ul>
 <p>
-範例：
+  分析僅在一個檔案內執行。 要處理來自其他類別的相依項，請使用選項。
+  分析會擴展到 private 或 static 方法，並且具有深度傳播的限制。
+<p>
+  範例：
 <pre>
-<code>
+<code lang="java">
   void doSmth(boolean b) {
     String s = safe();
     String s1 = "other";
     if (b) s1 = s;
     sink(s);
   }
-  
+
   String sink(@Untainted String s) {}
 </code>
 </pre>
 <p>
-此處沒有將非安全字串賦值給 <code>s</code>，因此沒有產生警告。 另一方面：
+  此處沒有將非安全字串賦值給 <code>s</code>，因此沒有產生警告。 另一方面：
 <pre>
-<code>
+<code lang="java">
   void doSmth(boolean b) {
     String s = safe();
     String s1 = "other";
@@ -39,7 +46,37 @@
 </code>
 </pre>
 <p>
-這裡有一條警告，因為 <code>s1</code> 在 <code>foo</code> 呼叫結果賦值後具有未知狀態。
-<!-- tooltip end -->
+  這裡有一條警告，因為 <code>s1</code> 在 <code>foo</code> 呼叫結果賦值後具有未知狀態。
+  <!-- tooltip end -->
+<ul>
+  <li>
+    <p>使用 <b>Untainted 註解</b>表來指定註解，這些註解將在分析過程中將被用作 <code>@Untainted</code> 註解。
+      如果類別路徑中存在此列表中的第一個註解，則它將用於傳播。
+  </li>
+  <li>
+    <p>使用 <b>Tainted 註解</b>表來指定註解，這些註解將在分析過程中將被用作 <code>@Tainted</code> 註解。
+  </li>
+  <li>
+    <p>如果啟用了<b>如果接收器和實參為 untainted 則認為外部方法未被污染</b>選項，則如果當前類別之外的外部方法的接收器和實參是安全的，那麼將被視為安全。
+      在某些情況下，它不適用，但對於無狀態類別很有用。
+      如果停用此選項，則所有外部方法都將被視為不安全。
+  </li>
+  <li>
+    <p>使用<b>安全類別</b>選項指定類別，此類型的表達式將被視為安全
+  </li>
+  <li>
+    <p>使用 <b>Untainted 方法</b>表來指定僅返回安全物件的方法
+  </li>
+  <li>
+    <p>使用 <b>Untainted 欄位</b>表來指定僅包含安全物件的欄位
+  </li>
+  <li>
+    <p>使用<b>如果情況過於複雜導致無法檢查則報告</b>選項來指定是否需要報告因為復雜度而無法檢查的字串
+  </li>
+  <li>
+    <p>使用<b>將 private 方法的參數視為安全</b>選項指定 private 方法的參數，否則它們將被視為未知。
+  </li>
+</ul>
 <p><small>2021.2 最新變化</small></p>
-</body></html>
+</body>
+</html>

@@ -2,20 +2,20 @@
 <body>
 <p>報告通過 <code>global</code> 語句定義的變數未在模組範圍中定義的問題。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 def foo():
     global bar
     print(bar)
 
 foo()
-</pre>
+</code></pre>
 <p>可以移動該全域變數宣告來進行修正：</p>
-<pre style="font-family: monospace">
+<pre><code>
 global bar
 
 
 def foo():
     print(bar)
-</pre>
+</code></pre>
 </body>
 </html>

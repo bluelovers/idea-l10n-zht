@@ -5,20 +5,22 @@
 <p>當使用組態的 <code>&lt;constructor-arg&gt;</code> 標記和定義的 <code>autowire</code> 策略找不到 <code>&lt;bean&gt;</code> 的合適建構函式或工廠方法時，將觸發檢查。</p>
 
 <p><b>範例：</b></p>
-<pre><code>
+<pre><code lang="java">
     public class MyComponent {
-    // constructor
+    // 建構函式
     public MyComponent(MyBean bean) {}
-    // factory method
+    // 工廠方法
     public static MyComponent getInstance(String name, int port) {
     }
+</code></pre>
+<pre><code lang="xml">
     &lt;beans&gt;
-      &lt;bean class="beans.MyComponent" id="foo"&gt; // 報告 "在類別 'MyComponent' 中找不到符合的建構函式"
-         &lt;constructor-arg ref="myBean"/&gt;
+      &lt;bean class="beans.MyComponent" id="foo"&gt; &lt;!-- 報告 "在類別 'MyComponent' 中找不到符合的建構函式" --&gt;
+          &lt;constructor-arg ref="myBean"/&gt;
          &lt;constructor-arg value="123"/&gt;
       &lt;/bean&gt;
 
-      &lt;bean class="beans.MyComponent" factory-method="getInstance"&gt; // 報告 "在類別中找不到符合的工廠方法"
+      &lt;bean class="beans.MyComponent" factory-method="getInstance"&gt; &lt;!-- 報告 "在類別中找不到符合的工廠方法" --&gt;
          &lt;constructor-arg value="123"/&gt;
       &lt;/bean&gt;
     &lt;/beans&gt;

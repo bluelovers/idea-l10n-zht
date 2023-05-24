@@ -6,24 +6,26 @@
 
 <p><b>範例：</b></p>
 
-<pre><code>
+<pre><code lang="java">
   public class InjectionValueTypes{
   public List&lt;MyBean&gt; setListBeans() {...}
     public MyBean setMyBean() {...}
     }
   }
+</code></pre>
+<pre><code lang="xml">
   &lt;beans&gt;
     &lt;bean class="MyBean" id="myBean"/&gt;
     &lt;bean class="ErrTypeBean" id="errTypeBean"/&gt;
     &lt;bean class="InjectionValueTypes" id="kt"&gt;
       &lt;property name="myBean" ref="errTypeBean"/&gt;
-      // 報告 "'MyBean' 類型的屬性不能由 'ErrTypeBean' 注入"
+      &lt;!-- 報告 "'MyBean' 類型的屬性不能由 'ErrTypeBean' 注入" --&gt;
       &lt;property name="listBeans"&gt;
         &lt;list&gt;
           &lt;idref local="myBean"/&gt;
           &lt;ref bean="myBean"/&gt;
-          &lt;ref bean="errTypeBean"/&gt; // 報告 "無法新增到 'MyBean' 類型的集合中"
-          &lt;bean class="ErrTypeBean"/&gt; // 報告 "Bean 必須為 'MyBean' 類型"
+          &lt;ref bean="errTypeBean"/&gt; &lt;!-- 報告 "無法新增到 'MyBean' 類型的集合中" --&gt;
+          &lt;bean class="ErrTypeBean"/&gt; &lt;!-- 報告 "Bean 必須為 'MyBean' 類型" --&gt;
         &lt;/list&gt;
       &lt;/property&gt;
     &lt;/bean&gt;

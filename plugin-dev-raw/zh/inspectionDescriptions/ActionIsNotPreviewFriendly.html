@@ -1,11 +1,11 @@
 <html>
 <body>
-報告 <code>LocalQuickFix</code> 和 <code>IntentionAction</code> 實作中阻止意圖預覽動作正常執行的欄位。 此外，在類型已知是安全的欄位上報告了過多的 <code>@SafeFieldForPreview</code> 註解。
+報告 <code>LocalQuickFix</code> 實作中阻止意圖預覽動作正常執行的欄位。
+此外，在類型已知是安全的欄位上報告了過多的 <code>@SafeFieldForPreview</code> 註解。
 <p>
-  意圖預覽是 IntelliJ 平台的一項功能，可以顯示在套用快速修復或意圖動作後對當前檔案所做的更改。 為了在快速修復中實作這一功能，需要使用指向當前檔案的非物理副本的自訂 <code>ProblemDescriptor</code> 呼叫 <code>LocalQuickFix.generatePreview()</code>。 在意圖動作中，使用當前檔案的非物理副本和虛部編輯器呼叫 <code>IntentionAction.generatePreview()</code>
-  通常，這些方法只委託給 <code>LocalQuickFix.applyFix()</code> 或 <code>IntentionAction.invoke()</code>。
-  但是，某些快速修復可能會直接或間接參照物理元素並將其用於寫入。 由於快速修復試圖更新的是物理 PSI 而不是非物理 PSI，預覽不起作用。
-  為避免這種情況，<code>generatePreview()</code> 的預設實作僅在快速修復或意圖動作類別的所有實例欄位均具有安全類型（基元、字串等）的情況下進行委託。
+  意圖預覽是 IntelliJ 平台的一項功能，可以顯示在套用快速修復或意圖動作後對當前檔案所做的更改。 為了實作這一功能，需要使用指向當前檔案的非物理副本的自訂 <code>ProblemDescriptor</code> 來呼叫 <code>LocalQuickFix.generatePreview()</code>。
+  通常，此實作委託給 <code>LocalQuickFix.applyFix()</code>。 但是，某些快速修復可能會直接或間接參照物理元素並將其用於寫入。 由於快速修復試圖更新的是物理 PSI 而不是非物理 PSI，預覽不起作用。
+  為避免這種情況，<code>generatePreview()</code> 的預設實作僅在快速修復類別的所有實例欄位均具有安全類型（基元、字串等）的情況下進行委託。
 </p>
 <p>
   您可以通過多種方式修正此問題：
@@ -19,9 +19,7 @@
     您可以覆寫 <code>getFileModifierForPreview()</code> 方法，然後建立一個快速修復副本，將其重新綁定至作為參數提供的非物理檔案副本。 使用 <code>PsiTreeUtil.findSameElementInCopy()</code> 可以在提供的非物理副本中找到相應的 PSI 元素。
   </li>
   <li>
-    不要在欄位中存儲 PSI 參照，而應盡量從快速修復中的 <code>ProblemDescriptor.getPsiElement()</code> 或意圖動作中提供的檔案/編輯器中提取所有必要的資訊。
-    您還可以繼承抽象 <code>LocalQuickFixAndIntentionActionOnPsiElement</code> 類別並實作其 <code>invoke()</code> 和 <code>isAvailable()</code> 方法，這些方法具有
-<code>startElement</code> 和 <code>endElement</code> 參數。 這些參數會自動映射到非物理檔案副本。
+    不要在欄位中存儲 PSI 參照，而應盡量從 <code>ProblemDescriptor.getPsiElement()</code> 中提取所有必要資訊。
   </li>
   <li>
     您可以覆寫 <code>generatePreview()</code> 方法並提供完全自訂的預覽行為。

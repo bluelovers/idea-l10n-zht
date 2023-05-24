@@ -2,7 +2,7 @@
 <body>
 <p>報告 <a href="https://www.python.org/dev/peps/pep-0589/">TypedDict</a> 無效的定義和用法。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 from typing import TypedDict
 
 
@@ -19,6 +19,6 @@ m = Movie(name="name", year=1000, rate=9)
 print(m["director"])  # 'Movie' 中沒有 'director' 鍵
 del m["name"]  # 無法刪除 'name' 鍵
 m["year"] = "1001"  # 應為 'int'，得到的是 'str'
-</pre>
+</code></pre>
 </body>
 </html>

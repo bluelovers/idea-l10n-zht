@@ -3,7 +3,7 @@
 <p>報告覆寫方法簽名的不一致。</p>
 
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 class Book:
     def add_title(self):
         pass
@@ -12,7 +12,7 @@ class Book:
 class Novel(Book):
     def add_title(self, text):
         pass
-</pre>
+</code></pre>
 
 <p><code>Novel</code> 類別中的 <code> add_title</code> 方法的形參與 <code>Book</code> 類別中指定的方法簽名不符合。 IDE 提議的修復方法是套用“更改簽名”重構。</p>
 </body>

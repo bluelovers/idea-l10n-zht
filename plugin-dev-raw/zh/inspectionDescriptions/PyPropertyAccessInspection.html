@@ -7,7 +7,7 @@
   <li>刪除了不可刪除的屬性</li>
 </ul>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 class MyClass:
     @property
     def read_only(self): return None
@@ -21,6 +21,6 @@ a = MyClass()
 a.read_only = 10 # 無法設定屬性
 del a.read_only # 無法刪除屬性
 print(a.write_only) # 無法讀取屬性
-</pre>
+</code></pre>
 </body>
 </html>

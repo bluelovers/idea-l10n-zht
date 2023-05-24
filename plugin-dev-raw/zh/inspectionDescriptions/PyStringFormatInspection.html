@@ -2,17 +2,17 @@
 <body>
 <p>報告字串格式化動作中的錯誤。</p>
 <p><b>範例 1：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 "Hello {1}".format("people")
-</pre>
+</code></pre>
 <p><b>範例 2：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 def bar():
     return 1
 
 
 "%s %s" % bar()
-</pre>
+</code></pre>
 <p>修復方法是覆寫字串格式化片段，以遵守<a href="https://docs.python.org/3/library/string.html#format-string-syntax">格式化語法</a>。</p>
 </body>
 </html>

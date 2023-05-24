@@ -5,7 +5,7 @@
 這可能導致測試環境部分初始化，因而對其他測試產生不利影響。
 相反，測試用例初始化應在 <code>setUp()</code> 或 <code>@Before</code> 註解方法中完成。
 <p>不良範例：</p>
-<pre><code>
+<pre><code lang="java">
   public class ImportantTest {
     private File file;
 

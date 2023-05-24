@@ -3,15 +3,13 @@
 報告有關不正確使用的代理方法的警告。
 
 Spring Framework 5.2 引入了對 @Configuration 類別處理的最佳化，可以通過 @Configuration(proxyBeanMethods = false) 特性啟用該最佳化。
-<br><br>
-如果您停用
-<pre><code>proxyBeanMethods</code></pre>
-將不再建立代理實例，呼叫該方法可以重新啟動（每次返回一個新實例）。
+<p>
+如果停用 <code>proxyBeanMethods</code>，將不再建立代理實例，呼叫該方法可以重新啟動（每次返回一個新實例）。
 因此，您無法保證您確實在上下文中注入相應的 Bean。
+</p>
 <!-- tooltip end -->
-<br><br>
-<strong>不正確的 Bean 方法呼叫範例</strong>：<br><br>
-<pre>
+<p>不正確的 Bean 方法呼叫範例：</p>
+<pre><code lang="java">
 @Configuration(proxyBeanMethods = false)
 class TestConfiguration {
   @Bean
@@ -21,17 +19,13 @@ class TestConfiguration {
 
   @Bean
   public SecondBean secondBean() {
-    return new SecondBean(firstBean()); // -> <strong>不正確的呼叫</strong>
+    return new SecondBean(firstBean()); // -> 不正確的呼叫
   }
 }
-</pre>
-<br>
+</code></pre>
 
-<hr>
-<strong>您可以將
-  <pre><code>proxyBeanMethods</code></pre>
-  設定為 true 或按如下所示覆寫程式碼</strong>：<br><br>
-<pre>
+<p>您可以將 <code>proxyBeanMethods</code> 設定為 true 或按如下所示覆寫程式碼：</p>
+<pre><code lang="java">
 @Configuration(proxyBeanMethods = false)
 class TestConfiguration {
   @Bean
@@ -40,16 +34,14 @@ class TestConfiguration {
   }
 
   @Bean
-  public SecondBean secondBean(FirstBean someBean) { // -> <strong>正確的注入實例</strong>
+  public SecondBean secondBean(FirstBean someBean) { // -> 正確的注入實例
     return new SecondBean(someBean);
   }
 }
-</pre>
-<br>
+</code></pre>
 
-<hr>
-<strong>此外，該檢查還會檢查沒有 @Configuration 建構型的類別中的 @Bean 方法呼叫（在 "Bean lite mode" 下）</strong>：<br><br>
-<pre>
+<p>此外，該檢查還會檢查沒有 <code>@Configuration</code> 建構型的類別中的 <code>@Bean</code> 方法呼叫（在 "Bean lite mode" 下）</0>：</p>
+<pre><code lang="java">
 @Component
 class TestComponent {
   @Bean
@@ -59,10 +51,10 @@ class TestComponent {
 
   @Bean
   public SecondBean secondBean() {
-    return new SecondBean(firstBean()); // -> <strong>不正確的呼叫</strong>
+    return new SecondBean(firstBean()); // -> 不正確的呼叫
   }
 }
-</pre>
+</code></pre>
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 <body>
 <p>報告類別中缺少對 <code>super</code> 建構函式進行呼叫的情況。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 class Fruit:
     def __init__(self):
         pass
@@ -11,10 +11,10 @@ class Fruit:
 class Pear(Fruit):
     def __init__(self):
         pass
-</pre>
+</code></pre>
 <p><code>Pear</code> 類別在 <code>__init__</code> 方法中應有 <code>super</code> 呼叫。</p>
 <p>套用快速修復後，程式碼變為：</p>
-<pre style="font-family: monospace">
+<pre><code>
 class Fruit:
     def __init__(self):
         pass
@@ -23,6 +23,6 @@ class Fruit:
 class Pear(Fruit):
     def __init__(self):
         super().__init__()
-</pre>
+</code></pre>
 </body>
 </html>

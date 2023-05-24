@@ -1,0 +1,23 @@
+<html>
+<body>
+報告未被宣告為 <code>public</code> 和 <code>static</code>、不返回 <code>void</code> 或接受實參的 JUnit 4.0 <code>@BeforeClass</code> 或 <code>@AfterClass</code> 方法。
+此類別方法很容易無意間建立，但是 JUnit 測試執行程序不會執行這些方法。
+<p><b>範例：</b></p>
+<pre><code>
+  public class MainTest {
+    @BeforeClass
+    String beforeClass(int i) {
+    }
+  }
+</code></pre>
+<p>套用快速修復後，該方法變為：</p>
+<pre><code>
+  class MainTest {
+    @BeforeClass
+    public static void beforeClass() {
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

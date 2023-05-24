@@ -2,22 +2,22 @@
 <body>
 <p>報告在未使用 <code>await</code> 語法的情況下呼叫的協同程序。</p>
 <p><b>範例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 async def bar():
     pass
 
 
 async def foo():
     bar()
-</pre>
+</code></pre>
 <p>套用快速修復後，程式碼變為：</p>
-<pre style="font-family: monospace">
+<pre><code>
 async def bar():
     pass
 
 
 async def foo():
     await bar()
-</pre>
+</code></pre>
 </body>
 </html>

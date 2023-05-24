@@ -3,14 +3,13 @@
 <p>報告在 <strong>&lt;bean&gt;</strong> 元素的 <code>factory-method</code> 特性中參照的非 public 方法。</p>
 
 <p><b>範例：</b></p>
-<pre><code>
+<pre><code lang="java">
 public class MyFactory {
   private static FooBean createBean() {...}
   }
 }
-
-<hr/>
-
+</code></pre>
+<pre><code lang="xml">
 &lt;beans&gt;
   &lt;bean class="MyFactory" factory-method="createBean"/&gt;
   // 報告 "工廠方法 'createBean' 應為 public"

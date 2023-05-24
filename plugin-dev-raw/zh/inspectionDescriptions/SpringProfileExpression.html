@@ -8,18 +8,18 @@
 </ul>
 
 <p><b>範例：</b></p>
-<pre><code>
-  <!-- correctly configured -->
+<pre><code lang="java">
+  // 組態正確
   @Configuration
   @Profile("a & (b | c)")
   public class MyConfiguration {...}
 
-  <!-- empty  -->
+  // 空 
   @Configuration
   @Profile() // 報告 "組態檔案表達式必須包含文本"
   public class MyConfiguration {...}
 
-  <!-- mixed operators without  parentheses -->
+  // 不帶圓括號的混合運算符 
   @Configuration
   @Profile("a & b | c") // 報告 "格式不正確的組態檔案表達式"
   public class MyConfiguration {...}

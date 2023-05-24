@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>報告 docstring 中不符合的參數。 例如，<code>b</code> 處於醒目提示顯示狀態，因為 <code>add</code> 函式中沒有此類別參數。</p>
-<pre style="font-family: monospace">
+<pre><code>
     def add(a, c):
     """
     @param a:
@@ -9,14 +9,14 @@
     @return:
     """
     pass
-</pre>
+</code></pre>
 <p>如果 docstring 中沒有提及其中任何一個參數，則檢查不會警告您缺少這些參數：</p>
-<pre style="font-family: monospace">
+<pre><code>
 def mult(a, c):
     """
     @return:
     """
     pass
-</pre>
+</code></pre>
 </body>
 </html>

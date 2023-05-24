@@ -1,0 +1,32 @@
+<html>
+<body>
+報告缺少取消檢查的 <code>forEach</code> 迴圈。
+<p>僅在具有 <code>com.intellij.util.concurrency.annotations.RequiresReadLock</code> 註解的方法內執行。</p>
+<p><b>範例：</b></p>
+<pre><code lang="kotlin">
+    for (item in items) {
+        ProgressManager.checkCanceled() // 應該出現在第一行
+        ...
+    }
+</code></pre>
+<p>
+    在嵌套迴圈之間沒有任何內容的情況下：
+</p>
+<pre><code lang="kotlin">
+    for (item in items) {
+        // 之間沒有任何內容
+        for (inner in item.inners) {
+            ProgressManager.checkCanceled() // 應僅出現在內部迴圈的第一行
+             ...
+        }
+    }
+</code></pre>
+<p>
+    在阻塞上下文中應使用 <code>com.intellij.openapi.progress.ProgressManager#checkCanceled</code>，而在掛起上下文中應使用 <code>com.intellij.openapi.progress.CoroutinesKt#checkCancelled</code>。
+</p>
+<p>
+    更多詳細資訊情參閱 IntelliJ 平台延伸模組 SDK 文檔中的<a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#background-processes-and-processcanceledexception">背景程序和 ProcessCanceledException</a>。
+</p>
+</body>
+<p><small>2023.1 最新變化</small>
+</html>

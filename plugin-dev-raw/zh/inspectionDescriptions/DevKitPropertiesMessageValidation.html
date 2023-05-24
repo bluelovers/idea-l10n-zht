@@ -1,0 +1,62 @@
+<html>
+<body>
+報告屬性值中的以下 <code>MessageFormat</code> 問題：
+
+<p><b>未知的格式類型</b>
+<p>
+  <code>MessageFormat</code> 僅支援以下格式類型：
+<ul>
+  <li>數值</li>
+  <li>日期</li>
+  <li>時間</li>
+  <li>choice</li>
+</ul>
+  其他格式類型將被報告。
+
+<p><b>不成對的引號</b>
+<pre><code>
+  property.key=Shouldn't happen: {0}
+</code></pre>
+<p>
+  單引號會被解釋為轉義，直到屬性結束，並且不會出現在結果字串中。
+  在大多數情況下，這不是我們的本意。
+  如果結果字串中應該出現單引號，則必須在屬性中使用重複的單引號。
+
+<p><b>不符合的大括號</b>
+<p>
+  每個佔位符必須有一個右大括號。
+
+<p><b>引號過多</b>
+<p>
+  在某些情況下（例如 <code>it's</code>），預期結果字串中只有一個引號。
+  報告結果字串中兩個或多個引號放在一起的情況。
+
+<p><b>嵌套 <code>ChoiceFormat</code> 的下限不正確</b>
+<p>
+  下限應為數字，並按升序排序。
+
+<p><b>參數兩旁的引號數量錯誤</b>
+<p>
+  在 <code>java.text.MessageFormat</code> 模式中，單引號用於轉義。
+  要讓引號可見，則必須使用重複的引號。
+  例如，在傳遞 <code>1</code> 時：
+<ul>
+  <li><code>'{0}'</code> &rarr; <code>{0}</code></li>
+  <li><code>''{0}''</code> &rarr; <code>'1'</code></li>
+</ul>
+<p>
+  使用 choice 格式時，會將嵌套格式評估為格式字串本身，並且引號必須重複兩次。
+  例如，在傳遞 <code>1</code> 時：
+<ul>
+  <li><code>{0, choice, 0#無檔案|#1''{0}'' 個檔案}</code> &rarr; <code>{0} 個檔案</code></li>
+  <li><code>{0, choice, 0#無檔案|#1''''{0}'''' 個檔案}</code> &rarr; <code>'1' 個檔案</code></li>
+</ul>
+
+<p><b>註釋</b>
+<p>
+  僅當屬性值包含文字文本 <code>{0}</code>、<code>{0,</code>、<code>{1}</code> 或 <code>{1,</code>時，才會對其進行驗證。
+  這是為了確保這些屬性值實際上被用作 <code>MessageFormat</code> 模式。
+<!-- tooltip end -->
+<p><small>2023.2 最新變化</small>
+</body>
+</html>

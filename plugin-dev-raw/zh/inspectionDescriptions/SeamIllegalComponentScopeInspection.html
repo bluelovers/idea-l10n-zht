@@ -1,0 +1,78 @@
+<html>
+<head>
+    <style type="text/css">
+<!--
+    th {font-family:monospace;vertical-align:top;}
+    td {font-family:monospace;text-align:center;}
+-->
+    </style>
+</head>
+<body>
+<p>報告 <code>@Scope</code>、<code>@Role</code> 和 <code>@DataModel</code> 註解，為特定組件指定不受支援的範圍。</p>
+
+<p>下表列出了每種組件類型的支援範圍（粗體為預設範圍）：</p>
+<table border="1">
+    <tr>
+        <th></th>
+        <th>無狀態<br>會話 Bean</th>
+        <th>有狀態<br>會話 Bean</th>
+        <th>實體 Bean</th>
+        <th>Java Bean</th>
+    </tr>
+    <tr>
+        <th>STATELESS</th>
+        <td><b>X</b></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>EVENT</th>
+        <td>&nbsp;</td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>PAGE</th>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>CONVERSATION</th>
+        <td>&nbsp;</td>
+        <td><b>X</b></td>
+        <td><b>X</b></td>
+        <td><b>X</b></td>
+    </tr>
+    <tr>
+        <th>SESSION</th>
+        <td>&nbsp;</td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>BUSINESS_PROCESS</th>
+        <td>&nbsp;</td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>APPLICATION</th>
+        <td>&nbsp;</td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+
+</table>
+
+<p><code>@DataModel</code> 上下文變數對其範圍有不同的限制：如果未指定範圍，則範圍與封閉組件的範圍相同（如果組件在 STATELESS 範圍內，則為 EVENT）。
+或者，為 <code>@DataModel</code> 上下文變數指定 PAGE 範圍。</p>
+
+</body>
+</html>
