@@ -4,7 +4,7 @@
 <p>返回 Publisher（包括 <code>Uni</code> 和 <code>Multi</code>）的方法不应直接调用 <code>subscribe()</code> 方法，因为它可能破坏反应式调用链。</p>
 <p>不要使用 <code>subscribe()</code>，而应考虑使用组合运算符，例如 <code>flatMap()</code>、<code>merge()</code> 等。</p>
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
   Multi&lt;String&gt; stringMulti(){
     Multi&lt;String&gt; multi = Multi.createFrom().item("abc");
     multi.subscribe(); // &lt;- 在非阻塞上下文中阻塞 'subscribe' 调用

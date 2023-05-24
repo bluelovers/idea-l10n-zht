@@ -1,0 +1,14 @@
+<html>
+<body>
+报告使用线程上下文（使用 <code>@RequiresBlockingContext</code> 注解）的 Kotlin 协同程序中方法的不当用法。
+这些方法中的许多方法都有对应的协同程序友好的类似物，可以在 <code>suspend</code> 上下文中使用。
+
+<!-- tooltip end -->
+
+部分示例：
+<ul>
+  <li><code>com.intellij.openapi.progress.ProgressManager.checkCanceled()</code> 应被替换为 <code>com.intellij.openapi.progress.checkCancelled()</code></li>
+  <li><code>com.intellij.openapi.application.Application.invokeAndWait</code> 等应被替换为 <code>withContext(Dispatchers.EDT)</code></li>
+</ul>
+</body>
+</html>

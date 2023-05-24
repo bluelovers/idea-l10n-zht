@@ -1,0 +1,16 @@
+<html>
+<body>
+报告 <code>for</code> 循环条件中的冗余 <code>true</code> 文字。
+
+<p>在 Go 中，<code>for</code> 循环具有一个带有隐式条件的形式。
+  这意味着您可以通过编写 <code>for { }</code> 来创建无限循环。
+  因此，在具有 <code>true</code> 条件 (<code>for true { }</code>) 的情况下，<code>true</code> 会被视为冗余，可以省略。</p>
+
+<p>有关 Go 中的 <code>for</code> 循环的更多信息，请参阅 <a href="https://go.dev/doc/effective_go#for">go.dev 上的 For</a> 页面。
+</p>
+<p>示例：</p>
+<pre><code>for true {
+  println("ping")
+}</code></pre>
+</body>
+</html>

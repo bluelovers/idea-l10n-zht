@@ -2,7 +2,7 @@
 <body>
 <p>报告 <a href="https://www.python.org/dev/peps/pep-0544/">PEP-544</a> 中引入的协议的无效定义和用法。</p>
 <p><b>示例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 from typing import Protocol
 
 
@@ -19,6 +19,6 @@ class MyClass(MyProtocol):
 class MyAnotherProtocol(MyClass, Protocol): # 协议的所有父类必须为协议
     pass
 
-</pre>
+</code></pre>
 </body>
 </html>

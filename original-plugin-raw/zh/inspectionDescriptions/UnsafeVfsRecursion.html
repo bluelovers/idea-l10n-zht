@@ -5,30 +5,5 @@
   对循环符号链接迭代时，这可能导致无限循环。
   请改用 <code>VfsUtilCore.visitChildrenRecursively()</code>。
 </p>
-<pre><code>
-void processDirectory(VirtualFile dir) {
-  for (VirtualFile file : dir.getChildren()) { // 不良
-    if (!file.isDirectory()) {
-      processFile(file);
-    } else {
-      processDirectory(file); // 递归调用
-    }
-  }
-}
-</code>
-</pre>
-<pre><code>
-void processDirectory(VirtualFile dir) {
-  VfsUtilCore.visitChildrenRecursively(dir, new VirtualFileVisitor&lt;Void>() { // 优良
-    @Override
-    public boolean visitFile(@NotNull VirtualFile file) {
-      if (!file.isDirectory()) {
-        processFile(file);
-      }
-      return true;
-    }
-  });
-}
-</code></pre>
 </body>
 </html>

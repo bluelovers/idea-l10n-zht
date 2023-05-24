@@ -3,24 +3,23 @@
 <p>报告 <code>&lt;bean&gt;</code> 元素中的 <code>autowire</code> 特性，并建议在可能的情况下显式注入 Bean 属性。</p>
 
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
   public class MyComponent {
     public void setOtherBean(OtherBean bean){...}
   }
-
-<hr/>
-
+</code></pre>
+<pre><code lang="xml">
   &lt;beans&gt;
     &lt;bean class="beans.OtherBean" id="bar"/&gt;
     &lt;bean autowire="byType" class="beans.MyComponent"/&gt;
-    // "不必要的自动装配的依赖项"
-    // 建议 "将自动装配的依赖项设为显式"
+    &lt;!-- "不必要的自动装配的依赖项" --&gt;
+    &lt;!-- 建议 "将自动装配的依赖项设为显式" --&gt;
   &lt;/beans&gt;
 </code></pre>
 
 <p>应用快速修复后：</p>
 
-<pre><code>
+<pre><code lang="xml">
   &lt;beans&gt;
     &lt;bean class="beans.OtherBean" id="bar"/&gt;
     &lt;bean class="beans.MyComponent" id="foo"&gt;

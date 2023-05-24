@@ -9,13 +9,13 @@
 
 <p>该快速修复会移除对 <code>Hooks.onOperatorDebug()</code> 的调用。</p>
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
   public void hook() {
     Hooks.onOperatorDebug(); // 报告 '初始化 ReactorDebugAgent 时调用 Hooks.onOperatorDebug()'
   }
 </code></pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre><code lang="java">
   public void hook() {
   }
 </code></pre>

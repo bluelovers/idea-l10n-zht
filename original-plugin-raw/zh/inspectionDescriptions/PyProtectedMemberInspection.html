@@ -1,7 +1,8 @@
 <html>
 <body>
 <p>报告 protected 成员在类、定义其的类的后代或模块的外部访问的情况。</p>
-<pre style="font-family: monospace">
+<p><b>示例：</b></p>
+<pre><code>
 class Foo:
     def _protected_method(self):
         pass
@@ -14,6 +15,6 @@ class Bar(Foo):
 
 foo = Foo()
 foo._protected_method() # 访问 protected 方法
-</pre>
+</code></pre>
 </body>
 </html>

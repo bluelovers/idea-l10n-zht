@@ -1,30 +1,18 @@
 <html>
 <body>
-报告可以简化的求反布尔表达式。
-<p>快速修复会简化布尔表达式。</p>
+报告可以简化的否定二进制表达式。
+<p>该快速修复会简化二进制表达式。</p>
 <p><b>示例：</b></p>
 <pre><code>
-    fun test(n: Int) {
-        !(0 == 1)
-    }
+  fun test(n: Int) {
+      !(0 == 1)
+  }
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
-    fun test(n: Int) {
-        0 != 1
-    }
-</code></pre>
-<p>请注意，如果涉及 IEEE-754 NaN 值，此操作可能会更改代码语义：</p>
-<pre><code>
-    fun main() {
-        println(!(Double.NaN &gt;= 0)) // true
-    }
-</code></pre>
-<p>在应用快速修复后：</p>
-<pre><code>
-    fun main() {
-        println(Double.NaN &lt; 0) // false
-    }
+  fun test(n: Int) {
+      0 != 1
+  }
 </code></pre>
 <!-- tooltip end -->
 </body>

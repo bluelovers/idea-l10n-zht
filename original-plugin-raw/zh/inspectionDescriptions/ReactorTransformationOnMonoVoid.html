@@ -1,20 +1,20 @@
 <html>
 <body>
-<p>报告在 Reactive Stream 链内的 <code>Mono with void value</code> 上调用的转换操作。</p>
+<p>报告对 Reactor 链内的 <code>Mono&lt;Void&gt;</code> 值调用的转换操作。</p>
 
 <p>
-  在 Mono with Void value 上调用 Reactive Streams 链不会有任何效果。
-  快速修复建议将 <code>map()、flatMap()</code> 替换为返回其他 Mono 的 <code>then()</code>。
+  <code>Mono&lt;Void&gt;</code> 会在没有任何值的情况下完成，这就是为什么没有任何东西可以调用转换函数的原因。
+  快速修复建议将 <code>map()</code> 和 <code>flatMap()</code> 替换为 <code>then()</code>。
 </p>
-
+<!-- tooltip end -->
 <p><b>示例：</b></p>
-<pre><code>Mono.when(Mono.just(1), Mono.just(2))
+<pre><code lang="java">Mono.when(Mono.just(1), Mono.just(2))
                 .map(v -> "New value")
                 .doFinally(System.out::println);
 </code></pre>
 
 <p>在应用快速修复后：</p>
-<pre><code>Mono.when(Mono.just(1), Mono.just(2))
+<pre><code lang="java">Mono.when(Mono.just(1), Mono.just(2))
                 .then(Mono.fromCallable(() -> "New value"))
                 .doFinally(System.out::println);
 </code></pre>

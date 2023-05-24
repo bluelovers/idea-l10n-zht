@@ -1,26 +1,41 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
+    <option name="copy" path="ActionManager" hit="Copy" />
     <option name="上一页" path="ActionManager" hit="上一页" />
     <option name="下一页" path="ActionManager" hit="下一页" />
+    <option name="值编辑器" path="ActionManager" hit="值编辑器" />
+    <option name="值编辑器和聚合视图" path="ActionManager" hit="值编辑器和聚合视图" />
     <option name="克隆列" path="ActionManager" hit="克隆列" />
     <option name="克隆行" path="ActionManager" hit="克隆行" />
+    <option name="分页" path="ActionManager" hit="分页" />
+    <option name="切换格式" path="ActionManager" hit="切换格式" />
+    <option name="切换自动换行" path="ActionManager" hit="切换自动换行" />
     <option name="列列表" path="ActionManager" hit="列列表" />
     <option name="删除所选列" path="ActionManager" hit="删除所选列" />
     <option name="删除所选行" path="ActionManager" hit="删除所选行" />
     <option name="加载文件" path="ActionManager" hit="加载文件…" />
     <option name="升序" path="ActionManager" hit="升序" />
+    <option name="取消选择上一个匹配项" path="ActionManager" hit="取消选择上一个匹配项" />
     <option name="启用所有聚合器" path="ActionManager" hit="启用所有聚合器" />
     <option name="在当前页面上查找" path="ActionManager" hit="在当前页面上查找" />
     <option name="复制列名称" path="ActionManager" hit="复制列名称" />
     <option name="复制聚合结果" path="ActionManager" hit="复制聚合结果" />
+    <option name="导出数据" path="ActionManager" hit="导出数据…" />
+    <option name="将所有数据导出到文件或剪贴板" path="ActionManager" hit="将所有数据导出到文件或剪贴板" />
+    <option name="展开所选列" path="ActionManager" hit="展开所选列" />
     <option name="常规" path="ActionManager" hit="常规" />
+    <option name="打开数据视图外观设置" path="ActionManager" hit="打开数据视图外观设置…" />
+    <option name="扩大选区" path="ActionManager" hit="扩大选区" />
     <option name="排序" path="ActionManager" hit="排序" />
     <option name="提取程序" path="ActionManager" hit="提取程序" />
+    <option name="收缩选区" path="ActionManager" hit="收缩选区" />
     <option name="文本" path="ActionManager" hit="文本" />
     <option name="显示" path="ActionManager" hit="显示/隐藏列" />
     <option name="隐藏列" path="ActionManager" hit="显示/隐藏列" />
     <option name="显示值编辑器" path="ActionManager" hit="显示值编辑器" />
+    <option name="显示图表" path="ActionManager" hit="显示图表" />
+    <option name="显示所有列" path="ActionManager" hit="显示所有列" />
     <option name="显示所选单元的值之间的不同" path="ActionManager" hit="显示所选单元的值之间的不同" />
     <option name="显示筛选器" path="ActionManager" hit="显示筛选器" />
     <option name="显示聚合视图" path="ActionManager" hit="显示聚合视图" />
@@ -38,6 +53,8 @@
     <option name="添加降序" path="ActionManager" hit="添加降序" />
     <option name="清除排序" path="ActionManager" hit="清除排序" />
     <option name="禁用所有聚合器" path="ActionManager" hit="禁用所有聚合器" />
+    <option name="移至右侧" path="ActionManager" hit="移至右侧" />
+    <option name="移至底部" path="ActionManager" hit="移至底部" />
     <option name="第一行为标头" path="ActionManager" hit="第一行为标头" />
     <option name="第一页" path="ActionManager" hit="第一页" />
     <option name="粘贴格式" path="ActionManager" hit="粘贴格式" />
@@ -45,6 +62,7 @@
     <option name="结果标题" path="ActionManager" hit="结果标题" />
     <option name="编辑" path="ActionManager" hit="编辑" />
     <option name="编辑所选单元" path="ActionManager" hit="编辑所选单元" />
+    <option name="缩小所选列的范围" path="ActionManager" hit="缩小所选列的范围" />
     <option name="聚合视图" path="ActionManager" hit="聚合视图" />
     <option name="行" path="ActionManager" hit="行…" />
     <option name="行计数" path="ActionManager" hit="行计数" />
@@ -54,12 +72,15 @@
     <option name="转置" path="ActionManager" hit="转置" />
     <option name="还原所选更改" path="ActionManager" hit="还原所选更改" />
     <option name="还原所选条目" path="ActionManager" hit="还原所选条目" />
+    <option name="选择下一个匹配项" path="ActionManager" hit="选择下一个匹配项" />
+    <option name="选择所有匹配项" path="ActionManager" hit="选择所有匹配项" />
     <option name="选择数据提取程序" path="ActionManager" hit="选择数据提取程序" />
     <option name="csv" path="ActionManager" hit="配置 CSV 格式…" />
     <option name="格式" path="ActionManager" hit="配置 CSV 格式…" />
     <option name="配置" path="ActionManager" hit="配置 CSV 格式…" />
     <option name="重命名" path="ActionManager" hit="重命名…" />
     <option name="重新加载页面" path="ActionManager" hit="重新加载页面" />
+    <option name="重置列宽" path="ActionManager" hit="重置列宽" />
     <option name="重置视图" path="ActionManager" hit="重置视图" />
     <option name="降序" path="ActionManager" hit="降序" />
     <option name="隐藏值编辑器" path="ActionManager" hit="隐藏值编辑器" />
@@ -118,5 +139,15 @@
     <option name="行后缀" hit="行后缀 I  " />
     <option name="逗号" hit="逗号" />
     <option name="需要时" hit="需要时" />
+  </configurable>
+  <configurable id="database.data.views.appearance" configurable_name="数据编辑器和查看器">
+    <option name="交替行颜色" hit="交替行颜色" />
+    <option name="使用自定义字体" hit="使用自定义字体 " />
+    <option name="复选框" hit="复选框" />
+    <option name="大小" hit="大小 " />
+    <option name="将布尔值显示为" hit="将布尔值显示为 " />
+    <option name="数据编辑器和查看器" hit="数据编辑器和查看器" />
+    <option name="文本" hit="文本" />
+    <option name="行高" hit="行高 " />
   </configurable>
 </options>

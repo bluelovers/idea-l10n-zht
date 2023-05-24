@@ -1,0 +1,15 @@
+<!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+报告以不支持的 <code>java.time.temporal.ChronoField</code> 或 <code>java.time.temporal.ChronoUnit</code> 枚举常量作为实参的 <code>java.time</code> 方法调用（<code>get()</code>、<code>getLong()</code>、
+<code>with()</code>、<code>plus()</code>、<code>minus()</code>）。
+此类调用将在运行时抛出 <code>UnsupportedTemporalTypeException</code>。
+<p>示例：</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int year = localTime.get(ChronoField.YEAR);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.2 最新变化</small></p>
+</body>
+</html>

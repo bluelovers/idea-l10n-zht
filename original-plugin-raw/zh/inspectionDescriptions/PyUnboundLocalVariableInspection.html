@@ -2,18 +2,18 @@
 <body>
 <p>报告赋值前引用的局部变量。</p>
 <p><b>示例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 x = 0
 if x > 10:
     b = 3
 print(b)
-</pre>
+</code></pre>
 <p>IDE 报告<code>print(b)</code> 的问题。 可能的修复方法是：</p>
-<pre style="font-family: monospace">
+<pre><code>
 x = 0
 if x > 10:
     b = 3
     print(b)
-</pre>
+</code></pre>
 </body>
 </html>

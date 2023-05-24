@@ -5,14 +5,14 @@
 </p>
 
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
 interface PersonRepository extends Repository&lt;Person, Long&gt; {
   List&lt;Person&gt; findByEmailAndLastname(String email, String lastname);
-  List&lt;Person&gt; findBy<strong>Unknown</strong>AndLastname(EmailAddress emailAddress, String lastname); // 无法解析 'Unknown' 属性
-  List&lt;Person&gt; <strong>findByAndLastname</strong>(String email, String lastname); // 缺少属性名称
+  List&lt;Person&gt; findByUnknownAndLastname(EmailAddress emailAddress, String lastname); // 无法解析 'Unknown' 属性
+  List&lt;Person&gt; findByAndLastname(String email, String lastname); // 缺少属性名称
 
   List&lt;Person&gt; findByLastnameOrderByFirstnameAsc(String lastname);
-  List&lt;Person&gt; findByLastnameOrderBy<strong>Unknown</strong>Desc(String lastname);  // 无法解析 'Unknown' 属性
+  List&lt;Person&gt; findByLastnameOrderByUnknownDesc(String lastname);  // 无法解析 'Unknown' 属性
 }
 </code></pre>
 </body>

@@ -2,7 +2,7 @@
 <body>
 <p>报告类型提示的无效用法。</p>
 <p><b>示例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 from typing import TypeVar
 
 T0 = TypeVar('T1') # 'TypeVar' 的实参必须为 'T0'
@@ -16,7 +16,7 @@ def b(p: int) -> int:  # 注释和注解中都指定了类型
 def c(p1, p2): # 类型签名的实参太多
     # type: (int) -> int
     pass
-</pre>
+</code></pre>
 <p>可以进行的快速修复提议各种各样的操作。 您可以重命名、移除或移动有问题的元素。 也可以手动修改类型声明，以确保不显示警告。</p>
 </body>
 </html>

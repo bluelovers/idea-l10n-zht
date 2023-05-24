@@ -7,12 +7,12 @@
 </p>
 <h2>示例</h2>
 <p>扩展程序注册：</p>
-<pre>
+<pre><code lang="xml">
 &lt;annotator language="myLang" implementationClass="com.example.MyAnnotator"/&gt;
-</pre>
+</code></pre>
 
 <p>扩展程序实现：</p>
-<pre>
+<pre><code lang="kotlin">
 // 不正确：
 object MyAnnotator : Annotator {
   ...
@@ -22,7 +22,7 @@ object MyAnnotator : Annotator {
 class MyAnnotator : Annotator {
   ...
 }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p><small>2023.1 最新变化</small>
 </body>

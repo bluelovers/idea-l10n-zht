@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>报告可能在 Reactive Stream 链内返回 <code>Mono with void value</code> 的 zip 操作。</p>
+
+<p>
+  带有 Mono Void 形参的 Reactive Streams zip 转换方法不会有任何效果。
+  快速修复建议将 <code>zip()、zipWhen()、zipWith()</code> 替换为返回 Mono with Void value 的 <code>when</code>。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>Mono.zip(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
+                .map(v -> "New value")
+                .doFinally(System.out::println);
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>Mono.when(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
+                .then(Mono.fromCallable(() -> "New value"))
+                .doFinally(System.out::println);
+</code></pre>
+
+<p><small>2023.1 最新变化</small></p>
+</body>
+</html>

@@ -2,80 +2,81 @@
 <body>
 报告资源包中包含的属性文件中的问题。
 <ul>
-  <li><b>报告缺失的翻译</b>
+  <li><b>报告失踪的翻译</b> <br><br>
+  使用此选项可以报告在父属性文件中包含但在继承中缺失的的属性（除非它是语言方言）。
+
+  <br><br> <p>示例：</p>
+  <pre><code>
+    # messages.properties
+    abc=xxx
+
+    # messages_fr.properties
+    # 空文件
+  </code></pre>
+
+  空属性 <code>abc</code> 将报告为未翻译。
+  <br><br><br> </li>
+
+  <li><b>报告不一致的属性</b> <br><br>
+  使用此选项可以报告在继承属性文件中包含但在父级（如果没有父级，则在同级）中缺失的属性。
+
+  <br><br> <p>示例：</p>
+  <pre><code>
+    # messages.properties
+    # 空文件
+
+    # messages_fr.properties
+    abc=xxx
+  </code></pre>
+
+  此处的属性 <code>abc</code> 翻译不适用于法语以外的任何语言，因此，将在（默认）属性文件 <code>messages.properties</code> 中报告为缺失。
+  <br><br><br> </li>
+
+  <li><b>报告使用相同值重写的属性</b> <br><br>
+  使用此选项可以报告逐字复制粘贴到多个属性文件中的属性。<br>
+
+  <br><br> <p>示例：</p>
+  <pre><code>
+    # messages.properties
+    abc=xxx
+
+    # messages_fr.properties
+    abc=xxx
+  </code></pre>
+  属性 <code>abc</code> 将在文件 <code>messages_fr.properties</code> 中报告为不必要地继承。
+  <br><br><br> </li>
+
+  <li><b>报告被不同的占位符重写的属性</b> <br><br>
+  使用此选项可检查重写属性中的占位符一致性。
+
+  <br><br> <p>示例：</p>
+  <pre><code>
+    # messages.properties
+    qwe={0}xxx{1}
+    abc={0}yyy{1}
+
+    # messages_fr.properties
+    qwe={0}xxx{0}xxx{1}
+    abc={0}yyy
+  </code></pre>
+
+  将报告属性 <code>abc</code>，因为属性包含值与 <code>messages.properties</code> 不对应的消息格式占位符。
+  <br><br><br> </li>
+
+  <li><b>报告使用不同值结尾重写的属性</b> <br><br>
+  使用此选项可检查重写属性中的结尾一致性。
+  <br><br> <p>示例：</p>
+
+  <pre><code>
+    # messages.properties
+    abc=xxxzzz
+
+    # messages_fr.properties
+    abc=xxx;
+  </code></pre>
+
+  属性 <code>abc</code> 将被报告为以特殊符号（<code>!</code> / <code>?</code> / <code>.</code> / <code>:</code> / <code>;</code>）结尾，而 <code>messages.properties</code> 中的父值则不会。
   </li>
 </ul>
-选项会控制搜索未翻译的属性。 <br>
-它报告在父属性文件中包含但在继承中缺失的属性（除非它是语言方言）。 <br>
-例如： 拥有此资源包： <br>
-
-<b>messages.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
-<b>messages_fr.properties</b>：空<br>
-
-属性 <font color="#000080"><b>abc</b></font> 将报告为未翻译。
-<ul>
-  <li>
-
-    <b>报告不一致的属性</b>
-  </li>
-</ul>
-选项会控制无效的资源包结构检查。 <br>
-它报告在继承属性文件中包含但在父级（如果没有父级，则在同级）中缺失的属性。 <br>
-例如： 拥有此资源包： <br>
-<b>messages.properties</b>：空 <br>
-<b>messages_fr.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
-
-此处的属性 <font color="#000080"><b>abc</b></font> 翻译不适用于法语以外的任何语言，因此，将在（默认）属性文件 <b>messages.properties</b> 中报告为缺失。
-
-<ul>
-  <li>
-
-    <b>报告使用相同值重写的属性</b>
-  </li>
-</ul>
-选项会检查逐字复制粘贴到多个属性文件中的属性。 <br>
-例如： 在此资源包中： <br>
-<b>messages.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
-<b>messages_fr.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
-
-属性 <font color="#000080"><b>abc</b></font> 将在文件 <b>messages_fr.properties</b> 中报告为不必要地继承。
-<br>
-
-<ul>
-  <li>
-
-    <b>报告被不同的占位符重写的属性</b>
-  </li>
-</ul>
-选项会检查为占位符一致性而重写的属性。 <br>
-例如： 在此资源包中： <br>
-<b>messages.properties</b>： <br>
-<font color="#000080"><b>qwe={0}xxx{1}</b></font> <br>
-<font color="#000080"><b>abc={0}yyy{1}</b></font> <br>
-<b>messages_fr.properties</b>： <br>
-<font color="#000080"><b>qwe={0}xxx{0}xxx{1}</b></font> <br>
-<font color="#000080"><b>abc={0}yyy</b></font> <br>
-
-
-将报告属性 <font color="#000080"><b>abc</b></font>，因为属性包含值与 <b>messages.properties</b> 不对应的消息格式占位符。
-<br>
-
-<ul>
-  <li>
-
-    <b>报告使用不同值结尾重写的属性</b>
-  </li>
-</ul>
-选项会检查为了结尾一致性而被重写的属性。 <br>
-例如： 在此资源包中： <br>
-<b>messages.properties</b>： <br>
-<font color="#000080"><b>abc=xxxzzz</b></font> <br>
-<b>messages_fr.properties</b>： <br>
-<font color="#000080"><b>abc=xxx;</b></font> <br>
-
-
-属性 <font color="#000080"><b>abc</b></font> 将被报告，因为属性在值的末尾包含特殊符号（<b>'!'</b>、<b>'?'</b>、<b>'.'</b>、<b>':'</b> 或 <b>';'</b>），但 <b>messages.properties</b> 中的值没有。
-<br>
-
 </body>
 </html>

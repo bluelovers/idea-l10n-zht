@@ -2,15 +2,15 @@
 <body>
 报告使用 <code>@ApiStatus.ScheduledForRemoval</code>（没有 <code>@Deprecated</code>）标记的声明。
 <p>示例：</p>
-<pre>
+<pre><code lang="java">
   @ApiStatus.ScheduledForRemoval(inVersion = "2017.3")
   public void myLegacyMethod() { }
-</pre>
+</code></pre>
 <p>应用快速修复后，结果如下所示：</p>
-<pre>
+<pre><code lang="java">
   @Deprecated
   @ApiStatus.ScheduledForRemoval(inVersion = "2017.3")
   public void myLegacyMethod() { }
-</pre>
+</code></pre>
 </body>
 </html>

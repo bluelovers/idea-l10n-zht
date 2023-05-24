@@ -1,30 +1,37 @@
-<html><body>
-报告将非安全字符串传递给带有使用注解 <code>org.checkerframework.checker.tainting.qual.Untainted</code> 标记的形参的方法的情况。
+<html>
+<body>
+报告将非安全字符串传递给带形参的方法的情况，该方法用 <code>@Untainted</code> 注解，从注解的方法返回，或分配给注解的字段、形参或局部变量。 不支持将字段的 `set` 和 `get` 方法作为入口点。
 <p>
-  安全字符串为：
+  安全对象为：
 <ul>
-  <li>标记为 <code>@Untainted</code> 的方法调用</li>
-  <li>未调用非安全方法的局部变量或方法形参</li>
-  <li>标记为 <code>@Untainted</code> 且没有分配非安全方法调用的字段、局部变量或形参</li>
+  <li>字符串文字、接口实例或枚举对象</li>
+  <li>对标记为 <code>@Untainted</code> 的方法进行调用的结果</li>
+  <li>private 字段，仅使用字符串文字赋值，并具有安全的初始值设定项</li>
+  <li>final 字段，具有安全的初始值设定项</li>
+  <li>标记为 <code>@Untainted</code> 且不是从非安全对象赋值的局部变量或形参</li>
+  此字段、局部变量或形参不得作为实参传递给方法或用作限定符，或者必须是基元、其包装器或不可变。
 </ul>
 <p>
-示例：
+  分析仅在一个文件内执行。 要处理来自其他类的依赖项，请使用选项。
+  分析会扩展到 private 或 static 方法，并且具有深度传播的限制。
+<p>
+  示例：
 <pre>
-<code>
+<code lang="java">
   void doSmth(boolean b) {
     String s = safe();
     String s1 = "other";
     if (b) s1 = s;
     sink(s);
   }
-  
+
   String sink(@Untainted String s) {}
 </code>
 </pre>
 <p>
-此处没有将非安全字符串赋值给 <code>s</code>，因此没有产生警告。 另一方面：
+  此处没有将非安全字符串赋值给 <code>s</code>，因此没有产生警告。 另一方面：
 <pre>
-<code>
+<code lang="java">
   void doSmth(boolean b) {
     String s = safe();
     String s1 = "other";
@@ -39,7 +46,37 @@
 </code>
 </pre>
 <p>
-这里有一条警告，因为 <code>s1</code> 在 <code>foo</code> 调用结果赋值后具有未知状态。
-<!-- tooltip end -->
+  这里有一条警告，因为 <code>s1</code> 在 <code>foo</code> 调用结果赋值后具有未知状态。
+  <!-- tooltip end -->
+<ul>
+  <li>
+    <p>使用 <b>Untainted 注解</b>表来指定注解，这些注解将在分析过程中将被用作 <code>@Untainted</code> 注解。
+      如果类路径中存在此列表中的第一个注解，则它将用于传播。
+  </li>
+  <li>
+    <p>使用 <b>Tainted 注解</b>表来指定注解，这些注解将在分析过程中将被用作 <code>@Tainted</code> 注解。
+  </li>
+  <li>
+    <p>如果启用了<b>如果接收器和实参为 untainted 则认为外部方法未被污染</b>选项，则如果当前类之外的外部方法的接收器和实参是安全的，那么将被视为安全。
+      在某些情况下，它不适用，但对于无状态类很有用。
+      如果禁用此选项，则所有外部方法都将被视为不安全。
+  </li>
+  <li>
+    <p>使用<b>安全类</b>选项指定类，此类型的表达式将被视为安全
+  </li>
+  <li>
+    <p>使用 <b>Untainted 方法</b>表来指定仅返回安全对象的方法
+  </li>
+  <li>
+    <p>使用 <b>Untainted 字段</b>表来指定仅包含安全对象的字段
+  </li>
+  <li>
+    <p>使用<b>如果情况过于复杂导致无法检查则报告</b>选项来指定是否需要报告因为复杂度而无法检查的字符串
+  </li>
+  <li>
+    <p>使用<b>将 private 方法的形参视为安全</b>选项指定 private 方法的形参，否则它们将被视为未知。
+  </li>
+</ul>
 <p><small>2021.2 最新变化</small></p>
-</body></html>
+</body>
+</html>

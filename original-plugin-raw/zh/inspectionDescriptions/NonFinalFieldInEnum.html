@@ -1,6 +1,7 @@
 <html>
 <body>
-报告枚举类型中的非 final 字段，因为很少需要它们，且提供全局可变状态。
+报告枚举类型中的非 final 字段。
+非 final 字段引入全局可变状态，这通常会被认为不可取。
 <p><b>示例：</b></p>
 <pre><code>
   enum Enum {
@@ -28,6 +29,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
-配置“在快速修复不可用时忽略字段”复选框以仅高亮显示可通过该快速修复设为 final 的字段。
+使用 `Ignore fields that cannot be made 'final'` 选项来仅对可使用快速修复设为 final 的字段发出警告。
 </body>
 </html>

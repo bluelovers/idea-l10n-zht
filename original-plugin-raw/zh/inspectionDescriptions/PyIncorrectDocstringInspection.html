@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>报告 docstring 中不匹配的形参。 例如，<code>b</code> 处于高亮显示状态，因为 <code>add</code> 函数中没有此类形参。</p>
-<pre style="font-family: monospace">
+<pre><code>
     def add(a, c):
     """
     @param a:
@@ -9,14 +9,14 @@
     @return:
     """
     pass
-</pre>
+</code></pre>
 <p>如果 docstring 中没有提及其中任何一个形参，则检查不会警告您缺少这些形参：</p>
-<pre style="font-family: monospace">
+<pre><code>
 def mult(a, c):
     """
     @return:
     """
     pass
-</pre>
+</code></pre>
 </body>
 </html>

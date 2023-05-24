@@ -3,13 +3,15 @@
 <p>报告 <code>&lt;bean&gt;</code> 元素的 <code>factory-method</code>特性中不正确的方法引用。</p>
 
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
 public class MyFactory {
 public static FooBean createBean() {}
 }
+</code></pre>
+<pre><code lang="xml">
 &lt;beans&gt;
   &lt;bean class="MyFactory" id="factory"/&gt;
-  &lt;bean factory-bean="factory" factory-method="createBean"/&gt; // 工厂方法 'createBean' 不得为 static
+  &lt;bean factory-bean="factory" factory-method="createBean"/&gt; &lt;!-- 报告 "工厂方法 'createBean' 应为 public" --&gt;
 &lt;/beans&gt;
 </code></pre>
 </body>

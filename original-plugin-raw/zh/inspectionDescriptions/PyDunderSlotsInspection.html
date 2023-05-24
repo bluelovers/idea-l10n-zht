@@ -2,13 +2,13 @@
 <body>
 <p>报告包含 <code>__slots__</code> 定义的类的无效用法。</p>
 <p><b>示例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 class Foo:
     __slots__ = ['foo', 'bar']
 
 
 foo = Foo()
 foo.baz = 'spam'
-</pre>
+</code></pre>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <p>该快速修复会移除冗余注解。</p>
 
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
 @SpringBootApplication
 @ComponentScan // 报告 '冗余声明: @SpringBootApplication 已暗示 @ComponentScan'
 public class DemoApplication {
@@ -14,7 +14,7 @@ public class DemoApplication {
 }
 </code></pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre><code lang="java">
   @SpringBootApplication
   public class DemoApplication {
     public static void main(String[] args) {

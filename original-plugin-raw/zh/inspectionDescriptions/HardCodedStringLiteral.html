@@ -3,14 +3,5 @@
 报告硬编码 <code>String</code> 文字的任何实例。
 <p>硬编码的 <code>String</code> 文字在国际化环境中可能是错误的。 此检查不会报告空字符串和仅包含空格的字符串。 可以使用快速修复将字符串文字转换为 <code>java.util.ResourceBundle.getString()</code> 方法调用。</p>
 <!-- tooltip end -->
-<p>使用检查的选项可进一步专门化此检查是否应报告以下位置的字符串：</p>
-<ul>
-  <li>断言语句，如 <code>assert str.equals("message")</code> 中</li>
-  <li>异常构造函数调用，如 <code>new Exception("message")</code> 中</li>
-  <li>JUnit 断言调用，如 <code>assertEquals(str, "message")</code> 中</li>
-  <li>返回 String 的方法的唯一实参，如 <code>getStringByKey("key")</code> 中</li>
-  <li>具有合法和现有类名值的文字，如 <code>Class.forName("java.lang.Object")</code></li>
-  <li>具有合法和现有属性键值的文字 <code>bundle.getString("authentication.failed")</code></li>
-</ul>
 </body>
 </html>

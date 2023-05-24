@@ -1,0 +1,17 @@
+<html>
+<body>
+报告在 <code>java.net.URL</code> 对象上的 <code>hashCode()</code> 和 <code>equals()</code> 调用，以及将 <code>URL</code> 对象添加到映射和集合的调用。
+<p>
+  <code>URL</code> 的 <code>equals()</code> 和 <code>hashCode()</code> 方法可以执行 DNS 查找来解析主机名。
+  这可能会导致重大延迟，具体取决于网络和 DNS 服务器的可用性和速度。
+  使用 <code>java.net.URI</code> 代替 <code>java.net.URL</code> 将避免 DNS 查找。
+</p>
+<p><b>示例：</b></p>
+<pre><code lang="java">
+  boolean urlEquals(URL url1, URL url2) {
+      return url1.equals(url2);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

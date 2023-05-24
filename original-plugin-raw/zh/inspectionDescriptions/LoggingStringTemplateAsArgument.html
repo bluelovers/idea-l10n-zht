@@ -5,12 +5,12 @@
 即使在没有记录日志消息的情况下，也会在运行时评估字符串模板；这可能会对性能产生负面影响。
 建议改用形参化日志消息，禁用日志记录时不会对其进行评估。
 <p><b>示例（针对 Kotlin）：</b></p>
-<pre><code>
+<pre><code lang="kotlin">
       val variable1 = getVariable()
       logger.info("variable1: $variable1")
 </code></pre>
 <p><b>在应用了快速修复之后（针对 Kotlin）：</b></p>
-<pre><code>
+<pre><code lang="kotlin">
       val variable1 = getVariable()
       logger.info("variable1: {}", variable1)
 </code></pre>

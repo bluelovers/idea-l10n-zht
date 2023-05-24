@@ -2,7 +2,7 @@
 <body>
 <p>报告 <a href="https://docs.python.org/3/library/typing.html#typing.ClassVar">ClassVar</a> 注解的无效用法。</p>
 <p><b>示例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 from typing import ClassVar
 
 
@@ -16,7 +16,7 @@ class Cat:
 
 Cat.color = "black"  # OK
 my_cat = Cat(5)
-my_cat.color = "gray"  # Error, setting class variable on instance
-</pre>
+my_cat.color = "gray"  # 错误，在实例上设置类变量
+</code></pre>
 </body>
 </html>

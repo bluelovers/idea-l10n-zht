@@ -1,0 +1,62 @@
+<html>
+<body>
+报告属性值中的以下 <code>MessageFormat</code> 问题：
+
+<p><b>未知的格式类型</b>
+<p>
+  <code>MessageFormat</code> 仅支持以下格式类型：
+<ul>
+  <li>数值</li>
+  <li>日期</li>
+  <li>时间</li>
+  <li>choice</li>
+</ul>
+  其他格式类型将被报告。
+
+<p><b>不成对的引号</b>
+<pre><code>
+  property.key=Shouldn't happen: {0}
+</code></pre>
+<p>
+  单引号会被解释为转义，直到属性结束，并且不会出现在结果字符串中。
+  在大多数情况下，这不是我们的本意。
+  如果结果字符串中应该出现单引号，则必须在属性中使用重复的单引号。
+
+<p><b>不匹配的大括号</b>
+<p>
+  每个占位符必须有一个右大括号。
+
+<p><b>引号过多</b>
+<p>
+  在某些情况下（例如 <code>it's</code>），预期结果字符串中只有一个引号。
+  报告结果字符串中两个或多个引号放在一起的情况。
+
+<p><b>嵌套 <code>ChoiceFormat</code> 的下限不正确</b>
+<p>
+  下限应为数字，并按升序排序。
+
+<p><b>形参两旁的引号数量错误</b>
+<p>
+  在 <code>java.text.MessageFormat</code> 模式中，单引号用于转义。
+  要让引号可见，则必须使用重复的引号。
+  例如，在传递 <code>1</code> 时：
+<ul>
+  <li><code>'{0}'</code> &rarr; <code>{0}</code></li>
+  <li><code>''{0}''</code> &rarr; <code>'1'</code></li>
+</ul>
+<p>
+  使用 choice 格式时，会将嵌套格式评估为格式字符串本身，并且引号必须重复两次。
+  例如，在传递 <code>1</code> 时：
+<ul>
+  <li><code>{0, choice, 0#无文件|#1''{0}'' 个文件}</code> &rarr; <code>{0} 个文件</code></li>
+  <li><code>{0, choice, 0#无文件|#1''''{0}'''' 个文件}</code> &rarr; <code>'1' 个文件</code></li>
+</ul>
+
+<p><b>注释</b>
+<p>
+  仅当属性值包含文字文本 <code>{0}</code>、<code>{0,</code>、<code>{1}</code> 或 <code>{1,</code>时，才会对其进行验证。
+  这是为了确保这些属性值实际上被用作 <code>MessageFormat</code> 模式。
+<!-- tooltip end -->
+<p><small>2023.2 最新变化</small>
+</body>
+</html>

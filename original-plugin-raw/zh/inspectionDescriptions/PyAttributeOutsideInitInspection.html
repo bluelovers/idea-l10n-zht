@@ -2,18 +2,18 @@
 <body>
 报告实例特性定义在<code>__init__</code> 方法外部的问题。
 <p><b>示例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
     class Book:
     def __init__(self):
         self.author = 'Mark Twain'
 
     def release(self):
         self.year = '1889'
-</pre>
+</code></pre>
 <p>
   应用快速修复后，代码示例变为：
 </p>
-<pre style="font-family: monospace">
+<pre><code>
     class Book:
     def __init__(self):
         self.year = '1889'
@@ -21,6 +21,6 @@
 
     def release(self):
         pass
-</pre>
+</code></pre>
 </body>
 </html>

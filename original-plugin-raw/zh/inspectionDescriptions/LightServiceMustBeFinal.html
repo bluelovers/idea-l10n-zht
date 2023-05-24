@@ -1,0 +1,34 @@
+<html>
+<body>
+报告使用 <code>@com.intellij.openapi.components.Service</code> 注解而不是 final 的类。
+<p>
+  如果某个类为具体类，则建议将该类设为 final。</p>
+<p><b>示例：</b></p>
+<pre><code lang="kotlin">
+  // MyService.kt
+  @Service(Service.Level.APP)
+  open class MyService
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code lang="kotlin">
+  // MyService.kt
+  @Service(Service.Level.APP)
+  class MyService
+</code></pre>
+<p>
+  如果为抽象类或接口，则建议移除 <code>@Service</code> 注解。
+</p>
+<p><b>示例：</b></p>
+<pre><code lang="java">
+  // MyService.java
+  @Service(Service.Level.APP)
+  abstract class MyService {}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code lang="java">
+  // MyService.java
+  abstract class MyService {}
+</code></pre>
+<p><small>2023.2 最新变化</small>
+</body>
+</html>

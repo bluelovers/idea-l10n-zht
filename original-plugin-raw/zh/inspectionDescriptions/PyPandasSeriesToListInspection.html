@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>Reports redundant <code>list</code> in <code>list(Series.values)</code> statement for pandas and polars libraries.
+  Such <code>Series</code> values extraction can be replaced with the <code>to_list()</code> function call.</p>
+<p><b>示例：</b></p>
+<pre style="font-family: monospace">
+list(df['column'].values)
+</pre>
+<p>应用快速修复后，代码变为：</p>
+<pre style="font-family: monospace">
+df['column'].to_list()
+</pre>
+</body>
+</html>

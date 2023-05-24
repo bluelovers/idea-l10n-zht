@@ -1,0 +1,17 @@
+<html>
+<body>
+报告引用中不必要的限定符。 当存在 use 子句或命名空间时，某些限定符是不必要的。
+<p>可以使用快速修复来移除不必要的限定符。</p>
+<p>示例：</p>
+<pre><code>use Enumerator::Generator
+class Example
+  # 'Enumerator::Generator' 可以缩短
+  def call: -> Enumerator::Generator
+end</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>use Enumerator::Generator
+class Example
+  def call: -> Generator
+end</code></pre>
+</body>
+</html>

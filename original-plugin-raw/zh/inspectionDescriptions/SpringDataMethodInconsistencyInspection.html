@@ -5,7 +5,7 @@
 </p>
 
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
 interface PersonRepository extends Repository&lt;Person, Long&gt; {
   List&lt;Person&gt; findByEmailAddressAndLastname(EmailAddress emailAddress, String lastname);
   List&lt;Person&gt; findByEmail<strong>Unknown</strong>AndLastname(EmailAddress emailAddress, String lastname); // 无法解析 'Unknown' 属性

@@ -5,11 +5,11 @@
 <p><b>示例：</b></p>
 <pre><code>
   &lt;beans profile="PROD"&gt;
-    &lt;bean class="..." id="duplicatedName"/&gt;  // 错误
-    &lt;bean class="..." name="foo_name, duplicatedName"/&gt; // 'duplicatedName' 错误
+    &lt;bean class="..." id="duplicatedName"/&gt;  &lt;!-- 错误错误 --&gt;
+    &lt;bean class="..." name="foo_name, duplicatedName"/&gt; &lt;!-- 'duplicatedName' 错误 --&gt;
     &lt;bean class="..." id="toBeAliased"/&gt;
 
-    &lt;alias alias="duplicatedName" name="toBeAliased"/&gt; // 'duplicatedName' 错误
+    &lt;alias alias="duplicatedName" name="toBeAliased"/&gt; &lt;!-- 'duplicatedName' 错误 --&gt;
   &lt;/beans&gt;
 </code></pre>
 </body>

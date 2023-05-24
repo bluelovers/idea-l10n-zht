@@ -6,7 +6,7 @@
   <li><code>B</code> 是 <code>A</code> 的子类</li>
 </ul>
 <p><b>示例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 class Figure:
     def color(self):
         pass
@@ -20,7 +20,7 @@ class Rectangle(Figure):
 class Square(Figure):
     def color(self):
         return super(Rectangle, self).color() # Square 不是 Rectangle 的子类
-</pre>
+</code></pre>
 <p>作为修复，您可以令 <code>Square</code> 为 <code>Rectangle</code> 类的实例。</p>
 </body>
 </html>

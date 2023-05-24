@@ -3,7 +3,7 @@
 <p>报告 <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/PropertySource.html>@PropertySource</a> 和 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/TestPropertySource.html">@TestPropertySource</a> 注解中的未解析文件或目录。</p>
 
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
   @Configuration
   @PropertySource("classpath:/com/mycompany/unknown.properties") // 报告 "无法解析文件 'unknown.properties'"
   public class AppConfig {...}

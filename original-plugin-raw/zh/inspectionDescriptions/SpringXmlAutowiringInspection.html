@@ -3,7 +3,7 @@
 <p>报告在 XML 应用程序上下文中配置的 Spring Bean 的不正确自动装配。</p>
 
 <p><b>示例：</b></p>
-<pre>
+<pre><code lang="java">
 public interface FooInterface {...}
 @Component public class FooBean implements FooInterface {...}
 @Component public class OtherBean implements FooInterface {...}
@@ -12,16 +12,15 @@ public interface FooInterface {...}
 public class MyComponent {
 	 public void setFooInterface(FooInterface foo) {...}
 }
-
-<hr/>
-
+</code></pre>
+<pre><code lang="xml">
 &lt;beans&gt;
 	&lt;bean class="beans.OtherBean" id="otherBean"/&gt;
 	&lt;bean class="beans.FooBean" id="fooBean"/&gt;
 
-	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; // 报告 "无法自动装配。 有不止一种 'FooInterface' 类型的 Bean。
-                                                               //          Beans: otherBean,fooBean. Properties: 'fooInterface' "
+	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; &lt;!- 报告 "无法自动装配。 有不止一种 'FooInterface' 类型的 Bean。 --&gt;
+                                                                   &lt;!--          Beans: otherBean,fooBean. Properties: 'fooInterface' " --&gt;
 &lt;/beans&gt;
-</pre>
+</code></pre>
 </body>
 </html>

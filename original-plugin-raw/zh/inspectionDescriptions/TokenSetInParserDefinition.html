@@ -1,0 +1,84 @@
+<html>
+<body>
+报告在 <code>ParserDefinition</code> 类中引用非平台元素类型的 <code>TokenSet</code> 字段声明。
+<p>
+  所有语言 <code>ParserDefinition</code> 在应用程序启动时创建。
+  声明引用非平台语言元素类型的 <code>TokenSet</code> 可能会导致在引用类型的容器类中创建和注册所有语言元素类型，即使项目不包含任何该语言的文件。
+</p>
+
+<p>示例：</p>
+<pre><code lang="java">
+// 元素类型容器：
+public interface MyLangTokenTypes {
+  IElementType COMMENT = new MyLangTokenType("COMMENT");
+  IElementType TYPE1 = new MyLangTokenType("TYPE1");
+  IElementType TYPE2 = new MyLangTokenType("TYPE2");
+  // 更多类型...
+}
+
+
+// 错误：
+
+public class MyLangParserDefinition implements ParserDefinition {
+  // 此字段会导致初始化和注册 MyLangTokenTypes 中的所有类型：
+  private static final TokenSet COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+
+  @NotNull
+  @Override
+  public TokenSet getCommentTokens() {
+    return COMMENTS;
+  }
+  ...
+}
+
+
+// 正确：
+
+public final class MyLangTokenSets {
+  public static final TokenSet COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+}
+
+public class MyLangParserDefinition implements ParserDefinition {
+  @NotNull
+  @Override
+  public TokenSet getCommentTokens() {
+    // 类型只有在调用此方法时才会被引用和注册：
+    return MyLangTokenSets.COMMENTS;
+  }
+  ...
+}
+
+// 正确 (Kotlin)：
+
+// 顶层声明直到调用 getCommentTokens() 方法后才会加载：
+private val COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+
+class MyLangParserDefinition : ParserDefinition {
+  override getCommentTokens(): TokenSet {
+    return COMMENTS;
+  }
+  ...
+}
+
+// 正确：
+
+public class MyLangParserDefinition implements ParserDefinition {
+  // 允许的平台 TokenSet：
+  private static final TokenSet COMMENTS1 = TokenSet.EMPTY;
+  // 允许的平台 TokenType：
+  private static final TokenSet COMMENTS2 = TokenSet.create(TokenType.WHITE_SPACE);
+
+  @NotNull
+  @Override
+  public TokenSet getCommentTokens() {
+    ...
+  }
+  ...
+}
+
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>2023.2 最新变化</small>
+</body>
+</html>

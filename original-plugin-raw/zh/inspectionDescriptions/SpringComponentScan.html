@@ -3,12 +3,13 @@
 <p>报告 <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html>@ComponentScan</a> 注解和 <code>@ComponentScan</code> 元注解的相应别名特性中的未解析软件包。<br></p>
 
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
   @ComponentScan(basePackages = {
      "com.my.company",
      "com.unknown" // 报告 "无法解析软件包 'unknown'"
   }) +
   @Configuration +
-  public class MyConfiguration {}</code></pre>
+  public class MyConfiguration {}
+</code></pre>
 </body>
 </html>

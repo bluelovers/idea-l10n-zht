@@ -2,7 +2,7 @@
 <body>
 报告 LOAD 语句中以波浪符号开头的路径。
 <p>示例（MySQL）：</p>
-<pre><code>CREATE TABLE table_name (id int);
+<pre><code lang="mysql">CREATE TABLE table_name (id int);
 LOAD DATA LOCAL INFILE '~/Documents/some_file.txt'
 INTO TABLE table_name FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 IGNORE 1 LINES;</code></pre>

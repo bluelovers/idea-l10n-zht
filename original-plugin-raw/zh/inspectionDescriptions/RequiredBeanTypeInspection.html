@@ -3,9 +3,10 @@
 <p>报告在 XML 应用程序上下文中定义的自定义架构 Bean 注入的不正确类型。</p>
 
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
   public class SimpleBean{}
-
+</code></pre>
+<pre><code lang="xml">
   &lt;beans ...>
     &lt;bean class="SimpleBean" id="simpleBean"/&gt;
        &lt;mvc:annotation-driven

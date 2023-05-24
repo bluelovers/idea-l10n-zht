@@ -38,5 +38,23 @@
     return res++;
   }
 </code></pre>
+<p>
+使用<b>报告其值从未被使用的模式变量</b>选项来报告模式变量的值未被使用的情况：
+</p>
+<pre><code>
+  if (object instanceof String s) {
+      s = "hello";
+      System.out.println(s);
+  }
+</code></pre>
+<p>
+使用<b>报告其值从未被使用的迭代形参</b>选项来报告增强的 `for` 语句迭代形参的值未被使用的情况：
+</p>
+<pre><code>
+  for (String  arg : args) {
+      arg = "test";
+      System.out.println(arg);
+  }
+</code></pre>
 </body>
 </html>

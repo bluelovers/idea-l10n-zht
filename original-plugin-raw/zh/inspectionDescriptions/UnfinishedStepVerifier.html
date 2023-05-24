@@ -5,11 +5,11 @@
   启动 <code>Publisher</code> 订阅和断言需要调用终端验证方法，例如<code>verify()</code>、<code>verifyComplete()</code> 等。
 </p>
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
 StepVerifier.create(Flux.just(1,2,3)).expectNext(1);
 </code></pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre><code lang="java">
 StepVerifier.create(Flux.just(1,2,3)).expectNext(1).verifyComplete();
 </code></pre>
 </body>

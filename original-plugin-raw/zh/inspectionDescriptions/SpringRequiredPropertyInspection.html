@@ -3,14 +3,13 @@
 <p>报告未注入或自动装配的 <code>@Required</code> setter Bean 属性。</p>
 
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="xml">
 &lt;beans&gt;
   &lt;bean class="beans.MyComponent" id="foo"/&gt;
-  // 报告 "缺少必需属性: 'port'"
+  &lt;!-- 报告"缺少必需的属性: 'port'" --&gt;
 &lt;/beans&gt;
-
-<hr/>
-
+</code></pre>
+<pre><code lang="java">
 public class MyComponent {
    @Required
    public void setPort(int port) // 报告 "未注入必需属性 'port'"

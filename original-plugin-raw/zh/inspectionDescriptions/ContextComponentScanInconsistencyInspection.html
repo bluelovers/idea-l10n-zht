@@ -4,8 +4,10 @@
 
 <p><b>示例：</b></p>
 
-<pre><code>
+<pre><code lang="java">
   public class NonAnnotationTypeClass {}
+</code></pre>
+<pre><code lang="xml">
   &lt;beans&gt;
     &lt;ctx:component-scan base-package="com.my.company"&gt;
       &lt;ctx:exclude-filter expression="com.my.company.anno.NonAnnotationTypeClass" type="annotation"/&gt;

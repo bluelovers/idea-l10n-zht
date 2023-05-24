@@ -1,0 +1,25 @@
+<!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+报告不正确的消息格式模式或占位符的不正确索引
+<p>报告以下错误：</p>
+<ul>
+  <li>未解析的索引或负索引</li>
+  <li>未闭合的大括号</li>
+  <li>不成对的引号。 在这种情况下，模式的一部分可能不会被使用</li>
+  <li>可能引号的数量不正确</li>
+  <li>嵌套选择模式的下限不正确</li>
+  <li>占位符索引不正确。 在这种情况下，不能替换占位符或不能使用实参</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+  MessageFormat.format("{wrong}", 1); // 不正确的索引
+  MessageFormat.format("{0", 1); // 不匹配的大括号
+  MessageFormat.format("'{0}", 1); // 不成对的引号
+  MessageFormat.format("It''''s {0}", 1); // 将打印 "It''s" 而非 "It's"
+  MessageFormat.format("{0}", 1, 2); // 模式中未使用索引为 '1' 的实参
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.2 最新变化</small>
+</body>
+</html>

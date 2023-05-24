@@ -4,29 +4,32 @@
 虽然默认运行程序可以自动转换，但自定义运行程序、方法规则和字段规则不能自动转换，需要手动更改。
 <p><b>示例：</b></p>
 <pre><code>
-  import org.junit.Assert;
-  import org.junit.Test;
+  <b>import</b> org.junit.Assert;
+  <b>import</b> org.junit.Test;
 
-  public class RelevantTest {
+  <b>public class</b> RelevantTest {
+
     @Test
-    public void testIt() {
+    <b>public void</b> testIt() {
       Assert.assertEquals("expected", "actual");
     }
   }
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
-  import org.junit.jupiter.api.Assertions;
-  import org.junit.jupiter.api.Test;
+  <b>import</b> org.junit.jupiter.api.Assertions;
+  <b>import</b> org.junit.jupiter.api.Test;
 
-  public class RelevantTest {
+  <b>public class</b> RelevantTest {
+
     @Test
-    public void testIt() {
+    <b>public void</b> testIt() {
       Assertions.assertEquals("expected", "actual");
     }
   }
 </code></pre>
 <!-- tooltip end -->
 <p>此检查要求类路径中提供 JUnit 5 库，并且为项目配置了 JDK 1.8 或更高版本。</p>
+<!--<small>New in 2017.1</small>-->
 </body>
 </html>

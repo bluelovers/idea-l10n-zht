@@ -2,7 +2,7 @@
 <body>
 <p>报告嵌套装饰器的问题。 此检查高亮显示先于另一个装饰器应用 <code>classmethod</code> 或 <code>staticmethod</code> 的情况。</p>
 <p><b>示例：</b></p>
-<pre style="font-family: monospace">
+<pre><code>
 def innocent(f):
     return f
 
@@ -17,7 +17,7 @@ class A:
     @staticmethod
     def f1():
         pass
-</pre>
+</code></pre>
 <p>IDE 提议的快速修复是移除此装饰器。</p>
 </body>
 </html>

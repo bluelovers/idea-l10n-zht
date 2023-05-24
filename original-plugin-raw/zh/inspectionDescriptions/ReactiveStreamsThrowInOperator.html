@@ -7,13 +7,13 @@
 此外，Reactor 工厂方法允许在没有任何错误的情况下返回已检查的异常，而在没有 <code>Exceptions</code> 类的情况下抛出此类异常会导致编译错误。
 </p>
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
 Flux.just(1, 2, 3).flatMap(i -> {
             throw new RuntimeException();
         })
 </code></pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre><code lang="java">
 Flux.just(1, 2, 3).flatMap(i -> {
             return Flux.error(new RuntimeException());
         })

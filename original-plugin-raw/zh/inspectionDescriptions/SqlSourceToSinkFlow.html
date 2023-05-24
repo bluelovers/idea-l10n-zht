@@ -1,0 +1,42 @@
+<html>
+<body>
+报告使用 Java 和 Kotlin 语言将非安全字符串作为 SQL 查询传递给方法的情况。
+这可能是 SQL 注入的一个原因。
+方法列表取自<b>设置</b> - <code>SQL</code>、<code>JPA QL</code>、<code>Hibernate QL</code> 和 <code>PostgreSQL</code> 的<b>语言注入</b>
+<p>
+  安全对象为：
+<ul>
+  <li>字符串文字、接口实例或枚举对象、int 及其包装器、布尔及其包装器、类对象</li>
+  <li>调用方法的结果，该方法的接收器和实参是安全的</li>
+  <li>同一文件中的 private 字段，仅使用字符串文字赋值，并具有安全的初始值设定项</li>
+  <li>同一文件中的 final 字段，具有安全的初始值设定项</li>
+  <li>从安全对象赋值的局部变量</li>
+  此字段、局部变量或形参不得作为实参传递给方法或用作限定符，或者必须是基元、其包装器或不可变。
+</ul>
+<p>
+  分析仅在一个文件内执行。
+  示例：
+<pre>
+<code lang="java">
+    public void save(String sql) {
+        JdbcTemplate jdbcTemplate = new JdbcTemplate();
+        jdbcTemplate.queryForList(sql);
+    }
+</code>
+</pre>
+
+<!-- tooltip end -->
+<ul>
+  <li>
+    <p>使用<b>如果情况过于复杂导致无法检查则报告</b>选项来指定是否需要报告因为复杂度而无法检查的字符串
+  </li>
+  <li>
+    <p>使用<b>将 private 方法的形参视为安全</b>选项指定 private 方法的形参，否则它们将被视为未知。
+  </li>
+  <li>
+    <p>使用 <b>Untainted 注解</b>表来指定注解，这些注解将在分析过程中将被用作 <code>@Untainted</code> 注解。 <code>@Untainted</code> 声明一个安全对象。
+  </li>
+</ul>
+<p><small>2023.2 最新变化</small></p>
+</body>
+</html>

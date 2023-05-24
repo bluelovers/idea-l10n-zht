@@ -3,7 +3,7 @@
 报告不应阻塞线程的代码段中的线程阻塞方法调用。
 
 <p><b>示例（项目 Reactor）：</b></p>
-<pre><code>
+<pre><code lang="java">
 Flux.just("1").flatMap(f -&gt; {
     Flux&lt;String&gt; just = loadUsersFromDatabase();
     just.toIterable(); // 错误：在非阻塞范围内调用阻塞运算符
@@ -17,7 +17,7 @@ Flux.just("1").flatMap(f -&gt; {
 <br/>
 
 <p><b>示例（Kotlin 协同程序）：</b></p>
-<pre><code>
+<pre><code lang="kotlin">
 suspend fun exampleFun() {
     Thread.sleep(100); // 错误：在挂起函数中调用阻塞方法
 }
