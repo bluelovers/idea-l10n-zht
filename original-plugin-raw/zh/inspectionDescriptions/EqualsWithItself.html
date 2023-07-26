@@ -2,7 +2,7 @@
 <body>
 报告对 <code>equals()</code>、<code>compareTo()</code> 或比较一个对象是否与自身相等的类似方法的调用。
 这些方法的方法约定指定了此类调用将始终为 <code>equals()</code> 返回 <code>true</code> 或为 <code>compareTo()</code> 返回 <code>0</code>。
-该检查还检查对 <code>Objects.equals()</code>、<code>Objects.deepEquals()</code>、<code>Arrays.equals()</code>、<code>Comparator.compare()</code>、测试框架（JUnit、TestNG、AssertJ）的 <code>assertEquals()</code> 方法、<code>Integer.compare()</code>、<code>Integer.compareUnsigned()</code> 以及类似方法的调用。
+该检查还会检查对 <code>Objects.equals()</code>、<code>Objects.deepEquals()</code>、<code>Arrays.equals()</code>、<code>Comparator.compare()</code>、测试框架（JUnit、TestNG、AssertJ）的 <code>assertEquals()</code> 方法、<code>Integer.compare()</code>、<code>Integer.compareUnsigned()</code> 以及类似方法的调用。
 <p><b>示例：</b></p>
 <pre><code>
   class Foo {
@@ -17,7 +17,7 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  使用该选项仅报告对不可扩展的库类（如 <code>String</code>）和基元类型的测试断言。
+  使用该选项可以仅报告对不可扩展的库类（如 <code>String</code>）和基元类型的测试断言。
   当测试 <code>equals</code> 方法时，此选项可能很有用。
 </p>
 </body>

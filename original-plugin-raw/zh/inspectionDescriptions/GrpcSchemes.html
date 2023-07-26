@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>
+  报告 gRPC 请求中不必要的 `grpc` 或标准的 `http[s]` 方案用法
+</p>
+<p>
+  示例请求：
+</p>
+<pre><code>
+# `grpc` 方案可以省略，因为默认情况下假定连接不安全
+GRPC grpc://localhost/TestService/testRpc
+
+# `http` 方案可以省略：对于不安全的连接首选空方案，对于安全的连接则首选专用的 `grpcs` 方案
+GRPC http://localhost/TestService/testRpc
+
+# `https` 方案应替换为 `grpcs`：首选专用的 `grpcs` 方案，表示需要启用传输层安全才能执行请求
+GRPC https://localhost/TestService/testRpc
+</code></pre>
+<!-- tooltip end -->
+<p>为避免混淆，建议在 gRPC 请求中使用专用的 `grpcs` 方案，此时请求应使用底层的安全通道。 否则，方案可能会被完全省略</p>
+</body>
+</html>

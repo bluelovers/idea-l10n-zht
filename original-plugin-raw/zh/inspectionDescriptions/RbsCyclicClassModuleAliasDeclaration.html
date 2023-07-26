@@ -1,0 +1,17 @@
+<html>
+<body>
+报告类或模块别名的循环声明。
+
+<p>
+  循环声明会生成 <code>CyclicClassAliasDefinitionError</code>。
+</p>
+<p>
+  示例：
+</p>
+<pre><code>
+# 循环类别名声明
+class User = Customer
+class Customer = User
+</code></pre>
+</body>
+</html>

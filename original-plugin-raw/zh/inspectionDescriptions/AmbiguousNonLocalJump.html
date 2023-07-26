@@ -2,14 +2,14 @@
 <body>
 报告类循环函数的 lambda 内的 <code>break</code> 或 <code>continue</code> 用法。
 <p>
-    <code>break</code> 和 <code>continue</code> 关键词始终适用于实际循环（<code>for</code>、<code>while</code>、<code>do-while</code>）。 <code>break</code> 和 <code>continue</code> 从不适用于函数；例如，<code>break</code> 和 <code>continue</code> 不适用于 <code>forEach</code>、<code>filter</code>、<code>map</code>。
+    <code>break</code> 和 <code>continue</code> 关键字始终适用于实际循环（<code>for</code>、<code>while</code>、<code>do-while</code>）。 <code>break</code> 和 <code>continue</code> 从不适用于函数；例如，<code>break</code> 和 <code>continue</code> 不适用于 <code>forEach</code>、<code>filter</code>、<code>map</code>。
 </p>
 <p>
     在类循环函数（如 <code>forEach</code>）内使用 <code>break</code>或 <code>continue</code> 可能会引起混淆。
-    检查建议添加标签，以澄清<code>Break</code> 或 <code>Continue</code> 适用于哪个语句。
+    该检查会建议添加标签，以澄清 <code>Break</code> 或 <code>Continue</code> 适用于哪条语句。
 </p>
 <p>
-    由于 Kotlin 没有类循环函数的概念，因此检查使用启发式。 它假设没有 <code>callsInPlace(EXACTLY_ONCE)</code> 或 <code>callsInPlace(AT_LEAST_ONCE)</code> 其中一个约定的函数是类循环函数。
+    由于 Kotlin 没有类循环函数的概念，该检查将使用启发。 它假设没有 <code>callsInPlace(EXACTLY_ONCE)</code> 或 <code>callsInPlace(AT_LEAST_ONCE)</code> 其中一个约定的函数是类循环函数。
 </p>
 <p><b>示例：</b></p>
 <pre><code>

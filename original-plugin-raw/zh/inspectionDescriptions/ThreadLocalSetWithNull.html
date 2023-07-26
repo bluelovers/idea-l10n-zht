@@ -4,7 +4,7 @@
 <p>此调用不会释放资源，并且可能导致内存泄漏。</p>
 这可能是因为：
 <ul>
-  <li>首先，<code>ThreadLocal.set(null)</code> 会查找与当前线程相关联的映射。 如无此类映射，则会创建该映射</li>
+  <li>首先，<code>ThreadLocal.set(null)</code> 会查找与当前线程相关联的映射。 如果没有此类映射，则会创建该映射</li>
   <li>它会设置键和值：<code>map.set(this, value)</code>，其中 <code>this</code> 是指 <code>ThreadLocal</code> 的实例</li>
 </ul>
 <p>应使用 <code>java.lang.ThreadLocal.remove()</code> 来释放资源。</p>

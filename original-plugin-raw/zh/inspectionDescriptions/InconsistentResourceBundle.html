@@ -2,8 +2,8 @@
 <body>
 报告资源包中包含的属性文件中的问题。
 <ul>
-  <li><b>报告失踪的翻译</b> <br><br>
-  使用此选项可以报告在父属性文件中包含但在继承中缺失的的属性（除非它是语言方言）。
+  <li><b>报告缺失的翻译</b> <br><br>
+  使用此选项可以报告在父属性文件中包含但在继承属性中缺失的属性（除非它是语言方言）。
 
   <br><br> <p>示例：</p>
   <pre><code>
@@ -14,11 +14,11 @@
     # 空文件
   </code></pre>
 
-  空属性 <code>abc</code> 将报告为未翻译。
+  空属性 <code>abc</code> 将被报告为未翻译。
   <br><br><br> </li>
 
   <li><b>报告不一致的属性</b> <br><br>
-  使用此选项可以报告在继承属性文件中包含但在父级（如果没有父级，则在同级）中缺失的属性。
+  使用此选项可以报告在继承属性文件中包含但在父属性（如果没有父属性，则在同级属性）中缺失的属性。
 
   <br><br> <p>示例：</p>
   <pre><code>
@@ -46,8 +46,8 @@
   属性 <code>abc</code> 将在文件 <code>messages_fr.properties</code> 中报告为不必要地继承。
   <br><br><br> </li>
 
-  <li><b>报告被不同的占位符重写的属性</b> <br><br>
-  使用此选项可检查重写属性中的占位符一致性。
+  <li><b>报告使用不同的占位符重写的属性</b> <br><br>
+  使用此选项可以检查被重写的属性中的占位符一致性。
 
   <br><br> <p>示例：</p>
   <pre><code>
@@ -60,11 +60,11 @@
     abc={0}yyy
   </code></pre>
 
-  将报告属性 <code>abc</code>，因为属性包含值与 <code>messages.properties</code> 不对应的消息格式占位符。
+  属性 <code>abc</code> 将被报告为包含消息格式占位符的属性，与 <code>messages.properties</code> 不对应。
   <br><br><br> </li>
 
   <li><b>报告使用不同值结尾重写的属性</b> <br><br>
-  使用此选项可检查重写属性中的结尾一致性。
+  使用此选项可以检查被重写的属性中的结尾一致性。
   <br><br> <p>示例：</p>
 
   <pre><code>
@@ -75,7 +75,7 @@
     abc=xxx;
   </code></pre>
 
-  属性 <code>abc</code> 将被报告为以特殊符号（<code>!</code> / <code>?</code> / <code>.</code> / <code>:</code> / <code>;</code>）结尾，而 <code>messages.properties</code> 中的父值则不会。
+  属性 <code>abc</code> 将被报告为以特殊符号 (<code>!</code> / <code>?</code> / <code>.</code> / <code>:</code> / <code>;</code>) 结尾，而 <code>messages.properties</code> 中的父值则不会。
   </li>
 </ul>
 </body>

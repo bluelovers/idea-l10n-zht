@@ -13,7 +13,7 @@ class User {
 }
 
 interface UserRepository extends Repository&lt;User, Long&gt; {
-  @Query("{ age: { $gt: ?0 } }") // 'age' 被高亮显示为未解决
+  @Query("{ age: { $gt: ?0 } }") // 'age' 被高亮显示为未解析
   List&lt;User&gt; findUsersOlderThan(Integer age);
 }
 </code></pre>

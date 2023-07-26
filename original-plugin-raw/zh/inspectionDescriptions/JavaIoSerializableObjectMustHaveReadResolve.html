@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>
+    报告实现 <code>java.io.Serializable</code> 但不实现 <a href="https://docs.oracle.com/en/java/javase/11/docs/specs/serialization/input.html#the-readresolve-method">readResolve</a> 的 <code>object</code>（包括 <code>data object</code>）
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  import java.io.Serializable
+
+  object Foo : Serializable
+</code></pre>
+<p>快速修复会实现 <code>readResolve</code> 方法：</p>
+<pre><code>
+  import java.io.Serializable
+
+  object Foo : Serializable {
+      private fun readResolve() = Foo
+  }
+</code></pre>
+</body>
+</html>

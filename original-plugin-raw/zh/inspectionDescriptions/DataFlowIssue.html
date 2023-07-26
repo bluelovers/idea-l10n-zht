@@ -1,6 +1,6 @@
 <html>
 <body>
-根据数据流分析，报告总是违反可空性约定、可能抛出异常或只是冗余的代码结构。
+根据数据流分析，报告始终违反为 null 性约定、可能抛出异常或只是冗余的代码结构。
 <p>示例：</p>
 <pre><code>if (array.length &lt; index) {
   System.out.println(array[index]);
@@ -16,7 +16,7 @@ Integer square(@Nullable Integer input) {
     return input == null ? null : input * input;
 }</code></pre>
 <p>
-  检查行为可能由许多注解控制，例如<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">可 null 性</a>注解、<code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 注解、<code>@Range</code> 注解等。
+  检查行为可能由许多注解控制，例如<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">为 null 性</a>注解、<code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 注解、<code>@Range</code> 注解等。
 </p>
 <!-- tooltip end -->
 <p>配置检查：</p>
@@ -31,7 +31,7 @@ Integer square(@Nullable Integer input) {
 </ul>
 <p>
   在 IntelliJ IDEA 2022.3 版本之前，此检查为“常量条件和异常”检查的一部分。
-  现在，它被拆分成了两个检查：“常量值”和“可空性和数据流问题”。
+  现在，它被拆分成两个检查：“常量值”和“为 null 性和数据流问题”。
 </p>
 </body>
 </html>

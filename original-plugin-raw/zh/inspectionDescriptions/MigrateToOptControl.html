@@ -2,8 +2,8 @@
 <body>
 报告检查实现中可以自动转换为 <code>getOptionsPane()</code> 的 <code>createOptionsPanel()</code> 方法。
 <p>
-  不建议通过 <code>createOptionsPanel()</code> 创建检查选项控制，而应使用声明性控制描述  <code>getOptionsPane()</code>。
-  该检查会检查 <code>createOptionsPanel()</code> 实现，如果它们使用 InspectionOptionsPanel 或其后代且足够简单，则建议自动转换为新的 API。
+  通过 <code>createOptionsPanel()</code> 创建检查选项控制已被弃用，应使用声明性控制描述 <code>getOptionsPane()</code>。
+  该检查会检查 <code>createOptionsPanel()</code> 实现，如果它们使用 InspectionOptionsPanel 或其后代且足够简单，则自动建议转换为新的 API。
 </p>
 <p>
   此检查目前仅支持 Java 和 Kotlin。

@@ -1,0 +1,14 @@
+<html>
+<body>
+报告传递始终为 null 或始终为非 null 实参的 <code>Optional.ofNullable()</code> 用法。
+在这种情况下使用 <code>Optional.ofNullable()</code> 没有意义：<code>Optional.empty()</code> 或 <code>Optional.of()</code> 应分别用于显式声明创建始终为空或始终非空的可选项的意图。 也可能在 <code>Optional.ofNullable()</code> 实参中存在错误，因此应对其进行检查。
+<p>
+  示例：
+</p>
+<pre><code>
+Optional&lt;String&gt; empty = Optional.ofNullable(null); // 应为 Optional.empty();
+Optional&lt;String&gt; present = Optional.ofNullable("value"); // 应为 Optional.of("value"); 
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

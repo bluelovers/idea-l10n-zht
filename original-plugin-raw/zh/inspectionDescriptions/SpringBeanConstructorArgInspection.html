@@ -15,12 +15,12 @@
 </code></pre>
 <pre><code lang="xml">
     &lt;beans&gt;
-      &lt;bean class="beans.MyComponent" id="foo"&gt; &lt;!-- 报告 "在类 'MyComponent' 中找不到匹配的构造函数" --&gt;
+      &lt;bean class="beans.MyComponent" id="foo"&gt; &lt;!-- 报告“在类 'MyComponent' 中找不到匹配的构造函数”" --&gt;
           &lt;constructor-arg ref="myBean"/&gt;
          &lt;constructor-arg value="123"/&gt;
       &lt;/bean&gt;
 
-      &lt;bean class="beans.MyComponent" factory-method="getInstance"&gt; &lt;!-- 报告 "在类中找不到匹配的工厂方法" --&gt;
+      &lt;bean class="beans.MyComponent" factory-method="getInstance"&gt; &lt;!-- 报告“在类中找不到匹配的工厂方法” --&gt;
          &lt;constructor-arg value="123"/&gt;
       &lt;/bean&gt;
     &lt;/beans&gt;

@@ -1,0 +1,13 @@
+<html>
+<body>
+报告 YAML 文件中的标量值类型与相似位置中的值类型不匹配的情况。
+
+<p><b>示例：</b></p>
+<pre><code>
+myElements:
+  - value1
+  - value2
+  - false # &lt;- 已报告，因为它是布尔值，而其他值是字符串
+</code></pre>
+</body>
+</html>

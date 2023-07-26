@@ -1,0 +1,20 @@
+<html>
+<body>
+如果右侧操作数的类型与变量的类型不兼容，则报告复合赋值。
+<p>
+在此类复合赋值过程中，会发生隐式强制转换，这可能会导致有损转换。
+
+<p>示例：</p>
+<pre><code>
+  long c = 1;
+  c += 1.2;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  long c = 1;
+  c += (long) 1.2;
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.2 最新变化</small></p>
+</body>
+</html>

@@ -17,15 +17,15 @@
     &lt;bean class="FooLookupBean" id="lookupTest"&gt;
       &lt;lookup-method bean="fooBean" name="createCommand"/&gt;
       &lt;!-- private --&gt;
-      &lt;lookup-method bean="fooBean" name="createCommand"/&gt; &lt;!-- "方法必须为 public 或 protected" --&gt;
+      &lt;lookup-method bean="fooBean" name="createCommand"/&gt; &lt;!-- “方法必须为 public 或 protected” --&gt;
       &lt;!-- static --&gt;
       &lt;lookup-method bean="fooBean" name="createCommandStatic"/&gt; &lt;!-- 此处不允许使用 static 方法 --&gt;
-      &lt;!-- 有实参 --&gt;
-      &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt; &lt;!-- 方法必须没有形参 --&gt;
-      &lt;!-- 不存在 --&gt;
+      &lt;!-- with arguments --&gt;
+      &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt; &lt;!-- 方法不得有形参 --&gt;
+      &lt;!-- not exist --&gt;
       &lt;lookup-method bean="fooBean" name="unknown"/&gt; &lt;!-- 未知方法 --&gt;
-      &lt;!-- 不匹配 --&gt;
-      &lt;lookup-method bean="fooBean" name="createOtherBean"/&gt; &lt;!-- 查找方法返回类型与 'FooBean' Bean 类不匹配 --&gt;
+      &lt;!-- mismatch --&gt;
+      &lt;lookup-method bean="fooBean" name="createOtherBean"/&gt; &lt;!-- Lookup 方法返回值类型与 'FooBean' Bean 类不匹配 --&gt;
     &lt;/bean&gt;
 
     &lt;bean class="FooBean" id="fooBean"/&gt;

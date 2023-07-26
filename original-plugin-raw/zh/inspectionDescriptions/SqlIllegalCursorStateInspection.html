@@ -15,7 +15,7 @@ DECLARE a INT;
 FETCH my_cursor INTO a;
 CLOSE my_cursor;
 END;</code></pre>
-<p>根据 <a href="https://docs.microsoft.com/en-us/sql/t-sql/language-elements/close-transact-sql">docs.microsoft.com 上的 CLOSE (Transact-SQL)</a> 页面，必须为打开的光标执行 CLOSE，并且不允许对仅声明或已经关闭的光标执行 CLOSE。 因此，我们需要打开光标来修正警告。</p>
+<p>根据 <a href="https://docs.microsoft.com/en-us/sql/t-sql/language-elements/close-transact-sql">docs.microsoft.com 上的 CLOSE (Transact-SQL)</a>，必须为打开的光标执行 CLOSE，并且不允许对仅声明或已经关闭的光标执行 CLOSE。 因此，我们需要打开光标来修正警告。</p>
 <pre><code>CREATE PROCEDURE foo() AS
 BEGIN
 DECLARE my_cursor CURSOR FOR SELECT * FROM t;

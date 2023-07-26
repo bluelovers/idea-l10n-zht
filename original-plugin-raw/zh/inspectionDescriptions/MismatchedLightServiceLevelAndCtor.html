@@ -3,9 +3,9 @@
 报告轻量服务级别和构造函数之间的不匹配。
 <p>报告的问题如下：</p>
 <ul>
-  <li>具有带一个类型 <code>com.intellij.openapi.project.Project</code> 形参的构造函数的轻量服务类不会被注解为项目级服务。
+  <li>具有带一个 <code>com.intellij.openapi.project.Project</code> 类型形参的构造函数的轻量服务类不会被注解为项目级服务。
   </li>
-  <li>注解为应用程序级服务的轻量服务类没有无实参构造函数，也没有带一个类型 <code>kotlinx.coroutines.CoroutineScope</code> 形参的构造函数。
+  <li>注解为应用程序级服务的轻量服务类没有无实参构造函数，也没有带一个 <code>kotlinx.coroutines.CoroutineScope</code> 类型形参的构造函数。
   </li>
 </ul>
 <p><small>2023.2 最新变化</small>

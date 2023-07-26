@@ -629,12 +629,6 @@
     <option name="all" path="命名" hit="ALL UPPER" />
     <option name="upper" path="命名" hit="ALL UPPER" />
     <option name="c" hit="C  " />
-    <option name="c" path="选项" hit="C   Formatting Engine" />
-    <option name="engine" path="选项" hit="C   Formatting Engine" />
-    <option name="formatting" path="选项" hit="C   Formatting Engine" />
-    <option name="c" hit="C++ Formatting Engine" />
-    <option name="engine" hit="C++ Formatting Engine" />
-    <option name="formatting" hit="C++ Formatting Engine" />
     <option name="c" hit="C++/CLI 泛型约束冒号前" />
     <option name="cli" hit="C++/CLI 泛型约束冒号前" />
     <option name="泛型约束冒号前" hit="C++/CLI 泛型约束冒号前" />
@@ -698,6 +692,10 @@
     <option name="case" hit="switch case 或标签语句中的冒号后" />
     <option name="switch" hit="switch case 或标签语句中的冒号后" />
     <option name="或标签语句中的冒号后" hit="switch case 或标签语句中的冒号后" />
+    <option name="с" path="选项" hit="С   格式设置引擎" />
+    <option name="格式设置引擎" path="选项" hit="С   格式设置引擎" />
+    <option name="с" hit="С++ 格式设置引擎" />
+    <option name="格式设置引擎" hit="С++ 格式设置引擎" />
     <option name="с" path="选项" hit="Сlang format С " />
     <option name="сlang-format" path="选项" hit="Сlang format С " />
     <option name="-" hit="一元运算符(+、-、~、*、&amp;、++、--)后" />
@@ -712,6 +710,9 @@
     <option name="从第一列开始缩进注释" hit="从第一列开始缩进注释" />
     <option name="从类缩进访问说明符" hit="从类缩进访问说明符" />
     <option name="从访问说明符缩进类成员" hit="从访问说明符缩进类成员" />
+    <option name="位域声明中的冒号之前" hit="位域声明中的冒号之前" />
+    <option name="位域声明中的冒号之后" hit="位域声明中的冒号之后" />
+    <option name="位域大小" hit="位域大小" />
     <option name="c" hit="使用 ReSharper C++ 格式化程序格式化代码并运行格式检查。可以手动或通过自动检测配置。还可以从 .clang-format 配置文件中读取格式设置。" />
     <option name="clang-format" hit="使用 ReSharper C++ 格式化程序格式化代码并运行格式检查。可以手动或通过自动检测配置。还可以从 .clang-format 配置文件中读取格式设置。" />
     <option name="resharper" hit="使用 ReSharper C++ 格式化程序格式化代码并运行格式检查。可以手动或通过自动检测配置。还可以从 .clang-format 配置文件中读取格式设置。" />
@@ -977,7 +978,7 @@
     <option name="括号之前" hit="括号之前" />
     <option name="按初始化顺序对成员初始值设定项排序" hit="按初始化顺序对成员初始值设定项排序" />
     <option name="0" path="选项" hit="捆绑 来自 LLVM         B " />
-    <option name="16" path="选项" hit="捆绑 来自 LLVM         B " />
+    <option name="17" path="选项" hit="捆绑 来自 LLVM         B " />
     <option name="b" path="选项" hit="捆绑 来自 LLVM         B " />
     <option name="llvm" path="选项" hit="捆绑 来自 LLVM         B " />
     <option name="捆绑" path="选项" hit="捆绑 来自 LLVM         B " />
@@ -1057,6 +1058,7 @@
     <option name="缩进对齐的" hit="缩进对齐的 ?: 运算符" />
     <option name="运算符" hit="缩进对齐的 ?: 运算符" />
     <option name="缩进导出声明块成员" hit="缩进导出声明块成员" />
+    <option name="缩进成员初始值设定项列表" hit="缩进成员初始值设定项列表" />
     <option name="缩进方法调用的圆括号" hit="缩进方法调用的圆括号" />
     <option name="缩进样式" hit="缩进样式" />
     <option name="for" hit="缩进语句(if、while、for 等)圆括号" />
@@ -1130,9 +1132,6 @@
     <option name="默认指针初始值设定项" hit="默认指针初始值设定项" />
     <option name="" path="缩进和对齐" hit="?: 运算符" />
     <option name="运算符" path="缩进和对齐" hit="?: 运算符" />
-    <option name="c" path="选项" hit="C++ Formatting Engine" />
-    <option name="engine" path="选项" hit="C++ Formatting Engine" />
-    <option name="formatting" path="选项" hit="C++ Formatting Engine" />
     <option name="c" path="空格" hit="C++/CLI 泛型约束冒号前" />
     <option name="cli" path="空格" hit="C++/CLI 泛型约束冒号前" />
     <option name="泛型约束冒号前" path="空格" hit="C++/CLI 泛型约束冒号前" />
@@ -1179,6 +1178,8 @@
     <option name="case" path="空格" hit="switch case 或标签语句中的冒号后" />
     <option name="switch" path="空格" hit="switch case 或标签语句中的冒号后" />
     <option name="或标签语句中的冒号后" path="空格" hit="switch case 或标签语句中的冒号后" />
+    <option name="с" path="选项" hit="С++ 格式设置引擎" />
+    <option name="格式设置引擎" path="选项" hit="С++ 格式设置引擎" />
     <option name="-" path="空格" hit="一元运算符(+、-、~、*、&amp;、++、--)后" />
     <option name="--" path="空格" hit="一元运算符(+、-、~、*、&amp;、++、--)后" />
     <option name="一元运算符" path="空格" hit="一元运算符(+、-、~、*、&amp;、++、--)后" />
@@ -1191,6 +1192,9 @@
     <option name="从第一列开始缩进注释" path="缩进和对齐" hit="从第一列开始缩进注释" />
     <option name="从类缩进访问说明符" path="缩进和对齐" hit="从类缩进访问说明符" />
     <option name="从访问说明符缩进类成员" path="缩进和对齐" hit="从访问说明符缩进类成员" />
+    <option name="位域声明中的冒号之前" path="空格" hit="位域声明中的冒号之前" />
+    <option name="位域声明中的冒号之后" path="空格" hit="位域声明中的冒号之后" />
+    <option name="位域大小" path="缩进和对齐" hit="位域大小" />
     <option name="c" path="选项" hit="使用 ReSharper C++ 格式化程序格式化代码并运行格式检查。可以手动或通过自动检测配置。还可以从 .clang-format 配置文件中读取格式设置。" />
     <option name="clang-format" path="选项" hit="使用 ReSharper C++ 格式化程序格式化代码并运行格式检查。可以手动或通过自动检测配置。还可以从 .clang-format 配置文件中读取格式设置。" />
     <option name="resharper" path="选项" hit="使用 ReSharper C++ 格式化程序格式化代码并运行格式检查。可以手动或通过自动检测配置。还可以从 .clang-format 配置文件中读取格式设置。" />
@@ -1505,6 +1509,7 @@
     <option name="缩进对齐的" path="缩进和对齐" hit="缩进对齐的 ?: 运算符" />
     <option name="运算符" path="缩进和对齐" hit="缩进对齐的 ?: 运算符" />
     <option name="缩进导出声明块成员" path="缩进和对齐" hit="缩进导出声明块成员" />
+    <option name="缩进成员初始值设定项列表" path="缩进和对齐" hit="缩进成员初始值设定项列表" />
     <option name="缩进方法调用的圆括号" path="缩进和对齐" hit="缩进方法调用的圆括号" />
     <option name="缩进样式" path="制表符和缩进" hit="缩进样式" />
     <option name="for" path="缩进和对齐" hit="缩进语句(if、while、for 等)圆括号" />
@@ -1585,6 +1590,9 @@
     <option name="clang" hit="#pragma-messages clang diagnostic" />
     <option name="diagnostic" hit="#pragma-messages clang diagnostic" />
     <option name="pragma-messages" hit="#pragma-messages clang diagnostic" />
+    <option name="" hit="#warning 指令" />
+    <option name="warning" hit="#warning 指令" />
+    <option name="指令" hit="#warning 指令" />
     <option name="" hit="#warnings clang diagnostic" />
     <option name="clang" hit="#warnings clang diagnostic" />
     <option name="diagnostic" hit="#warnings clang diagnostic" />
@@ -5528,6 +5536,8 @@
     <option name="clang" hit="static-self-init clang diagnostic" />
     <option name="diagnostic" hit="static-self-init clang diagnostic" />
     <option name="static-self-init" hit="static-self-init clang diagnostic" />
+    <option name="staticassert" hit="staticassert 失败" />
+    <option name="失败" hit="staticassert 失败" />
     <option name="clang" hit="stdlibcxx-not-found clang diagnostic" />
     <option name="diagnostic" hit="stdlibcxx-not-found clang diagnostic" />
     <option name="stdlibcxx-not-found" hit="stdlibcxx-not-found clang diagnostic" />
@@ -6150,10 +6160,14 @@
     <option name="关键词" hit="关键词“default”用作标识符" />
     <option name="用作标识符" hit="关键词“default”用作标识符" />
     <option name="其他位置换行冗余" hit="其他位置换行冗余" />
+    <option name="其他位置有冗余的缩进" hit="其他位置有冗余的缩进/减少缩进" />
+    <option name="减少缩进" hit="其他位置有冗余的缩进/减少缩进" />
     <option name="其他位置空行冗余" hit="其他位置空行冗余" />
     <option name="其他位置缺少换行" hit="其他位置缺少换行" />
     <option name="其他位置缺少空格" hit="其他位置缺少空格" />
     <option name="其他位置缺少空行" hit="其他位置缺少空行" />
+    <option name="其他位置缺少缩进" hit="其他位置缺少缩进/减少缩进" />
+    <option name="减少缩进" hit="其他位置缺少缩进/减少缩进" />
     <option name="core" hit="具有成员指针形参的委托构造函数不受 .NET Core 支持" />
     <option name="net" hit="具有成员指针形参的委托构造函数不受 .NET Core 支持" />
     <option name="具有成员指针形参的委托构造函数不受" hit="具有成员指针形参的委托构造函数不受 .NET Core 支持" />
@@ -6411,6 +6425,7 @@
     <option name="未在任何蓝图中实现" hit="未在任何蓝图中实现 BlueprintImplementableEvent 函数" />
     <option name="未实现私有特殊成员函数" hit="未实现私有特殊成员函数" />
     <option name="未找到预编译的标头" hit="未找到预编译的标头" />
+    <option name="未还原缩进级别" hit="未还原缩进级别" />
     <option name="条件表达式中的冗余参数" hit="条件表达式中的冗余参数" />
     <option name="构造函数" hit="构造函数/析构函数内虚拟函数的调用将导致纯虚拟函数调用" />
     <option name="析构函数内虚拟函数的调用将导致纯虚拟函数调用" hit="构造函数/析构函数内虚拟函数的调用将导致纯虚拟函数调用" />
@@ -6431,6 +6446,7 @@
     <option name="typename" hit="没有“typename”关键词的依赖类型" />
     <option name="关键词的依赖类型" hit="没有“typename”关键词的依赖类型" />
     <option name="没有" hit="没有“typename”关键词的依赖类型" />
+    <option name="没有基础类型的前向枚举声明" hit="没有基础类型的前向枚举声明" />
     <option name="engine" hit="没有预定义 Unreal 宏的 Unreal Engine 源文件" />
     <option name="unreal" hit="没有预定义 Unreal 宏的 Unreal Engine 源文件" />
     <option name="宏的" hit="没有预定义 Unreal 宏的 Unreal Engine 源文件" />
@@ -6471,9 +6487,6 @@
     <option name="防护" hit="缺少 include 防护" />
     <option name="范围声明中可能非有意的不兼容引用类型" hit="范围声明中可能非有意的不兼容引用类型" />
     <option name="行尾的冗余空格" hit="行尾的冗余空格" />
-    <option name="行应在其他位置缩进或减少缩进" hit="行应在其他位置缩进或减少缩进" />
-    <option name="行缩进应还原到其他位置以前的级别" hit="行缩进应还原到其他位置以前的级别" />
-    <option name="行缩进相对于其他位置的上一行不应更改" hit="行缩进相对于其他位置的上一行不应更改" />
     <option name="表达式大括号周围" hit="表达式大括号周围" />
     <option name="访问说明符不会影响任何声明" hit="访问说明符不会影响任何声明" />
     <option name="访问说明符不会更改访问级别" hit="访问说明符不会更改访问级别" />
@@ -6749,6 +6762,8 @@
     <option name="助记键" hit="助记键 M  " />
     <option name="m" hit="助记键(M):" />
     <option name="助记键" hit="助记键(M):" />
+    <option name="u" hit="包围 U " />
+    <option name="包围" hit="包围 U " />
     <option name="a" hit="可用性 A  " />
     <option name="可用性" hit="可用性 A  " />
     <option name="c" hit="在上下文操作中显示 C " />
@@ -6761,8 +6776,6 @@
     <option name="描述" hit="描述 D  " />
     <option name="d" hit="描述(D):" />
     <option name="描述" hit="描述(D):" />
-    <option name="u" hit="环绕 U " />
-    <option name="环绕" hit="环绕 U " />
     <option name="g" hit="生成 G " />
     <option name="生成" hit="生成 G " />
     <option name="用于" hit="用于 " />

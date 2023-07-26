@@ -1,21 +1,26 @@
 <html>
 <body>
-当签名中类的可见性不如成员本身的可见性时，报告类在字段或方法签名中的用法。
-虽然是合法的 Java，但此类成员在可见性范围之外是无用的。
-<p>示例：</p>
-<ul>
-  <li>返回 <code>private</code> 内部 <code>class</code> 的 <code>public</code> 方法。</li>
-  <li>类型为 package-local <code>class</code> 的 <code>protected</code> 字段。</li>
-</ul>
+当字段或方法签名中的类的可见性不如使用它的成员的可见性时，报告该类的用法。
+虽然此类成员是合法的 Java，但不能在它们引用的类类型的可见性作用域之外使用。
+<p><b>示例：</b></p>
+<pre><code>
+  public class Parent {
+    public Child getChild() {
+      return new Child();
+    }
+
+    private class Child {}
+  }
+</code></pre>
 <p>
-在 Java 9 中，模块可能会通过将其软件包排除在导出之外来隐藏某些类。
-因此，如果导出的 API 的签名包含非导出类，此类 API 在模块之外就是无用的。
+此外，在 Java 9 和更高版本中，模块可以通过不导出它们的软件包来向其他模块隐藏它的某些类。
+但是，如果作为导出的 API 的一部分的成员在其签名中引用了非导出类，则不能在模块外部使用此类成员。
 <!-- tooltip end -->
 <p>配置检查：</p>
 <ul>
-  <li>使用<b>模块的 API 公开未导出的类(Java 9+)</b> 选项可以报告公开未导出类的模块 API。<br>请注意，项目或模块的语言级别为 9 或更高时，该选项才有效。</li>
-  <li>使用<b>公共 API 公开不可访问的类</b>选项可以报告公开不可访问类的公共 API。</li>
-  <li>使用 <b>Package-local API 公开 private 类</b>选项可以以报告公开 <code>private</code> 类的 package-local API。</li>
+  <li>使用<b>报告模块 API 中公开的非导出类 (Java 9+)</b> 选项可报告公开非导出类的模块 API 成员。<br>请注意，对于此选项，项目或模块的语言级别必须为 9 或更高。</li>
+  <li>使用<b>报告在 public API 中公开的不可访问类</b>选项可报告公开可见性作用域较小的类的 public 成员。</li>
+  <li>使用<b>报告在 package-local API 中公开的 private 类</b>选项可报告公开 <code>private</code> 类的 package-local 成员。</li>
 </ul>
 </body>
 </html>

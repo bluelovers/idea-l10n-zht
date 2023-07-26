@@ -5,7 +5,7 @@
     根据 IEEE 754，对照 NaN 进行的相等检查始终返回 <code>false</code>，即便对 <code>NaN == NaN</code> 也如此。
     因此，这种检查很可能是错误的。
 </p>
-<p>快速修复可将比较替换为使用不同比较技术的 <code>isNaN()</code> 检查，并能够正确处理 <code>NaN</code> 值。</p>
+<p>该快速修复会将比较替换为使用不同比较技术的 <code>isNaN()</code> 检查，并能够正确处理 <code>NaN</code> 值。</p>
 <p><b>示例：</b></p>
 <pre><code>
   fun check(value: Double): Boolean {

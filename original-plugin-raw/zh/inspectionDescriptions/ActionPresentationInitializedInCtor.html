@@ -1,0 +1,62 @@
+<html>
+<body>
+<p>
+  报告在 <code>plugin.xml</code> 文件中注册的任何操作，并在其构造函数内初始化它们的表示（文本、描述或图标）。
+</p>
+<p>
+  在构造函数中加载表示会导致分配资源，这可能不是必需的。 更有效的方式是利用 <code>AnAction</code> 和其他基类的无实参构造函数，并遵循在 <code>plugin.xml</code> 中设置文本、描述和图标的约定。 只有当操作实际显示在 UI 中时，IDE 才会加载文本、描述和图标。
+</p>
+<p>
+  设置文本、说明和图标的约定如下：
+</p>
+<ul>
+  <li>
+    为 <code>plugin.xml</code> 文件中的操作设置 <code>id</code> 特性。
+  </li>
+  <li>
+    如果需要图标，也可以设置 <code>icon</code> 特性。
+  </li>
+  <li>
+    在关联的消息包中设置文本和描述（可以在 <code>&lt;actions&gt;</code> 中重写）：
+    <ul>
+      <li><code>action.&lt;action-id&gt;.text=翻译后的操作文本</code></li>
+      <li><code>action.&lt;action-id&gt;.description=翻译后的操作描述</code></li>
+    </ul>
+  </li>
+</ul>
+<p><b>不良示例：</b></p>
+<pre><code lang="kotlin">
+  // NewKotlinFileAction.kt
+  internal class NewKotlinFileAction : AnAction(
+    KotlinBundle.message("action.new.file.text"),
+    KotlinBundle.message("action.new.file.description"),
+    KotlinIcons.FILE
+  )
+</code></pre>
+<pre><code lang="xml">
+  <!-- plugin.xml -->
+  &lt;action
+    class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
+  &lt;/action&gt;
+</code></pre>
+<p><b>良好示例：</b></p>
+<pre><code lang="kotlin">
+  // NewKotlinFileAction.kt
+  internal class NewKotlinFileAction : AnAction()
+</code></pre>
+<pre><code lang="xml">
+  <!-- plugin.xml -->
+  &lt;action
+    id="Kotlin.NewFile"
+    class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
+    icon="org.jetbrains.kotlin.idea.KotlinIcons.FILE">
+  &lt;/action&gt;
+</code></pre>
+<pre><code lang="properties">
+  # KotlinBundle.properties
+  action.Kotlin.NewFile.text=Kotlin 类/文件
+  action.Kotlin.NewFile.description=创建新的 Kotlin 类或文件
+</code></pre>
+<p><small>2023.2 最新变化</small></p>
+</body>
+</html>

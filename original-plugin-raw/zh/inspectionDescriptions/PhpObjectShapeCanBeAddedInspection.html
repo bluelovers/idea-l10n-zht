@@ -1,0 +1,18 @@
+<html>
+<body>
+报告具有指定类型的对象的 public 属性。 建议通过 <code>#[ObjectShape]</code> 特性或 PHPDoc 注释中的对象形状来指定返回对象的形状。
+</body>
+<p><b>示例：</b></p>
+<pre><code>
+  $a = new stdClass();
+  $a->name = "name";
+  $a->age = 2;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  /** @var $a object{name: string, age: int} */
+  $a = new stdClass();
+  $a->name = "name";
+  $a->age = 2;
+</code></pre>
+</html>

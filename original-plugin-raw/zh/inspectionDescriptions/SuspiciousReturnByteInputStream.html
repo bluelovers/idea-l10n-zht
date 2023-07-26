@@ -1,10 +1,9 @@
 <html>
 <body>
-报告从 <code>InputStream.read()</code> 方法返回 <code>byte</code> 类型的可疑返回表达式。
+报告从实现 <code>InputStream.read()</code> 方法的方法返回的 <code>byte</code> 类型的表达式。
 <p>
-  这很可疑，因为 <code>InputStream.read()</code> 返回的范围应为 0 到 255。
-  同时，字节包含 -128 到 127 之间的数字。
-  快速修复会应用位掩码 <code>0xFF</code> 将返回值转换为无符号字节。
+  这很可疑，因为 <code>InputStream.read()</code> 应返回范围从 <code>0</code> 到 <code>255</code> 的值，而字节类型的表达式包含从 <code>-128</code> 到 <code>127</code> 的值。
+  快速修复会通过应用位掩码 <code>0xFF</code> 将表达式转换为无符号 <code>byte</code>。
 </p>
 <p><b>示例：</b></p>
 <pre><code lang="java">
@@ -21,7 +20,7 @@ class MyInputStream extends InputStream {
     if (pos == data.length) {
       return -1;
     }
-    return data[pos++]; // 将被报告
+    return data[pos++]; // 存在问题
   }
 }
 </code></pre>

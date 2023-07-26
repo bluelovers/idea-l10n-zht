@@ -9,7 +9,7 @@ public class MyCacheManager implements CacheManager {...}
 
 public class MyConfiguration {
    @Cacheable(value = "a",
-       cacheResolver ="myCacheManager") // 报告 "Bean 必须为 'org.springframework.cache.interceptor.CacheResolver' 类型"
+       cacheResolver ="myCacheManager") // 报告“Bean 必须为 'org.springframework.cache.interceptor.CacheResolver' 类型”
    public String getCache(String isbn) {...}
 
    @Cacheable(value = "abc",

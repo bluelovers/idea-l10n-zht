@@ -1,0 +1,19 @@
+<html>
+<body>
+报告错误的直接比较，例如使用 <code>==</code>，并建议改用 <code>errors.Is</code>。
+<p>从 Go 1.13 开始，可以使用 <code>fmt.Errorf</code> 函数和 <code>%w</code> 动词来包装错误。 因此，对于已包装错误，使用相等检查直接比较错误可能会失败。 从 Go 1.13 开始，检查特定错误的首选方式是使用标准库中的 <code>errors.Is</code> 函数。</p>
+<p>快速修复会将错误的直接比较替换为调用 <code>errors.Is</code>。</p>
+<p><b>示例：</b></p>
+<pre><code>
+if err == MyError {
+  fmt.Println("MyErr")
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+if errors.Is(err, MyError) {
+  fmt.Println("MyErr")
+}
+</code></pre>
+</body>
+</html>

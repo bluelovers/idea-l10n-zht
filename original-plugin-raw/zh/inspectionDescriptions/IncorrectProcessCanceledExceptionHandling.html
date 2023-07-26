@@ -1,0 +1,43 @@
+<html>
+<body>
+报告以不正确的方式处理 <code>ProcessCanceledException</code> 的情况。
+
+<p>
+  不能以任何方式捕获、吞下、记录或处理 <code>ProcessCanceledException</code> 及其继承者。
+  相反，必须将其重新抛出，以便基础架构能够对其进行正确处理。
+</p>
+
+<p>
+  检查会报告显式的 <code>ProcessCanceledException</code> 或其继承者的捕获，以及对覆盖 <code>ProcessCanceledException</code> 的 <code>RuntimeException</code>、<code>Exception</code> 和 <code>Throwable</code> 的捕获。
+</p>
+
+<p>示例：</p>
+
+<pre><code lang="java">
+// bad:
+try {
+  // ...
+} catch (ProcessCanceledException e) { // 不应吞下异常
+}
+
+// 错误:
+try {
+  // ...
+} catch (ProcessCanceledException e) {
+  LOG.error("Error occurred", e); // 不应记录异常
+  throw e;
+}
+
+
+// 优良:
+try {
+  // ...
+} catch (ProcessCanceledException e) {
+  // 其他操作
+  throw e;
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.2 最新变化</small></p>
+</body>
+</html>

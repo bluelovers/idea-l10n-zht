@@ -1,0 +1,19 @@
+<html>
+<body>
+报告类和模块别名的不一致声明。 类不能作为模块别名，模块也不能作为类别名。
+<p>
+  类作为模块别名，或模块作为类别名，会产生 <code>InconsistentClassModuleAliasError</code>。
+</p>
+<p>有一个快速修复可用于导航到冲突的声明。</p>
+<p>
+  示例：
+</p>
+<pre><code>
+class User
+end
+
+# 类 'User' 用作了模块别名目标
+module Customer = User
+</code></pre>
+</body>
+</html>

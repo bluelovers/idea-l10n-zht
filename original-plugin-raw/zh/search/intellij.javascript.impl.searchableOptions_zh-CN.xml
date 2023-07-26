@@ -99,6 +99,10 @@
     <option name="typescript" path="ActionManager" hit="编译 TypeScript" />
     <option name="编译" path="ActionManager" hit="编译 TypeScript" />
     <option name="编译当前项目" path="ActionManager" hit="编译当前项目" />
+    <option name="modules" path="ActionManager" hit="解释 node_modules 库" />
+    <option name="node" path="ActionManager" hit="解释 node_modules 库" />
+    <option name="库" path="ActionManager" hit="解释 node_modules 库" />
+    <option name="解释" path="ActionManager" hit="解释 node_modules 库" />
     <option name="转换为函数组件" path="ActionManager" hit="转换为函数组件" />
     <option name="转换为类组件" path="ActionManager" hit="转换为类组件" />
     <option name="grunt" path="ActionManager" hit="运行 Gulp/Grunt/npm 任务" />
@@ -153,8 +157,9 @@
     <option name="文本" hit="JSDoc 文本" />
     <option name="jsdoc" hit="JSDoc 标记" />
     <option name="标记" hit="JSDoc 标记" />
-    <option name="jsdoc" hit="JSDoc 标记值" />
-    <option name="标记值" hit="JSDoc 标记值" />
+    <option name="jsdoc" hit="JSDoc 标记的 namepath" />
+    <option name="namepath" hit="JSDoc 标记的 namepath" />
+    <option name="标记的" hit="JSDoc 标记的 namepath" />
     <option name="jsdoc" hit="JSDoc 类型" />
     <option name="类型" hit="JSDoc 类型" />
     <option name="static" hit="static 成员函数" />
@@ -272,8 +277,8 @@
     <option name="javascript" hit="JavaScript" />
     <option name="import" path="空行" hit="import 后 " />
     <option name="后" path="空行" hit="import 后 " />
+    <option name="不从指定路径或路径模式导入" path="Import" hit="不从指定路径或路径模式导入 " />
     <option name="不使用" path="标点" hit="不使用" />
-    <option name="不要完全从此导入" path="Import" hit="不要完全从此导入 " />
     <option name="app-component" path="代码生成" hit="中线命名法  app component " />
     <option name="中线命名法" path="代码生成" hit="中线命名法  app component " />
     <option name="仅在指定路径以外的文件中" path="Import" hit="仅在指定路径以外的文件中" />
@@ -292,8 +297,8 @@
     <option name="保持最大的空白行" path="空行" hit="保持最大的空白行" />
     <option name="函数声明返回" path="代码生成" hit="函数声明返回" />
     <option name="函数表达式返回" path="代码生成" hit="函数表达式返回" />
-    <option name="" path="标点" hit="分号" />
-    <option name="分号" path="标点" hit="分号" />
+    <option name="s" path="标点" hit="分号 S " />
+    <option name="分号" path="标点" hit="分号 S " />
     <option name="分组规则" path="排列" hit="分组规则 " />
     <option name="制表符和缩进" path="制表符和缩进" hit="制表符和缩进" />
     <option name="制表符大小" path="制表符和缩进" hit="制表符大小 " />
@@ -647,7 +652,7 @@
     <option name="视觉参考线" path="换行和大括号" hit="视觉参考线" />
     <option name="赋值符号置于下一行" path="换行和大括号" hit="赋值符号置于下一行" />
     <option name="赋值语句" path="换行和大括号" hit="赋值语句" />
-    <option name="赋值运算符" path="空格" hit="赋值运算符 (=, +=, ...)" />
+    <option name="赋值运算符" path="空格" hit="赋值运算符(=、+=、…)" />
     <option name="运算符号置于下一行" path="换行和大括号" hit="运算符号置于下一行" />
     <option name="运算符周围" path="空格" hit="运算符周围" />
     <option name="逻辑运算符" path="空格" hit="逻辑运算符(&amp;&amp;、||)" />
@@ -663,8 +668,8 @@
     <option name="typescript" hit="TypeScript" />
     <option name="import" path="空行" hit="import 后 " />
     <option name="后" path="空行" hit="import 后 " />
+    <option name="不从指定路径或路径模式导入" path="Import" hit="不从指定路径或路径模式导入 " />
     <option name="不使用" path="标点" hit="不使用" />
-    <option name="不要完全从此导入" path="Import" hit="不要完全从此导入 " />
     <option name="app-component" path="代码生成" hit="中线命名法  app component " />
     <option name="中线命名法" path="代码生成" hit="中线命名法  app component " />
     <option name="仅在指定路径以外的文件中" path="Import" hit="仅在指定路径以外的文件中" />
@@ -688,8 +693,8 @@
     <option name="保持最大的空白行" path="空行" hit="保持最大的空白行" />
     <option name="函数声明返回" path="代码生成" hit="函数声明返回" />
     <option name="函数表达式返回" path="代码生成" hit="函数表达式返回" />
-    <option name="" path="标点" hit="分号" />
-    <option name="分号" path="标点" hit="分号" />
+    <option name="s" path="标点" hit="分号 S " />
+    <option name="分号" path="标点" hit="分号 S " />
     <option name="分组规则" path="排列" hit="分组规则 " />
     <option name="制表符和缩进" path="制表符和缩进" hit="制表符和缩进" />
     <option name="制表符大小" path="制表符和缩进" hit="制表符大小 " />
@@ -1048,7 +1053,7 @@
     <option name="视觉参考线" path="换行和大括号" hit="视觉参考线" />
     <option name="赋值符号置于下一行" path="换行和大括号" hit="赋值符号置于下一行" />
     <option name="赋值语句" path="换行和大括号" hit="赋值语句" />
-    <option name="赋值运算符" path="空格" hit="赋值运算符 (=, +=, ...)" />
+    <option name="赋值运算符" path="空格" hit="赋值运算符(=、+=、…)" />
     <option name="运算符号置于下一行" path="换行和大括号" hit="运算符号置于下一行" />
     <option name="运算符周围" path="空格" hit="运算符周围" />
     <option name="逻辑运算符" path="空格" hit="逻辑运算符(&amp;&amp;、||)" />

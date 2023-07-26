@@ -16,12 +16,12 @@
 
   // 空 
   @Configuration
-  @Profile() // 报告 "配置文件表达式必须包含文本"
+  @Profile() // 报告“配置文件表达式必须包含文本”
   public class MyConfiguration {...}
 
   // 不带圆括号的混合运算符 
   @Configuration
-  @Profile("a & b | c") // 报告 "格式不正确的配置文件表达式"
+  @Profile("a & b | c") // 报告“格式不正确的配置文件表达式”
   public class MyConfiguration {...}
 </code></pre>
 </body>

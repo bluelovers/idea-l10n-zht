@@ -3,8 +3,8 @@
 <p>报告包含在 Reactor 链内具有 <code>Mono&lt;Void&gt;</code> 返回值的实参的 zip 操作 。</p>
 
 <p>
-  <code>Zip</code> 在接收到 <code>Mono&lt;Void&gt;</code> 完成信号后立即完成空操作。
-  快速修复建议将 <code>zip()</code>、<code>zipWhen()</code> 和 <code>zipWith()</code> 替换为 <code>when</code>。
+  <code>Zip</code> 会在传入 <code>Mono&lt;Void&gt;</code> 完成后立即完成空操作。
+  该快速修复会建议将 <code>zip()</code>、<code>zipWhen()</code> 和 <code>zipWith()</code> 替换为 <code>when</code>。
 </p>
 <!-- tooltip end -->
 <p><b>示例：</b></p>

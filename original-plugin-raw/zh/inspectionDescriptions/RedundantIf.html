@@ -3,7 +3,7 @@
 <p>报告可以简化为单个语句的 <code>if</code> 语句。</p>
 <p><b>示例：</b></p>
 <pre><code>
-  fun test() {
+  fun test(): Boolean {
       if (foo()) {
          return true
       } else {
@@ -13,7 +13,7 @@
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
-  fun test() {
+  fun test(): Boolean {
       return foo()
   }
 </code></pre>

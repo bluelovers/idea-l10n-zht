@@ -13,7 +13,7 @@ public interface MyLangTokenTypes {
   IElementType COMMENT = new MyLangTokenType("COMMENT");
   IElementType TYPE1 = new MyLangTokenType("TYPE1");
   IElementType TYPE2 = new MyLangTokenType("TYPE2");
-  // 更多类型...
+  // 更多类型…
 }
 
 
@@ -50,7 +50,7 @@ public class MyLangParserDefinition implements ParserDefinition {
 
 // 正确 (Kotlin)：
 
-// 顶层声明直到调用 getCommentTokens() 方法后才会加载：
+// 在调用 getCommentTokens() 方法之前，顶层声明未加载：
 private val COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
 
 class MyLangParserDefinition : ParserDefinition {

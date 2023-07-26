@@ -2,7 +2,7 @@
 <body>
 报告可以转换为 JUnit 4 测试类的 JUnit 3 测试类。
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
   public class MainTestCase extends junit.framework.TestCase {
     public void test() {
       Assert.assertTrue(true);
@@ -10,7 +10,7 @@
   }
 </code></pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre><code lang="java">
   public class MainTestCase {
     @org.junit.Test
     public void test() {

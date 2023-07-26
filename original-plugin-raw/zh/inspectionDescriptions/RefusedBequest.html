@@ -2,9 +2,9 @@
 <body>
 报告重写而不调用 super 方法的方法。
 这也称作<i>被拒绝的遗赠</i>。
-此类方法可能表明抽象失败，导致出现难以跟踪的错误。
+此类方法可能表明抽象失败，导致出现难以跟踪的 bug。
 <p>
-  检查不报告从 <code>java.lang.Object</code>（<code>clone()</code> 除外）重写的方法。
+  检查不报告从 <code>java.lang.Object</code>重写的方法（<code>clone()</code> 除外）。
   按照惯例，<code>clone()</code> 应该调用其 super 方法，该方法将返回正确类型的对象。</p>
 <p><b>示例 1：</b></p>
 <pre><code>
@@ -33,13 +33,13 @@
 <p>配置检查：</p>
 <ul>
   <li>
-    使用<b>仅在通过以下方式注解 super 方法时报告</b>选项，可忽略使用所提供列表中的注解标记的 super 方法。 您可以手动将注解添加到此列表中。
+    使用<b>仅在通过以下方式注解 super 方法时报告</b>选项，可以忽略使用所提供列表中的注解标记的 super 方法。 您可以手动将注解添加到此列表中。
   </li>
   <li>
-    使用<b>忽略空 super 方法</b>选项，可忽略仅抛出异常或空的 super 方法。
+    使用<b>忽略空 super 方法</b>选项，可以忽略仅抛出异常或空的 super 方法。
   </li>
   <li>
-    使用<b>忽略 'default' super 方法</b>选项，可忽略接口中的 <code>default</code> super 方法。
+    使用<b>忽略 'default' super 方法</b>选项，可以忽略接口中的 <code>default</code> super 方法。
   </li>
 </ul>
 </body>

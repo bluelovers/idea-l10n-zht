@@ -73,6 +73,7 @@
     <option name="使用对比度滚动条" hit="使用对比度滚动条" />
     <option name="使用自定义字体" hit="使用自定义字体 " />
     <option name="右侧并排布局" hit="右侧并排布局" />
+    <option name="在主工具栏中使用项目颜色" hit="在主工具栏中使用项目颜色" />
     <option name="在控件中启用助记键" hit="在控件中启用助记键" />
     <option name="在树中使用较小的缩进" hit="在树中使用较小的缩进" />
     <option name="m" hit="在菜单中启用助记键 M " />
@@ -106,22 +107,6 @@
   </configurable>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="add" path="ActionManager" hit="Add to Main Toolbar" />
-    <option name="main" path="ActionManager" hit="Add to Main Toolbar" />
-    <option name="to" path="ActionManager" hit="Add to Main Toolbar" />
-    <option name="toolbar" path="ActionManager" hit="Add to Main Toolbar" />
-    <option name="allows" path="ActionManager" hit="Allows the IDE to peek inside to detect project directories" />
-    <option name="detect" path="ActionManager" hit="Allows the IDE to peek inside to detect project directories" />
-    <option name="directories" path="ActionManager" hit="Allows the IDE to peek inside to detect project directories" />
-    <option name="ide" path="ActionManager" hit="Allows the IDE to peek inside to detect project directories" />
-    <option name="inside" path="ActionManager" hit="Allows the IDE to peek inside to detect project directories" />
-    <option name="peek" path="ActionManager" hit="Allows the IDE to peek inside to detect project directories" />
-    <option name="project" path="ActionManager" hit="Allows the IDE to peek inside to detect project directories" />
-    <option name="the" path="ActionManager" hit="Allows the IDE to peek inside to detect project directories" />
-    <option name="to" path="ActionManager" hit="Allows the IDE to peek inside to detect project directories" />
-    <option name="back" path="ActionManager" hit="Back / Forward" />
-    <option name="forward" path="ActionManager" hit="Back / Forward" />
-    <option name="build" path="ActionManager" hit="Build" />
     <option name="-" path="ActionManager" hit="CR - Classic Mac OS (\r)" />
     <option name="classic" path="ActionManager" hit="CR - Classic Mac OS (\r)" />
     <option name="cr" path="ActionManager" hit="CR - Classic Mac OS (\r)" />
@@ -133,20 +118,18 @@
     <option name="n" path="ActionManager" hit="CRLF - Windows (\r\n)" />
     <option name="r" path="ActionManager" hit="CRLF - Windows (\r\n)" />
     <option name="windows" path="ActionManager" hit="CRLF - Windows (\r\n)" />
+    <option name="change" path="ActionManager" hit="Change Project Color" />
+    <option name="color" path="ActionManager" hit="Change Project Color" />
+    <option name="project" path="ActionManager" hit="Change Project Color" />
     <option name="ddl" path="ActionManager" hit="DDL 映射" />
     <option name="映射" path="ActionManager" hit="DDL 映射" />
-    <option name="deployment" path="ActionManager" hit="Deployment" />
-    <option name="actions" path="ActionManager" hit="Deployment actions" />
-    <option name="deployment" path="ActionManager" hit="Deployment actions" />
-    <option name="detect" path="ActionManager" hit="Detect Project Directories" />
-    <option name="directories" path="ActionManager" hit="Detect Project Directories" />
-    <option name="project" path="ActionManager" hit="Detect Project Directories" />
     <option name="dock" path="ActionManager" hit="Dock" />
     <option name="docker" path="ActionManager" hit="Docker" />
     <option name="enter" path="ActionManager" hit="Enter" />
     <option name="esc" path="ActionManager" hit="Esc" />
     <option name="explain" path="ActionManager" hit="Explain Plan" />
     <option name="plan" path="ActionManager" hit="Explain Plan" />
+    <option name="gitlab" path="ActionManager" hit="GitLab" />
     <option name="ide" path="ActionManager" hit="IDE 和项目设置" />
     <option name="和项目设置" path="ActionManager" hit="IDE 和项目设置" />
     <option name="completion" path="ActionManager" hit="Insert current inline completion proposal" />
@@ -165,34 +148,17 @@
     <option name="和" path="ActionManager" hit="LF - Unix 和 macOS (\n)" />
     <option name="layouts" path="ActionManager" hit="Layouts" />
     <option name="mq" path="ActionManager" hit="MQ" />
-    <option name="as" path="ActionManager" hit="Main Menu as Separate Toolbar" />
-    <option name="main" path="ActionManager" hit="Main Menu as Separate Toolbar" />
-    <option name="menu" path="ActionManager" hit="Main Menu as Separate Toolbar" />
-    <option name="separate" path="ActionManager" hit="Main Menu as Separate Toolbar" />
-    <option name="toolbar" path="ActionManager" hit="Main Menu as Separate Toolbar" />
-    <option name="file" path="ActionManager" hit="Open File" />
-    <option name="open" path="ActionManager" hit="Open File" />
     <option name="devkit" path="ActionManager" hit="Plugin DevKit" />
     <option name="plugin" path="ActionManager" hit="Plugin DevKit" />
-    <option name="profiler" path="ActionManager" hit="Profiler" />
-    <option name="coverage" path="ActionManager" hit="Run with Coverage" />
-    <option name="run" path="ActionManager" hit="Run with Coverage" />
-    <option name="with" path="ActionManager" hit="Run with Coverage" />
-    <option name="all" path="ActionManager" hit="Save All" />
-    <option name="save" path="ActionManager" hit="Save All" />
-    <option name="bar" path="ActionManager" hit="Single Tool Window Bar" />
-    <option name="single" path="ActionManager" hit="Single Tool Window Bar" />
-    <option name="tool" path="ActionManager" hit="Single Tool Window Bar" />
-    <option name="window" path="ActionManager" hit="Single Tool Window Bar" />
+    <option name="profile" path="ActionManager" hit="Profile" />
+    <option name="custom" path="ActionManager" hit="Set Custom Project Icon..." />
+    <option name="icon" path="ActionManager" hit="Set Custom Project Icon..." />
+    <option name="project" path="ActionManager" hit="Set Custom Project Icon..." />
+    <option name="set" path="ActionManager" hit="Set Custom Project Icon..." />
+    <option name="gradient" path="ActionManager" hit="Show Project Gradient" />
+    <option name="project" path="ActionManager" hit="Show Project Gradient" />
+    <option name="show" path="ActionManager" hit="Show Project Gradient" />
     <option name="space" path="ActionManager" hit="Space" />
-    <option name="synchronize" path="ActionManager" hit="Synchronize" />
-    <option name="redo" path="ActionManager" hit="Undo / Redo" />
-    <option name="undo" path="ActionManager" hit="Undo / Redo" />
-    <option name="bar" path="ActionManager" hit="Use Single Tool Window Bar" />
-    <option name="single" path="ActionManager" hit="Use Single Tool Window Bar" />
-    <option name="tool" path="ActionManager" hit="Use Single Tool Window Bar" />
-    <option name="use" path="ActionManager" hit="Use Single Tool Window Bar" />
-    <option name="window" path="ActionManager" hit="Use Single Tool Window Bar" />
     <option name="wsl" path="ActionManager" hit="WSL 中的主目录" />
     <option name="中的主目录" path="ActionManager" hit="WSL 中的主目录" />
     <option name="xml" path="ActionManager" hit="XML 配置文件" />
@@ -212,12 +178,12 @@
     <option name="与退格键的作用相同" path="ActionManager" hit="与退格键的作用相同，但也会移除文本光标前的所有空白符号(如有)" />
     <option name="但也会移除文本光标前的所有空白符号" path="ActionManager" hit="与退格键的作用相同，但也会移除文本光标前的所有空白符号(如有)" />
     <option name="如有" path="ActionManager" hit="与退格键的作用相同，但也会移除文本光标前的所有空白符号(如有)" />
+    <option name="中心" path="ActionManager" hit="中心" />
     <option name="为所有新项目配置默认设置" path="ActionManager" hit="为所有新项目配置默认设置" />
     <option name="主工具栏" path="ActionManager" hit="主工具栏" />
-    <option name="主工具栏居中" path="ActionManager" hit="主工具栏居中" />
-    <option name="主工具栏靠左" path="ActionManager" hit="主工具栏靠左" />
     <option name="主目录" path="ActionManager" hit="主目录" />
     <option name="主菜单" path="ActionManager" hit="主菜单" />
+    <option name="主菜单作为单独的工具栏" path="ActionManager" hit="主菜单作为单独的工具栏" />
     <option name="主题" path="ActionManager" hit="主题" />
     <option name="ide" path="ActionManager" hit="了解此版本 IDE 中的新功能" />
     <option name="中的新功能" path="ActionManager" hit="了解此版本 IDE 中的新功能" />
@@ -248,7 +214,10 @@
     <option name="macos" path="ActionManager" hit="使用 macOS 系统调色板输入特殊字符" />
     <option name="使用" path="ActionManager" hit="使用 macOS 系统调色板输入特殊字符" />
     <option name="系统调色板输入特殊字符" path="ActionManager" hit="使用 macOS 系统调色板输入特殊字符" />
+    <option name="使用分析器运行" path="ActionManager" hit="使用分析器运行" />
     <option name="使用包含在单行标签页布局中不适合屏幕的标签页列表的下拉列表" path="ActionManager" hit="使用包含在单行标签页布局中不适合屏幕的标签页列表的下拉列表" />
+    <option name="使用单个工具窗口栏" path="ActionManager" hit="使用单个工具窗口栏" />
+    <option name="使用覆盖率运行" path="ActionManager" hit="使用覆盖率运行" />
     <option name="保存所有文件和设置" path="ActionManager" hit="保存所有文件和设置" />
     <option name="保存文档" path="ActionManager" hit="保存文档" />
     <option name="保存至终止环" path="ActionManager" hit="保存至终止环" />
@@ -263,6 +232,9 @@
     <option name="停靠不固定" path="ActionManager" hit="停靠不固定" />
     <option name="停靠固定" path="ActionManager" hit="停靠固定" />
     <option name="停靠模式" path="ActionManager" hit="停靠模式" />
+    <option name="ide" path="ActionManager" hit="允许 IDE 查看内部以检测项目目录" />
+    <option name="允许" path="ActionManager" hit="允许 IDE 查看内部以检测项目目录" />
+    <option name="查看内部以检测项目目录" path="ActionManager" hit="允许 IDE 查看内部以检测项目目录" />
     <option name="允许找出编辑器中实际使用的回退字体" path="ActionManager" hit="允许找出编辑器中实际使用的回退字体" />
     <option name="入门指南" path="ActionManager" hit="入门指南" />
     <option name="全选" path="ActionManager" hit="全选" />
@@ -295,6 +267,7 @@
     <option name="减小高度" path="ActionManager" hit="减小高度" />
     <option name="分支窗格设置" path="ActionManager" hit="分支窗格设置" />
     <option name="分散排列" path="ActionManager" hit="分散排列" />
+    <option name="分析器" path="ActionManager" hit="分析器" />
     <option name="分析图" path="ActionManager" hit="分析图" />
     <option name="分析插件启动性能" path="ActionManager" hit="分析插件启动性能" />
     <option name="分组依据" path="ActionManager" hit="分组依据" />
@@ -354,6 +327,7 @@
     <option name="粘贴操作" path="ActionManager" hit="剪切/复制/粘贴操作" />
     <option name="剪切到剪贴板" path="ActionManager" hit="剪切到剪贴板" />
     <option name="剪切到行尾" path="ActionManager" hit="剪切到行尾" />
+    <option name="单个工具窗口栏" path="ActionManager" hit="单个工具窗口栏" />
     <option name="双击时显示" path="ActionManager" hit="双击时显示" />
     <option name="双向文本基础方向" path="ActionManager" hit="双向文本基础方向" />
     <option name="反向剪切行" path="ActionManager" hit="反向剪切行" />
@@ -369,8 +343,11 @@
     <option name="右到左" path="ActionManager" hit="右到左" />
     <option name="合并所有项目窗口" path="ActionManager" hit="合并所有项目窗口" />
     <option name="同时切换免打扰和全屏模式" path="ActionManager" hit="同时切换免打扰和全屏模式" />
+    <option name="同步" path="ActionManager" hit="同步" />
     <option name="后台任务" path="ActionManager" hit="后台任务" />
     <option name="后退" path="ActionManager" hit="后退" />
+    <option name="前进" path="ActionManager" hit="后退/前进" />
+    <option name="后退" path="ActionManager" hit="后退/前进" />
     <option name="向上滚动" path="ActionManager" hit="向上滚动" />
     <option name="向上滚动并根据需要移动" path="ActionManager" hit="向上滚动并根据需要移动" />
     <option name="向上滚动页面" path="ActionManager" hit="向上滚动页面" />
@@ -416,9 +393,6 @@
     <option name="中显示" path="ActionManager" hit="在 文件管理器 中显示" />
     <option name="在" path="ActionManager" hit="在 文件管理器 中显示" />
     <option name="文件管理器" path="ActionManager" hit="在 文件管理器 中显示" />
-    <option name="中显示日志" path="ActionManager" hit="在 文件管理器 中显示日志" />
-    <option name="在" path="ActionManager" hit="在 文件管理器 中显示日志" />
-    <option name="文件管理器" path="ActionManager" hit="在 文件管理器 中显示日志" />
     <option name="在上方克隆文本光标" path="ActionManager" hit="在上方克隆文本光标" />
     <option name="以同时编辑多行代码" path="ActionManager" hit="在上面的行中插入一个辅助光标，以同时编辑多行代码。" />
     <option name="在上面的行中插入一个辅助光标" path="ActionManager" hit="在上面的行中插入一个辅助光标，以同时编辑多行代码。" />
@@ -479,6 +453,7 @@
     <option name="在所有编辑器中减小字体大小" path="ActionManager" hit="在所有编辑器中减小字体大小" />
     <option name="在所有编辑器中增加字体大小" path="ActionManager" hit="在所有编辑器中增加字体大小" />
     <option name="在所选行的末尾添加文本光标" path="ActionManager" hit="在所选行的末尾添加文本光标" />
+    <option name="在文件管理器中显示日志" path="ActionManager" hit="在文件管理器中显示日志" />
     <option name="在文本编辑器上方显示路径导航栏" path="ActionManager" hit="在文本编辑器上方显示路径导航栏" />
     <option name="在文本编辑器下方显示路径导航栏" path="ActionManager" hit="在文本编辑器下方显示路径导航栏" />
     <option name="在新窗口中打开源" path="ActionManager" hit="在新窗口中打开源" />
@@ -514,7 +489,7 @@
     <option name="完全展开树节点" path="ActionManager" hit="完全展开树节点" />
     <option name="宏" path="ActionManager" hit="宏" />
     <option name="宏操作" path="ActionManager" hit="宏操作" />
-    <option name="实验性功能" path="ActionManager" hit="实验性功能..." />
+    <option name="实验性功能" path="ActionManager" hit="实验性功能…" />
     <option name="对齐" path="ActionManager" hit="对齐" />
     <option name="导入到版本控制" path="ActionManager" hit="导入到版本控制" />
     <option name="导出到文本文件" path="ActionManager" hit="导出到文本文件" />
@@ -629,8 +604,8 @@
     <option name="工具栏" path="ActionManager" hit="工具栏" />
     <option name="工具栏经典" path="ActionManager" hit="工具栏经典" />
     <option name="工具窗口" path="ActionManager" hit="工具窗口" />
-    <option name="工具窗口传统视图模式" path="ActionManager" hit="工具窗口传统视图模式 (已弃用)" />
-    <option name="已弃用" path="ActionManager" hit="工具窗口传统视图模式 (已弃用)" />
+    <option name="工具窗口传统视图模式" path="ActionManager" hit="工具窗口传统视图模式(已弃用)" />
+    <option name="已弃用" path="ActionManager" hit="工具窗口传统视图模式(已弃用)" />
     <option name="工具窗口布局" path="ActionManager" hit="工具窗口布局" />
     <option name="工具窗口视图模式" path="ActionManager" hit="工具窗口视图模式" />
     <option name="左" path="ActionManager" hit="左" />
@@ -654,16 +629,15 @@
     <option name="打开" path="ActionManager" hit="打开…" />
     <option name="打开于" path="ActionManager" hit="打开于" />
     <option name="打开带日志文件的文件夹" path="ActionManager" hit="打开带日志文件的文件夹" />
-    <option name="vm" path="ActionManager" hit="打开带有自定义 VM 选项文件的编辑器标签页" />
-    <option name="打开带有自定义" path="ActionManager" hit="打开带有自定义 VM 选项文件的编辑器标签页" />
-    <option name="选项文件的编辑器标签页" path="ActionManager" hit="打开带有自定义 VM 选项文件的编辑器标签页" />
     <option name="打开带有自定义属性文件的编辑器标签页" path="ActionManager" hit="打开带有自定义属性文件的编辑器标签页" />
+    <option name="打开带有自定义虚拟机选项文件的编辑器标签页" path="ActionManager" hit="打开带有自定义虚拟机选项文件的编辑器标签页" />
     <option name="pdf" path="ActionManager" hit="打开带有默认按键映射参考卡的 PDF 文件。" />
     <option name="打开带有默认按键映射参考卡的" path="ActionManager" hit="打开带有默认按键映射参考卡的 PDF 文件。" />
     <option name="文件" path="ActionManager" hit="打开带有默认按键映射参考卡的 PDF 文件。" />
     <option name="打开或导入" path="ActionManager" hit="打开或导入" />
     <option name="打开所选条目的编辑器" path="ActionManager" hit="打开所选条目的编辑器" />
     <option name="打开所选条目的编辑器并使之获得焦点" path="ActionManager" hit="打开所选条目的编辑器并使之获得焦点" />
+    <option name="打开文件" path="ActionManager" hit="打开文件" />
     <option name="您也可以通过拖放到欢迎屏幕来打开项目或编辑文件" path="ActionManager" hit="打开文件或项目。您也可以通过拖放到欢迎屏幕来打开项目或编辑文件。" />
     <option name="打开文件或项目" path="ActionManager" hit="打开文件或项目。您也可以通过拖放到欢迎屏幕来打开项目或编辑文件。" />
     <option name="打开设置" path="ActionManager" hit="打开设置…" />
@@ -681,11 +655,14 @@
     <option name="按键映射" path="ActionManager" hit="按键映射" />
     <option name="排序行" path="ActionManager" hit="排序行" />
     <option name="控制台标签页" path="ActionManager" hit="控制台标签页" />
+    <option name="提交反馈" path="ActionManager" hit="提交反馈…" />
     <option name="引入" path="ActionManager" hit="提取/引入" />
     <option name="提取" path="ActionManager" hit="提取/引入" />
     <option name="插件" path="ActionManager" hit="插件" />
     <option name="撤消" path="ActionManager" hit="撤消" />
     <option name="撤消上次导航操作" path="ActionManager" hit="撤消上次导航操作" />
+    <option name="撤销" path="ActionManager" hit="撤销/重做" />
+    <option name="重做" path="ActionManager" hit="撤销/重做" />
     <option name="播放上次使用的宏" path="ActionManager" hit="播放上次使用的宏" />
     <option name="播放保存的宏" path="ActionManager" hit="播放保存的宏" />
     <option name="播放保存的宏" path="ActionManager" hit="播放保存的宏…" />
@@ -709,8 +686,8 @@
     <option name="新建文件" path="ActionManager" hit="新建文件…" />
     <option name="新建目录" path="ActionManager" hit="新建目录…" />
     <option name="新建项目组" path="ActionManager" hit="新建项目组" />
+    <option name="新建项目设置" path="ActionManager" hit="新建项目设置" />
     <option name="新项目的设置" path="ActionManager" hit="新项目的设置…" />
-    <option name="新项目设置" path="ActionManager" hit="新项目设置" />
     <option name="方向由初始字符决定" path="ActionManager" hit="方向由初始字符决定" />
     <option name="日志焦点请求" path="ActionManager" hit="日志焦点请求" />
     <option name="显示" path="ActionManager" hit="显示" />
@@ -771,7 +748,6 @@
     <option name="更改拆分器方向" path="ActionManager" hit="更改拆分器方向" />
     <option name="更改文件编码" path="ActionManager" hit="更改文件编码" />
     <option name="更改视图模式" path="ActionManager" hit="更改视图模式" />
-    <option name="更改项目图标" path="ActionManager" hit="更改项目图标…" />
     <option name="最后编辑位置" path="ActionManager" hit="最后编辑位置" />
     <option name="最大化" path="ActionManager" hit="最大化/还原活动对话框" />
     <option name="还原活动对话框" path="ActionManager" hit="最大化/还原活动对话框" />
@@ -805,7 +781,6 @@
     <option name="标准宏操作" path="ActionManager" hit="标准宏操作" />
     <option name="标签页" path="ActionManager" hit="标签页" />
     <option name="标签页分组" path="ActionManager" hit="标签页分组" />
-    <option name="标签页外观" path="ActionManager" hit="标签页外观" />
     <option name="树操作" path="ActionManager" hit="树操作" />
     <option name="根目录" path="ActionManager" hit="根目录" />
     <option name="桌面目录" path="ActionManager" hit="桌面目录" />
@@ -816,6 +791,7 @@
     <option name="检查更新" path="ActionManager" hit="检查更新…" />
     <option name="并从磁盘重新加载" path="ActionManager" hit="检测所有外部更改的文件，并从磁盘重新加载" />
     <option name="检测所有外部更改的文件" path="ActionManager" hit="检测所有外部更改的文件，并从磁盘重新加载" />
+    <option name="检测项目目录" path="ActionManager" hit="检测项目目录" />
     <option name="模块设置" path="ActionManager" hit="模块设置" />
     <option name="欢迎屏幕" path="ActionManager" hit="欢迎屏幕" />
     <option name="水平布局" path="ActionManager" hit="水平布局" />
@@ -836,6 +812,7 @@
     <option name="混合" path="ActionManager" hit="混合 LTR/RTL 文本的主要方向" />
     <option name="bom" path="ActionManager" hit="添加 BOM" />
     <option name="添加" path="ActionManager" hit="添加 BOM" />
+    <option name="添加到主工具栏" path="ActionManager" hit="添加到主工具栏" />
     <option name="添加或移除文本光标" path="ActionManager" hit="添加或移除文本光标" />
     <option name="清除所有通知" path="ActionManager" hit="清除所有通知" />
     <option name="清除缓存" path="ActionManager" hit="清除缓存…" />
@@ -928,10 +905,8 @@
     <option name="编辑源" path="ActionManager" hit="编辑源" />
     <option name="不在编辑器中" path="ActionManager" hit="编辑源(不在编辑器中)" />
     <option name="编辑源" path="ActionManager" hit="编辑源(不在编辑器中)" />
-    <option name="vm" path="ActionManager" hit="编辑自定义 VM 选项…" />
-    <option name="编辑自定义" path="ActionManager" hit="编辑自定义 VM 选项…" />
-    <option name="选项" path="ActionManager" hit="编辑自定义 VM 选项…" />
     <option name="编辑自定义属性" path="ActionManager" hit="编辑自定义属性…" />
+    <option name="编辑自定义虚拟机选项" path="ActionManager" hit="编辑自定义虚拟机选项…" />
     <option name="编辑表单元" path="ActionManager" hit="编辑表单元" />
     <option name="ide" path="ActionManager" hit="缩小 IDE" />
     <option name="缩小" path="ActionManager" hit="缩小 IDE" />
@@ -963,7 +938,7 @@
     <option name="调试日志设置" path="ActionManager" hit="调试日志设置…" />
     <option name="路径导航" path="ActionManager" hit="路径导航" />
     <option name="跳转到上一个工具窗口" path="ActionManager" hit="跳转到上一个工具窗口" />
-    <option name="跳转到源代码" path="ActionManager" hit="跳转到源代码" />
+    <option name="跳转到源" path="ActionManager" hit="跳转到源" />
     <option name="转储可聚焦组件层次结构" path="ActionManager" hit="转储可聚焦组件层次结构" />
     <option name="转储线程" path="ActionManager" hit="转储线程" />
     <option name="vm" path="ActionManager" hit="转到 WSL VM 中的主目录" />
@@ -1058,6 +1033,8 @@
     <option name="和" path="ActionManager" hit="通过编号在编辑器中导航到某一行(和/或列)" />
     <option name="或列" path="ActionManager" hit="通过编号在编辑器中导航到某一行(和/或列)" />
     <option name="通过编号在编辑器中导航到某一行" path="ActionManager" hit="通过编号在编辑器中导航到某一行(和/或列)" />
+    <option name="部署" path="ActionManager" hit="部署" />
+    <option name="部署操作" path="ActionManager" hit="部署操作" />
     <option name="配置" path="ActionManager" hit="配置" />
     <option name="配置现有宏" path="ActionManager" hit="配置现有宏" />
     <option name="配置编辑器标签页" path="ActionManager" hit="配置编辑器标签页…" />
@@ -1120,13 +1097,17 @@
   </configurable>
   <configurable id="reference.settings.ide.settings.notifications" configurable_name="通知">
     <option name="不再询问通知" hit="不再询问通知 " />
+    <option name="关闭" hit="关闭" />
     <option name="启用系统通知" hit="启用系统通知" />
     <option name="在工具窗口中显示" hit="在工具窗口中显示" />
     <option name="弹出窗口类型" hit="弹出窗口类型 " />
+    <option name="当前输出完成后" hit="当前输出完成后" />
     <option name="播放声音" hit="播放声音" />
     <option name="无弹出窗口" hit="无弹出窗口" />
     <option name="显示气球通知" hit="显示气球通知" />
+    <option name="正在中断当前输出" hit="正在中断当前输出" />
     <option name="气球" hit="气球" />
+    <option name="用屏幕阅读器宣布" hit="用屏幕阅读器宣布 " />
     <option name="粘性气球" hit="粘性气球" />
     <option name="通知" hit="通知" />
   </configurable>
@@ -1309,27 +1290,23 @@
   <configurable id="advanced.settings" configurable_name="高级设置">
     <option name="" hit="  符号" />
     <option name="符号" hit="  符号" />
-    <option name="code" hit="Code Vision  显示内嵌提示所需的最小用法 " />
-    <option name="vision" hit="Code Vision  显示内嵌提示所需的最小用法 " />
-    <option name="显示内嵌提示所需的最小用法" hit="Code Vision  显示内嵌提示所需的最小用法 " />
+    <option name="code" hit="Code Vision  显示嵌入提示所需的最小用法数量 " />
+    <option name="vision" hit="Code Vision  显示嵌入提示所需的最小用法数量 " />
+    <option name="显示嵌入提示所需的最小用法数量" hit="Code Vision  显示嵌入提示所需的最小用法数量 " />
+    <option name="containers" hit="Dev Containers" />
+    <option name="dev" hit="Dev Containers" />
     <option name="docker" hit="Docker" />
-    <option name="actions" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="available" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="enable" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="everywhere" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="experimental" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="fixing" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="in" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="only" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="search" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="tab" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="typo" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="code" hit="Hide floating toolbar for code editing" />
-    <option name="editing" hit="Hide floating toolbar for code editing" />
-    <option name="floating" hit="Hide floating toolbar for code editing" />
-    <option name="for" hit="Hide floating toolbar for code editing" />
-    <option name="hide" hit="Hide floating toolbar for code editing" />
-    <option name="toolbar" hit="Hide floating toolbar for code editing" />
+    <option name="containers" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
+    <option name="creating" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
+    <option name="dev" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
+    <option name="development" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
+    <option name="enable" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
+    <option name="from" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
+    <option name="gateway" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
+    <option name="remote" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
+    <option name="screen" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
+    <option name="the" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
+    <option name="welcome" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
     <option name="ide" hit="IDE" />
     <option name="java" hit="Java" />
     <option name="kotlin" hit="Kotlin" />
@@ -1338,23 +1315,7 @@
     <option name="openssh" hit="OpenSSH 工具的自定义路径 " />
     <option name="工具的自定义路径" hit="OpenSSH 工具的自定义路径 " />
     <option name="ssh" hit="SSH" />
-    <option name="everywhere" hit="Search Everywhere" />
-    <option name="search" hit="Search Everywhere" />
     <option name="textconv" hit="TextConv" />
-    <option name="a" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="class" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="do" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="in" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="it" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="library" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="navigating" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="not" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="project" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="select" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="the" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="to" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="tree" hit="When navigating to a library class  do not select it in the project tree" />
-    <option name="when" hit="When navigating to a library class  do not select it in the project tree" />
     <option name="个字符" hit="个字符" />
     <option name="临时配置限制" hit="临时配置限制 " />
     <option name="0" hit="为替代屏幕缓冲区使用     行距  mc vim nano 等 " />
@@ -1374,32 +1335,32 @@
     <option name="代码元素链接的语法高亮显示" hit="代码元素链接的语法高亮显示" />
     <option name="以较低优先级运行编译" hit="以较低优先级运行编译" />
     <option name="作为编辑器标签页打开差异" hit="作为编辑器标签页打开差异" />
-    <option name="extend" hit="使用  Extend Selection  选择空白字符" />
-    <option name="selection" hit="使用  Extend Selection  选择空白字符" />
-    <option name="使用" hit="使用  Extend Selection  选择空白字符" />
-    <option name="选择空白字符" hit="使用  Extend Selection  选择空白字符" />
     <option name="escape" hit="使用 Escape 将焦点移至编辑器" />
     <option name="使用" hit="使用 Escape 将焦点移至编辑器" />
     <option name="将焦点移至编辑器" hit="使用 Escape 将焦点移至编辑器" />
     <option name="gradle" hit="使用 Gradle 运行" />
     <option name="使用" hit="使用 Gradle 运行" />
     <option name="运行" hit="使用 Gradle 运行" />
+    <option name="使用" hit="使用 扩展选区 选择空白字符" />
+    <option name="扩展选区" hit="使用 扩展选区 选择空白字符" />
+    <option name="选择空白字符" hit="使用 扩展选区 选择空白字符" />
     <option name="unicode" hit="使用其 Unicode 名称缩写渲染特殊字符 例如控制代码 " />
     <option name="使用其" hit="使用其 Unicode 名称缩写渲染特殊字符 例如控制代码 " />
     <option name="例如控制代码" hit="使用其 Unicode 名称缩写渲染特殊字符 例如控制代码 " />
     <option name="名称缩写渲染特殊字符" hit="使用其 Unicode 名称缩写渲染特殊字符 例如控制代码 " />
     <option name="使用安全强制推送" hit="使用安全强制推送" />
+    <option name="保留上次选择的搜索范围" hit="保留上次选择的搜索范围" />
     <option name="像素" hit="像素" />
+    <option name="允许通过标题拖动工具窗口移动到另一个位置" hit="允许通过标题拖动工具窗口移动到另一个位置" />
     <option name="免打扰模式下的左边距" hit="免打扰模式下的左边距 " />
     <option name="内联代码的基本语法高亮显示" hit="内联代码的基本语法高亮显示" />
+    <option name="分支名称清理符号" hit="分支名称清理符号 " />
     <option name="切换提交控件" hit="切换提交控件" />
     <option name="制表符呈现" hit="制表符呈现 " />
     <option name="make" hit="即使开发的应用程序当前正在运行 也允许自动 make 启动" />
     <option name="也允许自动" hit="即使开发的应用程序当前正在运行 也允许自动 make 启动" />
     <option name="即使开发的应用程序当前正在运行" hit="即使开发的应用程序当前正在运行 也允许自动 make 启动" />
     <option name="启动" hit="即使开发的应用程序当前正在运行 也允许自动 make 启动" />
-    <option name="参与者等待超时" hit="参与者等待超时 毫秒  " />
-    <option name="毫秒" hit="参与者等待超时 毫秒  " />
     <option name="启动" hit="启动" />
     <option name="启用" hit="启用 提交 工具窗口" />
     <option name="工具窗口" hit="启用 提交 工具窗口" />
@@ -1414,6 +1375,12 @@
     <option name="在" hit="在 查找用法 视图中启用类似用法集群" />
     <option name="查找用法" hit="在 查找用法 视图中启用类似用法集群" />
     <option name="视图中启用类似用法集群" hit="在 查找用法 视图中启用类似用法集群" />
+    <option name="中启用实验性拼写错误修复" hit="在 随处搜索 中启用实验性拼写错误修复 仅在 操作 选项卡中可用 " />
+    <option name="仅在" hit="在 随处搜索 中启用实验性拼写错误修复 仅在 操作 选项卡中可用 " />
+    <option name="在" hit="在 随处搜索 中启用实验性拼写错误修复 仅在 操作 选项卡中可用 " />
+    <option name="操作" hit="在 随处搜索 中启用实验性拼写错误修复 仅在 操作 选项卡中可用 " />
+    <option name="选项卡中可用" hit="在 随处搜索 中启用实验性拼写错误修复 仅在 操作 选项卡中可用 " />
+    <option name="随处搜索" hit="在 随处搜索 中启用实验性拼写错误修复 仅在 操作 选项卡中可用 " />
     <option name="中显示文本搜索结果" hit="在 随处搜索 中显示文本搜索结果" />
     <option name="在" hit="在 随处搜索 中显示文本搜索结果" />
     <option name="随处搜索" hit="在 随处搜索 中显示文本搜索结果" />
@@ -1422,7 +1389,7 @@
     <option name="窗口中打开从分离窗口调用的声明源" hit="在主 IDE 窗口中打开从分离窗口调用的声明源" />
     <option name="在列表和树中循环滚动" hit="在列表和树中循环滚动" />
     <option name="在同一个标签页中打开声明源" hit="在同一个标签页中打开声明源" />
-    <option name="在显示结果之前等待所有参与者完成" hit="在显示结果之前等待所有参与者完成" />
+    <option name="在显示结果之前等待所有贡献者完成" hit="在显示结果之前等待所有贡献者完成" />
     <option name="剪切" hit="在未选择任何内容的情况下调用 复制 或 剪切 操作时不复制 剪切当前行" />
     <option name="剪切当前行" hit="在未选择任何内容的情况下调用 复制 或 剪切 操作时不复制 剪切当前行" />
     <option name="在未选择任何内容的情况下调用" hit="在未选择任何内容的情况下调用 复制 或 剪切 操作时不复制 剪切当前行" />
@@ -1462,6 +1429,8 @@
     <option name="对" hit="对 macOS 键盘快捷键使用单词而不是符号" />
     <option name="键盘快捷键使用单词而不是符号" hit="对 macOS 键盘快捷键使用单词而不是符号" />
     <option name="对代码行长度超过此值的文档强制进行自动换行" hit="对代码行长度超过此值的文档强制进行自动换行 " />
+    <option name="导航到库类时" hit="导航到库类时 请勿在项目树中选择它" />
+    <option name="请勿在项目树中选择它" hit="导航到库类时 请勿在项目树中选择它" />
     <option name="导航到文件时" hit="导航到文件时 首选在停用拆分窗格中选择现有标签页" />
     <option name="首选在停用拆分窗格中选择现有标签页" hit="导航到文件时 首选在停用拆分窗格中选择现有标签页" />
     <option name="selinux" hit="将  z 挂载选项应用于 SELinux 系统的几乎所有绑定卷 " />
@@ -1511,6 +1480,7 @@
     <option name="检查传入和传出提交" hit="检查传入和传出提交" />
     <option name="毫秒" hit="毫秒" />
     <option name="水平线" hit="水平线" />
+    <option name="点" hit="点" />
     <option name="版本控制" hit="版本控制" />
     <option name="git" hit="版本控制  Git" />
     <option name="版本控制" hit="版本控制  Git" />
@@ -1532,7 +1502,10 @@
     <option name="编辑器" hit="编辑器" />
     <option name="编辑器标签页" hit="编辑器标签页" />
     <option name="行" hit="行" />
+    <option name="行号的字体增量" hit="行号的字体增量 " />
     <option name="调试器" hit="调试器" />
+    <option name="毫秒" hit="贡献者等待超时 毫秒  " />
+    <option name="贡献者等待超时" hit="贡献者等待超时 毫秒  " />
     <option name="调试" hit="运行 调试" />
     <option name="运行" hit="运行 调试" />
     <option name="选择包含要推送的新提交的所有仓库" hit="选择包含要推送的新提交的所有仓库" />
@@ -1554,6 +1527,7 @@
     <option name="长箭头" hit="长箭头" />
     <option name="随处搜索" hit="随处搜索" />
     <option name="隐藏浮动工具栏" hit="隐藏浮动工具栏" />
+    <option name="隐藏用于代码编辑的浮动工具栏" hit="隐藏用于代码编辑的浮动工具栏" />
     <option name="项目范围分析" hit="项目范围分析" />
     <option name="项目范围分析使用的线程计数" hit="项目范围分析使用的线程计数 " />
     <option name="项目视图" hit="项目视图" />
