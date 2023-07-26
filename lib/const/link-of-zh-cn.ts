@@ -1,9 +1,9 @@
 
 /**
- * @default '336606'
+ * @default '365581'
  * @deprecated
  */
-export const __plugin_zh_cn_id: string = '336606';
+export const __plugin_zh_cn_id: string = '365581';
 
 /**
  * @default '232'
@@ -11,14 +11,14 @@ export const __plugin_zh_cn_id: string = '336606';
  */
 export const __plugin_zh_cn_series: string = '232';
 /**
- * @default '232.105'
+ * @default '232.172'
  * @deprecated
  */
-export const __plugin_zh_cn_version: string = '232.105';
+export const __plugin_zh_cn_version: string = '232.172';
 
 /**
- * @see https://plugins.jetbrains.com/plugin/download?rel=true&updateId=336606
+ * @see https://plugins.jetbrains.com/plugin/download?rel=true&updateId=365581
  * @deprecated
  */
-export const __plugin_zh_cn_download: string = 'https://plugins.jetbrains.com/plugin/download?rel=true&updateId=336606';
+export const __plugin_zh_cn_download: string = 'https://plugins.jetbrains.com/plugin/download?rel=true&updateId=365581';
 
