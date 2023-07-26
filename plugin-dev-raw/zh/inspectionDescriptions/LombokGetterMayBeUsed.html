@@ -1,0 +1,45 @@
+<html>
+<body>
+報告可由 lombok <code>@Getter</code> 註解取代的標準 getter 方法。
+<p>範例：</p>
+<pre><code>
+  import java.util.Date;
+
+  public class MyClass {
+    /**
+     * 處理日期。
+     */
+    private Date processDate;
+
+    /**
+     * 返回日期。
+     *
+     * @return The date
+     */
+    public Date getProcessDate() {
+      return processDate;
+    }
+  }
+</code></pre>
+<p>在套用快速修復/清理後：</p>
+<pre><code>
+  import lombok.Getter;
+  import java.util.Date;
+
+  @Getter
+  public class MyClass {
+    /**
+     * 處理日期。
+     * -- GETTER --
+     * 返回日期。
+     *
+     * @return The date
+     */
+    private Date processDate;
+  }
+</code></pre>
+<p>它僅在組態 lombok 庫時報告。 要移除 lombok，請參閱 lombok 網站。</p>
+<!-- tooltip end -->
+<p><small>2023.2 最新變化</small></p>
+</body>
+</html>

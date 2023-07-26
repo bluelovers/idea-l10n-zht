@@ -1,0 +1,26 @@
+<html>
+<body>
+報告錯誤的類型斷言或類型 switch，例如 <code>err.(*MyErr)</code> 或 <code>switch err.(type)</code>，並建議改為使用 <code>errors.As</code>。
+<p>從 Go 1.13 開始，可以使用 <code>fmt.Errorf</code> 函式和 <code>%w</code> 動詞來包裝錯誤。 因此，錯誤的類型斷言或類型 switch可能會在已包裝錯誤上失敗。 從 Go 1.13 開始，檢查特定錯誤的首選方式是使用標準庫中的 <code>errors.As</code> 函式。</p>
+<p>快速修復會將錯誤的類型斷言和類型 switch 取代為對 <code>errors.As</code> 的呼叫。</p>
+<p><b>範例</b></p>
+<pre><code>
+errFoo, ok := err.(*ErrFoo)
+
+
+switch err.(type) {
+  case *ErrBar:
+}
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+var errFoo *ErrFoo
+ok := errors.As(err, &errFoo)
+
+var errBar *ErrBar
+switch {
+case errors.As(err, &errBar):
+}
+</code></pre>
+</body>
+</html>

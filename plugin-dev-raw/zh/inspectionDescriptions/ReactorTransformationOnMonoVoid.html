@@ -3,8 +3,8 @@
 <p>報告對 Reactor 鏈內的 <code>Mono&lt;Void&gt;</code> 值呼叫的轉換動作。</p>
 
 <p>
-  <code>Mono&lt;Void&gt;</code> 會在沒有任何值的情況下完成，這就是為什麼沒有任何東西可以呼叫轉換函式的原因。
-  快速修復建議將 <code>map()</code> 和 <code>flatMap()</code> 取代為 <code>then()</code>。
+  <code>Mono&lt;Void&gt;</code> 會在沒有任何值的情況下完成，這就是不會在轉換函式上調用任何內容的原因。
+  該快速修復會建議將 <code>map()</code> 和 <code>flatMap()</code> 取代為 <code>then()</code>。
 </p>
 <!-- tooltip end -->
 <p><b>範例：</b></p>

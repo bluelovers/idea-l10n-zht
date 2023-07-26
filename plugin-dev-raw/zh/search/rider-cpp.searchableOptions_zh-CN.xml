@@ -629,12 +629,6 @@
     <option name="all" path="命名" hit="ALL UPPER" />
     <option name="upper" path="命名" hit="ALL UPPER" />
     <option name="c" hit="C  " />
-    <option name="c" path="選項" hit="C   Formatting Engine" />
-    <option name="engine" path="選項" hit="C   Formatting Engine" />
-    <option name="formatting" path="選項" hit="C   Formatting Engine" />
-    <option name="c" hit="C++ Formatting Engine" />
-    <option name="engine" hit="C++ Formatting Engine" />
-    <option name="formatting" hit="C++ Formatting Engine" />
     <option name="c" hit="C++/CLI 泛型約束冒號前" />
     <option name="cli" hit="C++/CLI 泛型約束冒號前" />
     <option name="泛型約束冒號前" hit="C++/CLI 泛型約束冒號前" />
@@ -698,6 +692,10 @@
     <option name="case" hit="switch case 或標籤語句中的冒號後" />
     <option name="switch" hit="switch case 或標籤語句中的冒號後" />
     <option name="或標籤語句中的冒號後" hit="switch case 或標籤語句中的冒號後" />
+    <option name="с" path="選項" hit="С   格式設定引擎" />
+    <option name="格式設定引擎" path="選項" hit="С   格式設定引擎" />
+    <option name="с" hit="С++ 格式設定引擎" />
+    <option name="格式設定引擎" hit="С++ 格式設定引擎" />
     <option name="с" path="選項" hit="Сlang format С " />
     <option name="сlang-format" path="選項" hit="Сlang format С " />
     <option name="-" hit="一元運算符(+、-、~、*、&amp;、++、--)後" />
@@ -712,6 +710,9 @@
     <option name="從第一列開始縮排註釋" hit="從第一列開始縮排註釋" />
     <option name="從類別縮排存取說明符" hit="從類別縮排存取說明符" />
     <option name="從存取說明符縮排類別成員" hit="從存取說明符縮排類別成員" />
+    <option name="位域宣告中的冒號之前" hit="位域宣告中的冒號之前" />
+    <option name="位域宣告中的冒號之後" hit="位域宣告中的冒號之後" />
+    <option name="位域大小" hit="位域大小" />
     <option name="c" hit="使用 ReSharper C++ 格式化程序格式化程式碼並執行格式檢查。可以手動或通過自動檢測組態。還可以從 .clang-format 組態檔案中讀取格式設定。" />
     <option name="clang-format" hit="使用 ReSharper C++ 格式化程序格式化程式碼並執行格式檢查。可以手動或通過自動檢測組態。還可以從 .clang-format 組態檔案中讀取格式設定。" />
     <option name="resharper" hit="使用 ReSharper C++ 格式化程序格式化程式碼並執行格式檢查。可以手動或通過自動檢測組態。還可以從 .clang-format 組態檔案中讀取格式設定。" />
@@ -977,7 +978,7 @@
     <option name="括號之前" hit="括號之前" />
     <option name="按初始化順序對成員初始設定式排序" hit="按初始化順序對成員初始設定式排序" />
     <option name="0" path="選項" hit="捆綁 來自 LLVM         B " />
-    <option name="16" path="選項" hit="捆綁 來自 LLVM         B " />
+    <option name="17" path="選項" hit="捆綁 來自 LLVM         B " />
     <option name="b" path="選項" hit="捆綁 來自 LLVM         B " />
     <option name="llvm" path="選項" hit="捆綁 來自 LLVM         B " />
     <option name="捆綁" path="選項" hit="捆綁 來自 LLVM         B " />
@@ -1057,6 +1058,7 @@
     <option name="縮排對齊的" hit="縮排對齊的 ?: 運算符" />
     <option name="運算符" hit="縮排對齊的 ?: 運算符" />
     <option name="縮排匯出宣告塊成員" hit="縮排匯出宣告塊成員" />
+    <option name="縮排成員初始設定式列表" hit="縮排成員初始設定式列表" />
     <option name="縮排方法呼叫的圓括號" hit="縮排方法呼叫的圓括號" />
     <option name="縮排樣式" hit="縮排樣式" />
     <option name="for" hit="縮排語句(if、while、for 等)圓括號" />
@@ -1130,9 +1132,6 @@
     <option name="預設指針初始設定式" hit="預設指針初始設定式" />
     <option name="" path="縮排和對齊" hit="?: 運算符" />
     <option name="運算符" path="縮排和對齊" hit="?: 運算符" />
-    <option name="c" path="選項" hit="C++ Formatting Engine" />
-    <option name="engine" path="選項" hit="C++ Formatting Engine" />
-    <option name="formatting" path="選項" hit="C++ Formatting Engine" />
     <option name="c" path="空格" hit="C++/CLI 泛型約束冒號前" />
     <option name="cli" path="空格" hit="C++/CLI 泛型約束冒號前" />
     <option name="泛型約束冒號前" path="空格" hit="C++/CLI 泛型約束冒號前" />
@@ -1179,6 +1178,8 @@
     <option name="case" path="空格" hit="switch case 或標籤語句中的冒號後" />
     <option name="switch" path="空格" hit="switch case 或標籤語句中的冒號後" />
     <option name="或標籤語句中的冒號後" path="空格" hit="switch case 或標籤語句中的冒號後" />
+    <option name="с" path="選項" hit="С++ 格式設定引擎" />
+    <option name="格式設定引擎" path="選項" hit="С++ 格式設定引擎" />
     <option name="-" path="空格" hit="一元運算符(+、-、~、*、&amp;、++、--)後" />
     <option name="--" path="空格" hit="一元運算符(+、-、~、*、&amp;、++、--)後" />
     <option name="一元運算符" path="空格" hit="一元運算符(+、-、~、*、&amp;、++、--)後" />
@@ -1191,6 +1192,9 @@
     <option name="從第一列開始縮排註釋" path="縮排和對齊" hit="從第一列開始縮排註釋" />
     <option name="從類別縮排存取說明符" path="縮排和對齊" hit="從類別縮排存取說明符" />
     <option name="從存取說明符縮排類別成員" path="縮排和對齊" hit="從存取說明符縮排類別成員" />
+    <option name="位域宣告中的冒號之前" path="空格" hit="位域宣告中的冒號之前" />
+    <option name="位域宣告中的冒號之後" path="空格" hit="位域宣告中的冒號之後" />
+    <option name="位域大小" path="縮排和對齊" hit="位域大小" />
     <option name="c" path="選項" hit="使用 ReSharper C++ 格式化程序格式化程式碼並執行格式檢查。可以手動或通過自動檢測組態。還可以從 .clang-format 組態檔案中讀取格式設定。" />
     <option name="clang-format" path="選項" hit="使用 ReSharper C++ 格式化程序格式化程式碼並執行格式檢查。可以手動或通過自動檢測組態。還可以從 .clang-format 組態檔案中讀取格式設定。" />
     <option name="resharper" path="選項" hit="使用 ReSharper C++ 格式化程序格式化程式碼並執行格式檢查。可以手動或通過自動檢測組態。還可以從 .clang-format 組態檔案中讀取格式設定。" />
@@ -1505,6 +1509,7 @@
     <option name="縮排對齊的" path="縮排和對齊" hit="縮排對齊的 ?: 運算符" />
     <option name="運算符" path="縮排和對齊" hit="縮排對齊的 ?: 運算符" />
     <option name="縮排匯出宣告塊成員" path="縮排和對齊" hit="縮排匯出宣告塊成員" />
+    <option name="縮排成員初始設定式列表" path="縮排和對齊" hit="縮排成員初始設定式列表" />
     <option name="縮排方法呼叫的圓括號" path="縮排和對齊" hit="縮排方法呼叫的圓括號" />
     <option name="縮排樣式" path="制表符和縮排" hit="縮排樣式" />
     <option name="for" path="縮排和對齊" hit="縮排語句(if、while、for 等)圓括號" />
@@ -1585,6 +1590,9 @@
     <option name="clang" hit="#pragma-messages clang diagnostic" />
     <option name="diagnostic" hit="#pragma-messages clang diagnostic" />
     <option name="pragma-messages" hit="#pragma-messages clang diagnostic" />
+    <option name="" hit="#warning 指令" />
+    <option name="warning" hit="#warning 指令" />
+    <option name="指令" hit="#warning 指令" />
     <option name="" hit="#warnings clang diagnostic" />
     <option name="clang" hit="#warnings clang diagnostic" />
     <option name="diagnostic" hit="#warnings clang diagnostic" />
@@ -5528,6 +5536,8 @@
     <option name="clang" hit="static-self-init clang diagnostic" />
     <option name="diagnostic" hit="static-self-init clang diagnostic" />
     <option name="static-self-init" hit="static-self-init clang diagnostic" />
+    <option name="staticassert" hit="staticassert 失敗" />
+    <option name="失敗" hit="staticassert 失敗" />
     <option name="clang" hit="stdlibcxx-not-found clang diagnostic" />
     <option name="diagnostic" hit="stdlibcxx-not-found clang diagnostic" />
     <option name="stdlibcxx-not-found" hit="stdlibcxx-not-found clang diagnostic" />
@@ -6150,10 +6160,14 @@
     <option name="關鍵詞" hit="關鍵詞“default”用作關鍵字" />
     <option name="用作關鍵字" hit="關鍵詞“default”用作關鍵字" />
     <option name="其他位置換行冗餘" hit="其他位置換行冗餘" />
+    <option name="其他位置有冗餘的縮排" hit="其他位置有冗餘的縮排/減少縮排" />
+    <option name="減少縮排" hit="其他位置有冗餘的縮排/減少縮排" />
     <option name="其他位置空行冗餘" hit="其他位置空行冗餘" />
     <option name="其他位置缺少換行" hit="其他位置缺少換行" />
     <option name="其他位置缺少空格" hit="其他位置缺少空格" />
     <option name="其他位置缺少空行" hit="其他位置缺少空行" />
+    <option name="其他位置缺少縮排" hit="其他位置缺少縮排/減少縮排" />
+    <option name="減少縮排" hit="其他位置缺少縮排/減少縮排" />
     <option name="core" hit="具有成員指針參數的委託建構函式不受 .NET Core 支援" />
     <option name="net" hit="具有成員指針參數的委託建構函式不受 .NET Core 支援" />
     <option name="具有成員指針參數的委託建構函式不受" hit="具有成員指針參數的委託建構函式不受 .NET Core 支援" />
@@ -6411,6 +6425,7 @@
     <option name="未在任何藍圖中實作" hit="未在任何藍圖中實作 BlueprintImplementableEvent 函式" />
     <option name="未實作私有特殊成員函式" hit="未實作私有特殊成員函式" />
     <option name="未找到預編譯的標頭" hit="未找到預編譯的標頭" />
+    <option name="未還原縮排級別" hit="未還原縮排級別" />
     <option name="條件表達式中的冗餘參數" hit="條件表達式中的冗餘參數" />
     <option name="建構函式" hit="建構函式/解構函式內虛擬函式的呼叫將導致純虛擬函式呼叫" />
     <option name="解構函式內虛擬函式的呼叫將導致純虛擬函式呼叫" hit="建構函式/解構函式內虛擬函式的呼叫將導致純虛擬函式呼叫" />
@@ -6431,6 +6446,7 @@
     <option name="typename" hit="沒有“typename”關鍵詞的相依類型" />
     <option name="關鍵詞的相依類型" hit="沒有“typename”關鍵詞的相依類型" />
     <option name="沒有" hit="沒有“typename”關鍵詞的相依類型" />
+    <option name="沒有基礎類型的前向枚舉宣告" hit="沒有基礎類型的前向枚舉宣告" />
     <option name="engine" hit="沒有預定義 Unreal 巨集的 Unreal Engine 原始檔" />
     <option name="unreal" hit="沒有預定義 Unreal 巨集的 Unreal Engine 原始檔" />
     <option name="巨集的" hit="沒有預定義 Unreal 巨集的 Unreal Engine 原始檔" />
@@ -6471,9 +6487,6 @@
     <option name="防護" hit="缺少 include 防護" />
     <option name="範圍宣告中可能非有意的不相容參照類型" hit="範圍宣告中可能非有意的不相容參照類型" />
     <option name="行尾的冗餘空格" hit="行尾的冗餘空格" />
-    <option name="行應在其他位置縮排或減少縮排" hit="行應在其他位置縮排或減少縮排" />
-    <option name="行縮排應還原到其他位置以前的級別" hit="行縮排應還原到其他位置以前的級別" />
-    <option name="行縮排相對於其他位置的上一行不應更改" hit="行縮排相對於其他位置的上一行不應更改" />
     <option name="表達式大括號周圍" hit="表達式大括號周圍" />
     <option name="存取說明符不會影響任何宣告" hit="存取說明符不會影響任何宣告" />
     <option name="存取說明符不會更改存取級別" hit="存取說明符不會更改存取級別" />
@@ -6749,6 +6762,8 @@
     <option name="助記鍵" hit="助記鍵 M  " />
     <option name="m" hit="助記鍵(M):" />
     <option name="助記鍵" hit="助記鍵(M):" />
+    <option name="u" hit="包圍 U " />
+    <option name="包圍" hit="包圍 U " />
     <option name="a" hit="可用性 A  " />
     <option name="可用性" hit="可用性 A  " />
     <option name="c" hit="在上下文動作中顯示 C " />
@@ -6761,8 +6776,6 @@
     <option name="描述" hit="描述 D  " />
     <option name="d" hit="描述(D):" />
     <option name="描述" hit="描述(D):" />
-    <option name="u" hit="環繞 U " />
-    <option name="環繞" hit="環繞 U " />
     <option name="g" hit="生成 G " />
     <option name="生成" hit="生成 G " />
     <option name="用於" hit="用於 " />

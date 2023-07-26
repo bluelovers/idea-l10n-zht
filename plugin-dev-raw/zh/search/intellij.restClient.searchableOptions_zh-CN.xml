@@ -24,6 +24,8 @@
     <option name="http" path="ActionManager" hit="建立新的 HTTP 請求檔案" />
     <option name="建立新的" path="ActionManager" hit="建立新的 HTTP 請求檔案" />
     <option name="請求檔案" path="ActionManager" hit="建立新的 HTTP 請求檔案" />
+    <option name="前進" path="ActionManager" hit="前進" />
+    <option name="後退" path="ActionManager" hit="後退" />
     <option name="http" path="ActionManager" hit="在 HTTP 客戶端中建立請求" />
     <option name="在" path="ActionManager" hit="在 HTTP 客戶端中建立請求" />
     <option name="客戶端中建立請求" path="ActionManager" hit="在 HTTP 客戶端中建立請求" />
@@ -61,6 +63,7 @@
     <option name="http" path="ActionManager" hit="顯示 HTTP 請求歷史記錄" />
     <option name="顯示" path="ActionManager" hit="顯示 HTTP 請求歷史記錄" />
     <option name="請求歷史記錄" path="ActionManager" hit="顯示 HTTP 請求歷史記錄" />
+    <option name="顯示預覽" path="ActionManager" hit="顯示預覽" />
     <option name="新增請求" path="ActionManager" hit="新增請求" />
     <option name="curl" path="ActionManager" hit="轉換到 cURL 並複製" />
     <option name="並複製" path="ActionManager" hit="轉換到 cURL 並複製" />
@@ -69,8 +72,6 @@
   <configurable id="reference.settingsdialog.IDE.editor.colors.HTTP 請求" configurable_name="HTTP 請求">
     <option name="http" hit="HTTP 請求" />
     <option name="請求" hit="HTTP 請求" />
-    <option name="escaped" hit="Escaped Value" />
-    <option name="value" hit="Escaped Value" />
     <option name="變數大括號" hit="變數大括號" />
     <option name="響應歷史記錄符號" hit="響應歷史記錄符號" />
     <option name="響應歷史記錄路徑" hit="響應歷史記錄路徑" />
@@ -88,6 +89,7 @@
     <option name="請求參數名稱" hit="請求參數名稱" />
     <option name="請求正文" hit="請求正文" />
     <option name="請求連接埠" hit="請求連接埠" />
+    <option name="轉義值" hit="轉義值" />
     <option name="輸入檔案符號" hit="輸入檔案符號" />
     <option name="輸入檔案路徑" hit="輸入檔案路徑" />
   </configurable>
@@ -106,8 +108,12 @@
     <option name="空格" path="空格" hit="空格" />
     <option name="縮排" path="制表符和縮排" hit="縮排 " />
     <option name="設定自" hit="設定自 " />
+    <option name="" path="空格" hit="'&amp;' 之前有空格" />
+    <option name="之前有空格" path="空格" hit="'&amp;' 之前有空格" />
     <option name="" path="換行和大括號" hit="':' 符號置於下一行" />
     <option name="符號置於下一行" path="換行和大括號" hit="':' 符號置於下一行" />
+    <option name="" path="空格" hit="'=' 周圍有空格" />
+    <option name="周圍有空格" path="空格" hit="'=' 周圍有空格" />
     <option name="" path="換行和大括號" hit="'?' 和 ':' 符號置於下一行" />
     <option name="和" path="換行和大括號" hit="'?' 和 ':' 符號置於下一行" />
     <option name="符號置於下一行" path="換行和大括號" hit="'?' 和 ':' 符號置於下一行" />
@@ -144,13 +150,9 @@
     <option name="" path="換行和大括號" hit="'while()' 語句" />
     <option name="while" path="換行和大括號" hit="'while()' 語句" />
     <option name="語句" path="換行和大括號" hit="'while()' 語句" />
-    <option name="" path="空格" hit="'x-www-form-urlencoded' parameters" />
-    <option name="parameters" path="空格" hit="'x-www-form-urlencoded' parameters" />
-    <option name="x-www-form-urlencoded" path="空格" hit="'x-www-form-urlencoded' parameters" />
-    <option name="before" path="空格" hit="Space before '&amp;'" />
-    <option name="space" path="空格" hit="Space before '&amp;'" />
-    <option name="around" path="空格" hit="Spaces around '='" />
-    <option name="spaces" path="空格" hit="Spaces around '='" />
+    <option name="" path="空格" hit="'x-www-form-urlencoded' 參數" />
+    <option name="x-www-form-urlencoded" path="空格" hit="'x-www-form-urlencoded' 參數" />
+    <option name="參數" path="空格" hit="'x-www-form-urlencoded' 參數" />
     <option name="throws" path="換行和大括號" hit="Throws 列表" />
     <option name="列表" path="換行和大括號" hit="Throws 列表" />
     <option name="extends" path="換行和大括號" hit="extends/implements/permits 關鍵字" />

@@ -16,12 +16,12 @@
 
   // 空 
   @Configuration
-  @Profile() // 報告 "組態檔案表達式必須包含文本"
+  @Profile() // 報告“組態檔案表達式必須包含文本”
   public class MyConfiguration {...}
 
   // 不帶圓括號的混合運算符 
   @Configuration
-  @Profile("a & b | c") // 報告 "格式不正確的組態檔案表達式"
+  @Profile("a & b | c") // 報告“格式不正確的組態檔案表達式”
   public class MyConfiguration {...}
 </code></pre>
 </body>

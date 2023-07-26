@@ -1,6 +1,6 @@
 <html>
 <body>
-報告對 <code>toString()</code> 或 <code>substring()</code> 等可取代為更簡單表達式的 <code>String</code> 建構函式和方法的冗餘呼叫。
+報告對 <code>toString()</code> 或 <code>substring()</code> 等可被取代為更簡單表達式的 <code>String</code> 建構函式和方法的冗餘呼叫。
 <p>例如，在 <code>"string".substring(0)</code>、<code>"string".toString()</code> 或
 <code>new StringBuilder().toString().substring(1,3)</code> 等程式碼中，可以安全移除對這些方法的呼叫。</p>
 <p>範例：</p>
@@ -17,7 +17,7 @@
 </p>
 <!-- tooltip end -->
 <p>
-  請使用下方的<b>不報告 String 建構函式呼叫</b>選項來不報告程式碼（如上例所示）。
+  使用下方的<b>不報告 String 建構函式呼叫</b>選項可以不報告如上例所示的程式碼。
   這將避免在使用 <code>new String()</code> 呼叫保證不同物件相等性的程式碼中套用快速修復後改變與 <code>==</code> 或 <code>!=</code> 進行字串比較的結果。
 </p>
 <p><small>2018.1 最新變化</small></p>

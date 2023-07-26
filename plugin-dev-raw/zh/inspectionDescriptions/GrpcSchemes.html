@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>
+  報告 gRPC 請求中不必要的 `grpc` 或標準的 `http[s]` 方案用法
+</p>
+<p>
+  範例請求：
+</p>
+<pre><code>
+# `grpc` 方案可以省略，因為預設情況下假定連線不安全
+GRPC grpc://localhost/TestService/testRpc
+
+# `http` 方案可以省略：對於不安全的連線首選空方案，對於安全的連線則首選專用的 `grpcs` 方案
+GRPC http://localhost/TestService/testRpc
+
+# `https` 方案應取代為 `grpcs`：首選專用的 `grpcs` 方案，表示需要啟用傳輸層安全才能執行請求
+GRPC https://localhost/TestService/testRpc
+</code></pre>
+<!-- tooltip end -->
+<p>為避免混淆，建議在 gRPC 請求中使用專用的 `grpcs` 方案，此時請求應使用底層的安全通道。 否則，方案可能會被完全省略</p>
+</body>
+</html>

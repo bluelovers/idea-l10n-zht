@@ -2,8 +2,8 @@
 <body>
 報告資源包中包含的屬性檔案中的問題。
 <ul>
-  <li><b>報告失踪的翻譯</b> <br><br>
-  使用此選項可以報告在父屬性檔案中包含但在繼承中缺失的的屬性（除非它是語言方言）。
+  <li><b>報告缺失的翻譯</b> <br><br>
+  使用此選項可以報告在父屬性檔案中包含但在繼承屬性中缺失的屬性（除非它是語言方言）。
 
   <br><br> <p>範例：</p>
   <pre><code>
@@ -14,11 +14,11 @@
     # 空檔案
   </code></pre>
 
-  空屬性 <code>abc</code> 將報告為未翻譯。
+  空屬性 <code>abc</code> 將被報告為未翻譯。
   <br><br><br> </li>
 
   <li><b>報告不一致的屬性</b> <br><br>
-  使用此選項可以報告在繼承屬性檔案中包含但在父級（如果沒有父級，則在同級）中缺失的屬性。
+  使用此選項可以報告在繼承屬性檔案中包含但在父屬性（如果沒有父屬性，則在同級屬性）中缺失的屬性。
 
   <br><br> <p>範例：</p>
   <pre><code>
@@ -46,8 +46,8 @@
   屬性 <code>abc</code> 將在檔案 <code>messages_fr.properties</code> 中報告為不必要地繼承。
   <br><br><br> </li>
 
-  <li><b>報告被不同的佔位符覆寫的屬性</b> <br><br>
-  使用此選項可檢查覆寫屬性中的佔位符一致性。
+  <li><b>報告使用不同的佔位符覆寫的屬性</b> <br><br>
+  使用此選項可以檢查被覆寫的屬性中的佔位符一致性。
 
   <br><br> <p>範例：</p>
   <pre><code>
@@ -60,11 +60,11 @@
     abc={0}yyy
   </code></pre>
 
-  將報告屬性 <code>abc</code>，因為屬性包含值與 <code>messages.properties</code> 不對應的訊息格式佔位符。
+  屬性 <code>abc</code> 將被報告為包含訊息格式佔位符的屬性，與 <code>messages.properties</code> 不對應。
   <br><br><br> </li>
 
   <li><b>報告使用不同值結尾覆寫的屬性</b> <br><br>
-  使用此選項可檢查覆寫屬性中的結尾一致性。
+  使用此選項可以檢查被覆寫的屬性中的結尾一致性。
   <br><br> <p>範例：</p>
 
   <pre><code>
@@ -75,7 +75,7 @@
     abc=xxx;
   </code></pre>
 
-  屬性 <code>abc</code> 將被報告為以特殊符號（<code>!</code> / <code>?</code> / <code>.</code> / <code>:</code> / <code>;</code>）結尾，而 <code>messages.properties</code> 中的父值則不會。
+  屬性 <code>abc</code> 將被報告為以特殊符號 (<code>!</code> / <code>?</code> / <code>.</code> / <code>:</code> / <code>;</code>) 結尾，而 <code>messages.properties</code> 中的父值則不會。
   </li>
 </ul>
 </body>

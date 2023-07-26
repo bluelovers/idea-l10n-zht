@@ -1,42 +1,42 @@
 <html>
 <body>
 報告未在 <code>finally</code> 塊內執行的 JUnit 3 的 <code>super.tearDown()</code> 方法的呼叫。
-如果 <code>tearDown()</code> 方法中還有可能會在 <code>super.tearDown()</code> 呼叫之前拋出異常的其他方法呼叫，這可能會導致不一致和泄漏。
+如果在呼叫 <code>super.tearDown()</code> 之前拋出異常，可能會導致不一致和泄露。
 <p><b>範例：</b></p>
-<pre><code>
-  <b>public class</b> AnotherTest <b>extends</b> CompanyTestCase {
-    <b>private</b> Path path;
+<pre><code lang="java">
+  public class AnotherTest extends CompanyTestCase {
+    private Path path;
 
     @Override
-    <b>protected void</b> setUp() <b>throws</b> Exception {
-      <b>super</b>.setUp();
-      path = Files.createTempFile("abcde", ".tmp");
+    protected void setUp() throws Exception {
+      super.setUp();
+      path = Files.createTempFile("File", ".tmp");
     }
 
     @Override
-    <b>protected void</b> tearDown() <b>throws</b> Exception {
+    protected void tearDown() throws Exception {
       Files.delete(path);
-      <b>super</b>.tearDown();
+      super.tearDown();
     }
   }
 </code></pre>
 <p>改進後的程式碼：</p>
-<pre><code>
-  <b>public class</b> AnotherTest <b>extends</b> CompanyTestCase {
-    <b>private</b> Path path;
+<pre><code lang="java">
+  public class AnotherTest extends CompanyTestCase {
+    private Path path;
 
     @Override
-    <b>protected void</b> setUp() <b>throws</b> Exception {
-      <b>super</b>.setUp();
-      path = Files.createTempFile("abcde", ".tmp");
+    protected void setUp() throws Exception {
+      super.setUp();
+      path = Files.createTempFile("File", ".tmp");
     }
 
     @Override
-    <b>protected void</b> tearDown() <b>throws</b> Exception {
-      <b>try</b> {
+    protected void tearDown() throws Exception {
+      try {
         Files.delete(path);
-      } <b>finally</b> {
-        <b>super</b>.tearDown();
+      } finally {
+        super.tearDown();
       }
     }
   }

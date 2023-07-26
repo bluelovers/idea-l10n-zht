@@ -3,7 +3,7 @@
 報告帶模式的 <code>instanceof</code>，並建議將其轉換為帶轉換的普通 <code>instanceof</code>。
 <p>通過套用快速修復，此檢查可以將帶模式的 <code>instanceof</code> 移到使用早期 Java 版本的程式碼庫。</p>
 <p>
-  請注意，當在 <code>instanceof</code> 前面使用複雜表達式時，結果不能完全等同於原始帶模式的 <code>instanceof</code>。 在這種情況下，將重新計算該表達式。
+  請注意，在 <code>instanceof</code> 前面使用複雜表達式時，結果不能完全等同於帶模式的原始 <code>instanceof</code>。 在這種情況下，將對該表達式重新求值。
 </p>
 <!-- tooltip end -->
 <p>範例：</p>

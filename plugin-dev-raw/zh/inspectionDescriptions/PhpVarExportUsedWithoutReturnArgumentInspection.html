@@ -1,6 +1,6 @@
 <html>
 <body>
-報告其結果被顯式使用時，<code>var_export()</code> 和 <code>print_r()</code> 呼叫沒有 <code>return</code> 實參的情況。
+報告其結果被顯式使用時，沒有 <code>return</code> 實參的 <code>var_export()</code> 和 <code>print_r()</code> 呼叫。
 此類別呼叫很可能由錯誤導致，因為如果未指定 <code>argument</code>，<code>var_export</code>/<code>print_r</code> 將始終返回 <code>null</code>/<code>true</code>。
 </body>
 </html>

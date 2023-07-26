@@ -1,6 +1,6 @@
 <html>
 <body>
-報告 JVM 平台上應取代為 <code>StringBuilder.appendRange(CharArray, startIndex, endIndex)</code> 函式呼叫的 <code>StringBuilder.append(CharArray, offset, len)</code> 函式呼叫。
+報告 JVM 平台上應被取代為 <code>StringBuilder.appendRange(CharArray, startIndex, endIndex)</code> 函式呼叫的 <code>StringBuilder.append(CharArray, offset, len)</code> 函式呼叫。
 <p><code>append</code> 函式在 JVM、JS 和 Native 平台上的行為不同，因此推薦使用 <code>appendRange</code> 函式。</p>
 <p><b>範例：</b></p>
 <pre><code>

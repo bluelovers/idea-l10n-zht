@@ -28,6 +28,9 @@
     <option name="使用者密鑰" path="ActionManager" hit=".NET 使用者密鑰" />
     <option name="arm" path="ActionManager" hit="Arm" />
     <option name="arm64" path="ActionManager" hit="Arm64" />
+    <option name="attach" path="ActionManager" hit="Attach to Process" />
+    <option name="process" path="ActionManager" hit="Attach to Process" />
+    <option name="to" path="ActionManager" hit="Attach to Process" />
     <option name="c" path="ActionManager" hit="C# Interactive" />
     <option name="interactive" path="ActionManager" hit="C# Interactive" />
     <option name="c" path="ActionManager" hit="C# Interactive 中的參照" />
@@ -57,8 +60,6 @@
     <option name="il" path="ActionManager" hit="IL Viewer 程式碼類型選擇器" />
     <option name="viewer" path="ActionManager" hit="IL Viewer 程式碼類型選擇器" />
     <option name="程式碼類型選擇器" path="ActionManager" hit="IL Viewer 程式碼類型選擇器" />
-    <option name="immediate" path="ActionManager" hit="Immediate Window" />
-    <option name="window" path="ActionManager" hit="Immediate Window" />
     <option name="json" path="ActionManager" hit="JSON 檔案" />
     <option name="檔案" path="ActionManager" hit="JSON 檔案" />
     <option name="localization" path="ActionManager" hit="Localization Manager" />
@@ -75,10 +76,6 @@
     <option name="還原" path="ActionManager" hit="NuGet 還原" />
     <option name="package所選專案" path="ActionManager" hit="Package所選專案" />
     <option name="pack所選專案" path="ActionManager" hit="Pack所選專案" />
-    <option name="generators" path="ActionManager" hit="Reboot Roslyn Source Generators" />
-    <option name="reboot" path="ActionManager" hit="Reboot Roslyn Source Generators" />
-    <option name="roslyn" path="ActionManager" hit="Reboot Roslyn Source Generators" />
-    <option name="source" path="ActionManager" hit="Reboot Roslyn Source Generators" />
     <option name="rider" path="ActionManager" hit="Rider 顯示/隱藏庫框架" />
     <option name="顯示" path="ActionManager" hit="Rider 顯示/隱藏庫框架" />
     <option name="隱藏庫框架" path="ActionManager" hit="Rider 顯示/隱藏庫框架" />
@@ -128,7 +125,6 @@
     <option name="上下文單元測試動作" path="ActionManager" hit="上下文單元測試動作(工具視窗) [延伸模組]" />
     <option name="工具視窗" path="ActionManager" hit="上下文單元測試動作(工具視窗) [延伸模組]" />
     <option name="延伸模組" path="ActionManager" hit="上下文單元測試動作(工具視窗) [延伸模組]" />
-    <option name="上下文幫助" path="ActionManager" hit="上下文幫助" />
     <option name="下一個錯誤" path="ActionManager" hit="下一個錯誤" />
     <option name="嚴格格式" path="ActionManager" hit="嚴格格式" />
     <option name="json" path="ActionManager" hit="為 launchSettings.json 中定義的組態檔案生成組態" />
@@ -139,7 +135,6 @@
     <option name="為所有專案使用相同的布局" path="ActionManager" hit="為所有專案使用相同的布局" />
     <option name="為每個專案使用唯一的布局" path="ActionManager" hit="為每個專案使用唯一的布局" />
     <option name="主單元測試動作" path="ActionManager" hit="主單元測試動作" />
-    <option name="主工具列靠右" path="ActionManager" hit="主工具列靠右" />
     <option name="交換編輯器和預覽" path="ActionManager" hit="交換編輯器和預覽" />
     <option name="僅從遠端主機附加到程序" path="ActionManager" hit="僅從遠端主機附加到程序" />
     <option name="僅在" path="ActionManager" hit="僅在“單元測試”工具視窗中有效的本地動作" />
@@ -276,6 +271,7 @@
     <option name="包含常用" path="ActionManager" hit="包含常用 NuGet 動作列表的上下文感知彈出視窗" />
     <option name="動作列表的上下文感知彈出視窗" path="ActionManager" hit="包含常用 NuGet 動作列表的上下文感知彈出視窗" />
     <option name="包含常用單元測試動作列表的上下文感知彈出視窗" path="ActionManager" hit="包含常用單元測試動作列表的上下文感知彈出視窗" />
+    <option name="包圍方式" path="ActionManager" hit="包圍方式" />
     <option name="nuget" path="ActionManager" hit="升級 NuGet 軟體套件" />
     <option name="升級" path="ActionManager" hit="升級 NuGet 軟體套件" />
     <option name="軟體套件" path="ActionManager" hit="升級 NuGet 軟體套件" />
@@ -339,6 +335,10 @@
     <option name="unit" path="ActionManager" hit="在 dotMemory Unit 下執行當前會話" />
     <option name="下執行當前會話" path="ActionManager" hit="在 dotMemory Unit 下執行當前會話" />
     <option name="在" path="ActionManager" hit="在 dotMemory Unit 下執行當前會話" />
+    <option name="dotmemory" path="ActionManager" hit="在 dotMemory Unit 下執行解決方案中的所有測試" />
+    <option name="unit" path="ActionManager" hit="在 dotMemory Unit 下執行解決方案中的所有測試" />
+    <option name="下執行解決方案中的所有測試" path="ActionManager" hit="在 dotMemory Unit 下執行解決方案中的所有測試" />
+    <option name="在" path="ActionManager" hit="在 dotMemory Unit 下執行解決方案中的所有測試" />
     <option name="中顯示" path="ActionManager" hit="在 檔案管理器 中顯示" />
     <option name="在" path="ActionManager" hit="在 檔案管理器 中顯示" />
     <option name="檔案管理器" path="ActionManager" hit="在 檔案管理器 中顯示" />
@@ -531,6 +531,15 @@
     <option name="msbuild" path="ActionManager" hit="顯示 MSBuild 連線診斷" />
     <option name="顯示" path="ActionManager" hit="顯示 MSBuild 連線診斷" />
     <option name="連線診斷" path="ActionManager" hit="顯示 MSBuild 連線診斷" />
+    <option name="2" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=目錄, index=2).id 頁籤" />
+    <option name="id" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=目錄, index=2).id 頁籤" />
+    <option name="index" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=目錄, index=2).id 頁籤" />
+    <option name="nuget" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=目錄, index=2).id 頁籤" />
+    <option name="ridernugetpanelinfo" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=目錄, index=2).id 頁籤" />
+    <option name="工具視窗並開啟" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=目錄, index=2).id 頁籤" />
+    <option name="目錄" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=目錄, index=2).id 頁籤" />
+    <option name="顯示" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=目錄, index=2).id 頁籤" />
+    <option name="頁籤" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=目錄, index=2).id 頁籤" />
     <option name="3" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=日誌, index=3).id 頁籤" />
     <option name="id" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=日誌, index=3).id 頁籤" />
     <option name="index" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=日誌, index=3).id 頁籤" />
@@ -549,15 +558,6 @@
     <option name="顯示" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=原始碼, index=1).id 頁籤" />
     <option name="頁籤" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=原始碼, index=1).id 頁籤" />
     <option name="原始碼" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=原始碼, index=1).id 頁籤" />
-    <option name="2" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=快取, index=2).id 頁籤" />
-    <option name="id" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=快取, index=2).id 頁籤" />
-    <option name="index" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=快取, index=2).id 頁籤" />
-    <option name="nuget" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=快取, index=2).id 頁籤" />
-    <option name="ridernugetpanelinfo" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=快取, index=2).id 頁籤" />
-    <option name="工具視窗並開啟" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=快取, index=2).id 頁籤" />
-    <option name="顯示" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=快取, index=2).id 頁籤" />
-    <option name="頁籤" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=快取, index=2).id 頁籤" />
-    <option name="快取" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=快取, index=2).id 頁籤" />
     <option name="0" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=軟體套件, index=0).id 頁籤" />
     <option name="id" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=軟體套件, index=0).id 頁籤" />
     <option name="index" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=軟體套件, index=0).id 頁籤" />
@@ -567,21 +567,24 @@
     <option name="顯示" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=軟體套件, index=0).id 頁籤" />
     <option name="頁籤" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=軟體套件, index=0).id 頁籤" />
     <option name="軟體套件" path="ActionManager" hit="顯示 NuGet 工具視窗並開啟 RiderNuGetPanelInfo(id=軟體套件, index=0).id 頁籤" />
+    <option name="nuget" path="ActionManager" hit="顯示 NuGet 目錄" />
+    <option name="目錄" path="ActionManager" hit="顯示 NuGet 目錄" />
+    <option name="顯示" path="ActionManager" hit="顯示 NuGet 目錄" />
     <option name="nuget" path="ActionManager" hit="顯示 NuGet 日誌" />
     <option name="日誌" path="ActionManager" hit="顯示 NuGet 日誌" />
     <option name="顯示" path="ActionManager" hit="顯示 NuGet 日誌" />
     <option name="nuget" path="ActionManager" hit="顯示 NuGet 原始碼" />
     <option name="顯示" path="ActionManager" hit="顯示 NuGet 原始碼" />
     <option name="原始碼" path="ActionManager" hit="顯示 NuGet 原始碼" />
-    <option name="nuget" path="ActionManager" hit="顯示 NuGet 快取" />
-    <option name="顯示" path="ActionManager" hit="顯示 NuGet 快取" />
-    <option name="快取" path="ActionManager" hit="顯示 NuGet 快取" />
     <option name="nuget" path="ActionManager" hit="顯示 NuGet 設定" />
     <option name="顯示" path="ActionManager" hit="顯示 NuGet 設定" />
     <option name="設定" path="ActionManager" hit="顯示 NuGet 設定" />
     <option name="nuget" path="ActionManager" hit="顯示 NuGet 軟體套件" />
     <option name="顯示" path="ActionManager" hit="顯示 NuGet 軟體套件" />
     <option name="軟體套件" path="ActionManager" hit="顯示 NuGet 軟體套件" />
+    <option name="rider" path="ActionManager" hit="顯示 Rider 生成的程序" />
+    <option name="顯示" path="ActionManager" hit="顯示 Rider 生成的程序" />
+    <option name="生成的程序" path="ActionManager" hit="顯示 Rider 生成的程序" />
     <option name="nuget" path="ActionManager" hit="顯示/隱藏 NuGet 工具視窗" />
     <option name="工具視窗" path="ActionManager" hit="顯示/隱藏 NuGet 工具視窗" />
     <option name="顯示" path="ActionManager" hit="顯示/隱藏 NuGet 工具視窗" />
@@ -593,7 +596,6 @@
     <option name="顯示上一個啟動日誌" path="ActionManager" hit="顯示上一個啟動日誌" />
     <option name="顯示上一個簽名" path="ActionManager" hit="顯示上一個簽名" />
     <option name="顯示上一個執行程序日誌" path="ActionManager" hit="顯示上一個執行程序日誌" />
-    <option name="顯示上下文幫助" path="ActionManager" hit="顯示上下文幫助" />
     <option name="顯示程式碼樣式組態" path="ActionManager" hit="顯示程式碼樣式組態" />
     <option name="顯示傳入呼叫" path="ActionManager" hit="顯示傳入呼叫…" />
     <option name="顯示傳出呼叫" path="ActionManager" hit="顯示傳出呼叫…" />
@@ -615,7 +617,6 @@
     <option name="顯示授權頁面" path="ActionManager" hit="顯示授權頁面" />
     <option name="顯示設計器" path="ActionManager" hit="顯示設計器" />
     <option name="顯示偵錯器事件" path="ActionManager" hit="顯示偵錯器事件" />
-    <option name="顯示軟體套件版本" path="ActionManager" hit="顯示軟體套件版本" />
     <option name="顯示選區的彈出視窗" path="ActionManager" hit="顯示選區的彈出視窗" />
     <option name="顯示問題描述" path="ActionManager" hit="顯示問題描述" />
     <option name="顯示專案頁面" path="ActionManager" hit="顯示專案頁面" />
@@ -889,6 +890,7 @@
     <option name="選擇包含宣告" path="ActionManager" hit="選擇包含宣告" />
     <option name="通過名稱執行檢查" path="ActionManager" hit="通過名稱執行檢查…" />
     <option name="組態建置相依項" path="ActionManager" hit="組態建置相依項" />
+    <option name="組態檢查嚴重性" path="ActionManager" hit="組態檢查嚴重性" />
     <option name="重新命名會話" path="ActionManager" hit="重新命名會話" />
     <option name="重新命名當前單元測試會話" path="ActionManager" hit="重新命名當前單元測試會話" />
     <option name="重新命名檔案" path="ActionManager" hit="重新命名檔案" />
@@ -914,6 +916,9 @@
     <option name="重新分析所有包含錯誤的解決方案檔案" path="ActionManager" hit="重新分析所有包含錯誤的解決方案檔案" />
     <option name="重新分析解決方案中的所有檔案" path="ActionManager" hit="重新分析解決方案中的所有檔案" />
     <option name="重新載入專案" path="ActionManager" hit="重新載入專案" />
+    <option name="roslyn" path="ActionManager" hit="重新啟動 Roslyn 原始碼產生器" />
+    <option name="原始碼產生器" path="ActionManager" hit="重新啟動 Roslyn 原始碼產生器" />
+    <option name="重新啟動" path="ActionManager" hit="重新啟動 Roslyn 原始碼產生器" />
     <option name="重新建置啟動專案" path="ActionManager" hit="重新建置啟動專案" />
     <option name="重新建置當前專案" path="ActionManager" hit="重新建置當前專案" />
     <option name="重新建置所選專案" path="ActionManager" hit="重新建置所選專案" />
@@ -1025,16 +1030,6 @@
     <option name="hlsl" hit="C++、C、HLSL" />
     <option name="html" hit="HTML 檔案" />
     <option name="檔案" hit="HTML 檔案" />
-    <option name="between" hit="Join concatenated strings when removing the plus sign between them" />
-    <option name="concatenated" hit="Join concatenated strings when removing the plus sign between them" />
-    <option name="join" hit="Join concatenated strings when removing the plus sign between them" />
-    <option name="plus" hit="Join concatenated strings when removing the plus sign between them" />
-    <option name="removing" hit="Join concatenated strings when removing the plus sign between them" />
-    <option name="sign" hit="Join concatenated strings when removing the plus sign between them" />
-    <option name="strings" hit="Join concatenated strings when removing the plus sign between them" />
-    <option name="the" hit="Join concatenated strings when removing the plus sign between them" />
-    <option name="them" hit="Join concatenated strings when removing the plus sign between them" />
-    <option name="when" hit="Join concatenated strings when removing the plus sign between them" />
     <option name="razor" hit="Razor" />
     <option name="basic" hit="Visual Basic" />
     <option name="visual" hit="Visual Basic" />
@@ -1185,6 +1180,8 @@
     <option name="文字游標位於行尾" hit="文字游標位於行尾" />
     <option name="無" hit="無" />
     <option name="更正通用語言特定的拼寫錯誤" hit="更正通用語言特定的拼寫錯誤" />
+    <option name="生成文檔註釋" hit="生成文檔註釋" />
+    <option name="移除串聯字串之間的加號時將串聯字串連線起來" hit="移除串聯字串之間的加號時將串聯字串連線起來" />
     <option name="p" hit="貼上時自動格式化 P   " />
     <option name="貼上時自動格式化" hit="貼上時自動格式化 P   " />
     <option name="p" hit="貼上時自動格式化(P):" />
@@ -1220,10 +1217,10 @@
     <option name="輸入左大括號後按" hit="輸入左大括號後按 Enter 鍵時" />
     <option name="鍵時" hit="輸入左大括號後按 Enter 鍵時" />
     <option name="輸入左大括號時" hit="輸入左大括號時" />
-    <option name="大括號或圓括號時環繞選區" hit="輸入引號 大括號或圓括號時環繞選區" />
-    <option name="輸入引號" hit="輸入引號 大括號或圓括號時環繞選區" />
-    <option name="大括號或圓括號時環繞選區" hit="輸入引號、大括號或圓括號時環繞選區" />
-    <option name="輸入引號" hit="輸入引號、大括號或圓括號時環繞選區" />
+    <option name="大括號或圓括號時包圍選區" hit="輸入引號 大括號或圓括號時包圍選區" />
+    <option name="輸入引號" hit="輸入引號 大括號或圓括號時包圍選區" />
+    <option name="大括號或圓括號時包圍選區" hit="輸入引號、大括號或圓括號時包圍選區" />
+    <option name="輸入引號" hit="輸入引號、大括號或圓括號時包圍選區" />
     <option name="tab" hit="輸入時使用 Tab 跳出字串文字中的右引號 大括號" />
     <option name="大括號" hit="輸入時使用 Tab 跳出字串文字中的右引號 大括號" />
     <option name="跳出字串文字中的右引號" hit="輸入時使用 Tab 跳出字串文字中的右引號 大括號" />
@@ -1255,14 +1252,6 @@
     <option name="net" hit="ASP.NET Route Templates" />
     <option name="route" hit="ASP.NET Route Templates" />
     <option name="templates" hit="ASP.NET Route Templates" />
-    <option name="add" hit="Add explicit 'return' or 'continue' before local function" />
-    <option name="before" hit="Add explicit 'return' or 'continue' before local function" />
-    <option name="continue" hit="Add explicit 'return' or 'continue' before local function" />
-    <option name="explicit" hit="Add explicit 'return' or 'continue' before local function" />
-    <option name="function" hit="Add explicit 'return' or 'continue' before local function" />
-    <option name="local" hit="Add explicit 'return' or 'continue' before local function" />
-    <option name="or" hit="Add explicit 'return' or 'continue' before local function" />
-    <option name="return" hit="Add explicit 'return' or 'continue' before local function" />
     <option name="add" hit="Add new argument to interpolation" />
     <option name="argument" hit="Add new argument to interpolation" />
     <option name="interpolation" hit="Add new argument to interpolation" />
@@ -1320,10 +1309,6 @@
     <option name="iterator" hit="Convert iterator to method" />
     <option name="method" hit="Convert iterator to method" />
     <option name="to" hit="Convert iterator to method" />
-    <option name="convert" hit="Convert to 'using' statement" />
-    <option name="statement" hit="Convert to 'using' statement" />
-    <option name="to" hit="Convert to 'using' statement" />
-    <option name="using" hit="Convert to 'using' statement" />
     <option name="convert" hit="Convert to implicitly typed local variable declaration" />
     <option name="declaration" hit="Convert to implicitly typed local variable declaration" />
     <option name="implicitly" hit="Convert to implicitly typed local variable declaration" />
@@ -1357,11 +1342,6 @@
     <option name="from" hit="Initialize field from constructor parameter" />
     <option name="initialize" hit="Initialize field from constructor parameter" />
     <option name="parameter" hit="Initialize field from constructor parameter" />
-    <option name="constructor" hit="Initialize member from constructor parameter" />
-    <option name="from" hit="Initialize member from constructor parameter" />
-    <option name="initialize" hit="Initialize member from constructor parameter" />
-    <option name="member" hit="Initialize member from constructor parameter" />
-    <option name="parameter" hit="Initialize member from constructor parameter" />
     <option name="arguments" hit="Insert inferred type arguments" />
     <option name="inferred" hit="Insert inferred type arguments" />
     <option name="insert" hit="Insert inferred type arguments" />
@@ -1393,16 +1373,6 @@
     <option name="merge" hit="Merge nested 'If' statements" />
     <option name="nested" hit="Merge nested 'If' statements" />
     <option name="statements" hit="Merge nested 'If' statements" />
-    <option name="a" hit="Move a local function to the end of containing scope" />
-    <option name="containing" hit="Move a local function to the end of containing scope" />
-    <option name="end" hit="Move a local function to the end of containing scope" />
-    <option name="function" hit="Move a local function to the end of containing scope" />
-    <option name="local" hit="Move a local function to the end of containing scope" />
-    <option name="move" hit="Move a local function to the end of containing scope" />
-    <option name="of" hit="Move a local function to the end of containing scope" />
-    <option name="scope" hit="Move a local function to the end of containing scope" />
-    <option name="the" hit="Move a local function to the end of containing scope" />
-    <option name="to" hit="Move a local function to the end of containing scope" />
     <option name="another" hit="Move type to another file to match its name" />
     <option name="file" hit="Move type to another file to match its name" />
     <option name="its" hit="Move type to another file to match its name" />
@@ -1474,6 +1444,7 @@
     <option name="iddqd" hit="iddqd" />
     <option name="上下文動作" hit="上下文動作" />
     <option name="為主建構函式建立顯式建構函式宣告" hit="為主建構函式建立顯式建構函式宣告" />
+    <option name="為主建構函式的參數建立顯式欄位宣告" hit="為主建構函式的參數建立顯式欄位宣告" />
     <option name="為位置參數建立顯式屬性宣告" hit="為位置參數建立顯式屬性宣告" />
     <option name="var" hit="為具有多個變數的解構宣告使用 'var (...)' 語法" />
     <option name="為具有多個變數的解構宣告使用" hit="為具有多個變數的解構宣告使用 'var (...)' 語法" />
@@ -1534,10 +1505,10 @@
     <option name="nameof" hit="使用 'nameof' 表達式捕獲實體名稱" />
     <option name="使用" hit="使用 'nameof' 表達式捕獲實體名稱" />
     <option name="表達式捕獲實體名稱" hit="使用 'nameof' 表達式捕獲實體名稱" />
-    <option name="format" hit="使用 'string.Format' 呼叫環繞字串文字" />
-    <option name="string" hit="使用 'string.Format' 呼叫環繞字串文字" />
-    <option name="使用" hit="使用 'string.Format' 呼叫環繞字串文字" />
-    <option name="呼叫環繞字串文字" hit="使用 'string.Format' 呼叫環繞字串文字" />
+    <option name="format" hit="使用 'string.Format' 呼叫包圍字串文字" />
+    <option name="string" hit="使用 'string.Format' 呼叫包圍字串文字" />
+    <option name="使用" hit="使用 'string.Format' 呼叫包圍字串文字" />
+    <option name="呼叫包圍字串文字" hit="使用 'string.Format' 呼叫包圍字串文字" />
     <option name="static" hit="使用 'using static' 指令匯入 static 成員" />
     <option name="using" hit="使用 'using static' 指令匯入 static 成員" />
     <option name="使用" hit="使用 'using static' 指令匯入 static 成員" />
@@ -1576,6 +1547,9 @@
     <option name="out" hit="內聯 out 變數宣告" />
     <option name="內聯" hit="內聯 out 變數宣告" />
     <option name="變數宣告" hit="內聯 out 變數宣告" />
+    <option name="using" hit="內聯 using 別名" />
+    <option name="內聯" hit="內聯 using 別名" />
+    <option name="別名" hit="內聯 using 別名" />
     <option name="內聯臨時變數" hit="內聯臨時變數" />
     <option name="內聯字串內插實參" hit="內聯字串內插實參" />
     <option name="內聯控制傳輸語句" hit="內聯控制傳輸語句" />
@@ -1605,6 +1579,7 @@
     <option name="建立類型宣告的另一部分" hit="建立類型宣告的另一部分" />
     <option name="建立裝置系列特定的檢視" hit="建立裝置系列特定的檢視" />
     <option name="刪除註釋" hit="刪除註釋" />
+    <option name="包圍條目" hit="包圍條目" />
     <option name="反轉" hit="反轉 '?:' 條件" />
     <option name="條件" hit="反轉 '?:' 條件" />
     <option name="for" hit="反轉 'for' 迴圈語句" />
@@ -1625,6 +1600,9 @@
     <option name="語句" hit="合併嵌套的 'if' 語句" />
     <option name="合併伺服器腳本內容" hit="合併伺服器腳本內容" />
     <option name="合併解構的宣告" hit="合併解構的宣告" />
+    <option name="pragma" hit="向 '#pragma' 指令新增警告描述註釋" />
+    <option name="向" hit="向 '#pragma' 指令新增警告描述註釋" />
+    <option name="指令新增警告描述註釋" hit="向 '#pragma' 指令新增警告描述註釋" />
     <option name="do-while" hit="啟用“在 'do-while' 語句中強制使用大括號”檢查" />
     <option name="啟用" hit="啟用“在 'do-while' 語句中強制使用大括號”檢查" />
     <option name="在" hit="啟用“在 'do-while' 語句中強制使用大括號”檢查" />
@@ -1677,10 +1655,9 @@
     <option name="檢查" hit="啟用“禁止的可以為 null 警告可能會隱藏底層問題”檢查" />
     <option name="禁止的可以為" hit="啟用“禁止的可以為 null 警告可能會隱藏底層問題”檢查" />
     <option name="警告可能會隱藏底層問題" hit="啟用“禁止的可以為 null 警告可能會隱藏底層問題”檢查" />
-    <option name="readonly" hit="啟用“結構成員可被設為 readonly”檢查" />
-    <option name="啟用" hit="啟用“結構成員可被設為 readonly”檢查" />
-    <option name="檢查" hit="啟用“結構成員可被設為 readonly”檢查" />
-    <option name="結構成員可被設為" hit="啟用“結構成員可被設為 readonly”檢查" />
+    <option name="啟用" hit="啟用“結構成員可被設為唯讀”檢查" />
+    <option name="檢查" hit="啟用“結構成員可被設為唯讀”檢查" />
+    <option name="結構成員可被設為唯讀" hit="啟用“結構成員可被設為唯讀”檢查" />
     <option name="啟用" hit="啟用“行尾的不必要空格”檢查" />
     <option name="檢查" hit="啟用“行尾的不必要空格”檢查" />
     <option name="行尾的不必要空格" hit="啟用“行尾的不必要空格”檢查" />
@@ -1700,7 +1677,13 @@
     <option name="與" hit="在 typename 與 class 關鍵字之間切換" />
     <option name="關鍵字之間切換" hit="在 typename 與 class 關鍵字之間切換" />
     <option name="在" hit="在 typename 與 class 關鍵字之間切換" />
+    <option name="在原始字串文字中新增" hit="在原始字串文字中新增/移除額外的引號和美元符號" />
+    <option name="移除額外的引號和美元符號" hit="在原始字串文字中新增/移除額外的引號和美元符號" />
     <option name="在實數文字中插入數字分隔符" hit="在實數文字中插入數字分隔符" />
+    <option name="continue" hit="在區域函式之前新增顯式 'return' 或 'continue'" />
+    <option name="return" hit="在區域函式之前新增顯式 'return' 或 'continue'" />
+    <option name="在區域函式之前新增顯式" hit="在區域函式之前新增顯式 'return' 或 'continue'" />
+    <option name="或" hit="在區域函式之前新增顯式 'return' 或 'continue'" />
     <option name="在當前定義之前新增網格列" hit="在當前定義之前新增網格列/行定義" />
     <option name="行定義" hit="在當前定義之前新增網格列/行定義" />
     <option name="在當前定義之後新增網格列" hit="在當前定義之後新增網格列/行定義" />
@@ -1973,7 +1956,7 @@
     <option name="將匿名類型轉換為元組" hit="將匿名類型轉換為元組" />
     <option name="將匿名類型轉換為命名類型" hit="將匿名類型轉換為命名類型" />
     <option name="將單獨的解構宣告取代為單個宣告" hit="將單獨的解構宣告取代為單個宣告" />
-    <option name="將變數內聯到使用此變數的條件表達式中" hit="將變數內聯到使用此變數的條件表達式中" />
+    <option name="將變數內聯到條件表達式中" hit="將變數內聯到條件表達式中" />
     <option name="using" hit="將變數置於 'using' 語句內" />
     <option name="將變數置於" hit="將變數置於 'using' 語句內" />
     <option name="語句內" hit="將變數置於 'using' 語句內" />
@@ -2007,6 +1990,7 @@
     <option name="將物件初始設定式轉換為建構函式呼叫" hit="將物件初始設定式轉換為建構函式呼叫" />
     <option name="將物件初始設定式轉換為賦值語句" hit="將物件初始設定式轉換為賦值語句" />
     <option name="將區域函式提取到正則方法" hit="將區域函式提取到正則方法" />
+    <option name="將區域函式移動到包含作用域的末尾" hit="將區域函式移動到包含作用域的末尾" />
     <option name="將區域函式閉包提升為參數" hit="將區域函式閉包提升為參數" />
     <option name="將區域變數" hit="將區域變數、常數或函式宣告移至外部作用域" />
     <option name="常數或函式宣告移至外部作用域" hit="將區域變數、常數或函式宣告移至外部作用域" />
@@ -2119,6 +2103,8 @@
     <option name="將語句" hit="將語句 lambda 轉換為表達式 lambda" />
     <option name="轉換為表達式" hit="將語句 lambda 轉換為表達式 lambda" />
     <option name="將語句體成員轉換為表達式體" hit="將語句體成員轉換為表達式體" />
+    <option name="將呼叫鏈分為兩部分" hit="將呼叫鏈分為兩部分" />
+    <option name="將呼叫鏈取代為單獨呼叫" hit="將呼叫鏈取代為單獨呼叫" />
     <option name="將資源參照從靜態更改為動態" hit="將資源參照從靜態更改為動態，或反之" />
     <option name="或反之" hit="將資源參照從靜態更改為動態，或反之" />
     <option name="as" hit="將轉換表達式取代為安全的 'as' 轉換" />
@@ -2265,12 +2251,11 @@
     <option name="新增字串格式設定方法實參" hit="新增字串格式設定方法實參" />
     <option name="新增解構模式組件名稱" hit="新增解構模式組件名稱" />
     <option name="新增模組限定" hit="新增模組限定" />
-    <option name="環繞條目" hit="環繞條目" />
     <option name="case" hit="生成 case 存根" />
     <option name="存根" hit="生成 case 存根" />
     <option name="生成" hit="生成 case 存根" />
     <option name="生成內聯定義" hit="生成內聯定義" />
-    <option name="生成方法以檢查是否為枚舉標誌" hit="生成方法以檢查是否為枚舉標誌" />
+    <option name="生成擴展方法以檢查枚舉標誌" hit="生成擴展方法以檢查枚舉標誌" />
     <option name="生成模擬方法" hit="生成模擬方法" />
     <option name="生成類型模式" hit="生成類型模式" />
     <option name="生成缺失的成員" hit="生成缺失的成員" />
@@ -2338,6 +2323,9 @@
     <option name="using" hit="轉換為 'using' 宣告" />
     <option name="宣告" hit="轉換為 'using' 宣告" />
     <option name="轉換為" hit="轉換為 'using' 宣告" />
+    <option name="using" hit="轉換為 'using' 語句" />
+    <option name="語句" hit="轉換為 'using' 語句" />
+    <option name="轉換為" hit="轉換為 'using' 語句" />
     <option name="linq" hit="轉換為 LINQ to XML" />
     <option name="to" hit="轉換為 LINQ to XML" />
     <option name="xml" hit="轉換為 LINQ to XML" />
@@ -2388,6 +2376,7 @@
     <option name="通過" hit="通過 'params' 參數實參建立顯式陣列建立" />
     <option name="通過宣告生成定義" hit="通過宣告生成定義" />
     <option name="通過建構函式參數初始化欄位" hit="通過建構函式參數初始化欄位" />
+    <option name="通過建構函式參數初始化成員" hit="通過建構函式參數初始化成員" />
     <option name="通過建構函式參數初始化自動屬性" hit="通過建構函式參數初始化自動屬性" />
     <option name="private" hit="通過建構函式參數初始化非 private 欄位" />
     <option name="欄位" hit="通過建構函式參數初始化非 private 欄位" />
@@ -2921,10 +2910,6 @@
     <option name="7" hit=" NET   " />
     <option name="net2" hit=" NET   " />
     <option name="net4" hit=" NET   " />
-    <option name="" hit=" 個測試執行程序" />
-    <option name="個測試執行程序" hit=" 個測試執行程序" />
-    <option name="" hit=" 行" />
-    <option name="行" hit=" 行" />
     <option name="arm" hit="ARM" />
     <option name="arm64" hit="ARM  " />
     <option name="sessions" hit="Unit Test Sessions" />
@@ -2933,7 +2918,6 @@
     <option name="iddqd" hit="iddqd" />
     <option name="x64" hit="x  " />
     <option name="x86" hit="x  " />
-    <option name="個測試執行程序" hit="個測試執行程序" />
     <option name="從此處執行測試" hit="從此處執行測試 " />
     <option name="從此處執行測試" hit="從此處執行測試:" />
     <option name="會話結束時顯示通知" hit="會話結束時顯示通知" />
@@ -2947,16 +2931,15 @@
     <option name="在單元測試會話輸出中將長行換行" hit="在單元測試會話輸出中將長行換行 W " />
     <option name="w" hit="在單元測試會話輸出中將長行換行(W)" />
     <option name="在單元測試會話輸出中將長行換行" hit="在單元測試會話輸出中將長行換行(W)" />
-    <option name="將自動載入的輸出限制為" hit="將自動載入的輸出限制為" />
-    <option name="將自動載入的輸出限制為" hit="將自動載入的輸出限制為 " />
-    <option name="並行執行最多" hit="並行執行最多" />
-    <option name="並行執行最多" hit="並行執行最多 " />
+    <option name="並行執行的測試執行程序的最大數量" hit="並行執行的測試執行程序的最大數量  " />
+    <option name="並行執行的測試執行程序的最大數量" hit="並行執行的測試執行程序的最大數量:" />
     <option name="f" hit="指定的目錄 F " />
     <option name="指定的目錄" hit="指定的目錄 F " />
     <option name="f" hit="指定的目錄(F)" />
     <option name="指定的目錄" hit="指定的目錄(F)" />
     <option name="自動" hit="自動" />
-    <option name="行" hit="行" />
+    <option name="自動載入的輸出中的最大行數" hit="自動載入的輸出中的最大行數  " />
+    <option name="自動載入的輸出中的最大行數" hit="自動載入的輸出中的最大行數:" />
     <option name="跳過指定類別的測試" hit="跳過指定類別的測試  " />
     <option name="跳過指定類別的測試" hit="跳過指定類別的測試:" />
     <option name="p" hit="專案輸出目錄 P " />
@@ -3077,33 +3060,6 @@
     <option name="測試執行程序" hit="測試執行程序" />
   </configurable>
   <configurable id="RiderNUnitUnitTestingPageId" configurable_name="NUnit">
-    <option name="addins" hit="Look for addins in test assembly folder" />
-    <option name="assembly" hit="Look for addins in test assembly folder" />
-    <option name="folder" hit="Look for addins in test assembly folder" />
-    <option name="for" hit="Look for addins in test assembly folder" />
-    <option name="in" hit="Look for addins in test assembly folder" />
-    <option name="look" hit="Look for addins in test assembly folder" />
-    <option name="test" hit="Look for addins in test assembly folder" />
-    <option name="addins" hit="Look for addins in the  addins  subfolder of test assembly folder" />
-    <option name="assembly" hit="Look for addins in the  addins  subfolder of test assembly folder" />
-    <option name="folder" hit="Look for addins in the  addins  subfolder of test assembly folder" />
-    <option name="for" hit="Look for addins in the  addins  subfolder of test assembly folder" />
-    <option name="in" hit="Look for addins in the  addins  subfolder of test assembly folder" />
-    <option name="look" hit="Look for addins in the  addins  subfolder of test assembly folder" />
-    <option name="of" hit="Look for addins in the  addins  subfolder of test assembly folder" />
-    <option name="subfolder" hit="Look for addins in the  addins  subfolder of test assembly folder" />
-    <option name="test" hit="Look for addins in the  addins  subfolder of test assembly folder" />
-    <option name="the" hit="Look for addins in the  addins  subfolder of test assembly folder" />
-    <option name="addins" hit="Look for addins in the 'addins' subfolder of test assembly folder" />
-    <option name="assembly" hit="Look for addins in the 'addins' subfolder of test assembly folder" />
-    <option name="folder" hit="Look for addins in the 'addins' subfolder of test assembly folder" />
-    <option name="for" hit="Look for addins in the 'addins' subfolder of test assembly folder" />
-    <option name="in" hit="Look for addins in the 'addins' subfolder of test assembly folder" />
-    <option name="look" hit="Look for addins in the 'addins' subfolder of test assembly folder" />
-    <option name="of" hit="Look for addins in the 'addins' subfolder of test assembly folder" />
-    <option name="subfolder" hit="Look for addins in the 'addins' subfolder of test assembly folder" />
-    <option name="test" hit="Look for addins in the 'addins' subfolder of test assembly folder" />
-    <option name="the" hit="Look for addins in the 'addins' subfolder of test assembly folder" />
     <option name="nunit" hit="NUnit" />
     <option name="2" hit="NUnit  " />
     <option name="3" hit="NUnit  " />
@@ -3127,6 +3083,13 @@
     <option name="nunit" hit="載入 NUnit 載入項" />
     <option name="載入" hit="載入 NUnit 載入項" />
     <option name="載入項" hit="載入 NUnit 載入項" />
+    <option name="在測試程序集目錄中尋找載入項" hit="在測試程序集目錄中尋找載入項" />
+    <option name="addins" hit="在測試程序集目錄的  addins  子目錄中尋找載入項" />
+    <option name="在測試程序集目錄的" hit="在測試程序集目錄的  addins  子目錄中尋找載入項" />
+    <option name="子目錄中尋找載入項" hit="在測試程序集目錄的  addins  子目錄中尋找載入項" />
+    <option name="addins" hit="在測試程序集目錄的 'addins' 子目錄中尋找載入項" />
+    <option name="在測試程序集目錄的" hit="在測試程序集目錄的 'addins' 子目錄中尋找載入項" />
+    <option name="子目錄中尋找載入項" hit="在測試程序集目錄的 'addins' 子目錄中尋找載入項" />
     <option name="在測試執行程序中發現測試時預篩選類型和方法" hit="在測試執行程序中發現測試時預篩選類型和方法" />
     <option name="a" hit="始終 A " />
     <option name="始終" hit="始終 A " />
@@ -3227,13 +3190,13 @@
   </configurable>
   <configurable id="SolutionBuilderGeneralOptionsPage" configurable_name="工具包和建置">
     <option name="" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="04" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="05" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="07" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="13" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="15" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="17" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="2023" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="5109" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="54" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="38" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="39" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="9460" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="jetbrainslog" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="log" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="msbuild" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
@@ -3299,20 +3262,21 @@
     <option name="net" hit=".NET CLI 可執行檔案路徑:" />
     <option name="可執行檔案路徑" hit=".NET CLI 可執行檔案路徑:" />
     <option name="1" hit="1" />
-    <option name="1" hit="1 (自動基於 CPU)" />
-    <option name="cpu" hit="1 (自動基於 CPU)" />
-    <option name="自動基於" hit="1 (自動基於 CPU)" />
+    <option name="1" hit="1 (基於 CPU 自動確定)" />
+    <option name="cpu" hit="1 (基於 CPU 自動確定)" />
+    <option name="基於" hit="1 (基於 CPU 自動確定)" />
+    <option name="自動確定" hit="1 (基於 CPU 自動確定)" />
     <option name="2" hit="2" />
     <option name="msbuild" hit="MSBuild 全域屬性 " />
     <option name="全域屬性" hit="MSBuild 全域屬性 " />
     <option name="msbuild" hit="MSBuild 全域屬性:" />
     <option name="全域屬性" hit="MSBuild 全域屬性:" />
-    <option name="jetbrainslog" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202305151354045109.log" />
-    <option name="log" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202305151354045109.log" />
-    <option name="msbuild" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202305151354045109.log" />
-    <option name="resharperbuild202305151354045109" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202305151354045109.log" />
-    <option name="日誌檔案將寫入每個建置的指定目錄中" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202305151354045109.log" />
-    <option name="範例檔名" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202305151354045109.log" />
+    <option name="jetbrainslog" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202307171338399460.log" />
+    <option name="log" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202307171338399460.log" />
+    <option name="msbuild" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202307171338399460.log" />
+    <option name="resharperbuild202307171338399460" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202307171338399460.log" />
+    <option name="日誌檔案將寫入每個建置的指定目錄中" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202307171338399460.log" />
+    <option name="範例檔名" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202307171338399460.log" />
     <option name="msbuild" hit="MSBuild 版本 " />
     <option name="版本" hit="MSBuild 版本 " />
     <option name="msbuild" hit="MSBuild 版本:" />
@@ -3509,9 +3473,6 @@
     <option name="搜尋引擎" hit="搜尋引擎" />
   </configurable>
   <configurable id="CodeCleanupOptionsPage" configurable_name="程式碼清理">
-    <option name="dereferences" hit="Remove redundant dereferences" />
-    <option name="redundant" hit="Remove redundant dereferences" />
-    <option name="remove" hit="Remove redundant dereferences" />
     <option name="abseil-cleanup-ctad" hit="abseil-cleanup-ctad" />
     <option name="abseil-duration-addition" hit="abseil-duration-addition" />
     <option name="abseil-duration-comparison" hit="abseil-duration-comparison" />
@@ -3769,6 +3730,10 @@
     <option name="對成員初始設定式排序" hit="對成員初始設定式排序" />
     <option name="對類型使用顯式或隱式修飾符定義" hit="對類型使用顯式或隱式修飾符定義" />
     <option name="對類型成員使用顯式或隱式修飾符定義" hit="對類型成員使用顯式或隱式修飾符定義" />
+    <option name="consteval" hit="將 'if' 取代為 'if consteval'" />
+    <option name="if" hit="將 'if' 取代為 'if consteval'" />
+    <option name="將" hit="將 'if' 取代為 'if consteval'" />
+    <option name="取代為" hit="將 'if' 取代為 'if consteval'" />
     <option name="tie" hit="將 'tie(..)' 取代為結構化綁定宣告" />
     <option name="將" hit="將 'tie(..)' 取代為結構化綁定宣告" />
     <option name="取代為結構化綁定宣告" hit="將 'tie(..)' 取代為結構化綁定宣告" />
@@ -3781,6 +3746,8 @@
     <option name="if" hit="將包含常數條件的 if 語句取代為 'if constexpr'" />
     <option name="將包含常數條件的" hit="將包含常數條件的 if 語句取代為 'if constexpr'" />
     <option name="語句取代為" hit="將包含常數條件的 if 語句取代為 'if constexpr'" />
+    <option name="constexpr" hit="將變數設為 'constexpr'" />
+    <option name="將變數設為" hit="將變數設為 'constexpr'" />
     <option name="將後綴運算符取代為前綴變體" hit="將後綴運算符取代為前綴變體" />
     <option name="const" hit="將區域變數設為 'const'" />
     <option name="將區域變數設為" hit="將區域變數設為 'const'" />
@@ -3895,6 +3862,7 @@
     <option name="lambda" hit="移除冗餘的 lambda 參數列表" />
     <option name="參數列表" hit="移除冗餘的 lambda 參數列表" />
     <option name="移除冗餘的" hit="移除冗餘的 lambda 參數列表" />
+    <option name="移除冗餘的取消參照" hit="移除冗餘的取消參照" />
     <option name="移除冗餘的成員初始設定式" hit="移除冗餘的成員初始設定式" />
     <option name="移除冗餘的詳細類型說明符" hit="移除冗餘的詳細類型說明符" />
     <option name="setter" hit="移除冗餘空集合屬性 setter" />
@@ -4328,8 +4296,6 @@
     <option name="all" path="命名" hit="ALL UPPER" />
     <option name="upper" path="命名" hit="ALL UPPER" />
     <option name="c" hit="C " />
-    <option name="assertion" hit="Debug assertion" />
-    <option name="debug" hit="Debug assertion" />
     <option name="file" hit="File Layout" />
     <option name="layout" hit="File Layout" />
     <option name="first" path="命名" hit="First upper" />
@@ -4344,8 +4310,6 @@
     <option name="宣告" hit="Property 宣告" />
     <option name="resharper" hit="ReSharper 其他" />
     <option name="其他" hit="ReSharper 其他" />
-    <option name="equality" hit="Reference equality" />
-    <option name="reference" hit="Reference equality" />
     <option name="static" hit="Static 成員限定" />
     <option name="成員限定" hit="Static 成員限定" />
     <option name="switch" hit="Switch 表達式" />
@@ -4356,8 +4320,6 @@
     <option name="api" hit="ThrowIfNull() API (.NET 6+)" />
     <option name="net" hit="ThrowIfNull() API (.NET 6+)" />
     <option name="throwifnull" hit="ThrowIfNull() API (.NET 6+)" />
-    <option name="assertion" hit="Trace assertion" />
-    <option name="trace" hit="Trace assertion" />
     <option name="uppercamelcase" path="命名" hit="UpperCamelCase" />
     <option name="underscoretolerant" path="命名" hit="UpperCamelCase UnderscoreTolerant" />
     <option name="uppercamelcase" path="命名" hit="UpperCamelCase UnderscoreTolerant" />
@@ -4680,10 +4642,12 @@
     <option name="大括號" hit="大括號" />
     <option name="大括號周圍" hit="大括號周圍" />
     <option name="大括號布局" hit="大括號布局" />
+    <option name="如何縮排原始字串文字" hit="如何縮排原始字串文字" />
     <option name="始終將後續元素置於新行中" hit="始終將後續元素置於新行中" />
     <option name="private" hit="欄位(非 private)" />
     <option name="欄位" hit="欄位(非 private)" />
     <option name="非" hit="欄位(非 private)" />
+    <option name="欄位周圍" hit="欄位周圍" />
     <option name="欄位和常數" hit="欄位和常數" />
     <option name="字串文字值" hit="字串文字值" />
     <option name="private" hit="實例欄位(private)" />
@@ -4747,6 +4711,7 @@
     <option name="將多個宣告換行" hit="將多個宣告換行" />
     <option name="將多類型參數約束換行" hit="將多類型參數約束換行" />
     <option name="將多行元素置於新行中" hit="將多行元素置於新行中" />
+    <option name="將多行註釋與星號對齊" hit="將多行註釋與星號對齊" />
     <option name="將欄位特性置於同一行中" hit="將欄位特性置於同一行中" />
     <option name="將物件和集合初始設定式換行" hit="將物件和集合初始設定式換行" />
     <option name="事件特性置於同一行中" hit="將屬性/索引器/事件特性置於同一行中" />
@@ -4818,6 +4783,7 @@
     <option name="常數欄位" hit="常數欄位(非 private)" />
     <option name="非" hit="常數欄位(非 private)" />
     <option name="套用樣式啟發" hit="套用樣式啟發" />
+    <option name="參照相等性" hit="參照相等性" />
     <option name="using" hit="參照限定和 'using' 指令" />
     <option name="參照限定和" hit="參照限定和 'using' 指令" />
     <option name="指令" hit="參照限定和 'using' 指令" />
@@ -4849,6 +4815,7 @@
     <option name="文字值" hit="文字值" />
     <option name="方法" hit="方法" />
     <option name="方法參數" hit="方法參數" />
+    <option name="方法周圍" hit="方法周圍" />
     <option name="方法和運算符" hit="方法和運算符" />
     <option name="方法宣告" hit="方法宣告" />
     <option name="方法宣告圓括號" hit="方法宣告圓括號" />
@@ -4887,8 +4854,6 @@
     <option name="if" hit="特殊的 'else if' 對待" />
     <option name="對待" hit="特殊的 'else if' 對待" />
     <option name="特殊的" hit="特殊的 'else if' 對待" />
-    <option name="環繞欄位" hit="環繞欄位" />
-    <option name="環繞方法" hit="環繞方法" />
     <option name="相同方法的呼叫" hit="相同方法的呼叫" />
     <option name="相等運算符" hit="相等運算符 (==,!=)" />
     <option name="移位運算符" hit="移位運算符(&lt;&lt;、&gt;&gt;、&gt;&gt;&gt;)" />
@@ -4993,9 +4958,11 @@
     <option name="語法樣式" path="語法樣式" hit="語法樣式" />
     <option name="呼叫參數" hit="呼叫參數" />
     <option name="呼叫的排列" hit="呼叫的排列" />
+    <option name="偵錯斷言" hit="偵錯斷言" />
     <option name="和" hit="賦值運算符(如 '=' 和 '+=')" />
     <option name="如" hit="賦值運算符(如 '=' 和 '+=')" />
     <option name="賦值運算符" hit="賦值運算符(如 '=' 和 '+=')" />
+    <option name="追蹤斷言" hit="追蹤斷言" />
     <option name="跳過單一實參" hit="跳過單一實參" />
     <option name="運算符關鍵字後" hit="運算符關鍵字後" />
     <option name="還原為舊格式設定引擎" hit="還原為舊格式設定引擎" />
@@ -5118,8 +5085,6 @@
     <option name="前" path="空格" hit="++ 和 -- 前/後" />
     <option name="後" path="空格" hit="++ 和 -- 前/後" />
     <option name="和" path="空格" hit="++ 和 -- 前/後" />
-    <option name="assertion" path="Null 檢查" hit="Debug assertion" />
-    <option name="debug" path="Null 檢查" hit="Debug assertion" />
     <option name="file" path="檔案布局" hit="File Layout" />
     <option name="layout" path="檔案布局" hit="File Layout" />
     <option name="linq" path="制表符、縮排、對齊" hit="LINQ 查詢" />
@@ -5130,8 +5095,6 @@
     <option name="宣告" path="大括號布局" hit="Property 宣告" />
     <option name="resharper" path="其他" hit="ReSharper 其他" />
     <option name="其他" path="其他" hit="ReSharper 其他" />
-    <option name="equality" path="Null 檢查" hit="Reference equality" />
-    <option name="reference" path="Null 檢查" hit="Reference equality" />
     <option name="static" path="語法樣式" hit="Static 成員限定" />
     <option name="成員限定" path="語法樣式" hit="Static 成員限定" />
     <option name="switch" path="制表符、縮排、對齊" hit="Switch 表達式" />
@@ -5142,8 +5105,6 @@
     <option name="api" path="Null 檢查" hit="ThrowIfNull() API (.NET 6+)" />
     <option name="net" path="Null 檢查" hit="ThrowIfNull() API (.NET 6+)" />
     <option name="throwifnull" path="Null 檢查" hit="ThrowIfNull() API (.NET 6+)" />
-    <option name="assertion" path="Null 檢查" hit="Trace assertion" />
-    <option name="trace" path="Null 檢查" hit="Trace assertion" />
     <option name="abstract" path="空行" hit="auto/abstract 屬性/事件周圍" />
     <option name="auto" path="空行" hit="auto/abstract 屬性/事件周圍" />
     <option name="事件周圍" path="空行" hit="auto/abstract 屬性/事件周圍" />
@@ -5439,10 +5400,12 @@
     <option name="大括號" path="語法樣式" hit="大括號" />
     <option name="大括號周圍" path="空格" hit="大括號周圍" />
     <option name="大括號布局" path="大括號布局" hit="大括號布局" />
+    <option name="如何縮排原始字串文字" path="制表符、縮排、對齊" hit="如何縮排原始字串文字" />
     <option name="始終將後續元素置於新行中" path="XML 文檔" hit="始終將後續元素置於新行中" />
     <option name="private" path="命名" hit="欄位(非 private)" />
     <option name="欄位" path="命名" hit="欄位(非 private)" />
     <option name="非" path="命名" hit="欄位(非 private)" />
+    <option name="欄位周圍" path="空行" hit="欄位周圍" />
     <option name="欄位和常數" path="制表符、縮排、對齊" hit="欄位和常數" />
     <option name="字串文字值" path="語法樣式" hit="字串文字值" />
     <option name="private" path="命名" hit="實例欄位(private)" />
@@ -5506,6 +5469,7 @@
     <option name="將多個宣告換行" path="換行" hit="將多個宣告換行" />
     <option name="將多類型參數約束換行" path="換行" hit="將多類型參數約束換行" />
     <option name="將多行元素置於新行中" path="XML 文檔" hit="將多行元素置於新行中" />
+    <option name="將多行註釋與星號對齊" path="制表符、縮排、對齊" hit="將多行註釋與星號對齊" />
     <option name="將欄位特性置於同一行中" path="換行" hit="將欄位特性置於同一行中" />
     <option name="將物件和集合初始設定式換行" path="換行" hit="將物件和集合初始設定式換行" />
     <option name="事件特性置於同一行中" path="換行" hit="將屬性/索引器/事件特性置於同一行中" />
@@ -5577,6 +5541,7 @@
     <option name="常數欄位" path="命名" hit="常數欄位(非 private)" />
     <option name="非" path="命名" hit="常數欄位(非 private)" />
     <option name="套用樣式啟發" path="語法樣式" hit="套用樣式啟發" />
+    <option name="參照相等性" path="Null 檢查" hit="參照相等性" />
     <option name="using" path="語法樣式" hit="參照限定和 'using' 指令" />
     <option name="參照限定和" path="語法樣式" hit="參照限定和 'using' 指令" />
     <option name="指令" path="語法樣式" hit="參照限定和 'using' 指令" />
@@ -5607,6 +5572,7 @@
     <option name="文字值" path="語法樣式" hit="文字值" />
     <option name="方法" path="命名" hit="方法" />
     <option name="方法參數" path="制表符、縮排、對齊" hit="方法參數" />
+    <option name="方法周圍" path="空行" hit="方法周圍" />
     <option name="方法和運算符" path="語法樣式" hit="方法和運算符" />
     <option name="方法宣告" path="大括號布局" hit="方法宣告" />
     <option name="方法宣告圓括號" path="空格" hit="方法宣告圓括號" />
@@ -5636,8 +5602,6 @@
     <option name="if" path="換行" hit="特殊的 'else if' 對待" />
     <option name="對待" path="換行" hit="特殊的 'else if' 對待" />
     <option name="特殊的" path="換行" hit="特殊的 'else if' 對待" />
-    <option name="環繞欄位" path="空行" hit="環繞欄位" />
-    <option name="環繞方法" path="空行" hit="環繞方法" />
     <option name="相同方法的呼叫" path="制表符、縮排、對齊" hit="相同方法的呼叫" />
     <option name="相等運算符" path="空格" hit="相等運算符 (==,!=)" />
     <option name="移位運算符" path="空格" hit="移位運算符(&lt;&lt;、&gt;&gt;、&gt;&gt;&gt;)" />
@@ -5739,9 +5703,11 @@
     <option name="語句的排列" path="換行" hit="語句的排列" />
     <option name="呼叫參數" path="制表符、縮排、對齊" hit="呼叫參數" />
     <option name="呼叫的排列" path="換行" hit="呼叫的排列" />
+    <option name="偵錯斷言" path="Null 檢查" hit="偵錯斷言" />
     <option name="和" path="空格" hit="賦值運算符(如 '=' 和 '+=')" />
     <option name="如" path="空格" hit="賦值運算符(如 '=' 和 '+=')" />
     <option name="賦值運算符" path="空格" hit="賦值運算符(如 '=' 和 '+=')" />
+    <option name="追蹤斷言" path="Null 檢查" hit="追蹤斷言" />
     <option name="跳過單一實參" path="語法樣式" hit="跳過單一實參" />
     <option name="運算符關鍵字後" path="空格" hit="運算符關鍵字後" />
     <option name="還原為舊格式設定引擎" path="其他" hit="還原為舊格式設定引擎" />
@@ -5793,207 +5759,16 @@
     <option name="預設值" path="語法樣式" hit="預設值" />
   </configurable>
   <configurable id="preferences.sourceCode.VB.NET" configurable_name="VB.NET">
+    <option name="" hit="',' 前" />
+    <option name="前" hit="',' 前" />
+    <option name="" hit="',' 後" />
+    <option name="後" hit="',' 後" />
+    <option name="" hit="'.' 周圍" />
+    <option name="周圍" hit="'.' 周圍" />
     <option name="all" path="命名" hit="ALL UPPER" />
     <option name="upper" path="命名" hit="ALL UPPER" />
-    <option name="-" hit="Additive operators (+,-)" />
-    <option name="additive" hit="Additive operators (+,-)" />
-    <option name="operators" hit="Additive operators (+,-)" />
-    <option name="after" hit="After ','" />
-    <option name="after" hit="After attribute target colon" />
-    <option name="attribute" hit="After attribute target colon" />
-    <option name="colon" hit="After attribute target colon" />
-    <option name="target" hit="After attribute target colon" />
-    <option name="after" hit="After file options section" />
-    <option name="file" hit="After file options section" />
-    <option name="options" hit="After file options section" />
-    <option name="section" hit="After file options section" />
-    <option name="after" hit="After global attribute" />
-    <option name="attribute" hit="After global attribute" />
-    <option name="global" hit="After global attribute" />
-    <option name="after" hit="After imports section" />
-    <option name="imports" hit="After imports section" />
-    <option name="section" hit="After imports section" />
-    <option name="after" hit="After unary operators" />
-    <option name="operators" hit="After unary operators" />
-    <option name="unary" hit="After unary operators" />
-    <option name="alias" hit="Allow 'Imports' alias directive" />
-    <option name="allow" hit="Allow 'Imports' alias directive" />
-    <option name="directive" hit="Allow 'Imports' alias directive" />
-    <option name="imports" hit="Allow 'Imports' alias directive" />
-    <option name="around" hit="Around '.'" />
-    <option name="around" hit="Around multiline field" />
-    <option name="field" hit="Around multiline field" />
-    <option name="multiline" hit="Around multiline field" />
-    <option name="around" hit="Around multiline method" />
-    <option name="method" hit="Around multiline method" />
-    <option name="multiline" hit="Around multiline method" />
-    <option name="around" hit="Around namespace" />
-    <option name="namespace" hit="Around namespace" />
-    <option name="around" hit="Around region" />
-    <option name="region" hit="Around region" />
-    <option name="around" hit="Around single line field" />
-    <option name="field" hit="Around single line field" />
-    <option name="line" hit="Around single line field" />
-    <option name="single" hit="Around single line field" />
-    <option name="around" hit="Around single line method" />
-    <option name="line" hit="Around single line method" />
-    <option name="method" hit="Around single line method" />
-    <option name="single" hit="Around single line method" />
-    <option name="around" hit="Around statement ':'" />
-    <option name="statement" hit="Around statement ':'" />
-    <option name="around" hit="Around type" />
-    <option name="type" hit="Around type" />
-    <option name="array" hit="Array initializer" />
-    <option name="initializer" hit="Array initializer" />
-    <option name="and" hit="Assignment operators (such as '=' and '+=')" />
-    <option name="as" hit="Assignment operators (such as '=' and '+=')" />
-    <option name="assignment" hit="Assignment operators (such as '=' and '+=')" />
-    <option name="operators" hit="Assignment operators (such as '=' and '+=')" />
-    <option name="such" hit="Assignment operators (such as '=' and '+=')" />
-    <option name="before" hit="Before ','" />
-    <option name="before" hit="Before ':' in label" />
-    <option name="in" hit="Before ':' in label" />
-    <option name="label" hit="Before ':' in label" />
-    <option name="array" hit="Before array rank parentheses" />
-    <option name="before" hit="Before array rank parentheses" />
-    <option name="parentheses" hit="Before array rank parentheses" />
-    <option name="rank" hit="Before array rank parentheses" />
-    <option name="attribute" hit="Before attribute target colon" />
-    <option name="before" hit="Before attribute target colon" />
-    <option name="colon" hit="Before attribute target colon" />
-    <option name="target" hit="Before attribute target colon" />
-    <option name="before" hit="Before empty invocation parentheses" />
-    <option name="empty" hit="Before empty invocation parentheses" />
-    <option name="invocation" hit="Before empty invocation parentheses" />
-    <option name="parentheses" hit="Before empty invocation parentheses" />
-    <option name="before" hit="Before empty method declaration parentheses" />
-    <option name="declaration" hit="Before empty method declaration parentheses" />
-    <option name="empty" hit="Before empty method declaration parentheses" />
-    <option name="method" hit="Before empty method declaration parentheses" />
-    <option name="parentheses" hit="Before empty method declaration parentheses" />
-    <option name="before" hit="Before invocation parentheses" />
-    <option name="invocation" hit="Before invocation parentheses" />
-    <option name="parentheses" hit="Before invocation parentheses" />
-    <option name="before" hit="Before method declaration parentheses" />
-    <option name="declaration" hit="Before method declaration parentheses" />
-    <option name="method" hit="Before method declaration parentheses" />
-    <option name="parentheses" hit="Before method declaration parentheses" />
-    <option name="before" hit="Before type parameter parentheses" />
-    <option name="parameter" hit="Before type parameter parentheses" />
-    <option name="parentheses" hit="Before type parameter parentheses" />
-    <option name="type" hit="Before type parameter parentheses" />
-    <option name="at" hit="Don't indent comments started at first column" />
-    <option name="column" hit="Don't indent comments started at first column" />
-    <option name="comments" hit="Don't indent comments started at first column" />
-    <option name="don" hit="Don't indent comments started at first column" />
-    <option name="first" hit="Don't indent comments started at first column" />
-    <option name="indent" hit="Don't indent comments started at first column" />
-    <option name="started" hit="Don't indent comments started at first column" />
-    <option name="t" hit="Don't indent comments started at first column" />
-    <option name="expression" hit="Expression" />
     <option name="first" path="命名" hit="First upper" />
     <option name="upper" path="命名" hit="First upper" />
-    <option name="handles" hit="Implements/handles list" />
-    <option name="implements" hit="Implements/handles list" />
-    <option name="list" hit="Implements/handles list" />
-    <option name="case" hit="Indent 'case' from 'select'" />
-    <option name="from" hit="Indent 'case' from 'select'" />
-    <option name="indent" hit="Indent 'case' from 'select'" />
-    <option name="select" hit="Indent 'case' from 'select'" />
-    <option name="inside" hit="Inside region" />
-    <option name="region" hit="Inside region" />
-    <option name="arguments" hit="Invocation arguments" />
-    <option name="invocation" hit="Invocation arguments" />
-    <option name="breaks" hit="Keep existing line breaks" />
-    <option name="existing" hit="Keep existing line breaks" />
-    <option name="keep" hit="Keep existing line breaks" />
-    <option name="line" hit="Keep existing line breaks" />
-    <option name="blank" hit="Keep max blank lines in code" />
-    <option name="code" hit="Keep max blank lines in code" />
-    <option name="in" hit="Keep max blank lines in code" />
-    <option name="keep" hit="Keep max blank lines in code" />
-    <option name="lines" hit="Keep max blank lines in code" />
-    <option name="max" hit="Keep max blank lines in code" />
-    <option name="blank" hit="Keep max blank lines in declarations" />
-    <option name="declarations" hit="Keep max blank lines in declarations" />
-    <option name="in" hit="Keep max blank lines in declarations" />
-    <option name="keep" hit="Keep max blank lines in declarations" />
-    <option name="lines" hit="Keep max blank lines in declarations" />
-    <option name="max" hit="Keep max blank lines in declarations" />
-    <option name="method" hit="Method parameters" />
-    <option name="parameters" hit="Method parameters" />
-    <option name="declaration" hit="Multiple declaration list" />
-    <option name="list" hit="Multiple declaration list" />
-    <option name="multiple" hit="Multiple declaration list" />
-    <option name="and" hit="Multiplicative operators (such as '*' and '/')" />
-    <option name="as" hit="Multiplicative operators (such as '*' and '/')" />
-    <option name="multiplicative" hit="Multiplicative operators (such as '*' and '/')" />
-    <option name="operators" hit="Multiplicative operators (such as '*' and '/')" />
-    <option name="such" hit="Multiplicative operators (such as '*' and '/')" />
-    <option name="attribute" hit="Place event attribute on the same line" />
-    <option name="event" hit="Place event attribute on the same line" />
-    <option name="line" hit="Place event attribute on the same line" />
-    <option name="on" hit="Place event attribute on the same line" />
-    <option name="place" hit="Place event attribute on the same line" />
-    <option name="same" hit="Place event attribute on the same line" />
-    <option name="the" hit="Place event attribute on the same line" />
-    <option name="attribute" hit="Place field attribute on the same line" />
-    <option name="field" hit="Place field attribute on the same line" />
-    <option name="line" hit="Place field attribute on the same line" />
-    <option name="on" hit="Place field attribute on the same line" />
-    <option name="place" hit="Place field attribute on the same line" />
-    <option name="same" hit="Place field attribute on the same line" />
-    <option name="the" hit="Place field attribute on the same line" />
-    <option name="attribute" hit="Place method attribute on the same line" />
-    <option name="line" hit="Place method attribute on the same line" />
-    <option name="method" hit="Place method attribute on the same line" />
-    <option name="on" hit="Place method attribute on the same line" />
-    <option name="place" hit="Place method attribute on the same line" />
-    <option name="same" hit="Place method attribute on the same line" />
-    <option name="the" hit="Place method attribute on the same line" />
-    <option name="attribute" hit="Place property attribute on the same line" />
-    <option name="line" hit="Place property attribute on the same line" />
-    <option name="on" hit="Place property attribute on the same line" />
-    <option name="place" hit="Place property attribute on the same line" />
-    <option name="property" hit="Place property attribute on the same line" />
-    <option name="same" hit="Place property attribute on the same line" />
-    <option name="the" hit="Place property attribute on the same line" />
-    <option name="attribute" hit="Place type attribute on the same line" />
-    <option name="line" hit="Place type attribute on the same line" />
-    <option name="on" hit="Place type attribute on the same line" />
-    <option name="place" hit="Place type attribute on the same line" />
-    <option name="same" hit="Place type attribute on the same line" />
-    <option name="the" hit="Place type attribute on the same line" />
-    <option name="type" hit="Place type attribute on the same line" />
-    <option name="fully" hit="Prefer fully qualified references" />
-    <option name="prefer" hit="Prefer fully qualified references" />
-    <option name="qualified" hit="Prefer fully qualified references" />
-    <option name="references" hit="Prefer fully qualified references" />
-    <option name="before" hit="Prefer to wrap before '(' in invocation" />
-    <option name="in" hit="Prefer to wrap before '(' in invocation" />
-    <option name="invocation" hit="Prefer to wrap before '(' in invocation" />
-    <option name="prefer" hit="Prefer to wrap before '(' in invocation" />
-    <option name="to" hit="Prefer to wrap before '(' in invocation" />
-    <option name="wrap" hit="Prefer to wrap before '(' in invocation" />
-    <option name="before" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="declaration" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="in" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="method" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="prefer" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="to" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="wrap" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="before" hit="Prefer to wrap before operator in binary expression" />
-    <option name="binary" hit="Prefer to wrap before operator in binary expression" />
-    <option name="expression" hit="Prefer to wrap before operator in binary expression" />
-    <option name="in" hit="Prefer to wrap before operator in binary expression" />
-    <option name="operator" hit="Prefer to wrap before operator in binary expression" />
-    <option name="prefer" hit="Prefer to wrap before operator in binary expression" />
-    <option name="to" hit="Prefer to wrap before operator in binary expression" />
-    <option name="wrap" hit="Prefer to wrap before operator in binary expression" />
-    <option name="operators" hit="Relational operators (&lt;,&gt;,&lt;=,&gt;=)" />
-    <option name="relational" hit="Relational operators (&lt;,&gt;,&lt;=,&gt;=)" />
-    <option name="operators" hit="Shift operators (&lt;&lt;,&gt;&gt;)" />
-    <option name="shift" hit="Shift operators (&lt;&lt;,&gt;&gt;)" />
     <option name="uppercamelcase" path="命名" hit="UpperCamelCase" />
     <option name="underscoretolerant" path="命名" hit="UpperCamelCase UnderscoreTolerant" />
     <option name="uppercamelcase" path="命名" hit="UpperCamelCase UnderscoreTolerant" />
@@ -6001,66 +5776,11 @@
     <option name="uppercamelcase" path="命名" hit="UpperCamelCase underscoreTolerant" />
     <option name="net" hit="VB NET" />
     <option name="vb" hit="VB NET" />
-    <option name="array" hit="Within array initialization braces" />
-    <option name="braces" hit="Within array initialization braces" />
-    <option name="initialization" hit="Within array initialization braces" />
-    <option name="within" hit="Within array initialization braces" />
-    <option name="array" hit="Within array rank parentheses" />
-    <option name="parentheses" hit="Within array rank parentheses" />
-    <option name="rank" hit="Within array rank parentheses" />
-    <option name="within" hit="Within array rank parentheses" />
-    <option name="angles" hit="Within attribute angles" />
-    <option name="attribute" hit="Within attribute angles" />
-    <option name="within" hit="Within attribute angles" />
-    <option name="array" hit="Within empty array rank parentheses" />
-    <option name="empty" hit="Within empty array rank parentheses" />
-    <option name="parentheses" hit="Within empty array rank parentheses" />
-    <option name="rank" hit="Within empty array rank parentheses" />
-    <option name="within" hit="Within empty array rank parentheses" />
-    <option name="empty" hit="Within empty invocation parentheses" />
-    <option name="invocation" hit="Within empty invocation parentheses" />
-    <option name="parentheses" hit="Within empty invocation parentheses" />
-    <option name="within" hit="Within empty invocation parentheses" />
-    <option name="declaration" hit="Within empty method declaration parentheses" />
-    <option name="empty" hit="Within empty method declaration parentheses" />
-    <option name="method" hit="Within empty method declaration parentheses" />
-    <option name="parentheses" hit="Within empty method declaration parentheses" />
-    <option name="within" hit="Within empty method declaration parentheses" />
-    <option name="expression" hit="Within expression parentheses" />
-    <option name="parentheses" hit="Within expression parentheses" />
-    <option name="within" hit="Within expression parentheses" />
-    <option name="invocation" hit="Within invocation parentheses" />
-    <option name="parentheses" hit="Within invocation parentheses" />
-    <option name="within" hit="Within invocation parentheses" />
-    <option name="declaration" hit="Within method declaration parentheses" />
-    <option name="method" hit="Within method declaration parentheses" />
-    <option name="parentheses" hit="Within method declaration parentheses" />
-    <option name="within" hit="Within method declaration parentheses" />
-    <option name="parentheses" hit="Within tuple parentheses" />
-    <option name="tuple" hit="Within tuple parentheses" />
-    <option name="within" hit="Within tuple parentheses" />
-    <option name="parameter" hit="Within type parameter parentheses" />
-    <option name="parentheses" hit="Within type parameter parentheses" />
-    <option name="type" hit="Within type parameter parentheses" />
-    <option name="within" hit="Within type parameter parentheses" />
-    <option name="extends" hit="Wrap extends/implements/handles list" />
-    <option name="handles" hit="Wrap extends/implements/handles list" />
-    <option name="implements" hit="Wrap extends/implements/handles list" />
-    <option name="list" hit="Wrap extends/implements/handles list" />
-    <option name="wrap" hit="Wrap extends/implements/handles list" />
-    <option name="formal" hit="Wrap formal parameters" />
-    <option name="parameters" hit="Wrap formal parameters" />
-    <option name="wrap" hit="Wrap formal parameters" />
-    <option name="arguments" hit="Wrap invocation arguments" />
-    <option name="invocation" hit="Wrap invocation arguments" />
-    <option name="wrap" hit="Wrap invocation arguments" />
-    <option name="declarations" hit="Wrap multiple declarations list" />
-    <option name="list" hit="Wrap multiple declarations list" />
-    <option name="multiple" hit="Wrap multiple declarations list" />
-    <option name="wrap" hit="Wrap multiple declarations list" />
     <option name="all" path="命名" hit="all lower" />
     <option name="lower" path="命名" hit="all lower" />
     <option name="iddqd" hit="iddqd" />
+    <option name="import" hit="import 部分後" />
+    <option name="部分後" hit="import 部分後" />
     <option name="lowercamelcase" path="命名" hit="lowerCamelCase" />
     <option name="lowercamelcase" path="命名" hit="lowerCamelCase UnderscoreTolerant" />
     <option name="underscoretolerant" path="命名" hit="lowerCamelCase UnderscoreTolerant" />
@@ -6076,23 +5796,62 @@
     <option name="private" hit="static 欄位(private)" />
     <option name="static" hit="static 欄位(private)" />
     <option name="欄位" hit="static 欄位(private)" />
+    <option name="一元運算符後" hit="一元運算符後" />
+    <option name="不縮排從第一列開始的註釋" hit="不縮排從第一列開始的註釋" />
+    <option name="乘法運算符" hit="乘法運算符(如 '*' 和 '/')" />
+    <option name="和" hit="乘法運算符(如 '*' 和 '/')" />
+    <option name="如" hit="乘法運算符(如 '*' 和 '/')" />
     <option name="事件" hit="事件" />
+    <option name="保留程式碼中的最大空行" hit="保留程式碼中的最大空行" />
+    <option name="保留宣告中的最大空行" hit="保留宣告中的最大空行" />
+    <option name="保留現有換行符" hit="保留現有換行符" />
     <option name="保留現有格式設定" hit="保留現有格式設定" />
+    <option name="imports" hit="允許 'Imports' 別名指令" />
+    <option name="允許" hit="允許 'Imports' 別名指令" />
+    <option name="別名指令" hit="允許 'Imports' 別名指令" />
+    <option name="元組圓括號內" hit="元組圓括號內" />
+    <option name="全域特性後" hit="全域特性後" />
+    <option name="關係運算符" hit="關係運算符(&lt;、&gt;、&lt;=、&gt;=)" />
     <option name="其他" hit="其他" />
     <option name="制表符和縮排" hit="制表符和縮排" />
     <option name="制表符寬度" hit="制表符寬度" />
     <option name="制表符用於縮排時如何對齊" hit="制表符用於縮排時如何對齊" />
     <option name="前綴" path="命名" hit="前綴  " />
+    <option name="-" hit="加法運算符 (+,-)" />
+    <option name="加法運算符" hit="加法運算符 (+,-)" />
+    <option name="區域內" hit="區域內" />
+    <option name="區域周圍" hit="區域周圍" />
+    <option name="單行欄位周圍" hit="單行欄位周圍" />
+    <option name="單行方法周圍" hit="單行方法周圍" />
     <option name="參數" hit="參數" />
     <option name="後綴" path="命名" hit="後綴  " />
     <option name="啟用檢查" path="命名" hit="啟用檢查" />
     <option name="命名" path="命名" hit="命名" />
+    <option name="命名空間周圍" hit="命名空間周圍" />
+    <option name="多個宣告列表" hit="多個宣告列表" />
+    <option name="多行欄位周圍" hit="多行欄位周圍" />
+    <option name="多行方法周圍" hit="多行方法周圍" />
     <option name="private" hit="欄位(非 private)" />
     <option name="欄位" hit="欄位(非 private)" />
     <option name="非" hit="欄位(非 private)" />
     <option name="private" hit="實例欄位(private)" />
     <option name="實例欄位" hit="實例欄位(private)" />
+    <option name="句柄列表" hit="實作/句柄列表" />
+    <option name="實作" hit="實作/句柄列表" />
     <option name="對齊多行建構" hit="對齊多行建構" />
+    <option name="extends" hit="將 extends/implements/handles 列表換行" />
+    <option name="handles" hit="將 extends/implements/handles 列表換行" />
+    <option name="implements" hit="將 extends/implements/handles 列表換行" />
+    <option name="列表換行" hit="將 extends/implements/handles 列表換行" />
+    <option name="將" hit="將 extends/implements/handles 列表換行" />
+    <option name="將事件特性置於同一行中" hit="將事件特性置於同一行中" />
+    <option name="將多個宣告列表換行" hit="將多個宣告列表換行" />
+    <option name="將欄位特性置於同一行中" hit="將欄位特性置於同一行中" />
+    <option name="將屬性特性置於同一行中" hit="將屬性特性置於同一行中" />
+    <option name="將參數換行" hit="將參數換行" />
+    <option name="將方法特性置於同一行中" hit="將方法特性置於同一行中" />
+    <option name="將類型特性置於同一行中" hit="將類型特性置於同一行中" />
+    <option name="將呼叫實參換行" hit="將呼叫實參換行" />
     <option name="區域函式" hit="區域函式" />
     <option name="區域變數" hit="區域變數" />
     <option name="區域常數" hit="區域常數" />
@@ -6108,276 +5867,72 @@
     <option name="換行" hit="換行" />
     <option name="接口" hit="接口" />
     <option name="陣列" hit="陣列" />
+    <option name="陣列初始設定式" hit="陣列初始設定式" />
+    <option name="陣列初始化大括號內" hit="陣列初始化大括號內" />
+    <option name="陣列秩圓括號內" hit="陣列秩圓括號內" />
+    <option name="陣列秩圓括號前" hit="陣列秩圓括號前" />
+    <option name="檔案選項部分後" hit="檔案選項部分後" />
     <option name="方法" hit="方法" />
+    <option name="方法參數" hit="方法參數" />
+    <option name="方法宣告圓括號內" hit="方法宣告圓括號內" />
+    <option name="方法宣告圓括號前" hit="方法宣告圓括號前" />
     <option name="枚舉成員" hit="枚舉成員" />
+    <option name="前" hit="標籤中的 ':' 前" />
+    <option name="標籤中的" hit="標籤中的 ':' 前" />
     <option name="樣式" path="命名" hit="樣式  " />
     <option name="正在載入" hit="正在載入 " />
     <option name="特性" hit="特性" />
+    <option name="特性尖括號內" hit="特性尖括號內" />
+    <option name="特性目標冒號前" hit="特性目標冒號前" />
+    <option name="特性目標冒號後" hit="特性目標冒號後" />
+    <option name="移位運算符" hit="移位運算符(&lt;&lt;、&gt;&gt;)" />
+    <option name="空陣列秩圓括號內" hit="空陣列秩圓括號內" />
+    <option name="空方法宣告圓括號內" hit="空方法宣告圓括號內" />
+    <option name="空方法宣告圓括號前" hit="空方法宣告圓括號前" />
     <option name="空格" path="空格" hit="空格" />
     <option name="空行" hit="空行" />
+    <option name="空調用圓括號內" hit="空調用圓括號內" />
+    <option name="空調用圓括號前" hit="空調用圓括號前" />
+    <option name="類型周圍" hit="類型周圍" />
     <option name="類型和命名空間" hit="類型和命名空間" />
     <option name="類型參數" hit="類型參數" />
+    <option name="類型參數圓括號內" hit="類型參數圓括號內" />
+    <option name="類型參數圓括號前" hit="類型參數圓括號前" />
+    <option name="case" hit="縮排 'select' 中的 'case'" />
+    <option name="select" hit="縮排 'select' 中的 'case'" />
+    <option name="中的" hit="縮排 'select' 中的 'case'" />
+    <option name="縮排" hit="縮排 'select' 中的 'case'" />
     <option name="縮排大小" hit="縮排大小" />
     <option name="縮排樣式" hit="縮排樣式" />
+    <option name="表達式" hit="表達式" />
+    <option name="表達式圓括號內" hit="表達式圓括號內" />
+    <option name="周圍" hit="語句 ':' 周圍" />
+    <option name="語句" hit="語句 ':' 周圍" />
     <option name="語法樣式" path="語法樣式" hit="語法樣式" />
+    <option name="呼叫圓括號內" hit="呼叫圓括號內" />
+    <option name="呼叫圓括號前" hit="呼叫圓括號前" />
+    <option name="呼叫實參" hit="呼叫實參" />
+    <option name="和" hit="賦值運算符(如 '=' 和 '+=')" />
+    <option name="如" hit="賦值運算符(如 '=' 和 '+=')" />
+    <option name="賦值運算符" hit="賦值運算符(如 '=' 和 '+=')" />
     <option name="運算周圍" hit="運算周圍" />
     <option name="長行換行" hit="長行換行" />
     <option name="附近的圓括號" hit="附近的圓括號" />
-    <option name="-" path="空格" hit="Additive operators (+,-)" />
-    <option name="additive" path="空格" hit="Additive operators (+,-)" />
-    <option name="operators" path="空格" hit="Additive operators (+,-)" />
-    <option name="after" path="空格" hit="After ','" />
-    <option name="after" path="空格" hit="After attribute target colon" />
-    <option name="attribute" path="空格" hit="After attribute target colon" />
-    <option name="colon" path="空格" hit="After attribute target colon" />
-    <option name="target" path="空格" hit="After attribute target colon" />
-    <option name="after" path="空行" hit="After file options section" />
-    <option name="file" path="空行" hit="After file options section" />
-    <option name="options" path="空行" hit="After file options section" />
-    <option name="section" path="空行" hit="After file options section" />
-    <option name="after" path="空行" hit="After global attribute" />
-    <option name="attribute" path="空行" hit="After global attribute" />
-    <option name="global" path="空行" hit="After global attribute" />
-    <option name="after" path="空行" hit="After imports section" />
-    <option name="imports" path="空行" hit="After imports section" />
-    <option name="section" path="空行" hit="After imports section" />
-    <option name="after" path="空格" hit="After unary operators" />
-    <option name="operators" path="空格" hit="After unary operators" />
-    <option name="unary" path="空格" hit="After unary operators" />
-    <option name="alias" path="語法樣式" hit="Allow 'Imports' alias directive" />
-    <option name="allow" path="語法樣式" hit="Allow 'Imports' alias directive" />
-    <option name="directive" path="語法樣式" hit="Allow 'Imports' alias directive" />
-    <option name="imports" path="語法樣式" hit="Allow 'Imports' alias directive" />
-    <option name="around" path="空格" hit="Around '.'" />
-    <option name="around" path="空行" hit="Around multiline field" />
-    <option name="field" path="空行" hit="Around multiline field" />
-    <option name="multiline" path="空行" hit="Around multiline field" />
-    <option name="around" path="空行" hit="Around multiline method" />
-    <option name="method" path="空行" hit="Around multiline method" />
-    <option name="multiline" path="空行" hit="Around multiline method" />
-    <option name="around" path="空行" hit="Around namespace" />
-    <option name="namespace" path="空行" hit="Around namespace" />
-    <option name="around" path="空行" hit="Around region" />
-    <option name="region" path="空行" hit="Around region" />
-    <option name="around" path="空行" hit="Around single line field" />
-    <option name="field" path="空行" hit="Around single line field" />
-    <option name="line" path="空行" hit="Around single line field" />
-    <option name="single" path="空行" hit="Around single line field" />
-    <option name="around" path="空行" hit="Around single line method" />
-    <option name="line" path="空行" hit="Around single line method" />
-    <option name="method" path="空行" hit="Around single line method" />
-    <option name="single" path="空行" hit="Around single line method" />
-    <option name="around" path="空格" hit="Around statement ':'" />
-    <option name="statement" path="空格" hit="Around statement ':'" />
-    <option name="around" path="空行" hit="Around type" />
-    <option name="type" path="空行" hit="Around type" />
-    <option name="array" path="其他" hit="Array initializer" />
-    <option name="initializer" path="其他" hit="Array initializer" />
-    <option name="and" path="空格" hit="Assignment operators (such as '=' and '+=')" />
-    <option name="as" path="空格" hit="Assignment operators (such as '=' and '+=')" />
-    <option name="assignment" path="空格" hit="Assignment operators (such as '=' and '+=')" />
-    <option name="operators" path="空格" hit="Assignment operators (such as '=' and '+=')" />
-    <option name="such" path="空格" hit="Assignment operators (such as '=' and '+=')" />
-    <option name="before" path="空格" hit="Before ','" />
-    <option name="before" path="空格" hit="Before ':' in label" />
-    <option name="in" path="空格" hit="Before ':' in label" />
-    <option name="label" path="空格" hit="Before ':' in label" />
-    <option name="array" path="空格" hit="Before array rank parentheses" />
-    <option name="before" path="空格" hit="Before array rank parentheses" />
-    <option name="parentheses" path="空格" hit="Before array rank parentheses" />
-    <option name="rank" path="空格" hit="Before array rank parentheses" />
-    <option name="attribute" path="空格" hit="Before attribute target colon" />
-    <option name="before" path="空格" hit="Before attribute target colon" />
-    <option name="colon" path="空格" hit="Before attribute target colon" />
-    <option name="target" path="空格" hit="Before attribute target colon" />
-    <option name="before" path="空格" hit="Before empty invocation parentheses" />
-    <option name="empty" path="空格" hit="Before empty invocation parentheses" />
-    <option name="invocation" path="空格" hit="Before empty invocation parentheses" />
-    <option name="parentheses" path="空格" hit="Before empty invocation parentheses" />
-    <option name="before" path="空格" hit="Before empty method declaration parentheses" />
-    <option name="declaration" path="空格" hit="Before empty method declaration parentheses" />
-    <option name="empty" path="空格" hit="Before empty method declaration parentheses" />
-    <option name="method" path="空格" hit="Before empty method declaration parentheses" />
-    <option name="parentheses" path="空格" hit="Before empty method declaration parentheses" />
-    <option name="before" path="空格" hit="Before invocation parentheses" />
-    <option name="invocation" path="空格" hit="Before invocation parentheses" />
-    <option name="parentheses" path="空格" hit="Before invocation parentheses" />
-    <option name="before" path="空格" hit="Before method declaration parentheses" />
-    <option name="declaration" path="空格" hit="Before method declaration parentheses" />
-    <option name="method" path="空格" hit="Before method declaration parentheses" />
-    <option name="parentheses" path="空格" hit="Before method declaration parentheses" />
-    <option name="before" path="空格" hit="Before type parameter parentheses" />
-    <option name="parameter" path="空格" hit="Before type parameter parentheses" />
-    <option name="parentheses" path="空格" hit="Before type parameter parentheses" />
-    <option name="type" path="空格" hit="Before type parameter parentheses" />
-    <option name="at" path="其他" hit="Don't indent comments started at first column" />
-    <option name="column" path="其他" hit="Don't indent comments started at first column" />
-    <option name="comments" path="其他" hit="Don't indent comments started at first column" />
-    <option name="don" path="其他" hit="Don't indent comments started at first column" />
-    <option name="first" path="其他" hit="Don't indent comments started at first column" />
-    <option name="indent" path="其他" hit="Don't indent comments started at first column" />
-    <option name="started" path="其他" hit="Don't indent comments started at first column" />
-    <option name="t" path="其他" hit="Don't indent comments started at first column" />
-    <option name="expression" path="其他" hit="Expression" />
-    <option name="handles" path="其他" hit="Implements/handles list" />
-    <option name="implements" path="其他" hit="Implements/handles list" />
-    <option name="list" path="其他" hit="Implements/handles list" />
-    <option name="case" path="其他" hit="Indent 'case' from 'select'" />
-    <option name="from" path="其他" hit="Indent 'case' from 'select'" />
-    <option name="indent" path="其他" hit="Indent 'case' from 'select'" />
-    <option name="select" path="其他" hit="Indent 'case' from 'select'" />
-    <option name="inside" path="空行" hit="Inside region" />
-    <option name="region" path="空行" hit="Inside region" />
-    <option name="arguments" path="其他" hit="Invocation arguments" />
-    <option name="invocation" path="其他" hit="Invocation arguments" />
-    <option name="breaks" path="換行" hit="Keep existing line breaks" />
-    <option name="existing" path="換行" hit="Keep existing line breaks" />
-    <option name="keep" path="換行" hit="Keep existing line breaks" />
-    <option name="line" path="換行" hit="Keep existing line breaks" />
-    <option name="blank" path="空行" hit="Keep max blank lines in code" />
-    <option name="code" path="空行" hit="Keep max blank lines in code" />
-    <option name="in" path="空行" hit="Keep max blank lines in code" />
-    <option name="keep" path="空行" hit="Keep max blank lines in code" />
-    <option name="lines" path="空行" hit="Keep max blank lines in code" />
-    <option name="max" path="空行" hit="Keep max blank lines in code" />
-    <option name="blank" path="空行" hit="Keep max blank lines in declarations" />
-    <option name="declarations" path="空行" hit="Keep max blank lines in declarations" />
-    <option name="in" path="空行" hit="Keep max blank lines in declarations" />
-    <option name="keep" path="空行" hit="Keep max blank lines in declarations" />
-    <option name="lines" path="空行" hit="Keep max blank lines in declarations" />
-    <option name="max" path="空行" hit="Keep max blank lines in declarations" />
-    <option name="method" path="其他" hit="Method parameters" />
-    <option name="parameters" path="其他" hit="Method parameters" />
-    <option name="declaration" path="其他" hit="Multiple declaration list" />
-    <option name="list" path="其他" hit="Multiple declaration list" />
-    <option name="multiple" path="其他" hit="Multiple declaration list" />
-    <option name="and" path="空格" hit="Multiplicative operators (such as '*' and '/')" />
-    <option name="as" path="空格" hit="Multiplicative operators (such as '*' and '/')" />
-    <option name="multiplicative" path="空格" hit="Multiplicative operators (such as '*' and '/')" />
-    <option name="operators" path="空格" hit="Multiplicative operators (such as '*' and '/')" />
-    <option name="such" path="空格" hit="Multiplicative operators (such as '*' and '/')" />
-    <option name="attribute" path="換行" hit="Place event attribute on the same line" />
-    <option name="event" path="換行" hit="Place event attribute on the same line" />
-    <option name="line" path="換行" hit="Place event attribute on the same line" />
-    <option name="on" path="換行" hit="Place event attribute on the same line" />
-    <option name="place" path="換行" hit="Place event attribute on the same line" />
-    <option name="same" path="換行" hit="Place event attribute on the same line" />
-    <option name="the" path="換行" hit="Place event attribute on the same line" />
-    <option name="attribute" path="換行" hit="Place field attribute on the same line" />
-    <option name="field" path="換行" hit="Place field attribute on the same line" />
-    <option name="line" path="換行" hit="Place field attribute on the same line" />
-    <option name="on" path="換行" hit="Place field attribute on the same line" />
-    <option name="place" path="換行" hit="Place field attribute on the same line" />
-    <option name="same" path="換行" hit="Place field attribute on the same line" />
-    <option name="the" path="換行" hit="Place field attribute on the same line" />
-    <option name="attribute" path="換行" hit="Place method attribute on the same line" />
-    <option name="line" path="換行" hit="Place method attribute on the same line" />
-    <option name="method" path="換行" hit="Place method attribute on the same line" />
-    <option name="on" path="換行" hit="Place method attribute on the same line" />
-    <option name="place" path="換行" hit="Place method attribute on the same line" />
-    <option name="same" path="換行" hit="Place method attribute on the same line" />
-    <option name="the" path="換行" hit="Place method attribute on the same line" />
-    <option name="attribute" path="換行" hit="Place property attribute on the same line" />
-    <option name="line" path="換行" hit="Place property attribute on the same line" />
-    <option name="on" path="換行" hit="Place property attribute on the same line" />
-    <option name="place" path="換行" hit="Place property attribute on the same line" />
-    <option name="property" path="換行" hit="Place property attribute on the same line" />
-    <option name="same" path="換行" hit="Place property attribute on the same line" />
-    <option name="the" path="換行" hit="Place property attribute on the same line" />
-    <option name="attribute" path="換行" hit="Place type attribute on the same line" />
-    <option name="line" path="換行" hit="Place type attribute on the same line" />
-    <option name="on" path="換行" hit="Place type attribute on the same line" />
-    <option name="place" path="換行" hit="Place type attribute on the same line" />
-    <option name="same" path="換行" hit="Place type attribute on the same line" />
-    <option name="the" path="換行" hit="Place type attribute on the same line" />
-    <option name="type" path="換行" hit="Place type attribute on the same line" />
-    <option name="fully" path="語法樣式" hit="Prefer fully qualified references" />
-    <option name="prefer" path="語法樣式" hit="Prefer fully qualified references" />
-    <option name="qualified" path="語法樣式" hit="Prefer fully qualified references" />
-    <option name="references" path="語法樣式" hit="Prefer fully qualified references" />
-    <option name="before" path="換行" hit="Prefer to wrap before '(' in invocation" />
-    <option name="in" path="換行" hit="Prefer to wrap before '(' in invocation" />
-    <option name="invocation" path="換行" hit="Prefer to wrap before '(' in invocation" />
-    <option name="prefer" path="換行" hit="Prefer to wrap before '(' in invocation" />
-    <option name="to" path="換行" hit="Prefer to wrap before '(' in invocation" />
-    <option name="wrap" path="換行" hit="Prefer to wrap before '(' in invocation" />
-    <option name="before" path="換行" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="declaration" path="換行" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="in" path="換行" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="method" path="換行" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="prefer" path="換行" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="to" path="換行" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="wrap" path="換行" hit="Prefer to wrap before '(' in method declaration" />
-    <option name="before" path="換行" hit="Prefer to wrap before operator in binary expression" />
-    <option name="binary" path="換行" hit="Prefer to wrap before operator in binary expression" />
-    <option name="expression" path="換行" hit="Prefer to wrap before operator in binary expression" />
-    <option name="in" path="換行" hit="Prefer to wrap before operator in binary expression" />
-    <option name="operator" path="換行" hit="Prefer to wrap before operator in binary expression" />
-    <option name="prefer" path="換行" hit="Prefer to wrap before operator in binary expression" />
-    <option name="to" path="換行" hit="Prefer to wrap before operator in binary expression" />
-    <option name="wrap" path="換行" hit="Prefer to wrap before operator in binary expression" />
-    <option name="operators" path="空格" hit="Relational operators (&lt;,&gt;,&lt;=,&gt;=)" />
-    <option name="relational" path="空格" hit="Relational operators (&lt;,&gt;,&lt;=,&gt;=)" />
-    <option name="operators" path="空格" hit="Shift operators (&lt;&lt;,&gt;&gt;)" />
-    <option name="shift" path="空格" hit="Shift operators (&lt;&lt;,&gt;&gt;)" />
-    <option name="array" path="空格" hit="Within array initialization braces" />
-    <option name="braces" path="空格" hit="Within array initialization braces" />
-    <option name="initialization" path="空格" hit="Within array initialization braces" />
-    <option name="within" path="空格" hit="Within array initialization braces" />
-    <option name="array" path="空格" hit="Within array rank parentheses" />
-    <option name="parentheses" path="空格" hit="Within array rank parentheses" />
-    <option name="rank" path="空格" hit="Within array rank parentheses" />
-    <option name="within" path="空格" hit="Within array rank parentheses" />
-    <option name="angles" path="空格" hit="Within attribute angles" />
-    <option name="attribute" path="空格" hit="Within attribute angles" />
-    <option name="within" path="空格" hit="Within attribute angles" />
-    <option name="array" path="空格" hit="Within empty array rank parentheses" />
-    <option name="empty" path="空格" hit="Within empty array rank parentheses" />
-    <option name="parentheses" path="空格" hit="Within empty array rank parentheses" />
-    <option name="rank" path="空格" hit="Within empty array rank parentheses" />
-    <option name="within" path="空格" hit="Within empty array rank parentheses" />
-    <option name="empty" path="空格" hit="Within empty invocation parentheses" />
-    <option name="invocation" path="空格" hit="Within empty invocation parentheses" />
-    <option name="parentheses" path="空格" hit="Within empty invocation parentheses" />
-    <option name="within" path="空格" hit="Within empty invocation parentheses" />
-    <option name="declaration" path="空格" hit="Within empty method declaration parentheses" />
-    <option name="empty" path="空格" hit="Within empty method declaration parentheses" />
-    <option name="method" path="空格" hit="Within empty method declaration parentheses" />
-    <option name="parentheses" path="空格" hit="Within empty method declaration parentheses" />
-    <option name="within" path="空格" hit="Within empty method declaration parentheses" />
-    <option name="expression" path="空格" hit="Within expression parentheses" />
-    <option name="parentheses" path="空格" hit="Within expression parentheses" />
-    <option name="within" path="空格" hit="Within expression parentheses" />
-    <option name="invocation" path="空格" hit="Within invocation parentheses" />
-    <option name="parentheses" path="空格" hit="Within invocation parentheses" />
-    <option name="within" path="空格" hit="Within invocation parentheses" />
-    <option name="declaration" path="空格" hit="Within method declaration parentheses" />
-    <option name="method" path="空格" hit="Within method declaration parentheses" />
-    <option name="parentheses" path="空格" hit="Within method declaration parentheses" />
-    <option name="within" path="空格" hit="Within method declaration parentheses" />
-    <option name="parentheses" path="空格" hit="Within tuple parentheses" />
-    <option name="tuple" path="空格" hit="Within tuple parentheses" />
-    <option name="within" path="空格" hit="Within tuple parentheses" />
-    <option name="parameter" path="空格" hit="Within type parameter parentheses" />
-    <option name="parentheses" path="空格" hit="Within type parameter parentheses" />
-    <option name="type" path="空格" hit="Within type parameter parentheses" />
-    <option name="within" path="空格" hit="Within type parameter parentheses" />
-    <option name="extends" path="換行" hit="Wrap extends/implements/handles list" />
-    <option name="handles" path="換行" hit="Wrap extends/implements/handles list" />
-    <option name="implements" path="換行" hit="Wrap extends/implements/handles list" />
-    <option name="list" path="換行" hit="Wrap extends/implements/handles list" />
-    <option name="wrap" path="換行" hit="Wrap extends/implements/handles list" />
-    <option name="formal" path="換行" hit="Wrap formal parameters" />
-    <option name="parameters" path="換行" hit="Wrap formal parameters" />
-    <option name="wrap" path="換行" hit="Wrap formal parameters" />
-    <option name="arguments" path="換行" hit="Wrap invocation arguments" />
-    <option name="invocation" path="換行" hit="Wrap invocation arguments" />
-    <option name="wrap" path="換行" hit="Wrap invocation arguments" />
-    <option name="declarations" path="換行" hit="Wrap multiple declarations list" />
-    <option name="list" path="換行" hit="Wrap multiple declarations list" />
-    <option name="multiple" path="換行" hit="Wrap multiple declarations list" />
-    <option name="wrap" path="換行" hit="Wrap multiple declarations list" />
+    <option name="首選在二元表達式中的運算符前換行" hit="首選在二元表達式中的運算符前換行" />
+    <option name="前換行" hit="首選在呼叫中的 '(' 前換行" />
+    <option name="首選在呼叫中的" hit="首選在呼叫中的 '(' 前換行" />
+    <option name="首選完全限定參照" hit="首選完全限定參照" />
+    <option name="前換行" hit="首選方法宣告中的 '(' 前換行" />
+    <option name="首選方法宣告中的" hit="首選方法宣告中的 '(' 前換行" />
+    <option name="" path="空格" hit="',' 前" />
+    <option name="前" path="空格" hit="',' 前" />
+    <option name="" path="空格" hit="',' 後" />
+    <option name="後" path="空格" hit="',' 後" />
+    <option name="" path="空格" hit="'.' 周圍" />
+    <option name="周圍" path="空格" hit="'.' 周圍" />
     <option name="iddqd" path="語法樣式" hit="iddqd" />
+    <option name="import" path="空行" hit="import 部分後" />
+    <option name="部分後" path="空行" hit="import 部分後" />
     <option name="private" path="命名" hit="static 唯讀欄位(private)" />
     <option name="static" path="命名" hit="static 唯讀欄位(private)" />
     <option name="唯讀欄位" path="命名" hit="static 唯讀欄位(private)" />
@@ -6388,19 +5943,58 @@
     <option name="private" path="命名" hit="static 欄位(private)" />
     <option name="static" path="命名" hit="static 欄位(private)" />
     <option name="欄位" path="命名" hit="static 欄位(private)" />
+    <option name="一元運算符後" path="空格" hit="一元運算符後" />
+    <option name="不縮排從第一列開始的註釋" path="其他" hit="不縮排從第一列開始的註釋" />
+    <option name="乘法運算符" path="空格" hit="乘法運算符(如 '*' 和 '/')" />
+    <option name="和" path="空格" hit="乘法運算符(如 '*' 和 '/')" />
+    <option name="如" path="空格" hit="乘法運算符(如 '*' 和 '/')" />
     <option name="事件" path="命名" hit="事件" />
+    <option name="保留程式碼中的最大空行" path="空行" hit="保留程式碼中的最大空行" />
+    <option name="保留宣告中的最大空行" path="空行" hit="保留宣告中的最大空行" />
+    <option name="保留現有換行符" path="換行" hit="保留現有換行符" />
     <option name="保留現有格式設定" path="換行" hit="保留現有格式設定" />
+    <option name="imports" path="語法樣式" hit="允許 'Imports' 別名指令" />
+    <option name="允許" path="語法樣式" hit="允許 'Imports' 別名指令" />
+    <option name="別名指令" path="語法樣式" hit="允許 'Imports' 別名指令" />
+    <option name="元組圓括號內" path="空格" hit="元組圓括號內" />
+    <option name="全域特性後" path="空行" hit="全域特性後" />
+    <option name="關係運算符" path="空格" hit="關係運算符(&lt;、&gt;、&lt;=、&gt;=)" />
     <option name="其他" path="其他" hit="其他" />
     <option name="制表符和縮排" path="制表符和縮排" hit="制表符和縮排" />
     <option name="制表符寬度" path="制表符和縮排" hit="制表符寬度" />
     <option name="制表符用於縮排時如何對齊" path="制表符和縮排" hit="制表符用於縮排時如何對齊" />
+    <option name="-" path="空格" hit="加法運算符 (+,-)" />
+    <option name="加法運算符" path="空格" hit="加法運算符 (+,-)" />
+    <option name="區域內" path="空行" hit="區域內" />
+    <option name="區域周圍" path="空行" hit="區域周圍" />
+    <option name="單行欄位周圍" path="空行" hit="單行欄位周圍" />
+    <option name="單行方法周圍" path="空行" hit="單行方法周圍" />
     <option name="參數" path="命名" hit="參數" />
+    <option name="命名空間周圍" path="空行" hit="命名空間周圍" />
+    <option name="多個宣告列表" path="其他" hit="多個宣告列表" />
+    <option name="多行欄位周圍" path="空行" hit="多行欄位周圍" />
+    <option name="多行方法周圍" path="空行" hit="多行方法周圍" />
     <option name="private" path="命名" hit="欄位(非 private)" />
     <option name="欄位" path="命名" hit="欄位(非 private)" />
     <option name="非" path="命名" hit="欄位(非 private)" />
     <option name="private" path="命名" hit="實例欄位(private)" />
     <option name="實例欄位" path="命名" hit="實例欄位(private)" />
+    <option name="句柄列表" path="其他" hit="實作/句柄列表" />
+    <option name="實作" path="其他" hit="實作/句柄列表" />
     <option name="對齊多行建構" path="其他" hit="對齊多行建構" />
+    <option name="extends" path="換行" hit="將 extends/implements/handles 列表換行" />
+    <option name="handles" path="換行" hit="將 extends/implements/handles 列表換行" />
+    <option name="implements" path="換行" hit="將 extends/implements/handles 列表換行" />
+    <option name="列表換行" path="換行" hit="將 extends/implements/handles 列表換行" />
+    <option name="將" path="換行" hit="將 extends/implements/handles 列表換行" />
+    <option name="將事件特性置於同一行中" path="換行" hit="將事件特性置於同一行中" />
+    <option name="將多個宣告列表換行" path="換行" hit="將多個宣告列表換行" />
+    <option name="將欄位特性置於同一行中" path="換行" hit="將欄位特性置於同一行中" />
+    <option name="將屬性特性置於同一行中" path="換行" hit="將屬性特性置於同一行中" />
+    <option name="將參數換行" path="換行" hit="將參數換行" />
+    <option name="將方法特性置於同一行中" path="換行" hit="將方法特性置於同一行中" />
+    <option name="將類型特性置於同一行中" path="換行" hit="將類型特性置於同一行中" />
+    <option name="將呼叫實參換行" path="換行" hit="將呼叫實參換行" />
     <option name="區域函式" path="命名" hit="區域函式" />
     <option name="區域變數" path="命名" hit="區域變數" />
     <option name="區域常數" path="命名" hit="區域常數" />
@@ -6416,17 +6010,59 @@
     <option name="換行" path="換行" hit="換行" />
     <option name="接口" path="命名" hit="接口" />
     <option name="陣列" path="空格" hit="陣列" />
+    <option name="陣列初始設定式" path="其他" hit="陣列初始設定式" />
+    <option name="陣列初始化大括號內" path="空格" hit="陣列初始化大括號內" />
+    <option name="陣列秩圓括號內" path="空格" hit="陣列秩圓括號內" />
+    <option name="陣列秩圓括號前" path="空格" hit="陣列秩圓括號前" />
+    <option name="檔案選項部分後" path="空行" hit="檔案選項部分後" />
     <option name="方法" path="命名" hit="方法" />
+    <option name="方法參數" path="其他" hit="方法參數" />
+    <option name="方法宣告圓括號內" path="空格" hit="方法宣告圓括號內" />
+    <option name="方法宣告圓括號前" path="空格" hit="方法宣告圓括號前" />
     <option name="枚舉成員" path="命名" hit="枚舉成員" />
+    <option name="前" path="空格" hit="標籤中的 ':' 前" />
+    <option name="標籤中的" path="空格" hit="標籤中的 ':' 前" />
     <option name="特性" path="換行" hit="特性" />
+    <option name="特性尖括號內" path="空格" hit="特性尖括號內" />
+    <option name="特性目標冒號前" path="空格" hit="特性目標冒號前" />
+    <option name="特性目標冒號後" path="空格" hit="特性目標冒號後" />
+    <option name="移位運算符" path="空格" hit="移位運算符(&lt;&lt;、&gt;&gt;)" />
+    <option name="空陣列秩圓括號內" path="空格" hit="空陣列秩圓括號內" />
+    <option name="空方法宣告圓括號內" path="空格" hit="空方法宣告圓括號內" />
+    <option name="空方法宣告圓括號前" path="空格" hit="空方法宣告圓括號前" />
     <option name="空行" path="空行" hit="空行" />
+    <option name="空調用圓括號內" path="空格" hit="空調用圓括號內" />
+    <option name="空調用圓括號前" path="空格" hit="空調用圓括號前" />
+    <option name="類型周圍" path="空行" hit="類型周圍" />
     <option name="類型和命名空間" path="命名" hit="類型和命名空間" />
     <option name="類型參數" path="命名" hit="類型參數" />
+    <option name="類型參數圓括號內" path="空格" hit="類型參數圓括號內" />
+    <option name="類型參數圓括號前" path="空格" hit="類型參數圓括號前" />
+    <option name="case" path="其他" hit="縮排 'select' 中的 'case'" />
+    <option name="select" path="其他" hit="縮排 'select' 中的 'case'" />
+    <option name="中的" path="其他" hit="縮排 'select' 中的 'case'" />
+    <option name="縮排" path="其他" hit="縮排 'select' 中的 'case'" />
     <option name="縮排大小" path="制表符和縮排" hit="縮排大小" />
     <option name="縮排樣式" path="制表符和縮排" hit="縮排樣式" />
+    <option name="表達式" path="其他" hit="表達式" />
+    <option name="表達式圓括號內" path="空格" hit="表達式圓括號內" />
+    <option name="周圍" path="空格" hit="語句 ':' 周圍" />
+    <option name="語句" path="空格" hit="語句 ':' 周圍" />
+    <option name="呼叫圓括號內" path="空格" hit="呼叫圓括號內" />
+    <option name="呼叫圓括號前" path="空格" hit="呼叫圓括號前" />
+    <option name="呼叫實參" path="其他" hit="呼叫實參" />
+    <option name="和" path="空格" hit="賦值運算符(如 '=' 和 '+=')" />
+    <option name="如" path="空格" hit="賦值運算符(如 '=' 和 '+=')" />
+    <option name="賦值運算符" path="空格" hit="賦值運算符(如 '=' 和 '+=')" />
     <option name="運算周圍" path="空格" hit="運算周圍" />
     <option name="長行換行" path="換行" hit="長行換行" />
     <option name="附近的圓括號" path="空格" hit="附近的圓括號" />
+    <option name="首選在二元表達式中的運算符前換行" path="換行" hit="首選在二元表達式中的運算符前換行" />
+    <option name="前換行" path="換行" hit="首選在呼叫中的 '(' 前換行" />
+    <option name="首選在呼叫中的" path="換行" hit="首選在呼叫中的 '(' 前換行" />
+    <option name="首選完全限定參照" path="語法樣式" hit="首選完全限定參照" />
+    <option name="前換行" path="換行" hit="首選方法宣告中的 '(' 前換行" />
+    <option name="首選方法宣告中的" path="換行" hit="首選方法宣告中的 '(' 前換行" />
   </configurable>
   <configurable id="preferences.sourceCode.XAML" configurable_name="XAML">
     <option name="all" path="命名" hit="ALL UPPER" />
@@ -6547,16 +6183,6 @@
     <option name="篩選器" hit="篩選器 " />
   </configurable>
   <configurable id="CodeInspectionSettingsId" configurable_name="檢查設定">
-    <option name="" hit=" Enable Entity Framework specific inspections" />
-    <option name="enable" hit=" Enable Entity Framework specific inspections" />
-    <option name="entity" hit=" Enable Entity Framework specific inspections" />
-    <option name="framework-specific" hit=" Enable Entity Framework specific inspections" />
-    <option name="inspections" hit=" Enable Entity Framework specific inspections" />
-    <option name="" hit=" Re analyzes solution if changed" />
-    <option name="changed" hit=" Re analyzes solution if changed" />
-    <option name="if" hit=" Re analyzes solution if changed" />
-    <option name="re-analyzes" hit=" Re analyzes solution if changed" />
-    <option name="solution" hit=" Re analyzes solution if changed" />
     <option name="" hit=" 從 editorconfig 專案設定和規則集中讀取設定" />
     <option name="editorconfig" hit=" 從 editorconfig 專案設定和規則集中讀取設定" />
     <option name="從" hit=" 從 editorconfig 專案設定和規則集中讀取設定" />
@@ -6632,6 +6258,8 @@
     <option name="醒目提示游標下元素的用法" hit=" 醒目提示游標下元素的用法" />
     <option name="" hit=" 醒目提示字串文字中的特殊字元" />
     <option name="醒目提示字串文字中的特殊字元" hit=" 醒目提示字串文字中的特殊字元" />
+    <option name="" hit=" 醒目提示捕獲的主參數" />
+    <option name="醒目提示捕獲的主參數" hit=" 醒目提示捕獲的主參數" />
     <option name="" hit=" 醒目提示條件元素" />
     <option name="醒目提示條件元素" hit=" 醒目提示條件元素" />
     <option name="" hit=" 醒目提示相關的 async await 關鍵字" />
@@ -6641,14 +6269,6 @@
     <option name="醒目提示相關的" hit=" 醒目提示相關的 async await 關鍵字" />
     <option name="" hit=" 醒目提示顏色用法" />
     <option name="醒目提示顏色用法" hit=" 醒目提示顏色用法" />
-    <option name="enable" hit="Enable Entity Framework-specific inspections" />
-    <option name="entity" hit="Enable Entity Framework-specific inspections" />
-    <option name="framework-specific" hit="Enable Entity Framework-specific inspections" />
-    <option name="inspections" hit="Enable Entity Framework-specific inspections" />
-    <option name="changed" hit="Re-analyzes solution if changed" />
-    <option name="if" hit="Re-analyzes solution if changed" />
-    <option name="re-analyzes" hit="Re-analyzes solution if changed" />
-    <option name="solution" hit="Re-analyzes solution if changed" />
     <option name="iddqd" hit="iddqd" />
     <option name="canbenull" hit="樂觀  使用  CanBeNull  特性顯式標記時 或為  null  檢查" />
     <option name="null" hit="樂觀  使用  CanBeNull  特性顯式標記時 或為  null  檢查" />
@@ -6744,6 +6364,7 @@
     <option name="當實體沒有顯式" hit="悲觀  當實體沒有顯式  NotNull  特性時" />
     <option name="悲觀" hit="悲觀  當實體沒有顯式  NotNull  特性時" />
     <option name="特性時" hit="悲觀  當實體沒有顯式  NotNull  特性時" />
+    <option name="文字游標相依醒目提示" hit="文字游標相依醒目提示" />
     <option name="檢查設定" hit="檢查設定" />
     <option name="監視警告" hit="監視警告" />
     <option name="要編輯跳過的檔案和目錄列表" hit="要編輯跳過的檔案和目錄列表，請開啟解決方案" />
@@ -6752,9 +6373,18 @@
     <option name="c" hit="顏色關鍵字(C)" />
     <option name="顏色關鍵字" hit="顏色關鍵字(C)" />
     <option name="醒目提示顯示" hit="醒目提示顯示" />
+    <option name="c" hit="醒目提示顯示“捕獲”的 C# 主參數 – 在實例成員中使用，並採用單獨的顏色（預設與欄位相同）" />
+    <option name="主參數" hit="醒目提示顯示“捕獲”的 C# 主參數 – 在實例成員中使用，並採用單獨的顏色（預設與欄位相同）" />
+    <option name="在實例成員中使用" hit="醒目提示顯示“捕獲”的 C# 主參數 – 在實例成員中使用，並採用單獨的顏色（預設與欄位相同）" />
+    <option name="並採用單獨的顏色" hit="醒目提示顯示“捕獲”的 C# 主參數 – 在實例成員中使用，並採用單獨的顏色（預設與欄位相同）" />
+    <option name="捕獲" hit="醒目提示顯示“捕獲”的 C# 主參數 – 在實例成員中使用，並採用單獨的顏色（預設與欄位相同）" />
+    <option name="的" hit="醒目提示顯示“捕獲”的 C# 主參數 – 在實例成員中使用，並採用單獨的顏色（預設與欄位相同）" />
+    <option name="醒目提示顯示" hit="醒目提示顯示“捕獲”的 C# 主參數 – 在實例成員中使用，並採用單獨的顏色（預設與欄位相同）" />
+    <option name="預設與欄位相同" hit="醒目提示顯示“捕獲”的 C# 主參數 – 在實例成員中使用，並採用單獨的顏色（預設與欄位相同）" />
     <option name="醒目提示上下文退出" hit="醒目提示上下文退出" />
     <option name="醒目提示游標下元素的用法" hit="醒目提示游標下元素的用法" />
     <option name="醒目提示字串文字中的特殊字元" hit="醒目提示字串文字中的特殊字元" />
+    <option name="醒目提示捕獲的主參數" hit="醒目提示捕獲的主參數" />
     <option name="醒目提示條件元素" hit="醒目提示條件元素" />
     <option name="async" hit="醒目提示相關的 async/await 關鍵字" />
     <option name="await" hit="醒目提示相關的 async/await 關鍵字" />
@@ -6877,6 +6507,23 @@
     <option name="自動傳播註解" hit="自動傳播註解(在程式碼動作和重構中)" />
     <option name="要使用的預設註解命名空間" hit="要使用的預設註解命名空間  " />
     <option name="要使用的預設註解命名空間" hit="要使用的預設註解命名空間:" />
+  </configurable>
+  <configurable id="EntityFrameworkAnalysisSettingsId" configurable_name="Entity Framework">
+    <option name="" hit=" 啟用 Entity Framework 特定檢查" />
+    <option name="entity" hit=" 啟用 Entity Framework 特定檢查" />
+    <option name="framework" hit=" 啟用 Entity Framework 特定檢查" />
+    <option name="啟用" hit=" 啟用 Entity Framework 特定檢查" />
+    <option name="特定檢查" hit=" 啟用 Entity Framework 特定檢查" />
+    <option name="" hit=" 如果更改則重新分析解決方案" />
+    <option name="如果更改則重新分析解決方案" hit=" 如果更改則重新分析解決方案" />
+    <option name="entity" hit="Entity Framework" />
+    <option name="framework" hit="Entity Framework" />
+    <option name="iddqd" hit="iddqd" />
+    <option name="entity" hit="啟用 Entity Framework 特定檢查" />
+    <option name="framework" hit="啟用 Entity Framework 特定檢查" />
+    <option name="啟用" hit="啟用 Entity Framework 特定檢查" />
+    <option name="特定檢查" hit="啟用 Entity Framework 特定檢查" />
+    <option name="如果更改則重新分析解決方案" hit="如果更改則重新分析解決方案" />
   </configurable>
   <configurable id="Inspections-IDEA" configurable_name="其他語言">
     <option name="其他語言" hit="其他語言" />
@@ -7355,6 +7002,10 @@
     <option name="to" hit="Comparison to integral constant is useless; the constant is outside the range of type 'type'." />
     <option name="type" hit="Comparison to integral constant is useless; the constant is outside the range of type 'type'." />
     <option name="useless" hit="Comparison to integral constant is useless; the constant is outside the range of type 'type'." />
+    <option name="constructor" hit="Convert constructor into primary constructor" />
+    <option name="convert" hit="Convert constructor into primary constructor" />
+    <option name="into" hit="Convert constructor into primary constructor" />
+    <option name="primary" hit="Convert constructor into primary constructor" />
     <option name="converting" hit="Converting method group to non-delegate type 'object'." />
     <option name="group" hit="Converting method group to non-delegate type 'object'." />
     <option name="method" hit="Converting method group to non-delegate type 'object'." />
@@ -7415,6 +7066,14 @@
     <option name="of" hit="Dereference of a possibly null reference." />
     <option name="possibly" hit="Dereference of a possibly null reference." />
     <option name="reference" hit="Dereference of a possibly null reference." />
+    <option name="do" hit="Do not use object initializer for 'using' variable" />
+    <option name="for" hit="Do not use object initializer for 'using' variable" />
+    <option name="initializer" hit="Do not use object initializer for 'using' variable" />
+    <option name="not" hit="Do not use object initializer for 'using' variable" />
+    <option name="object" hit="Do not use object initializer for 'using' variable" />
+    <option name="use" hit="Do not use object initializer for 'using' variable" />
+    <option name="using" hit="Do not use object initializer for 'using' variable" />
+    <option name="variable" hit="Do not use object initializer for 'using' variable" />
     <option name="comment" hit="Duplicate param tag in XML comment" />
     <option name="duplicate" hit="Duplicate param tag in XML comment" />
     <option name="in" hit="Duplicate param tag in XML comment" />
@@ -7492,6 +7151,15 @@
     <option name="include" hit="Invalid XML include element" />
     <option name="invalid" hit="Invalid XML include element" />
     <option name="xml" hit="Invalid XML include element" />
+    <option name="keep" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
+    <option name="keyword" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
+    <option name="of" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
+    <option name="outside" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
+    <option name="parentheses" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
+    <option name="source" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
+    <option name="var" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
+    <option name="x" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
+    <option name="y" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
     <option name="is" hit="Keyword 'new' is redundant" />
     <option name="keyword" hit="Keyword 'new' is redundant" />
     <option name="new" hit="Keyword 'new' is redundant" />
@@ -7505,6 +7173,11 @@
     <option name="lambda" hit="Lambda 表達式/匿名方法不應捕獲包含上下文" />
     <option name="匿名方法不應捕獲包含上下文" hit="Lambda 表達式/匿名方法不應捕獲包含上下文" />
     <option name="表達式" hit="Lambda 表達式/匿名方法不應捕獲包含上下文" />
+    <option name="confuse" hit="Local parameter name may confuse" />
+    <option name="local" hit="Local parameter name may confuse" />
+    <option name="may" hit="Local parameter name may confuse" />
+    <option name="name" hit="Local parameter name may confuse" />
+    <option name="parameter" hit="Local parameter name may confuse" />
     <option name="abs" hit="Math.Abs() 實參始終為非負" />
     <option name="math" hit="Math.Abs() 實參始終為非負" />
     <option name="實參始終為非負" hit="Math.Abs() 實參始終為非負" />
@@ -8002,6 +7675,16 @@
     <option name="nullable" hit="Nullable value type may be null." />
     <option name="type" hit="Nullable value type may be null." />
     <option name="value" hit="Nullable value type may be null." />
+    <option name="exception" hit="Object initializer expression may throw exception while initializing 'using' variable" />
+    <option name="expression" hit="Object initializer expression may throw exception while initializing 'using' variable" />
+    <option name="initializer" hit="Object initializer expression may throw exception while initializing 'using' variable" />
+    <option name="initializing" hit="Object initializer expression may throw exception while initializing 'using' variable" />
+    <option name="may" hit="Object initializer expression may throw exception while initializing 'using' variable" />
+    <option name="object" hit="Object initializer expression may throw exception while initializing 'using' variable" />
+    <option name="throw" hit="Object initializer expression may throw exception while initializing 'using' variable" />
+    <option name="using" hit="Object initializer expression may throw exception while initializing 'using' variable" />
+    <option name="variable" hit="Object initializer expression may throw exception while initializing 'using' variable" />
+    <option name="while" hit="Object initializer expression may throw exception while initializing 'using' variable" />
     <option name="collection" hit="Object or collection initializer implicitly dereferences possibly null member." />
     <option name="dereferences" hit="Object or collection initializer implicitly dereferences possibly null member." />
     <option name="implicitly" hit="Object or collection initializer implicitly dereferences possibly null member." />
@@ -8167,12 +7850,20 @@
     <option name="query" hit="Query can return incomplete data for related entities" />
     <option name="related" hit="Query can return incomplete data for related entities" />
     <option name="return" hit="Query can return incomplete data for related entities" />
+    <option name="be" hit="Raw string can be simplified" />
+    <option name="can" hit="Raw string can be simplified" />
+    <option name="raw" hit="Raw string can be simplified" />
+    <option name="simplified" hit="Raw string can be simplified" />
+    <option name="string" hit="Raw string can be simplified" />
     <option name="but" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="defined" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="equals" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="gethashcode" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="not" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="record" hit="Record defined 'Equals' but not 'GetHashCode'" />
+    <option name="invocation" hit="Redundant 'WithCancellation()' invocation" />
+    <option name="redundant" hit="Redundant 'WithCancellation()' invocation" />
+    <option name="withcancellation" hit="Redundant 'WithCancellation()' invocation" />
     <option name="directive" hit="Redundant nullable directive" />
     <option name="nullable" hit="Redundant nullable directive" />
     <option name="redundant" hit="Redundant nullable directive" />
@@ -8190,6 +7881,15 @@
     <option name="treated" hit="Reference to a volatile field will not be treated as volatile" />
     <option name="volatile" hit="Reference to a volatile field will not be treated as volatile" />
     <option name="will" hit="Reference to a volatile field will not be treated as volatile" />
+    <option name="-captured" hit="Return of a task produced by 'using'-captured object" />
+    <option name="a" hit="Return of a task produced by 'using'-captured object" />
+    <option name="by" hit="Return of a task produced by 'using'-captured object" />
+    <option name="object" hit="Return of a task produced by 'using'-captured object" />
+    <option name="of" hit="Return of a task produced by 'using'-captured object" />
+    <option name="produced" hit="Return of a task produced by 'using'-captured object" />
+    <option name="return" hit="Return of a task produced by 'using'-captured object" />
+    <option name="task" hit="Return of a task produced by 'using'-captured object" />
+    <option name="using" hit="Return of a task produced by 'using'-captured object" />
     <option name="a" hit="Return of a variable captured by 'using' statement" />
     <option name="by" hit="Return of a variable captured by 'using' statement" />
     <option name="captured" hit="Return of a variable captured by 'using' statement" />
@@ -8284,6 +7984,13 @@
     <option name="statement" hit="Suggest in nested scopes ending with a jump statement" />
     <option name="suggest" hit="Suggest in nested scopes ending with a jump statement" />
     <option name="with" hit="Suggest in nested scopes ending with a jump statement" />
+    <option name="discard-like" hit="Suspicious use of variable with discard-like name" />
+    <option name="name" hit="Suspicious use of variable with discard-like name" />
+    <option name="of" hit="Suspicious use of variable with discard-like name" />
+    <option name="suspicious" hit="Suspicious use of variable with discard-like name" />
+    <option name="use" hit="Suspicious use of variable with discard-like name" />
+    <option name="variable" hit="Suspicious use of variable with discard-like name" />
+    <option name="with" hit="Suspicious use of variable with discard-like name" />
     <option name="comment" hit="Syntax error in XML comment" />
     <option name="error" hit="Syntax error in XML comment" />
     <option name="in" hit="Syntax error in XML comment" />
@@ -8946,10 +8653,6 @@
     <option name="directive" hit="Unused nullable directive" />
     <option name="nullable" hit="Unused nullable directive" />
     <option name="unused" hit="Unused nullable directive" />
-    <option name="constructor" hit="Unused primary constructor parameter" />
-    <option name="parameter" hit="Unused primary constructor parameter" />
-    <option name="primary" hit="Unused primary constructor parameter" />
-    <option name="unused" hit="Unused primary constructor parameter" />
     <option name="can" hit="Usage of navigational property can return incomplete data" />
     <option name="data" hit="Usage of navigational property can return incomplete data" />
     <option name="incomplete" hit="Usage of navigational property can return incomplete data" />
@@ -8987,6 +8690,9 @@
     <option name="symbol" hit="Use of obsolete symbol (without message)" />
     <option name="use" hit="Use of obsolete symbol (without message)" />
     <option name="without" hit="Use of obsolete symbol (without message)" />
+    <option name="raw" hit="Use raw string" />
+    <option name="string" hit="Use raw string" />
+    <option name="use" hit="Use raw string" />
     <option name="all" hit="Using 'is' to test compatibility with 'dynamic' is essentially identical to testing compatibility with 'Object' and will succeed for all non-null values" />
     <option name="and" hit="Using 'is' to test compatibility with 'dynamic' is essentially identical to testing compatibility with 'Object' and will succeed for all non-null values" />
     <option name="compatibility" hit="Using 'is' to test compatibility with 'dynamic' is essentially identical to testing compatibility with 'Object' and will succeed for all non-null values" />
@@ -9257,6 +8963,7 @@
     <option name="的註解而不是特性" hit="使用可以為 null 的註解而不是特性" />
     <option name="使用複合分配" hit="使用複合分配" />
     <option name="使用字串內插表達式" hit="使用字串內插表達式" />
+    <option name="使用棄用賦值" hit="使用棄用賦值" />
     <option name="使用陣列建立表達式" hit="使用陣列建立表達式" />
     <option name="any" hit="使用方法 Any()" />
     <option name="使用方法" hit="使用方法 Any()" />
@@ -9289,10 +8996,14 @@
     <option name="元組的組件從未被使用" hit="元組的組件從未被使用" />
     <option name="關鍵字和圓括號之間" hit="關鍵字和圓括號之間" />
     <option name="其他位置換行冗餘" hit="其他位置換行冗餘" />
+    <option name="其他位置有冗餘的縮排" hit="其他位置有冗餘的縮排/減少縮排" />
+    <option name="減少縮排" hit="其他位置有冗餘的縮排/減少縮排" />
     <option name="其他位置空行冗餘" hit="其他位置空行冗餘" />
     <option name="其他位置缺少換行" hit="其他位置缺少換行" />
     <option name="其他位置缺少空格" hit="其他位置缺少空格" />
     <option name="其他位置缺少空行" hit="其他位置缺少空行" />
+    <option name="其他位置缺少縮排" hit="其他位置缺少縮排/減少縮排" />
+    <option name="減少縮排" hit="其他位置缺少縮排/減少縮排" />
     <option name="其他地方" hit="其他地方" />
     <option name="optional" hit="具有 [Optional] 特性的 'ref' 或 'out' 參數" />
     <option name="out" hit="具有 [Optional] 特性的 'ref' 或 'out' 參數" />
@@ -9664,12 +9375,6 @@
     <option name="如果可能" hit="如果可能，使用物件或集合初始設定式" />
     <option name="則圓括號冗餘" hit="如果特性沒有實參，則圓括號冗餘" />
     <option name="如果特性沒有實參" hit="如果特性沒有實參，則圓括號冗餘" />
-    <option name="source" hit="始終保持 'var' 解構宣告 'var (x, y, ...) = source'" />
-    <option name="var" hit="始終保持 'var' 解構宣告 'var (x, y, ...) = source'" />
-    <option name="x" hit="始終保持 'var' 解構宣告 'var (x, y, ...) = source'" />
-    <option name="y" hit="始終保持 'var' 解構宣告 'var (x, y, ...) = source'" />
-    <option name="始終保持" hit="始終保持 'var' 解構宣告 'var (x, y, ...) = source'" />
-    <option name="解構宣告" hit="始終保持 'var' 解構宣告 'var (x, y, ...) = source'" />
     <option name="始終符合的子模式冗餘" hit="始終符合的子模式冗餘" />
     <option name="子語句周圍" hit="子語句周圍" />
     <option name="欄位上的同步不一致" hit="欄位上的同步不一致" />
@@ -9790,6 +9495,7 @@
     <option name="將屬性轉換為自動屬性" hit="將屬性轉換為自動屬性(如果可能)" />
     <option name="將條件" hit="將條件 ?: 表達式合併到條件存取中" />
     <option name="表達式合併到條件存取中" hit="將條件 ?: 表達式合併到條件存取中" />
+    <option name="將建構函式轉換為成員初始設定式" hit="將建構函式轉換為成員初始設定式" />
     <option name="is" hit="將求反的 'is' 表達式轉換為具有求反模式的 'is' 表達式" />
     <option name="將求反的" hit="將求反的 'is' 表達式轉換為具有求反模式的 'is' 表達式" />
     <option name="表達式" hit="將求反的 'is' 表達式轉換為具有求反模式的 'is' 表達式" />
@@ -9798,7 +9504,6 @@
     <option name="將求反的" hit="將求反的 null/模式檢查合併到複雜模式中" />
     <option name="模式檢查合併到複雜模式中" hit="將求反的 null/模式檢查合併到複雜模式中" />
     <option name="將自動屬性取代為計算所得屬性" hit="將自動屬性取代為計算所得屬性" />
-    <option name="將記錄建構函式轉換為主建構函式" hit="將記錄建構函式轉換為主建構函式" />
     <option name="將賦值表達式放入塊中" hit="將賦值表達式放入塊中" />
     <option name="將順序檢查合併到單個條件存取檢查中" hit="將順序檢查合併到單個條件存取檢查中" />
     <option name="盡可能合併順序" hit="盡可能合併順序 '||' 檢查(停用啟发式)" />
@@ -10020,6 +9725,7 @@
     <option name="args" hit="取代為 SingleOrDefault($args$)" />
     <option name="singleordefault" hit="取代為 SingleOrDefault($args$)" />
     <option name="取代為" hit="取代為 SingleOrDefault($args$)" />
+    <option name="取代為主建構函式參數" hit="取代為主建構函式參數" />
     <option name="取代為單個賦值" hit="取代為單個賦值" />
     <option name="any" hit="取代為對 Any(..) 的單個呼叫" />
     <option name="取代為對" hit="取代為對 Any(..) 的單個呼叫" />
@@ -10061,6 +9767,8 @@
     <option name="部分" hit="未知 Razor 部分" />
     <option name="未被賦值的唯讀欄位" hit="未被賦值的唯讀欄位" />
     <option name="未被賦值的欄位" hit="未被賦值的欄位" />
+    <option name="未存取的主建構函式參數" hit="未存取的主建構函式參數" />
+    <option name="未還原縮排級別" hit="未還原縮排級別" />
     <option name="條件表達式中存在賦值" hit="條件表達式中存在賦值" />
     <option name="null" hit="條件表達式可被覆寫為 null 合併" />
     <option name="合併" hit="條件表達式可被覆寫為 null 合併" />
@@ -10256,9 +9964,6 @@
     <option name="自動屬性存取器從未被使用" hit="自動屬性存取器從未被使用" />
     <option name="獲取的鎖的順序不一致" hit="獲取的鎖的順序不一致" />
     <option name="行尾的不必要空格" hit="行尾的不必要空格" />
-    <option name="行應在其他位置縮排或減少縮排" hit="行應在其他位置縮排或減少縮排" />
-    <option name="行縮排應還原到其他位置以前的級別" hit="行縮排應還原到其他位置以前的級別" />
-    <option name="行縮排相對於其他位置的上一行不應更改" hit="行縮排相對於其他位置的上一行不應更改" />
     <option name="表達式大括號周圍" hit="表達式大括號周圍" />
     <option name="null" hit="表達式始終為 'null'" />
     <option name="表達式始終為" hit="表達式始終為 'null'" />
@@ -10332,6 +10037,7 @@
     <option name="方法" hit="避免使用帶有 'void' 返回值類型的 'async' 方法" />
     <option name="返回值類型的" hit="避免使用帶有 'void' 返回值類型的 'async' 方法" />
     <option name="避免使用帶有" hit="避免使用帶有 'void' 返回值類型的 'async' 方法" />
+    <option name="避免類型成員虛擬化" hit="避免類型成員虛擬化" />
     <option name="部分程式碼不能解析" hit="部分程式碼不能解析" />
     <option name="params" hit="覆寫時始終忽略 'params' 修飾符" />
     <option name="修飾符" hit="覆寫時始終忽略 'params' 修飾符" />
@@ -10808,10 +10514,6 @@
     <option name="to" hit="The CallerArgumentExpressionAttribute applied to parameter will have no effect. It is applied with an invalid parameter name." />
     <option name="will" hit="The CallerArgumentExpressionAttribute applied to parameter will have no effect. It is applied with an invalid parameter name." />
     <option name="with" hit="The CallerArgumentExpressionAttribute applied to parameter will have no effect. It is applied with an invalid parameter name." />
-    <option name="constructor" hit="Unused primary constructor parameter" />
-    <option name="parameter" hit="Unused primary constructor parameter" />
-    <option name="primary" hit="Unused primary constructor parameter" />
-    <option name="unused" hit="Unused primary constructor parameter" />
     <option name="is" hit="Use 'TypeOf .. Is ..' operator" />
     <option name="operator" hit="Use 'TypeOf .. Is ..' operator" />
     <option name="typeof" hit="Use 'TypeOf .. Is ..' operator" />
@@ -11068,6 +10770,7 @@
     <option name="未使用賦值" hit="未使用賦值" />
     <option name="未被賦值的唯讀欄位" hit="未被賦值的唯讀欄位" />
     <option name="未被賦值的欄位" hit="未被賦值的欄位" />
+    <option name="未存取的主建構函式參數" hit="未存取的主建構函式參數" />
     <option name="關鍵字中存在拼寫錯誤" hit="關鍵字中存在拼寫錯誤" />
     <option name="static" hit="泛型類型中存在 static 欄位或自動屬性" />
     <option name="欄位或自動屬性" hit="泛型類型中存在 static 欄位或自動屬性" />
@@ -11122,6 +10825,7 @@
     <option name="返回值類型可以為" hit="返回值類型可以為 IEnumerable&lt;T&gt;" />
     <option name="迭代器從未返回" hit="迭代器從未返回" />
     <option name="邏輯條件表達式中存在冗餘的動作數" hit="邏輯條件表達式中存在冗餘的動作數" />
+    <option name="避免類型成員虛擬化" hit="避免類型成員虛擬化" />
     <option name="集合從未更新" hit="集合從未更新" />
     <option name="集合內容從未查詢" hit="集合內容從未查詢" />
   </configurable>
@@ -11681,6 +11385,42 @@
     <option name="iddqd" hit="iddqd" />
   </configurable>
   <configurable id="LiveTemplatesSettingsId" configurable_name="實時模板" />
+  <configurable id="UsagesOptionsPageId" configurable_name="搜尋和導覽">
+    <option name="" hit=" 轉到基礎 繼承者  如果只有一個結果 導覽而不顯示列表" />
+    <option name="如果只有一個結果" hit=" 轉到基礎 繼承者  如果只有一個結果 導覽而不顯示列表" />
+    <option name="導覽而不顯示列表" hit=" 轉到基礎 繼承者  如果只有一個結果 導覽而不顯示列表" />
+    <option name="繼承者" hit=" 轉到基礎 繼承者  如果只有一個結果 導覽而不顯示列表" />
+    <option name="轉到基礎" hit=" 轉到基礎 繼承者  如果只有一個結果 導覽而不顯示列表" />
+    <option name="" hit=" 轉到用法  如果只有一個結果 導覽而不顯示列表 O " />
+    <option name="o" hit=" 轉到用法  如果只有一個結果 導覽而不顯示列表 O " />
+    <option name="如果只有一個結果" hit=" 轉到用法  如果只有一個結果 導覽而不顯示列表 O " />
+    <option name="導覽而不顯示列表" hit=" 轉到用法  如果只有一個結果 導覽而不顯示列表 O " />
+    <option name="轉到用法" hit=" 轉到用法  如果只有一個結果 導覽而不顯示列表 O " />
+    <option name="iddqd" hit="iddqd" />
+    <option name="不執行任何動作" hit="不執行任何動作" />
+    <option name="始終搜尋具體的泛型類型" hit="始終搜尋具體的泛型類型" />
+    <option name="始終搜尋開放式泛型類型" hit="始終搜尋開放式泛型類型" />
+    <option name="搜尋和導覽" hit="搜尋和導覽" />
+    <option name="導覽到" hit="顯示“導覽到”選單" />
+    <option name="顯示" hit="顯示“導覽到”選單" />
+    <option name="選單" hit="顯示“導覽到”選單" />
+    <option name="彈出視窗" hit="顯示“符號用法”彈出視窗" />
+    <option name="顯示" hit="顯示“符號用法”彈出視窗" />
+    <option name="符號用法" hit="顯示“符號用法”彈出視窗" />
+    <option name="顯示消除歧義彈出視窗" hit="顯示消除歧義彈出視窗" />
+    <option name="智能轉到宣告行為" hit="智能轉到宣告行為 " />
+    <option name="智能轉到宣告行為" hit="智能轉到宣告行為:" />
+    <option name="尋找泛型類型用法時的行為" hit="尋找泛型類型用法時的行為 " />
+    <option name="尋找泛型類型用法時的行為" hit="尋找泛型類型用法時的行為:" />
+    <option name="如果只有一個結果" hit="轉到基礎/繼承者: 如果只有一個結果，導覽而不顯示列表" />
+    <option name="導覽而不顯示列表" hit="轉到基礎/繼承者: 如果只有一個結果，導覽而不顯示列表" />
+    <option name="繼承者" hit="轉到基礎/繼承者: 如果只有一個結果，導覽而不顯示列表" />
+    <option name="轉到基礎" hit="轉到基礎/繼承者: 如果只有一個結果，導覽而不顯示列表" />
+    <option name="o" hit="轉到用法: 如果只有一個結果，導覽而不顯示列表(O)" />
+    <option name="如果只有一個結果" hit="轉到用法: 如果只有一個結果，導覽而不顯示列表(O)" />
+    <option name="導覽而不顯示列表" hit="轉到用法: 如果只有一個結果，導覽而不顯示列表(O)" />
+    <option name="轉到用法" hit="轉到用法: 如果只有一個結果，導覽而不顯示列表(O)" />
+  </configurable>
   <configurable id="inlay.hints.RiderInlayHintsCSharpConfigurableGroup" configurable_name="C#" />
   <configurable id="CSharpParameterNameHintsOptions" configurable_name="參數名提示">
     <option name="" hit=" 如果存在多個類型相同的參數 則對非文字顯示" />
@@ -11884,6 +11624,12 @@
     <option name="push-to-hint" hit="Push-to-Hint" />
     <option name="iddqd" hit="iddqd" />
     <option name="從不顯示" hit="從不顯示" />
+    <option name="pragma" hit="使用  pragma 指令停用或恢復警告的描述 " />
+    <option name="使用" hit="使用  pragma 指令停用或恢復警告的描述 " />
+    <option name="指令停用或恢復警告的描述" hit="使用  pragma 指令停用或恢復警告的描述 " />
+    <option name="pragma" hit="使用 #pragma 指令停用或恢復警告的描述:" />
+    <option name="使用" hit="使用 #pragma 指令停用或恢復警告的描述:" />
+    <option name="指令停用或恢復警告的描述" hit="使用 #pragma 指令停用或恢復警告的描述:" />
     <option name="元組組件名稱" hit="元組組件名稱 " />
     <option name="元組組件名稱" hit="元組組件名稱:" />
     <option name="其他" hit="其他" />
@@ -12214,7 +11960,6 @@
     <option name="void" hit="svm ('void Main' method)" />
     <option name="statement" hit="switch (switch statement)" />
     <option name="switch" hit="switch (switch statement)" />
-    <option name="test" hit="test" />
     <option name="new" hit="thr (throw new)" />
     <option name="thr" hit="thr (throw new)" />
     <option name="throw" hit="thr (throw new)" />
@@ -12245,6 +11990,8 @@
     <option name="助記鍵" hit="助記鍵 M  " />
     <option name="m" hit="助記鍵(M):" />
     <option name="助記鍵" hit="助記鍵(M):" />
+    <option name="u" hit="包圍 U " />
+    <option name="包圍" hit="包圍 U " />
     <option name="a" hit="可用性 A  " />
     <option name="可用性" hit="可用性 A  " />
     <option name="c" hit="在上下文動作中顯示 C " />
@@ -12257,8 +12004,6 @@
     <option name="描述" hit="描述 D  " />
     <option name="d" hit="描述(D):" />
     <option name="描述" hit="描述(D):" />
-    <option name="u" hit="環繞 U " />
-    <option name="環繞" hit="環繞 U " />
     <option name="g" hit="生成 G " />
     <option name="生成" hit="生成 G " />
     <option name="用於" hit="用於 " />
@@ -12292,6 +12037,8 @@
     <option name="助記鍵" hit="助記鍵 M  " />
     <option name="m" hit="助記鍵(M):" />
     <option name="助記鍵" hit="助記鍵(M):" />
+    <option name="u" hit="包圍 U " />
+    <option name="包圍" hit="包圍 U " />
     <option name="a" hit="可用性 A  " />
     <option name="可用性" hit="可用性 A  " />
     <option name="c" hit="在上下文動作中顯示 C " />
@@ -12305,8 +12052,6 @@
     <option name="描述" hit="描述 D  " />
     <option name="d" hit="描述(D):" />
     <option name="描述" hit="描述(D):" />
-    <option name="u" hit="環繞 U " />
-    <option name="環繞" hit="環繞 U " />
     <option name="g" hit="生成 G " />
     <option name="生成" hit="生成 G " />
     <option name="用於" hit="用於 " />
@@ -12366,9 +12111,9 @@
     <option name="settings" hit="settings" />
     <option name="xamarin" hit="xamarin" />
     <option name="xml" hit="xml" />
+    <option name="程式碼隱藏產生器設定" hit="程式碼隱藏產生器設定" />
     <option name="內建" hit="內建" />
     <option name="自訂工具" hit="自訂工具" />
-    <option name="設定程式碼隱藏產生器" hit="設定程式碼隱藏產生器" />
   </configurable>
   <configurable id="ReSpellerSettingsId" configurable_name="ReSpeller">
     <option name="" hit=" Internal" />

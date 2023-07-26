@@ -4,7 +4,7 @@
 <p>此呼叫不會釋放資源，並且可能導致記憶體泄漏。</p>
 這可能是因為：
 <ul>
-  <li>首先，<code>ThreadLocal.set(null)</code> 會尋找與當前執行緒相關聯的映射。 如無此類別映射，則會建立該映射</li>
+  <li>首先，<code>ThreadLocal.set(null)</code> 會尋找與當前執行緒相關聯的映射。 如果沒有此類別映射，則會建立該映射</li>
   <li>它會設定鍵和值：<code>map.set(this, value)</code>，其中 <code>this</code> 是指 <code>ThreadLocal</code> 的實例</li>
 </ul>
 <p>應使用 <code>java.lang.ThreadLocal.remove()</code> 來釋放資源。</p>

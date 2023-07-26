@@ -4,7 +4,7 @@
 如果不使用，最好移除該賦值，以縮短程式碼並避免冗餘分配。
 <p>報告的情況如下：</p>
 <ul>
-  <li>該變數在賦值後從未被讀取。</li>
+  <li>賦值後從未讀取的變數。</li>
   <li>該變數在被讀取前始終被新值覆寫。</li>
   <li>變數初始設定式冗餘（出於以上兩種原因之一）。</li>
 </ul>
@@ -21,25 +21,25 @@
   }
 </code></pre>
 <p>
-使用<b>在可以取代為(i + 1)時報告 ++i</b> 選項，報告 <code>++i</code> 表達式可以取代為 <code>i + 1</code> 的情況：
+使用<b>報告可取代為二進制表達式的前綴表達式</b>選項可報告可將 <code>++i</code> 表達式取代為 <code>i + 1</code> 的情況：
 </p>
 <pre><code>
-  int preInc(int i) {
-    int res = i;
+  int preInc(int value) {
+    int res = value;
     return ++res;
   }
 </code></pre>
 <p>
-使用<b>在更改後的值後續未使用時報告 i++</b> 選項可以報告後續不使用 <code>i++</code> 表達式的結果的情況：
+使用<b>報告未使用更改值的後綴表達式</b>選項可報告稍後未使用 <code>i</code> 的值的 <code>i++</code> 情況：
 </p>
 <pre><code>
-  int postInc(int i) {
-    int res = i;
+  int postInc(int value) {
+    int res = value;
     return res++;
   }
 </code></pre>
 <p>
-使用<b>報告其值從未被使用的模式變數</b>選項來報告模式變數的值未被使用的情況：
+使用<b>報告其值從未被使用的模式變數</b>選項可報告模式變數的值在讀取之前被覆蓋的情況：
 </p>
 <pre><code>
   if (object instanceof String s) {
@@ -48,10 +48,10 @@
   }
 </code></pre>
 <p>
-使用<b>報告其值從未被使用的迭代參數</b>選項來報告增強的 `for` 語句迭代參數的值未被使用的情況：
+使用<b>報告其值從未被使用的迭代參數</b>選項可報告增強的 <code>for</code> 語句的迭代參數的值在讀取前被覆蓋的情況：
 </p>
 <pre><code>
-  for (String  arg : args) {
+  for (String arg : args) {
       arg = "test";
       System.out.println(arg);
   }

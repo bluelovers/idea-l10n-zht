@@ -1,0 +1,20 @@
+<html>
+<body>
+如果右側動作數的類型與變數的類型不相容，則報告複合賦值。
+<p>
+在此類別複合賦值過程中，會發生隱式強制轉換，這可能會導致有損轉換。
+
+<p>範例：</p>
+<pre><code>
+  long c = 1;
+  c += 1.2;
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  long c = 1;
+  c += (long) 1.2;
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.2 最新變化</small></p>
+</body>
+</html>

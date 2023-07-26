@@ -1,0 +1,62 @@
+<html>
+<body>
+<p>
+  報告在 <code>plugin.xml</code> 檔案中註冊的任何動作，並在其建構函式內初始化它們的表示（文本、描述或圖標）。
+</p>
+<p>
+  在建構函式中載入表示會導致分配資源，這可能不是必需的。 更有效的方式是利用 <code>AnAction</code> 和其他基類別的無實參建構函式，並遵循在 <code>plugin.xml</code> 中設定文本、描述和圖標的約定。 只有當動作實際顯示在 UI 中時，IDE 才會載入文本、描述和圖標。
+</p>
+<p>
+  設定文本、說明和圖標的約定如下：
+</p>
+<ul>
+  <li>
+    為 <code>plugin.xml</code> 檔案中的動作設定 <code>id</code> 特性。
+  </li>
+  <li>
+    如果需要圖標，也可以設定 <code>icon</code> 特性。
+  </li>
+  <li>
+    在關聯的訊息包中設定文本和描述（可以在 <code>&lt;actions&gt;</code> 中覆寫）：
+    <ul>
+      <li><code>action.&lt;action-id&gt;.text=翻譯後的動作文本</code></li>
+      <li><code>action.&lt;action-id&gt;.description=翻譯後的動作描述</code></li>
+    </ul>
+  </li>
+</ul>
+<p><b>不良範例：</b></p>
+<pre><code lang="kotlin">
+  // NewKotlinFileAction.kt
+  internal class NewKotlinFileAction : AnAction(
+    KotlinBundle.message("action.new.file.text"),
+    KotlinBundle.message("action.new.file.description"),
+    KotlinIcons.FILE
+  )
+</code></pre>
+<pre><code lang="xml">
+  <!-- plugin.xml -->
+  &lt;action
+    class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
+  &lt;/action&gt;
+</code></pre>
+<p><b>良好範例：</b></p>
+<pre><code lang="kotlin">
+  // NewKotlinFileAction.kt
+  internal class NewKotlinFileAction : AnAction()
+</code></pre>
+<pre><code lang="xml">
+  <!-- plugin.xml -->
+  &lt;action
+    id="Kotlin.NewFile"
+    class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
+    icon="org.jetbrains.kotlin.idea.KotlinIcons.FILE">
+  &lt;/action&gt;
+</code></pre>
+<pre><code lang="properties">
+  # KotlinBundle.properties
+  action.Kotlin.NewFile.text=Kotlin 類別/檔案
+  action.Kotlin.NewFile.description=建立新的 Kotlin 類別或檔案
+</code></pre>
+<p><small>2023.2 最新變化</small></p>
+</body>
+</html>

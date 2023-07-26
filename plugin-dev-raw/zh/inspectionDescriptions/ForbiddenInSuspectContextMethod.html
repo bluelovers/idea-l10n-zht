@@ -1,14 +1,15 @@
 <html>
 <body>
 報告使用執行緒上下文（使用 <code>@RequiresBlockingContext</code> 註解）的 Kotlin 協同程序中方法的不當用法。
-這些方法中的許多方法都有對應的協同程序友好的類似物，可以在 <code>suspend</code> 上下文中使用。
+這些方法中的許多方法都有對應的協同程序友好型替代，可以在 <code>suspend</code> 上下文中使用。
 
 <!-- tooltip end -->
 
-部分範例：
+範例：
 <ul>
   <li><code>com.intellij.openapi.progress.ProgressManager.checkCanceled()</code> 應被取代為 <code>com.intellij.openapi.progress.checkCancelled()</code></li>
-  <li><code>com.intellij.openapi.application.Application.invokeAndWait</code> 等應被取代為 <code>withContext(Dispatchers.EDT)</code></li>
+  <li><code>com.intellij.openapi.application.Application.invokeAndWait()</code> 應取代為 <code>withContext(Dispatchers.EDT)</code></li>
+  <li>等</li>
 </ul>
 </body>
 </html>

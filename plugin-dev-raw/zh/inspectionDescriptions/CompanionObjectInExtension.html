@@ -1,12 +1,71 @@
 <html>
 <body>
-報告伴生物件在擴展中的不正確用法。
+報告 <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">IDE 擴展</a>中不正確的伴生物件用法。
 <p>
-  擴展中的伴生物件只能包含記錄器和常數，其他宣告可能會導致載入過多的類別或提前初始化大量資源（TokenSets、Regexes 等）。
-  載入擴展類別時。
+  Kotlin 伴生物件始終會在您嘗試載入其包含的類別時建立，並且 IDE 擴展的建立成本應該很低。
+  延伸模組中過多的類別載入是 IDE 啟動的一個大問題。
+</p>
+<p>錯誤模式:</p>
+<pre><code lang="kotlin">
+  class KotlinDocumentationProvider : AbstractDocumentationProvider(), ExternalDocumentationProvider {
 
+      companion object {
+          private val LOG = Logger.getInstance(KotlinDocumentationProvider::class.java)
+          private val javaDocumentProvider = JavaDocumentationProvider()
+      }
+  }
+</code></pre>
+<p>
+  這裡 <code>KotlinDocumentationProvider</code> 是在 <code>plugin.xml</code> 中註冊的擴展：
+</p>
+<pre><code lang="xml">
+  &lt;lang.documentationProvider language="JAVA"
+                              implementationClass="org.jetbrains.kotlin.idea.KotlinDocumentationProvider"
+                              order="first"/&gt;
+</code></pre>
+<p>
+  在此範例中，只要有人呼叫 <code>new KotlinDocumentationProvider()</code>，就會從磁碟載入 <code>JavaDocumentationProvider</code>。
+</p>
+<p>
+  擴展實作中的 Kotlin 伴生物件只能包含記錄器和簡單常數。
+  其他宣告可能會導致過多類別載入或提前初始化開銷大的資源（TokenSet、Regex 等）。
+  載入擴展類別時。
+</p>
+<p>
   這些宣告必須存儲在物件中或處於頂層，而不是存儲在伴生物件中。
 </p>
+<h3>常見問題解答</h3>
+<h4>如何覆寫 runConfigurationType？</h4>
+<p>將宣告移到頂層：</p>
+<pre><code lang="kotlin">
+  // 正確做法
+  internal fun mnRunConfigurationType(): MnRunConfigurationType = runConfigurationType&lt;MnRunConfigurationType&gt;()
+
+  internal class MnRunConfigurationType : ConfigurationType {
+    companion object { // 錯誤做法
+      fun getInstance(): MnRunConfigurationType = findConfigurationType(MnRunConfigurationType::class.java)
+    }
+  }
+</code></pre>
+<h4>如何覆寫 FileType？</h4>
+<p>之前:</p>
+<pre><code lang="kotlin">
+  internal class SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
+    companion object {
+      val FILE_TYPE = SpringBootImportsFileType()
+   }
+  }
+</code></pre>
+<p>之後:</p>
+<pre><code lang="kotlin">
+  internal object SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
+</code></pre>
+<p>在 <code>plugin.xml</code> 中使用 <code>INSTANCE</code> fieldName：</p>
+<pre><code lang="xml">
+  &lt;fileType name="Spring Boot Imports"
+              fieldName="INSTANCE"
+              implementationClass="com.intellij.spring.boot.spi.SpringBootImportsFileType"/&gt;
+</code></pre>
 <!-- tooltip end -->
 <p><small>2023.2 最新變化</small>
 </body>

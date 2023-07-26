@@ -22,6 +22,12 @@
     <option name="build" path="ActionManager" hit="Build Bundle(s) / APK(s)" />
     <option name="bundle" path="ActionManager" hit="Build Bundle(s) / APK(s)" />
     <option name="s" path="ActionManager" hit="Build Bundle(s) / APK(s)" />
+    <option name="banner" path="ActionManager" hit="Dismisses banner for Gradle project notifications" />
+    <option name="dismisses" path="ActionManager" hit="Dismisses banner for Gradle project notifications" />
+    <option name="for" path="ActionManager" hit="Dismisses banner for Gradle project notifications" />
+    <option name="gradle" path="ActionManager" hit="Dismisses banner for Gradle project notifications" />
+    <option name="notifications" path="ActionManager" hit="Dismisses banner for Gradle project notifications" />
+    <option name="project" path="ActionManager" hit="Dismisses banner for Gradle project notifications" />
     <option name="display" path="ActionManager" hit="Display selected file in the Resource Manager" />
     <option name="file" path="ActionManager" hit="Display selected file in the Resource Manager" />
     <option name="in" path="ActionManager" hit="Display selected file in the Resource Manager" />
@@ -33,6 +39,9 @@
     <option name="resource" path="ActionManager" hit="Dump Resource Trace" />
     <option name="trace" path="ActionManager" hit="Dump Resource Trace" />
     <option name="help" path="ActionManager" hit="Help" />
+    <option name="android" path="ActionManager" hit="Hide Android Banners" />
+    <option name="banners" path="ActionManager" hit="Hide Android Banners" />
+    <option name="hide" path="ActionManager" hit="Hide Android Banners" />
     <option name="editor" path="ActionManager" hit="Open Translations Editor" />
     <option name="open" path="ActionManager" hit="Open Translations Editor" />
     <option name="translations" path="ActionManager" hit="Open Translations Editor" />
@@ -40,6 +49,7 @@
     <option name="open" path="ActionManager" hit="Open the Resource Manager" />
     <option name="resource" path="ActionManager" hit="Open the Resource Manager" />
     <option name="the" path="ActionManager" hit="Open the Resource Manager" />
+    <option name="refresh" path="ActionManager" hit="Refresh" />
     <option name="manager" path="ActionManager" hit="Resource Manager" />
     <option name="resource" path="ActionManager" hit="Resource Manager" />
     <option name="devices" path="ActionManager" hit="Running devices" />
@@ -51,15 +61,8 @@
     <option name="manager" path="ActionManager" hit="Show In Resource Manager" />
     <option name="resource" path="ActionManager" hit="Show In Resource Manager" />
     <option name="show" path="ActionManager" hit="Show In Resource Manager" />
-    <option name="feedback" path="ActionManager" hit="Submit Feedback" />
-    <option name="submit" path="ActionManager" hit="Submit Feedback" />
-    <option name="android" path="ActionManager" hit="Submit feedback to the Android Studio team" />
-    <option name="feedback" path="ActionManager" hit="Submit feedback to the Android Studio team" />
-    <option name="studio" path="ActionManager" hit="Submit feedback to the Android Studio team" />
-    <option name="submit" path="ActionManager" hit="Submit feedback to the Android Studio team" />
-    <option name="team" path="ActionManager" hit="Submit feedback to the Android Studio team" />
-    <option name="the" path="ActionManager" hit="Submit feedback to the Android Studio team" />
-    <option name="to" path="ActionManager" hit="Submit feedback to the Android Studio team" />
+    <option name="logcat" path="ActionManager" hit="Show Logcat" />
+    <option name="show" path="ActionManager" hit="Show Logcat" />
     <option name="resource" path="ActionManager" hit="Trace Resource Updates" />
     <option name="trace" path="ActionManager" hit="Trace Resource Updates" />
     <option name="updates" path="ActionManager" hit="Trace Resource Updates" />
@@ -84,6 +87,7 @@
     <option name="建立" path="ActionManager" hit="建立 9-Patch 檔案…" />
     <option name="檔案" path="ActionManager" hit="建立 9-Patch 檔案…" />
     <option name="建立新的資源檔案" path="ActionManager" hit="建立新的資源檔案" />
+    <option name="右側" path="ActionManager" hit="右側" />
     <option name="啟用免安裝套用支援" path="ActionManager" hit="啟用免安裝套用支援…" />
     <option name="在可能的情況下使用樣式" path="ActionManager" hit="在可能的情況下使用樣式…" />
     <option name="rtl" path="ActionManager" hit="在可能的情況下新增從右到左(RTL)支援" />
@@ -124,27 +128,9 @@
     <option name="文字的" hit="Compose 文字的 Live Edit" />
     <option name="文字裝飾" hit="文字裝飾" />
   </configurable>
-  <configurable id="project.propDebugger" configurable_name="偵錯器">
-    <option name="logcat" hit="Logcat output" />
-    <option name="output" hit="Logcat output" />
-    <option name="application" hit="Show application logcat messages in Debug Console" />
-    <option name="console" hit="Show application logcat messages in Debug Console" />
-    <option name="debug" hit="Show application logcat messages in Debug Console" />
-    <option name="in" hit="Show application logcat messages in Debug Console" />
-    <option name="logcat" hit="Show application logcat messages in Debug Console" />
-    <option name="messages" hit="Show application logcat messages in Debug Console" />
-    <option name="show" hit="Show application logcat messages in Debug Console" />
-    <option name="application" hit="Show application logcat messages in Run Console" />
-    <option name="console" hit="Show application logcat messages in Run Console" />
-    <option name="in" hit="Show application logcat messages in Run Console" />
-    <option name="logcat" hit="Show application logcat messages in Run Console" />
-    <option name="messages" hit="Show application logcat messages in Run Console" />
-    <option name="run" hit="Show application logcat messages in Run Console" />
-    <option name="show" hit="Show application logcat messages in Run Console" />
-  </configurable>
-  <configurable id="configuration.execution" configurable_name="Android Configurations">
-    <option name="android" hit="Android Configurations" />
-    <option name="configurations" hit="Android Configurations" />
+  <configurable id="configuration.execution" configurable_name="Android 組態">
+    <option name="android" hit="Android 組態" />
+    <option name="組態" hit="Android 組態" />
     <option name="android" hit="Enable new execution flow for Android configurations" />
     <option name="configurations" hit="Enable new execution flow for Android configurations" />
     <option name="enable" hit="Enable new execution flow for Android configurations" />
@@ -156,23 +142,27 @@
     <option name="flow" hit="New Execution Flow" />
     <option name="new" hit="New Execution Flow" />
   </configurable>
-  <configurable id="testing.instrumented.configuration" configurable_name="Testing">
+  <configurable id="testing.instrumented.configuration" configurable_name="測試">
     <option name="android" hit="Run Android Instrumented Tests using Gradle " />
     <option name="gradle" hit="Run Android Instrumented Tests using Gradle " />
     <option name="instrumented" hit="Run Android Instrumented Tests using Gradle " />
     <option name="run" hit="Run Android Instrumented Tests using Gradle " />
     <option name="tests" hit="Run Android Instrumented Tests using Gradle " />
     <option name="using" hit="Run Android Instrumented Tests using Gradle " />
-    <option name="testing" hit="Testing" />
+    <option name="測試" hit="測試" />
   </configurable>
-  <configurable id="live.edit.configurable" configurable_name="Compose Live Edit">
-    <option name="compose" hit="Compose Live Edit" />
-    <option name="edit" hit="Compose Live Edit" />
-    <option name="live" hit="Compose Live Edit" />
-    <option name="edit" hit="文字的 Live Edit" />
-    <option name="live" hit="文字的 Live Edit" />
-    <option name="文字的" hit="文字的 Live Edit" />
+  <configurable id="live.edit.configurable" configurable_name="Live Edit">
+    <option name="" hit=" 已棄用 文字的Live Edit" />
+    <option name="edit" hit=" 已棄用 文字的Live Edit" />
+    <option name="已棄用" hit=" 已棄用 文字的Live Edit" />
+    <option name="文字的live" hit=" 已棄用 文字的Live Edit" />
+    <option name="edit" hit="Live Edit" />
+    <option name="live" hit="Live Edit" />
+    <option name="ctrl" hit="手動推送編輯內容  Ctrl S " />
+    <option name="s" hit="手動推送編輯內容  Ctrl S " />
+    <option name="手動推送編輯內容" hit="手動推送編輯內容  Ctrl S " />
     <option name="無" hit="無" />
+    <option name="自動推送編輯內容" hit="自動推送編輯內容" />
   </configurable>
   <configurable id="instant.run" configurable_name="部署">
     <option name="apply" hit="Automatically perform  Run  when Apply Changes fails" />
@@ -256,24 +246,21 @@
     <option name="these" hit=" Note  These settings are for features that are considered experimental " />
     <option name="android" hit="Android  Experimental " />
     <option name="experimental" hit="Android  Experimental " />
+    <option name="all" hit="Configure all Gradle tasks during Gradle Sync  this can make Gradle Sync slower " />
+    <option name="can" hit="Configure all Gradle tasks during Gradle Sync  this can make Gradle Sync slower " />
+    <option name="configure" hit="Configure all Gradle tasks during Gradle Sync  this can make Gradle Sync slower " />
+    <option name="during" hit="Configure all Gradle tasks during Gradle Sync  this can make Gradle Sync slower " />
+    <option name="gradle" hit="Configure all Gradle tasks during Gradle Sync  this can make Gradle Sync slower " />
+    <option name="make" hit="Configure all Gradle tasks during Gradle Sync  this can make Gradle Sync slower " />
+    <option name="slower" hit="Configure all Gradle tasks during Gradle Sync  this can make Gradle Sync slower " />
+    <option name="sync" hit="Configure all Gradle tasks during Gradle Sync  this can make Gradle Sync slower " />
+    <option name="tasks" hit="Configure all Gradle tasks during Gradle Sync  this can make Gradle Sync slower " />
+    <option name="this" hit="Configure all Gradle tasks during Gradle Sync  this can make Gradle Sync slower " />
     <option name="default" hit="Default profile" />
     <option name="profile" hit="Default profile" />
-    <option name="device" hit="Device Mirroring" />
-    <option name="mirroring" hit="Device Mirroring" />
     <option name="enable" hit="Enable  Preview picker" />
     <option name="picker" hit="Enable  Preview picker" />
     <option name="preview" hit="Enable  Preview picker" />
-    <option name="android" hit="Enable mirroring of physical Android devices" />
-    <option name="devices" hit="Enable mirroring of physical Android devices" />
-    <option name="enable" hit="Enable mirroring of physical Android devices" />
-    <option name="mirroring" hit="Enable mirroring of physical Android devices" />
-    <option name="of" hit="Enable mirroring of physical Android devices" />
-    <option name="physical" hit="Enable mirroring of physical Android devices" />
-    <option name="enable" hit="Enable new Logcat tool window" />
-    <option name="logcat" hit="Enable new Logcat tool window" />
-    <option name="new" hit="Enable new Logcat tool window" />
-    <option name="tool" hit="Enable new Logcat tool window" />
-    <option name="window" hit="Enable new Logcat tool window" />
     <option name="enable" hit="Enable parallel Gradle Sync" />
     <option name="gradle" hit="Enable parallel Gradle Sync" />
     <option name="parallel" hit="Enable parallel Gradle Sync" />
@@ -283,28 +270,14 @@
     <option name="jetpack" hit="Jetpack Compose" />
     <option name="editor" hit="Layout Editor" />
     <option name="layout" hit="Layout Editor" />
-    <option name="learn" hit="Learn more" />
-    <option name="more" hit="Learn more" />
-    <option name="logcat" hit="Logcat" />
-    <option name="during" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="generated" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="gradle" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="in" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="include" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="list" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="only" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="sync" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="task" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="tasks" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="test" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="the" hit="Only include test tasks in the Gradle task list generated during Gradle Sync" />
-    <option name="and" hit="Parse and write to Version Catalog files" />
-    <option name="catalog" hit="Parse and write to Version Catalog files" />
-    <option name="files" hit="Parse and write to Version Catalog files" />
-    <option name="parse" hit="Parse and write to Version Catalog files" />
-    <option name="to" hit="Parse and write to Version Catalog files" />
-    <option name="version" hit="Parse and write to Version Catalog files" />
-    <option name="write" hit="Parse and write to Version Catalog files" />
+    <option name="api" hit="Optimize build for target device API level only" />
+    <option name="build" hit="Optimize build for target device API level only" />
+    <option name="device" hit="Optimize build for target device API level only" />
+    <option name="for" hit="Optimize build for target device API level only" />
+    <option name="level" hit="Optimize build for target device API level only" />
+    <option name="only" hit="Optimize build for target device API level only" />
+    <option name="optimize" hit="Optimize build for target device API level only" />
+    <option name="target" hit="Optimize build for target device API level only" />
     <option name="annotation" hit="Popup with editing tools for  Preview annotation from the Editor gutter" />
     <option name="editing" hit="Popup with editing tools for  Preview annotation from the Editor gutter" />
     <option name="editor" hit="Popup with editing tools for  Preview annotation from the Editor gutter" />

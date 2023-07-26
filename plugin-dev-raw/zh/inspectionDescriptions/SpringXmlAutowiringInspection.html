@@ -18,7 +18,7 @@ public class MyComponent {
 	&lt;bean class="beans.OtherBean" id="otherBean"/&gt;
 	&lt;bean class="beans.FooBean" id="fooBean"/&gt;
 
-	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; &lt;!- 報告 "無法自動裝配。 有不止一種 'FooInterface' 類型的 Bean。 --&gt;
+	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; &lt;!- 報告“無法自動裝配”。 有不止一種 'FooInterface' 類型的 Bean。 --&gt;
                                                                    &lt;!--          Beans: otherBean,fooBean. Properties: 'fooInterface' " --&gt;
 &lt;/beans&gt;
 </code></pre>

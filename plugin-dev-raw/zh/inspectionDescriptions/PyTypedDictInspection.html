@@ -17,7 +17,7 @@ class Movie(TypedDict):
 
 m = Movie(name="name", year=1000, rate=9)
 print(m["director"])  # 'Movie' 中沒有 'director' 鍵
-del m["name"]  # 無法刪除 'name' 鍵
+del m["name"]  # 不能刪除 'name' 鍵
 m["year"] = "1001"  # 應為 'int'，得到的是 'str'
 </code></pre>
 </body>

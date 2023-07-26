@@ -7,12 +7,12 @@
 <p>
 範例：
 <pre><code lang="java">
-// 不良：
+// 錯誤：
 actionManager.createActionToolbar("", group, false);
 actionManager.createActionToolbar("unknown", group, false);
 actionManager.createActionPopupMenu(ActionPlaces.UNKNOWN, group);
 
-// 優良：
+// 正確：
 actionManager.createActionToolbar("MyPlace", group, false);
 actionManager.createActionPopupMenu(ActionPlaces.EDITOR_TOOLBAR, group);
 </code></pre>

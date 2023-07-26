@@ -6,13 +6,13 @@
 <pre><code lang="xml">
 &lt;beans&gt;
   &lt;bean class="beans.MyComponent" id="foo"/&gt;
-  &lt;!-- 報告"缺少必需的屬性: 'port'" --&gt;
+  &lt;!-- 報告“缺少必需屬性: 'port'” --&gt;
 &lt;/beans&gt;
 </code></pre>
 <pre><code lang="java">
 public class MyComponent {
    @Required
-   public void setPort(int port) // 報告 "未注入必需屬性 'port'"
+   public void setPort(int port) // 報告“未注入必需屬性 'port'”
    {...}
 }
 </code></pre>

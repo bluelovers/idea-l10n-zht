@@ -7,7 +7,7 @@
   &lt;beans&gt;
     &lt;bean class="java.lang.String" factory-bean="factoryBean"/&gt;
     &lt;!-- 只需要 'class' 或 'factory-bean' 中的一個 --&gt;
-    &lt;bean factory-bean="factoryBean" id="missingFactoryMethod"/&gt; &lt;!-- 當 factory-bean存在時，需要 factory-method --&gt;
+    &lt;bean factory-bean="factoryBean" id="missingFactoryMethod"/&gt; &lt;!-- 當 factory-bean 存在時，需要 factory-method --&gt;
 
     &lt;!-- 具有預設值 'false' 的特性 abstract 是多餘的 --&gt;
     &lt;bean abstract="false" id="superfluousDefaultAttributeAbstract"/&gt;

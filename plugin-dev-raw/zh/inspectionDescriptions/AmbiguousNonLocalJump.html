@@ -2,14 +2,14 @@
 <body>
 報告類別迴圈函式的 lambda 內的 <code>break</code> 或 <code>continue</code> 用法。
 <p>
-    <code>break</code> 和 <code>continue</code> 關鍵詞始終適用於實際迴圈（<code>for</code>、<code>while</code>、<code>do-while</code>）。 <code>break</code> 和 <code>continue</code> 從不適用於函式；例如，<code>break</code> 和 <code>continue</code> 不適用於 <code>forEach</code>、<code>filter</code>、<code>map</code>。
+    <code>break</code> 和 <code>continue</code> 關鍵字始終適用於實際迴圈（<code>for</code>、<code>while</code>、<code>do-while</code>）。 <code>break</code> 和 <code>continue</code> 從不適用於函式；例如，<code>break</code> 和 <code>continue</code> 不適用於 <code>forEach</code>、<code>filter</code>、<code>map</code>。
 </p>
 <p>
     在類別迴圈函式（如 <code>forEach</code>）內使用 <code>break</code>或 <code>continue</code> 可能會引起混淆。
-    檢查建議新增標籤，以澄清<code>Break</code> 或 <code>Continue</code> 適用於哪個語句。
+    該檢查會建議新增標籤，以澄清 <code>Break</code> 或 <code>Continue</code> 適用於哪條語句。
 </p>
 <p>
-    由於 Kotlin 沒有類別迴圈函式的概念，因此檢查使用啟发式。 它假設沒有 <code>callsInPlace(EXACTLY_ONCE)</code> 或 <code>callsInPlace(AT_LEAST_ONCE)</code> 其中一個約定的函式是類別迴圈函式。
+    由於 Kotlin 沒有類別迴圈函式的概念，該檢查將使用啟發。 它假設沒有 <code>callsInPlace(EXACTLY_ONCE)</code> 或 <code>callsInPlace(AT_LEAST_ONCE)</code> 其中一個約定的函式是類別迴圈函式。
 </p>
 <p><b>範例：</b></p>
 <pre><code>

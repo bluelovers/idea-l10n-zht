@@ -1,0 +1,19 @@
+<html>
+<body>
+報告類別和模組別名的不一致宣告。 類別不能作為模組別名，模組也不能作為類別名。
+<p>
+  類別作為模組別名，或模組作為類別名，會產生 <code>InconsistentClassModuleAliasError</code>。
+</p>
+<p>有一個快速修復可用於導覽到衝突的宣告。</p>
+<p>
+  範例：
+</p>
+<pre><code>
+class User
+end
+
+# 類別 'User' 用作了模組別名目標
+module Customer = User
+</code></pre>
+</body>
+</html>

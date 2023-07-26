@@ -5,7 +5,8 @@
   此信息由螢幕閱讀器使用。 如果不提供，則視障使用者將無法存取該組件。
 </p>
 <p><b>範例：</b></p>
-<pre><code>  ListCellRenderer&lt;String&gt; renderer = (list, val, index, sel, cell) -> {
+<pre><code lang="java">
+  ListCellRenderer&lt;String&gt; renderer = (list, val, index, sel, cell) -> {
     JPanel panel = new JPanel();
     return panel;
   };

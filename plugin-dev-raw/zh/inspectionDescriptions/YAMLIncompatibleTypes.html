@@ -1,0 +1,13 @@
+<html>
+<body>
+報告 YAML 檔案中的標量值類型與相似位置中的值類型不符合的情況。
+
+<p><b>範例：</b></p>
+<pre><code>
+myElements:
+  - value1
+  - value2
+  - false # &lt;- 已報告，因為它是布林值，而其他值是字串
+</code></pre>
+</body>
+</html>
