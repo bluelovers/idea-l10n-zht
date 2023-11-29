@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告 @Scheduled 注解的 <code>scheduler</code> 形参中不正确的 bean 引用</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  @Component public class UserController {...}
+  @Component public class UserServiceAsyncTaskScheduler extends SimpleAsyncTaskScheduler {...}
+
+  @Component public class UserService {
+    @Scheduled(scheduler="userServiceAsyncTaskScheduler", cron="1 * * * * * ?")
+    public void scheduleTask() {...}
+
+    @Scheduled(scheduler="userController", cron="1 * * * * * ?") // 报告 "Bean 必须是以下类型之一: TaskScheduler,ScheduledExecutorService "
+    public void scheduleTask_2() {...}
+
+    @Scheduled(scheduler="unknown", cron="1 * * * * * ?")   // 报告 "无法解析 bean 'unknown'"
+    public void scheduleTask_3() {...}
+  }
+</code></pre>
+</body>
+</html>

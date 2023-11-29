@@ -1,0 +1,24 @@
+<html>
+<body>
+报告协程上下文中 <code>Process.waitFor()</code> 和 <code>Process.onExit()</code> 的用法。
+禁止在协程上下文中使用这些方法。
+
+<p>请改用 <code>com.intellij.util.io.awaitExit()</code>。</p>
+
+<p>示例：</p>
+<pre><code lang="kotlin">
+suspend fun doSomething(process: Process) {
+  val exitCode = process.waitFor() // 错误
+  // ...
+}
+
+suspend fun doSomething(process: Process) {
+  val exitCode = process.awaitExit() // 正确
+  // ...
+}
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>2023.3 最新变化</small>
+</body>
+</html>

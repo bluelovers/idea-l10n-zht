@@ -1,13 +1,30 @@
 <html>
 <body>
-报告轻量服务级别和构造函数之间的不匹配。
+报告轻量服务级别及其构造函数之间的不匹配。
 <p>报告的问题如下：</p>
 <ul>
-  <li>具有带一个 <code>com.intellij.openapi.project.Project</code> 类型形参的构造函数的轻量服务类不会被注解为项目级服务。
+  <li>具有带两个类型为 <code>com.intellij.openapi.project.Project</code> 和 <code>kotlinx.coroutines.CoroutineScope</code> 的形参，或者一个类型为 <code>Project</code> 的形参的构造函数的轻量服务类不会被注解为项目级服务。
   </li>
-  <li>注解为应用程序级服务的轻量服务类没有无实参构造函数，也没有带一个 <code>kotlinx.coroutines.CoroutineScope</code> 类型形参的构造函数。
+  <li>注解为应用程序级服务的轻量服务类没有无实参构造函数，也没有带一个 <code>CoroutineScope</code> 类型形参的构造函数。
   </li>
 </ul>
+<p></p>
+<p>示例 (Kotlin)：</p>
+<pre><code lang="kotlin">
+@Service                              // 建议在 '@Service' 注解中指定 'Service.Level.PROJECT' 形参
+class MyService(val project: Project) // 建议从构造函数 'MyService' 中移除形参
+</code></pre>
+<p></p>
+<p>应用建议在 '@Service' 注解中指定 'Service.Level.PROJECT' 形参的快速修复后：</p>
+<pre><code lang="kotlin">
+@Service(Service.Level.PROJECT)
+class MyService(val project: Project)
+</code></pre>
+<p>应用建议从构造函数 'MyService' 移除形参的快速修复后:</p>
+<pre><code lang="kotlin">
+@Service
+class MyService()
+</code></pre>
 <p><small>2023.2 最新变化</small>
 </body>
 </html>

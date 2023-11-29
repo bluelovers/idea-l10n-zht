@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>报告 Hibernate @Find 注解错误</p>
+<ul>
+  <li>注解方法的返回类型必须是实体类型 <b>E</b>，或者是以下类型之一：
+    <ul>
+      <li>java.util.List&lt;E&gt;</li>
+      <li>org.hibernate.query.Query&lt;E&gt;</li>
+      <li>org.hibernate.query.SelectionQuery&lt;E&gt;</li>
+      <li>jakarta.persistence.Query&lt;E&gt;</li>
+      <li>jakarta.persistence.TypedQuery&lt;E&gt;</li>
+    </ul>
+  </li>
+  <li>finder 方法的形参名称和类型必须与 finder 方法返回的实体类型的持久字段的名称和类型完全匹配。
+  </li>
+</ul>
+</body>
+</html>

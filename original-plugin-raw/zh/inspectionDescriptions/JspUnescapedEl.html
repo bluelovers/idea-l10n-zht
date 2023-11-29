@@ -1,16 +1,69 @@
 <html>
 <body>
-报告 JSP 页面中未转义的 EL 表达式。
-<p>未转义的 EL 表达式可能导致<a href="http://en.wikipedia.org/wiki/Cross-site_scripting">跨站脚本攻击 (XSS)</a> 漏洞。</p>
-<p>该快速修复会使用 JSTL <code>&lt;out&gt;</code> 标记包装原始 EL 表达式。</p>
-<p><b>示例：</b></p>
-<pre><code>
-${foo}
-</code></pre>
-<p>在应用快速修复后：</p>
-<pre><code>
-&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+报告 JSP 页面中未转义的 EL 表达式中的非安全数据。 此类情况可能导致<a href="https://en.wikipedia.org/wiki/Cross-site_scripting">跨站脚本攻击 (XSS)</a> 漏洞。
+<p>
+  下面的描述使用术语 <b>untainted</b> 数据来指代安全可信的数据，与 <b>tainted</b>（不安全、不可信）相对。 请参阅 <a href="https://en.wikipedia.org/wiki/Taint_checking">taint 检查</a>获取更多信息。
+</p>
+<p>
+  安全的 (untainted) 对象为：
+</p>
+<ul>
+  <li>基元数据类型（<code>char</code> 除外）</li>
+  <li>调用标记为 untainted 的方法的结果</li>
+  <li>转义函数调用的结果</li>
+  <li>标记为 untainted 的字段</li>
+</ul>
+对于所提供的数据，JSP 页面可能有不同的上下文，如果数据对于一个上下文是安全的，并不一定意味着它对所有上下文都是安全的。
+有关示例，请参阅<a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding">跨站脚本攻击防御备忘单</a>。 此检查会跳过在<b>所有</b>上下文中标记为 untainted（安全）的数据。
+<p>
+  此检查支持以下选项以将方法和字段标记为安全：
+</p>
+<ul>
+  <li>通过使用可配置的 untainted 注解列表中的任何注解</li>
+  <li>通过配置安全方法和字段列表</li>
+</ul>
+<p>
+  此类检查不会高亮显示 JSP 页面中非安全数据到达安全标记的位置。
+  例如，JSTL taglib 中的 <code>out</code> 标记是安全的，因为它在默认情况下对给定值进行转义。
+  安全标记列表是可配置的（省略 <code>tag</code> 或 <code>attribute</code> 值可定义整个范围）。
+</p>
+<p>&quot;用 JSTL &lt;out&gt; 标记包装&quot; 快速修复会用 JSTL <code>&lt;out&gt;</code> 标记包装 EL 表达式。</p>
+<p>之前:</p>
+<pre>
+  <code>
+    ${foo}
+  </code>
+</pre>
+<p>之后:</p>
+<pre>
+  <code>
+  &lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
 &lt;c:out value=&quot;${foo}&quot;/&gt;
-</code></pre>
+  </code>
+</pre>
+<p>&quot;用 JSTL escapeXml() 函数包装&quot; 会使用 <code>escapeXml</code> 转义函数包装非安全值。</p>
+<p>之前:</p>
+<pre>
+  <code>
+  &lt;%@ taglib prefix=&quot;custom&quot; uri=&quot;WEB_INF/custom.tld&quot; %&gt;
+  &lt;custom:tag value=&quot;${foo}&quot;/&gt;
+  </code>
+</pre>
+<p>之后:</p>
+<pre>
+  <code>
+    &lt;%@ taglib prefix=&quot;custom&quot; uri=&quot;WEB_INF/custom.tld&quot; %&gt;
+    &lt;%@ taglib prefix=&quot;fn&quot; uri=&quot;http://java.sun.com/jsp/jstl/functions&quot; %&gt;
+    &lt;custom:tag value=&quot;${fn:escapeXml(foo)}&quot;/&gt;
+  </code>
+</pre>
+<p>还有更多快速修复可以将所选标记添加到安全标记中，或者用 untainted 注解来注解相关方法（或字段）。</p>
+<p>
+  可以添加自定义转义函数（请参阅“转移函数”选项卡）。
+  现在，它包含来自 JSTL 的返回安全值的函数（例如，已知的 <code>escapeXml</code> 函数）。
+  它不需要用不同的命名空间 URI 定义两次 JSTL 函数。
+  如果使用了 "http://java.sun.com/jsp/jstl/functions" 或 "http://java.sun.com/jstl/functions" 中的一个，另一个也将被检查。 也可以根据名称在任何地方跳过转义函数。
+  为此，请将命名空间 URI 字段留空。
+</p>
 </body>
 </html>

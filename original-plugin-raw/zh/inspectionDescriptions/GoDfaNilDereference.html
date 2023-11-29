@@ -1,0 +1,14 @@
+<html>
+<body>
+报告可能包含 <code>nil</code> 的指针的取消引用。</body>
+
+<p>示例：</p>
+<pre><code>
+func _(file *os.File) {
+ //接收器 'file' 在调用中可能为 'nil'
+ if file != nil || file.Name() != "" {
+  //code
+ }
+}
+</code></pre>
+</html>

@@ -18,7 +18,7 @@
 <p>在应用快速修复后：</p>
 <pre><code>
   boolean isNewFile(File file, long lastModified) throws IOException {
-    BasicFileAttributes fileAttributes = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
+    var fileAttributes = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
     return fileAttributes.isRegularFile() && fileAttributes.lastModifiedTime().toMillis() > lastModified;
   }
 </code></pre>

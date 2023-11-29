@@ -1,24 +1,24 @@
 <html>
 <body>
-报告其中比较的类型为接口，比较的表达式的类的类型既不实现比较的接口，也不具有实现所比较接口的任何可见子类的 <code>instanceof</code> 表达式。
+报告 <code>instanceof</code> 表达式，其中选中的表达式具有既不扩展/实现 <code>instanceof</code> 表达式右侧的类/接口类型，也没有进行上述操作的子类。
 <p>
-  尽管这可能是有意为之，但通常此类结构很可能表明有错误，其中得到的 <code>instanceof</code> 表达式的求值结果始终为 <code>false</code>。
+  尽管它可以用于库代码，但此类构造很可能是错误的，因为项目中声明的任何类的任何实例都无法通过此 <code>instanceof</code> 测试。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
-  interface I1 {}
+  class Foo { }
 
-  interface I2 {}
-
-  interface I3 extends I1 {}
-
-  static class Sub1 implements I1 {}
-
-  static class Sub2 extends Sub1 implements I2 {
-    void test(Sub1 sub1) {
-      if (sub1 instanceof I3) { // 这里的 'I3' 为不兼容的接口
+  interface Bar { }
+  
+  class Main {
+      void test(Foo f, Bar b) {
+          if (f instanceof Bar) { // 问题
+              System.out.println("fail");
+          }
+          if (b instanceof Foo) { // 问题
+              System.out.println("fail");
+          }
       }
-    }
   }
 </code></pre>
 <!-- tooltip end -->

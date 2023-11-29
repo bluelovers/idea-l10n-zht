@@ -1,0 +1,45 @@
+<html>
+<body>
+报告可由 lombok <code>@Setter</code> 注解替换的标准 setter 方法。
+<p>示例：</p>
+<pre><code>
+  import java.util.Date;
+
+  public class MyClass {
+    /**
+     * 处理日期。
+     */
+    private Date processDate;
+
+    /**
+     * 设置日期。
+     *
+     * @param The date
+     */
+    public void setProcessDate(Date param) {
+      processDate = param;
+    }
+  }
+</code></pre>
+<p>在应用快速修复/清理后：</p>
+<pre><code>
+  import lombok.Setter;
+  import java.util.Date;
+
+  @Setter
+  public class MyClass {
+    /**
+     * 处理日期。
+     * -- SETTER --
+     * 设置日期。
+     *
+     * @param The date
+     */
+    private Date processDate;
+  }
+</code></pre>
+<p>它仅在配置 lombok 库时报告。 要移除 lombok，请参阅 lombok 网站。</p>
+<!-- tooltip end -->
+<p><small>2023.2 最新变化</small></p>
+</body>
+</html>

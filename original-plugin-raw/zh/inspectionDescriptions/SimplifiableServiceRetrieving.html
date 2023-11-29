@@ -1,0 +1,33 @@
+<html>
+<body>
+报告可替换为对现有 static <code>getInstance()</code>
+或 <code>getInstance(Project)</code> 方法的调用的服务获取调用。
+<p>示例 (Java)：</p>
+<pre><code lang="java">
+@Service
+public class MyAppService {
+  public static MyAppService getInstance() {
+    return ApplicationManager.getApplication().getService(MyAppService.class);
+  }
+}
+
+@Service(Service.Level.PROJECT)
+public class MyProjectService {
+  public static MyProjectService getInstance(Project project) {
+    return project.getService(MyProjectService.class);
+  }
+}
+</code></pre>
+<pre><code lang="java">
+// 错误:
+MyAppService applicationService = ApplicationManager.getApplication().getService(MyAppService.class);
+MyProjectService projectService = project.getService(MyProjectService.class);
+</code></pre>
+<pre><code lang="java">
+// 正确:
+MyAppService applicationService = MyAppService.getInstance();
+MyProjectService projectService = MyProjectService.getInstance(project);
+</code></pre>
+<p><small>2023.2 最新变化</small>
+</body>
+</html>

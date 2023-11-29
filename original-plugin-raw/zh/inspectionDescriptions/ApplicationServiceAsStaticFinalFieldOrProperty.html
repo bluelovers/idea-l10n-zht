@@ -1,0 +1,65 @@
+<html>
+<body>
+报告将应用程序服务分配到 static final 字段/不可变属性的情况。
+<h4>Static final 字段 (Java) 或带支持字段的 static 不可变属性 (Kotlin)</h4>
+<p>
+  <b>注意：</b>在下文中，Kotlin 中的 static 指的是非匿名对象或顶层声明的成员。
+</p>
+<p>
+  此类服务会导致全局状态，使得在测试中无法删除一个应用程序并设置另一个应用程序，因此，同一进程中的重复测试可能会失败。
+  唯一的例外是用来存储虚拟/默认实例的显式构造函数调用。
+</p>
+<p>
+  避免存储服务的推荐方式是在本地检索服务。
+  或者，可以将其包装在 <code>java.util.function.Supplier</code> (Java, Kotlin) 中或将属性转换为函数 (Kotlin)。
+</p>
+<p>示例 (Java)：</p>
+<pre><code lang="java">
+// 错误：
+private static final ManagingFS ourInstance = ApplicationManager.getApplication().getService(ManagingFS.class);
+</code></pre>
+<pre><code lang="java">
+// 正确：
+private static final Supplier&lt;ManagingFS&gt; ourInstance = CachedSingletonsRegistry.lazy(() -> {
+  return ApplicationManager.getApplication().getService(ManagingFS.class);
+});
+</code></pre>
+<pre><code lang="java">
+// 例外：
+private static final UniqueVFilePathBuilder DUMMY_BUILDER = new UniqueVFilePathBuilder()
+</code></pre>
+<h4>通过 static 不可变属性检索服务实例 (Kotlin)</h4>
+<p>
+  虽然服务对没有支持字段的属性的分配不会导致上述问题，但使用显式 <code>getInstance()</code> 方法检索服务比使用属性更可取：
+</p>
+<ul>
+  <li>这让调用站点更加清楚地表明，它可以涉及加载服务，这可能并不便宜。</li>
+  <li>加载服务可能会引发异常，与由属性访问引起的异常相比，由方法调用引发的异常并不令人意外。</li>
+  <li>（过度）使用属性可能容易出错，因为它可能会意外地更改为具有初始值设定项的属性，而不是具有 getter 的正确（但更详细）的属性，而且这种更改很容易被忽略。</li>
+  <li>在 Kotlin 和 JAVA 中使用时，使用方法而不是属性可以保持 <code>MyApplicationService.getInstance()</code> 调用的一致性。</li>
+  <li>在声明和调用站点上，使用该方法可使 <code>MyApplicationService.getInstance()</code> 与 <code>MyProjectService.getInstance(project)</code> 保持一致。</li>
+</ul>
+<p>为了获得更好的工具性能，建议始终保持显式方法返回值类型。</p>
+<p>示例：</p>
+<pre><code lang="kotlin">
+@Service
+class MyApplicationService {
+  companion object {
+    @JvmStatic
+    val instance: MyApplicationService // 错误
+       get() = service()
+  }
+}
+</code></pre>
+<pre><code lang="kotlin">
+@Service
+class MyApplicationService {
+  companion object {
+    @JvmStatic
+    fun getInstance(): MyApplicationService = service() // 正确
+  }
+}
+</code></pre>
+<p><small>2023.3 最新变化</small>
+</body>
+</html>

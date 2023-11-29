@@ -1,0 +1,17 @@
+<html lang="zh">
+<body>
+高亮显示 JDL 文件中未使用的实体和枚举。
+<pre><code>
+  application {
+    config {
+    }
+
+    entities Product
+  }
+
+  entity Product {}
+
+  entity Car {} // 未使用的实体 Car
+</code></pre>
+</body>
+</html>

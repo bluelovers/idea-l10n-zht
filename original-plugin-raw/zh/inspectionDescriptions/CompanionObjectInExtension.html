@@ -1,8 +1,8 @@
 <html>
 <body>
-报告 <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">IDE 扩展</a>中不正确的伴生对象用法。
+报告 <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">扩展</a>中不正确的伴生对象用法。
 <p>
-  Kotlin 伴生对象始终会在您尝试加载其包含的类时创建，并且 IDE 扩展的创建成本应该很低。
+  Kotlin 伴生对象始终会在您尝试加载其包含的类时创建，并且扩展点实现的创建成本应该很低。
   插件中过多的类加载是 IDE 启动的一个大问题。
 </p>
 <p>错误模式:</p>
@@ -27,9 +27,10 @@
   在此示例中，只要有人调用 <code>new KotlinDocumentationProvider()</code>，就会从磁盘加载 <code>JavaDocumentationProvider</code>。
 </p>
 <p>
-  扩展实现中的 Kotlin 伴生对象只能包含记录器和简单常量。
+  扩展点实现中的 Kotlin 伴生对象只能包含记录器和简单常量。
   其他声明可能会导致过多类加载或提前初始化开销大的资源（TokenSet、Regex 等）。
   加载扩展类时。
+  请注意，即使标记为 <code>@JvmStatic</code> 的声明也会为伴生对象生成一个额外的类，这可能会导致开销巨大的计算。
 </p>
 <p>
   这些声明必须存储在对象中或处于顶层，而不是存储在伴生对象中。
@@ -38,14 +39,14 @@
 <h4>如何重写 runConfigurationType？</h4>
 <p>将声明移到顶层：</p>
 <pre><code lang="kotlin">
-  // 正确做法
+  // 正确做法，使用顶层 fun
   internal fun mnRunConfigurationType(): MnRunConfigurationType = runConfigurationType&lt;MnRunConfigurationType&gt;()
 
   internal class MnRunConfigurationType : ConfigurationType {
     companion object { // 错误做法
-      fun getInstance(): MnRunConfigurationType = findConfigurationType(MnRunConfigurationType::class.java)
+      fun getInstance(): MnRunConfigurationType = runConfigurationType&lt;MnRunConfigurationType&gt;()
     }
-  }
+    ...
 </code></pre>
 <h4>如何重写 FileType？</h4>
 <p>之前:</p>
@@ -53,12 +54,12 @@
   internal class SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
     companion object {
       val FILE_TYPE = SpringBootImportsFileType()
-   }
-  }
+      ...
 </code></pre>
 <p>之后:</p>
 <pre><code lang="kotlin">
   internal object SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
+  ...
 </code></pre>
 <p>在 <code>plugin.xml</code> 中使用 <code>INSTANCE</code> fieldName：</p>
 <pre><code lang="xml">
@@ -66,7 +67,34 @@
               fieldName="INSTANCE"
               implementationClass="com.intellij.spring.boot.spi.SpringBootImportsFileType"/&gt;
 </code></pre>
+<h4>如何重写 rewrite CounterUsagesCollector？
+</h4>
+<h5>内部 API</h5>
+<p>之前:</p>
+<pre><code lang="kotlin">
+  class AntActionsUsagesCollector : CounterUsagesCollector() {
+    override fun getGroup(): EventLogGroup = GROUP
+
+    companion object {
+      private val GROUP = EventLogGroup("build.ant.actions", 1)
+
+      @JvmField
+      val runSelectedBuildAction = GROUP.registerEvent("RunSelectedBuild")
+   }
+}
+</code></pre>
+<p>之后:</p>
+<pre><code lang="kotlin">
+ object AntActionsUsagesCollector : CounterUsagesCollector() {
+  override fun getGroup(): EventLogGroup = GROUP
+
+  private val GROUP = EventLogGroup("build.ant.actions", 1)
+
+  @JvmField
+  val runSelectedBuildAction = GROUP.registerEvent("RunSelectedBuild")
+}
+</code></pre>
 <!-- tooltip end -->
-<p><small>2023.2 最新变化</small>
+<p><small>2023.3 最新变化</small>
 </body>
 </html>

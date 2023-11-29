@@ -3,15 +3,28 @@
 报告 SLF4J、Log4j2 和 akka.event.LoggingAdapter 日志记录调用，例如 <code>logger.info("{}: {}", key)</code>，其中记录器消息中 <code>{}</code> 占位符的数量与日志调用的其他实参的数量不匹配。
 <!-- tooltip end -->
 <p>
-使用检查选项可以指定 SLF4J 使用哪个实现。
-如果选择<strong>自动检查</strong>，则在类路径中搜索 <code>org.apache.logging.slf4j.Log4jLogger</code>。
-如果找到了此文件或选择了<strong>是</strong>，将不为 SLFJ4 API 报告带有异常类型的最后一个形参具有占位符的情况。
-示例：
+  使用检查选项可以指定 SLF4J 使用哪个实现。
+  如果选择<strong>自动检查</strong>，则在类路径中搜索 <code>org.apache.logging.slf4j.Log4jLogger</code>。
+  如果找到了此文件或选择了<strong>是</strong>，将不为 SLFJ4 API 报告带有异常类型的最后一个形参具有占位符的情况。<br/>
+例如：
 <pre><code lang="java">
-// 将不报告
-log.error("For id {}: {}", id, new RuntimeException());
+//如果选中“是”选项，则不会报告此情况
+log.error("For id {}: {}", "1", new RuntimeException());
 </code></pre>
-此选项仅适用于 SLF4J。
+在这种情况下，将使用 'toString()' 打印 'new RuntimeException()'，（不会打印其堆栈跟踪）：
+<pre><code lang="text">
+For id 1: java.lang.RuntimeException
+</code></pre>
+
+否则，它将高亮显示，因为未使用最后一个占位符：
+<pre><code lang="text">
+For id 1: {}
+java.lang.RuntimeException: null
+</code></pre>
+
+<strong>否</strong>选项可用于在占位符用于异常时始终高亮显示此类情况，即使 <code>org.apache.logging.slf4j.Log4jLogger</code> 用作后端也是如此。<br/>
+
+此选项仅适用于SLF4J。
 <p>
 </body>
 </html>
