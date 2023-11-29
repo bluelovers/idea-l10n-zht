@@ -1,0 +1,33 @@
+<html>
+<body>
+報告可取代為對現有 static <code>getInstance()</code>
+或 <code>getInstance(Project)</code> 方法的呼叫的服務獲取呼叫。
+<p>範例 (Java)：</p>
+<pre><code lang="java">
+@Service
+public class MyAppService {
+  public static MyAppService getInstance() {
+    return ApplicationManager.getApplication().getService(MyAppService.class);
+  }
+}
+
+@Service(Service.Level.PROJECT)
+public class MyProjectService {
+  public static MyProjectService getInstance(Project project) {
+    return project.getService(MyProjectService.class);
+  }
+}
+</code></pre>
+<pre><code lang="java">
+// 錯誤:
+MyAppService applicationService = ApplicationManager.getApplication().getService(MyAppService.class);
+MyProjectService projectService = project.getService(MyProjectService.class);
+</code></pre>
+<pre><code lang="java">
+// 正確:
+MyAppService applicationService = MyAppService.getInstance();
+MyProjectService projectService = MyProjectService.getInstance(project);
+</code></pre>
+<p><small>2023.2 最新變化</small>
+</body>
+</html>

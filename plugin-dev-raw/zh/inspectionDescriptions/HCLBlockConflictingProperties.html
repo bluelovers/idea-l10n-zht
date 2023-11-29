@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>報告 HCL 塊中的衝突屬性。</p>
+<p>問題範例：</p>
+<pre><code>
+provider "kubernetes" {
+  version = "~> 1.25"
+  config_path = "~/.kube/config"
+  version = "~> 1.24"
+}
+</code></pre>
+<p>
+  在此範例中，在 Kubernetes 提供程序塊中宣告了兩次版本屬性。這是一個錯誤。
+</p>
+<p>更正範例：</p>
+<pre><code>
+provider "kubernetes" {
+  version = "~> 1.25"
+  config_path = "~/.kube/config"
+}
+</code></pre>
+<em>技術支援</em>：<a href="https://plugins.jetbrains.com/plugin/7808-terraform-and-hcl">Terraform 和 HCL 延伸模組</a>
+</body>
+</html>

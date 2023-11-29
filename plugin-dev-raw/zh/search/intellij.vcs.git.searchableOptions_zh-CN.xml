@@ -1,6 +1,9 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
+    <option name="changes" path="ActionManager" hit="Configure Local Changes" />
+    <option name="configure" path="ActionManager" hit="Configure Local Changes" />
+    <option name="local" path="ActionManager" hit="Configure Local Changes" />
     <option name="fixup" path="ActionManager" hit="Fixup…" />
     <option name="git" path="ActionManager" hit="Git" />
     <option name="vcs" path="ActionManager" hit="VCS 小工具" />
@@ -27,6 +30,9 @@
     <option name="從這裡進行互動重定基底" path="ActionManager" hit="從這裡進行互動重定基底…" />
     <option name="儲存庫" path="ActionManager" hit="儲存庫" />
     <option name="儲存庫根路徑" path="ActionManager" hit="儲存庫根路徑" />
+    <option name="git" path="ActionManager" hit="使用原生 Git 暫存概念進行提交" />
+    <option name="使用原生" path="ActionManager" hit="使用原生 Git 暫存概念進行提交" />
+    <option name="暫存概念進行提交" path="ActionManager" hit="使用原生 Git 暫存概念進行提交" />
     <option name="使用重定基底拉入當前分支" path="ActionManager" hit="使用重定基底拉入當前分支" />
     <option name="使用合併拉入當前分支" path="ActionManager" hit="使用合併拉入當前分支" />
     <option name="使用所選分支更新日誌中的分支篩選器" path="ActionManager" hit="使用所選分支更新日誌中的分支篩選器" />
@@ -54,11 +60,11 @@
     <option name="取消隱藏更改" path="ActionManager" hit="取消隱藏更改…" />
     <option name="重定基底" path="ActionManager" hit="重定基底" />
     <option name="重定基底" path="ActionManager" hit="重定基底…" />
+    <option name="變更列表" path="ActionManager" hit="變更列表" />
     <option name="合併" path="ActionManager" hit="合併" />
     <option name="合併" path="ActionManager" hit="合併…" />
     <option name="合併到當前分支" path="ActionManager" hit="合併到當前分支" />
     <option name="回滾" path="ActionManager" hit="回滾" />
-    <option name="回滾" path="ActionManager" hit="回滾..." />
     <option name="git" path="ActionManager" hit="在 Git 日誌中顯示" />
     <option name="在" path="ActionManager" hit="在 Git 日誌中顯示" />
     <option name="日誌中顯示" path="ActionManager" hit="在 Git 日誌中顯示" />
@@ -111,6 +117,7 @@
     <option name="新分支" path="ActionManager" hit="新分支" />
     <option name="新增分支" path="ActionManager" hit="新增分支…" />
     <option name="新增標記" path="ActionManager" hit="新增標記…" />
+    <option name="無任何內容暫存時全部提交" path="ActionManager" hit="無任何內容暫存時全部提交" />
     <option name="無優選提交" path="ActionManager" hit="無優選提交" />
     <option name="無內容的暫存" path="ActionManager" hit="無內容的暫存" />
     <option name="無提示隱藏" path="ActionManager" hit="無提示隱藏" />
@@ -135,28 +142,29 @@
     <option name="從中可以互動地將更改新增到暫存區域" path="ActionManager" hit="顯示包含 HEAD、暫存和本地版本的差異視窗，從中可以互動地將更改新增到暫存區域" />
     <option name="顯示包含" path="ActionManager" hit="顯示包含 HEAD、暫存和本地版本的差異視窗，從中可以互動地將更改新增到暫存區域" />
     <option name="暫存和本地版本的差異視窗" path="ActionManager" hit="顯示包含 HEAD、暫存和本地版本的差異視窗，從中可以互動地將更改新增到暫存區域" />
-    <option name="顯示歷史記錄" path="ActionManager" hit="顯示歷史記錄..." />
-    <option name="顯示差異" path="ActionManager" hit="顯示差異..." />
     <option name="顯示忽略的檔案" path="ActionManager" hit="顯示忽略的檔案" />
     <option name="顯示暫存區域" path="ActionManager" hit="顯示暫存區域" />
     <option name="顯示暫存版本" path="ActionManager" hit="顯示暫存版本" />
+    <option name="顯示最近的分支" path="ActionManager" hit="顯示最近的分支" />
     <option name="顯示本地版本" path="ActionManager" hit="顯示本地版本" />
     <option name="暫存" path="ActionManager" hit="暫存" />
     <option name="暫存全部已追蹤項" path="ActionManager" hit="暫存全部已追蹤項" />
+    <option name="暫存區域" path="ActionManager" hit="暫存區域" />
     <option name="更新" path="ActionManager" hit="更新" />
     <option name="更新分支篩選器" path="ActionManager" hit="更新分支篩選器" />
     <option name="更新日誌中的分支篩選器" path="ActionManager" hit="更新日誌中的分支篩選器" />
-    <option name="更新專案" path="ActionManager" hit="更新專案..." />
     <option name="head" path="ActionManager" hit="比較 HEAD 版本、暫存版本和本地版本" />
     <option name="暫存版本和本地版本" path="ActionManager" hit="比較 HEAD 版本、暫存版本和本地版本" />
     <option name="比較" path="ActionManager" hit="比較 HEAD 版本、暫存版本和本地版本" />
     <option name="版本" path="ActionManager" hit="比較 HEAD 版本、暫存版本和本地版本" />
+    <option name="沒有暫存檔案時全部提交" path="ActionManager" hit="沒有暫存檔案時全部提交" />
     <option name="gitignore" path="ActionManager" hit="新增到 .gitignore" />
     <option name="新增到" path="ActionManager" hit="新增到 .gitignore" />
     <option name="版本控制" path="ActionManager" hit="版本控制" />
     <option name="生成新提交" path="ActionManager" hit="生成新提交，這會還原在原始提交中所做的更改" />
     <option name="這會還原在原始提交中所做的更改" path="ActionManager" hit="生成新提交，這會還原在原始提交中所做的更改" />
     <option name="目錄" path="ActionManager" hit="目錄" />
+    <option name="停用暫存區域並切換到更改列表" path="ActionManager" hit="停用暫存區域並切換到更改列表" />
     <option name="簽出" path="ActionManager" hit="簽出" />
     <option name="簽出修訂" path="ActionManager" hit="簽出修訂" />
     <option name="簽出並重定基底到當前分支" path="ActionManager" hit="簽出並重定基底到當前分支" />
@@ -188,6 +196,7 @@
     <option name="git" path="ActionManager" hit="隱藏 Git 分支" />
     <option name="分支" path="ActionManager" hit="隱藏 Git 分支" />
     <option name="隱藏" path="ActionManager" hit="隱藏 Git 分支" />
+    <option name="隱藏檔案" path="ActionManager" hit="隱藏檔案" />
     <option name="隱藏更改" path="ActionManager" hit="隱藏更改…" />
     <option name="醒目提示尚未優選到當前分支的提交" path="ActionManager" hit="醒目提示尚未優選到當前分支的提交" />
   </configurable>

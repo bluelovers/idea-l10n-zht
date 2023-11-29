@@ -1,0 +1,10 @@
+<html>
+<body>
+報告方法 <code>System.getProperty(str)</code> 的用法，並在以下 2 中情況下提出修復建議：
+<ul>
+  <li><code>System.getProperty("path.separator")</code> -> <code>File.pathSeparator</code></li>
+  <li><code>System.getProperty("line.separator")</code> -> <code>System.lineSeparator()</code></li>
+</ul>
+第二種方式不僅不太容易出錯，而且可能更快，因為 <code>System.lineSeparator()</code> 返回快取值，而 <code>System.getProperty("line.separator")</code> 每次都呼叫屬性（Hashtable 或 CHM，具體取決於實作）。
+</body>
+</html>

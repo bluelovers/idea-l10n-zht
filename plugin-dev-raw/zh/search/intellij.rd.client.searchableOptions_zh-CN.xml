@@ -1,6 +1,9 @@
 <options>
-  <configurable id="reference.settingsdialog.IDE.editor.colors.Stacktrace" configurable_name="Stacktrace">
-    <option name="stacktrace" hit="Stacktrace" />
+  <configurable id="preferences.keymap" configurable_name="按鍵映射">
+    <option name="" path="ActionManager" hit="" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.堆疊追蹤" configurable_name="堆疊追蹤">
+    <option name="堆疊追蹤" hit="堆疊追蹤" />
     <option name="rider" hit="Rider 異常中斷點插入點" />
     <option name="異常中斷點插入點" hit="Rider 異常中斷點插入點" />
     <option name="可疑文本" hit="可疑文本" />
@@ -10,20 +13,7 @@
     <option name="路徑" hit="路徑" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.C#" configurable_name="C#">
-    <option name="c" hit="C " />
-    <option name="and" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="constructor" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="parameter" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="primary" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="properties" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="variables" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="and" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="captured" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="constructor" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="parameter" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="primary" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="properties" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="variables" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
+    <option name="c#" hit="C " />
     <option name="關鍵字" hit="關鍵字//關鍵字" />
     <option name="bool" hit="關鍵字//內建類型關鍵字(int、short、bool 等)" />
     <option name="int" hit="關鍵字//內建類型關鍵字(int、short、bool 等)" />
@@ -68,6 +58,11 @@
     <option name="static" hit="屬性和變數//static 屬性" />
     <option name="屬性" hit="屬性和變數//static 屬性" />
     <option name="屬性和變數" hit="屬性和變數//static 屬性" />
+    <option name="主建構函式參數" hit="屬性和變數//主建構函式參數" />
+    <option name="屬性和變數" hit="屬性和變數//主建構函式參數" />
+    <option name="主建構函式參數" hit="屬性和變數//主建構函式參數(已捕獲)" />
+    <option name="屬性和變數" hit="屬性和變數//主建構函式參數(已捕獲)" />
+    <option name="已捕獲" hit="屬性和變數//主建構函式參數(已捕獲)" />
     <option name="元組組件名稱" hit="屬性和變數//元組組件名稱" />
     <option name="屬性和變數" hit="屬性和變數//元組組件名稱" />
     <option name="動態" hit="屬性和變數//動態" />
@@ -146,6 +141,102 @@
     <option name="關鍵字" hit="預處理程序//關鍵字" />
     <option name="預處理程序" hit="預處理程序//關鍵字" />
   </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.F#" configurable_name="F#">
+    <option name="f#" hit="F " />
+    <option name="block" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Block comment" />
+    <option name="comments" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Line comment" />
+    <option name="comments" hit="Comments//Line comment" />
+    <option name="line" hit="Comments//Line comment" />
+    <option name="1" hit="Escape Character 1" />
+    <option name="character" hit="Escape Character 1" />
+    <option name="escape" hit="Escape Character 1" />
+    <option name="2" hit="Escape Character 2" />
+    <option name="character" hit="Escape Character 2" />
+    <option name="escape" hit="Escape Character 2" />
+    <option name="event" hit="Members//Event" />
+    <option name="members" hit="Members//Event" />
+    <option name="extension" hit="Members//Extension method" />
+    <option name="members" hit="Members//Extension method" />
+    <option name="method" hit="Members//Extension method" />
+    <option name="extension" hit="Members//Extension property" />
+    <option name="members" hit="Members//Extension property" />
+    <option name="property" hit="Members//Extension property" />
+    <option name="field" hit="Members//Field" />
+    <option name="members" hit="Members//Field" />
+    <option name="members" hit="Members//Method" />
+    <option name="method" hit="Members//Method" />
+    <option name="members" hit="Members//Property" />
+    <option name="property" hit="Members//Property" />
+    <option name="and" hit="Modules and namespaces//Module" />
+    <option name="module" hit="Modules and namespaces//Module" />
+    <option name="modules" hit="Modules and namespaces//Module" />
+    <option name="namespaces" hit="Modules and namespaces//Module" />
+    <option name="and" hit="Modules and namespaces//Namespace" />
+    <option name="modules" hit="Modules and namespaces//Namespace" />
+    <option name="namespace" hit="Modules and namespaces//Namespace" />
+    <option name="namespaces" hit="Modules and namespaces//Namespace" />
+    <option name="branch" hit="Preprocessor//Inactive branch" />
+    <option name="inactive" hit="Preprocessor//Inactive branch" />
+    <option name="preprocessor" hit="Preprocessor//Inactive branch" />
+    <option name="keyword" hit="Preprocessor//Keyword" />
+    <option name="preprocessor" hit="Preprocessor//Keyword" />
+    <option name="keyword" hit="Syntax//Keyword" />
+    <option name="syntax" hit="Syntax//Keyword" />
+    <option name="number" hit="Syntax//Number" />
+    <option name="syntax" hit="Syntax//Number" />
+    <option name="string" hit="Syntax//String" />
+    <option name="syntax" hit="Syntax//String" />
+    <option name="class" hit="Types//Class" />
+    <option name="types" hit="Types//Class" />
+    <option name="delegate" hit="Types//Delegate" />
+    <option name="types" hit="Types//Delegate" />
+    <option name="enum" hit="Types//Enum" />
+    <option name="types" hit="Types//Enum" />
+    <option name="interface" hit="Types//Interface" />
+    <option name="types" hit="Types//Interface" />
+    <option name="record" hit="Types//Record" />
+    <option name="types" hit="Types//Record" />
+    <option name="class" hit="Types//Static class" />
+    <option name="static" hit="Types//Static class" />
+    <option name="types" hit="Types//Static class" />
+    <option name="struct" hit="Types//Struct" />
+    <option name="types" hit="Types//Struct" />
+    <option name="parameter" hit="Types//Type parameter" />
+    <option name="type" hit="Types//Type parameter" />
+    <option name="types" hit="Types//Type parameter" />
+    <option name="types" hit="Types//Union" />
+    <option name="union" hit="Types//Union" />
+    <option name="case" hit="Types//Union Case" />
+    <option name="types" hit="Types//Union Case" />
+    <option name="union" hit="Types//Union Case" />
+    <option name="measure" hit="Types//Unit of measure" />
+    <option name="of" hit="Types//Unit of measure" />
+    <option name="types" hit="Types//Unit of measure" />
+    <option name="unit" hit="Types//Unit of measure" />
+    <option name="active" hit="Values//Active pattern case" />
+    <option name="case" hit="Values//Active pattern case" />
+    <option name="pattern" hit="Values//Active pattern case" />
+    <option name="values" hit="Values//Active pattern case" />
+    <option name="computation" hit="Values//Computation expression" />
+    <option name="expression" hit="Values//Computation expression" />
+    <option name="values" hit="Values//Computation expression" />
+    <option name="function" hit="Values//Function" />
+    <option name="values" hit="Values//Function" />
+    <option name="literal" hit="Values//Literal" />
+    <option name="values" hit="Values//Literal" />
+    <option name="function" hit="Values//Mutable function" />
+    <option name="mutable" hit="Values//Mutable function" />
+    <option name="values" hit="Values//Mutable function" />
+    <option name="mutable" hit="Values//Mutable value" />
+    <option name="value" hit="Values//Mutable value" />
+    <option name="values" hit="Values//Mutable value" />
+    <option name="operator" hit="Values//Operator" />
+    <option name="values" hit="Values//Operator" />
+    <option name="value" hit="Values//Value" />
+    <option name="values" hit="Values//Value" />
+  </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.Xaml" configurable_name="Xaml">
     <option name="xaml" hit="Xaml" />
     <option name="styleclass" hit="StyleClass_Text" />
@@ -192,21 +283,8 @@
     <option name="razor" hit="Razor//標記幫助程序特性" />
     <option name="標記幫助程序特性" hit="Razor//標記幫助程序特性" />
   </configurable>
-  <configurable id="reference.settingsdialog.IDE.editor.colors.Assembly Explorer" configurable_name="Assembly Explorer">
-    <option name="assembly" hit="Assembly Explorer" />
-    <option name="explorer" hit="Assembly Explorer" />
-    <option name="元資料令牌" hit="元資料令牌" />
-    <option name="元資料用法" hit="元資料用法" />
-    <option name="其他資訊" hit="其他資訊" />
-    <option name="private" hit="內部/private" />
-    <option name="內部" hit="內部/private" />
-    <option name="基" hit="基/繼承者" />
-    <option name="繼承者" hit="基/繼承者" />
-    <option name="強調元資料" hit="強調元資料" />
-    <option name="類型元素" hit="類型元素" />
-  </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.C++" configurable_name="C++">
-    <option name="c" hit="C  " />
+    <option name="c++" hit="C  " />
     <option name="engine" hit="Unreal Engine 反射說明符" />
     <option name="unreal" hit="Unreal Engine 反射說明符" />
     <option name="反射說明符" hit="Unreal Engine 反射說明符" />
@@ -269,6 +347,44 @@
     <option name="浮點文字" hit="文字//浮點文字" />
     <option name="模組名稱" hit="模組名稱" />
     <option name="模板參數" hit="模板參數" />
+    <option name="關鍵字" hit="匯編器//關鍵字//關鍵字" />
+    <option name="匯編器" hit="匯編器//關鍵字//關鍵字" />
+    <option name="關鍵字" hit="匯編器//關鍵字//大小關鍵字" />
+    <option name="大小關鍵字" hit="匯編器//關鍵字//大小關鍵字" />
+    <option name="匯編器" hit="匯編器//關鍵字//大小關鍵字" />
+    <option name="關鍵字" hit="匯編器//關鍵字//常數關鍵字" />
+    <option name="常數關鍵字" hit="匯編器//關鍵字//常數關鍵字" />
+    <option name="匯編器" hit="匯編器//關鍵字//常數關鍵字" />
+    <option name="單行註釋" hit="匯編器//單行註釋" />
+    <option name="匯編器" hit="匯編器//單行註釋" />
+    <option name="字串文字" hit="匯編器//字串文字" />
+    <option name="匯編器" hit="匯編器//字串文字" />
+    <option name="寄存器" hit="匯編器//寄存器" />
+    <option name="匯編器" hit="匯編器//寄存器" />
+    <option name="equ" hit="匯編器//指令//Equ 偽指令" />
+    <option name="偽指令" hit="匯編器//指令//Equ 偽指令" />
+    <option name="指令" hit="匯編器//指令//Equ 偽指令" />
+    <option name="匯編器" hit="匯編器//指令//Equ 偽指令" />
+    <option name="前綴" hit="匯編器//指令//前綴" />
+    <option name="指令" hit="匯編器//指令//前綴" />
+    <option name="匯編器" hit="匯編器//指令//前綴" />
+    <option name="指令" hit="匯編器//指令//指令" />
+    <option name="匯編器" hit="匯編器//指令//指令" />
+    <option name="指令" hit="匯編器//指令//資料偽指令" />
+    <option name="資料偽指令" hit="匯編器//指令//資料偽指令" />
+    <option name="匯編器" hit="匯編器//指令//資料偽指令" />
+    <option name="數字文字" hit="匯編器//數字文字" />
+    <option name="匯編器" hit="匯編器//數字文字" />
+    <option name="未解析的關鍵字" hit="匯編器//未解析的關鍵字" />
+    <option name="匯編器" hit="匯編器//未解析的關鍵字" />
+    <option name="變數" hit="匯編器//標籤//變數" />
+    <option name="標籤" hit="匯編器//標籤//變數" />
+    <option name="匯編器" hit="匯編器//標籤//變數" />
+    <option name="常數" hit="匯編器//標籤//常數" />
+    <option name="標籤" hit="匯編器//標籤//常數" />
+    <option name="匯編器" hit="匯編器//標籤//常數" />
+    <option name="標籤" hit="匯編器//標籤//標籤" />
+    <option name="匯編器" hit="匯編器//標籤//標籤" />
     <option name="doxygen" hit="註釋//Doxygen//指令" />
     <option name="指令" hit="註釋//Doxygen//指令" />
     <option name="註釋" hit="註釋//Doxygen//指令" />
@@ -302,10 +418,24 @@
     <option name="預處理程序" hit="預處理程序//預處理程序巨集參數" />
     <option name="預處理程序巨集參數" hit="預處理程序//預處理程序巨集參數" />
   </configurable>
-  <configurable id="reference.settingsdialog.IDE.editor.colors.IL (Intermediate Language)" configurable_name="IL (Intermediate Language)">
-    <option name="il" hit="IL  Intermediate Language " />
-    <option name="intermediate" hit="IL  Intermediate Language " />
-    <option name="language" hit="IL  Intermediate Language " />
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Cg/HLSL" configurable_name="Cg/HLSL">
+    <option name="cg" hit="Cg HLSL" />
+    <option name="hlsl" hit="Cg HLSL" />
+    <option name="關鍵字" hit="關鍵字" />
+    <option name="函式關鍵字" hit="函式關鍵字" />
+    <option name="變數關鍵字" hit="變數關鍵字" />
+    <option name="欄位關鍵字" hit="欄位關鍵字" />
+    <option name="數值" hit="數值" />
+    <option name="塊註釋" hit="註釋//塊註釋" />
+    <option name="註釋" hit="註釋//塊註釋" />
+    <option name="註釋" hit="註釋//行註釋" />
+    <option name="行註釋" hit="註釋//行註釋" />
+    <option name="類型關鍵字" hit="類型關鍵字" />
+    <option name="預處理程序行內容" hit="預處理程序行內容" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.IL （中間語言）" configurable_name="IL （中間語言）">
+    <option name="il" hit="IL  中間語言 " />
+    <option name="中間語言" hit="IL  中間語言 " />
     <option name="程式碼標籤" hit="程式碼標籤" />
     <option name="關鍵字" hit="關鍵字" />
     <option name="字串文字" hit="字串文字" />
@@ -319,6 +449,71 @@
     <option name="評論" hit="評論" />
     <option name="限定名稱" hit="限定名稱" />
   </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.ShaderLab" configurable_name="ShaderLab">
+    <option name="shaderlab" hit="ShaderLab" />
+    <option name="active" hit="Active Shader Keyword" />
+    <option name="keyword" hit="Active Shader Keyword" />
+    <option name="shader" hit="Active Shader Keyword" />
+    <option name="inactive" hit="Inactive Shader Keyword" />
+    <option name="keyword" hit="Inactive Shader Keyword" />
+    <option name="shader" hit="Inactive Shader Keyword" />
+    <option name="keyword" hit="Suppressed Shader Keyword" />
+    <option name="shader" hit="Suppressed Shader Keyword" />
+    <option name="suppressed" hit="Suppressed Shader Keyword" />
+    <option name="關鍵字" hit="關鍵字" />
+    <option name="字串" hit="字串" />
+    <option name="數值" hit="數值" />
+    <option name="注入的語言片段" hit="注入的語言片段" />
+    <option name="塊註釋" hit="註釋//塊註釋" />
+    <option name="註釋" hit="註釋//塊註釋" />
+    <option name="註釋" hit="註釋//行註釋" />
+    <option name="行註釋" hit="註釋//行註釋" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.T4" configurable_name="T4">
+    <option name="t4" hit="T " />
+    <option name="block" hit="Code Block" />
+    <option name="code" hit="Code Block" />
+    <option name="attribute" hit="T4 Attribute Value" />
+    <option name="t4" hit="T4 Attribute Value" />
+    <option name="value" hit="T4 Attribute Value" />
+    <option name="directive" hit="T4 Directive" />
+    <option name="t4" hit="T4 Directive" />
+    <option name="attribute" hit="T4 Directive Attribute" />
+    <option name="directive" hit="T4 Directive Attribute" />
+    <option name="t4" hit="T4 Directive Attribute" />
+    <option name="environment" hit="T4 Environment Variable" />
+    <option name="t4" hit="T4 Environment Variable" />
+    <option name="variable" hit="T4 Environment Variable" />
+    <option name="macro" hit="T4 Macro" />
+    <option name="t4" hit="T4 Macro" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Unity" configurable_name="Unity">
+    <option name="unity" hit="Unity" />
+    <option name="低效的乘法次序" hit="低效的乘法次序" />
+    <option name="低效的多維陣列用法" hit="低效的多維陣列用法" />
+    <option name="camera" hit="開銷較大的 'Camera.main' 用法" />
+    <option name="main" hit="開銷較大的 'Camera.main' 用法" />
+    <option name="開銷較大的" hit="開銷較大的 'Camera.main' 用法" />
+    <option name="用法" hit="開銷較大的 'Camera.main' 用法" />
+    <option name="null" hit="開銷較大的 null 比較" />
+    <option name="開銷較大的" hit="開銷較大的 null 比較" />
+    <option name="比較" hit="開銷較大的 null 比較" />
+    <option name="開銷較大的方法呼叫" hit="開銷較大的方法呼叫" />
+    <option name="性能關鍵行標記" hit="性能關鍵行標記" />
+    <option name="隱式使用的關鍵字" hit="隱式使用的關鍵字" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.程序集資源管理器" configurable_name="程序集資源管理器">
+    <option name="程序集資源管理器" hit="程序集資源管理器" />
+    <option name="元資料令牌" hit="元資料令牌" />
+    <option name="元資料用法" hit="元資料用法" />
+    <option name="其他資訊" hit="其他資訊" />
+    <option name="private" hit="內部/private" />
+    <option name="內部" hit="內部/private" />
+    <option name="基" hit="基/繼承者" />
+    <option name="繼承者" hit="基/繼承者" />
+    <option name="強調元資料" hit="強調元資料" />
+    <option name="類型元素" hit="類型元素" />
+  </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.其他" configurable_name="其他">
     <option name="其他" hit="其他" />
     <option name="asp" hit="ASP.NET 路由模板令牌取代" />
@@ -327,6 +522,11 @@
     <option name="asp" hit="ASP.NET 路由模板參數" />
     <option name="net" hit="ASP.NET 路由模板參數" />
     <option name="路由模板參數" hit="ASP.NET 路由模板參數" />
+    <option name="analysis" hit="Dynamic Program Analysis Highlighter (問題框架)" />
+    <option name="dynamic" hit="Dynamic Program Analysis Highlighter (問題框架)" />
+    <option name="highlighter" hit="Dynamic Program Analysis Highlighter (問題框架)" />
+    <option name="program" hit="Dynamic Program Analysis Highlighter (問題框架)" />
+    <option name="問題框架" hit="Dynamic Program Analysis Highlighter (問題框架)" />
     <option name="組態檔案中要刪除的文本" hit="組態檔案中要刪除的文本" />
     <option name="組態檔案中要插入的文本" hit="組態檔案中要插入的文本" />
     <option name="組態檔案衝突警告" hit="組態檔案衝突警告" />

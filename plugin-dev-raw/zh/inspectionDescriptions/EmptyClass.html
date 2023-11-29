@@ -1,7 +1,25 @@
 <html>
 <body>
-報告空類別和沒有任何定義類別的 Java 檔案。
-<p>如果一個類別不包含任何欄位、方法、建構函式或初始設定式，則為空類別。 在進行重大更改或重構後，空類別通常會保留下來。</p>
+報告空類別和空 Java 檔案。
+<p>如果一個類別不包含任何欄位、方法、建構函式或初始設定式，則為空類別。 在進行重大更改或重構後，空類別有時會保留下來。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  class Example {
+    List&lt;String&gt; getList() {
+       return new ArrayList&lt;&gt;() {
+
+       };
+    }
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  class Example {
+    List&lt;String&gt; getList() {
+       return new ArrayList&lt;&gt;();
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
 <p>組態檢查：</p>
 <ul>

@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>
+  Reports attempts to access PySpark DataFrame columns that do not exist in the schema.
+</p>
+<p><b>範例：</b></p>
+<pre><code lang="Python">
+df = spark.createDataFrame(data=[(“John”, 10),
+                                 (“Anakin”, 20),
+                                 (“Luke”, 30)],
+                           schema=[“name”, “age”])
+df.select(“unknown_column”)
+</code></pre>
+</body>
+</html>

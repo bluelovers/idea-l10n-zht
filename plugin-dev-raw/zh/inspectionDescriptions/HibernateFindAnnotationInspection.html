@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>報告 Hibernate @Find 註解錯誤</p>
+<ul>
+  <li>註解方法的返回類型必須是實體類型 <b>E</b>，或者是以下類型之一：
+    <ul>
+      <li>java.util.List&lt;E&gt;</li>
+      <li>org.hibernate.query.Query&lt;E&gt;</li>
+      <li>org.hibernate.query.SelectionQuery&lt;E&gt;</li>
+      <li>jakarta.persistence.Query&lt;E&gt;</li>
+      <li>jakarta.persistence.TypedQuery&lt;E&gt;</li>
+    </ul>
+  </li>
+  <li>finder 方法的參數名稱和類型必須與 finder 方法返回的實體類型的持久欄位的名稱和類型完全符合。
+  </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+報告檢索服務時出現的以下問題：
+<ul>
+  <li>嘗試檢索未註冊的服務.</li>
+  <li>檢索服務時不符合：嘗試將專案級服務作為應用程式級服務獲取，或者反向動作。</li>
+</ul>
+<p>範例 (Kotlin)：</p>
+<pre><code lang="kotlin">
+@Service
+class MyAppService
+
+@Service(Service.Level.PROJECT)
+class MyProjectService(private val project: Project)
+</code></pre>
+<pre><code lang="kotlin">
+// 錯誤:
+val projectService = service&lt;MyProjectService&gt;()         // 專案級服務作為應用程式級服務進行檢索
+val applicationService = project.service&lt;MyAppService&gt;() // 應用程式級服務作為專案級服務進行檢索
+</code></pre>
+<pre><code lang="kotlin">
+// 正確:
+val projectService = project.service&lt;MyProjectService&gt;()
+val applicationService = service&lt;MyAppService&gt;();
+</code></pre>
+<p><small>2023.2 最新變化</small>
+</body>
+</html>

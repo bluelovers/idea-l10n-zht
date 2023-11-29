@@ -1,24 +1,24 @@
 <html>
 <body>
-報告其中比較的類型為接口，比較的表達式的類別的類型既不實現比較的接口，也不具有實作所比較接口的任何可見子類別的 <code>instanceof</code> 表達式。
+報告 <code>instanceof</code> 表達式，其中選中的表達式具有既不擴展/實作 <code>instanceof</code> 表達式右側的類別/接口類型，也沒有進行上述動作的子類別。
 <p>
-  儘管這可能是有意為之，但通常此類別結構很可能表明有錯誤，其中得到的 <code>instanceof</code> 表達式的求值結果始終為 <code>false</code>。
+  儘管它可以用於庫程式碼，但此類別建構很可能是錯誤的，因為專案中宣告的任何類別的任何實例都無法通過此 <code>instanceof</code> 測試。
 </p>
 <p><b>範例：</b></p>
 <pre><code>
-  interface I1 {}
+  class Foo { }
 
-  interface I2 {}
-
-  interface I3 extends I1 {}
-
-  static class Sub1 implements I1 {}
-
-  static class Sub2 extends Sub1 implements I2 {
-    void test(Sub1 sub1) {
-      if (sub1 instanceof I3) { // 這裡的 'I3' 為不相容的接口
+  interface Bar { }
+  
+  class Main {
+      void test(Foo f, Bar b) {
+          if (f instanceof Bar) { // 問題
+              System.out.println("fail");
+          }
+          if (b instanceof Foo) { // 問題
+              System.out.println("fail");
+          }
       }
-    }
   }
 </code></pre>
 <!-- tooltip end -->

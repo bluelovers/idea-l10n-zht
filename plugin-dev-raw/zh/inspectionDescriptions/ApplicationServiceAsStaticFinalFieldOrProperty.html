@@ -1,0 +1,65 @@
+<html>
+<body>
+報告將套用程序服務分配到 static final 欄位/不可變屬性的情況。
+<h4>Static final 欄位 (Java) 或帶支援欄位的 static 不可變屬性 (Kotlin)</h4>
+<p>
+  <b>注意：</b>在下文中，Kotlin 中的 static 指的是非匿名物件或頂層宣告的成員。
+</p>
+<p>
+  此類別服務會導致全域狀態，使得在測試中無法刪除一個應用程式並設定另一個應用程式，因此，同一程序中的重複測試可能會失敗。
+  唯一的例外是用來存儲虛擬/預設實例的顯式建構函式呼叫。
+</p>
+<p>
+  避免存儲服務的推薦方式是在本地檢索服務。
+  或者，可以將其包裝在 <code>java.util.function.Supplier</code> (Java, Kotlin) 中或將屬性轉換為函式 (Kotlin)。
+</p>
+<p>範例 (Java)：</p>
+<pre><code lang="java">
+// 錯誤：
+private static final ManagingFS ourInstance = ApplicationManager.getApplication().getService(ManagingFS.class);
+</code></pre>
+<pre><code lang="java">
+// 正確：
+private static final Supplier&lt;ManagingFS&gt; ourInstance = CachedSingletonsRegistry.lazy(() -> {
+  return ApplicationManager.getApplication().getService(ManagingFS.class);
+});
+</code></pre>
+<pre><code lang="java">
+// 例外：
+private static final UniqueVFilePathBuilder DUMMY_BUILDER = new UniqueVFilePathBuilder()
+</code></pre>
+<h4>通過 static 不可變屬性檢索服務實例 (Kotlin)</h4>
+<p>
+  雖然服務對沒有支援欄位的屬性的分配不會導致上述問題，但使用顯式 <code>getInstance()</code> 方法檢索服務比使用屬性更可取：
+</p>
+<ul>
+  <li>這讓呼叫站點更加清楚地表明，它可以涉及載入服務，這可能並不便宜。</li>
+  <li>載入服務可能會引發異常，與由屬性存取引起的異常相比，由方法呼叫引發的異常並不令人意外。</li>
+  <li>（過度）使用屬性可能容易出錯，因為它可能會意外地更改為具有初始設定式的屬性，而不是具有 getter 的正確（但更詳細）的屬性，而且這種更改很容易被忽略。</li>
+  <li>在 Kotlin 和 JAVA 中使用時，使用方法而不是屬性可以保持 <code>MyApplicationService.getInstance()</code> 呼叫的一致性。</li>
+  <li>在宣告和呼叫站點上，使用該方法可使 <code>MyApplicationService.getInstance()</code> 與 <code>MyProjectService.getInstance(project)</code> 保持一致。</li>
+</ul>
+<p>為了獲得更好的工具性能，建議始終保持顯式方法返回值類型。</p>
+<p>範例：</p>
+<pre><code lang="kotlin">
+@Service
+class MyApplicationService {
+  companion object {
+    @JvmStatic
+    val instance: MyApplicationService // 錯誤
+       get() = service()
+  }
+}
+</code></pre>
+<pre><code lang="kotlin">
+@Service
+class MyApplicationService {
+  companion object {
+    @JvmStatic
+    fun getInstance(): MyApplicationService = service() // 正確
+  }
+}
+</code></pre>
+<p><small>2023.3 最新變化</small>
+</body>
+</html>

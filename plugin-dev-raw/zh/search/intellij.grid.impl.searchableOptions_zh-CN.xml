@@ -1,15 +1,27 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="copy" path="ActionManager" hit="Copy" />
-    <option name="column" path="ActionManager" hit="Select Column" />
-    <option name="select" path="ActionManager" hit="Select Column" />
+    <option name="chart" path="ActionManager" hit="Close Chart" />
+    <option name="close" path="ActionManager" hit="Close Chart" />
+    <option name="go" path="ActionManager" hit="Go to Referenced Result" />
+    <option name="referenced" path="ActionManager" hit="Go to Referenced Result" />
+    <option name="result" path="ActionManager" hit="Go to Referenced Result" />
+    <option name="to" path="ActionManager" hit="Go to Referenced Result" />
+    <option name="referencing" path="ActionManager" hit="Referencing Result" />
+    <option name="result" path="ActionManager" hit="Referencing Result" />
+    <option name="chart" path="ActionManager" hit="Switch to Chart" />
+    <option name="switch" path="ActionManager" hit="Switch to Chart" />
+    <option name="to" path="ActionManager" hit="Switch to Chart" />
+    <option name="switch" path="ActionManager" hit="Switch to Table" />
+    <option name="table" path="ActionManager" hit="Switch to Table" />
+    <option name="to" path="ActionManager" hit="Switch to Table" />
     <option name="上一頁" path="ActionManager" hit="上一頁" />
     <option name="下一頁" path="ActionManager" hit="下一頁" />
     <option name="值編輯器" path="ActionManager" hit="值編輯器" />
     <option name="值編輯器和聚合檢視" path="ActionManager" hit="值編輯器和聚合檢視" />
     <option name="克隆列" path="ActionManager" hit="克隆列" />
     <option name="克隆行" path="ActionManager" hit="克隆行" />
+    <option name="關閉" path="ActionManager" hit="關閉" />
     <option name="分頁" path="ActionManager" hit="分頁" />
     <option name="切換格式" path="ActionManager" hit="切換格式" />
     <option name="切換自動換行" path="ActionManager" hit="切換自動換行" />
@@ -21,6 +33,7 @@
     <option name="取消選擇上一個符合項" path="ActionManager" hit="取消選擇上一個符合項" />
     <option name="啟用所有聚合器" path="ActionManager" hit="啟用所有聚合器" />
     <option name="在當前頁面上尋找" path="ActionManager" hit="在當前頁面上尋找" />
+    <option name="複製" path="ActionManager" hit="複製" />
     <option name="複製列名稱" path="ActionManager" hit="複製列名稱" />
     <option name="複製聚合結果" path="ActionManager" hit="複製聚合結果" />
     <option name="匯出資料" path="ActionManager" hit="匯出資料…" />
@@ -28,7 +41,7 @@
     <option name="展開所選列" path="ActionManager" hit="展開所選列" />
     <option name="一般" path="ActionManager" hit="一般" />
     <option name="開啟資料檢視外觀設定" path="ActionManager" hit="開啟資料檢視外觀設定…" />
-    <option name="擴大選區" path="ActionManager" hit="擴大選區" />
+    <option name="擴展選區" path="ActionManager" hit="擴展選區" />
     <option name="排序" path="ActionManager" hit="排序" />
     <option name="提取程序" path="ActionManager" hit="提取程序" />
     <option name="收縮選區" path="ActionManager" hit="收縮選區" />
@@ -36,11 +49,13 @@
     <option name="顯示" path="ActionManager" hit="顯示/隱藏列" />
     <option name="隱藏列" path="ActionManager" hit="顯示/隱藏列" />
     <option name="顯示值編輯器" path="ActionManager" hit="顯示值編輯器" />
+    <option name="顯示列統計資訊" path="ActionManager" hit="顯示列統計資訊" />
     <option name="顯示圖表" path="ActionManager" hit="顯示圖表" />
     <option name="顯示所有列" path="ActionManager" hit="顯示所有列" />
     <option name="顯示所選單元的值之間的不同" path="ActionManager" hit="顯示所選單元的值之間的不同" />
     <option name="顯示篩選器" path="ActionManager" hit="顯示篩選器" />
     <option name="顯示聚合檢視" path="ActionManager" hit="顯示聚合檢視" />
+    <option name="更改資料提取程序" path="ActionManager" hit="更改資料提取程序" />
     <option name="更改顯示類型" path="ActionManager" hit="更改顯示類型" />
     <option name="更改編碼" path="ActionManager" hit="更改編碼…" />
     <option name="更改頁面大小" path="ActionManager" hit="更改頁面大小" />
@@ -60,7 +75,9 @@
     <option name="第一行為標頭" path="ActionManager" hit="第一行為標頭" />
     <option name="第一頁" path="ActionManager" hit="第一頁" />
     <option name="貼上格式" path="ActionManager" hit="貼上格式" />
+    <option name="緊湊" path="ActionManager" hit="緊湊" />
     <option name="結果" path="ActionManager" hit="結果" />
+    <option name="結果工具列" path="ActionManager" hit="結果工具列" />
     <option name="結果標題" path="ActionManager" hit="結果標題" />
     <option name="編輯" path="ActionManager" hit="編輯" />
     <option name="編輯所選單元" path="ActionManager" hit="編輯所選單元" />
@@ -70,11 +87,13 @@
     <option name="行計數" path="ActionManager" hit="行計數" />
     <option name="表" path="ActionManager" hit="表" />
     <option name="設定醒目提示顯示語言" path="ActionManager" hit="設定醒目提示顯示語言…" />
+    <option name="詳細" path="ActionManager" hit="詳細" />
     <option name="轉到腳本目錄" path="ActionManager" hit="轉到腳本目錄" />
     <option name="轉置" path="ActionManager" hit="轉置" />
     <option name="還原所選更改" path="ActionManager" hit="還原所選更改" />
     <option name="還原所選條目" path="ActionManager" hit="還原所選條目" />
     <option name="選擇下一個符合項" path="ActionManager" hit="選擇下一個符合項" />
+    <option name="選擇列" path="ActionManager" hit="選擇列" />
     <option name="選擇所有符合項" path="ActionManager" hit="選擇所有符合項" />
     <option name="選擇資料提取程序" path="ActionManager" hit="選擇資料提取程序" />
     <option name="csv" path="ActionManager" hit="組態 CSV 格式…" />

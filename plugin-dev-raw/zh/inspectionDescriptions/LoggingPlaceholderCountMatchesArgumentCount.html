@@ -3,15 +3,28 @@
 報告 SLF4J、Log4j2 和 akka.event.LoggingAdapter 日誌記錄呼叫，例如 <code>logger.info("{}: {}", key)</code>，其中記錄器訊息中 <code>{}</code> 佔位符的數量與日誌呼叫的其他實參的數量不符合。
 <!-- tooltip end -->
 <p>
-使用檢查選項可以指定 SLF4J 使用哪個實作。
-如果選擇<strong>自動檢查</strong>，則在類別路徑中搜尋 <code>org.apache.logging.slf4j.Log4jLogger</code>。
-如果找到了此檔案或選擇了<strong>是</strong>，將不為 SLFJ4 API 報告帶有異常類型的最後一個參數具有佔位符的情況。
-範例：
+  使用檢查選項可以指定 SLF4J 使用哪個實作。
+  如果選擇<strong>自動檢查</strong>，則在類別路徑中搜尋 <code>org.apache.logging.slf4j.Log4jLogger</code>。
+  如果找到了此檔案或選擇了<strong>是</strong>，將不為 SLFJ4 API 報告帶有異常類型的最後一個參數具有佔位符的情況。<br/>
+例如：
 <pre><code lang="java">
-// 將不報告
-log.error("For id {}: {}", id, new RuntimeException());
+//如果選中“是”選項，則不會報告此情況
+log.error("For id {}: {}", "1", new RuntimeException());
 </code></pre>
-此選項僅適用於 SLF4J。
+在這種情況下，將使用 'toString()' 列印 'new RuntimeException()'，（不會列印其堆疊追蹤）：
+<pre><code lang="text">
+For id 1: java.lang.RuntimeException
+</code></pre>
+
+否則，它將醒目提示顯示，因為未使用最後一個佔位符：
+<pre><code lang="text">
+For id 1: {}
+java.lang.RuntimeException: null
+</code></pre>
+
+<strong>否</strong>選項可用於在佔位符用於異常時始終醒目提示此類別情況，即使 <code>org.apache.logging.slf4j.Log4jLogger</code> 用作後端也是如此。<br/>
+
+此選項僅適用於SLF4J。
 <p>
 </body>
 </html>

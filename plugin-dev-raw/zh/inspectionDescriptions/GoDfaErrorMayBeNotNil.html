@@ -1,0 +1,14 @@
+<html>
+<body>
+報告不會被檢查不是 nil 的有對應錯誤的變數的用法。 當變數和錯誤在類似 <code>v, err := foo()</code> 語句中一起定義或賦值時，錯誤對應於一個變數。
+<p>範例：</p>
+<pre><code>
+func _() {
+ file, err := os.Open("file.txt")
+ //'file' 可能具有 'nil' 或其他意外值，
+ //因為其對應的錯誤變數 'err' 可能不是 'nil'
+ name := file.Name()
+}
+</code></pre>
+</body>
+</html>

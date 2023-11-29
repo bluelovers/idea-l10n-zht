@@ -2,5 +2,23 @@
 <body>
 報告僅恰好在下一個 <code>return</code> 語句或其他變數的確切副本中使用的區域變數。
 <p>可以安全地內聯此類別變數，以使程式碼更加清晰易懂。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+  fun sum(a: Int, b: Int): Int {
+      val c = a + b
+      return c
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun sum(a: Int, b: Int): Int {
+      return a + b
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>組態檢查：</p>
+<p>使用<b>報告立即返回的變數</b>選項可以報告立即返回的變數。
+    當給定描述性名稱時，此類別變數在某些情況下可能會提高程式碼的可讀性，這就是預設情況下停用此選項的原因。</p>
 </body>
 </html>

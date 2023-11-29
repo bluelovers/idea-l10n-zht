@@ -1,7 +1,7 @@
 <html>
 <body>
-報告其中一個實參為空字串的字串串聯。
-此類別串聯不必要。 有時，會作為習慣用法將非 <code>String</code> 物件或基元轉換為 <code>String</code>，但在這種情況下，使用類似 <code>String.valueOf</code> 的方法會更清晰。
+報告字串串聯中的空字串動作數。
+與空字串的串聯可以用於將非 <code>String</code> 物件或基元轉換為 <code>String</code>，但使用 <code>String.valueOf()</code> 方法呼叫會更清晰。
 <p>
   建議通過快速修復來簡化串聯。
 </p>
@@ -19,6 +19,6 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  使用<b>僅報告可以刪除空字串而不進行其他更改的情況</b>選項僅報告可刪除空字串而不使用 <code>String.valueOf</code> 轉換其他動作數的情況。
+  使用<b>僅報告無需其他更改即可移除空字串的情況</b>選項可忽略移除空字串需要新增另一個動作數的 <code>String.valueOf()</code> 轉換的情況。
 </body>
 </html>

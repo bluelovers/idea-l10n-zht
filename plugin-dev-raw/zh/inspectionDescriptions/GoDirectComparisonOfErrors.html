@@ -1,7 +1,8 @@
 <html>
 <body>
 報告錯誤的直接比較，例如使用 <code>==</code>，並建議改用 <code>errors.Is</code>。
-<p>從 Go 1.13 開始，可以使用 <code>fmt.Errorf</code> 函式和 <code>%w</code> 動詞來包裝錯誤。 因此，對於已包裝錯誤，使用相等檢查直接比較錯誤可能會失敗。 從 Go 1.13 開始，檢查特定錯誤的首選方式是使用標準庫中的 <code>errors.Is</code> 函式。</p>
+<p>從 Go 1.13 開始，可以使用 <code>fmt.Errorf</code> 函式和 <code>%w</code> 動詞來包裝錯誤。 因此，對於已包裝錯誤，使用相等檢查直接比較錯誤會失敗。 檢查特定錯誤的首選方式是使用標準庫中的 <a href="https://pkg.go.dev/errors#Is">errors.Is</a> 函式，因為此函式會在檢查特定錯誤時遍歷已包裝錯誤鏈。</p>
+<p>有關 <code>errors.Is</code> 的更多資訊，請參閱<a href="https://go.dev/blog/go1.13-errors">處理 Go 1.13 中的錯誤</a>。</p>
 <p>快速修復會將錯誤的直接比較取代為呼叫 <code>errors.Is</code>。</p>
 <p><b>範例：</b></p>
 <pre><code>

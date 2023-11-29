@@ -1,0 +1,36 @@
+<html>
+<body>
+<p>報告 <a href="https://www.python.org/dev/peps/pep-0695/">PEP 695</a> 類型參數語法的無效用法
+<p>
+  在函式和類別定義以及新樣式類型別名語句中發現以下問題：
+<ul>
+  <li>在新樣式泛型類別中擴展 typing.Generic</li>
+  <li>在新樣式泛型類別中擴展參數化的 typing.Protocol</li>
+  <li>對 ParamSpec 和 TypeVarTuple 使用具有類型參數的泛型上限和約束</li>
+  <li>混合傳統和新樣式類型變數</li>
+  <li>在新樣式類型別名中使用傳統類型變數</li>
+</ul>
+
+<p>
+  範例：
+</p>
+<pre><code>
+  from typing import Generic
+
+  class Example[T](Generic[T]): ... # 具有類型參數列表的類別不應擴展 'Generic'
+</code></pre>
+
+<pre><code>
+  class Example[T: (list[S], str)]: ... # 在類型參數的約束和邊界內不允許使用泛型類型
+</code></pre>
+
+<pre><code>
+  from typing import TypeVar
+
+  K = TypeVar("K")
+
+  class ClassC[V]:
+      def method2[M](self, a: M, b: K) -> M | K: ... # 不允許混合使用傳統和新樣式 TypeVars
+</code></pre>
+</body>
+</html>

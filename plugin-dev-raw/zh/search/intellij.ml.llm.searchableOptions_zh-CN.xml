@@ -1,77 +1,148 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="actions" path="ActionManager" hit="AI Actions" />
-    <option name="ai" path="ActionManager" hit="AI Actions" />
+    <option name="ai" path="ActionManager" hit="AI Assistant 動作" />
+    <option name="assistant" path="ActionManager" hit="AI Assistant 動作" />
+    <option name="動作" path="ActionManager" hit="AI Assistant 動作" />
     <option name="ai" path="ActionManager" hit="AI 助手" />
     <option name="助手" path="ActionManager" hit="AI 助手" />
-    <option name="all" path="ActionManager" hit="Delete All Chats" />
-    <option name="chats" path="ActionManager" hit="Delete All Chats" />
-    <option name="delete" path="ActionManager" hit="Delete All Chats" />
-    <option name="chat" path="ActionManager" hit="Delete Chat" />
-    <option name="delete" path="ActionManager" hit="Delete Chat" />
-    <option name="dislike" path="ActionManager" hit="Dislike this response" />
-    <option name="response" path="ActionManager" hit="Dislike this response" />
-    <option name="this" path="ActionManager" hit="Dislike this response" />
-    <option name="chat" path="ActionManager" hit="Dump Chat" />
-    <option name="dump" path="ActionManager" hit="Dump Chat" />
-    <option name="ai" path="ActionManager" hit="Explain error message with AI" />
-    <option name="error" path="ActionManager" hit="Explain error message with AI" />
-    <option name="explain" path="ActionManager" hit="Explain error message with AI" />
-    <option name="message" path="ActionManager" hit="Explain error message with AI" />
-    <option name="with" path="ActionManager" hit="Explain error message with AI" />
-    <option name="ai" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
-    <option name="assistant" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
-    <option name="commit" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
-    <option name="generate" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
-    <option name="message" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
-    <option name="with" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
-    <option name="at" path="ActionManager" hit="Insert Snippet at Caret" />
-    <option name="caret" path="ActionManager" hit="Insert Snippet at Caret" />
-    <option name="insert" path="ActionManager" hit="Insert Snippet at Caret" />
-    <option name="snippet" path="ActionManager" hit="Insert Snippet at Caret" />
-    <option name="like" path="ActionManager" hit="Like this response" />
-    <option name="response" path="ActionManager" hit="Like this response" />
-    <option name="this" path="ActionManager" hit="Like this response" />
-    <option name="dialog" path="ActionManager" hit="Remove Dialog" />
-    <option name="remove" path="ActionManager" hit="Remove Dialog" />
-    <option name="chat" path="ActionManager" hit="Rename Chat" />
-    <option name="rename" path="ActionManager" hit="Rename Chat" />
-    <option name="settings" path="ActionManager" hit="Settings..." />
+    <option name="ai" path="ActionManager" hit="AI 動作" />
+    <option name="動作" path="ActionManager" hit="AI 動作" />
+    <option name="call" path="ActionManager" hit="Call LLM Code Completion" />
+    <option name="code" path="ActionManager" hit="Call LLM Code Completion" />
+    <option name="completion" path="ActionManager" hit="Call LLM Code Completion" />
+    <option name="llm" path="ActionManager" hit="Call LLM Code Completion" />
+    <option name="ai" path="ActionManager" hit="Manage AI Assistant Subscription" />
+    <option name="assistant" path="ActionManager" hit="Manage AI Assistant Subscription" />
+    <option name="manage" path="ActionManager" hit="Manage AI Assistant Subscription" />
+    <option name="subscription" path="ActionManager" hit="Manage AI Assistant Subscription" />
+    <option name="a" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="ai" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="assistant" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="browser" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="can" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="in" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="manage" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="new" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="open" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="subscription" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="tab" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="web" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="where" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="you" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="your" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
+    <option name="不喜歡此響應" path="ActionManager" hit="不喜歡此響應" />
+    <option name="ai" path="ActionManager" hit="使用 AI Assistant 改進提交訊息" />
+    <option name="assistant" path="ActionManager" hit="使用 AI Assistant 改進提交訊息" />
+    <option name="使用" path="ActionManager" hit="使用 AI Assistant 改進提交訊息" />
+    <option name="改進提交訊息" path="ActionManager" hit="使用 AI Assistant 改進提交訊息" />
+    <option name="ai" path="ActionManager" hit="使用 AI Assistant 生成提交訊息" />
+    <option name="assistant" path="ActionManager" hit="使用 AI Assistant 生成提交訊息" />
+    <option name="使用" path="ActionManager" hit="使用 AI Assistant 生成提交訊息" />
+    <option name="生成提交訊息" path="ActionManager" hit="使用 AI Assistant 生成提交訊息" />
+    <option name="ai" path="ActionManager" hit="使用 AI Assistant 解釋提交" />
+    <option name="assistant" path="ActionManager" hit="使用 AI Assistant 解釋提交" />
+    <option name="使用" path="ActionManager" hit="使用 AI Assistant 解釋提交" />
+    <option name="解釋提交" path="ActionManager" hit="使用 AI Assistant 解釋提交" />
+    <option name="ai" path="ActionManager" hit="使用 AI 生成提交摘要" />
+    <option name="使用" path="ActionManager" hit="使用 AI 生成提交摘要" />
+    <option name="生成提交摘要" path="ActionManager" hit="使用 AI 生成提交摘要" />
+    <option name="儲存當前提示" path="ActionManager" hit="儲存當前提示" />
+    <option name="停止" path="ActionManager" hit="停止" />
+    <option name="全部接受" path="ActionManager" hit="全部接受" />
+    <option name="刪除" path="ActionManager" hit="刪除" />
+    <option name="刪除所有聊天" path="ActionManager" hit="刪除所有聊天" />
+    <option name="刪除聊天" path="ActionManager" hit="刪除聊天" />
+    <option name="喜歡此響應" path="ActionManager" hit="喜歡此響應" />
+    <option name="在文字游標處插入程式碼段" path="ActionManager" hit="在文字游標處插入程式碼段" />
+    <option name="ai" path="ActionManager" hit="在編輯器中開啟 AI Assistant 請求日誌" />
+    <option name="assistant" path="ActionManager" hit="在編輯器中開啟 AI Assistant 請求日誌" />
+    <option name="在編輯器中開啟" path="ActionManager" hit="在編輯器中開啟 AI Assistant 請求日誌" />
+    <option name="請求日誌" path="ActionManager" hit="在編輯器中開啟 AI Assistant 請求日誌" />
     <option name="複製到剪貼簿" path="ActionManager" hit="複製到剪貼簿" />
+    <option name="對此專案停用" path="ActionManager" hit="對此專案停用" />
+    <option name="所有聊天" path="ActionManager" hit="所有聊天" />
+    <option name="指定" path="ActionManager" hit="指定" />
+    <option name="新增聊天" path="ActionManager" hit="新增聊天" />
+    <option name="檢視差異並套用" path="ActionManager" hit="檢視差異並套用" />
+    <option name="浮動程式碼工具列" path="ActionManager" hit="浮動程式碼工具列" />
+    <option name="ai" path="ActionManager" hit="清理 AI Assistant 請求日誌" />
+    <option name="assistant" path="ActionManager" hit="清理 AI Assistant 請求日誌" />
+    <option name="清理" path="ActionManager" hit="清理 AI Assistant 請求日誌" />
+    <option name="請求日誌" path="ActionManager" hit="清理 AI Assistant 請求日誌" />
+    <option name="ai" path="ActionManager" hit="清理當前項目的 AI Assistant 請求日誌" />
+    <option name="assistant" path="ActionManager" hit="清理當前項目的 AI Assistant 請求日誌" />
+    <option name="清理當前項目的" path="ActionManager" hit="清理當前項目的 AI Assistant 請求日誌" />
+    <option name="請求日誌" path="ActionManager" hit="清理當前項目的 AI Assistant 請求日誌" />
+    <option name="生成程式碼" path="ActionManager" hit="生成程式碼" />
+    <option name="生成提交摘要" path="ActionManager" hit="生成提交摘要" />
+    <option name="ai" path="ActionManager" hit="用 AI 解釋錯誤資訊" />
+    <option name="用" path="ActionManager" hit="用 AI 解釋錯誤資訊" />
+    <option name="解釋錯誤資訊" path="ActionManager" hit="用 AI 解釋錯誤資訊" />
+    <option name="移除聊天" path="ActionManager" hit="移除聊天" />
     <option name="編輯" path="ActionManager" hit="編輯" />
+    <option name="設定" path="ActionManager" hit="設定…" />
+    <option name="調整字體大小" path="ActionManager" hit="調整字體大小…" />
+    <option name="傾印聊天" path="ActionManager" hit="傾印聊天" />
+    <option name="通過延伸模組完全停用" path="ActionManager" hit="通過延伸模組完全停用…" />
+    <option name="重新命名聊天" path="ActionManager" hit="重新命名聊天" />
+    <option name="重新生成" path="ActionManager" hit="重新生成" />
+  </configurable>
+  <configurable id="ml.llm.LLMDataSharingConfigurable" configurable_name="資料共享">
+    <option name="允許詳細的資料收集" hit="允許詳細的資料收集" />
+    <option name="資料共享" hit="資料共享" />
   </configurable>
   <configurable id="ml.llm.LLMConfigurable" configurable_name="AI 助手">
+    <option name="100" hit="     of trial volume left" />
+    <option name="left" hit="     of trial volume left" />
+    <option name="of" hit="     of trial volume left" />
+    <option name="trial" hit="     of trial volume left" />
+    <option name="volume" hit="     of trial volume left" />
     <option name="ai" hit="AI 助手" />
     <option name="助手" hit="AI 助手" />
-    <option name="cancel" hit="Cancel" />
-    <option name="ai" hit="Log in to JetBrains AI" />
-    <option name="in" hit="Log in to JetBrains AI" />
-    <option name="jetbrains" hit="Log in to JetBrains AI" />
-    <option name="log" hit="Log in to JetBrains AI" />
-    <option name="to" hit="Log in to JetBrains AI" />
+    <option name="activate" hit="Activate Subscription " />
+    <option name="subscription" hit="Activate Subscription " />
+    <option name="completion" hit="Enable inline completion" />
+    <option name="enable" hit="Enable inline completion" />
+    <option name="inline" hit="Enable inline completion" />
+    <option name="ai" hit="Get Unlimited AI " />
+    <option name="get" hit="Get Unlimited AI " />
+    <option name="unlimited" hit="Get Unlimited AI " />
+    <option name="activation" hit="Go to Activation " />
+    <option name="go" hit="Go to Activation " />
+    <option name="to" hit="Go to Activation " />
+    <option name="ai" hit="How to permanently disable AI Assistant" />
+    <option name="assistant" hit="How to permanently disable AI Assistant" />
+    <option name="disable" hit="How to permanently disable AI Assistant" />
+    <option name="how" hit="How to permanently disable AI Assistant" />
+    <option name="permanently" hit="How to permanently disable AI Assistant" />
+    <option name="to" hit="How to permanently disable AI Assistant" />
     <option name="show" hit="Show token" />
     <option name="token" hit="Show token" />
-    <option name="ai" hit="You re logged in to JetBrains AI" />
-    <option name="in" hit="You re logged in to JetBrains AI" />
-    <option name="jetbrains" hit="You re logged in to JetBrains AI" />
-    <option name="logged" hit="You re logged in to JetBrains AI" />
-    <option name="re" hit="You re logged in to JetBrains AI" />
-    <option name="to" hit="You re logged in to JetBrains AI" />
-    <option name="you" hit="You re logged in to JetBrains AI" />
     <option name="功能" hit="功能" />
+    <option name="啟用智能聊天模式" hit="啟用智能聊天模式" />
+    <option name="建議將貼上的程式碼轉換為目標檔案的語言" hit="建議將貼上的程式碼轉換為目標檔案的語言" />
     <option name="ai" hit="提供 AI 生成的名稱建議" />
     <option name="提供" hit="提供 AI 生成的名稱建議" />
     <option name="生成的名稱建議" hit="提供 AI 生成的名稱建議" />
-    <option name="轉到瀏覽器以完成登入" hit="轉到瀏覽器以完成登入" />
-    <option name="退出登入" hit="退出登入" />
   </configurable>
-  <configurable id="ml.llm.LLMDataSharingConfigurable" configurable_name="資料共享">
-    <option name="ai" hit="Send AI Assistant usage statistics" />
-    <option name="assistant" hit="Send AI Assistant usage statistics" />
-    <option name="send" hit="Send AI Assistant usage statistics" />
-    <option name="statistics" hit="Send AI Assistant usage statistics" />
-    <option name="usage" hit="Send AI Assistant usage statistics" />
-    <option name="資料共享" hit="資料共享" />
+  <configurable id="ml.llm.AIAssistantPromptsLibrary" configurable_name="使用者提示庫">
+    <option name="" hit=" 點擊     按鈕建立提示或選擇現有提示" />
+    <option name="+" hit=" 點擊     按鈕建立提示或選擇現有提示" />
+    <option name="按鈕建立提示或選擇現有提示" hit=" 點擊     按鈕建立提示或選擇現有提示" />
+    <option name="點擊" hit=" 點擊     按鈕建立提示或選擇現有提示" />
+    <option name="使用者提示庫" hit="使用者提示庫" />
+  </configurable>
+  <configurable id="ml.llm.LLMProjectConfigurable" configurable_name="專案設定">
+    <option name="ai" hit="How to permanently disable AI Assistant" />
+    <option name="assistant" hit="How to permanently disable AI Assistant" />
+    <option name="disable" hit="How to permanently disable AI Assistant" />
+    <option name="how" hit="How to permanently disable AI Assistant" />
+    <option name="permanently" hit="How to permanently disable AI Assistant" />
+    <option name="to" hit="How to permanently disable AI Assistant" />
+    <option name="ai" hit="對此專案啟用 AI Assistant" />
+    <option name="assistant" hit="對此專案啟用 AI Assistant" />
+    <option name="對此專案啟用" hit="對此專案啟用 AI Assistant" />
+    <option name="專案設定" hit="專案設定" />
   </configurable>
 </options>

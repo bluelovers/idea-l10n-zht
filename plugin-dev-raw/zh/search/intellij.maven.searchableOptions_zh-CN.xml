@@ -75,6 +75,7 @@
     <option name="將所選" path="ActionManager" hit="將所選 Maven 專案排除/包含在匯入範圍內" />
     <option name="專案排除" path="ActionManager" hit="將所選 Maven 專案排除/包含在匯入範圍內" />
     <option name="將模組分組" path="ActionManager" hit="將模組分組" />
+    <option name="將組態檔案重設為預設狀態" path="ActionManager" hit="將組態檔案重設為預設狀態" />
     <option name="屬性" path="ActionManager" hit="屬性" />
     <option name="忽略專案" path="ActionManager" hit="忽略專案" />
     <option name="maven" path="ActionManager" hit="開啟 Maven settings.xml" />
@@ -84,26 +85,17 @@
     <option name="maven" path="ActionManager" hit="開啟 Maven 組態" />
     <option name="開啟" path="ActionManager" hit="開啟 Maven 組態" />
     <option name="組態" path="ActionManager" hit="開啟 Maven 組態" />
-    <option name="profiles" path="ActionManager" hit="開啟 profiles.xml" />
-    <option name="xml" path="ActionManager" hit="開啟 profiles.xml" />
-    <option name="開啟" path="ActionManager" hit="開啟 profiles.xml" />
     <option name="settings" path="ActionManager" hit="開啟 settings.xml" />
     <option name="xml" path="ActionManager" hit="開啟 settings.xml" />
     <option name="開啟" path="ActionManager" hit="開啟 settings.xml" />
     <option name="maven" path="ActionManager" hit="開啟所選模組或庫的 Maven 組態檔案" />
     <option name="開啟所選模組或庫的" path="ActionManager" hit="開啟所選模組或庫的 Maven 組態檔案" />
     <option name="組態檔案" path="ActionManager" hit="開啟所選模組或庫的 Maven 組態檔案" />
-    <option name="profiles" path="ActionManager" hit="開啟所選項目的 profiles.xml" />
-    <option name="xml" path="ActionManager" hit="開啟所選項目的 profiles.xml" />
-    <option name="開啟所選項目的" path="ActionManager" hit="開啟所選項目的 profiles.xml" />
     <option name="maven" path="ActionManager" hit="執行 Maven 目標" />
     <option name="執行" path="ActionManager" hit="執行 Maven 目標" />
     <option name="目標" path="ActionManager" hit="執行 Maven 目標" />
     <option name="執行所選階段或目標" path="ActionManager" hit="執行所選階段或目標" />
     <option name="提取管理型相依項" path="ActionManager" hit="提取管理型相依項" />
-    <option name="maven" path="ActionManager" hit="顯示 Maven 連線器" />
-    <option name="顯示" path="ActionManager" hit="顯示 Maven 連線器" />
-    <option name="連線器" path="ActionManager" hit="顯示 Maven 連線器" />
     <option name="maven" path="ActionManager" hit="顯示 Maven 專案的版本" />
     <option name="顯示" path="ActionManager" hit="顯示 Maven 專案的版本" />
     <option name="專案的版本" path="ActionManager" hit="顯示 Maven 專案的版本" />
@@ -152,26 +144,17 @@
     <option name="重新建置前執行" path="ActionManager" hit="重新建置前執行" />
     <option name="重新建置後執行" path="ActionManager" hit="重新建置後執行" />
     <option name="重構" path="ActionManager" hit="重構" />
+    <option name="重設組態檔案" path="ActionManager" hit="重設組態檔案" />
   </configurable>
   <configurable id="MavenSettings" configurable_name="Maven">
     <option name="-t" hit=" T 選項" />
     <option name="選項" hit=" T 選項" />
-    <option name="" hit=" usr share maven" />
-    <option name="maven" hit=" usr share maven" />
-    <option name="share" hit=" usr share maven" />
-    <option name="usr" hit=" usr share maven" />
     <option name="" hit=" 重新匯入後可能會丟失在其組態中所做的任何更改" />
     <option name="重新匯入後可能會丟失在其組態中所做的任何更改" hit=" 重新匯入後可能會丟失在其組態中所做的任何更改" />
-    <option name="3" hit="Bundled  Maven   " />
-    <option name="bundled" hit="Bundled  Maven   " />
-    <option name="maven" hit="Bundled  Maven   " />
     <option name="maven" hit="Maven" />
     <option name="h" hit="Maven 主路徑 H  " />
     <option name="maven" hit="Maven 主路徑 H  " />
     <option name="主路徑" hit="Maven 主路徑 H  " />
-    <option name="maven" hit="Use Maven wrapper" />
-    <option name="use" hit="Use Maven wrapper" />
-    <option name="wrapper" hit="Use Maven wrapper" />
     <option name="從不失敗" hit="從不失敗" />
     <option name="g" hit="以遞迴方式執行目標 G " />
     <option name="以遞迴方式執行目標" hit="以遞迴方式執行目標 G " />
@@ -180,14 +163,18 @@
     <option name="mvn" hit="使用  mvn maven config 中的設定" />
     <option name="中的設定" hit="使用  mvn maven config 中的設定" />
     <option name="使用" hit="使用  mvn maven config 中的設定" />
-    <option name="r" hit="使用延伸模組註冊表 R " />
-    <option name="使用延伸模組註冊表" hit="使用延伸模組註冊表 R " />
+    <option name="maven" hit="使用 Maven 包裝器" />
+    <option name="使用" hit="使用 Maven 包裝器" />
+    <option name="包裝器" hit="使用 Maven 包裝器" />
     <option name="資訊" hit="資訊" />
     <option name="f" hit="多項目建置失敗策略 F  " />
     <option name="多項目建置失敗策略" hit="多項目建置失敗策略 F  " />
     <option name="失敗" hit="失敗" />
     <option name="s" hit="始終更新快照 S " />
     <option name="始終更新快照" hit="始終更新快照 S " />
+    <option name="3" hit="已捆綁 Maven   " />
+    <option name="maven" hit="已捆綁 Maven   " />
+    <option name="已捆綁" hit="已捆綁 Maven   " />
     <option name="已停用" hit="已停用" />
     <option name="快速失敗" hit="快速失敗" />
     <option name="e" hit="列印異常堆疊追蹤 E " />
@@ -253,10 +240,6 @@
     <option name="generated-sources" hit="target generated sources" />
     <option name="target" hit="target generated sources" />
     <option name="不檢測" hit="不檢測" />
-    <option name="g" hit="為多模組 Maven 專案建立模組組 G " />
-    <option name="maven" hit="為多模組 Maven 專案建立模組組 G " />
-    <option name="為多模組" hit="為多模組 Maven 專案建立模組組 G " />
-    <option name="專案建立模組組" hit="為多模組 Maven 專案建立模組組 G " />
     <option name="idea" hit="為聚合器專案建立 IntelliJ IDEA 模組 使用  pom  打包  M " />
     <option name="intellij" hit="為聚合器專案建立 IntelliJ IDEA 模組 使用  pom  打包  M " />
     <option name="m" hit="為聚合器專案建立 IntelliJ IDEA 模組 使用  pom  打包  M " />
@@ -319,8 +302,6 @@
   <configurable id="reference.settings.project.maven.runner" configurable_name="執行程序">
     <option name="j" hit="JRE J  " />
     <option name="jre" hit="JRE J  " />
-    <option name="b" hit="在背景執行 B " />
-    <option name="在背景執行" hit="在背景執行 B " />
     <option name="d" hit="將 IDE 建置 執行動作委託給 Maven D " />
     <option name="ide" hit="將 IDE 建置 執行動作委託給 Maven D " />
     <option name="maven" hit="將 IDE 建置 執行動作委託給 Maven D " />

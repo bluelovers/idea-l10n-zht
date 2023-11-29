@@ -1,0 +1,14 @@
+<html>
+<body>
+報告可能包含 <code>nil</code> 的指針的取消參照。</body>
+
+<p>範例：</p>
+<pre><code>
+func _(file *os.File) {
+ //接收器 'file' 在呼叫中可能為 'nil'
+ if file != nil || file.Name() != "" {
+  //code
+ }
+}
+</code></pre>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告 Micronaut 表達式語言 (MicronautEL) 程式碼中的語法錯誤，例如未解析的參照。</p>
+
+<p><b>範例：</b></p>
+<pre><code lang="java">
+import io.micronaut.context.annotation.Value;
+import io.micronaut.http.annotation.Controller;
+
+@Controller("/owners")
+class OwnerController {
+    @Value("#{T(java.lang.Math).<strong>unknown</strong>()}") // 無法解析方法 'unknown'
+    double injectedValue;
+}
+</code></pre>
+</body>
+</html>

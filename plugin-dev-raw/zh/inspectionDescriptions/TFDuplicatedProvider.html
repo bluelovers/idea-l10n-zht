@@ -2,7 +2,33 @@
 <body>
 <p>報告重複的提供程序。</p>
 
-<p>如果需要多個組態，請設定替代組態的 <code>alias</code> 實參。</p>
+<p>問題範例：</p>
+<pre><code>
+provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
 
+provider "kubernetes" {
+  config_path = "~/kube/kubeconfig-0728633f-2c4a-4d2b-9eb7-bc629d5e7f37"
+}</code>
+</pre>
+<p>
+  解決此問題的其中一種方式是新增<b>別名</b>，並在所需的提供程序中建立資源時顯式指定它。
+</p>
+
+<p>更正範例：</p>
+<pre><code>
+  provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
+
+provider "kubernetes" {
+  config_path = "~/kube/kubeconfig-0728633f-2c4a-4d2b-9eb7-bc629d5e7f37"
+  alias = "cloud"
+}
+</code>
+</pre>
+
+<em>技術支援</em>：<a href="https://plugins.jetbrains.com/plugin/7808-terraform-and-hcl">Terraform 和 HCL 延伸模組</a>
 </body>
 </html>

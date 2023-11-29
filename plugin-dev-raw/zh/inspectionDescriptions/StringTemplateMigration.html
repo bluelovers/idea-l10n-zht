@@ -1,0 +1,22 @@
+<html>
+<body>
+報告可以通過取代為字串模板的 <code>String</code> 串聯。
+
+<p><b>範例：</b></p>
+<pre><code>
+  String name = "Bob";
+  String greeting = "Hello, " + name + ". You are " + 29 + " years old.";
+</code></pre>
+
+<p>在套用快速修復後：</p>
+<pre><code>
+  String name = "Bob";
+  String greeting = STR."Hello, \{name}. You are 29 years old.";
+</code></pre>
+
+<!-- tooltip end -->
+
+<p>僅當專案或模組的語言級別為 21 或更高時，此檢查才會報告。</p>
+<p><small>2023.3 最新變化</small></p>
+</body>
+</html>

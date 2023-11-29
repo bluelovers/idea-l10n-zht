@@ -1,0 +1,16 @@
+<html>
+<body>
+報告 <code>STR</code> 模板中冗餘的嵌入表達式，例如普通文字或空表達式。
+<p>範例：</p>
+<pre><code>
+  System.out.println(STR."Hello \{"world"}");
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  System.out.println(STR."Hello world");
+</code></pre>
+<!-- tooltip end -->
+<p>僅當專案或模組的語言級別為 21 或更高時，此檢查才會報告。</p>
+<p><small>2023.3 最新變化</small></p>
+</body>
+</html>
