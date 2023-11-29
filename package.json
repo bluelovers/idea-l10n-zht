@@ -42,7 +42,7 @@
     "build:tsdx": "ynpx @bluelovers/tsdx build --target node --name index",
     "postbuild": "yarn run test && ts-node ./scripts/jetbrains/create-jetbrains-update-plugins-xml.ts",
     "ci:test": "yarn run test",
-    "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest ts-jest ts-node ynpx lerna yarn-tool @bluelovers/jest-config",
+    "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest ts-jest@next ts-node@10.0 ynpx lerna@6 yarn-tool @bluelovers/jest-config tsx",
     "ci:build": "yarn run plugin:build && yarn run build:commit",
     "ci:build:sub": "yarn run plugin:build:core && yarn run build:commit && yarn run ci:postpublish",
     "ci:postpublish": "ts-node scripts/ci-postpublish.ts && yarn run postpublish:git:tag && echo ci:postpublish",
