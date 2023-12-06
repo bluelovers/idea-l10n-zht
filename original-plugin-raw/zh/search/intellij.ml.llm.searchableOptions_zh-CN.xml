@@ -1,17 +1,13 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
+    <option name="ai" path="ActionManager" hit="AI Assistant" />
+    <option name="assistant" path="ActionManager" hit="AI Assistant" />
     <option name="ai" path="ActionManager" hit="AI Assistant 操作" />
     <option name="assistant" path="ActionManager" hit="AI Assistant 操作" />
     <option name="操作" path="ActionManager" hit="AI Assistant 操作" />
-    <option name="ai" path="ActionManager" hit="AI 助手" />
-    <option name="助手" path="ActionManager" hit="AI 助手" />
     <option name="ai" path="ActionManager" hit="AI 操作" />
     <option name="操作" path="ActionManager" hit="AI 操作" />
-    <option name="call" path="ActionManager" hit="Call LLM Code Completion" />
-    <option name="code" path="ActionManager" hit="Call LLM Code Completion" />
-    <option name="completion" path="ActionManager" hit="Call LLM Code Completion" />
-    <option name="llm" path="ActionManager" hit="Call LLM Code Completion" />
     <option name="ai" path="ActionManager" hit="Manage AI Assistant Subscription" />
     <option name="assistant" path="ActionManager" hit="Manage AI Assistant Subscription" />
     <option name="manage" path="ActionManager" hit="Manage AI Assistant Subscription" />
@@ -32,6 +28,15 @@
     <option name="you" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
     <option name="your" path="ActionManager" hit="Open a new tab in your web browser where you can manage your AI Assistant subscription" />
     <option name="不喜欢此响应" path="ActionManager" hit="不喜欢此响应" />
+    <option name="ai" path="ActionManager" hit="从 JetBrains AI 平台退出登录" />
+    <option name="jetbrains" path="ActionManager" hit="从 JetBrains AI 平台退出登录" />
+    <option name="从" path="ActionManager" hit="从 JetBrains AI 平台退出登录" />
+    <option name="平台退出登录" path="ActionManager" hit="从 JetBrains AI 平台退出登录" />
+    <option name="ai" path="ActionManager" hit="从 JetBrains AI 平台退出登录 AI Assistant" />
+    <option name="assistant" path="ActionManager" hit="从 JetBrains AI 平台退出登录 AI Assistant" />
+    <option name="jetbrains" path="ActionManager" hit="从 JetBrains AI 平台退出登录 AI Assistant" />
+    <option name="从" path="ActionManager" hit="从 JetBrains AI 平台退出登录 AI Assistant" />
+    <option name="平台退出登录" path="ActionManager" hit="从 JetBrains AI 平台退出登录 AI Assistant" />
     <option name="ai" path="ActionManager" hit="使用 AI Assistant 改进提交消息" />
     <option name="assistant" path="ActionManager" hit="使用 AI Assistant 改进提交消息" />
     <option name="使用" path="ActionManager" hit="使用 AI Assistant 改进提交消息" />
@@ -40,6 +45,10 @@
     <option name="assistant" path="ActionManager" hit="使用 AI Assistant 生成提交消息" />
     <option name="使用" path="ActionManager" hit="使用 AI Assistant 生成提交消息" />
     <option name="生成提交消息" path="ActionManager" hit="使用 AI Assistant 生成提交消息" />
+    <option name="ai" path="ActionManager" hit="使用 AI Assistant 补全代码" />
+    <option name="assistant" path="ActionManager" hit="使用 AI Assistant 补全代码" />
+    <option name="使用" path="ActionManager" hit="使用 AI Assistant 补全代码" />
+    <option name="补全代码" path="ActionManager" hit="使用 AI Assistant 补全代码" />
     <option name="ai" path="ActionManager" hit="使用 AI Assistant 解释提交" />
     <option name="assistant" path="ActionManager" hit="使用 AI Assistant 解释提交" />
     <option name="使用" path="ActionManager" hit="使用 AI Assistant 解释提交" />
@@ -84,7 +93,7 @@
     <option name="设置" path="ActionManager" hit="设置…" />
     <option name="调整字体大小" path="ActionManager" hit="调整字体大小…" />
     <option name="转储聊天" path="ActionManager" hit="转储聊天" />
-    <option name="通过插件完全禁用" path="ActionManager" hit="通过插件完全禁用…" />
+    <option name="通过插件永久禁用" path="ActionManager" hit="通过插件永久禁用…" />
     <option name="重命名聊天" path="ActionManager" hit="重命名聊天" />
     <option name="重新生成" path="ActionManager" hit="重新生成" />
   </configurable>
@@ -92,54 +101,39 @@
     <option name="允许详细的数据收集" hit="允许详细的数据收集" />
     <option name="数据共享" hit="数据共享" />
   </configurable>
-  <configurable id="ml.llm.LLMConfigurable" configurable_name="AI 助手">
-    <option name="100" hit="     of trial volume left" />
-    <option name="left" hit="     of trial volume left" />
-    <option name="of" hit="     of trial volume left" />
-    <option name="trial" hit="     of trial volume left" />
-    <option name="volume" hit="     of trial volume left" />
-    <option name="ai" hit="AI 助手" />
-    <option name="助手" hit="AI 助手" />
-    <option name="activate" hit="Activate Subscription " />
-    <option name="subscription" hit="Activate Subscription " />
-    <option name="completion" hit="Enable inline completion" />
-    <option name="enable" hit="Enable inline completion" />
-    <option name="inline" hit="Enable inline completion" />
-    <option name="ai" hit="Get Unlimited AI " />
-    <option name="get" hit="Get Unlimited AI " />
-    <option name="unlimited" hit="Get Unlimited AI " />
-    <option name="activation" hit="Go to Activation " />
-    <option name="go" hit="Go to Activation " />
-    <option name="to" hit="Go to Activation " />
-    <option name="ai" hit="How to permanently disable AI Assistant" />
-    <option name="assistant" hit="How to permanently disable AI Assistant" />
-    <option name="disable" hit="How to permanently disable AI Assistant" />
-    <option name="how" hit="How to permanently disable AI Assistant" />
-    <option name="permanently" hit="How to permanently disable AI Assistant" />
-    <option name="to" hit="How to permanently disable AI Assistant" />
+  <configurable id="ml.llm.LLMConfigurable" configurable_name="AI Assistant">
+    <option name="ai" hit="AI Assistant" />
+    <option name="assistant" hit="AI Assistant" />
     <option name="show" hit="Show token" />
     <option name="token" hit="Show token" />
+    <option name="100" hit="剩余      试用量" />
+    <option name="剩余" hit="剩余      试用量" />
+    <option name="试用量" hit="剩余      试用量" />
     <option name="功能" hit="功能" />
+    <option name="启用在您键入时的自动内联代码补全" hit="启用在您键入时的自动内联代码补全" />
     <option name="启用智能聊天模式" hit="启用智能聊天模式" />
+    <option name="ai" hit="如何永久禁用 AI Assistant" />
+    <option name="assistant" hit="如何永久禁用 AI Assistant" />
+    <option name="如何永久禁用" hit="如何永久禁用 AI Assistant" />
     <option name="建议将粘贴的代码转换为目标文件的语言" hit="建议将粘贴的代码转换为目标文件的语言" />
     <option name="ai" hit="提供 AI 生成的名称建议" />
     <option name="提供" hit="提供 AI 生成的名称建议" />
     <option name="生成的名称建议" hit="提供 AI 生成的名称建议" />
+    <option name="激活订阅" hit="激活订阅 " />
+    <option name="ai" hit="获得无限制 AI " />
+    <option name="获得无限制" hit="获得无限制 AI " />
+    <option name="转到激活" hit="转到激活 " />
   </configurable>
   <configurable id="ml.llm.AIAssistantPromptsLibrary" configurable_name="用户提示库">
-    <option name="" hit=" 点击     按钮创建提示或选择现有提示" />
-    <option name="+" hit=" 点击     按钮创建提示或选择现有提示" />
-    <option name="按钮创建提示或选择现有提示" hit=" 点击     按钮创建提示或选择现有提示" />
-    <option name="点击" hit=" 点击     按钮创建提示或选择现有提示" />
+    <option name="" hit=" 点击   按钮创建提示或选择现有提示" />
+    <option name="按钮创建提示或选择现有提示" hit=" 点击   按钮创建提示或选择现有提示" />
+    <option name="点击" hit=" 点击   按钮创建提示或选择现有提示" />
     <option name="用户提示库" hit="用户提示库" />
   </configurable>
   <configurable id="ml.llm.LLMProjectConfigurable" configurable_name="项目设置">
-    <option name="ai" hit="How to permanently disable AI Assistant" />
-    <option name="assistant" hit="How to permanently disable AI Assistant" />
-    <option name="disable" hit="How to permanently disable AI Assistant" />
-    <option name="how" hit="How to permanently disable AI Assistant" />
-    <option name="permanently" hit="How to permanently disable AI Assistant" />
-    <option name="to" hit="How to permanently disable AI Assistant" />
+    <option name="ai" hit="如何永久禁用 AI Assistant" />
+    <option name="assistant" hit="如何永久禁用 AI Assistant" />
+    <option name="如何永久禁用" hit="如何永久禁用 AI Assistant" />
     <option name="ai" hit="对此项目启用 AI Assistant" />
     <option name="assistant" hit="对此项目启用 AI Assistant" />
     <option name="对此项目启用" hit="对此项目启用 AI Assistant" />
