@@ -3,7 +3,7 @@
 报告已弃用类、字段和方法的用法。
 当可以从已弃用成员的 Javadoc 中提取必要的信息时，可以使用快速修复来自动转换已弃用的用法。
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
   class Interesting {
 
     /**
@@ -21,7 +21,7 @@
   }
 </code></pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre><code lang="java">
   class Interesting {
 
     /**
@@ -39,7 +39,7 @@
   }
 </code></pre>
 <p>默认情况下，如果不可能或很难避免，则检查不会发出警告。  比如下面的代码就不会被报告：</p>
-<pre><code>
+<pre><code lang="java">
   abstract class A { //库代码
      @Deprecated
      abstract void m();

@@ -1,6 +1,6 @@
 <html>
 <body>
-报告可替换为对现有 static <code>getInstance()</code>
+报告可被替换为对现有 static <code>getInstance()</code>
 或 <code>getInstance(Project)</code> 方法的调用的服务获取调用。
 <p>示例 (Java)：</p>
 <pre><code lang="java">
@@ -19,12 +19,12 @@ public class MyProjectService {
 }
 </code></pre>
 <pre><code lang="java">
-// 错误:
+// 错误：
 MyAppService applicationService = ApplicationManager.getApplication().getService(MyAppService.class);
 MyProjectService projectService = project.getService(MyProjectService.class);
 </code></pre>
 <pre><code lang="java">
-// 正确:
+// 正确：
 MyAppService applicationService = MyAppService.getInstance();
 MyProjectService projectService = MyProjectService.getInstance(project);
 </code></pre>

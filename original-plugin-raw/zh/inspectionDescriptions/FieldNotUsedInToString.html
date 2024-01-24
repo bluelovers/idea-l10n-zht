@@ -1,7 +1,8 @@
 <html>
 <body>
-报告在类的 <code>toString()</code> 方法中未使用的任何字段。
-<p>此检查对于查找在 <code> toString() </code> 方法创建后添加且 <code>toString()</code> 方法未更新的字段很有用。 该快速修复会重新生成 <code>toString()</code> 方法。</p>
+报告在类的 <code>toString()</code> 方法中未使用的字段。
+<p>帮助发现在 <code>toString()</code> 方法上次更新后添加的字段。
+  该快速修复会重新生成 <code>toString()</code> 方法。</p>
 <p>
 在 <b>生成 | toString()</b> 对话框中，可以从此检查中排除字段。
 如果<em>在代码生成中启用 getter</em> 选项，则此检查还将检查 getter 方法是否存在问题。

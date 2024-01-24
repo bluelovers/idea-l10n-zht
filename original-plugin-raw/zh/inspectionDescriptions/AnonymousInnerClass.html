@@ -1,8 +1,38 @@
 <html>
 <body>
-报告匿名内部类。
-<p>在某些情况下，将匿名内部类替换为内部类可以提高代码的可读性和可维护性。
-  另外，有些代码标准不建议使用匿名内部类。</p>
+报告匿名类。
+<p>偶尔将匿名类替换为内部类可以提高代码的可读性和可维护性。
+  有些代码标准不建议使用匿名类。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class Example {
+    public static void main(String[] args) {
+      new Thread() {
+        public void run() {
+          work()
+        }
+
+        private void work() {}
+      }.start();
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Example {
+    public static void main(String[] args) {
+      new MyThread().start();
+    }
+
+    private static class MyThread extends Thread {
+      public void run() {
+        work();
+      }
+
+      private void work() {}
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

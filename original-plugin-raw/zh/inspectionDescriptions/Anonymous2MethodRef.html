@@ -6,16 +6,19 @@
 </p>
 <p><b>示例：</b></p>
 <pre><code>
-    Runnable r = new Runnable() {
-      @Override
-      public void run() {
-        System.out.println();
-      }
-    };
+  Runnable r = new Runnable() {
+    @Override
+    public void run() {
+      System.out.println();
+    }
+  };
 </code></pre>
-<p>该快速修复会将此代码更改为压缩形式：<code>Runnable r = System.out::println;</code>。</p>
+<p>在应用快速修复后：</p>
+<pre><code>
+  Runnable r = System.out::println;
+</code></pre>
 <!-- tooltip end -->
-<p>使用<b>在接口未使用 @FunctionalInterface 注解时报告</b>选项可为未使用 @FunctionalInterface 注解的接口启用此检查。</p>
+<p>使用<b>在接口未使用 @FunctionalInterface 注解时报告</b>选项可为未使用 <code>@FunctionalInterface</code> 注解的接口启用此检查。</p>
 
 <p>仅当项目或模块的语言级别为 8 或更高时，此检查才会报告。</p>
 </body>

@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>
+  报告可以更有效地编写为 <code>do-while</code> 循环的 <code>while</code> 循环。
+  重点是在检查条件之前执行 <code>while</code> 循环的整个主体会导致代码执行中出现潜在冗余的情况。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  foo();
+  while (x) {
+      foo();
+  }
+</code></pre>
+<p>可以替换为：</p>
+<pre><code>
+  do {
+    foo();
+  } while (x);
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <small>2024.1 最新变化</small>
+</p>
+</body>
+</html>

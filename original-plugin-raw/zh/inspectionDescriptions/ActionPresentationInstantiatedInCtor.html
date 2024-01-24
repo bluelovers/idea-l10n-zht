@@ -4,7 +4,7 @@
   报告在 <code>plugin.xml</code> 文件中注册的任何操作，并在其构造函数中实例化 <code>com.intellij.openapi.actionSystem.Presentation</code> 对象。
 </p>
 <p>
-  任何带形参的 <code>AnAction</code> 的构造函数都会实例化 <code>Presentation</code> 对象。 但是，在构造函数中实例化 <code>Presentation</code> 对象会导致分配资源，这可能是不必要的。 比起创建存储文本、描述或图标的 <code>Presentation</code> 实例，更有效的方式是利用 <code>AnAction</code> 和其他基类的无实参构造函数，并遵循在 <code>plugin.xml</code> 中设置文本、描述和图标的约定。 只有当操作实际显示在 UI 中时，IDE 才会加载文本、描述和图标。
+  任何带形参的 <code>AnAction</code> 的构造函数都会实例化 <code>Presentation</code> 对象。 但是，在构造函数中实例化 <code>Presentation</code> 对象会导致分配资源，这可能并非必要。 比起创建存储文本、描述或图标的 <code>Presentation</code> 实例，更有效的方式是利用 <code>AnAction</code> 和其他基类的无实参构造函数，并遵循在 <code>plugin.xml</code> 中设置文本、描述和图标的约定。 只有当操作实际显示在 UI 中时，IDE 才会加载文本、描述和图标。
 </p>
 <p>
   设置文本、说明和图标的约定如下：
@@ -39,7 +39,7 @@
     class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
   &lt;/action&gt;
 </code></pre>
-<p><b>良好示例：</b></p>
+<p><b>正确示例：</b></p>
 <pre><code lang="kotlin">
   // NewKotlinFileAction.kt
   internal class NewKotlinFileAction : AnAction()

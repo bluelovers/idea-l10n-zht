@@ -1,23 +1,11 @@
 <html>
 <body>
-报告可以简化的 <code>javax.swing.border.EmptyBorder</code> 和 <code>JBUI.Borders.emptyXyz()</code> 的用法。
+报告 <code>javax.swing.border.EmptyBorder</code> 的用法。
 <p>
-  <code>EmptyBorder</code> 实例非 DPI 感知，并且可能导致 UI 布局问题。
+  这可能无法感知 DPI，并且可能导致 UI 布局问题。
 </p>
 <p>
-  快速修复会使用 <code>JBUI.Borders.empty()</code> 执行替换或简化表达式。
+  快速修复将使用 <code>JBUI.Borders.empty()</code> 执行替换。
 </p>
-<p>示例：</p>
-<pre><code lang="java">
-// 错误：
-Border border1 = new EmptyBorder(1, 2, 3, 4);
-Border border2 = new EmptyBorder(1, 2, 1, 2);
-Border border3 = new EmptyBorder(1, 0, 0, 0);
-
-// 正确：
-Border border1 = JBUI.Borders.empty(1, 2, 3, 4);
-Border border2 = JBUI.Borders.empty(1, 2);
-Border border3 = JBUI.Borders.emptyTop(1);
-</code></pre>
 </body>
 </html>

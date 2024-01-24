@@ -1,7 +1,7 @@
 <html>
 <body>
-报告对将其形参转换为字符串的 static 方法的不必要调用，例如 <code>String.valueOf()</code> 或 <code>Integer.toString()</code>。
-当在字符串串联中使用时，此类调用是不必要的。
+报告对将其形参转换为字符串的 static 方法（例如 <code>String.valueOf()</code> 或 <code>Integer.toString()</code>）的不必要调用。
+在字符串串联中使用时，此类调用是不必要的。
 <p>示例：</p>
 <pre><code>
   System.out.println("Number: " + Integer.toString(count));
@@ -10,7 +10,7 @@
 <pre><code>
   System.out.println("Number: " + count);
 </code></pre>
-此外，当用作进行自身字符串转换的库方法的实参时，此类调用是不必要的。
+此外，用作进行自身字符串转换的库方法的实参时，此类调用是不必要的。
 一些进行自身字符串转换的库方法的示例如下：
 <ul>
   <li>
@@ -31,6 +31,6 @@
 </ul>
 <!-- tooltip end -->
 <p>
-  使用<b>报告可替换为具有空字符串串联的调用</b>选项，还可以报告可使用空字符串串联来代替调用 <code>String.valueOf()</code> 的情况。
+  使用<b>报告可被替换为带空字符串的串联的调用</b>选项还可以报告可使用带空字符串的串联代替 <code>String.valueOf()</code> 调用的情况。
 </body>
 </html>

@@ -1,0 +1,157 @@
+<html>
+<body>
+<p>报告无效组件类型上的 Seam 注解用法。</p>
+
+<p>只有属于 Seam 组件的类才允许使用 Seam 注解
+（<code>@Around</code>、<code>@Within</code>、<code>@DataBinderClass</code> 和 <code>@DataSelectorClass</code> 除外）。<br>
+此外，许多注解仅对特定组件类型有效，例如，实体 Bean 不支持双向注入、上下文划分或事务划分。</p>
+
+<p>Seam 注解允许使用以下组件类型：</p>
+<table border="1">
+  <tr>
+    <th>类型</th>
+    <th>注解</th>
+    <th>无状态<br>会话 Bean</th>
+    <th>有状态<br>会话 Bean</th>
+    <th>实体 Bean</th>
+    <th>Java Bean</th>
+  </tr>
+  <tr>
+    <td>组件<br>定义</td>
+    <td>@Name</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>@Scope</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>@Role</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>@Roles</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@Intercept</td><td>X</td><td>X</td><td>X</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@JndiName</td><td>X</td><td>X</td><td>&nbsp;</td><td>&nbsp;</td>
+  </tr>
+  <tr>
+  <td></td><td>@Startup</td><td>X</td><td>X</td><td>X</td><td>X</td>
+  </tr>
+  <tr>
+  <td>双向注入</td><td>@In</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@Out</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@Unwrap</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@Factory</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@Logger</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@RequestParameter</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td>生命周期</td><td>@Create</td><td>&nbsp;</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@Destroy</td><td>&nbsp;</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@Observer</td><td>X</td><td>X</td><td>X</td><td>X</td>
+  </tr>
+  <tr>
+  <td>上下文<br>划分</td><td>@Begin</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@BeginTask</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@End</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@EndTask</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@StartTask</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@ResumeProcess</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@CreateProcess</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td>事务<br>划分</td><td>@Transactional</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@Rollback</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td>验证</td><td>@IfInvalid</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td>远程处理</td><td>@Remote</td><td>本地接口上的<br>X</td><td>本地接口上的<br>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td>JSF 数据表</td><td>@DataModel</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@DataModelIndex</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td></td><td>@DataModelSelection</td><td>X</td><td>X</td><td>&nbsp;</td><td>X</td>
+  </tr>
+  <tr>
+  <td>数据绑定</td><td>@DataBinderClass</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>X</td>
+  </tr>
+    <tr>
+      <td></td>
+      <td>@DataSelectorClass</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>X</td>
+    </tr>
+</table>
+<style type="text/css">
+  <!--
+  th {
+    font-family: monospace;
+    vertical-align: top;
+  }
+
+  td {
+    font-family: monospace;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  -->
+</style>
+</body>
+</html>

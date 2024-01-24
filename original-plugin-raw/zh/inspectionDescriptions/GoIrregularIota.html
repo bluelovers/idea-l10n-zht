@@ -3,7 +3,7 @@
 报告常量声明内 <code>iota</code> 的无规律用法。
 <p><code>iota</code> 标识符会针对每个常量声明重置，并针对每个常量规范自动递增。
   在一个常量规范内，标识符会保留其值。 显式引用 <code>iota</code> 不会重置计数器。</p>
-<p>有关更多信息，请参阅 Go 规范中的 <a href="https://go.dev/ref/spec#Iota">Iota</a>。</p>
+<p>有关详情，请参阅 Go 规范中的 <a href="https://go.dev/ref/spec#Iota">Iota</a>。</p>
 <p>如果两个常量规范具有文本相同的表达式列表，其中至少包含一个对 <code>iota</code> 的引用，并且两个常量规范之间只有常量规范，而没有表达式列表，则会触发此检查。</p>
 <p>考虑省略冗余的表达式列表，或者每次都写出表达式列表。</p>
 <p>示例：</p>

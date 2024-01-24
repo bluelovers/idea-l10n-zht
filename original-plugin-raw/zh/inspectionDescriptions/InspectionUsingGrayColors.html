@@ -2,15 +2,11 @@
 <body>
 报告用于创建灰色的 <code>java.awt.Color</code> 的用法。
 <p>
-  <b>转换为 'Gray'</b> 快速修复将改用 <code>com.intellij.ui.Gray</code> 常量。
+  快速修复<b>转换为 Gray</b> 将改用 <code>com.intellij.ui.Gray</code> 常量。
 </p>
-<p>示例：</p>
-<pre><code lang="java">
-// 错误：
-Color gray = new Color(37, 37, 37);
-
-// 正确：
-Color gray = Gray._37;
-</code></pre>
+<p><b>示例：</b></p>
+<code>Color myGray = new Color(55, 55, 55);</code>
+<p>在应用快速修复后：</p>
+<code>Color myGray = Gray._55;</code>
 </body>
 </html>

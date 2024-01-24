@@ -14,13 +14,13 @@
 </code></pre>
 <p>
 此外，在 Java 9 和更高版本中，模块可以通过不导出它们的软件包来向其他模块隐藏它的某些类。
-但是，如果作为导出的 API 的一部分的成员在其签名中引用了非导出类，则不能在模块外部使用此类成员。
+不过，如果属于导出的 API 的成员在其签名中引用了非导出类，则不能在模块外部使用此类成员。
 <!-- tooltip end -->
 <p>配置检查：</p>
 <ul>
-  <li>使用<b>报告模块 API 中公开的非导出类 (Java 9+)</b> 选项可报告公开非导出类的模块 API 成员。<br>请注意，对于此选项，项目或模块的语言级别必须为 9 或更高。</li>
-  <li>使用<b>报告在 public API 中公开的不可访问类</b>选项可报告公开可见性作用域较小的类的 public 成员。</li>
-  <li>使用<b>报告在 package-local API 中公开的 private 类</b>选项可报告公开 <code>private</code> 类的 package-local 成员。</li>
+  <li>使用<b>报告在模块 API 中公开的非导出类(Java 9+)</b> 选项可以报告公开非导出类的模块 API 成员。<br>请注意，对于此选项，项目或模块的语言级别必须为 9 或更高。</li>
+  <li>使用<b>报告在公开 API 中公开的不可访问类</b>选项可以报告公开可见性作用域较小的类的 public 成员。</li>
+  <li>使用<b>报告在 package-local API 中公开的 private 类</b>选项可以报告公开 <code>private</code> 类的 package-local 成员。</li>
 </ul>
 </body>
 </html>

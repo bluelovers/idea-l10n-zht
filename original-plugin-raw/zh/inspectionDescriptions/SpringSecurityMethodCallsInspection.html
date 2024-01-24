@@ -1,0 +1,6 @@
+<html>
+<body>
+使用 @PreFilter/@PostFilter/@PreAuthorize：在代理模式（默认）下，只有通过代理进入的外部方法调用会被拦截。
+这意味着，自调用（实际上是目标对象内的方法调用目标对象的另一个方法）在运行时将不会工作，即使被调用的方法被标记为 @PreFilter/@PostFilter/@PreAuthorize
+</body>
+</html>

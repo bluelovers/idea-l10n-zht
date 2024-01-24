@@ -6,10 +6,23 @@
   此外，有些代码标准不建议使用本地类。</p>
 <p><b>示例：</b></p>
 <pre><code>
-  void test() {
-    class Local { // 局部类
+  class Example {
+    void test() {
+      class Local { // 这里
+      }
+      new Local();
     }
-    new Local();
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class Example {
+    void test() {
+      new Local();
+    }
+
+    private static class Local { // 这里
+    }
   }
 </code></pre>
 <!-- tooltip end -->

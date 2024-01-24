@@ -1,0 +1,22 @@
+<html>
+<body>
+在 JUnit 测试层次结构中的父类和子类使用 <code>@RunWith</code> 进行注解时报告。
+它可能导致意外的测试行为。
+<p><b>示例：</b></p>
+<pre><code lang="java">
+  @RunWith(Suite.class)
+  @SuiteClasses(MySuiteClass.class)
+  public abstract Parent {
+  }
+
+  @RunWith(Parameterized.class)
+  public MyTest {
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p>
+  <small>2024.1 最新变化</small>
+</p>
+</body>
+</html>

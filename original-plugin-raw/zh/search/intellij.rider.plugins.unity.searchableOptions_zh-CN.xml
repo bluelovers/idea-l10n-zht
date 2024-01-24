@@ -1,6 +1,9 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
+    <option name="add" path="ActionManager" hit="Add Unity Pausepoint" />
+    <option name="pausepoint" path="ActionManager" hit="Add Unity Pausepoint" />
+    <option name="unity" path="ActionManager" hit="Add Unity Pausepoint" />
     <option name="actions" path="ActionManager" hit="Unity Toolbar Actions Base" />
     <option name="base" path="ActionManager" hit="Unity Toolbar Actions Base" />
     <option name="toolbar" path="ActionManager" hit="Unity Toolbar Actions Base" />
@@ -85,9 +88,6 @@
     <option name="恢复" path="ActionManager" hit="暂停/恢复" />
     <option name="暂停" path="ActionManager" hit="暂停/恢复" />
     <option name="步骤" path="ActionManager" hit="步骤" />
-    <option name="unity" path="ActionManager" hit="添加 Unity 暂停点" />
-    <option name="暂停点" path="ActionManager" hit="添加 Unity 暂停点" />
-    <option name="添加" path="ActionManager" hit="添加 Unity 暂停点" />
     <option name="编辑" path="ActionManager" hit="运行/编辑" />
     <option name="运行" path="ActionManager" hit="运行/编辑" />
     <option name="unity" path="ActionManager" hit="重要的 Unity 相关操作" />
@@ -110,9 +110,24 @@
     <option name="uss" hit="USS" />
   </configurable>
   <configurable id="preferences.build.unityPlugin" configurable_name="Unity 引擎">
-    <option name="" hit="  预览  着色器变体支持" />
-    <option name="着色器变体支持" hit="  预览  着色器变体支持" />
-    <option name="预览" hit="  预览  着色器变体支持" />
+    <option name="" hit="  Preview  Shader variants support" />
+    <option name="preview" hit="  Preview  Shader variants support" />
+    <option name="shader" hit="  Preview  Shader variants support" />
+    <option name="support" hit="  Preview  Shader variants support" />
+    <option name="variants" hit="  Preview  Shader variants support" />
+    <option name="" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="as" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="before" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="evaluation" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="long" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="operations" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="preview" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="such" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="terminating" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="texture" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="time" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="to" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
+    <option name="wait" hit=" Time to wait before terminating long evaluation operations  such as texture preview" />
     <option name="" hit=" Unity 的 Mono   x 运行时会忽略  在遇到未处理的异常时中断  设置  此选项将相同的行为应用于 IL CPP 播放器 " />
     <option name="4" hit=" Unity 的 Mono   x 运行时会忽略  在遇到未处理的异常时中断  设置  此选项将相同的行为应用于 IL CPP 播放器 " />
     <option name="il2cpp" hit=" Unity 的 Mono   x 运行时会忽略  在遇到未处理的异常时中断  设置  此选项将相同的行为应用于 IL CPP 播放器 " />
@@ -189,10 +204,6 @@
     <option name="软件包自动支持运行" hit=" 推荐 Unity        及更高版本中的 Rider 软件包自动支持运行 暂停 日志视图和后台刷新资源等集成功能 早期版本要求将插件安装到项目中 " />
     <option name="" hit=" 禁止非限定名称的解析错误" />
     <option name="禁止非限定名称的解析错误" hit=" 禁止非限定名称的解析错误" />
-    <option name="" hit=" 终止长评估操作 如纹理预览 之前等待的时间" />
-    <option name="之前等待的时间" hit=" 终止长评估操作 如纹理预览 之前等待的时间" />
-    <option name="如纹理预览" hit=" 终止长评估操作 如纹理预览 之前等待的时间" />
-    <option name="终止长评估操作" hit=" 终止长评估操作 如纹理预览 之前等待的时间" />
     <option name="" hit=" 缓存预制件数据以提高 查找用法 性能" />
     <option name="性能" hit=" 缓存预制件数据以提高 查找用法 性能" />
     <option name="查找用法" hit=" 缓存预制件数据以提高 查找用法 性能" />
@@ -224,6 +235,32 @@
     <option name="c#" hit="C#" />
     <option name="dots" hit="Dots" />
     <option name="firstupper" hit="Firstupper" />
+    <option name="as" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="before" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="evaluation" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="long" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="operations" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="preview" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="such" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="terminating" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="texture" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="time" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="to" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="wait" hit="Time to wait before terminating long evaluation operations, such as texture preview" />
+    <option name="advanced" hit="Timeout for advanced Unity evaluations  in milliseconds " />
+    <option name="evaluations" hit="Timeout for advanced Unity evaluations  in milliseconds " />
+    <option name="for" hit="Timeout for advanced Unity evaluations  in milliseconds " />
+    <option name="in" hit="Timeout for advanced Unity evaluations  in milliseconds " />
+    <option name="milliseconds" hit="Timeout for advanced Unity evaluations  in milliseconds " />
+    <option name="timeout" hit="Timeout for advanced Unity evaluations  in milliseconds " />
+    <option name="unity" hit="Timeout for advanced Unity evaluations  in milliseconds " />
+    <option name="advanced" hit="Timeout for advanced Unity evaluations, in milliseconds:" />
+    <option name="evaluations" hit="Timeout for advanced Unity evaluations, in milliseconds:" />
+    <option name="for" hit="Timeout for advanced Unity evaluations, in milliseconds:" />
+    <option name="in" hit="Timeout for advanced Unity evaluations, in milliseconds:" />
+    <option name="milliseconds" hit="Timeout for advanced Unity evaluations, in milliseconds:" />
+    <option name="timeout" hit="Timeout for advanced Unity evaluations, in milliseconds:" />
+    <option name="unity" hit="Timeout for advanced Unity evaluations, in milliseconds:" />
     <option name="unity" hit="Unity 引擎" />
     <option name="引擎" hit="Unity 引擎" />
     <option name="4" hit="Unity 的 Mono 4.x 运行时会忽略 '在遇到未处理的异常时中断' 设置。&#10;此选项将相同的行为应用于 IL2CPP 播放器。" />
@@ -240,9 +277,11 @@
     <option name="uppercamelcase" hit="UpperCamelCase" />
     <option name="uppercamelcaseunderscoretolerant" hit="UpperCamelCaseUnderscoreTolerant" />
     <option name="uppercamelcaseunderscoretolerant" hit="UpperCamelCaseunderscoreTolerant" />
-    <option name="" hit="[预览] 着色器变体支持" />
-    <option name="着色器变体支持" hit="[预览] 着色器变体支持" />
-    <option name="预览" hit="[预览] 着色器变体支持" />
+    <option name="" hit="[Preview] Shader variants support" />
+    <option name="preview" hit="[Preview] Shader variants support" />
+    <option name="shader" hit="[Preview] Shader variants support" />
+    <option name="support" hit="[Preview] Shader variants support" />
+    <option name="variants" hit="[Preview] Shader variants support" />
     <option name="iddqd" hit="iddqd" />
     <option name="lowercamelcase" hit="lowerCamelCase" />
     <option name="lowercamelcaseunderscoretolerant" hit="lowerCamelCaseUnderscoreTolerant" />
@@ -320,9 +359,6 @@
     <option name="样式" hit="样式:" />
     <option name="着色器" hit="着色器" />
     <option name="禁止非限定名称的解析错误" hit="禁止非限定名称的解析错误" />
-    <option name="之前等待的时间" hit="终止长评估操作(如纹理预览)之前等待的时间" />
-    <option name="如纹理预览" hit="终止长评估操作(如纹理预览)之前等待的时间" />
-    <option name="终止长评估操作" hit="终止长评估操作(如纹理预览)之前等待的时间" />
     <option name="性能" hit="缓存预制件数据以提高“查找用法”性能" />
     <option name="查找用法" hit="缓存预制件数据以提高“查找用法”性能" />
     <option name="缓存预制件数据以提高" hit="缓存预制件数据以提高“查找用法”性能" />
@@ -347,14 +383,6 @@
     <option name="首选" hit="首选 UnityYamlMerge 用于合并 YAML 文件" />
     <option name="高亮显示性能关键上下文" hit="高亮显示性能关键上下文 " />
     <option name="高亮显示性能关键上下文" hit="高亮显示性能关键上下文:" />
-    <option name="unity" hit="高级 Unity 评估超时 以毫秒为单位  " />
-    <option name="以毫秒为单位" hit="高级 Unity 评估超时 以毫秒为单位  " />
-    <option name="评估超时" hit="高级 Unity 评估超时 以毫秒为单位  " />
-    <option name="高级" hit="高级 Unity 评估超时 以毫秒为单位  " />
-    <option name="unity" hit="高级 Unity 评估超时(以毫秒为单位):" />
-    <option name="以毫秒为单位" hit="高级 Unity 评估超时(以毫秒为单位):" />
-    <option name="评估超时" hit="高级 Unity 评估超时(以毫秒为单位):" />
-    <option name="高级" hit="高级 Unity 评估超时(以毫秒为单位):" />
   </configurable>
   <configurable id="preferences.sourceCode.ShaderLab" configurable_name="ShaderLab">
     <option name="" path="格式设置样式" hit=" 要仅查看影响所选代码块的代码样式规则 请按 Alt Enter 然后选择 重新格式化并清理    配置代码样式  或 检测代码样式设置 " />

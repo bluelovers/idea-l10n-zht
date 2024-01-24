@@ -2,7 +2,7 @@
 <body>
 <p>报告对带有类文字实参的 Kotlin 标准库函数 <code>filterIsInstance</code> 的调用。 更习惯的做法是使用带有具体化类型形参的此函数版本，以避免使用 <code>::class.java</code> 语法。</p>
 
-<p>注意：不报告对泛型类文字的检查，因为类型实参列表中的 <code>Class<*, *></code> 语法可能是不需要的。</p>
+<p>注意：不报告对泛型类文字的检查，因为类型实参列表中的 <code>Class<*, *></code> 语法可能不受欢迎。</p>
 
 <p>示例：</p>
 <pre><code>

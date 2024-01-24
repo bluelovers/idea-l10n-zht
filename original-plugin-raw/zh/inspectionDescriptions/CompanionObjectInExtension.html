@@ -1,11 +1,11 @@
 <html>
 <body>
-报告 <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">扩展</a>中不正确的伴生对象用法。
+报告 <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">扩展程序</a>中不正确的伴生对象用法。
 <p>
-  Kotlin 伴生对象始终会在您尝试加载其包含的类时创建，并且扩展点实现的创建成本应该很低。
+  Kotlin 伴生对象始终会在您尝试加载其包含类时创建，并且扩展点实现的创建开销应该很低。
   插件中过多的类加载是 IDE 启动的一个大问题。
 </p>
-<p>错误模式:</p>
+<p>错误模式：</p>
 <pre><code lang="kotlin">
   class KotlinDocumentationProvider : AbstractDocumentationProvider(), ExternalDocumentationProvider {
 
@@ -36,7 +36,7 @@
   这些声明必须存储在对象中或处于顶层，而不是存储在伴生对象中。
 </p>
 <h3>常见问题解答</h3>
-<h4>如何重写 runConfigurationType？</h4>
+<h4>如何重写运行 ConfigurationType？</h4>
 <p>将声明移到顶层：</p>
 <pre><code lang="kotlin">
   // 正确做法，使用顶层 fun
@@ -49,14 +49,14 @@
     ...
 </code></pre>
 <h4>如何重写 FileType？</h4>
-<p>之前:</p>
+<p>之前：</p>
 <pre><code lang="kotlin">
   internal class SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
     companion object {
       val FILE_TYPE = SpringBootImportsFileType()
       ...
 </code></pre>
-<p>之后:</p>
+<p>之后：</p>
 <pre><code lang="kotlin">
   internal object SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
   ...
@@ -70,7 +70,7 @@
 <h4>如何重写 rewrite CounterUsagesCollector？
 </h4>
 <h5>内部 API</h5>
-<p>之前:</p>
+<p>之前：</p>
 <pre><code lang="kotlin">
   class AntActionsUsagesCollector : CounterUsagesCollector() {
     override fun getGroup(): EventLogGroup = GROUP
@@ -83,7 +83,7 @@
    }
 }
 </code></pre>
-<p>之后:</p>
+<p>之后：</p>
 <pre><code lang="kotlin">
  object AntActionsUsagesCollector : CounterUsagesCollector() {
   override fun getGroup(): EventLogGroup = GROUP

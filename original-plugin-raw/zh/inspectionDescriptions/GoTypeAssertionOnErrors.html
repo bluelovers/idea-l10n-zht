@@ -1,9 +1,9 @@
 <html>
 <body>
-报告错误的类型断言或类型 switch，例如 <code>err.(*MyErr)</code> 或 <code>switch err.(type)</code>，并建议改为使用 <code>errors.As</code>。
-<p>从 Go 1.13 开始，可以使用 <code>fmt.Errorf</code> 函数和 <code>%w</code> 动词来包装错误。 因此，错误的类型断言或类型 switch 会在已包装错误上失败。 检查特定错误类型的首选方式是使用标准库中的 <a href="https://pkg.go.dev/errors#As">errors.As</a> 函数，因为此函数会在检查特定错误类型时遍历已包装错误链。</p>
-<p>有关 <code>errors.As</code> 的更多信息，请参阅<a href="https://go.dev/blog/go1.13-errors">处理 Go 1.13 中的错误</a>。</p>
-<p>快速修复会将错误的类型断言和类型 switch 替换为对 <code>errors.As</code> 的调用。</p>
+报告错误的类型断言或类型 switch，例如 <code>err.(*MyErr)</code> 或 <code>switch err.(type)</code>，并建议改用 <code>errors.As</code>。
+<p>从 Go 1.13 开始，可以使用 <code>fmt.Errorf</code> 函数和 <code>%w</code> 动词来包装错误。 因此，错误的类型断言或类型 switch 会在已包装错误上失败。 检查特定错误类型的首选方式是使用标准库中的 <a href="https://pkg.go.dev/errors#As">errors.As</a> 函数，因为此函数会在检查特定错误类型时遍历包装错误链。</p>
+<p>有关 <code>errors.As</code> 的详细信息，请参阅 <a href="https://go.dev/blog/go1.13-errors">working with Errors in Go 1.13</a>。</p>
+<p>该快速修复会将错误的类型断言和类型 switch 替换为对 <code>errors.As</code> 的调用。</p>
 <p><b>示例</b></p>
 <pre><code>
 errFoo, ok := err.(*ErrFoo)

@@ -1,0 +1,17 @@
+<html>
+<body>
+硬编码的 Struts 操作 URL。
+报告 Struts 操作 URL 为“手动”制作的模式，并建议使用 Struts &lt;url&gt;-tag 进行转换。<br/>
+<p>示例：</p>
+<pre><code>
+&lt;a href="namespace/foo!bar.action?param1=value1&amp;param2=value2"/&gt;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+&lt;a href="&lt;s:url namespace="namespace" action="foo" method="bar"/&gt;
+  &lt;s:param name="param1"&gt;value1&lt;/s:param&gt;
+  &lt;s:param name="param2"&gt;value2&lt;/s:param&gt;
+&lt;/s:url&gt;"/&gt;
+</code></pre>
+</body>
+</html>

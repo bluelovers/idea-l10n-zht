@@ -1,10 +1,10 @@
 <html>
 <body>
-当 <code>iota</code> 标识符出现在 <code>const</code> 声明中时，报告 <code>switch</code> 语句中未处理的值。 要处理这些值，请考虑使用 <code>case</code> 或 <code>default</code> 子句。
+当 <code>iota</code> 标识符出现在 <code>const</code> 声明中时，报告 <code>switch</code> 语句中的未处理值。 要处理这些值，请考虑使用 <code>case</code> 或 <code>default</code> 子句。
 <p>
-  Go 中的 <code>iota</code> 关键字会在 <code>const</code> 块中创建一个整数序列。 虽然 Go 编译器不需要处理所有 <code>iota</code> 值，但缺少其中一些值可能表示存在错误。
+  Go 中的 <code>iota</code> 关键字会在 <code>const</code> 块中创建一个整数序列。 虽然 Go 编译器不需要处理所有 <code>iota</code> 值，但缺少其中一些值可能表示存在 bug。
 </p>
-<p>有关 <code>iota</code> 的更多信息，请参阅 <a href="https://go.dev/ref/spec#Iota">go.dev 上的 Iota</a>。</p>
+<p>有关 <code>iota</code> 的详细信息，请参阅 <a href="https://go.dev/ref/spec#Iota">go.dev 上的 Iota</a>。</p>
 <p>示例：</p>
 <pre><code>const (
   a = iota
@@ -27,7 +27,7 @@ func main() {
   IDE 会触发检查，因为 <code>c</code> 未由 <code>switch</code> 语句处理。 请注意，<code>c</code> 位于相同的 <code>const</code> 块中，即使它不使用 <code>iota</code>。
 </p>
 
-<p>快速修复选项是 <b>Create 'case' clause for values</b>（为值创建 'case' 子句）和 <b>Create 'default' clause</b>（创建 'default' 子句）。 应用 <b>Create 'default' clause</b> 快速修复后：</p>
+<p>快速修复选项是<b>为值创建 'case' 子句</b>和<b>创建 'default' 子句</b>。 应用<b>创建 'default' 子句</b>快速修复后：</p>
 <pre><code>const (
   a = iota
   b
