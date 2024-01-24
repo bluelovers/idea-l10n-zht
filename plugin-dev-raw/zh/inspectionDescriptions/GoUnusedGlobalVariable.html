@@ -18,14 +18,14 @@
 <body>
 報告已定義但從未在程式碼中使用的全域變數。
 <p>如果您有未使用的變數，程式碼將無法編譯。
-  有關未使用的變數和匯入的更多資訊，請參閱 <a href="https://go.dev/doc/effective_go#blank_unused">go.dev 上的 Unused imports and variables</a>。
+  有關未使用的變數和匯入的更多資訊，請參閱 <a href="https://golang.org/doc/effective_go#blank_unused">golang.org 上的 Unused imports and variables</a>。
 </p>
 <pre><code>func main() {
  a := 422
 }</code></pre>
-<p>範例中的程式碼將無法編譯。 因此，將其醒目提示為錯誤。 對於此類別情況，您可以套用兩個快速修復：<b>刪除變數</b> 和 <b>重命名為 _</b>。 第一個快速修復刪除變數，第二個將變數轉換為空白
+<p>範例中的程式碼將無法編譯。 因此，將其醒目提示為錯誤。 對於此類別情況，您可以套用兩個快速修復：<b>刪除變數</b> 和 <b>重新命名 _</b>。 第一個快速修復刪除變數，第二個將變數轉換為空白
    關鍵字。</p>
-<p>在套用<b>重命名為 _</b>快速修復後：</p>
+<p>在套用<b>重新命名 _</b>快速修復後：</p>
 <pre><code>func main() {
  _ := 422
 }</code></pre>

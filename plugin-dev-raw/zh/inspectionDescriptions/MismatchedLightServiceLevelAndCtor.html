@@ -3,7 +3,7 @@
 報告輕量服務級別及其建構函式之間的不符合。
 <p>報告的問題如下：</p>
 <ul>
-  <li>具有帶兩個類型為 <code>com.intellij.openapi.project.Project</code> 和 <code>kotlinx.coroutines.CoroutineScope</code> 的參數，或者一個類型為 <code>Project</code> 的參數的建構函式的輕量服務類別不會被註解為專案級服務。
+  <li>具有帶兩個類型為 <code>com.intellij.openapi.project.Project</code> 和 <code>kotlinx.coroutines.CoroutineScope</code> 的參數或者一個類型為 <code>Project</code> 的參數的建構函式的輕量服務類別不會被註解為專案級服務。
   </li>
   <li>註解為應用程式級服務的輕量服務類別沒有無實參建構函式，也沒有帶一個 <code>CoroutineScope</code> 類型參數的建構函式。
   </li>
@@ -20,7 +20,7 @@ class MyService(val project: Project) // 建議從建構函式 'MyService' 中�
 @Service(Service.Level.PROJECT)
 class MyService(val project: Project)
 </code></pre>
-<p>套用建議從建構函式 'MyService' 移除參數的快速修復後:</p>
+<p>套用建議從建構函式 'MyService' 移除參數的快速修復後：</p>
 <pre><code lang="kotlin">
 @Service
 class MyService()

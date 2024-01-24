@@ -1,0 +1,14 @@
+<html>
+<body>
+報告存儲在實例變數中的未釋放的擁有物件。<br>
+如果符合以下條件，您將獲得物件的所有權：<br>
+- 使用名稱以 <code>alloc</code> 或 <code>new</code> 開頭或包含 <code>copy</code><br> 的方法建立
+- 向其發送 <code>retain</code> 訊息<br>
+- 設定具有<code>retain</code> 或 <code>copy</code> 特性並與實例變數合成的屬性的值<br> 
+要放棄物件的所有權，您需要：<br>
+- 向其發送 <code>release</code> 或 <code>autorelease</code> 訊息<br>
+- 將 <code>nil</code> 分配給與實例變數合成的屬性<br> 
+如果 ARC（自動參照計數）已啟用，則此檢查會被停用。 如果下面的複選框被關閉，您可以在類別的任何方法中釋放實例變數。 如果開啟，您可以在 <code>dealloc</code>、<code>tearDown</code>、<code>applicationWillTerminate:</code>、
+<code>didTurnIntoFault</code> 方法以及任何可以從它們呼叫的方法中釋放實例變數。
+</body>
+</html>

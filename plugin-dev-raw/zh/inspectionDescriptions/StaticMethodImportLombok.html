@@ -1,0 +1,10 @@
+<html>
+<body>
+報告 Lombok 的生成方法的靜態 import 用法。<br>
+<p>
+  這將在使用 javac 進行編譯時失敗。 原因是在 lombok 註解處理器啟動之前解析了 static 方法。
+  此時，javac 在註解處理器應該生成的程式碼之前使用原始程式碼，然後 javac 當然會報告缺失的符號（生成的方法）。
+</p>
+參閱更多<a href="https://github.com/projectlombok/lombok/issues/2044">詳細資訊</a>
+</body>
+</html>

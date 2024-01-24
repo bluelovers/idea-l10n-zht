@@ -1,9 +1,9 @@
 <html>
 <body>
-排除將函式或方法標識為類似於 <code>fmt.Printf</code> 的格式化程序函式的情況：
+排除將函式或方法被標識為類似於 <code>fmt.Printf</code> 的格式化程序函式的情況：
 <ul>
-  <li>將不會檢查格式字串中是否動詞的錯誤用法，如 <code>%s</code>、<code>%d</code>、<code>%v</code> 和其他</li>
-  <li>將不會醒目提示格式字串中的格式化動詞</li>
+  <li>將不會檢查格式字串中是否使用了錯誤的格式設定動詞，例如 <code>%s</code>、<code>%d</code>、<code>%v</code> 和其他</li>
+  <li>將不會醒目提示格式字串中的格式設定動詞</li>
   <li>將停用最終格式化字串的插值（程式碼折疊）</li>
 </ul>
 </body>

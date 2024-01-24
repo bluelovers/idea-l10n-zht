@@ -3,7 +3,7 @@
 報告以不正確的方式處理 <code>ProcessCanceledException</code> 的情況。
 
 <p>
-  不能以任何方式捕獲、吞下、記錄或處理 <code>ProcessCanceledException</code> 及其繼承者。
+  不得以任何方式捕獲、吞下、記錄或處理 <code>ProcessCanceledException</code> 及其繼承者。
   相反，必須將其重新拋出，以便基礎架構能夠對其進行正確處理。
 </p>
 
@@ -20,7 +20,7 @@ try {
 } catch (ProcessCanceledException e) { // 不應吞下異常
 }
 
-// 錯誤:
+// 錯誤：
 try {
   // ...
 } catch (ProcessCanceledException e) {
@@ -29,7 +29,7 @@ try {
 }
 
 
-// 優良:
+// 正確：
 try {
   // ...
 } catch (ProcessCanceledException e) {

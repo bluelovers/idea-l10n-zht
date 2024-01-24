@@ -1,7 +1,7 @@
 <html>
 <body>
-報告命名為 "main" 但在 Java 21 之前沒有 <code>public static void main(String[])</code> 簽名的方法。
-從 Java 21 預覽版開始，檢查在 package-private、受保護或實例 main 方法，也沒有參數。
+在 Java 21 及更低版本中，報告命名為 "main" 但沒有 <code>public static void main(String[])</code> 簽名的方法。
+從 Java 21 預覽版開始，檢查不會醒目提示 package-private、protected 或實例 main 方法（也沒有參數）。
 此外，還會報告位於匿名或區域類別中的 main 方法。
 匿名類別和區域類別沒有完全限定名稱，因此無法執行。
 <p>此類別方法可能令人困惑，因為命名為 "main" 的方法應為應用程式入口點。</p>

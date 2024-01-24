@@ -3,7 +3,7 @@
 報告從實作 <code>InputStream.read()</code> 方法的方法返回的 <code>byte</code> 類型的表達式。
 <p>
   這很可疑，因為 <code>InputStream.read()</code> 應返回範圍從 <code>0</code> 到 <code>255</code> 的值，而位元組類型的表達式包含從 <code>-128</code> 到 <code>127</code> 的值。
-  快速修復會通過套用位元遮罩 <code>0xFF</code> 將表達式轉換為無符號 <code>byte</code>。
+  該快速修復會通過套用位元遮罩 <code>0xFF</code> 將表達式轉換為無符號 <code>byte</code>。
 </p>
 <p><b>範例：</b></p>
 <pre><code lang="java">
@@ -20,7 +20,7 @@ class MyInputStream extends InputStream {
     if (pos == data.length) {
       return -1;
     }
-    return data[pos++]; // 存在問題
+    return data[pos++]; // 問題
   }
 }
 </code></pre>

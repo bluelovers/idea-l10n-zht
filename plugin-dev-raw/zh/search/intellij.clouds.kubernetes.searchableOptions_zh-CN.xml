@@ -1,12 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="and" path="ActionManager" hit="Download and install latest stable kubectl" />
-    <option name="download" path="ActionManager" hit="Download and install latest stable kubectl" />
-    <option name="install" path="ActionManager" hit="Download and install latest stable kubectl" />
-    <option name="kubectl" path="ActionManager" hit="Download and install latest stable kubectl" />
-    <option name="latest" path="ActionManager" hit="Download and install latest stable kubectl" />
-    <option name="stable" path="ActionManager" hit="Download and install latest stable kubectl" />
     <option name="helm" path="ActionManager" hit="Helm Lint" />
     <option name="lint" path="ActionManager" hit="Helm Lint" />
     <option name="helm" path="ActionManager" hit="Helm 相依項" />
@@ -17,16 +11,12 @@
     <option name="圖表" path="ActionManager" hit="Helm 圖表" />
     <option name="helm" path="ActionManager" hit="Helm 模板" />
     <option name="模板" path="ActionManager" hit="Helm 模板" />
-    <option name="how" path="ActionManager" hit="How To Install kubectl…" />
-    <option name="install" path="ActionManager" hit="How To Install kubectl…" />
-    <option name="kubectl" path="ActionManager" hit="How To Install kubectl…" />
-    <option name="to" path="ActionManager" hit="How To Install kubectl…" />
-    <option name="install" path="ActionManager" hit="Install kubectl" />
-    <option name="kubectl" path="ActionManager" hit="Install kubectl" />
     <option name="kubernetes" path="ActionManager" hit="Kubernetes 資源" />
     <option name="資源" path="ActionManager" hit="Kubernetes 資源" />
     <option name="shell" path="ActionManager" hit="Shell 執行位置…" />
     <option name="執行位置" path="ActionManager" hit="Shell 執行位置…" />
+    <option name="kubectl" path="ActionManager" hit="下載並安裝最新的穩定版 kubectl" />
+    <option name="下載並安裝最新的穩定版" path="ActionManager" hit="下載並安裝最新的穩定版 kubectl" />
     <option name="下載日誌" path="ActionManager" hit="下載日誌" />
     <option name="下載日誌" path="ActionManager" hit="下載日誌…" />
     <option name="與集群比較" path="ActionManager" hit="與集群比較" />
@@ -65,7 +55,8 @@
     <option name="建立新密鑰" path="ActionManager" hit="建立新密鑰" />
     <option name="建立新密鑰" path="ActionManager" hit="建立新密鑰…" />
     <option name="建立新攔截" path="ActionManager" hit="建立新攔截" />
-    <option name="刪除" path="ActionManager" hit="刪除" />
+    <option name="刪除" path="ActionManager" hit="刪除(當前上下文未組態)" />
+    <option name="當前上下文未組態" path="ActionManager" hit="刪除(當前上下文未組態)" />
     <option name="刪除資源" path="ActionManager" hit="刪除資源" />
     <option name="重新整理" path="ActionManager" hit="重新整理" />
     <option name="dependencies" path="ActionManager" hit="向 'dependencies' 部分新增新的相依項" />
@@ -76,8 +67,12 @@
     <option name="在編輯器中開啟" path="ActionManager" hit="在編輯器中開啟 kubeconfig 檔案" />
     <option name="檔案" path="ActionManager" hit="在編輯器中開啟 kubeconfig 檔案" />
     <option name="在專案源中尋找用法" path="ActionManager" hit="在專案源中尋找用法" />
+    <option name="kubectl" path="ActionManager" hit="如何安裝 Kubectl…" />
+    <option name="如何安裝" path="ActionManager" hit="如何安裝 Kubectl…" />
     <option name="kubectl" path="ActionManager" hit="如何安裝 kubectl…" />
     <option name="如何安裝" path="ActionManager" hit="如何安裝 kubectl…" />
+    <option name="kubectl" path="ActionManager" hit="安裝 kubectl" />
+    <option name="安裝" path="ActionManager" hit="安裝 kubectl" />
     <option name="telepresence" path="ActionManager" hit="將 Telepresence 連線到集群，啟用攔截" />
     <option name="啟用攔截" path="ActionManager" hit="將 Telepresence 連線到集群，啟用攔截" />
     <option name="將" path="ActionManager" hit="將 Telepresence 連線到集群，啟用攔截" />
@@ -85,7 +80,8 @@
     <option name="將檔案中的組態應用於集群" path="ActionManager" hit="將檔案中的組態應用於集群" />
     <option name="pod" path="ActionManager" hit="將連接埠轉發到 pod" />
     <option name="將連接埠轉發到" path="ActionManager" hit="將連接埠轉發到 pod" />
-    <option name="套用" path="ActionManager" hit="套用" />
+    <option name="套用" path="ActionManager" hit="套用(當前上下文未組態)" />
+    <option name="當前上下文未組態" path="ActionManager" hit="套用(當前上下文未組態)" />
     <option name="所有命名空間" path="ActionManager" hit="所有命名空間" />
     <option name="開啟主控台" path="ActionManager" hit="開啟主控台" />
     <option name="開啟主控台" path="ActionManager" hit="開啟主控台…" />
@@ -98,8 +94,6 @@
     <option name="顯示集群檢視設定" path="ActionManager" hit="顯示集群檢視設定" />
     <option name="顯示集群設定" path="ActionManager" hit="顯示集群設定…" />
     <option name="更多" path="ActionManager" hit="更多" />
-    <option name="更改當前上下文" path="ActionManager" hit="更改當前上下文" />
-    <option name="更改要使用的上下文" path="ActionManager" hit="更改要使用的上下文" />
     <option name="更新圖表的相依項" path="ActionManager" hit="更新圖表的相依項" />
     <option name="尋找用法" path="ActionManager" hit="尋找用法" />
     <option name="yaml" path="ActionManager" hit="檢視 YAML" />
@@ -115,6 +109,8 @@
     <option name="自訂命名空間列表" path="ActionManager" hit="自訂命名空間列表" />
     <option name="自訂通知" path="ActionManager" hit="自訂通知" />
     <option name="自訂通知" path="ActionManager" hit="自訂通知…" />
+    <option name="設定當前上下文" path="ActionManager" hit="設定當前上下文" />
+    <option name="設定要使用的上下文" path="ActionManager" hit="設定要使用的上下文" />
     <option name="轉发連接埠" path="ActionManager" hit="轉发連接埠…" />
     <option name="shell" path="ActionManager" hit="執行 Shell" />
     <option name="執行" path="ActionManager" hit="執行 Shell" />

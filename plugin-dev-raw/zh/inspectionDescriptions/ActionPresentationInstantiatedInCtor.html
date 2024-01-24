@@ -4,7 +4,7 @@
   報告在 <code>plugin.xml</code> 檔案中註冊的任何動作，並在其建構函式中實例化 <code>com.intellij.openapi.actionSystem.Presentation</code> 物件。
 </p>
 <p>
-  任何帶參數的 <code>AnAction</code> 的建構函式都會實例化 <code>Presentation</code> 物件。 但是，在建構函式中實例化 <code>Presentation</code> 物件會導致分配資源，這可能是不必要的。 比起建立存儲文本、描述或圖標的 <code>Presentation</code> 實例，更有效的方式是利用 <code>AnAction</code> 和其他基類別的無實參建構函式，並遵循在 <code>plugin.xml</code> 中設定文本、描述和圖標的約定。 只有當動作實際顯示在 UI 中時，IDE 才會載入文本、描述和圖標。
+  任何帶參數的 <code>AnAction</code> 的建構函式都會實例化 <code>Presentation</code> 物件。 但是，在建構函式中實例化 <code>Presentation</code> 物件會導致分配資源，這可能並非必要。 比起建立存儲文本、描述或圖標的 <code>Presentation</code> 實例，更有效的方式是利用 <code>AnAction</code> 和其他基類別的無實參建構函式，並遵循在 <code>plugin.xml</code> 中設定文本、描述和圖標的約定。 只有當動作實際顯示在 UI 中時，IDE 才會載入文本、描述和圖標。
 </p>
 <p>
   設定文本、說明和圖標的約定如下：
@@ -39,7 +39,7 @@
     class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
   &lt;/action&gt;
 </code></pre>
-<p><b>良好範例：</b></p>
+<p><b>正確範例：</b></p>
 <pre><code lang="kotlin">
   // NewKotlinFileAction.kt
   internal class NewKotlinFileAction : AnAction()

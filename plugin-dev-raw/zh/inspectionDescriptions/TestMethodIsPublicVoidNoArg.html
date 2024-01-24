@@ -1,0 +1,25 @@
+<html>
+<body>
+報告任何被宣告為 static、非 public、不返回 void 類型或具有參數的 JUnit 測試方法。
+此類別測試方法很容易無意間建立，但是 JUnit 測試執行程序不會執行這些方法。
+<p><b>範例：</b></p>
+<pre><code>
+  @Test
+  void test() {
+    assertEquals(1, 1);
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  @Test
+  public void test() {
+    assertEquals(1, 1);
+  }
+</code></pre>
+<!-- tooltip end -->
+
+<p>使用檢查選項可以指定註解。
+  不會報告任何使用其中一種註解進行註解的參數。
+<p>
+</body>
+</html>

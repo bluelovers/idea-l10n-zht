@@ -5,13 +5,13 @@
 <p>
   使用檢查選項可以指定 SLF4J 使用哪個實作。
   如果選擇<strong>自動檢查</strong>，則在類別路徑中搜尋 <code>org.apache.logging.slf4j.Log4jLogger</code>。
-  如果找到了此檔案或選擇了<strong>是</strong>，將不為 SLFJ4 API 報告帶有異常類型的最後一個參數具有佔位符的情況。<br/>
+  如果找到此檔案或選擇<strong>是</strong>，將不為 SLFJ4 API 報告帶有異常類型的最後一個參數具有佔位符的情況。<br/>
 例如：
 <pre><code lang="java">
 //如果選中“是”選項，則不會報告此情況
 log.error("For id {}: {}", "1", new RuntimeException());
 </code></pre>
-在這種情況下，將使用 'toString()' 列印 'new RuntimeException()'，（不會列印其堆疊追蹤）：
+在這種情況下，將使用 'toString()' 列印 'new RuntimeException()'（不會列印其堆疊追蹤）：
 <pre><code lang="text">
 For id 1: java.lang.RuntimeException
 </code></pre>

@@ -1,0 +1,23 @@
+<html>
+<body>
+報告未根據當前程式碼樣式排列的 <code>import</code> 語句（請參閱“設定|編輯|程式碼樣式”）。
+<p><b>範例：</b></p>
+<pre><code>
+  import java.util.List;
+  import java.util.ArrayList;
+
+  public class Example {
+    List list = new ArrayList();
+  }
+</code></pre>
+<p>在套用“最佳化 import”快速修復後：
+<pre><code>
+  import java.util.ArrayList;
+  import java.util.List;
+
+  public class Example {
+    List list = new ArrayList();
+  }
+</code></pre>
+</body>
+</html>

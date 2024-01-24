@@ -1,7 +1,7 @@
 <html>
 <body>
-報告對將其參數轉換為字串的 static 方法的不必要呼叫，例如 <code>String.valueOf()</code> 或 <code>Integer.toString()</code>。
-當在字串串聯中使用時，此類別呼叫是不必要的。
+報告對將其參數轉換為字串的 static 方法（例如 <code>String.valueOf()</code> 或 <code>Integer.toString()</code>）的不必要呼叫。
+在字串串聯中使用時，此類別呼叫是不必要的。
 <p>範例：</p>
 <pre><code>
   System.out.println("Number: " + Integer.toString(count));
@@ -10,7 +10,7 @@
 <pre><code>
   System.out.println("Number: " + count);
 </code></pre>
-此外，當用作進行自身字串轉換的庫方法的實參時，此類別呼叫是不必要的。
+此外，用作進行自身字串轉換的庫方法的實參時，此類別呼叫是不必要的。
 一些進行自身字串轉換的庫方法的範例如下：
 <ul>
   <li>
@@ -31,6 +31,6 @@
 </ul>
 <!-- tooltip end -->
 <p>
-  使用<b>報告可取代為具有空字串串聯的呼叫</b>選項，還可以報告可使用空字串串聯來代替呼叫 <code>String.valueOf()</code> 的情況。
+  使用<b>報告可被取代為帶空字串的串聯的呼叫</b>選項還可以報告可使用帶空字串的串聯代替 <code>String.valueOf()</code> 呼叫的情況。
 </body>
 </html>

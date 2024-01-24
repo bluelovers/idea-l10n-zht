@@ -1,11 +1,11 @@
 <html>
 <body>
-報告 <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">擴展</a>中不正確的伴生物件用法。
+報告 <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">擴展程序</a>中不正確的伴生物件用法。
 <p>
-  Kotlin 伴生物件始終會在您嘗試載入其包含的類別時建立，並且擴展點實作的建立成本應該很低。
+  Kotlin 伴生物件始終會在您嘗試載入其包含類別時建立，並且擴展點實作的建立開銷應該很低。
   延伸模組中過多的類別載入是 IDE 啟動的一個大問題。
 </p>
-<p>錯誤模式:</p>
+<p>錯誤模式：</p>
 <pre><code lang="kotlin">
   class KotlinDocumentationProvider : AbstractDocumentationProvider(), ExternalDocumentationProvider {
 
@@ -36,7 +36,7 @@
   這些宣告必須存儲在物件中或處於頂層，而不是存儲在伴生物件中。
 </p>
 <h3>常見問題解答</h3>
-<h4>如何覆寫 runConfigurationType？</h4>
+<h4>如何覆寫執行 ConfigurationType？</h4>
 <p>將宣告移到頂層：</p>
 <pre><code lang="kotlin">
   // 正確做法，使用頂層 fun
@@ -49,14 +49,14 @@
     ...
 </code></pre>
 <h4>如何覆寫 FileType？</h4>
-<p>之前:</p>
+<p>之前：</p>
 <pre><code lang="kotlin">
   internal class SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
     companion object {
       val FILE_TYPE = SpringBootImportsFileType()
       ...
 </code></pre>
-<p>之後:</p>
+<p>之後：</p>
 <pre><code lang="kotlin">
   internal object SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
   ...
@@ -70,7 +70,7 @@
 <h4>如何覆寫 rewrite CounterUsagesCollector？
 </h4>
 <h5>內部 API</h5>
-<p>之前:</p>
+<p>之前：</p>
 <pre><code lang="kotlin">
   class AntActionsUsagesCollector : CounterUsagesCollector() {
     override fun getGroup(): EventLogGroup = GROUP
@@ -83,7 +83,7 @@
    }
 }
 </code></pre>
-<p>之後:</p>
+<p>之後：</p>
 <pre><code lang="kotlin">
  object AntActionsUsagesCollector : CounterUsagesCollector() {
   override fun getGroup(): EventLogGroup = GROUP

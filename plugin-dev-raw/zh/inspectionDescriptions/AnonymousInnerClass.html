@@ -1,8 +1,38 @@
 <html>
 <body>
-報告匿名內部類別。
-<p>在某些情況下，將匿名內部類別取代為內部類別可以提高程式碼的可讀性和可維護性。
-  另外，有些程式碼標準不建議使用匿名內部類別。</p>
+報告匿名類別。
+<p>偶爾將匿名類別取代為內部類別可以提高程式碼的可讀性和可維護性。
+  有些程式碼標準不建議使用匿名類別。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  class Example {
+    public static void main(String[] args) {
+      new Thread() {
+        public void run() {
+          work()
+        }
+
+        private void work() {}
+      }.start();
+    }
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  class Example {
+    public static void main(String[] args) {
+      new MyThread().start();
+    }
+
+    private static class MyThread extends Thread {
+      public void run() {
+        work();
+      }
+
+      private void work() {}
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

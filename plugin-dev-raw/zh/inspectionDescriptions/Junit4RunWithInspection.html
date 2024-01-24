@@ -1,0 +1,22 @@
+<html>
+<body>
+在 JUnit 測試層次結構中的父類別和子類別使用 <code>@RunWith</code> 進行註解時報告。
+它可能導致意外的測試行為。
+<p><b>範例：</b></p>
+<pre><code lang="java">
+  @RunWith(Suite.class)
+  @SuiteClasses(MySuiteClass.class)
+  public abstract Parent {
+  }
+
+  @RunWith(Parameterized.class)
+  public MyTest {
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p>
+  <small>2024.1 最新變化</small>
+</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+如果記錄壓縮建構函式中的方法存取欄位，則報告這些方法呼叫。
+<p>這些呼叫看起來很可疑，因為記錄欄位在這些呼叫時可能沒有初始化。</p>
+<p><b>範例：</b></p>
+<pre><code>
+public record MyRecord(String name, int id) {
+    public MyRecord {
+        validateMyFields(); // 看起來可疑
+    }
+
+    private void validateMyFields() {
+        if (this.name.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2024.1 最新變化</small></p>
+</body>
+</html>
