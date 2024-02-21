@@ -1,4 +1,12 @@
 <options>
+  <configurable id="preferences.keymap" configurable_name="按键映射">
+    <option name="always" path="ActionManager" hit="Always On" />
+    <option name="on" path="ActionManager" hit="Always On" />
+    <option name="off" path="ActionManager" hit="Off" />
+    <option name="debug" path="ActionManager" hit="Only during Debug" />
+    <option name="during" path="ActionManager" hit="Only during Debug" />
+    <option name="only" path="ActionManager" hit="Only during Debug" />
+  </configurable>
   <configurable id="IdeDpaFilteringPageId" configurable_name="筛选">
     <option name="" hit=" 使用筛选器将不必要的进程 模块 类 方法排除在分析范围外 通常 模块名称是具有扩展名  dll 或  exe 的相应程序集的名称 " />
     <option name="dll" hit=" 使用筛选器将不必要的进程 模块 类 方法排除在分析范围外 通常 模块名称是具有扩展名  dll 或  exe 的相应程序集的名称 " />
@@ -152,5 +160,38 @@
     <option name="asp" hit="自动禁用影响性能的 ASP 检查" />
     <option name="检查" hit="自动禁用影响性能的 ASP 检查" />
     <option name="自动禁用影响性能的" hit="自动禁用影响性能的 ASP 检查" />
+  </configurable>
+  <configurable id="MonitoringPageId" configurable_name="Monitoring">
+    <option name="" hit=" Monitoring mode" />
+    <option name="mode" hit=" Monitoring mode" />
+    <option name="monitoring" hit=" Monitoring mode" />
+    <option name="always" hit="Always On" />
+    <option name="on" hit="Always On" />
+    <option name="counter" hit="Counter providers" />
+    <option name="providers" hit="Counter providers" />
+    <option name="counters" hit="Counters" />
+    <option name="learn" hit="Learn more" />
+    <option name="more" hit="Learn more" />
+    <option name="histograms" hit="Maximum number of histograms" />
+    <option name="maximum" hit="Maximum number of histograms" />
+    <option name="number" hit="Maximum number of histograms" />
+    <option name="of" hit="Maximum number of histograms" />
+    <option name="maximum" hit="Maximum number of time series" />
+    <option name="number" hit="Maximum number of time series" />
+    <option name="of" hit="Maximum number of time series" />
+    <option name="series" hit="Maximum number of time series" />
+    <option name="time" hit="Maximum number of time series" />
+    <option name="metric" hit="Metric providers" />
+    <option name="providers" hit="Metric providers" />
+    <option name="monitoring" hit="Monitoring" />
+    <option name="mode" hit="Monitoring mode" />
+    <option name="monitoring" hit="Monitoring mode" />
+    <option name="off" hit="Off" />
+    <option name="debug" hit="Only during Debug" />
+    <option name="during" hit="Only during Debug" />
+    <option name="only" hit="Only during Debug" />
+    <option name="interval" hit="Refresh interval" />
+    <option name="refresh" hit="Refresh interval" />
+    <option name="iddqd" hit="iddqd" />
   </configurable>
 </options>

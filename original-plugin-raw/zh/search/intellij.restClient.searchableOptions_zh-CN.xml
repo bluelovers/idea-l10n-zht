@@ -1,12 +1,36 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
+    <option name="auth" path="ActionManager" hit="Clean Auth Browser Cookies" />
+    <option name="browser" path="ActionManager" hit="Clean Auth Browser Cookies" />
+    <option name="clean" path="ActionManager" hit="Clean Auth Browser Cookies" />
+    <option name="cookies" path="ActionManager" hit="Clean Auth Browser Cookies" />
+    <option name="body" path="ActionManager" hit="Copy Response Body to Clipboard" />
+    <option name="clipboard" path="ActionManager" hit="Copy Response Body to Clipboard" />
+    <option name="copy" path="ActionManager" hit="Copy Response Body to Clipboard" />
+    <option name="response" path="ActionManager" hit="Copy Response Body to Clipboard" />
+    <option name="to" path="ActionManager" hit="Copy Response Body to Clipboard" />
+    <option name="create" path="ActionManager" hit="Create environment file for HTTP requests" />
+    <option name="environment" path="ActionManager" hit="Create environment file for HTTP requests" />
+    <option name="file" path="ActionManager" hit="Create environment file for HTTP requests" />
+    <option name="for" path="ActionManager" hit="Create environment file for HTTP requests" />
+    <option name="http" path="ActionManager" hit="Create environment file for HTTP requests" />
+    <option name="requests" path="ActionManager" hit="Create environment file for HTTP requests" />
+    <option name="create" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
+    <option name="environment" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
+    <option name="file" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
+    <option name="for" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
+    <option name="http" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
+    <option name="private" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
+    <option name="requests" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
     <option name="http" path="ActionManager" hit="HTTP 客户端" />
     <option name="客户端" path="ActionManager" hit="HTTP 客户端" />
     <option name="http" path="ActionManager" hit="HTTP 环境文件" />
     <option name="环境文件" path="ActionManager" hit="HTTP 环境文件" />
     <option name="http" path="ActionManager" hit="HTTP 请求" />
     <option name="请求" path="ActionManager" hit="HTTP 请求" />
+    <option name="preview" path="ActionManager" hit="Show Preview" />
+    <option name="show" path="ActionManager" hit="Show Preview" />
     <option name="env" path="ActionManager" hit="http-client.env.json" />
     <option name="http-client" path="ActionManager" hit="http-client.env.json" />
     <option name="json" path="ActionManager" hit="http-client.env.json" />
@@ -14,13 +38,6 @@
     <option name="http-client" path="ActionManager" hit="http-client.private.env.json" />
     <option name="json" path="ActionManager" hit="http-client.private.env.json" />
     <option name="private" path="ActionManager" hit="http-client.private.env.json" />
-    <option name="http" path="ActionManager" hit="为 HTTP 请求创建环境文件" />
-    <option name="为" path="ActionManager" hit="为 HTTP 请求创建环境文件" />
-    <option name="请求创建环境文件" path="ActionManager" hit="为 HTTP 请求创建环境文件" />
-    <option name="http" path="ActionManager" hit="为 HTTP 请求创建私有 HTTP 环境文件" />
-    <option name="为" path="ActionManager" hit="为 HTTP 请求创建私有 HTTP 环境文件" />
-    <option name="环境文件" path="ActionManager" hit="为 HTTP 请求创建私有 HTTP 环境文件" />
-    <option name="请求创建私有" path="ActionManager" hit="为 HTTP 请求创建私有 HTTP 环境文件" />
     <option name="postman" path="ActionManager" hit="从 Postman 集合文件导入" />
     <option name="从" path="ActionManager" hit="从 Postman 集合文件导入" />
     <option name="集合文件导入" path="ActionManager" hit="从 Postman 集合文件导入" />
@@ -55,7 +72,6 @@
     <option name="将" path="ActionManager" hit="将 cURL 转换为 HTTP 请求" />
     <option name="请求" path="ActionManager" hit="将 cURL 转换为 HTTP 请求" />
     <option name="转换为" path="ActionManager" hit="将 cURL 转换为 HTTP 请求" />
-    <option name="将响应正文复制到剪贴板" path="ActionManager" hit="将响应正文复制到剪贴板" />
     <option name="http" path="ActionManager" hit="将旧版 REST 客户端文件转换为 HTTP 请求" />
     <option name="rest" path="ActionManager" hit="将旧版 REST 客户端文件转换为 HTTP 请求" />
     <option name="客户端文件转换为" path="ActionManager" hit="将旧版 REST 客户端文件转换为 HTTP 请求" />
@@ -71,11 +87,6 @@
     <option name="将集合转换为" path="ActionManager" hit="将集合转换为 .http 文件" />
     <option name="文件" path="ActionManager" hit="将集合转换为 .http 文件" />
     <option name="微服务模板" path="ActionManager" hit="微服务模板" />
-    <option name="cli" path="ActionManager" hit="打开 HTTP 客户端 CLI 下载页面" />
-    <option name="http" path="ActionManager" hit="打开 HTTP 客户端 CLI 下载页面" />
-    <option name="下载页面" path="ActionManager" hit="打开 HTTP 客户端 CLI 下载页面" />
-    <option name="客户端" path="ActionManager" hit="打开 HTTP 客户端 CLI 下载页面" />
-    <option name="打开" path="ActionManager" hit="打开 HTTP 客户端 CLI 下载页面" />
     <option name="http" path="ActionManager" hit="打开 HTTP 请求的内置集合" />
     <option name="打开" path="ActionManager" hit="打开 HTTP 请求的内置集合" />
     <option name="请求的内置集合" path="ActionManager" hit="打开 HTTP 请求的内置集合" />
@@ -88,7 +99,6 @@
     <option name="http" path="ActionManager" hit="显示 HTTP 请求历史记录" />
     <option name="显示" path="ActionManager" hit="显示 HTTP 请求历史记录" />
     <option name="请求历史记录" path="ActionManager" hit="显示 HTTP 请求历史记录" />
-    <option name="显示预览" path="ActionManager" hit="显示预览" />
     <option name="http" path="ActionManager" hit="添加到 HTTP 客户端…" />
     <option name="客户端" path="ActionManager" hit="添加到 HTTP 客户端…" />
     <option name="添加到" path="ActionManager" hit="添加到 HTTP 客户端…" />
@@ -120,6 +130,8 @@
   <configurable id="reference.settingsdialog.IDE.editor.colors.HTTP 请求" configurable_name="HTTP 请求">
     <option name="http" hit="HTTP 请求" />
     <option name="请求" hit="HTTP 请求" />
+    <option name="http" hit="HTTP protocol" />
+    <option name="protocol" hit="HTTP protocol" />
     <option name="动态变量" hit="动态变量//字符串实参" />
     <option name="字符串实参" hit="动态变量//字符串实参" />
     <option name="动态变量" hit="动态变量//数字实参" />

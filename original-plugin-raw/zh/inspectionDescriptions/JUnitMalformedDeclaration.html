@@ -37,13 +37,17 @@
 
 请注意，在 Kotlin 中，挂起函数确实有实参和非 void 返回值类型。 因此，它们也不会由 JUnit 测试运行程序执行。 此检查也将报告这一问题。
 
-<p><b>格式错误的 <code>@Before</code> 方法示例 (Java)：</b></p>
-<pre><code>@Before private int foo(int arg) { ... } </code></pre>
+<p><b>格式错误的 <code>@Before</code> 方法示例：</b></p>
+<pre><code lang="java">
+  @Before private int foo(int arg) { }
+</code></pre>
 <p>在应用快速修复后：</p>
-<pre><code>@Before public void foo() { ... } </code></pre>
+<pre><code lang="java">
+  @Before public void foo() { }
+</code></pre>
 
 <p><b>缺少方法源代码示例 (Kotlin)：</b></p>
-<pre><code>
+<pre><code lang="kotlin">
   class Example {
     @MethodSource("parameters")
     @ParameterizedTest
@@ -51,7 +55,7 @@
   }
 </code></pre>
 <p>在应用快速修复后：</p>
-<pre><code>
+<pre><code lang="kotlin">
   class Example {
     @MethodSource("parameters")
     @ParameterizedTest

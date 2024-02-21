@@ -2,7 +2,9 @@
 <body>
 <p>
   报告可以更有效地编写为 <code>do-while</code> 循环的 <code>while</code> 循环。
-  重点是在检查条件之前执行 <code>while</code> 循环的整个主体会导致代码执行中出现潜在冗余的情况。
+  There are <code>while</code> loops where the code just before the loop is identical to the code in the body of the loop.
+  Replacing with a <code>do-while</code> loop removes the duplicated code.
+  For <code>while</code> loops without such duplicated code, the quick fix is offered in the editor as well, but without highlighting.
 </p>
 <p><b>示例：</b></p>
 <pre><code>

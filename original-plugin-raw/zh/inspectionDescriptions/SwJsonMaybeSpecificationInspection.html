@@ -11,8 +11,8 @@
   第二个引用自第一个，因此建议将其视为一个规范。
 </p>
 
-<p><b>主规范文件 `openapi.yaml`：</b></p>
-<pre><code>
+<p><b>主规范文件 <code>openapi.yaml</code>：</b></p>
+<pre><code lang="yaml">
 openapi: 3.1.0
 components:
   schemas:
@@ -23,10 +23,10 @@ components:
           $ref: 'common.components.json#/components/schemas/CommonSchema'
 </code></pre>
 
-<p><b>规范文件候选项 `common.components.json`：</b></p>
-<pre><code>
+<p><b>规范文件候选项 <code>common.components.json</code>：</b></p>
+<pre><code lang="json">
 {
-  "components": { # 'Mark file as OpenAPI specification' highlighting
+  "components": { // 'Mark file as OpenAPI specification' highlighting
     "schemas": {
       "CommonSchema": {
         "description": "Common schema object reused in several specifications"

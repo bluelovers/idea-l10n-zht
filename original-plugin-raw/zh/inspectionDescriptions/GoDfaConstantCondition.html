@@ -1,15 +1,18 @@
 <html>
 <body>
-报告始终为 <code>true</code> 或 <code>false</code> 的条件</body>.
-<p>示例：</p>
-<pre><code>
+Reports conditions in code that always evaluate to <code>true</code> or <code>false</code>.
+  <p>示例：</p>
+  <pre><code>
 func _(file *os.File) {
- if file == nil {
-	return
- }
- // 条件始终为 false
- if file == nil {
- }
+    if file == nil {
+        return
+    }
+    if file == nil {
+    }
 }
-</code></pre>
+  </code></pre>
+<p>
+  In the given example, the second condition <code>if file == nil</code> is redundant. It will always evaluate to <code>false</code> as it repeats a check already performed in the code.
+</p>
+</body>
 </html>
