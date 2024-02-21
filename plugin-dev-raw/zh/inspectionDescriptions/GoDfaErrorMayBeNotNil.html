@@ -1,14 +1,17 @@
 <html>
 <body>
-報告不會被檢查是否不為 nil 的帶相應錯誤的變數的用法。 當變數和錯誤在類似 <code>v, err := foo()</code> 語句的中一起定義或賦值時，錯誤對應於一個變數。
+Reports instances where variables might have <code>nil</code> or an unexpected value because of the associated error that is not checked for
+being non-nil, as in <code>v, err := foo()</code>.
+<p>The quick-fix removes the function from the scope of this inspection.</p>
 <p>範例：</p>
 <pre><code>
 func _() {
- file, err := os.Open("file.txt")
- //'file' 可能具有 'nil' 或其他意外值，
- //因為其對應錯誤變數 'err' 可能不是 'nil'
- name := file.Name()
+    file, err := os.Open("file.txt")
+    // Error check is omitted here
+    name := file.Name()
+    print(name, err)
 }
 </code></pre>
+<p>In the example provided, <code>file</code> could be <code>nil</code> or have an unexpected value if <code>err</code> is not <code>nil</code>.</p>
 </body>
 </html>

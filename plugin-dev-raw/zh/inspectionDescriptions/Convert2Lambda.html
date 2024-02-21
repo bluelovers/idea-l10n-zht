@@ -19,7 +19,6 @@
 <p>
 請注意，如果將匿名類別轉換為無狀態 lambda，則 Java Runtime 可以在後續呼叫期間重用相同的 lambda 物件。 另一方面，當使用匿名類別時，每次都會建立單獨的物件。 因此，在極少數情況下，套用該快速修復可能會導致語意發生變化，例如，當匿名類別實例用作 <code>HashMap</code> 鍵時。
 </p>
-<p>Java 1.7 和更早版本的 JVM 不支持 lambda 語法。</p>
 <!-- tooltip end -->
 <p>
 使用<b>在接口未使用 @FunctionalInterface 註解時報告</b>選項可忽略匿名類別實作沒有 <code>@FunctionalInterface</code> 註解的接口的情況。

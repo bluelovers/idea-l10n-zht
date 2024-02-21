@@ -1,14 +1,16 @@
 <html>
 <body>
-報告可能包含 <code>nil</code> 的指針的取消參照。</body>
-
+Reports instances where pointers that might be <code>nil</code> are dereferenced.
 <p>範例：</p>
 <pre><code>
-func _(file *os.File) {
- //接收器 'file' 在呼叫中可能為 'nil'
- if file != nil || file.Name() != "" {
-  //code
- }
+type Person struct{ Name string }
+
+func _(person *Person) {
+	if person != nil || person.Name != "Peter" {
+	}
 }
 </code></pre>
+<p>In the provided example, <code>person</code> is a pointer to a <code>Person</code> struct, but it is <code>nil</code> as it is not assigned any value.
+  Attempting to dereference <code>person</code> to access <code>Name</code> without checking if <code>person</code> is <code>nil</code> results in a runtime error.</p>
+</body>
 </html>

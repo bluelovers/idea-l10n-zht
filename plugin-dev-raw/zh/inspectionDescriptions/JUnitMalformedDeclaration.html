@@ -37,13 +37,17 @@
 
 請注意，在 Kotlin 中，掛起函式確實有實參和非 void 返回值類型。 因此，它們也不會由 JUnit 測試執行程序執行。 此檢查也將報告這一問題。
 
-<p><b>格式錯誤的 <code>@Before</code> 方法範例 (Java)：</b></p>
-<pre><code>@Before private int foo(int arg) { ... } </code></pre>
+<p><b>格式錯誤的 <code>@Before</code> 方法範例：</b></p>
+<pre><code lang="java">
+  @Before private int foo(int arg) { }
+</code></pre>
 <p>在套用快速修復後：</p>
-<pre><code>@Before public void foo() { ... } </code></pre>
+<pre><code lang="java">
+  @Before public void foo() { }
+</code></pre>
 
 <p><b>缺少方法原始碼範例 (Kotlin)：</b></p>
-<pre><code>
+<pre><code lang="kotlin">
   class Example {
     @MethodSource("parameters")
     @ParameterizedTest
@@ -51,7 +55,7 @@
   }
 </code></pre>
 <p>在套用快速修復後：</p>
-<pre><code>
+<pre><code lang="kotlin">
   class Example {
     @MethodSource("parameters")
     @ParameterizedTest

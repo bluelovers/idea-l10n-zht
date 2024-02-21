@@ -1,0 +1,35 @@
+<html>
+<body>
+Reports fragments of Java code which are identical to the existing static methods
+suggesting to reuse these static methods. Reusing existing methods makes code
+shorter and more readable.
+<!-- tooltip end -->
+<p>範例：</p>
+<pre><code lang="java">
+  static List&lt;String&gt; readFileAndTrim(Path path) throws IOException {
+    List&lt;String&gt; lines = Files.readAllLines(path);
+    return lines.stream().map(String::trim).toList();
+  }
+  
+  static List&lt;String&gt; readFileAndTrim(String path) throws IOException {
+    Path p = Path.of(path);
+    List&lt;String&gt; lines = Files.readAllLines(p);
+    return lines.stream().map(String::trim).toList();
+  }
+</code></pre>
+Here, the second method is quite similar to the first one, and the first one can be reused in its implementation.
+套用快速修復後，結果如下所示：
+<pre><code lang="java">
+  static List&lt;String&gt; readFileAndTrim(Path path) throws IOException {
+    List&lt;String&gt; lines = Files.readAllLines(path);
+    return lines.stream().map(String::trim).toList();
+  }
+
+  static List&lt;String&gt; readFileAndTrim(String path) throws IOException {
+    Path p = Path.of(path);
+    return readFileAndTrim(p);
+  }
+</code></pre>
+<p><small>2024.1 最新變化</small></p>
+</body>
+</html>

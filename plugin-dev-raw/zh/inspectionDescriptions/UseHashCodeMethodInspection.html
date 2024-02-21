@@ -1,18 +1,15 @@
 <html>
 <body>
-<p>
-通知您什麼時候可以用 <code>Long.hashCode</code> 或 <code>Double.hashCode()</code> 方法取代按位動作。
-  它會檢測模式 <code>(int)(x ^ (x >>> 32))</code> 的實例，其中 <code>x</code> 是類型為 <code>long</code> 的變數，或者是前一個 <code>Double.doubleToLongBits()</code> 呼叫的結果。 此取代可以縮短程式碼，提高程式碼的可讀性。
-</p>
-<p>
-  範例：
-</p>
+Reports bitwise operations that can be replaced with a call to the <code>Long.hashCode()</code> or <code>Double.hashCode()</code> methods.
+It detects the construct <code>(int)(x ^ (x >>> 32))</code> where <code>x</code> is a variable of type <code>long</code> or
+the result of a previous <code>Double.doubleToLongBits()</code> call. The replacement shortens the code, improving its readability.
+<p><b>範例：</b></p>
 <pre><code>
-int result = (int)(var ^ (var >>> 32));
+  int result = (int)(var ^ (var >>> 32));
 </code></pre>
-套用快速修復後：
+<p>套用快速修復後：</p>
 <pre><code>
-int result = Long.hashCode(var);
+  int result = Long.hashCode(var);
 </code></pre>
 <!-- tooltip end -->
 <p>僅當專案或模組的語言級別為 8 或更高時，此檢查才會報告。

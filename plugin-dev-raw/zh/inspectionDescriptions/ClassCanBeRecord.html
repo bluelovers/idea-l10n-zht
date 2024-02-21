@@ -1,17 +1,18 @@
 <html>
 <body>
-建議用記錄取代類別。
-<p>當您需要專注於建模不可變資料而不是可擴展行為時，檢查會很有用。
-  資料驅動方法的自動實作，例如 equals 和存取器，有助於消除樣板。</p>
+Reports classes that can be converted record classes.
+<p>Record classes focus on modeling immutable data rather than extensible behavior.
+Automatic implicit implementation of data-driven methods, such as <code>equals()</code> and accessors, helps to reduce boilerplate code.</p>
 <p>
-  請注意，不是每個類別都可以成為記錄。 以下是一些限制：
+  Note that not every class can be a record class. 以下是一些限制：
 </p>
 <ul>
-  <li>類別不能包含繼承者，並且必須是一個頂級類別。</li>
-  <li>類別中的所有非 static 欄位必須為 final。</li>
-  <li>不允許類別包含實例初始設定式、泛型建構函式或原生方法。</li>
+  <li>The class must be a top-level class and must have no subclasses.</li>
+  <li>All non-static fields in the class must be final.</li>
+  <li>Initializers, generic constructors, and native methods must not be present.</li>
 </ul>
-<p>要獲取完整的限制列表，請參閱 <a href="https://docs.oracle.com/javase/specs/jls/se15/preview/specs/records-jls.html">Oracle 文檔</a>。</p>
+<p>For a full description of record classes, refer to the
+  <a href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10">Java Language Specification</a>.</p>
 <!-- tooltip end -->
 <p>範例：</p>
 <pre><code>
@@ -38,17 +39,16 @@
   record Point(int x, int y) {
   }
 </code></pre>
-<p>啟用<b>建議重新命名 get/is 存取器</b>選項以允許將 <code>getX()</code>/<code>isX()</code> 存取器自動重命名為 <code>x()</code>。</p>
+<p>Enable the <b>Suggest renaming accessor methods</b> option to rename <code>getX()</code>/<code>isX()</code> accessors to <code>x()</code> automatically.</p>
 <p>
-  使用<b>當轉換使成員更易於存取時</b>選項可指定轉換是否可以違反類別封裝：
+  Use the <b>If members become more accessible</b> option to specify what to do when conversion will make members more accessible:
 <ul>
-  <li>選擇<b>不建議轉換</b>選項則從不違反類別封裝</li>
-  <li>選擇<b>在衝突檢視中顯示受影響的成員</b>選項則套用轉換並通知有關封裝違規的問題</li>
-  <li>選擇<b>無提示轉換</b>選項則無論是否存在封裝違規問題，均可無提示套用轉換</li>
+  <li>Choose <b>Do not suggest conversion</b> option to not convert when members would become more accessible.</li>
+  <li>Choose <b>Show conflicts view</b> option to show the affected members and ask to continue. In batch mode conversion will not be suggested.</li>
+  <li>Choose <b>Convert silently</b> option to increase accessibility silently when needed.</li>
 </ul>
 <p>使用<b>禁止轉換有以下註解的類別</b>列表可在要轉換的類別中排除其註解符合指定模式的類別。
 </p>
-<p>僅當專案或模組的語言級別為 16 或更高時，此檢查才會報告。</p>
 <p><small>2020.3 最新變化</small></p>
 </body>
 </html>

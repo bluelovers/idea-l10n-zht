@@ -1,9 +1,9 @@
 <html>
 <body>
-報告用類別名限定的 static 成員的用法。
+Reports usages of static members unnecessarily qualified with the class name.
 <p>
-  此類別限定不必要，並且可以安全移除。
-</p>
+Qualification with the class is unnecessary when the static member is available in a surrounding class
+or in a super class of a surrounding class. Such qualification may be safely removed.
 <p><b>範例：</b></p>
 <pre><code>
   class Foo {

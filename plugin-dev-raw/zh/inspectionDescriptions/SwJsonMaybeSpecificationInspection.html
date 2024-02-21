@@ -11,8 +11,8 @@
   第二個參照自第一個，因此建議將其視為一個規範。
 </p>
 
-<p><b>主規範檔案 `openapi.yaml`：</b></p>
-<pre><code>
+<p><b>主規範檔案 <code>openapi.yaml</code>：</b></p>
+<pre><code lang="yaml">
 openapi: 3.1.0
 components:
   schemas:
@@ -23,10 +23,10 @@ components:
           $ref: 'common.components.json#/components/schemas/CommonSchema'
 </code></pre>
 
-<p><b>規範檔案候選項 `common.components.json`：</b></p>
-<pre><code>
+<p><b>規範檔案候選項 <code>common.components.json</code>：</b></p>
+<pre><code lang="json">
 {
-  "components": { # 'Mark file as OpenAPI specification' highlighting
+  "components": { // 'Mark file as OpenAPI specification' highlighting
     "schemas": {
       "CommonSchema": {
         "description": "Common schema object reused in several specifications"

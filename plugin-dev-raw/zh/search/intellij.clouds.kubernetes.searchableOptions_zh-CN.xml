@@ -1,6 +1,30 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
+    <option name="add" path="ActionManager" hit="Add Contexts" />
+    <option name="contexts" path="ActionManager" hit="Add Contexts" />
+    <option name="add" path="ActionManager" hit="Add New Context…" />
+    <option name="context" path="ActionManager" hit="Add New Context…" />
+    <option name="new" path="ActionManager" hit="Add New Context…" />
+    <option name="attach" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
+    <option name="content" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
+    <option name="contexts" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
+    <option name="from" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
+    <option name="kubeconfig" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
+    <option name="kubernetes" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
+    <option name="attach" path="ActionManager" hit="Attach New Context From File…" />
+    <option name="context" path="ActionManager" hit="Attach New Context From File…" />
+    <option name="file" path="ActionManager" hit="Attach New Context From File…" />
+    <option name="from" path="ActionManager" hit="Attach New Context From File…" />
+    <option name="new" path="ActionManager" hit="Attach New Context From File…" />
+    <option name="creates" path="ActionManager" hit="Creates Telepresence interception" />
+    <option name="interception" path="ActionManager" hit="Creates Telepresence interception" />
+    <option name="telepresence" path="ActionManager" hit="Creates Telepresence interception" />
+    <option name="automatic" path="ActionManager" hit="Enable / Disable automatic watch starting" />
+    <option name="disable" path="ActionManager" hit="Enable / Disable automatic watch starting" />
+    <option name="enable" path="ActionManager" hit="Enable / Disable automatic watch starting" />
+    <option name="starting" path="ActionManager" hit="Enable / Disable automatic watch starting" />
+    <option name="watch" path="ActionManager" hit="Enable / Disable automatic watch starting" />
     <option name="helm" path="ActionManager" hit="Helm Lint" />
     <option name="lint" path="ActionManager" hit="Helm Lint" />
     <option name="helm" path="ActionManager" hit="Helm 相依項" />
@@ -11,8 +35,16 @@
     <option name="圖表" path="ActionManager" hit="Helm 圖表" />
     <option name="helm" path="ActionManager" hit="Helm 模板" />
     <option name="模板" path="ActionManager" hit="Helm 模板" />
+    <option name="kubernetes" path="ActionManager" hit="Kubernetes" />
     <option name="kubernetes" path="ActionManager" hit="Kubernetes 資源" />
     <option name="資源" path="ActionManager" hit="Kubernetes 資源" />
+    <option name="content" path="ActionManager" hit="Paste kubeconfig Content…" />
+    <option name="kubeconfig" path="ActionManager" hit="Paste kubeconfig Content…" />
+    <option name="paste" path="ActionManager" hit="Paste kubeconfig Content…" />
+    <option name="automatically" path="ActionManager" hit="Reload Cluster Resources Automatically" />
+    <option name="cluster" path="ActionManager" hit="Reload Cluster Resources Automatically" />
+    <option name="reload" path="ActionManager" hit="Reload Cluster Resources Automatically" />
+    <option name="resources" path="ActionManager" hit="Reload Cluster Resources Automatically" />
     <option name="shell" path="ActionManager" hit="Shell 執行位置…" />
     <option name="執行位置" path="ActionManager" hit="Shell 執行位置…" />
     <option name="kubectl" path="ActionManager" hit="下載並安裝最新的穩定版 kubectl" />
@@ -23,7 +55,6 @@
     <option name="kubernetes" path="ActionManager" hit="從檔案附加新的 Kubernetes 上下文" />
     <option name="上下文" path="ActionManager" hit="從檔案附加新的 Kubernetes 上下文" />
     <option name="從檔案附加新的" path="ActionManager" hit="從檔案附加新的 Kubernetes 上下文" />
-    <option name="從檔案附加新的上下文" path="ActionManager" hit="從檔案附加新的上下文" />
     <option name="從集群中刪除檔案中定義的資源" path="ActionManager" hit="從集群中刪除檔案中定義的資源" />
     <option name="從集群刪除資源" path="ActionManager" hit="從集群刪除資源" />
     <option name="從集群重新整理資訊" path="ActionManager" hit="從集群重新整理資訊" />
@@ -99,7 +130,6 @@
     <option name="yaml" path="ActionManager" hit="檢視 YAML" />
     <option name="檢視" path="ActionManager" hit="檢視 YAML" />
     <option name="檢查圖表中可能存在的問題" path="ActionManager" hit="檢查圖表中可能存在的問題" />
-    <option name="新增新上下文" path="ActionManager" hit="新增新上下文" />
     <option name="kubernetes" path="ActionManager" hit="新增新的 Kubernetes 上下文" />
     <option name="上下文" path="ActionManager" hit="新增新的 Kubernetes 上下文" />
     <option name="新增新的" path="ActionManager" hit="新增新的 Kubernetes 上下文" />
@@ -207,6 +237,7 @@
     <option name="shell" hit="在容器中執行 shell 的指令 " />
     <option name="在容器中執行" hit="在容器中執行 shell 的指令 " />
     <option name="的指令" hit="在容器中執行 shell 的指令 " />
+    <option name="安裝" hit="安裝" />
     <option name="將時間戳附加到日誌檔名" hit="將時間戳附加到日誌檔名" />
     <option name="全域設定" hit="工具位置 全域設定 " />
     <option name="工具位置" hit="工具位置 全域設定 " />
