@@ -33,12 +33,6 @@ exports[`cache original properties files messages/CloudConfigBundle.properties 1
 }
 `;
 
-exports[`cache original properties files messages/CocoaCommonBundle.properties 1`] = `
-{
-  "device.reportMessage": "请尝试从设备上卸载应用程序，然后重试。\\n如果无效，请向我们的跟踪器 (https://youtrack.jetbrains.com/issues/OC) 报告问题",
-}
-`;
-
 exports[`cache original properties files messages/FlexBundle.properties 1`] = `
 {
   "uninstall.air.runtime.title": "卸载 AIR 运行时",
@@ -72,9 +66,9 @@ exports[`cache original properties files messages/IdeBundle.properties 1`] = `
   "packages.successfully.uninstalled": "已成功卸载软件包",
   "plugins.configurable.uninstall": "卸载",
   "plugins.configurable.uninstalled": "已卸载",
-  "prompt.uninstall.plugin": "确定要卸载插件 ''{0}'' 吗?",
+  "prompt.uninstall.plugin": "Are you sure you want to uninstall the plugin ''{0}''{1, choice, 0#|1# update}?",
   "prompt.uninstall.several.plugins": "确定要卸载这 {0} 个插件吗?",
-  "title.plugin.uninstall": "卸载插件",
+  "title.plugin.uninstall": "Uninstall Plugin{0, choice, 0#|1# Update}?",
   "uninstall.packages.failed": "无法卸载软件包。<a href="xxx">详细信息…</a>",
   "uninstall.packages.failed.dialog.title": "卸载软件包失败",
 }
