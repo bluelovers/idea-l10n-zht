@@ -3,11 +3,11 @@
 報告禁止檢查的註釋或註解。
 <p>當有意保留禁止以供進一步檢查時，此檢查可能有用。</p>
 <p><b>範例：</b></p>
-<pre><code>
-    @SuppressWarnings("unused")
-    static Stream&lt;String&gt; stringProvider() {
-        return Stream.of("foo", "bar");
-    }
+<pre><code lang="Java">
+@SuppressWarnings("unused")
+static Stream&lt;String&gt; stringProvider() {
+    return Stream.of("foo", "bar");
+}
 </code></pre>
 <!-- tooltip end -->
 </body>

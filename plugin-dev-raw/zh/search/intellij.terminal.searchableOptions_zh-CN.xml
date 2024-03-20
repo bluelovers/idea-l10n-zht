@@ -1,15 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="clear" path="ActionManager" hit="Clear Command Prompt" />
-    <option name="command" path="ActionManager" hit="Clear Command Prompt" />
-    <option name="prompt" path="ActionManager" hit="Clear Command Prompt" />
-    <option name="block" path="ActionManager" hit="Copy Block" />
-    <option name="copy" path="ActionManager" hit="Copy Block" />
-    <option name="command" path="ActionManager" hit="Search in Command History" />
-    <option name="history" path="ActionManager" hit="Search in Command History" />
-    <option name="in" path="ActionManager" hit="Search in Command History" />
-    <option name="search" path="ActionManager" hit="Search in Command History" />
     <option name="從剪貼簿貼上" path="ActionManager" hit="從剪貼簿貼上" />
     <option name="ide" path="ActionManager" hit="使用 IDE 偵錯醒目提示的指令" />
     <option name="使用" path="ActionManager" hit="使用 IDE 偵錯醒目提示的指令" />
@@ -31,21 +22,22 @@
     <option name="向下拆分" path="ActionManager" hit="向下拆分" />
     <option name="向右拆分" path="ActionManager" hit="向右拆分" />
     <option name="指令補全" path="ActionManager" hit="指令補全" />
+    <option name="在上方展開塊選區" path="ActionManager" hit="在上方展開塊選區" />
+    <option name="在下方展開塊選區" path="ActionManager" hit="在下方展開塊選區" />
+    <option name="在指令歷史記錄中搜尋" path="ActionManager" hit="在指令歷史記錄中搜尋" />
     <option name="在終端中開啟" path="ActionManager" hit="在終端中開啟" />
     <option name="在終端中開啟當前檔案位置" path="ActionManager" hit="在終端中開啟當前檔案位置" />
     <option name="複製" path="ActionManager" hit="複製" />
+    <option name="複製塊" path="ActionManager" hit="複製塊" />
     <option name="如果提示為空則關閉會話" path="ActionManager" hit="如果提示為空則關閉會話" />
     <option name="將所選文本複製到剪貼簿" path="ActionManager" hit="將所選文本複製到剪貼簿" />
-    <option name="將文字游標移至行尾" path="ActionManager" hit="將文字游標移至行尾" />
-    <option name="將文字游標移至行首" path="ActionManager" hit="將文字游標移至行首" />
     <option name="將焦點切換到編輯器" path="ActionManager" hit="將焦點切換到編輯器" />
-    <option name="展開上面的塊選區" path="ActionManager" hit="展開上面的塊選區" />
-    <option name="展開下面的塊選區" path="ActionManager" hit="展開下面的塊選區" />
     <option name="左移頁籤" path="ActionManager" hit="左移頁籤" />
     <option name="插入內聯補全條目" path="ActionManager" hit="插入內聯補全條目" />
     <option name="新增預定義會話" path="ActionManager" hit="新增預定義會話" />
     <option name="顯示文檔" path="ActionManager" hit="顯示文檔" />
     <option name="尋找" path="ActionManager" hit="尋找" />
+    <option name="清除指令提示符" path="ActionManager" hit="清除指令提示符" />
     <option name="清除終端" path="ActionManager" hit="清除終端" />
     <option name="移至編輯器" path="ActionManager" hit="移至編輯器" />
     <option name="貼上" path="ActionManager" hit="貼上" />
@@ -62,18 +54,15 @@
     <option name="預設使用" path="ActionManager" hit="預設使用 Alt 鍵" />
   </configurable>
   <configurable id="terminal" configurable_name="終端">
-    <option name="default" hit="Default tab name " />
-    <option name="name" hit="Default tab name " />
-    <option name="tab" hit="Default tab name " />
-    <option name="enable" hit="Enable new terminal" />
-    <option name="new" hit="Enable new terminal" />
-    <option name="terminal" hit="Enable new terminal" />
     <option name="s" hit="Shell 路徑 S  " />
     <option name="shell" hit="Shell 路徑 S  " />
     <option name="路徑" hit="Shell 路徑 S  " />
     <option name="shell" hit="Shell 整合" />
     <option name="整合" hit="Shell 整合" />
     <option name="下劃線" hit="下劃線" />
+    <option name="ide" hit="使用 IDE 執行指令" />
+    <option name="使用" hit="使用 IDE 執行指令" />
+    <option name="執行指令" hit="使用 IDE 執行指令" />
     <option name="meta" hit="使用 Option 作為 Meta 鍵" />
     <option name="option" hit="使用 Option 作為 Meta 鍵" />
     <option name="作為" hit="使用 Option 作為 Meta 鍵" />
@@ -83,6 +72,7 @@
     <option name="可聽鈴聲" hit="可聽鈴聲" />
     <option name="d" hit="啟動目錄 D  " />
     <option name="啟動目錄" hit="啟動目錄 D  " />
+    <option name="啟用新終端" hit="啟用新終端" />
     <option name="塊" hit="塊" />
     <option name="垂直線" hit="垂直線" />
     <option name="應用程式設定" hit="應用程式設定" />
@@ -98,6 +88,8 @@
     <option name="組態終端鍵綁定" hit="組態終端鍵綁定" />
     <option name="專案設定" hit="專案設定" />
     <option name="醒目提示超鏈接" hit="醒目提示超鏈接" />
+    <option name="t" hit="預設頁籤名稱 T  " />
+    <option name="預設頁籤名稱" hit="預設頁籤名稱 T  " />
     <option name="滑鼠報告" hit="滑鼠報告" />
   </configurable>
 </options>

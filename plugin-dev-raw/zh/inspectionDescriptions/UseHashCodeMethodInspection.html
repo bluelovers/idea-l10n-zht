@@ -1,8 +1,7 @@
 <html>
 <body>
-Reports bitwise operations that can be replaced with a call to the <code>Long.hashCode()</code> or <code>Double.hashCode()</code> methods.
-It detects the construct <code>(int)(x ^ (x >>> 32))</code> where <code>x</code> is a variable of type <code>long</code> or
-the result of a previous <code>Double.doubleToLongBits()</code> call. The replacement shortens the code, improving its readability.
+報告可以取代為對 <code>Long.hashCode()</code> 或 <code>Double.hashCode()</code> 方法的呼叫的按位動作。
+它會檢測結構 <code>(int)(x ^ (x >>> 32))</code>，其中 <code>x</code> 是類型為 <code>long</code> 的變數，或者是前一個 <code>Double.doubleToLongBits()</code> 呼叫的結果。 此取代可以縮短程式碼，提高程式碼的可讀性。
 <p><b>範例：</b></p>
 <pre><code>
   int result = (int)(var ^ (var >>> 32));

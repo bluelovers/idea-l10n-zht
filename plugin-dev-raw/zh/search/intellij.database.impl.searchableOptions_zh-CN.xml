@@ -19,17 +19,12 @@
     <option name="raw" path="ActionManager" hit="Explain Plan (Raw)" />
     <option name="analyse" path="ActionManager" hit="Explain analyse" />
     <option name="explain" path="ActionManager" hit="Explain analyse" />
-    <option name="generate" path="ActionManager" hit="Generate UUID" />
-    <option name="uuid" path="ActionManager" hit="Generate UUID" />
     <option name="sql" path="ActionManager" hit="SQL 生成器…" />
     <option name="生成器" path="ActionManager" hit="SQL 生成器…" />
     <option name="sql" path="ActionManager" hit="SQL 腳本" />
     <option name="腳本" path="ActionManager" hit="SQL 腳本" />
     <option name="tx" path="ActionManager" hit="Tx 隔離" />
     <option name="隔離" path="ActionManager" hit="Tx 隔離" />
-    <option name="as" path="ActionManager" hit="View as Table" />
-    <option name="table" path="ActionManager" hit="View as Table" />
-    <option name="view" path="ActionManager" hit="View as Table" />
     <option name="上下文模板" path="ActionManager" hit="上下文模板" />
     <option name="為所選列新增單獨的索引" path="ActionManager" hit="為所選列新增單獨的索引" />
     <option name="為所選列新增新索引" path="ActionManager" hit="為所選列新增新索引" />
@@ -48,6 +43,7 @@
     <option name="從專案檔案匯入資料來源" path="ActionManager" hit="從專案檔案匯入資料來源" />
     <option name="以文本顯示模型物件" path="ActionManager" hit="以文本顯示模型物件" />
     <option name="會話" path="ActionManager" hit="會話" />
+    <option name="作為表檢視" path="ActionManager" hit="作為表檢視" />
     <option name="作為表編輯" path="ActionManager" hit="作為表編輯" />
     <option name="lob" path="ActionManager" hit="儲存 LOB…" />
     <option name="儲存" path="ActionManager" hit="儲存 LOB…" />
@@ -69,8 +65,10 @@
     <option name="準備內省器診斷" path="ActionManager" hit="準備內省器診斷" />
     <option name="p" path="ActionManager" hit="準備內省診斷資訊(_P)" />
     <option name="準備內省診斷資訊" path="ActionManager" hit="準備內省診斷資訊(_P)" />
+    <option name="切換會話" path="ActionManager" hit="切換會話" />
     <option name="切換結果位置" path="ActionManager" hit="切換結果位置" />
     <option name="切換附加的會話" path="ActionManager" hit="切換附加的會話" />
+    <option name="切換附加的資料來源" path="ActionManager" hit="切換附加的資料來源" />
     <option name="c" path="ActionManager" hit="列(C) (舊 UI)" />
     <option name="ui" path="ActionManager" hit="列(C) (舊 UI)" />
     <option name="列" path="ActionManager" hit="列(C) (舊 UI)" />
@@ -228,6 +226,8 @@
     <option name="清除所有快取的資料庫架構" path="ActionManager" hit="清除所有快取的資料庫架構" />
     <option name="清除映射" path="ActionManager" hit="清除映射" />
     <option name="清除快取的架構並從頭重新整理" path="ActionManager" hit="清除快取的架構並從頭重新整理" />
+    <option name="uuid" path="ActionManager" hit="生成 UUID" />
+    <option name="生成" path="ActionManager" hit="生成 UUID" />
     <option name="停用所選物件" path="ActionManager" hit="停用所選物件" />
     <option name="停用觸發器" path="ActionManager" hit="停用觸發器/約束" />
     <option name="約束" path="ActionManager" hit="停用觸發器/約束" />
@@ -333,7 +333,7 @@
     <option name="重新編譯" path="ActionManager" hit="重新編譯…" />
     <option name="重新編譯所選物件" path="ActionManager" hit="重新編譯所選物件" />
     <option name="鏈接的資料來源" path="ActionManager" hit="鏈接的資料來源" />
-    <option name="附加會話" path="ActionManager" hit="附加會話" />
+    <option name="附加資料來源" path="ActionManager" hit="附加資料來源" />
     <option name="隱藏地理位置檢視器" path="ActionManager" hit="隱藏地理位置檢視器" />
     <option name="隱藏資料庫和架構" path="ActionManager" hit="隱藏資料庫和架構" />
     <option name="隱藏架構" path="ActionManager" hit="隱藏架構" />
@@ -477,6 +477,8 @@
     <option name="降序" hit="降序" />
     <option name="限制" hit="限制" />
     <option name="預覽中的資料行" hit="預覽中的資料行" />
+    <option name="預設啟用本地篩選器" hit="預設啟用本地篩選器" />
+    <option name="預設在編輯器內結果中啟用分頁" hit="預設在編輯器內結果中啟用分頁" />
   </configurable>
   <configurable id="database.other" configurable_name="其他">
     <option name="ddl" hit="DDL 映射" />

@@ -1,8 +1,6 @@
 <html>
 <body>
-Reports fragments of Java code which are identical to the existing static methods
-suggesting to reuse these static methods. Reusing existing methods makes code
-shorter and more readable.
+報告與現有 static 方法相同的 Java 程式碼段，建議重用這些 static 方法。 重用現有方法可以使程式碼更短、更具可讀性。
 <!-- tooltip end -->
 <p>範例：</p>
 <pre><code lang="java">
@@ -17,7 +15,7 @@ shorter and more readable.
     return lines.stream().map(String::trim).toList();
   }
 </code></pre>
-Here, the second method is quite similar to the first one, and the first one can be reused in its implementation.
+這裡，第二個方法與第一個方法非常相似，第一個方法可以在其實現中重用。
 套用快速修復後，結果如下所示：
 <pre><code lang="java">
   static List&lt;String&gt; readFileAndTrim(Path path) throws IOException {

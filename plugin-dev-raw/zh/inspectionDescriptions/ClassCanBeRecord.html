@@ -1,18 +1,18 @@
 <html>
 <body>
-Reports classes that can be converted record classes.
-<p>Record classes focus on modeling immutable data rather than extensible behavior.
-Automatic implicit implementation of data-driven methods, such as <code>equals()</code> and accessors, helps to reduce boilerplate code.</p>
+報告可以轉換為記錄類別的類別。
+<p>記錄類別側重於對不可變數據進行建模，而不是對可擴展行為進行建模。
+資料驅動方法的自動隱式實作（例如 <code>equals()</code> 和存取器）有助於減少樣板程式碼。</p>
 <p>
-  Note that not every class can be a record class. 以下是一些限制：
+  請注意，不是每個類別都可以是記錄類別。 以下是一些限制：
 </p>
 <ul>
-  <li>The class must be a top-level class and must have no subclasses.</li>
-  <li>All non-static fields in the class must be final.</li>
-  <li>Initializers, generic constructors, and native methods must not be present.</li>
+  <li>該類必須是頂級類別，並且不能有子類別。</li>
+  <li>類別中的所有非 static 欄位必須為 final。</li>
+  <li>不能存在初始設定式、泛型建構函式和原生方法。</li>
 </ul>
-<p>For a full description of record classes, refer to the
-  <a href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10">Java Language Specification</a>.</p>
+<p>有關記錄類別的完整描述，請參閱 <
+  <a href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10">Java 語言規範</a>。</p>
 <!-- tooltip end -->
 <p>範例：</p>
 <pre><code>
@@ -39,13 +39,13 @@ Automatic implicit implementation of data-driven methods, such as <code>equals()
   record Point(int x, int y) {
   }
 </code></pre>
-<p>Enable the <b>Suggest renaming accessor methods</b> option to rename <code>getX()</code>/<code>isX()</code> accessors to <code>x()</code> automatically.</p>
+<p>啟用<b>建議重新命名存取器方法</b>選項可自動將 <code>getX()</code>/<code>isX()</code> 存取器重命名為 <code>x()</code>。</p>
 <p>
-  Use the <b>If members become more accessible</b> option to specify what to do when conversion will make members more accessible:
+  使用<b>如果成員變得更易於存取</b>選項可指定當轉換將使成員更易於存取時要執行的動作：
 <ul>
-  <li>Choose <b>Do not suggest conversion</b> option to not convert when members would become more accessible.</li>
-  <li>Choose <b>Show conflicts view</b> option to show the affected members and ask to continue. In batch mode conversion will not be suggested.</li>
-  <li>Choose <b>Convert silently</b> option to increase accessibility silently when needed.</li>
+  <li>選擇<b>不建議轉換</b>選項可在成員變得更易於存取時不進行轉換。</li>
+  <li>選擇<b>顯示衝突檢視</b>選項可顯示受影響的成員並要求繼續。 在批處理模式下，將不建議進行轉換。</li>
+  <li>選擇<b>靜默轉換</b>選項可在需要時以靜默方式提高可存取性。</li>
 </ul>
 <p>使用<b>禁止轉換有以下註解的類別</b>列表可在要轉換的類別中排除其註解符合指定模式的類別。
 </p>

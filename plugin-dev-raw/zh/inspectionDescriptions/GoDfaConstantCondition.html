@@ -1,6 +1,6 @@
 <html>
 <body>
-Reports conditions in code that always evaluate to <code>true</code> or <code>false</code>.
+報告程式碼中始終計算為 <code>true</code> 或 <code>false</code> 的條件。
   <p>範例：</p>
   <pre><code>
 func _(file *os.File) {
@@ -12,7 +12,7 @@ func _(file *os.File) {
 }
   </code></pre>
 <p>
-  In the given example, the second condition <code>if file == nil</code> is redundant. It will always evaluate to <code>false</code> as it repeats a check already performed in the code.
+  在給定的範例中，第二個條件 <code>if file == nil</code> 冗餘。 它將始終計算為 <code>false</code>，因為它重複程式碼中已經執行的檢查。
 </p>
 </body>
 </html>

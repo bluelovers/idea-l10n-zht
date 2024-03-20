@@ -1,6 +1,8 @@
 <html>
 <body>
 報告對延伸模組組態元素的未解析參照。
+
+<h4>擴展</h4>
 <p>
   使用未知 <code>id</code> 參照擴展程序可能在執行時導致錯誤。
 </p>
@@ -9,9 +11,21 @@
 <ul>
   <li>資源包 <code>advanced.setting.*</code> 鍵中的 <code>com.intellij.advancedSetting</code></li>
   <li><code>Experiments.isFeatureEnabled()/setFeatureEnabled()</code> 中的 <code>com.intellij.experimentalFeature</code></li>
-  <li><code>Notification</code> 建構函式和 <code>NotificationGroupManager.getNotificationGroup()</code> 中的 <code>com.intellij.notificationGroup</code></li>
+  <li><code>Notification</code> 建構函式和 <code>NotificationGroupManager.getNotificationGroup()</code> 中的 <code>com.intellij.notificationGroup</code>
+  </li>
   <li><code>Registry</code> 方法 <code>key</code> 參數中的 <code>com.intellij.registryKey</code></li>
   <li>資源包 <code>toolwindow.stripe.*</code> 鍵中的 <code>com.intellij.toolWindow</code></li>
 </ul>
+
+<h4>擴展點</h4>
+<p>
+  在 <code>plugin.xml</code> 中參照對應的 <code>&lt;extensionPoint></code> 宣告的擴展點名稱。
+<ul>
+  <li><code>com.intellij.openapi.extensions.ExtensionPointName</code> 建構函式和 <code>create()</code></li>
+  <li><code>com.intellij.openapi.extensions.ProjectExtensionPointName</code> 建構函式</li>
+  <li><code>com.intellij.openapi.util.KeyedExtensionCollector</code> 和繼承者建構函式</li>
+</ul>
+</p>
+
 </body>
 </html>

@@ -11,8 +11,6 @@
     <option name="方法" path="ActionManager" hit="AfterClass 方法" />
     <option name="beforeclass" path="ActionManager" hit="BeforeClass 方法" />
     <option name="方法" path="ActionManager" hit="BeforeClass 方法" />
-    <option name="generate" path="ActionManager" hit="Generate logger" />
-    <option name="logger" path="ActionManager" hit="Generate logger" />
     <option name="getter" path="ActionManager" hit="Getter" />
     <option name="getter" path="ActionManager" hit="Getter 和 Setter" />
     <option name="setter" path="ActionManager" hit="Getter 和 Setter" />
@@ -97,6 +95,7 @@
     <option name="生成" path="ActionManager" hit="生成 toString() 方法" />
     <option name="生成建構函式" path="ActionManager" hit="生成建構函式" />
     <option name="生成的原始碼根目錄" path="ActionManager" hit="生成的原始碼根目錄" />
+    <option name="生成記錄器" path="ActionManager" hit="生成記錄器" />
     <option name="軟體套件" path="ActionManager" hit="軟體套件" />
     <option name="javadoc" path="ActionManager" hit="執行 JavaDoc 工具" />
     <option name="工具" path="ActionManager" hit="執行 JavaDoc 工具" />
@@ -503,22 +502,8 @@
     <option name="" path="換行和大括號" hit="'while()' 語句" />
     <option name="while" path="換行和大括號" hit="'while()' 語句" />
     <option name="語句" path="換行和大括號" hit="'while()' 語句" />
-    <option name="annotations" path="換行和大括號" hit="Enum field annotations" />
-    <option name="enum" path="換行和大括號" hit="Enum field annotations" />
-    <option name="field" path="換行和大括號" hit="Enum field annotations" />
     <option name="lambda" path="空格" hit="Lambda 箭頭" />
     <option name="箭頭" path="空格" hit="Lambda 箭頭" />
-    <option name="line" path="換行和大括號" hit="Move ';' to the new line" />
-    <option name="move" path="換行和大括號" hit="Move ';' to the new line" />
-    <option name="new" path="換行和大括號" hit="Move ';' to the new line" />
-    <option name="the" path="換行和大括號" hit="Move ';' to the new line" />
-    <option name="to" path="換行和大括號" hit="Move ';' to the new line" />
-    <option name="body" path="換行和大括號" hit="New line when body is presented" />
-    <option name="is" path="換行和大括號" hit="New line when body is presented" />
-    <option name="line" path="換行和大括號" hit="New line when body is presented" />
-    <option name="new" path="換行和大括號" hit="New line when body is presented" />
-    <option name="presented" path="換行和大括號" hit="New line when body is presented" />
-    <option name="when" path="換行和大括號" hit="New line when body is presented" />
     <option name="throws" path="換行和大括號" hit="Throws 列表" />
     <option name="列表" path="換行和大括號" hit="Throws 列表" />
     <option name="extends" path="換行和大括號" hit="extends/implements/permits 關鍵字" />
@@ -630,6 +615,8 @@
     <option name="對齊拋出異常說明" path="JavaDoc" hit="對齊拋出異常說明" />
     <option name="將" path="換行和大括號" hit="將 ')' 置於新行中" />
     <option name="置於新行中" path="換行和大括號" hit="將 ')' 置於新行中" />
+    <option name="將" path="換行和大括號" hit="將 ';' 移動到新行" />
+    <option name="移動到新行" path="換行和大括號" hit="將 ';' 移動到新行" />
     <option name="throws" path="換行和大括號" hit="將 'throws' 對齊到方法開始" />
     <option name="對齊到方法開始" path="換行和大括號" hit="將 'throws' 對齊到方法開始" />
     <option name="將" path="換行和大括號" hit="將 'throws' 對齊到方法開始" />
@@ -661,9 +648,11 @@
     <option name="方法呼叫圓括號" path="空格" hit="方法呼叫圓括號" />
     <option name="方法呼叫實參" path="換行和大括號" hit="方法呼叫實參" />
     <option name="無效標籤" path="JavaDoc" hit="無效標籤" />
+    <option name="顯示正文時換行" path="換行和大括號" hit="顯示正文時換行" />
     <option name="建置器方法" path="換行和大括號" hit="建置器方法" />
     <option name="解構列表" path="空格" hit="解構列表" />
     <option name="解構模式" path="換行和大括號" hit="解構模式" />
+    <option name="枚舉欄位註解" path="換行和大括號" hit="枚舉欄位註解" />
     <option name="枚舉常數" path="換行和大括號" hit="枚舉常數" />
     <option name="周圍" path="空格" hit="註解值對中的 '=' 周圍" />
     <option name="註解值對中的" path="空格" hit="註解值對中的 '=' 周圍" />
@@ -773,12 +762,12 @@
     <option name="邊框" hit="邊框" />
     <option name="長度" hit="長度 " />
   </configurable>
-  <configurable id="jvm.logging" configurable_name="JVM Logging">
+  <configurable id="jvm.logging" configurable_name="JVM 日誌記錄">
     <option name="apache" hit="Apache Commons Logging" />
     <option name="commons" hit="Apache Commons Logging" />
     <option name="logging" hit="Apache Commons Logging" />
-    <option name="jvm" hit="JVM Logging" />
-    <option name="logging" hit="JVM Logging" />
+    <option name="jvm" hit="JVM 日誌記錄" />
+    <option name="日誌記錄" hit="JVM 日誌記錄" />
     <option name="java" hit="Java" />
     <option name="log4j" hit="Log j" />
     <option name="log4j2" hit="Log j " />
@@ -791,9 +780,11 @@
     <option name="lombok" hit="Lombok Log j" />
     <option name="log4j2" hit="Lombok Log j " />
     <option name="lombok" hit="Lombok Log j " />
-    <option name="lombok" hit="Lombok SLf j" />
-    <option name="slf4j" hit="Lombok SLf j" />
+    <option name="lombok" hit="Lombok Slf j" />
+    <option name="slf4j" hit="Lombok Slf j" />
     <option name="slf4j" hit="Slf j" />
-    <option name="unspecified" hit="Unspecified" />
+    <option name="name" hit="Variable name " />
+    <option name="variable" hit="Variable name " />
+    <option name="未指定" hit="未指定" />
   </configurable>
 </options>

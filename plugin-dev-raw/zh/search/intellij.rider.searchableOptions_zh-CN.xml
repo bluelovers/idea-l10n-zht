@@ -569,7 +569,7 @@
     <option name="控制流目標" path="ActionManager" hit="控制流目標" />
     <option name="摺疊到定義" path="ActionManager" hit="摺疊到定義" />
     <option name="檔案" path="ActionManager" hit="檔案" />
-    <option name="檔案結構" path="ActionManager" hit="檔案結構" />
+    <option name="檔案成員" path="ActionManager" hit="檔案成員" />
     <option name="新增" path="ActionManager" hit="新增…" />
     <option name="新增解決方案" path="ActionManager" hit="新增解決方案…" />
     <option name="新增解決方案目錄" path="ActionManager" hit="新增解決方案目錄…" />
@@ -650,8 +650,6 @@
     <option name="顯示完全限定類型名稱" path="ActionManager" hit="顯示完全限定類型名稱" />
     <option name="顯示工具包中的錯誤" path="ActionManager" hit="顯示工具包中的錯誤" />
     <option name="顯示差異" path="ActionManager" hit="顯示差異" />
-    <option name="以便快速導覽" path="ActionManager" hit="顯示帶有當前檔案結構的彈出視窗，以便快速導覽" />
-    <option name="顯示帶有當前檔案結構的彈出視窗" path="ActionManager" hit="顯示帶有當前檔案結構的彈出視窗，以便快速導覽" />
     <option name="顯示所有檔案" path="ActionManager" hit="顯示所有檔案" />
     <option name="目錄和隱藏的專案條目" path="ActionManager" hit="顯示所有檔案、目錄和隱藏的專案條目" />
     <option name="顯示所有檔案" path="ActionManager" hit="顯示所有檔案、目錄和隱藏的專案條目" />
@@ -860,6 +858,7 @@
     <option name="診斷參照" path="ActionManager" hit="診斷參照…" />
     <option name="偵錯單元測試" path="ActionManager" hit="偵錯單元測試" />
     <option name="偵錯後聚焦單元測試會話" path="ActionManager" hit="偵錯後聚焦單元測試會話" />
+    <option name="偵錯器" path="ActionManager" hit="偵錯器" />
     <option name="偵錯器強制步動作" path="ActionManager" hit="偵錯器強制步動作" />
     <option name="偵錯器動作" path="ActionManager" hit="偵錯器動作" />
     <option name="偵錯器步動作" path="ActionManager" hit="偵錯器步動作" />
@@ -967,6 +966,7 @@
     <option name="重新格式化" path="ActionManager" hit="重新格式化、執行清理檢查並套用快速修復" />
     <option name="重新格式化並清理" path="ActionManager" hit="重新格式化並清理…" />
     <option name="重新格式化檔案" path="ActionManager" hit="重新格式化檔案…" />
+    <option name="重新執行" path="ActionManager" hit="重新執行" />
     <option name="重新執行不確定的測試" path="ActionManager" hit="重新執行不確定的測試" />
     <option name="重新執行中止的測試" path="ActionManager" hit="重新執行中止的測試" />
     <option name="重新執行失效測試" path="ActionManager" hit="重新執行失效測試" />
@@ -1296,6 +1296,10 @@
     <option name="net" hit="ASP.NET Route Templates" />
     <option name="route" hit="ASP.NET Route Templates" />
     <option name="templates" hit="ASP.NET Route Templates" />
+    <option name="add" hit="Add ComponentData reference (DOTS)" />
+    <option name="componentdata" hit="Add ComponentData reference (DOTS)" />
+    <option name="dots" hit="Add ComponentData reference (DOTS)" />
+    <option name="reference" hit="Add ComponentData reference (DOTS)" />
     <option name="add" hit="Add braces" />
     <option name="braces" hit="Add braces" />
     <option name="add" hit="Add new argument to interpolation" />
@@ -1546,6 +1550,7 @@
     <option name="format" hit="Surround with format" />
     <option name="surround" hit="Surround with format" />
     <option name="with" hit="Surround with format" />
+    <option name="toimmutablefield" hit="ToImmutableField" />
     <option name="toliteral" hit="ToLiteral" />
     <option name="tomodulenamespace" hit="ToModuleNamespace" />
     <option name="tomultilinerecord" hit="ToMultilineRecord" />
@@ -1653,7 +1658,6 @@
     <option name="使用物件" hit="使用物件/集合初始設定式代替賦值/.Add() 方法呼叫" />
     <option name="方法呼叫" hit="使用物件/集合初始設定式代替賦值/.Add() 方法呼叫" />
     <option name="集合初始設定式代替賦值" hit="使用物件/集合初始設定式代替賦值/.Add() 方法呼叫" />
-    <option name="使用所選實參類型建立多載" hit="使用所選實參類型建立多載" />
     <option name="使用顯式棄元宣告" hit="使用顯式棄元宣告" />
     <option name="使用顯式或隱式元組組件名稱" hit="使用顯式或隱式元組組件名稱" />
     <option name="使用格式字串" hit="使用格式字串" />
@@ -3043,6 +3047,18 @@
     <option name="blazor" hit="Blazor WASM 偵錯 " />
     <option name="wasm" hit="Blazor WASM 偵錯 " />
     <option name="偵錯" hit="Blazor WASM 偵錯 " />
+    <option name="8" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="and" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="breakpoints" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="de-optimize" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="into" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="later" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="methods" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="net" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="on" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="step" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="windows" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
+    <option name="with" hit="De optimize methods on step into and methods with breakpoints  Windows   NET   and later " />
     <option name="enable" hit="Enable splash screen" />
     <option name="screen" hit="Enable splash screen" />
     <option name="splash" hit="Enable splash screen" />
@@ -3055,6 +3071,12 @@
     <option name="show" hit="Show elapsed time between debugger stops" />
     <option name="stops" hit="Show elapsed time between debugger stops" />
     <option name="time" hit="Show elapsed time between debugger stops" />
+    <option name="0" hit="Use  NET WASM Debugger    " />
+    <option name="2" hit="Use  NET WASM Debugger    " />
+    <option name="debugger" hit="Use  NET WASM Debugger    " />
+    <option name="net" hit="Use  NET WASM Debugger    " />
+    <option name="use" hit="Use  NET WASM Debugger    " />
+    <option name="wasm" hit="Use  NET WASM Debugger    " />
     <option name="為大陣列劃分聚類別" hit="為大陣列劃分聚類別" />
     <option name="值檢查" hit="值檢查 " />
     <option name="允許屬性求值和其他隱式函式呼叫" hit="允許屬性求值和其他隱式函式呼叫" />
@@ -3494,13 +3516,13 @@
     <option name="net" hit=" Automatically download  NET SDK if necessary" />
     <option name="sdk" hit=" Automatically download  NET SDK if necessary" />
     <option name="" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="02" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="04" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="09" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="19" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="03" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="12" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="1359" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="17" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="2024" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="44" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="8094" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="36" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="40" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="jetbrainslog" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="log" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
     <option name="msbuild" hit=" MSBuild 日誌檔案將寫入每個建置的指定目錄中  範例檔名  JetBrainsLog ReSharperBuild                          log" />
@@ -3584,12 +3606,12 @@
     <option name="全域屬性" hit="MSBuild 全域屬性 " />
     <option name="msbuild" hit="MSBuild 全域屬性:" />
     <option name="全域屬性" hit="MSBuild 全域屬性:" />
-    <option name="jetbrainslog" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202402190904448094.log" />
-    <option name="log" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202402190904448094.log" />
-    <option name="msbuild" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202402190904448094.log" />
-    <option name="resharperbuild202402190904448094" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202402190904448094.log" />
-    <option name="日誌檔案將寫入每個建置的指定目錄中" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202402190904448094.log" />
-    <option name="範例檔名" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202402190904448094.log" />
+    <option name="jetbrainslog" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
+    <option name="log" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
+    <option name="msbuild" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
+    <option name="resharperbuild202403171240361359" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
+    <option name="日誌檔案將寫入每個建置的指定目錄中" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
+    <option name="範例檔名" hit="MSBuild 日誌檔案將寫入每個建置的指定目錄中。&#10;範例檔名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
     <option name="msbuild" hit="MSBuild 版本 " />
     <option name="版本" hit="MSBuild 版本 " />
     <option name="msbuild" hit="MSBuild 版本:" />
@@ -4350,63 +4372,6 @@
     <option name="註釋" hit="註釋" />
   </configurable>
   <configurable id="FileHeaderTextPageId" configurable_name="檔案頭模板">
-    <option name="" path="File header text" hit="  CurrentDate Day " />
-    <option name="currentdate" path="File header text" hit="  CurrentDate Day " />
-    <option name="day" path="File header text" hit="  CurrentDate Day " />
-    <option name="" path="File header text" hit="  CurrentDate Hour " />
-    <option name="currentdate" path="File header text" hit="  CurrentDate Hour " />
-    <option name="hour" path="File header text" hit="  CurrentDate Hour " />
-    <option name="" path="File header text" hit="  CurrentDate Minute " />
-    <option name="currentdate" path="File header text" hit="  CurrentDate Minute " />
-    <option name="minute" path="File header text" hit="  CurrentDate Minute " />
-    <option name="" path="File header text" hit="  CurrentDate Month " />
-    <option name="currentdate" path="File header text" hit="  CurrentDate Month " />
-    <option name="month" path="File header text" hit="  CurrentDate Month " />
-    <option name="" path="File header text" hit="  CurrentDate Second " />
-    <option name="currentdate" path="File header text" hit="  CurrentDate Second " />
-    <option name="second" path="File header text" hit="  CurrentDate Second " />
-    <option name="" path="File header text" hit="  CurrentDate Year " />
-    <option name="currentdate" path="File header text" hit="  CurrentDate Year " />
-    <option name="year" path="File header text" hit="  CurrentDate Year " />
-    <option name="" path="File header text" hit="  File CreatedDay " />
-    <option name="createdday" path="File header text" hit="  File CreatedDay " />
-    <option name="file" path="File header text" hit="  File CreatedDay " />
-    <option name="" path="File header text" hit="  File CreatedHour " />
-    <option name="createdhour" path="File header text" hit="  File CreatedHour " />
-    <option name="file" path="File header text" hit="  File CreatedHour " />
-    <option name="" path="File header text" hit="  File CreatedMinute " />
-    <option name="createdminute" path="File header text" hit="  File CreatedMinute " />
-    <option name="file" path="File header text" hit="  File CreatedMinute " />
-    <option name="" path="File header text" hit="  File CreatedMonth " />
-    <option name="createdmonth" path="File header text" hit="  File CreatedMonth " />
-    <option name="file" path="File header text" hit="  File CreatedMonth " />
-    <option name="" path="File header text" hit="  File CreatedSecond " />
-    <option name="createdsecond" path="File header text" hit="  File CreatedSecond " />
-    <option name="file" path="File header text" hit="  File CreatedSecond " />
-    <option name="" path="File header text" hit="  File CreatedYear " />
-    <option name="createdyear" path="File header text" hit="  File CreatedYear " />
-    <option name="file" path="File header text" hit="  File CreatedYear " />
-    <option name="" path="File header text" hit="  File FileName " />
-    <option name="file" path="File header text" hit="  File FileName " />
-    <option name="filename" path="File header text" hit="  File FileName " />
-    <option name="" path="File header text" hit="  File FullPath " />
-    <option name="file" path="File header text" hit="  File FullPath " />
-    <option name="fullpath" path="File header text" hit="  File FullPath " />
-    <option name="" path="File header text" hit="  File ProjectName " />
-    <option name="file" path="File header text" hit="  File ProjectName " />
-    <option name="projectname" path="File header text" hit="  File ProjectName " />
-    <option name="" path="File header text" hit="  File SolutionName " />
-    <option name="file" path="File header text" hit="  File SolutionName " />
-    <option name="solutionname" path="File header text" hit="  File SolutionName " />
-    <option name="" path="File header text" hit="  OldHeader Text " />
-    <option name="oldheader" path="File header text" hit="  OldHeader Text " />
-    <option name="text" path="File header text" hit="  OldHeader Text " />
-    <option name="" path="File header text" hit="  User FullName " />
-    <option name="fullname" path="File header text" hit="  User FullName " />
-    <option name="user" path="File header text" hit="  User FullName " />
-    <option name="" path="File header text" hit="  User Name " />
-    <option name="name" path="File header text" hit="  User Name " />
-    <option name="user" path="File header text" hit="  User Name " />
     <option name="createdday" hit="CREATEDDAY" />
     <option name="createdmonth" hit="CREATEDMONTH" />
     <option name="createdtime" hit="CREATEDTIME" />
@@ -4415,7 +4380,6 @@
     <option name="currentmonth" hit="CURRENTMONTH" />
     <option name="currenttime" hit="CURRENTTIME" />
     <option name="currentyear" hit="CURRENTYEAR" />
-    <option name="currentdate" path="File header text" hit="CurrentDate" />
     <option name="currentdate" hit="CurrentDate.Day" />
     <option name="day" hit="CurrentDate.Day" />
     <option name="currentdate" hit="CurrentDate.Hour" />
@@ -4429,7 +4393,6 @@
     <option name="currentdate" hit="CurrentDate.Year" />
     <option name="year" hit="CurrentDate.Year" />
     <option name="filename" hit="FILENAME" />
-    <option name="file" path="File header text" hit="File" />
     <option name="detection" hit="File header start detection regex" />
     <option name="file" hit="File header start detection regex" />
     <option name="header" hit="File header start detection regex" />
@@ -4467,13 +4430,11 @@
     <option name="solution" hit="SOLUTION" />
     <option name="userlogin" hit="USERLOGIN" />
     <option name="username" hit="USERNAME" />
-    <option name="user" path="File header text" hit="User" />
     <option name="fullname" hit="User.FullName" />
     <option name="user" hit="User.FullName" />
     <option name="name" hit="User.Name" />
     <option name="user" hit="User.Name" />
     <option name="iddqd" hit="iddqd" />
-    <option name="將檔案頭放入以下名稱的區域" path="File header text" hit="將檔案頭放入以下名稱的區域 " />
     <option name="將檔案頭放入以下名稱的區域" hit="將檔案頭放入以下名稱的區域:" />
     <option name="檔案頭模板" hit="檔案頭模板" />
   </configurable>
@@ -8196,6 +8157,12 @@
     <option name="ienumerable" hit="IQueryable 可能被無意中用作 IEnumerable" />
     <option name="iqueryable" hit="IQueryable 可能被無意中用作 IEnumerable" />
     <option name="可能被無意中用作" hit="IQueryable 可能被無意中用作 IEnumerable" />
+    <option name="check" hit="Implicit check for Unity object lifetime" />
+    <option name="for" hit="Implicit check for Unity object lifetime" />
+    <option name="implicit" hit="Implicit check for Unity object lifetime" />
+    <option name="lifetime" hit="Implicit check for Unity object lifetime" />
+    <option name="object" hit="Implicit check for Unity object lifetime" />
+    <option name="unity" hit="Implicit check for Unity object lifetime" />
     <option name="attribute" hit="Incorrect Odin's group attribute type" />
     <option name="group" hit="Incorrect Odin's group attribute type" />
     <option name="incorrect" hit="Incorrect Odin's group attribute type" />
@@ -8351,6 +8318,15 @@
     <option name="override" hit="Multiple override candidates at run-time" />
     <option name="run-time" hit="Multiple override candidates at run-time" />
     <option name="nunit" hit="NUnit" />
+    <option name="attribute" hit="NUnit. Missing CancelAfter attribute on the test method declaration." />
+    <option name="cancelafter" hit="NUnit. Missing CancelAfter attribute on the test method declaration." />
+    <option name="declaration" hit="NUnit. Missing CancelAfter attribute on the test method declaration." />
+    <option name="method" hit="NUnit. Missing CancelAfter attribute on the test method declaration." />
+    <option name="missing" hit="NUnit. Missing CancelAfter attribute on the test method declaration." />
+    <option name="nunit" hit="NUnit. Missing CancelAfter attribute on the test method declaration." />
+    <option name="on" hit="NUnit. Missing CancelAfter attribute on the test method declaration." />
+    <option name="test" hit="NUnit. Missing CancelAfter attribute on the test method declaration." />
+    <option name="the" hit="NUnit. Missing CancelAfter attribute on the test method declaration." />
     <option name="autofixture" hit="NUnit.AutoFixture。InlineAutoData 特性中的實參冗餘。" />
     <option name="inlineautodata" hit="NUnit.AutoFixture。InlineAutoData 特性中的實參冗餘。" />
     <option name="nunit" hit="NUnit.AutoFixture。InlineAutoData 特性中的實參冗餘。" />
@@ -8380,12 +8356,6 @@
     <option name="to" hit="NUnit。不正確的範圍界限。'to' 必須大於或等於 'from'。" />
     <option name="不正確的範圍界限" hit="NUnit。不正確的範圍界限。'to' 必須大於或等於 'from'。" />
     <option name="必須大於或等於" hit="NUnit。不正確的範圍界限。'to' 必須大於或等於 'from'。" />
-    <option name="nunit" hit="NUnit。不能解析 TestCaseSource 或 ValueSource 特性中的符號。" />
-    <option name="testcasesource" hit="NUnit。不能解析 TestCaseSource 或 ValueSource 特性中的符號。" />
-    <option name="valuesource" hit="NUnit。不能解析 TestCaseSource 或 ValueSource 特性中的符號。" />
-    <option name="不能解析" hit="NUnit。不能解析 TestCaseSource 或 ValueSource 特性中的符號。" />
-    <option name="或" hit="NUnit。不能解析 TestCaseSource 或 ValueSource 特性中的符號。" />
-    <option name="特性中的符號" hit="NUnit。不能解析 TestCaseSource 或 ValueSource 特性中的符號。" />
     <option name="expectedresult" hit="NUnit。冗餘的實參，而不是 ExpectedResult。" />
     <option name="nunit" hit="NUnit。冗餘的實參，而不是 ExpectedResult。" />
     <option name="冗餘的實參" hit="NUnit。冗餘的實參，而不是 ExpectedResult。" />
@@ -8467,6 +8437,38 @@
     <option name="uninitialized" hit="Non-nullable member is uninitialized." />
     <option name="accessibility" hit="Non-private accessibility" />
     <option name="non-private" hit="Non-private accessibility" />
+    <option name="a" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="bypasses" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="check" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="coalescing" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="deriving" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="engine" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="from" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="lifetime" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="null" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="object" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="on" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="the" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="type" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="underlying" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="unity" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="unityengine" hit="Null coalescing on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="a" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="bypasses" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="check" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="deriving" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="engine" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="from" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="lifetime" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="null" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="object" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="on" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="propagating" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="the" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="type" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="underlying" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="unity" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="unityengine" hit="Null propagating on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
     <option name="constraints" hit="Nullability mismatch in constraints for type parameter." />
     <option name="for" hit="Nullability mismatch in constraints for type parameter." />
     <option name="in" hit="Nullability mismatch in constraints for type parameter." />
@@ -8974,6 +8976,24 @@
     <option name="parameter" hit="Partial method declarations have inconsistent nullability for type parameter." />
     <option name="partial" hit="Partial method declarations have inconsistent nullability for type parameter." />
     <option name="type" hit="Partial method declarations have inconsistent nullability for type parameter." />
+    <option name="a" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="bypasses" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="check" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="checks" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="deriving" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="engine" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="from" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="lifetime" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="matching" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="null" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="object" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="on" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="pattern" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="the" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="type" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="underlying" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="unity" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
+    <option name="unityengine" hit="Pattern matching null checks on a type deriving from 'UnityEngine.Object' bypasses the lifetime check on the underlying Unity engine object" />
     <option name="collection" hit="Possible 'System.InvalidOperationException: Collection was modified'" />
     <option name="invalidoperationexception" hit="Possible 'System.InvalidOperationException: Collection was modified'" />
     <option name="modified" hit="Possible 'System.InvalidOperationException: Collection was modified'" />
@@ -9108,11 +9128,6 @@
     <option name="braces" hit="Remove redundant braces" />
     <option name="redundant" hit="Remove redundant braces" />
     <option name="remove" hit="Remove redundant braces" />
-    <option name="collection" hit="Replace with empty collection expression" />
-    <option name="empty" hit="Replace with empty collection expression" />
-    <option name="expression" hit="Replace with empty collection expression" />
-    <option name="replace" hit="Replace with empty collection expression" />
-    <option name="with" hit="Replace with empty collection expression" />
     <option name="annotated" hit="Return value must be disposed but the method or function is not annotated with [MustDisposeResource]" />
     <option name="be" hit="Return value must be disposed but the method or function is not annotated with [MustDisposeResource]" />
     <option name="but" hit="Return value must be disposed but the method or function is not annotated with [MustDisposeResource]" />
@@ -9250,6 +9265,16 @@
     <option name="in" hit="Syntax error in XML comment" />
     <option name="syntax" hit="Syntax error in XML comment" />
     <option name="xml" hit="Syntax error in XML comment" />
+    <option name="aspect" hit="SystemApi.Query&lt;...&gt; type parameters must be Aspect, RefRO, or RefRW" />
+    <option name="be" hit="SystemApi.Query&lt;...&gt; type parameters must be Aspect, RefRO, or RefRW" />
+    <option name="must" hit="SystemApi.Query&lt;...&gt; type parameters must be Aspect, RefRO, or RefRW" />
+    <option name="or" hit="SystemApi.Query&lt;...&gt; type parameters must be Aspect, RefRO, or RefRW" />
+    <option name="parameters" hit="SystemApi.Query&lt;...&gt; type parameters must be Aspect, RefRO, or RefRW" />
+    <option name="query" hit="SystemApi.Query&lt;...&gt; type parameters must be Aspect, RefRO, or RefRW" />
+    <option name="refro" hit="SystemApi.Query&lt;...&gt; type parameters must be Aspect, RefRO, or RefRW" />
+    <option name="refrw" hit="SystemApi.Query&lt;...&gt; type parameters must be Aspect, RefRO, or RefRW" />
+    <option name="systemapi" hit="SystemApi.Query&lt;...&gt; type parameters must be Aspect, RefRO, or RefRW" />
+    <option name="type" hit="SystemApi.Query&lt;...&gt; type parameters must be Aspect, RefRO, or RefRW" />
     <option name="address" hit="Taking address of marshal-by-reference class field" />
     <option name="class" hit="Taking address of marshal-by-reference class field" />
     <option name="field" hit="Taking address of marshal-by-reference class field" />
@@ -10735,20 +10760,6 @@
     <option name="在" hit="在 virtual 成員中建議不可以為 null 的返回值類型" />
     <option name="成員中建議不可以為" hit="在 virtual 成員中建議不可以為 null 的返回值類型" />
     <option name="的返回值類型" hit="在 virtual 成員中建議不可以為 null 的返回值類型" />
-    <option name="object" hit="在從 'UnityEngine.Object' 派生的類型上使用 '?.' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="unity" hit="在從 'UnityEngine.Object' 派生的類型上使用 '?.' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="unityengine" hit="在從 'UnityEngine.Object' 派生的類型上使用 '?.' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="會繞過對底層" hit="在從 'UnityEngine.Object' 派生的類型上使用 '?.' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="在從" hit="在從 'UnityEngine.Object' 派生的類型上使用 '?.' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="引擎物件的生存期檢查" hit="在從 'UnityEngine.Object' 派生的類型上使用 '?.' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="派生的類型上使用" hit="在從 'UnityEngine.Object' 派生的類型上使用 '?.' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="object" hit="在從 'UnityEngine.Object' 派生的類型上使用 '??' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="unity" hit="在從 'UnityEngine.Object' 派生的類型上使用 '??' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="unityengine" hit="在從 'UnityEngine.Object' 派生的類型上使用 '??' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="會繞過對底層" hit="在從 'UnityEngine.Object' 派生的類型上使用 '??' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="在從" hit="在從 'UnityEngine.Object' 派生的類型上使用 '??' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="引擎物件的生存期檢查" hit="在從 'UnityEngine.Object' 派生的類型上使用 '??' 會繞過對底層 Unity 引擎物件的生存期檢查" />
-    <option name="派生的類型上使用" hit="在從 'UnityEngine.Object' 派生的類型上使用 '??' 會繞過對底層 Unity 引擎物件的生存期檢查" />
     <option name="null" hit="在任何非 null 值之後使用 null 檢查模式而非類型檢查" />
     <option name="值之後使用" hit="在任何非 null 值之後使用 null 檢查模式而非類型檢查" />
     <option name="在任何非" hit="在任何非 null 值之後使用 null 檢查模式而非類型檢查" />
@@ -12451,6 +12462,12 @@
     <option name="redundant" hit="UpdateSourceTrigger=Default is redundant" />
     <option name="updatesourcetrigger" hit="UpdateSourceTrigger=Default is redundant" />
     <option name="xaml" hit="XAML" />
+    <option name="dynamic" hit="XAML dynamic resource of invalid type" />
+    <option name="invalid" hit="XAML dynamic resource of invalid type" />
+    <option name="of" hit="XAML dynamic resource of invalid type" />
+    <option name="resource" hit="XAML dynamic resource of invalid type" />
+    <option name="type" hit="XAML dynamic resource of invalid type" />
+    <option name="xaml" hit="XAML dynamic resource of invalid type" />
     <option name="invalid" hit="XAML resource of invalid type" />
     <option name="of" hit="XAML resource of invalid type" />
     <option name="resource" hit="XAML resource of invalid type" />

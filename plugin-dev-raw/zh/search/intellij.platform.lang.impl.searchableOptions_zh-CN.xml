@@ -6,12 +6,6 @@
     <option name="3" path="ActionManager" hit="3" />
     <option name="4" path="ActionManager" hit="4" />
     <option name="5" path="ActionManager" hit="5" />
-    <option name="close" path="ActionManager" hit="Close Preview" />
-    <option name="preview" path="ActionManager" hit="Close Preview" />
-    <option name="close" path="ActionManager" hit="Close search everywhere preview" />
-    <option name="everywhere" path="ActionManager" hit="Close search everywhere preview" />
-    <option name="preview" path="ActionManager" hit="Close search everywhere preview" />
-    <option name="search" path="ActionManager" hit="Close search everywhere preview" />
     <option name="emacs" path="ActionManager" hit="Emacs 頁籤" />
     <option name="頁籤" path="ActionManager" hit="Emacs 頁籤" />
     <option name="fold" path="ActionManager" hit="Fold Lines Like This" />
@@ -139,6 +133,8 @@
     <option name="全部摺疊" path="ActionManager" hit="全部摺疊" />
     <option name="使下一個動作呼叫開啟新的頁籤" path="ActionManager" hit="關閉當前頁籤中的所有更新，使下一個動作呼叫開啟新的頁籤" />
     <option name="關閉當前頁籤中的所有更新" path="ActionManager" hit="關閉當前頁籤中的所有更新，使下一個動作呼叫開啟新的頁籤" />
+    <option name="關閉隨處搜尋預覽" path="ActionManager" hit="關閉隨處搜尋預覽" />
+    <option name="關閉預覽" path="ActionManager" hit="關閉預覽" />
     <option name="內聯" path="ActionManager" hit="內聯…" />
     <option name="內聯所選方法或變數" path="ActionManager" hit="內聯所選方法或變數" />
     <option name="分析" path="ActionManager" hit="分析" />
@@ -534,6 +530,7 @@
     <option name="按最後修改時間對檔案進行排序" path="ActionManager" hit="按最後修改時間對檔案進行排序，從舊到新" />
     <option name="按檢查分組" path="ActionManager" hit="按檢查分組" />
     <option name="按類型和名稱對書籤進行排序" path="ActionManager" hit="按類型和名稱對書籤進行排序" />
+    <option name="按類型對服務分組" path="ActionManager" hit="按類型對服務分組" />
     <option name="按類型排序" path="ActionManager" hit="按類型排序" />
     <option name="排列規則" path="ActionManager" hit="排列規則" />
     <option name="提取委託" path="ActionManager" hit="提取委託" />
@@ -624,7 +621,6 @@
     <option name="更改簽名" path="ActionManager" hit="更改簽名…" />
     <option name="取代" path="ActionManager" hit="取代…" />
     <option name="最近的尋找用法" path="ActionManager" hit="最近的尋找用法" />
-    <option name="服務類型" path="ActionManager" hit="服務類型" />
     <option name="來自內容根的路徑" path="ActionManager" hit="來自內容根的路徑" />
     <option name="來自來源根的路徑" path="ActionManager" hit="來自來源根的路徑" />
     <option name="尋找" path="ActionManager" hit="尋找" />
@@ -683,8 +679,7 @@
     <option name="省電模式將停用背景程式碼分析和其他背景動作" path="ActionManager" hit="省電模式將停用背景程式碼分析和其他背景動作" />
     <option name="禁止" path="ActionManager" hit="禁止" />
     <option name="停用嵌入提示" path="ActionManager" hit="停用嵌入提示" />
-    <option name="的提示" path="ActionManager" hit="停用方法 '' 的提示" />
-    <option name="停用方法" path="ActionManager" hit="停用方法 '' 的提示" />
+    <option name="停用方法的提示" path="ActionManager" hit="停用方法的提示" />
     <option name="停用檢查" path="ActionManager" hit="停用檢查" />
     <option name="移動" path="ActionManager" hit="移動…" />
     <option name="m" path="ActionManager" hit="移動模組(_M)" />
@@ -885,7 +880,6 @@
     <option name="組態排列符合規則的別名" path="ActionManager" hit="組態排列符合規則的別名" />
     <option name="組態檔案嵌套" path="ActionManager" hit="組態檔案嵌套" />
     <option name="組態服務工具視窗" path="ActionManager" hit="組態服務工具視窗" />
-    <option name="組態狀態" path="ActionManager" hit="組態狀態" />
     <option name="組態自動換行" path="ActionManager" hit="組態自動換行" />
     <option name="組態裝訂區域圖標" path="ActionManager" hit="組態裝訂區域圖標…" />
     <option name="覆寫助記鍵之前詢問" path="ActionManager" hit="覆寫助記鍵之前詢問" />
@@ -1045,9 +1039,6 @@
     <option name="退格時取消縮排" hit="退格時取消縮排 " />
   </configurable>
   <configurable id="editor.preferences.appearance" configurable_name="外觀">
-    <option name="show" hit="Show up to" />
-    <option name="to" hit="Show up to" />
-    <option name="up" hit="Show up to" />
     <option name="使用全行高文本游標" hit="使用全行高文本游標" />
     <option name="使用塊文字游標" hit="使用塊文字游標" />
     <option name="內部" hit="內部" />
@@ -1076,7 +1067,9 @@
     <option name="顯示空格" hit="顯示空格" />
     <option name="顯示縮排參考線" hit="顯示縮排參考線" />
     <option name="顯示行號" hit="顯示行號 " />
+    <option name="最大行數" hit="最大行數" />
     <option name="渲染文檔註釋" hit="渲染文檔註釋" />
+    <option name="滾動時顯示粘性行" hit="滾動時顯示粘性行 " />
     <option name="要醒目提示的級別" hit="要醒目提示的級別 " />
     <option name="選區" hit="選區" />
     <option name="透明度" hit="透明度 " />
@@ -1178,12 +1171,14 @@
     <option name="預設折疊" hit="預設折疊 " />
   </configurable>
   <configurable id="editor.preferences.completion" configurable_name="程式碼補全">
-    <option name="accept" hit="Additional characters to accept completion " />
-    <option name="additional" hit="Additional characters to accept completion " />
-    <option name="characters" hit="Additional characters to accept completion " />
-    <option name="completion" hit="Additional characters to accept completion " />
-    <option name="to" hit="Additional characters to accept completion " />
-    <option name="css" hit="CSS" />
+    <option name="ask" hit="Ask before download" />
+    <option name="before" hit="Ask before download" />
+    <option name="download" hit="Ask before download" />
+    <option name="css-like" hit="CSS like" />
+    <option name="download" hit="Download Model" />
+    <option name="model" hit="Download Model" />
+    <option name="download" hit="Download models " />
+    <option name="models" hit="Download models " />
     <option name="html" hit="HTML" />
     <option name="join" hit="JOIN 子句 " />
     <option name="子句" hit="JOIN 子句 " />
@@ -1191,6 +1186,8 @@
     <option name="補全" hit="JOIN 補全" />
     <option name="java" hit="Java" />
     <option name="javascript" hit="JavaScript" />
+    <option name="javascript" hit="JavaScript   TypeScript" />
+    <option name="typescript" hit="JavaScript   TypeScript" />
     <option name="kotlin" hit="Kotlin" />
     <option name="sql" hit="SQL" />
     <option name="typescript" hit="TypeScript" />
@@ -1243,6 +1240,7 @@
     <option name="所有字母" hit="所有字母" />
     <option name="拖放" hit="拖放" />
     <option name="按字母順序對建議排序" hit="按字母順序對建議排序" />
+    <option name="接受補全的附加字元" hit="接受補全的附加字元 " />
     <option name="資料庫" hit="資料庫 " />
     <option name="顯示完整的方法簽名" hit="顯示完整的方法簽名" />
     <option name="機器學習輔助補全" hit="機器學習輔助補全" />

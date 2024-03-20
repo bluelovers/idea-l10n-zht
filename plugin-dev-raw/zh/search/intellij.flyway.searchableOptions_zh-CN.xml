@@ -1,67 +1,41 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按鍵映射">
-    <option name="" path="ActionManager" hit="" />
-    <option name="add" path="ActionManager" hit="Add Versioned Migration" />
-    <option name="migration" path="ActionManager" hit="Add Versioned Migration" />
-    <option name="versioned" path="ActionManager" hit="Add Versioned Migration" />
-    <option name="create" path="ActionManager" hit="Create Flyway Versioned Migration" />
-    <option name="flyway" path="ActionManager" hit="Create Flyway Versioned Migration" />
-    <option name="migration" path="ActionManager" hit="Create Flyway Versioned Migration" />
-    <option name="versioned" path="ActionManager" hit="Create Flyway Versioned Migration" />
-    <option name="data" path="ActionManager" hit="Data Model Snapshot" />
-    <option name="model" path="ActionManager" hit="Data Model Snapshot" />
-    <option name="snapshot" path="ActionManager" hit="Data Model Snapshot" />
-    <option name="empty" path="ActionManager" hit="Flyway Empty Migration" />
-    <option name="flyway" path="ActionManager" hit="Flyway Empty Migration" />
-    <option name="migration" path="ActionManager" hit="Flyway Empty Migration" />
-    <option name="flyway" path="ActionManager" hit="Flyway Init Migration" />
-    <option name="init" path="ActionManager" hit="Flyway Init Migration" />
-    <option name="migration" path="ActionManager" hit="Flyway Init Migration" />
-    <option name="callback" path="ActionManager" hit="Flyway Java Callback" />
-    <option name="flyway" path="ActionManager" hit="Flyway Java Callback" />
-    <option name="java" path="ActionManager" hit="Flyway Java Callback" />
-    <option name="flyway" path="ActionManager" hit="Flyway Java Migration" />
-    <option name="java" path="ActionManager" hit="Flyway Java Migration" />
-    <option name="migration" path="ActionManager" hit="Flyway Java Migration" />
-    <option name="callback" path="ActionManager" hit="Flyway SQL Callback" />
-    <option name="flyway" path="ActionManager" hit="Flyway SQL Callback" />
-    <option name="sql" path="ActionManager" hit="Flyway SQL Callback" />
-    <option name="by" path="ActionManager" hit="Generate DDL by Entities" />
-    <option name="ddl" path="ActionManager" hit="Generate DDL by Entities" />
-    <option name="entities" path="ActionManager" hit="Generate DDL by Entities" />
-    <option name="generate" path="ActionManager" hit="Generate DDL by Entities" />
-    <option name="ddl" path="ActionManager" hit="Generate Init DDL Schema" />
-    <option name="generate" path="ActionManager" hit="Generate Init DDL Schema" />
-    <option name="init" path="ActionManager" hit="Generate Init DDL Schema" />
-    <option name="schema" path="ActionManager" hit="Generate Init DDL Schema" />
-    <option name="another" path="ActionManager" hit="Move to Another Versioned Migration" />
-    <option name="migration" path="ActionManager" hit="Move to Another Versioned Migration" />
-    <option name="move" path="ActionManager" hit="Move to Another Versioned Migration" />
-    <option name="to" path="ActionManager" hit="Move to Another Versioned Migration" />
-    <option name="versioned" path="ActionManager" hit="Move to Another Versioned Migration" />
-    <option name="from" path="ActionManager" hit="Remove from Versioned Migration" />
-    <option name="migration" path="ActionManager" hit="Remove from Versioned Migration" />
-    <option name="remove" path="ActionManager" hit="Remove from Versioned Migration" />
-    <option name="versioned" path="ActionManager" hit="Remove from Versioned Migration" />
-    <option name="from" path="ActionManager" hit="Restore from Ignored" />
-    <option name="ignored" path="ActionManager" hit="Restore from Ignored" />
-    <option name="restore" path="ActionManager" hit="Restore from Ignored" />
-    <option name="ddl" path="ActionManager" hit="Show DDL" />
-    <option name="show" path="ActionManager" hit="Show DDL" />
+    <option name="flyway" path="ActionManager" hit="Flyway Java 回調" />
+    <option name="java" path="ActionManager" hit="Flyway Java 回調" />
+    <option name="回調" path="ActionManager" hit="Flyway Java 回調" />
+    <option name="flyway" path="ActionManager" hit="Flyway Java 遷移" />
+    <option name="java" path="ActionManager" hit="Flyway Java 遷移" />
+    <option name="遷移" path="ActionManager" hit="Flyway Java 遷移" />
+    <option name="flyway" path="ActionManager" hit="Flyway SQL 回調" />
+    <option name="sql" path="ActionManager" hit="Flyway SQL 回調" />
+    <option name="回調" path="ActionManager" hit="Flyway SQL 回調" />
+    <option name="flyway" path="ActionManager" hit="Flyway 初始化遷移" />
+    <option name="初始化遷移" path="ActionManager" hit="Flyway 初始化遷移" />
+    <option name="flyway" path="ActionManager" hit="Flyway 空遷移" />
+    <option name="空遷移" path="ActionManager" hit="Flyway 空遷移" />
+    <option name="從忽略狀態還原" path="ActionManager" hit="從忽略狀態還原" />
+    <option name="從版本化遷移中移除" path="ActionManager" hit="從版本化遷移中移除" />
+    <option name="flyway" path="ActionManager" hit="建立 Flyway 版本化遷移" />
+    <option name="建立" path="ActionManager" hit="建立 Flyway 版本化遷移" />
+    <option name="版本化遷移" path="ActionManager" hit="建立 Flyway 版本化遷移" />
+    <option name="ddl" path="ActionManager" hit="按實體生成 DDL" />
+    <option name="按實體生成" path="ActionManager" hit="按實體生成 DDL" />
+    <option name="資料模型快照" path="ActionManager" hit="資料模型快照" />
+    <option name="ddl" path="ActionManager" hit="顯示 DDL" />
+    <option name="顯示" path="ActionManager" hit="顯示 DDL" />
+    <option name="新增版本化遷移" path="ActionManager" hit="新增版本化遷移" />
+    <option name="ddl" path="ActionManager" hit="生成初始化 DDL 架構" />
+    <option name="架構" path="ActionManager" hit="生成初始化 DDL 架構" />
+    <option name="生成初始化" path="ActionManager" hit="生成初始化 DDL 架構" />
+    <option name="移動到其他版本化遷移" path="ActionManager" hit="移動到其他版本化遷移" />
   </configurable>
   <configurable id="com.intellij.flyway.settings.FlywayConfigurable" configurable_name="Flyway">
     <option name="flyway" hit="Flyway" />
-    <option name="description" hit="Migration description " />
-    <option name="migration" hit="Migration description " />
-    <option name="migration" hit="Migration prefix " />
-    <option name="prefix" hit="Migration prefix " />
-    <option name="migration" hit="Migration separator " />
-    <option name="separator" hit="Migration separator " />
-    <option name="dependency" hit="Use Flyway without dependency" />
-    <option name="flyway" hit="Use Flyway without dependency" />
-    <option name="use" hit="Use Flyway without dependency" />
-    <option name="without" hit="Use Flyway without dependency" />
-    <option name="pattern" hit="Version pattern " />
-    <option name="version" hit="Version pattern " />
+    <option name="flyway" hit="使用無相依項的 Flyway" />
+    <option name="使用無相依項的" hit="使用無相依項的 Flyway" />
+    <option name="版本模式" hit="版本模式 " />
+    <option name="遷移分隔符" hit="遷移分隔符 " />
+    <option name="遷移前綴" hit="遷移前綴 " />
+    <option name="遷移描述" hit="遷移描述 " />
   </configurable>
 </options>

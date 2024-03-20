@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>此檢查可識別下述方法呼叫，其中可能為 <code>null</code> 的實參被傳遞給未使用 <code>@Nullable</code> 註解的參數，有助於在執行時發生潛在的 <code>NullPointerExceptions</code> 之前檢測到這些異常。</p>
+<p>此檢查僅對專案原始碼中的目標方法顯示。</p>
+<p><b>範例：</b></p>
+<pre>
+<code>
+def test(@Nullable greeting: String): Unit = {
+  sayHello(greeting)
+}
+
+def sayHello(greeting: String): Unit = {
+  println(greeting.toLowerCase)
+}
+</code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>
