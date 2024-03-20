@@ -1,6 +1,6 @@
 <html>
 <body>
-Reports instances where pointers that might be <code>nil</code> are dereferenced.
+报告可能为 <code>nil</code> 的指针被取消引用的实例。
 <p>示例：</p>
 <pre><code>
 type Person struct{ Name string }
@@ -10,7 +10,7 @@ func _(person *Person) {
 	}
 }
 </code></pre>
-<p>In the provided example, <code>person</code> is a pointer to a <code>Person</code> struct, but it is <code>nil</code> as it is not assigned any value.
-  Attempting to dereference <code>person</code> to access <code>Name</code> without checking if <code>person</code> is <code>nil</code> results in a runtime error.</p>
+<p>在提供的示例中，<code>person</code> 是指向 <code>Person</code> 结构的指针，但它是 <code>nil</code>，因为它没有被赋予任何值。
+  尝试取消引用 <code>person</code> 以访问 <code>Name</code> 而不检查 <code>person</code> 是否为 <code>nil</code> 会导致运行时错误。</p>
 </body>
 </html>

@@ -3,7 +3,7 @@
 报告无法在配置的数据源中解析的 Persistence ORM XML 描述符并建议刷新数据源或分配不同的数据源。
 
 <p><b>示例数据库表：</b></p>
-<pre><code>
+<pre><code lang="sql">
   CREATE TABLE DATA_TABLE (
     ID INTEGER,
     DATA VARCHAR(100)
@@ -11,7 +11,7 @@
 </code></pre><br/>
 
 <p><b>示例 JSP 文件：</b></p>
-<pre><code>
+<pre><code lang="jsp">
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
     &lt;entity name="JavaEntity" class="JavaEntity"&gt;

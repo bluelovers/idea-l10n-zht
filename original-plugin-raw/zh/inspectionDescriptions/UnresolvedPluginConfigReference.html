@@ -1,6 +1,8 @@
 <html>
 <body>
 报告对插件配置元素的未解析引用。
+
+<h4>扩展</h4>
 <p>
   使用未知 <code>id</code> 引用扩展程序可能在运行时导致错误。
 </p>
@@ -9,9 +11,21 @@
 <ul>
   <li>资源包 <code>advanced.setting.*</code> 键中的 <code>com.intellij.advancedSetting</code></li>
   <li><code>Experiments.isFeatureEnabled()/setFeatureEnabled()</code> 中的 <code>com.intellij.experimentalFeature</code></li>
-  <li><code>Notification</code> 构造函数和 <code>NotificationGroupManager.getNotificationGroup()</code> 中的 <code>com.intellij.notificationGroup</code></li>
+  <li><code>Notification</code> 构造函数和 <code>NotificationGroupManager.getNotificationGroup()</code> 中的 <code>com.intellij.notificationGroup</code>
+  </li>
   <li><code>Registry</code> 方法 <code>key</code> 形参中的 <code>com.intellij.registryKey</code></li>
   <li>资源包 <code>toolwindow.stripe.*</code> 键中的 <code>com.intellij.toolWindow</code></li>
 </ul>
+
+<h4>扩展点</h4>
+<p>
+  在 <code>plugin.xml</code> 中引用对应的 <code>&lt;extensionPoint></code> 声明的扩展点名称。
+<ul>
+  <li><code>com.intellij.openapi.extensions.ExtensionPointName</code> 构造函数和 <code>create()</code></li>
+  <li><code>com.intellij.openapi.extensions.ProjectExtensionPointName</code> 构造函数</li>
+  <li><code>com.intellij.openapi.util.KeyedExtensionCollector</code> 和继承者构造函数</li>
+</ul>
+</p>
+
 </body>
 </html>

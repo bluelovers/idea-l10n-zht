@@ -1,16 +1,16 @@
 <html>
 <body>
-Reports SLF4J, Log4j2 logging calls in one class, such as <code>logger.info("message: {}", key)</code> with similar log messages.
-These calls can be non-distinguishable from each other, and this introduces difficulties to understand where a certain log message is from.
-<p><b>Example (for Java):</b></p>
+报告一个类中的 SLF4J 或 Log4j2 日志记录调用，例如具有类似日志消息的 <code>logger.info("message: {}", key)</code>。
+这些调用之间可能无法区分，这给理解某个日志消息来自何处带来了困难。
+<p><b>示例 (Java)：</b></p>
 <pre><code lang="java">
   private static void request1(String text) {
-      log.info("Message: {}", text); //similar call
+      log.info("Message: {}", text); //类似调用
       doSomething1();
   }
 
   private static void request2(int i) {
-      log.info("Message: {}", i); //similar call
+      log.info("Message: {}", i); //类似调用
       doSomething2();
   }
 </code></pre>
@@ -18,11 +18,11 @@ These calls can be non-distinguishable from each other, and this introduces diff
 <!-- tooltip end -->
 <ul>
   <li>
-    Use the <b>Minimal length of a similar sequence</b> option to set minimal length of similar sequences after which calls will be reported
+    使用<b>相似序列的最小长度</b>选项可设置相似序列的最小长度，之后将报告调用
   </li>
   <li>
-    Use the <b>Do not report calls with `error` log level</b> option to ignore messages with `error` log level and when there is an exception.
-    It can be useful, because places of calls can be found with stacktraces
+    使用<b>不报告日志级别为 'error' 的调用</b>选项可忽略日志级别为 `error` 且存在异常的消息。
+    隐藏警告可能会有用，因为仍然可以使用堆栈跟踪来定位调用站点
   </li>
 </ul>
 

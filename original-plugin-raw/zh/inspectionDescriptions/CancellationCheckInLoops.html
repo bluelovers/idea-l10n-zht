@@ -1,6 +1,6 @@
 <html>
 <body>
-Reports loops, <code>forEach</code>-like methods, and <code>ContainerUtil.process()</code> with missing cancellation checks.
+报告缺少取消检查的循环、类似 <code>forEach</code> 的方法，以及 <code>ContainerUtil.process()</code>。
 <p>仅在具有 <code>com.intellij.util.concurrency.annotations.RequiresReadLock</code> 注解的方法内运行。</p>
 <p><b>示例：</b></p>
 <pre><code lang="kotlin">
@@ -8,27 +8,27 @@ Reports loops, <code>forEach</code>-like methods, and <code>ContainerUtil.proces
 fun doSomething() {
   ...
   for (item in items) {
-    ProgressManager.checkCanceled() // should be present in the first line
+        ProgressManager.checkCanceled() // 应该出现在第一行中
     ...
   }
 
   items.forEach {
-    ProgressManager.checkCanceled() // should be present in the first line
+    ProgressManager.checkCanceled() // 应该出现在第一行中
     ...
   }
   ...
 }
 </code></pre>
 
-<p>In the case of nested loops with nothing in between:</p>
+<p>在嵌套循环之间没有任何内容的情况下：</p>
 <pre><code lang="kotlin">
 @RequiresReadLock
 fun doSomething() {
   ...
   for (item in items) {
-    // nothing in between
-    for (inner in item.inners) {
-      ProgressManager.checkCanceled() // should be present in the first line of the inner loop only
+        // 之间没有任何内容
+        for (inner in item.inners) {
+            ProgressManager.checkCanceled() // 应仅出现在内部循环的第一行中
       ...
     }
   }

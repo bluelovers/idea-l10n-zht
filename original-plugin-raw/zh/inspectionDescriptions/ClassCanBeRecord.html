@@ -1,18 +1,18 @@
 <html>
 <body>
-Reports classes that can be converted record classes.
-<p>Record classes focus on modeling immutable data rather than extensible behavior.
-Automatic implicit implementation of data-driven methods, such as <code>equals()</code> and accessors, helps to reduce boilerplate code.</p>
+报告可以转换为记录类的类。
+<p>记录类侧重于对不可变数据进行建模，而不是对可扩展行为进行建模。
+数据驱动方法的自动隐式实现（例如 <code>equals()</code> 和访问器）有助于减少样板代码。</p>
 <p>
-  Note that not every class can be a record class. 以下是一些限制：
+  请注意，不是每个类都可以是记录类。 以下是一些限制：
 </p>
 <ul>
-  <li>The class must be a top-level class and must have no subclasses.</li>
-  <li>All non-static fields in the class must be final.</li>
-  <li>Initializers, generic constructors, and native methods must not be present.</li>
+  <li>该类必须是顶级类，并且不能有子类。</li>
+  <li>类中的所有非 static 字段必须为 final。</li>
+  <li>不能存在初始值设定项、泛型构造函数和原生方法。</li>
 </ul>
-<p>For a full description of record classes, refer to the
-  <a href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10">Java Language Specification</a>.</p>
+<p>有关记录类的完整描述，请参阅 <
+  <a href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10">Java 语言规范</a>。</p>
 <!-- tooltip end -->
 <p>示例：</p>
 <pre><code>
@@ -39,13 +39,13 @@ Automatic implicit implementation of data-driven methods, such as <code>equals()
   record Point(int x, int y) {
   }
 </code></pre>
-<p>Enable the <b>Suggest renaming accessor methods</b> option to rename <code>getX()</code>/<code>isX()</code> accessors to <code>x()</code> automatically.</p>
+<p>启用<b>建议重命名访问器方法</b>选项可自动将 <code>getX()</code>/<code>isX()</code> 访问器重命名为 <code>x()</code>。</p>
 <p>
-  Use the <b>If members become more accessible</b> option to specify what to do when conversion will make members more accessible:
+  使用<b>如果成员变得更易于访问</b>选项可指定当转换将使成员更易于访问时要执行的操作：
 <ul>
-  <li>Choose <b>Do not suggest conversion</b> option to not convert when members would become more accessible.</li>
-  <li>Choose <b>Show conflicts view</b> option to show the affected members and ask to continue. In batch mode conversion will not be suggested.</li>
-  <li>Choose <b>Convert silently</b> option to increase accessibility silently when needed.</li>
+  <li>选择<b>不建议转换</b>选项可在成员变得更易于访问时不进行转换。</li>
+  <li>选择<b>显示冲突视图</b>选项可显示受影响的成员并要求继续。 在批处理模式下，将不建议进行转换。</li>
+  <li>选择<b>静默转换</b>选项可在需要时以静默方式提高可访问性。</li>
 </ul>
 <p>使用<b>禁止转换有以下注解的类</b>列表可在要转换的类中排除其注解匹配指定模式的类。
 </p>

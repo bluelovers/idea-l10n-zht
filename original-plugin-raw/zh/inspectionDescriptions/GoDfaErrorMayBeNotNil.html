@@ -1,17 +1,16 @@
 <html>
 <body>
-Reports instances where variables might have <code>nil</code> or an unexpected value because of the associated error that is not checked for
-being non-nil, as in <code>v, err := foo()</code>.
-<p>The quick-fix removes the function from the scope of this inspection.</p>
+报告变量可能具有 <code>nil</code> 或意外值的实例，因为为检查相关错误是否为非 nil，如 <code>v, err := foo()</code> 中。
+<p>快速修复会将该函数从此检查的范围中移除。</p>
 <p>示例：</p>
 <pre><code>
 func _() {
     file, err := os.Open("file.txt")
-    // Error check is omitted here
+    // 这里省略了错误检查
     name := file.Name()
     print(name, err)
 }
 </code></pre>
-<p>In the example provided, <code>file</code> could be <code>nil</code> or have an unexpected value if <code>err</code> is not <code>nil</code>.</p>
+<p>在提供的示例中，<code>file</code> 可能为 <code>nil</code>，或者在 <code>err</code> 不为 <code>nil</code> 时具有意外值。</p>
 </body>
 </html>

@@ -3,15 +3,15 @@
 报告 JPA 特性的属性类型不匹配。
 
 <p><b>示例：</b></p><br/>
-<pre><code>
+<pre><code lang="java">
   @Entity
   public class JavaEntity {
 
     @OneToOne
-    Map<Integer, AnotherEntity> incorrectRelationship; // 错误：'One To One' 特性类型应该是 Entity，而不是 Map
+    Map&lt;Integer, AnotherEntity&gt; incorrectRelationship; // 错误：'One To One' 特性类型应该是 Entity，而不是 Map
 
     @ManyToMany
-    Map<Integer, AnotherEntity> correctRelationship;
+    Map&lt;Integer, AnotherEntity&gt; correctRelationship;
   }
 </code></pre>
 </body>

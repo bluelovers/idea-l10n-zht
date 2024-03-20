@@ -13,11 +13,16 @@
 </p>
 <p>示例：</p>
 <pre><code>
-  if (iterator.next() != null || iterator.next() != null) {
+  native boolean unknownMethod();
+  
+  ...
+  
+  if (unknownMethod() || unknownMethod()) {
     System.out.println("Got it");
   }
 </code></pre>
-<p>由于 <code>iterator.next()</code> 可能存在副作用（在示例中），只有在禁用 <b>忽略有副作用的条件</b> 选项时才会触发警告。</p>
+<p>Due to possible side effects of <code>unknownMethod()</code> (on the example), the warning will only be
+  triggered if the <b>Ignore conditions with side effects</b> option is disabled.</p>
 
 </body>
 </html>

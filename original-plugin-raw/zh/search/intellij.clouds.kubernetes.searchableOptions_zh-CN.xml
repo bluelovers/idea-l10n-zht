@@ -1,30 +1,12 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="add" path="ActionManager" hit="Add Contexts" />
-    <option name="contexts" path="ActionManager" hit="Add Contexts" />
-    <option name="add" path="ActionManager" hit="Add New Context…" />
-    <option name="context" path="ActionManager" hit="Add New Context…" />
-    <option name="new" path="ActionManager" hit="Add New Context…" />
-    <option name="attach" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
-    <option name="content" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
-    <option name="contexts" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
-    <option name="from" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
-    <option name="kubeconfig" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
-    <option name="kubernetes" path="ActionManager" hit="Attach Kubernetes contexts from kubeconfig content" />
-    <option name="attach" path="ActionManager" hit="Attach New Context From File…" />
-    <option name="context" path="ActionManager" hit="Attach New Context From File…" />
-    <option name="file" path="ActionManager" hit="Attach New Context From File…" />
-    <option name="from" path="ActionManager" hit="Attach New Context From File…" />
-    <option name="new" path="ActionManager" hit="Attach New Context From File…" />
     <option name="creates" path="ActionManager" hit="Creates Telepresence interception" />
     <option name="interception" path="ActionManager" hit="Creates Telepresence interception" />
     <option name="telepresence" path="ActionManager" hit="Creates Telepresence interception" />
-    <option name="automatic" path="ActionManager" hit="Enable / Disable automatic watch starting" />
-    <option name="disable" path="ActionManager" hit="Enable / Disable automatic watch starting" />
-    <option name="enable" path="ActionManager" hit="Enable / Disable automatic watch starting" />
-    <option name="starting" path="ActionManager" hit="Enable / Disable automatic watch starting" />
-    <option name="watch" path="ActionManager" hit="Enable / Disable automatic watch starting" />
+    <option name="custom" path="ActionManager" hit="From Custom kubeconfigs…" />
+    <option name="from" path="ActionManager" hit="From Custom kubeconfigs…" />
+    <option name="kubeconfigs" path="ActionManager" hit="From Custom kubeconfigs…" />
     <option name="helm" path="ActionManager" hit="Helm Lint" />
     <option name="lint" path="ActionManager" hit="Helm Lint" />
     <option name="helm" path="ActionManager" hit="Helm 依赖项" />
@@ -38,13 +20,16 @@
     <option name="kubernetes" path="ActionManager" hit="Kubernetes" />
     <option name="kubernetes" path="ActionManager" hit="Kubernetes 资源" />
     <option name="资源" path="ActionManager" hit="Kubernetes 资源" />
-    <option name="content" path="ActionManager" hit="Paste kubeconfig Content…" />
-    <option name="kubeconfig" path="ActionManager" hit="Paste kubeconfig Content…" />
-    <option name="paste" path="ActionManager" hit="Paste kubeconfig Content…" />
-    <option name="automatically" path="ActionManager" hit="Reload Cluster Resources Automatically" />
-    <option name="cluster" path="ActionManager" hit="Reload Cluster Resources Automatically" />
-    <option name="reload" path="ActionManager" hit="Reload Cluster Resources Automatically" />
-    <option name="resources" path="ActionManager" hit="Reload Cluster Resources Automatically" />
+    <option name="actions" path="ActionManager" hit="Refresh Cluster Actions" />
+    <option name="cluster" path="ActionManager" hit="Refresh Cluster Actions" />
+    <option name="refresh" path="ActionManager" hit="Refresh Cluster Actions" />
+    <option name="automatically" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
+    <option name="by" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
+    <option name="cluster" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
+    <option name="default" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
+    <option name="each" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
+    <option name="refresh" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
+    <option name="resources" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
     <option name="shell" path="ActionManager" hit="Shell 运行位置…" />
     <option name="运行位置" path="ActionManager" hit="Shell 运行位置…" />
     <option name="kubectl" path="ActionManager" hit="下载并安装最新的稳定版 kubectl" />
@@ -52,9 +37,16 @@
     <option name="下载日志" path="ActionManager" hit="下载日志" />
     <option name="下载日志" path="ActionManager" hit="下载日志…" />
     <option name="与集群比较" path="ActionManager" hit="与集群比较" />
-    <option name="kubernetes" path="ActionManager" hit="从文件附加新的 Kubernetes 上下文" />
-    <option name="上下文" path="ActionManager" hit="从文件附加新的 Kubernetes 上下文" />
-    <option name="从文件附加新的" path="ActionManager" hit="从文件附加新的 Kubernetes 上下文" />
+    <option name="kubeconfig" path="ActionManager" hit="从 kubeconfig 内容附加 Kubernetes 上下文" />
+    <option name="kubernetes" path="ActionManager" hit="从 kubeconfig 内容附加 Kubernetes 上下文" />
+    <option name="上下文" path="ActionManager" hit="从 kubeconfig 内容附加 Kubernetes 上下文" />
+    <option name="从" path="ActionManager" hit="从 kubeconfig 内容附加 Kubernetes 上下文" />
+    <option name="内容附加" path="ActionManager" hit="从 kubeconfig 内容附加 Kubernetes 上下文" />
+    <option name="kubeconfig" path="ActionManager" hit="从 kubeconfig 文件附加 Kubernetes 上下文" />
+    <option name="kubernetes" path="ActionManager" hit="从 kubeconfig 文件附加 Kubernetes 上下文" />
+    <option name="上下文" path="ActionManager" hit="从 kubeconfig 文件附加 Kubernetes 上下文" />
+    <option name="从" path="ActionManager" hit="从 kubeconfig 文件附加 Kubernetes 上下文" />
+    <option name="文件附加" path="ActionManager" hit="从 kubeconfig 文件附加 Kubernetes 上下文" />
     <option name="从集群中删除文件中定义的资源" path="ActionManager" hit="从集群中删除文件中定义的资源" />
     <option name="从集群删除资源" path="ActionManager" hit="从集群删除资源" />
     <option name="从集群刷新信息" path="ActionManager" hit="从集群刷新信息" />
@@ -68,6 +60,9 @@
     <option name="api" path="ActionManager" hit="从集群重新加载缓存配置和信息并重新读取 API 架构" />
     <option name="从集群重新加载缓存配置和信息并重新读取" path="ActionManager" hit="从集群重新加载缓存配置和信息并重新读取 API 架构" />
     <option name="架构" path="ActionManager" hit="从集群重新加载缓存配置和信息并重新读取 API 架构" />
+    <option name="kubernetes" path="ActionManager" hit="从默认目录添加 Kubernetes 上下文" />
+    <option name="上下文" path="ActionManager" hit="从默认目录添加 Kubernetes 上下文" />
+    <option name="从默认目录添加" path="ActionManager" hit="从默认目录添加 Kubernetes 上下文" />
     <option name="telepresence" path="ActionManager" hit="使用 Telepresence 拦截" />
     <option name="使用" path="ActionManager" hit="使用 Telepresence 拦截" />
     <option name="拦截" path="ActionManager" hit="使用 Telepresence 拦截" />
@@ -86,13 +81,15 @@
     <option name="创建新密钥" path="ActionManager" hit="创建新密钥" />
     <option name="创建新密钥" path="ActionManager" hit="创建新密钥…" />
     <option name="创建新拦截" path="ActionManager" hit="创建新拦截" />
-    <option name="删除" path="ActionManager" hit="删除(当前上下文未配置)" />
-    <option name="当前上下文未配置" path="ActionManager" hit="删除(当前上下文未配置)" />
+    <option name="删除" path="ActionManager" hit="删除(未配置当前上下文)" />
+    <option name="未配置当前上下文" path="ActionManager" hit="删除(未配置当前上下文)" />
     <option name="删除资源" path="ActionManager" hit="删除资源" />
     <option name="刷新" path="ActionManager" hit="刷新" />
     <option name="dependencies" path="ActionManager" hit="向 'dependencies' 部分添加新的依赖项" />
     <option name="向" path="ActionManager" hit="向 'dependencies' 部分添加新的依赖项" />
     <option name="部分添加新的依赖项" path="ActionManager" hit="向 'dependencies' 部分添加新的依赖项" />
+    <option name="启用" path="ActionManager" hit="启用/禁用自动监视启动" />
+    <option name="禁用自动监视启动" path="ActionManager" hit="启用/禁用自动监视启动" />
     <option name="命名空间" path="ActionManager" hit="命名空间" />
     <option name="kubeconfig" path="ActionManager" hit="在编辑器中打开 kubeconfig 文件" />
     <option name="在编辑器中打开" path="ActionManager" hit="在编辑器中打开 kubeconfig 文件" />
@@ -111,8 +108,8 @@
     <option name="将文件中的配置应用于集群" path="ActionManager" hit="将文件中的配置应用于集群" />
     <option name="pod" path="ActionManager" hit="将端口转发到 pod" />
     <option name="将端口转发到" path="ActionManager" hit="将端口转发到 pod" />
-    <option name="应用" path="ActionManager" hit="应用(当前上下文未配置)" />
-    <option name="当前上下文未配置" path="ActionManager" hit="应用(当前上下文未配置)" />
+    <option name="应用" path="ActionManager" hit="应用(未配置当前上下文)" />
+    <option name="未配置当前上下文" path="ActionManager" hit="应用(未配置当前上下文)" />
     <option name="所有命名空间" path="ActionManager" hit="所有命名空间" />
     <option name="打开控制台" path="ActionManager" hit="打开控制台" />
     <option name="打开控制台" path="ActionManager" hit="打开控制台…" />
@@ -126,14 +123,16 @@
     <option name="显示集群设置" path="ActionManager" hit="显示集群设置…" />
     <option name="更多" path="ActionManager" hit="更多" />
     <option name="更新图表的依赖项" path="ActionManager" hit="更新图表的依赖项" />
+    <option name="来自默认目录" path="ActionManager" hit="来自默认目录…" />
     <option name="查找用法" path="ActionManager" hit="查找用法" />
     <option name="yaml" path="ActionManager" hit="查看 YAML" />
     <option name="查看" path="ActionManager" hit="查看 YAML" />
     <option name="检查图表中可能存在的问题" path="ActionManager" hit="检查图表中可能存在的问题" />
-    <option name="kubernetes" path="ActionManager" hit="添加新的 Kubernetes 上下文" />
-    <option name="上下文" path="ActionManager" hit="添加新的 Kubernetes 上下文" />
-    <option name="添加新的" path="ActionManager" hit="添加新的 Kubernetes 上下文" />
+    <option name="添加上下文" path="ActionManager" hit="添加上下文" />
     <option name="移除现有拦截" path="ActionManager" hit="移除现有拦截" />
+    <option name="kubeconfig" path="ActionManager" hit="粘贴 kubeconfig 内容…" />
+    <option name="内容" path="ActionManager" hit="粘贴 kubeconfig 内容…" />
+    <option name="粘贴" path="ActionManager" hit="粘贴 kubeconfig 内容…" />
     <option name="自动重新加载配置" path="ActionManager" hit="自动重新加载配置" />
     <option name="自定义命名空间" path="ActionManager" hit="自定义命名空间…" />
     <option name="自定义命名空间列表" path="ActionManager" hit="自定义命名空间列表" />

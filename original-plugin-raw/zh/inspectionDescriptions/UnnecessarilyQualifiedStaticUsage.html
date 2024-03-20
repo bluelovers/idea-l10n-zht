@@ -1,9 +1,8 @@
 <html>
 <body>
-Reports usages of static members unnecessarily qualified with the class name.
+报告不必要地使用类名限定的 static 成员的用法。
 <p>
-Qualification with the class is unnecessary when the static member is available in a surrounding class
-or in a super class of a surrounding class. Such qualification may be safely removed.
+当 static 成员在周围类或周围类的超类中可用时，不需要对类进行限定。 此类限定可以安全移除。
 <p><b>示例：</b></p>
 <pre><code>
   class Foo {

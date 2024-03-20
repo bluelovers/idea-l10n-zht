@@ -3,10 +3,9 @@
     <option name="" path="ActionManager" hit="" />
     <option name="fixup" path="ActionManager" hit="Fixup…" />
     <option name="git" path="ActionManager" hit="Git" />
-    <option name="merge" path="ActionManager" hit="VCS Merge/Rebase Widget" />
-    <option name="rebase" path="ActionManager" hit="VCS Merge/Rebase Widget" />
-    <option name="vcs" path="ActionManager" hit="VCS Merge/Rebase Widget" />
-    <option name="widget" path="ActionManager" hit="VCS Merge/Rebase Widget" />
+    <option name="vcs" path="ActionManager" hit="VCS 合并/变基微件" />
+    <option name="变基微件" path="ActionManager" hit="VCS 合并/变基微件" />
+    <option name="合并" path="ActionManager" hit="VCS 合并/变基微件" />
     <option name="vcs" path="ActionManager" hit="VCS 微件" />
     <option name="微件" path="ActionManager" hit="VCS 微件" />
     <option name="vcs" path="ActionManager" hit="VCS 操作" />
@@ -172,6 +171,7 @@
     <option name="签出并变基到当前分支" path="ActionManager" hit="签出并变基到当前分支" />
     <option name="签出所选" path="ActionManager" hit="签出所选…" />
     <option name="签出所选修订或所选提交中的分支" path="ActionManager" hit="签出所选修订或所选提交中的分支" />
+    <option name="签出所选分支" path="ActionManager" hit="签出所选分支" />
     <option name="签出标记或修订" path="ActionManager" hit="签出标记或修订…" />
     <option name="管理远程" path="ActionManager" hit="管理远程…" />
     <option name="继续变基" path="ActionManager" hit="继续变基" />
@@ -194,6 +194,7 @@
     <option name="通过" path="ActionManager" hit="通过 git rebase 或 amend 的改写选项更改提交消息" />
     <option name="配置本地更改" path="ActionManager" hit="配置本地更改" />
     <option name="重命名" path="ActionManager" hit="重命名…" />
+    <option name="重命名本地分支" path="ActionManager" hit="重命名本地分支" />
     <option name="head" path="ActionManager" hit="重置 HEAD…" />
     <option name="重置" path="ActionManager" hit="重置 HEAD…" />
     <option name="git" path="ActionManager" hit="隐藏 Git 分支" />
@@ -204,37 +205,11 @@
     <option name="高亮显示尚未优选到当前分支的提交" path="ActionManager" hit="高亮显示尚未优选到当前分支的提交" />
   </configurable>
   <configurable id="vcs.Git" configurable_name="Git">
-    <option name="and" hit="Combine stashes and shelves in one tab" />
-    <option name="combine" hit="Combine stashes and shelves in one tab" />
-    <option name="in" hit="Combine stashes and shelves in one tab" />
-    <option name="one" hit="Combine stashes and shelves in one tab" />
-    <option name="shelves" hit="Combine stashes and shelves in one tab" />
-    <option name="stashes" hit="Combine stashes and shelves in one tab" />
-    <option name="tab" hit="Combine stashes and shelves in one tab" />
     <option name="git" hit="Git" />
     <option name="git" hit="Git 可执行文件路径 P  " />
     <option name="p" hit="Git 可执行文件路径 P  " />
     <option name="可执行文件路径" hit="Git 可执行文件路径 P  " />
     <option name="mb" hit="MB" />
-    <option name="committing" hit="Warn when committing files larger than" />
-    <option name="files" hit="Warn when committing files larger than" />
-    <option name="larger" hit="Warn when committing files larger than" />
-    <option name="than" hit="Warn when committing files larger than" />
-    <option name="warn" hit="Warn when committing files larger than" />
-    <option name="when" hit="Warn when committing files larger than" />
-    <option name="cause" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="committing" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="files" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="issues" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="might" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="names" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="on" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="other" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="systems" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="that" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="warn" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="when" hit="Warn when committing files with names that might cause issues on other systems" />
-    <option name="with" hit="Warn when committing files with names that might cause issues on other systems" />
     <option name="仅为当前项目设置此路径" hit="仅为当前项目设置此路径" />
     <option name="仅在提交到受保护分支时显示推送对话框" hit="仅在提交到受保护分支时显示推送对话框" />
     <option name="github" hit="从 GitHub 加载分支保护规则" />
@@ -263,12 +238,15 @@
     <option name="则自动更新" hit="如果当前分支的推送被拒 则自动更新" />
     <option name="如果当前分支的推送被拒" hit="如果当前分支的推送被拒 则自动更新" />
     <option name="始终" hit="始终" />
+    <option name="将隐藏和搁置合并到一个标签页中" hit="将隐藏和搁置合并到一个标签页中" />
     <option name="所有" hit="所有" />
     <option name="信息" hit="按路径过滤 更新项目 信息 " />
     <option name="按路径过滤" hit="按路径过滤 更新项目 信息 " />
     <option name="更新项目" hit="按路径过滤 更新项目 信息 " />
     <option name="推送" hit="推送" />
     <option name="提交" hit="提交" />
+    <option name="提交名称可能会导致其他系统出现问题的文件时发出警告" hit="提交名称可能会导致其他系统出现问题的文件时发出警告" />
+    <option name="提交大于以下大小的文件时发出警告" hit="提交大于以下大小的文件时发出警告 " />
     <option name="搁置" hit="搁置" />
     <option name="显式检查远程分支上的传入提交" hit="显式检查远程分支上的传入提交 " />
     <option name="显示提交和推送的推送对话框" hit="显示提交和推送的推送对话框" />
