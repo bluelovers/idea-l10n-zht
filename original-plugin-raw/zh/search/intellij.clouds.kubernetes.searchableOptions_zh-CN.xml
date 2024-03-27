@@ -1,12 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="creates" path="ActionManager" hit="Creates Telepresence interception" />
-    <option name="interception" path="ActionManager" hit="Creates Telepresence interception" />
-    <option name="telepresence" path="ActionManager" hit="Creates Telepresence interception" />
-    <option name="custom" path="ActionManager" hit="From Custom kubeconfigs…" />
-    <option name="from" path="ActionManager" hit="From Custom kubeconfigs…" />
-    <option name="kubeconfigs" path="ActionManager" hit="From Custom kubeconfigs…" />
     <option name="helm" path="ActionManager" hit="Helm Lint" />
     <option name="lint" path="ActionManager" hit="Helm Lint" />
     <option name="helm" path="ActionManager" hit="Helm 依赖项" />
@@ -20,16 +14,6 @@
     <option name="kubernetes" path="ActionManager" hit="Kubernetes" />
     <option name="kubernetes" path="ActionManager" hit="Kubernetes 资源" />
     <option name="资源" path="ActionManager" hit="Kubernetes 资源" />
-    <option name="actions" path="ActionManager" hit="Refresh Cluster Actions" />
-    <option name="cluster" path="ActionManager" hit="Refresh Cluster Actions" />
-    <option name="refresh" path="ActionManager" hit="Refresh Cluster Actions" />
-    <option name="automatically" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
-    <option name="by" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
-    <option name="cluster" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
-    <option name="default" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
-    <option name="each" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
-    <option name="refresh" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
-    <option name="resources" path="ActionManager" hit="Refresh Each Cluster Resources Automatically By Default" />
     <option name="shell" path="ActionManager" hit="Shell 运行位置…" />
     <option name="运行位置" path="ActionManager" hit="Shell 运行位置…" />
     <option name="kubectl" path="ActionManager" hit="下载并安装最新的稳定版 kubectl" />
@@ -47,6 +31,8 @@
     <option name="上下文" path="ActionManager" hit="从 kubeconfig 文件附加 Kubernetes 上下文" />
     <option name="从" path="ActionManager" hit="从 kubeconfig 文件附加 Kubernetes 上下文" />
     <option name="文件附加" path="ActionManager" hit="从 kubeconfig 文件附加 Kubernetes 上下文" />
+    <option name="kubeconfigs" path="ActionManager" hit="从自定义 kubeconfigs…" />
+    <option name="从自定义" path="ActionManager" hit="从自定义 kubeconfigs…" />
     <option name="从集群中删除文件中定义的资源" path="ActionManager" hit="从集群中删除文件中定义的资源" />
     <option name="从集群删除资源" path="ActionManager" hit="从集群删除资源" />
     <option name="从集群刷新信息" path="ActionManager" hit="从集群刷新信息" />
@@ -85,6 +71,7 @@
     <option name="未配置当前上下文" path="ActionManager" hit="删除(未配置当前上下文)" />
     <option name="删除资源" path="ActionManager" hit="删除资源" />
     <option name="刷新" path="ActionManager" hit="刷新" />
+    <option name="刷新集群操作" path="ActionManager" hit="刷新集群操作" />
     <option name="dependencies" path="ActionManager" hit="向 'dependencies' 部分添加新的依赖项" />
     <option name="向" path="ActionManager" hit="向 'dependencies' 部分添加新的依赖项" />
     <option name="部分添加新的依赖项" path="ActionManager" hit="向 'dependencies' 部分添加新的依赖项" />
@@ -164,6 +151,7 @@
     <option name="命令形参" path="ActionManager" hit="配置此图表的常用 Helm 命令形参" />
     <option name="配置此图表的常用" path="ActionManager" hit="配置此图表的常用 Helm 命令形参" />
     <option name="重新加载配置" path="ActionManager" hit="重新加载配置" />
+    <option name="默认自动刷新各个集群资源" path="ActionManager" hit="默认自动刷新各个集群资源" />
   </configurable>
   <configurable id="com.intellij.kubernetes.config.KubernetesConfigurable" configurable_name="Kubernetes">
     <option name="1" hit="   " />

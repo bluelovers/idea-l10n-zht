@@ -1,5 +1,14 @@
 <html>
 <body>
-报告从未在任何控制流中执行并且可以安全移除的代码段。</p>
+根据数据流分析报告从未到达的代码。 
+可能是前一个始终为 true 或始终为 false 的条件、无法到达的循环主体或 catch 部分的结果。 通常（尽管并非总是）无法到达的代码是先前警告的结果，因此请检查形成“为 null 性和数据流问题”、“常量值”或“空容器上的冗余操作”的检查警告，以更好地了解原因。
+<p>示例：</p>
+<pre><code>
+  void finishApplication() {
+    System.exit(0);
+    System.out.println("Application is terminated"); // 不可到达的代码
+  }
+</code></pre>
+<p><small>2024.1 最新变化</small></p>
 </body>
 </html>

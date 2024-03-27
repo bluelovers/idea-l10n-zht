@@ -101,10 +101,6 @@
     <option name="multiple" path="ActionManager" hit="Run Multiple Projects…" />
     <option name="projects" path="ActionManager" hit="Run Multiple Projects…" />
     <option name="run" path="ActionManager" hit="Run Multiple Projects…" />
-    <option name="as" path="ActionManager" hit="Save As Solution Filter" />
-    <option name="filter" path="ActionManager" hit="Save As Solution Filter" />
-    <option name="save" path="ActionManager" hit="Save As Solution Filter" />
-    <option name="solution" path="ActionManager" hit="Save As Solution Filter" />
     <option name="containing" path="ActionManager" hit="Selecting Containing Declarations" />
     <option name="declarations" path="ActionManager" hit="Selecting Containing Declarations" />
     <option name="selecting" path="ActionManager" hit="Selecting Containing Declarations" />
@@ -125,15 +121,6 @@
     <option name="show" path="ActionManager" hit="Show sticky scroll what's new" />
     <option name="sticky" path="ActionManager" hit="Show sticky scroll what's new" />
     <option name="what" path="ActionManager" hit="Show sticky scroll what's new" />
-    <option name="constructors" path="ActionManager" hit="Step into, ignore stepping filters for libraries, constructors, etc." />
-    <option name="etc" path="ActionManager" hit="Step into, ignore stepping filters for libraries, constructors, etc." />
-    <option name="filters" path="ActionManager" hit="Step into, ignore stepping filters for libraries, constructors, etc." />
-    <option name="for" path="ActionManager" hit="Step into, ignore stepping filters for libraries, constructors, etc." />
-    <option name="ignore" path="ActionManager" hit="Step into, ignore stepping filters for libraries, constructors, etc." />
-    <option name="into" path="ActionManager" hit="Step into, ignore stepping filters for libraries, constructors, etc." />
-    <option name="libraries" path="ActionManager" hit="Step into, ignore stepping filters for libraries, constructors, etc." />
-    <option name="step" path="ActionManager" hit="Step into, ignore stepping filters for libraries, constructors, etc." />
-    <option name="stepping" path="ActionManager" hit="Step into, ignore stepping filters for libraries, constructors, etc." />
     <option name="todo" path="ActionManager" hit="TODO" />
     <option name="xml" path="ActionManager" hit="XML 文件" />
     <option name="文件" path="ActionManager" hit="XML 文件" />
@@ -343,6 +330,7 @@
     <option name="发送到" path="ActionManager" hit="发送到 C# Interactive" />
     <option name="取消" path="ActionManager" hit="取消" />
     <option name="取消构建" path="ActionManager" hit="取消构建" />
+    <option name="另存为解决方案筛选器" path="ActionManager" hit="另存为解决方案筛选器" />
     <option name="右侧" path="ActionManager" hit="右侧" />
     <option name="xamarin" path="ActionManager" hit="右侧(Xamarin)" />
     <option name="右侧" path="ActionManager" hit="右侧(Xamarin)" />
@@ -709,6 +697,9 @@
     <option name="检测" path="ActionManager" hit="检测 C# 命名" />
     <option name="步入" path="ActionManager" hit="步入" />
     <option name="步入特定方法" path="ActionManager" hit="步入特定方法" />
+    <option name="忽略库" path="ActionManager" hit="步入，忽略库、构造函数等步进筛选器。" />
+    <option name="构造函数等步进筛选器" path="ActionManager" hit="步入，忽略库、构造函数等步进筛选器。" />
+    <option name="步入" path="ActionManager" hit="步入，忽略库、构造函数等步进筛选器。" />
     <option name="步出" path="ActionManager" hit="步出" />
     <option name="步过" path="ActionManager" hit="步过" />
     <option name="在步进前禁用所有断点" path="ActionManager" hit="步过，在步进前禁用所有断点。" />
@@ -1076,8 +1067,6 @@
     <option name="typing" hit="Enable typing assist for Slate" />
     <option name="html" hit="HTML 文件" />
     <option name="文件" hit="HTML 文件" />
-    <option name="indent" hit="Indent" />
-    <option name="none" hit="None" />
     <option name="razor" hit="Razor" />
     <option name="basic" hit="Visual Basic" />
     <option name="visual" hit="Visual Basic" />
@@ -1226,6 +1215,7 @@
     <option name="在第一个非空白字符之前" hit="文本光标位于缩进位置(在第一个非空白字符之前)" />
     <option name="文本光标位于缩进位置" hit="文本光标位于缩进位置(在第一个非空白字符之前)" />
     <option name="文本光标位于行尾" hit="文本光标位于行尾" />
+    <option name="无" hit="无" />
     <option name="更正通用语言特定的拼写错误" hit="更正通用语言特定的拼写错误" />
     <option name="生成文档注释" hit="生成文档注释" />
     <option name="移除串联字符串之间的加号时将串联字符串连接起来" hit="移除串联字符串之间的加号时将串联字符串连接起来" />
@@ -1239,6 +1229,7 @@
     <option name="c#" hit="结构化导航(C#、XAML)" />
     <option name="xaml" hit="结构化导航(C#、XAML)" />
     <option name="结构化导航" hit="结构化导航(C#、XAML)" />
+    <option name="缩进" hit="缩进" />
     <option name="i" hit="自动插入右大括号 I   " />
     <option name="自动插入右大括号" hit="自动插入右大括号 I   " />
     <option name="i" hit="自动插入右大括号(I):" />
@@ -1300,8 +1291,6 @@
     <option name="componentdata" hit="Add ComponentData reference (DOTS)" />
     <option name="dots" hit="Add ComponentData reference (DOTS)" />
     <option name="reference" hit="Add ComponentData reference (DOTS)" />
-    <option name="add" hit="Add braces" />
-    <option name="braces" hit="Add braces" />
     <option name="add" hit="Add new argument to interpolation" />
     <option name="argument" hit="Add new argument to interpolation" />
     <option name="interpolation" hit="Add new argument to interpolation" />
@@ -1458,9 +1447,6 @@
     <option name="if" hit="Invert 'If' statement" />
     <option name="invert" hit="Invert 'If' statement" />
     <option name="statement" hit="Invert 'If' statement" />
-    <option name="if" hit="Invert 'if' statement" />
-    <option name="invert" hit="Invert 'if' statement" />
-    <option name="statement" hit="Invert 'if' statement" />
     <option name="invertif" hit="InvertIf" />
     <option name="each" hit="Iterate via 'For Each'" />
     <option name="for" hit="Iterate via 'For Each'" />
@@ -1501,8 +1487,6 @@
     <option name="negateifcondition" hit="NegateIfCondition" />
     <option name="negatewhilecondition" hit="NegateWhileCondition" />
     <option name="razor" hit="Razor" />
-    <option name="braces" hit="Remove braces" />
-    <option name="remove" hit="Remove braces" />
     <option name="format" hit="Remove format item" />
     <option name="item" hit="Remove format item" />
     <option name="remove" hit="Remove format item" />
@@ -1713,6 +1697,9 @@
     <option name="for" hit="反转 'for' 循环语句" />
     <option name="反转" hit="反转 'for' 循环语句" />
     <option name="循环语句" hit="反转 'for' 循环语句" />
+    <option name="if" hit="反转 'if' 语句" />
+    <option name="反转" hit="反转 'if' 语句" />
+    <option name="语句" hit="反转 'if' 语句" />
     <option name="反转赋值语句" hit="反转赋值语句" />
     <option name="partial" hit="合并 partial 方法声明" />
     <option name="合并" hit="合并 partial 方法声明" />
@@ -2418,6 +2405,7 @@
     <option name="添加元组组件名称" hit="添加元组组件名称" />
     <option name="添加匿名属性的显式名称" hit="添加匿名属性的显式名称" />
     <option name="添加另一个访问器" hit="添加另一个访问器" />
+    <option name="添加大括号" hit="添加大括号" />
     <option name="添加字符串内插实参" hit="添加字符串内插实参" />
     <option name="添加字符串格式设置方法实参" hit="添加字符串格式设置方法实参" />
     <option name="添加析构模式组件名称" hit="添加析构模式组件名称" />
@@ -2459,6 +2447,7 @@
     <option name="移除" hit="移除 CodeBehind 文件" />
     <option name="移除元组组件名称" hit="移除元组组件名称" />
     <option name="移除冗余圆括号" hit="移除冗余圆括号" />
+    <option name="移除大括号" hit="移除大括号" />
     <option name="移除字符串格式设置方法实参" hit="移除字符串格式设置方法实参" />
     <option name="移除实参名称" hit="移除实参名称" />
     <option name="移除所有具有指定名称的标记并提升其子项" hit="移除所有具有指定名称的标记并提升其子项" />
@@ -3239,7 +3228,6 @@
     <option name="error" hit="ERROR" />
     <option name="fatal" hit="FATAL" />
     <option name="info" hit="INFO" />
-    <option name="none" hit="None" />
     <option name="off" hit="OFF" />
     <option name="trace" hit="TRACE" />
     <option name="verbose" hit="VERBOSE" />
@@ -3261,6 +3249,7 @@
     <option name="捕获输出" hit="捕获输出(T)" />
     <option name="文件掩码" hit="文件掩码" />
     <option name="文件掩码" hit="文件掩码 " />
+    <option name="无" hit="无" />
     <option name="l" hit="日志记录级别 L  " />
     <option name="日志记录级别" hit="日志记录级别 L  " />
     <option name="l" hit="日志记录级别(L)" />
@@ -3333,7 +3322,6 @@
     <option name="xunit" hit="   xunit runner json" />
     <option name="" hit=" 按以下顺序自动从输出文件夹中查找并加载配置文件 " />
     <option name="按以下顺序自动从输出文件夹中查找并加载配置文件" hit=" 按以下顺序自动从输出文件夹中查找并加载配置文件 " />
-    <option name="metadata" hit="Metadata" />
     <option name="iddqd" hit="iddqd" />
     <option name="net" hit="xUnit net" />
     <option name="xunit" hit="xUnit net" />
@@ -3360,12 +3348,12 @@
     <option name="从工件运行测试发现时" hit="从工件运行测试发现时，使用:" />
     <option name="使用" hit="从工件运行测试发现时，使用:" />
     <option name="使用特定的配置文件" hit="使用特定的配置文件" />
+    <option name="元数据" hit="元数据" />
     <option name="按以下顺序自动从输出文件夹中查找并加载配置文件" hit="按以下顺序自动从输出文件夹中查找并加载配置文件:" />
     <option name="测试发现" hit="测试发现" />
     <option name="测试运行程序" hit="测试运行程序" />
   </configurable>
   <configurable id="RiderNUnitUnitTestingPageId" configurable_name="NUnit">
-    <option name="metadata" hit="Metadata" />
     <option name="nunit" hit="NUnit" />
     <option name="2" hit="NUnit  " />
     <option name="3" hit="NUnit  " />
@@ -3385,6 +3373,7 @@
     <option name="使用" hit="从工件运行测试发现时，使用:" />
     <option name="nunit" hit="使用指定的自定义 NUnit" />
     <option name="使用指定的自定义" hit="使用指定的自定义 NUnit" />
+    <option name="元数据" hit="元数据" />
     <option name="nunit" hit="加载 NUnit 加载项" />
     <option name="加载" hit="加载 NUnit 加载项" />
     <option name="加载项" hit="加载 NUnit 加载项" />
@@ -3418,7 +3407,6 @@
     <option name="使用特定的" hit=" 使用特定的  runsettings  testsettings 设置文件 " />
     <option name="设置文件" hit=" 使用特定的  runsettings  testsettings 设置文件 " />
     <option name="mstest" hit="MSTest" />
-    <option name="metadata" hit="Metadata" />
     <option name="iddqd" hit="iddqd" />
     <option name="从工件运行测试发现时" hit="从工件运行测试发现时 使用 " />
     <option name="使用" hit="从工件运行测试发现时 使用 " />
@@ -3428,6 +3416,7 @@
     <option name="testsettings" hit="使用特定的 .runsettings/.testsettings 设置文件:" />
     <option name="使用特定的" hit="使用特定的 .runsettings/.testsettings 设置文件:" />
     <option name="设置文件" hit="使用特定的 .runsettings/.testsettings 设置文件:" />
+    <option name="元数据" hit="元数据" />
     <option name="测试发现" hit="测试发现" />
     <option name="测试设置" hit="测试设置" />
     <option name="测试运行程序" hit="测试运行程序" />
@@ -3518,11 +3507,11 @@
     <option name="" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
     <option name="03" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
     <option name="12" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="1359" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="17" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
     <option name="2024" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="36" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
-    <option name="40" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="24" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="25" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="42" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
+    <option name="9664" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
     <option name="jetbrainslog" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
     <option name="log" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
     <option name="msbuild" hit=" MSBuild 日志文件将写入每个构建的指定文件夹中  示例文件名  JetBrainsLog ReSharperBuild                          log" />
@@ -3601,17 +3590,16 @@
     <option name="necessary" hit="Automatically download .NET SDK if necessary" />
     <option name="net" hit="Automatically download .NET SDK if necessary" />
     <option name="sdk" hit="Automatically download .NET SDK if necessary" />
-    <option name="custom" hit="Custom " />
     <option name="msbuild" hit="MSBuild 全局属性 " />
     <option name="全局属性" hit="MSBuild 全局属性 " />
     <option name="msbuild" hit="MSBuild 全局属性:" />
     <option name="全局属性" hit="MSBuild 全局属性:" />
-    <option name="jetbrainslog" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
-    <option name="log" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
-    <option name="msbuild" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
-    <option name="resharperbuild202403171240361359" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
-    <option name="日志文件将写入每个构建的指定文件夹中" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
-    <option name="示例文件名" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403171240361359.log" />
+    <option name="jetbrainslog" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403241242259664.log" />
+    <option name="log" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403241242259664.log" />
+    <option name="msbuild" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403241242259664.log" />
+    <option name="resharperbuild202403241242259664" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403241242259664.log" />
+    <option name="日志文件将写入每个构建的指定文件夹中" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403241242259664.log" />
+    <option name="示例文件名" hit="MSBuild 日志文件将写入每个构建的指定文件夹中。&#10;示例文件名: JetBrainsLog.ReSharperBuild202403241242259664.log" />
     <option name="msbuild" hit="MSBuild 版本 " />
     <option name="版本" hit="MSBuild 版本 " />
     <option name="msbuild" hit="MSBuild 版本:" />
@@ -3659,6 +3647,7 @@
     <option name="可能会降低设计时构建速度" hit="根据依赖项排列项目加载顺序(可能会降低设计时构建速度，但会防止项目被多次构建)" />
     <option name="根据依赖项排列项目加载顺序" hit="根据依赖项排列项目加载顺序(可能会降低设计时构建速度，但会防止项目被多次构建)" />
     <option name="编辑" hit="编辑 " />
+    <option name="自定义" hit="自定义 " />
     <option name="解决方案加载" hit="设计时构建 解决方案加载 " />
     <option name="设计时构建" hit="设计时构建 解决方案加载 " />
     <option name="解决方案加载" hit="设计时构建(解决方案加载)" />
@@ -4598,10 +4587,7 @@
     <option name="调用" hit="调用“C# Interactive 中的引用”操作时构建项目" />
   </configurable>
   <configurable id="RiderNuGetOptionsPageId" configurable_name="NuGet">
-    <option name="console" hit="Console" />
-    <option name="embedded" hit="Embedded" />
     <option name="msbuild" hit="MsBuild" />
-    <option name="none" hit="None" />
     <option name="nuget" hit="NuGet" />
     <option name="cli" hit="NuGet  NET CLI 插件" />
     <option name="net" hit="NuGet  NET CLI 插件" />
@@ -4657,6 +4643,7 @@
     <option name="始终启用" hit="始终启用" />
     <option name="始终禁用" hit="始终禁用" />
     <option name="安装并更新" hit="安装并更新" />
+    <option name="嵌入式" hit="嵌入式" />
     <option name="即使上面存在依赖项" hit="强制卸载 即使上面存在依赖项" />
     <option name="强制卸载" hit="强制卸载 即使上面存在依赖项" />
     <option name="即使上面存在依赖项" hit="强制卸载，即使上面存在依赖项" />
@@ -4664,10 +4651,12 @@
     <option name="必要时自动还原缺少的软件包" hit="必要时自动还原缺少的软件包" />
     <option name="必要时自动还原缺少的软件包" hit="必要时自动还原缺少的软件包 " />
     <option name="忽略" hit="忽略" />
+    <option name="控制台" hit="控制台" />
     <option name="提示" hit="提示" />
     <option name="搜索" hit="搜索" />
     <option name="文件冲突操作" hit="文件冲突操作" />
     <option name="文件冲突操作" hit="文件冲突操作 " />
+    <option name="无" hit="无" />
     <option name="最低" hit="最低" />
     <option name="最高" hit="最高" />
     <option name="最高修补程序版本" hit="最高修补程序版本" />
@@ -4682,11 +4671,42 @@
     <option name="默认软件包管理格式" hit="默认软件包管理格式 " />
   </configurable>
   <configurable id="preferences.sourceCode.C#" configurable_name="C#">
+    <option name="" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="0" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="for" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="naming" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="on" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="override" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="page" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="rules" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="s" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="solution" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="some" path="命名" hit="     for solution override s  some naming rules on this page" />
+    <option name="this" path="命名" hit="     for solution override s  some naming rules on this page" />
     <option name="" path="命名" hit=" Enable  Inconsistent Naming  inspection" />
     <option name="enable" path="命名" hit=" Enable  Inconsistent Naming  inspection" />
     <option name="inconsistent" path="命名" hit=" Enable  Inconsistent Naming  inspection" />
     <option name="inspection" path="命名" hit=" Enable  Inconsistent Naming  inspection" />
     <option name="naming" path="命名" hit=" Enable  Inconsistent Naming  inspection" />
+    <option name="" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="are" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="auto-detected" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="based" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="clear" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="current" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="default" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="in" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="naming" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="on" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="rules" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="set" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="solution" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="some" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="symbol" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="the" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="to" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="use" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
+    <option name="values" path="命名" hit=" Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
     <option name="" path="命名" hit=" Support Microsoft events naming style" />
     <option name="events" path="命名" hit=" Support Microsoft events naming style" />
     <option name="microsoft" path="命名" hit=" Support Microsoft events naming style" />
@@ -4780,87 +4800,21 @@
     <option name="后" hit="++ 和 -- 前/后" />
     <option name="和" hit="++ 和 -- 前/后" />
     <option name="abbreviations" path="命名" hit="Abbreviations " />
-    <option name="abbreviations" hit="Abbreviations:" />
-    <option name="+" hit="Additive operators (+,-)" />
-    <option name="-" hit="Additive operators (+,-)" />
-    <option name="additive" hit="Additive operators (+,-)" />
-    <option name="operators" hit="Additive operators (+,-)" />
-    <option name="after" hit="After comma" />
-    <option name="comma" hit="After comma" />
-    <option name="before" hit="Before comma" />
-    <option name="comma" hit="Before comma" />
-    <option name="before" hit="Before semicolon" />
-    <option name="semicolon" hit="Before semicolon" />
     <option name="c#" hit="C " />
-    <option name="arguments" hit="Call arguments" />
-    <option name="call" hit="Call arguments" />
-    <option name="calls" hit="Chained method calls" />
-    <option name="chained" hit="Chained method calls" />
-    <option name="method" hit="Chained method calls" />
-    <option name="constant" hit="Constant fields (not private)" />
-    <option name="fields" hit="Constant fields (not private)" />
-    <option name="not" hit="Constant fields (not private)" />
-    <option name="private" hit="Constant fields (not private)" />
-    <option name="constant" hit="Constant fields (private)" />
-    <option name="fields" hit="Constant fields (private)" />
-    <option name="private" hit="Constant fields (private)" />
-    <option name="default" hit="Default" />
-    <option name="editorconfig" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="for" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="naming" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="on" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="override" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="page" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="rules" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="s" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="solution" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="some" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="this" path="命名" hit="EditorConfig for solution override s  some naming rules on this page" />
-    <option name="editorconfig" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="for" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="naming" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="on" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="override" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="page" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="rules" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="s" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="solution" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="some" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="this" hit="EditorConfig for solution override(s) some naming rules on this page" />
     <option name="enable" hit="Enable 'Inconsistent Naming' inspection" />
     <option name="inconsistent" hit="Enable 'Inconsistent Naming' inspection" />
     <option name="inspection" hit="Enable 'Inconsistent Naming' inspection" />
     <option name="naming" hit="Enable 'Inconsistent Naming' inspection" />
-    <option name="enum" hit="Enum members" />
-    <option name="members" hit="Enum members" />
     <option name="event" path="命名" hit="Event subscriptions on fields " />
     <option name="fields" path="命名" hit="Event subscriptions on fields " />
     <option name="on" path="命名" hit="Event subscriptions on fields " />
     <option name="subscriptions" path="命名" hit="Event subscriptions on fields " />
-    <option name="event" hit="Event subscriptions on fields:" />
-    <option name="fields" hit="Event subscriptions on fields:" />
-    <option name="on" hit="Event subscriptions on fields:" />
-    <option name="subscriptions" hit="Event subscriptions on fields:" />
     <option name="event" path="命名" hit="Event subscriptions on this " />
     <option name="on" path="命名" hit="Event subscriptions on this " />
     <option name="subscriptions" path="命名" hit="Event subscriptions on this " />
     <option name="this" path="命名" hit="Event subscriptions on this " />
-    <option name="event" hit="Event subscriptions on this:" />
-    <option name="on" hit="Event subscriptions on this:" />
-    <option name="subscriptions" hit="Event subscriptions on this:" />
-    <option name="this" hit="Event subscriptions on this:" />
-    <option name="events" hit="Events" />
     <option name="file" hit="File Layout" />
     <option name="layout" hit="File Layout" />
-    <option name="iuppercamelcase" hit="IUpperCamelCase" />
-    <option name="fields" hit="Instance fields (not private)" />
-    <option name="instance" hit="Instance fields (not private)" />
-    <option name="not" hit="Instance fields (not private)" />
-    <option name="private" hit="Instance fields (not private)" />
-    <option name="fields" hit="Instance fields (private)" />
-    <option name="instance" hit="Instance fields (private)" />
-    <option name="private" hit="Instance fields (private)" />
-    <option name="interfaces" hit="Interfaces" />
     <option name="linq" hit="LINQ 查询" />
     <option name="查询" hit="LINQ 查询" />
     <option name="linq" hit="LINQ 表达式的排列" />
@@ -4869,17 +4823,6 @@
     <option name="indent" hit="Line continuation indent multiplier" />
     <option name="line" hit="Line continuation indent multiplier" />
     <option name="multiplier" hit="Line continuation indent multiplier" />
-    <option name="constants" hit="Local constants" />
-    <option name="local" hit="Local constants" />
-    <option name="functions" hit="Local functions" />
-    <option name="local" hit="Local functions" />
-    <option name="local" hit="Local variables" />
-    <option name="variables" hit="Local variables" />
-    <option name="method" hit="Method parameters" />
-    <option name="parameters" hit="Method parameters" />
-    <option name="methods" hit="Methods" />
-    <option name="modifiers" hit="Modifiers" />
-    <option name="namespaces" hit="Namespaces" />
     <option name="and" hit="Naming style will be inferred from symbol naming in the current solution and auto-saved into solution settings." />
     <option name="auto-saved" hit="Naming style will be inferred from symbol naming in the current solution and auto-saved into solution settings." />
     <option name="be" hit="Naming style will be inferred from symbol naming in the current solution and auto-saved into solution settings." />
@@ -4897,8 +4840,6 @@
     <option name="will" hit="Naming style will be inferred from symbol naming in the current solution and auto-saved into solution settings." />
     <option name="null" path="Null 检查" hit="Null 检查" />
     <option name="检查" path="Null 检查" hit="Null 检查" />
-    <option name="parameters" hit="Parameters" />
-    <option name="properties" hit="Properties" />
     <option name="property" hit="Property 声明" />
     <option name="声明" hit="Property 声明" />
     <option name="resharper" hit="ReSharper 其他" />
@@ -4908,24 +4849,6 @@
     <option name="on" hit="Remove whitespace on blank lines" />
     <option name="remove" hit="Remove whitespace on blank lines" />
     <option name="whitespace" hit="Remove whitespace on blank lines" />
-    <option name="are" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="auto-detected" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="based" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="clear" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="current" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="default" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="in" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="naming" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="on" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="rules" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="set" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="solution" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="some" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="symbol" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="the" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="to" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="use" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
-    <option name="values" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution  To use default rules  clear  Use auto detected values  " />
     <option name="are" hit="Some naming rules are set based on the symbol naming in the current solution. To use default rules, clear 'Use auto-detected values'." />
     <option name="auto-detected" hit="Some naming rules are set based on the symbol naming in the current solution. To use default rules, clear 'Use auto-detected values'." />
     <option name="based" hit="Some naming rules are set based on the symbol naming in the current solution. To use default rules, clear 'Use auto-detected values'." />
@@ -4944,48 +4867,17 @@
     <option name="to" hit="Some naming rules are set based on the symbol naming in the current solution. To use default rules, clear 'Use auto-detected values'." />
     <option name="use" hit="Some naming rules are set based on the symbol naming in the current solution. To use default rules, clear 'Use auto-detected values'." />
     <option name="values" hit="Some naming rules are set based on the symbol naming in the current solution. To use default rules, clear 'Use auto-detected values'." />
-    <option name="fields" hit="Static fields (not private)" />
-    <option name="not" hit="Static fields (not private)" />
-    <option name="private" hit="Static fields (not private)" />
-    <option name="static" hit="Static fields (not private)" />
-    <option name="fields" hit="Static fields (private)" />
-    <option name="private" hit="Static fields (private)" />
-    <option name="static" hit="Static fields (private)" />
-    <option name="fields" hit="Static readonly fields (not private)" />
-    <option name="not" hit="Static readonly fields (not private)" />
-    <option name="private" hit="Static readonly fields (not private)" />
-    <option name="readonly" hit="Static readonly fields (not private)" />
-    <option name="static" hit="Static readonly fields (not private)" />
-    <option name="fields" hit="Static readonly fields (private)" />
-    <option name="private" hit="Static readonly fields (private)" />
-    <option name="readonly" hit="Static readonly fields (private)" />
-    <option name="static" hit="Static readonly fields (private)" />
     <option name="static" hit="Static 成员限定" />
     <option name="成员限定" hit="Static 成员限定" />
-    <option name="events" hit="Support Microsoft events naming style" />
-    <option name="microsoft" hit="Support Microsoft events naming style" />
-    <option name="naming" hit="Support Microsoft events naming style" />
-    <option name="style" hit="Support Microsoft events naming style" />
-    <option name="support" hit="Support Microsoft events naming style" />
     <option name="switch" hit="Switch 表达式" />
     <option name="表达式" hit="Switch 表达式" />
     <option name="switch" hit="Switch 表达式的排列" />
     <option name="表达式的排列" hit="Switch 表达式的排列" />
-    <option name="tuppercamelcase" hit="TUpperCamelCase" />
     <option name="6+" hit="ThrowIfNull() API (.NET 6+)" />
     <option name="api" hit="ThrowIfNull() API (.NET 6+)" />
     <option name="net" hit="ThrowIfNull() API (.NET 6+)" />
     <option name="throwifnull" hit="ThrowIfNull() API (.NET 6+)" />
-    <option name="parameters" hit="Type parameters" />
-    <option name="type" hit="Type parameters" />
-    <option name="and" hit="Types and namespaces" />
-    <option name="namespaces" hit="Types and namespaces" />
-    <option name="types" hit="Types and namespaces" />
     <option name="unity" hit="Unity" />
-    <option name="field" hit="Unity serialized field" />
-    <option name="serialized" hit="Unity serialized field" />
-    <option name="unity" hit="Unity serialized field" />
-    <option name="uppercamelcase" hit="UpperCamelCase" />
     <option name="auto-detected" hit="Use auto-detected rules" />
     <option name="rules" hit="Use auto-detected rules" />
     <option name="use" hit="Use auto-detected rules" />
@@ -5013,9 +4905,6 @@
     <option name="want" hit="Violations of naming rules are detected with the 'Inconsistent Naming' inspection. If you want this inspection to skip only specific rules, clear 'Enable Inspections' in the preferences of those rules." />
     <option name="with" hit="Violations of naming rules are detected with the 'Inconsistent Naming' inspection. If you want this inspection to skip only specific rules, clear 'Enable Inspections' in the preferences of those rules." />
     <option name="you" hit="Violations of naming rules are detected with the 'Inconsistent Naming' inspection. If you want this inspection to skip only specific rules, clear 'Enable Inspections' in the preferences of those rules." />
-    <option name="lines" hit="Wrap long lines" />
-    <option name="long" hit="Wrap long lines" />
-    <option name="wrap" hit="Wrap long lines" />
     <option name="xml" path="XML 文档" hit="XML 文档" />
     <option name="文档" path="XML 文档" hit="XML 文档" />
     <option name="" hit="[Header] 注解之后的空行" />
@@ -5031,7 +4920,6 @@
     <option name="和委托" hit="lambda 和委托(匿名方法声明)" />
     <option name="lambda" hit="lambda 箭头周围" />
     <option name="箭头周围" hit="lambda 箭头周围" />
-    <option name="lowercamelcase" hit="lowerCamelCase" />
     <option name="null" hit="null 合并运算符(??)" />
     <option name="合并运算符" hit="null 合并运算符(??)" />
     <option name="null" hit="null 检查模式样式" />
@@ -5052,6 +4940,18 @@
     <option name="switch" hit="switch 语句中的 'case' 后" />
     <option name="后" hit="switch 语句中的 'case' 后" />
     <option name="语句中的" hit="switch 语句中的 'case' 后" />
+    <option name="" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="0" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="for" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="naming" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="on" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="override" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="page" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="rules" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="s" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="solution" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="some" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="this" hit="{0} for solution override(s) some naming rules on this page" />
     <option name="-" hit="一元减法运算符(-)" />
     <option name="一元减法运算符" hit="一元减法运算符(-)" />
     <option name="+" hit="一元加法运算符(+)" />
@@ -5126,6 +5026,7 @@
     <option name="保留表达式主体成员的现有排列" hit="保留表达式主体成员的现有排列" />
     <option name="保留调用中圆括号的现有排列" hit="保留调用中圆括号的现有排列" />
     <option name="修正相邻行中的列对齐" hit="修正相邻行中的列对齐" />
+    <option name="修饰符" hit="修饰符" />
     <option name="修饰符顺序" hit="修饰符顺序" />
     <option name="global" hit="允许使用 'global::' 前缀" />
     <option name="允许使用" hit="允许使用 'global::' 前缀" />
@@ -5156,6 +5057,7 @@
     <option name="减少缩进语句标签" hit="减少缩进语句标签" />
     <option name="减少缩进逗号" hit="减少缩进逗号" />
     <option name="减少缩进链式方法调用中的点" hit="减少缩进链式方法调用中的点" />
+    <option name="分号之前" hit="分号之前" />
     <option name="列表模式" hit="列表模式" />
     <option name="列表模式的排列" hit="列表模式的排列" />
     <option name="初始值设定项的排列" hit="初始值设定项的排列" />
@@ -5165,6 +5067,9 @@
     <option name="制表符和缩进" hit="制表符和缩进" />
     <option name="制表符宽度" hit="制表符宽度" />
     <option name="制表符用于缩进时如何对齐" hit="制表符用于缩进时如何对齐" />
+    <option name="+" hit="加法运算符(+、-)" />
+    <option name="-" hit="加法运算符(+、-)" />
+    <option name="加法运算符" hit="加法运算符(+、-)" />
     <option name="加载模式" hit="加载模式:" />
     <option name="包装主构造函数形参" hit="包装主构造函数形参" />
     <option name="区域内" hit="区域内" />
@@ -5206,6 +5111,7 @@
     <option name="可用于断言" path="Null 检查" hit="可用于断言  否" />
     <option name="否" path="Null 检查" hit="可用于断言  否" />
     <option name="命名" path="命名" hit="命名" />
+    <option name="命名空间" hit="命名空间" />
     <option name="命名空间内部" hit="命名空间内部" />
     <option name="周围" hit="命名空间别名指令中的 '=' 周围" />
     <option name="命名空间别名指令中的" hit="命名空间别名指令中的 '=' 周围" />
@@ -5292,6 +5198,8 @@
     <option name="周围空格" hit="在特性中的 '=' 周围空格" />
     <option name="在特性中的" hit="在特性中的 '=' 周围空格" />
     <option name="在表达式大括号内使用连续行缩进" hit="在表达式大括号内使用连续行缩进" />
+    <option name="在逗号前" hit="在逗号前" />
+    <option name="在逗号后" hit="在逗号后" />
     <option name="在部分中联接或分隔特性" hit="在部分中联接或分隔特性" />
     <option name="在部分格式上使用上一个元素的缩进" hit="在部分格式上使用上一个元素的缩进" />
     <option name="基类和接口列表" hit="基类和接口列表" />
@@ -5476,6 +5384,7 @@
     <option name="unity" path="文件布局.Unity" hit="文件布局 Unity" />
     <option name="文件布局" path="文件布局.Unity" hit="文件布局 Unity" />
     <option name="文字值" hit="文字值" />
+    <option name="方法参数" hit="方法参数" />
     <option name="方法周围" hit="方法周围" />
     <option name="方法和运算符" hit="方法和运算符" />
     <option name="方法声明" hit="方法声明" />
@@ -5607,6 +5516,7 @@
     <option name="语句的圆括号前" hit="语句的圆括号前" />
     <option name="语句的排列" hit="语句的排列" />
     <option name="语法样式" path="语法样式" hit="语法样式" />
+    <option name="调用参数" hit="调用参数" />
     <option name="调用的排列" hit="调用的排列" />
     <option name="调试断言" hit="调试断言" />
     <option name="+" hit="赋值运算符(如 '=' 和 '+=')" />
@@ -5621,7 +5531,9 @@
     <option name="逗号和分号周围" hit="逗号和分号周围" />
     <option name="逻辑运算符" hit="逻辑运算符(&amp;&amp;,||)" />
     <option name="逻辑非运算符" hit="逻辑非运算符(!)" />
+    <option name="链式方法调用" hit="链式方法调用" />
     <option name="长度大于此值时将特性部分列表置于单独的行中" hit="长度大于此值时将特性部分列表置于单独的行中" />
+    <option name="长行换行" hit="长行换行" />
     <option name="预处理程序指令" hit="预处理程序指令" />
     <option name="前换行" hit="首选在 ',' 前换行" />
     <option name="首选在" hit="首选在 ',' 前换行" />
@@ -5733,67 +5645,12 @@
     <option name="前" path="空格" hit="++ 和 -- 前/后" />
     <option name="后" path="空格" hit="++ 和 -- 前/后" />
     <option name="和" path="空格" hit="++ 和 -- 前/后" />
-    <option name="abbreviations" path="命名" hit="Abbreviations:" />
-    <option name="+" path="空格" hit="Additive operators (+,-)" />
-    <option name="-" path="空格" hit="Additive operators (+,-)" />
-    <option name="additive" path="空格" hit="Additive operators (+,-)" />
-    <option name="operators" path="空格" hit="Additive operators (+,-)" />
-    <option name="after" path="空格" hit="After comma" />
-    <option name="comma" path="空格" hit="After comma" />
-    <option name="before" path="空格" hit="Before comma" />
-    <option name="comma" path="空格" hit="Before comma" />
-    <option name="before" path="空格" hit="Before semicolon" />
-    <option name="semicolon" path="空格" hit="Before semicolon" />
-    <option name="arguments" path="制表符、缩进、对齐" hit="Call arguments" />
-    <option name="call" path="制表符、缩进、对齐" hit="Call arguments" />
-    <option name="calls" path="制表符、缩进、对齐" hit="Chained method calls" />
-    <option name="chained" path="制表符、缩进、对齐" hit="Chained method calls" />
-    <option name="method" path="制表符、缩进、对齐" hit="Chained method calls" />
-    <option name="constant" path="命名" hit="Constant fields (not private)" />
-    <option name="fields" path="命名" hit="Constant fields (not private)" />
-    <option name="not" path="命名" hit="Constant fields (not private)" />
-    <option name="private" path="命名" hit="Constant fields (not private)" />
-    <option name="constant" path="命名" hit="Constant fields (private)" />
-    <option name="fields" path="命名" hit="Constant fields (private)" />
-    <option name="private" path="命名" hit="Constant fields (private)" />
-    <option name="default" path="命名" hit="Default" />
-    <option name="editorconfig" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="for" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="naming" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="on" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="override" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="page" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="rules" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="s" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="solution" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="some" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
-    <option name="this" path="命名" hit="EditorConfig for solution override(s) some naming rules on this page" />
     <option name="enable" path="命名" hit="Enable 'Inconsistent Naming' inspection" />
     <option name="inconsistent" path="命名" hit="Enable 'Inconsistent Naming' inspection" />
     <option name="inspection" path="命名" hit="Enable 'Inconsistent Naming' inspection" />
     <option name="naming" path="命名" hit="Enable 'Inconsistent Naming' inspection" />
-    <option name="enum" path="命名" hit="Enum members" />
-    <option name="members" path="命名" hit="Enum members" />
-    <option name="event" path="命名" hit="Event subscriptions on fields:" />
-    <option name="fields" path="命名" hit="Event subscriptions on fields:" />
-    <option name="on" path="命名" hit="Event subscriptions on fields:" />
-    <option name="subscriptions" path="命名" hit="Event subscriptions on fields:" />
-    <option name="event" path="命名" hit="Event subscriptions on this:" />
-    <option name="on" path="命名" hit="Event subscriptions on this:" />
-    <option name="subscriptions" path="命名" hit="Event subscriptions on this:" />
-    <option name="this" path="命名" hit="Event subscriptions on this:" />
-    <option name="events" path="命名" hit="Events" />
     <option name="file" path="文件布局" hit="File Layout" />
     <option name="layout" path="文件布局" hit="File Layout" />
-    <option name="iuppercamelcase" path="命名" hit="IUpperCamelCase" />
-    <option name="fields" path="命名" hit="Instance fields (not private)" />
-    <option name="instance" path="命名" hit="Instance fields (not private)" />
-    <option name="not" path="命名" hit="Instance fields (not private)" />
-    <option name="private" path="命名" hit="Instance fields (not private)" />
-    <option name="fields" path="命名" hit="Instance fields (private)" />
-    <option name="instance" path="命名" hit="Instance fields (private)" />
-    <option name="private" path="命名" hit="Instance fields (private)" />
-    <option name="interfaces" path="命名" hit="Interfaces" />
     <option name="linq" path="制表符、缩进、对齐" hit="LINQ 查询" />
     <option name="查询" path="制表符、缩进、对齐" hit="LINQ 查询" />
     <option name="linq" path="换行" hit="LINQ 表达式的排列" />
@@ -5802,17 +5659,6 @@
     <option name="indent" path="制表符、缩进、对齐" hit="Line continuation indent multiplier" />
     <option name="line" path="制表符、缩进、对齐" hit="Line continuation indent multiplier" />
     <option name="multiplier" path="制表符、缩进、对齐" hit="Line continuation indent multiplier" />
-    <option name="constants" path="命名" hit="Local constants" />
-    <option name="local" path="命名" hit="Local constants" />
-    <option name="functions" path="命名" hit="Local functions" />
-    <option name="local" path="命名" hit="Local functions" />
-    <option name="local" path="命名" hit="Local variables" />
-    <option name="variables" path="命名" hit="Local variables" />
-    <option name="method" path="制表符、缩进、对齐" hit="Method parameters" />
-    <option name="parameters" path="制表符、缩进、对齐" hit="Method parameters" />
-    <option name="methods" path="命名" hit="Methods" />
-    <option name="modifiers" path="语法样式" hit="Modifiers" />
-    <option name="namespaces" path="语法样式" hit="Namespaces" />
     <option name="and" path="命名" hit="Naming style will be inferred from symbol naming in the current solution and auto-saved into solution settings." />
     <option name="auto-saved" path="命名" hit="Naming style will be inferred from symbol naming in the current solution and auto-saved into solution settings." />
     <option name="be" path="命名" hit="Naming style will be inferred from symbol naming in the current solution and auto-saved into solution settings." />
@@ -5828,8 +5674,6 @@
     <option name="symbol" path="命名" hit="Naming style will be inferred from symbol naming in the current solution and auto-saved into solution settings." />
     <option name="the" path="命名" hit="Naming style will be inferred from symbol naming in the current solution and auto-saved into solution settings." />
     <option name="will" path="命名" hit="Naming style will be inferred from symbol naming in the current solution and auto-saved into solution settings." />
-    <option name="parameters" path="命名" hit="Parameters" />
-    <option name="properties" path="命名" hit="Properties" />
     <option name="property" path="大括号布局" hit="Property 声明" />
     <option name="声明" path="大括号布局" hit="Property 声明" />
     <option name="resharper" path="其他" hit="ReSharper 其他" />
@@ -5857,48 +5701,17 @@
     <option name="to" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution. To use default rules, clear 'Use auto-detected values'." />
     <option name="use" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution. To use default rules, clear 'Use auto-detected values'." />
     <option name="values" path="命名" hit="Some naming rules are set based on the symbol naming in the current solution. To use default rules, clear 'Use auto-detected values'." />
-    <option name="fields" path="命名" hit="Static fields (not private)" />
-    <option name="not" path="命名" hit="Static fields (not private)" />
-    <option name="private" path="命名" hit="Static fields (not private)" />
-    <option name="static" path="命名" hit="Static fields (not private)" />
-    <option name="fields" path="命名" hit="Static fields (private)" />
-    <option name="private" path="命名" hit="Static fields (private)" />
-    <option name="static" path="命名" hit="Static fields (private)" />
-    <option name="fields" path="命名" hit="Static readonly fields (not private)" />
-    <option name="not" path="命名" hit="Static readonly fields (not private)" />
-    <option name="private" path="命名" hit="Static readonly fields (not private)" />
-    <option name="readonly" path="命名" hit="Static readonly fields (not private)" />
-    <option name="static" path="命名" hit="Static readonly fields (not private)" />
-    <option name="fields" path="命名" hit="Static readonly fields (private)" />
-    <option name="private" path="命名" hit="Static readonly fields (private)" />
-    <option name="readonly" path="命名" hit="Static readonly fields (private)" />
-    <option name="static" path="命名" hit="Static readonly fields (private)" />
     <option name="static" path="语法样式" hit="Static 成员限定" />
     <option name="成员限定" path="语法样式" hit="Static 成员限定" />
-    <option name="events" path="命名" hit="Support Microsoft events naming style" />
-    <option name="microsoft" path="命名" hit="Support Microsoft events naming style" />
-    <option name="naming" path="命名" hit="Support Microsoft events naming style" />
-    <option name="style" path="命名" hit="Support Microsoft events naming style" />
-    <option name="support" path="命名" hit="Support Microsoft events naming style" />
     <option name="switch" path="制表符、缩进、对齐" hit="Switch 表达式" />
     <option name="表达式" path="制表符、缩进、对齐" hit="Switch 表达式" />
     <option name="switch" path="换行" hit="Switch 表达式的排列" />
     <option name="表达式的排列" path="换行" hit="Switch 表达式的排列" />
-    <option name="tuppercamelcase" path="命名" hit="TUpperCamelCase" />
     <option name="6+" path="Null 检查" hit="ThrowIfNull() API (.NET 6+)" />
     <option name="api" path="Null 检查" hit="ThrowIfNull() API (.NET 6+)" />
     <option name="net" path="Null 检查" hit="ThrowIfNull() API (.NET 6+)" />
     <option name="throwifnull" path="Null 检查" hit="ThrowIfNull() API (.NET 6+)" />
-    <option name="parameters" path="命名" hit="Type parameters" />
-    <option name="type" path="命名" hit="Type parameters" />
-    <option name="and" path="命名" hit="Types and namespaces" />
-    <option name="namespaces" path="命名" hit="Types and namespaces" />
-    <option name="types" path="命名" hit="Types and namespaces" />
     <option name="unity" path="其他" hit="Unity" />
-    <option name="field" path="命名" hit="Unity serialized field" />
-    <option name="serialized" path="命名" hit="Unity serialized field" />
-    <option name="unity" path="命名" hit="Unity serialized field" />
-    <option name="uppercamelcase" path="命名" hit="UpperCamelCase" />
     <option name="auto-detected" path="命名" hit="Use auto-detected rules" />
     <option name="rules" path="命名" hit="Use auto-detected rules" />
     <option name="use" path="命名" hit="Use auto-detected rules" />
@@ -5926,9 +5739,6 @@
     <option name="want" path="命名" hit="Violations of naming rules are detected with the 'Inconsistent Naming' inspection. If you want this inspection to skip only specific rules, clear 'Enable Inspections' in the preferences of those rules." />
     <option name="with" path="命名" hit="Violations of naming rules are detected with the 'Inconsistent Naming' inspection. If you want this inspection to skip only specific rules, clear 'Enable Inspections' in the preferences of those rules." />
     <option name="you" path="命名" hit="Violations of naming rules are detected with the 'Inconsistent Naming' inspection. If you want this inspection to skip only specific rules, clear 'Enable Inspections' in the preferences of those rules." />
-    <option name="lines" path="XML 文档" hit="Wrap long lines" />
-    <option name="long" path="XML 文档" hit="Wrap long lines" />
-    <option name="wrap" path="XML 文档" hit="Wrap long lines" />
     <option name="" path="其他" hit="[Header] 注解之后的空行" />
     <option name="header" path="其他" hit="[Header] 注解之后的空行" />
     <option name="注解之后的空行" path="其他" hit="[Header] 注解之后的空行" />
@@ -5942,7 +5752,6 @@
     <option name="和委托" path="大括号布局" hit="lambda 和委托(匿名方法声明)" />
     <option name="lambda" path="空格" hit="lambda 箭头周围" />
     <option name="箭头周围" path="空格" hit="lambda 箭头周围" />
-    <option name="lowercamelcase" path="命名" hit="lowerCamelCase" />
     <option name="null" path="空格" hit="null 合并运算符(??)" />
     <option name="合并运算符" path="空格" hit="null 合并运算符(??)" />
     <option name="null" path="语法样式" hit="null 检查模式样式" />
@@ -5963,6 +5772,18 @@
     <option name="switch" path="空行" hit="switch 语句中的 'case' 后" />
     <option name="后" path="空行" hit="switch 语句中的 'case' 后" />
     <option name="语句中的" path="空行" hit="switch 语句中的 'case' 后" />
+    <option name="" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="0" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="for" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="naming" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="on" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="override" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="page" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="rules" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="s" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="solution" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="some" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
+    <option name="this" path="命名" hit="{0} for solution override(s) some naming rules on this page" />
     <option name="-" path="空格" hit="一元减法运算符(-)" />
     <option name="一元减法运算符" path="空格" hit="一元减法运算符(-)" />
     <option name="+" path="空格" hit="一元加法运算符(+)" />
@@ -6037,6 +5858,7 @@
     <option name="保留表达式主体成员的现有排列" path="换行" hit="保留表达式主体成员的现有排列" />
     <option name="保留调用中圆括号的现有排列" path="换行" hit="保留调用中圆括号的现有排列" />
     <option name="修正相邻行中的列对齐" path="制表符、缩进、对齐" hit="修正相邻行中的列对齐" />
+    <option name="修饰符" path="语法样式" hit="修饰符" />
     <option name="修饰符顺序" path="语法样式" hit="修饰符顺序" />
     <option name="global" path="语法样式" hit="允许使用 'global::' 前缀" />
     <option name="允许使用" path="语法样式" hit="允许使用 'global::' 前缀" />
@@ -6067,12 +5889,16 @@
     <option name="减少缩进语句标签" path="制表符、缩进、对齐" hit="减少缩进语句标签" />
     <option name="减少缩进逗号" path="制表符、缩进、对齐" hit="减少缩进逗号" />
     <option name="减少缩进链式方法调用中的点" path="制表符、缩进、对齐" hit="减少缩进链式方法调用中的点" />
+    <option name="分号之前" path="空格" hit="分号之前" />
     <option name="列表模式" path="制表符、缩进、对齐" hit="列表模式" />
     <option name="列表模式的排列" path="换行" hit="列表模式的排列" />
     <option name="初始值设定项的排列" path="换行" hit="初始值设定项的排列" />
     <option name="制表符和缩进" path="XML 文档" hit="制表符和缩进" />
     <option name="制表符宽度" path="XML 文档" hit="制表符宽度" />
     <option name="制表符用于缩进时如何对齐" path="XML 文档" hit="制表符用于缩进时如何对齐" />
+    <option name="+" path="空格" hit="加法运算符(+、-)" />
+    <option name="-" path="空格" hit="加法运算符(+、-)" />
+    <option name="加法运算符" path="空格" hit="加法运算符(+、-)" />
     <option name="加载模式" path="文件布局" hit="加载模式:" />
     <option name="包装主构造函数形参" path="换行" hit="包装主构造函数形参" />
     <option name="区域内" path="空行" hit="区域内" />
@@ -6111,6 +5937,7 @@
     <option name="null" path="空格" hit="可以为 null 的标记前" />
     <option name="可以为" path="空格" hit="可以为 null 的标记前" />
     <option name="的标记前" path="空格" hit="可以为 null 的标记前" />
+    <option name="命名空间" path="语法样式" hit="命名空间" />
     <option name="命名空间内部" path="空行" hit="命名空间内部" />
     <option name="周围" path="空格" hit="命名空间别名指令中的 '=' 周围" />
     <option name="命名空间别名指令中的" path="空格" hit="命名空间别名指令中的 '=' 周围" />
@@ -6197,6 +6024,8 @@
     <option name="周围空格" path="XML 文档" hit="在特性中的 '=' 周围空格" />
     <option name="在特性中的" path="XML 文档" hit="在特性中的 '=' 周围空格" />
     <option name="在表达式大括号内使用连续行缩进" path="大括号布局" hit="在表达式大括号内使用连续行缩进" />
+    <option name="在逗号前" path="空格" hit="在逗号前" />
+    <option name="在逗号后" path="空格" hit="在逗号后" />
     <option name="在部分中联接或分隔特性" path="语法样式" hit="在部分中联接或分隔特性" />
     <option name="在部分格式上使用上一个元素的缩进" path="制表符、缩进、对齐" hit="在部分格式上使用上一个元素的缩进" />
     <option name="基类和接口列表" path="制表符、缩进、对齐" hit="基类和接口列表" />
@@ -6372,6 +6201,7 @@
     <option name="文件作用域的命名空间指令后" path="空行" hit="文件作用域的命名空间指令后" />
     <option name="文件头注释后" path="空行" hit="文件头注释后" />
     <option name="文字值" path="语法样式" hit="文字值" />
+    <option name="方法参数" path="制表符、缩进、对齐" hit="方法参数" />
     <option name="方法周围" path="空行" hit="方法周围" />
     <option name="方法和运算符" path="语法样式" hit="方法和运算符" />
     <option name="方法声明" path="大括号布局" hit="方法声明" />
@@ -6499,6 +6329,7 @@
     <option name="语句的圆括号内" path="空格" hit="语句的圆括号内" />
     <option name="语句的圆括号前" path="空格" hit="语句的圆括号前" />
     <option name="语句的排列" path="换行" hit="语句的排列" />
+    <option name="调用参数" path="制表符、缩进、对齐" hit="调用参数" />
     <option name="调用的排列" path="换行" hit="调用的排列" />
     <option name="调试断言" path="Null 检查" hit="调试断言" />
     <option name="+" path="空格" hit="赋值运算符(如 '=' 和 '+=')" />
@@ -6513,7 +6344,9 @@
     <option name="逗号和分号周围" path="空格" hit="逗号和分号周围" />
     <option name="逻辑运算符" path="空格" hit="逻辑运算符(&amp;&amp;,||)" />
     <option name="逻辑非运算符" path="空格" hit="逻辑非运算符(!)" />
+    <option name="链式方法调用" path="制表符、缩进、对齐" hit="链式方法调用" />
     <option name="长度大于此值时将特性部分列表置于单独的行中" path="换行" hit="长度大于此值时将特性部分列表置于单独的行中" />
+    <option name="长行换行" path="XML 文档" hit="长行换行" />
     <option name="预处理程序指令" path="制表符、缩进、对齐" hit="预处理程序指令" />
     <option name="前换行" path="换行" hit="首选在 ',' 前换行" />
     <option name="首选在" path="换行" hit="首选在 ',' 前换行" />
@@ -6562,17 +6395,8 @@
     <option name="周围" hit="'.' 周围" />
     <option name="all" path="命名" hit="ALL UPPER" />
     <option name="upper" path="命名" hit="ALL UPPER" />
-    <option name="+" hit="Additive operators (+,-)" />
-    <option name="-" hit="Additive operators (+,-)" />
-    <option name="additive" hit="Additive operators (+,-)" />
-    <option name="operators" hit="Additive operators (+,-)" />
-    <option name="blank" hit="Blank Lines" />
-    <option name="lines" hit="Blank Lines" />
-    <option name="expression" hit="Expression" />
     <option name="first" path="命名" hit="First upper" />
     <option name="upper" path="命名" hit="First upper" />
-    <option name="method" hit="Method parameters" />
-    <option name="parameters" hit="Method parameters" />
     <option name="uppercamelcase" path="命名" hit="UpperCamelCase" />
     <option name="underscoretolerant" path="命名" hit="UpperCamelCase UnderscoreTolerant" />
     <option name="uppercamelcase" path="命名" hit="UpperCamelCase UnderscoreTolerant" />
@@ -6580,9 +6404,6 @@
     <option name="uppercamelcase" path="命名" hit="UpperCamelCase underscoreTolerant" />
     <option name="net" hit="VB NET" />
     <option name="vb" hit="VB NET" />
-    <option name="lines" hit="Wrap long lines" />
-    <option name="long" hit="Wrap long lines" />
-    <option name="wrap" hit="Wrap long lines" />
     <option name="all" path="命名" hit="all lower" />
     <option name="lower" path="命名" hit="all lower" />
     <option name="iddqd" hit="iddqd" />
@@ -6624,6 +6445,9 @@
     <option name="制表符宽度" hit="制表符宽度" />
     <option name="制表符用于缩进时如何对齐" hit="制表符用于缩进时如何对齐" />
     <option name="前缀" path="命名" hit="前缀  " />
+    <option name="+" hit="加法运算符(+、-)" />
+    <option name="-" hit="加法运算符(+、-)" />
+    <option name="加法运算符" hit="加法运算符(+、-)" />
     <option name="区域内" hit="区域内" />
     <option name="区域周围" hit="区域周围" />
     <option name="单行字段周围" hit="单行字段周围" />
@@ -6678,6 +6502,7 @@
     <option name="数组秩圆括号前" hit="数组秩圆括号前" />
     <option name="文件选项部分后" hit="文件选项部分后" />
     <option name="方法" hit="方法" />
+    <option name="方法参数" hit="方法参数" />
     <option name="方法声明圆括号内" hit="方法声明圆括号内" />
     <option name="方法声明圆括号前" hit="方法声明圆括号前" />
     <option name="枚举成员" hit="枚举成员" />
@@ -6694,7 +6519,7 @@
     <option name="空方法声明圆括号内" hit="空方法声明圆括号内" />
     <option name="空方法声明圆括号前" hit="空方法声明圆括号前" />
     <option name="空格" path="空格" hit="空格" />
-    <option name="空行" path="空行" hit="空行" />
+    <option name="空行" hit="空行" />
     <option name="空调用圆括号内" hit="空调用圆括号内" />
     <option name="空调用圆括号前" hit="空调用圆括号前" />
     <option name="类型周围" hit="类型周围" />
@@ -6708,6 +6533,7 @@
     <option name="缩进" hit="缩进 'select' 中的 'case'" />
     <option name="缩进大小" hit="缩进大小" />
     <option name="缩进样式" hit="缩进样式" />
+    <option name="表达式" hit="表达式" />
     <option name="表达式圆括号内" hit="表达式圆括号内" />
     <option name="周围" hit="语句 ':' 周围" />
     <option name="语句" hit="语句 ':' 周围" />
@@ -6720,6 +6546,7 @@
     <option name="如" hit="赋值运算符(如 '=' 和 '+=')" />
     <option name="赋值运算符" hit="赋值运算符(如 '=' 和 '+=')" />
     <option name="运算周围" hit="运算周围" />
+    <option name="长行换行" hit="长行换行" />
     <option name="附近的圆括号" hit="附近的圆括号" />
     <option name="首选在二元表达式中的运算符前换行" hit="首选在二元表达式中的运算符前换行" />
     <option name="前换行" hit="首选在调用中的 '(' 前换行" />
@@ -6733,18 +6560,6 @@
     <option name="后" path="空格" hit="',' 后" />
     <option name="" path="空格" hit="'.' 周围" />
     <option name="周围" path="空格" hit="'.' 周围" />
-    <option name="+" path="空格" hit="Additive operators (+,-)" />
-    <option name="-" path="空格" hit="Additive operators (+,-)" />
-    <option name="additive" path="空格" hit="Additive operators (+,-)" />
-    <option name="operators" path="空格" hit="Additive operators (+,-)" />
-    <option name="blank" path="空行" hit="Blank Lines" />
-    <option name="lines" path="空行" hit="Blank Lines" />
-    <option name="expression" path="其他" hit="Expression" />
-    <option name="method" path="其他" hit="Method parameters" />
-    <option name="parameters" path="其他" hit="Method parameters" />
-    <option name="lines" path="换行" hit="Wrap long lines" />
-    <option name="long" path="换行" hit="Wrap long lines" />
-    <option name="wrap" path="换行" hit="Wrap long lines" />
     <option name="iddqd" path="语法样式" hit="iddqd" />
     <option name="import" path="空行" hit="import 部分后" />
     <option name="部分后" path="空行" hit="import 部分后" />
@@ -6778,6 +6593,9 @@
     <option name="制表符和缩进" path="制表符和缩进" hit="制表符和缩进" />
     <option name="制表符宽度" path="制表符和缩进" hit="制表符宽度" />
     <option name="制表符用于缩进时如何对齐" path="制表符和缩进" hit="制表符用于缩进时如何对齐" />
+    <option name="+" path="空格" hit="加法运算符(+、-)" />
+    <option name="-" path="空格" hit="加法运算符(+、-)" />
+    <option name="加法运算符" path="空格" hit="加法运算符(+、-)" />
     <option name="区域内" path="空行" hit="区域内" />
     <option name="区域周围" path="空行" hit="区域周围" />
     <option name="单行字段周围" path="空行" hit="单行字段周围" />
@@ -6829,6 +6647,7 @@
     <option name="数组秩圆括号前" path="空格" hit="数组秩圆括号前" />
     <option name="文件选项部分后" path="空行" hit="文件选项部分后" />
     <option name="方法" path="命名" hit="方法" />
+    <option name="方法参数" path="其他" hit="方法参数" />
     <option name="方法声明圆括号内" path="空格" hit="方法声明圆括号内" />
     <option name="方法声明圆括号前" path="空格" hit="方法声明圆括号前" />
     <option name="枚举成员" path="命名" hit="枚举成员" />
@@ -6842,6 +6661,7 @@
     <option name="空数组秩圆括号内" path="空格" hit="空数组秩圆括号内" />
     <option name="空方法声明圆括号内" path="空格" hit="空方法声明圆括号内" />
     <option name="空方法声明圆括号前" path="空格" hit="空方法声明圆括号前" />
+    <option name="空行" path="空行" hit="空行" />
     <option name="空调用圆括号内" path="空格" hit="空调用圆括号内" />
     <option name="空调用圆括号前" path="空格" hit="空调用圆括号前" />
     <option name="类型周围" path="空行" hit="类型周围" />
@@ -6855,6 +6675,7 @@
     <option name="缩进" path="其他" hit="缩进 'select' 中的 'case'" />
     <option name="缩进大小" path="制表符和缩进" hit="缩进大小" />
     <option name="缩进样式" path="制表符和缩进" hit="缩进样式" />
+    <option name="表达式" path="其他" hit="表达式" />
     <option name="表达式圆括号内" path="空格" hit="表达式圆括号内" />
     <option name="周围" path="空格" hit="语句 ':' 周围" />
     <option name="语句" path="空格" hit="语句 ':' 周围" />
@@ -6866,6 +6687,7 @@
     <option name="如" path="空格" hit="赋值运算符(如 '=' 和 '+=')" />
     <option name="赋值运算符" path="空格" hit="赋值运算符(如 '=' 和 '+=')" />
     <option name="运算周围" path="空格" hit="运算周围" />
+    <option name="长行换行" path="换行" hit="长行换行" />
     <option name="附近的圆括号" path="空格" hit="附近的圆括号" />
     <option name="首选在二元表达式中的运算符前换行" path="换行" hit="首选在二元表达式中的运算符前换行" />
     <option name="前换行" path="换行" hit="首选在调用中的 '(' 前换行" />
@@ -6884,9 +6706,6 @@
     <option name="uppercamelcase" path="命名" hit="UpperCamelCase UnderscoreTolerant" />
     <option name="underscoretolerant" path="命名" hit="UpperCamelCase underscoreTolerant" />
     <option name="uppercamelcase" path="命名" hit="UpperCamelCase underscoreTolerant" />
-    <option name="lines" hit="Wrap long lines" />
-    <option name="long" hit="Wrap long lines" />
-    <option name="wrap" hit="Wrap long lines" />
     <option name="xaml" hit="XAML" />
     <option name="xaml" hit="XAML 字段" />
     <option name="字段" hit="XAML 字段" />
@@ -6943,9 +6762,7 @@
     <option name="特性缩进" hit="特性缩进" />
     <option name="缩进大小" hit="缩进大小" />
     <option name="缩进样式" hit="缩进样式" />
-    <option name="lines" path="格式设置样式" hit="Wrap long lines" />
-    <option name="long" path="格式设置样式" hit="Wrap long lines" />
-    <option name="wrap" path="格式设置样式" hit="Wrap long lines" />
+    <option name="长行换行" hit="长行换行" />
     <option name="xaml" path="命名" hit="XAML 字段" />
     <option name="字段" path="命名" hit="XAML 字段" />
     <option name="xaml" path="命名" hit="XAML 资源" />
@@ -6987,6 +6804,7 @@
     <option name="特性缩进" path="格式设置样式" hit="特性缩进" />
     <option name="缩进大小" path="格式设置样式" hit="缩进大小" />
     <option name="缩进样式" path="格式设置样式" hit="缩进样式" />
+    <option name="长行换行" path="格式设置样式" hit="长行换行" />
   </configurable>
   <configurable id="preferences.toDoOptions" configurable_name="TODO">
     <option name="todo" hit="TODO" />
@@ -8229,8 +8047,6 @@
     <option name="include" hit="Invalid XML include element" />
     <option name="invalid" hit="Invalid XML include element" />
     <option name="xml" hit="Invalid XML include element" />
-    <option name="condition" hit="Invert condition" />
-    <option name="invert" hit="Invert condition" />
     <option name="is" hit="Keyword 'new' is redundant" />
     <option name="keyword" hit="Keyword 'new' is redundant" />
     <option name="new" hit="Keyword 'new' is redundant" />
@@ -9067,14 +8883,6 @@
     <option name="gethashcode" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="not" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="record" hit="Record defined 'Equals' but not 'GetHashCode'" />
-    <option name="else" hit="Redundant 'else' keyword" />
-    <option name="keyword" hit="Redundant 'else' keyword" />
-    <option name="redundant" hit="Redundant 'else' keyword" />
-    <option name="control" hit="Redundant control flow jump statement" />
-    <option name="flow" hit="Redundant control flow jump statement" />
-    <option name="jump" hit="Redundant control flow jump statement" />
-    <option name="redundant" hit="Redundant control flow jump statement" />
-    <option name="statement" hit="Redundant control flow jump statement" />
     <option name="corresponding" hit="Reference kind modifier of parameter doesn't match the corresponding parameter in hidden member." />
     <option name="doesn" hit="Reference kind modifier of parameter doesn't match the corresponding parameter in hidden member." />
     <option name="hidden" hit="Reference kind modifier of parameter doesn't match the corresponding parameter in hidden member." />
@@ -9125,9 +8933,6 @@
     <option name="treated" hit="Reference to a volatile field will not be treated as volatile" />
     <option name="volatile" hit="Reference to a volatile field will not be treated as volatile" />
     <option name="will" hit="Reference to a volatile field will not be treated as volatile" />
-    <option name="braces" hit="Remove redundant braces" />
-    <option name="redundant" hit="Remove redundant braces" />
-    <option name="remove" hit="Remove redundant braces" />
     <option name="annotated" hit="Return value must be disposed but the method or function is not annotated with [MustDisposeResource]" />
     <option name="be" hit="Return value must be disposed but the method or function is not annotated with [MustDisposeResource]" />
     <option name="but" hit="Return value must be disposed but the method or function is not annotated with [MustDisposeResource]" />
@@ -9155,6 +8960,15 @@
     <option name="parameter" hit="Return value must be non-null because parameter mentioned in [NotNullIfNotNull] annotation is non-null." />
     <option name="return" hit="Return value must be non-null because parameter mentioned in [NotNullIfNotNull] annotation is non-null." />
     <option name="value" hit="Return value must be non-null because parameter mentioned in [NotNullIfNotNull] annotation is non-null." />
+    <option name="call" hit="Return value of 'GetEnumerator' method call is never disposed" />
+    <option name="disposed" hit="Return value of 'GetEnumerator' method call is never disposed" />
+    <option name="getenumerator" hit="Return value of 'GetEnumerator' method call is never disposed" />
+    <option name="is" hit="Return value of 'GetEnumerator' method call is never disposed" />
+    <option name="method" hit="Return value of 'GetEnumerator' method call is never disposed" />
+    <option name="never" hit="Return value of 'GetEnumerator' method call is never disposed" />
+    <option name="of" hit="Return value of 'GetEnumerator' method call is never disposed" />
+    <option name="return" hit="Return value of 'GetEnumerator' method call is never disposed" />
+    <option name="value" hit="Return value of 'GetEnumerator' method call is never disposed" />
     <option name="a" hit="Return value of a method annotated with [MustDisposeResource] is never disposed" />
     <option name="annotated" hit="Return value of a method annotated with [MustDisposeResource] is never disposed" />
     <option name="disposed" hit="Return value of a method annotated with [MustDisposeResource] is never disposed" />
@@ -10524,6 +10338,9 @@
     <option name="using" hit="冗余的 using 指令" />
     <option name="冗余的" hit="冗余的 using 指令" />
     <option name="指令" hit="冗余的 using 指令" />
+    <option name="else" hit="冗余的“else”关键词" />
+    <option name="关键词" hit="冗余的“else”关键词" />
+    <option name="冗余的" hit="冗余的“else”关键词" />
     <option name="冗余的匿名类型属性显式名称" hit="冗余的匿名类型属性显式名称" />
     <option name="null" hit="冗余的可以为 null 的指令" />
     <option name="冗余的可以为" hit="冗余的可以为 null 的指令" />
@@ -10543,6 +10360,7 @@
     <option name="冗余的弃元指定" hit="冗余的弃元指定" />
     <option name="冗余的成员初始值设定项" hit="冗余的成员初始值设定项" />
     <option name="冗余的成员重写" hit="冗余的成员重写" />
+    <option name="冗余的控制流跳过语句" hit="冗余的控制流跳过语句" />
     <option name="冗余的方法重载" hit="冗余的方法重载" />
     <option name="冗余的显式位置属性声明" hit="冗余的显式位置属性声明" />
     <option name="冗余的显式元组组件名称" hit="冗余的显式元组组件名称" />
@@ -10595,6 +10413,7 @@
     <option name="if" hit="反转 'if' 语句以减少嵌套" />
     <option name="反转" hit="反转 'if' 语句以减少嵌套" />
     <option name="语句以减少嵌套" hit="反转 'if' 语句以减少嵌套" />
+    <option name="反转条件" hit="反转条件" />
     <option name="notnull" hit="受不可以为 null 的基类型约束的类型形参上存在冗余的 'notnull' 约束" />
     <option name="null" hit="受不可以为 null 的基类型约束的类型形参上存在冗余的 'notnull' 约束" />
     <option name="受不可以为" hit="受不可以为 null 的基类型约束的类型形参上存在冗余的 'notnull' 约束" />
@@ -11391,6 +11210,7 @@
     <option name="移动到现有位置析构模式" hit="移动到现有位置析构模式" />
     <option name="tolist" hit="移除 ToList()" />
     <option name="移除" hit="移除 ToList()" />
+    <option name="移除冗余大括号" hit="移除冗余大括号" />
     <option name="移除冗余括号" hit="移除冗余括号" />
     <option name="移除冗余的模式匹配圆括号" hit="移除冗余的模式匹配圆括号" />
     <option name="移除冗余语句" hit="移除冗余语句" />
@@ -12992,7 +12812,7 @@
     <option name="转到用法" hit="转到用法: 如果只有一个结果，导航而不显示列表(O)" />
   </configurable>
   <configurable id="inlay.hints.RiderInlayHintsCSharpConfigurableGroup" configurable_name="C#" />
-  <configurable id="CSharpParameterNameHintsOptions" configurable_name="Parameter Name Hints">
+  <configurable id="CSharpParameterNameHintsOptions" configurable_name="形参名称提示">
     <option name="" hit=" 如果存在多个类型相同的形参 则对非文字显示" />
     <option name="则对非文字显示" hit=" 如果存在多个类型相同的形参 则对非文字显示" />
     <option name="如果存在多个类型相同的形参" hit=" 如果存在多个类型相同的形参 则对非文字显示" />
@@ -13042,9 +12862,6 @@
     <option name="隐藏注解为" hit=" 隐藏注解为  StringFormatMethod  的方法的形参名称提示" />
     <option name="nunit" hit="NUnit 特性" />
     <option name="特性" hit="NUnit 特性" />
-    <option name="hints" hit="Parameter Name Hints" />
-    <option name="name" hit="Parameter Name Hints" />
-    <option name="parameter" hit="Parameter Name Hints" />
     <option name="push-to-hint" hit="Push-to-Hint" />
     <option name="iddqd" hit="iddqd" />
     <option name="xunit" hit="xUnit 特性" />
@@ -13080,6 +12897,7 @@
     <option name="对方法调用显示" hit="对方法调用显示" />
     <option name="对类似构建器的方法隐藏" hit="对类似构建器的方法隐藏" />
     <option name="对非文字隐藏" hit="对非文字隐藏" />
+    <option name="形参名称提示" hit="形参名称提示" />
     <option name="内嵌提示设置页面上设置默认可见性" hit="您可以在编辑器 | 内嵌提示设置页面上设置默认可见性。" />
     <option name="您可以在编辑器" hit="您可以在编辑器 | 内嵌提示设置页面上设置默认可见性。" />
     <option name="隐藏形参数组的形参名称提示" hit="隐藏形参数组的形参名称提示" />
@@ -13123,8 +12941,6 @@
     <option name="范围变量" hit="LINQ 范围变量" />
     <option name="lambda" hit="Lambda 表达式形参" />
     <option name="表达式形参" hit="Lambda 表达式形参" />
-    <option name="mode" hit="Mode " />
-    <option name="mode" hit="Mode:" />
     <option name="push-to-hint" hit="Push-to-Hint" />
     <option name="iddqd" hit="iddqd" />
     <option name="为具有相同返回值类型的方法调用序列联接提示" hit="为具有相同返回值类型的方法调用序列联接提示" />
@@ -13151,6 +12967,8 @@
     <option name="内嵌提示设置页面上设置默认可见性" hit="您可以在编辑器 | 内嵌提示设置页面上设置默认可见性。" />
     <option name="您可以在编辑器" hit="您可以在编辑器 | 内嵌提示设置页面上设置默认可见性。" />
     <option name="方法返回值类型" hit="方法返回值类型" />
+    <option name="模式" hit="模式 " />
+    <option name="模式" hit="模式:" />
     <option name="模式匹配的表达式" hit="模式匹配的表达式" />
     <option name="目标类型化新表达式" hit="目标类型化新表达式" />
     <option name="类型名称提示" hit="类型名称提示" />
@@ -13284,7 +13102,7 @@
     <option name="默认" hit="默认(通用) (始终显示)" />
   </configurable>
   <configurable id="inlay.hints.RiderInlayHintsVBConfigurableGroup" configurable_name="VB.NET" />
-  <configurable id="VBParameterNameHintsOptions" configurable_name="Parameter Name Hints">
+  <configurable id="VBParameterNameHintsOptions" configurable_name="形参名称提示">
     <option name="" hit=" 如果存在多个类型相同的形参 则对非文字显示" />
     <option name="则对非文字显示" hit=" 如果存在多个类型相同的形参 则对非文字显示" />
     <option name="如果存在多个类型相同的形参" hit=" 如果存在多个类型相同的形参 则对非文字显示" />
@@ -13320,9 +13138,6 @@
     <option name="stringformatmethod" hit=" 隐藏注解为  StringFormatMethod  的方法的形参名称提示" />
     <option name="的方法的形参名称提示" hit=" 隐藏注解为  StringFormatMethod  的方法的形参名称提示" />
     <option name="隐藏注解为" hit=" 隐藏注解为  StringFormatMethod  的方法的形参名称提示" />
-    <option name="hints" hit="Parameter Name Hints" />
-    <option name="name" hit="Parameter Name Hints" />
-    <option name="parameter" hit="Parameter Name Hints" />
     <option name="push-to-hint" hit="Push-to-Hint" />
     <option name="iddqd" hit="iddqd" />
     <option name="不对与下列任何模式匹配的方法显示任何形参名称提示" hit="不对与下列任何模式匹配的方法显示任何形参名称提示 " />
@@ -13347,6 +13162,7 @@
     <option name="对方法调用显示" hit="对方法调用显示" />
     <option name="对类似构建器的方法隐藏" hit="对类似构建器的方法隐藏" />
     <option name="对非文字隐藏" hit="对非文字隐藏" />
+    <option name="形参名称提示" hit="形参名称提示" />
     <option name="内嵌提示设置页面上设置默认可见性" hit="您可以在编辑器 | 内嵌提示设置页面上设置默认可见性。" />
     <option name="您可以在编辑器" hit="您可以在编辑器 | 内嵌提示设置页面上设置默认可见性。" />
     <option name="隐藏形参数组的形参名称提示" hit="隐藏形参数组的形参名称提示" />
