@@ -197,7 +197,6 @@
     <option name="uproject" hit="Discover programs when opening .uproject" />
     <option name="when" hit="Discover programs when opening .uproject" />
     <option name="hlsl" hit="HLSL" />
-    <option name="navigation" hit="Navigation" />
     <option name="engine" hit="Unreal Engine" />
     <option name="unreal" hit="Unreal Engine" />
     <option name="engine" hit="Unreal Engine 專案模型使 Rider 可以直接從 UnrealBuildTool 讀取專案屬性，而不使用 Unreal Engine 生成的中間 Visual Studio 專案檔案" />
@@ -277,6 +276,7 @@
     <option name="對所有" hit="對所有 IntelliSense 目的忽略 PCH 檔案。它們仍將用於建置(如果如此組態)。" />
     <option name="檔案" hit="對所有 IntelliSense 目的忽略 PCH 檔案。它們仍將用於建置(如果如此組態)。" />
     <option name="目的忽略" hit="對所有 IntelliSense 目的忽略 PCH 檔案。它們仍將用於建置(如果如此組態)。" />
+    <option name="導覽" hit="導覽" />
     <option name="忽略預編譯標頭檔" hit="忽略預編譯標頭檔" />
     <option name="engine" hit="您可以選擇從索引編制中排除 Unreal Engine 原始檔，以減少記憶體使用並提高性能。請注意，您在專案中使用的引擎頭仍將被編入索引。" />
     <option name="unreal" hit="您可以選擇從索引編制中排除 Unreal Engine 原始檔，以減少記憶體使用並提高性能。請注意，您在專案中使用的引擎頭仍將被編入索引。" />
@@ -716,20 +716,12 @@
     <option name="運算符" hit="?: 運算符" />
     <option name="all" path="命名" hit="ALL UPPER" />
     <option name="upper" path="命名" hit="ALL UPPER" />
-    <option name="after" hit="After semicolon" />
-    <option name="semicolon" hit="After semicolon" />
     <option name="after" hit="Allow comment after '{'" />
     <option name="allow" hit="Allow comment after '{'" />
     <option name="comment" hit="Allow comment after '{'" />
     <option name="arrangement" hit="Arrangement of Enumerations" />
     <option name="enumerations" hit="Arrangement of Enumerations" />
     <option name="of" hit="Arrangement of Enumerations" />
-    <option name="before" hit="Before parentheses" />
-    <option name="parentheses" hit="Before parentheses" />
-    <option name="before" hit="Before semicolon" />
-    <option name="semicolon" hit="Before semicolon" />
-    <option name="blank" hit="Blank Lines" />
-    <option name="lines" hit="Blank Lines" />
     <option name="-" hit="Break line after '-&gt;' in trailing return types" />
     <option name="after" hit="Break line after '-&gt;' in trailing return types" />
     <option name="break" hit="Break line after '-&gt;' in trailing return types" />
@@ -758,11 +750,6 @@
     <option name="c++" hit="C++/CLI 泛型約束冒號後" />
     <option name="cli" hit="C++/CLI 泛型約束冒號後" />
     <option name="泛型約束冒號後" hit="C++/CLI 泛型約束冒號後" />
-    <option name="arguments" hit="Call arguments" />
-    <option name="call" hit="Call arguments" />
-    <option name="calls" hit="Chained method calls" />
-    <option name="chained" hit="Chained method calls" />
-    <option name="method" hit="Chained method calls" />
     <option name="enable" hit="Enable UE Slate formatting support" />
     <option name="formatting" hit="Enable UE Slate formatting support" />
     <option name="slate" hit="Enable UE Slate formatting support" />
@@ -826,9 +813,6 @@
     <option name="chained" hit="Wrap Slate chained calls" />
     <option name="slate" hit="Wrap Slate chained calls" />
     <option name="wrap" hit="Wrap Slate chained calls" />
-    <option name="lines" hit="Wrap long lines" />
-    <option name="long" hit="Wrap long lines" />
-    <option name="wrap" hit="Wrap long lines" />
     <option name="abstract" hit="abstract 宣告中的 ptr 前" />
     <option name="ptr" hit="abstract 宣告中的 ptr 前" />
     <option name="前" hit="abstract 宣告中的 ptr 前" />
@@ -951,6 +935,8 @@
     <option name="ref" hit="函式返回值類型中的 ref 後" />
     <option name="函式返回值類型中的" hit="函式返回值類型中的 ref 後" />
     <option name="後" hit="函式返回值類型中的 ref 後" />
+    <option name="分號之前" hit="分號之前" />
+    <option name="分號之後" hit="分號之後" />
     <option name="初始設定式列表實參" hit="初始設定式列表實參" />
     <option name="初始化" hit="初始化" />
     <option name="別名宣告和命名空間別名中的" hit="別名宣告和命名空間別名中的 '=' 周圍" />
@@ -1144,6 +1130,7 @@
     <option name="建議在變數類型中使用" hit="建議在變數類型中使用 'auto'" />
     <option name="強制換行位置" hit="強制換行位置:" />
     <option name="成員初始設定式列表中的成員初始設定式" hit="成員初始設定式列表中的成員初始設定式" />
+    <option name="括號之前" hit="括號之前" />
     <option name="按初始化順序對成員初始設定式排序" hit="按初始化順序對成員初始設定式排序" />
     <option name="0" path="選項" hit="捆綁 來自 LLVM         B " />
     <option name="18" path="選項" hit="捆綁 來自 LLVM         B " />
@@ -1194,7 +1181,7 @@
     <option name="空格" path="空格" hit="空格" />
     <option name="空格在新行" hit="空格在新行" />
     <option name="空的統一初始化大括號內" hit="空的統一初始化大括號內" />
-    <option name="空行" path="空行" hit="空行" />
+    <option name="空行" hit="空行" />
     <option name="枚舉定義周圍" hit="類別/結構/枚舉定義周圍" />
     <option name="類別" hit="類別/結構/枚舉定義周圍" />
     <option name="結構" hit="類別/結構/枚舉定義周圍" />
@@ -1251,6 +1238,7 @@
     <option name="要在覆寫函式上使用的說明符" hit="要在覆寫函式上使用的說明符" />
     <option name="要在覆寫解構函式上使用的說明符" hit="要在覆寫解構函式上使用的說明符" />
     <option name="語法樣式" path="語法樣式" hit="語法樣式" />
+    <option name="呼叫參數" hit="呼叫參數" />
     <option name="賦值" hit="賦值" />
     <option name="賦值運算符周圍" hit="賦值運算符周圍" />
     <option name="轉換表達式中的圓括號內" hit="轉換表達式中的圓括號內" />
@@ -1261,7 +1249,9 @@
     <option name="邏輯非運算符" hit="邏輯非運算符(!)後" />
     <option name="覆寫函式" hit="覆寫函式" />
     <option name="鏈式二元表達式" hit="鏈式二元表達式" />
+    <option name="鏈式方法呼叫" hit="鏈式方法呼叫" />
     <option name="鏈接規範" hit="鏈接規範" />
+    <option name="長行換行" hit="長行換行" />
     <option name="預處理程序指令縮排" hit="預處理程序指令縮排" />
     <option name="typedef" hit="首選 typedef 或類型別名" />
     <option name="或類型別名" hit="首選 typedef 或類型別名" />
@@ -1298,20 +1288,12 @@
     <option name="預設指針初始設定式" hit="預設指針初始設定式" />
     <option name="" path="縮排和對齊" hit="?: 運算符" />
     <option name="運算符" path="縮排和對齊" hit="?: 運算符" />
-    <option name="after" path="空格" hit="After semicolon" />
-    <option name="semicolon" path="空格" hit="After semicolon" />
     <option name="after" path="大括號布局" hit="Allow comment after '{'" />
     <option name="allow" path="大括號布局" hit="Allow comment after '{'" />
     <option name="comment" path="大括號布局" hit="Allow comment after '{'" />
     <option name="arrangement" path="換行" hit="Arrangement of Enumerations" />
     <option name="enumerations" path="換行" hit="Arrangement of Enumerations" />
     <option name="of" path="換行" hit="Arrangement of Enumerations" />
-    <option name="before" path="空格" hit="Before parentheses" />
-    <option name="parentheses" path="空格" hit="Before parentheses" />
-    <option name="before" path="空格" hit="Before semicolon" />
-    <option name="semicolon" path="空格" hit="Before semicolon" />
-    <option name="blank" path="空行" hit="Blank Lines" />
-    <option name="lines" path="空行" hit="Blank Lines" />
     <option name="-" path="換行" hit="Break line after '-&gt;' in trailing return types" />
     <option name="after" path="換行" hit="Break line after '-&gt;' in trailing return types" />
     <option name="break" path="換行" hit="Break line after '-&gt;' in trailing return types" />
@@ -1339,11 +1321,6 @@
     <option name="c++" path="空格" hit="C++/CLI 泛型約束冒號後" />
     <option name="cli" path="空格" hit="C++/CLI 泛型約束冒號後" />
     <option name="泛型約束冒號後" path="空格" hit="C++/CLI 泛型約束冒號後" />
-    <option name="arguments" path="縮排和對齊" hit="Call arguments" />
-    <option name="call" path="縮排和對齊" hit="Call arguments" />
-    <option name="calls" path="縮排和對齊" hit="Chained method calls" />
-    <option name="chained" path="縮排和對齊" hit="Chained method calls" />
-    <option name="method" path="縮排和對齊" hit="Chained method calls" />
     <option name="enable" path="Unreal Engine" hit="Enable UE Slate formatting support" />
     <option name="formatting" path="Unreal Engine" hit="Enable UE Slate formatting support" />
     <option name="slate" path="Unreal Engine" hit="Enable UE Slate formatting support" />
@@ -1395,9 +1372,6 @@
     <option name="chained" path="Unreal Engine" hit="Wrap Slate chained calls" />
     <option name="slate" path="Unreal Engine" hit="Wrap Slate chained calls" />
     <option name="wrap" path="Unreal Engine" hit="Wrap Slate chained calls" />
-    <option name="lines" path="換行" hit="Wrap long lines" />
-    <option name="long" path="換行" hit="Wrap long lines" />
-    <option name="wrap" path="換行" hit="Wrap long lines" />
     <option name="abstract" path="空格" hit="abstract 宣告中的 ptr 前" />
     <option name="ptr" path="空格" hit="abstract 宣告中的 ptr 前" />
     <option name="前" path="空格" hit="abstract 宣告中的 ptr 前" />
@@ -1509,6 +1483,8 @@
     <option name="ref" path="空格" hit="函式返回值類型中的 ref 後" />
     <option name="函式返回值類型中的" path="空格" hit="函式返回值類型中的 ref 後" />
     <option name="後" path="空格" hit="函式返回值類型中的 ref 後" />
+    <option name="分號之前" path="空格" hit="分號之前" />
+    <option name="分號之後" path="空格" hit="分號之後" />
     <option name="初始設定式列表實參" path="縮排和對齊" hit="初始設定式列表實參" />
     <option name="初始化" path="語法樣式" hit="初始化" />
     <option name="別名宣告和命名空間別名中的" path="空格" hit="別名宣告和命名空間別名中的 '=' 周圍" />
@@ -1682,6 +1658,7 @@
     <option name="建議在變數類型中使用" path="語法樣式" hit="建議在變數類型中使用 'auto'" />
     <option name="強制換行位置" path="換行" hit="強制換行位置:" />
     <option name="成員初始設定式列表中的成員初始設定式" path="縮排和對齊" hit="成員初始設定式列表中的成員初始設定式" />
+    <option name="括號之前" path="空格" hit="括號之前" />
     <option name="按初始化順序對成員初始設定式排序" path="語法樣式" hit="按初始化順序對成員初始設定式排序" />
     <option name="換行" path="換行" hit="換行" />
     <option name="陣列下標中括號內" path="空格" hit="陣列下標中括號內" />
@@ -1722,6 +1699,7 @@
     <option name="空大括號格式設定" path="大括號布局" hit="空大括號格式設定" />
     <option name="空格在新行" path="換行" hit="空格在新行" />
     <option name="空的統一初始化大括號內" path="空格" hit="空的統一初始化大括號內" />
+    <option name="空行" path="空行" hit="空行" />
     <option name="枚舉定義周圍" path="空行" hit="類別/結構/枚舉定義周圍" />
     <option name="類別" path="空行" hit="類別/結構/枚舉定義周圍" />
     <option name="結構" path="空行" hit="類別/結構/枚舉定義周圍" />
@@ -1774,6 +1752,7 @@
     <option name="要在" path="語法樣式" hit="要在 include 指令中使用的斜杠類型" />
     <option name="要在覆寫函式上使用的說明符" path="語法樣式" hit="要在覆寫函式上使用的說明符" />
     <option name="要在覆寫解構函式上使用的說明符" path="語法樣式" hit="要在覆寫解構函式上使用的說明符" />
+    <option name="呼叫參數" path="縮排和對齊" hit="呼叫參數" />
     <option name="賦值" path="縮排和對齊" hit="賦值" />
     <option name="賦值運算符周圍" path="空格" hit="賦值運算符周圍" />
     <option name="轉換表達式中的圓括號內" path="空格" hit="轉換表達式中的圓括號內" />
@@ -1784,7 +1763,9 @@
     <option name="邏輯非運算符" path="空格" hit="邏輯非運算符(!)後" />
     <option name="覆寫函式" path="語法樣式" hit="覆寫函式" />
     <option name="鏈式二元表達式" path="縮排和對齊" hit="鏈式二元表達式" />
+    <option name="鏈式方法呼叫" path="縮排和對齊" hit="鏈式方法呼叫" />
     <option name="鏈接規範" path="大括號布局" hit="鏈接規範" />
+    <option name="長行換行" path="換行" hit="長行換行" />
     <option name="預處理程序指令縮排" path="縮排和對齊" hit="預處理程序指令縮排" />
     <option name="typedef" path="語法樣式" hit="首選 typedef 或類型別名" />
     <option name="或類型別名" path="語法樣式" hit="首選 typedef 或類型別名" />
@@ -1901,23 +1882,12 @@
     <option name="clang" hit="NSObject-attribute clang diagnostic" />
     <option name="diagnostic" hit="NSObject-attribute clang diagnostic" />
     <option name="nsobject-attribute" hit="NSObject-attribute clang diagnostic" />
-    <option name="else" hit="Redundant 'else' keyword" />
-    <option name="keyword" hit="Redundant 'else' keyword" />
-    <option name="redundant" hit="Redundant 'else' keyword" />
-    <option name="control" hit="Redundant control flow jump statement" />
-    <option name="flow" hit="Redundant control flow jump statement" />
-    <option name="jump" hit="Redundant control flow jump statement" />
-    <option name="redundant" hit="Redundant control flow jump statement" />
-    <option name="statement" hit="Redundant control flow jump statement" />
     <option name="aggregate" hit="Redundant zero initializer in aggregate initialization" />
     <option name="in" hit="Redundant zero initializer in aggregate initialization" />
     <option name="initialization" hit="Redundant zero initializer in aggregate initialization" />
     <option name="initializer" hit="Redundant zero initializer in aggregate initialization" />
     <option name="redundant" hit="Redundant zero initializer in aggregate initialization" />
     <option name="zero" hit="Redundant zero initializer in aggregate initialization" />
-    <option name="braces" hit="Remove redundant braces" />
-    <option name="redundant" hit="Remove redundant braces" />
-    <option name="remove" hit="Remove redundant braces" />
     <option name="ufunction" hit="UFUNCTION 巨集呼叫不起任何作用" />
     <option name="巨集呼叫不起任何作用" hit="UFUNCTION 巨集呼叫不起任何作用" />
     <option name="uproperty" hit="UPROPERTY 巨集呼叫不起任何作用" />
@@ -6529,6 +6499,9 @@
     <option name="冗餘括號" hit="冗餘括號" />
     <option name="冗餘條件表達式" hit="冗餘條件表達式" />
     <option name="冗餘模板參數" hit="冗餘模板參數" />
+    <option name="else" hit="冗餘的“else”關鍵詞" />
+    <option name="關鍵詞" hit="冗餘的“else”關鍵詞" />
+    <option name="冗餘的" hit="冗餘的“else”關鍵詞" />
     <option name="template" hit="冗餘的“template”關鍵詞" />
     <option name="關鍵詞" hit="冗餘的“template”關鍵詞" />
     <option name="冗餘的" hit="冗餘的“template”關鍵詞" />
@@ -6540,6 +6513,7 @@
     <option name="自變量列表" hit="冗餘的“void”自變量列表" />
     <option name="冗餘的取消參照和獲取地址" hit="冗餘的取消參照和獲取地址" />
     <option name="冗餘的基類別初始設定式" hit="冗餘的基類別初始設定式" />
+    <option name="冗餘的控制流跳過語句" hit="冗餘的控制流跳過語句" />
     <option name="冗餘的空宣告" hit="冗餘的空宣告" />
     <option name="冗餘的空語句" hit="冗餘的空語句" />
     <option name="冗餘的詳細類型說明符" hit="冗餘的詳細類型說明符" />
@@ -6795,6 +6769,7 @@
     <option name="類別應該具有使用者定義的建構函式" hit="由於未初始化的資料成員，類別應該具有使用者定義的建構函式" />
     <option name="禁止使用制表符" hit="禁止使用制表符" />
     <option name="禁止使用多個空格" hit="禁止使用多個空格" />
+    <option name="移除冗餘大括號" hit="移除冗餘大括號" />
     <option name="空大括號周圍" hit="空大括號周圍" />
     <option name="空行不正確" hit="空行不正確" />
     <option name="anstract" hit="類別為 anstract，但未顯式進行此類別宣告" />
