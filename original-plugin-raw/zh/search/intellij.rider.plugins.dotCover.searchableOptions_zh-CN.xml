@@ -1,11 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="按键映射">
     <option name="" path="ActionManager" hit="" />
-    <option name="coverage" path="ActionManager" hit="Show Coverage Details" />
-    <option name="details" path="ActionManager" hit="Show Coverage Details" />
-    <option name="show" path="ActionManager" hit="Show Coverage Details" />
-    <option name="dotcover" path="ActionManager" hit="dotCover Settings…" />
-    <option name="settings" path="ActionManager" hit="dotCover Settings…" />
     <option name="dotcover" path="ActionManager" hit="dotCover 设置…" />
     <option name="设置" path="ActionManager" hit="dotCover 设置…" />
     <option name="" path="ActionManager" hit="“齿轮”样式单元测试选项 [插件]" />
@@ -38,6 +33,7 @@
     <option name="持续测试选项" path="ActionManager" hit="持续测试选项" />
     <option name="排除并创建运行时覆盖率筛选器" path="ActionManager" hit="排除并创建运行时覆盖率筛选器" />
     <option name="排除除此之外的所有节点" path="ActionManager" hit="排除除此之外的所有节点" />
+    <option name="显示覆盖率详细信息" path="ActionManager" hit="显示覆盖率详细信息" />
     <option name="显示覆盖的测试" path="ActionManager" hit="显示覆盖的测试" />
     <option name="点击以导航到上一条未覆盖的语句" path="ActionManager" hit="点击以导航到上一条未覆盖的语句" />
     <option name="点击以导航到下一条未覆盖的语句" path="ActionManager" hit="点击以导航到下一条未覆盖的语句" />
@@ -77,14 +73,6 @@
     <option name="高亮显示代码" path="ActionManager" hit="高亮显示代码" />
   </configurable>
   <configurable id="RiderDotCoverPageId" configurable_name="dotCover">
-    <option name="" hit=" Open Unit Tests Coverage tool window automatically " />
-    <option name="automatically" hit=" Open Unit Tests Coverage tool window automatically " />
-    <option name="coverage" hit=" Open Unit Tests Coverage tool window automatically " />
-    <option name="open" hit=" Open Unit Tests Coverage tool window automatically " />
-    <option name="tests" hit=" Open Unit Tests Coverage tool window automatically " />
-    <option name="tool" hit=" Open Unit Tests Coverage tool window automatically " />
-    <option name="unit" hit=" Open Unit Tests Coverage tool window automatically " />
-    <option name="window" hit=" Open Unit Tests Coverage tool window automatically " />
     <option name="" hit=" 使用 NGen 原生映像 N " />
     <option name="n" hit=" 使用 NGen 原生映像 N " />
     <option name="ngen" hit=" 使用 NGen 原生映像 N " />
@@ -126,32 +114,16 @@
     <option name="覆盖率分析将更快开始" hit=" 由于已加载测试运行程序 覆盖率分析将更快开始 预加载运行程序的最大数量通过构建 执行 部署   单元测试   并行运行最多 X 个测试运行程序进行定义 " />
     <option name="部署" hit=" 由于已加载测试运行程序 覆盖率分析将更快开始 预加载运行程序的最大数量通过构建 执行 部署   单元测试   并行运行最多 X 个测试运行程序进行定义 " />
     <option name="预加载运行程序的最大数量通过构建" hit=" 由于已加载测试运行程序 覆盖率分析将更快开始 预加载运行程序的最大数量通过构建 执行 部署   单元测试   并行运行最多 X 个测试运行程序进行定义 " />
+    <option name="" hit=" 自动打开 单元测试覆盖率 工具窗口 " />
+    <option name="单元测试覆盖率" hit=" 自动打开 单元测试覆盖率 工具窗口 " />
+    <option name="工具窗口" hit=" 自动打开 单元测试覆盖率 工具窗口 " />
+    <option name="自动打开" hit=" 自动打开 单元测试覆盖率 工具窗口 " />
     <option name="" hit=" 预加载测试运行程序 R " />
     <option name="r" hit=" 预加载测试运行程序 R " />
     <option name="预加载测试运行程序" hit=" 预加载测试运行程序 R " />
-    <option name="never" hit="Never" />
-    <option name="coverage" hit="On each run of test coverage" />
-    <option name="each" hit="On each run of test coverage" />
-    <option name="of" hit="On each run of test coverage" />
-    <option name="on" hit="On each run of test coverage" />
-    <option name="run" hit="On each run of test coverage" />
-    <option name="test" hit="On each run of test coverage" />
-    <option name="coverage" hit="On the first run of test coverage" />
-    <option name="first" hit="On the first run of test coverage" />
-    <option name="of" hit="On the first run of test coverage" />
-    <option name="on" hit="On the first run of test coverage" />
-    <option name="run" hit="On the first run of test coverage" />
-    <option name="test" hit="On the first run of test coverage" />
-    <option name="the" hit="On the first run of test coverage" />
-    <option name="automatically" hit="Open Unit Tests Coverage tool window automatically:" />
-    <option name="coverage" hit="Open Unit Tests Coverage tool window automatically:" />
-    <option name="open" hit="Open Unit Tests Coverage tool window automatically:" />
-    <option name="tests" hit="Open Unit Tests Coverage tool window automatically:" />
-    <option name="tool" hit="Open Unit Tests Coverage tool window automatically:" />
-    <option name="unit" hit="Open Unit Tests Coverage tool window automatically:" />
-    <option name="window" hit="Open Unit Tests Coverage tool window automatically:" />
     <option name="dotcover" hit="dotCover" />
     <option name="iddqd" hit="iddqd" />
+    <option name="从不" hit="从不" />
     <option name="n" hit="使用 NGen 原生映像(N)" />
     <option name="ngen" hit="使用 NGen 原生映像(N)" />
     <option name="使用" hit="使用 NGen 原生映像(N)" />
@@ -179,6 +151,7 @@
     <option name="这样可以加快分析速度" hit="如果启用，则允许 .NET Framework 运行时在覆盖率分析期间加载应用程序的原生映像。在大多数情况下，这样可以加快分析速度。在某些情况下，无法使用原生映像: 这可能导致出现无结论测试或应用程序异常。" />
     <option name="p" hit="并行运行测试类(P)" />
     <option name="并行运行测试类" hit="并行运行测试类(P)" />
+    <option name="每次运行测试覆盖率时" hit="每次运行测试覆盖率时" />
     <option name="x" hit="由于已加载测试运行程序，覆盖率分析将更快开始。预加载运行程序的最大数量通过构建、执行、部署 &gt; 单元测试 &gt; 并行运行最多 X 个测试运行程序进行定义。" />
     <option name="个测试运行程序进行定义" hit="由于已加载测试运行程序，覆盖率分析将更快开始。预加载运行程序的最大数量通过构建、执行、部署 &gt; 单元测试 &gt; 并行运行最多 X 个测试运行程序进行定义。" />
     <option name="单元测试" hit="由于已加载测试运行程序，覆盖率分析将更快开始。预加载运行程序的最大数量通过构建、执行、部署 &gt; 单元测试 &gt; 并行运行最多 X 个测试运行程序进行定义。" />
@@ -188,8 +161,12 @@
     <option name="覆盖率分析将更快开始" hit="由于已加载测试运行程序，覆盖率分析将更快开始。预加载运行程序的最大数量通过构建、执行、部署 &gt; 单元测试 &gt; 并行运行最多 X 个测试运行程序进行定义。" />
     <option name="部署" hit="由于已加载测试运行程序，覆盖率分析将更快开始。预加载运行程序的最大数量通过构建、执行、部署 &gt; 单元测试 &gt; 并行运行最多 X 个测试运行程序进行定义。" />
     <option name="预加载运行程序的最大数量通过构建" hit="由于已加载测试运行程序，覆盖率分析将更快开始。预加载运行程序的最大数量通过构建、执行、部署 &gt; 单元测试 &gt; 并行运行最多 X 个测试运行程序进行定义。" />
+    <option name="单元测试覆盖率" hit="自动打开“单元测试覆盖率”工具窗口:" />
+    <option name="工具窗口" hit="自动打开“单元测试覆盖率”工具窗口:" />
+    <option name="自动打开" hit="自动打开“单元测试覆盖率”工具窗口:" />
     <option name="r" hit="预加载测试运行程序(R)" />
     <option name="预加载测试运行程序" hit="预加载测试运行程序(R)" />
+    <option name="首次运行测试覆盖率时" hit="首次运行测试覆盖率时" />
   </configurable>
   <configurable id="RiderDotCoverHighlightingPageId" configurable_name="高亮显示">
     <option name="" hit=" 代码覆盖率高亮显示方式 " />

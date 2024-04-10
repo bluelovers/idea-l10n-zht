@@ -8,7 +8,7 @@
   <li>对标记为 <code>@Untainted</code> 的方法进行调用的结果</li>
   <li>private 字段，仅使用字符串文字赋值，并具有安全的初始值设定项</li>
   <li>final 字段，具有安全的初始值设定项</li>
-  <li>local variable or parameter that are marked as <code>@Untainted</code> and are not assigned from non-safe objects.</li>
+  <li>标记为 <code>@Untainted</code> 且不是从非安全对象赋值的局部变量或形参.</li>
 </ul>
 <p>This field, local variable, or parameter must not be passed as arguments to methods or used as a qualifier or must be a primitive, its
 wrapper or immutable.</p>

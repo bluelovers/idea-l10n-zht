@@ -14,18 +14,6 @@
     <option name="帮助程序周围的空行数" hit="Razor 帮助程序周围的空行数" />
     <option name="razor" hit="Razor 部分周围的空行数" />
     <option name="部分周围的空行数" hit="Razor 部分周围的空行数" />
-    <option name="blank" hit="Remove whitespace on blank lines" />
-    <option name="lines" hit="Remove whitespace on blank lines" />
-    <option name="on" hit="Remove whitespace on blank lines" />
-    <option name="remove" hit="Remove whitespace on blank lines" />
-    <option name="whitespace" hit="Remove whitespace on blank lines" />
-    <option name="engine" hit="Use the old engine for Razor formatting" />
-    <option name="for" hit="Use the old engine for Razor formatting" />
-    <option name="formatting" hit="Use the old engine for Razor formatting" />
-    <option name="old" hit="Use the old engine for Razor formatting" />
-    <option name="razor" hit="Use the old engine for Razor formatting" />
-    <option name="the" hit="Use the old engine for Razor formatting" />
-    <option name="use" hit="Use the old engine for Razor formatting" />
     <option name="web" path="Web 表单" hit="Web 表单" />
     <option name="表单" path="Web 表单" hit="Web 表单" />
     <option name="iddqd" hit="iddqd" />
@@ -35,6 +23,9 @@
     <option name="为" hit="为 @inherits 和 @model 指令使用完全限定名称" />
     <option name="和" hit="为 @inherits 和 @model 指令使用完全限定名称" />
     <option name="指令使用完全限定名称" hit="为 @inherits 和 @model 指令使用完全限定名称" />
+    <option name="razor" hit="使用旧引擎进行 Razor 格式设置" />
+    <option name="使用旧引擎进行" hit="使用旧引擎进行 Razor 格式设置" />
+    <option name="格式设置" hit="使用旧引擎进行 Razor 格式设置" />
     <option name="保留里面的空格" hit="保留里面的空格" />
     <option name="其他" hit="其他" />
     <option name="内部多余空格" hit="内部多余空格" />
@@ -96,6 +87,7 @@
     <option name="之后的空行" hit="移除 @functions 中 '{' and before '}' 之后的空行" />
     <option name="移除" hit="移除 @functions 中 '{' and before '}' 之后的空行" />
     <option name="移除值不包含空格的特性引号" hit="移除值不包含空格的特性引号" />
+    <option name="移除空行中的空格" hit="移除空行中的空格" />
     <option name="缩进大小" hit="缩进大小" />
     <option name="缩进样式" hit="缩进样式" />
     <option name="语法样式" path="语法样式" hit="语法样式" />
@@ -106,18 +98,6 @@
     <option name="帮助程序周围的空行数" path="Razor" hit="Razor 帮助程序周围的空行数" />
     <option name="razor" path="Razor" hit="Razor 部分周围的空行数" />
     <option name="部分周围的空行数" path="Razor" hit="Razor 部分周围的空行数" />
-    <option name="blank" path="格式化" hit="Remove whitespace on blank lines" />
-    <option name="lines" path="格式化" hit="Remove whitespace on blank lines" />
-    <option name="on" path="格式化" hit="Remove whitespace on blank lines" />
-    <option name="remove" path="格式化" hit="Remove whitespace on blank lines" />
-    <option name="whitespace" path="格式化" hit="Remove whitespace on blank lines" />
-    <option name="engine" path="Razor" hit="Use the old engine for Razor formatting" />
-    <option name="for" path="Razor" hit="Use the old engine for Razor formatting" />
-    <option name="formatting" path="Razor" hit="Use the old engine for Razor formatting" />
-    <option name="old" path="Razor" hit="Use the old engine for Razor formatting" />
-    <option name="razor" path="Razor" hit="Use the old engine for Razor formatting" />
-    <option name="the" path="Razor" hit="Use the old engine for Razor formatting" />
-    <option name="use" path="Razor" hit="Use the old engine for Razor formatting" />
     <option name="iddqd" path="格式化" hit="iddqd" />
     <option name="不缩进子级" path="格式化" hit="不缩进子级" />
     <option name="inherits" path="Razor" hit="为 @inherits 和 @model 指令使用完全限定名称" />
@@ -125,6 +105,9 @@
     <option name="为" path="Razor" hit="为 @inherits 和 @model 指令使用完全限定名称" />
     <option name="和" path="Razor" hit="为 @inherits 和 @model 指令使用完全限定名称" />
     <option name="指令使用完全限定名称" path="Razor" hit="为 @inherits 和 @model 指令使用完全限定名称" />
+    <option name="razor" path="Razor" hit="使用旧引擎进行 Razor 格式设置" />
+    <option name="使用旧引擎进行" path="Razor" hit="使用旧引擎进行 Razor 格式设置" />
+    <option name="格式设置" path="Razor" hit="使用旧引擎进行 Razor 格式设置" />
     <option name="保留里面的空格" path="格式化" hit="保留里面的空格" />
     <option name="其他" path="格式化" hit="其他" />
     <option name="内部多余空格" path="格式化" hit="内部多余空格" />
@@ -184,14 +167,12 @@
     <option name="之后的空行" path="Razor" hit="移除 @functions 中 '{' and before '}' 之后的空行" />
     <option name="移除" path="Razor" hit="移除 @functions 中 '{' and before '}' 之后的空行" />
     <option name="移除值不包含空格的特性引号" path="语法样式" hit="移除值不包含空格的特性引号" />
+    <option name="移除空行中的空格" path="格式化" hit="移除空行中的空格" />
     <option name="缩进大小" path="格式化" hit="缩进大小" />
     <option name="缩进样式" path="格式化" hit="缩进样式" />
   </configurable>
   <configurable id="Inspections-Razor" configurable_name="Razor">
     <option name="razor" hit="Razor" />
-    <option name="assembly" hit="Unknown Razor assembly" />
-    <option name="razor" hit="Unknown Razor assembly" />
-    <option name="unknown" hit="Unknown Razor assembly" />
     <option name="iddqd" hit="iddqd" />
     <option name="描述" hit="描述" />
     <option name="razor" hit="未知 Razor 布局" />
@@ -200,6 +181,9 @@
     <option name="razor" hit="未知 Razor 部分" />
     <option name="未知" hit="未知 Razor 部分" />
     <option name="部分" hit="未知 Razor 部分" />
+    <option name="razor" hit="未知的 Razor 程序集" />
+    <option name="未知的" hit="未知的 Razor 程序集" />
+    <option name="程序集" hit="未知的 Razor 程序集" />
     <option name="潜在的代码质量问题" hit="潜在的代码质量问题" />
   </configurable>
   <configurable id="RiderRazorFileTemplatesSettingsId" configurable_name="Razor">
