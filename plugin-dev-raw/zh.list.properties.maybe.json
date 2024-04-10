@@ -175,6 +175,12 @@
     "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options",
     "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options"
   },
+  "messages/CLionCMakePythonBundle.properties": {
+    "advanced.setting.cmake.python.propagate.interpreter": "Pass Python Interpreter to CMake",
+    "cmake.console.hint": "Do not pass Python Interpreter to CMake",
+    "settings.configurable.advanced.settings.off": "Integration has been disabled in <a href=\"advanced-settings\">Advanced Settings</a>.",
+    "settings.configurable.comment.settings": "If no Python executable variables are present in <a href='cmake-options'>CMake Options</a>, the path to the project's <a href=\"python-interpreter\">Python interpreter</a> will be passed to CMake. This integration does not work with Remote, Docker, and WSL toolchains."
+  },
   "messages/CLionExecutionBundle.properties": {
     "coredump.sysroot": "Sysroot:",
     "cpp.build.description.1": "====================[ {0} ]====",
@@ -350,9 +356,7 @@
     "compdb.url": "http://clang.llvm.org/docs/JSONCompilationDatabase.html"
   },
   "messages/CompilerIntegrationBundle.properties": {
-    "jdk": "JDK(&J):",
-    "scala.project.settings.form.compiler.highlighting.scala": "Use compiler for error highlighting in Scala",
-    "scala.project.settings.form.compiler.highlighting.scala.version": "Use compiler for error highlighting in Scala {0}"
+    "jdk": "JDK(&J):"
   },
   "messages/CompletionRankingModelsBundle.properties": {
     "ml.completion.experiment.model.cidr": "C/C++"
@@ -428,6 +432,8 @@
     "action.Dart.pub.get.text": "Pub Get",
     "action.Dart.pub.outdated.text": "Pub Outdated",
     "action.Dart.pub.upgrade.text": "Pub Upgrade",
+    "action.DartCopyDtdUriAction.description": "Copy Dart Tooling Daemon URI to clipboard",
+    "action.DartCopyDtdUriAction.text": "Dart: Copy DTD URI to Clipboard",
     "action.Generate.ToString.Dart.text": "toString()",
     "action.text.pub.build": "Pub Build…",
     "action.text.webdev.build": "Webdev Build…",
@@ -456,7 +462,9 @@
     "Console.TableResult.n.bytes.of.m.bytes.loaded": "{0}/{1}",
     "count.rows.action.of.text": "/{0}",
     "csv.format.settings.quotation.policy.escape.duplicate": "<duplicate>",
-    "excel.xlsx": "Excel (xlsx)"
+    "excel.xlsx": "Excel (xlsx)",
+    "grid.load.nested.table.error": "Navigation to nested tables is unavailable for static grid",
+    "grid.load.nested.table.error.loading": "Navigation to nested tables is unavailable during loading of rows"
   },
   "messages/DatabaseBundle.properties": {
     "ChangeDialectToolbarAction.action.dialect.text": "<dialect>",
@@ -504,6 +512,7 @@
     "notification.content.missing.error.message": "<missing error message>",
     "notification.content.oracle.home.should.be.defined.action": "<a href='$ACTION0'>Set ORACLE_HOME</a>",
     "progress.title.anonymous": "<Anonymous>",
+    "progress.title.duplicating.object": "Duplicating object",
     "scriptGen.option.RestrictDeleteTriggers.text": "RESTRICT WHEN DELETE TRIGGERS",
     "settings.number.nan": "NaN:",
     "unknown.in.angleBraces": "<unknown>",
@@ -563,7 +572,14 @@
     "configurable.name.device.file.explorer": "Device File Explorer"
   },
   "messages/DiagnosticBundle.properties": {
-    "error.list.message.index.count": "{0}/{1}"
+    "error.dialog.comment.prompt": "Comment on what you were doing when the exception occurred",
+    "error.dialog.disable.plugin.can.restart": "Changes in plugin configuration will take effect after restart.",
+    "error.list.disable.plugin": "Disable plugin…",
+    "error.list.message.index.count": "{0}/{1}",
+    "error.list.message.submitting": "Submitting…",
+    "error.report.view.action": "View report",
+    "log.monitor.fragment.name": "Specify logs to be shown in the console",
+    "wsl.firewall.settings.prompt": "The IDE will now change the Microsoft Defender Firewall settings to allow connections from WSL environments to the IDE instance. If you're using a different firewall product, this action won't resolve the problem, and you shouldn't execute it. Do you wish to continue?"
   },
   "messages/DiagramBundle.properties": {
     "action.Diagram.ExportToFileGroup.Dot.text": "Graphviz .dot",
@@ -690,8 +706,6 @@
     "action.Educational.Educator.SyncChangesWithNextTasks.MergeDialog.LeftPanel.title": "New changes in {0}",
     "action.Educational.Educator.SyncChangesWithNextTasks.MergeDialog.MergeWindow.title": "Resolve conflicts for {0}",
     "action.Educational.Educator.SyncChangesWithNextTasks.MergeDialog.MultipleFileDialog.description": "It was not possible to apply changes to some files automatically. Conflict resolution is needed.",
-    "action.Educational.Educator.SyncChangesWithNextTasks.MergeDialog.MultipleFileDialog.title": "Resolve conflicts",
-    "action.Educational.Educator.SyncChangesWithNextTasks.MergeDialog.RightPanel.title": "Changes in {0}",
     "action.Educational.Educator.SyncChangesWithNextTasks.Notification.cancel.description": "Applying changes from task \"{0}\" to all subsequent tasks was canceled at task \"{1}\"",
     "action.Educational.Educator.SyncChangesWithNextTasks.Notification.cancel.title": "Canceled applying the changes",
     "action.Educational.Educator.SyncChangesWithNextTasks.Notification.success.description": "Applied changes from task \"{0}\" to all subsequent tasks",
@@ -851,7 +865,6 @@
   },
   "messages/GithubUltimateBundle.properties": {
     "advanced.setting.github.actions.support.enabled": "GitHub actions authoring support (requires IDE restart)",
-    "github.action.support": "GitHub actions",
     "github.actions.support.enabled.description": "Enable GitHub actions support: parameters autocompletion, inspections and navigation inside in workflow and custom action files",
     "group.com.intellij.github.actions.ide.new.file.text": "GitHub Actions"
   },
@@ -870,8 +883,12 @@
     "action.com.goide.vgo.actions.VgoVendorAction.text": "Go Mod Vendor",
     "go.app.engine.wizard.name": "App Engine",
     "go.debugger.thread.dump.n.goroutines": "{0} {0,choice,0#goroutines|1#goroutine|2#goroutine}",
+    "go.error.annotator.needs.experiment.for.range.over.func": "Cannot use a range-over-function clause because the 'rangefunc' Go experiment is not enabled.",
     "go.execution.remote.run.configuration.description": "Go Remote",
     "go.execution.remote.run.configuration.display.name": "Go Remote",
+    "go.fix.enable.range.func.experiment": "Enable the 'rangefunc' Go experiment",
+    "go.inspection.problem.no.core.type.in.range.expression": "Range expressions must have a <a href=\"https://go.dev/ref/spec#Core_types\">core type</a>",
+    "go.inspection.problem.non.enabled.rangefunc.exclude.iter.package.files": "All files in the 'iter' package are excluded from the build process because the 'rangefunc' experiment is not enabled.",
     "go.intention.run.go.generate.text": "Go generate ''{0}''",
     "go.libraries.configurable.path.source.prefix.gopath": "[GOPATH]",
     "go.quick.doc.keyword.resource.effective.go.label": "Effective Go",
@@ -969,7 +986,6 @@
     "run.configuration.terraform.path.incorrect": "Could not find Terraform executable at the specified path: <br>{0}",
     "run.configuration.terraform.path.title": "Terraform executable path error",
     "terraform.configuration.type.description": "Run Terraform with specified parameters",
-    "terraform.open.settings": "Open settings",
     "terraform.run.text": "Run Terraform",
     "terraform.settings.reloading.terraform.model.progress.title": "Reloading Terraform Model"
   },
@@ -1072,6 +1088,10 @@
   "messages/ImportSettingsBundle.properties": {
     "jetbrains.ides": "JetBrains IDE",
     "transfer.error.no-error-message": "<no error message>"
+  },
+  "messages/InspectionGadgetsBundle.properties": {
+    "static.import.display.name": "static import",
+    "static.import.problem.descriptor": "static import <code>#ref</code>  #loc"
   },
   "messages/InspectionJSBundle.properties": {
     "add.require.amd.module.group.name": "Node.js"
@@ -1182,6 +1202,7 @@
     "aux.context.display": "/{0}",
     "element.kind.and.name": "{0} {1}",
     "feature.classfile.api": "ClassFile API",
+    "feature.static.imports": "static import",
     "feature.stream.gatherers": "Stream Gatherer",
     "feature.try.with.resources": "Try-with-resources",
     "feature.with.initial": "ThreadLocal.withInitial()"
@@ -1330,7 +1351,6 @@
     "action.JupyterCreateFileAction.text": "Jupyter Notebook",
     "jupyter.cell.type.raw": "Raw NBConvert",
     "jupyter.server.run.configuration.radio.python.sdk": "Python SDK",
-    "new.project.file.generation.progress": "New files are generated",
     "notebook.collapsed.web.output.text": "Web: {0}x{1} px"
   },
   "messages/JupyterDSBundle.properties": {
@@ -1441,6 +1461,7 @@
   "messages/KotlinNotebookBundle.properties": {
     "action.CreateNewKotlinNotebook.text": "Kotlin Notebook",
     "kotlin.jupyter.settings.title": "Kotlin Notebook",
+    "kotlin.jupyter.table.output.cannot.parse.dataframe.error": "Unable to display the dataframe as it is too big in serialized format. Please consider increasing the value of 'jupyter.notebook.json.maxStringLength' in registry or switch to an HTML representation. To use HTML rendering, please disable the ‘Render DataFrame tables natively’ option in the Kotlin Notebook Plugin Settings.",
     "kotlin.jupyter.template.context.type.generic": "Kotlin Notebook"
   },
   "messages/KotlinPluginUpdaterBundle.properties": {
@@ -1476,7 +1497,6 @@
     "name.assistant": "AI Assistant",
     "notification.group.name": "AI Assistant",
     "panel.ai.enterprise.disabled.comment": "<center>AI Enterprise is disabled by company policy</center>",
-    "settings.checkbox.enable.database.context.feature": "Allow attaching database schemas to AI Assistant chat",
     "settings.checkbox.enable.inline.completion.space.trigger.feature": "Automatic trigger for current line",
     "settings.checkbox.enable.inline.completion.space.trigger.feature.description": "With this setting enabled, you will get automatic completion after Space in supported contexts.",
     "settings.configurable.display.name": "AI Assistant",
@@ -1645,6 +1665,9 @@
     "run.configuration.name": "Kotlin Mobile",
     "sdk.sync.missing.sdk.title": "Android SDK"
   },
+  "messages/MonitoringToolBundle.properties": {
+    "dashboard.row.operating.system": "OS = {0}"
+  },
   "messages/NextJsBundle.properties": {
     "create.next.app.name": "Next.js"
   },
@@ -1690,6 +1713,7 @@
     "open.rewrite.recipe.local.history.label": "OpenRewrite: {0}"
   },
   "messages/OptionsBundle.properties": {
+    "color.settings.blockTerminal.promptSeparator": "Block terminal//Prompt separator color",
     "exportable.ShortcutPromoterManager.presentable.name": "Shortcut Promoter"
   },
   "messages/OsmorcBundle.properties": {
@@ -1774,7 +1798,6 @@
     "inspection.void.never.function.result.used.problem.type": "void/never",
     "label.lt.no.server": "<no server>",
     "label.server.document.root": "$_SERVER['DOCUMENT_ROOT']",
-    "link.label.builtin.formatter": "Force built-in formatter",
     "php.framework.laravel.plugin": "Laravel Idea",
     "php.run.label.https": "HTTPS:",
     "php.run.label.url": "URL:",
@@ -1871,27 +1894,15 @@
   "messages/QodanaBundle.properties": {
     "action.open.qodana.cloud.open.in.ide.report.action": "Qodana Cloud {0}",
     "cli.coverage.percent": "%",
-    "inspectionKts.action.compile.inspection.file.text": "Compile Inspection File",
-    "inspectionKts.open.log": "Open Log",
     "inspectionkts.analysis.error": "Analysis failed due to error",
     "inspectionkts.analysis.no.error": "Analysis is successful",
-    "inspectionkts.banner.examples.title": "Inspection Examples",
     "inspectionkts.compilation.cancelled": "Compilation cancelled",
     "inspectionkts.compilation.failed": "Compilation failed, up to date with source code",
     "inspectionkts.compilation.failed.no.match": "Compilation failed, mismatch with source code",
     "inspectionkts.compiled": "Compiled inspection up to date with source code",
     "inspectionkts.compiled.no.match": "Compiled inspection does not match source code",
     "inspectionkts.compiling": "Compiling…",
-    "inspectionkts.example.js": "JavaScript and TypeScript",
-    "inspectionkts.example.json": "JSON and YAML",
-    "inspectionkts.open.psi.viewer": "Open PSI Viewer",
-    "inspectionkts.open.psi.viewer.tooltip.description": "Inspection code operates with the source code's PSI tree. Choose file to view the PSI tree",
-    "inspectionkts.open.psi.viewer.tooltip.link": "About PSI",
-    "inspectionkts.template.any.language.global.inspection": "Empty global inspection",
-    "inspectionkts.template.any.language.local.inspection": "Empty local inspection",
     "inspectionkts.template.java.local.inspection": "Java local inspection template",
-    "inspectionkts.template.js.local.inspection": "JavaScript and TypeScript local inspection template",
-    "inspectionkts.template.kotlin.local.inspection": "Kotlin local inspection template",
     "notification.title.qodana.cloud": "Qodana Cloud",
     "psi.viewer.kotlin.api.in.analyze.block": "Kotlin APIs available in analyze block",
     "qodana.add.to.ci.azure.pipelines": "Azure Pipelines",
@@ -1902,7 +1913,6 @@
     "qodana.documentation.ide.plugin.url": "https://www.jetbrains.com/help/qodana/qodana-ide-plugin.html#Open+a+Qodana+report+in+the+IDE",
     "qodana.documentation.website.url": "https://www.jetbrains.com/help/qodana/",
     "qodana.open.settings.other": "Qodana Cloud…",
-    "qodana.panel.authorized.linked.with.report.text": "<html><body>Load the <a href=''{0}''>report</a> to see problems found by Qodana.</body></html>",
     "qodana.preview.url": "https://www.jetbrains.com/qodana/#:~:text=See%20how%20Qodana%20works",
     "qodana.problem.description.with.level": "[{0}]{1,choice,0#|1# Qodana:} {2}",
     "qodana.problem.description.without.level": "{0,choice,0#|1# Qodana:} {1}",
@@ -2018,7 +2028,7 @@
     "memory.usage": "Memory Usage",
     "progress.text.process.workspace.model": "Process Workspace Model…"
   },
-  "messages/ReactBundle.properties": {
+  "messages/ReactBuddyBundle.properties": {
     "JsxTree.ifMain": "if ({0})",
     "JsxTree.switchCase": "case ({0})",
     "JsxTree.switchMain": "switch ({0})",
@@ -2079,7 +2089,6 @@
     "action.ReSharperSelectContainingDeclaration.description": "Selecting Containing Declarations",
     "action.RiderShowIlViewerAction.text": "IL Viewer",
     "action.RiderShowResxEditorAction.text": "Localization Manager",
-    "action.XamarinIOSSessionConnection.text": "Xamarin Mac Agent",
     "action.stack.trace.explorer.text": "Stack Trace Explorer",
     "group.BackendEntityFrameworkActionGroup.text": "Entity Framework",
     "group.CSharpInteractive.text": "C# Interactive",
@@ -2101,6 +2110,9 @@
     "publish.to.iis.option": "IIS…",
     "settings.completion.ml.csharp.display.name": "C#"
   },
+  "messages/RiderCodeWithMeBundle.properties": {
+    "activate.code.with.me.dialog.title": "Code With Me"
+  },
   "messages/RiderCppBundle.properties": {
     "applicationConfigurable.CppClangTidyOptionsId.displayName": "Clang-Tidy",
     "applicationConfigurable.CppUnrealEngineOptionsId.displayName": "Unreal Engine",
@@ -2120,7 +2132,8 @@
     "DotNetDebuggerGeneralConfigurableUi.checkbox.show.run.to.panel.3": ")",
     "MsNetAttachDebugger.display.short.name": ".NET",
     "RemoteDebugConfigurableUi.label.os": "OS:",
-    "debugger.action.link.force.refresh": "Force Refresh"
+    "debugger.action.link.force.refresh": "Force Refresh",
+    "rider.debugger.DFA.mode.exit.debugger.DFA.mode": "Disable Predictive Debugger For This Session"
   },
   "messages/RiderDesignersBundle.properties": {
     "ResxEditor.editor.name.localization.manager": "Localization Manager",
@@ -2140,9 +2153,10 @@
     "rider.javascript.debug.companion.tab.name": "{0} - JavaScript"
   },
   "messages/RiderLessonsBundle.properties": {
-    "rider.onboarding.debug.window.toolbar": "The <strong>Debug</strong> window has all necessary controls. Let''s press {0} or click {1} to step over the {2} call and check how the value of {3} changes.",
-    "rider.onboarding.project.view.description": "Use the {0} view to access your solution files: click the sidebar icon or press {1}",
-    "rider.onboarding.run.configuration.widget": "With the ''run'' widget, you can configure and launch run configurations.  Press {0} or click {1} to start debugging with the current configuration."
+    "rider.onboarding.alt.enter": "{0} is your number one shortcut in the editor. For instance, when your caret is at the {1} parameter, press it to remove the parameter and update usages."
+  },
+  "messages/RiderMultiPlatformBundle.properties": {
+    "notification.group.riderandroid.sdk": "Android SDK"
   },
   "messages/RiderNugetBundle.properties": {
     "RiderNuGetFeedTable.label.url": "URL:",
@@ -2153,11 +2167,13 @@
     "CodeVisionFilter.display.name.code.vision": "Code Vision"
   },
   "messages/RiderProjectViewBundle.properties": {
+    "NewProjectDialog.DockerSupport.row.label": "Docker:",
     "RiderProjectTemplate.ReSharperProjectTemplate.CPlPl.name": "C++",
     "RiderProjectTemplate.ReSharperProjectTemplate.NET.NETCore.name": ".NET/.NET Core",
     "RiderProjectTemplate.ReSharperProjectTemplate.NETFramework.name": ".NET Framework"
   },
   "messages/RiderRazorBundle.properties": {
+    "blazor.wasm.debug.exception.target.path.missing": "Unable to attach Blazor debugger: Unable to retrieve output assembly path.",
     "blazor.wasm.debug.hosted.companion.tab.name": "{0} - WASM",
     "configurable.name.asp.net.c": "ASP.NET (C#)",
     "configurable.name.asp.net.vb": "ASP.NET (VB)",
@@ -2168,8 +2184,7 @@
   },
   "messages/RiderRunBundle.properties": {
     "IisExpressHost.notification.title.iis.express": "IIS Express",
-    "RiderContextPublishAction.action.azure.name": "Azure…",
-    "XamarinConnectToServerDialog.dialog.title.xamarin.mac.agent": "Xamarin Mac Agent"
+    "RiderContextPublishAction.action.azure.name": "Azure…"
   },
   "messages/RiderSettingsBundle.properties": {
     "IisExpressOptionsPage.configurable.name.iis.express": "IIS Express",
@@ -2178,12 +2193,13 @@
     "applicationConfigurable.CodeVision.displayName": "Code Vision",
     "applicationConfigurable.RiderEntityFrameworkSettings.displayName": "Entity Framework",
     "applicationConfigurable.VBCodeCleanupOptions.displayName": "VB.NET",
+    "configurable.codestyle.title.unrealEngine": "Unreal Engine",
     "configurable.name.asp.net": "ASP.NET (Razor)",
     "configurable.name.csharp": "C#",
     "configurable.name.dotnet": ".NET",
     "configurable.name.vb.net": "VB.NET",
     "configurable.name.xUnit.net": "xUnit.net",
-    "configurable.name.xamarin.mac.ios": "Xamarin (Mac/iOS)",
+    "configurable.name.xamarin.mac.ios": "Mac/iOS",
     "configurable.name.xaml.c": "XAML (C#)",
     "configurable.name.xaml.vb": "XAML (VB)",
     "folding.header.dotnet": ".NET"
@@ -2196,13 +2212,12 @@
     "action.RiderUnitTestSessionLaunchOptionActionGroupBase.text.toolbar": "{0}：{1}"
   },
   "messages/RiderWizardBundle.properties": {
+    "steps.featured-plugins.ai-assistant.description": "AI-powered productivity boost: understand and generate code, find issues, get answers to programming-related questions, and more",
+    "steps.featured-plugins.azure-toolkit.description": "Explore your Azure resources. Build and deploy Azure Web Apps and Functions. Register applications with Azure AD.",
     "steps.keymaps.groups.jetbrains-ide.name": "JetBrains IDE",
     "steps.keymaps.groups.vscode.name": "VS Code",
     "steps.keymaps.visual-assist.name": "Visual Assist",
     "steps.keymaps.visual-studio.name": "Visual Studio"
-  },
-  "messages/RiderXamarinBundle.properties": {
-    "notification.group.riderandroid.sdk": "Android SDK"
   },
   "messages/RubyDockerBundle.properties": {
     "border.title.docker.compose": "docker-compose",
@@ -2224,7 +2239,8 @@
     "action.while.expr.text": "while expr",
     "action.while.text": "while { }",
     "adt.const.params": "adt const params",
-    "advanced.setting.org.rust.show.attach.projects.dialog": "Show Attach Cargo Projects dialog for multiple projects",
+    "advanced.setting.org.rust.show.attach.projects.dialog": "Show Attach Cargo Projects dialog each time a new project is opened",
+    "advanced.setting.org.rust.show.attach.projects.dialog.on.file.opened": "Show Attach Cargo Projects dialog each time an unattached file is opened",
     "attach.projects.dialog.dont.show.again.button": "Don't Show Again",
     "attach.projects.dialog.explanation": "<html>The following Cargo.toml files are not attached to the project model.<br/>Select the files to attach:</html>",
     "attach.projects.dialog.ok.button": "Attach Selected",
@@ -2232,6 +2248,9 @@
     "build.event.message.": "{0} {1}",
     "cargo.toml": "Cargo.toml",
     "dialog.message.html.body.br.b.b.body.html": "<html><body>{0}{1}<br/><b>{2}</b> {3}</body></html>\n",
+    "explain.move.highlights.code.elements.that.resulted.in.this.error": "Highlights code elements that resulted in this error.",
+    "explain.move.value.moved.here": "Value{0, choice, 0#|1# partially} moved{1, choice, 0#|1# into closure} here{2, choice, 0#|1# by the macro call} {3, choice, 0#|1#, in the previous iteration of loop}",
+    "explain.move.was.moved": "{0} was moved",
     "extern.crate.self": "extern crate self",
     "fn.0": "fn {0}",
     "gutter.rust.implemented.item.name": "Implemented item",
@@ -2240,43 +2259,55 @@
     "inline.const": "inline const",
     "inline.const.pat": "inline const pat",
     "inspection.message.": "{0}: {1}",
+    "inspection.message.a.field.type.must.be.specified": "Field type is required",
     "inspection.message.access.field.on.primitive.type": "`{0}` cannot have fields as it is a primitive type",
     "inspection.message.break.with.value.from.loop": "`break` with a value is not allowed in `{0}` loops",
     "inspection.message.cannot.implement.both.copy.drop": "Both `Copy` and `Drop` cannot be implemented simultaneously",
     "inspection.message.consts": "{0}::{1}::consts::{2}",
     "inspection.message.drop.can.be.only.implemented.by.structs.enums": "`Drop` can only be implemented for structs and enums",
+    "inspection.message.expected.path.to.trait.found.literal": "Expected path to a trait but found literal",
     "inspection.message.generic.default.param.cannot.use.forward.declared.identifiers": "Generic parameters with a default value cannot use forward-declared identifiers",
     "inspection.message.has.been.removed2": "{0} has been removed",
+    "inspection.message.incorrect.meta.item": "Invalid meta item",
+    "inspection.message.multiple.default.variants": "Multiple declared defaults",
+    "inspection.message.no.default.declared": "No default declared",
     "inspection.message.recursion.in.async.fn.requires.boxing": "Recursion in an `async` function requires boxing",
     "inspection.message.should.have.body2": "`{0}` must have a body",
     "inspection.message.trait.copy.may.not.be.implemented.for.this.type": "Trait `Copy` cannot be implemented for this type",
     "inspection.rs.cannot.impl.for.dyn.auto.trait": "Inherent `impl` for dyn auto trait",
     "inspection.rs.copy.and.drop.impl": "Both `Copy` and `Drop` implemented",
+    "inspection.rs.equality.trait.members.display.name": "Member does not implement the trait being derived.",
+    "inspection.rs.field.without.type": "Missing struct field type",
+    "inspection.rs.format.macro.errors": "Format macro error",
     "inspection.rs.function.parameters.are.sized": "Parameter type with unknown size",
     "inspection.rs.generic.default.param.cannot.use.forward": "Forward-declared identifier for parameter with default value",
     "inspection.rs.impl.copy.for.wrong.type": "Invalid `Copy` implementation",
     "inspection.rs.impl.drop.for.non.adt": "Invalid `Drop` implementation",
-    "inspection.rs.incorrect.function.argument.count": "Wrong number of arguments",
     "inspection.rs.invalid.brea.continue.usage": "Invalid 'break' or 'continue'",
     "inspection.rs.nonexistent.field.access": "Non-existent field access",
     "inspection.rs.recursion.in.async.function": "No boxing for async recursion",
     "inspection.rs.reference.is.not.public": "Invalid private field/method access",
     "inspection.rs.return.must.have.value": "`return` must have a value",
     "inspection.rs.super.trait.is.not.implemented": "Supertrait is not implemented",
+    "intention.family.name.add.default.meta.item": "Add #[default] to first variant",
     "intention.name.": "{0}{1}",
     "intention.name.add.self": "Add `Self::`",
     "intention.name.b.b": "<b>{0}</b>",
     "intention.name.b.b2": "<b>{0}</b>",
     "label.struct": "struct {0}`{`",
     "let.else": "`let-else`",
+    "library.file.restore.content.notification.hyperlink": "Restore initial content",
+    "library.file.restore.content.notification.text": "External source files should not be modified",
     "list.item.webassembly.lib": "WebAssembly Lib",
     "min.const.generics": "min const generics",
     "mod.0": "mod {0}",
     "notification.content.cargo.expand": "cargo-expand",
     "notification.content.wasm.pack": "wasm-pack",
+    "popup.title.value.used.after.being.moved": "Value Used After Being Moved",
     "rust.cargo.toml": "Rust/Cargo.toml",
     "rust.external.linter.cargo.check.item": "Cargo Check",
     "rust.repl": "Rust REPL",
+    "tooltip.must.be.defined.only.once.in.namespace.this": "`{0}` can only be defined once in the `{1}` namespace of this {2}",
     "wasm.pack": "wasm-pack"
   },
   "messages/SASSBundle.properties": {
@@ -2378,15 +2409,35 @@
     "action.com.intellij.space.vcs.share.SpaceShareProjectAction.Vcs.Toolbar.Widget.text": "Space…"
   },
   "messages/SpaceportBundle.properties": {
-    "auth.page.jetbrains.space.header.text": "JetBrains Space",
-    "product.name.jetbrains.space": "JetBrains Space"
+    "action.com.intellij.space.actions.SpaceLoginAction.text": "Log In to Spaceport…",
+    "auth.error.cannot.login.to.space": "Cannot log in to Spaceport: {0}"
   },
   "messages/SpaceportGatewayBundle.properties": {
-    "connector.title": "JetBrains Space",
+    "auth.page.jetbrains.space.header.text": "JetBrains Spaceport",
+    "connections.status.dev.env.state.unhealthy": "IDE not responding",
+    "connector.title": "JetBrains Spaceport",
+    "dialog.message.no.permissions.to.create.dev.env": "Contact your namespace administrator for permission to create dev environments.",
+    "hot.pool.status.branch.unmatched": "Dev Environment will start slower as custom branch is selected",
+    "hot.pool.status.initializing": "<b>Standby pool</b> is enabled, but is initializing",
+    "hot.pool.status.ready": "<b>Standby pool</b> is active, Dev Environment should start <b>immediately</b>",
+    "hot.pool.status.ready.from.stopped": "<b>Standby pool</b> is active, Dev Environment should start faster",
+    "hot.pool.status.schedule.unmatched": "<b>Standby pool</b> is enabled, but the current time is out of schedule {0}",
+    "hot.pool.status.unexpected": "<b>Standby pool is enabled, but there are no available Dev Environments</b>",
+    "hot.pool.status.warmup.unmatched": "Dev Environment will start slower as no warm-up is selected",
+    "hot.pool.status.warmup.used": "Dev Environment will start using selected warmup",
     "label.dev.env.ide": "IDE:",
+    "label.dev.env.optional.parameters": "Optional parameters",
+    "label.dev.env.parameters.nothing.selected": "No parameter selected",
+    "label.dev.env.projects": "Namespaces:",
+    "label.dev.env.required.parameters": "Required parameters",
     "label.dev.file": "Devfile:",
     "label.warmup.snapshot.created.at.by": "{0}，{1}",
-    "login.page.title": "JetBrains Space"
+    "login.page.title": "JetBrains Spaceport",
+    "login.panel.organization.url.label": "Spaceport URL:",
+    "select.dev.env.conf.empty": "Select a template",
+    "space.promo.text.full": "Create and manage reproducible remote dev environments. Code within these environments from your JetBrains IDEs.",
+    "space.promo.watch.space.overview.label": "Remote Development with Spaceport",
+    "ssh.connectivity.key.absent": "You have selected a Template with SSH connectivity enabled, but you don''t have any SSH keys configured. Add them on the <a href=\"{0}\">SSH Keys</a> page."
   },
   "messages/SpaceportMainGatewayBundle.properties": {
     "auth.page.jetbrains.space.header.text": "JetBrains Spaceport",
@@ -2429,7 +2480,6 @@
     "icon.icons.SpringBoot.tooltip": "Spring Boot",
     "icon.icons.SpringBoot_Overlay.tooltip": "Spring Boot",
     "spring.boot.configuration.key.value.quick.info": "\"{0}\" [{1}]",
-    "spring.boot.imports.registration.tooltip": "Navigate to import registration",
     "spring.boot.intention.category": "Spring Boot",
     "spring.boot.name": "Spring Boot"
   },
@@ -2518,13 +2568,6 @@
     "settings.code.style.table.alter": "ALTER TABLE",
     "settings.code.style.table.create": "CREATE TABLE",
     "sql.inspections.group.name.mssql": "SQL Server"
-  },
-  "messages/SqlLLMBundle.properties": {
-    "attach.schema.got.it.text": "Attach schema to improve the quality of generated database queries",
-    "dialog.enable.database.context.message": "Always allow attaching database schemas to AI Assistant chat",
-    "dialog.message.attach.schema": "LLM will get access to the structure of the attached database schema. Do you want to attach schema {0} to AI Assistant chat?",
-    "dialog.title.attach.schema": "Attach Schema to AI Assistant Chat",
-    "notification.contents.schema.is.too.large": "Schema is too large"
   },
   "messages/SshBundle.properties": {
     "ide.service.view.local.port.forwarding.text": "{0} → {1}",
@@ -2651,7 +2694,11 @@
     "appended.android.package": " ({0})",
     "appended.pid.0": " (pid: {0})",
     "run.configuration.player.label.id": "ID:",
-    "widgets.shaderVariants.noShaderVariants": "No shader variants"
+    "shaderVariant.popup.shaderApi.entries.d3d11": "DirectX 11",
+    "shaderVariant.popup.shaderApi.entries.glcore": "OpenGL Core (3/4)",
+    "shaderVariant.popup.shaderApi.entries.gles": "Open GL ES 2.0",
+    "shaderVariant.popup.shaderApi.entries.gles3": "Open GL ES 3.0/3.1",
+    "shaderVariant.popup.shaderApi.entries.metal": "Metal (iOS、Mac)"
   },
   "messages/UnityPluginActionsBundle.properties": {
     "action.UnityToolbarLabel.text": "Unity:",
