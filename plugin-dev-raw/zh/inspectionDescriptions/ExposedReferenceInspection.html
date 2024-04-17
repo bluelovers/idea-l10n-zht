@@ -1,0 +1,12 @@
+<html>
+<body>
+Reports unresolved symbols in tables or columns
+
+<p><b>範例：</b></p><br/>
+<pre><code lang="kotlin">
+  class User : Table("User") {
+    val name = varchar("missing_name", 50) // Unresolved symbol
+  }
+</code></pre>
+</body>
+</html>

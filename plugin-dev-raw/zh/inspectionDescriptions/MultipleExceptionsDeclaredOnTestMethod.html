@@ -4,9 +4,9 @@
 此類別子句會造成不必要的冗餘。
 不會從其他專案程式碼呼叫測試方法，因此無需單獨處理這些異常。
 <p>範例：</p>
-<pre><code lang="java">
+<pre><code>
   @Test
-  public void testReflection() throws NoSuchMethodException,
+  <b>public void</b> testReflection() <b>throws</b> NoSuchMethodException,
       InvocationTargetException, IllegalAccessException {
     String result = (String) String.class.getMethod("trim")
         .invoke(" hello ");
@@ -14,9 +14,9 @@
   }
 </code></pre>
 <p>通過快速修復將異常宣告取代為單個異常：</p>
-<pre><code lang="java">
+<pre><code>
   @Test
-  public void testReflection() throws Exception {
+  <b>public void</b> testReflection() <b>throws</b> Exception {
     String result = (String) String.class.getMethod("trim")
         .invoke(" hello ");
     assertEquals("hello", result);

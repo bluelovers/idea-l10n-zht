@@ -1,0 +1,28 @@
+<html>
+<body>
+報告將套用程序服務分配到 static final 欄位/屬性的情況。
+<p>
+  此類別分配會導致全域狀態，使得在測試中無法刪除一個應用程式並設定另一個應用程式，因此，同一程序中的重複測試可能會失敗。
+  唯一的例外是用來存儲虛擬/預設實例的顯式建構函式呼叫。
+</p>
+<p>
+  避免存儲服務的推薦方式是在本地檢索服務或將其包裝在 <code>java.util.function.Supplier</code> 中。
+</p>
+<p><b>範例：</b></p>
+<pre><code lang="java">
+  // 不正確的方式
+  private static final ManagingFS ourInstance = ApplicationManager.getApplication().getService(ManagingFS.class);
+</code></pre>
+<pre><code lang="java">
+  // 正確的方式
+  private static final Supplier&lt;ManagingFS&gt; ourInstance = CachedSingletonsRegistry.lazy(() -> {
+    return ApplicationManager.getApplication().getService(ManagingFS.class);
+  });
+</code></pre>
+<pre><code lang="java">
+  // 例外
+  private static final UniqueVFilePathBuilder DUMMY_BUILDER = new UniqueVFilePathBuilder()
+</code></pre>
+<p><small>2023.2 最新變化</small>
+</body>
+</html>

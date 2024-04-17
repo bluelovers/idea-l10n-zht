@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>報告 JUnit 5 <code>@RepeatedTest</code> 的以下問題：</p>
+<ul>
+  <li>在同一個方法中使用 <code>@Test</code> 和 <code>@RepeatedTest</code>。 即便允許使用它們，結合使用也不會產生其他效果。</li>
+  <li><code>RepetitionInfo</code> 參數在 <code>@BeforeAll</code> 和 <code>@AfterAll</code> 方法中使用。 該參數未注入到這些方法中。</li>
+  <li><code>RepetitionInfo</code> 參數在包含 <code>@Test</code> 方法的類別中的 <code>@BeforeEach</code> 和 <code>@AfterEach</code> 方法中使用。 在本例中，此參數不會被注入 <code>@Test</code> 方法中。</li>
+</ul>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+報告 <code>junit.framework.TestCase</code> 繼承者中的 JUnit 4 <code>@Test</code> 註解方法。 混合 JUnit 的 API 會導致執行測試出現問題。
+<p><b>範例：</b></p>
+<pre><code>
+  public class MyTest extends TestCase {
+      @Test //名稱不是以 "test" 開頭，因此將被忽略
+      public void wouldBeIgnored() {}
+  
+      @Test   //名稱以 "test" 開頭
+      @Ignore //因此即便有 @Ignore 註解也會執行
+      public void testWouldBeExecuted() {}
+  }
+</code></pre>
+<p><b>提供的修正：</b></p>
+<ul>
+  <li>移除 <code>@Ignore</code> 註解並重命名測試方法，使名稱不以“test”開頭。</li>
+  <li>將 JUnit 3 測試類別轉換為 JUnit 4。</li>
+</ul>
+<!-- tooltip end -->
+</body>
+</html>

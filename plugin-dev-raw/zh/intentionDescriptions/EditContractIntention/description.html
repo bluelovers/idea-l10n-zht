@@ -1,30 +1,33 @@
 <html><body>
 這個意圖改變了一個庫方法契約。
 
-方法約定的語法如下：<br/>
- contract ::= (clause ';')* clause<br/>
- clause ::= args '->' effect<br/>
- args ::= ((arg ',')* arg )?<br/>
- arg ::= value-constraint<br/>
- value-constraint ::= '_' | 'null' | '!null' | 'false' | 'true'<br/>
- effect ::= value-constraint | 'fail' | 'new' | 'this' | 'param' number<br/>
- number ::= [1-9] [0-9]*<p/>
+A method contract has the following syntax:
+<pre><code>
+ contract ::= (clause ';')* clause
+ clause ::= args '->' effect
+ args ::= ((arg ',')* arg )?
+ arg ::= value-constraint
+ value-constraint ::= '_' | 'null' | '!null' | 'false' | 'true'
+ effect ::= value-constraint | 'fail' | 'new' | 'this' | 'param' number
+ number ::= [1-9] [0-9]*
+</code></pre>
 
 約束意味著：<br/>
 <ul>
-<li> _ - 任意值
-<li> null - null 值
-<li> !null - 靜態證明非 null 的值
-<li> true - 布林值 true
-<li> false - 布林值 false
-<li> fail - 如果實參滿足實參約束，則該方法拋出異常
-<li> new - 每次執行該方法時，它都會返回一個新的非 null 物件，該物件與執行前存在於堆中的其他物件不同。 如果方法是純方法，則新物件不會存儲在欄位或陣列中，如果不使用方法的返回值，則新物件將丟失。
-<li> this - 該方法返回非 null 的 this 參照
-<li> param1（param2、param3 等） - 該方法返回其第一個（第二個、第三個等）實參
+  <li> <code>_</code>: 任意值
+  <li> <code>null</code>: null value
+  <li> <code>null!</code>: a value statically proved to be not-null
+  <li> <code>true</code>: true boolean value
+  <li> <code>false</code>: false boolean value
+  <li> <code>fail</code>: the method throws exception if the arguments satisfy argument constraints
+  <li> <code>new</code>: every time the method is executed, it returns a non-null new object that is distinct from other objects existing in the heap prior to method execution. 如果方法是純方法，則新物件不會存儲在欄位或陣列中，如果不使用方法的返回值，則新物件將丟失。
+  <li> <code>this</code>: the method returns non-null this reference
+  <li> <code>param1 (param2, param3, etc.)</code>: the method returns its first (second, third, etc.) argument
 </ul>
-範例：<p/>
-<code>@Contract("_, null -> null")</code> - 方法的第二個實參為 null，則返回 null<br/>
-<code>@Contract("_, null -> null; _, !null -> !null")</code> - 方法的第二個實參為 null，則返回 null，否則返回非 null。<br/>
-<code>@Contract("true -> fail")</code> - 一個典型的 assertFalse 方法，如果 <code>true</code> 被傳遞給它，它會拋出一個異常。<br/>
-
+範例：<br/>
+<ul>
+  <li> <code>@Contract("_, null -> null")</code>: method returns null if its second argument is null.
+  <li> <code>@Contract("_, null -> null; _, !null -> !null")</code>: method returns null if its second argument is null and not-null otherwise.
+  <li> <code>@Contract("true -> fail")</code>: a typical <code>assertFalse</code> method which throws an exception if <code>true</code> is passed to it.
+</ul>
 </body></html>

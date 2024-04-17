@@ -1,0 +1,28 @@
+<html>
+<body>
+Reports logging calls that are not surrounded by a guard condition.
+The evaluation of a call's arguments can be expensive.
+當日誌記錄語句使用的級別停用日誌記錄時，使用臨界子句包圍日誌記錄呼叫可避免這種開銷。 這對於最不嚴重的日誌記錄呼叫級別（追蹤、偵錯、最精細）特別有用，因為這些呼叫在生產環境中最常被停用。
+<p><b>範例：</b></p>
+<pre><code lang="java">
+  public class TestObject {
+    void test(Object object) {
+      LOG.debug("some logging " + expensiveCalculation(1));
+    }
+  }
+</code></pre>
+<p>After a quick-fix is applied:</p>
+<pre><code lang="java">
+  public class TestObject {
+    void test(Object object) {
+      if(LOG.isDebugEnabled()){
+        LOG.debug("some logging " + expensiveCalculation(1));
+      }
+    }
+  }
+</code></pre>
+<p>This inspection supports <em>Log4j2</em> and the <em>SLF4J</em> logging frameworks (except builders).
+<!-- tooltip end -->
+<p><small>2024.2 最新變化</small></p>
+</body>
+</html>

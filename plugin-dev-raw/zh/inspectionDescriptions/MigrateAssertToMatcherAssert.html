@@ -2,10 +2,10 @@
 <body>
 報告對可以遷移到 Hamcrest 宣告式樣式 <code>Assert.assertThat()</code> 呼叫的 <code>Assert.assertEquals()</code>、<code>Assert.assertTrue()</code> 等方法的呼叫。
 <p>範例：</p>
-<pre><code lang="java">
-  public class SubstantialTest {
+<pre><code>
+  <b>public class</b> SubstantialTest {
     @Test
-    public void testContents(Collection&lt;String&gt; c, String s) {
+    <b>public void</b> testContents(Collection&lt;String> c, String s) {
       Assert.assertTrue(c.contains(s));
       Assert.assertEquals(c, s);
       Assert.assertNotNull(c);
@@ -15,10 +15,10 @@
   }
 </code></pre>
 <p>為執行遷移提供了快速修復：</p>
-<pre><code lang="java">
-  public class SubstantialTest {
+<pre><code>
+  <b>public class</b> SubstantialTest {
     @Test
-    public void testContents(Collection&lt;String&gt; c, String s) {
+    <b>public void</b> testContents(Collection&lt;String> c, String s) {
       assertThat(c, hasItem(o));
       assertThat(o, is(c));
       assertThat(c, notNullValue());

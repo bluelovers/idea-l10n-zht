@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>
+    報告後面緊跟 <code>await</code> 的 <code>async</code> 呼叫。
+    此類別呼叫可以取代為塊呼叫。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+  suspend fun test(ctx: CoroutineContext, scope: CoroutineScope) {
+      scope.async(ctx) { doSomeJob() }.await()
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  suspend fun test(ctx: CoroutineContext, scope: CoroutineScope) {
+      withContext(scope.coroutineContext + ctx) { doSomeJob() }
+  }
+</code></pre>
+</body>
+</html>

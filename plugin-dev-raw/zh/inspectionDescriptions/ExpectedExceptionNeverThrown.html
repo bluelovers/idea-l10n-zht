@@ -3,9 +3,10 @@
 報告 JUnit 4 測試方法預期但從未在方法體內拋出的已檢查的異常。
 此類別測試方法永遠不會成功。
 <p><b>範例：</b></p>
-<pre><code lang="java">
+<pre><code>
   @Test(expected = CloneNotSupportedException.class)
-  public void testIt() { }
+  <b>public void</b> testIt() {
+  }
 </code></pre>
 <!-- tooltip end -->
 </body>

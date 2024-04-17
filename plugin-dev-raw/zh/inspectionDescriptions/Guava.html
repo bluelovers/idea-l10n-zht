@@ -11,7 +11,7 @@
   List&lt;String&gt; results = List.of(1, 2, 3).stream().map(Object::toString).collect(Collectors.toList());
 </code></pre>
 <p>
-該快速修復可能會改變語意。 Guava 的一些惰性求值的可迭代物件可以轉換為預求值的可迭代物件。
+該快速修復可能會改變語意。 Some lazily evaluated Guava iterables can be transformed to eagerly evaluated.
 </p>
 <!-- tooltip end -->
 </body>

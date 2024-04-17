@@ -1,0 +1,17 @@
+<html>
+<body>
+報告 SLF4J 或 Log4j 2 日誌記錄呼叫，例如 <code>logger.info("{}: {}", key)</code>，其中記錄器訊息中 <code>{}</code> 佔位符的數量與日誌呼叫的其他實參的數量不符合。
+<!-- tooltip end -->
+<p>
+使用檢查選項可以指定 SLF4J 使用哪個實作。
+如果選擇<strong>自動檢查</strong>，則在類別路徑中搜尋 <code>org.apache.logging.slf4j.Log4jLogger</code>。
+如果找到了此檔案或選擇了<strong>是</strong>，將不為 SLFJ4 API 報告帶有異常類型的最後一個參數具有佔位符的情況。
+範例：
+<pre><code>
+// 將不報告
+log.error("For id {}: {}", id, new RuntimeException());
+</code></pre>
+此選項僅適用於 SLF4J。
+<p>
+</body>
+</html>

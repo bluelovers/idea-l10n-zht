@@ -1,9 +1,10 @@
 <html>
 <body>
 報告<a href="https://www.c2.com/cgi/wiki?DoubleBraceInitialization">雙大括號初始化</a>。
-<p>雙大括號初始化在非 static 上下文中使用時可能會導致記憶體泄漏，因為它建立了一個將參照周圍物件的匿名類別。</p>
 <p>與一般初始化相比，雙大括號初始化的性能更差，因為它需要載入一個額外的類別。</p>
 <p>如果 <code>equals()</code> 方法不接受子類別作為參數，還可能導致 <code>equals()</code> 比較失敗。</p>
+<p>Double brace initialization may cause memory leaks when used in a non-static context. This is because it defines an anonymous class
+  that will reference the surrounding object, when compiled with javac from before Java 18.</p>
 <p>此外，在 Java 9 以前的版本中，雙大括號初始化不能與 Diamond 運算符結合使用，因為它與匿名類別不相容。
 </p>
 <p><b>範例：</b></p>
