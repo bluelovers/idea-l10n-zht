@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>The inspection is designed to identify potentially vulnerable sections of code where data
+  obtained from potentially unreliable sources may be used in operations that pose security risks.</p>
+
+<p>Data Flow Tracking:</p>
+
+<p>The inspection tracks the flow of data from the source to its usage in critical operations.
+  This includes analyzing the transfer of data through methods, objects, and variables.</p>
+
+<p>Consider an example where user input is directly used in an SQL query without proper preprocessing.
+  The inspection would issue a warning about a potential SQL injection.</p>
+<pre>
+String userInput = getUserInput();
+String sqlQuery = "SELECT * FROM users WHERE username = '" + userInput + "'";
+</pre>
+</body>
+</html>

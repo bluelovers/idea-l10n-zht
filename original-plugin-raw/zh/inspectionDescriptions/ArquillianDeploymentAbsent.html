@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>报告没有部署的 Arquillian 测试用例类。</p>
+<p>
+  根据 <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/en-US/html/gettingstarted.html#d0e451">Arquillian 文档</a>，Arquillian 测试类应该使用具有特定签名的 public static 方法定义部署归档，并使用 <code>@Deployment</code> 注解。
+</p>
+<p>该快速修复会根据用户可编辑的 <em>Arquillian 部署方法</em>代码模板添加所需方法。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  // 此测试用例无法被 Arquillian 启动
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    // 通过快速修复添加
+    @Deployment
+    public static JavaArchive ${DEPLOYMENT_NAME}() {
+      return ShrinkWrap.create(JavaArchive.class)
+                       .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+</body>
+</html>

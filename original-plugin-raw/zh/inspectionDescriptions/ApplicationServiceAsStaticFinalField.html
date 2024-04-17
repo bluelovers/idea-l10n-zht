@@ -1,0 +1,28 @@
+<html>
+<body>
+报告将应用程序服务分配到 static final 字段/属性的情况。
+<p>
+  此类分配会导致全局状态，使得在测试中无法删除一个应用程序并设置另一个应用程序，因此，同一进程中的重复测试可能会失败。
+  唯一的例外是用来存储虚拟/默认实例的显式构造函数调用。
+</p>
+<p>
+  避免存储服务的推荐方式是在本地检索服务或将其包装在 <code>java.util.function.Supplier</code> 中。
+</p>
+<p><b>示例：</b></p>
+<pre><code lang="java">
+  // 不正确的方式
+  private static final ManagingFS ourInstance = ApplicationManager.getApplication().getService(ManagingFS.class);
+</code></pre>
+<pre><code lang="java">
+  // 正确的方式
+  private static final Supplier&lt;ManagingFS&gt; ourInstance = CachedSingletonsRegistry.lazy(() -> {
+    return ApplicationManager.getApplication().getService(ManagingFS.class);
+  });
+</code></pre>
+<pre><code lang="java">
+  // 例外
+  private static final UniqueVFilePathBuilder DUMMY_BUILDER = new UniqueVFilePathBuilder()
+</code></pre>
+<p><small>2023.2 最新变化</small>
+</body>
+</html>

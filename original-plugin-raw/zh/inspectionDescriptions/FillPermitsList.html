@@ -1,6 +1,8 @@
 <html>
 <body>
-报告其 permits 子句不包含来自同一文件的某些子类的密封类。
+Reports <code>sealed</code> classes without an explicit <code>permits</code> list.
+Sealed classes that only have subclasses in the same file are not required to have an explicit <code>permits</code> list.
+By default, this inspection does not highlight in the editor, but only provides a fix.
 <p>示例：</p>
 <pre><code>
   sealed class A {}

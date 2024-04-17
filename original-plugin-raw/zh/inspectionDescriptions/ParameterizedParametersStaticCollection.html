@@ -5,38 +5,38 @@
 <p>建议创建一个空的形参提供程序方法或更改不正确的数据提供程序方法的签名。</p>
 
 <p><b>示例：</b><p>
-<pre><code lang="java">
+<pre><code>
   @RunWith(Parameterized.class)
-  public class ImportantTest {
-    private int input;
-    private int expected;
+  <b>public class</b> ImportantTest {
+    <b>private int</b> input;
+    <b>private int</b> expected;
 
-    ImportantTest(int input, int expected) {
-      this.input = input;
-      this.expected = expected;
+    ImportantTest(<b>int</b> input, <b>int</b> expected) {
+      <b>this</b>.input = input;
+      <b>this</b>.expected = expected;
     }
 
     // …测试用例
   }
 </code></pre>
 <p>在应用快速修复后：</p>
-<pre><code lang="java">
+<pre><code>
   @RunWith(Parameterized.class)
-  public class ImportantTest {
-    private int input;
-    private int expected;
+  <b>public class</b> ImportantTest {
+    <b>private int</b> input;
+    <b>private int</b> expected;
 
-    ImportantTest(int input, int expected) {
-      this.input = input;
-      this.expected = expected;
+    ImportantTest(<b>int</b> input, <b>int</b> expected) {
+      <b>this</b>.input = input;
+      <b>this</b>.expected = expected;
     }
 
     @Parameters
-    public static Iterable&lt;Object[]> parameters() {
-      return null;
+    <b>public static</b> Iterable&lt;Object[]> parameters() {
+      <b>return null</b>;
     }
 
-    // ... test cases
+    // …测试用例
   }
 </code></pre>
 <!-- tooltip end -->

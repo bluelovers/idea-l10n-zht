@@ -1,0 +1,19 @@
+<html>
+<body>
+报告动态类型（<code>instance</code>、<code>class</code> 和 <code>self</code>）在静态上下文中的用法。 在静态上下文中使用动态类型可能会令人混淆，因为该类型永远不会改变。
+<p>可以通过快速修复将动态类型用法替换为其静态等效项。</p>
+<p>示例：</p>
+<pre><code>class Example
+  # 在静态上下文中使用 'instance'
+  INSTANCE: instance
+  # 在静态上下文中使用 'class'
+  CLASS: class
+end
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>class Example
+  INSTANCE: Example
+  CLASS: singleton(Example)
+end</code></pre>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+报告未被声明为 <code>public</code>、不返回 <code>void</code> 或接受实参的 JUnit 4 <code>@Before</code> 或 <code>@After</code> 方法。 此类方法很容易无意间创建，但是 JUnit 测试运行程序不会执行这些方法。
+<p>该检查会为方法签名提供修正。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  @Before private int foo(int arg) { ... }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  @Before public void foo() { ... }
+</code></pre>
+</body>
+</html>

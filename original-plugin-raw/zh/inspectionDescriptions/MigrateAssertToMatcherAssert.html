@@ -2,10 +2,10 @@
 <body>
 报告对可以迁移到 Hamcrest 声明式样式 <code>Assert.assertThat()</code> 调用的 <code>Assert.assertEquals()</code>、<code>Assert.assertTrue()</code> 等方法的调用。
 <p>示例：</p>
-<pre><code lang="java">
-  public class SubstantialTest {
+<pre><code>
+  <b>public class</b> SubstantialTest {
     @Test
-    public void testContents(Collection&lt;String&gt; c, String s) {
+    <b>public void</b> testContents(Collection&lt;String> c, String s) {
       Assert.assertTrue(c.contains(s));
       Assert.assertEquals(c, s);
       Assert.assertNotNull(c);
@@ -15,10 +15,10 @@
   }
 </code></pre>
 <p>为执行迁移提供了快速修复：</p>
-<pre><code lang="java">
-  public class SubstantialTest {
+<pre><code>
+  <b>public class</b> SubstantialTest {
     @Test
-    public void testContents(Collection&lt;String&gt; c, String s) {
+    <b>public void</b> testContents(Collection&lt;String> c, String s) {
       assertThat(c, hasItem(o));
       assertThat(o, is(c));
       assertThat(c, notNullValue());

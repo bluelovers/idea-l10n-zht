@@ -1,0 +1,22 @@
+<html>
+<body>
+报告无法由标准的 JUnit 测试运行程序构建的 JUnit 测试类。
+<p>
+  JUnit 4 测试类需要为 <code>public</code> 并包含一个 <code>public</code> 无实参构造函数或完全不包含构造函数（隐式的默认构造函数），且没有其他 <code>public</code> 构造函数。
+  JUnit 3 测试类需要为 <code>public</code>，并且需要 <code>public</code> 无实参构造函数或者带有单个 <code>String</code> 类型形参的 <code>public</code> 构造函数（调用匹配的超构造函数）。
+  否则，测试类无法由标准的 JUnit 测试运行程序运行。
+<p><b>示例：</b></p>
+<pre><code>
+public class MyTest {
+
+  private MyTest() {} // no-arg 构造函数为 private
+
+  @Test
+  public void testSomething() {
+    assertEquals(1, 1);
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

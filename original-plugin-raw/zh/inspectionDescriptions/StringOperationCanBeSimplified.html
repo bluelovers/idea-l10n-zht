@@ -20,6 +20,16 @@
   使用下方的<b>不报告 String 构造函数调用</b>选项可以不报告如上例所示的代码。
   这将避免在使用 <code>new String()</code> 调用保证不同对象相等性的代码中应用快速修复后改变与 <code>==</code> 或 <code>!=</code> 进行字符串比较的结果。
 </p>
+<p>
+  Use the <b>Do not report single argument substring() calls</b> option below to not report code like the following.
+</p>
+<pre><code>
+  stringBuilder.append(string.substring(5));
+</code></pre>
+<p>which can be replaced with the following.
+<pre><code>
+  stringBuilder.append(string, 5, string.length());
+</code></pre>
 <p><small>2018.1 最新变化</small></p>
 </body>
 </html>
