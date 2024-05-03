@@ -8,12 +8,17 @@
     "action.Floating.CodeToolbar.SurroundWithTryCatchFinally.text": "try / catch / finally",
     "action.GenerateCreateUI.text": "createUI(...)",
     "action.SearchEverywhereToolbarHotKey.hotkey": "Shift+Shift",
+    "action.ShowCompressibleToolbarAction.text": "Display Dynamic Compressed Toolbars",
+    "action.main.toolbar.Filename.text": "File Name Widget (when editor tabs are hidden or “Always show full path” is enabled)",
     "group.Internal.UI.KotlinUiDsl.text": "Kotlin UI DSL",
     "group.Internal.UI.text": "UI(&U)",
     "group.VcsGroups.text": "Git(_G)"
   },
   "messages/AmperBundle.properties": {
     "jvm.app.module.yaml.template.group.name": "module.yaml"
+  },
+  "messages/AnalysisBundle.properties": {
+    "virtual.file.window.name": "<Injected {0}file>"
   },
   "messages/AndroidBundle.properties": {
     "action.Android.RunAndroidAvdManager.text": "AVD Manager",
@@ -116,7 +121,8 @@
     "playwright.project.generator.presentable.package.name": "Playwright(&P):"
   },
   "messages/AquaWebInspectorBundle.properties": {
-    "locators.evaluator.placeholder.xpath": "XPath..."
+    "locators.evaluator.placeholder.xpath": "XPath...",
+    "web.inspector.frames.top.frame": "top frame"
   },
   "messages/AspectJBundle.properties": {
     "action.create.aspect.kind.annotation": "@Aspect",
@@ -721,6 +727,8 @@
     "marketplace.widget.title": "JetBrains Account",
     "stepik.url": "Stepik URL:",
     "submissions.button.community.tooltip.text.login": "Log in to view community solutions",
+    "submissions.got.stuck": "Got stuck?",
+    "submissions.see.community.solutions.link": "See community solutions...",
     "ui.dialog.create.answer.placeholder.path.pattern": "[sectionName#]lessonName#taskName#filePath#placeholderIndex",
     "user.agreement.dialog.text": "By clicking Agree, you confirm that you have read and agree <br> to the following terms and conditions:",
     "user.agreement.editor.notification": "Saves are disabled/don''t work. Agree to the user agreement to enable them"
@@ -986,8 +994,7 @@
     "run.configuration.terraform.path.incorrect": "Could not find Terraform executable at the specified path: <br>{0}",
     "run.configuration.terraform.path.title": "Terraform executable path error",
     "terraform.configuration.type.description": "Run Terraform with specified parameters",
-    "terraform.run.text": "Run Terraform",
-    "terraform.settings.reloading.terraform.model.progress.title": "Reloading Terraform Model"
+    "terraform.run.text": "Run Terraform"
   },
   "messages/HadoopMonitoringBundle.properties": {
     "settings.group.name": "Hadoop YARN",
@@ -1493,6 +1500,7 @@
     "intention.category.large.language.models": "AI Assistant",
     "intentions.apply.custom.edit.dialog.title.ai.assistant": "AI Assistant",
     "llm.codeModification.prompt.hint": "Ask AI to modify selected code",
+    "llm.error.code.fragment.is.too.long.to.send": "Fragment is too long to send to chat. Please place the caret within the code block or select text",
     "llm.inline.completion.noVar.tooltip.text": "No suggestions",
     "name.assistant": "AI Assistant",
     "notification.group.name": "AI Assistant",
@@ -1835,6 +1843,17 @@
     "settings.project.display": "Protocol Buffers",
     "settings.virtual.group.std.google.proto.name": "google stdlib"
   },
+  "messages/ProtobufLangBundle.properties": {
+    "editions.enum.value.reserved.identifier": "Identifier reserved enum values are not allowed before edition 2023",
+    "editions.enum.value.reserved.string": "String literal reserved enum values are not allowed since edition 2023",
+    "editions.features.invalid": "Features are not allowed before edition 2023",
+    "editions.field.label.optional": "The optional label is not allowed since edition 2023",
+    "editions.field.label.required": "The required label is not allowed since edition 2023",
+    "editions.field.reserved.identifier": "Identifier reserved fields are not allowed before edition 2023",
+    "editions.field.reserved.string": "String literal reserved fields are not allowed since edition 2023",
+    "editions.group.invalid": "Group syntax is not allowed since edition 2023",
+    "editions.unsupported": "Edition ''{0}'' is not yet supported"
+  },
   "messages/PuppetBundle.properties": {
     "language.settings.code.style.sample": "service { 'sshd':\n  subscribe => File['sshdconfig'],\n}",
     "puppet.module.name": "{0} {1}",
@@ -1851,7 +1870,6 @@
     "debugger.dataviewer.header.filter.hint": "{0}: {1}",
     "debugger.progress.title.stackframe.processing": "StackFrame processing",
     "framework.support.python.sdk.combobox.label": "Python SDK:",
-    "new.project.welcome": "Create a welcome script",
     "pandas.completion.type.text": "DataFrame: {0}",
     "python.console.command.queue.got.it.tooltip.id": "python.console.command.queue.show",
     "python.packaging.dialog.description.attempt.to.uninstall.for.several.dependent.packages.single.package.description": "{0} -> {1}",
@@ -1873,6 +1891,10 @@
   "messages/PyDockerBundle.properties": {
     "python.add.sdk.panel.name.docker.compose": "Docker Compose",
     "remote.sdk.exception.message.with.cause": "{0}:\n{1}"
+  },
+  "messages/PyEndpointsBundle.properties": {
+    "project.model.group.by.module.title.full": "Group By Application",
+    "project.model.group.by.module.title.short": "Group By Application"
   },
   "messages/PyHuggingFaceBundle.properties": {
     "python.hugging.face.base.url": "https://huggingface.co"
@@ -2132,8 +2154,7 @@
     "DotNetDebuggerGeneralConfigurableUi.checkbox.show.run.to.panel.3": ")",
     "MsNetAttachDebugger.display.short.name": ".NET",
     "RemoteDebugConfigurableUi.label.os": "OS:",
-    "debugger.action.link.force.refresh": "Force Refresh",
-    "rider.debugger.DFA.mode.exit.debugger.DFA.mode": "Disable Predictive Debugger For This Session"
+    "debugger.action.link.force.refresh": "Force Refresh"
   },
   "messages/RiderDesignersBundle.properties": {
     "ResxEditor.editor.name.localization.manager": "Localization Manager",
@@ -2151,9 +2172,6 @@
   },
   "messages/RiderJavaScriptBundle.properties": {
     "rider.javascript.debug.companion.tab.name": "{0} - JavaScript"
-  },
-  "messages/RiderLessonsBundle.properties": {
-    "rider.onboarding.alt.enter": "{0} is your number one shortcut in the editor. For instance, when your caret is at the {1} parameter, press it to remove the parameter and update usages."
   },
   "messages/RiderMultiPlatformBundle.properties": {
     "notification.group.riderandroid.sdk": "Android SDK"
@@ -2173,7 +2191,6 @@
     "RiderProjectTemplate.ReSharperProjectTemplate.NETFramework.name": ".NET Framework"
   },
   "messages/RiderRazorBundle.properties": {
-    "blazor.wasm.debug.exception.target.path.missing": "Unable to attach Blazor debugger: Unable to retrieve output assembly path.",
     "blazor.wasm.debug.hosted.companion.tab.name": "{0} - WASM",
     "configurable.name.asp.net.c": "ASP.NET (C#)",
     "configurable.name.asp.net.vb": "ASP.NET (VB)",
@@ -2212,8 +2229,6 @@
     "action.RiderUnitTestSessionLaunchOptionActionGroupBase.text.toolbar": "{0}：{1}"
   },
   "messages/RiderWizardBundle.properties": {
-    "steps.featured-plugins.ai-assistant.description": "AI-powered productivity boost: understand and generate code, find issues, get answers to programming-related questions, and more",
-    "steps.featured-plugins.azure-toolkit.description": "Explore your Azure resources. Build and deploy Azure Web Apps and Functions. Register applications with Azure AD.",
     "steps.keymaps.groups.jetbrains-ide.name": "JetBrains IDE",
     "steps.keymaps.groups.vscode.name": "VS Code",
     "steps.keymaps.visual-assist.name": "Visual Assist",
@@ -2269,26 +2284,34 @@
     "inspection.message.generic.default.param.cannot.use.forward.declared.identifiers": "Generic parameters with a default value cannot use forward-declared identifiers",
     "inspection.message.has.been.removed2": "{0} has been removed",
     "inspection.message.incorrect.meta.item": "Invalid meta item",
-    "inspection.message.multiple.default.variants": "Multiple declared defaults",
+    "inspection.message.invalid.json.schema.format": "Value format should be `{0}`",
+    "inspection.message.multiple.default.variants": "Multiple defaults declared",
     "inspection.message.no.default.declared": "No default declared",
     "inspection.message.recursion.in.async.fn.requires.boxing": "Recursion in an `async` function requires boxing",
     "inspection.message.should.have.body2": "`{0}` must have a body",
     "inspection.message.trait.copy.may.not.be.implemented.for.this.type": "Trait `Copy` cannot be implemented for this type",
     "inspection.rs.cannot.impl.for.dyn.auto.trait": "Inherent `impl` for dyn auto trait",
+    "inspection.rs.control.flow.expr.in.while.condition.without.loop": "`break` or `continue` with no label in the condition of a `while` loop",
     "inspection.rs.copy.and.drop.impl": "Both `Copy` and `Drop` implemented",
-    "inspection.rs.equality.trait.members.display.name": "Member does not implement the trait being derived.",
+    "inspection.rs.enum.repr.int.is.required": "`#[repr(inttype)]` must be specified for enum",
+    "inspection.rs.equality.trait.members.display.name": "Derived trait not implemented",
     "inspection.rs.field.without.type": "Missing struct field type",
     "inspection.rs.format.macro.errors": "Format macro error",
     "inspection.rs.function.parameters.are.sized": "Parameter type with unknown size",
     "inspection.rs.generic.default.param.cannot.use.forward": "Forward-declared identifier for parameter with default value",
     "inspection.rs.impl.copy.for.wrong.type": "Invalid `Copy` implementation",
     "inspection.rs.impl.drop.for.non.adt": "Invalid `Drop` implementation",
+    "inspection.rs.incorrectly.placed.inline.attr": "`#[inline]` Attribute can only be applied to a function or closure",
     "inspection.rs.invalid.brea.continue.usage": "Invalid 'break' or 'continue'",
+    "inspection.rs.invalid.lifetime.name": "Invalid lifetime name",
+    "inspection.rs.loop.only.keyword.outside.of.loop": "`break` and `continue` can only be used inside `loop` and `while` blocks",
     "inspection.rs.nonexistent.field.access": "Non-existent field access",
     "inspection.rs.recursion.in.async.function": "No boxing for async recursion",
     "inspection.rs.reference.is.not.public": "Invalid private field/method access",
     "inspection.rs.return.must.have.value": "`return` must have a value",
     "inspection.rs.super.trait.is.not.implemented": "Supertrait is not implemented",
+    "inspection.rs.unlabeled.control.flow.expr": "Unlabeled `continue` or `break` inside of a labeled block",
+    "inspection.toml.json.schema": "Doesn't conform to schema",
     "intention.family.name.add.default.meta.item": "Add #[default] to first variant",
     "intention.name.": "{0}{1}",
     "intention.name.add.self": "Add `Self::`",
@@ -2307,6 +2330,7 @@
     "rust.cargo.toml": "Rust/Cargo.toml",
     "rust.external.linter.cargo.check.item": "Cargo Check",
     "rust.repl": "Rust REPL",
+    "settings.rust.code.style.end.of.line.comments.on.the.same.line": "Preserve end of line comments on the same line",
     "tooltip.must.be.defined.only.once.in.namespace.this": "`{0}` can only be defined once in the `{1}` namespace of this {2}",
     "wasm.pack": "wasm-pack"
   },
@@ -2628,6 +2652,17 @@
     "group.Swift.PackageManager.Menu.text": "Swift Package Manager",
     "swift.package.manager": "Swift Package Manager"
   },
+  "messages/SymfonySupportSurveyBundle.properties": {
+    "dialog.symfony.support.survey.dev.experience.label": "Rate how satisfied are you with the developer experience in PhpStorm:",
+    "dialog.symfony.support.survey.feature.fullness.label": "Rate the feature fullness of the plugin:",
+    "dialog.symfony.support.survey.performance.label": "Rate the general performance of your IDE when developing a Symfony project:",
+    "dialog.symfony.support.survey.reliability": "Rate the general reliability of PhpStorm:",
+    "dialog.symfony.support.survey.symfony.plugin.experience.label": "Rate your overall experience with the Symfony plugin:",
+    "dialog.symfony.support.survey.title": "Symfony support feedback",
+    "notification.symfony.support.request.content": "Please take two minutes to answer a few questions.",
+    "notification.symfony.support.request.title": "Share feedback about Symfony support",
+    "notification.symfony.support.thanks.feedback.content": "You are helping make the PhpStorm better!"
+  },
   "messages/TableBundle.properties": {
     "of": "/{0}"
   },
@@ -2646,6 +2681,18 @@
     "label.content.encoding": "Content-Encoding",
     "label.content.type": "Content-Type",
     "settings.appid": "APPID:"
+  },
+  "messages/TerminalBundle.properties": {
+    "action.Terminal.ShowFeedbackNotification.text": "Show New Terminal Feedback Notification",
+    "feedback.dialog.description": "It's been a while since you tried the New Terminal Beta, and your first impression is very valuable to us.",
+    "feedback.dialog.other.placeholder": "For example, missing features or vice versa, what you particularly like.",
+    "feedback.dialog.rating.interface": "Interface/Usability:",
+    "feedback.dialog.title": "New Terminal Feedback",
+    "feedback.notification.text": "Please answer a few questions about your experience with New Terminal.",
+    "feedback.notification.title": "Share feedback about New Terminal",
+    "feedback.system.info.commands.number": "Executed commands number:",
+    "feedback.system.info.moment": "Feedback moment:",
+    "feedback.system.info.shell": "Most used shell:"
   },
   "messages/TmsBundle.properties": {
     "tms.connection.url": "URL:",
@@ -2708,6 +2755,7 @@
     "git.url": "Git URL: {0}"
   },
   "messages/UnrealLinkBundle.properties": {
+    "RiderLink.Unreal.Debugger.BlueprintCallstack.UnrealEngineCode.suffix": "filtered out",
     "configurable.UnrealLink.settings.title": "Unreal Engine"
   },
   "messages/UsageViewBundle.properties": {

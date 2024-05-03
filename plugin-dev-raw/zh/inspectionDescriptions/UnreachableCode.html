@@ -1,14 +1,5 @@
 <html>
 <body>
-根據數據流分析報告從未到達的程式碼。 
-可能是前一個始終為 true 或始終為 false 的條件、無法到達的迴圈主體或 catch 部分的結果。 通常（儘管並非總是）無法到達的程式碼是先前警告的結果，因此請檢查形成“為 null 性和數據流問題”、“常量值”或“空容器上的冗餘動作”的檢查警告，以更好地了解原因。
-<p>範例：</p>
-<pre><code>
-  void finishApplication() {
-    System.exit(0);
-    System.out.println("Application is terminated"); // 不可到達的程式碼
-  }
-</code></pre>
-<p><small>2024.1 最新變化</small></p>
+報告從未在任何控制流中執行並且可以安全移除的程式碼段。</p>
 </body>
 </html>
