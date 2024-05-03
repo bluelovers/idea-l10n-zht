@@ -6,6 +6,7 @@ import { ITSArrayListMaybeReadonly, ITSValueOrArrayMaybeReadonly } from 'ts-type
 import { handleFile } from './lib/handle.file';
 import { before } from 'lodash';
 import { initIdeaSegmentText } from '../lib/segment';
+import { existsSync } from 'node:fs';
 
 jest.setTimeout(60 * 1000);
 
@@ -113,7 +114,14 @@ function _initTests(data: Record<string, ITestConfig[]>, cwd: string)
 
 function _doTests(file: string, configs: ITestConfig[], cwd: string)
 {
-	test(file, async () =>
+	let ft = test;
+
+	if (!existsSync(join(cwd, file)))
+	{
+		ft = ft.skip
+	}
+
+	ft(file, async () =>
 	{
 		let { actual } = await handleFile(file, cwd);
 
