@@ -3,6 +3,7 @@ import { outputFile, readFile } from 'fs-extra';
 import { join } from 'upath2';
 import { __root } from '../test/__root';
 import { readFileSync } from 'fs';
+// @ts-ignore
 import Token from 'markdown-it/lib/token';
 import { LazyURL } from 'lazy-url';
 
