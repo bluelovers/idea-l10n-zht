@@ -1,11 +1,11 @@
 <html>
 <body>
-Reports read and write actions run from the scope of service initialization:
+報告從服務初始化範圍執行的讀取和寫入動作：
 <ul>
-  <li>service constructors and initialization blocks (including static)</li>
-  <li>service companion object's initialization blocks (Kotlin)</li>
-  <li>service methods used in initialization blocks and fields initialization</li>
-  <li><code>PersistentStateComponent</code> initialization lifecycle methods:
+  <li>服務建構函式和初始化塊（包括 static）</li>
+  <li>服務伴生物件的初始化塊 (Kotlin)</li>
+  <li>初始化塊和欄位初始化中使用的服務方法</li>
+  <li><code>PersistentStateComponent</code> 初始化生命周期方法：
     <ul>
       <li><code>loadState</code></li>
       <li><code>noStateLoaded</code></li>
@@ -13,64 +13,64 @@ Reports read and write actions run from the scope of service initialization:
     </ul>
 </ul>
 
-<p>Running a read or write action during service initialization may cause deadlocks.</p>
+<p>在服務初始化期間執行讀取或寫入動作可能會導致死鎖。</p>
 
 <p><b>範例：</b></p>
-<p>Kotlin:</p>
+<p>Kotlin：</p>
 <pre><code lang="kotlin">
 @Service
 internal class MyService {
   private val myData = initMyData();
 
   constructor() {
-    val data = runReadAction { // bad: read action run in a constructor
-      // read data
+    val data = runReadAction { // 錯誤：在建構函式中執行讀取動作
+      // 讀取資料
     }
   }
 
   private fun initMyData(): Data {
-    return runWriteAction { // bad: invoked while initializing myData property
-      // write data
+    return runWriteAction { // 錯誤：在初始化 myData 屬性時呼叫
+      // 寫入資料
     }
   }
 
   companion object {
     lateinit var companionData: String
     init {
-      companionData = runReadAction { // bad: read action run in an init block
-        // read data
+      companionData = runReadAction { // 錯誤：在 init 塊中執行讀取動作
+        // 讀取資料
       }
     }
   }
 }
 </code></pre>
 
-<p>Java:</p>
+<p>Java：</p>
 <pre><code lang="java">
 @Service
 class MyService {
   private static final Data ourData1 = ReadAction.compute(() -> {
-    // read data
+    // 讀取資料
   });
   private static final Data ourData2;
 
   static {
-    ourData2 = ReadAction.compute(() -> { // bad: read action in a static initialization block
-      // read data
+    ourData2 = ReadAction.compute(() -> { // 錯誤：在 static 初始化塊中存在讀取動作
+      // 讀取資料
     });
   }
 
   private final Data myData2 = initMyData();
 
   MyService() {
-    Data data = WriteAction.compute(() -> { // bad: read action run in a constructor
-      // write data
+    Data data = WriteAction.compute(() -> { // 錯誤：在建構函式中執行讀取動作
+      // 寫入資料
     });
   }
 
   private Data initMyData() {
-    return ReadAction.compute(() -> { // bad: invoked while initializing myData property
-      // read data
+    return ReadAction.compute(() -> { // 錯誤：在初始化 myData 屬性時呼叫
+      // 讀取資料
     });
   }
 }
@@ -84,22 +84,22 @@ internal class MySettings : PersistentStateComponent&lt;MyService> {
   var stateValue: String? = null
 
   override fun loadState(state: MySettings) {
-    val data = runReadAction { // bad: read action run in loadState
-      // read data
+    val data = runReadAction { // 錯誤：在 loadState 中執行讀取動作
+      // 讀取資料
     }
     // ...
   }
 
   override fun noStateLoaded() {
-    val data = runWriteAction { // bad: read action run in noStateLoaded
-      // write data
+    val data = runWriteAction { // 錯誤：在 noStateLoaded 中執行讀取動作
+      // 寫入資料
     }
     // ...
   }
 
   override fun initializeComponent() {
-    val data = runReadAction { // bad: read action run in initializeComponent
-      // read data
+    val data = runReadAction { // 錯誤：在 initializeComponent 中執行讀取動作
+      // 讀取資料
     }
     // ...
   }

@@ -1,8 +1,8 @@
 <html>
 <body>
-Reports Stream API call chains ending with a <code>count()</code> operation, that are optimizable.
+報告可以最佳化並且以 <code>count()</code> 運算結束的 Stream API 呼叫鏈。
 <p>
-  The following call chains can be replaced by this inspection:
+  以下呼叫鏈可以取代為此檢查：
 </p>
 <ul>
   <li><code>Collection.stream().count()</code> &rarr; <code>Collection.size()</code>. 在 Java 8 中，<code>Collection.stream().count()</code> 實際上是通過迭代集合元素來進行計數，而 <code>Collection.size()</code> 對於大多數集合來說速度要快得多。</li>

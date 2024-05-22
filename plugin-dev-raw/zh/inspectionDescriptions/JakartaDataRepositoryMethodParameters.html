@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>報告不正確的儲存庫方法參數類型。</p>
+<!-- tooltip end -->
+<p><b>範例：</b></p>
+<pre><code lang="java">
+  public class Person {
+    private int id;
+    @Column
+    private String lastname;
+
+    @Column
+    private int age;
+  }
+
+  public interface CustomerRepository extends Repository&lt;Person, Integer&gt; {
+    List&lt;Person&gt; <strong>findByAddress</strong>(int lastname);  // 應為 'String' 類型
+    List&lt;Person&gt; <strong>deleteByAge</strong>(String str);   // 應為 'int' 類型
+  }
+</code></pre>
+</body>
+</html>

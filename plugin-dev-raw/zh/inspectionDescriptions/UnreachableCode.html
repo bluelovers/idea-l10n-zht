@@ -9,6 +9,35 @@
     System.out.println("Application is terminated"); // 不可到達的程式碼
   }
 </code></pre>
+<p>
+  請注意，此檢查依賴於方法契約推斷。 特別是，如果您呼叫總是引發異常的 static 或 final 方法，那麼將推斷出“總是失敗”契約，並且方法呼叫之後的程式碼將被視為不可到達。 範例：
+</p>
+<pre><code>
+  void run() {
+    performAction();
+    System.out.println("Action is performed"); // 不可到達的程式碼
+  }
+  
+  static void performAction() {
+    throw new AssertionError();
+  }
+</code></pre>
+<p>
+  如果使用任何類型的程式碼後處理，這可能會導致誤報，例如，如果註解處理器稍後用有用的內容取代了方法體。 To avoid false-positive warnings, suppress the automatic 
+  contract inference with explicit <code>@org.jetbrains.annotations.Contract</code> annotation from 
+  <code>org.jetbrains:annotations</code> package:
+</p>
+<pre><code>
+  void run() {
+    performAction();
+    System.out.println("Action is performed"); // 不再有警告
+  }
+
+  @Contract("-> _") // 實作將被取代
+  static void performAction() {
+    throw new AssertionError();
+  }
+</code></pre>
 <p><small>2024.1 最新變化</small></p>
 </body>
 </html>

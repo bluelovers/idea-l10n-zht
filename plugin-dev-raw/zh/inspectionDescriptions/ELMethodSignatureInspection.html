@@ -3,7 +3,7 @@
 報告 EL 中與 TLD 檔案中的 <code>method-signature</code> 約束不符合的方法呼叫。
 
 <p><b>範例 Java 類別：</b></p><br/>
-<pre><code>
+<pre><code lang="java">
 public class ExampleAction {
   public void goodAction() { ... }
   public void badAction(String str) { ... }
@@ -11,7 +11,7 @@ public class ExampleAction {
 </code></pre>
 
 <p><b>範例 JSP 檔案：</b></p><br/>
-<pre><code>
+<pre><code lang="jsp">
 &lt;jsp:useBean id="example" scope="request" type="org.example.ExampleAction"/&gt;
 &lt;f:view&gt;
   &lt;h:commandButton action="#{example.goodAction}"/&gt; // 優良：方法接受零實參並返回 `void`
