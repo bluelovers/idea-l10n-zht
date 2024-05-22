@@ -4,8 +4,8 @@
 <p>使用 print 语句记录异常会隐藏堆栈跟踪，这可能会使问题的调查变得复杂。
   建议您改用记录器。</p>
 <p>也会报告以异常作为实参的 <code>System.out.print()</code>、<code>System.err.println()</code> 和 <code>System.err.print()</code> 调用。 建议使用记录器来记录异常。</p>
-<p>The provided quick-fix supports <b>SLF4J</b> and <b>Log4j 2</b>.
-It replaces <code>System.out.println()</code> call with log calls</p>
+<p>提供的快速修复支持 <b>SLF4J</b> 和 <b>Log4j 2</b>。
+它会将 <code>System.out.println()</code> 调用替换为日志调用</p>
 <p><b>示例：</b></p>
 <pre><code>
   try {
@@ -24,7 +24,7 @@ It replaces <code>System.out.println()</code> call with log calls</p>
 </code></pre>
 <!-- tooltip end -->
 <p>
-  Use the <b>Log method for fix</b> option to specify a method which it is used to log a message.
+  使用<b>用于修复的日志方法</b>选项可以指定用于记录消息的方法。
 </p>
 </body>
 </html>

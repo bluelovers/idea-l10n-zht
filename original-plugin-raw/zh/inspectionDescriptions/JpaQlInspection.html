@@ -9,7 +9,7 @@
 </ul>
 
 <p><b>示例查询：</b></p>
-<pre><code>
+<pre><code lang="sql">
 SELECT OBJECT(e) FROM JavaEntity e WHERE TRUE // 警告：常量条件
 
 SELECT OBJECT(e) FROM JavaEntity e WHERE e.id BETWEEN 0 AND '2' // 错误：应为数值，但得到字符串

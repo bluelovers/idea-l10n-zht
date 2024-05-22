@@ -1,7 +1,7 @@
 <html><body>
 这个意图改变了一个库方法契约。
 
-A method contract has the following syntax:
+方法契约的语法如下：
 <pre><code>
  contract ::= (clause ';')* clause
  clause ::= args '->' effect
@@ -15,19 +15,19 @@ A method contract has the following syntax:
 约束意味着：<br/>
 <ul>
   <li> <code>_</code>: 任意值
-  <li> <code>null</code>: null value
-  <li> <code>null!</code>: a value statically proved to be not-null
-  <li> <code>true</code>: true boolean value
-  <li> <code>false</code>: false boolean value
-  <li> <code>fail</code>: the method throws exception if the arguments satisfy argument constraints
-  <li> <code>new</code>: every time the method is executed, it returns a non-null new object that is distinct from other objects existing in the heap prior to method execution. 如果方法是纯方法，则新对象不会存储在字段或数组中，如果不使用方法的返回值，则新对象将丢失。
-  <li> <code>this</code>: the method returns non-null this reference
-  <li> <code>param1 (param2, param3, etc.)</code>: the method returns its first (second, third, etc.) argument
+  <li> <code>null</code>：null 值
+  <li> <code>null!</code>：静态证明非 null 的值
+  <li> <code>true</code>：布尔值 true
+  <li> <code>false</code>：布尔值 false
+  <li> <code>fail</code>：如果实参满足实参约束，则该方法抛出异常
+  <li> <code>new</code>：每次执行该方法时，它都会返回一个新的非 null 对象，该对象与执行前存在于堆中的其他对象不同。 如果方法是纯方法，则新对象不会存储在字段或数组中，如果不使用方法的返回值，则新对象将丢失。
+  <li> <code>this</code>：该方法返回非 null 的 this 引用
+  <li> <code>param1 (param2, param3, etc.)</code>：该方法返回其第一个（第二个、第三个等）实参
 </ul>
 示例：<br/>
 <ul>
-  <li> <code>@Contract("_, null -> null")</code>: method returns null if its second argument is null.
-  <li> <code>@Contract("_, null -> null; _, !null -> !null")</code>: method returns null if its second argument is null and not-null otherwise.
-  <li> <code>@Contract("true -> fail")</code>: a typical <code>assertFalse</code> method which throws an exception if <code>true</code> is passed to it.
+  <li> <code>@Contract("_, null -> null")</code>：方法的第二个实参为 null，则返回 null。
+  <li> <code>@Contract("_, null -> null; _, !null -> !null")</code> - 方法的第二个实参为 null，则返回 null，否则返回非 null。
+  <li> <code>@Contract("true -> fail")</code> - 一个典型的 <code>assertFalse</code> 方法，如果 <code>true</code> 被传递给它，它会抛出一个异常。
 </ul>
 </body></html>

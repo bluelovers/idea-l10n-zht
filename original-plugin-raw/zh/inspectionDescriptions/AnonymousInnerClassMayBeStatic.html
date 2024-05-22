@@ -7,9 +7,7 @@
 这可以防止常见的内存泄漏，并减少每个类实例使用的内存。
 </p>
 <p>
-  Since Java 18, only serializable anonymous classes keep an implicit reference to their enclosing instance,
-  if this reference is not used. Therefore, when the module language level is Java 18 or higher,
-  this inspection reports serializable classes only.
+  从 Java 18 开始，只有可序列化的匿名类在不使用该引用的情况下，才保留对其封闭实例的隐式引用。 因此，如果模块语言级别为 Java 18 或更高，则此检查只报告可序列化的类。
 </p>
 <p>该快速修复会将匿名类提取到命名的 <code>static</code> 内部类中。</p>
 <p><b>示例：</b></p>

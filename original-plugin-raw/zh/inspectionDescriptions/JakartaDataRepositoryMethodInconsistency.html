@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>
+  Reports Jakarta Dat repository methods for which the builder cannot generate the corresponding query.
+</p>
+
+<p><b>示例：</b></p>
+<pre><code lang="java">
+interface PersonRepository extends Repository&lt;Person, Long&gt; {
+  List&lt;Person&gt; findByEmailAndLastname(String email, String lastname);
+  List&lt;Person&gt; findByUnknownAndLastname(EmailAddress emailAddress, String lastname); // 无法解析 'Unknown' 属性
+  List&lt;Person&gt; findByAndLastname(String email, String lastname); // 缺少属性名称
+
+  List&lt;Person&gt; findByLastnameOrderByFirstnameAsc(String lastname);
+  List&lt;Person&gt; findByLastnameOrderByUnknownDesc(String lastname);  // 无法解析 'Unknown' 属性
+}
+</code></pre>
+</body>
+</html>

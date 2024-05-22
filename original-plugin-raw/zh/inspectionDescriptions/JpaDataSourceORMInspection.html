@@ -13,7 +13,7 @@
 建议刷新数据源或分配不同的数据源。<br/>
 
 <p><b>示例数据库表：</b></p>
-<pre><code>
+<pre><code lang="sql">
   CREATE TABLE DATA_TABLE (
     ID INTEGER,
     DATA VARCHAR(100)
@@ -21,7 +21,7 @@
 </code></pre><br/>
 
 <p><b>示例 JPA 实体类：</b></p>
-<pre><code>
+<pre><code lang="java">
   @Entity
   @Table(name = "UNKNOWN_TABLE") // 未解决的引用
   public class JavaEntity {
