@@ -1,6 +1,6 @@
 import Bluebird from 'bluebird';
 import { console } from 'debug-color2';
-import { join } from 'upath2';
+import { join, relative } from 'upath2';
 import {
 	__plugin_dev_output_dir,
 	__plugin_dev_overwrite_dir,
@@ -14,9 +14,12 @@ import { cyan } from 'ansi-colors';
 import { fixedJSZipDate } from 'jszip-fixed-date';
 import { outputFile, outputJSON } from 'fs-extra';
 import { createSingleBar } from '../cli-progress';
+import { __root } from '../../test/__root';
 
 export function packPluginJar(lang: string | 'zh')
 {
+	let ls2: Record<string, string> = {};
+
 	return Bluebird.resolve()
 		.then(async () =>
 		{
@@ -31,6 +34,7 @@ export function packPluginJar(lang: string | 'zh')
 
 			const {
 				readPathFile,
+				getPath,
 			} = mergePaths([
 				join(__plugin_dev_overwrite_dir, lang),
 				join(__plugin_dev_overwrite_dir, lang.split('-')[0]),
@@ -49,6 +53,12 @@ export function packPluginJar(lang: string | 'zh')
 					{
 						jar.file(file, buf);
 						ls.push(file);
+
+						ls2[file] = relative(__root, await getPath(file));
+					}
+					else
+					{
+						ls2[file] = null;
 					}
 
 					return ls;
@@ -67,6 +77,9 @@ export function packPluginJar(lang: string | 'zh')
 					return Promise.all([
 						buf,
 						outputJSON(join(__plugin_dev_output_dir, lang + '.list.json'), ls, {
+							spaces: 2,
+						}),
+						outputJSON(join(__plugin_dev_output_dir, lang + '.list2.json'), ls2, {
 							spaces: 2,
 						}),
 						outputFile(join(__plugin_dev_output_dir, lang + '.jar'), buf),
