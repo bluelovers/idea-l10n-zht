@@ -16,7 +16,7 @@
       .filter { it.size == 2 }
       .map { Entity(it[0], it[1]) }
 </code></pre>
-<p>该快速修复会将调用链包装到 <code>asSequence()</code> 和 <code>toList()</code> 中：</p>
+<p>快速修复可将调用链包装到 <code>asSequence()</code> 和 <code>toList()</code> 中：</p>
 <pre><code>
   class Entity(val key: String, val value: String)
 

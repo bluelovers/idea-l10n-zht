@@ -7,9 +7,8 @@
   <li>在 <code>java.io.PrintWriter</code> 或 <code>java.io.PrintStream</code> 的方法中</li>
   <li>在 <code>org.slf4j.Logger</code> 的方法中</li>
 </ul>
-<p>In these cases, conversion to string will be handled by the underlying library methods,
-  and the explicit call to <code>toString()</code> is not needed.
-  Removing redundant <code>toString()</code> calls can occasionally even improve performance and reduce object allocations.</p>
+<p>在這些情況下，轉換為字串將由底層庫方法處理，不需要顯式呼叫 <code>toString()</code>。
+  移除冗餘的 <code>toString()</code> 呼叫有時甚至可以提高性能並減少物件分配。</p>
 <p>範例：</p>
 <pre><code>
   System.out.println(this.toString())
@@ -22,8 +21,7 @@
 <p>
   請注意，沒有 <code>toString()</code> 呼叫，程式碼語意可能會有所不同：如果表達式為 null，則將使用 <code>null</code> 字串，而不是拋出 <code>NullPointerException</code>。</p>
   <p>使用 <b>僅在已知限定符為非 null 時報告</b> 選項以避免對可能為 null 的值發出警告。
-  Removing the explicit <code>toString()</code> in these cases will change the runtime semantics
-  from throwing a <code>NullPointException</code> to silently accepting the value when it is <code>null</code>.
+  在這些情況下移除顯式 <code>toString()</code> 會改變執行時語意，從拋出 <code>NullPointException</code> 變為在其為 <code>null</code> 時靜默接受該值。
 </p>
 </body>
 </html>

@@ -21,12 +21,12 @@
   這將避免在使用 <code>new String()</code> 呼叫保證不同物件相等性的程式碼中套用快速修復後改變與 <code>==</code> 或 <code>!=</code> 進行字串比較的結果。
 </p>
 <p>
-  Use the <b>Do not report single argument substring() calls</b> option below to not report code like the following.
+  使用下方的<b>不報告單實參 substring() 呼叫</b>選項可以不報告如下所示的程式碼。
 </p>
 <pre><code>
   stringBuilder.append(string.substring(5));
 </code></pre>
-<p>which can be replaced with the following.
+<p>可以取代為以下內容。
 <pre><code>
   stringBuilder.append(string, 5, string.length());
 </code></pre>

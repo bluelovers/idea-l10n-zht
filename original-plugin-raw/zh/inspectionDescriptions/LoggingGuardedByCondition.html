@@ -1,7 +1,7 @@
 <html>
 <body>
-Reports logging calls that are surrounded by a guard condition.
-This inspection can be used to adjust with a custom code style.
+报告被保护条件包围的日志记录调用。
+此检查可用于调整自定义代码样式。
 <p><b>示例：</b></p>
 <pre><code lang="java">
   public class TestObject {
@@ -12,7 +12,7 @@ This inspection can be used to adjust with a custom code style.
     }
   }
 </code></pre>
-<p>After a quick-fix is applied:</p>
+<p>在应用快速修复后：</p>
 <pre><code lang="java">
   public class TestObject {
     void test(Object object) {
@@ -20,7 +20,7 @@ This inspection can be used to adjust with a custom code style.
     }
   }
 </code></pre>
-<p>This inspection supports <em>Log4j2</em> and the <em>SLF4J</em> logging frameworks (except builders).
+<p>此检查支持 <em>Log4j2</em> 和 <em>SLF4J</em> 日志记录框架（ 构建器除外）。
 <!-- tooltip end -->
 <p><small>2024.2 最新变化</small></p>
 </body>

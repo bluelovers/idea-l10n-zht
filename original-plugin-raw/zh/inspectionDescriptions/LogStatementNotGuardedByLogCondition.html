@@ -1,7 +1,7 @@
 <html>
 <body>
-Reports logging calls that are not surrounded by a guard condition.
-The evaluation of a call's arguments can be expensive.
+报告未被保护条件包围的日志记录调用。
+对调用的实参进行评估可能开销巨大。
 当日志记录语句使用的级别禁用日志记录时，使用临界子句包围日志记录调用可避免这种开销。 这对于最不严重的日志记录调用级别（跟踪、调试、最精细）特别有用，因为这些调用在生产环境中最常被禁用。
 <p><b>示例：</b></p>
 <pre><code lang="java">
@@ -11,7 +11,7 @@ The evaluation of a call's arguments can be expensive.
     }
   }
 </code></pre>
-<p>After a quick-fix is applied:</p>
+<p>在应用快速修复后：</p>
 <pre><code lang="java">
   public class TestObject {
     void test(Object object) {
@@ -21,7 +21,7 @@ The evaluation of a call's arguments can be expensive.
     }
   }
 </code></pre>
-<p>This inspection supports <em>Log4j2</em> and the <em>SLF4J</em> logging frameworks (except builders).
+<p>此检查支持 <em>Log4j2</em> 和 <em>SLF4J</em> 日志记录框架（ 构建器除外）。
 <!-- tooltip end -->
 <p><small>2024.2 最新变化</small></p>
 </body>

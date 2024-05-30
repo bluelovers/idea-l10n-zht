@@ -4,8 +4,8 @@
 <p>使用 print 語句記錄異常會隱藏堆疊追蹤，這可能會使問題的調查變得複雜。
   建議您改用記錄器。</p>
 <p>也會報告以異常作為實參的 <code>System.out.print()</code>、<code>System.err.println()</code> 和 <code>System.err.print()</code> 呼叫。 建議使用記錄器來記錄異常。</p>
-<p>The provided quick-fix supports <b>SLF4J</b> and <b>Log4j 2</b>.
-It replaces <code>System.out.println()</code> call with log calls</p>
+<p>提供的快速修復支援 <b>SLF4J</b> 和 <b>Log4j 2</b>。
+它會將 <code>System.out.println()</code> 呼叫取代為日誌呼叫</p>
 <p><b>範例：</b></p>
 <pre><code>
   try {
@@ -24,7 +24,7 @@ It replaces <code>System.out.println()</code> call with log calls</p>
 </code></pre>
 <!-- tooltip end -->
 <p>
-  Use the <b>Log method for fix</b> option to specify a method which it is used to log a message.
+  使用<b>用於修復的日誌方法</b>選項可以指定用於記錄訊息的方法。
 </p>
 </body>
 </html>

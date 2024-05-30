@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告不正确的仓库方法形参类型。</p>
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+<pre><code lang="java">
+  public class Person {
+    private int id;
+    @Column
+    private String lastname;
+
+    @Column
+    private int age;
+  }
+
+  public interface CustomerRepository extends Repository&lt;Person, Integer&gt; {
+    List&lt;Person&gt; <strong>findByAddress</strong>(int lastname);  // 应为 'String' 类型
+    List&lt;Person&gt; <strong>deleteByAge</strong>(String str);   // 应为 'int' 类型
+  }
+</code></pre>
+</body>
+</html>

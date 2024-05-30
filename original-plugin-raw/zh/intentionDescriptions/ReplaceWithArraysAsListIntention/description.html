@@ -1,7 +1,7 @@
 <html>
 <body>
 将 <code>Collections.emptyList()</code> 或 <code>Collections.singletonList()</code> 调用替换为对 <code>Arrays.asList()</code> 的调用。
-<p>When the project or module uses language level 9:</p>
+<p>当项目或模块使用语言级别 9 时：</p>
 <ul>
   <li>该意图将 <code>Collections.emptyList()</code> 或 <code>Collections.singletonList()</code> 替换为对 <code>java.util.List.of()</code> 的调用。</li>
   <li>将 <code>Collections.emptySet()</code> 或 <code>Collections.singleton()</code> 调用替换为 <code>java.util.Set.of()</code>。</li>
