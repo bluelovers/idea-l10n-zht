@@ -40,6 +40,8 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 - 部分翻譯差異統一化
 - [需使用自訂 plugin repo 才能夠在版本編號變化時得到更新](https://github.com/bluelovers/idea-l10n-zht/discussions/25)
 
+> https://github.com/bluelovers/idea-l10n-zht/raw/master/plugin-dev-out/updatePlugins.xml
+
 ### Git Commit Message Convention
 
 - 提交 git 訊息時可參考 [Git Commit Message Convention](.github/commit-convention.md)
