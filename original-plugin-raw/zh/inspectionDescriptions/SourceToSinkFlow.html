@@ -10,9 +10,8 @@
   <li>final 字段，具有安全的初始值设定项</li>
   <li>标记为 <code>@Untainted</code> 且不是从非安全对象赋值的局部变量或形参.</li>
 </ul>
-<p>This field, local variable, or parameter must not be passed as arguments to methods or used as a qualifier or must be a primitive, its
-wrapper or immutable.</p>
-<p>Also, static final fields are considered as safe.</p>
+<p>此字段、局部变量或形参不得作为实参传递给方法或用作限定符，或者必须是基元、其包装器或不可变对象。</p>
+<p>此外，static final 字段也被认为是安全的。</p>
 <p>
   分析仅在一个文件内执行。 要处理来自其他类的依赖项，请使用选项。
   分析会扩展到 private 或 static 方法，并且具有深度传播限值。
