@@ -8,8 +8,6 @@
     "action.Floating.CodeToolbar.SurroundWithTryCatchFinally.text": "try / catch / finally",
     "action.GenerateCreateUI.text": "createUI(...)",
     "action.SearchEverywhereToolbarHotKey.hotkey": "Shift+Shift",
-    "action.ShowCompressibleToolbarAction.text": "Display Dynamic Compressed Toolbars",
-    "action.main.toolbar.Filename.text": "File Name Widget (when editor tabs are hidden or “Always show full path” is enabled)",
     "group.Internal.UI.KotlinUiDsl.text": "Kotlin UI DSL",
     "group.Internal.UI.text": "UI(&U)",
     "group.VcsGroups.text": "Git(_G)"
@@ -113,16 +111,11 @@
     "aqua.cloud.settings.title": "Aqua Cloud",
     "aqua.cloud.toolwindow.name": "Aqua Cloud"
   },
-  "messages/AquaFrameworksCoreBundle.properties": {
-    "action.WebInspector.Frames.Add.From.Selected.description": "Generate frame elements from selected",
-    "action.WebInspector.Frames.Add.From.Selected.text": "Generate Frame Elements From Selected"
-  },
   "messages/AquaFrameworksPlaywrightJSBundle.properties": {
     "playwright.project.generator.presentable.package.name": "Playwright(&P):"
   },
   "messages/AquaWebInspectorBundle.properties": {
-    "locators.evaluator.placeholder.xpath": "XPath...",
-    "web.inspector.frames.top.frame": "top frame"
+    "locators.evaluator.placeholder.xpath": "XPath..."
   },
   "messages/AspectJBundle.properties": {
     "action.create.aspect.kind.annotation": "@Aspect",
@@ -181,12 +174,6 @@
     "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options",
     "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options"
   },
-  "messages/CLionCMakePythonBundle.properties": {
-    "advanced.setting.cmake.python.propagate.interpreter": "Pass Python Interpreter to CMake",
-    "cmake.console.hint": "Do not pass Python Interpreter to CMake",
-    "settings.configurable.advanced.settings.off": "Integration has been disabled in <a href=\"advanced-settings\">Advanced Settings</a>.",
-    "settings.configurable.comment.settings": "If no Python executable variables are present in <a href='cmake-options'>CMake Options</a>, the path to the project's <a href=\"python-interpreter\">Python interpreter</a> will be passed to CMake. This integration does not work with Remote, Docker, and WSL toolchains."
-  },
   "messages/CLionExecutionBundle.properties": {
     "coredump.sysroot": "Sysroot:",
     "cpp.build.description.1": "====================[ {0} ]====",
@@ -195,9 +182,6 @@
     "debug.attach.remoteHostTypeName.ssh.wsl": "SSH/WSL",
     "gdbRemote.lldb.command": "'process connect' url:",
     "gdbRemote.sysroot": "Sysroot:"
-  },
-  "messages/CLionLangSwitcherBundle.properties": {
-    "remote.stub.welcome.need.classic": "<center>Remote development is not currently supported in <b>CLion Nova</b>.<br>To use remote development features, switch to <b>CLion Classic</b>.</center>"
   },
   "messages/CLionProfilingBundle.properties": {
     "sanitizers.llvmSymbolizer.notification.title": "Google Sanitizers"
@@ -423,10 +407,10 @@
     "notification.name.cucumber.js": "Cucumber.js"
   },
   "messages/DSActionsBundle.properties": {
-    "dbt.create.project.title": "dbt init",
     "jupyter.managed.server.settings.run.configuration.inherit.from.workspace": "<inherit from workspace>"
   },
   "messages/DSTableBundle.properties": {
+    "ds.DataManager.cannot.get.dataframe": "Cannot get DataFrame info",
     "ds.DataWrangler.main.panel.name": "Data Wrangler"
   },
   "messages/DaemonBundle.properties": {
@@ -438,8 +422,6 @@
     "action.Dart.pub.get.text": "Pub Get",
     "action.Dart.pub.outdated.text": "Pub Outdated",
     "action.Dart.pub.upgrade.text": "Pub Upgrade",
-    "action.DartCopyDtdUriAction.description": "Copy Dart Tooling Daemon URI to clipboard",
-    "action.DartCopyDtdUriAction.text": "Dart: Copy DTD URI to Clipboard",
     "action.Generate.ToString.Dart.text": "toString()",
     "action.text.pub.build": "Pub Build…",
     "action.text.webdev.build": "Webdev Build…",
@@ -468,9 +450,7 @@
     "Console.TableResult.n.bytes.of.m.bytes.loaded": "{0}/{1}",
     "count.rows.action.of.text": "/{0}",
     "csv.format.settings.quotation.policy.escape.duplicate": "<duplicate>",
-    "excel.xlsx": "Excel (xlsx)",
-    "grid.load.nested.table.error": "Navigation to nested tables is unavailable for static grid",
-    "grid.load.nested.table.error.loading": "Navigation to nested tables is unavailable during loading of rows"
+    "excel.xlsx": "Excel (xlsx)"
   },
   "messages/DatabaseBundle.properties": {
     "ChangeDialectToolbarAction.action.dialect.text": "<dialect>",
@@ -518,7 +498,6 @@
     "notification.content.missing.error.message": "<missing error message>",
     "notification.content.oracle.home.should.be.defined.action": "<a href='$ACTION0'>Set ORACLE_HOME</a>",
     "progress.title.anonymous": "<Anonymous>",
-    "progress.title.duplicating.object": "Duplicating object",
     "scriptGen.option.RestrictDeleteTriggers.text": "RESTRICT WHEN DELETE TRIGGERS",
     "settings.number.nan": "NaN:",
     "unknown.in.angleBraces": "<unknown>",
@@ -542,12 +521,14 @@
     "job.info.spark.jars": "Jar:",
     "metainfo.cluster.id": "ID:"
   },
+  "messages/DbtBundle.properties": {
+    "dbt.create.project.title": "dbt init"
+  },
   "messages/DenoBundle.properties": {
     "deno.path": "Deno:",
     "deno.run.configuration.default.name": "Deno: {0}"
   },
   "messages/DependencyAnalysisBundle.properties": {
-    "dependency.analysis.raise.problems": "Raise inspection problems",
     "spdx.creators.organization": "JetBrains s.r.o."
   },
   "messages/DesignerBundle.properties": {
@@ -578,14 +559,7 @@
     "configurable.name.device.file.explorer": "Device File Explorer"
   },
   "messages/DiagnosticBundle.properties": {
-    "error.dialog.comment.prompt": "Comment on what you were doing when the exception occurred",
-    "error.dialog.disable.plugin.can.restart": "Changes in plugin configuration will take effect after restart.",
-    "error.list.disable.plugin": "Disable plugin…",
-    "error.list.message.index.count": "{0}/{1}",
-    "error.list.message.submitting": "Submitting…",
-    "error.report.view.action": "View report",
-    "log.monitor.fragment.name": "Specify logs to be shown in the console",
-    "wsl.firewall.settings.prompt": "The IDE will now change the Microsoft Defender Firewall settings to allow connections from WSL environments to the IDE instance. If you're using a different firewall product, this action won't resolve the problem, and you shouldn't execute it. Do you wish to continue?"
+    "error.list.message.index.count": "{0}/{1}"
   },
   "messages/DiagramBundle.properties": {
     "action.Diagram.ExportToFileGroup.Dot.text": "Graphviz .dot",
@@ -672,8 +646,7 @@
   "messages/DpaBundle.properties": {
     "dpa.icon.widget.display.name": "Dynamic Program Analysis",
     "dpa.options.page.name": "Dynamic Program Analysis",
-    "dpa.status.bar.popup.title": "Dynamic Program Analysis",
-    "dpa.toolwindow.stripe": "Dynamic Program Analysis"
+    "dpa.status.bar.popup.title": "Dynamic Program Analysis"
   },
   "messages/DubboBundle.properties": {
     "inspection.group.name": "Apache Dubbo",
@@ -722,16 +695,22 @@
     "action.Educational.Educator.SyncChangesWithNextTasks.SingleFile.text": "Sync File with Next Tasks...",
     "action.Educational.Educator.SyncChangesWithNextTasks.conflict.resolution.smart.indicator": "Resolving Conflicts...",
     "action.Educational.Student.ApplyCode.dialog.text": "Are you sure you want to apply this code?",
+    "action.Educational.Student.PostMarketplaceProjectToGitHub.banner.action": "Share on GitHub",
+    "action.Educational.Student.PostMarketplaceProjectToGitHub.banner.message": "Would you like to share your project on GitHub?",
+    "action.Educational.Student.PostMarketplaceProjectToGitHub.notification.content.no.framework.lessons.found": "No framework lessons found",
+    "action.Educational.Student.PostMarketplaceProjectToGitHub.notification.title.failed.to.post.project.to.marketplace": "Failed to post project to Marketplace",
+    "action.Educational.Student.PostMarketplaceProjectToGitHub.text": "Post Marketplace Project to GitHub",
     "exception.message.http.info": "HTTP {0} {1}",
     "inspection.group.path.key": "JetBrains Academy",
     "marketplace.widget.title": "JetBrains Account",
     "stepik.url": "Stepik URL:",
     "submissions.button.community.tooltip.text.login": "Log in to view community solutions",
-    "submissions.got.stuck": "Got stuck?",
-    "submissions.see.community.solutions.link": "See community solutions...",
     "ui.dialog.create.answer.placeholder.path.pattern": "[sectionName#]lessonName#taskName#filePath#placeholderIndex",
     "user.agreement.dialog.text": "By clicking Agree, you confirm that you have read and agree <br> to the following terms and conditions:",
     "user.agreement.editor.notification": "Saves are disabled/don''t work. Agree to the user agreement to enable them"
+  },
+  "messages/EduFormatBundle.properties": {
+    "error.agreement.not.accepted": "User Agreement Not Accepted"
   },
   "messages/EfCoreUiBundle.properties": {
     "configurable.name.ef.core.ui": "EF Core UI",
@@ -744,17 +723,12 @@
     "label.edit.relationship.ejb": "EJB:"
   },
   "messages/EmbeddedBundle.properties": {
-    "action.com.intellij.clion.embedded.execution.wizard.GdbServerWizardAction.description": "GDB Server configuration wizard",
-    "action.com.intellij.clion.embedded.execution.wizard.GdbServerWizardAction.text": "New Embedded Configuration…",
-    "embedded.settings.fix": "Fix…",
     "freertos.task.table.id.column": "TCB №",
     "jlink.gdb.server.displayname": "Segger JLink",
     "label.jlink.gdb.server": "Segger J-Link",
     "label.st.util.gdb.server": "st-util",
     "non.readable": "<Non-readable>",
-    "openocd.assist.button": "Assist…",
     "pemicro.gdb.server.displayname": "PE Micro (OpenSDA)",
-    "progress.title.loading.devices": "Loading devices…",
     "reset.strategy.pre_reset": "Pre-Reset",
     "reset.strategy.under_reset": "Init-Under-Reset",
     "rtos.azure.display.name": "Azure RTOS ThreadX",
@@ -824,7 +798,6 @@
   },
   "messages/FullLineBundle.properties": {
     "full.line.configurable.name": "Full Line Code Completion",
-    "full.line.inline.inplace.choose.shortcut.hint.text": "Choose key for completion:",
     "full.line.notifications.feedback.title": "Full Line Code Completion"
   },
   "messages/GatewayBundle.properties": {
@@ -872,8 +845,6 @@
     "action.Github.Share.Vcs.Toolbar.Widget.text": "GitHub…"
   },
   "messages/GithubUltimateBundle.properties": {
-    "advanced.setting.github.actions.support.enabled": "GitHub actions authoring support (requires IDE restart)",
-    "github.actions.support.enabled.description": "Enable GitHub actions support: parameters autocompletion, inspections and navigation inside in workflow and custom action files",
     "group.com.intellij.github.actions.ide.new.file.text": "GitHub Actions"
   },
   "messages/GlassfishBundle.properties": {
@@ -891,12 +862,8 @@
     "action.com.goide.vgo.actions.VgoVendorAction.text": "Go Mod Vendor",
     "go.app.engine.wizard.name": "App Engine",
     "go.debugger.thread.dump.n.goroutines": "{0} {0,choice,0#goroutines|1#goroutine|2#goroutine}",
-    "go.error.annotator.needs.experiment.for.range.over.func": "Cannot use a range-over-function clause because the 'rangefunc' Go experiment is not enabled.",
     "go.execution.remote.run.configuration.description": "Go Remote",
     "go.execution.remote.run.configuration.display.name": "Go Remote",
-    "go.fix.enable.range.func.experiment": "Enable the 'rangefunc' Go experiment",
-    "go.inspection.problem.no.core.type.in.range.expression": "Range expressions must have a <a href=\"https://go.dev/ref/spec#Core_types\">core type</a>",
-    "go.inspection.problem.non.enabled.rangefunc.exclude.iter.package.files": "All files in the 'iter' package are excluded from the build process because the 'rangefunc' experiment is not enabled.",
     "go.intention.run.go.generate.text": "Go generate ''{0}''",
     "go.libraries.configurable.path.source.prefix.gopath": "[GOPATH]",
     "go.quick.doc.keyword.resource.effective.go.label": "Effective Go",
@@ -905,8 +872,7 @@
     "vgo.inspection.dependency-deprecated-retracted.tooltip-template": "<html><body>{0}.<p><span style=\"color:{3}\">{1}:</span> {2}</body></html>"
   },
   "messages/GraalVmBundle.properties": {
-    "debugger.display.name": "GDB/GraalVM",
-    "graalvm.install.title": "GraalVM Gu"
+    "debugger.display.name": "GDB/GraalVM"
   },
   "messages/GradleBundle.properties": {
     "gradle.dsl.new.project.wizard": "Gradle DSL:",
@@ -990,12 +956,6 @@
   "messages/GwtJpsBundle.properties": {
     "compiler.message.stderr.0": "[stderr]: {0}"
   },
-  "messages/HCLBundle.properties": {
-    "run.configuration.terraform.path.incorrect": "Could not find Terraform executable at the specified path: <br>{0}",
-    "run.configuration.terraform.path.title": "Terraform executable path error",
-    "terraform.configuration.type.description": "Run Terraform with specified parameters",
-    "terraform.run.text": "Run Terraform"
-  },
   "messages/HadoopMonitoringBundle.properties": {
     "settings.group.name": "Hadoop YARN",
     "toolwindow.title": "Hadoop YARN"
@@ -1071,10 +1031,7 @@
     "node.structureview.invalid": "<invalid>",
     "notification.manager.content.height.linebreak": "<br>\n",
     "notification.title.jcef.measureFPS": "OSR JCEF FPS Meter",
-    "notification.vfs.vfs-recovered.notification.text": "File system caches contained errors, and {0} required some time to repair them. Such errors are usually caused by an improper shutdown or crash.",
     "plugin.advertiser.product.call.to.action": "{0}: {1}",
-    "plugins.configurable.buy.the.license": "purchase a license",
-    "plugins.configurable.buy.the.license.from.0": "purchase a license for as low as {0}",
     "presentation.assistant.configurable.keymap.win.label": "Win/Linux",
     "presentation.assistant.configurable.name": "Presentation Assistant",
     "presentation.assistant.notification": "Presentation Assistant",
@@ -1468,7 +1425,6 @@
   "messages/KotlinNotebookBundle.properties": {
     "action.CreateNewKotlinNotebook.text": "Kotlin Notebook",
     "kotlin.jupyter.settings.title": "Kotlin Notebook",
-    "kotlin.jupyter.table.output.cannot.parse.dataframe.error": "Unable to display the dataframe as it is too big in serialized format. Please consider increasing the value of 'jupyter.notebook.json.maxStringLength' in registry or switch to an HTML representation. To use HTML rendering, please disable the ‘Render DataFrame tables natively’ option in the Kotlin Notebook Plugin Settings.",
     "kotlin.jupyter.template.context.type.generic": "Kotlin Notebook"
   },
   "messages/KotlinPluginUpdaterBundle.properties": {
@@ -1486,7 +1442,7 @@
     "ContextsTreeDialog.selected.nodes.count.text": "{0}/{1}",
     "HelmLintAction.task.title": "Helm Lint",
     "KubectlExecutor.BaseProcessListener.progressTitle.template": "Kubernetes: {0}",
-    "Kubernetes.db.no.error.message": "<no error message>",
+    "Kubernetes.db.no.error.message": "<no error message> ",
     "KubernetesPodContent.shell.title": "Shell: {0}",
     "KubernetesResourceMapper.resourceDisplayableName.template": "{0} ''{1}''",
     "KubernetesViewConfigurable.podShellRow.title": "Pod Shell",
@@ -1499,14 +1455,8 @@
     "cmg.prompt.customization.title.ai.assistant": "AI Assistant",
     "intention.category.large.language.models": "AI Assistant",
     "intentions.apply.custom.edit.dialog.title.ai.assistant": "AI Assistant",
-    "llm.codeModification.prompt.hint": "Ask AI to modify selected code",
-    "llm.error.code.fragment.is.too.long.to.send": "Fragment is too long to send to chat. Please place the caret within the code block or select text",
-    "llm.inline.completion.noVar.tooltip.text": "No suggestions",
     "name.assistant": "AI Assistant",
     "notification.group.name": "AI Assistant",
-    "panel.ai.enterprise.disabled.comment": "<center>AI Enterprise is disabled by company policy</center>",
-    "settings.checkbox.enable.inline.completion.space.trigger.feature": "Automatic trigger for current line",
-    "settings.checkbox.enable.inline.completion.space.trigger.feature.description": "With this setting enabled, you will get automatic completion after Space in supported contexts.",
     "settings.configurable.display.name": "AI Assistant",
     "statusbar.balloon.title": "AI Assistant",
     "statusbar.widget.toolTipText": "AI Assistant"
@@ -1514,6 +1464,10 @@
   "messages/LLMInstallerBundle.properties": {
     "action.ActivateAIAssistantToolWindow.text": "AI Assistant",
     "toolwindow.stripe.AIAssistant": "AI Assistant"
+  },
+  "messages/LLMPyCharmCommunityInstallerBundle.properties": {
+    "intention.category.large.language.models": "AI Assistant",
+    "promo.configurable.ai": "AI Assistant"
   },
   "messages/LLMUITestGenerationBundle.properties": {
     "action.AIAssistant.WebInspector.Generate.Popup.Section.Framework": "{0}",
@@ -1673,9 +1627,6 @@
     "run.configuration.name": "Kotlin Mobile",
     "sdk.sync.missing.sdk.title": "Android SDK"
   },
-  "messages/MonitoringToolBundle.properties": {
-    "dashboard.row.operating.system": "OS = {0}"
-  },
   "messages/NextJsBundle.properties": {
     "create.next.app.name": "Next.js"
   },
@@ -1721,7 +1672,6 @@
     "open.rewrite.recipe.local.history.label": "OpenRewrite: {0}"
   },
   "messages/OptionsBundle.properties": {
-    "color.settings.blockTerminal.promptSeparator": "Block terminal//Prompt separator color",
     "exportable.ShortcutPromoterManager.presentable.name": "Shortcut Promoter"
   },
   "messages/OsmorcBundle.properties": {
@@ -1843,17 +1793,6 @@
     "settings.project.display": "Protocol Buffers",
     "settings.virtual.group.std.google.proto.name": "google stdlib"
   },
-  "messages/ProtobufLangBundle.properties": {
-    "editions.enum.value.reserved.identifier": "Identifier reserved enum values are not allowed before edition 2023",
-    "editions.enum.value.reserved.string": "String literal reserved enum values are not allowed since edition 2023",
-    "editions.features.invalid": "Features are not allowed before edition 2023",
-    "editions.field.label.optional": "The optional label is not allowed since edition 2023",
-    "editions.field.label.required": "The required label is not allowed since edition 2023",
-    "editions.field.reserved.identifier": "Identifier reserved fields are not allowed before edition 2023",
-    "editions.field.reserved.string": "String literal reserved fields are not allowed since edition 2023",
-    "editions.group.invalid": "Group syntax is not allowed since edition 2023",
-    "editions.unsupported": "Edition ''{0}'' is not yet supported"
-  },
   "messages/PuppetBundle.properties": {
     "language.settings.code.style.sample": "service { 'sshd':\n  subscribe => File['sshdconfig'],\n}",
     "puppet.module.name": "{0} {1}",
@@ -1875,14 +1814,10 @@
     "python.packaging.dialog.description.attempt.to.uninstall.for.several.dependent.packages.single.package.description": "{0} -> {1}",
     "python.sdk.action.add.interpreter.based.on.target.text": "{0}…",
     "python.sdk.configurable.name": "Python SDK",
-    "python.sdk.download.failed.title": "{0} Download Failed",
     "python.sdk.environment.yml.label": "environment.yml",
-    "python.sdk.installation.failed.title": "{0} Installation Failed",
-    "python.sdk.try.to.install.manually": "Try to install {0} manually.",
     "remote.interpreter.default.interpreter.path": "/usr/bin/python",
     "remote.interpreter.wsl.default.interpreter.path": "/usr/bin/python",
-    "runcfg.trial.display_name": "Twisted Trial",
-    "sdk.create.conda.install.fix": "Install Miniconda"
+    "runcfg.trial.display_name": "Twisted Trial"
   },
   "messages/PyCharmCommunityCustomizationBundle.properties": {
     "action.PromoNewJupyterNotebook.text": "Jupyter Notebook",
@@ -1892,20 +1827,14 @@
     "python.add.sdk.panel.name.docker.compose": "Docker Compose",
     "remote.sdk.exception.message.with.cause": "{0}:\n{1}"
   },
-  "messages/PyEndpointsBundle.properties": {
-    "project.model.group.by.module.title.full": "Group By Application",
-    "project.model.group.by.module.title.short": "Group By Application"
-  },
   "messages/PyHuggingFaceBundle.properties": {
-    "python.hugging.face.base.url": "https://huggingface.co"
+    "python.hugging.face.base.url": "https://huggingface.co",
+    "python.hugging.face.tags.style": "<style>{0}</style>"
   },
   "messages/PyPsiBundle.properties": {
     "element.presentation.location.string.module": "({0})",
     "filetype.python.docstring.description": "Python docstring",
     "find.usages.unnamed": "<unnamed>"
-  },
-  "messages/PySdkBundle.properties": {
-    "python.sdk.downloading.progress.details": "Downloading ({0}) {1} "
   },
   "messages/PySshInterpreterBundle.properties": {
     "ssh.connection.wizard.remote.interpreter.default.interpreter.path": "/usr/bin/python"
@@ -1916,17 +1845,7 @@
   "messages/QodanaBundle.properties": {
     "action.open.qodana.cloud.open.in.ide.report.action": "Qodana Cloud {0}",
     "cli.coverage.percent": "%",
-    "inspectionkts.analysis.error": "Analysis failed due to error",
-    "inspectionkts.analysis.no.error": "Analysis is successful",
-    "inspectionkts.compilation.cancelled": "Compilation cancelled",
-    "inspectionkts.compilation.failed": "Compilation failed, up to date with source code",
-    "inspectionkts.compilation.failed.no.match": "Compilation failed, mismatch with source code",
-    "inspectionkts.compiled": "Compiled inspection up to date with source code",
-    "inspectionkts.compiled.no.match": "Compiled inspection does not match source code",
-    "inspectionkts.compiling": "Compiling…",
-    "inspectionkts.template.java.local.inspection": "Java local inspection template",
     "notification.title.qodana.cloud": "Qodana Cloud",
-    "psi.viewer.kotlin.api.in.analyze.block": "Kotlin APIs available in analyze block",
     "qodana.add.to.ci.azure.pipelines": "Azure Pipelines",
     "qodana.add.to.ci.bitbucket": "Bitbucket Cloud",
     "qodana.add.to.ci.gitlab.ci": "GitLab CI/CD",
@@ -2113,8 +2032,7 @@
     "action.RiderShowResxEditorAction.text": "Localization Manager",
     "action.stack.trace.explorer.text": "Stack Trace Explorer",
     "group.BackendEntityFrameworkActionGroup.text": "Entity Framework",
-    "group.CSharpInteractive.text": "C# Interactive",
-    "toolwindow.stripe.IL_Viewer": "IL Viewer"
+    "group.CSharpInteractive.text": "C# Interactive"
   },
   "messages/RiderBundle.properties": {
     "EntityFramework.toolWindow.title": "Entity Framework",
@@ -2130,7 +2048,8 @@
     "notification.group.entityframework": "Entity Framework",
     "notification.group.problemsview.notification": "ProblemsView notification",
     "publish.to.iis.option": "IIS…",
-    "settings.completion.ml.csharp.display.name": "C#"
+    "settings.completion.ml.csharp.display.name": "C#",
+    "spellchecker.dictionary.settings": "Dictionary settings"
   },
   "messages/RiderCodeWithMeBundle.properties": {
     "activate.code.with.me.dialog.title": "Code With Me"
@@ -2254,18 +2173,9 @@
     "action.while.expr.text": "while expr",
     "action.while.text": "while { }",
     "adt.const.params": "adt const params",
-    "advanced.setting.org.rust.show.attach.projects.dialog": "Show Attach Cargo Projects dialog each time a new project is opened",
-    "advanced.setting.org.rust.show.attach.projects.dialog.on.file.opened": "Show Attach Cargo Projects dialog each time an unattached file is opened",
-    "attach.projects.dialog.dont.show.again.button": "Don't Show Again",
-    "attach.projects.dialog.explanation": "<html>The following Cargo.toml files are not attached to the project model.<br/>Select the files to attach:</html>",
-    "attach.projects.dialog.ok.button": "Attach Selected",
-    "attach.projects.dialog.title": "Attach Cargo Projects",
     "build.event.message.": "{0} {1}",
     "cargo.toml": "Cargo.toml",
     "dialog.message.html.body.br.b.b.body.html": "<html><body>{0}{1}<br/><b>{2}</b> {3}</body></html>\n",
-    "explain.move.highlights.code.elements.that.resulted.in.this.error": "Highlights code elements that resulted in this error.",
-    "explain.move.value.moved.here": "Value{0, choice, 0#|1# partially} moved{1, choice, 0#|1# into closure} here{2, choice, 0#|1# by the macro call} {3, choice, 0#|1#, in the previous iteration of loop}",
-    "explain.move.was.moved": "{0} was moved",
     "extern.crate.self": "extern crate self",
     "fn.0": "fn {0}",
     "gutter.rust.implemented.item.name": "Implemented item",
@@ -2274,64 +2184,22 @@
     "inline.const": "inline const",
     "inline.const.pat": "inline const pat",
     "inspection.message.": "{0}: {1}",
-    "inspection.message.a.field.type.must.be.specified": "Field type is required",
-    "inspection.message.access.field.on.primitive.type": "`{0}` cannot have fields as it is a primitive type",
-    "inspection.message.break.with.value.from.loop": "`break` with a value is not allowed in `{0}` loops",
-    "inspection.message.cannot.implement.both.copy.drop": "Both `Copy` and `Drop` cannot be implemented simultaneously",
     "inspection.message.consts": "{0}::{1}::consts::{2}",
-    "inspection.message.drop.can.be.only.implemented.by.structs.enums": "`Drop` can only be implemented for structs and enums",
-    "inspection.message.expected.path.to.trait.found.literal": "Expected path to a trait but found literal",
-    "inspection.message.generic.default.param.cannot.use.forward.declared.identifiers": "Generic parameters with a default value cannot use forward-declared identifiers",
     "inspection.message.has.been.removed2": "{0} has been removed",
-    "inspection.message.incorrect.meta.item": "Invalid meta item",
-    "inspection.message.invalid.json.schema.format": "Value format should be `{0}`",
-    "inspection.message.multiple.default.variants": "Multiple defaults declared",
-    "inspection.message.no.default.declared": "No default declared",
-    "inspection.message.recursion.in.async.fn.requires.boxing": "Recursion in an `async` function requires boxing",
     "inspection.message.should.have.body2": "`{0}` must have a body",
-    "inspection.message.trait.copy.may.not.be.implemented.for.this.type": "Trait `Copy` cannot be implemented for this type",
-    "inspection.rs.cannot.impl.for.dyn.auto.trait": "Inherent `impl` for dyn auto trait",
-    "inspection.rs.control.flow.expr.in.while.condition.without.loop": "`break` or `continue` with no label in the condition of a `while` loop",
-    "inspection.rs.copy.and.drop.impl": "Both `Copy` and `Drop` implemented",
-    "inspection.rs.enum.repr.int.is.required": "`#[repr(inttype)]` must be specified for enum",
-    "inspection.rs.equality.trait.members.display.name": "Derived trait not implemented",
-    "inspection.rs.field.without.type": "Missing struct field type",
-    "inspection.rs.format.macro.errors": "Format macro error",
-    "inspection.rs.function.parameters.are.sized": "Parameter type with unknown size",
-    "inspection.rs.generic.default.param.cannot.use.forward": "Forward-declared identifier for parameter with default value",
-    "inspection.rs.impl.copy.for.wrong.type": "Invalid `Copy` implementation",
-    "inspection.rs.impl.drop.for.non.adt": "Invalid `Drop` implementation",
-    "inspection.rs.incorrectly.placed.inline.attr": "`#[inline]` Attribute can only be applied to a function or closure",
-    "inspection.rs.invalid.brea.continue.usage": "Invalid 'break' or 'continue'",
-    "inspection.rs.invalid.lifetime.name": "Invalid lifetime name",
-    "inspection.rs.loop.only.keyword.outside.of.loop": "`break` and `continue` can only be used inside `loop` and `while` blocks",
-    "inspection.rs.nonexistent.field.access": "Non-existent field access",
-    "inspection.rs.recursion.in.async.function": "No boxing for async recursion",
-    "inspection.rs.reference.is.not.public": "Invalid private field/method access",
-    "inspection.rs.return.must.have.value": "`return` must have a value",
-    "inspection.rs.super.trait.is.not.implemented": "Supertrait is not implemented",
-    "inspection.rs.unlabeled.control.flow.expr": "Unlabeled `continue` or `break` inside of a labeled block",
-    "inspection.toml.json.schema": "Doesn't conform to schema",
-    "intention.family.name.add.default.meta.item": "Add #[default] to first variant",
     "intention.name.": "{0}{1}",
-    "intention.name.add.self": "Add `Self::`",
     "intention.name.b.b": "<b>{0}</b>",
     "intention.name.b.b2": "<b>{0}</b>",
     "label.struct": "struct {0}`{`",
     "let.else": "`let-else`",
-    "library.file.restore.content.notification.hyperlink": "Restore initial content",
-    "library.file.restore.content.notification.text": "External source files should not be modified",
     "list.item.webassembly.lib": "WebAssembly Lib",
     "min.const.generics": "min const generics",
     "mod.0": "mod {0}",
     "notification.content.cargo.expand": "cargo-expand",
     "notification.content.wasm.pack": "wasm-pack",
-    "popup.title.value.used.after.being.moved": "Value Used After Being Moved",
     "rust.cargo.toml": "Rust/Cargo.toml",
     "rust.external.linter.cargo.check.item": "Cargo Check",
     "rust.repl": "Rust REPL",
-    "settings.rust.code.style.end.of.line.comments.on.the.same.line": "Preserve end of line comments on the same line",
-    "tooltip.must.be.defined.only.once.in.namespace.this": "`{0}` can only be defined once in the `{1}` namespace of this {2}",
     "wasm.pack": "wasm-pack"
   },
   "messages/SASSBundle.properties": {
@@ -2350,6 +2218,7 @@
     "xml_html.category": "XML/HTML"
   },
   "messages/SbtBundle.properties": {
+    "sbt.migrate.configurations.dialog.wrapper.default": "<no module>",
     "sbt.settings.sbt": "sbt(&S):",
     "sbt.settings.scala": "Scala(&C):",
     "sbt.settings.shell.title": "sbt shell",
@@ -2420,7 +2289,16 @@
     "product.name.jetbrains.space": "JetBrains Space",
     "review.at.time": "{0} {1}",
     "review.by.author.at.time": "{0}，{1} {2}",
-    "review.chat.editor.tab.tooltip": "{0}: {1}"
+    "review.chat.editor.tab.tooltip": "{0}: {1}",
+    "review.commit.message.error": "Please enter a commit message",
+    "review.delete.branch.message": "Delete branch {0}",
+    "review.details.cancel.checks.keep": "Keep running checks",
+    "review.details.cancel.checks.message": "This action stops all active checks",
+    "review.details.cancel.dry.run.title": "Cancel dry run?",
+    "review.details.cancel.safe.merge.title": "Cancel safe merge?",
+    "review.rebase.and.squash.title": "Rebase and squash",
+    "review.safe.merge.title": "Safe Merge",
+    "review.start.safe.merge.title": "Start safe merge"
   },
   "messages/SpaceGatewayBundle.properties": {
     "connector.title": "JetBrains Space",
@@ -2432,36 +2310,14 @@
   "messages/SpaceVcsBundle.properties": {
     "action.com.intellij.space.vcs.share.SpaceShareProjectAction.Vcs.Toolbar.Widget.text": "Space…"
   },
-  "messages/SpaceportBundle.properties": {
-    "action.com.intellij.space.actions.SpaceLoginAction.text": "Log In to Spaceport…",
-    "auth.error.cannot.login.to.space": "Cannot log in to Spaceport: {0}"
-  },
   "messages/SpaceportGatewayBundle.properties": {
-    "auth.page.jetbrains.space.header.text": "JetBrains Spaceport",
-    "connections.status.dev.env.state.unhealthy": "IDE not responding",
-    "connector.title": "JetBrains Spaceport",
-    "dialog.message.no.permissions.to.create.dev.env": "Contact your namespace administrator for permission to create dev environments.",
-    "hot.pool.status.branch.unmatched": "Dev Environment will start slower as custom branch is selected",
-    "hot.pool.status.initializing": "<b>Standby pool</b> is enabled, but is initializing",
-    "hot.pool.status.ready": "<b>Standby pool</b> is active, Dev Environment should start <b>immediately</b>",
-    "hot.pool.status.ready.from.stopped": "<b>Standby pool</b> is active, Dev Environment should start faster",
-    "hot.pool.status.schedule.unmatched": "<b>Standby pool</b> is enabled, but the current time is out of schedule {0}",
-    "hot.pool.status.unexpected": "<b>Standby pool is enabled, but there are no available Dev Environments</b>",
-    "hot.pool.status.warmup.unmatched": "Dev Environment will start slower as no warm-up is selected",
-    "hot.pool.status.warmup.used": "Dev Environment will start using selected warmup",
+    "auth.page.jetbrains.space.header.text": "JetBrains CodeCanvas",
+    "connector.title": "JetBrains CodeCanvas",
     "label.dev.env.ide": "IDE:",
-    "label.dev.env.optional.parameters": "Optional parameters",
-    "label.dev.env.parameters.nothing.selected": "No parameter selected",
-    "label.dev.env.projects": "Namespaces:",
-    "label.dev.env.required.parameters": "Required parameters",
     "label.dev.file": "Devfile:",
     "label.warmup.snapshot.created.at.by": "{0}，{1}",
-    "login.page.title": "JetBrains Spaceport",
-    "login.panel.organization.url.label": "Spaceport URL:",
-    "select.dev.env.conf.empty": "Select a template",
-    "space.promo.text.full": "Create and manage reproducible remote dev environments. Code within these environments from your JetBrains IDEs.",
-    "space.promo.watch.space.overview.label": "Remote Development with Spaceport",
-    "ssh.connectivity.key.absent": "You have selected a Template with SSH connectivity enabled, but you don''t have any SSH keys configured. Add them on the <a href=\"{0}\">SSH Keys</a> page."
+    "login.page.title": "JetBrains CodeCanvas",
+    "login.panel.organization.url.label": "Spaceport URL:"
   },
   "messages/SpaceportMainGatewayBundle.properties": {
     "auth.page.jetbrains.space.header.text": "JetBrains Spaceport",
@@ -2652,17 +2508,6 @@
     "group.Swift.PackageManager.Menu.text": "Swift Package Manager",
     "swift.package.manager": "Swift Package Manager"
   },
-  "messages/SymfonySupportSurveyBundle.properties": {
-    "dialog.symfony.support.survey.dev.experience.label": "Rate how satisfied are you with the developer experience in PhpStorm:",
-    "dialog.symfony.support.survey.feature.fullness.label": "Rate the feature fullness of the plugin:",
-    "dialog.symfony.support.survey.performance.label": "Rate the general performance of your IDE when developing a Symfony project:",
-    "dialog.symfony.support.survey.reliability": "Rate the general reliability of PhpStorm:",
-    "dialog.symfony.support.survey.symfony.plugin.experience.label": "Rate your overall experience with the Symfony plugin:",
-    "dialog.symfony.support.survey.title": "Symfony support feedback",
-    "notification.symfony.support.request.content": "Please take two minutes to answer a few questions.",
-    "notification.symfony.support.request.title": "Share feedback about Symfony support",
-    "notification.symfony.support.thanks.feedback.content": "You are helping make the PhpStorm better!"
-  },
   "messages/TableBundle.properties": {
     "of": "/{0}"
   },
@@ -2681,18 +2526,6 @@
     "label.content.encoding": "Content-Encoding",
     "label.content.type": "Content-Type",
     "settings.appid": "APPID:"
-  },
-  "messages/TerminalBundle.properties": {
-    "action.Terminal.ShowFeedbackNotification.text": "Show New Terminal Feedback Notification",
-    "feedback.dialog.description": "It's been a while since you tried the New Terminal Beta, and your first impression is very valuable to us.",
-    "feedback.dialog.other.placeholder": "For example, missing features or vice versa, what you particularly like.",
-    "feedback.dialog.rating.interface": "Interface/Usability:",
-    "feedback.dialog.title": "New Terminal Feedback",
-    "feedback.notification.text": "Please answer a few questions about your experience with New Terminal.",
-    "feedback.notification.title": "Share feedback about New Terminal",
-    "feedback.system.info.commands.number": "Executed commands number:",
-    "feedback.system.info.moment": "Feedback moment:",
-    "feedback.system.info.shell": "Most used shell:"
   },
   "messages/TmsBundle.properties": {
     "tms.connection.url": "URL:",

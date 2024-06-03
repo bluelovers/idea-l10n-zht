@@ -889,9 +889,9 @@
     <option name="取代動作" path="ActionManager" hit="重複上一次尋找/取代動作，或移至所選文本的下一個符合項" />
     <option name="重複上一次尋找" path="ActionManager" hit="重複上一次尋找/取代動作，或移至所選文本的下一個符合項" />
     <option name="重新排列程式碼" path="ActionManager" hit="重新排列程式碼" />
-    <option name="通常為80" path="ActionManager" hit="重新格式化字串文字或註釋以適應最大寬度(通常為80)" />
-    <option name="重新格式化字串文字或註釋以適應最大寬度" path="ActionManager" hit="重新格式化字串文字或註釋以適應最大寬度(通常為80)" />
     <option name="重新設定程式碼格式" path="ActionManager" hit="重新設定程式碼格式" />
+    <option name="通常為80" path="ActionManager" hit="重新設定字串文字或註釋的格式以適應最大寬度(通常為80)" />
+    <option name="重新設定字串文字或註釋的格式以適應最大寬度" path="ActionManager" hit="重新設定字串文字或註釋的格式以適應最大寬度(通常為80)" />
     <option name="重新設定檔案格式" path="ActionManager" hit="重新設定檔案格式…" />
     <option name="重構" path="ActionManager" hit="重構" />
     <option name="重構此" path="ActionManager" hit="重構此…" />
@@ -941,7 +941,7 @@
     <option name="保留文字游標行中的尾隨空格" hit="保留文字游標行中的尾隨空格" />
     <option name="允許文字游標放置" hit="允許文字游標放置 " />
     <option name="啟用平滑滾動" hit="啟用平滑滾動" />
-    <option name="在檔案底部顯示虛擬空間" hit="在檔案底部顯示虛擬空間" />
+    <option name="在檔案底部顯示虛擬空白" hit="在檔案底部顯示虛擬空白" />
     <option name="垂直滾動偏移量" hit="垂直滾動偏移量 " />
     <option name="垂直滾動跳轉" hit="垂直滾動跳轉 " />
     <option name="複製的片段的配色方案" hit="複製的片段的配色方案 " />
@@ -987,7 +987,7 @@
     <option name="使用箭頭鍵在按兩次" hit="使用箭頭鍵在按兩次 Ctrl 時添加多個文字游標" />
     <option name="時添加多個文字游標" hit="使用箭頭鍵在按兩次 Ctrl 時添加多個文字游標" />
     <option name="關閉塊註釋" hit="關閉塊註釋" />
-    <option name="再次重新格式化以移除自訂換行符" hit="再次重新格式化以移除自訂換行符" />
+    <option name="再次重新設定格式以移除自訂換行符" hit="再次重新設定格式以移除自訂換行符" />
     <option name="enter" hit="在 JSP 中按 Enter 時插入對   " />
     <option name="jsp" hit="在 JSP 中按 Enter 時插入對   " />
     <option name="中按" hit="在 JSP 中按 Enter 時插入對   " />
@@ -1020,13 +1020,13 @@
     <option name="貼上時不顯示" hit="貼上時不顯示 Java 至 Kotlin 轉換對話框" />
     <option name="至" hit="貼上時不顯示 Java 至 Kotlin 轉換對話框" />
     <option name="轉換對話框" hit="貼上時不顯示 Java 至 Kotlin 轉換對話框" />
-    <option name="貼上時重新格式化" hit="貼上時重新格式化 " />
+    <option name="貼上時重新設定格式" hit="貼上時重新設定格式 " />
     <option name="val" hit="自動將  val  關鍵字新增到資料 值類別建構函式參數" />
     <option name="值類別建構函式參數" hit="自動將  val  關鍵字新增到資料 值類別建構函式參數" />
     <option name="關鍵字新增到資料" hit="自動將  val  關鍵字新增到資料 值類別建構函式參數" />
     <option name="自動將" hit="自動將  val  關鍵字新增到資料 值類別建構函式參數" />
-    <option name="時重新格式化塊" hit="輸入     時重新格式化塊" />
-    <option name="輸入" hit="輸入     時重新格式化塊" />
+    <option name="時重新設定塊格式" hit="輸入     時重新設定塊格式" />
+    <option name="輸入" hit="輸入     時重新設定塊格式" />
     <option name="輸入引號或大括號時包圍選區" hit="輸入引號或大括號時包圍選區" />
     <option name="tab" hit="輸入時使用 Tab 鍵跳出右中括號 引號" />
     <option name="引號" hit="輸入時使用 Tab 鍵跳出右中括號 引號" />
@@ -1345,8 +1345,8 @@
     <option name="實時模板" hit="實時模板" />
     <option name="x" hit="展開方式 X " />
     <option name="展開方式" hit="展開方式 X " />
-    <option name="r" hit="按照樣式重新格式化 R " />
-    <option name="按照樣式重新格式化" hit="按照樣式重新格式化 R " />
+    <option name="r" hit="按照樣式重新設定格式 R " />
+    <option name="按照樣式重新設定格式" hit="按照樣式重新設定格式 R " />
     <option name="d" hit="描述 D  " />
     <option name="描述" hit="描述 D  " />
     <option name="無" hit="無" />
@@ -1626,8 +1626,8 @@
     <option name="windows" path="一般" hit="Windows   r n " />
     <option name="glob" path="格式化程序" hit="glob 模式" />
     <option name="模式" path="格式化程序" hit="glob 模式" />
-    <option name="不格式化" path="格式化程序" hit="不格式化 " />
-    <option name="不格式化作用域" path="格式化程序" hit="不格式化作用域 " />
+    <option name="不設定作用域格式" path="格式化程序" hit="不設定作用域格式 " />
+    <option name="不設定格式" path="格式化程序" hit="不設定格式 " />
     <option name="程式碼樣式" hit="程式碼樣式" />
     <option name="使用" path="格式化程序" hit="使用 指定檔名模式和目錄" />
     <option name="指定檔名模式和目錄" path="格式化程序" hit="使用 指定檔名模式和目錄" />
@@ -1673,8 +1673,8 @@
     <option name="其他" path="其他" hit="其他" />
     <option name="l" hit="啟用實時模板  L " />
     <option name="啟用實時模板" hit="啟用實時模板  L " />
-    <option name="r" hit="按照樣式重新格式化 R " />
-    <option name="按照樣式重新格式化" hit="按照樣式重新格式化 R " />
+    <option name="r" hit="按照樣式重新設定格式 R " />
+    <option name="按照樣式重新設定格式" hit="按照樣式重新設定格式 R " />
     <option name="描述" hit="描述 " />
     <option name="檔案" path="檔案" hit="檔案" />
     <option name="檔案和程式碼模板" hit="檔案和程式碼模板" />
