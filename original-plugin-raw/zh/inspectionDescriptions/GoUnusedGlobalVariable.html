@@ -18,14 +18,14 @@
 <body>
 报告已定义但从未在代码中使用的全局变量。
 <p>如果您有未使用的变量，代码将无法编译。
-  有关未使用的变量和导入的详细息，请参阅 <a href="https://go.dev/doc/effective_go#blank_unused">go.dev 上的 Unused imports and variables</a>。
+  有关未使用的变量和导入的更多信息，请参阅 <a href="https://golang.org/doc/effective_go#blank_unused">golang.org 上的 Unused imports and variables</a>。
 </p>
 <pre><code>func main() {
  a := 422
 }</code></pre>
-<p>示例中的代码将无法编译。 因此，将其高亮显示为错误。 对于此类情况，您可以应用两个快速修复：<b>删除变量</b> 和 <b>重命名为 _</b>。 第一个快速修复删除变量，第二个将变量转换为空白
+<p>示例中的代码将无法编译。 因此，将其高亮显示为错误。 对于此类情况，您可以应用两个快速修复：<b>删除变量</b> 和 <b>重命名 _</b>。 第一个快速修复删除变量，第二个将变量转换为空白
    标识符。</p>
-<p>在应用<b>重命名为 _</b>快速修复后：</p>
+<p>在应用<b>重命名 _</b>快速修复后：</p>
 <pre><code>func main() {
  _ := 422
 }</code></pre>

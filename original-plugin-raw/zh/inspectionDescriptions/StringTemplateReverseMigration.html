@@ -1,0 +1,22 @@
+<html>
+<body>
+Reports string template expressions using the <code>STR</code> processor and offers a quick-fix to 
+migrate back to a plain string concatenation.
+
+<p><b>示例：</b></p>
+<pre><code>
+  String name = "Bob";
+  String greeting = STR."Hello, \{name}. You are 29 years old.";
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+  String name = "Bob";
+  String greeting = "Hello, " + name + ". You are 29 years old.";
+</code></pre>
+
+<!-- tooltip end -->
+
+<p><small>2024.2 最新变化</small></p>
+</body>
+</html>

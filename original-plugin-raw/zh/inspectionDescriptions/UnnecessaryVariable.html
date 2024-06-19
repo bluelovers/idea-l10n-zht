@@ -1,6 +1,24 @@
 <html>
 <body>
-报告仅恰好在下一个 <code>return</code> 语句或其他变量的确切副本中使用的局部变量。
+报告仅恰好在下一条 <code>return</code> 语句或其他变量的确切副本中使用的局部变量。
 <p>可以安全地内联此类变量，以使代码更加清晰易懂。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  fun sum(a: Int, b: Int): Int {
+      val c = a + b
+      return c
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun sum(a: Int, b: Int): Int {
+      return a + b
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<p>使用<b>报告立即返回的变量</b>选项可以报告立即返回的变量。
+    当给定描述性名称时，此类变量在某些情况下可能会提高代码的可读性，这就是默认情况下禁用此选项的原因。</p>
 </body>
 </html>

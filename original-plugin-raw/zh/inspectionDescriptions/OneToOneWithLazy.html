@@ -1,6 +1,8 @@
 <html>
 <body>
-此检查会检查是否存在带有 FetchType.Lazy 特性的 @OneToOne 关联的非所有方。 为 @OneToOne 关联的非所有方指定 FetchType.LAZY 不会影响加载。 相关实体仍将被加载，就像定义了 FetchType.EAGER 一样。
+检查以下关联的非所有方： <pre><code>@OneToOne</code></pre> 关联（带有 <pre><code>FetchType.Lazy</code></pre> 特性）。
+指定 <pre><code>FetchType.LAZY</code></pre> 为以下关联的所有方 <pre><code>@OneToOne</code></pre> 不会影响加载。
+相关实体仍将被加载，就像定义了 <pre><code>FetchType.EAGER</code></pre> 一样。
 有关详情，请参阅<a
   href="https://docs.jboss.org/hibernate/orm/6.1/userguide/html_single/Hibernate_User_Guide.html#associations-one-to-one-bidirectional-lazy">文档</a>。
 </body>

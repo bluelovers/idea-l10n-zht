@@ -9,7 +9,7 @@
       class User(val id: Int) : Receiver()
   }
 </code></pre>
-<p>快速修复会将 <code>class</code> 转换为 <code>object</code>：</p>
+<p>该快速修复会将 <code>class</code> 转换为 <code>object</code>：</p>
 <pre><code>
   sealed class Receiver {
       object Everyone : Receiver()

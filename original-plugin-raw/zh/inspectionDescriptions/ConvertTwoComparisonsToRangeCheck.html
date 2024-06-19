@@ -8,7 +8,7 @@
       return month >= 1 && month &lt;= 12
   }
 </code></pre>
-<p>快速修复可将基于比较的检查替换为针对范围的检查：</p>
+<p>该快速修复会将基于比较的检查替换为针对范围的检查：</p>
 <pre><code>
   fun checkMonth(month: Int): Boolean {
       return month in 1..12
