@@ -1,0 +1,28 @@
+<html>
+<body>
+報告左動作數和右動作數表示相同表達式的比較。
+雖然有時可能會有意將表達式與其自身進行比較，但通常是疏忽大意所致。
+<p>範例：</p>
+<pre><code>
+  // 可能 left.getLength() == right.getLength() 是有意為之
+  boolean result = left.getLength() == left.getLength();
+</code></pre>
+<!-- tooltip end -->
+<p>
+  要忽略可能產生副作用的比較，請使用<b>忽略有副作用的條件</b> 選項。
+停用此選項可能會導致誤報，例如，當同一方法在後續呼叫中返回不同的值時。
+</p>
+<p>範例：</p>
+<pre><code>
+  native int unknownMethod();
+  
+  ...
+  
+  if (unknownMethod() &gt; unknownMethod()) {
+    System.out.println("Got it");
+  }
+</code></pre>
+<p>由於 <code>unknownMethod()</code> 可能存在副作用（在範例中），只有在停用 <b>忽略有副作用的條件</b> 選項時才會觸發警告。</p>
+<p><small>2024.2 最新變化</small></p>
+</body>
+</html>

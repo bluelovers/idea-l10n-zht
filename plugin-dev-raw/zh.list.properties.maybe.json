@@ -2,64 +2,120 @@
   "com/android/tools/idea/compose/preview/ComposePreviewBundle.properties": {
     "inspection.animation.type.animate.as.state": "animate*AsState"
   },
+  "messages/AIImplBundle.properties": {
+    "ai.completion.diagnostics.contexts.copy.button.label": "Copy Context",
+    "ai.completion.diagnostics.mock.button.add": "Add to Existing",
+    "ai.completion.inline.hint.insert.line.text": "to complete line",
+    "ai.completion.inline.hint.insert.word.text": "to complete word"
+  },
   "messages/ActionsBundle.properties": {
     "action.Actions.ActionsPlugin.GenerateToString.text": "to_String()",
-    "action.CloseDiffEditor.text": "Close Diff Editor",
-    "action.EditorToggleResolveConflictsInImports.text": "Resolve Conflicts in Import Statements",
-    "action.ExpandRecursively.shortcutHint": "Press {0} to expand all nodes",
-    "action.ExpandRecursively.text": "Expand Subtree",
+    "action.AddToWorkspace.text": "Add Projects to Workspace…",
+    "action.CodeVisionToggleAction.description": "Toggle code vision for current project",
+    "action.CodeVisionToggleAction.text": "Toggle Code Vision for Project",
+    "action.EditorStickyLinesDisableForLang.description": "Hide the sticky lines panel for language",
+    "action.EditorStickyLinesDisableForLang.text": "Disable for Language",
     "action.Floating.CodeToolbar.SurroundWithTryCatch.text": "try / catch",
     "action.Floating.CodeToolbar.SurroundWithTryCatchFinally.text": "try / catch / finally",
     "action.GenerateCreateUI.text": "createUI(...)",
     "action.GenerateProviderMethod.text": "provider()",
-    "action.RepairDebuggerViewAction.description": "Try to repair debugger view to the responsible state",
-    "action.RepairDebuggerViewAction.text": "Repair Debugger View",
+    "action.ManageWorkspace.text": "Manage Workspace…",
+    "action.ProjectView.AbbreviatePackageNames.text": "Abbreviate Qualified Names",
+    "action.ProjectView.CustomizeTrees.text": "Customize Tree Views...",
+    "action.ProjectView.ShowLibraryContents.ToolwindowPopup.text": "Libraries Contents",
+    "action.ProjectView.ShowVisibilityIcons.ToolwindowPopup.text": "Visibility Icons",
+    "action.ProjectView.SortByTimeAscending.ToolwindowPopup.text": "Modification Time (Oldest First)",
+    "action.ProjectView.SortByTimeDescending.ToolwindowPopup.text": "Modification Time (Newest First)",
     "action.SearchEverywhereToolbarHotKey.hotkey": "Shift+Shift",
-    "action.ToggleIncompleteMode.text": "Enter Incomplete Dependencies Mode",
-    "action.Vcs.CombinedDiff.CaretToNextBlock.text": "Next File",
-    "action.Vcs.CombinedDiff.CaretToPrevBlock.text": "Previous File",
-    "action.Vcs.CombinedDiff.ToggleCollapseAllBlock.description": "Toggle collapse all files in Combined Diff",
-    "action.Vcs.CombinedDiff.ToggleCollapseAllBlock.text": "Collapse All Files",
-    "action.Vcs.CombinedDiff.ToggleCollapseBlock.text": "Collapse File",
-    "action.main.toolbar.Filename.text": "File Name Widget (when editor tabs are hidden or “Always show full path” is enabled)",
+    "action.ShowHideDebugInfoInUi.text": "Debugging Info in UI",
+    "action.ViewInplaceComments.text": "File Details",
+    "action.remove.workspace.subproject.x.text": "Remove ''{0}'' from Workspace",
+    "action.remove.workspace.subprojects.text": "Remove Projects from Workspace",
     "group.Internal.UI.KotlinUiDsl.text": "Kotlin UI DSL",
     "group.Internal.UI.text": "UI(&U)",
+    "group.ProjectView.ToolWindow.Appearance.Actions.text": "Appearance \\&\\& Behavior",
     "group.VcsGroups.text": "Git(_G)"
   },
   "messages/AmperBundle.properties": {
+    "Amper.intentions.convert.catalog.dependency": "Convert to a resolved dependency",
+    "amper.build.finished": "Amper build finished",
+    "build.progress": "Building…",
+    "inspections.can.convert.to.catalog.version": "Can be converted to a catalog version",
+    "inspections.can.convert.to.catalog.version.conflict": "Can be converted to a catalog version (is already available in the catalog, but with version {0} instead)",
+    "inspections.can.convert.to.catalog.version.no.conflict": "Can be converted to a catalog version",
+    "inspections.can.convert.to.catalog.version.quickfix.conflict.change": "Convert to an existing catalog version (version {0})",
+    "inspections.can.convert.to.catalog.version.quickfix.conflict.create": "Create a new catalog entry with a different version",
+    "inspections.can.convert.to.catalog.version.quickfix.no.conflict": "Convert to a catalog version",
+    "inspections.can.extract.to.catalog.version": "Can be extracted into a version catalog",
+    "inspections.can.extract.to.catalog.version.quickfix": "Create a new entry in the catalog",
+    "inspections.compose.no.dependencies": "Compose is enabled, but no compose dependencies are listed",
+    "inspections.duplicate.dependencies.outside.catalog": "This dependency is referenced directly in some modules. Replace it with the catalog reference?",
+    "inspections.duplicate.dependencies.outside.catalog.fix": "Replace all explicit dependencies with the catalog entry",
+    "inspections.duplicate.dependencies.outside.catalog.fix.and.update.version": "Replace all explicit dependencies with the catalog entry of version {0}",
+    "inspections.duplicate.dependencies.outside.catalog.fix.only.matching": "Replace explicit dependencies matching by version {0} with the catalog entry",
+    "intentions.add.compose.dependencies.name": "Add compose dependencies",
     "jvm.app.module.yaml.template.group.name": "module.yaml"
   },
   "messages/AnalysisBundle.properties": {
     "virtual.file.window.name": "<Injected {0}file>"
   },
   "messages/AndroidBundle.properties": {
-    "action.Android.RunAndroidAvdManager.text": "AVD Manager",
+    "action.Android.RunAndroidSdkManager.description": "Run Android SDK Manager",
     "android.9patch.file.type.description": "Android 9-Patch",
+    "android.baseline.profile.run.configuration.group.variants.allvariants": "Generate the baseline profile for all variants",
+    "android.baseline.profile.run.configuration.group.variants.current": "Generate the baseline profile for the current variant",
+    "android.baseline.profile.run.configuration.type.description": "Android Baseline Profile run configuration",
+    "android.baseline.profile.run.configuration.type.name": "Android Baseline Profile",
     "android.ddms.actions.layoutinspector.notification.group": "Layout Inspector",
     "android.ddms.actions.layoutinspector.notification.title": "Layout Inspector",
     "android.ddms.nodevices": "[none]",
     "android.extended.device.chooser.avd.label": "Android Virtual Device(&A):",
+    "android.run.configuration.generate.baseline.profile": "Generate Baseline Profile",
+    "android.run.configuration.not.supported.package": "Run configuration {0} is not supported in the current project. Cannot obtain the package.",
     "android.sdk.presentable.name": "Android SDK",
     "android.test.run.configuration.type.name": "Android Instrumented Tests",
+    "android.wizard.action.requires.aidlEnabled": "{0} (Requires setting the buildFeatures.aidl to true in the Gradle build files)",
     "android.wizard.module.config.new.base.missing": "<No Base Module found>",
+    "android.wizard.module.help.baselineprofiles.minversionrequired": "Your project is using an unsupported version of androidx.benchmark. Please update to the minimum required version 1.2.2.",
+    "android.wizard.module.help.baselineprofiles.usegmd.description": "Add Gradle Managed Device configurations to use in your continuous integration builds or from the command-line, in order to generate baseline profiles under a fully managed and controlled environment. <a href=\"https://developer.android.com/studio/test/gradle-managed-devices\">Learn more</a>",
     "android.wizard.module.new.google.cloud": "Google Cloud",
     "android.wizard.module.new.wear": "Wear OS",
-    "configurable.ExperimentalSettingsConfigurable.checkbox.jetpack.compose": "Jetpack Compose",
-    "configurable.SdkUpdaterConfigurable.display.name": "Android SDK",
+    "android.wizard.validate.module.empty.package.name.baseline.profiles": "Empty package name",
+    "android.wizard.validate.module.invalid.application.baseline.profiles": "Target application is not an Android app",
+    "android.wizard.validate.module.invalid.application.id.baseline.profiles": "Target application does not have a valid application ID",
+    "android.wizard.validate.module.not.present.baseline.profiles": "No valid target module available",
+    "android.wizard.validate.module.same.package.name.baseline.profiles": "Package name is the same as target module's application ID",
+    "android.wizard.validate.module.sync.needed.baseline.profiles": "Gradle sync needs to be completed first",
+    "configurable.SdkUpdaterConfigurable.display.name": "Android SDK Updater",
+    "configurable.TaskSettings.display.name": "Task Settings",
+    "ddms.corrupted.error": "Warning: Some processes are not showing because there is no debug information available for them. This may be due to other applications currently running, such as Intellij with the Android plugin, or another instance of Android Studio from a different channel (Beta or Canary). Please close these applications to ensure all processes are displayed.If no applications are running, try to disconnect/reconnect the device and cycle adb server via `adb kill-server`.",
+    "essentials.mode.notification.content": "Essentials Mode may improve performance by limiting code highlighters and preview resource usage. All highlighters will run on file saving actions.",
     "essentials.mode.notification.ignore": "ignore.essentials.mode.notification",
+    "essentials.mode.recommendation.content": "Switching to Essentials Mode may improve IDE performance. Background highlighters and preview resources are limited until receiving a file saving action.",
+    "essentials.mode.recommendation.title": "Try Essentials Mode?",
     "gradle.settings.jdk.component.label.text": "Gradle JDK:",
     "group.Android.InstantRunActions.text": "Instant Run",
     "live.edit": "Live Edit",
     "live.edit.configurable.display.name": "Compose Live Edit",
+    "project.gradle.catalog.settings.dsl": "Android Studio does not support Version Catalog entries defined in Gradle Settings DSL: consider specifying the version catalog entries in a Toml file.",
     "project.migrated.to.gradle.local.java.home.info.url": "https://d.android.com/r/studio-ui/jdk-macro",
-    "project.sync.warning.multiple.gradle.daemons.url": "https://docs.gradle.org/current/userguide/gradle_daemon.html#sec:why_is_there_more_than_one_daemon_process_on_my_machine"
+    "project.sync.warning.multiple.gradle.daemons.url": "https://docs.gradle.org/current/userguide/gradle_daemon.html#sec:why_is_there_more_than_one_daemon_process_on_my_machine",
+    "project.upgrade.studio.notification.body.different.channel.recommendation": "Your project is configured with a compile SDK version that is not supported by this version of Android Studio ({0}). We recommend installing {1} or higher to work on this project. You can also install versions of Android Studio alongside your current version using the <a href=\"https://developer.android.com/studio/preview/install-preview#install_alongside_your_stable_version\"> following guide</a>.",
+    "project.upgrade.studio.notification.body.no.recommendation": "Your project is configured with a compile SDK version that is not supported by this version of Android Studio ({0}). Currently, there is no version of Android Studio that supports this compile SDK. You may experience issues while working on this project. If you do, please file a bug by selecting <b>Help > Submit Feedback</b>.",
+    "project.upgrade.studio.notification.body.same.channel.recommendation": "Your project is configured with a compile SDK version that is not supported by this version of Android Studio ({0}). You can upgrade to {1} or higher to have better IDE support for this project. <br/><br/> Keep in mind that the update flow moves you to the latest version of Android Studio. If that version is several versions ahead, it may no longer support certain components or APIs used by your project.",
+    "project.upgrade.studio.notification.no.recommendation.title": "Android Studio does not support the specified Android API level"
+  },
+  "messages/AndroidDesignerActionsBundle.properties": {
+    "android.inspections.group.path.lint": "Android,Lint"
   },
   "messages/AndroidLintBundle.properties": {
-    "android.inspections.group.path.lint": "Android,Lint"
+    "android.lint.inspections.activity.icon.color": "Ongoing activity icon is not white",
+    "android.lint.inspections.selected.photo.access": "Behavior change when requesting photo library access"
   },
   "messages/AndroidWearPairingBundle.properties": {
     "wear.assistant.companion.app.name": "Google Pixel Watch",
-    "wear.assistant.companion.app.name.legacy": "Wear OS by Google"
+    "wear.assistant.companion.app.name.legacy": "Wear OS by Google",
+    "wear.assistant.device.connection.wear.os.wear3.abi": "<html>This phone does not support this version of the companion app.<a href=\"https://developer.android.com/training/wearables/get-started/creating#pairing-assistant\"> Learn more</a> to upgrade to a new Wear OS emulator that uses a newer version of the companion app.</html>"
   },
   "messages/Angular2Bundle.properties": {
     "angular.action.goto-related.inline": "<inline>",
@@ -116,6 +172,10 @@
     "group.PythonAppEngine.text": "Google App Engine",
     "python.app.engine.project.name": "Google App Engine"
   },
+  "messages/AppInspectionBundle.properties": {
+    "inspector.launch.error": "Error was encountered while launching {0}. Please redeploy app or restart the inspector.",
+    "select.process": "Deploy a debuggable app to a device running API level 26 or higher, or select a debuggable process to inspect."
+  },
   "messages/AppServersCommonBundle.properties": {
     "ServerInstance.exception.message": "{0}: {1}"
   },
@@ -124,6 +184,7 @@
     "combobox.crlf.windows": "Windows (\\r\\n)",
     "editorsearch.current.cursor.position": "{0}/{1}",
     "editorsearch.toomuch": "{0}+",
+    "label.show.sticky.lines": "Maximum number of lines:",
     "settings.hints.group.code.vision": "Code Vision",
     "settings.hints.new.group.code.vision": "Code Vision",
     "wrapping.try.resources": "'try-with-resources'"
@@ -146,6 +207,7 @@
   },
   "messages/AspectJBundle.properties": {
     "action.create.aspect.kind.annotation": "@Aspect",
+    "compiler.ajc.select.path": "Select Path To AspectJ Compiler ('aspectjtools.jar')",
     "highlighting.tooltip.html": "<html><body>{0}</body></html>",
     "highlighting.tooltip.link": "<a href=\"#navigation/{0}:{1}\">{2}</a>"
   },
@@ -194,6 +256,9 @@
   "messages/BicepBundle.properties": {
     "progress.title.load.dotnet": ".net SDK"
   },
+  "messages/BowerBundle.properties": {
+    "bower.json": "bower.json (&O):"
+  },
   "messages/CLionBazelBundle.properties": {
     "checkbox.dev.containers": "Dev Container"
   },
@@ -202,16 +267,49 @@
     "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options"
   },
   "messages/CLionExecutionBundle.properties": {
+    "action.CLionDebugTargetHelpPopup.InsertText.text": "&Insert to Arguments",
+    "action.CLionDebugTargetHelpPopup.RefreshHelp.text": "&Gather Help",
+    "action.edit.debug.targets.text": "Edit Debug Targets…",
+    "advanced.setting.clion.debug.targets.enabled": "Enable Debug Targets",
     "coredump.sysroot": "Sysroot:",
     "cpp.build.description.1": "====================[ {0} ]====",
     "cpp.build.description.2": "====================[ {0} | {1} ]====",
     "cpp.build.description.3": "====================[ {0} | {1} | {2} ]====",
     "debug.attach.remoteHostTypeName.ssh.wsl": "SSH/WSL",
+    "debug.targets.configurable.message.name.already.taken": "The name {0} is already taken",
+    "debug.targets.configurable.name.debug.target": "Debug Target",
+    "debug.targets.configurable.new.debug.target": "New Debug Target",
+    "debug.targets.edit.debugger.radio.custom": "Custom connection script",
+    "debug.targets.edit.debugger.radio.extended.remote": "Extended-remote",
+    "debug.targets.edit.label.debugger.work.dir": "\\&Work dir:",
+    "debug.targets.edit.label.enable": "E\\&nable",
+    "debug.targets.edit.label.executable": "E\\&xecutable:",
+    "debug.targets.edit.message.debugger.work.dir.not.found": "Debugger working directory does not exist",
+    "debug.targets.edit.message.empty.connection.script": "Empty connection script",
+    "debug.targets.edit.message.empty.remote.arguments": "Empty remote arguments",
+    "debug.targets.edit.message.gdb.server.not.found": "GDB server is not found or cannot be executed",
+    "debug.targets.edit.reset.label.after.download": "Af\\&ter download",
+    "debug.targets.edit.reset.label.before.download": "B\\&efore download",
+    "debug.targets.edit.title.debugger.working.directory": "Debugger Working Directory",
+    "debug.targets.edit.title.gdbserver.executable": "Gdbserver executable",
+    "debug.targets.edit.title.validate.gdbserver": "Validate Gdbserver Run",
+    "dialog.message.console.port.range": "Console port should be a number within 1025...65535 range",
+    "dialog.message.gdbserver.working.directory.not.found": "Gdbserver working directory does not exist",
     "gdbRemote.lldb.command": "'process connect' url:",
-    "gdbRemote.sysroot": "Sysroot:"
+    "gdbRemote.sysroot": "Sysroot:",
+    "helpcomponent.error.html": "<html>{0}<br><a href=\"HELPRUNNER\">Click here</a> to retry getting help by running the gdbserver with <i>--help</i> parameter</html>",
+    "helpcomponent.initial.html": "<html><a href=\"HELPRUNNER\">Click here</a> to get help by running the gdbserver with <i>--help</i> parameter</html>",
+    "non.readable": "<Non-readable>",
+    "svd.write.only": "<Write-Only>"
   },
   "messages/CLionProfilingBundle.properties": {
     "sanitizers.llvmSymbolizer.notification.title": "Google Sanitizers"
+  },
+  "messages/CLionWestBundle.properties": {
+    "cant.find.build.target": "Can't find build target",
+    "west.run.configuration.description": "Flash board",
+    "west.run.configuration.display.name": "Zephyr West",
+    "west.run.configuration.target.name": "West Run"
   },
   "messages/CMakeBundle.properties": {
     "action.CPP.NewCMakeListsFile.description": "CMakeLists.txt",
@@ -234,6 +332,11 @@
     "category.name.inject": "@Inject",
     "category.name.produces": "@Produces"
   },
+  "messages/ChatInputMessageBundle.properties": {
+    "file.reference.description": "Add a file into prompt",
+    "symbol.fetching.progress.title": "Looking for symbols",
+    "symbol.reference.description": "Add a symbol into prompt"
+  },
   "messages/ChefBundle.properties": {
     "chef.sdk.name": "Chef DK: {0}"
   },
@@ -250,7 +353,12 @@
     "llvm.cov.binary.row.title": "llvm-cov:",
     "llvm.profdata.binary.row.title": "llvm-profdata:"
   },
+  "messages/CidrCustomCompilerBundle.properties": {
+    "custom.compiler.definitions.read.error": "YAML read error:"
+  },
   "messages/CidrDebuggerBundle.properties": {
+    "action.CIDR.Debugger.ViewRawValue.progressTitle": "Retrieving raw value",
+    "action.CIDR.Debugger.ViewRawValue.text": "View Raw Value",
     "debug.address.breakpoint": "{0}",
     "debug.exception.breakpoint.when.kn.fragment": "Kotlin/Native",
     "debug.exception.breakpoint.when.kn.label": "Kotlin/Native",
@@ -274,16 +382,26 @@
     "language.cpp.configurable.name": "C/C++",
     "objective.c": "Objective-C"
   },
+  "messages/CidrProjectModelBundle.properties": {
+    "inspections.fileChecks.dummyFile": "This file is not parsed correctly; code insight features might not work properly."
+  },
+  "messages/CidrWorkspaceBundle.properties": {
+    "project.notifications.show.fixes.text": "Show fixes",
+    "project.popup.no.fixes": "No Fixes"
+  },
   "messages/ClangdBundle.properties": {
     "action.ClangdXRefAction.text": "clangd: XRef",
     "clang.tidy.schema.name": "Clang-Tidy",
     "clang.tidy.status.bar.widget.title": ".clang-tidy",
     "clangd.crash.reason.clang.tidy": "clang-tidy",
     "clangd.crash.reason.clion.clang.tidy": "clang-tidy",
+    "clangd.indexer.opt.optimize.include.graph": "Optimize building include graph",
+    "clangd.indexer.opt.optimize.include.graph.comment": "Speeds up building include graph by caching important directives.",
     "inspection.clangTidy.message": "Clang-Tidy: {0}",
     "inspection.clangTidy.name": "Clang-Tidy",
     "inspection.clazy.message": "Clazy: {0}",
     "language.cpp.clang-tidy.configurable.name": "Clang-Tidy",
+    "language.cpp.clangd.info.panel.indexing.stateless.title": "Indexing Stateless",
     "language.cpp.clangd.quick.fix": "Clangd fix-it"
   },
   "messages/ClionEmbeddedPlatformioBundle.properties": {
@@ -342,8 +460,8 @@
   "messages/CodeWithMeGuestBundle.properties": {
     "action.CWMThinClientShowPopupAction.text": "Code With Me",
     "code.with.me.tm": "Code With Me:",
+    "jcef.not.available.label": "JCEF isn't supported by the current IDE instance",
     "project.title.cwm": "Code With Me – {0}",
-    "ssh.agent.forwarding.key.not.specified.error.message": "Please provide a path to an existing SSH private key",
     "status.bar.text.ping.label": "Ping: {0}",
     "status.bar.text.ping.value": "{0} (UI: {1})",
     "thin.client.network.latency.status.connected": "{0}ms"
@@ -351,35 +469,31 @@
   "messages/CodeWithMePlatformBundle.properties": {
     "action.CWMHostShowPopupAction.text": "Code With Me",
     "action.CWMThinClientShowPopupAction.text": "Code With Me",
-    "action.OpenCallWindowAction.popup.browser.text": "The call switched to a browser",
     "circle.control.tooltip": "<html><div>{0}</div><font color={1}>{2}</font></html>",
     "code.with.me.learn.more.link": "https://www.jetbrains.com/code-with-me/",
+    "connection.dialog.permissions.message": "Current permissions for this session: ",
+    "connection.tooltip.learn.more.link": "https://www.jetbrains.com/help/idea/code-with-me-security-overview.html",
     "license.buy.link": "http://www.jetbrains.com/code-with-me/buy",
+    "license.free.time.left.new.ui": "<html>{0} free time left</html>",
     "metrics.cpu.label": "CPU {0}%",
     "metrics.jvm.ram.label": "JVM RAM {0}%",
     "metrics.server.ram.label": "RAM {0}%",
-    "newUiOnboarding.code.with.me.step.header": "Code With Me",
     "product.name": "Code With Me",
     "toolwindow.factory.title.code.with.me": "Code With Me",
     "user.notification.html.not.escaped": "<html><a href=\"\">{0}</a></html>",
     "wire.stats.status.bar.text": "({0}) ↑{1}/s / ↓{2}/s"
   },
   "messages/CodeWithMePluginBundle.properties": {
-    "action.ForceReconnect.description": "Drop transport for all existing wires",
-    "action.ForceReconnect.text": "Drop Connection (Internal)",
+    "action.user.permissions": "Permissions: {0}…",
     "backend.control.center.heap": "MiB -Xmx",
-    "inactive.session.popup.description": "Code With Me collaborative session is active for 30 minutes with no guests. This session will close automatically.",
-    "inactive.session.popup.dont.show.for.session": "Don’t Show Again for This Session",
-    "inactive.session.popup.ended.notification.content": "Code With Me session automatically closed as there were no guests for more than 30 min.",
-    "inactive.session.popup.ended.notification.title": "Code With Me session ended",
-    "inactive.session.popup.keep.active.button": "Keep active",
-    "inactive.session.popup.title": "Do you want to keep a session active?",
-    "permission.dialog.toolWindow.access.tooltip": "Gradle、Ant、Maven、Messages",
-    "permission.dialog.toolWindow.access.tooltip.clion": "Gradle、Ant、Maven、Messages、CMake",
-    "sudo.password.dialog.title": "Sudo Password"
+    "custom.permission.dialog.title": "Code With Me: Custom Permissions",
+    "permission.dialog.file.access.label": "Access to Files:",
+    "permission.dialog.hidden.files": "Code With Me: Hidden Files",
+    "permission.dialog.run.access.label": "Access to Run & Debug:",
+    "permission.dialog.toolWindow.access.tooltip": "Only for Gradle, Ant, Maven, Messages",
+    "permission.dialog.toolWindow.access.tooltip.clion": "Only for Gradle, Ant, Maven, Messages, CMake"
   },
   "messages/CollaborationToolsBundle.properties": {
-    "diff.discard.new.comment.icon.tooltip": "Discard a comment",
     "review.details.branch.checkout.remote.ad.label": "{0} ← {1}"
   },
   "messages/CommonProfilerBundle.properties": {
@@ -391,20 +505,63 @@
   "messages/CompilerIntegrationBundle.properties": {
     "jdk": "JDK(&J):"
   },
+  "messages/CompletionBundle.properties": {
+    "cloud.completion.enabled.comment": "Cloud completion models powered by AI Assistant (<a>Settings</a>)",
+    "cloud.completion.universal.completion.checkbox": "Universal completion",
+    "cloud.completion.universal.completion.exclude.files.comment": "Extensions of files to be excluded from code completion, comma-separated",
+    "cloud.completion.universal.completion.exclude.files.example.text": "Example: ext1, ext2",
+    "cloud.completion.universal.completion.exclude.files.label": "Exclude file types:",
+    "cloud.completion.universal.completion.hint": "Shows suggestions in files of any type"
+  },
   "messages/CompletionRankingModelsBundle.properties": {
     "ml.completion.experiment.model.cidr": "C/C++"
   },
   "messages/ComposeBundle.properties": {
-    "recomposition.state.function.description.lambda": "Composable {0}"
+    "add.composable.annotation": "Add '@Composable' annotation",
+    "add.composable.to.anonymous.function": "Add '@Composable' to anonymous function",
+    "add.composable.to.element.with.name": "Add ''@Composable'' to ''{0}''",
+    "add.composable.to.enclosing.lambda": "Add '@Composable' to enclosing lambda",
+    "add.composable.to.lambda.parameter": "Add ''@Composable'' to type of ''{0}'' parameter ''{1}''",
+    "add.composable.to.lambda.parameter.of.anonymous.function": "Add ''@Composable'' to type of anonymous function parameter ''{0}''",
+    "add.composable.to.property.type": "Add ''@Composable'' to type of ''{0}''",
+    "composable.function.rendering.text.attributes.description": "Calls to @Compose functions",
+    "compose.color.picker.name": "Compose color picker",
+    "recomposition.state.function.description.lambda": "Composable {0}",
+    "state.read": "State read",
+    "state.read.inlay.provider": "State reads",
+    "state.read.inlay.provider.description": "Accesses of State variables, which when changed, trigger a recomposition of the surrounding scope.",
+    "state.read.inlay.provider.disable": "Disable inlay hints for State reads",
+    "state.read.inlay.provider.enable": "Enable inlay hints for State reads",
+    "state.read.inlay.provider.name": "State reads",
+    "state.read.message": "When the value of {0} changes, {1} will recompose",
+    "state.read.message.titled": "State read: when the value of {0} changes, {1} will recompose",
+    "state.read.recompose.target.enclosing.anonymous.function": "the enclosing anonymous function",
+    "state.read.recompose.target.enclosing.lambda": "an enclosing lambda",
+    "state.read.scope.highlighting.text.attributes.description": "Highlighted @Composable scopes",
+    "state.read.text.attributes.description": "State Reads in @Composable scopes"
   },
   "messages/ComposePreviewBundle.properties": {
-    "inspection.animation.type.animate.as.state": "animate*AsState"
+    "action.uicheck.toolbar.description": "Control the visibility of UI Check previews",
+    "action.uicheck.toolbar.title": "Preview Visibility Control",
+    "action.uicheck.wear.description": "UI Check is not available for Wear previews",
+    "animation.inspector.action.close.tab": "Close animation tab",
+    "inspection.animation.type.animate.as.state": "animate*AsState",
+    "inspection.top.level.function": "Preview must be a top level declaration or in a top level class with a default constructor.",
+    "picker.preview.title": "Preview Configuration",
+    "ui.check.mode.empty.message": "UI Check did not find any issues to report",
+    "ui.check.mode.font.scale.group": "Font scales",
+    "ui.check.mode.light.dark.group": "Light/Dark",
+    "ui.check.mode.screen.accessibility.group": "Colorblind filters",
+    "ui.check.mode.suppress.action.description": "Suppress {0} rule from preview analysis"
   },
   "messages/ComposeProjectWizardBundle.properties": {
     "module.presentation.name": "Compose for Desktop"
   },
   "messages/CoreBundle.properties": {
     "plugin.name.and.vendor": "{0} ({1})"
+  },
+  "messages/CoverageBundle.properties": {
+    "coverage.show.unmodified.elements": "Show {0} without uncommitted changes"
   },
   "messages/CsBundle.properties": {
     "color.display.name.heredoc.id": "Heredoc id",
@@ -467,7 +624,6 @@
     "action.Generate.ToString.Dart.text": "toString()",
     "action.text.pub.build": "Pub Build…",
     "action.text.webdev.build": "Webdev Build…",
-    "dart.feedback.url": "https://github.com/dart-lang/sdk/issues/new?title={0}\\&body=",
     "dart.problems.view.status.0.and.1": "{0}、{1}",
     "dart.problems.view.status.0.and.1.and.2": "{0}、{1}、{2}",
     "dart.problems.view.status.0.and.filters.1": "{0} ({1})",
@@ -492,17 +648,12 @@
     "Console.TableResult.n.bytes.of.m.bytes.loaded": "{0}/{1}",
     "count.rows.action.of.text": "/{0}",
     "csv.format.settings.quotation.policy.escape.duplicate": "<duplicate>",
-    "excel.xlsx": "Excel (xlsx)",
-    "grid.load.nested.table.error": "Navigation to nested tables is unavailable for static grid",
-    "grid.load.nested.table.error.loading": "Navigation to nested tables is unavailable during loading of rows",
-    "grid.load.prev.nested.table.error.loading": "Navigation to {0} table is not available while rows are loading"
+    "excel.xlsx": "Excel (xlsx)"
   },
   "messages/DatabaseBundle.properties": {
     "ChangeDialectToolbarAction.action.dialect.text": "<dialect>",
     "DataSourceConfigurable.tab.ssh.ssl": "SSH/SSL",
     "DatabaseScriptRunConfigurationSettingsEditor.unknown.target": "<unknown>",
-    "DatabaseView.create.data.source.promotion.0": "No data sources",
-    "DatabaseView.create.data.source.promotion.1": "Create data source...",
     "DbObjectGrantsEditor.label.no.grantee": "<No grantee>",
     "DbObjectGrantsEditor.label.no.grants": "<No grants>",
     "DbObjectGrantsEditor.state.label.not.granted": "<Not granted>",
@@ -554,38 +705,9 @@
     "export.notification.success.message.reveal": "<a href=reveal>{0}</a>"
   },
   "messages/DatabricksBundle.properties": {
-    "action.run.as.workflow.text": "Run \"{0}\" as Workflow",
-    "cluster.action.create": "Create Cluster…",
-    "cluster.action.restart": "Restart Cluster…",
-    "cluster.action.start": "Start Cluster…",
-    "cluster.action.stop": "Terminate Cluster…",
-    "cluster.is.not.selected": "Select cluster to run jobs",
-    "cluster.not.ready": "You cannot run code on this cluster",
-    "cluster.ready": "You can run code on this cluster",
-    "cluster.worker.single": "None (single node cluster)",
-    "combobox.cluster.create.new": "Create new cluster..",
-    "combobox.configuration.cluster": "Attached cluster:",
-    "databricks.sync.notification.label": "Databricks sync",
-    "error.cannot.find.job.with.id": "Cannot find job with {0} run id.",
-    "job.action.create": "Create Job…",
-    "job.runs.action.run.job.with.params.title": "Run With Different Params…",
-    "link.sync.start": "Start sync",
-    "link.sync.stop": "Stop sync",
-    "monitoring.task.is.executing": "Task is performing…",
-    "note.format.inote": "INote (BigDataTools)",
-    "sync.status.aborted": "Stopped by user",
-    "sync.status.files.in.repos.disabled": "Error. Files in repos are disabled",
-    "sync.status.files.in.workspace.disabled": "Error. Files in workspace are disabled",
-    "sync.status.init": "Starting synchronization",
-    "sync.status.start": "Starting synchronization ({0} files)",
-    "sync.status.stopped": "Sync is stopped",
-    "sync.status.waiting": "Watching for changes",
-    "task.run.task.as.workflow": "Sending Databrciks workflow task",
-    "task.run.task.as.workflow.step.prepare.notebook": "Preparing notebok",
-    "task.run.task.as.workflow.step.run.notebook": "Running notebook",
-    "task.run.task.as.workflow.step.wait.cluster": "Starting the cluster",
-    "task.run.task.as.workflow.step.wait.sync": "Waiting finish sync of the workspace",
-    "title.sync.dest": "Sync Destnation"
+    "auth.type.azure": "Azure CLI",
+    "auth.type.databricks.cli": "Databricks CLI",
+    "note.format.inote": "INote (BigDataTools)"
   },
   "messages/DatagenBundle.properties": {
     "test.data.generator.lorem.ipsum": "Lorem Ipsum",
@@ -617,6 +739,9 @@
     "inspections.group.path": "Plugin DevKit",
     "plugin.xml.convert.action.or.group.invalid.name": "<invalid name>",
     "plugin.xml.convert.language.id.any.language.display.name": "<any language>"
+  },
+  "messages/DevKitGitBundle.properties": {
+    "push.commit.message.lacks.issue.reference.body": "<html>Commits listed below change the Kotlin IDE plugin sources. According to the rules of the plugin team, <a href=https://github.com/JetBrains/intellij-community/blob/master/plugins/kotlin/README.md#2-commits-requirements>all meaningful commits</a> should reference a <a href=\"https://youtrack.jetbrains.com/newIssue?project=KTIJ\">KTIJ</a>, <a href=\"https://youtrack.jetbrains.com/newIssue?project=IJPL\">IJPL</a> or <a href=\"https://youtrack.jetbrains.com/newIssue?project=IDEA\">IDEA</a> issue in their message. Do you still want to push as is? <pre>{0}</pre> </html>"
   },
   "messages/DevKitImagesBundle.properties": {
     "action.darcula.hidpi.theme.text": "Darcula HiDPI"
@@ -656,20 +781,32 @@
     "visibility.level.package": "public  package",
     "visibility.level.protected": "public  package  protected"
   },
+  "messages/DiagramJavaBundle.properties": {
+    "intention.name.show.diagram": "Show UML diagram"
+  },
   "messages/DiffBundle.properties": {
+    "apply.patch.all.changes.processed.message.text": "Save changes and finish resolve",
+    "apply.patch.all.changes.processed.title.text": "All hunks have been processed",
     "blank.diff.recent.content.summary.text.date": "{0} ({1})",
     "diff.utf.charset.name.bom.suffix": "{0} BOM",
-    "settings.automatically.resolve.imports.conflicts": "Automatically resolve conflicts in import statements"
+    "merge.all.changes.processed.message.text": "Save changes and finish merging",
+    "merge.all.changes.processed.title.text": "All changes have been processed"
   },
   "messages/DjangoBundle.properties": {
     "django.manage.console.name": "manage.py@{0}",
     "django.manage.name": "manage.py",
-    "django.project.generator.open.files": "Open files…",
-    "django.templates.command.set.folder": "Set folder for Django templates",
-    "django.templates.command.set.language": "Set language for Django templates backend",
     "inspection.url_tag_arguments.named_arg_string": "''{0}''",
     "magic_literals.django_url_name": "Django url",
     "manage.run.tab.name": "Django: manage.py"
+  },
+  "messages/DockerAgentBundle.properties": {
+    "BuildDevcontainerWithGitModelExtractor.cleanup": "Cleaning up temporary working directory ''{0}''…",
+    "DevContainerPreparation.remove.previous": "Removing previous dev container…",
+    "DockerDevcontainerModelExtractor.creating.temporary.folder": "Creating temporary folder for extracting model…",
+    "DockerDevcontainerModelExtractor.extract.devcontainer.model.from.repository": "Extract devcontainer model from repository…",
+    "DockerDevcontainerModelExtractor.model.successfully.extracted": "Model files successfully extracted…",
+    "devcontainer.features.downloading.manifest": "Downloading {0} feature manifest…",
+    "devcontainers.feature.creating.base.image": "Creating {0}…"
   },
   "messages/DockerBundle.properties": {
     "ComposeApplicationRuntime.notification.group": "docker-compose",
@@ -705,11 +842,13 @@
     "DockerExtraHostConfigurable.ip.text": "IP:",
     "DockerFileDeploymentSourceType.deploymentName": "{0} Dockerfile: {1}",
     "DockerFileDeploymentSourceType.suggestRunConfigurationName": "{0}",
+    "DockerGroupRuntime.DevcontainersGroup.groupName": "Dev Container",
     "DockerSingletonDeploymentSourceType.unknown.node.text": "<unknown>",
     "DockerSshConnectionConfigurator.label": "SSH:",
     "DockerTargetConfigurable.dockerfile.row.label": "Dockerfile:",
     "DockerWslConnectionConfigurator.label": "WSL:",
-    "RegistryRuntimeTask.current.of.total": "{0}/{1}"
+    "RegistryRuntimeTask.current.of.total": "{0}/{1}",
+    "action.Docker.FilterDevontainers.text": "Dev Container"
   },
   "messages/DockerComposeBundle.properties": {
     "ComposeFileRunLineMarkerProvider.AllServicesLineMarkerInfo.tooltip": "docker-compose up",
@@ -717,12 +856,18 @@
     "ComposeFileRunLineMarkerProvider.ServiceLineMarkerInfo.up.tooltip": "docker-compose up {0}"
   },
   "messages/DockerGatewayBundle.properties": {
+    "DockerCreateDevcontainerPanel.computing.backend": "Computing backend…",
     "DockerGateway.devcontainer": "Dev Container",
     "DockerGatewayConnector.title": "Docker Dev Container",
     "DockerGatewayRecentConnections.title": "Dev Container",
-    "action.com.intellij.clouds.docker.gateway.actions.NewDevcontainerAction.text": ".devcontainer",
+    "Ijent.trying.to.clone.with.https.url": "Trying to clone with https url {0}…",
+    "action.com.intellij.clouds.docker.gateway.actions.NewDevcontainerAction.text": "New Dev Container Configuration…",
+    "action.com.intellij.clouds.docker.gateway.actions.NewDevcontainerFileAction.text": ".devcontainer",
+    "advanced.setting.dev.containers.always.use.latest.backend": "Always use the latest backend",
+    "advanced.setting.dev.containers.show.connection.notification.on.timeout": "Display notification if deployment of dev container backend / frontend takes more than 10 sec",
     "advanced.settings.dev.containers": "Dev Container",
-    "group.Dev.Container.Actions.text": "Dev Container"
+    "group.Dev.Container.Actions.text": "Dev Container",
+    "group.Tools.Services.DevContainers.text": "Dev Container"
   },
   "messages/DownburstBundle.properties": {
     "docker.terminal.title": "Docker: {0}",
@@ -732,8 +877,7 @@
   "messages/DpaBundle.properties": {
     "dpa.icon.widget.display.name": "Dynamic Program Analysis",
     "dpa.options.page.name": "Dynamic Program Analysis",
-    "dpa.status.bar.popup.title": "Dynamic Program Analysis",
-    "dpa.toolwindow.stripe": "Dynamic Program Analysis"
+    "dpa.status.bar.popup.title": "Dynamic Program Analysis"
   },
   "messages/DubboBundle.properties": {
     "inspection.group.name": "Apache Dubbo",
@@ -782,15 +926,6 @@
     "action.Educational.Educator.SyncChangesWithNextTasks.SingleFile.text": "Sync File with Next Tasks...",
     "action.Educational.Educator.SyncChangesWithNextTasks.conflict.resolution.smart.indicator": "Resolving Conflicts...",
     "action.Educational.Student.ApplyCode.dialog.text": "Are you sure you want to apply this code?",
-    "course.dialog.hyperskill.jba.on.hyperskill.description": "Together with Hyperskill, JetBrains Academy provides a project-based approach to learning computer science available right in JetBrains IDEs",
-    "course.dialog.hyperskill.jba.on.hyperskill.how.it.works": "Here''s how it works",
-    "course.dialog.hyperskill.jba.on.hyperskill.how.it.works.learn.by.doing.description": "Dive into theory and get hands-on with interactive tasks",
-    "course.dialog.hyperskill.jba.on.hyperskill.how.it.works.learning.track.description": "Pick a skill set that you want to improve or learn from the ground up",
-    "course.dialog.hyperskill.jba.on.hyperskill.how.it.works.learning.track.title": "Select a learning track",
-    "course.dialog.hyperskill.jba.on.hyperskill.how.it.works.real.apps.comment": "Premium subscription required",
-    "course.dialog.hyperskill.jba.on.hyperskill.how.it.works.real.apps.description": "Work on projects and build your developer portfolio from scratch",
-    "course.dialog.hyperskill.jba.on.hyperskill.how.it.works.real.apps.title": "Create real-world applications",
-    "course.dialog.hyperskill.jba.on.hyperskill.log.in": "Log in to Hyperskill",
     "exception.message.http.info": "HTTP {0} {1}",
     "inspection.group.path.key": "JetBrains Academy",
     "marketplace.widget.title": "JetBrains Account",
@@ -815,13 +950,11 @@
     "jlink.gdb.server.displayname": "Segger JLink",
     "label.jlink.gdb.server": "Segger J-Link",
     "label.st.util.gdb.server": "st-util",
-    "non.readable": "<Non-readable>",
     "pemicro.gdb.server.displayname": "PE Micro (OpenSDA)",
     "reset.strategy.pre_reset": "Pre-Reset",
     "reset.strategy.under_reset": "Init-Under-Reset",
     "rtos.azure.display.name": "Azure RTOS ThreadX",
-    "stutil.displayname": "st-util",
-    "svd.write.only": "<Write-Only>"
+    "stutil.displayname": "st-util"
   },
   "messages/EmrBundle.properties": {
     "emr.spark.submit.editor.mapper": "Mapper:",
@@ -834,6 +967,9 @@
   },
   "messages/EvaluationPluginBundle.properties": {
     "evaluation.settings.filters.static.title": "static:"
+  },
+  "messages/ExceptionAnalyzerBundle.properties": {
+    "runtime.error.highlighting.service": "Runtime error highlighting service started"
   },
   "messages/ExecutionBundle.properties": {
     "combo.java.version.1.4": "JDK 1.4.x",
@@ -849,20 +985,29 @@
     "wsl.folding.placeholder": "{0}: {1}"
   },
   "messages/ExternalSystemBundle.properties": {
+    "action.ExternalSystem.RecoveryAction.name": "Invalidate Build System Caches and Re-sync",
     "external.system.dependency.analyzer.editor.tab.name": "Dependency Analyzer",
     "progress.update.text": "{0}: {1}"
+  },
+  "messages/FSharpBundle.properties": {
+    "Fsi.runConfiguration.has.invalid.script.file.path": "F# script file should exist and have the '.fsx' extension",
+    "Fsi.runConfiguration.type.description": "Run F# script",
+    "Fsi.runConfiguration.type.display.name": "Run F# script"
   },
   "messages/FacesBundle.properties": {
     "action.Faces.CreateJsfAction.text": "JSF/Facelets",
     "list.item.jsf.facelets": "JSF/Facelets"
   },
   "messages/FeedbackBundle.properties": {
+    "action.org.jetbrains.kotlin.onboarding.k2.satisfaction.survey.ShowK2FeedbackDialogAction.text": "Show Kotlin K2 Mode Feedback Dialog",
+    "dialog.k2.satisfaction.title": "K2 Mode Feedback",
     "dialog.previous.ide.2": "IntelliJ Ultimate",
     "dialog.previous.ide.3": "IntelliJ Community",
     "dialog.previous.ide.4": "Android Studio",
     "dialog.previous.language.4": "JavaScript/TypeScript",
     "dialog.previous.language.5": "C/C++",
-    "dialog.previous.language.6": "C#"
+    "dialog.previous.language.6": "C#",
+    "notification.k2.satisfaction.thanks.feedback.content": "You are helping improve the Kotlin K2 mode plugin!"
   },
   "messages/FindBundle.properties": {
     "emptyText.used.option": "{0}",
@@ -878,6 +1023,19 @@
     "javascript.uml.visibility.package_local": "protected \\&\\& internal",
     "js.uml.presentable.name": "ActionScript/Flex"
   },
+  "messages/FlywayBundle.properties": {
+    "action.CreateDiffFlyway.DatabaseViewPopup.text": "Create Flyway Versioned Migration…",
+    "action.CreateDiffFlyway.EditorToolbar.text": "Diff DDL…",
+    "action.CreateDiffFlyway.text": "Flyway Versioned Migration…",
+    "action.CreateFlywayJavaCallback.text": "Flyway Java Callback…",
+    "action.CreateFlywayJavaMigration.text": "Flyway Java Migration…",
+    "action.CreateFlywaySnapshot.text": "Data Model Snapshot…",
+    "action.CreateFlywaySqlCallback.text": "Flyway SQL Callback…",
+    "action.CreateFlywayVersioned.text": "Flyway Empty Migration…",
+    "action.CreateInitFlyway.EditorToolbar.text": "Init DDL…",
+    "action.CreateInitFlyway.description": "Generate Flyway init migration",
+    "action.CreateInitFlyway.text": "Flyway Init Migration…"
+  },
   "messages/FrameworkBundle.properties": {
     "framework.commands.form.messages.title.command.line.tools": "Command Line Tools",
     "framework.run.anything.value.patten.help.description": "{0}<value> {1}",
@@ -889,7 +1047,11 @@
   },
   "messages/FullLineBundle.properties": {
     "full.line.configurable.name": "Full Line Code Completion",
-    "full.line.notifications.feedback.title": "Full Line Code Completion"
+    "full.line.notifications.feedback.title": "Full Line Code Completion",
+    "full.line.settings.header.comment.avx2.unsupported": "Full Line Code Completion is disabled due to lack of AVX2 support on your processor"
+  },
+  "messages/GDBBundle.properties": {
+    "warning.pretty.printer.failed": "Using the raw presentation due to pretty printer error. Check the GDB console for details."
   },
   "messages/GatewayBundle.properties": {
     "connector.cwm.dialog.title": "Code With Me",
@@ -907,7 +1069,6 @@
   "messages/GitBundle.properties": {
     "abort.operation.indicator.text": "git {0} --abort{1}",
     "action.Git.Fixup.To.Commit.text": "Fixup…",
-    "action.Git.Log.Show.Command.text": "Show Git Log for Command",
     "activity.name.abort.command": "Git abort {0}",
     "activity.name.checkout": "Git checkout",
     "activity.name.cherry.pick": "Git cherry-pick",
@@ -930,7 +1091,7 @@
     "log.command.empty.text": "[<options>] [<revision-range>] [[--] <path>...]",
     "remotes.define.remote.url": "URL:",
     "stash.editor.diff.preview.id.change.title": "{0}: {1}",
-    "unstash.stash.applied": "Stash successfully applied"
+    "stash.keep.index.tooltip": "If this checkbox is selected, all changes already added to the index are left intact"
   },
   "messages/GitLabBundle.properties": {
     "merge.request.on.branch": "!{0}，{1}"
@@ -939,7 +1100,6 @@
     "action.Github.Share.Vcs.Toolbar.Widget.text": "GitHub…"
   },
   "messages/GithubUltimateBundle.properties": {
-    "GithubActionsCronDocumentationTarget.cron.explanation": "<p>Cron explanation: <b>{0}</b></p><p>For Cron format explanation, see <a href=\"https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule\">https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule</a>.</p>",
     "group.com.intellij.github.actions.ide.new.file.text": "GitHub Actions"
   },
   "messages/GlassfishBundle.properties": {
@@ -966,21 +1126,16 @@
     "go.wizard.name": "Go (GOPATH)",
     "vgo.inspection.dependency-deprecated-retracted.tooltip-template": "<html><body>{0}.<p><span style=\"color:{3}\">{1}:</span> {2}</body></html>"
   },
+  "messages/GoLLMBundle.properties": {
+    "go.ai.assistant.test.generation.prompt.library.name": "Go Test Generation"
+  },
   "messages/GraalVmBundle.properties": {
     "debugger.display.name": "GDB/GraalVM"
   },
   "messages/GradleBundle.properties": {
-    "gradle.build.issue.gradle.compatible.maximum.description": "The maximum compatible Gradle version is {0}.",
-    "gradle.build.issue.gradle.compatible.minimum.description": "The minimum compatible Gradle version is {0}.",
-    "gradle.build.issue.gradle.jvm.compatible.maximum.description": "The maximum compatible Gradle JVM version is {0}.",
-    "gradle.build.issue.gradle.jvm.compatible.minimum.description": "The minimum compatible Gradle JVM version is {0}.",
-    "gradle.build.issue.gradle.jvm.incompatible.description": "Your build is currently configured to use incompatible Java {0} and Gradle {1}. Cannot sync the project.",
-    "gradle.build.issue.gradle.jvm.incompatible.title": "Incompatible Gradle JVM",
-    "gradle.build.issue.gradle.jvm.incompatible.unknown.gradle.description": "Your build is currently configured to use incompatible Java {0}. Cannot sync the project.",
-    "gradle.build.issue.gradle.jvm.incompatible.unknown.java.description": "Your build is currently configured to use incompatible Java. Cannot sync the project.",
     "gradle.dsl.new.project.wizard": "Gradle DSL:",
     "gradle.filetype.display.name": "Groovy Gradle DSL",
-    "gradle.plugin.0": "Gradle plugin ''{0}''",
+    "gradle.notifications.sources.download.from.repository.failed.content": "<html>Unable to download {0} from {1}. Ensure that all the artifact’s components are available in this repository. Alternatively, adjust the order of repositories in build.gradle to prioritize downloading from the repository with the full set of components.</html>",
     "gradle.settings.text.jvm.path": "Gradle JVM:"
   },
   "messages/GrailsBundle.properties": {
@@ -1015,13 +1170,12 @@
     "filetype.logback.display.name": "Groovy Logback DSL",
     "framework.0.sdk.chooser.title": "{0} SDK",
     "getter.kind.getter.0": "Getter {0}",
-    "groovy.complex.argument.label.annotator.message": "A complex label expression before a colon must be parenthesized",
-    "groovy.complex.argument.label.quick.fix.message": "Parenthesize expression",
     "groovy.version.0": "Groovy {0}",
     "inspection.display.name.delegates.to": "@DelegatesTo",
     "label.groovy.sdk": "Groovy SDK:",
     "module.name.0.and.groovy.version.1": "{0} ({1})",
     "non.sealed.visibility.presentation": "non-sealed",
+    "settings.inlay.groovy.lambda.parameter.provider.description": "Displays the types of a parameter in lambda expressions:",
     "surround.with.cast": "((Type) expr)",
     "surround.with.closure": "{ -> ... }.call()",
     "surround.with.if.else": "if / else",
@@ -1063,13 +1217,7 @@
     "compiler.message.stderr.0": "[stderr]: {0}"
   },
   "messages/HCLBundle.properties": {
-    "action.Terraform.InstallTerraform.description": "Download and install the latest stable version of Terraform",
-    "action.Terraform.InstallTerraform.text": "Install Terraform",
-    "terraform.doc.block.type.0": "{0} {1}",
-    "terraform.executor.unrecognized.version": "Unrecognized Terraform version",
-    "terraform.executor.version": "Getting Terraform version",
-    "terraform.fmt.commit.error.message": "Couldn't apply 'terraform fmt' on chosen files",
-    "terraform.invalid.path": "Specified path doesn't exist"
+    "terraform.doc.block.type.0": "{0} {1}"
   },
   "messages/HadoopMonitoringBundle.properties": {
     "settings.group.name": "Hadoop YARN",
@@ -1114,10 +1262,21 @@
     "settings.uri.emptyText": "thrift://address:1083,thrift://address2:1083"
   },
   "messages/HttpClientExecutorBundle.properties": {
+    "http.client.configurable.command.line.editor.row.name": "Custom HTTP methods:",
+    "http.client.script_assertion_message": "Assertion Error: ''{0}''",
     "rest.client.0.of.1.kb.indicator.text": "{0}/{1}Kb"
   },
   "messages/HuggingFaceProBundle.properties": {
-    "group.HuggingFace.text": "Hugging Face"
+    "action.title.refresh": "Refresh Cache List",
+    "action.title.remove.from.cache": "Remove From Cache",
+    "cache.table.column.repo.type": "Repo Type",
+    "cache.table.column.repoId": "Repo ID",
+    "cache.table.column.size.on.disk": "Size Mb",
+    "group.HuggingFace.text": "Hugging Face",
+    "panel.label.cli.is.not.setup": "Hugging Face CLI is not detected",
+    "python.hugging.face.model.choice.no.template.for.model": "Model usage template is currently not available.",
+    "python.hugging.face.model.choice.please.visit.model.page": "To explore other integration options, please visit the model's page on the Hugging Face website.",
+    "toolwindow.cacheToolWindow.title": "Hugging Face"
   },
   "messages/HunspellBundle.properties": {
     "hunspell.type": "hunspell-jni"
@@ -1128,8 +1287,12 @@
   "messages/IdeBundle.properties": {
     "about.box.jcef": "JCEF {0}.{1}.{2}",
     "about.box.vm": "VM: {0}，{1}",
+    "accessibility.filter.label": "{0}: {1}",
     "action.reopen.project.display.name.with.branch": "{0}  [{1}]",
     "browsers.explorer": "Internet Explorer",
+    "checkbox.compact.tree.indents": "Use smaller indents",
+    "checkbox.expand.node.with.single.click": "Expand node with single click",
+    "checkbox.expand.node.with.single.click.comment": "Some trees may ignore this setting",
     "colorpanel.label.alpha.percent": "A%",
     "colorpanel.label.brightness": "B%",
     "colorpanel.label.hue": "H°",
@@ -1141,13 +1304,21 @@
     "colorpicker.label.red": "R:",
     "colorpicker.label.saturation": "S:",
     "colorpicker.recent.color.tooltip": "R: {0} G: {1} B: {2} A: {3}",
+    "combobox.region.comment": "Configure region to ensure links and region-specific features work correctly.<br>For more details see <a href=\"{0}\">documentation</a>. Requires restart.",
     "configurable.AppEngineFacetEditor.display.name": "Google App Engine",
+    "dialog.message.url.is.empty": "The URL is empty",
+    "dialog.message.url.is.invalid": "The URL is invalid",
+    "group.customizations.add.action.below": "Add Action Below…",
     "icon.nodes.c_plocal.tooltip": "package-local",
+    "ijent.wsl.fs.dialog.message": "Please restart the IDE to automatically apply the necessary VM options",
+    "ijent.wsl.fs.dialog.title": "VM Options For WSL File System Through Remote Agent",
+    "incomplete.mode.results.might.be.incomplete": "Results might be incomplete until all dependencies are loaded",
     "intellij.light.theme.name": "IntelliJ Light",
     "label.text.antialiasing.scope.ide": "IDE:",
     "label.version.any": "<any>",
     "list.item.temporary.file.0": "<temporary file>{0}",
     "login.dialog.title": "{0}",
+    "notification.group.advertiser.try.ultimate.installed.content": "Your settings will be migrated. {0} will still be available.",
     "notification.manager.content.height.linebreak": "<br>\n",
     "notification.title.jcef.measureFPS": "OSR JCEF FPS Meter",
     "plugin.advertiser.product.call.to.action": "{0}: {1}",
@@ -1156,12 +1327,21 @@
     "presentation.assistant.notification": "Presentation Assistant",
     "presentation.assistant.settings": "Presentation Assistant",
     "presentation.assistant.toggle.action.name": "Presentation Assistant",
+    "progress.counting.files": "Counting files",
+    "progress.saving.app": "Saving application settings",
+    "progress.saving.project": "Saving ''{0}'' settings",
     "settings.menus.group.touch.bar": "Touch Bar",
     "start.browser.panel.url.label": "URL(&U):",
     "task.browser.url": "URL:",
+    "text.use.solution.colors.in.main.toolbar": "Distinguish projects with different toolbar colors at a glance.",
+    "title.language.and.region": "Language and Region",
     "transfersettings.product.visual.studio": "Visual Studio",
     "transfersettings.product.visual.studio.for.mac": "Visual Studio for Mac",
     "wsl.wsl.ip": "WSL (Linux) IP"
+  },
+  "messages/IdeCoreBundle.properties": {
+    "macro.os.user": "The name of the operating system user",
+    "proxy.old.way.label": "<html>You have JVM property <tt>{0}</tt> set to <tt>{1}</tt>. This may lead to incorrect behaviour. Proxy should be set in Settings | HTTP Proxy. This JVM property is old and its usage is not recommended by Oracle. (Note: It could have been assigned by some code dynamically.)</html>"
   },
   "messages/ImagesBundle.properties": {
     "icon.dimensions": "{0,number}x{1,number}x{2,number}",
@@ -1173,8 +1353,13 @@
     "transfer.error.no-error-message": "<no error message>"
   },
   "messages/InspectionGadgetsBundle.properties": {
+    "if.statement.with.identical.branches.display.name": "'if' statement with identical branches or common parts",
+    "result.of.object.allocation.ignored.problem.descriptor.methodRef": "Object allocated inside <code>#ref</code> is discarded #loc",
+    "single.character.startswith.problem.descriptor": "Single character <code>#ref()</code> can be replaced with 'charAt()' expression #loc",
     "static.import.display.name": "static import",
-    "static.import.problem.descriptor": "static import <code>#ref</code>  #loc"
+    "static.import.problem.descriptor": "static import <code>#ref</code>  #loc",
+    "string.concatenation.argument.to.log.call.problem.descriptor": "Non-constant string as argument to <code>#ref()</code> logging call #loc",
+    "switch.statement.density.problem.descriptor": "<code>#ref</code> branch density is too low ({0}%) #loc"
   },
   "messages/InspectionJSBundle.properties": {
     "add.require.amd.module.group.name": "Node.js"
@@ -1199,6 +1384,8 @@
   },
   "messages/J2EEBundle.properties": {
     "group.names.javaee.issues": "Java EE",
+    "javaee.starter.library.core-api.description": "Includes CDI, JSON-P, JSON-B, and JAX-RS specifications.",
+    "javaee.starter.library.nosql.description": "Framework that streamlines the integration of Java applications with NoSQL databases",
     "project.view.pane.title.j2ee": "Java EE",
     "starter.web.application.hint": "Servlet、web.xml、index.jsp"
   },
@@ -1222,6 +1409,12 @@
     "pug.inspections.group.name": "Pug/Jade",
     "pug.template.context.name": "Pug/Jade"
   },
+  "messages/JakartaDataBundle.properties": {
+    "beans.tool.window.name": "Jakarta Data",
+    "entity.attribute.expected.type.error.message": "Parameter must be of ''{0}'' type",
+    "jakarta.data.inspections.group": "Jakarta Data",
+    "jakarta.data.ql": "Jakarta Data QL"
+  },
   "messages/JavaAnalysisBundle.properties": {
     "dfa.find.cause.special.field.of.something": "{0}/{1}",
     "inspection.reference.lambda.name": "lambda ({0})"
@@ -1229,11 +1422,16 @@
   "messages/JavaBundle.properties": {
     "action.create.new.module-info.title": "module-info.java",
     "action.create.new.package-info.title": "package-info.java",
+    "advanced.setting.compiler.unified.ic.implementation": "Enable unified Java/Kotlin incremental compilation implementation",
+    "advanced.setting.compiler.unified.ic.implementation.description": "External JPS process will use new incremental compilation implementation that can handle both Java- and Kotlin-produced bytecode",
+    "checkbox.check.for.jdk.updates": "Check for JDK updates",
     "checkbox.collapse.suppress.warnings": "<html>@SuppressWarnings</html>",
+    "inspection.same.parameter.problem.descriptor": "Value of parameter <code>#ref</code> is always ''{0}''",
     "inspection.unused.symbol.check.accessors": "Getter/Setter",
     "intention.category.junit": "Java/JUnit",
     "intention.create.test.dialog.setUp": "set&Up/@Before",
     "intention.create.test.dialog.tearDown": "tear&Down/@After",
+    "intention.family.name.rename.to.ignored": "Rename to ignored",
     "intention.surround.with.ARM.block.template": "try-with-resources",
     "java.terms.variable.of.method": "{0}/{1}",
     "jrt.node.short": "[JRT]",
@@ -1271,6 +1469,20 @@
     "threads.export.attribute.label.priority": "prio={0}",
     "threads.export.attribute.label.tid": "tid=0x{0}"
   },
+  "messages/JavaDfaAnalysisBundle.properties": {
+    "inspection.cast.always.fails": "Cast always fails",
+    "inspection.cast.may.fail": "Cast may fail",
+    "inspection.dfa.progress": "DFA Chunks Processing",
+    "inspection.ir.progress": "IR Files Generation",
+    "inspection.null.dereference": "Possible null dereference",
+    "inspection.rml.analysis.display.name": "Global RML-based analysis"
+  },
+  "messages/JavaErrorBundle.properties": {
+    "annotation.not.allowed.in.permit.list": "Annotation is not allowed in permit list",
+    "record.is.not.used": "Record ''{0}'' is never used",
+    "switch.unconditional.boolean.and.default.exist": "'switch' has all boolean values and a default label",
+    "switch.unconditional.boolean.and.unconditional.exist": "'switch' has all boolean values and an unconditional pattern"
+  },
   "messages/JavaFXBundle.properties": {
     "javafx.edit.certificates.dialog.keypass": "Keypass(&E):",
     "javafx.edit.certificates.dialog.keystore": "Keystore(&Y):",
@@ -1285,6 +1497,7 @@
     "element.kind.and.name": "{0} {1}",
     "feature.classfile.api": "ClassFile API",
     "feature.objects.class": "java.util.Objects API",
+    "feature.primitive.types.in.patterns": "Primitive types in patterns, instanceof and switch",
     "feature.static.imports": "static import",
     "feature.stream.gatherers": "Stream Gatherer",
     "feature.try.with.resources": "Try-with-resources",
@@ -1307,7 +1520,6 @@
     "action.QUnitGenerateNewTestAction.text": "QUnit Test",
     "action.QUnitGenerateSetupAction.text": "QUnit Setup",
     "action.QUnitGenerateTearDownAction.text": "QUnit TearDown",
-    "bower.json": "bower.json (&O):",
     "es6.auto.import.options.title": "TypeScript / JavaScript",
     "fetch.client.generator.title": "JavaScript Fetch",
     "filetype.ecmascript6.description": "ECMAScript 6",
@@ -1320,7 +1532,6 @@
     "grunt.rc.gruntfile.label": "Gruntfile (&F):",
     "gulp.rc.gulpfile.label": "Gulpfile (&F):",
     "intention.category.ecmascript6": "JavaScript/ECMAScript 6",
-    "intention.family.name.enable.web.types": "Enable HTMX support",
     "introduce.variable.const": "const(&C)",
     "introduce.variable.let": "let(&L)",
     "introduce.variable.var": "var(&V)",
@@ -1360,7 +1571,6 @@
     "notification.group.linters": "JavaScript linter",
     "npm.rc.packageJson.label": "package.json(&P):",
     "settings.nodejs.name": "Node.js",
-    "ts.param.hints.blacklist.pattern.explanation": "<b>Deprecation notice:</b> <p style=\"margin-left: 5px\">Starting from TypeScript 4.4, the <code>provideInlayHints</code> service method is used to render the hints. The method has its own heuristics; hence, this exclude list is not used anymore.",
     "typescript.compiler.configurable.options.version": "TypeScript:",
     "unresolved.project.interpreter.notification.download.action.url": "https://nodejs.org/en/download"
   },
@@ -1377,6 +1587,8 @@
     "facet.banner.text": "Facet ''{0}''",
     "facet.type.banner.text": "''{0}''Facets",
     "jdk.missing.item": "<No JDK>",
+    "jdk.windows.wsl.error": "A WSL JDK can't be used to set up a Windows project",
+    "jdk.wsl.windows.error": "A Windows JDK can't be used to set up a WSL project",
     "label.maven": "Maven:",
     "label.project.wizard.new.project.jdk": "JDK:",
     "multiple.facets.banner.0.1.facets": "{0} {1} facet",
@@ -1409,9 +1621,13 @@
     "RepositoryMethodDialog.is": "(Is)",
     "configurable.group.jpa.buddy.tools.settings.display.name": "JPA Buddy",
     "inspection.group.key.jpbCommon": "JPA Buddy",
+    "inspection.serializable.annotator.message": "Class ''{0}'' should implement ''Serializable''",
     "jpa.buddy.generation": "JPA Buddy",
     "jpaBuddy.title": "JPA Buddy",
     "project.persistenceUnit.caption": "JPA Buddy"
+  },
+  "messages/JpaHighlightingBundle.properties": {
+    "attribute.should.be.interface.or.serializable": "Attribute ''{0}\" type should be an interface or serializable"
   },
   "messages/JpaModelBundle.properties": {
     "BasicRepositoryAttribute.Nullability.NotSet": "-",
@@ -1423,10 +1639,12 @@
     "jpa.buddy.template.group": "JPA Buddy",
     "microsoft.sql.server": "Microsoft SQL Server",
     "microsoft.sql.server.jtds": "Microsoft SQL Server (jtds)",
+    "migrate.default.values": "Migrate default values",
     "to.string": "toString()",
     "transactional.read.only": "Transactional readOnly"
   },
   "messages/JpaQlBundle.properties": {
+    "label.jpa.query.language": "JPA query language",
     "options.xml.display.name": "JPA QL"
   },
   "messages/JsonBundle.properties": {
@@ -1437,16 +1655,11 @@
     "Jupyter.hub.login.dialog.description.instruction.link.href": "https://jupyterhub.readthedocs.io/en/stable/reference/rest.html#create-an-api-token",
     "Jupyter.servers.managed.server.dynamic.port": "<Dynamic>",
     "action.JupyterAddRawNBCellAction.text": "Raw NBConvert",
-    "action.JupyterCellPanel.NotebookInsertCellBelowWithLLMAction.text": "Open Autopilot",
-    "action.JupyterCellPanel.OpenAutopilotActionWrapperNew.text": "Open Autopilot",
     "action.JupyterCreateFileAction.text": "Jupyter Notebook",
     "jupyter.cell.type.raw": "Raw NBConvert",
     "jupyter.server.run.configuration.radio.python.sdk": "Python SDK",
     "notebook.collapsed.web.output.text": "Web: {0}x{1} px",
-    "settings.show.add.cell.popup": "Show \"Add Cell\" pop-up in the editor",
-    "settings.show.inline.values.in.the.editor": "Show inline values for:",
-    "settings.show.inline.values.in.the.editor.mode.current.line": "Current Line",
-    "settings.show.inline.values.in.the.editor.mode.entire.notebook": "Entire Notebook"
+    "settings.markdown.scale.percentage.suffix": "%."
   },
   "messages/JupyterDSBundle.properties": {
     "notification.group.jupyter": "Jupyter Notebook"
@@ -1457,15 +1670,28 @@
     "kotlin.jupyter.template.context.type.generic": "Kotlin Notebook"
   },
   "messages/JupyterLLMBundle.properties": {
-    "action.PyExplainDataFrameAction.description": "Explain dataframe with LLM",
-    "action.PyGenerateChartsForDataFrameAction.description": "Generate code for dataframe visualization in chat with LLM",
-    "action.PyGenerateChartsForDataFrameAction.text": "Generate Charts for DataFrame",
-    "autopilot.button.get.advice.from.ai": "Get Advice from AI",
-    "autopilot.progress.title.getting.suggestions": "Getting suggestions from Autopilot",
-    "autopilot.text.field.put.text.here": "Put text here",
-    "intention.edit.cell.with.ai": "Edit Cell",
-    "intention.explain.cell.with.markdown": "Generate Markdown for Cell",
-    "intention.fix.error.in.cell.with.ai": "Fix Error in Cell"
+    "action.LLMJupyterPythonChartsActionBelowTable.text": "Generate Under Table",
+    "action.LLMJupyterPythonChartsActionBelowTableCloseAction.description": "Delete charts",
+    "action.LLMJupyterPythonChartsActionBelowTableCloseAction.text": "Delete Charts",
+    "action.LLMJupyterPythonChartsActionChat.text": "Generate in Chat",
+    "action.LLMJupyterPythonChartsActionsGroup.separator": "Charts Recommended by AI",
+    "error.install.visualization.package.info": "You need to have {0} package installed to generate the visualizations"
+  },
+  "messages/JupyterLLMCommonBundle.properties": {
+    "action.EditCellWithAIAction.text": "AI Edit Cell",
+    "action.FixCellWithAIAction.text": "AI Fix Cell",
+    "autopilot.cell.command.accept.result.code": "Accept Result Code",
+    "autopilot.cell.command.replace.current.message.part": "Revert Original Code",
+    "autopilot.cell.command.revert.original.code": "Revert Original Code",
+    "autopilot.text.field.create.new.cell": "Ask the assistant to create some code for you",
+    "autopilot.text.field.edit.cell": "Ask the assistant how to edit this cell"
+  },
+  "messages/JupyterPyBundle.properties": {
+    "convert.jupyter.action.convert.description": "Convert notebook to {0} format",
+    "convert.jupyter.action.error": "Cannot convert {1} to {0} format.",
+    "export.notebook.progress": "Exporting {0} notebook to {1}…",
+    "group.ConvertJupyterActionGroup.description": "Export notebook as…",
+    "group.ConvertJupyterActionGroup.text": "Export Notebook As…"
   },
   "messages/KafkaBundle.properties": {
     "kafka.auth.aws_iam": "AWS IAM",
@@ -1496,33 +1722,56 @@
     "html.javascript.0.html": "JavaScript: {0}",
     "i.for.i.br.0": "<i> for </i><br/>{0}"
   },
+  "messages/KotlinBasePluginBundle.properties": {
+    "kotlin.plugin.kind.k1": "K1 mode",
+    "kotlin.plugin.kind.k2": "K2 mode (Alpha)"
+  },
   "messages/KotlinBaseProjectStructureBundle.properties": {
+    "klib.manifest.description": "Klib manifest",
     "sdk.0": "<sdk {0}>"
   },
   "messages/KotlinBundle.properties": {
     "action.KotlinGenerateToString.text": "toString()",
+    "add.kotlin.coroutines": "Add Kotlin coroutines library",
+    "add.kotlin.coroutines.description": "Add Kotlin Coroutines Library",
+    "checkbox.collapse.to.expression.body": "Collapse to expression body",
     "column.name.val.var": "Val/Var",
+    "fix.opt_in.text.use.module": "Opt in for ''{0}'' in module ''{1}''",
     "group.path.kotlin.migration": "Kotlin,Migration",
     "highlighter.name.dsl": "Dsl//",
     "hints.ranges.greaterOrEqual": "≥",
     "hints.ranges.less": "<",
     "hints.ranges.lessOrEqual": "≤",
     "hints.title.codevision": "Code Vision",
+    "infix.call.may.be.dot.call": "Infix call may be dot call",
+    "inspection.add.kotlin.coroutines.display.name": "Add Kotlin Coroutines library",
+    "inspection.no.actual.for.expect.display.name": "No actual for expect declaration",
     "kotlin.script.in.beta.stage.link": "https://kotlinlang.org/docs/components-stability.html#stability-levels-explained",
     "kotlin.script.in.project.sources.link": "https://youtrack.jetbrains.com/issue/KT-52735",
+    "label.text.package": "P&ackage:",
     "member.info.abstract.0": "abstract {0}",
+    "no.actual.for.expect.declaration": "No actual for expect declaration in module(s): {0}",
     "notification.text.kotlin.js.compiler.link": "https://kotl.in/jsirstable",
     "presentation.text.paren": "({0})",
     "presentation.text.paren.no.brackets": "{0}",
+    "print.should.be.replaced.with.logging.display.name": "Call to 'print()' or 'println()'",
+    "progress.title.check.for.conflicts": "Check for conflicts…",
+    "text.move.declaration.no.support.for.multi.file": "Moving declarations from different files is not supported",
+    "text.proceed.with.extraction": "Proceed with extraction anyway",
     "usage.provider.text.property.of.0": "{0}/{1}",
     "version": "{version}"
   },
   "messages/KotlinCodeInsightBundle.properties": {
+    "kmp.support.availability.name": "Kotlin Multiplatform for non-JVM/Common modules",
     "surround.with.try.catch.finally.template": "try / catch / finally",
     "surround.with.try.catch.template": "try / catch"
   },
   "messages/KotlinDebuggerCoreBundle.properties": {
-    "message.variables.property.get": "... get()"
+    "message.variables.property.get": "... get()",
+    "progress.text.waiting.for.smart.mode": "Waiting for indexing to complete",
+    "progress.title.kt.file.search": "Debugger: Searching for Kotlin file",
+    "variables.disable.coroutine.agent.tooltip": "Attach coroutine agent for Gradle and Java run configurations",
+    "variables.disable.coroutine.agent.values": "Attach coroutine agent"
   },
   "messages/KotlinIdeaCompletionBundle.properties": {
     "find.usage.provider.0": "{0}",
@@ -1543,6 +1792,10 @@
   },
   "messages/KotlinMavenBundle.properties": {
     "notification.text.kotlin.js.compiler.link": "https://kotl.in/jsir-move-to-gradle"
+  },
+  "messages/KotlinNJ2KServicesBundle.properties": {
+    "converter.kotlin.not.configured.message": "You will have to configure Kotlin in the project before performing a conversion.\nYou might have to wait until changes are reloaded.",
+    "converter.kotlin.wait.for.sync.to.be.finished": "Waiting for sync to be finished"
   },
   "messages/KotlinNewProjectWizardBundle.properties": {
     "buildsystem.type.gradle.groovy": "Gradle Groovy",
@@ -1568,58 +1821,104 @@
   },
   "messages/KotlinNotebookBundle.properties": {
     "action.CreateNewKotlinNotebook.text": "Kotlin Notebook",
+    "action.RestartKotlinNotebookSession.text": "Restart current session{0}",
+    "kotlin.jupyter.debug.node.not.enabled.message": "Variables are not available for Kotlin Notebooks running in the IDE process.",
+    "kotlin.jupyter.session.mode.changed": "Consider restarting the session for changes to take effect.",
     "kotlin.jupyter.settings.title": "Kotlin Notebook",
     "kotlin.jupyter.template.context.type.generic": "Kotlin Notebook"
+  },
+  "messages/KotlinNotebookLLMBundle.properties": {
+    "action.KotlinNotebookExplainDataFrame.text": "Analyze Kotlin DataFrame",
+    "intentions.notebook.family.name": "Kotlin Notebook inline intentions",
+    "intentions.notebook.summarize.libraries.text": "Explain Notebook Session libraries",
+    "intentions.notebook.summarize.notebook.text": "Summarize Kotlin Notebook"
   },
   "messages/KotlinPluginUpdaterBundle.properties": {
     "kotlin.eap.notification.group.name": "Kotlin EAP",
     "update.name.android.studio": "Android Studio"
+  },
+  "messages/KotlinPreferencesBundle.properties": {
+    "checkbox.enable.k2.based.kotlin.plugin": "Enable K2 mode"
   },
   "messages/KotlinProjectConfigurationBundle.properties": {
     "auto.configure.kotlin.documentation.gradle.url": "https://kotl.in/configure-kotlin-with-gradle",
     "warning.failed.disable.default.compile.link": "https://kotl.in/maven/compile-kotlin-and-java-sources"
   },
   "messages/KtorStarterBundle.properties": {
-    "ktor.inspections.config.yaml": "Ktor application.yaml"
+    "advanced.settings.ktor": "Frameworks. Ktor",
+    "ktor.inspections.config.yaml": "Ktor application.yaml",
+    "ktor.run.config.enable.development.mode.tag.description": "-Dio.ktor.development=true",
+    "ktor.run.config.enable.development.mode.tag.hint": "<html>Enable development mode by adding VM option <code>-Dio.ktor.development=true</code></html>"
   },
   "messages/KubernetesBundle.properties": {
     "ContextsTreeDialog.selected.nodes.count.text": "{0}/{1}",
     "HelmLintAction.task.title": "Helm Lint",
     "KubectlExecutor.BaseProcessListener.progressTitle.template": "Kubernetes: {0}",
     "Kubernetes.db.no.error.message": "<no error message>",
-    "KubernetesCronDocumentationTarget.cron.explanation": "<p>Cron explanation: <b>{0}</b></p><p>For Cron format explanation, see <a href=\"https://en.wikipedia.org/wiki/Cron\">https://en.wikipedia.org/wiki/Cron</a>.</p>",
     "KubernetesPodContent.shell.title": "Shell: {0}",
     "KubernetesResourceMapper.resourceDisplayableName.template": "{0} ''{1}''",
     "KubernetesViewConfigurable.podShellRow.title": "Pod Shell",
-    "action.Kubernetes.ClusterResourceWatcher.text": "Refresh Resources in All Clusters Automatically",
     "action.Kubernetes.HelmLint.text": "Helm Lint(&L)",
     "group.Kubernetes.HelmActions.text": "Helm(&H)"
   },
   "messages/LLMBundle.properties": {
-    "action.AIAssistant.Editor.CompleteCodeWithAI.text": "Complete Code with AI",
-    "action.AIAssistant.Editor.GenerateCodeInplace.text": "Generate Code with AI…",
-    "action.AIAssistant.Editor.ModifyCodeInplace.text": "Modify Code with AI…",
+    "action.AIAssistant.CodeGeneration.Actions.OpenPromptLibrarySettingsAction.GotIt.text": "Personalize your code generation with custom guidelines in Prompt Library",
+    "action.AIAssistant.ToolWindow.Message.Regenerate.text": "Regenerate this response",
     "action.AIAssistant.ToolWindow.ShowOrFocus.text": "AI Assistant",
-    "action.Vcs.LLMResolveConflictsAction.text": "Resolve Conflicts with AI Assistant",
-    "action.link.open.popup": "Open popup",
+    "action.Vcs.LLMResolveConflictsAction.Toolbar.description": "Merge with AI",
+    "action.Vcs.LLMResolveConflictsAction.description": "Merge All Changes with AI",
+    "action.Vcs.LLMResolveConflictsAction.text": "Merge All Changes with AI",
+    "action.Vcs.LLMStopResolvingConflictsAction.Error.Description": "Try again or merge manually",
+    "action.Vcs.LLMStopResolvingConflictsAction.text": "Stop AI Merging",
     "ai.assistant.grazie.login.error.title": "AI Assistant",
     "cmg.prompt.customization.title.ai.assistant": "AI Assistant",
     "intention.category.large.language.models": "AI Assistant",
     "intentions.apply.custom.edit.dialog.title.ai.assistant": "AI Assistant",
-    "label.restore.recent.chat": "Restore recent chat",
-    "label.try.ai.assistant.in.popup": "Try chat in popup",
-    "llm.diff.tool.one.side.name": "One-Side",
+    "label.chat.in.popup.ai.assistant": "AI Assistant",
     "name.assistant": "AI Assistant",
     "notification.group.name": "AI Assistant",
     "popup.title.ai.assistant": "AI Assistant",
-    "resolve.conflicts.merge.command.name": "Resolve Conflicts with AI Assistant",
+    "promptlibrary.settings.chat.prompt.defaultName": "New Prompt",
+    "settings.checkbox.enable.inline.completion.feature": "Enable cloud completion suggestions",
+    "settings.checkbox.enable.inline.completion.feature.description": "Go to <a>Inline Completion settings page</a> to fine-tune completion suggestions",
     "settings.configurable.display.name": "AI Assistant",
     "statusbar.balloon.title": "AI Assistant",
     "statusbar.widget.toolTipText": "AI Assistant"
   },
   "messages/LLMInstallerBundle.properties": {
     "action.ActivateAIAssistantToolWindow.text": "AI Assistant",
-    "toolwindow.stripe.AIAssistant": "AI Assistant"
+    "panel.activate.foot.note": "JetBrains AI does not use your data or code to train models.<br><a href=\"https://jb.gg/logindcup\">Data Collection and Use Policy</a>",
+    "panel.activate.subscription.required": "Subscription required",
+    "panel.activate.title": "JetBrains AI Assistant",
+    "toolwindow.stripe.AIAssistant": "AI Assistant",
+    "welcome.feature.ask.about.code.button": "Ask about code",
+    "welcome.feature.ask.about.code.title": "Ask About Code",
+    "welcome.feature.ask.about.local.changes.and.commits.button": "Ask about local changes and commits",
+    "welcome.feature.ask.about.local.changes.and.commits.title": "Ask About Local Changes and Commits",
+    "welcome.feature.ask.questions.button": "Ask questions",
+    "welcome.feature.ask.questions.title": "Ask Questions",
+    "welcome.feature.convert.to.another.language.button": "Convert to another language",
+    "welcome.feature.convert.to.another.language.title": "Convert to Another Language",
+    "welcome.feature.craft.prompt.library.button": "Craft prompt library",
+    "welcome.feature.craft.prompt.library.title": "Craft Prompt Library",
+    "welcome.feature.explain.commit.button": "Explain commit",
+    "welcome.feature.explain.commit.title": "Explain Commit",
+    "welcome.feature.explain.problem.button": "Explain problem",
+    "welcome.feature.explain.problem.title": "Explain Problem",
+    "welcome.feature.explain.runtime.error.button": "Explain runtime error",
+    "welcome.feature.explain.runtime.error.title": "Explain Runtime Error",
+    "welcome.feature.inline.code.completion.button": "Inline code completion",
+    "welcome.feature.inline.code.completion.title": "Inline Code Completion",
+    "welcome.feature.name.suggestions.button": "Name suggestions",
+    "welcome.feature.name.suggestions.title": "Name Suggestions",
+    "welcome.feature.refactoring.suggestions.button": "Refactoring suggestions",
+    "welcome.feature.refactoring.suggestions.title": "Refactoring Suggestions",
+    "welcome.feature.rewrite.commit.button": "Rewrite commit",
+    "welcome.feature.rewrite.commit.title": "Rewrite Commit"
+  },
+  "messages/LLMPyCharmCommunityInstallerBundle.properties": {
+    "intention.category.large.language.models": "AI Assistant",
+    "promo.configurable.ai": "AI Assistant"
   },
   "messages/LLMUITestGenerationBundle.properties": {
     "action.AIAssistant.WebInspector.Generate.Popup.Section.Framework": "{0}",
@@ -1628,17 +1927,37 @@
   },
   "messages/LangBundle.properties": {
     "build.event.message.with": "{0}，{1}",
+    "dialog.message.project.can.t.be.added.to.workspace": "Project ''{0}'' cannot be added to workspace",
     "executor.one.of.actions": "{0}/{1}: {2}",
     "image.preview.label": "{0}x{1}，{2}bpp，{3}",
     "label.export.plugin.url": "URL:",
-    "popup.title.regular.expressions.syntax": "Regular Expressions Syntax"
+    "manage.workspace.dialog.title": "Manage Workspace",
+    "project.remove.confirmation.prompt": "Remove {1, choice, 1#project|2#projects} {0} from the workspace?\nNo files will be deleted.",
+    "prompt.open.project.attach.to.workspace": "<html><body>Projects can either be opened in a new window, or replace the project in the current window, or be attached to the current workspace.<br>How would you like to open the project?</body></html>",
+    "prompt.open.project.attach.to.workspace.button.attach": "&Add to Workspace",
+    "prompt.open.project.create.workspace": "<html><body>Projects can either be opened in a new window, or replace the project in the current window, or be attached to the new workspace.<br>How would you like to open the project?</body></html>",
+    "prompt.open.project.create.workspace.button.attach": "&Create Workspace",
+    "status.text.no.projects.added": "No projects added",
+    "workspace.project.type.comment": "A special project type intended to work with multiple projects in the same window"
   },
   "messages/LangCoreBundle.properties": {
     "shorten.command.line.method.argfile": "@argfile (Java 9+)"
   },
   "messages/LayoutInspectorBundle.properties": {
     "action.Android.RunLayoutInspector.text": "Layout Inspector",
-    "layout.inspector": "Layout Inspector"
+    "deep.inspect.description": "Select components by clicking on the device. Enabling Deep Inspect will intercept clicks from the device.",
+    "layout.inspector": "Layout Inspector",
+    "left.vertical": "Left Vertical",
+    "left.vertical.swap": "Left Vertical (swap)",
+    "right.vertical": "Right Vertical",
+    "right.vertical.swap": "Right Vertical (swap)",
+    "split.horizontal": "Split Horizontal",
+    "split.horizontal.swap": "Split Horizontal (swap)",
+    "split.vertical": "Split Vertical",
+    "split.vertical.swap": "Split Vertical (swap)",
+    "toggle.deep.inspect": "Toggle Deep Inspect",
+    "try.embedded.layout.inspector": "Try the new experimental Embedded Layout Inspector",
+    "turn.on": "Turn On"
   },
   "messages/LearnBundle.properties": {
     "learn.options.panel.name": "Features Trainer",
@@ -1651,17 +1970,27 @@
     "percent.of.parent": " /{0}"
   },
   "messages/LintBundle.properties": {
-    "android.inspections.group.path.lint": "Android,Lint",
-    "android.lint.inspections.group.name": "Android Lint"
+    "android.lint.inspections.group.name": "Android Lint",
+    "android.lint.inspections.use.sdk.suppress": "Using @SdkSuppress instead of @RequiresApi",
+    "android.lint.inspections.wrong.comment.type": "Wrong Comment Type"
   },
   "messages/LiveEditBundle.properties": {
     "configurable.displayName": "Live Edit",
     "update.application.ws.suffix": "(Live Edit)"
   },
+  "messages/LocalHistoryBundle.properties": {
+    "activity.browser.diff.mode.link": "Switch to diff with the {0}",
+    "activity.browser.diff.mode.presentation.local": "local directory",
+    "activity.browser.diff.mode.presentation.next": "next revision",
+    "activity.browser.diff.mode.text": "Diff with the {0}."
+  },
   "messages/LogcatBundle.properties": {
     "logcat.color.page.name": "Android Logcat",
     "logcat.device.combo.offline": " [OFFLINE]",
     "logcat.device.combo.version": "Android {0}，API {1}",
+    "logcat.header.options.process.show": "Show process name",
+    "logcat.header.options.process.show.repeated": "Show repeated process names",
+    "logcat.header.options.process.width": "Process column width:",
     "logcat.settings.buffer.kb": " KB"
   },
   "messages/LombokBundle.properties": {
@@ -1682,6 +2011,13 @@
     "inspection.redundant.slf.4.j.definition.display.name": "@Slf4j",
     "intention.category.lombok": "Java/Lombok"
   },
+  "messages/MLInlineCompletionBundle.properties": {
+    "ml.completion.diagnostics.contexts.copy.button.label": "Copy Context",
+    "ml.completion.diagnostics.mock.button.add": "Add to Existing",
+    "ml.completion.inline.hint.insert.line.text": "to complete line",
+    "ml.completion.inline.hint.insert.word.text": "to complete word",
+    "ml.completion.tooltip.action.settings": "Inline Completion Settings…"
+  },
   "messages/MLServerCompletionBundle.properties": {
     "fl.server.completion.display": "Full Line Code Completion",
     "full.line.configurable.name": "Full Line Code Completion",
@@ -1695,6 +2031,12 @@
   },
   "messages/MarkdownBundle.properties": {
     "markdown.header.level.popup.heading.action.secondary.text": "(H{0})"
+  },
+  "messages/MatterhornProjectOpenerBundle.properties": {
+    "project.opener.confirmation.dialog.text": "You are about to download a project from Matterhorn website. This will download the project files to your computer and open them in IntelliJ IDEA.\n\nDo you want to continue?",
+    "project.opener.error.dialog.message": "Error occurred during downloading or extracting the archive:",
+    "project.opener.open.dialog.label.text": "Select a directory for project download:",
+    "project.opener.open.dialog.title": "Matterhorn Project Opener"
   },
   "messages/MavenConfigurableBundle.properties": {
     "maven.run.configuration.bundled.distribution.name": "Maven {0}",
@@ -1726,7 +2068,6 @@
     "ui.filetype.spacebars.description": "Meteor Spacebars"
   },
   "messages/MicronautBundle.properties": {
-    "MnCronDocumentationTarget.cron.explanation": "<p>Cron explanation: <b>{0}</b></p><p>For Cron format explanation, see <a href=\"https://docs.micronaut.io/latest/api/io/micronaut/scheduling/cron/CronExpression.html\">https://docs.micronaut.io/latest/api/io/micronaut/scheduling/cron/CronExpression.html</a>.</p>",
     "micronaut.data.inspections.group": "Micronaut Data",
     "micronaut.data.ql": "Micronaut Data QL",
     "micronaut.inspections.config.yaml": "Micronaut application.yaml",
@@ -1736,7 +2077,6 @@
     "mn.el.name": "Micronaut EL"
   },
   "messages/MicroservicesBundle.properties": {
-    "frameworks.accessibility.filter.label": "{0}: {1}",
     "http.code.description.101": "Switching Protocols",
     "http.code.description.203": "Non-Authoritative Information",
     "http.code.description.204": "No Content",
@@ -1782,15 +2122,13 @@
     "http.code.description.510": "Not Extended",
     "http.code.description.511": "Network Authentication Required"
   },
-  "messages/MicroservicesJvmBundle.properties": {
-    "scheduled.target.process.not.started": "Target application hasn't been started yet."
-  },
   "messages/MobileBundle.properties": {
     "run.configuration.name": "Kotlin Mobile",
     "sdk.sync.missing.sdk.title": "Android SDK"
   },
-  "messages/MonitoringToolBundle.properties": {
-    "dashboard.row.operating.system": "OS = {0}"
+  "messages/NewUiOnboardingBundle.properties": {
+    "classic.ui.plugin.name": "Classic UI",
+    "dialog.text": "Starting with this update, {0} has a new UI. Take an onboarding tour to see the most notable changes. The classic UI is still available as a plugin in <a href=\"#\">Settings | Plugins</a>."
   },
   "messages/NextJsBundle.properties": {
     "create.next.app.name": "Next.js"
@@ -1804,7 +2142,7 @@
     "profile.cpu.line.total.text": "<total>",
     "profile.table.root.text": "<root>",
     "profile.table.unreachable_or_hidden.text": "<unreachable or hidden>",
-    "rc.nodejs.test.runner.node_js_version_does_not_support_correct_tests_filtration": "The specified Node.js version is under development, which may result in problems with filtering tests and suits. Use Node.js 22.0.0 or later. <a href=\"https://github.com/nodejs/node/issues/46728#issuecomment-1764968836\">Learn More</a>."
+    "rc.nodejs.test.runner.type_script_loader.ts_node": "ts-node"
   },
   "messages/NotebookBundle.properties": {
     "hint.readonly": "<html>{0}</html>"
@@ -1838,7 +2176,10 @@
     "open.rewrite.recipe.local.history.label": "OpenRewrite: {0}"
   },
   "messages/OptionsBundle.properties": {
-    "exportable.ShortcutPromoterManager.presentable.name": "Shortcut Promoter"
+    "exportable.ShortcutPromoterManager.presentable.name": "Shortcut Promoter",
+    "options.general.color.descriptor.sticky.lines.background": "Editor//Sticky Lines//Background",
+    "options.general.color.descriptor.sticky.lines.border.color": "Editor//Sticky Lines//Border",
+    "options.general.color.descriptor.sticky.lines.hovered.color": "Editor//Sticky Lines//Hovered"
   },
   "messages/OsmorcBundle.properties": {
     "bnd.configuration.name": "Bnd OSGi",
@@ -1904,10 +2245,6 @@
     "action.PhpGenerateSetters.text": "setter…",
     "actions.mark.directory.as.psr.0.root": "<i>{0}</i>",
     "all.scripts": "<All scripts>",
-    "code.style.option.force.empty.classes.braces.in.one.line": "Place braces for empty classes on one line",
-    "code.style.option.place.first.call.on.new.line": "Place first call on new line when multiline",
-    "code.style.option.place.lambda.on.new.line": "Place '=>' on new line in multiline closures",
-    "code.style.option.short.closure": "Short closure",
     "color.settings.heredoc_id": "Heredoc//Heredoc ID",
     "composer.label.phar": "composer.phar",
     "configurable.quality.tool.laravel.pint": "Laravel Pint",
@@ -1919,7 +2256,7 @@
     "filetype.phar.description": "Php Phar",
     "filetype.phar.display.name": "Php Phar",
     "fluent.setters": "Fluent setter",
-    "folding.checkbox.collapse.heredocs.and.nowdocs": "HEREDOC\\NOWDOC",
+    "folding.checkbox.collapse.heredocs.and.nowdocs": "heredoc/nowdoc",
     "inspection.php.group.psr.12": "PSR-12",
     "inspection.php.illegal.array.key.type.description": "{0} {1}",
     "inspection.php.separate.else.if.inspection.display.name": "Else if",
@@ -1929,6 +2266,9 @@
     "php.framework.laravel.plugin": "Laravel Idea",
     "php.run.label.https": "HTTPS:",
     "php.run.label.url": "URL:",
+    "php.terminal.artisan.command.description": "Laravel Artisan",
+    "php.terminal.composer.command.description": "Dependency manager for PHP",
+    "php.terminal.php.command.description": "Runs PHP interpreter",
     "php.web.server.validation.xdebug.remote.log": "<b>{0}:</b> {1}",
     "phpdoc.code.style.convert.else.if.separate": "else if",
     "profiler.measurement.unit.microsecond.short": "µs",
@@ -1954,6 +2294,9 @@
   },
   "messages/PrettierBundle.properties": {
     "prettier.formatter.hint.0": "Prettier: {0}"
+  },
+  "messages/ProjectArchiveOpenerBundle.properties": {
+    "dialog.label.text": "Select project download directory:"
   },
   "messages/ProjectBundle.properties": {
     "dialog.text.resolving.sdks.item": "{0}“{1}”",
@@ -1995,17 +2338,20 @@
   },
   "messages/PyCharmCommunityCustomizationBundle.properties": {
     "action.PromoNewJupyterNotebook.text": "Jupyter Notebook",
-    "action.PromoPreviewJupyterNotebook.text": "Jupyter Notebook",
-    "feature.ai.assistant.description.html": "<a href=\"{0}\">AI Assistant</a> provides AI-powered features for software development.<br/>It can help with the following:",
-    "feature.ai.assistant.open.toolwindow": "Open AI Assistant",
-    "promo.configurable.ai": "AI Assistant"
+    "action.PromoPreviewJupyterNotebook.text": "Jupyter Notebook"
   },
   "messages/PyDockerBundle.properties": {
     "python.add.sdk.panel.name.docker.compose": "Docker Compose",
     "remote.sdk.exception.message.with.cause": "{0}:\n{1}"
   },
+  "messages/PyEndpointsBundle.properties": {
+    "web.structure.line.marker.name": "Python web structure",
+    "web.structure.line.marker.show.all.endpoints": "Show all endpoints of {0}",
+    "web.structure.line.marker.show.all.endpoints.accessible.name": "Show all endpoints"
+  },
   "messages/PyHuggingFaceBundle.properties": {
     "python.hugging.face.base.url": "https://huggingface.co",
+    "python.hugging.face.placeholder.gated.model": "Access to this {0} is limited. Please check the conditions [here]({1}).",
     "python.hugging.face.tags.style": "<style>{0}</style>"
   },
   "messages/PyPsiBundle.properties": {
@@ -2013,8 +2359,19 @@
     "filetype.python.docstring.description": "Python docstring",
     "find.usages.unnamed": "<unnamed>"
   },
+  "messages/PyScientificBundle.properties": {
+    "notification.save.all.is.finished": "All plots are saved.",
+    "plots.save.all.plots.action": "Save All Plots",
+    "plots.select.directory.to.save.plot": "Select Directory to Save Plot",
+    "python.sci.view.table.dataframes.unsupported": "<html>The old view does not support this dataframe type.</html>",
+    "python.sci.view.table.multidimensional.unsupported": "The view does not support multidimensional arrays.",
+    "separator.TableViewColoring.settings": "Coloring Options"
+  },
   "messages/PySshInterpreterBundle.properties": {
     "ssh.connection.wizard.remote.interpreter.default.interpreter.path": "/usr/bin/python"
+  },
+  "messages/PythonLLMBundle.properties": {
+    "python.ai.assistant.test.generation.prompt.library.description": "AI Assistant uses this prompt each time you run the Generate Unit Tests action. Add new test generation rules to match your specific needs.<br><br>Examples:<ul><li>Make sure the test tests one thing only.</li><li>Add clear fail messages into the assertion calls.</li></ul>"
   },
   "messages/PythonProBundle.properties": {
     "python.debug.text.pane.text": "<html><head></head><body></body></html>"
@@ -2040,10 +2397,8 @@
     "qodana.yaml.include.scope.name.w.severity": "qodana.yaml.{0}.{1}"
   },
   "messages/QuarkusBundle.properties": {
-    "QsCronDocumentationTarget.cron.explanation": "<p>Cron explanation: <b>{0}</b></p><p>For Cron format explanation, see <a href=\"https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html\">https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html</a>.</p>",
     "dev.ui.editor.tab.title": "Quarkus Dev UI",
-    "quarkus.starter.version.label": "Quarkus:",
-    "run.configuration.arguments.name": "Add a&rguments"
+    "quarkus.starter.version.label": "Quarkus:"
   },
   "messages/RBundle.properties": {
     "action.rspec.LetIntroduce.text": "RSpec 'let'",
@@ -2127,6 +2482,8 @@
     "webservices.file.templates.group.name": "JAX-RS"
   },
   "messages/RadBundle.properties": {
+    "color.template.non.type": "Templates//Non-type parameter",
+    "color.template.type": "Templates//Type parameter",
     "project.awaiter": "Awaits CLion backend activities",
     "projectConfigurable.RiderInlayHintsCppOptions.displayName": "C++",
     "projectConfigurable.TypeNameHints.displayName": "Type Name Hints"
@@ -2146,7 +2503,9 @@
     "backend.notification.title": "{0} backend",
     "frontendbulbrenderer.0": "FrontendBulbRenderer {0}",
     "memory.usage": "Memory Usage",
-    "progress.text.process.workspace.model": "Process Workspace Model…"
+    "popup.search.actions.text": "Searching for actions…",
+    "progress.text.process.workspace.model": "Process Workspace Model…",
+    "spellchecker.rename.to": "Typo: Rename to…"
   },
   "messages/ReactBuddyBundle.properties": {
     "JsxTree.ifMain": "if ({0})",
@@ -2154,6 +2513,8 @@
     "JsxTree.switchMain": "switch ({0})",
     "Palette.devtools.extensionDependency.notificationContent": "<html>{0}</html>",
     "React.generation": "React Buddy",
+    "React.inspection.emptyFormActionAttribute": "Form action attribute is empty",
+    "React.inspection.quickFix.emptyFormActionAttribute": "Generate useActionState",
     "Snippet.velocity.charts.x": "x:",
     "Snippet.velocity.charts.y": "y:",
     "configurable.group.com.intellij.reactbuddy.tools.settings.display.name": "React Buddy",
@@ -2214,17 +2575,31 @@
     "live.template.gtrp.description": "GET http://example.com/get?id=99",
     "live.template.mptr.description": "POST multipart/form-data",
     "live.template.ptr.description": "POST http://example.com/add...",
-    "live.template.ptrp.description": "POST application/x-www-form-urlencoded"
+    "live.template.ptrp.description": "POST application/x-www-form-urlencoded",
+    "rest.client.request.inspection.add.custom.http.method": "Add custom HTTP method",
+    "rest.client.request.unknown.http.method": "Unknown HTTP method"
   },
   "messages/RiderActionsBundle.properties": {
+    "ActivateSweaToolWindow.action.show.errors.in.toolwindow.text": "Open in Problems View",
     "action.DecompileAndShowIlViewerAction.text": "IL Viewer",
+    "action.GoToControllerOrView.text": "Go to Controller or View",
     "action.ReSharperSelectContainingDeclaration.description": "Selecting Containing Declarations",
+    "action.RiderAddDockerComposeFileAction.description": "Add Docker Compose file to the project",
+    "action.RiderAddDockerfileAction.description": "Add Dockerfile to the project",
+    "action.RiderAddProjectDependenciesToSolutionFilterAction.text": "Show Direct Dependencies",
+    "action.RiderAddProjectDependencyTreeToSolutionFilterAction.text": "Show Entire Dependency Tree",
+    "action.RiderAddToSolutionFilterProjectAction.several.text": "Show All Projects",
+    "action.RiderAddToSolutionFilterProjectAction.text": "Show Project",
+    "action.RiderAddToSolutionFilterProjectWithDependenciesAction.several.text": "Show All Projects with Dependencies",
+    "action.RiderAddToSolutionFilterProjectWithDependenciesAction.text": "Show Project with Dependencies",
+    "action.RiderRemoveFromSolutionFilterProjectAction.several.text": "Hide All Projects",
+    "action.RiderRemoveFromSolutionFilterProjectAction.text": "Hide Project",
     "action.RiderShowIlViewerAction.text": "IL Viewer",
     "action.RiderShowResxEditorAction.text": "Localization Manager",
+    "action.install.v.in.text": "Install {0} V{1} In {2}",
     "action.stack.trace.explorer.text": "Stack Trace Explorer",
     "group.BackendEntityFrameworkActionGroup.text": "Entity Framework",
-    "group.CSharpInteractive.text": "C# Interactive",
-    "toolwindow.stripe.IL_Viewer": "IL Viewer"
+    "group.CSharpInteractive.text": "C# Interactive"
   },
   "messages/RiderBundle.properties": {
     "EntityFramework.toolWindow.title": "Entity Framework",
@@ -2233,19 +2608,28 @@
     "action.dump.backend.delegating.actions.text": "Dump Backend Delegating Actions",
     "action.dump.color.settings.mappings.text": "Dump Color Settings Mappings",
     "action.winform.stack.trace.explorer.text": "Stack Trace Explorer",
+    "checkbox.reader.mode.show.visual.formatting": "Indent code virtually according to current code style settings",
+    "checkbox.reader.mode.show.visual.formatting.hint": "The virtual indenter will use the indent size value specified in the C# Code Style settings.",
     "configurable.group.inlay.hints.RiderInlayHintsCSharpConfigurableGroup.settings.display.name": "C#",
     "configurable.group.inlay.hints.RiderInlayHintsVBConfigurableGroup.settings.display.name": "VB.NET",
     "endpoints.framework.asp.net.core.minimal.api": "ASP.NET Core Minimal API",
     "notification.group.collect.backend.threaddump": "Collect backend threadDump",
     "notification.group.entityframework": "Entity Framework",
     "notification.group.problemsview.notification": "ProblemsView notification",
+    "nuget.feed.allow.insecure": "Allow insecure",
     "publish.to.iis.option": "IIS…",
-    "settings.completion.ml.csharp.display.name": "C#"
+    "rider.inlinedoc.inheritdoc.loading": "Loading inheritdoc…",
+    "settings.completion.ml.csharp.display.name": "C#",
+    "spellchecker.dictionary.settings": "Dictionary settings"
+  },
+  "messages/RiderCodeWithMeCoreBundle.properties": {
+    "activate.code.with.me.dialog.title": "Code With Me"
   },
   "messages/RiderCppBundle.properties": {
     "applicationConfigurable.CppClangTidyOptionsId.displayName": "Clang-Tidy",
     "applicationConfigurable.CppUnrealEngineOptionsId.displayName": "Unreal Engine",
     "applicationConfigurable.preferences.CppConfiguration.displayName": "C++",
+    "configurable.codestyle.title.unrealEngine": "Unreal Engine",
     "configurable.name.clang.tidy": "Clang-Tidy",
     "configurable.name.unreal.engine": "Unreal Engine",
     "projectConfigurable.RiderInlayHintsCppOptions.displayName": "C++",
@@ -2261,14 +2645,67 @@
     "DotNetDebuggerGeneralConfigurableUi.checkbox.show.run.to.panel.3": ")",
     "MsNetAttachDebugger.display.short.name": ".NET",
     "RemoteDebugConfigurableUi.label.os": "OS:",
-    "debugger.action.link.force.refresh": "Force Refresh"
+    "RiderHotReloadNotifier.hide.for.this.session": "Hide for this session",
+    "SymbolServerConfigurable.checkbox.decompile.protected.assemblies": "Decompile protected assemblies",
+    "SymbolServerConfigurable.tooltip.text.decompile.protected.assemblies": "Decompile protected assemblies (ignore SuppressIldasm attribute)",
+    "blazor.wasm.debug.exception.browser.pages": "Blazor debug proxy error: no debuggable pages in the browser. Restart the session and wait until the debugger is connected.",
+    "blazor.wasm.debug.exception.core.runtime": "Unable to attach Blazor debugger: no Core runtime found",
+    "blazor.wasm.debug.exception.target.path.missing": "Unable to attach Blazor debugger: Unable to retrieve the output assembly path",
+    "blazor.wasm.debug.exception.uri": "Blazor debug proxy error: unable to build debug proxy URL, incorrect 'inspectUri'",
+    "blazor.wasm.debug.gateway.notification.text": "Rider failed to obtain browser DevTools gateway. Close other running browsers and project instances and try again.",
+    "blazor.wasm.debug.notification.lockfile.force": "Blazor Wasm Debugging: lockfile exists, but no 'DevToolsActivePort' file found. Browser must be started with '--remote-debugging-port=0' argument to allow debugging.",
+    "debugger.action.link.force.refresh": "Force Refresh",
+    "dialog.message.you.have.incorrect.browser.cli.options": "You have incorrect browser CLI options",
+    "rider.debugger.DFA.mode.exit.debugger.DFA.mode": "Disable Predictive Debugger for This Session",
+    "rider.debugger.no.variants.available": "No variants are available"
   },
   "messages/RiderDesignersBundle.properties": {
     "ResxEditor.editor.name.localization.manager": "Localization Manager",
     "localization.manager": "Localization Manager"
   },
+  "messages/RiderDiagramBundle.properties": {
+    "action.Rider.Diagram.Layout.BusinessLogicLayouter.text": "Business Logic Layouter",
+    "action.Rider.Diagram.Layout.OrganicLayouter.text": "Organic Layouter"
+  },
   "messages/RiderDockerBundle.properties": {
-    "rider.docker.compose.project.file.type.display.name": "Docker Compose"
+    "rider.docker.compose.project.file.type.display.name": "Docker Compose",
+    "rider.docker.warmup.run.configurations": "Warming up Docker run configurations"
+  },
+  "messages/RiderFeedbackMessagesBundle.properties": {
+    "evaluation.dialog.rating.label": "Evaluate Rider:",
+    "evaluation.dialog.title": "Tell us about your experience",
+    "evaluation.long.dialog.describe.problem.in.more.detail": "Describe your problem in more detail:",
+    "evaluation.long.dialog.description": "It’s been a few days since you started the trial and your opinion is very valuable to us. This is the only time you’ll see this.",
+    "evaluation.long.dialog.ide.in.use.label": "Which of the following IDEs and editors do you regularly use?",
+    "evaluation.long.dialog.ide.in.use.option.1": "Visual Studio",
+    "evaluation.long.dialog.ide.in.use.option.2": "VS Code",
+    "evaluation.long.dialog.ide.in.use.option.3": "Visual Studio for Mac",
+    "evaluation.long.dialog.ide.in.use.option.4": "JetBrains Rider",
+    "evaluation.long.dialog.ide.in.use.option.5": "Another JetBrains IDE",
+    "evaluation.long.dialog.ide.in.use.option.6": "None of the above",
+    "evaluation.long.dialog.problems.label": "Have you encountered any problems while using Rider?",
+    "evaluation.long.dialog.problems.option.1": "I don’t like how it looks and feels (theme, colors, clutter, etc.)",
+    "evaluation.long.dialog.problems.option.2": "It’s unintuitive and difficult to use",
+    "evaluation.long.dialog.problems.option.3": "I’ve encountered performance issues (too slow)",
+    "evaluation.long.dialog.problems.option.4": "I’ve experienced problems with specific functionality",
+    "evaluation.long.dialog.problems.option.5": "No problem",
+    "evaluation.long.dialog.text.area.details": "Anything you would like to share:",
+    "evaluation.long.dialog.text.area.details.placeholder": "For example, missing features or your overall impression",
+    "evaluation.long.dialog.why.try.rider.label": "Why did you decide to try Rider?",
+    "evaluation.long.dialog.why.try.rider.option.1": "Out of curiosity",
+    "evaluation.long.dialog.why.try.rider.option.2": "I’ve used other JetBrains products before and liked them",
+    "evaluation.long.dialog.why.try.rider.option.3": "I was looking for a faster IDE",
+    "evaluation.long.dialog.why.try.rider.option.4": "I was missing some features in my previous IDE",
+    "evaluation.long.dialog.why.try.rider.option.5": "I needed a cross-platform IDE",
+    "evaluation.notification.cancel.feedback.content": "If you want to share your feedback with us again, use the Help | Submit feedback… menu.",
+    "evaluation.notification.thanks.feedback.content": "You help make Rider better!\nIf you want to share your feedback with us again, use the Help|Send feedback menu.",
+    "evaluation.short.dialog.check.box.no.problem": "No problem",
+    "evaluation.short.dialog.demo.action": "Show Rider Evaluation Feedback Dialog",
+    "evaluation.short.dialog.description": "It’s been a few days since you started the trial and your opinion is very valuable to us.",
+    "evaluation.short.dialog.text.area.details": "Anything you would like to share:",
+    "evaluation.short.dialog.text.area.details.placeholder": "For example, missing features or your overall impression",
+    "evaluation.short.dialog.text.area.problems": "Have you encountered any problems while using Rider?",
+    "evaluation.short.dialog.text.area.problems.placeholder": "Describe your problem in more detail"
   },
   "messages/RiderIdeaInteropBundle.properties": {
     "RiderPluginGroups.group.name.azure.devops": "Azure DevOps"
@@ -2280,24 +2717,38 @@
   "messages/RiderJavaScriptBundle.properties": {
     "rider.javascript.debug.companion.tab.name": "{0} - JavaScript"
   },
+  "messages/RiderLessonsBundle.properties": {
+    "rider.onboarding.feedback.system.current.sdk": "Current SDK:",
+    "rider.onboarding.feedback.system.found.sdks": "Found SDKs:"
+  },
   "messages/RiderMultiPlatformBundle.properties": {
     "notification.group.riderandroid.sdk": "Android SDK"
   },
   "messages/RiderNugetBundle.properties": {
+    "RiderNuGetFeedTable.checkbox.label.allow.insecure": "Allow insecure connections:",
     "RiderNuGetFeedTable.label.url": "URL:",
+    "button.packages.folder": "Packages Folder",
     "digits.separator": ".",
     "dotnet.cli": "dotnet cli"
   },
   "messages/RiderPencilsBundle.properties": {
-    "CodeVisionFilter.display.name.code.vision": "Code Vision"
+    "CodeVisionFilter.display.name.code.vision": "Code Vision",
+    "PencilsComponent.label.in.solution.row.title": "In solution:"
   },
   "messages/RiderProjectViewBundle.properties": {
     "NewProjectDialog.DockerSupport.row.label": "Docker:",
+    "NewProjectDialog.Edit.MultipleValues.Option": "Edit {0}",
+    "NewProjectDialog.Install.Net.installation.failed.message": "Do you want to try to install the SDK again?",
+    "NewProjectDialog.StatusMessages.workload.need.to.be.installed": "Additional components need to be installed to work with the project template",
+    "NewProjectDialog.TypeListBasedProjectGenerator.template.list.not.supported.separator.label": "Not supported for the selected Target Framework",
     "RiderProjectTemplate.ReSharperProjectTemplate.CPlPl.name": "C++",
     "RiderProjectTemplate.ReSharperProjectTemplate.NET.NETCore.name": ".NET/.NET Core",
-    "RiderProjectTemplate.ReSharperProjectTemplate.NETFramework.name": ".NET Framework"
+    "RiderProjectTemplate.ReSharperProjectTemplate.NETFramework.name": ".NET Framework",
+    "SaveAsSolutionFilterAction.open.dialog.message": "Do you want to open the filtered solution ''{0}'' that you just created?",
+    "SaveAsSolutionFilterAction.open.dialog.title": "Open Filtered Solution"
   },
   "messages/RiderRazorBundle.properties": {
+    "blazor.wasm.debug.exception.target.path.missing": "Unable to attach Blazor debugger: Unable to retrieve output assembly path",
     "blazor.wasm.debug.hosted.companion.tab.name": "{0} - WASM",
     "configurable.name.asp.net.c": "ASP.NET (C#)",
     "configurable.name.asp.net.vb": "ASP.NET (VB)",
@@ -2308,7 +2759,12 @@
   },
   "messages/RiderRunBundle.properties": {
     "IisExpressHost.notification.title.iis.express": "IIS Express",
-    "RiderContextPublishAction.action.azure.name": "Azure…"
+    "PublishRuntimeSettingsCoreHelper.label.include.all.content.for.self.extract": "Include all content for self extract",
+    "RiderContextPublishAction.action.azure.name": "Azure…",
+    "launch.configuration.message": "\"Launching ''{0}''…",
+    "launch.generic.configuration.message": "\"Launching configuration…",
+    "launch.settings.command.unsupported.os": "{0} launch settings command cannot be executed on this operating system",
+    "obsolete.synchronous.api.is.used.message": "Synchronous call of ''{0}'' is not supported"
   },
   "messages/RiderSettingsBundle.properties": {
     "IisExpressOptionsPage.configurable.name.iis.express": "IIS Express",
@@ -2317,10 +2773,10 @@
     "applicationConfigurable.CodeVision.displayName": "Code Vision",
     "applicationConfigurable.RiderEntityFrameworkSettings.displayName": "Entity Framework",
     "applicationConfigurable.VBCodeCleanupOptions.displayName": "VB.NET",
-    "configurable.codestyle.title.unrealEngine": "Unreal Engine",
     "configurable.name.asp.net": "ASP.NET (Razor)",
     "configurable.name.csharp": "C#",
     "configurable.name.dotnet": ".NET",
+    "configurable.name.inlay.hints": "Inlay Hints",
     "configurable.name.vb.net": "VB.NET",
     "configurable.name.xUnit.net": "xUnit.net",
     "configurable.name.xamarin.mac.ios": "Mac/iOS",
@@ -2336,6 +2792,8 @@
     "action.RiderUnitTestSessionLaunchOptionActionGroupBase.text.toolbar": "{0}：{1}"
   },
   "messages/RiderWizardBundle.properties": {
+    "actions.go-to-declaration.name": "Go to Declaration",
+    "plugin-installation.progress.text-with-details": "{0} / {1}",
     "steps.keymaps.groups.jetbrains-ide.name": "JetBrains IDE",
     "steps.keymaps.groups.vscode.name": "VS Code",
     "steps.keymaps.visual-assist.name": "Visual Assist",
@@ -2556,24 +3014,8 @@
     "inline.const.pat": "inline const pat",
     "inspection.message.": "{0}: {1}",
     "inspection.message.consts": "{0}::{1}::consts::{2}",
-    "inspection.message.extra.fields.found.in.tuple.struct.pattern.expected.found": "Tuple struct pattern contains too many fields: expected {0} but found {1}",
-    "inspection.message.field.bound.multiple.times.in.pattern": "Field `{0}` bound multiple times in a single pattern",
     "inspection.message.has.been.removed2": "{0} has been removed",
-    "inspection.message.implementing.trait.not.unsafe": "Implementing the `{0}` trait is safe",
-    "inspection.message.inclusive.ranges.must.be.bounded.at.end.b.or.b": "An inclusive range must have a specified end bound (`..=b` or `a..=b`)",
-    "inspection.message.non.constant.value.was.used.in.constant.expression": "Non-constant value used in a constant expression",
-    "inspection.message.pattern.does.not.correspond.to.its.declaration.expected.found": "{0} pattern does not match its declaration: expected {1} {2}, found {3}",
     "inspection.message.should.have.body2": "`{0}` must have a body",
-    "inspection.message.this.function.takes.choice.at.least.but.choice.was.were.supplied": "This {0} takes{1, choice, 0# at least|1#} {2} {3}, but {4} {5} {6, choice, 0#was|1#were} supplied",
-    "inspection.message.union.patterns.requires.field": "A union pattern requires a field",
-    "inspection.message.union.patterns.should.have.exactly.one.field": "A union pattern should have exactly one field",
-    "inspection.message.visibilities.can.only.be.restricted.to.ancestor.modules": "Visibility can only be restricted to ancestor modules",
-    "inspection.rs.chained.comparison.operator.requires.parentheses": "Missing parentheses for chained comparison",
-    "inspection.rs.inclusive.range.with.no.end": "Inclusive range without an end bound",
-    "inspection.rs.manual.impl.of.fn.trait": "Manual implementation of `Fn`, `FnMut`, or `FnOnce`",
-    "inspection.rs.pat.struct.invalid.fields": "Invalid fields in struct or tuple struct pattern",
-    "inspection.rs.repeated.identifier.in.pattern": "Repeated identifier in pattern",
-    "inspection.rs.unsafe.impl": "Trait safety mismatch",
     "intention.name.": "{0}{1}",
     "intention.name.b.b": "<b>{0}</b>",
     "intention.name.b.b2": "<b>{0}</b>",
@@ -2584,12 +3026,9 @@
     "mod.0": "mod {0}",
     "notification.content.cargo.expand": "cargo-expand",
     "notification.content.wasm.pack": "wasm-pack",
-    "notification.database.plugin.suggestion.text": "Database Tools and SQL is now a paid plugin. You can purchase it or redeem it as part of your subscription.",
-    "notification.database.plugin.suggestion.title": "Access database and SQL features via paid plugin",
     "rust.cargo.toml": "Rust/Cargo.toml",
     "rust.external.linter.cargo.check.item": "Cargo Check",
     "rust.repl": "Rust REPL",
-    "tooltip.visibility.restriction.with.module.path.should.start.with.in.keyword": "Use `in` to restrict visibility to a module path",
     "wasm.pack": "wasm-pack"
   },
   "messages/SASSBundle.properties": {
@@ -2607,7 +3046,29 @@
     "type.0.label": "Type={0}",
     "xml_html.category": "XML/HTML"
   },
+  "messages/SamplesBrowserBundle.properties": {
+    "application.name.not.set": "Application name must be set",
+    "git.project.dir.empty": "Failed to find any projects in Git repository",
+    "git.project.missing.sample.root": "Could not find sample root \"{0}\" in Git repository",
+    "sample.browse.source": "Browse source in GitHub",
+    "sample.browser.description": "Select a sample to import",
+    "sample.browser.empty": "No matching samples found",
+    "sample.browser.no.preview": "No preview available",
+    "sample.browser.please.select": "Please select a sample",
+    "sample.browser.title": "Browse Samples",
+    "sample.copy.to.project.failed": "Failed to copy sample into project directory",
+    "sample.default.name": "My Imported Sample",
+    "sample.import.error.title": "Sample Import Failed",
+    "sample.import.no.gradlew.exec": "Could not make gradle wrapper executable for sample: {0}. Command line builds may not work properly.",
+    "sample.import.title": "Import Sample",
+    "sample.import.warning.title": "Sample Import Warning",
+    "sample.index.download.failed": "Failed to download samples index, please check your connection and try again",
+    "sample.index.downloading": "Downloading samples index...",
+    "sample.setup.description": "Provide information about your project",
+    "sample.setup.title": "Sample Setup"
+  },
   "messages/SbtBundle.properties": {
+    "sbt.migrate.configurations.dialog.wrapper.default": "<no module>",
     "sbt.settings.sbt": "sbt(&S):",
     "sbt.settings.scala": "Scala(&C):",
     "sbt.settings.shell.title": "sbt shell",
@@ -2695,8 +3156,7 @@
     "login.page.title": "JetBrains Space"
   },
   "messages/SpaceVcsBundle.properties": {
-    "action.com.intellij.space.vcs.share.SpaceShareProjectAction.Vcs.Toolbar.Widget.text": "Space…",
-    "toolwindow.access.progress": "Accessing {} tool window"
+    "action.com.intellij.space.vcs.share.SpaceShareProjectAction.Vcs.Toolbar.Widget.text": "Space…"
   },
   "messages/SpaceportGatewayBundle.properties": {
     "auth.page.jetbrains.space.header.text": "JetBrains CodeCanvas",
@@ -2762,10 +3222,10 @@
     "spring.boot.run.config.type.name": "Spring Boot"
   },
   "messages/SpringBundle.properties": {
-    "SpringCronDocumentationTarget.cron.explanation": "<p>Cron explanation: <b>{0}</b></p><p>For Cron format explanation, see <a href=\"https://docs.spring.io/spring-framework/reference/integration/scheduling.html#scheduling-cron-expression\">https://docs.spring.io/spring-framework/reference/integration/scheduling.html#scheduling-cron-expression</a>.</p>",
     "facet.context.edit.parent.none.selected": "<none>",
     "group.Spring.Beans.Generate.Action.text": "Spring Bean",
-    "spring.bean": "Spring Bean"
+    "spring.bean": "Spring Bean",
+    "spring.scheduled.method": "Trigger the @Scheduled method"
   },
   "messages/SpringCloudBundle.properties": {
     "spring.cloud.inspection.group.name": "Spring Cloud"
@@ -2839,28 +3299,15 @@
     "sql.inspections.group.name.mssql": "SQL Server"
   },
   "messages/SqlLLMBundle.properties": {
-    "action.Ai.FormatByExample.description": "Ask AI to format the current SQL statement or the selection according to the given example",
-    "action.Ai.FormatByExample.text": "Reformat Code with AI",
     "action.UiAssistant.ScriptGeneratorSettings.text": "UI AI Assistant",
-    "ai.FormatByExample.diff.left.name": "File content before re-formatting",
-    "ai.FormatByExample.diff.right.name": "Re-formatted by AI",
-    "ai.FormatByExample.diff.title": "AI Re-Formatting Result",
-    "ai.FormatByExample.fail.noFlow": "Cannot re-format: no answer from AI",
-    "ai.FormatByExample.fail.noText": "Cannot re-format: AI returned no text",
-    "ai.FormatByExample.fail.originalFragmentIsInvalid": "Cannot re-format: the original code fragment disappeared",
-    "ai.FormatByExample.gutter.icon.text": "This code fragment is being formatted",
-    "ai.FormatByExample.noExamples": "Cannot re-format: no files with examples",
-    "ai.FormatByExample.progressText": "Asking AI to format an SQL statement",
-    "dialog.message.how.can.i.assist.your": "How can I assist you?",
-    "dialog.title.suggested.action": "Suggested Action",
-    "dialog.title.ui.ai.assistant": "UI AI Assistant",
-    "no.answer.from.llm": "No answer from LLM",
-    "progress.text.processing.response": "Processing response…",
-    "progress.text.sending.request.choice": "Sending request{0, choice, 1#|1< ({0})}{1, choice, 0#|1# - forcing finish}…"
+    "dialog.title.ui.ai.assistant": "UI AI Assistant"
   },
   "messages/SshBundle.properties": {
     "ide.service.view.local.port.forwarding.text": "{0} → {1}",
     "ide.service.view.remote.port.forwarding.text": "{0} ← {1}"
+  },
+  "messages/StreamingBundle.properties": {
+    "manage.snapshots.one.snapshot.deleted": "1 snapshot deleted"
   },
   "messages/StructureViewBundle.properties": {
     "node.structureview.invalid": "<invalid>"
@@ -2914,6 +3361,7 @@
   "messages/SwiftBundle.properties": {
     "action.Swift.Generate.DebugDescription.text": "debugDescription…",
     "action.Swift.Generate.Description.text": "description…",
+    "action.Swift.SwiftFormatCreateConfigFileAction.text": "Create Swift-Format Config File",
     "auto.import.completion.presentation.tail.from.0": " ({0})",
     "change.info.async.throws.label": "async/throws:"
   },
@@ -2951,12 +3399,11 @@
     "settings.appid": "APPID:"
   },
   "messages/TerminalBundle.properties": {
-    "feedback.dialog.other.placeholder": "For example, missing features or vice versa, what you particularly like.",
-    "feedback.system.info.commands.number": "Number of executed commands:",
-    "feedback.system.info.moment": "Feedback moment:",
-    "feedback.system.info.shell": "Most used shell:",
-    "settings.show.shell.prompt": "Show Shell Prompt",
-    "terminal.prompt.lang.description": "Terminal Prompt (internal)"
+    "action.Terminal.SwitchPromptStyle.text": "Switch Terminal Prompt Style",
+    "action.Terminal.SwitchPromptStyle.use.preset.prompt": "Use Pre-set Prompt",
+    "action.Terminal.SwitchPromptStyle.use.shell.prompt": "Use Shell Prompt (PS1)",
+    "settings.show.shell.prompt": "Use shell prompt (PS1) instead of pre-set prompt",
+    "settings.show.shell.prompt.description": "Some prompts may not be supported"
   },
   "messages/TmsBundle.properties": {
     "tms.connection.url": "URL:",
@@ -2985,7 +3432,9 @@
     "tslint.notification.content": "TSLint: {0}"
   },
   "messages/UIBundle.properties": {
-    "memory.usage.panel.message.text": "{0,number,####}/{1,number,####}M"
+    "memory.usage.panel.message.text": "{0,number,####}/{1,number,####}M",
+    "proxy.settings.override.by.plugin.checkbox": "Proxy settings provided by ''{0}'' plugin",
+    "proxy.tunneling.disabled.warning": "<html>Basic proxy authentication is currently disabled for HTTPS connections. HTTPS connections may fail if proxy requires authentication. To allow basic proxy authentication, add <tt>-Djdk.http.auth.tunneling.disabledSchemes=\"\"</tt> to your VM options file and restart.</html>"
   },
   "messages/UIDesignerBundle.properties": {
     "bind.to.bean.getdata.checkbox": "getData()",
@@ -3004,6 +3453,8 @@
   "messages/UnityBundle.properties": {
     "appended.android.package": " ({0})",
     "appended.pid.0": " (pid: {0})",
+    "blockShader.fileType": "Block Shader file",
+    "filetype.GlslFileType.description": "OpenGL shading Language (GLSL)",
     "run.configuration.player.label.id": "ID:",
     "shaderVariant.popup.shaderApi.entries.d3d11": "DirectX 11",
     "shaderVariant.popup.shaderApi.entries.glcore": "OpenGL Core (3/4)",
@@ -3019,6 +3470,7 @@
     "git.url": "Git URL: {0}"
   },
   "messages/UnrealLinkBundle.properties": {
+    "RiderLink.Unreal.Debugger.BlueprintCallstack.UnrealEngineCode.suffix": "filtered out",
     "configurable.UnrealLink.settings.title": "Unreal Engine"
   },
   "messages/UsageViewBundle.properties": {
@@ -3042,7 +3494,10 @@
     "vcs.generic.name.with.mnemonic": "VCS(_S)"
   },
   "messages/VcsLogBundle.properties": {
-    "vcs.log.filter.accessible.name": "{0}: {1}"
+    "action.Vcs.Log.ShowBigRepositories.text": "Show Repositories with Disabled Indexing",
+    "vcs.log.big.repositories.dialog.title": "Repositories with Disabled Indexing",
+    "vcs.log.filter.accessible.name": "{0}: {1}",
+    "vcs.log.settings.visible.columns": "Visible Columns"
   },
   "messages/VisualizationBundle.properties": {
     "paginator.of": "/{0}"
@@ -3087,7 +3542,30 @@
     "jaxb.generation.dialog.jxc.label": "JXC:",
     "jaxb.generation.dialog.sdk.label": "SDK:",
     "jaxb.generation.dialog.xjc.label": "XJC:",
+    "live.template.ijrws.description": "Generate JaxRPC web service invocation",
+    "live.template.ijws.description": "Generate JaxWS web service invocation",
+    "live.template.itaws.description": "Generate Axis2 web service invocation",
+    "live.template.itws.description": "Generate Axis web service invocation",
+    "live.template.iuws.description": "Generate Axis untyped web service invocation",
+    "live.template.iuxws.description": "Generate XFire untyped web service invocation",
+    "live.template.iwws.description": "Generate WebSphere web service invocation",
+    "live.template.ixws.description": "Generate Apache CXF web service invocation",
+    "live.template.mjo.description": "Generate JAXB object-to-XML serialization",
+    "live.template.mxb.description": "Generate XmlBeans object-to-XML serialization",
+    "live.template.ujo.description": "Generate JAXB XML-to-object serialization",
+    "live.template.uxb.description": "Generate XmlBeans XML-to-object deserialization",
     "websphere.platform.name": "WebSphere 6.X"
+  },
+  "messages/WearWhsBundle.properties": {
+    "wear.whs.capability.absolute.elevation.label": "Absolute Elevation",
+    "wear.whs.capability.elevation.gain.label": "Elevation Gain",
+    "wear.whs.capability.heart.rate.label": "Heart rate",
+    "wear.whs.capability.speed.unit": "mi/h",
+    "wear.whs.capability.total.calories.label": "Total calories",
+    "wear.whs.panel.capabilities.all": "All capabilities",
+    "wear.whs.panel.capabilities.standard": "Standard capabilities",
+    "wear.whs.panel.test.data.inactive": "Test data inactive",
+    "wear.whs.panel.title": "Wear Health Services"
   },
   "messages/WebBundle.properties": {
     "action.GenerateServletAction.text": "Servlet(&S)…",
@@ -3135,6 +3613,11 @@
   },
   "messages/WordPressBundle.properties": {
     "wp.cli.title": "WP-CLI"
+  },
+  "messages/WxnBundle.properties": {
+    "wxn.options.descriptor.interpolation.braces": "Interpolation braces",
+    "wxn.parser.message.statements.not.allowed": "Statements are not allowed in WXML script expressions",
+    "wxn.parser.unclosed.interpolation.expression": "Interpolation expression is not closed"
   },
   "messages/XDebuggerBundle.properties": {
     "action.Anonymous.text.breakpointdialog.gotosource": "BreakpointDialog.GoToSource",

@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>Reports unknown properties in blocks</p>
+<p>問題範例：</p>
+<pre><code>
+resource "awscc_appflow_flow" "aws_flow1" {
+  flow_name          = ""
+  source_flow_config = ""
+  trigger_config     = ""
+  destination_flow_config_list {}
+  tasks {}
+  test = ""
+}
+
+</code></pre>
+<p>
+  在此範例中，塊中的 'test' 屬性未知。
+</p>
+<p>更正範例：</p>
+<pre><code>
+resource "awscc_appflow_flow" "aws_flow1" {
+  flow_name          = ""
+  source_flow_config = ""
+  trigger_config     = ""
+  destination_flow_config_list {}
+  tasks {}
+}
+
+</code></pre>
+</body>
+</html>

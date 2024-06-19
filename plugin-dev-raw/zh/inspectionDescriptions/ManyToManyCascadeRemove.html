@@ -1,8 +1,9 @@
 <html>
 <body>
-此檢查會檢查是否存在帶有 CascadeType.REMOVE 特性的 @ManyToMany 關聯。
-為 @ManyTOMany 指定 CascadeType.REMOVE 對於級聯沒有意義，因為它會傳播到鏈接表之外。 由於另一側可能被父側的其他實體參照，自動移除可能會導致 ConstraintViolationException。
-例如，如果定義了 @ManyToMany(cascade = CascadeType.ALL)，且第一個人員會被刪除，Hibernate 會拋出異常，因為另一個人員仍與正在刪除的地址相關聯。
+檢查是否存在 <pre><code>@ManyToMany</code></pre> 關聯（帶有 <pre><code>CascadeType.REMOVE</code></pre> 特性）。
+指定 <pre><code>CascadeType.REMOVE</code></pre> 為 <pre><code>@ManyToMany</code></pre> 對於級聯沒有意義，因為它會傳播到鏈接表之外。
+由於另一側可能被父側的其他實體參照，自動移除可能會導致 <pre><code>ConstraintViolationException</code></pre>.
+例如，如果對 <pre><code>@ManyToMany(cascade = CascadeType.ALL)</code></pre> 進行了定義，且第一個人員會被刪除，Hibernate 會拋出異常，因為另一個人員仍與正在刪除的地址相關聯。
 有關詳情，請參閱<a href="https://vladmihalcea.com/hypersistence-optimizer/docs/user-guide/#ManyToManyCascadeRemoveEvent">此文章</a>。
 </body>
 </html>
