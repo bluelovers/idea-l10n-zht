@@ -20,6 +20,17 @@ export class PluginXml extends XMLSerialized
 		this.root['version'] = value
 	}
 
+	get locale()
+	{
+		return this.root['locale'] as string
+	}
+
+	set locale(value: string)
+	{
+		this.root['locale'] = 'zh-TW';
+		this.root['extensions']['languageBundle']['@locale'] = 'zh-TW';
+	}
+
 	get name()
 	{
 		return this.root['name'] as string

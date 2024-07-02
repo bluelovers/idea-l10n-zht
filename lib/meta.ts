@@ -15,6 +15,9 @@ export function updateMeta(content_new: string)
 	obj.id = 'com.intellij.zh-tw';
 	obj.name = `Chinese (Traditional) Language Pack / 繁體中文語言包`;
 
+	// from 2024.2 EAP
+	obj.locale = 'zh-TW';
+
 	obj.root['vendor'] = {
 		'@url': 'https://github.com/bluelovers/idea-l10n-zht',
 		'#': 'bluelovers',
