@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2024-07-02)
+
+
+
+### ✨　Features
+
+* set `locale` for 2024.2 EAP ([244f82d](https://github.com/bluelovers/idea-l10n-zht/commit/244f82d3204ad0c621389b55c84937bb51553b82))
+
+
+### 🛠　Build System
+
+* **cache:** update version-map ([2fca870](https://github.com/bluelovers/idea-l10n-zht/commit/2fca870099f46bea78ad79a5fbc6826cda50e22b))
+* **cache:** update version-map ([c549584](https://github.com/bluelovers/idea-l10n-zht/commit/c54958422313446416547f328300587220674e04))
+* **release:** update build ( 242.152 ) ([b25f9b3](https://github.com/bluelovers/idea-l10n-zht/commit/b25f9b37a412df54a54b2aa695bf5b541bd3522e))
+* **release:** update dev build files ( 242.152 ) ([ba25ecc](https://github.com/bluelovers/idea-l10n-zht/commit/ba25eccd0c9a3c83325b3a5d78ea449520f11a33))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2024-06-19)
 
 
