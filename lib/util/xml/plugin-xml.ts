@@ -39,6 +39,10 @@ export class PluginXml extends XMLSerialized
 	set name(value: string)
 	{
 		this.root['name'] = value
+		/**
+		 * https://youtrack.jetbrains.com/issue/IJPL-149950/2024.2-eap-force-ui-lang-as-chinese-simplified#focus=Comments-27-9923808.0-0
+		 */
+		this.root['extensions']['languageBundle']['@displayName'] = value;
 	}
 
 	get id()
