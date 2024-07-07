@@ -477,6 +477,36 @@ describe(`should include`, () => {
 			`javascript.validation.message.this.referenced.from.static.context=在 static 上下文中引用了 'this'`
 		],
 
+		[
+			`併`,
+			`action.Profiler.OpenMergedCalleesAction.description=在新页籤中开启选定的方法合并被呼叫方树`
+		],
+
+		[
+			`併`,
+			`ui.merged.calls.view.tab.title=方法合并被呼叫方`
+		],
+
+		[
+			`併`,
+			`property.Merges.title=合并数`
+		],
+
+		[
+			`併`,
+			`merge.columns=合并列`
+		],
+
+		[
+			`併`,
+			`支援您分配和合并拉取请求，`
+		],
+
+		[
+			`併`,
+			`二元运算符合并由逗号分隔的条件`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
