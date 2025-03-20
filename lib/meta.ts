@@ -7,6 +7,7 @@ import { insertAfterObjectKey } from './util/insertAfterObjectKey';
 
 export function updateMeta(content_new: string)
 {
+	// @ts-ignore
 	const html = renderMarkdown(readFileSync(join(__root, 'README.md')));
 
 	const obj = new PluginXml(content_new);
