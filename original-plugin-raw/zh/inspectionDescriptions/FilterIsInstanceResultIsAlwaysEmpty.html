@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>此检查会检测对 Kotlin 标准库函数 <code>filterIsInstance</code>/<code>filterIsInstanceTo</code> 的调用，其目标类型不是对其调用筛选的元素类型的子类型。 </p>
+
+<p>示例：</p>
+<pre><code>
+    val list = listOf&lt;Int&gt;(1, 2, 3)
+    val filteredList = list.filterIsInstance&lt;Boolean&gt;() // 空结果
+</code></pre>
+</body>
+</html>

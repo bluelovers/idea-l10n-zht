@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>
+  检测 OpenTofu 加密块配置中不存在的加密方法引用。 对于以下代码：
+  <pre>
+    <code>
+      terraform {
+        encryption {
+          key_provider "pbkdf2" "foo" {
+            # Configuration parameters
+          }
+          method "aes_gcm" "yourname2" {
+            keys = key_provider.pbkdf2.foo
+          }
+        }
+      }
+    </code>
+  </pre>
+  我们应检查方法名称是否正确。
+</p>
+<p>
+  有关详情，请参阅 https://opentofu.org/docs/language/state/encryption/#methods。
+</p>
+</body>
+</html>

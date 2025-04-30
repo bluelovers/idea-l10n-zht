@@ -7,7 +7,7 @@
   <li>由 <code>@RegisterExtension</code> 注解的类型错误或在需要时未被声明为 static 的字段</li>
   <li>使用 <code>@Nested</code> 注解的 static 或 private 内部类</li>
   <li>在没有源的情况下定义的形参化测试</li>
-  <li>具有包含未知、非 static 或无实参目标的 <code>@MethodSource</code> 的形参化测试。</li>
+  <li>包含具有未知、非 static 或无实参目标的 <code>@MethodSource</code> 的形参化测试。</li>
   <li>形参化测试方法形参与指定的 <code>@ValueSource</code> 或 <code>@EnumSource</code> 值之间的类型不匹配</li>
   <li>由 <code>@Test</code>、<code>@ParameterizedTest</code> 或 <code>@RepeatedTest</code> 中的多个注解的测试</li>
   <li>非 public 的 <code>setup()</code> 或 <code>tearDown()</code>方法，其返回值类型不是 void 或接受实参</li>
@@ -20,7 +20,7 @@
   </li>
   <li>在 <code>@BeforeAll</code> 或 <code>@AfterAll</code> 方法中注入的 <code>RepetitionInfo</code></li>
   <li>
-    由 <code>@Test</code> 注解测试使用，在 <code>@BeforeEach</code> 或 <code>@AfterEach</code>方法中注入的 <code>RepetitionInfo</code>
+    由 <code>@Test</code> 注解测试使用，在 <code>@BeforeEach</code> 或 <code>@AfterEach</code> 方法中注入的 <code>RepetitionInfo</code>
   </li>
   <li>由 <code>@DataPoint</code> 或 <code>@DataPoints</code> 注解的非 public 或非 static 字段和方法</li>
   <li>
@@ -71,7 +71,7 @@
 </code></pre>
 
 <!-- tooltip end -->
-<p>使用检查选项可以指定注解。 不会报告任何使用其中一种注解进行注解的形参。
+<p>使用检查选项可以指定注解。 将不会报告任何使用其中一种注解进行注解的形参。
 </p>
 </body>
 </html>

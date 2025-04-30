@@ -16,16 +16,16 @@
 
 <html>
 <body>
-报告对 <code>fmt.Printf</code>、<code>fmt.Println</code> 以及类似的格式化和打印功能的不正确使用情况。
-<p>在格式化字符串中，格式化函数使用格式化动词，如 <code>%s</code>、<code>%d</code>、<code>%v</code> 等。
-  如果格式化动词使用不正确，格式化函数的结果将包含错误。
-  有关格式动词的更多信息，请参阅 <a href="https://golang.org/pkg/fmt/">golang.org 上的 Package fmt</a>。
+报告对 <code>fmt.Printf</code>、<code>fmt.Println</code> 以及类似格式设置和打印函数的不正确用法。
+<p>在格式设置字符串中，格式设置函数使用格式设置动词，例如 <code>%s</code>、<code>%d</code>、<code>%v</code> 等。
+  如果格式设置动词使用不正确，格式设置函数的结果将包含错误。
+  有关格式动词的详细信息，请参阅 <a href="https://pkg.go.dev/fmt">go.dev 上的 Package fmt</a>。
 </p>
 <p>示例：</p>
 <pre><code>fmt.Printf("id: %s", 42)</code></pre>
-<p>这个函数的输出是 <code>id: %!s(int=42)</code>。 这可能不是您所期望的。
-  以下函数使用 <code>%d</code> 格式化动词。
-  带有 <code>%d</code> 格式化动词的输出将是 <code>id: 42</code>。</p>
+<p>此函数的输出为 <code>id: %!s(int=42)</code>。 这可能不是您所期望的。
+  以下函数使用 <code>%d</code> 格式设置动词。
+  带有 <code>%d</code> 格式设置动词的输出将是 <code>id: 42</code>。</p>
 <pre><code>fmt.Printf("id: %d", 42)</code></pre>
 </body>
 </html>

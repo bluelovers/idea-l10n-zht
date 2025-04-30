@@ -1,7 +1,7 @@
 <html>
 <body>
 报告查询中限制行的冗余子句，例如 FETCH 和 LIMIT。
-<p>示例（PostgreSQL）：</p>
+<p>示例 (PostgreSQL)：</p>
 <pre><code>CREATE TABLE foo(a INT);
 
 SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo LIMIT 2);

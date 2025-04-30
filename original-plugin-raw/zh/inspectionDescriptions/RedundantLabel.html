@@ -1,0 +1,28 @@
+<html>
+<body>
+报告无法从 'break'、'continue' 或 'return' 语句引用的冗余标签。 
+<p>
+此类标签可以安全移除。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+fun foo(c: Boolean) {
+    b@ while (true) a@ {
+        while (true) {
+            break@b
+        }
+    }
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+fun foo(c: Boolean) {
+    b@ while (true) {
+        while (true) {
+            break@b
+        }
+    }
+}
+</code></pre>
+</body>
+</html>

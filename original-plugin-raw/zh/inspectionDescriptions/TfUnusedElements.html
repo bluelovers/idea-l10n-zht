@@ -1,0 +1,110 @@
+<html>
+<body>
+<p>报告 Terraform 模块中未使用的变量、局部变量和数据源，并提供移除它们的快速修复。</p>
+<p>问题示例：</p>
+
+<pre><code>
+data "aws_ami" "latest_amazon_linux" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+  }
+
+  owners = ["amazon"]
+}
+
+data "aws_vpc" "unused_data_source" {
+  default = true
+}
+
+resource "aws_instance" "example" {
+  ami           = data.aws_ami.latest_amazon_linux.id
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "ExampleInstance"
+  }
+}
+
+variable "used_variable" {
+  description = "This variable is used in resource configuration"
+  type        = string
+  default     = "ami-01456a894f71116f2"
+}
+
+locals {
+  instance_name = "used-instance"
+}
+
+resource "aws_instance" "example1" {
+  ami           = var.used_variable
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = local.instance_name
+  }
+}
+
+variable "unused_variable1" {
+  description = "This variable is not used anywhere in the configuration"
+  type        = string
+  default     = "default_value1"
+}
+
+locals {
+  unused_local1 = "This is an unused local value"
+}
+</code></pre>
+
+<p>
+  在此示例中，<code>unused_data_source</code>，<code>unused_variable1</code> 和 <code>unused_local1</code> 在文件中进行了声明，但未在任何地方使用。
+</p>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+data "aws_ami" "latest_amazon_linux" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+  }
+
+  owners = ["amazon"]
+}
+
+resource "aws_instance" "example" {
+  ami           = data.aws_ami.latest_amazon_linux.id
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "ExampleInstance"
+  }
+}
+
+variable "used_variable" {
+  description = "This variable is used in resource configuration"
+  type        = string
+  default     = "ami-01456a894f71116f2"
+}
+
+locals {
+  instance_name = "used-instance"
+}
+
+resource "aws_instance" "example1" {
+  ami           = var.used_variable
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = local.instance_name
+  }
+}
+
+locals {
+}
+</code></pre>
+</body>
+</html>

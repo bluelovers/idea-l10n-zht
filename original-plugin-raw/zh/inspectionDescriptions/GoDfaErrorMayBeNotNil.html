@@ -1,7 +1,7 @@
 <html>
 <body>
-报告变量可能具有 <code>nil</code> 或意外值的实例，因为为检查相关错误是否为非 nil，如 <code>v, err := foo()</code> 中。
-<p>快速修复会将该函数从此检查的范围中移除。</p>
+报告变量可能具有 <code>nil</code> 或意外值的实例，因为未检查关联错误是否为非 nil，如 <code>v, err := foo()</code> 中。
+<p>该快速修复会将函数从此检查的范围中移除。</p>
 <p>示例：</p>
 <pre><code>
 func _() {

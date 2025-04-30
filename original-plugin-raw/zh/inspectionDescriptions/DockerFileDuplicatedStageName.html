@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>报告 <code>FROM ... AS stage-name </code> 命令中重复的暂存名称。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  # 以下命令将会失败
+  FROM ubuntu:latest AS stage1
+  FROM ubuntu:latest AS stage1
+</code></pre>
+</body>
+</html>

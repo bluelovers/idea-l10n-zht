@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>
+    检查 <code>typing.assert_type(val, typ, /)</code> 调用，并报告 <code>val</code> 的推断类型不是 <code>typ</code> 的情况。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+def greet(name: str) -> None:
+    assert_type(name, str)  # OK
+    assert_type(name, int)  # 应为类型 'int'，但实际为 'str'
+</code></pre>
+</body>
+</html>

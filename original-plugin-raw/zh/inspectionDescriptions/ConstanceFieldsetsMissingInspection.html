@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>
+  检测 <code>CONSTANCE_CONFIG_FIELDSETS</code>（用于配置 <a href="https://django-constance.readthedocs.io/en/latest/">Django Constance</a> 的常量）中缺少的键。
+</p>
+<p><b>示例：</b></p>
+<pre><code lang="Python">
+CONSTANCE_CONFIG = {
+    'SITE_NAME': ('My Title', 'Website title'),
+    'SITE_DESCRIPTION': ('', 'Website description'),
+}
+
+CONSTANCE_CONFIG_FIELDSETS = {
+    'General Options': ('SITE_NAME'),
+}
+</code></pre>
+</body>
+</html>

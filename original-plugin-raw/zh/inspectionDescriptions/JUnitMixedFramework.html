@@ -1,6 +1,6 @@
 <html>
 <body>
-当在不同 JUnit 版本的测试用例中使用时，报告 JUnit 注解的方法。 为了确定测试用例的框架版本，该检查会在可用时检查超类的框架版本。 当某个超类不可用时，它将在测试用例中使用最常用的框架。
+在不同 JUnit 版本的测试用例中使用时，报告 JUnit 注解的方法。 为了确定测试用例的框架版本，该检查会在可用时检查超类的框架版本。 当某个超类不可用时，它将在测试用例中使用最常用的框架。
 <p>示例（JUnit 3 测试用例中的 JUnit 4 注解）：</p>
 <pre><code lang="java">
   public class MyTest extends TestCase {
@@ -24,7 +24,7 @@
 <p>示例（JUnit 4 测试用例中的 JUnit 5 注解）：</p>
 <pre><code lang="java">
   public class MyTest {
-      @BeforeAll // JUnit 5 生命周期方法
+      @BeforeAll // JUnit 5 生存期方法
       public void initialize() { }
 
       @org.junit.Test  // JUnit 4 测试注解
@@ -37,7 +37,7 @@
 <p>在应用快速修复后：</p>
 <pre><code lang="java">
   public class MyTest {
-      @BeforeClass // JUnit 4 生命周期方法
+      @BeforeClass // JUnit 4 生存期方法
       public void initialize() { }
 
       @org.junit.Test  // JUnit 4 测试注解

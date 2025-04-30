@@ -1,12 +1,12 @@
 <html>
 <body>
-报告可以替换为对 <code>Long.hashCode()</code> 或 <code>Double.hashCode()</code> 方法的调用的按位操作。
-它会检测结构 <code>(int)(x ^ (x >>> 32))</code>，其中 <code>x</code> 是类型为 <code>long</code> 的变量，或者是前一个 <code>Double.doubleToLongBits()</code> 调用的结果。 此替换可以缩短代码，提高代码的可读性。
+报告可以替换为对 <code>Long.hashCode()</code> 或 <code>Double.hashCode()</code> 方法的调用的按位运算。
+它会检测构造 <code>(int)(x ^ (x >>> 32))</code>，其中 <code>x</code> 是类型为 <code>long</code> 的变量，或者是前一个 <code>Double.doubleToLongBits()</code> 调用的结果。 此替换可以缩短代码，提高代码的可读性。
 <p><b>示例：</b></p>
 <pre><code>
   int result = (int)(var ^ (var >>> 32));
 </code></pre>
-<p>应用快速修复后：</p>
+<p>应用该快速修复后：</p>
 <pre><code>
   int result = Long.hashCode(var);
 </code></pre>

@@ -1,10 +1,10 @@
 <html>
 <body>
-报告“预期”实参和“实际”实参的类型不兼容时对断言方法的调用。
-<p>此类调用通常表明测试中存在错误。
-  该检查会检查相关的 JUnit、TestNG 和 AssertJ 方法。</p>
+报告“expected”实参和“actual”实参的类型不兼容时对断言方法的调用。
+<p>此类调用通常表明测试中存在 bug。
+  此检查会检查相关的 JUnit、TestNG 和 AssertJ 方法。</p>
 <p><b>示例：</b></p>
-<pre><code>
+<pre><code lang="java">
   assertEquals("1", 1);
   assertNotSame(new int[0], 0);
 

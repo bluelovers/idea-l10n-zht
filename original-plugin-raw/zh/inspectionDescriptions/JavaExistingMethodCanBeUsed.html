@@ -15,8 +15,8 @@
     return lines.stream().map(String::trim).toList();
   }
 </code></pre>
-这里，第二个方法与第一个方法非常相似，第一个方法可以在其实现中重用。
-应用快速修复后，结果如下所示：
+在这里，第二个方法与第一个方法非常相似，第一个方法可以在其实现中重用。
+应用该快速修复后，结果将如下所示：
 <pre><code lang="java">
   static List&lt;String&gt; readFileAndTrim(Path path) throws IOException {
     List&lt;String&gt; lines = Files.readAllLines(path);

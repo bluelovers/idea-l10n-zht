@@ -16,13 +16,13 @@
 
 <html>
 <body>
-报告不以导出元素名称开头的注释。
-<p>根据 <a href="https://golang.org/wiki/CodeReviewComments#comment-sentences">golang.org 上的 Comment Sentences</a>，将导出元素的名称放在评论的开头是一个约定。</p>
+报告不以导出元素的名称开头的注释。
+<p>根据 <a href="https://github.com/golang/go/wiki/CodeReviewComments#comment-sentences">github.com/golang 上的 Comment Sentences</a>，将导出元素的名称放在评论的开头是一个约定。</p>
 <p>示例：</p>
 <pre><code>// 表示运行命令的请求。
 type Request struct {}</code></pre>
 
-<p>注释以结构描述开头，而不是结构名称。 为了遵守约定规则，您可以应用 <b>向注释中添加前缀</b> 快速修复。 应用快速修复后，注释如下所示：</p>
+<p>注释以结构体描述而不是结构体名称开头。 为了遵守约定规则，您可以应用<b>向注释中添加前缀</b>快速修复。 应用该快速修复后，注释将如下所示：</p>
 <pre>
 // Request 表示运行命令的请求。
 type Request struct {} // 更好

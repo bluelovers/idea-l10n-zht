@@ -1,8 +1,15 @@
 <html>
 <body>
 <p>报告未使用的依赖项。</p>
-<p>对于当前 <i>go.mod</i> 文件中的每个依赖项，此检查会搜索所有 Go 文件中以依赖项名称开头的任何导入语句。
-  如果未找到此类导入，则该依赖项被视为未使用。
-  检查不报告间接依赖关系。 间接依赖被 <code>//indirect</code> 注释标记。</p>
+<p>对于当前 <i>go.mod</i> 文件中的每个依赖项，此检查会搜索所有 Go 文件中以依赖项名称开头的任何 import 语句。
+  如果找不到此类 import，该依赖项会被视为未使用。
+  此检查等效于 <a href="https://go.dev/ref/mod#go-mod-why"><code>go mod why</code> 命令</a>。</p>
+<p>该检查会处理 <code>require</code> 和 <code>replace</code> 指令。
+  带有 <code>// indirect</code> 注释的 <code>require</code> 指令也会被处理。</p>
+<p>在以下情况下，该检查可能无法准确确定是否未使用替换或间接要求的依赖项：</p>
+<ul>
+  <li>已启用 vendoring 模式</li>
+  <li>未下载某些依赖项</li>
+</ul>
 </body>
 </html>

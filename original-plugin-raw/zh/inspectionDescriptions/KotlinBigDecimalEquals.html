@@ -1,0 +1,19 @@
+<html>
+<body>
+报告比较两个 <code>java.math.BigDecimal</code> 数字的 <code>==</code> 或 <code>equals()</code> 调用。
+这通常会是错误，因为两个 <code>java.math.BigDecimal</code> 数字只有在值和比例上都相等时才相等。
+<p><b>示例：</b></p>
+<pre><code>
+  // 条件为 false
+  val condition = BigDecimal("2.0") ==
+      BigDecimal("2.00")
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  // 条件为 true
+  val condition = BigDecimal("2.0").compareTo(
+      BigDecimal("2.00")) == 0
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,14 +1,14 @@
 <html>
 <body>
-报告构建标记的格式错误和放置在错误位置的构建标记。 <code>go</code> 工具要求将构建标记放置在特定位置并以特殊语法编写。 如果不满足这些要求，则可能会忽略构建标记或可能会意外地从构建中删除文件。
-<p>请参阅 <a href="https://golang.org/pkg/go/build/#hdr-Build_Constraints">golang.org 上的 Build Constraints</a>。</p>
+报告格式错误的构建标记和放置在错误位置的构建标记。 <code>go</code> 工具要求将构建标记放置在特定位置并遵循特殊语法。 如果不满足这些要求，则可能会忽略构建标记或可能会错误地从构建中排除文件。
+<p>请参阅 <a href="https://pkg.go.dev/go/build#hdr-Build_Constraints">go.dev 上的 Build Constraints</a>。</p>
 <p>示例：</p>
 <pre><code>package main
 
 // +build ignore
 
 func main() {}</code></pre>
-<p><code>// +build ignore</code> 部分应该在软件包声明之前。 要解决此问题，您可以应用<b>在软件包前面放置构建标签</b>快速修复。 在应用快速修复后：</p>
+<p><code>// +build ignore</code> 部分应该位于软件包声明之前。 要修正此问题，您可以应用<b>在软件包前面放置构建标记</b>快速修复。 在应用快速修复后：</p>
 <pre><code>// +build ignore
 
 package main

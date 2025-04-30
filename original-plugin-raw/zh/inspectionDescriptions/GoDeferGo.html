@@ -21,9 +21,9 @@
   应特别注意以下事项：</p>
 <ul>
   <li><code>go panic()</code>：一个新启动的 goroutine 会立即 panic。</li>
-  <li><code>defer panic()</code>：带有这个语句的函数在退出时总是会 panic。</li>
-  <li><code>go recovery()</code>：没有效果，因为新启动的 goroutine 不能 panic。</li>
-  <li><code>defer recovery()</code>：带有这个语句的函数将默默地停止 panic。 这种用法可能有效，但一种惯用的方法是检查 <code>recover()</code> 返回的值：
+  <li><code>defer panic()</code>：带有此语句的函数在退出时始终 panic。</li>
+  <li><code>go recovery()</code>：不起任何作用，因为新启动的 goroutine 不能 panic。</li>
+  <li><code>defer recovery()</code>：带有此语句的函数将默默地停止 panic。 这种用法可能有效，但一种惯用的方式是检查 <code>recover()</code> 返回的值：
     <pre><code>defer func() {
   if r := recover(); r != nil {
     fmt.Println("Recovered from: ", r)
@@ -31,6 +31,6 @@
 }()</code></pre>
   </li>
 </ul>
-<p>有关 go 语句和 panic 处理的更多信息，请参阅 Go 语言规范中的 <a href="https://golang.org/ref/spec#Handling_panics">Handling panics</a> 和 <a href="https://golang.org/ref/spec#Go_statements">Go statements</a>。</p>
+<p>有关 go 语句和 panic 处理的详细信息，请参阅 Go 语言规范中的 <a href="https://go.dev/ref/spec#Handling_panics">Handling panics</a> 和 <a href="https://go.dev/ref/spec#Go_statements">Go statements</a>。</p>
 </body>
 </html>

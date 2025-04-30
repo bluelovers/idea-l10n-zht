@@ -2,13 +2,13 @@
 <body>
 当第二个实参不是一个指向接口或实现错误的类型的指针时，报告对 <code>errors.As</code> 函数的调用。
 <p>此类调用在运行时会出现 panic。</p>
-<p>有关 <code>As</code> 函数的更多信息，请参阅 <a href="https://golang.org/pkg/errors/#As">golang.org 上的 func As</a>。</p>
+<p>有关 <code>As</code> 函数的详细信息，请参阅 <a href="https://pkg.go.dev/errors#As">go.dev 上的 func As</a>。</p>
 <p>示例：</p>
 <pre><code>_, err := os.Open("non-existing")
 var pathError *fs.PathError
 if errors.As(err, pathError) { // 需要一个指向 *fs.PathError 的指针
 }</code></pre>
-<p>在应用<b>在前面追加 '&amp;'</b>快速修复后：</p>
+<p>在应用<b>预置 '&amp;'</b> 快速修复后：</p>
 <pre><code>_, err := os.Open("non-existing")
 var pathError *fs.PathError
 if errors.As(err, &pathError) {

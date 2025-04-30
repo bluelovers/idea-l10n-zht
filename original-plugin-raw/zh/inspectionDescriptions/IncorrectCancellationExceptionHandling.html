@@ -1,0 +1,82 @@
+<html>
+<body>
+报告 <code>ProcessCanceledException</code> 和 <code>CancellationException</code> 处理不正确的情况。
+
+<p>
+  不得以任何方式捕获、吞下、记录或处理 <code>ProcessCanceledException</code> 及其继承者。
+  相反，必须将其重新抛出，以便 IntelliJ 平台基础架构能够对其进行正确处理。
+</p>
+<p>
+  在协程上下文中不得以任何方式捕获、吞下、记录或处理 <code>CancellationException</code>。
+  相反，必须将其重新抛出，以便协程基础架构能够对其进行正确处理。
+</p>
+
+<p>
+  检查会报告显式的 <code>ProcessCanceledException</code>（包括继承者）和 <code>CancellationException</code> 的捕获，以及对覆盖取消异常的 <code>RuntimeException</code>、<code>Exception</code> 和 <code>Throwable</code> 的捕获。
+</p>
+
+<h3>示例：</h3>
+
+<h4><code>ProcessCanceledException</code>:</h4>
+
+<pre><code lang="java">
+// bad:
+try {
+  // ...
+} catch (ProcessCanceledException e) { // 不应吞下异常
+}
+
+// 错误：
+try {
+  // ...
+} catch (ProcessCanceledException e) {
+  LOG.error("Error occurred", e); // 不应记录异常
+  throw e;
+}
+
+
+// 正确：
+try {
+  // ...
+} catch (ProcessCanceledException e) {
+  // 其他操作
+  throw e;
+}
+</code></pre>
+
+<h4><code>CancellationException</code>:</h4>
+<pre><code lang="kotlin">
+// bad:
+cs.launch {
+  try {
+    // ...
+  } catch (e: CancellationException) { // 不应吞下异常
+  }
+}
+
+// 错误：
+suspend fun suspendingFunction() {
+  try {
+    // ...
+  } catch (ProcessCanceledException e) {
+    LOG.error("Error occurred", e); // 不应记录异常
+    throw e;
+  }
+}
+
+
+// 正确：
+cs.launch {
+  try {
+    // ...
+  } catch (ProcessCanceledException e) {
+    // additional actions
+    throw e;
+  }
+}
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>2023.2 最新变化</small></p>
+</body>
+</html>

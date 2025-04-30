@@ -13,7 +13,7 @@
 <ol>
   <li>
     如果该字段其实未存储任何 PSI 引用，或者该 PSI 仅用于读取，
-您可以使用 <code>@SafeFieldForPreview</code> 注解该字段。 如果字段类型永远无法存储任何可写入的 PSI 引用，则也可以使用 <code>@SafeTypeForPreview</code>。
+您可以使用 <code>@SafeFieldForPreview</code> 注解该字段。 如果字段类型永远无法存储任何可写入的 PSI 引用，也可以使用 <code>@SafeTypeForPreview</code>。
   </li>
   <li>
     您可以重写 <code>getFileModifierForPreview()</code> 方法，然后创建一个快速修复副本，将其重新绑定至作为形参提供的非物理文件副本。 使用 <code>PsiTreeUtil.findSameElementInCopy()</code> 可以在提供的非物理副本中找到相应的 PSI 元素。
@@ -25,12 +25,12 @@
   </li>
   <li>
     您可以重写 <code>generatePreview()</code> 方法并提供完全自定义的预览行为。
-    例如，可以显示自定义 HTML 文档而不是实际预览，只要您在修改当前文件之外还进行了相应操作。
+    例如，只要您在修改当前文件之外还进行了相应操作，即可显示自定义 HTML 文档而不是实际预览。
   </li>
 </ol>
 <p>
   此检查不会报告 <code>getFileModifierForPreview()</code> 或 <code>generatePreview()</code> 的自定义实现是否存在。 但是，这并不意味着实现正确且预览有效。
-  请进行测试。 另请注意，预览结果是在后台线程中计算的，因此您无法在预览期间启动写入操作或执行任何需要写入操作的运算。 最后，如果 <code>startInWriteAction()</code> 返回 <code>false</code>，则不会自动生成预览。 在这种情况下，需要有自定义的 <code>generatePreview()</code> 实现。
+  请进行测试。 另请注意，预览结果是在后台线程中计算的，因此您无法在预览期间启动写入操作或执行任何需要写入操作的运算。 最后，如果 <code>startInWriteAction()</code> 返回 <code>false</code>，则不会自动生成预览。 在这种情况下，需要具有自定义 <code>generatePreview()</code> 实现。
 </p>
 <!-- tooltip end -->
 <p><small>2022.1 最新变化</small></p>

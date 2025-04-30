@@ -1,0 +1,43 @@
+<html>
+<body>
+报告应该迁移到上下文形参的上下文接收器。
+<p>
+    从 Kotlin 2.2.0 开始，上下文接收器已被上下文形参取代。
+    此检查有助于将已启用上下文接收器但尚未迁移到上下文形参语法的项目从上下文接收器迁移到上下文形参。
+</p>
+<p>
+    示例：
+</p>
+<pre><code>
+context(MutableList&lt;String&gt;, C)
+private fun foo() {
+    add("new")
+    bar()
+    baz()
+}
+
+class C {
+    fun bar() {}
+}
+
+fun C.baz() {}
+</code></pre>
+迁移后：
+<pre><code>
+context(strings: MutableList&lt;String&gt;, c: C)
+private fun foo() {
+    strings.add("new")
+    c.bar()
+    c.baz()
+}
+
+class C {
+    fun bar() {}
+}
+
+fun C.baz() {}
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

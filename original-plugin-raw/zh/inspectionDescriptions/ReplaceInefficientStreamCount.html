@@ -2,7 +2,7 @@
 <body>
 报告可以优化并且以 <code>count()</code> 运算结束的 Stream API 调用链。
 <p>
-  以下调用链可以替换为此检查：
+  以下调用链可被替换为此检查：
 </p>
 <ul>
   <li><code>Collection.stream().count()</code> &rarr; <code>Collection.size()</code>. 在 Java 8 中，<code>Collection.stream().count()</code> 实际上是通过迭代集合元素来进行计数，而 <code>Collection.size()</code> 对于大多数集合来说速度要快得多。</li>

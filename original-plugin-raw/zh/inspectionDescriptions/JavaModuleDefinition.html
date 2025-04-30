@@ -1,0 +1,13 @@
+<html>
+<body>
+报告 module-info.java 文件中的各种问题。 例如，它会报告已提供但未导出或使用的服务。
+<p><b>示例：</b></p>
+<pre><code>
+module myModule {
+  // 服务已提供，但其包含的软件包未导出
+  provides com.example.MyService with com.example.MyServiceImpl;
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

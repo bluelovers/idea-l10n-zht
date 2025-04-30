@@ -19,13 +19,12 @@
 报告可以省略的类型转换。
 <p>示例：</p>
 <pre><code>var s = string("hello")</code></pre>
-<p><code>“hello”</code>值已经是 <code>string</code> 类型，进一步转换为 <code>string</code> 是冗余的。
-  要删除转换，请考虑使用<b>删除转换</b> 快速修复。</p>
+<p><code>"hello"</code> 值已经是 <code>string</code> 类型，进一步转换为 <code>string</code> 的操作冗余。
+  要移除转换，请考虑使用<b>删除转换</b>快速修复。</p>
 <p>在应用快速修复后：</p>
 <pre><code>var s = "hello"</code></pre>
 <!-- tooltip end -->
-<p>浮点表达式可能会故意转换为浮点类型
-   （以<a href="https://github.com/mdempsky/unconvert/issues/40">这个问题</a>为例）。 在这种情况下，IDE 会警告您存在 <i>潜在的</i> 冗余类型转换。
+<p>有时将浮点表达式转换为浮点类型可能是有意为之（请参阅<a href="https://github.com/mdempsky/unconvert/issues/40">此问题</a>）。 在这种情况下，IDE 会警告您存在<i>潜在的</i>冗余转换。
 </p>
 </body>
 </html>

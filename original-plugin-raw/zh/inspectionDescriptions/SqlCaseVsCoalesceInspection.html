@@ -1,7 +1,7 @@
 <html>
 <body>
 报告 CASE 和 COALESCE 调用可以互换的情况。 此检查具有以下意图操作：<b>替换为 'COALESCE' 调用</b>和相反的 <b>替换为 CASE 表达式</b>。
-<p>示例（MySQL）：</p>
+<p>示例 (MySQL)：</p>
 <pre><code>SELECT
   -- this CASE may be replaced by COALESCE
 	CASE

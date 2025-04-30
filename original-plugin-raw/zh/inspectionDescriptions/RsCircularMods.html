@@ -1,0 +1,14 @@
+<html>
+<body>
+报告带有 <code>#path</code> 特性的循环模块声明。
+此类声明会产生无限的模块图并且无法编译。
+
+<!-- tooltip end -->
+此错误的一个常见示例是文件模块声明了引用当前文件的子 <code>mod</code>：<br>
+<code>
+    // File: recursive_mod.rs<br>
+    #[path = "recursive_mod.rs"]<br>
+    mod child_mod;<br>
+</code>
+</body>
+</html>

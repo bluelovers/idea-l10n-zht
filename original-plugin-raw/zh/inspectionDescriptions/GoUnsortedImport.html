@@ -16,15 +16,15 @@
 
 <html>
 <body>
-报告未排序的导入。
-<p>所有的 Go 程序都需要以同样的方式进行格式化，格式化规则由 <a href="https://golang.org/cmd/gofmt">gofmt</a> 工具固定。 这些规则要求对导入进行分类。</p>
-<p>错误排序的实例：</p>
+报告未排序的 import。
+<p>所有的 Go 程序都需要以同样的方式进行格式化，格式化规则由 <a href="https://pkg.go.dev/cmd/gofmt">gofmt</a> 工具固定。 这些规则要求对 import 进行分类。</p>
+<p>错误排序的示例：</p>
 <pre><code>import (
  "net"
  "errors"
  "fmt"
 )</code></pre>
-<p>您可以应用 <b>import 排序</b>快速修复来解决排序问题。 应用快速修复后，排序如下所示：</p>
+<p>您可以应用<b>对 import 排序</b>快速修复来修正排序问题。 应用快速修复后，排序将如下所示：</p>
 <pre><code>import (
  "errors"
  "fmt"

@@ -1,17 +1,17 @@
 <html>
 <body>
-Reports missing or redundant hints in <code>UastHintedVisitorAdapter</code> creation.
+报告 <code>UastHintedVisitorAdapter</code> 创建中缺少或冗余的提示。
 <p>
-  <code>UastHintedVisitorAdapter</code> receives hints that allow to optimize UAST visitor execution by visiting only elements, which classes are specified in the hint list.
+  <code>UastHintedVisitorAdapter</code> 可以接收提示，这些提示允许通过仅访问提示列表中指定的类的元素来优化 UAST 访问器执行。
 </p>
 <p>
-  If the visitor implements, e.g., <code>visitCallExpression</code> method, but does not include <code>UCallExpression</code> in hints, then the method will not be executed.
+  例如，如果访问器实现了 <code>visitCallExpression</code> 方法，但没有在提示中包括 <code>UCallExpression</code>，则该方法将不会被执行。
 </p>
 <p>
-  If the visitor does not implement, e.g., <code>visitCallExpression</code> method, but does include <code>UCallExpression</code> in hints, then the inherited method will be unnecessarily executed.
+  例如，如果访问器没有实现 <code>visitCallExpression</code> 方法，但在提示中包括了 <code>UCallExpression</code>，则继承的方法将被不必要地执行。
 </p>
 
-<h3>Examples</h3>
+<h3>示例</h3>
 
 <pre><code lang="kotlin">
 return UastHintedVisitorAdapter.create(
@@ -22,13 +22,13 @@ return UastHintedVisitorAdapter.create(
       return true
     }
 
-    override fun visitDoWhileExpression(node: UDoWhileExpression): Boolean { // unused at runtime
+    override fun visitDoWhileExpression(node: UDoWhileExpression): Boolean { // 运行时未使用
       inspectLoopExpression()
       return true
     }
     //...
   },
-  arrayOf(UForExpression::class.java) // Bad: missing UDoWhileExpression::class.java
+  arrayOf(UForExpression::class.java) // 错误：缺少 UDoWhileExpression::class.java
 )
 </code></pre>
 
@@ -44,7 +44,7 @@ UastHintedVisitorAdapter.create(
   },
   arrayOf(
     UForExpression::class.java,
-    UDoWhileExpression::class.java // Bad: visiting UDoWhileExpression is not implemented
+    UDoWhileExpression::class.java // 错误：访问 UDoWhileExpression 未实现
   )
 )
 </code></pre>

@@ -19,7 +19,7 @@
   这里 <code>KotlinDocumentationProvider</code> 是在 <code>plugin.xml</code> 中注册的扩展：
 </p>
 <pre><code lang="xml">
-  &lt;lang.documentationProvider language="JAVA"
+  &lt;lang.documentationProvider language="kotlin"
                               implementationClass="org.jetbrains.kotlin.idea.KotlinDocumentationProvider"
                               order="first"/&gt;
 </code></pre>
@@ -28,7 +28,7 @@
 </p>
 <p>
   扩展点实现中的 Kotlin 伴生对象只能包含记录器和简单常量。
-  其他声明可能会导致过多类加载或提前初始化开销大的资源（TokenSet、Regex 等）。
+  其他声明可能会导致过多类加载或提前初始化开销大的资源（<code>TokenSet</code>、Regex 等）。
   加载扩展类时。
   请注意，即使标记为 <code>@JvmStatic</code> 的声明也会为伴生对象生成一个额外的类，这可能会导致开销巨大的计算。
 </p>

@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>
+  报告 <a href="https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#beat-schedule">Celery Beat 调度表</a>中未注册的任务
+</p>
+<p><b>示例：</b></p>
+<pre><code lang="Python">
+  #settings.py
+
+  CELERY_BEAT_SCHEDULE = {
+      'task_name': {
+          'task': 'example_app.tasks.task_name', # path to a task represented by a class or function
+          'schedule': 3.0,
+      },
+  }
+
+
+  #example_app/tasks.py
+
+  @app.task()
+  def taskName():
+      pass
+
+  class TaskName(Task):
+      pass
+</code></pre>
+<p>如果一个任务类没有继承 Task 或任务函数没有必要的装饰器，则不会被视为已注册</p>
+</body>
+</html>

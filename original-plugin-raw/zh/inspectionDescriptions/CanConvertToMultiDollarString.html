@@ -1,0 +1,23 @@
+<html>
+<body>
+报告将字符串转换为带有多个美元符号内插前缀的版本时可以从中受益的情况。
+<p>
+内插前缀可以使字符串更容易理解，因为带前缀的字符串可以使用美元符号字面量，而无需额外的转义。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+val jsonSchema: String = """
+{
+  "${'$'}id": "https://example.com/product.schema.json",
+}"""
+</code></pre>
+快速修复会将所有可安全替换的转义美元字符转换为常规美元字符：
+<pre><code>
+val jsonSchema: String = $$"""
+{
+  "$id": "https://example.com/product.schema.json",
+}"""
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

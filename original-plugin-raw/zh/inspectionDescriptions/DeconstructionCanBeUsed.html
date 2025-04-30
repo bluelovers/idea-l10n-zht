@@ -3,23 +3,23 @@
 报告可被替换为记录模式的模式。
 <p>示例：</p>
 <pre><code>
-  record Point(int x, int y) {}
-
-  static void printSum(Object obj) {
-    if (obj instanceof Point p) {
-      int x = p.x();
-      int y = p.y();
-      System.out.println(x + y);
+  record Point(int x, int y) {
+    static void printSum(Object obj) {
+      if (obj instanceof Point p) {
+        int x = p.x();
+        int y = p.y();
+        System.out.println(x + y);
+      }
     }
   }
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
-  record Point(int x, int y) {}
-
-  static void printSum(Object obj) {
-    if (obj instanceof Point(int x, int y)) {
-      System.out.println(x + y);
+  record Point(int x, int y) {
+    static void printSum(Object obj) {
+      if (obj instanceof Point(int x, int y)) {
+        System.out.println(x + y);
+      }
     }
   }
 </code></pre>

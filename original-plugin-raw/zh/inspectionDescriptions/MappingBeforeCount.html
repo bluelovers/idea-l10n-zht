@@ -1,12 +1,12 @@
 <html>
 <body>
-报告冗余的 <code>Stream</code> API 调用，如 <code>map()</code> 或在 <code>count()</code> 调用之前的 <code>boxed()</code>。
+报告冗余的 <code>Stream</code> API 调用，例如 <code>map()</code> 或在 <code>count()</code> 调用之前的 <code>boxed()</code>。
 <p>
-  此类调用不会改变最终计数，因此可以移除。 代码可能依赖于此类映射调用中 lambda 的副作用。 然而，依靠 Stream 链内部的副作用是非常不好的做法。 不能保证该调用在未来的 Java 版本中不会被优化。
+  此类调用不会改变最终计数，因此可以移除。 代码可能依赖于此类映射调用中 lambda 的副作用。 不过，依赖 Stream 链内部的副作用是极其不好的做法。 不能保证该调用在未来的 Java 版本中不会被优化。
 </p>
 <p><b>示例：</b></p>
 <pre><code>
-  // map() 调用是冗余的
+  // map() 调用冗余
   long count = list.stream().filter(s -> !s.isEmpty()).map(s -> s.trim()).count();
 </code></pre>
 <!-- tooltip end -->

@@ -2,7 +2,7 @@
 <body>
 报告从函数执行 SELECT 或执行没有类型别名的 DBLINK（例如 <code> AS t1 (s VARCHAR) </code>）的情况。
   <p>此要求不适用于标量函数。</p>
-<p>示例（PostgreSQL）：</p>
+<p>示例 (PostgreSQL)：</p>
 <pre><code>CREATE FUNCTION produce_a_table() RETURNS RECORD AS $$
 SELECT 1;
 $$ LANGUAGE sql;

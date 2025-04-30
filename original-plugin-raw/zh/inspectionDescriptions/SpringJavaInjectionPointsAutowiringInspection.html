@@ -29,14 +29,14 @@ public class MyComponent {
 @Component
 public class MyComponent {
 	@Autowired
-	public MyComponent(BarBean bean) {...} // 报告 '只允许一个 @Autowired 构造函数'
+	public MyComponent(BarBean bean) {...} // 报告“只允许一个 @Autowired 构造函数”
 
 	@Autowired
-	public MyComponent(FooBean bean) {...} // 报告 '只允许一个 @Autowired 构造函数'
+	public MyComponent(FooBean bean) {...} // 报告“只允许一个 @Autowired 构造函数”
 }
 
 @Component
-public class MyFactory {  // 报告 '没有匹配的 @Autowired 构造函数'
+public class MyFactory {  // 报告“没有匹配的 @Autowired 构造函数”
 	public MyFactory(String str) {...}
 	public MyFactory(int count) {...}
 }

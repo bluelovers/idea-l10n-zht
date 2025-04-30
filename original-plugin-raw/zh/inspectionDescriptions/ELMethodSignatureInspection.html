@@ -3,7 +3,7 @@
 报告 EL 中与 TLD 文件中的 <code>method-signature</code> 约束不匹配的方法调用。
 
 <p><b>示例 Java 类：</b></p><br/>
-<pre><code>
+<pre><code lang="java">
 public class ExampleAction {
   public void goodAction() { ... }
   public void badAction(String str) { ... }
@@ -11,7 +11,7 @@ public class ExampleAction {
 </code></pre>
 
 <p><b>示例 JSP 文件：</b></p><br/>
-<pre><code>
+<pre><code lang="jsp">
 &lt;jsp:useBean id="example" scope="request" type="org.example.ExampleAction"/&gt;
 &lt;f:view&gt;
   &lt;h:commandButton action="#{example.goodAction}"/&gt; // 优良：方法接受零实参并返回 `void`

@@ -1,6 +1,6 @@
 <html>
 <body>
-报告在比 <code>&lt;idea-version></code> <code>@since-build</code> (<code>plugin.xml</code>) 中指定的版本<em>更新</em>的版本中引入的 IntelliJ Platform API 的用法。
+报告在<em>低于</em> <code>plugin.xml</code> 的 <code><idea-version></code> <code>@since-build</code> 中所指定版本的版本中引入的 IntelliJ Platform API 的用法。
 <p>
   使用此类 API 可能导致插件与旧的 IDE 版本不兼容。
 </p>
@@ -13,6 +13,6 @@
 
 <!-- tooltip end -->
 <p>配置检查：</p>
-如果 <code>&lt;idea-version></code> <code>@since/until-build</code> 特性在 <code>plugin.xml</code> 中未指定，请显式设置 <b>Since</b>/<b>Until</b>。
+如果 <code>&lt;idea-version></code> <code>@since/until-build</code> 特性在 <code>plugin.xml</code> 中未指定，请明确设置 <b>Since</b>/<b>Until</b>。
 </body>
 </html>

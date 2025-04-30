@@ -1,0 +1,85 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td><font face="verdana" size="-1">适用于通过在<b>项目</b>工具窗口中调用<b>新建 | Spring 组件 | 服务</b>创建的新 Spring 服务。<br>此内置模板是可编辑的。 除了 Java 表达式和注释外，您还可以使用预定义变量（如下所列），这些变量随后将像宏一样被展开为相应值。<br><br>
+
+       您也可以指定自定义变量。 自定义变量使用以下格式：<i>${VARIABLE_NAME}</i>，其中 <i>VARIABLE_NAME</i> 是变量的名称（例如，<i>${MY_CUSTOM_FUNCTION_NAME}</i>）。
+      在 IDE 使用自定义变量创建新文件之前，您会看到一个对话框，您可以在其中定义模板中自定义变量的值。<br><br>
+
+       通过使用 <i>#parse</i> 指令，您可以包括 <b>Include</b> 标签页中的模板。 要包含模板，请在引号中以形参形式指定模板的全名（例如，<i>#parse("File Header.java")</i>）。
+    </font></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">预定义变量接受以下值：</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PACKAGE_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在其中创建新类的软件包名称</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">您在<i>创建新类</i>对话框中指定的新类的名称</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">当前用户的系统登录名</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">当前系统日期</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">当前系统时间</font></td>
+  </tr>
+  <tr>
+     <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">当前年份</font></td>
+   </tr>
+   <tr>
+     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">当前月份</font></td>
+   </tr>
+   <tr>
+     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">当前月份名称的前 3 个字母（Jan、Feb 等）</font></td>
+   </tr>
+   <tr>
+     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">当前月份的全名（January、February 等）。</font></td>
+   </tr>
+   <tr>
+     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">当月几号</font></td>
+   </tr>
+   <tr>
+     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">当前小时</font></td>
+   </tr>
+   <tr>
+     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">当前分钟</font></td>
+   </tr>
+   <tr>
+     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">当前项目的名称</font></td>
+   </tr>
+</table>
+</body>
+</html>

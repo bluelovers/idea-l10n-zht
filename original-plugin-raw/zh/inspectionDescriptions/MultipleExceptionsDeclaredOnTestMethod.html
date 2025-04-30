@@ -1,12 +1,12 @@
 <html>
 <body>
 报告具有多个异常的 JUnit 测试方法的 <code>throws</code> 子句。
-此类子句会造成不必要的冗余。
-不会从其他项目代码调用测试方法，因此无需单独处理这些异常。
-<p>示例：</p>
-<pre><code>
+此类子句会造成不必要的冗长。
+将不会从其他项目代码调用测试方法，因此无需单独处理这些异常。
+<p>例如：</p>
+<pre><code lang="java">
   @Test
-  <b>public void</b> testReflection() <b>throws</b> NoSuchMethodException,
+  public void testReflection() throws NoSuchMethodException,
       InvocationTargetException, IllegalAccessException {
     String result = (String) String.class.getMethod("trim")
         .invoke(" hello ");
@@ -14,9 +14,9 @@
   }
 </code></pre>
 <p>通过快速修复将异常声明替换为单个异常：</p>
-<pre><code>
+<pre><code lang="java">
   @Test
-  <b>public void</b> testReflection() <b>throws</b> Exception {
+  public void testReflection() throws Exception {
     String result = (String) String.class.getMethod("trim")
         .invoke(" hello ");
     assertEquals("hello", result);

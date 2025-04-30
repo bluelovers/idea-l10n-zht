@@ -1,11 +1,11 @@
 <body>
-报告空的 <code>module-info.java</code> 文件，指示未解析的模块依赖项。 通过检查导入自动添加必要的 <code>requires</code> 语句。
-要取消显示此警告，您可以在模块语句主体中写入任何注释，如下所示：
+报告空的 <code>module-info.java</code> 文件，指示未解析的模块依赖项。 通过检查 import 自动添加必要的 <code>requires</code> 语句。
+要禁止此警告，您可以在模块语句主体中写入任何注释，如下所示：
 <pre><code>
 module module.name {
     // 无依赖项
 }
 </code></pre>
-<b>快速修复：</b> <i>填充模块依赖项</i>会基于源代码导入填充缺少的 <code>requires</code>。
+<b>快速修复：</b> <i>填充模块依赖项</i>会基于源代码 import 填充缺少的 <code>requires</code>。
 <small>2024.1 最新变化</small>
 </body>

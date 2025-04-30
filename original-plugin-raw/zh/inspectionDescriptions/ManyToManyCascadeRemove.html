@@ -1,9 +1,9 @@
 <html>
 <body>
-检查是否存在 <pre><code>@ManyToMany</code></pre> 关联（带有 <pre><code>CascadeType.REMOVE</code></pre> 特性）。
-指定 <pre><code>CascadeType.REMOVE</code></pre> 为 <pre><code>@ManyToMany</code></pre> 对于级联没有意义，因为它会传播到链接表之外。
+检查是否存在 <pre><code>@ManyToMany</code></pre> 关联（与 <pre><code>CascadeType.REMOVE</code></pre> 特性）。
+指定 <pre><code>CascadeType.REMOVE</code></pre> 针对 <pre><code>@ManyToMany</code></pre> 对于级联没有意义，因为它会传播到链接表之外。
 由于另一侧可能被父侧的其他实体引用，自动移除可能会导致 <pre><code>ConstraintViolationException</code></pre>.
-例如，如果对 <pre><code>@ManyToMany(cascade = CascadeType.ALL)</code></pre> 进行了定义，且第一个人员会被删除，Hibernate 会抛出异常，因为另一个人员仍与正在删除的地址相关联。
+例如，如果定义了 <pre><code>@ManyToMany(cascade = CascadeType.ALL)</code></pre> ，且第一个人员会被删除，Hibernate 会抛出异常，因为另一个人员仍与正在删除的地址相关联。
 有关详情，请参阅<a href="https://vladmihalcea.com/hypersistence-optimizer/docs/user-guide/#ManyToManyCascadeRemoveEvent">此文章</a>。
 </body>
 </html>

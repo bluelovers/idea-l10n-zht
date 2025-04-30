@@ -1,0 +1,35 @@
+<html>
+<body>
+报告可从协程到达的 runBlocking 构建器。 
+<p>协程共享执行的线程。 从协程调用 runBlocking 构建器时，它会阻塞底层线程，并阻止其他协程使用此资源。 这可能会导致性能问题，在糟糕的情况下还会导致线程饥饿。</p>
+<p>它提供了从协程基元（挂起函数或构建器）到 runBlocking 构建器的潜在调用栈。</p>
+<p>示例： </p>
+<pre><code>
+  suspend fun main() {
+      foo() 
+   }
+
+  fun foo() {
+      runBlocking { suspendFunction() }
+  }
+</code></pre>
+<p>潜在解决方案： </p>
+<pre><code>
+  suspend fun main() {
+      foo() 
+   }
+
+  suspend fun foo() {
+      suspendFunction()
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>浏览具有重写的函数</b>选项可以配置虚拟函数的分析：</p>
+<ul>
+    <li>使用<b>否</b>选项可以跳过对具有重写的函数的分析。</li>
+    <li>使用<b>是，不包括重写</b>选项可以仅浏览定义的被调用方类型中的函数。</li>
+    <li>使用<b>是，包括重写</b>选项可以浏览函数和所有重写。</li>
+</ul>
+
+</body>
+</html>

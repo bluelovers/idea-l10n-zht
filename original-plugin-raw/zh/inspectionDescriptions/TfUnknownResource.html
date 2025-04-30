@@ -1,0 +1,45 @@
+<html>
+<body>
+<p>
+  检测无法根据已知提供程序进行解析的资源/数据源。
+  提供程序应在 <code>required_providers</code> 部分中指定，或者应来自 <code>hashicorp</code> 命名空间。
+</p>
+<p>
+  例如，下面的代码会导致错误：
+</p>
+<pre><code>
+terraform {
+  required_version = "1.1.3"
+}
+resource "abbey_demo" "demo" {
+  email      = "user@mail.company"
+  permission = "user"
+}
+</code></pre>
+<p>
+  Terraform 将尝试为 <code>abbey_demo</code> 资源导入 <code>hashicorp/abbey</code> 提供程序。
+</p>
+<p>
+  要修正此问题，我们需要指定准确的提供程序坐标：
+</p>
+<pre><code>
+terraform {
+  required_version = "1.1.3"
+  required_providers {
+    abbey = {
+      source  = "abbeylabs/abbey"
+      version = "0.2.9"
+    }
+  }
+}
+resource "abbey_demo" "demo" {
+  email      = "user@mail.company"
+  permission = "user"
+}
+</code></pre>
+<p>
+  有关详情，请参阅 <a href ="https://developer.hashicorp.com/terraform/language/providers/requirements#requiring-providers">Terraform 文档</a>。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+报告 <code>@SafeVarargs</code> 方法内的写操作，其中 vararg 形参被重新分配给了其他对象。
+在这种情况下，新赋值的数组与调用站点的可变 arity 无关，并且可能不再安全。
+<p><b>示例：</b></p>
+<pre><code>
+    @SafeVarargs
+    public final &lt;T&gt; void test(T[] tt, T... t) {
+        t = tt;
+        System.out.println(t[0]);
+    }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

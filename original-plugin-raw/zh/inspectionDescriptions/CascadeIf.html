@@ -1,38 +1,32 @@
 <html>
 <body>
-报告有三个以上分支并且可以替换为 <code>when</code> 表达式的 <code>if</code> 语句。
+报告有三个或更多分支并且可以替换为带主体的 <code>when</code> 表达式的 <code>if</code> 语句。
 <p><b>示例：</b></p>
 <pre><code>
-  fun checkIdentifier(id: String) {
-      fun Char.isIdentifierStart() = this in 'A'..'z'
-      fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
-
-      if (id.isEmpty()) {
-          print("Identifier is empty")
-      } else if (!id.first().isIdentifierStart()) {
-          print("Identifier should start with a letter")
-      } else if (!id.subSequence(1, id.length).all(Char::isIdentifierPart)) {
-          print("Identifier should contain only letters and numbers")
-      }
+  fun translateNumber(n: Int): String {
+    return if (n == 1) {
+      "one"
+    } else if (n == 2) {
+      "two"
+    } else {
+      "???"
+    }
   }
 </code></pre>
 <p>该快速修复会将 <code>if</code> 表达式转换为 <code>when</code>：</p>
 <pre><code>
-  fun checkIdentifier(id: String) {
-      fun Char.isIdentifierStart() = this in 'A'..'z'
-      fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
-
-      when {
-          id.isEmpty() -> {
-              print("Identifier is empty")
-          }
-          !id.first().isIdentifierStart() -> {
-              print("Identifier should start with a letter")
-          }
-          !id.subSequence(1, id.length).all(Char::isIdentifierPart) -> {
-              print("Identifier should contain only letters and numbers")
-          }
+  fun translateNumber(n: Int): String {
+    return when (n) {
+      1 -> {
+        "one"
       }
+      2 -> {
+        "two"
+      }
+      else -> {
+        "???"
+      }
+    }
   }
 </code></pre>
 <!-- tooltip end -->

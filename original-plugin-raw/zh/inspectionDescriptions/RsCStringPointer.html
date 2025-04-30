@@ -1,0 +1,7 @@
+<html>
+<body>
+检测 <code>CString</code> 的不安全用法。
+
+像 <code>CString::new("hello").unwrap().as_ptr()</code> 这样的代码可能会导致内存不安全，因为字符串在表达式的末尾被取消分配。
+</body>
+</html>

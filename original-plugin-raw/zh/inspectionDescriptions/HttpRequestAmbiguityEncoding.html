@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>
+  Detects '+' in an encoded query string. It is ambiguous whether it should be encoded as space or as a '+' character.
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  GET https://example.com/api?name=John+Doe%40example.com
+</code></pre>
+<p>在应用快速修复后</p>
+<pre><code>
+  GET https://example.com/api?name=John%20Doe%40example.com
+</code></pre>
+</body>
+</html>

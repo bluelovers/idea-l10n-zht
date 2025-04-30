@@ -1,0 +1,30 @@
+<html>
+<body>
+报告 <code>suspend</code> 函数内部的 <code>runBlocking</code> 调用。
+<p>在 <code>suspend</code> 函数中使用 <code>runBlocking</code> 会否定挂起机制，阻塞调用线程，并破坏异步编程的核心目的。
+<p>该快速修复会根据上下文，自动将 <code>runBlocking</code> 替换为以下选项之一：</p>
+<ul>
+    <li><code>run</code> 调用。</li>
+    <li>提供了特定 <code>CoroutineContext</code> 的情况下的 <code>withContext</code> 调用。</li>
+    <li>内联包装代码</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+suspend fun something() {
+  runBlocking {
+    code() // 线程在此处被阻塞
+  }
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+suspend fun something() {
+  runBlocking {
+    code() // 异步运行
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2025.1 的新功能</small></p>
+</body>
+</html>

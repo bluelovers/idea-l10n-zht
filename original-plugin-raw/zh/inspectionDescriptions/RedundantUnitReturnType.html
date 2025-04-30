@@ -1,5 +1,18 @@
 <html>
 <body>
 报告可以省略的冗余 <code>Unit</code> 返回类型。
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(): Unit {
+      ...
+  }
+</code></pre>
+<p>该快速修复会移除 <code>Unit</code> 返回类型：</p>
+<pre><code>
+  fun test() {
+      ...
+  }
+</code></pre>
+<!-- tooltip end -->
 </body>
 </html>

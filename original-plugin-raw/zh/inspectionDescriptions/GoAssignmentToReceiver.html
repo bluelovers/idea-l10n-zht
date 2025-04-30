@@ -29,7 +29,7 @@ type demo struct {
 }
 
 func (d *demo) change() {
- d = nil // 对方法接收器的分配仅传播给被调用者，而不传播给调用者
+ d = nil // 对方法接收器的赋值仅传播给被调用方，而不传播给调用方
  d.myVal()
 }
 
@@ -38,7 +38,7 @@ func (d *demo) myVal() {
 }
 
 func (d demo) change2() {
- d = demo{} // 对方法接收器的分配不会传播到其他调用
+ d = demo{} // 对方法接收器的赋值不会传播到其他调用
  d.myVal()
 }
 

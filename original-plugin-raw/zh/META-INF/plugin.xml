@@ -1,14 +1,40 @@
-<idea-plugin>
- <id>com.intellij.zh</id>
- <version>242.152</version>
- <idea-version since-build="242" until-build="242.*"/>
- <name>Chinese (Simplified) Language Pack / 中文语言包</name>
- <vendor>JetBrains</vendor>
- <description><![CDATA[The Chinese Language Pack localizes the UI of IntelliJ-based IDEs into Chinese.<br>Your feedback is very much appreciated. You can submit it directly from the <a target="_blank" href="https://www.jetbrains.com/help/idea/getting-help.html#report-bug">IDE</a> or via <a target="_blank" href="https://youtrack.jetbrains.com/newIssue?project=IDEA&summary=Issue%20name%20(English%20or%20Chinese)&description=Describe%20your%20problem&c=Subsystem%20Localization.%20Chinese">YouTrack</a> either in English or Chinese.<br><br>中文语言包能够为基于 IntelliJ 平台的 IDE 带来完全中文化的界面。<br>您的反馈至关重要。您可以直接通过 <a target="_blank" href="https://www.jetbrains.com/help/idea/getting-help.html#report-bug">IDE</a> 或者 <a target="_blank" href="https://youtrack.jetbrains.com/newIssue?project=IDEA&summary=Issue%20name%20(English%20or%20Chinese)&description=Describe%20your%20problem&c=Subsystem%20Localization.%20Chinese">YouTrack</a> 以中文或者英文的形式提交您的反馈。]]></description>
- <change-notes><![CDATA[最近更新：<br><a target="_blank" href="https://youtrack.jetbrains.com/articles/IDEA-A-2100661408">发行说明</a><br><a target="_blank" href="https://www.jetbrains.com.cn/lp/language-pack/">2023 年 4 月 19 日</a>（Rider 现在提供中文语言包）<br><a target="_blank" href="https://blog.jetbrains.com/zh-hans/idea/2021/07/language-packs-public-release/">2021 年 7 月 21 日</a>（正式发布）<br><a target="_blank" href="https://blog.jetbrains.com/zh-hans/idea/2021/04/use-updated-language-packs-for-intellij-based-ides-with-translation-plugin/">2021 年 4 月 27 日</a>（版本更新）<br><a target="_blank" href="https://blog.jetbrains.com/zh-hans/idea/2021/01/intellij-idea-2/">2021 年 1 月 4 日</a>（版本更新）<br><a target="_blank" href="https://blog.jetbrains.com/zh-hans/idea/2020/10/intellij-idea-chinese-2/">2020年 10月 30日</a>（版本更新）<br><a target="_blank" href="https://blog.jetbrains.com/zh-hans/2020/06/10/intellij-idea-language-pack/">2020 年 6 月 10 日</a>（安装配置及反馈提交指南）<br><a target="_blank" href="https://blog.jetbrains.com/zh-hans/2020/05/11/jetbrains-chinese/">2020 年 5 月 11 日</a>（中文化插件发布）]]></change-notes>
- <depends>com.intellij.modules.platform</depends>
- <locale>zh-CN</locale>
- <extensions defaultExtensionNs="com.intellij">
-   <languageBundle locale="zh-CN"/>
- </extensions>
+<idea-plugin allow-bundled-update="true">
+  <id>com.intellij.zh</id>
+  <version>251.25410.23</version>
+  <idea-version since-build="251.25410.23" until-build="251.25410.23" />
+  <name>Chinese (Simplified) Language Pack / 中文语言包</name>
+  <category>IDE Localization</category>
+  <vendor>JetBrains</vendor>
+  <description><![CDATA[The Chinese Language Pack localizes the UI of IntelliJ-based IDEs into Chinese.<br>
+      The Language Pack should be manually installed in IDE version 2024.1 or below.<br>  
+      Starting from version 2024.2, the plugin is bundled. No manual installation is required. 
+      You can change the IDE language via File | Settings | Appearance & Behavior | System Settings | Language and Region
+      for Windows and Linux or IntelliJ IDEA | Settings | Appearance & Behavior | System Settings | Language and Region for macOS.<br>
+      Your feedback is very much appreciated.
+      You can submit it directly from the <a target="_blank" href="https://www.jetbrains.com/help/idea/getting-help.html#report-bug">IDE</a>
+      or via
+      <a target="_blank" href="https://youtrack.jetbrains.com/newIssue?project=IJPL&summary=Issue%20name%20(English%20or%20Chinese)&description=Describe%20your%20problem&c=Subsystem%20Localization.%20Chinese">YouTrack</a>
+      either in English or Chinese.
+      <br><br>
+      中文语言包能够为基于 IntelliJ 平台的 IDE 带来完全中文化的界面。<br>
+      语言包应在 2024.1 或更低版本的 IDE 中手动安装。<br> 
+      从 2024.2 版开始，该插件已捆绑，无需手动安装。您可以通过 文件 | 设置 | 外观与行为 | 系统设置 | 语言和区域（适用于 
+      Windows 和 Linux）或 IntelliJ IDEA | 设置 | 外观与行为 | 系统设置 | 语言和区域（适用于 macOS）更改 IDE 语言。<br>
+      您的反馈至关重要。
+      您可以直接通过 <a target="_blank" href="https://www.jetbrains.com/help/idea/getting-help.html#report-bug">IDE</a>
+      或者 <a target="_blank" href="https://youtrack.jetbrains.com/newIssue?project=IJPL&summary=Issue%20name%20(English%20or%20Chinese)&description=Describe%20your%20problem&c=Subsystem%20Localization.%20Chinese">YouTrack</a>
+      以中文或者英文的形式提交您的反馈。]]></description>
+  <change-notes><![CDATA[最近更新：<br>
+      <a target="_blank" href="https://youtrack.jetbrains.com/articles/IDEA-A-2100661408">发行说明</a><br>
+      <a target="_blank" href="https://www.jetbrains.com.cn/lp/language-pack/">2023 年 4 月 19 日</a>（Rider 现在提供中文语言包）<br>
+      <a target="_blank" href="https://blog.jetbrains.com/zh-hans/idea/2021/07/language-packs-public-release/">2021 年 7 月 21 日</a>（正式发布）<br>
+      <a target="_blank" href="https://blog.jetbrains.com/zh-hans/idea/2021/04/use-updated-language-packs-for-intellij-based-ides-with-translation-plugin/">2021 年 4 月 27 日</a>（版本更新）<br>
+      <a target="_blank" href="https://blog.jetbrains.com/zh-hans/idea/2021/01/intellij-idea-2/">2021 年 1 月 4 日</a>（版本更新）<br>
+      <a target="_blank" href="https://blog.jetbrains.com/zh-hans/idea/2020/10/intellij-idea-chinese-2/">2020年 10月 30日</a>（版本更新）<br>
+      <a target="_blank" href="https://blog.jetbrains.com/zh-hans/2020/06/10/intellij-idea-language-pack/">2020 年 6 月 10 日</a>（安装配置及反馈提交指南）<br>
+      <a target="_blank" href="https://blog.jetbrains.com/zh-hans/2020/05/11/jetbrains-chinese/">2020 年 5 月 11 日</a>（中文化插件发布）]]></change-notes>
+  <depends>com.intellij.modules.platform</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <languageBundle locale="zh-CN" displayName="Chinese (Simplified) 简体中文" />
+  </extensions>
 </idea-plugin>

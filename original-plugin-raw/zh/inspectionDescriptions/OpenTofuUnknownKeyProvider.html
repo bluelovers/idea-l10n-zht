@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>
+  检测 OpenTofu 加密块配置中不存在的加密密钥提供程序引用。 例如：对于代码
+  <pre>
+  <code>
+    terraform {
+      encryption {
+        key_provider "pbkdf2" "foo" {
+          # Configuration parameters
+        }
+        method "aes_gcm" "yourname" {
+          keys = key_provider.pbkdf2.unknown
+        }
+        method "aes_gcm" "yourname2" {
+          keys = key_provider.pbkdf2.foo
+        }
+      }
+    }
+  </code>
+  </pre> 我们应检查密钥提供程序引用是否正确。 在这种情况下，应高亮显示 <code>unknown</code> 引用。
+</p>
+<p>
+  有关详情，请参阅 https://opentofu.org/docs/language/state/encryption/#methods。
+</p>
+</body>
+</html>

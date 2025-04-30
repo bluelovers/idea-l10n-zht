@@ -5,7 +5,7 @@
 <pre><code>
   return str == null ? "" : str.trim();
 </code></pre>
-<p>应用快速修复后：</p>
+<p>应用该快速修复后：</p>
 <pre><code>
   return Optional.ofNullable(str).map(String::trim).orElse("");
 </code></pre>

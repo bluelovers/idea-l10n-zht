@@ -1,0 +1,113 @@
+<html>
+<body>
+报告从服务初始化作用域调用的读/写操作和 <code>invokeAndWait</code>：
+<ul>
+  <li>服务构造函数和初始化块（包括 static）</li>
+  <li>服务伴生对象的初始化块 (Kotlin)</li>
+  <li>初始化块和字段初始化中使用的服务方法</li>
+  <li><code>PersistentStateComponent</code> 初始化生存期方法：
+    <ul>
+      <li><code>loadState</code></li>
+      <li><code>noStateLoaded</code></li>
+      <li><code>initializeComponent</code></li>
+    </ul>
+</ul>
+
+<p>在服务初始化期间运行读/写操作或调用 <code>invokeAndWait</code> 可能会导致死锁。</p>
+
+<p><b>示例：</b></p>
+<p>Kotlin：</p>
+<pre><code lang="kotlin">
+@Service
+internal class MyService {
+  private val myData = initMyData();
+
+  constructor() {
+    val data = runReadAction { // 错误：在构造函数中运行读取操作
+      // 读取数据
+    }
+  }
+
+  private fun initMyData(): Data {
+    return runWriteAction { // 错误：在初始化 myData 属性时调用
+      // 写入数据
+    }
+  }
+
+  companion object {
+    lateinit var companionData: String
+    init {
+      companionData = runReadAction { // 错误：在 init 块中运行读取操作
+        // 读取数据
+      }
+    }
+  }
+}
+</code></pre>
+
+<p>Java：</p>
+<pre><code lang="java">
+@Service
+class MyService {
+  private static final Data ourData1 = ReadAction.compute(() -> {
+    // 读取数据
+  });
+  private static final Data ourData2;
+
+  static {
+    ourData2 = ReadAction.compute(() -> { // 错误：在 static 初始化块中运行读取操作
+      // 读取数据
+    });
+  }
+
+  private final Data myData2 = initMyData();
+
+  MyService() {
+    Data data = WriteAction.compute(() -> { // 错误：在构造函数中运行读取操作
+      // 写入数据
+    });
+  }
+
+  private Data initMyData() {
+    return ReadAction.compute(() -> { // 错误：在初始化 myData 属性时调用
+      // 读取数据
+    });
+  }
+}
+</code></pre>
+
+<p><code>PersistentStateComponent</code>:</p>
+<pre><code lang="kotlin">
+@Service
+@State(...)
+internal class MySettings : PersistentStateComponent&lt;MyService> {
+  var stateValue: String? = null
+
+  override fun loadState(state: MySettings) {
+    val data = runReadAction { // 错误：在 loadState 中运行读取操作
+      // 读取数据
+    }
+    // ...
+  }
+
+  override fun noStateLoaded() {
+    val data = runWriteAction { // 错误：在 noStateLoaded 中运行读取操作
+      // 写入数据
+    }
+    // ...
+  }
+
+  override fun initializeComponent() {
+    val data = runReadAction { // 错误：在 initializeComponent 中运行读取操作
+      // 读取数据
+    }
+    // ...
+  }
+
+}
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>2024.2 最新变化</small>
+</body>
+</html>

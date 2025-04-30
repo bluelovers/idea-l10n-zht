@@ -1,0 +1,25 @@
+<html>
+<body>
+
+报告无法执行的代码语句。
+<p>
+    快速修复会移除无法到达的代码。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  fun value(): Int {
+      return 42
+      print("Hello, world !")
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun value(): Int {
+      return 42
+  }
+</code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>
