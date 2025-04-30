@@ -14,15 +14,24 @@ import { LF } from 'crlf-normalize';
 import { getSourceInfoSync } from '../lib/build/get-source-info';
 import { getBranchInfo } from '../lib/git/branch-info';
 import { updatePublishTags } from '../lib/git/update-publish-tags';
+import { _lazyImportWithDelay } from '../lib/util/import';
 
 export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
-	.then((from) =>
+	.then(async (from) =>
 	{
+		const { isMasterBranch } = getBranchInfo();
+
 		from ||= 'origin/master';
 
 		console.dir({
 			from,
+			isMasterBranch,
 		});
+
+		if (isMasterBranch)
+		{
+			await _lazyImportWithDelay('./jetbrains/create-jetbrains-update-plugins-xml', __dirname);
+		}
 
 		//from = '2d01cffc5da15e0a34a40b40ec3b7d0cc7612dda';
 
