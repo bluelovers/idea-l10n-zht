@@ -13,7 +13,7 @@
 <ol>
   <li>
     如果該欄位其實未存儲任何 PSI 參照，或者該 PSI 僅用於讀取，
-您可以使用 <code>@SafeFieldForPreview</code> 註解該欄位。 如果欄位類型永遠無法存儲任何可寫入的 PSI 參照，則也可以使用 <code>@SafeTypeForPreview</code>。
+您可以使用 <code>@SafeFieldForPreview</code> 註解該欄位。 如果欄位類型永遠無法存儲任何可寫入的 PSI 參照，也可以使用 <code>@SafeTypeForPreview</code>。
   </li>
   <li>
     您可以覆寫 <code>getFileModifierForPreview()</code> 方法，然後建立一個快速修復副本，將其重新綁定至作為參數提供的非物理檔案副本。 使用 <code>PsiTreeUtil.findSameElementInCopy()</code> 可以在提供的非物理副本中找到相應的 PSI 元素。
@@ -25,12 +25,12 @@
   </li>
   <li>
     您可以覆寫 <code>generatePreview()</code> 方法並提供完全自訂的預覽行為。
-    例如，可以顯示自訂 HTML 文檔而不是實際預覽，只要您在修改當前檔案之外還進行了相應動作。
+    例如，只要您在修改當前檔案之外還進行了相應動作，即可顯示自訂 HTML 文檔而不是實際預覽。
   </li>
 </ol>
 <p>
   此檢查不會報告 <code>getFileModifierForPreview()</code> 或 <code>generatePreview()</code> 的自訂實作是否存在。 但是，這並不意味著實現正確且預覽有效。
-  請進行測試。 另請注意，預覽結果是在背景執行緒中計算的，因此您無法在預覽期間啟動寫入動作或執行任何需要寫入動作的運算。 最後，如果 <code>startInWriteAction()</code> 返回 <code>false</code>，則不會自動生成預覽。 在這種情況下，需要有自訂的 <code>generatePreview()</code> 實作。
+  請進行測試。 另請注意，預覽結果是在背景執行緒中計算的，因此您無法在預覽期間啟動寫入動作或執行任何需要寫入動作的運算。 最後，如果 <code>startInWriteAction()</code> 返回 <code>false</code>，則不會自動生成預覽。 在這種情況下，需要具有自訂 <code>generatePreview()</code> 實作。
 </p>
 <!-- tooltip end -->
 <p><small>2022.1 最新變化</small></p>

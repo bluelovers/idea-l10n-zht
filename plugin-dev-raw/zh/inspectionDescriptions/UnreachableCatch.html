@@ -1,0 +1,38 @@
+<html>
+<body>
+報告那些雖符合 Java 語言規範但從未被執行的 catch 部分。 
+<p>
+  雖然 Java 編譯器通常不允許使用無法到達的 catch 部分，並會將其報告為編譯錯誤，但在某些情況下，Java 語言規範所要求的分析並不完整。
+  此檢查提供了增強的分析，並會報告一些編譯器沒有報告的無法到達的 catch 部分。
+  這些部分是冗餘的，可以安全移除。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+  void method() {
+    try { 
+      throw new FileNotFoundException(); 
+    }
+    catch (FileNotFoundException e) { 
+      
+    }
+    catch (IOException e) {
+      // 規範允許此 catch
+      // 但從未被執行
+    }
+  }
+</code></pre>
+<p>提供了快速修復，可移除冗餘的 catch 部分：</p>
+<pre><code>
+  void method() {
+    try { 
+      throw new FileNotFoundException(); 
+    }
+    catch (FileNotFoundException e) { 
+      
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2025.1 的新功能</small></p>
+</body>
+</html>

@@ -21,7 +21,7 @@
 <p>
   請注意，沒有 <code>toString()</code> 呼叫，程式碼語意可能會有所不同：如果表達式為 null，則將使用 <code>null</code> 字串，而不是拋出 <code>NullPointerException</code>。</p>
   <p>使用 <b>僅在已知限定符為非 null 時報告</b> 選項以避免對可能為 null 的值發出警告。
-  在這些情況下移除顯式 <code>toString()</code> 會改變執行時語意，從拋出 <code>NullPointException</code> 變為在其為 <code>null</code> 時靜默接受該值。
+  在這些情況下移除顯式 <code>toString()</code> 會改變執行時語意，從拋出 <code>NullPointException</code> 變為當它為 <code>null</code> 時靜默接受該值。
 </p>
 </body>
 </html>

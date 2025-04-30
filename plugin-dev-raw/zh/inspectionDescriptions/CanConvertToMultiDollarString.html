@@ -1,0 +1,23 @@
+<html>
+<body>
+報告將字串轉換為帶有多個美元符號內插前綴的版本時可以從中受益的情況。
+<p>
+內插前綴可以使字串更容易理解，因為帶前綴的字串可以使用美元符號字面量，而無需額外的轉義。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+val jsonSchema: String = """
+{
+  "${'$'}id": "https://example.com/product.schema.json",
+}"""
+</code></pre>
+快速修復會將所有可安全取代的轉義美元字元轉換為一般美元字元：
+<pre><code>
+val jsonSchema: String = $$"""
+{
+  "$id": "https://example.com/product.schema.json",
+}"""
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

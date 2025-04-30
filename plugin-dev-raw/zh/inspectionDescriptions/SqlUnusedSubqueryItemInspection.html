@@ -1,7 +1,7 @@
 <html>
 <body>
 報告外部查詢表達式中未參照的列、別名和其他子查詢項。
-<p>範例（PostgreSQL）：</p>
+<p>範例 (PostgreSQL)：</p>
 <pre><code>CREATE TABLE for_subquery(id INT);
 SELECT a, q FROM (SELECT 1 AS a, 10 AS b, 2 + 3 AS q, id
       FROM for_subquery) x;</code></pre>

@@ -1,11 +1,11 @@
 <html>
 <body>
 報告對可以遷移到 Hamcrest 宣告式樣式 <code>Assert.assertThat()</code> 呼叫的 <code>Assert.assertEquals()</code>、<code>Assert.assertTrue()</code> 等方法的呼叫。
-<p>範例：</p>
-<pre><code>
-  <b>public class</b> SubstantialTest {
+<p>例如：</p>
+<pre><code lang="java">
+  public class SubstantialTest {
     @Test
-    <b>public void</b> testContents(Collection&lt;String> c, String s) {
+    public void testContents(Collection&lt;String&gt; c, String s) {
       Assert.assertTrue(c.contains(s));
       Assert.assertEquals(c, s);
       Assert.assertNotNull(c);
@@ -15,10 +15,10 @@
   }
 </code></pre>
 <p>為執行遷移提供了快速修復：</p>
-<pre><code>
-  <b>public class</b> SubstantialTest {
+<pre><code lang="java">
+  public class SubstantialTest {
     @Test
-    <b>public void</b> testContents(Collection&lt;String> c, String s) {
+    public void testContents(Collection&lt;String&gt; c, String s) {
       assertThat(c, hasItem(o));
       assertThat(o, is(c));
       assertThat(c, notNullValue());
@@ -29,6 +29,6 @@
 </code></pre>
 <!-- tooltip end -->
 <p>此檢查要求類別路徑上有可用的 Hamcrest 庫。
-<p>使用<b>靜態匯入符合程序的方法</b>選項，可指定是否希望該快速修復靜態匯入 Hamcrest 符合程序方法。
+<p>使用<b>靜態匯入符合程序的方法</b>選項可以指定是否希望該快速修復靜態匯入 Hamcrest 符合程序方法。
 </body>
 </html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>
+  檢測 OpenTofu 加密塊組態中不存在的加密方法參照。 對於以下程式碼：
+  <pre>
+    <code>
+      terraform {
+        encryption {
+          key_provider "pbkdf2" "foo" {
+            # Configuration parameters
+          }
+          method "aes_gcm" "yourname2" {
+            keys = key_provider.pbkdf2.foo
+          }
+        }
+      }
+    </code>
+  </pre>
+  我們應檢查方法名稱是否正確。
+</p>
+<p>
+  有關詳情，請參閱 https://opentofu.org/docs/language/state/encryption/#methods。
+</p>
+</body>
+</html>

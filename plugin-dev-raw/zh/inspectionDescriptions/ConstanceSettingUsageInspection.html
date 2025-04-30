@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>
+  報告 <a href="https://django-constance.readthedocs.io/en/latest/">Django Constance</a> 組態中未解析的鍵。
+</p>
+<p><b>範例：</b></p>
+<pre><code lang="Python">
+  # settings.py
+  CONSTANCE_CONFIG = {
+    'SITE_NAME': ('My Title', 'Website title'),
+  }
+
+  # 專案中的某個位置
+  from constance import config
+  print(config.SITE_DESCRIPTION)
+</code></pre>
+</body>
+</html>

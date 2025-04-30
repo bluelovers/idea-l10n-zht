@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告 @MockitoBean、@MockitoSpyBean 和 @TestBean 註解的 <code>value</code> 參數中不正確的 bean/方法參照。
+
+<p><b>範例：</b></p>
+<pre><code>
+@SpringBootTest
+class TestBeanApplicationTests {
+   @TestBean(value = "unknownBean", methodName="createUserService")  // 報告 1. “無法解析 'unknownBean' bean”，以及 2. “無法解析符號 'createUserService'”
+   UserService userService;
+
+  @TestBean  // 報告“找不到 static 工廠方法”
+  UserService userService;
+}
+</code></pre>
+</body>
+</html>

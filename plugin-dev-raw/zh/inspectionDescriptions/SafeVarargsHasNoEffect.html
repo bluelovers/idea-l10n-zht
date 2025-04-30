@@ -1,0 +1,15 @@
+<html>
+<body>
+報告 <code>@SafeVarargs</code> 方法內的寫動作，其中 vararg 參數被重新分配給了其他物件。
+在這種情況下，新賦值的陣列與呼叫站點的可變 arity 無關，並且可能不再安全。
+<p><b>範例：</b></p>
+<pre><code>
+    @SafeVarargs
+    public final &lt;T&gt; void test(T[] tt, T... t) {
+        t = tt;
+        System.out.println(t[0]);
+    }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

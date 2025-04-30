@@ -1,42 +1,42 @@
 <html>
 <body>
 報告使用 <code>@RunWith(Parameterized.class)</code> 註解，但要麼不包括使用 <code>@Parameterized.Parameters</code> 註解的資料提供程序方法，要麼此方法的簽名不正確的 JUnit 4 <a href="https://github.com/junit-team/junit4/wiki/parameterized-tests">參數化測試</a>類別。 這種測試類別無法執行。
-資料提供程序方法應為 <code>public</code> 和 <code>static</code> 並具有 <code>Iterable</code> 或 <code>Object[]</code> 的返回類型。
+資料提供程序方法應為 <code>public</code> 和 <code>static</code> 並具有 <code>Iterable</code> 或 <code>Object[]</code> 的返回值類型。
 <p>建議建立一個空的參數提供程序方法或更改不正確的資料提供程序方法的簽名。</p>
 
 <p><b>範例：</b><p>
-<pre><code>
+<pre><code lang="java">
   @RunWith(Parameterized.class)
-  <b>public class</b> ImportantTest {
-    <b>private int</b> input;
-    <b>private int</b> expected;
+  public class ImportantTest {
+    private int input;
+    private int expected;
 
-    ImportantTest(<b>int</b> input, <b>int</b> expected) {
-      <b>this</b>.input = input;
-      <b>this</b>.expected = expected;
+    ImportantTest(int input, int expected) {
+      this.input = input;
+      this.expected = expected;
     }
 
     // …測試用例
   }
 </code></pre>
 <p>在套用快速修復後：</p>
-<pre><code>
+<pre><code lang="java">
   @RunWith(Parameterized.class)
-  <b>public class</b> ImportantTest {
-    <b>private int</b> input;
-    <b>private int</b> expected;
+  public class ImportantTest {
+    private int input;
+    private int expected;
 
-    ImportantTest(<b>int</b> input, <b>int</b> expected) {
-      <b>this</b>.input = input;
-      <b>this</b>.expected = expected;
+    ImportantTest(int input, int expected) {
+      this.input = input;
+      this.expected = expected;
     }
 
     @Parameters
-    <b>public static</b> Iterable&lt;Object[]> parameters() {
-      <b>return null</b>;
+    public static Iterable&lt;Object[]> parameters() {
+      return null;
     }
 
-    // …測試用例
+    // ... test cases
   }
 </code></pre>
 <!-- tooltip end -->

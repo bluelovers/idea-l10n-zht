@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>報告 <code>FROM ... AS stage-name </code> 指令中重複的暫存名稱。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+  # 以下指令將會失敗
+  FROM ubuntu:latest AS stage1
+  FROM ubuntu:latest AS stage1
+</code></pre>
+</body>
+</html>

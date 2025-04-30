@@ -19,7 +19,7 @@
   這裡 <code>KotlinDocumentationProvider</code> 是在 <code>plugin.xml</code> 中註冊的擴展：
 </p>
 <pre><code lang="xml">
-  &lt;lang.documentationProvider language="JAVA"
+  &lt;lang.documentationProvider language="kotlin"
                               implementationClass="org.jetbrains.kotlin.idea.KotlinDocumentationProvider"
                               order="first"/&gt;
 </code></pre>
@@ -28,7 +28,7 @@
 </p>
 <p>
   擴展點實作中的 Kotlin 伴生物件只能包含記錄器和簡單常數。
-  其他宣告可能會導致過多類別載入或提前初始化開銷大的資源（TokenSet、Regex 等）。
+  其他宣告可能會導致過多類別載入或提前初始化開銷大的資源（<code>TokenSet</code>、Regex 等）。
   載入擴展類別時。
   請注意，即使標記為 <code>@JvmStatic</code> 的宣告也會為伴生物件生成一個額外的類別，這可能會導致開銷巨大的計算。
 </p>

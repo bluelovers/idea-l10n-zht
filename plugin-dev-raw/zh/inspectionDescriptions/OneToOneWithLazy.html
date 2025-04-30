@@ -1,8 +1,8 @@
 <html>
 <body>
-檢查以下關聯的非所有方： <pre><code>@OneToOne</code></pre> 關聯（帶有 <pre><code>FetchType.Lazy</code></pre> 特性）。
-指定 <pre><code>FetchType.LAZY</code></pre> 為以下關聯的所有方 <pre><code>@OneToOne</code></pre> 不會影響載入。
-相關實體仍將被載入，就像定義了 <pre><code>FetchType.EAGER</code></pre> 一樣。
+檢查以下關聯的非所有方： <pre><code>@OneToOne</code></pre> 關聯（與 <pre><code>FetchType.Lazy</code></pre> 特性）。
+指定 <pre><code>FetchType.LAZY</code></pre> （為 <pre><code>@OneToOne</code></pre> 關聯的非所有方）不會影響載入。
+相關實體仍將被載入，如同定義了 <pre><code>FetchType.EAGER</code></pre> 一樣。
 有關詳情，請參閱<a
   href="https://docs.jboss.org/hibernate/orm/6.1/userguide/html_single/Hibernate_User_Guide.html#associations-one-to-one-bidirectional-lazy">文檔</a>。
 </body>

@@ -1,8 +1,8 @@
 <html>
 <body>
-報告使用沒有 <code>N</code> 前綴的國家字元的字串文字。
+報告使用沒有 <code>N</code> 前綴的國家字元的字串字面量。
 <p>如果沒有 N 前綴，字串將被轉換為資料庫的預設程式碼頁面。 此預設程式碼頁面可能無法識別某些字元。 有關更多資訊，請參閱 <a href="https://docs.microsoft.com/en-us/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql" target="_blank">docs.microsoft.com 上的“nchar 和 nvarchar”(Transact-SQL)</a> 頁面。</p>
-<p>範例（Microsoft SQL 伺服器）：</p>
+<p>範例 (Microsoft SQL Server)：</p>
 <pre><code>SELECT 'abcde' AS a;
 SELECT N'abcde' AS b;
 SELECT 'абвгд' AS c;

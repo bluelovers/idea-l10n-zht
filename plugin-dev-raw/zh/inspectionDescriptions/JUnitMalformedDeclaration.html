@@ -7,7 +7,7 @@
   <li>由 <code>@RegisterExtension</code> 註解的類型錯誤或在需要時未被宣告為 static 的欄位</li>
   <li>使用 <code>@Nested</code> 註解的 static 或 private 內部類別</li>
   <li>在沒有源的情況下定義的參數化測試</li>
-  <li>具有包含未知、非 static 或無實參目標的 <code>@MethodSource</code> 的參數化測試。</li>
+  <li>包含具有未知、非 static 或無實參目標的 <code>@MethodSource</code> 的參數化測試。</li>
   <li>參數化測試方法形參與指定的 <code>@ValueSource</code> 或 <code>@EnumSource</code> 值之間的類型不符合</li>
   <li>由 <code>@Test</code>、<code>@ParameterizedTest</code> 或 <code>@RepeatedTest</code> 中的多個註解的測試</li>
   <li>非 public 的 <code>setup()</code> 或 <code>tearDown()</code>方法，其返回值類型不是 void 或接受實參</li>
@@ -20,7 +20,7 @@
   </li>
   <li>在 <code>@BeforeAll</code> 或 <code>@AfterAll</code> 方法中注入的 <code>RepetitionInfo</code></li>
   <li>
-    由 <code>@Test</code> 註解測試使用，在 <code>@BeforeEach</code> 或 <code>@AfterEach</code>方法中注入的 <code>RepetitionInfo</code>
+    由 <code>@Test</code> 註解測試使用，在 <code>@BeforeEach</code> 或 <code>@AfterEach</code> 方法中注入的 <code>RepetitionInfo</code>
   </li>
   <li>由 <code>@DataPoint</code> 或 <code>@DataPoints</code> 註解的非 public 或非 static 欄位和方法</li>
   <li>
@@ -71,7 +71,7 @@
 </code></pre>
 
 <!-- tooltip end -->
-<p>使用檢查選項可以指定註解。 不會報告任何使用其中一種註解進行註解的參數。
+<p>使用檢查選項可以指定註解。 將不會報告任何使用其中一種註解進行註解的參數。
 </p>
 </body>
 </html>

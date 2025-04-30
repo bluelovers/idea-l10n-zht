@@ -8,14 +8,14 @@
 </p>
 <p><b>範例：</b></p>
 <pre><code>
-  interface A: Entity {
+  interface A : LegacyEntity {
     var x: SharedEntity
     var y: SharedEntity
   }
 </code></pre>
 <p>可以通過快速修復來生成註解或使類型為可 null</p>
 <pre><code>
-  interface A: Entity {
+  interface A : LegacyEntity {
     var x: SharedEntity?
     @CascadeDeleteBy
     var y: SharedEntity

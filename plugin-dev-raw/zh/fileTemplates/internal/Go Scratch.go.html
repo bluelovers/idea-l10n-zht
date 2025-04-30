@@ -2,16 +2,15 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td><font face="verdana" size="-1"><b>Go 草稿</b> 是每次建立新 Go 臨時檔案時使用的內建模板。
-      臨時檔案是功能齊全、可執行且可偵錯的檔案，您可以使用它們來草擬您的編碼想法。 要建立臨時檔案，請點擊 <b>檔案 | 新增 | 臨時檔案</b>。 在<b>新增臨時檔案</b> 對話框中，找到並選擇 <b>Go</b>。<br> <br>
+    <td><font face="verdana" size="-1"><b>Go Scratch</b> 是每次建立新的 Go 臨時檔案時使用的內建模板。
+      臨時檔案是功能齊全、可執行且可偵錯的檔案，您可以使用它們來草擬您的編碼想法。 要建立臨時檔案，請點擊<b>檔案 | 新增 | 臨時檔案</b>。 在<b>新增臨時檔案</b>對話框中，找到並選擇 <b>Go</b>。<br> <br>
 
-      模板是可編輯的。 在模板中，可以使用下面列出的預定義變數。 這些變數稍後將
-      在編輯器中擴展為相應的值。<br> <br>
+      該模板可編輯。 在模板中，您可以使用下面列出的預定義變數。 這些變數稍後將在編輯器中擴展為相應的值。<br> <br>
 
-       您也可以指定自訂變數。 自訂變數使用以下格式：<code>${VARIABLE_NAME}</code>，其中 <code>VARIABLE_NAME</code>是變數的名稱（例如，<code>${MY_CUSTOM_FUNCTION_NAME}</code>） 。
+       您也可以指定自訂變數。 自訂變數使用以下格式：<code>${VARIABLE_NAME}</code>，其中 <code>VARIABLE_NAME</code> 是變數的名稱（例如，<code>${MY_CUSTOM_FUNCTION_NAME}</code>）。
       在 IDE 使用自訂變數建立新檔案之前，您會看到一個對話框，您可以在其中定義模板中自訂變數的值。<br><br>
 
-       通過使用 <code>#parse</code> 指令，可以包括 <b>包含</b> 選項中的模板。 要包含模板，請在引號中將模板的全名指定為參數（例如，<code>#parse("File Header")</code>）。
+       通過使用 <code>#parse</code> 指令，您可以包括 <b>Include</b> 頁籤中的模板。 要包含模板，請在引號中以參數形式指定模板的全名（例如，<code>#parse("File Header")</code>）。
     </font></td>
   </tr>
 </table>
@@ -24,14 +23,14 @@
       <nobr><font face="verdana" size="-2"><strong>${GO_PACKAGE_NAME_WITH_TEST_SUFFIX}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">在其中建立新測試檔案的軟體套件名稱。 該檔案必須具有 <code>_test</code> 後綴。 該名稱的格式如下：<code>package_test</code>。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在其中建立新測試檔案的軟體套件的名稱。 該檔案必須具有 <code>_test</code> 後綴。 該名稱的格式如下：<code>package_test</code>。</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${GO_PACKAGE_NAME}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">在其中建立新檔案的軟體套件名稱。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">在其中建立新檔案的軟體套件的名稱。</font></td>
   </tr>
   <tr>
     <td valign="top">
@@ -45,7 +44,7 @@
       <nobr><font face="verdana" size="-2"><strong>${DAY}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">當前月份的日期。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當月幾號。</font></td>
   </tr>
   <tr>
     <td valign="top">
@@ -66,21 +65,21 @@
       <nobr><font face="verdana" size="-2"><strong>${DIR_PATH}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"> 新檔案的目錄路徑。 此路徑相對於專案根目錄的。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> 新檔案的目錄路徑。 此路徑相對於專案根目錄。</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${DS}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"> 美元符號 （$）。 此變數用於轉義美元字元，因此不會將其視為模板變數的前綴。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> 美元符號 ($)。 此變數用於轉義美元字元，因此不會將其視為模板變數的前綴。</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${FILE_NAME}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"> 新檔名。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> 新檔案的名稱。</font></td>
   </tr>
   <tr>
     <td valign="top">
@@ -135,24 +134,17 @@
   </tr>
   <tr>
     <td valign="top">
-      <nobr><font face="verdana" size="-2"><strong>${ORGANIZATION_NAME}</strong></font></nobr>
-    </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"> 在專案設定中指定的組織名稱。</font></td>
-  </tr>
-  <tr>
-    <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${PRODUCT_NAME}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"> IDE 名稱。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> IDE 的名稱。</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${PROJECT_NAME}</strong></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">當前專案名稱。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">當前專案的名稱。</font></td>
   </tr>
   <tr>
     <td valign="top">

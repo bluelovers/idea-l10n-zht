@@ -1,9 +1,9 @@
 <html>
 <body>
-報告取代次數為 <code>0</code> 而不是 <code>-1</code> 的 <code> strings.Replace </code> 的呼叫。
-<p>指示取代字串次數的計數實參不能為 <code>0</code>，因為它不會進行任何取代從而使函式呼叫是冗餘的。 請改用 <code>-1</code>。</p>
+報告取代次數為 <code>0</code> 而不是 <code>-1</code> 的 <code>strings.Replace </code> 呼叫。
+<p>表示字串取代次數的計數實參不能為 <code>0</code>，因為它不會取代任何內容，並且使函式呼叫冗餘。 請改用 <code>-1</code>。</p>
 <p>範例：</p>
-<pre><code>a := strings.Replace("SSS", "S", "H", 0) // 沒有取代任何東西
-b := strings.Replace("SSS", "S", "H", -1) // 用 “H” 取代所有出現的 “S”</code></pre>
+<pre><code>a := strings.Replace("SSS", "S", "H", 0) // 不取代任何內容
+b := strings.Replace("SSS", "S", "H", -1) // 將所有 S 匹配項取代為 H</code></pre>
 </body>
 </html>

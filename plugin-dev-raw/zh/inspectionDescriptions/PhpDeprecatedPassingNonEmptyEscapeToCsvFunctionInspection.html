@@ -1,0 +1,16 @@
+<html>
+<body>
+報告將非空字串作為 CSV 相關方法和函式的 <code>$enclosure</code> 參數傳遞的情況。
+  <ul>
+    <li><code>SplFileObject::setCsvControl()</code></li>
+    <li><code>SplFileObject::fputcsv()</code></li>
+    <li><code>SplFileObject::fgetcsv()</code></li>
+    <li><code>fputcsv()</code></li>
+    <li><code>fgetcsv()</code></li>
+    <li><code>str_getcsv()</code>.</li>
+  </ul>
+<p>
+  將非空字串作為 <code>$enclosure</code> 參數傳遞<a href="https://wiki.php.net/rfc/deprecations_php_8_4#deprecate_proprietary_csv_escaping_mechanism">自 PHP 8.4 起已棄用</a>。
+</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<body>
+報告 <code>suspend</code> 函式內部的 <code>runBlocking</code> 呼叫。
+<p>在 <code>suspend</code> 函式中使用 <code>runBlocking</code> 會否定掛起機制，阻塞呼叫執行緒，並破壞異步編程的核心目的。
+<p>該快速修復會根據上下文，自動將 <code>runBlocking</code> 取代為以下選項之一：</p>
+<ul>
+    <li><code>run</code> 呼叫。</li>
+    <li>提供了特定 <code>CoroutineContext</code> 的情況下的 <code>withContext</code> 呼叫。</li>
+    <li>內聯包裝程式碼</li>
+</ul>
+<p>範例：</p>
+<pre><code>
+suspend fun something() {
+  runBlocking {
+    code() // 執行緒在此處被阻塞
+  }
+}
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+suspend fun something() {
+  runBlocking {
+    code() // 異步執行
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2025.1 的新功能</small></p>
+</body>
+</html>

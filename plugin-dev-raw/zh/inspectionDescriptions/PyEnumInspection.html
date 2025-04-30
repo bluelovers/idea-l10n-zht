@@ -1,0 +1,39 @@
+<html>
+<body>
+<p>
+  報告 <a href="https://peps.python.org/pep-0435/">Enum</a> 無效的定義和用法。
+</p>
+<p>
+  <b>範例：</b>
+</p>
+<pre><code>
+from enum import Enum
+
+
+class Shape(Enum):
+    SQUARE = 1
+    CIRCLE = 2
+
+
+class ExtendedShape(Shape):  # 枚舉類別 'Shape' 為 final，無法被子類別化
+    TRIANGLE = 3
+</code></pre>
+<pre><code>
+  from enum import Enum
+
+
+  class Color(Enum):
+    _value_: int
+    RED = 1
+    GREEN = "green"  # 類型 'str' 不可賦值給已宣告的類型 'int'
+</code></pre>
+<pre><code>
+  from enum import Enum
+
+
+  class Pet(Enum):
+    CAT = 1
+    DOG: int = 2  # 枚舉成員不允許使用類型註解
+</code></pre>
+</body>
+</html>

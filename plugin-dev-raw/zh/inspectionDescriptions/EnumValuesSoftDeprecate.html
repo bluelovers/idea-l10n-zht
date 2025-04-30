@@ -12,7 +12,7 @@
 </p>
 <p>
     <b>注意</b>：<code>entries</code> 屬性類型與 <code>values()</code> 方法的返回值類型不同（<code>EnumEntries&lt;T&gt;</code> 繼承自 <code>List&lt;T&gt;</code>，而不是 <code>Array&lt;T&gt;</code>）。
-    因此，在某些情況下，快速修復會插入額外的 <code>.toTypedArray()</code> 轉換，以避免破壞程式碼，但在大多數情況下，將在沒有該轉換的情況下完成（例如，在 <code>for</code> 迴圈中）。
+    因此，在某些情況下，快速修復會插入額外的 <code>.toTypedArray()</code> 轉換，以避免破壞程式碼，但在大多數情況下，取代將在沒有該轉換的情況下完成（例如，在 <code>for</code> 迴圈中）。
 </p>
 <p><b>範例：</b></p>
 <pre><code>

@@ -1,12 +1,11 @@
 <html>
 <body>
-報告 JUnit 4 測試方法預期但從未在方法體內拋出的已檢查的異常。
+報告 JUnit 4 測試方法預期但從未在方法體內拋出的檢查的異常。
 此類別測試方法永遠不會成功。
 <p><b>範例：</b></p>
-<pre><code>
+<pre><code lang="java">
   @Test(expected = CloneNotSupportedException.class)
-  <b>public void</b> testIt() {
-  }
+  public void testIt() { }
 </code></pre>
 <!-- tooltip end -->
 </body>

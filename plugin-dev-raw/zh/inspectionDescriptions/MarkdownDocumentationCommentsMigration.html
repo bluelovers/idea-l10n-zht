@@ -1,0 +1,25 @@
+<html>
+<body>
+報告可以轉換為 Markdown 文檔註釋的 Javadoc 註釋。
+<p><b>範例：</b></p>
+<pre><code>
+  /**
+   * For blubbering of the florz.
+   *
+   * Similar to {@link com.deeps.Querp querping} class.
+   */
+  class FlorzBlubber {
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  /// For blubbering of the florz.
+  /// Similar to [querping][com.deeps.Querp] class.
+  class FlorzBlubber {
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2024.2 最新變化</small></p>
+
+</body>
+</html>

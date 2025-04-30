@@ -1,0 +1,35 @@
+<html>
+<body>
+報告可從協程到達的 runBlocking 建置器。 
+<p>協程共享執行的執行緒。 從協程呼叫 runBlocking 建置器時，它會阻塞底層執行緒，並阻止其他協程使用此資源。 這可能會導致性能問題，在糟糕的情況下還會導致執行緒飢餓。</p>
+<p>它提供了從協程基元（掛起函式或建置器）到 runBlocking 建置器的潛在呼叫棧。</p>
+<p>範例： </p>
+<pre><code>
+  suspend fun main() {
+      foo() 
+   }
+
+  fun foo() {
+      runBlocking { suspendFunction() }
+  }
+</code></pre>
+<p>潛在解決方案： </p>
+<pre><code>
+  suspend fun main() {
+      foo() 
+   }
+
+  suspend fun foo() {
+      suspendFunction()
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>使用<b>瀏覽具有覆寫的函式</b>選項可以組態虛擬函式的分析：</p>
+<ul>
+    <li>使用<b>否</b>選項可以跳過對具有覆寫的函式的分析。</li>
+    <li>使用<b>是，不包括覆寫</b>選項可以僅瀏覽定義的被呼叫方類型中的函式。</li>
+    <li>使用<b>是，包括覆寫</b>選項可以瀏覽函式和所有覆寫。</li>
+</ul>
+
+</body>
+</html>

@@ -29,7 +29,7 @@ type demo struct {
 }
 
 func (d *demo) change() {
- d = nil // 對方法接收器的分配僅傳播給被呼叫者，而不傳播給呼叫者
+ d = nil // 對方法接收器的賦值僅傳播給被呼叫方，而不傳播給呼叫方
  d.myVal()
 }
 
@@ -38,7 +38,7 @@ func (d *demo) myVal() {
 }
 
 func (d demo) change2() {
- d = demo{} // 對方法接收器的分配不會傳播到其他呼叫
+ d = demo{} // 對方法接收器的賦值不會傳播到其他呼叫
  d.myVal()
 }
 

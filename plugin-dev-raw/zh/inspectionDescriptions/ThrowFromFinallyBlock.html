@@ -1,9 +1,22 @@
 <html>
 <body>
-報告 <code>finally</code> 塊內的 <code>throw</code> 語句。
-<p>雖然偶爾是有意為之，但此類別 <code>throw</code> 語句可能隱藏從 <code>try</code>-<code>catch</code> 拋出的異常，並因此導致偵錯變得極其複雜。</p>
+報告 <code>finally</code> 塊內的 <code>throw</code> 語句。 
+雖然偶爾是有意為之，但此類別 <code>throw</code> 語句可能隱藏從 <code>try</code> 和 <code>catch</code> 塊拋出的異常，並使偵錯過程變得複雜。
+<p><b>範例：</b></p>
+<pre><code>
+  class Fascinating {
+    void doTask(Task t) {
+      try {
+        t.activity();
+      } finally {
+        if (!t.finish()) {
+          throw new IllegalStateException();
+        }
+      }
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
-<p>
-
+<p>使用<b>在可能拋出已宣告異常的每一處發出警告</b>選項，可以在呼叫宣告了異常的方法時也發出警告。</p>
 </body>
 </html>

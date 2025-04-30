@@ -1,0 +1,37 @@
+<html>
+<body>
+醒目提示函式中不一致的 return 語句。
+根據 PEP8，函式中的所有 return 語句要麼都應該返回一個表達式，要麼都不應該返回。
+<p>
+  PEP8 的建議：函式中的所有 return 語句要麼都應該返回一個表達式，要麼都不應該返回。
+  如果任何 return 語句返回一個表達式，則任何不返回值的 return 語句都應顯式地將其宣告為 return None，並且在函式末尾應存在顯式的 return 語句（如果可到達）：
+</p>
+<pre><code>
+# 正確：
+
+def foo(x):
+    if x >= 0:
+        return math.sqrt(x)
+    else:
+        return None
+
+def bar(x):
+    if x < 0:
+        return None
+    return math.sqrt(x)
+</code></pre>
+<pre><code>
+# 錯誤：
+
+def foo(x):
+    if x >= 0:
+        return math.sqrt(x)
+
+def bar(x):
+    if x < 0:
+        return
+    return math.sqrt(x)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

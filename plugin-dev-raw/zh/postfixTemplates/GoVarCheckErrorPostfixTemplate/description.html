@@ -3,12 +3,12 @@
 生成用於慣用錯誤處理的樣板程式碼。
 <p>
   您可以在返回 <code>error</code> 的呼叫或 <code>error</code> 類型的任何表達式上呼叫模板。
-  模板引入新變數，將表達式賦值給它們，並使用以下程式碼檢查 error 是否為 <code>nil</code>：
+  該模板會引入新變數，將表達式賦給它們，並使用以下程式碼檢查錯誤是否為非 <code>nil</code>：
 </p>
 <pre><code>if err != nil {
   return value1, value2, ...
 }</code></pre>
-<p>每個 <code>value</code> 要麼是 <code>err</code> 變數，要麼是封閉函式的相應返回類型的預設值。</p>
+<p>每個 <code>value</code> 要麼是 <code>err</code> 變數，要麼是封閉函式的相應返回值類型的預設值。</p>
 <!-- tooltip end -->
 </body>
 </html>

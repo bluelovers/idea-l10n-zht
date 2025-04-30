@@ -3,6 +3,10 @@
 報告對 <code>equals()</code>、<code>compareTo()</code> 或比較一個物件是否與自身相等的類似方法的呼叫。
 這些方法的方法約定指定了此類別呼叫將始終為 <code>equals()</code> 返回 <code>true</code> 或為 <code>compareTo()</code> 返回 <code>0</code>。
 該檢查還會檢查對 <code>Objects.equals()</code>、<code>Objects.deepEquals()</code>、<code>Arrays.equals()</code>、<code>Comparator.compare()</code>、測試框架（JUnit、TestNG、AssertJ）的 <code>assertEquals()</code> 方法、<code>Integer.compare()</code>、<code>Integer.compareUnsigned()</code> 以及類似方法的呼叫。
+<p>
+  請注意，在極少數情況下，該檢查可能會報告返回 false 的 <code>equals()</code> 呼叫，因為雖然兩邊的表達式相同，但它們會生成單獨的物件，並且會在參照上而不是在內容上執行比較。 
+  最簡單的範例是 <code>new Object().equals(new Object())</code>。 無論如何，此類別呼叫都很可疑，而且可能具有其他意圖。
+</p>
 <p><b>範例：</b></p>
 <pre><code>
   class Foo {
@@ -16,9 +20,5 @@
 }
 </code></pre>
 <!-- tooltip end -->
-<p>
-  使用該選項可以僅報告對不可擴展的庫類別（如 <code>String</code>）和基元類型的測試斷言。
-  當測試 <code>equals</code> 方法時，此選項可能很有用。
-</p>
 </body>
 </html>

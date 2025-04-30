@@ -16,13 +16,13 @@
 
 <html>
 <body>
-報告不以匯出元素名稱開頭的註釋。
-<p>根據 <a href="https://golang.org/wiki/CodeReviewComments#comment-sentences">golang.org 上的 Comment Sentences</a>，將匯出元素的名稱放在評論的開頭是一個約定。</p>
+報告不以匯出元素的名稱開頭的註釋。
+<p>根據 <a href="https://github.com/golang/go/wiki/CodeReviewComments#comment-sentences">github.com/golang 上的 Comment Sentences</a>，將匯出元素的名稱放在評論的開頭是一個約定。</p>
 <p>範例：</p>
 <pre><code>// 表示執行指令的請求。
 type Request struct {}</code></pre>
 
-<p>註釋以結構描述開頭，而不是結構名稱。 為了遵守約定規則，您可以套用 <b>向註釋中新增前綴</b> 快速修復。 套用快速修復後，註釋如下所示：</p>
+<p>註釋以結構體描述而不是結構體名稱開頭。 為了遵守約定規則，您可以套用<b>向註釋中新增前綴</b>快速修復。 套用該快速修復後，註釋將如下所示：</p>
 <pre>
 // Request 表示執行指令的請求。
 type Request struct {} // 更好

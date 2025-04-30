@@ -1,0 +1,47 @@
+<!-- Copyright 2000-2024 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+報告 'java.time' 物件上的冗餘動作：
+<ul>
+  <li>當可以使用更簡單的方法呼叫或可以避免建立時，從 JDK <code>java.time</code> 軟體套件建立日期/時間物件。</li>
+  <li>將 <code>java.time.temporal.ChronoField</code> 和 <code>java.time.temporal.ChronoUnit</code> 作為實參的 <code>java.time</code> 方法呼叫可被取代為更具體的方法時。</li>
+  <li><code>java.time</code> 與 <code>compareTo()</code> 呼叫（可被取代為 <code>isAfter()</code>、<code>isBefore()</code> 或 <code>isEqual()</code> 呼叫）的比較。</li>
+</ul>
+
+<p>範例：</p>
+- 之前：
+<pre><code>
+LocalDateTime now = LocalDateTime.now();
+return LocalDateTime.from(now);
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+LocalDateTime now = LocalDateTime.now();
+return now;
+</code></pre>
+- 之前：
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int minute = localTime.get(ChronoField.MINUTE_OF_HOUR);
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int minute = localTime.getMinute();
+</code></pre>
+- 之前：
+<pre><code>
+  LocalDate date1 = LocalDate.now();
+  LocalDate date2 = LocalDate.now();
+  boolean t = date1.compareTo(date2) > 0;
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  LocalDate date1 = LocalDate.now();
+  LocalDate date2 = LocalDate.now();
+  boolean t = date1.isAfter(date2);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2024.3 最新變化</small></p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+報告帶有 <code>#path</code> 特性的迴圈模組宣告。
+此類別宣告會產生無限的模組圖並且無法編譯。
+
+<!-- tooltip end -->
+此錯誤的一個常見範例是檔案模組宣告了參照當前檔案的子 <code>mod</code>：<br>
+<code>
+    // File: recursive_mod.rs<br>
+    #[path = "recursive_mod.rs"]<br>
+    mod child_mod;<br>
+</code>
+</body>
+</html>

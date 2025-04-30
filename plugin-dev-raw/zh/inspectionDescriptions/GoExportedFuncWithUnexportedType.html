@@ -5,8 +5,14 @@
 <p>範例：</p>
 <pre><code>type hidden struct{}
 
-func Exported() hidden { // 具有 `hidden` 未匯出返回類型的匯出函式
+func Exported() hidden { // 具有 `hidden` 未匯出返回值類型的匯出函式
  return hidden{}
+}</code></pre>
+<p>您可以套用<b>匯出</b>快速修復來匯出類型。 套用快速修復後，類型名稱將會大寫：</p>
+<pre><code>type Hidden struct{}
+
+func Exported() Hidden { // 已修正
+ return Hidden{}
 }</code></pre>
 </body>
 </html>

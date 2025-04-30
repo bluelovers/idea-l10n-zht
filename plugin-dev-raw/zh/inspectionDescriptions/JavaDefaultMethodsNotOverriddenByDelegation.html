@@ -1,0 +1,73 @@
+<html>
+<body>
+<p>
+    當委託對象是覆寫（對於 <code>final</code> 和 <code>sealed</code> 類別的情況）或可能覆寫（對於 <code>open</code> 和 <code>abstract</code> 類別的情況）Java 預設方法的類別的實例時，報告委託。
+</p>
+<p>
+    根據設計，Kotlin 委託不會覆蓋 Java 預設方法，這可能導致難以捉摸的錯誤，尤其是在繼承層次結構很深的情況下。
+</p>
+<p><b>範例：</b></p>
+<pre><code lang="java">
+// Base.java:
+public interface Base {
+  default void print() {
+    System.out.println("Base");
+  }
+}
+</code></pre>
+<pre><code lang="kotlin">
+// BaseImpl.kt:
+class BaseImpl : Base {
+  override fun print() {
+    println("BaseImpl")
+  }
+}
+</code></pre>
+<pre><code lang="kotlin">
+// Main.kt:
+fun main() {
+  val inherited = BaseImpl()
+  val delegated = object : Base by inherited {}
+  inherited.print() // Outputs: BaseImpl
+  delegated.print() // Outputs: Base
+}
+</code></pre>
+<p>
+    開發者通常期望所有方法，包括在委託中覆寫的預設方法，都被轉發。 相反，呼叫的是 Java 預設方法，這可能會導致意外的結果。
+</p>
+<p>
+    一種快速修復是通過將 Java 預設方法的實作委託給委託物件來覆寫這些方法。
+</p>
+<pre><code>
+// Main.kt:
+fun main() {
+  val inherited = BaseImpl()
+  val delegated = object : Base by inherited {
+    override fun print() {
+      inherited.print()
+    }
+  }
+  inherited.print() // 輸出: BaseImpl
+  delegated.print() // 輸出: BaseImpl
+}
+</code></pre>
+<p>
+    另一種快速修復是通過顯式地將 Java 預設方法的實作委託給超類別來覆寫這些方法。
+</p>
+<pre><code>
+// Main.kt:
+fun main() {
+  val inherited = BaseImpl()
+  val delegated = object : Base by inherited {
+    override fun print() {
+      super.print()
+    }
+  }
+  inherited.print() // Outputs: BaseImpl
+  delegated.print() // Outputs: Base
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2025.1 的新功能</small></p>
+</body>
+</html>

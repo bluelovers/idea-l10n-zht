@@ -48,13 +48,13 @@
   使用 choice 格式時，會將嵌套格式評估為格式字串本身，並且引號必須重複兩次。
   例如，在傳遞 <code>1</code> 時：
 <ul>
-  <li><code>{0, choice, 0#無|#1''{0}'' 檔案}</code> &rarr; <code>{0} 檔案</code></li>
-  <li><code>{0, choice, 0#無|#1''''{0}'''' 檔案}</code> &rarr; <code>'1' 檔案</code></li>
+  <li><code>{0, choice, 0#no|1#''{0}'' files}</code> &rarr; <code>{0} files</code></li>
+  <li><code>{0, choice, 0#no|1#''''{0}'''' files}</code> &rarr; <code>'1' files</code></li>
 </ul>
 
 <p><b>註釋</b>
 <p>
-  僅當屬性值包含文字文本 <code>{0}</code>、<code>{0,</code>、<code>{1}</code> 或 <code>{1,</code> 時，才會對其進行驗證。
+  僅當屬性值包含字面量文本 <code>{0}</code>、<code>{0,</code>、<code>{1}</code> 或 <code>{1,</code> 時，才會對其進行驗證。
   這是為了確保這些屬性值實際上被用作 <code>MessageFormat</code> 模式。
 </p>
 

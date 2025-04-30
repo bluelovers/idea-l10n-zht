@@ -1,11 +1,11 @@
 <body>
-報告空的 <code>module-info.java</code> 檔案，指示未解析的模組相依項。 通過檢查匯入自動新增必要的 <code>requires</code> 語句。
-要取消顯示此警告，您可以在模組語句主體中寫入任何註釋，如下所示：
+報告空的 <code>module-info.java</code> 檔案，指示未解析的模組相依項。 通過檢查 import 自動新增必要的 <code>requires</code> 語句。
+要禁止此警告，您可以在模組語句主體中寫入任何註釋，如下所示：
 <pre><code>
 module module.name {
     // 無相依項
 }
 </code></pre>
-<b>快速修復：</b> <i>填充模組相依項</i>會基於原始碼匯入填充缺少的 <code>requires</code>。
+<b>快速修復：</b> <i>填充模組相依項</i>會基於原始碼 import 填充缺少的 <code>requires</code>。
 <small>2024.1 最新變化</small>
 </body>

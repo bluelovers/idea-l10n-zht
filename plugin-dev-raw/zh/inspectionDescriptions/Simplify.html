@@ -3,10 +3,10 @@
 報告可以簡化的語句，例如常數條件、相同的 if 分支、冗餘布爾表達式等。
 使用下面的複選框可以控制分析選項：
 <ul>
-<li><b>簡化 "if (true)", "while(false)"</b>：建議將 <code>if</code>/<code>while</code> 語句取代為布爾文字。</li>
-<li><b>簡化 "condition == true"</b>：建議將相等語句取代為布爾文字。</li>
-<li><b>簡化 "condition1 ? true : condition2;"</b>：建議簡化其中一個表達式是布爾文字的三元運算符。</li>
-  <li><b>簡化 "if (condition1) return true; return condition2;"</b>：建議簡化符合以下條件的 <code>if</code>：如果條件為 true 則返回布爾文字，否則返回另一個條件。</li>
+<li><b>簡化 "if (true)", "while(false)"</b>：建議將 <code>if</code>/<code>while</code> 語句取代為布爾字面量。</li>
+<li><b>簡化 "condition == true"</b>：建議將相等語句取代為布爾字面量。</li>
+<li><b>簡化 "condition1 ? true : condition2;"</b>：建議簡化其中一個表達式是布爾字面量的三元運算符。</li>
+  <li><b>簡化 "if (condition1) return true; return condition2;"</b>：建議簡化符合以下條件的 <code>if</code>：如果條件為 true 則返回布爾字面量，否則返回另一個條件。</li>
 </ul>
 </body>
 </html>

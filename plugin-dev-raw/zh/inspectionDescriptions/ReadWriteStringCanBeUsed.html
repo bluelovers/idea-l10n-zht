@@ -14,6 +14,10 @@
   Files.writeString(Paths.get("out.txt"), s, StandardOpenOption.WRITE);
   s = Files.readString(Paths.get("in.txt"), StandardCharsets.ISO_8859_1);
 </code></pre>
+<p>
+  請注意，當涉及到處理無效（不可映射）字元時，<code>readString()</code> 行為不同於 <code>new String(bytes, charset)</code> 行為。 在這種情況下，<code>readString()</code> 方法會拋出異常，而 <code>new String(bytes, charset)</code> 方法會以靜默方式將無效字元取代為取代字元。 
+  如果希望進行靜默取代，則最好禁止檢查警告。 
+</p>
 <!-- tooltip end -->
 <p><small>2018.3 最新變化</small></p>
 </body>

@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>
+  報告 <a href="https://docs.python.org/3/library/typing.html#typing.NewType">NewType</a> 的無效用法。
+</p>
+<p>
+  <b>範例：</b>
+</p>
+<pre><code>
+  from typing import NewType
+
+  InvalidName = NewType("Name", int)  # 變數名稱 'InvalidName' 與 NewType 名稱 'Name' 不符合
+</code></pre>
+<pre><code>
+  from typing import Literal
+
+  InvalidType = NewType("InvalidType", Literal[1])  # NewType 不能與 'Literal[1]' 一起使用
+</code></pre>
+<pre><code>
+  Base = NewType("Base", str)
+
+  class Derived(Base):  # 'Base' cannot be subclassed
+      pass
+</code></pre>
+</body>
+</html>

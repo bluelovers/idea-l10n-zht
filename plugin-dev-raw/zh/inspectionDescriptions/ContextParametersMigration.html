@@ -1,0 +1,43 @@
+<html>
+<body>
+報告應該遷移到上下文參數的上下文接收器。
+<p>
+    從 Kotlin 2.2.0 開始，上下文接收器已被上下文參數取代。
+    此檢查有助於將已啟用上下文接收器但尚未遷移到上下文參數語法的專案從上下文接收器遷移到上下文參數。
+</p>
+<p>
+    範例：
+</p>
+<pre><code>
+context(MutableList&lt;String&gt;, C)
+private fun foo() {
+    add("new")
+    bar()
+    baz()
+}
+
+class C {
+    fun bar() {}
+}
+
+fun C.baz() {}
+</code></pre>
+遷移後：
+<pre><code>
+context(strings: MutableList&lt;String&gt;, c: C)
+private fun foo() {
+    strings.add("new")
+    c.bar()
+    c.baz()
+}
+
+class C {
+    fun bar() {}
+}
+
+fun C.baz() {}
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

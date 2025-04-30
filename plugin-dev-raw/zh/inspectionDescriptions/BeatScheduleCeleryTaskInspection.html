@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>
+  報告 <a href="https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#beat-schedule">Celery Beat 排程表</a>中未註冊的任務
+</p>
+<p><b>範例：</b></p>
+<pre><code lang="Python">
+  #settings.py
+
+  CELERY_BEAT_SCHEDULE = {
+      'task_name': {
+          'task': 'example_app.tasks.task_name', # path to a task represented by a class or function
+          'schedule': 3.0,
+      },
+  }
+
+
+  #example_app/tasks.py
+
+  @app.task()
+  def taskName():
+      pass
+
+  class TaskName(Task):
+      pass
+</code></pre>
+<p>如果一個任務類別沒有繼承 Task 或任務函式沒有必要的裝飾器，則不會被視為已註冊</p>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<body>
+報告 Gradle <code>.kts</code> 建置腳本中已棄用的 <code>kotlinOptions</code> DSL 的用法。
+<p>
+    <code>kotlinOptions</code> DSL 在 Kotlin 2.0 中已被棄用。
+    該檢查有助於從 <code>kotlinOptions</code> 遷移到 <code>compilerOptions</code>。
+    它還會更改多個<a href="https://kotl.in/types-for-kgp-compiler-options">使用新類型的選項</a>，而不是 <code>String</code> 類型。
+</p>
+<p>
+    <code>KotlinCompile</code> 任務的範例：
+</p>
+<pre><code>
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+    jvmTarget = "1.8"
+    freeCompilerArgs = listOf("-module-name", "my_module_name")
+    apiVersion = "1.9"
+}
+
+//OR
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        freeCompilerArgs += listOf("-module-name", "my_module_name")
+    }
+}
+</code></pre>
+
+<p>該檢查還會為類型已更改的選項新增 import：</p>
+<pre><code>
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
+
+...
+
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.compilerOptions {
+    jvmTarget.set(JvmTarget.JVM_1_8)
+    freeCompilerArgs.set(listOf("-module-name", "my_module_name"))
+    apiVersion.set(KotlinVersion.KOTLIN_1_9)
+}
+</code></pre>
+
+<p>
+    <code>Kotlin2JsCompile</code> 任務的範例：
+</p>
+<pre><code>
+val compileKotlin: Kotlin2JsCompile by tasks
+compileKotlin.kotlinOptions {
+    moduleKind = "commonjs"
+    sourceMapEmbedSources = "inlining"
+    sourceMapNamesPolicy = "fully-qualified-names"
+    main = "noCall"
+}
+</code></pre>
+
+<p>套用該檢查後：</p>
+<pre><code>
+import org.jetbrains.kotlin.gradle.dsl.JsMainFunctionExecutionMode
+import org.jetbrains.kotlin.gradle.dsl.JsModuleKind
+import org.jetbrains.kotlin.gradle.dsl.JsSourceMapEmbedMode
+import org.jetbrains.kotlin.gradle.dsl.JsSourceMapNamesPolicy
+
+...
+
+val compileKotlin: Kotlin2JsCompile by tasks
+compileKotlin.compilerOptions {
+    moduleKind.set(JsModuleKind.MODULE_COMMONJS)
+    sourceMapEmbedSources.set(JsSourceMapEmbedMode.SOURCE_MAP_SOURCE_CONTENT_INLINING)
+    sourceMapNamesPolicy.set(JsSourceMapNamesPolicy.SOURCE_MAP_NAMES_POLICY_FQ_NAMES)
+    main.set(JsMainFunctionExecutionMode.NO_CALL)
+}
+</code></pre>

@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>此檢查會檢測對 Kotlin 標準庫函數 <code>filterIsInstance</code>/<code>filterIsInstanceTo</code> 的呼叫，其目標類型不是對其呼叫篩選的元素類型的子類型。 </p>
+
+<p>範例：</p>
+<pre><code>
+    val list = listOf&lt;Int&gt;(1, 2, 3)
+    val filteredList = list.filterIsInstance&lt;Boolean&gt;() // 空結果
+</code></pre>
+</body>
+</html>

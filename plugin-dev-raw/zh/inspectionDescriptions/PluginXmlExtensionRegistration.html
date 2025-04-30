@@ -2,17 +2,19 @@
 <body>
 報告 <code>plugin.xml</code> 中的擴展註冊問題。
 <p>
-  報告的問題如下：
+  將報告以下問題：
 <ul>
   <li>缺少 <code>language</code> 宣告。
     如果擴展不針對特定語言，請使用快速修復為“任何語言”建立顯式宣告。
   </li>
   <li>檢查：缺少特性</li>
+  <li>意圖：冗餘的 <code>descriptionDirectoryName</code> 宣告</li>
   <li>服務：冗餘的 <code>serviceInterface</code> 宣告</li>
   <li>沒有 <code>externalIdPrefix</code> 的 <code>com.intellij.stubElementTypeHolder</code>，請參閱<a
     href='https://plugins.jetbrains.com/docs/intellij/stub-indexes.html?from=?from=DevkitPluginXmlInspectionDescription'>存根索引</a>
   </li>
   <li>不帶 <code>id</code> 的 <code>com.intellij.statusBarWidgetFactory</code></li>
+  <li>不帶 <code>displayName</code>/<code>key</code> 的 <code>com.intellij.applicationConfigurable|projectConfigurable</code></li>
 </ul>
 </p>
 

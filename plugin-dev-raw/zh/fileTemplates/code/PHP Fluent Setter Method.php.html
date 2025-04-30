@@ -2,32 +2,32 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">一個 PHP setter 方法的內建模板。 例如，當呼叫 "新增 getter 和 setter" 快速修復時，就會用到它。</font><br>
+    <td colspan="3"><font face="verdana" size="-1">一個 PHP setter 方法的內建模板。 例如，當呼叫“新增 getter 和 setter”快速修復時，就會用到它。</font><br>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">預定義變數接收以下值：</font></td>
+    <td colspan="3"><font face="verdana" size="-1">預定義變數接受以下值：</font></td>
   </tr>
   <tr>    
     <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
     <td width="100%" valign="top"><font face="verdana" size="-1">
-      使用駝峰式命名法樣式的方法名，沒有 "set" 前綴，第一個字元大寫。 例如，屬性名稱 '_my_property' 被
+      使用駝峰式命名法樣式的方法名，沒有“set”前綴，第一個字元大寫。 例如，屬性名稱 '_my_property' 被
       轉換為 'MyProperty'。
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CLASS_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">包含類別名稱。</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">包含類別的名稱。</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SCALAR_TYPE_HINT}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">如果語言級別為 PHP 7.0 或更高版本，則包含標量類型提示</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">如果語言級別為 PHP 7.0 或更高，則包含標量類型提示</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
@@ -42,8 +42,7 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">setter 參數名稱。 幾乎與 ${FIELD_NAME} 相同，
-    但刪除了第一個下劃線（如果有的話）。 例如，屬性名稱 '_myProperty' 被
+    <td width="100%" valign="top"><font face="verdana" size="-1">setter 的參數名稱。 幾乎與 ${FIELD_NAME} 相同，但移除了第一個下劃線（如果有）。 例如，屬性名稱 '_myProperty' 被
       轉換為 'myProperty'。</font></td>
   </tr>
   <tr>

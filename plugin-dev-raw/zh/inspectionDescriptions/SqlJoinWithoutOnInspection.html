@@ -2,7 +2,7 @@
 <body>
 報告可能更改整個資料庫的語句的缺失條件檢查。
 <p>例如，在沒有 ON 或 WHERE 的 DELETE 語句中使用 JOIN 子句。 如果不對 JOIN 進行條件檢查，DELETE 將刪除整個表的內容。</p>
-<p>範例（MySQL）：</p>
+<p>範例 (MySQL)：</p>
 <pre><code>CREATE TABLE foo (a INT,b INT,c INT);
 CREATE TABLE bar (a INT,b INT,c INT);
 
