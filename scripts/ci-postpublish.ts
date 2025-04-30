@@ -31,6 +31,12 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 		if (isMasterBranch)
 		{
 			await _lazyImportWithDelay('./jetbrains/create-jetbrains-update-plugins-xml', __dirname);
+
+			await lazyCommitFiles([
+				'./plugin-dev-out/updatePlugins.xml',
+			], `build(release): updatePlugins.xml`, {
+				addFlags: ['--all'],
+			}).catch(() => void 0);
 		}
 
 		//from = '2d01cffc5da15e0a34a40b40ec3b7d0cc7612dda';
