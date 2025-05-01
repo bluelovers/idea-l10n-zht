@@ -84,5 +84,5 @@ export default Bluebird.resolve()
 
 function getVersionSinceLazy(versionOrSeries: string, pluginMeta: PluginXml)
 {
-	return (_getVersionInfoByVersion(versionOrSeries) ?? _getVersionInfoBySeries(versionOrSeries)).since ?? pluginMeta.versionSinceBuild(true) ?? versionToParts(versionOrSeries)[0]
+	return (_getVersionInfoByVersion(versionOrSeries) ?? _getVersionInfoBySeries(versionOrSeries))?.since ?? pluginMeta.versionSinceBuild(true) ?? versionToParts(versionOrSeries)[0]
 }

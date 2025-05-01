@@ -85,7 +85,7 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 		console.log(`result`);
 
 		const isSameHash = info.from === info.to;
-		const isBuildCommit = latestLog.subject.startsWith('build(release): update build');
+		const isBuildCommit = /^build\(release\): (updatePlugins\.xml|update build)/.test(latestLog.subject);
 
 		const result = {
 			from: info.from,
