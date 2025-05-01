@@ -4,17 +4,17 @@
   報告在 <code>plugin.xml</code> 檔案中註冊的任何動作，並在其建構函式中實例化 <code>com.intellij.openapi.actionSystem.Presentation</code> 物件。
 </p>
 <p>
-  任何帶參數的 <code>AnAction</code> 的建構函式都會實例化 <code>Presentation</code> 物件。 但是，在建構函式中實例化 <code>Presentation</code> 物件會導致分配資源，這可能並非必要。 比起建立存儲文本、描述或圖標的 <code>Presentation</code> 實例，更有效的方式是利用 <code>AnAction</code> 和其他基類別的無實參建構函式，並遵循在 <code>plugin.xml</code> 中設定文本、描述和圖標的約定。 只有當動作實際顯示在 UI 中時，IDE 才會載入文本、描述和圖標。
+  任何帶參數的 <code>AnAction</code> 的建構函式都會實例化 <code>Presentation</code> 物件。 但是，在建構函式中實例化 <code>Presentation</code> 物件會導致分配資源，這可能並非必要。 比起建立存儲文本、描述或圖示的 <code>Presentation</code> 實例，更有效的方式是利用 <code>AnAction</code> 和其他基類別的無實參建構函式，並遵循在 <code>plugin.xml</code> 中設定文本、描述和圖示的約定。 只有當動作實際顯示在 UI 中時，IDE 才會載入文本、描述和圖示。
 </p>
 <p>
-  設定文本、說明和圖標的約定如下：
+  設定文本、說明和圖示的約定如下：
 </p>
 <ul>
   <li>
     為 <code>plugin.xml</code> 檔案中的動作設定 <code>id</code> 特性。
   </li>
   <li>
-    如果需要圖標，也可以設定 <code>icon</code> 特性。
+    如果需要圖示，也可以設定 <code>icon</code> 特性。
   </li>
   <li>
     在關聯的訊息包中設定文本和描述（可以在 <code>&lt;actions&gt;</code> 中覆寫）：

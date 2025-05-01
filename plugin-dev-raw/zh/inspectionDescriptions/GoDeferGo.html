@@ -21,7 +21,7 @@
   應特別注意以下事項：</p>
 <ul>
   <li><code>go panic()</code>：一個新啟動的 goroutine 會立即 panic。</li>
-  <li><code>defer panic()</code>：帶有此語句的函式在退出時始終 panic。</li>
+  <li><code>defer panic()</code>：帶有此語句的函式在離開時始終 panic。</li>
   <li><code>go recovery()</code>：不起任何作用，因為新啟動的 goroutine 不能 panic。</li>
   <li><code>defer recovery()</code>：帶有此語句的函式將默默地停止 panic。 這種用法可能有效，但一種慣用的方式是檢查 <code>recover()</code> 返回的值：
     <pre><code>defer func() {

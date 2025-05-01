@@ -7,7 +7,7 @@
 <p>範例：</p>
 <pre><code>func TestFoo(t *testing.T) {
   go func() {
-    t.Fatal("oops") // 退出 goroutine，而不是 TestFoo
+    t.Fatal("oops") // 離開 goroutine，而不是 TestFoo
   }()
 }</code></pre>
 <p>在套用<b>取代為 'Error' 和 'return'</b> 快速修復後：</p>
