@@ -9,6 +9,8 @@ import { __file_publish_tags_json } from '../../lib/const';
 import { updatePublishTags } from '../../lib/git/update-publish-tags';
 import { getSourceInfoSync } from '../../lib/build/get-source-info';
 import { createNew } from '@bluelovers/string-natural-compare';
+import { PluginXml } from '../../lib/util/xml/plugin-xml';
+import { versionToParts } from '@lazy-node/semver-part';
 
 const _myNaturalCompare = createNew({
 	desc: true,
@@ -46,7 +48,7 @@ export default Bluebird.resolve()
 			.forEach((version) =>
 			{
 
-				const since = getVersionSinceLazy(version);
+				const since = getVersionSinceLazy(version, pluginMeta);
 
 				let href = `https://github.com/bluelovers/idea-l10n-zht/raw/v${version}/plugin-dev-out/zh.jar`;
 
@@ -80,7 +82,7 @@ export default Bluebird.resolve()
 	})
 ;
 
-function getVersionSinceLazy(versionOrSeries: string)
+function getVersionSinceLazy(versionOrSeries: string, pluginMeta: PluginXml)
 {
-	return (_getVersionInfoByVersion(versionOrSeries) ?? _getVersionInfoBySeries(versionOrSeries)).since
+	return (_getVersionInfoByVersion(versionOrSeries) ?? _getVersionInfoBySeries(versionOrSeries)).since ?? pluginMeta.versionSinceBuild(true) ?? versionToParts(versionOrSeries)[0]
 }

@@ -1,6 +1,7 @@
 import { XMLSerialized } from './object';
 import { XMLSerializedAsObject } from 'xmlbuilder2/lib/interfaces';
 import { getElementText, setElementCDATA } from './elem-value';
+import { versionToParts } from '@lazy-node/semver-part';
 
 export class PluginXml extends XMLSerialized
 {
@@ -78,6 +79,16 @@ export class PluginXml extends XMLSerialized
 	removeUntilBuild()
 	{
 		delete this.root['idea-version']['@until-build'];
+	}
+
+	versionSinceBuild(series?: boolean): string
+	{
+		const versionOrSeries: string = this.root['idea-version']['@since-build'];
+		if (series)
+		{
+			return versionToParts(versionOrSeries)[0]
+		}
+		return versionOrSeries
 	}
 
 }
