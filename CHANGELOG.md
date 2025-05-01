@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2025-05-01)
+
+
+
+### 🐛　Bug Fixes
+
+* TypeError: Cannot read properties of undefined (reading 'since') ([ddc34b0](https://github.com/bluelovers/idea-l10n-zht/commit/ddc34b0ed8dfd3285b0f9aaa1b40ec1f10412039))
+* TypeError: Cannot read properties of undefined (reading 'since') ([330a143](https://github.com/bluelovers/idea-l10n-zht/commit/330a1437fa05690bd3f5ddbf9abe73a828bf6d48))
+
+
+### 📦　Code Refactoring
+
+* **dict:** { 退出登录 => 登出 , 退出 => 離開 } ([899ea8c](https://github.com/bluelovers/idea-l10n-zht/commit/899ea8cecfb0cb7dcd3820ccbfeb7f57e1385f6f))
+* **dict:** { 图标 => 圖示 } ([f517bcd](https://github.com/bluelovers/idea-l10n-zht/commit/f517bcd4da70e625e594acef7f3f1afb8a28be4e))
+
+
+### 🛠　Build System
+
+* **cache:** update static cache ([b82d40b](https://github.com/bluelovers/idea-l10n-zht/commit/b82d40bf69f9211ccf4aa6e9045ea7e6eed82b08))
+* **release:** update build ( 251.25410.23 ) ([13c44b9](https://github.com/bluelovers/idea-l10n-zht/commit/13c44b91ac73f0933002d6d18c86df98c5d4438b))
+* **release:** update dev build files ( 251.25410.23 ) ([739ec8b](https://github.com/bluelovers/idea-l10n-zht/commit/739ec8b91222c554765bd29b6955a2565cd28fb1))
+* **release:** updatePlugins.xml ([9de27f9](https://github.com/bluelovers/idea-l10n-zht/commit/9de27f98364c9c88a2d6b66f71d00d7e6f37445f))
+* **test:** update snapshots ( 251.25410.23 ) ([69d2f8a](https://github.com/bluelovers/idea-l10n-zht/commit/69d2f8a89aadd380639a380ae5fd57b55c0c82ab))
+
+
+### ⚙️　Continuous Integration
+
+* commit `plugin-dev-out/updatePlugins.xml` when `ci:postpublish` ([a47244b](https://github.com/bluelovers/idea-l10n-zht/commit/a47244b740f820db94706a8f365c1e90f97eb43b))
+* update `plugin-dev-out/updatePlugins.xml` when `ci:postpublish` ([0dd0f92](https://github.com/bluelovers/idea-l10n-zht/commit/0dd0f923707b30cd70ba9af2d6be77eb1d508edc))
+
+
+
 # 1.0.0 (2025-04-30)
 
 
