@@ -1,12 +1,39 @@
 <html>
 <body>
-報告賦值後在程式碼中從未使用所賦值的情況。
+<p>報告賦值後在程式碼中從未使用所賦值的情況。</p>
 <p><b>範例：</b></p>
 <pre><code>
+  fun foo(): Int = 42
+
   fun example() {
       var local = 0
       print(local)
       local = 42  // 所賦值從未被讀取
+  }
+</code></pre>
+<ul>
+    <li>在快速修復後，該賦值被刪除：</li>
+</ul>
+<pre><code>
+  fun foo(): Int = 42
+
+  fun example() {
+      var local = 0
+      print(local)
+  }
+</code></pre>
+
+<ul>
+    <li>如果右側 (RHS) 表達式可能具有副作用，該快速修復還會建議保留 RHS 表達式以保留這些副作用：
+    </li>
+</ul>
+<pre><code>
+  fun foo(): Int = 42
+
+  fun example() {
+      var local = 0
+      print(local)
+      foo()  // 該函式呼叫因其副作用而保留
   }
 </code></pre>
 <!-- tooltip end -->

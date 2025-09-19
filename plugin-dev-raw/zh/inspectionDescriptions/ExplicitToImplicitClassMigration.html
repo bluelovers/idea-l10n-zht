@@ -1,6 +1,6 @@
 <html>
 <body>
-報告可轉換為隱式宣告的類別的普通類別。
+報告可被轉換為緊湊原始檔的普通類別
 <p><b>範例：</b></p>
 <pre><code>
   public class Sample {
@@ -11,11 +11,15 @@
 </code></pre>
 <p>在套用快速修復後：</p>
 <pre><code>
-  public static void main(String[] args) {
-      System.out.println("Hello, world!");
+  void main() {
+      IO.println("Hello, world!");
   }
 </code></pre>
 <!-- tooltip end -->
+<p>組態檢查：</p>
+<ul>
+  <li>選擇<b>將 'System.out.print()' 和 'System.out.println()' 取代為 'java.lang.IO' 類別中的方法</b>以將這些呼叫轉換為 IO 方法。</li>
+</ul>
 <p><small>2024.1 最新變化</small></p>
 </body>
 </html>

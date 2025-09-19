@@ -1,0 +1,17 @@
+<html>
+<body>
+報告模組檔案描述子 (XML) 中缺少的 <code>intellij.platform.frontend</code> 或 <code>intellij.platform.backend</code> 執行時相依項。
+<p>遠端開發引入了標記模組，用於在前端或後端模式下載入的模組：</p>
+<ul>
+  <li><code>intellij.platform.frontend</code></li>
+  <li><code>intellij.platform.backend</code></li>
+</ul>
+<p>
+  如果未指定此類別相依關係，IDE 將載入與當前模式無關的模組，例如，在前端模式下，它將載入後端模組。
+  這將影響性能並可能導致錯誤。
+</p>
+<p>此檢查基於前端/後端模組命名約定 (<code>*.frontend</code>/<code>*.backend</code>)。</p>
+<!-- tooltip end -->
+<p><small>2025.2 最新變化</small>
+</body>
+</html>

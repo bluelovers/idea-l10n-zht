@@ -1,0 +1,44 @@
+<html>
+<body>
+報告沒有顯式目標的值參數註解用法，預設目標可能變成意外形式並且不受歡迎。
+<p>
+    沒有顯式目標的值參數註解在 Kotlin 2.1.20 前只應用於參數本身。
+    對於適用於參數和欄位或屬性的註解，當註解用於 <code>val</code> 或 <code>var</code> 建構函式參數時，這種行為可能是非預期行為。
+</p>
+<p>
+範例：
+</p>
+<pre><code>
+class Example(
+    @Param val foo: String,
+    @ParamField val bar: String, // 欄位未被註解，只有參數被註解
+    @ParamProperty val baz: String, // 屬性未被註解，只有參數被註解
+    @ParamProperty boo: String,
+)
+
+@Target(AnnotationTarget.VALUE_PARAMETER)
+annotation class Param
+@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.FIELD)
+annotation class ParamField
+@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.PROPERTY)
+annotation class ParamProperty
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+class Example(
+    @Param val foo: String,
+    @field:ParamField val bar: String,
+    @property:ParamProperty val baz: String,
+    @ParamProperty boo: String,
+)
+
+@Target(AnnotationTarget.VALUE_PARAMETER)
+annotation class Param
+@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.FIELD)
+annotation class ParamField
+@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.PROPERTY)
+annotation class ParamProperty
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

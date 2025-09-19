@@ -1,10 +1,40 @@
 <html>
 <body>
 報告對使用 <code>@ApiStatus.OverrideOnly</code> 標記的 API 方法的呼叫。
+
+<p>
+  <code>@ApiStatus.OverrideOnly</code> 註解表明被註解的方法應由客戶端程式碼實作或覆寫，而不應被直接呼叫。
+  此模式通常出現在擴展機制中，在這種機制中，您的實作必須符合某個接口，但呼叫它不是您的責任。
+  此類別擴展機制的一個範例是服務提供者接口。
+  使用此註解標記類別或接口與使用它標記每個方法相同。
+</p>
+
 <p>
   <code>@ApiStatus.OverrideOnly</code> 註解表示該方法是 SPI（服務提供程序接口）的一部分。
   宣告庫的客戶端應實作或覆寫此類別方法，而不是直接呼叫。
   使用此註解標記類別或接口與使用它標記每個方法相同。
 </p>
+
+<p><b>範例：</b></p>
+<pre><code lang="java">
+  // 在上游庫程式碼中
+@ApiStatus.OverrideOnly
+public class MyService {
+    public void perform();
+}
+
+// 在下游客戶端程式碼中
+public class Foo {
+    public void bar(MyService myService) {
+        myService.perform();
+    }
+}
+</code></pre>
+
+此檢查還可以檢測以下與錯誤套用註解相關的問題：
+<ul>
+  <li>為不能擴展/覆寫的類別/方法新增註解</li>
+  <li>為已經使用 <code>@ApiStatus.OverrideOnly</code> 註解的類別中的方法冗餘新增註解</li>
+</ul>
 </body>
 </html>

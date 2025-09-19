@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>報告不是所有抽象屬性或方法都在子類別中定義的情況。</p>
+<p>報告無效的抽象類別定義和用法。</p>
 <p><b>範例：</b></p>
 <pre><code>
 from abc import abstractmethod, ABC
@@ -13,9 +13,12 @@ class Figure(ABC):
         pass
 
 
-class Triangle(Figure):
+class Triangle(Figure):  # 'Triangle' 類別中未定義所有 abstract 方法
     def do_triangle(self):
         pass
+
+
+Triangle()  # 無法實例化抽象類別 'Triangle'
 </code></pre>
 <p>套用快速修復後，IDE 為 <code>Triangle</code> 類別實作抽象方法：</p>
 <pre><code>
@@ -35,6 +38,20 @@ class Triangle(Figure):
 
     def do_triangle(self):
         pass
+
+
+Triangle()
+</code></pre>
+
+如果在元類別不是 <code>abc.ABCMeta</code> 的類別中使用 <code>abc.abstractmethod</code>，它也會發出警告：
+<code><pre>
+from abc import abstractmethod
+
+
+class MyClass:
+    @abstractmethod  # 'MyClass' 不是抽象類別
+    def foo(self):
+        ...
 </code></pre>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<html>
+報告 <code>Job</code> 集合上的 <code>forEach { it.join() }</code> 呼叫。
+<p>
+  這可以通過更簡潔且完全等效的 <code>joinAll()</code> 呼叫替代。
+</p>
+<p>
+  如需了解詳情，請參閱 <code>kotlinx.coroutines.joinAll</code> 的文檔。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+  suspend fun waitForJobs(jobs: List&lt;Job&gt;) {
+    jobs.forEach { it.join() }
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  suspend fun waitForJobs(jobs: List&lt;Job&gt;) {
+    jobs.joinAll()
+  }
+</code></pre>
+</html>

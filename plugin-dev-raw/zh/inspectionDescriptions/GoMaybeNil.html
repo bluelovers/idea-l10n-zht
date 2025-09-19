@@ -1,0 +1,27 @@
+<html>
+<body>
+此檢查可以檢測潛在的 nil 解參照，並考慮所有函式呼叫。
+該分析是跨過程的，並且會考慮整個專案中的呼叫，包括不同軟體套件之間的呼叫。
+<p>範例：</p>
+<pre><code>
+package a
+
+func CreateUser(name string) *User {
+  if isValid(name) {
+    return &User{Name: name}
+  }
+  return nil
+}
+</code></pre>
+<pre><code>
+package main
+
+func main() {
+	user := CreateUser("NilDereference")
+	print(user.Name) // 潛在的 nil 解參照
+}
+</code></pre>
+
+<p>在提供的範例中，<code>user</code> 是指向 <code>User</code> 結構體的指針，但它可能為 <code>nil</code>，因為 <code>CreateUser</code> 可能會返回<code>nil</code>。 嘗試解參照 <code>user</code> 以存取 <code>Name</code> 而不檢查 <code>user</code> 是否為 <code>nil</code> 會導致執行時錯誤。</p>
+</body>
+</html>

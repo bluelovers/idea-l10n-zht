@@ -1,8 +1,7 @@
 <html>
 <body>
-報告對可變 arity 方法的任何呼叫，其中該呼叫在 arity 參數位置有基元陣列（例如 <code>System.out.printf("%s", new int[]{1, 2, 3})</code>）。
-此類別基元陣列實參可能令人困惑，因為它將被包裝為單一元素陣列，而不是像預期的那樣將每個單獨的元素裝箱。
-<!-- tooltip end -->
+報告對可變 arity 方法的任何呼叫，其中該呼叫在 arity 參數位置有基元陣列 。
+此類別 primitive-array 實參可能令人困惑，因為它會被包裝在單元素陣列實參中，而不是像預期的那樣每個元素都是一個單獨的實參。
 <p><b>範例：</b></p>
 <pre><code>
   String.format("%s", new int[]{1, 2, 3});
@@ -11,5 +10,6 @@
 <pre><code>
   String.format("%s", (Object) new int[]{1, 2, 3});
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

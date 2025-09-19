@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>檢測前導空格中的不一致縮排字元使用，具體來說，在組態了空格的地方標記制表符，在組態了制表符的地方標記空格。</p>
+<p>Godot 不允許在縮排中混用制表符和空格。</p>
+<p>
+    例如，如果您的程式碼樣式組態為使用空格進行縮排：
+</p>
+<pre><code>
+func _init():
+  var x = 1
+\tvar y = 2 # 醒目提示：在最好使用空格的地方發現制表符
+</code></pre>
+<p>
+    或者，如果您的程式碼樣式組態為使用制表符進行縮排：
+</p>
+<pre><code>
+func _init():
+\tvar x = 1
+    var y = 2 # 醒目提示：在最好使用制表符的地方發現空格
+</code></pre>
+<!-- tooltip end -->
+<!--<p>Text after this comment will only be shown in the settings of the inspection.</p>-->
+
+<!--<p>To open related settings directly from the description, add a link with `settings://$` optionally followed by `?$` to pre-select a UI-->
+<!--    element.</p>-->
+</body>
+</html>
+

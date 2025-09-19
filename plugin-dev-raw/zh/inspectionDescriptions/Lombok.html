@@ -1,5 +1,36 @@
 <html>
 <body>
 提供 Lombok 註解的一般檢查。
+<p>
+此檢查報告的警告和錯誤旨在與編譯時由 Lombok 註解處理程序報告的警告和錯誤 1:1 符合，例如：
+<ul>
+  <li>
+    冗餘套用的註解（報告為警告）
+    <p><b>範例：</b></p>
+    <pre><code>
+      @ToString
+      class Person {
+        final String name;
+        final int age;
+
+        @Override
+        public String toString() {
+            return "Person{name='" + name + "', age=" + age + '}';
+        }
+      }
+    </code></pre>
+    快速修復建議移除冗餘註解。
+  </li>
+  <li>
+    不正確套用的註解（報告為錯誤）
+    <p><b>範例：</b></p>
+    <pre><code>
+      @Value
+      record Person(String name, int age) {}
+    </code></pre>
+    快速修復會建議移除無效註解。
+  </li>
+</ul>
+
 </body>
 </html>

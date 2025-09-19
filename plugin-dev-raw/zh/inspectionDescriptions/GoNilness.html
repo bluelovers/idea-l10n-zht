@@ -6,7 +6,7 @@
   IDE 將基於此結果報告程式碼中的潛在問題。 考慮以下可能導致意外後果的情況：</p>
 
 <ul>
-  <li>帶有 <code>nil</code> 接收器的方法呼叫可能會導致 'nil 指針取消參照'。</li>
+  <li>帶有 <code>nil</code> 接收器的方法呼叫可能會導致 'nil 指針解參照'。</li>
   <li><code>nil</code> 切片索引可能會導致 panic。</li>
   <li>如果 <code>v</code> 已知始終為 <code>nil</code> 或非 <code>nil</code>，像 <code>v == nil</code> 一樣的比較可能毫無意義。
   </li>

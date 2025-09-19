@@ -1,0 +1,18 @@
+<html>
+<body>
+報告向不接受 null 的 Java 集合提供可 null 類型實參的情況。
+<p>
+    某些在 Java 標準庫中提供的 Java 集合不支持 null 元素、鍵或值。
+    此類別集合的類型實參不應使用可 null 類型實例化。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+val map = ConcurrentHashMap&lt;String, String?&gt;()
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+val map = ConcurrentHashMap&lt;String, String&gt;()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+報告未被呼叫或未被賦值的 lambda 表達式。
+
+<p>
+  未被呼叫或未被賦值給變數的 lambda 表達式對程序執行沒有影響，可能是無意的。
+</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+  fun foo() {
+    {} // 警告：Lambda 表達式從未被呼叫
+  }
+</code></pre>
+
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun foo() {
+    run {} // Lambda 現在通過 'run' 函式呼叫
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,194 @@
+<html>
+<body>
+<h1>IntelliJ Lombok flagUsage 檢查</h1>
+
+<p>
+  此檢查支援在 <code>lombok.config</code> 檔案中指定的每個 <code>flagUsage</code> 組態。 使用組態為標記的 Lombok 功能時，它會在 IntelliJ 內發出警告或錯誤。 此主動反饋有助於保持程式碼標準，並確保僅使用批准的 Lombok 功能。
+</p>
+
+<h2>支援的 flagUsage 組態</h2>
+<table>
+  <thead>
+  <tr>
+    <th>組態鍵</th>
+    <th>描述</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>lombok.anyConstructor.flagUsage</td>
+    <td>如果使用了任何 XxxArgsConstructor 註解，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.allArgsConstructor.flagUsage</td>
+    <td>如果使用了<code>@AllArgsConstructor</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.noArgsConstructor.flagUsage</td>
+    <td>如果使用了<code>@NoArgsConstructor</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.requiredArgsConstructor.flagUsage</td>
+    <td>如果使用了<code>@RequiredArgsConstructor</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.data.flagUsage</td>
+    <td>如果使用了<code>@Data</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.value.flagUsage</td>
+    <td>如果使用了<code>@Value</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.getter.flagUsage</td>
+    <td>如果使用了<code>@Getter</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.getter.lazy.flagUsage</td>
+    <td>如果使用了<code>@Getter(lazy=true)</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.setter.flagUsage</td>
+    <td>如果使用了<code>@Setter</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.equalsAndHashCode.flagUsage</td>
+    <td>如果使用了<code>@EqualsAndHashCode</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.toString.flagUsage</td>
+    <td>如果使用了<code>@ToString</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.builder.flagUsage</td>
+    <td>如果使用了<code>@Builder</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.cleanup.flagUsage</td>
+    <td>如果使用了<code>@Cleanup</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.delegate.flagUsage</td>
+    <td>如果使用了<code>@Delegate</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.nonNull.flagUsage</td>
+    <td>如果使用了<code>@NonNull</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.sneakyThrows.flagUsage</td>
+    <td>如果使用了<code>@SneakyThrows</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.synchronized.flagUsage</td>
+    <td>如果使用了<code>@Synchronized</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.val.flagUsage</td>
+    <td>如果使用了語言關鍵字 <code>val</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.var.flagUsage</td>
+    <td>如果使用了語言關鍵字 <code>var</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.with.flagUsage</td>
+    <td>如果使用了 <code>@With</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.log.flagUsage</td>
+    <td>如果使用了任何日誌註解，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.log.apacheCommons.flagUsage</td>
+    <td>如果使用了 <code>@CommonsLog</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.log.javaUtilLogging.flagUsage</td>
+    <td>如果使用了 <code>@Log</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.log.log4j.flagUsage</td>
+    <td>如果使用了 <code>@Log4j</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.log.log4j2.flagUsage</td>
+    <td>如果使用了 <code>@Log4j2</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.log.slf4j.flagUsage</td>
+    <td>如果使用了 <code>@Slf4j</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.log.xslf4j.flagUsage</td>
+    <td>如果使用了 <code>@XSlf4j</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.log.jbosslog.flagUsage</td>
+    <td>如果使用了 <code>@JBossLog</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.log.flogger.flagUsage</td>
+    <td>如果使用了 <code>@Flogger</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.log.custom.flagUsage</td>
+    <td>如果使用了 <code>@CustomLog</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.experimental.flagUsage</td>
+    <td>如果使用了實驗性功能，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.accessors.flagUsage</td>
+    <td>如果使用了 <code>@Accessors</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.extensionMethod.flagUsage</td>
+    <td>如果使用了 <code>@ExtensionMethod</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.fieldDefaults.flagUsage</td>
+    <td>如果使用了 <code>@FieldDefaults</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.helper.flagUsage</td>
+    <td>如果使用了 <code>@Helper</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.locked.flagUsage</td>
+    <td>如果使用了 <code>@Locked</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.onX.flagUsage</td>
+    <td>如果使用了 <code>onX</code> 標誌，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.utilityClass.flagUsage</td>
+    <td>如果使用了 <code>@UtilityClass</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.fieldNameConstants.flagUsage</td>
+    <td>如果使用了 <code>@FieldNameConstants</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.superBuilder.flagUsage</td>
+    <td>如果使用了 <code>@SuperBuilder</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.withBy.flagUsage</td>
+    <td>如果使用了 <code>@WithBy</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.jacksonized.flagUsage</td>
+    <td>如果使用了 <code>@Jacksonized</code>，則發出警告或錯誤。</td>
+  </tr>
+  <tr>
+    <td>lombok.standardException.flagUsage</td>
+    <td>如果使用了 <code>@StandardException</code>，則發出警告或錯誤。</td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

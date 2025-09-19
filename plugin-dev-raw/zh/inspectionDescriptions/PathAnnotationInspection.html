@@ -1,0 +1,27 @@
+<html>
+<body>
+報告路徑註解的不正確用法。
+
+<p>
+  此檢查可以檢測帶有一種路徑註解的字串在需要帶有另一種路徑註解的上下文中使用的情況。
+  有助於確保正確使用 <code>@MultiRoutingFileSystemPath</code> 和 <code>@NativePath</code> 註解。
+</p>
+
+<p>該檢查會重點顯示以下問題：</p>
+<ul>
+  <li>當帶有 <code>@NativePath</code> 註解的字串在 Path 建構函式或工廠方法中使用時</li>
+  <li>當帶有 <code>@NativePath</code> 註解的字串被傳遞給帶有 <code>@MultiRoutingFileSystemPath</code> 註解的方法參數時</li>
+  <li>當帶有 <code>@MultiRoutingFileSystemPath</code> 註解的字串被傳遞給帶有 <code>@NativePath</code> 註解的方法參數時</li>
+  <li>當字串字面量用於需要任意一種註解的上下文中時</li>
+</ul>
+
+<p>
+  提供了快速修復以在需要的地方新增適當的註解。
+</p>
+<!-- tooltip end -->
+<p>
+  此檢查有助於防止在錯誤使用不同格式的路徑時可能發生的執行時錯誤。
+  <code>@MultiRoutingFileSystemPath</code> 註解用於應當支援不同檔案系統的路徑，而 <code>@NativePath</code> 註解用於特定於原生檔案系統的路徑。
+</p>
+</body>
+</html>

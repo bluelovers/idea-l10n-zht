@@ -1,11 +1,16 @@
 <html>
 <body>
 報告不必要的轉換表達式。
-
-<p>範例：</p>
+<p><b>範例：</b></p>
 <pre><code>
   static Object toObject(String s) {
     return (Object) s;
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+    static Object toObject(String s) {
+    return s;
   }
 </code></pre>
 <!-- tooltip end -->
