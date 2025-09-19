@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2025-09-19)
+
+
+
+### 🛠　Build System
+
+* **cache:** update version-map ([1b5fcfc](https://github.com/bluelovers/idea-l10n-zht/commit/1b5fcfc33d2f011325bd12ef37d9679aa6711e98))
+* **original:** update original source ( 253.20558.43 ) ([644ce88](https://github.com/bluelovers/idea-l10n-zht/commit/644ce88e8911c0912fa9bd41b8c490259158d47f))
+* **release:** update build ( 253.20558.43 ) ([041e484](https://github.com/bluelovers/idea-l10n-zht/commit/041e484dcf6e68e9200ff38dbb37b638985bf1fc))
+* **release:** updatePlugins.xml ([efe14f5](https://github.com/bluelovers/idea-l10n-zht/commit/efe14f5e880b3563e94f3063678d65ef96f31053))
+* **release:** update dev build files ( 253.20558.43 ) ([676b5ae](https://github.com/bluelovers/idea-l10n-zht/commit/676b5ae249c9450c9c2c533b3f9744f9a9d2aa8b))
+* **test:** update snapshots ( 253.20558.43 ) ([7ec880a](https://github.com/bluelovers/idea-l10n-zht/commit/7ec880a4e757dacbea9a3f541a4c495685413141))
+
+
+### ⚙️　Continuous Integration
+
+* **update:** support extracting built-in JetBrains language pack using toolbox paths ([0e3dc30](https://github.com/bluelovers/idea-l10n-zht/commit/0e3dc30525571579c2ecc3fd38ec22b2fd2d6834))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2025-05-01)
 
 
