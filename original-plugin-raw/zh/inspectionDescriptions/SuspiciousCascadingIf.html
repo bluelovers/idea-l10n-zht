@@ -1,0 +1,63 @@
+<html>
+<body>
+<p>报告最后的 <code>else</code> 分支为点限定或二元表达式一部分的级联 <code>if</code> 表达式。
+</p>
+<p>这可能导致意外行为，因为只有最内层的 <code>if-else</code> 表达式成为外部表达式的接收器或左操作数，这可能与预期逻辑不一致。</p>
+<p><b>示例：</b></p>
+<pre><code>
+fun printNumberSign(num: Int) {
+    if (num > 0) {
+        "positive"
+    } else if (num < 0) {
+        "negative"
+    } else {
+        "zero"
+    }.let { print(it) }
+}
+
+fun main() {
+    printNumberSign(1) // 未打印任何内容，因为 'let' 的接收者仅为内层的 'if-else' 表达式
+}
+</code></pre>
+<p>应用第一个快速修复（转换为 <code>when</code>）后：</p>
+<pre><code>
+fun printNumberSign(num: Int) {
+    when {
+        num > 0 -> {
+            "positive"
+        }
+
+        num < 0 -> {
+            "negative"
+        }
+
+        else -> {
+            "zero"
+        }
+    }.let { print(it) }
+}
+
+fun main() {
+    printNumberSign(1) // 打印“positive”
+}
+</code></pre>
+<p>或者，第二个快速修复会添加明确的大括号以保持原始语义，同时将嵌套的 <code>else</code> 分支设为显式：</p>
+<pre><code>
+fun printNumberSign(num: Int) {
+    if (num > 0) {
+        "positive"
+    } else {
+        if (num < 0) {
+            "negative"
+        } else {
+            "zero"
+        }.let { print(it) }
+    }
+}
+
+fun main() {
+    printNumberSign(1) // 未打印任何内容，但代码更清晰
+}
+</code></pre>
+</body>
+</html>

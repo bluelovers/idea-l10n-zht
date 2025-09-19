@@ -1,0 +1,44 @@
+<html>
+<body>
+报告没有显式目标的值形参注解用法，默认目标可能变成意外形式并且不受欢迎。
+<p>
+    没有显式目标的值形参注解在 Kotlin 2.1.20 前只应用于形参本身。
+    对于适用于形参和字段或属性的注解，当注解用于 <code>val</code> 或 <code>var</code> 构造函数形参时，这种行为可能是非预期行为。
+</p>
+<p>
+示例：
+</p>
+<pre><code>
+class Example(
+    @Param val foo: String,
+    @ParamField val bar: String, // 字段未被注解，只有形参被注解
+    @ParamProperty val baz: String, // 属性未被注解，只有形参被注解
+    @ParamProperty boo: String,
+)
+
+@Target(AnnotationTarget.VALUE_PARAMETER)
+annotation class Param
+@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.FIELD)
+annotation class ParamField
+@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.PROPERTY)
+annotation class ParamProperty
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+class Example(
+    @Param val foo: String,
+    @field:ParamField val bar: String,
+    @property:ParamProperty val baz: String,
+    @ParamProperty boo: String,
+)
+
+@Target(AnnotationTarget.VALUE_PARAMETER)
+annotation class Param
+@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.FIELD)
+annotation class ParamField
+@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.PROPERTY)
+annotation class ParamProperty
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,10 +1,40 @@
 <html>
 <body>
 报告对使用 <code>@ApiStatus.OverrideOnly</code> 标记的 API 方法的调用。
+
+<p>
+  <code>@ApiStatus.OverrideOnly</code> 注解表明被注解的方法应由客户端代码实现或重写，而不应被直接调用。
+  此模式通常出现在扩展机制中，在这种机制中，您的实现必须符合某个接口，但调用它不是您的责任。
+  此类扩展机制的一个示例是服务提供者接口。
+  使用此注解标记类或接口与使用它标记每个方法相同。
+</p>
+
 <p>
   <code>@ApiStatus.OverrideOnly</code> 注解表示该方法是 SPI（服务提供程序接口）的一部分。
   声明库的客户端应实现或重写此类方法，而不是直接调用。
   使用此注解标记类或接口与使用它标记每个方法相同。
 </p>
+
+<p><b>示例：</b></p>
+<pre><code lang="java">
+  // 在上游库代码中
+@ApiStatus.OverrideOnly
+public class MyService {
+    public void perform();
+}
+
+// 在下游客户端代码中
+public class Foo {
+    public void bar(MyService myService) {
+        myService.perform();
+    }
+}
+</code></pre>
+
+此检查还可以检测以下与错误应用注解相关的问题：
+<ul>
+  <li>为不能扩展/重写的类/方法添加注解</li>
+  <li>为已经使用 <code>@ApiStatus.OverrideOnly</code> 注解的类中的方法冗余添加注解</li>
+</ul>
 </body>
 </html>

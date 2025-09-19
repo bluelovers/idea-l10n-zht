@@ -1,0 +1,34 @@
+<html>
+<body>
+Reports usages of immutable collections in JPA entities.
+<p>
+  Detects properties annotated with <code>@OneToMany</code> or <code>@ManyToMany</code> with immutable collection types (<code>List</code>,
+  <code>Set</code>, <code>Map</code>).
+  Suggests using mutable collection types (<code>MutableList</code>, <code>MutableSet</code>, <code>MutableMap</code>) instead, to ensure
+  Hibernate compatibility.
+</p>
+<p>
+  嵌入代码段：
+</p>
+<pre><code>
+@Entity
+open class User(
+  @Id
+  val id: Long = 0L,
+  @OneToMany
+  val orders: List<Order> = listOf(),
+)
+</code></pre>
+After applying the quickfix:
+<pre><code>
+@Entity
+open class User(
+  @Id
+  val id: Long = 0L,
+  @OneToMany
+  val orders: MutableList<Order> = mutableListOf(),
+)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

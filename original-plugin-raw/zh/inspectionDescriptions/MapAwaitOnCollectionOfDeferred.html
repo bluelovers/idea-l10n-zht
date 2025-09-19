@@ -1,0 +1,21 @@
+<html>
+报告 <code>Deferred</code> 集合上的 <code>map { it.await() }</code> 调用。
+<p>
+  这可以替换为更简洁且潜在更高效的 <code>awaitAll()</code> 调用。
+</p>
+<p>
+  如需了解详情，请参阅 <code>kotlinx.coroutines.awaitAll</code> 的文档。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  suspend fun waitForResult(results: List&lt;Deferred&lt;String&gt;&gt;): List&lt;String&gt; {
+    return results.map { it.await() }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  suspend fun waitForResult(results: List&lt;Deferred&lt;String&gt;&gt;): List&lt;String&gt; {
+    return results.awaitAll()
+  }
+</code></pre>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+报告路径注解的不正确用法。
+
+<p>
+  此检查可以检测带有一种路径注解的字符串在需要带有另一种路径注解的上下文中使用的情况。
+  有助于确保正确使用 <code>@MultiRoutingFileSystemPath</code> 和 <code>@NativePath</code> 注解。
+</p>
+
+<p>该检查会重点显示以下问题：</p>
+<ul>
+  <li>当带有 <code>@NativePath</code> 注解的字符串在 Path 构造函数或工厂方法中使用时</li>
+  <li>当带有 <code>@NativePath</code> 注解的字符串被传递给带有 <code>@MultiRoutingFileSystemPath</code> 注解的方法形参时</li>
+  <li>当带有 <code>@MultiRoutingFileSystemPath</code> 注解的字符串被传递给带有 <code>@NativePath</code> 注解的方法形参时</li>
+  <li>当字符串字面量用于需要任意一种注解的上下文中时</li>
+</ul>
+
+<p>
+  提供了快速修复以在需要的地方添加适当的注解。
+</p>
+<!-- tooltip end -->
+<p>
+  此检查有助于防止在错误使用不同格式的路径时可能发生的运行时错误。
+  <code>@MultiRoutingFileSystemPath</code> 注解用于应当支持不同文件系统的路径，而 <code>@NativePath</code> 注解用于特定于原生文件系统的路径。
+</p>
+</body>
+</html>

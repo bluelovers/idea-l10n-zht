@@ -1,0 +1,30 @@
+<html>
+<body>
+报告 Python 代码中未使用的 import 语句。
+
+<p>
+  此检查会检测代码中未使用并且可以安全移除的 import 语句。
+  移除未使用的 import 有助于保持代码整洁，并降低名称冲突的风险。
+</p>
+
+<!-- tooltip end -->
+<p><b>示例：</b></p>
+
+<pre><code>
+import os           # Unused import
+import sys         # Used import
+from math import pi # Unused import
+
+print(sys.version)
+</code></pre>
+
+<p>
+  该检查提供了一项优化 import 的快速修复，可以移除所有未使用的 import 语句。
+</p>
+
+<p>
+  请注意，某些 import 可能会被间接使用（例如，用于副作用），不应被移除。
+  如果某些 import 是为了副作用而存在，您可以对其禁止此检查。
+</p>
+</body>
+</html>

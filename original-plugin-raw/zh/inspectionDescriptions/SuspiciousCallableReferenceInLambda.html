@@ -2,11 +2,17 @@
 <body>
 报告具有一个可调用引用的 lambda 表达式。
 <p>将 lambda 替换为可调用引用而不将大括号更改为圆括号是常见错误。</p>
+
 <p><b>示例：</b></p>
-<pre><code>  listOf(1,2,3).map { it::toString }
+<pre><code>
+  val numbers = listOf(1, 2, 3)
+  val result = numbers.map { it::toString }
 </code></pre>
+
 <p>在应用快速修复后：</p>
-<pre><code>  listOf(1,2,3).map(Int::toString)
+<pre><code>
+  val numbers = listOf(1, 2, 3)
+  val result = numbers.map(Int::toString) // real type here
 </code></pre>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+报告可以简化的异步事务事件侦听器声明：
+<pre><code>
+@Component
+public class MyEventListener {
+
+    @Async
+    @Transactional
+    @TransactionalEventListener
+    public void on(MyEvent e) {
+        // ...
+    }
+}
+</code></pre>
+
+使用 <code>@ApplicationModuleListener</code>：
+<pre><code>
+@Component
+public class MyEventListener {
+
+    @ApplicationModuleListener
+    public void on(MyEvent e) {
+        // ...
+    }
+}
+</code></pre>
+</body>
+</html>

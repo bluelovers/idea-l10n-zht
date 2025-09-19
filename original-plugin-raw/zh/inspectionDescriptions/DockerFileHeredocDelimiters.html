@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>
+  报告文件末尾未闭合的 heredoc 分隔符。
+</p>
+<p><b>示例：</b></p>
+此代码将报告缺失的 FILE2 和 FILE3 分隔符。
+<pre><code>
+  RUN &lt;&lt;FILE1 cat &gt; file1 && &lt;&lt;FILE2 cat &gt; file2 && &lt;&lt;FILE3 cat &gt; file3
+  mkdir -p foo/bar
+  FILE1
+</code></pre>
+</body>
+</html>

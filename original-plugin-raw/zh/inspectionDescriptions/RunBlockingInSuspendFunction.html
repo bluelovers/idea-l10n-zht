@@ -1,12 +1,12 @@
 <html>
 <body>
 报告 <code>suspend</code> 函数内部的 <code>runBlocking</code> 调用。
-<p>在 <code>suspend</code> 函数中使用 <code>runBlocking</code> 会否定挂起机制，阻塞调用线程，并破坏异步编程的核心目的。
-<p>该快速修复会根据上下文，自动将 <code>runBlocking</code> 替换为以下选项之一：</p>
+<p>在 <code>suspend</code> 函数中使用 <code>runBlocking</code> 会阻塞调用线程，违背异步编程的目的。</p>
+<p>该快速修复可以将 <code>runBlocking</code> 调用替换为以下备选项之一，具体取决于上下文：</p>
 <ul>
     <li><code>run</code> 调用。</li>
-    <li>提供了特定 <code>CoroutineContext</code> 的情况下的 <code>withContext</code> 调用。</li>
-    <li>内联包装代码</li>
+    <li>使用特定 <code>CoroutineContext</code> 时的 <code>withContext</code> 调用。</li>
+    <li>无 <code>runBlocking</code> 包装器的直接内联代码。</li>
 </ul>
 <p>示例：</p>
 <pre><code>
@@ -19,9 +19,7 @@ suspend fun something() {
 <p>在应用快速修复后：</p>
 <pre><code>
 suspend fun something() {
-  runBlocking {
-    code() // 异步运行
-  }
+  code() // 异步运行
 }
 </code></pre>
 <!-- tooltip end -->

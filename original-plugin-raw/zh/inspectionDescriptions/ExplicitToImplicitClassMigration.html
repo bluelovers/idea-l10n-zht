@@ -1,6 +1,6 @@
 <html>
 <body>
-报告可转换为隐式声明的类的普通类。
+报告可被转换为紧凑源文件的普通类
 <p><b>示例：</b></p>
 <pre><code>
   public class Sample {
@@ -11,11 +11,15 @@
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
-  public static void main(String[] args) {
-      System.out.println("Hello, world!");
+  void main() {
+      IO.println("Hello, world!");
   }
 </code></pre>
 <!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>选择<b>将 'System.out.print()' 和 'System.out.println()' 替换为 'java.lang.IO' 类中的方法</b>以将这些调用转换为 IO 方法。</li>
+</ul>
 <p><small>2024.1 最新变化</small></p>
 </body>
 </html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+报告 RPC 接口中的不可序列化类型（使用 <code>@kotlinx.rpc.annotations.Rpc</code> 注解）。
+<p>
+  该检查会核对使用 <code>@kotlinx.rpc.annotations.Rpc</code> 注解的 Kotlin 接口的返回值和形参类型是否可序列化。
+</p>
+<p>
+  它会深入核对，并在接口的类型用法级别报告问题，包括关于哪个属性不可序列化的详细信息。
+</p>
+<p>
+  可序列化类型：
+</p>
+<ul>
+  <li>使用 <code>@kotlinx.serialization.Serializable</code> 注解</li>
+  <li>默认情况下，基元、字符串、Flow 和 Deferred 被视为可序列化</li>
+</ul>
+</body>
+</html>

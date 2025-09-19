@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <p>
+      Reports an array that does not provide all the required keys/entries defined in the array shape.
+    </p>
+    <p>
+      This inspection helps you identify the scenarios when an array instantiation might lead to runtime issues due to missing required entries,
+      ensuring better code consistency and adherence to the defined structure.
+    </p>
+    <p>
+      嵌入代码段：
+    </p>
+    <pre><code>
+      function connect(#[ArrayShape([
+          'path' => 'string',
+          'host' => [
+              'name' => 'string',
+              'port' => 'int'
+          ]
+      ])] array $options = []) { };
+      connect(['host' => ['name' => 'localhost', 'port' => 1234]]); // 缺少 'path' 键
+    </code></pre>
+  </body>
+</html>

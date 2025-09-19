@@ -1,0 +1,32 @@
+<html>
+<body>
+Reports usages of immutable properties in validated JPA entities.
+<p>
+  Detects immutable properties annotated with <code>@NotNull</code>.
+  Suggests making them mutable, to ensure Hibernate compatibility.
+</p>
+<p>
+  嵌入代码段：
+</p>
+<pre><code>
+@Entity
+open class User(
+  @Id
+  val id: Long = 0L,
+  @NotNull
+  val name: String = "",
+)
+</code></pre>
+After applying the quickfix:
+<pre><code>
+@Entity
+open class User(
+  @Id
+  val id: Long = 0L,
+  @NotNull
+  var name: String = "",
+)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

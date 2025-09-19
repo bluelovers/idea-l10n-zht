@@ -23,7 +23,7 @@ Integer square(@Nullable Integer input) {
 <ul>
   <li>使用<b>对可以为 null 的值的方法/字段/形参建议使用 @Nullable 注解</b>选项可以在以下情况下发出警告：null 值作为实参传递给具有非注解形参的方法时，存储到非注解字段时，或从非注解方法返回时。 在这种情况下，该检查将建议传播 <code>@Nullable</code> 注解。 您还可以使用<b>配置注解</b>按钮配置为 null 性注解。</li>
   <li>使用<b>将未注解的成员和形参视为 @Nullable</b> 选项可以假设未注解的成员可以为 null，因此不得在非 null 上下文中使用。</li>
-  <li>使用<b>报告使用 null 字面量实参用法的非 null 必需形参</b>>选项可以报告不能为 null（例如，在方法体中立即取消引用），但存在传递 <code>null</code> 字面量的调用点的方法形参。</li>
+  <li>使用<b>报告使用 null 字面量实参用法的非 null 必需形参</b>>选项可以报告不能为 null（例如，在方法体中立即解引用），但存在传递 <code>null</code> 字面量的调用点的方法形参。</li>
   <li>使用<b>报告始终返回非 null 值的可以为 null 的方法</b>选项，可以报告注解为 <code>@Nullable</code> 但始终返回非 null 值的方法。 在这种情况下，建议您将注解更改为 <code>@NotNull</code>。</li>
   <li>使用<b>忽略 assert 语句</b>选项可控制检查如何处理 <code>assert</code> 语句。 默认情况下，该选项被禁用，这意味着断言视为被执行（-ea 模式）。 如果启用该选项，断言将被完全忽略（-da 模式）。</li>
   <li>使用<b>报告仅在某些代码路径上发生的问题</b>选项可以控制是否报告仅在某些代码路径上发生的问题。 如果禁用此选项，则不会报告 <i>exception is possible</i> 等警告。 该检查只会报告类似 <i>exception will definitely occur</i> 的警告。 这种模式可以大大减少误报的数量，特别是如果代码没有一致地使用为 null 性和约定注解进行注解。 这就是为什么它对于查找旧代码库中最重要的问题很有用。

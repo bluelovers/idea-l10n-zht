@@ -1,23 +1,27 @@
 <html>
-<style>
-  body {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: #3c8bf1;
-  }
-
-  pre {
-    font-size: 8px;
-  }
-</style>
 <body>
-<pre>
-     __ _ _       _                __
-  /\ \ (_) |   __| | ___ _ __ ___ / _| ___ _ __ ___ _ __   ___ ___
- /  \/ / | |  / _` |/ _ \ '__/ _ \ |_ / _ \ '__/ _ \ '_ \ / __/ _ \
-/ /\  /| | | | (_| |  __/ | |  __/  _|  __/ | |  __/ | | | (_|  __/
-\_\ \/ |_|_|  \__,_|\___|_|  \___|_|  \___|_|  \___|_| |_|\___\___|
+此检查可以检测潜在的 nil 解引用，并考虑所有函数调用。
+该分析是跨过程的，并且会考虑整个项目中的调用，包括不同软件包之间的调用。
+<p>示例：</p>
+<pre><code>
+package a
 
-</pre>
+func CreateUser(name string) *User {
+  if isValid(name) {
+    return &User{Name: name}
+  }
+  return nil
+}
+</code></pre>
+<pre><code>
+package main
+
+func main() {
+	user := CreateUser("NilDereference")
+	print(user.Name) // 潜在的 nil 解引用
+}
+</code></pre>
+
+<p>在提供的示例中，<code>user</code> 是指向 <code>User</code> 结构体的指针，但它可能为 <code>nil</code>，因为 <code>CreateUser</code> 可能会返回<code>nil</code>。 尝试解引用 <code>user</code> 以访问 <code>Name</code> 而不检查 <code>user</code> 是否为 <code>nil</code> 会导致运行时错误。</p>
 </body>
 </html>

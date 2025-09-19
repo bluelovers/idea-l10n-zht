@@ -1,17 +1,17 @@
 <html>
 <body>
-报告隐式声明的类，并建议将其替换为常规类。
+报告紧凑的源文件，并建议将其替换为常规类。
 <p><b>示例（在文件 Sample.java 中）：</b></p>
 <pre><code>
-  public static void main() {
-      System.out.println("Hello, world!");
+  void main() {
+      String a = "Hello, world!";
   }
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
 public class Sample {
-    public static void main() {
-        System.out.println("Hello, world!");
+    void main() {
+        String a = "Hello, world!";
     }
 }
 </code></pre>

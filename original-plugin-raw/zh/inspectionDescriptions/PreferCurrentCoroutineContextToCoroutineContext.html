@@ -1,0 +1,24 @@
+<html>
+报告在依赖于 <code>kotlinx.coroutines</code> 库的代码中的 <code>kotlin.coroutine.coroutineContext</code> 属性的用法。
+<p>
+  当代码中同时存在 <code>kotlin.coroutine.coroutineContext</code> 和 <code>kotlinx.coroutines.CoroutineScope.coroutineContext</code> 时，可能导致混淆和潜在 bug。
+</p>
+<p>
+  <code>kotlinx.coroutines</code> 库提供了 <code>currentCoroutineContext()</code> 函数作为更清晰的替代方案，即使没有明显的冲突，也应优先选择。
+</p>
+<p>
+  如需了解详情，请参阅 <code>kotlin.coroutine.coroutineContext</code> 和 <code>kotlinx.coroutines.currentCoroutineContext</code> 的文档。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  suspend fun getCurrentJob(): Job? {
+    return coroutineContext[Job]
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  suspend fun getCurrentJob(): Job? {
+    return currentCoroutineContext()[Job]
+  }
+</code></pre>
+</html>

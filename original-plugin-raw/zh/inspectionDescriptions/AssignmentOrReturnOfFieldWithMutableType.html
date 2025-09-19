@@ -1,6 +1,6 @@
 <html>
 <body>
-报告从方法形参到数组或可变类型（如 <code>Collection</code>、<code>Date</code>、<code>Map</code>、<code>Calendar</code> 等）的返回或赋值
+报告数组或可变类型（例如 <code>Collection</code>、<code>Date</code>、<code>Map</code>、<code>Calendar</code> 等）字段的返回值或从方法形参到数组或可变类型字段的赋值。
 <p>由于这种类型是可变的，此结构可能会导致来自所属类之外的对象状态发生意外修改。 尽管出于性能原因，此结构可能很有用，但它本质上很容易出现错误。</p>
 <p>报告了以下可变类型：</p>
 <ul>
@@ -11,32 +11,40 @@
   <li><code>com.google.common.collect.Multimap</code></li>
   <li><code>com.google.common.collect.Table</code></li>
 </ul>
-<p>该快速修复会添加对字段的 <code>.clone()</code> 方法的调用。</p>
+<p>该快速修复会为数组添加对字段的 <code>.clone()</code> 方法的调用，或使用不可修改的集合包装器。</p>
 <p><b>示例：</b></p>
 <pre><code>
+  import java.util.*;
   class Log {
-    String[] messages;
-    ...
+    private String[] messages = {"one", "two", "three"};
+    private Map&lt;String, String&gt; map = new HashMap<>();
 
     String[] getMessages() {
       return messages; // 警告：返回 String[] 字段 'messages'
+    }
+
+    Map&lt;String, String&gt; mapping() {
+      return map; // 警告：返回 Map&lt;String, String&gt; 字段 'map'
     }
   }
 </code></pre>
 <p>在应用快速修复后：</p>
 <pre><code>
+  import java.util.*;
   class Log {
-    String[] messages;
-    ...
+    String[] messages = {"one", "two", "three"};
+    private Map&lt;String, String&gt; map = new HashMap<>();
 
     String[] getMessages() {
       return messages.clone();
+    }
+
+    Map&lt;String, String&gt; mapping() {
+      return Collections.unmodifiableMap(map);
     }
   }
 </code></pre>
 <!-- tooltip end -->
 <p>使用<b>忽略 private 方法中的赋值和返回值</b>选项可忽略 <code>private</code>方法中的赋值和返回值。
-
-  <!--<p><small>New in 2017.3</small>-->
 </body>
 </html>

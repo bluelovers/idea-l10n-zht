@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>
+  报告在 ADD/COPY 命令中用作最后一个实参（目标）的 heredoc。
+</p>
+<p><b>示例：</b></p>
+此代码定义了无效的目标：
+<pre><code>
+  COPY foo &lt;&lt;EOF1 bar &lt;&lt;EOF2
+  file content 1
+  EOF1
+  file content 2
+  EOF2
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+报告模块描述符 (XML) 中缺少的 <code>intellij.platform.frontend</code> 或 <code>intellij.platform.backend</code> 运行时依赖项。
+<p>远程开发引入了标记模块，用于在前端或后端模式下加载的模块：</p>
+<ul>
+  <li><code>intellij.platform.frontend</code></li>
+  <li><code>intellij.platform.backend</code></li>
+</ul>
+<p>
+  如果未指定此类依赖关系，IDE 将加载与当前模式无关的模块，例如，在前端模式下，它将加载后端模块。
+  这将影响性能并可能导致错误。
+</p>
+<p>此检查基于前端/后端模块命名约定 (<code>*.frontend</code>/<code>*.backend</code>)。</p>
+<!-- tooltip end -->
+<p><small>2025.2 最新变化</small>
+</body>
+</html>

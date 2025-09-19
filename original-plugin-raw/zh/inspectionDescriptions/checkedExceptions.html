@@ -1,0 +1,14 @@
+<html>
+<body>
+<h1>Kotlin 中的检查异常</h1>
+<p>此检测仅适用于带有 <code>com.intellij.openapi.ThrowsChecked</code> 注解的方法。</p>
+<p>该检查会尝试找到调用带注解的函数但没有捕获异常的情况。</p>
+<p>与 Java 的检查异常的区别：</p>
+<ul>
+  <li>此检查会产生警告，但不会中断编译。</li>
+  <li>根据设计，可以禁止异常。</li>
+  <li>该检查不应该在每种情况下都尝试证明未捕获某些异常。 它只是为了提醒 API 用户注意异常。
+  </li>
+</ul>
+</body>
+</html>

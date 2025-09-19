@@ -1,0 +1,14 @@
+<html>
+<body>
+Reports unresolved file paths in ignore directives within Go module files.
+
+<p>
+  This inspection helps identify paths specified in ignore directives that cannot be resolved to actual files or directories in the module.
+  It only validates paths that are relative to the module root (starting with "./"), as other paths may exist at various depths in the module hierarchy and cannot be reliably resolved.
+</p>
+
+<p>
+  The ignore directive causes the go command to ignore specified directory paths and any files or directories recursively contained within them.
+</p>
+</body>
+</html>

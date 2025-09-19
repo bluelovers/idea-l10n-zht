@@ -1,0 +1,16 @@
+<html>
+<body>
+将 <code>map.getOrDefault(key, defaultValue)</code> 函数调用替换为索引和 elvis 运算符 (<code>map[key] ?: defaultValue</code>)。
+<p>示例：</p>
+<pre><code>
+  fun test(map: Map&lt;Int, String&gt;) {
+      map<spot>.getOrDefault(1, "foo")</spot>
+  }
+</code></pre>
+<pre><code>
+  fun test(map: Map&lt;Int, String&gt;) {
+      map<spot>[1] ?: "foo"</spot>
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+报告 <code>System.out.println()</code> 和 <code>System.out.print()</code> 调用，并建议将其替换为 <code>java.lang.IO</code> 类中的方法。
+<p>
+  此检查有助于迁移代码以使用较新的 <code>java.lang.IO</code> 类。</p>
+<p>
+  <b>示例：</b>
+</p>
+<pre><code>System.out.println("Hello, World!");</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>IO.println("Hello, World!");</code></pre>
+<!-- tooltip end -->
+<p>配置检查：</p>
+<ul>
+  <li>使用<b>在常规类中报告</b>选项在常规类中报告并建议修正</li>
+  <li>使用<b>在紧凑源文件中报告</b>选项在紧凑源文件中报告并建议修正</li>
+</ul>
+<p><small>2025.2 最新变化</small></p>
+</body>
+</html>

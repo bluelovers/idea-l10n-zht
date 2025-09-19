@@ -1,0 +1,24 @@
+<html>
+<body>
+报告未被调用或未被赋值的 lambda 表达式。
+
+<p>
+  未被调用或未被赋值给变量的 lambda 表达式对程序执行没有影响，可能是无意的。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo() {
+    {} // 警告：Lambda 表达式从未被调用
+  }
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo() {
+    run {} // Lambda 现在通过 'run' 函数调用
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

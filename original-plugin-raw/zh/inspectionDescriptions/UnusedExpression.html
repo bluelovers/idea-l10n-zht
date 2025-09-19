@@ -1,0 +1,26 @@
+<html>
+<body>
+报告未使用的表达式，这通常表示代码不完整或缺少 <code>return</code> 语句。
+
+<p>
+    如果未使用的表达式是函数中的最后一条语句，并且其类型与函数的返回值类型匹配，一项快速修复将自动添加 <code>return</code> 关键字。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+fun example(): Int {
+    val x = 10
+    x // 警告：表达式未被使用
+}
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+fun example(): Int {
+    val x = 10
+    return x
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

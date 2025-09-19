@@ -1,0 +1,18 @@
+<html>
+<body>
+报告 <code>IO.println()</code> 和 <code>IO.print()</code> 调用，并建议将其替换为 <code>System.out</code> 方法。
+<p>
+  此检查有助于将代码从 <code>java.lang.IO</code> 类迁移回传统的 <code>System.out</code> 调用。</p>
+<p>
+  <b>示例：</b>
+</p>
+<pre><code>IO.println("Hello, World!");</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>System.out.println("Hello, World!");</code></pre>
+<!-- tooltip end -->
+<p>
+  此检查有助于为向后兼容早期 Java 版本而降级。
+</p>
+<p><small>2025.2 最新变化</small></p>
+</body>
+</html>

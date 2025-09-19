@@ -1,7 +1,7 @@
 <html>
 <body>
 报告 <code>String</code> 和 <code>char</code> 字面量（可选）中不必要的转义字符。
-<p>不会报告转义的制表符字符 <code>\t</code>，因为制表符字符不可见。</p>
+<p>尽管不需要对其进行转义，但转义的制表符 (<code>\t</code>) 不会被报告，因为制表符与空格难以区分。</p>
 <p>示例：</p>
 <pre><code>
   String s = "\'Scare\' quotes";
@@ -14,9 +14,8 @@
   String t = """
     All you need is
     \tLove
-  """;
+    """;
 </code></pre>
 <!-- tooltip end -->
-<p><small>2019.3 最新变化</small>
 </body>
 </html>

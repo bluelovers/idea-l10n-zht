@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>检测前导空格中的不一致缩进字符使用，具体来说，在配置了空格的地方标记制表符，在配置了制表符的地方标记空格。</p>
+<p>Godot 不允许在缩进中混用制表符和空格。</p>
+<p>
+    例如，如果您的代码样式配置为使用空格进行缩进：
+</p>
+<pre><code>
+func _init():
+  var x = 1
+\tvar y = 2 # 高亮：在最好使用空格的地方发现制表符
+</code></pre>
+<p>
+    或者，如果您的代码样式配置为使用制表符进行缩进：
+</p>
+<pre><code>
+func _init():
+\tvar x = 1
+    var y = 2 # 高亮：在最好使用制表符的地方发现空格
+</code></pre>
+<!-- tooltip end -->
+<!--<p>Text after this comment will only be shown in the settings of the inspection.</p>-->
+
+<!--<p>To open related settings directly from the description, add a link with `settings://$` optionally followed by `?$` to pre-select a UI-->
+<!--    element.</p>-->
+</body>
+</html>
+

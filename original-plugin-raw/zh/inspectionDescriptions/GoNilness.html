@@ -6,7 +6,7 @@
   IDE 将基于此结果报告代码中的潜在问题。 考虑以下可能导致意外后果的情况：</p>
 
 <ul>
-  <li>带有 <code>nil</code> 接收器的方法调用可能会导致 'nil 指针取消引用'。</li>
+  <li>带有 <code>nil</code> 接收器的方法调用可能会导致 'nil 指针解引用'。</li>
   <li><code>nil</code> 切片索引可能会导致 panic。</li>
   <li>如果 <code>v</code> 已知始终为 <code>nil</code> 或非 <code>nil</code>，像 <code>v == nil</code> 一样的比较可能毫无意义。
   </li>

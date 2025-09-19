@@ -1,12 +1,39 @@
 <html>
 <body>
-报告赋值后在代码中从未使用所赋值的情况。
+<p>报告赋值后在代码中从未使用所赋值的情况。</p>
 <p><b>示例：</b></p>
 <pre><code>
+  fun foo(): Int = 42
+
   fun example() {
       var local = 0
       print(local)
       local = 42  // 所赋值从未被读取
+  }
+</code></pre>
+<ul>
+    <li>在快速修复后，该赋值被删除：</li>
+</ul>
+<pre><code>
+  fun foo(): Int = 42
+
+  fun example() {
+      var local = 0
+      print(local)
+  }
+</code></pre>
+
+<ul>
+    <li>如果右侧 (RHS) 表达式可能具有副作用，该快速修复还会建议保留 RHS 表达式以保留这些副作用：
+    </li>
+</ul>
+<pre><code>
+  fun foo(): Int = 42
+
+  fun example() {
+      var local = 0
+      print(local)
+      foo()  // 该函数调用因其副作用而保留
   }
 </code></pre>
 <!-- tooltip end -->

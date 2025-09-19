@@ -1,0 +1,16 @@
+<html>
+<body>
+报告在实现多平台模块中具有模糊的 <code>actual</code> 声明的 <code>expect</code> 声明。
+<p>
+    例如：
+</p>
+<pre><code>
+// common.kt
+expect class Foo
+// middle.kt
+actual class Foo
+// bottom.kt
+actual class Foo
+</code></pre>
+</body>
+</html>

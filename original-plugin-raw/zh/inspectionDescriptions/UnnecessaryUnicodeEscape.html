@@ -1,9 +1,16 @@
 <html>
 <body>
-报告不必要的 unicode 转义序列。 例如，当文件编码可以在不转义的情况下处理字符时。
-此检查不报告 Unicode 控制字符（换行符和制表符除外）。
+报告不必要的 Unicode 转义序列。
+当文件编码能够处理字符而无需转义时，Unicode 转义序列将不必要。
+此检查不会报告 Unicode 控制字符，但换行符和水平制表符除外。
 <p><b>示例：</b></p>
-<pre><code>String s = "\u0062";</code></pre>
+<pre><code>
+  String s = "\u0078";
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  String s = "x";
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

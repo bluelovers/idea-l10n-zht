@@ -6,5 +6,29 @@
   将此类接口和类转换为内部库实现很常见，因此，如果客户端提供不同的实现，将获得 <code>ClassCastException</code>。
   将新的 abstract 方法添加到这种类和接口将破坏与客户端实现的兼容性。
 </p>
+
+<p><b>示例：</b></p>
+<pre><code lang="java">
+  // 在上游库代码中
+  @ApiStatus.NonExtendable
+  public interface MyService {
+    public void perform();
+  }
+
+  // 在下游客户代码中
+  public class MyServiceImpl implements MyService {
+    @Override
+    public void perform() {
+      // ...
+    }
+  }
+</code></pre>
+
+此检查还可以检测以下与错误应用注解相关的问题：
+<ul>
+  <li>为不能扩展/重写的类/方法添加注解</li>
+  <li>为已经使用 <code>@ApiStatus.NonExtendable</code> 注解的类中的方法冗余添加注解</li>
+</ul>
+
 </body>
 </html>
