@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>Reports unnecessary calls to typing.cast when the expression already has the specified target type.</p>
+<p>报告在表达式已经具有指定目标类型时不必要调用 typing.cast。</p>
 <p><b>示例：</b></p>
 <pre><code>
 from typing import cast
 
 a: int
-b = <b>cast(int, a)</b>  # Unnecessary, a is already int
+b = <b>cast(int, a)</b>  # 不必要的，a 已经是 int
 </code></pre>
 </body>
 </html>

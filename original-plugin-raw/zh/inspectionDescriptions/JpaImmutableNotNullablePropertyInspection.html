@@ -1,9 +1,9 @@
 <html>
 <body>
-Reports usages of immutable properties in validated JPA entities.
+报告已验证的 JPA 实体中不可变属性的用法。
 <p>
-  Detects immutable properties annotated with <code>@NotNull</code>.
-  Suggests making them mutable, to ensure Hibernate compatibility.
+  检测使用 <code>@NotNull</code> 注释的不可变属性。
+  建议使它们可变，以确保与 Hibernate 的兼容性。
 </p>
 <p>
   嵌入代码段：
@@ -17,7 +17,7 @@ open class User(
   val name: String = "",
 )
 </code></pre>
-After applying the quickfix:
+应用快速修复后:
 <pre><code>
 @Entity
 open class User(

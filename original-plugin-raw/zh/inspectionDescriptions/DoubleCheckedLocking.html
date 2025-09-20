@@ -3,7 +3,7 @@
 报告<a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">双重检查锁定</a>。
 <p>
   双重检查锁定会尝试以线程安全的方式按需初始化字段，同时避免同步的开销。
-  遗憾的是，在未被声明为 <code>volatile</code> 的字段上使用时，它不具备线程安全。
+  遗憾的是，在未被声明为 <code>volatile</code> 的字段上使用时，不具备线程安全性。
   在使用 Java 1.4 或更早的版本时，双重检查锁定即便对 <code>volatile</code> 字段也不起作用。
   阅读上面的链接文章，了解该问题的详细说明。
 </p>
