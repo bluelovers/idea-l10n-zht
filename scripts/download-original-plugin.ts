@@ -3,14 +3,14 @@ import Bluebird from 'bluebird';
 import { getBranchInfo } from '../lib/git/branch-info';
 import { async as FastGlob } from '@bluelovers/fast-glob/bluebird';
 import { basename, join } from 'upath2';
-import { __root } from '../test/__root';
-import { __plugin_dev_output_dir, __plugin_downloaded_dir } from '../lib/const';
+import { __plugin_downloaded_dir } from '../lib/const';
 import JSZip from 'jszip';
-import { copy, copySync, outputFile, readFile, readJSON } from 'fs-extra';
+import { copySync, outputFile, readFile } from 'fs-extra';
 import { fixedJSZipDate } from 'jszip-fixed-date';
 import { chalkByConsole, console } from 'debug-color2';
 import { homedir } from 'os';
 import { existsSync } from 'node:fs';
+import { PluginXml } from '../lib/util/xml/plugin-xml';
 
 export default Bluebird.resolve()
 	.then(async () =>
@@ -45,28 +45,32 @@ export default Bluebird.resolve()
 			{
 				console.info(`ideDir:`, ideDir);
 
-				let info: {
-					buildNumber: string
-				} = await readJSON(join(ideDir, 'product-info.json'))
-					.catch(info => null)
+				let src = join(ideDir, pluginFile);
+
+				const info = await readFile(src)
+					.then(JSZip.loadAsync)
+					.then(zip =>
+					{
+						return zip.file('META-INF/plugin.xml').async('nodebuffer')
+					})
+					.then(buf =>
+					{
+						return new PluginXml(buf);
+					})
 				;
 
-				if (info?.buildNumber)
-				{
-					let src = join(ideDir, pluginFile);
-
-					copySync(src, join(cwd, `localization-zh-${info.buildNumber}.jar`))
-				}
+				copySync(src, join(cwd, `localization-zh-${info.version}.jar`))
 			}
 
 			let file = await FastGlob<string>([
-				'*.jar'
-			], {
-				cwd,
-			})
-				.then(ls => {
-					return ls.sort().at(-1);
+					'*.jar',
+				], {
+					cwd,
 				})
+					.then(ls =>
+					{
+						return ls.sort().at(-1);
+					})
 			;
 
 			const zip = new JSZip();
