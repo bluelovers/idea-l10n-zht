@@ -1,11 +1,10 @@
 <html>
 <body>
-Reports usages of immutable collections in JPA entities.
+報告在 JPA 實體中使用不可變集合。
 <p>
-  Detects properties annotated with <code>@OneToMany</code> or <code>@ManyToMany</code> with immutable collection types (<code>List</code>,
-  <code>Set</code>, <code>Map</code>).
-  Suggests using mutable collection types (<code>MutableList</code>, <code>MutableSet</code>, <code>MutableMap</code>) instead, to ensure
-  Hibernate compatibility.
+  檢測使用 <code>@OneToMany</code> 或 <code>@ManyToMany</code> 註釋的屬性，它們具有不可變集合類型（<code>List</code>，
+  <code>Set</code>，<code>Map</code>）。
+  建議使用可變集合類型（<code>MutableList</code>，<code>MutableSet</code>，<code>MutableMap</code>）來確保與 Hibernate 的兼容性。
 </p>
 <p>
   嵌入程式碼段：
@@ -19,7 +18,7 @@ open class User(
   val orders: List<Order> = listOf(),
 )
 </code></pre>
-After applying the quickfix:
+套用快速修復後:
 <pre><code>
 @Entity
 open class User(

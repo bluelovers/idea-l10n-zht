@@ -10,9 +10,14 @@
       calcEverythingAsync()
   }
 </code></pre>
+<p>該快速修復會提供具有 <code>Deferred</code> 初始設定式的變數：</p>
+<pre><code>
+  fun calcEverythingAsync() = CompletableDeferred(42)
 
-<code>calcEverythingAsync()</code> call here is never used 
-and not awaited for with <code>await()</code>, which is suspicious.
+  fun usage() {
+      val answer = calcEverythingAsync()
+  }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

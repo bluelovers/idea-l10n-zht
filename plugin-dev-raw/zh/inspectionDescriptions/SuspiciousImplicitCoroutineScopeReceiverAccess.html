@@ -3,65 +3,42 @@
 <p>報告在掛起上下文中可能存在問題的隱式 <code>CoroutineScope</code> 接收器存取。</p>
 
 <p>
-    When a suspend function or lambda captures an implicit <code>CoroutineScope</code> receiver from the outer context, it might lead to
-    unexpected behavior.
-</p>
-<p>
-    Such code can be prone to violating the rules of Structured Concurrency, 
-    even though it might look deceptively well-structured.
-</p>
-<p>
-    This can lead to incorrect behaviors when handling errors, 
-    cancelling computations, or managing lifetimes.
+  當一個掛起函式或 Lambda 從外部上下文捕獲隱式 <code>CoroutineScope</code> 接收器時，可能會導致意外行為。
+  這是因為捕獲的作用域在掛起函式仍在執行時可能會被取消或完成。
 </p>
 
-<p><b>A typical example:</b></p>
+<p>
+  此檢查可以檢測程式碼在掛起函式或 Lambda 中隱式存取 <code>CoroutineScope</code> 接收器的情況，
+隱式存取會建立對外部作用域的潛在危險相依。
+</p>
 
+<p><b>範例：</b></p>
 <pre><code>
-fun processFlow(flow: Flow&lt;String&gt;) {
-  runBlocking {
-    flow.collectLatest {
-      
-      // launched on this@runBlocking CoroutineScope
-      launch { 
-        longProcessing(value)
-      }
-  
+class MyClass {
+    fun CoroutineScope.launchJobs() {
+        launch { // 可以：直接在擴展函式中使用
+            doSomething()
+        }
+        
+        suspendingFunction { // 警告：可疑的隱式 'CoroutineScope' 接收器存取
+            launch { // launch 呼叫使用外部上下文中的隱式 CoroutineScope
+                doSomethingElse()
+            }
+        }
     }
-  }
 }
-  
-suspend fun longProcessing(value: String) { ... }
 </code></pre>
 
-<p>
-    In the example above, the <code>launch { ... }</code> call launches coroutines in the implicit
-    <code>CoroutineScope</code> from the outer <code>runBlocking</code> call.
-</p>
-<p>
-    Because of this, <code>collectLatest</code> would not be able
-    to cancel those coroutines when it needs to.
-</p>
-<p>
-    This inspection will detect that <code>launch</code> is called on a
-    <code>CoroutineScope</code> which is captured from the outside of the current
-    suspending lambda (i.e. <code>collectLatest</code>'s body).
-</p>
-<p>
-    For more information about this particular problem, see <a href="https://github.com/Kotlin/kotlinx.coroutines/issues/3533">this GitHub Issue</a>.
-</p>
-
-<p><b>Possible solutions:</b></p>
+<p><b>選項:</b></p>
+<ul>
+  <li><b>檢測 CoroutineScope 子類型</b> – 啟用後，該檢查還將檢測對 CoroutineScope 的子類型的隱式存取</li>
+</ul>
 
 <p>要解決此問題，您可以：</p>
 <ul>
-    <li>使用 <code>coroutineScope { ... }</code> 建置器建立一個與掛起函式的生命周期綁定的子作用域</li>
-    <li>Rearrange the code so that the implicit <code>CoroutineScope</code> comes from the current syntactical context</li>
+  <li>使用 <code>this@receiverLabel.method()</code> 明確指定接收器</li>
+  <li>將作用域作為參數傳遞給掛起函式</li>
+  <li>使用 <code>coroutineScope { }</code> 建置器建立一個與掛起函式的生命周期綁定的子作用域</li>
 </ul>
-<p>
-    In case you are sure that the code is correct, you can explicitly specify the receiver
-    to make your intention clear. In the example above, that would be <code>this@runBlocking.launch { ... }</code>.
-    Note, however, that in this case the semantics of the code <b>won't change</b>.
-</p>
 </body>
 </html>

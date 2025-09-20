@@ -1,30 +1,30 @@
 <html>
 <body>
 <p>
-  Reports ambiguous usage of a pandas <code>DataFrame</code> or <code>Series</code> in a boolean context,
-  such as <code>if</code>, <code>while</code>, or logical expressions.
-  This typically leads to the runtime error:
-  <code>ValueError: The truth value of a DataFrame is ambiguous</code>.
+  報告在布爾上下文中使用 pandas <code>DataFrame</code> 或 <code>Series</code> 的模糊使用，
+  例如 <code>if</code>、<code>while</code> 或邏輯表達式。
+  這通常會導致執行時錯誤：
+  <code>ValueError: The truth value of a DataFrame is ambiguous</code>。
 </p>
 
 <p>
-  In pandas, expressions like <code>df</code> or <code>df == other</code> do not return a single boolean value,
-  but rather a DataFrame or Series of booleans. Using these in control flow without explicit reduction
-  (e.g., <code>.any()</code>, <code>.all()</code>, or <code>.empty</code>) is ambiguous and will raise an exception.
+  在 pandas 中，類似 <code>df</code> 或 <code>df == other</code> 的表達式不會返回單個布林值，
+  而是返回布林值的 DataFrame 或 Series。 在控制流程中使用這些，未進行顯式減少
+  (例如，<code>.any()</code>、<code>.all()</code> 或 <code>.empty</code>) 是模糊的，且會引發異常。
 </p>
 
 <p><b>範例：</b></p>
 <pre style="font-family: monospace">
-if df:  # ❌ Raises ValueError: The truth value of a DataFrame is ambiguous
+if df:  # ❌ 引發 ValueError: The truth value of a DataFrame is ambiguous
     print("DataFrame exists")
 
-if not df.empty:  # ✅ Checks if DataFrame has any rows
+if not df.empty:  # ✅ 檢查 DataFrame 是否有任何行
     print("DataFrame exists")
 </pre>
 
 <p>
-  When the quick-fix is applied, the condition is replaced with an appropriate reducer
-  like <code>.any()</code>, <code>.all()</code>, or <code>.empty</code> depending on the context.
+  套用快速修復時，條件將被取代為適當的歸約器
+  根據上下文，可能是 <code>.any()</code>、<code>.all()</code> 或 <code>.empty</code>。
 </p>
 
 </body>
