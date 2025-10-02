@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2025-10-02)
+
+
+
+### 🐛　Bug Fixes
+
+* 253.20558.43 since-build 253 ([f0bdc2e](https://github.com/bluelovers/idea-l10n-zht/commit/f0bdc2e0bd468252f0b5ff658ae4dcef8e20025b))
+* **ci:** use version from META-INF/plugin.xml ([89af023](https://github.com/bluelovers/idea-l10n-zht/commit/89af0236b94378283237a1062875f128080716f5))
+* **ci:** version >= 251 之後 since 等於該版本 ([786d137](https://github.com/bluelovers/idea-l10n-zht/commit/786d13740e2e242e97f5bcd40238b9b33c6ade10))
+* **updatePlugins.xml:** version >= 251 之後 since 等於該版本 ([f51623f](https://github.com/bluelovers/idea-l10n-zht/commit/f51623f983a60ccb8565171f525fe54c275c0531))
+
+
+### 🛠　Build System
+
+* **original:** update original source ( 253.22441.33 ) ([4663b05](https://github.com/bluelovers/idea-l10n-zht/commit/4663b05a5461ad9a07ea6d5791cdda1c50bbae23))
+* **release:** update build ( 253.22441.33 ) ([6cdf5d7](https://github.com/bluelovers/idea-l10n-zht/commit/6cdf5d77711dd8f71a228c0fa8b7ca28e4cd369e))
+* **release:** updatePlugins.xml ([a9e6532](https://github.com/bluelovers/idea-l10n-zht/commit/a9e65320cc8efe2ccc469a9a31aa2f327df90239))
+* **release:** update dev build files ( 253.22441.33 ) ([81c7816](https://github.com/bluelovers/idea-l10n-zht/commit/81c78169d8f332e9aa429fcb204ab434d9995c8d))
+* **release:** updatePlugins.xml ([1f5f83c](https://github.com/bluelovers/idea-l10n-zht/commit/1f5f83cacf8cad80ea8598a432c3dedd6a3ce839))
+* **test:** update snapshots ( 253.22441.33 ) ([1a90a8d](https://github.com/bluelovers/idea-l10n-zht/commit/1a90a8d7419be48c2c43e79f0adb2e7a20baf3ee))
+* **test:** update snapshots ( 252.26199.162 ) ([7ba6ff7](https://github.com/bluelovers/idea-l10n-zht/commit/7ba6ff79d9456cd3d2d37fc229726348869a89f8))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2025-09-20)
 
 
