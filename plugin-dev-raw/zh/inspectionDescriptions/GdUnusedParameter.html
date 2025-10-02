@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>報告在所屬函式體中宣告但從未使用的 GDScript 函式/方法參數。</p>
+
+<p>
+此檢查可以幫助您發現無效或冗餘的參數。 它僅檢查封閉函式或方法內的內容並忽略信號宣告。 名稱以下劃線開頭的參數被視為有意未使用，不會被報告。 如果存在類型提示但參照的是未解析的非內建類型，則忽略該參數以防止誤報。
+</p>
+
+<p>範例：</p>
+<pre><code>
+func damage(target, amount):
+    print("Damaged!")
+    # 'target' 和 'amount' 從未使用 → 報告
+
+func _process(_delta):
+    # 前導下劃線標記有意未使用的參數 → 不報告
+    pass
+
+func spawn(enemy: UnknownType):
+    # 如果無法解析 UnknownType，則忽略
+    pass
+</code></pre>
+
+<p>快速修復動作：</p>
+<ul>
+  <li>在參數前加下劃線以標記為有意未使用。</li>
+</ul>
+
+<!-- tooltip end -->
+<p>該檢查不會報告在函式/方法體中的任何位置被參照的參數。 它還會跳過信號參數以及未解析類型的參數，以避免誤報。</p>
+</body>
+</html>

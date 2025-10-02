@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>
-  報告在 intellij.driver.tests 模組的測試類別中，針對 Driver/Finder/IdeaFrameUI 的 public 擴展函式。
+  報告 intelij.driver.tests 模組內測試類別中 Driver/Finder/IdeaFrameUI 上的 public 擴展函式。
 </p>
 
 <p>
@@ -9,7 +9,7 @@
 </p>
 <ul>
   <li>在所有上下文中對所有測試可見</li>
-  <li>可能會導致測試相依關係不清晰，以及更難以維護</li>
+  <li>可能會導致測試相依項不清晰，以及更難以維護</li>
 </ul>
 
 <p>
@@ -19,8 +19,8 @@
   <li>將函式移至 private 伴生物件</li>
   <li>重新定位到合適的頁面物件：
     <ul>
-      <li>用於廣泛適用函式的泛型頁面物件</li>
-      <li>用於相依上下文函式的特定頁面物件</li>
+      <li>廣泛適用函式的泛型頁面物件</li>
+      <li>上下文相依函式的特定頁面物件</li>
     </ul>
   </li>
 </ul>

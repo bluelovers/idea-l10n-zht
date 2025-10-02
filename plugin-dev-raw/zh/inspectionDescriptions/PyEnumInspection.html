@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>
-  報告 <a href="https://peps.python.org/pep-0435/">Enum</a> 無效的定義和用法。
+  報告 <a href="https://peps.python.org/pep-0435/">Enum</a> 的無效定義和用法。
 </p>
 <p>
   <b>範例：</b>
@@ -33,7 +33,7 @@ class ExtendedShape(Shape):  # 枚舉類別 'Shape' 為 final，無法被子類�
 
   class Pet(Enum):
     CAT = 1
-    DOG: int = 2  # 枚舉成員不允許使用類型註解
+    DOG: int = 2  # 不允許為枚舉成員使用類型註解
 </code></pre>
 </body>
 </html>

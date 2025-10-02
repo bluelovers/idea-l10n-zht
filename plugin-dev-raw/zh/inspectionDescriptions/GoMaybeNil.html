@@ -22,6 +22,6 @@ func main() {
 }
 </code></pre>
 
-<p>在提供的範例中，<code>user</code> 是指向 <code>User</code> 結構體的指針，但它可能為 <code>nil</code>，因為 <code>CreateUser</code> 可能會返回<code>nil</code>。 嘗試解參照 <code>user</code> 以存取 <code>Name</code> 而不檢查 <code>user</code> 是否為 <code>nil</code> 會導致執行時錯誤。</p>
+<p>在提供的範例中，<code>user</code> 是指向 <code>User</code> 結構體的指針，但它可能為 <code>nil</code>，因為 <code>CreateUser</code> 可能會返回<code>nil</code>。 嘗試解參照 <code>user</code> 以存取 <code>Name</code> 而首先不檢查 <code>user</code> 是否為 <code>nil</code> 會導致執行時錯誤。</p>
 </body>
 </html>

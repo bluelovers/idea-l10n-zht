@@ -1,29 +1,36 @@
 <html>
 <body>
-<p>報告呼叫 `typing.cast` 時，源類型的任何可能值都無法分配給目標類型。 我們可以將這稱為“非重疊”類型。</p>
-<p>這通常表明有錯誤。 如果轉換是故意的，首先將表達式轉換為公共父類型，以明確表達意圖。</p>
+<p>Reports <code>typing.cast</code> calls where the source and target types are unrelated.</p>
+<p>An error is reported when neither the source type is a subtype of the target, nor the target type is a subtype of the source.
+  Such casts often indicate a logical error, as an instance of one type cannot be assumed to be an instance of the other,
+  and <code>typing.cast</code> does not dynamically validate the type.</p>
+
+<p>This check applies even to types that could theoretically have a common descendant.
+  For example, it will flag a cast between two sibling classes <code>Left</code> and <code>Right</code> that both inherit from <code>Top</code>,
+  because there is no direct inheritance relationship between them.</p>
+
 <p><b>範例：</b></p>
 <pre><code>
 from typing import cast
 
-# 非重疊類型 — 可能是一個錯誤
+# 非重疊類型 — 可能是錯誤
 <b>cast(int, "a")</b>          # 'str' -> 'int'
 <b>cast(list[int], ["a"])</b>  # 'list[str]' -> 'list[int]'
 
-# 推薦的顯式逃避方法是使用 “雙重轉換”
-cast(int, <b>cast(object, "a")</b>)  # ok
+# 推薦的顯式逃生艙口是使用“雙重轉換”
+cast(int, <b>cast(object, "a")</b>)  # 正常
 
-# 合法的重疊案例
+# 合法的重疊情況
 cast(int, object())    # 有效的向下轉換
 cast(object, 1)        # 有效的向上轉換
 
-# 雖然以下是無效轉換，因為 <code>list</code> 是不可變的。 當前不支持此檢查
+# 但以下是無效轉換，因為 <code>list</code> 不可變。 當前不受此檢查支援
 int_list = [1, 2, 3]
 cast(list[object], int_list)
 </code></pre>
 <!-- tooltip end -->
-<p>檢查依賴於靜態類型資訊; 當類型未知時，不會報告警告。
+<p>該檢查依賴於靜態類型資訊；當類型未知時，不會報告警告。
 
-  尚未考慮泛型類型的變化。</p>
+  尚未考慮泛型類型的差異。</p>
 </body>
 </html>

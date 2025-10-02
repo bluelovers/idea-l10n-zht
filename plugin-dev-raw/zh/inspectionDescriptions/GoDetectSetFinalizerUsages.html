@@ -1,0 +1,13 @@
+<html>
+<body>
+檢測 <code>runtime.SetFinalizer</code> 的用法。
+<p>
+    借助 <code>runtime.SetFinalizer</code>，您可以註冊一個函式，該函式將在垃圾收集器發現一個物件不再使用時執行。
+  從 Go 1.24 開始，您應當改用 <code>runtime.AddCleanup</code>，因為它更安全且不易引發錯誤。
+</p>
+<p>
+  有關詳情，請參閱 <a href="https://pkg.go.dev/runtime#SetFinalizer">runtime.SetFinalizer</a> 和
+  <a href="https://pkg.go.dev/runtime#AddCleanup">runtime.AddCleanup</a> 的文檔。
+</p>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <html>
 <body>
-報告 <code>@SafeVarargs</code> 方法內的寫動作，其中 vararg 參數被重新分配給了其他物件。
-在這種情況下，新賦值的陣列與呼叫站點的可變 arity 無關，並且可能不再安全。
+報告 <code>@SafeVarargs</code> 方法內的寫入動作，其中 vararg 參數被重新賦值給了其他物件。
+在這種情況下，新賦值的陣列與呼叫點的可變 arity 實參無關，並且可能不再安全。
 <p><b>範例：</b></p>
 <pre><code>
     @SafeVarargs

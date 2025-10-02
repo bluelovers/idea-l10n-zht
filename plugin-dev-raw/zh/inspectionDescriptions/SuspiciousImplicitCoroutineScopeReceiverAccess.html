@@ -3,42 +3,57 @@
 <p>報告在掛起上下文中可能存在問題的隱式 <code>CoroutineScope</code> 接收器存取。</p>
 
 <p>
-  當一個掛起函式或 Lambda 從外部上下文捕獲隱式 <code>CoroutineScope</code> 接收器時，可能會導致意外行為。
-  這是因為捕獲的作用域在掛起函式仍在執行時可能會被取消或完成。
+    當一個掛起函式或 Lambda 從外部上下文捕獲隱式 <code>CoroutineScope</code> 接收器時，可能會導致意外行為。
 </p>
-
 <p>
-  此檢查可以檢測程式碼在掛起函式或 Lambda 中隱式存取 <code>CoroutineScope</code> 接收器的情況，
-隱式存取會建立對外部作用域的潛在危險相依。
+    這樣的程式碼可能容易違反結構化並發的規則，即使它看似結構良好。
+</p>
+<p>
+    這可能在處理錯誤、取消計算或管理生存期時導致不正確的行為。
 </p>
 
-<p><b>範例：</b></p>
+<p><b>一個典型範例：</b></p>
+
 <pre><code>
-class MyClass {
-    fun CoroutineScope.launchJobs() {
-        launch { // 可以：直接在擴展函式中使用
-            doSomething()
-        }
-        
-        suspendingFunction { // 警告：可疑的隱式 'CoroutineScope' 接收器存取
-            launch { // launch 呼叫使用外部上下文中的隱式 CoroutineScope
-                doSomethingElse()
-            }
-        }
+fun processFlow(flow: Flow&lt;String&gt;) {
+  runBlocking {
+    flow.collectLatest {
+      
+      // 在 this@runBlocking CoroutineScope 上啟動
+      launch { 
+        longProcessing(value)
+      }
+  
     }
+  }
 }
+  
+suspend fun longProcessing(value: String) { ... }
 </code></pre>
 
-<p><b>選項:</b></p>
-<ul>
-  <li><b>檢測 CoroutineScope 子類型</b> – 啟用後，該檢查還將檢測對 CoroutineScope 的子類型的隱式存取</li>
-</ul>
+<p>
+    在上面的範例中，<code>launch { ... }</code> 呼叫在外部 <code>runBlocking</code> 呼叫的隱式 <code>CoroutineScope</code> 中啟動協程。
+</p>
+<p>
+    因此，<code>collectLatest</code> 無法在需要時取消這些協程。
+</p>
+<p>
+    此檢查將檢測在從當前掛起的 lambda（即 <code>collectLatest</code> 的主體）外部捕獲的 <code>CoroutineScope</code> 上呼叫 <code>launch</code> 的情況。
+</p>
+<p>
+    有關此特定問題的更多資訊，請參閱<a href="https://github.com/Kotlin/kotlinx.coroutines/issues/3533">此 GitHub 議題</a>。
+</p>
+
+<p><b>可能的解決方案：</b></p>
 
 <p>要解決此問題，您可以：</p>
 <ul>
-  <li>使用 <code>this@receiverLabel.method()</code> 明確指定接收器</li>
-  <li>將作用域作為參數傳遞給掛起函式</li>
-  <li>使用 <code>coroutineScope { }</code> 建置器建立一個與掛起函式的生命周期綁定的子作用域</li>
+    <li>使用 <code>coroutineScope { ... }</code> 建置器建立一個與掛起函式的生存期綁定的子作用域</li>
+    <li>重新排列程式碼，使隱式 <code>CoroutineScope</code> 來自當前的語法上下文</li>
 </ul>
+<p>
+    如果您確定程式碼是正確的，可以通過顯式指定接收者來使您的意圖明確。 在上面的範例中，這將是 <code>this@runBlocking.launch { ... }</code>。
+    但請注意，在這種情況下，程式碼的語意<b>不會改變</b>。
+</p>
 </body>
 </html>

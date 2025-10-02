@@ -21,9 +21,9 @@
   fun consumeString(box: Box&lt;String&gt;) {}
   fun consumeCharSequence(box: Box&lt;CharSequence&gt;) {}
 
-  fun usage(box: Box&lt;String&gt;) ++{
+  fun usage(box: Box&lt;String&gt;) {
       consumeString(box)
-      consumeCharSequence(box) // 可以
+      consumeCharSequence(box) // OK
   }
 </code></pre>
 <!-- tooltip end -->

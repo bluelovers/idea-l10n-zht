@@ -5,9 +5,12 @@
 <pre><code>
   fun sum(a: Int, b: Int) = { a + b } // 此函式的返回類型為 '() -> Int'。
 </code></pre>
-<p>該快速修復會移除大括號：</p>
+<p>有幾個快速修復。 套用快速修復後：</p>
 <pre><code>
-  fun sum(a: Int, b: Int) = a + b
+    fun sum(a: Int, b: Int) = a + b // 移除大括號
+    fun sum(a: Int, b: Int): () -> Int = { a + b } // 顯式指定返回值類型
+    fun sum(a: Int, b: Int) = run { a + b } // 轉換為 run { ... }
+    fun sum(a: Int, b: Int) = { -> a + b } // 顯式指定 lambda 簽名
 </code></pre>
 </body>
 </html>

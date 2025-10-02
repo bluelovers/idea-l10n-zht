@@ -1,6 +1,6 @@
 <html>
 <body>
-報告為空或可能忽略異常的 <code>catch</code> 塊。
+報告空的或可能忽略異常的 <code>catch</code> 塊。
 <p>雖然偶爾是有意為之，但空的 <code>catch</code> 塊可能導致偵錯復雜化。
 此外，忽略 <code>catch</code> 參數可能是錯誤的。
   最後，靜態程式碼分析器會報告是否檢測到 <code>catch</code> 塊可能無提示地忽略重要的 VM 異常，如 <code>NullPointerException</code>。 忽略此類別異常（不記錄或重新拋出）可能會隱藏錯誤。</p>

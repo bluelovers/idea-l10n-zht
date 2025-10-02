@@ -2,7 +2,7 @@
 <body>
 報告擴展、實作或覆寫使用 <code>@ApiStatus.NonExtendable</code> 標記的 API 元素的類別、接口和方法。
 <p>
-  <code>@ApiStatus.NonExtendable</code> 註解表示<strong>不得擴展、實作或覆寫</strong>類別、接口或方法。
+  <code>@ApiStatus.NonExtendable</code> 註解表示類別、接口或方法<strong>不得擴展、實作或覆寫</strong>。
   將此類別接口和類別轉換為內部庫實作很常見，因此，如果客戶端提供不同的實作，將獲得 <code>ClassCastException</code>。
   將新的 abstract 方法新增到這種類和接口將破壞與客戶端實作的兼容性。
 </p>

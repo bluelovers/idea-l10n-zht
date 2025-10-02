@@ -2,7 +2,7 @@
 <body>
 報告對接受 <code>double</code> 值的 <code>BigDecimal</code> 建構函式的呼叫。
 這些建構函式生成的 <code>BigDecimal</code> 與提供的 <code>double</code> 值相等。
-但是，由於 double 是以 IEEE 754 64 位雙精度二進制浮點格式進行編碼，確切值可能出乎意料。
+不過，由於 double 是以 IEEE 754 64 位雙精度二進制浮點格式進行編碼，確切值可能出乎意料。
 <p>例如，<code>new BigDecimal(0.1)</code> 會產生一個 <code>BigDecimal</code> 物件，值為 <small><code>0.1000000000000000055511151231257827021181583404541015625</code></small>，這是以 <code>double</code> 表示最接近 0.1 的數字。
   要獲得包含期望值 <code>0.1</code> 的<code>BigDecimal</code>，請使用 <code>new BigDecimal("0.1")</code> 或 <code>BigDecimal.valueOf(0.1)</code>。</p>
 <p><b>範例：</b></p>

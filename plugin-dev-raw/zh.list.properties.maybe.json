@@ -25,13 +25,8 @@
   },
   "messages/AmperBundle.properties": {
     "amper.new.module.ios": "iOS App",
-    "inspections.can.convert.to.catalog.version.no.catalog.version": "Can be converted to catalog version (with no version instead)",
     "inspections.module.dependency.with.overridden.version.dependency.location": "，",
-    "intentions.create.directories.html.item": "- {0}",
-    "jvm.app.module.yaml.template.group.name": "module.yaml",
-    "quickfix.add.dependency.importAction": "Adding Import for ''{0}''",
-    "quickfix.add.dependency.sync.failed.hint": "Dependency {0} was added, but project sync failed with an error.",
-    "sync.scheduling.modal.title": "Scheduling Amper Sync…"
+    "jvm.app.module.yaml.template.group.name": "module.yaml"
   },
   "messages/AmperHotReloadBundle.properties": {
     "amper.compose.hot.reload.run.configuration.type.name": "Amper Compose Hot Reload"
@@ -178,7 +173,8 @@
   },
   "messages/BazelPluginBundle.properties": {
     "console.task.mobile.install.title": "mobile-install",
-    "console.tasks.title": "{0}: {1}"
+    "console.tasks.title": "{0}: {1}",
+    "state.bazel.intellij.sdk": "IntelliJ SDK"
   },
   "messages/BdtCommonBundle.properties": {
     "action.BigDataTools.Services.AddDataproc.text": "Google Cloud Dataproc",
@@ -254,9 +250,6 @@
     "livetemplate.description.foreach": "foreach()-loop",
     "livetemplate.description.if": "if()-condition",
     "livetemplate.description.while": "while()-loop"
-  },
-  "messages/CPPBundle.properties": {
-    "language.cpp.settings.description": "C/C++"
   },
   "messages/CVPBundle.properties": {
     "cached.value.profiler.column.avg.cost": "Cost÷N",
@@ -353,14 +346,6 @@
     "CFIntegration.name": "Cloud Foundry"
   },
   "messages/CodeInsightBundle.properties": {
-    "livetemplate.description.prsf": "private static final",
-    "livetemplate.description.psf": "public static final",
-    "livetemplate.description.psfi": "public static final int",
-    "livetemplate.description.psfs": "public static final String",
-    "livetemplate.description.short.psvm": "void main()",
-    "livetemplate.description.short.psvma": "void main(String[] args)",
-    "livetemplate.description.short.static.psvm": "static void main()",
-    "livetemplate.description.short.static.psvma": "static void main(String[] args)",
     "macro.capitalize.string": "capitalize(String)",
     "macro.capitalizeAndUnderscore.string": "capitalizeAndUnderscore(String)",
     "macro.decapitalize.string": "decapitalize(String)",
@@ -448,7 +433,7 @@
   },
   "messages/ComposeDesktopBundle.properties": {
     "compose.hotreload.settings.displayName": "Compose Hot Reload",
-    "kmm.run.configuration.web.hint": "Select a task to run"
+    "compose.hotreload.title": "Compose Hot Reload"
   },
   "messages/ComposeProjectWizardBundle.properties": {
     "module.presentation.name": "Compose Multiplatform"
@@ -540,10 +525,10 @@
     "Console.TableResult.n.bytes.of.m.bytes.loaded": "{0}/{1}",
     "count.rows.action.of.text": "/{0}",
     "csv.format.settings.quotation.policy.escape.duplicate": "<duplicate>",
-    "excel.xlsx": "Excel (xlsx)"
+    "excel.xlsx": "Excel (xlsx)",
+    "separator.order.by": "ORDER BY"
   },
   "messages/DataSpellBundle.properties": {
-    "advanced.setting.dataspell.show.scratches.and.consoles.node": "Show scratches and consoles node as a root node in the workspace",
     "dataspell.ai.survey.link": "https://surveys.jetbrains.com/s3/dataspell-ai",
     "welcome.screen.action.aiAssistant": "AI Assistant",
     "welcome.screen.action.jupyterNotebook": "Jupyter\nNotebook"
@@ -738,6 +723,7 @@
     "DockerFileDeploymentSourceType.deploymentName": "{0} Dockerfile: {1}",
     "DockerFileDeploymentSourceType.suggestRunConfigurationName": "{0}",
     "DockerGroupRuntime.DevcontainersGroup.groupName": "Dev Container",
+    "DockerInDockerConfigurator.label": "Docker-in-Docker",
     "DockerSingletonDeploymentSourceType.unknown.node.text": "<unknown>",
     "DockerSshConnectionConfigurator.label": "SSH:",
     "DockerTargetConfigurable.dockerfile.row.label": "Dockerfile:",
@@ -759,6 +745,9 @@
     "devcontainer.inspection.group": "Dev Container",
     "group.Dev.Container.Actions.text": "Dev Container",
     "group.Tools.Services.DevContainers.text": "Dev Container"
+  },
+  "messages/DotCoverBundle.properties": {
+    "action.RiderDotCoverCoveringTestsPopupNewSessionSelectedTestsAction.description": "Create new session"
   },
   "messages/DotNetWatchBundle.properties": {
     "run.configuration.display.name": "dotnet-watch"
@@ -927,6 +916,9 @@
     "install.sdk.title": "GCloud SDK",
     "managedsdk.notifications.title": "Google Cloud SDK"
   },
+  "messages/GdScriptBundle.properties": {
+    "inspections.whitespace.fix.indents.fix.name": "Fix indents"
+  },
   "messages/GitBundle.properties": {
     "abort.operation.indicator.text": "git {0} --abort{1}",
     "action.Git.Fixup.To.Commit.text": "Fixup…",
@@ -940,7 +932,7 @@
     "activity.name.stash": "Git stash",
     "activity.name.undo.commit": "Git undo commit",
     "activity.name.unstash": "Git unstash",
-    "errors.message.item": "\n   {0}",
+    "errors.message.item": "\n{0}",
     "git.add.to.exclude.file.action.text": ".git/info/exclude",
     "git.light.status.bar.text": "Git: {0}",
     "git4idea.vcs.name.with.mnemonic": "&Git",
@@ -954,8 +946,7 @@
     "stash.editor.diff.preview.id.change.title": "{0}: {1}"
   },
   "messages/GitClientBundle.properties": {
-    "welcome.screen.documentations.url": "https://www.jetbrains.com/help/idea/getting-started.html",
-    "welcome.screen.tutorial.url": "https://www.jetbrains.com/help/idea/getting-started.html"
+    "welcome.screen.documentations.url": "https://www.jetbrains.com/help/idea/using-git-integration.html"
   },
   "messages/GitLabBundle.properties": {
     "action.GitLab.Share.Vcs.Toolbar.Widget.text": "GitLab…",
@@ -1009,7 +1000,14 @@
     "inspection.message.golangci.lint": "golangci-lint ({0}): {1}"
   },
   "messages/GodotPluginBundle.properties": {
-    "godot.debug.run.configuration.editor.help.link": "https://jb.gg/godot-dap",
+    "editor.should.be.running": "Godot Editor should be running. <a>Start Godot Editor</a>",
+    "gdscript.editor.form.arguments.comment": "Some of those features require Godot 4.6. See <a href=https://github.com/godotengine/godot/pull/109637>pull request</a>",
+    "gdscript.editor.form.arguments.error.debugServer": "The 'debugServer' property must be an integer or a string containing an integer",
+    "gdscript.editor.form.arguments.error.invalid.json": "Invalid JSON. Please fix syntax (comments and trailing commas are allowed).",
+    "gdscript.editor.form.arguments.error.request": "The 'request' property must be a string with one of the following values: Launch, Attach",
+    "gdscript.editor.form.arguments.error.root.object": "Root value must be a JSON object",
+    "gdscript.editor.form.arguments.error.scene": "The 'scene' property must be a string",
+    "label.note.scene.debugging.requires.godot.see.pr": "Scene debugging requires Godot 4.6. See <a href=https://github.com/godotengine/godot/pull/109637>PR</a>",
     "notification.group.godot.lsp": "Godot LSP"
   },
   "messages/GraalVmBundle.properties": {
@@ -1281,7 +1279,6 @@
     "action.create.new.module-info.title": "module-info.java",
     "action.create.new.package-info.title": "package-info.java",
     "checkbox.collapse.suppress.warnings": "<html>@SuppressWarnings</html>",
-    "inspection.implicit.to.explicit.class.backward.migration.fix.name": "Convert into a regular class",
     "inspection.unused.symbol.check.accessors": "Getter/Setter",
     "intention.category.junit": "Java/JUnit",
     "intention.create.test.dialog.setUp": "set&Up/@Before",
@@ -1290,6 +1287,14 @@
     "java.terms.variable.of.method": "{0}/{1}",
     "jrt.node.short": "[JRT]",
     "jvm.logging.configurable.id": "jvm.logging",
+    "livetemplate.description.prsf": "private static final",
+    "livetemplate.description.psf": "public static final",
+    "livetemplate.description.psfi": "public static final int",
+    "livetemplate.description.psfs": "public static final String",
+    "livetemplate.description.short.psvm": "void main()",
+    "livetemplate.description.short.psvma": "void main(String[] args)",
+    "livetemplate.description.short.static.psvm": "static void main()",
+    "livetemplate.description.short.static.psvma": "static void main(String[] args)",
     "macro.array.variable": "arrayVariable()",
     "macro.component.type.of.array": "componentTypeOf(Array)",
     "macro.descendant.classes.enum": "descendantClassesEnum(String)",
@@ -1304,7 +1309,8 @@
     "surround.with.try.catch.finally.template": "try / catch / finally",
     "surround.with.try.catch.template": "try / catch",
     "switch.stmt.template.description": "switch (expr) {…}",
-    "title.code.vision": "Code Vision"
+    "title.code.vision": "Code Vision",
+    "todo.0": "TODO \"{0}\""
   },
   "messages/JavaCompilationErrorBundle.properties": {
     "annotation.malformed.repeatable.explained": "{0}",
@@ -1341,14 +1347,7 @@
   },
   "messages/JavaPsiBundle.properties": {
     "aux.context.display": "/{0}",
-    "element.kind.and.name": "{0} {1}",
-    "feature.classfile.api": "ClassFile API",
-    "feature.objects.class": "java.util.Objects API",
-    "feature.static.imports": "static import",
-    "feature.stream.gatherers": "Stream Gatherer",
-    "feature.try.with.resources": "Try-with-resources",
-    "feature.with.initial": "ThreadLocal.withInitial()",
-    "jdk.24.language.level.description": "24 - Stream Gatherers"
+    "element.kind.and.name": "{0} {1}"
   },
   "messages/JavaRefactoringBundle.properties": {
     "encapsulate.fields..package.local.radio": "Package local(&C)",
@@ -1411,6 +1410,9 @@
     "node.js.inspection.group.name": "Node.js",
     "notification.group.linters": "JavaScript linter",
     "npm.rc.packageJson.label": "package.json(&P):",
+    "settings.javascript.runtime.configurable.name": "JavaScript Runtime",
+    "settings.javascript.runtime.preferred.runtime.context.help.description": "For running and debugging within a project. Language services, ESLint, and tests will still use Node.js",
+    "settings.javascript.runtime.preferred.runtime.label.name": "Preferred runtime:",
     "settings.nodejs.name": "Node.js",
     "typescript.compiler.configurable.options.version": "TypeScript:",
     "typescript.go.name": "TypeScript-Go",
@@ -1446,8 +1448,6 @@
   "messages/JavaSyntaxBundle.properties": {
     "feature.classfile.api": "ClassFile API",
     "feature.objects.class": "java.util.Objects API",
-    "feature.pem.api": "PEM Encodings API",
-    "feature.stable.values": "Stable Values",
     "feature.static.imports": "static import",
     "feature.stream.gatherers": "Stream Gatherer",
     "feature.try.with.resources": "Try-with-resources",
@@ -1508,7 +1508,8 @@
     "microsoft.sql.server": "Microsoft SQL Server",
     "microsoft.sql.server.jtds": "Microsoft SQL Server (jtds)",
     "to.string": "toString()",
-    "transactional.read.only": "Transactional readOnly"
+    "transactional.read.only": "Transactional readOnly",
+    "unmapped.columns": "unmapped columns"
   },
   "messages/JpaQlBundle.properties": {
     "options.xml.display.name": "JPA QL"
@@ -1526,9 +1527,14 @@
     "jupyter.cell.type.raw": "Raw NBConvert",
     "notebook.collapsed.web.output.text": "Web: {0}x{1} px",
     "notebook.color.settings.title": "Jupyter Notebook",
+    "notebook.save.svg.output.default.name": "output.svg",
+    "notifications.jupyter.settings.title": "Jupyter Notebook",
     "settings.jupyter.general.display.name": "Jupyter General",
     "settings.jupyter.vcs.display.name": "Jupyter VCS",
     "settings.markdown.scale.percentage.suffix": "%"
+  },
+  "messages/JupyterCustomCellsBundle.properties": {
+    "jupyter.custom.cell.dropdown.options.default": "value1,value2,value3"
   },
   "messages/JupyterKotlinBundle.properties": {
     "kotlin.jupyter.action.create.notebook.text": "Kotlin Notebook",
@@ -1547,15 +1553,24 @@
     "presentable.name.kmp.wizard": "Kotlin Multiplatform"
   },
   "messages/KafkaBundle.properties": {
+    "action.BigDataTools.Services.AddDataproc.text": "Google Cloud Dataproc",
+    "action.BigDataTools.Services.AddEMR.text": "AWS EMR",
     "kafka.auth.aws_iam": "AWS IAM",
     "kafka.auth.type.scram256": "SCRAM-SHA-256",
     "kafka.auth.type.scram512": "SCRAM-SHA-512",
+    "kerberos.settings.principal.empty": "user@EXAMPLE.COM",
+    "notification.title.bdt": "Big Data Tools",
     "producer.asks": "ACK:",
+    "progress.title.to": "{0} {1}，{2}",
+    "rfs.copy.process.text": "({0}/{1}) {2}->{3}",
+    "rfs.copy.process.text.fast": "{0}->{1}",
     "schema.info.arn": "ARN:",
     "settings.cloud.type.msk": "AWS MSK",
     "settings.registry.url": "URL:",
     "settings.registry.url.hint": "http://localhost:8081",
-    "settings.url.text.empty": "server1,server2"
+    "settings.s3.region.group.us.gov": "AWS GovCloud",
+    "settings.url.text.empty": "server1,server2",
+    "tool.window.title": "Big Data Tools"
   },
   "messages/KeyMapBundle.properties": {
     "dialog.mouse.pad.shortcut.text": "<html><center> <br>{0}<br><br>"
@@ -1599,6 +1614,9 @@
   "messages/KotlinCodeInsightBundle.properties": {
     "surround.with.try.catch.finally.template": "try / catch / finally",
     "surround.with.try.catch.template": "try / catch"
+  },
+  "messages/KotlinDataFrameBundle.properties": {
+    "dialog.title.dataframe": "DataFrame: {0}"
   },
   "messages/KotlinDebuggerCoreBundle.properties": {
     "message.variables.property.get": "... get()"
@@ -1650,6 +1668,7 @@
   },
   "messages/KotlinNotebookBundle.properties": {
     "action.NewKotlinNotebookAction.text": "Kotlin Notebook",
+    "kotlin.jupyter.settings.k2.title": "Kotlin Notebook K2",
     "kotlin.jupyter.settings.title": "Kotlin Notebook",
     "kotlin.notebook.file.type.in.chooser": "Kotlin Notebook",
     "kotlin.notebook.root.type.display.name": "Kotlin Notebook",
@@ -1688,7 +1707,15 @@
     "action.Kubernetes.HelmLint.text": "Helm Lint(&L)",
     "debug.in.kubernetes.survey.dialog.tools.item.3.label": "kubectl port-forward",
     "group.Kubernetes.HelmActions.text": "Helm(&H)",
-    "k8s.logs..pattern.matching.matching.count.text": "\t\t(matching = {0})"
+    "k8s.logs..pattern.matching.matching.count.text": "\t\t(matching = {0})",
+    "k8s.logs.all.existing.cronjobs": "All Existing CronJobs",
+    "k8s.logs.all.existing.daemonsets": "All Existing DaemonSets",
+    "k8s.logs.all.existing.deployments": "All Existing Deployments",
+    "k8s.logs.all.existing.jobs": "All Existing Jobs",
+    "k8s.logs.all.existing.pods": "All Existing Pods",
+    "k8s.logs.all.existing.replicasets": "All Existing ReplicaSets",
+    "k8s.logs.all.existing.statefulsets": "All Existing StatefulSets",
+    "k8s.logs.cluster.events": "Cluster Events"
   },
   "messages/LLMInstallerBundle.properties": {
     "ai.hub.tooltip.text": "JetBrains AI",
@@ -1732,6 +1759,8 @@
     "notification.group.feature.trainer": "IDE Features Trainer"
   },
   "messages/LicenseBundle.properties": {
+    "auto.trial.extend.trial.description": "<p>Get an extended 45-day trial for your team.</p><p>Complete the request form, and once your organization is verified, you'll receive a free trial for your whole team.</p><p>When you receive the code, return here to activate it.</p>",
+    "button.continue.for.30.minutes": "Continue For 30 Minutes",
     "message.jetbrains.ide": "JETBRAINS IDE",
     "radio.button.jb.account": "JetBrains Account(&A)"
   },
@@ -1947,6 +1976,7 @@
   },
   "messages/OsmorcBundle.properties": {
     "bnd.configuration.name": "Bnd OSGi",
+    "bnd.file.type": "Bnd/Bndtools",
     "bnd.importer.name": "Bnd/Bndtools",
     "bnd.resolve.tree.via": "VIA:",
     "facet.library.name": "OSGi Core API"
@@ -2154,7 +2184,11 @@
   "messages/PySshInterpreterBundle.properties": {
     "ssh.connection.wizard.remote.interpreter.default.interpreter.path": "/usr/bin/python"
   },
+  "messages/PythonDapBundle.properties": {
+    "pythonDap.run.configuration.name": "Python DAP"
+  },
   "messages/PythonProBundle.properties": {
+    "celery.run.app.config.name": "Celery {0}",
     "python.debug.text.pane.text": "<html><head></head><body></body></html>"
   },
   "messages/PythonRemoteInterpreterBundle.properties": {
@@ -2266,6 +2300,7 @@
     "webservices.file.templates.group.name": "JAX-RS"
   },
   "messages/RadBundle.properties": {
+    "action.RadMigrateLiveTemplatesAction.text": "Migrate Live Templates from CLion Classic to Nova",
     "inspection.measure.resolve.description": "Measures time needed to resolve all references in the project",
     "inspection.measure.resolve.title": "Measure references resolve",
     "project.awaiter": "Awaits CLion backend activities",
@@ -2285,9 +2320,14 @@
   },
   "messages/RdClientDotnetBundle.properties": {
     "action.MeasurePerformanceAndDump.text": "Measure Performance and Dump",
+    "action.RestartIdeWithAutoBackendProfiling.text": "Restart the IDE with Automatic Backend Profiling",
+    "action.RiderBackendAction-EncapsulateField.description": "Encapsulates field at caret",
     "action.RiderDumpComponentContainersCtorStepsToJsonAction.text": "Dump Component Containers Ctor Steps to Json",
     "action.wildcard.container.text": "Wildcard Container",
     "backend.notification.title": "{0} backend",
+    "dialog.self.profiling.auto.attach.options": "To enable automatic backend profiling, set the following VM options and restart the IDE:\n{0}",
+    "dialog.self.profiling.auto.attach.options2": "To enable automatic backend profiling, set the following VM options and restart the IDE:\n{0}\n{1}",
+    "dialog.self.profiling.auto.attach.title": "VM options required",
     "dialog.self.profiling.executable.global.tool": "Global tool",
     "dialog.self.profiling.executable.global.tool.install.modal.title": "Installing dotTrace global tool",
     "dialog.self.profiling.executable.global.tool.uninstall.button.with.ver.0": "Uninstall {0}",
@@ -2354,8 +2394,10 @@
   },
   "messages/RenderDocBundle.properties": {
     "notification.group.general": "Frame Viewer",
+    "renderdoc.open.frame.confirmation.message": "Opening a new snapshot will discard the selected event and terminate all active debug sessions.",
     "renderdoc.tool.previewer.texture.info": "{0} - {1}x{2}",
-    "renderdoc.tool.title": "Frame Viewer"
+    "renderdoc.tool.title": "Frame Viewer",
+    "shader.debug.startSessionFailure.message": "Failed to start the debug session: Snapshot {0} was closed."
   },
   "messages/ResinBundle.properties": {
     "RemoteRunConfigurationEditor.message.ping.operation-name": "Ping Resin",
@@ -2386,7 +2428,25 @@
     "group.CSharpInteractive.text": "C# Interactive"
   },
   "messages/RiderAndroidBundle.properties": {
-    "rider.android.unknown.android.client.message": "<Unknown>"
+    "rider.android.native.cannot.find.android.runner.message": "Cannot find debug runner",
+    "rider.android.native.cannot.find.package.message": "Cannot find package on the device",
+    "rider.android.native.cannot.find.package.name.message": "Android package name is not set",
+    "rider.android.native.device.unavailable.message": "Android device is unavailable",
+    "rider.android.native.invalid.project.path.message": "Invalid project path",
+    "rider.android.native.launch.failed.message": "Failed to launch the game",
+    "rider.android.native.launch.profile.additional.parameters.text": "Additional UAT arguments",
+    "rider.android.native.launch.profile.name": "Android Deploy",
+    "rider.android.native.launch.profile.uat.parameter.text": "RunUAT path",
+    "rider.android.native.launch.view.invalid.uat.path": "Invalid UAT path",
+    "rider.android.native.no.android.device.message": "No android devices connected",
+    "rider.android.native.unreal.device.category": "Android devices",
+    "rider.android.native.unreal.device.name": "Android device",
+    "rider.android.native.unreal.no.devices": "No Android devices available",
+    "rider.android.native.wait.for.attach.message": "Waiting for the game to launch",
+    "rider.android.unknown.android.client.message": "<Unknown>",
+    "xamarin.androidPlugin.emptyAndroidSdkPath.message": "Install Android SDK and set its path in the settings",
+    "xamarin.androidPlugin.emptyAndroidSdkPath.title": "Android SDK path is not set",
+    "xamarin.androidPlugin.invalidAndroidSdkPath.message": "Android SDK is not found at ''{0}''"
   },
   "messages/RiderBundle.properties": {
     "EntityFramework.toolWindow.title": "Entity Framework",
@@ -2403,7 +2463,8 @@
     "notification.group.entityframework": "Entity Framework",
     "notification.group.problemsview.notification": "ProblemsView notification",
     "publish.to.iis.option": "IIS…",
-    "settings.completion.ml.csharp.display.name": "C#"
+    "settings.completion.ml.csharp.display.name": "C#",
+    "welcome.screen.banner.promotion.tech.insights.description": "Participate in remote interviews, surveys, and usability testing to help shape the future of JetBrains .NET products. Some studies come with prizes – just our way of saying thanks!"
   },
   "messages/RiderCodeWithMeCoreBundle.properties": {
     "activate.code.with.me.dialog.title": "Code With Me"
@@ -2422,6 +2483,14 @@
   },
   "messages/RiderCppCoreBundle.properties": {
     "configurations.CppLanguage.name": "C/C++",
+    "cpp.ctd.action.step.backward.description": "Step backward",
+    "cpp.ctd.action.step.backward.text": "Step Backward",
+    "cpp.ctd.failed.compute.frames": "Failed to compute frames",
+    "cpp.ctd.failed.compute.locals": "Failed to compute locals",
+    "cpp.ctd.failed.evaluate.expression": "Failed to evaluate expression",
+    "cpp.ctd.outdated.session": "Session oudated"
+  },
+  "messages/RiderCppCoreLanguagesBundle.properties": {
     "filetype.CppSourceFileType.name": "C/C++"
   },
   "messages/RiderDebuggerBundle.properties": {
@@ -2455,7 +2524,9 @@
     "rider.javascript.debug.companion.tab.name": "{0} - JavaScript"
   },
   "messages/RiderMultiPlatformBundle.properties": {
-    "notification.group.riderandroid.sdk": "Android SDK"
+    "notification.group.riderandroid.sdk": "Android SDK",
+    "rider.ios.not.available.during.connection.message": "Not available during the connection to macOS Agent",
+    "rider.ios.session.is.not.available.message": "Connection to macOS is not available"
   },
   "messages/RiderNugetBundle.properties": {
     "RiderNuGetFeedTable.label.url": "URL:",
@@ -2483,8 +2554,12 @@
     "folding.header.dotnet": ".NET"
   },
   "messages/RiderRunBundle.properties": {
+    "DotNetCoreDebugProfile.incorrect.cli.notification": "Incorrect .NET CLI for target platform ({0}). <a href=''settings''>Configure</a>.",
     "IisExpressHost.notification.title.iis.express": "IIS Express",
     "RiderContextPublishAction.action.azure.name": "Azure…"
+  },
+  "messages/RiderRuntimeBundle.properties": {
+    "RuntimeDetectionResult.dialog.message.cant.run.net.core": ".NET CLI location is not specified in settings correctly and cannot be discovered automatically. Please check .NET CLI settings under File | Settings | Build, Execution, Deployment | Toolset and Build."
   },
   "messages/RiderSettingsBundle.properties": {
     "IisExpressOptionsPage.configurable.name.iis.express": "IIS Express",
@@ -2509,10 +2584,18 @@
   },
   "messages/RiderUnitTestingBundle.properties": {
     "RiderDiffLinkPrefix": "Compare(Rider) =",
+    "RiderUnitTestResultPanel.output.message.the.launch.log.has.reached.the.limit.and.was.truncated": "The launch log has reached the limit and was truncated.",
+    "RiderUnitTestResultPanel.output.message.the.output.has.reached.the.limit.and.was.truncated": "The output has reached the limit and was truncated.",
+    "RiderUnitTestResultPanel.output.message.to.view.the.full.launch.log.use.the._0_.action": "To view the full launch log, use the {0} action.",
+    "RiderUnitTestResultPanel.output.message.to.view.the.full.output.use.the._0_.action": "To view the full output, use the {0} action.",
+    "RiderUnitTestResultPanel.output.message.you.can.also.change.the.limit.in._0_": "You can also change the limit in {0}.",
     "action.RiderUnitTestSessionLaunchOptionActionGroupBase.text.toolbar": "{0}：{1}"
   },
   "messages/RiderWizardBundle.properties": {
     "plugin-installation.progress.text-with-details": "{0}/{1}",
+    "plugins.failed-to-install": "Failed to install",
+    "plugins.failure.could-not-load-plugins": "Could not load plugins",
+    "steps.featured-plugins.junie.description": "Your coding agent by JetBrains designed to handle tasks autonomously or in collaboration with a developer. Developers can fully delegate routine tasks to Junie or partner with it on more complex ones.",
     "steps.keymaps.groups.jetbrains-ide.name": "JetBrains IDE",
     "steps.keymaps.groups.vscode.name": "VS Code",
     "steps.keymaps.visual-assist.name": "Visual Assist",
@@ -2726,15 +2809,18 @@
   "messages/SettingsSyncBundle.properties": {
     "action.SettingsSyncOpenSettingsAction.text": "Backup and Sync…",
     "action.SettingsSyncStatusAction.text": "Backup and Sync",
-    "disable.dialog.text": "This will disable Backup and Sync for this installation,<br>leaving the data stored on the {0} account intact.<br>This change will take effect immediately.",
-    "disable.dialog.title": "Confirm Disabling Backup and Sync",
-    "logout.link.text": "Log Out {0} Account…",
-    "settings.cross.product.sync.choice.all.products": "JetBrains IDE products and Android Studio",
-    "settings.cross.product.sync.choice.all.products.android": "Android Studio and JetBrains IDE products",
-    "settings.jba.plugin.required.title": "Plugin Download Required",
     "status.action.settings.sync": "Backup and Sync…",
     "title.settings.sync": "Backup and Sync",
     "ui.toolwindow.time.date": "{0} {1}"
+  },
+  "messages/SettingsSyncJbaBundle.properties": {
+    "check.licenses.progress.text": "Loading license information…",
+    "confirm.logout.check.licenses.button": "Check Licenses",
+    "confirm.logout.checkbox.text": "<html>I confirm that I want to log out of the account<br>and disable the associated licenses.</html>",
+    "confirm.logout.licenses.text": "Logging out will disable paid plugins and themes<br>that require your current authorization.",
+    "confirm.logout.text": "You will be logged out of your JetBrains Account.",
+    "confirm.logout.title": "Confirm Log Out of JetBrains Account",
+    "manage.license.not.found.error.message": "Could not find any action for managing licenses"
   },
   "messages/ShBundle.properties": {
     "sh.unnamed.element.presentable.name": "<unnamed>"
@@ -2816,7 +2902,14 @@
     "icon.icons.SpringBoot_Overlay.tooltip": "Spring Boot",
     "spring.boot.configuration.key.value.quick.info": "“{0}”[{1}]",
     "spring.boot.intention.category": "Spring Boot",
-    "spring.boot.name": "Spring Boot"
+    "spring.boot.name": "Spring Boot",
+    "spring.data.no.driver.class.inspection.description": "Driver class {0} not found in dependencies",
+    "spring.data.no.driver.class.inspection.name": "Spring Data driver class availability"
+  },
+  "messages/SpringBootDataBundle.properties": {
+    "spring.boot.data.aot.goto.implementation": "Go to AOT implementation",
+    "spring.boot.data.aot.implementation": "AOT Implementation",
+    "spring.boot.data.aot.method.title": "Spring AOT repository methods"
   },
   "messages/SpringBootInitializrBundle.properties": {
     "icon.icons.SpringInitializr.tooltip": "Spring Initializr",
@@ -2843,9 +2936,17 @@
     "data.inspection.group.name": "Spring Data",
     "named.query.type.title": "@NamedQuery",
     "notification.group.spring.dataJpa": "Spring Data JPA",
+    "spring.data.jdbc.entity.in.several.aggregates.inspection.description": "''{0}'' already belongs to a different aggregate root",
+    "spring.data.jdbc.entity.in.several.aggregates.inspection.name": "Spring Data JDBC aggregate roots",
+    "spring.data.jdbc.mapped.collection.key.column.inspection.description": "Missing 'keyColumn' attribute",
+    "spring.data.jdbc.mapped.collection.key.column.inspection.name": "Spring Data JDBC mapped collection key column",
+    "spring.data.jdbc.orm.framework.name": "Spring Data JDBC",
     "spring.data.jpa": "Spring Data JPA",
     "spring.data.ql": "Spring Data QL",
     "spring.template.context.type": "Spring Data"
+  },
+  "messages/SpringDataMongodbBundle.properties": {
+    "spring.data.mongodb.orm.framework.name": "Spring Data MongoDB"
   },
   "messages/SpringDebuggerBundle.properties": {
     "config.property.actual.in.context": "{0} ({1})",
@@ -3008,6 +3109,15 @@
     "label.content.type": "Content-Type",
     "settings.appid": "APPID:"
   },
+  "messages/TerminalBundle.properties": {
+    "action.Terminal.Completion.ShowFeedbackNotification.text": "Show Terminal Completion Feedback Notification",
+    "completion.feedback.dialog.description": "You’ve been using terminal command completion for a while, and we’d appreciate your feedback on the feature.",
+    "completion.feedback.dialog.experience.label": "Please tell us more about your experience with the terminal command completion:",
+    "completion.feedback.dialog.experience.placeholder": "For example, the relevance of suggestions, overall usability, shortcuts",
+    "completion.feedback.dialog.rating": "How satisfied are you with the terminal command completion? (1 = Very unsatisfied, 5 = Very satisfied)",
+    "completion.feedback.notification.text": "Please answer a few questions about your experience with the terminal command completion",
+    "settings.enable.cloud.completion.suggestions": "Enable inline AI completion suggestions"
+  },
   "messages/TmsBundle.properties": {
     "tms.connection.url": "URL:",
     "tms.project.configurable.jvm": "Java/Kotlin",
@@ -3030,14 +3140,6 @@
     "console.trace.unknown": "…",
     "fileDependency.details.event.unknown": "<deleted>",
     "label.s.s": "''{0}'' -> ''{1}''"
-  },
-  "messages/TrialPromotionBundle.properties": {
-    "trial.status.bar.widget.got.it.trial.last.day.in.ide.without.free.tier.text": "Choose a license today to keep access to the IDE.",
-    "trial.status.bar.widget.got.it.trial.last.day.in.ide.without.free.tier.title": "Your free trial ends tomorrow",
-    "trial.status.bar.widget.got.it.trial.last.week.in.ide.without.free.tier.text": "Enjoying the experience?<br>Choose a license to keep going.",
-    "trial.status.bar.widget.got.it.trial.last.week.in.ide.without.free.tier.title": "Your free trial ends soon",
-    "trial.status.bar.widget.got.it.trial.started.in.ide.without.free.tier.text": "When you're ready to buy a license, click the Manage Licenses to choose a license or activate one you already have.",
-    "trial.status.bar.widget.got.it.trial.started.in.ide.without.free.tier.title": "Free trial has started. {0} days left"
   },
   "messages/TsLintBundle.properties": {
     "tslint.notification.content": "TSLint: {0}"
@@ -3193,9 +3295,6 @@
     "template.group.title.version.9.x": "9.x",
     "weblogic.appc.name": "WebLogic APPC",
     "weblogic.ejbc.name": "WebLogic EJBC"
-  },
-  "messages/WebstormBundle.properties": {
-    "typescript.engine.widget.TSandTSX.label": "TypeScript (*.ts / *.tsx)"
   },
   "messages/WizardBundle.properties": {
     "bdide.project.wizard.jdk.label": "JDK:",

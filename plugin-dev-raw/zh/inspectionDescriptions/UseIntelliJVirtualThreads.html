@@ -1,0 +1,21 @@
+<html>
+<body>
+報告使用 <code>Thread.ofVirtual</code> 而不是 <code>IntelliJVirtualThreads.ofVirtual</code> 的情況。
+<p>
+  <code>Thread.ofVirtual</code> 是一個用於建立虛擬執行緒的通用 Java API，不適合 IntelliJ 平台的需求。
+</p>
+<p>
+  快速修復將使用 <code>IntelliJVirtualThreads.ofVirtual</code> 執行取代。
+</p>
+<p>
+  範例：
+</p>
+<pre><code lang="java">
+// 錯誤：
+Thread thread = Thread.ofVirtual().start();
+
+// 正確：
+Thread thread = IntelliJVirtualThreads.ofVirtual().start();
+</code></pre>
+</body>
+</html>

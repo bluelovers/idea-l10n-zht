@@ -2,11 +2,17 @@
 <body>
 報告具有一個可調用參照的 lambda 表達式。
 <p>將 lambda 取代為可調用參照而不將大括號更改為圓括號是常見錯誤。</p>
+
 <p><b>範例：</b></p>
-<pre><code>  listOf(1,2,3).map { it::toString }
+<pre><code>
+  val numbers = listOf(1, 2, 3)
+  val result = numbers.map { it::toString }
 </code></pre>
+
 <p>在套用快速修復後：</p>
-<pre><code>  listOf(1,2,3).map(Int::toString)
+<pre><code>
+  val numbers = listOf(1, 2, 3)
+  val result = numbers.map(Int::toString) // 此處為實際類型
 </code></pre>
 </body>
 </html>

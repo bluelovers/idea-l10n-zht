@@ -1,21 +1,17 @@
 <html>
 <body>
 <p>
-  報告在布爾上下文中使用 pandas <code>DataFrame</code> 或 <code>Series</code> 的模糊使用，
-  例如 <code>if</code>、<code>while</code> 或邏輯表達式。
-  這通常會導致執行時錯誤：
-  <code>ValueError: The truth value of a DataFrame is ambiguous</code>。
+  報告布爾上下文（例如 <code>if</code>、<code>while</code> 或邏輯表達式）中 pandas <code>DataFrame</code> 或 <code>Series</code> 的模糊用法。
+  這通常會導致執行時錯誤：<code>ValueError: The truth value of a DataFrame is ambiguous</code>。
 </p>
 
 <p>
-  在 pandas 中，類似 <code>df</code> 或 <code>df == other</code> 的表達式不會返回單個布林值，
-  而是返回布林值的 DataFrame 或 Series。 在控制流程中使用這些，未進行顯式減少
-  (例如，<code>.any()</code>、<code>.all()</code> 或 <code>.empty</code>) 是模糊的，且會引發異常。
+  在 pandas 中，類似 <code>df</code> 或 <code>df == other</code> 的表達式不會返回單個布林值，而是返回布林值的 DataFrame 或 Series。 在控制流中使用這些表達式而不進行顯式規約（例如 <code>.any()</code>、<code>.all()</code> 或 <code>.empty</code>）是模糊的，將會引發異常。
 </p>
 
 <p><b>範例：</b></p>
 <pre style="font-family: monospace">
-if df:  # ❌ 引發 ValueError: The truth value of a DataFrame is ambiguous
+if df:  # ❌ 引發 ValueError：DataFrame 的真值不明確
     print("DataFrame exists")
 
 if not df.empty:  # ✅ 檢查 DataFrame 是否有任何行
@@ -23,8 +19,7 @@ if not df.empty:  # ✅ 檢查 DataFrame 是否有任何行
 </pre>
 
 <p>
-  套用快速修復時，條件將被取代為適當的歸約器
-  根據上下文，可能是 <code>.any()</code>、<code>.all()</code> 或 <code>.empty</code>。
+  套用該快速修復後，條件將根據上下文取代為適當的歸約器，如 <code>.any()</code>、<code>.all()</code> 或 <code>.empty</code>。
 </p>
 
 </body>

@@ -4,7 +4,7 @@
 <p>在觸發器主體中使用 COMMIT 或 ROLLBACK 語句時，觸發器將不會編譯。
   發生錯誤是因為觸發器在事務中間觸發。 當觸發器啟動時，當前事務仍未完成。 因為 COMMIT 會終止事務，這兩個語句（COMMIT 和 ROLLBACK）都會導致異常。
   在觸發器中執行的更改應該由啟動觸發器的所屬事務提交（或回滾）。</p>
-<p>範例 (Oracle)：</p>
+<p>範例（Oracle）：</p>
 <pre><code>CREATE TABLE employee_audit
 (
     id          INT  NOT NULL,

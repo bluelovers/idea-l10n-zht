@@ -1,0 +1,36 @@
+<html>
+<body>
+<p>報告使用 <code>plus</code>/<code>minus</code> 以運算符形式（<code>a + b</code>、<code>a - b</code>）或一般呼叫形式（<code>a.plus(b)</code>，<code>a.minus(b)</code>）將 <code>java.nio.file.Path</code> 新增到/從 Kotlin 集合或序列中移除的呼叫。</p>
+<p>由於 <code>java.nio.file.Path</code> 實作了 <code>Iterable&lt;Path&gt;</code>，此類別呼叫解析為 <code>plus</code> 或 <code>minus</code> 函式的意外多載，這兩個函式接受元素的集合（這種情況下為 <code>Path</code> 的單個元素）。 但是，程式碼的意圖可能是新增或移除 <code>Path</code> 本身，而非單個元素。</p>
+<p><b>範例：</b></p>
+<pre><code>
+// 運算符形式
+val paths = listOf(path) + somePath
+val paths2 = setOf(path) - somePath
+
+// 一般呼叫形式
+val paths = listOf(path).plus(somePath)
+val paths2 = setOf(path).minus(somePath)
+</code></pre>
+
+<p><b>快速修復：</b></p>
+<ul>
+    <li>轉換為 <code>plusElement</code>/<code>minusElement</code>（將語意更改為最初的意圖）：
+        <pre><code>
+val paths = listOf(path).plusElement(somePath)
+val paths2 = setOf(path).minusElement(somePath)
+    </code></pre>
+    </li>
+    <li>將 <code>Path</code> 實參轉換為集合，以澄清意圖而不改變語意：
+        <ul>
+            <li>對於 <code>plus</code>：使用 <code>toList()</code> 包裝實參以保持順序。</li>
+            <li>對於 <code>minus</code>：使用 <code>toSet()</code> 包裝實參以提高移除效率。</li>
+        </ul>
+        <pre><code>
+val paths = listOf(path).plus(somePath.toList())
+val paths2 = setOf(path).minus(somePath.toSet())
+    </code></pre>
+    </li>
+</ul>
+</body>
+</html>

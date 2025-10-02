@@ -4,7 +4,7 @@
 報告 'java.time' 物件上的冗餘動作：
 <ul>
   <li>當可以使用更簡單的方法呼叫或可以避免建立時，從 JDK <code>java.time</code> 軟體套件建立日期/時間物件。</li>
-  <li>將 <code>java.time.temporal.ChronoField</code> 和 <code>java.time.temporal.ChronoUnit</code> 作為實參的 <code>java.time</code> 方法呼叫可被取代為更具體的方法時。</li>
+  <li>當 <code>java.time</code> 方法呼叫可被取代為更具體的方法時將 <code>java.time.temporal.ChronoField</code> 和 <code>java.time.temporal.ChronoUnit</code> 作為實參。</li>
   <li><code>java.time</code> 與 <code>compareTo()</code> 呼叫（可被取代為 <code>isAfter()</code>、<code>isBefore()</code> 或 <code>isEqual()</code> 呼叫）的比較。</li>
 </ul>
 

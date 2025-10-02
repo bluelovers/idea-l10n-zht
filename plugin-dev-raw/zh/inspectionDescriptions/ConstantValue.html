@@ -1,6 +1,6 @@
 <html>
 <body>
-報告始終產生相同結果的表達式和條件，如 <code>true</code>、<code>false</code>、<code>null</code> <code>或零</code>。
+報告始終產生相同結果的表達式和條件，如 <code>true</code>、<code>false</code>、<code>null</code> 或 <code>0</code>。
 此類別表達式可被取代為相應的常量值，或者可能表明程式碼中存在 bug。
 <p>範例：</p>
 <pre><code>  // 始終為 true
@@ -13,12 +13,12 @@
   if (str == null) {}
 </code></pre>
 <p>
-  檢查行為可能由許多註解控制，例如<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">為 null 性</a>註解、<code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 註解、<code>@Range</code> 註解等。
+  檢查行為可能由註解控制，例如<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">為 null 性</a>註解、<code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 註解、<code>@Range</code> 註解等。
 </p>
 <!-- tooltip end -->
 <p>組態檢查：</p>
 <ul>
-  <li>使用<b>不報告條件靜態證明始終為 true 的斷言</b>選項可避免報告靜態證明始終為 true 的斷言。 這還包括 <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code> 等條件。</li>
+  <li>使用<b>不報告條件靜態證明始終為 true 的斷言</b>選項可避免報告靜態證明始終為 true 的斷言。 這包括 <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code> 等條件。</li>
   <li>使用<b>忽略 assert 語句</b>選項可控制檢查如何處理 <code>assert</code> 語句。
     預設情況下，斷言會被假定為已執行（<code>-ea</code> 模式）。
     當該選項啟用時，斷言將被忽略（<code>-da</code> 模式）。</li>
@@ -26,7 +26,7 @@
 </ul>
 <p>
   在 IntelliJ IDEA 2022.3 版本之前，此檢查為<i>常數條件和異常</i>檢查的一部分。
-  此檢查已拆分為兩個檢查：<i>常量值</i>和 <i>Null 性和數據流問題</i>。
+  此檢查已被拆分為兩個檢查：<i>常量值</i>與<i>為 null 性和數據流問題</i>。
 </p>
 </body>
 </html>

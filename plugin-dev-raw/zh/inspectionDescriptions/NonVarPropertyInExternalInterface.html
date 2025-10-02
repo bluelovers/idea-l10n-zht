@@ -1,7 +1,15 @@
+<!-- Copyright 2000-2025 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 <html>
 <body>
 <p>
-  報告外部接口中的非 var 屬性。 在<a href="https://kotlinlang.org/docs/js-ir-migration.html#convert-properties-of-external-interfaces-to-var">遷移指南</a>中閱讀更多資訊。
+  在 Kotlin/JS 專案中報告擴展 React Props 或 State 類型的外部接口中的 <code>val</code> 屬性。
 </p>
+<p>
+  React 組件接口中的屬性應當是可變的 (<code>var</code>)，以便正確使用 JavaScript 執行時。
+</p>
+<p><b>範例：</b></p>
+<pre><code>external interface MyProps : Props {
+    val title: String // 警告：應當為 var
+}</code></pre>
 </body>
 </html>
