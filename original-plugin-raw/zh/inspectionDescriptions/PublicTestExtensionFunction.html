@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>
-  报告在 intellij.driver.tests 模块的测试类中，针对 Driver/Finder/IdeaFrameUI 的 public 扩展函数。
+  报告 intelij.driver.tests 模块内测试类中 Driver/Finder/IdeaFrameUI 上的 public 扩展函数。
 </p>
 
 <p>
@@ -9,7 +9,7 @@
 </p>
 <ul>
   <li>在所有上下文中对所有测试可见</li>
-  <li>可能会导致测试依赖关系不清晰，以及更难以维护</li>
+  <li>可能会导致测试依赖项不清晰，以及更难以维护</li>
 </ul>
 
 <p>
@@ -19,8 +19,8 @@
   <li>将函数移至 private 伴生对象</li>
   <li>重新定位到合适的页面对象：
     <ul>
-      <li>用于广泛适用函数的泛型页面对象</li>
-      <li>用于依赖上下文函数的特定页面对象</li>
+      <li>广泛适用函数的泛型页面对象</li>
+      <li>上下文依赖函数的特定页面对象</li>
     </ul>
   </li>
 </ul>

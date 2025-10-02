@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>报告 Fleet 通用/工作区层模块中 Java/Kotlin IO 软件包中的可疑 import。</p>
+<p>以下 import 前缀存在问题：</p>
+<ul>
+  <li><code>java.io.File</code></li>
+  <li><code>java.nio</code></li>
+  <li><code>kotlin.io.path</code></li>
+</ul>
+<p>这些 API 针对特定平台。 除非确实希望在本地 JVM 进程旁边运行某些内容（例如出于性能原因），否则请通过 Fleet API 使用与平台无关的抽象。</p>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<html>
+<body>
+An entity within a Spring Data JDBC aggregate is referencing another entity that already belongs to a different aggregate.
+In Spring Data JDBC, every reference to another entity must remain strictly within the boundaries of the same aggregate.
+Cross-aggregate relationships cannot be expressed as direct entity references;
+they should instead be modeled using the identifier of the target aggregate
+(for example, storing the foreign key as a simple value type).
+<a href="https://docs.spring.io/spring-data/relational/reference/jdbc/mapping.html#jdbc.entity-persistence.types.referenced-entities">Spring Data Documentation</a>
+</body>
+</html>

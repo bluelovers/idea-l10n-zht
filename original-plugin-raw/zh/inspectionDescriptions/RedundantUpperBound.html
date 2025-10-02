@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>
+报告类型形参上冗余的显式上限 <code>Any?</code>。
+在 Kotlin 中，类型参数的默认上限为 <code>Any?</code>，因此没有必要显式指定它。
+</p>
+
+<p>示例：</p>
+<pre><code>// 之前
+fun &lt;T : Any?&gt; foo(t: T) {}
+class C&lt;T : Any?&gt;
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+fun &lt;T&gt; foo(t: T) {}
+class C&lt;T&gt;
+</code></pre>
+
+<p>
+该快速修复会移除冗余的上限和前面的冒号。
+</p>
+</body>
+</html>

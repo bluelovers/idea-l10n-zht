@@ -1,5 +1,17 @@
 <html>
 <body>
-报告没有名称标识符的实参。
+<p>报告没有名称标识符的实参。</p>
+<p>示例：</p>
+<pre><code>
+function foo(int $param1, int $param2){}
+
+foo(1, 2); // 没有名称标识符的实参
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+function foo(int $param1,int $param2){}
+
+foo(param1: 1, param2: 2);
+</code></pre>
 </body>
 </html>

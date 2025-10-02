@@ -1,7 +1,15 @@
+<!-- Copyright 2000-2025 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 <html>
 <body>
 <p>
-  报告外部接口中的非 var 属性。 在<a href="https://kotlinlang.org/docs/js-ir-migration.html#convert-properties-of-external-interfaces-to-var">迁移指南</a>中阅读更多信息。
+  在 Kotlin/JS 项目中报告扩展 React Props 或 State 类型的外部接口中的 <code>val</code> 属性。
 </p>
+<p>
+  React 组件接口中的属性应当是可变的 (<code>var</code>)，以便正确使用 JavaScript 运行时。
+</p>
+<p><b>示例：</b></p>
+<pre><code>external interface MyProps : Props {
+    val title: String // 警告：应当为 var
+}</code></pre>
 </body>
 </html>

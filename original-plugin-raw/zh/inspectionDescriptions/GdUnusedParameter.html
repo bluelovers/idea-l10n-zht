@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>报告在所属函数体中声明但从未使用的 GDScript 函数/方法形参。</p>
+
+<p>
+此检查可以帮助您发现无效或冗余的形参。 它仅检查封闭函数或方法内的内容并忽略信号声明。 名称以下划线开头的形参被视为有意未使用，不会被报告。 如果存在类型提示但引用的是未解析的非内置类型，则忽略该形参以防止误报。
+</p>
+
+<p>示例：</p>
+<pre><code>
+func damage(target, amount):
+    print("Damaged!")
+    # 'target' 和 'amount' 从未使用 → 报告
+
+func _process(_delta):
+    # 前导下划线标记有意未使用的形参 → 不报告
+    pass
+
+func spawn(enemy: UnknownType):
+    # 如果无法解析 UnknownType，则忽略
+    pass
+</code></pre>
+
+<p>快速修复操作：</p>
+<ul>
+  <li>在形参前加下划线以标记为有意未使用。</li>
+</ul>
+
+<!-- tooltip end -->
+<p>该检查不会报告在函数/方法体中的任何位置被引用的形参。 它还会跳过信号形参以及未解析类型的形参，以避免误报。</p>
+</body>
+</html>

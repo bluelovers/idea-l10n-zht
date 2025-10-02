@@ -1,7 +1,23 @@
+<!-- Copyright 2000-2025 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 <html>
 <body>
 <p>
-  报告扩展 State 或 Props 的非外部分类器。 在<a href="https://kotlinlang.org/docs/js-ir-migration.html#convert-js-and-react-related-classes-and-interfaces-to-external-interfaces">迁移指南</a>中阅读更多信息。
+  在 Kotlin/JS 项目中报告扩展 React Props 或 State 类型但未标记为 <code>external</code> 的类、接口和对象。
 </p>
+<p>
+  React 组件类型应当为外部接口，以便正确地与 JavaScript 运行时互操作。
+</p>
+<p><b>示例：</b></p>
+<pre><code>interface MyProps : Props { // 警告：应为 external 接口
+    var title: String
+}
+
+class MyState : State { // 警告：应为 external 接口
+    var count: Int = 0
+}</code></pre>
+<p><b>在应用快速修复后：</b></p>
+<pre><code>external interface MyProps : Props {
+    var title: String
+}</code></pre>
 </body>
 </html>

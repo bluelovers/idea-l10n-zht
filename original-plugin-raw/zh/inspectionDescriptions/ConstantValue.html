@@ -1,6 +1,6 @@
 <html>
 <body>
-报告始终产生相同结果的表达式和条件，如 <code>true</code>、<code>false</code>、<code>null</code> <code>或零</code>。
+报告始终产生相同结果的表达式和条件，如 <code>true</code>、<code>false</code>、<code>null</code> 或 <code>0</code>。
 此类表达式可被替换为相应的常量值，或者可能表明代码中存在 bug。
 <p>示例：</p>
 <pre><code>  // 始终为 true
@@ -13,12 +13,12 @@
   if (str == null) {}
 </code></pre>
 <p>
-  检查行为可能由许多注解控制，例如<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">为 null 性</a>注解、<code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 注解、<code>@Range</code> 注解等。
+  检查行为可能由注解控制，例如<a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">为 null 性</a>注解、<code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 注解、<code>@Range</code> 注解等。
 </p>
 <!-- tooltip end -->
 <p>配置检查：</p>
 <ul>
-  <li>使用<b>不报告条件静态证明始终为 true 的断言</b>选项可避免报告静态证明始终为 true 的断言。 这还包括 <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code> 等条件。</li>
+  <li>使用<b>不报告条件静态证明始终为 true 的断言</b>选项可避免报告静态证明始终为 true 的断言。 这包括 <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code> 等条件。</li>
   <li>使用<b>忽略 assert 语句</b>选项可控制检查如何处理 <code>assert</code> 语句。
     默认情况下，断言会被假定为已执行（<code>-ea</code> 模式）。
     当该选项启用时，断言将被忽略（<code>-da</code> 模式）。</li>
@@ -26,7 +26,7 @@
 </ul>
 <p>
   在 IntelliJ IDEA 2022.3 版本之前，此检查为<i>常量条件和异常</i>检查的一部分。
-  此检查已拆分为两个检查：<i>常量值</i>和 <i>Null 性和数据流问题</i>。
+  此检查已被拆分为两个检查：<i>常量值</i>与<i>为 null 性和数据流问题</i>。
 </p>
 </body>
 </html>

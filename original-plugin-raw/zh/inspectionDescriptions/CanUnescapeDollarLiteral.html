@@ -1,6 +1,6 @@
 <html>
 <body>
-报告字符串中的转义美元字面量可以替换为常规字面量的情况。
+报告字符串中的转义美元字符可被替换为常规字面量的情况。
 <p>
     只有当美元符号后面的字符串内容可能被误解为字符串插值条目时，才需要转义。
 </p>
@@ -10,7 +10,7 @@
     "The price today is \$10. The price tomorrow will be ${'$'}20."
   }
 </code></pre>
-快速修复会将所有可安全替换的转义美元字符转换为常规美元字符：
+该快速修复会将所有可安全替换的转义美元字符转换为常规美元字符：
 <pre><code>
   fun example() {
     "The price today is $10. The price tomorrow will be $20."

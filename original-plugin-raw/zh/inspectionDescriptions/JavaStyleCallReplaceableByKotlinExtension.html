@@ -1,0 +1,27 @@
+<html>
+<body>
+Reports places where a Kotlin Spring extension can be used instead of a call with a <code>::class.java</code> argument.
+
+<p>
+  Spring provides a number of Kotlin extensions for generic Java methods with type token parameters.
+  The inspection reports Spring API usages where Java-style calls can be replaced by Kotlin extension calls without changing the semantics.
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+import org.springframework.core.env.PropertyResolver
+
+fun example(resolver: PropertyResolver): String? =
+    resolver.getProperty("test.property", String::class.java)
+</code></pre>
+
+<p><b>应用修正后：</b></p>
+<pre><code>
+import org.springframework.core.env.PropertyResolver
+import org.springframework.core.env.getProperty
+
+fun example(resolver: PropertyResolver): String? =
+    resolver.getProperty&lt;String&gt;("test.property")
+</code></pre>
+</body>
+</html>

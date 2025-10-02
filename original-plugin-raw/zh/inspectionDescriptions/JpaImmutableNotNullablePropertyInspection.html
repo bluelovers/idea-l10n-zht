@@ -2,8 +2,8 @@
 <body>
 报告已验证的 JPA 实体中不可变属性的用法。
 <p>
-  检测使用 <code>@NotNull</code> 注释的不可变属性。
-  建议使它们可变，以确保与 Hibernate 的兼容性。
+  检测使用 <code>@NotNull</code> 注解的不可变属性。
+  建议将它们设为可变，以确保 Hibernate 兼容性。
 </p>
 <p>
   嵌入代码段：
@@ -17,7 +17,7 @@ open class User(
   val name: String = "",
 )
 </code></pre>
-应用快速修复后:
+应用该快速修复后：
 <pre><code>
 @Entity
 open class User(

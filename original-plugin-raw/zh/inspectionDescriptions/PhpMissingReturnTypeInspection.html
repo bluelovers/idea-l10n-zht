@@ -1,5 +1,20 @@
 <html>
 <body>
-报告那些没有指定返回类型声明的函数。
+<p>报告未指定返回值类型声明的函数。</p>
+<p>示例：</p>
+<pre><code>
+// foo() 上缺少函数的返回值类型声明
+function foo()
+{
+    return "foo";
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+function foo(): string
+{
+    return "foo";
+}
+</code></pre>
 </body>
 </html>

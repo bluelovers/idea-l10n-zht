@@ -1,7 +1,21 @@
+<!-- Copyright 2000-2025 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 <html>
 <body>
 <p>
-  报告外部接口中不可为 null 的布尔属性。 在<a href="https://kotlinlang.org/docs/js-ir-migration.html#make-boolean-properties-nullable-in-external-interfaces">迁移指南</a>中阅读更多信息。
+  在 Kotlin/JS 项目中报告外部接口中不可为 null 的 <code>Boolean</code> 属性。
 </p>
+<p>
+  外部接口中的 Boolean 属性应当可为 null，以处理 JavaScript 值可能为 <code>undefined</code> 的情况。
+</p>
+<p><b>示例：</b></p>
+<pre><code>external interface MyInterface {
+    var enabled: Boolean // 警告：应当为 Boolean?
+    var visible: Boolean // 警告：应当为 Boolean?
+}</code></pre>
+<p><b>在应用快速修复后：</b></p>
+<pre><code>external interface MyInterface {
+    var enabled: Boolean?
+    var visible: Boolean?
+}</code></pre>
 </body>
 </html>

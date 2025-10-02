@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>报告包含 <code>return</code> 的 <code>if</code> 语句中的冗余 <code>else</code> 子句。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  if someCode() {
+      fmt.Println("branch A")
+      return nil
+  } else {
+      fmt.Println("branch B")
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  if someCode() {
+      fmt.Println("branch A")
+      return nil
+  }
+  fmt.Println("branch B")
+</code></pre>
+</body>
+</html>

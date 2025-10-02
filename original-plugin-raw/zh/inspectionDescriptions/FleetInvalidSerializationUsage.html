@@ -1,0 +1,29 @@
+<html>
+<body>
+检测 Fleet 代码库中不当使用 Kotlin 序列化方法的情况，这些方法缺少显式的序列化/反序列化策略形参。
+<p>
+  此检查可以识别对 JSON 序列化方法的调用，这些调用在未适当形参化时可能导致运行时意外反射。
+</p>
+<p>
+  该检查会专门检查对 <code>kotlinx.serialization.json.Json</code> 软件包中以下方法的调用：
+</p>
+<pre><code>
+decodeFromString
+decodeFromJsonElement
+encodeToString
+encodeToJsonElement
+</code></pre>
+<!-- tooltip end -->
+<p>这些方法应始终使用显式序列化/反序列化策略形参进行调用，以避免依赖于反射，这可能会在 Fleet 的多平台环境中引发问题。</p>
+
+<p>有问题的代码示例：</p>
+<pre><code>
+Json.encodeToString(myObject) // 缺少 SerializationStrategy
+</code></pre>
+
+<p>正确用法：</p>
+<pre><code>
+Json.encodeToString(MyType.serializer(), myObject)
+</code></pre>
+</body>
+</html>

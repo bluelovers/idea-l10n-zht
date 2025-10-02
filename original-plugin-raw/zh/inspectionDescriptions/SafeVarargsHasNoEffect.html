@@ -1,7 +1,7 @@
 <html>
 <body>
-报告 <code>@SafeVarargs</code> 方法内的写操作，其中 vararg 形参被重新分配给了其他对象。
-在这种情况下，新赋值的数组与调用站点的可变 arity 无关，并且可能不再安全。
+报告 <code>@SafeVarargs</code> 方法内的写入操作，其中 vararg 形参被重新赋值给了其他对象。
+在这种情况下，新赋值的数组与调用点的可变 arity 实参无关，并且可能不再安全。
 <p><b>示例：</b></p>
 <pre><code>
     @SafeVarargs

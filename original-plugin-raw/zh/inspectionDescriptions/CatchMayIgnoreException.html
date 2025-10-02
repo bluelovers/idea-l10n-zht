@@ -1,6 +1,6 @@
 <html>
 <body>
-报告为空或可能忽略异常的 <code>catch</code> 块。
+报告空的或可能忽略异常的 <code>catch</code> 块。
 <p>虽然偶尔是有意为之，但空的 <code>catch</code> 块可能导致调试复杂化。
 此外，忽略 <code>catch</code> 形参可能是错误的。
   最后，静态代码分析器会报告是否检测到 <code>catch</code> 块可能无提示地忽略重要的 VM 异常，如 <code>NullPointerException</code>。 忽略此类异常（不记录或重新抛出）可能会隐藏错误。</p>

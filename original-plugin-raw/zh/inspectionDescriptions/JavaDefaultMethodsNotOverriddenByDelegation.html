@@ -4,7 +4,7 @@
     当委托对象是重写（对于 <code>final</code> 和 <code>sealed</code> 类的情况）或可能重写（对于 <code>open</code> 和 <code>abstract</code> 类的情况）Java 默认方法的类的实例时，报告委托。
 </p>
 <p>
-    根据设计，Kotlin 委托不会覆盖 Java 默认方法，这可能导致难以捉摸的错误，尤其是在继承层次结构很深的情况下。
+    根据设计，Kotlin 委托不会重写 Java 默认方法，这可能导致难以捉摸的 bug，尤其是在继承层次结构很深的情况下。
 </p>
 <p><b>示例：</b></p>
 <pre><code lang="java">
@@ -33,10 +33,10 @@ fun main() {
 }
 </code></pre>
 <p>
-    开发者通常期望所有方法，包括在委托中重写的默认方法，都被转发。 相反，调用的是 Java 默认方法，这可能会导致意外的结果。
+    开发者通常期望所有方法（包括在委托中重写的默认方法）都被转发。 相反，调用的是 Java 默认方法，这可能会导致意外的结果。
 </p>
 <p>
-    一种快速修复是通过将 Java 默认方法的实现委托给委托对象来重写这些方法。
+    一种快速修复是通过将 Java 默认方法的实现委托给委托对象来重写这些方法：
 </p>
 <pre><code>
 // Main.kt:
@@ -47,12 +47,12 @@ fun main() {
       inherited.print()
     }
   }
-  inherited.print() // 输出: BaseImpl
-  delegated.print() // 输出: BaseImpl
+  inherited.print() // 输出：BaseImpl
+  delegated.print() // 输出：BaseImpl
 }
 </code></pre>
 <p>
-    另一种快速修复是通过显式地将 Java 默认方法的实现委托给超类来重写这些方法。
+    另一种快速修复是通过显式地将 Java 默认方法的实现委托给超类来重写这些方法：
 </p>
 <pre><code>
 // Main.kt:
@@ -68,6 +68,6 @@ fun main() {
 }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2025.1 的新功能</small></p>
+<p><small>2025.1 最新变化</small></p>
 </body>
 </html>

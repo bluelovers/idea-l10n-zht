@@ -22,6 +22,6 @@ func main() {
 }
 </code></pre>
 
-<p>在提供的示例中，<code>user</code> 是指向 <code>User</code> 结构体的指针，但它可能为 <code>nil</code>，因为 <code>CreateUser</code> 可能会返回<code>nil</code>。 尝试解引用 <code>user</code> 以访问 <code>Name</code> 而不检查 <code>user</code> 是否为 <code>nil</code> 会导致运行时错误。</p>
+<p>在提供的示例中，<code>user</code> 是指向 <code>User</code> 结构体的指针，但它可能为 <code>nil</code>，因为 <code>CreateUser</code> 可能会返回<code>nil</code>。 尝试解引用 <code>user</code> 以访问 <code>Name</code> 而首先不检查 <code>user</code> 是否为 <code>nil</code> 会导致运行时错误。</p>
 </body>
 </html>
