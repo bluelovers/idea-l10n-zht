@@ -1,10 +1,8 @@
 <html>
 <body>
-An entity within a Spring Data JDBC aggregate is referencing another entity that already belongs to a different aggregate.
-In Spring Data JDBC, every reference to another entity must remain strictly within the boundaries of the same aggregate.
-Cross-aggregate relationships cannot be expressed as direct entity references;
-they should instead be modeled using the identifier of the target aggregate
-(for example, storing the foreign key as a simple value type).
-<a href="https://docs.spring.io/spring-data/relational/reference/jdbc/mapping.html#jdbc.entity-persistence.types.referenced-entities">Spring Data Documentation</a>
+Spring Data JDBC 聚合内的某个实体正在引用另一个已属于不同聚合的实体。
+在 Spring Data JDBC 中，对其他实体的每个引用都必须严格保持在同一个聚合的边界内。
+跨聚合关系不能表示为直接实体引用，而应使用目标聚合的标识符进行建模（例如，将外键存储为简单值类型）。
+<a href="https://docs.spring.io/spring-data/relational/reference/jdbc/mapping.html#jdbc.entity-persistence.types.referenced-entities">Spring Data 文档</a>
 </body>
 </html>

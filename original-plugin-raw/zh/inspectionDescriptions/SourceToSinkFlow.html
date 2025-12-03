@@ -5,7 +5,7 @@
   （相同类中的）安全对象为：
 <ul>
   <li>字符串字面量、接口实例或枚举对象</li>
-  <li>a call result of a method that is marked as <code>@Untainted</code></li>
+  <li>标记为 <code>@Untainted</code> 的方法的调用结果</li>
   <li>private 字段，仅使用字符串字面量赋值，并具有安全的初始值设定项</li>
   <li>final 字段，具有安全的初始值设定项</li>
   <li>标记为 <code>@Untainted</code> 且不是从非安全对象赋值的局部变量或形参</li>
@@ -14,7 +14,7 @@
 
 此外，static final 字段也被认为是安全的。
 <p>
-  分析仅在一个文件内执行。 要处理来自其他类的依赖项，请使用选项。
+  该分析仅在一个文件内执行。 要处理来自其他类的依赖项，请使用选项。
   分析会扩展到 private 或 static 方法，并且具有深度传播限值。
 <p>
   示例：

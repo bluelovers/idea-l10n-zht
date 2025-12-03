@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>报告包含 <code>__slots__</code> 定义的类的无效用法。</p>
-<p><b>Example when accessing undefined attributes:</b></p>
+<p><b>访问未定义特性的示例：</b></p>
 <pre><code>
 class Foo:
     __slots__ = ['foo', 'bar']
@@ -10,18 +10,18 @@ class Foo:
         self.x = 3  # error: 'x' is not defined in __slots__
 </code></pre>
 
-<p><b>Example of conflicting attributes:</b></p>
+<p><b>特性冲突的示例：</b></p>
 <pre><code>
 class A:
     __slots__ = ("x",)
     x = 42  # error: conflict with "x" listed in __slots__
 </code></pre>
 
-<p><b>Example <code>slots=True</code>:</b></p>
+<p><b>示例 <code>slots=True</code>：</b></p>
 <pre><code>
 from dataclasses import dataclass
 
-@dataclass(slots=True)  # error: __slots__ is also defined in Foo
+@dataclass(slots=True)  # 错误：__slots__ 也在 Foo 中定义
 class Foo:
     __slots__ = ['a']
 </code></pre>

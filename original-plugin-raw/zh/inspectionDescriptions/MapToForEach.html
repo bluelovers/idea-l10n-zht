@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>报告结果被忽略且可被替换为 <code>forEach</code> 的 <code>map</code> 调用。</p>
+
+<p>以这种方式使用 <code>map</code> 具有误导性，因为 <code>map</code> 旨在转换集合并返回结果。
+    当它的返回值未使用时，调用会创建不必要的分配并降低代码可读性。
+    在这种情况下，应改用 <code>forEach</code>，因为它清楚地表达了具有副作用的迭代。</p>
+
+<p>该快速修复会将 <code>map</code> 调用替换为 <code>forEach</code> 调用。</p>
+
+<p>示例：</p>
+<pre><code>
+fun foo(list: List&lt;String&gt;) {
+ list.map { print(it) } // 已报告
+
+ val x = list.map { it.length } // 未报告：结果已使用
+}
+</code></pre>
+
+<p>在应用快速修复后：</p>
+<pre><code>
+fun foo(list: List&lt;String&gt;) {
+ list.forEach { print(it) }
+
+ val x = list.map { it.length } // 未报告：结果已使用
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

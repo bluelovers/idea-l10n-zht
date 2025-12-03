@@ -1,0 +1,31 @@
+<html>
+<body>
+报告 Kotlin 路由器 DSL 中存在未使用的路径变量，以及使用未声明的路径变量。
+<p>
+  路径变量必须先在在路由路径中声明，然后才能访问。
+  尝试访问未声明的路径变量将导致运行时错误。
+</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+@Configuration
+class RouterConfiguration {
+    @Bean
+    fun myRouter() = router {
+        GET("/test/{var}") { ServerResponse.ok().body("${it.pathVariable("bar")}") }
+    }
+}
+</code></pre>
+
+<p><b>应用修正后：</b></p>
+<pre><code>
+@Configuration
+class RouterConfiguration {
+    @Bean
+    fun myRouter() = router {
+        GET("/test/{var}") { ServerResponse.ok().body("${it.pathVariable("var")}") }
+    }
+}
+</code></pre>
+</body>
+</html>

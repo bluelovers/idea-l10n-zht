@@ -1,0 +1,20 @@
+<html>
+<body>
+报告在 Groovy 5 中包含多个重载 <code>main</code> 方法的类或文件。
+<p>
+  当一个类或文件拥有多个具有不同签名的 <code>main</code> 方法时，可能会不清楚哪一个用作应用程序的入口点，因为 main 方法的调用在运行时基于实参的存在而发生。 请考虑以下示例：
+</p>
+<pre><code>
+class A {
+    void main(String[] args) {
+        println "1"
+    }
+
+    void main() {
+        println "2"
+    }
+}
+</code></pre>
+如果没有传递实参，则调用 <code>main()</code>，否则调用 <code>main(String[])</code>。
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+报告在声明模块依赖项时违反内容模块可见性的情况。
+<p>
+  内容模块可以将其可见性指定为 <code>private</code>（默认，当缺少时）、<code>internal</code> 或 <code>public</code>。
+</p>
+<p>
+  在声明对其他模块的依赖关系时，必须遵循以下规则：
+</p>
+<ul>
+  <li>只能在同一个插件内访问 private 模块。</li>
+  <li>只有在同一命名空间 (<code>content@namespace</code>) 内声明的 internal 模块才能被访问。</li>
+  <li>可以从任意位置访问 public 模块。</li>
+</ul>
+</body>
+</html>

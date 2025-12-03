@@ -1,10 +1,8 @@
 <html>
 <body>
-Reports usages of <code>kotlin.coroutines.suspendCoroutine</code> and suggests replacing them with
-<code>kotlinx.coroutines.suspendCancellableCoroutine</code> when the <code>kotlinx.coroutines</code> dependency is present.
+报告 <code>kotlin.coroutines.suspendCoroutine</code> 的用法，并建议在出现 <code>kotlinx.coroutines</code> 依赖项时将其替换为 <code>kotlinx.coroutines.suspendCancellableCoroutine</code>。
 <p>
-    The <code>suspendCancellableCoroutine</code> variant provides built-in cancellation support that is important
-    for structured concurrency and proper resource management.
+    <code>suspendCancellableCoroutine</code> 变体提供了内置的取消支持，这对于结构化并发和正确的资源管理非常重要。
 </p>
 <p><b>示例：</b></p>
 <pre><code>

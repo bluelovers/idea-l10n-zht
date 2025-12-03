@@ -1,0 +1,41 @@
+<html>
+<body>
+<p>
+  该检查会报告没有为测试配置 <code>ApiVersionInserter</code> 时的 <code>MockMvcTester</code> 和 <code>WebTestClient</code> 的 <code>apiVersion()</code> 方法调用。
+</p>
+<p>
+  例如：
+</p>
+<pre><code lang="java">
+@WebMvcTest(MyController.class)
+public class MvcTest {
+
+    @Test
+    void testEndpoint(@Autowired MockMvcTester tester) {
+        tester.get().uri("/hello")
+                .apiVersion(1.1)
+                .assertThat()
+                .hasStatusOk();
+    }
+}
+</code></pre>
+<p>
+  在这种情况下，应为测试添加测试配置：
+</p>
+<pre><code lang="java">
+@WebMvcTest(MyController.class)
+public class MvcTest {
+
+    // ... 测试
+
+    @TestConfiguration
+    static class MvcTestConfig implements MockMvcBuilderCustomizer {
+        @Override
+        public void customize(ConfigurableMockMvcBuilder<?> builder) {
+            builder.apiVersionInserter(ApiVersionInserter.useHeader("Api-Version"));
+        }
+    }
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告嵌套类内声明的实例 <code>main</code> 方法。</p>
+
+<p>
+  在嵌套类中对 <code>main</code> 方法的调用不会直接由 Groovy 处理；不过，可以通过将执行委托给 Java 来实现。
+  在这种情况下，只有当 Java 版本足够高时，代码才能成功执行。 请考虑以下示例：
+</p>
+<pre><code>
+class Outer {
+  static class Nested {
+    void main() {
+      println 'Hello from nested'
+    }
+  }
+}
+</code></pre>
+
+代码在 Java 25 上运行成功，但在 Java 17 上运行失败。
+</body>
+</html>

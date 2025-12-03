@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>
+  Spring 组件类可以隐式子类化，且不得为 final 类。
+
+  <code>enum</code>、<code>data</code>、<code>final</code> 和 <code>object</code> 等 Kotlin 类修饰符实际上都是 <code>final</code> 类，会导致运行时错误。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+@Configuration
+object MyConfiguration
+</code></pre>
+<p><b>应用修正后：</b></p>
+<pre><code>
+@Configuration
+class MyConfiguration
+</code></pre>
+</body>
+</html>

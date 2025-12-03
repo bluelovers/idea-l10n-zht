@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>
+    报告当整个 <code>if</code>/<code>when</code> 表达式本身被返回时，在 <code>if</code> 或 <code>when</code> 的分支最后一个表达式中出现的冗余 <code>return</code> 关键字。
+</p>
+<p>这些关键字不会增加任何价值，只会导致代码混乱。</p>
+<p>该快速修复可以移除冗余的 <code>return</code> 关键字，只保留表达式。</p>
+<!-- tooltip end -->
+<p>示例：</p>
+<pre><code>
+fun foo(flag: Boolean): String {
+  return if (flag) {
+    "foo"
+  } else {
+    return "bar"  // 冗余的 'return' 关键字
+  }
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+fun foo(flag: Boolean): String {
+  return if (flag) {
+    "foo"
+  } else {
+    "bar"
+  }
+}
+</code></pre>
+<p><small>2025.3 最新变化</small></p>
+</body>
+</html>

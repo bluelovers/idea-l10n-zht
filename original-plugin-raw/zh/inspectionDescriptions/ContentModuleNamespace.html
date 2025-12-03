@@ -1,0 +1,13 @@
+<html>
+<body>
+验证 plugin.xml 文件中内容模块声明的命名空间属性。
+<p>
+  该检查会报告以下问题：
+</p>
+<ul>
+  <li><strong>缺少命名空间</strong>：当插件内容包含至少一个具有非 private 可见性的模块时，需要内容命名空间</li>
+  <li><strong>命名空间格式无效</strong>：命名空间必须符合要求的模式 (<code>[a-zA-Z0-9]+([_-][a-zA-Z0-9]+)*</code>)，长度必须在 5 到 30 个字符之间</li>
+  <li><strong>命名空间不一致</strong>：所有内容元素必须定义相同的命名空间</li>
+</ul>
+</body>
+</html>

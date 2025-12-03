@@ -1,0 +1,21 @@
+<html>
+<body>
+报告对 <code>MutableCollection.addAll</code>/<code>+=</code> 的调用，其中实参是对 <code>Iterable.map/filter</code> 的调用。
+<p>
+    此代码会分配一个附加的 <code>List</code> 对象，而使用 <code>mapTo/filterTo</code> 可以避免此分配。
+</p>
+<p>
+    该快速修复可以将调用替换为 <code>mapTo/filterTo</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+    coll1.addAll(coll2.map { transform(it) })
+    coll1 += coll2.map { transform(it) }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+    coll2.mapTo(coll1) { transform(it) }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

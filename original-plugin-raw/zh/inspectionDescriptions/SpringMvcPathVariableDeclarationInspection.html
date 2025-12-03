@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>当 <code>@PathVariable</code> 名称声明与形参名称匹配时，报告其冗余。
+  该快速修复可以移除注解中的显式名称特性。</p>
+<p><b>示例：</b></p>
+<pre><code lang="java">
+  @GetMapping("/{orderId}")
+  public Order getOrder(@PathVariable("orderId") Long orderId)
+    return return orderRepository.findOne(orderId);
+  }
+</code></pre>
+<p>应用该快速修复后，结果将如下所示：</p>
+<pre><code lang="java">
+  @GetMapping("/{orderId}")
+  public Order getOrder(@PathVariable Long orderId)
+    return orderRepository.findOne(orderId);
+  }
+</code></pre>
+</body>
+</html>
