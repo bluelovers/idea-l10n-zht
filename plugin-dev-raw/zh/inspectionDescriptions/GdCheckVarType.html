@@ -1,18 +1,18 @@
 <html>
 <body>
-<p>Reports GDScript variable and constant declarations that miss an explicit type hint when it can be inferred, and flags typed use of the <code>:=</code> assignment.</p>
+<p>報告 GDScript 變數和常數宣告中在可推斷類型時缺少顯式類型提示的情況，並標記 <code>:=</code> 賦值的類型化使用。</p>
 <!-- tooltip end -->
-<p>Notes:</p>
+<p>注意：</p>
 <ul>
-  <li>Suggests adding a type when the initializer expression has a concrete, non-<code>Variant</code>/<code>null</code> type.</li>
-  <li>Ignores resource-like types that cannot be resolved precisely.</li>
-  <li>The <code>:=</code> assignment cannot be used together with an explicit type hint. Use <code>=</code> when a type is specified.</li>
+  <li>建議在初始設定式表達式具有具體、非 <code>Variant</code>/<code>null</code> 類型時新增類型。</li>
+  <li>忽略無法精確解析的類似資源的類型。</li>
+  <li><code>:=</code> 賦值不能與顯式類型提示一起使用。 當指定類型時使用 <code>=</code>。</li>
 </ul>
 <p>範例：</p>
 <pre><code>
-var hp = 100          # suggests: var hp: int = 100
-var hp: int := 100    # error: ":=" assignment cannot be typed
-var hp: int = 100     # OK
+var hp = 100          # 建議：var hp: int = 100
+var hp: int := 100    # 錯誤：“:=”賦值無法類型化
+var hp: int = 100     # 正確
 </code></pre>
 </body>
 </html>

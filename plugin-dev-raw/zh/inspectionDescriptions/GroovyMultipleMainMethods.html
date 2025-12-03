@@ -1,0 +1,20 @@
+<html>
+<body>
+報告在 Groovy 5 中包含多個多載 <code>main</code> 方法的類別或檔案。
+<p>
+  當一個類別或檔案擁有多個具有不同簽名的 <code>main</code> 方法時，可能會不清楚哪一個用作應用程式的入口點，因為 main 方法的呼叫在執行時基於實參的存在而發生。 請考慮以下範例：
+</p>
+<pre><code>
+class A {
+    void main(String[] args) {
+        println "1"
+    }
+
+    void main() {
+        println "2"
+    }
+}
+</code></pre>
+如果沒有傳遞實參，則呼叫 <code>main()</code>，否則呼叫 <code>main(String[])</code>。
+</body>
+</html>

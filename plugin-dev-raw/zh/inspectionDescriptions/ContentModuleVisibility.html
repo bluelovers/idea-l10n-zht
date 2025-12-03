@@ -1,0 +1,16 @@
+<html>
+<body>
+報告在宣告模組相依項時違反內容模組可見性的情況。
+<p>
+  內容模組可以將其可見性指定為 <code>private</code>（預設，當缺少時）、<code>internal</code> 或 <code>public</code>。
+</p>
+<p>
+  在宣告對其他模組的相依關係時，必須遵循以下規則：
+</p>
+<ul>
+  <li>只能在同一個延伸模組內存取 private 模組。</li>
+  <li>只有在同一命名空間 (<code>content@namespace</code>) 內宣告的 internal 模組才能被存取。</li>
+  <li>可以從任意位置存取 public 模組。</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>
+    報告當整個 <code>if</code>/<code>when</code> 表達式本身被返回時，在 <code>if</code> 或 <code>when</code> 的分支最後一個表達式中出現的冗餘 <code>return</code> 關鍵字。
+</p>
+<p>這些關鍵字不會增加任何價值，只會導致程式碼混亂。</p>
+<p>該快速修復可以移除冗餘的 <code>return</code> 關鍵字，只保留表達式。</p>
+<!-- tooltip end -->
+<p>範例：</p>
+<pre><code>
+fun foo(flag: Boolean): String {
+  return if (flag) {
+    "foo"
+  } else {
+    return "bar"  // 冗餘的 'return' 關鍵字
+  }
+}
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+fun foo(flag: Boolean): String {
+  return if (flag) {
+    "foo"
+  } else {
+    "bar"
+  }
+}
+</code></pre>
+<p><small>2025.3 最新變化</small></p>
+</body>
+</html>

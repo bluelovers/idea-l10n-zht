@@ -12,7 +12,7 @@
 </ul>
 
 <p>如果方法未被宣告為 <code>final</code>、<code>static</code> 或 <code>private</code>，則該方法可覆寫。
-  即使可覆寫，package-local 方法也被認為是安全的。 此類別呼叫可能會導致難以捉摸的錯誤，因為物件初始化可能發生在方法呼叫之前。</p>
+  即使可覆寫，package-local 方法也被認為是安全的。 此類別呼叫可能會導致難以捉摸的 bug，因為物件初始化可能發生在方法呼叫之前。</p>
 <p><b>範例：</b></p>
 <pre><code>
   class Parent {

@@ -1,0 +1,14 @@
+<html>
+<body>
+報告通過接受包含 <code>Job</code> 的 <code>CoroutineContext</code> 違反結構化並發的協程建置器呼叫。
+<p>
+  將具有 <code>Job</code> 的上下文傳遞給協程建置器（如 <code>launch</code>、<code>async</code>、<code>produce</code>、<code>promise</code>）或傳遞給 <code>withContext</code> 會破壞協程之間的父子關係，從而違背結構化並發的目的。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+coroutineScope.launch(Job()) {
+  // 此協程與 `coroutineScope` 接收者沒有父級關係
+}
+</code></pre>
+</body>
+</html>

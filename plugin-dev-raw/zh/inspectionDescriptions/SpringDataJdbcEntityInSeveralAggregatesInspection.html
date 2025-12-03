@@ -1,0 +1,8 @@
+<html>
+<body>
+Spring Data JDBC 聚合內的某個實體正在參照另一個已屬於不同聚合的實體。
+在 Spring Data JDBC 中，對其他實體的每個參照都必須嚴格保持在同一個聚合的邊界內。
+跨聚合關係不能表示為直接實體參照，而應使用目標聚合的關鍵字進行建模（例如，將外鍵存儲為簡單值類型）。
+<a href="https://docs.spring.io/spring-data/relational/reference/jdbc/mapping.html#jdbc.entity-persistence.types.referenced-entities">Spring Data 文檔</a>
+</body>
+</html>

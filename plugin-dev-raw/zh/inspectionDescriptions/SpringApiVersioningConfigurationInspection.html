@@ -1,0 +1,46 @@
+<html>
+<body>
+<p>
+  如果沒有為模組組態 API 版本控制，則會醒目提示端點的 <code>version</code> 屬性。
+</p>
+<p>
+  可以通過兩種方式組態 API 版本控制：
+</p>
+<ul>
+  <li>
+    在 Spring Boot 專案的組態檔案中組態
+  </li>
+  <li>
+    或提供 <code>org.springframework.web.servlet.config.annotation.WebMvcConfigurer</code> 的實作並覆寫 <code>configureApiVersioning</code> 方法。
+  </li>
+</ul>
+<p>
+  例如：
+</p>
+<pre><code lang="Properties">
+  # 對於 Spring Boot 專案
+  spring.mvc.apiversion.use.header=Api-Version
+  spring.mvc.apiversion.default=1.0
+  spring.mvc.apiversion.detect-supported=false
+</code></pre>
+
+<p>
+  或：
+</p>
+
+<pre><code lang="java">
+  // Spring Boot 和 Spring Framework 專案均支援使用這種方式
+  @Configuration
+  public class MyWebConfig implements WebMvcConfigurer {
+
+      @Override
+      public void configureApiVersioning(ApiVersionConfigurer configurer) {
+          configurer
+                  .useRequestHeader("Api-Version")
+                  .setDefaultVersion("1.0")
+                  .detectSupportedVersions(false);
+      }
+  }
+</code></pre>
+</body>
+</html>

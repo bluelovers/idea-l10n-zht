@@ -3,12 +3,16 @@
     "action.preview.pagination.page.range": "{0} - {1}/{2}",
     "action.preview.pagination.page.total.pages": "/{0}"
   },
+  "messages/AIPlaygroundPythonBundle.properties": {
+    "intention.category.name": "AI playground"
+  },
   "messages/AIPlaygroundUIBundle.properties": {
     "configurable.ai.playground.display.name": "AI Playground",
     "label.top.p": "Top-p:"
   },
   "messages/ActionsBundle.properties": {
     "action.Actions.ActionsPlugin.GenerateToString.text": "to_String()",
+    "action.DumpGroupActions.text": "DumpGroupActions…",
     "action.Floating.CodeToolbar.SurroundWithTryCatch.text": "try / catch",
     "action.Floating.CodeToolbar.SurroundWithTryCatchFinally.text": "try / catch / finally",
     "action.GenerateCreateUI.text": "createUI(…)",
@@ -25,6 +29,7 @@
   },
   "messages/AmperBundle.properties": {
     "amper.new.module.ios": "iOS App",
+    "completion.root.module.name": "<root module>",
     "inspections.module.dependency.with.overridden.version.dependency.location": "，",
     "jvm.app.module.yaml.template.group.name": "module.yaml"
   },
@@ -209,8 +214,7 @@
     "bower.json": "bower.json (&O):"
   },
   "messages/BunBundle.properties": {
-    "bun.url.label": "URL(&U):",
-    "settings.bun.path": "Bun:"
+    "bun.url.label": "URL(&U):"
   },
   "messages/CLionBazelBundle.properties": {
     "checkbox.dev.containers": "Dev Container"
@@ -225,13 +229,8 @@
     "cpp.build.description.2": "====================[ {0} | {1} ]====",
     "cpp.build.description.3": "====================[ {0} | {1} | {2} ]====",
     "debug.attach.remoteHostTypeName.ssh.wsl": "SSH/WSL",
-    "debug.targets.edit.debugger.extended.remote.hint": "target extended-remote",
-    "debug.targets.edit.debugger.remote.hint": "target remote",
     "gdbRemote.lldb.command": "'process connect' url:",
-    "gdbRemote.sysroot": "Sysroot:",
-    "label.type.error": "<error>",
-    "non.readable": "<Non-readable>",
-    "svd.write.only": "<Write-Only>"
+    "gdbRemote.sysroot": "Sysroot:"
   },
   "messages/CLionLangSwitcherBundle.properties": {
     "activate.clion.switch.dialog.toClassic.title": "CLion Classic",
@@ -245,6 +244,10 @@
     "west.run.configuration.display.name": "Zephyr West"
   },
   "messages/CMakeBundle.properties": {
+    "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options",
+    "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options"
+  },
+  "messages/CMakePsiBundle.properties": {
     "action.CPP.NewCMakeListsFile.description": "CMakeLists.txt",
     "action.CPP.NewCMakeListsFile.text": "CMakeLists.txt",
     "livetemplate.description.foreach": "foreach()-loop",
@@ -351,7 +354,6 @@
     "macro.decapitalize.string": "decapitalize(String)",
     "macro.enum": "enum(...)",
     "macro.firstWord.string": "firstWord(String)",
-    "macro.groovy.script": "groovyScript(\"groovy code\")",
     "macro.spacesToUnderscores.string": "spacesToUnderscores(String)",
     "macro.underscoresToCamelCase.string": "underscoresToCamelCase(String)",
     "macro.underscoresToSpaces.string": "underscoresToSpaces(String)",
@@ -432,6 +434,8 @@
     "group.advanced.settings.federatedCompute": "Federated Compute"
   },
   "messages/ComposeDesktopBundle.properties": {
+    "action.org.jetbrains.compose.desktop.ide.hotreload.ComposeHotReloadAction.text": "Hot Reload Compose",
+    "compose.desktop.notification.group": "Compose Multiplatform",
     "compose.hotreload.settings.displayName": "Compose Hot Reload",
     "compose.hotreload.title": "Compose Hot Reload"
   },
@@ -533,6 +537,10 @@
     "welcome.screen.action.aiAssistant": "AI Assistant",
     "welcome.screen.action.jupyterNotebook": "Jupyter\nNotebook"
   },
+  "messages/DataSpellIdeImplBundle.properties": {
+    "welcome.screen.action.aiAssistant": "AI Assistant",
+    "welcome.screen.action.jupyterNotebook": "Jupyter\nNotebook"
+  },
   "messages/DatabaseBundle.properties": {
     "ChangeDialectToolbarAction.action.dialect.text": "<dialect>",
     "DataSourceConfigurable.tab.ssh.ssl": "SSH/SSL",
@@ -562,7 +570,11 @@
     "azure.active.directory.interactive": "Azure Active Directory Interactive",
     "azure.active.directory.msi": "Azure Active Directory MSI",
     "column.0": "<Column {0}>",
+    "consoles.migration.console.name.to.error": "<a href=\"file\">{0} [{1}]</a>: {2}",
+    "consoles.migration.error.message.to.stacktrace": "<html>{0}<br>{1}</html>",
+    "consoles.migration.preview.title": "<html><b>{0}</b> <font color=#888888>[{1}]</font></html>",
     "data.grip.promo.notification.action.url": "https://jb.gg/8rzbpq",
+    "data.source.editor.environment.dev.container": "Dev Container",
     "data.source.editor.url.label": "URL:",
     "data.source.from.url.url": "URL(&U):",
     "data.source.scope.editor.tree.unnamed.node.name": "<Unnamed>",
@@ -614,7 +626,6 @@
     "inspection.group.dcl": "Declarative Gradle"
   },
   "messages/DenoBundle.properties": {
-    "deno.path": "Deno:",
     "deno.run.configuration.default.name": "Deno: {0}",
     "progress.title.deno.init": "Deno init"
   },
@@ -655,6 +666,10 @@
   "messages/DeviceMonitorBundle.properties": {
     "configurable.name.android.device.file.explorer": "Android Device File Explorer",
     "configurable.name.device.file.explorer": "Device File Explorer"
+  },
+  "messages/DevkitComposeBundle.properties": {
+    "compose.preview.build": "— <Build project>",
+    "compose.preview.refresh": "— <Refresh>"
   },
   "messages/DiagnosticBundle.properties": {
     "error.list.message.index.count": "{0}/{1}"
@@ -729,7 +744,9 @@
     "DockerTargetConfigurable.dockerfile.row.label": "Dockerfile:",
     "DockerWslConnectionConfigurator.label": "WSL:",
     "RegistryRuntimeTask.current.of.total": "{0}/{1}",
-    "action.Docker.FilterDevContainers.text": "Dev Container"
+    "action.Docker.FilterDevContainers.text": "Dev Container",
+    "advanced.settings.dev.containers": "Dev Container",
+    "devcontainer.promo.panel.help": "https://www.jetbrains.com/help/idea/connect-to-devcontainer.html"
   },
   "messages/DockerComposeBundle.properties": {
     "ComposeFileRunLineMarkerProvider.AllServicesLineMarkerInfo.tooltip": "docker-compose up",
@@ -746,8 +763,8 @@
     "group.Dev.Container.Actions.text": "Dev Container",
     "group.Tools.Services.DevContainers.text": "Dev Container"
   },
-  "messages/DotCoverBundle.properties": {
-    "action.RiderDotCoverCoveringTestsPopupNewSessionSelectedTestsAction.description": "Create new session"
+  "messages/DotNetReporterBundle.properties": {
+    "action.break.patch.engine.text": "Break Patch Engine"
   },
   "messages/DotNetWatchBundle.properties": {
     "run.configuration.display.name": "dotnet-watch"
@@ -802,19 +819,24 @@
     "label.edit.relationship.ejb": "EJB:"
   },
   "messages/EmbeddedBundle.properties": {
+    "debug.targets.edit.debugger.extended.remote.hint": "target extended-remote",
+    "debug.targets.edit.debugger.remote.hint": "target remote",
     "esp.idf": "ESP-IDF",
     "freertos.task.table.id.column": "TCB №",
     "jlink.gdb.server.displayname": "Segger JLink",
     "label.jlink.gdb.server": "Segger J-Link",
     "label.st.util.gdb.server": "st-util",
+    "label.type.error": "<error>",
     "label.uart": "UART:",
+    "non.readable": "<Non-readable>",
     "pemicro.gdb.server.displayname": "PE Micro (OpenSDA)",
     "reset.strategy.pre_reset": "Pre-Reset",
     "reset.strategy.under_reset": "Init-Under-Reset",
     "rtos.azure.display.name": "Azure RTOS ThreadX",
     "segger.jlink": "SEGGER J-Link",
     "stlink.groupname": "ST-LINK",
-    "stutil.displayname": "st-util"
+    "stutil.displayname": "st-util",
+    "svd.write.only": "<Write-Only>"
   },
   "messages/EmrBundle.properties": {
     "emr.spark.submit.editor.mapper": "Mapper:",
@@ -916,9 +938,6 @@
     "install.sdk.title": "GCloud SDK",
     "managedsdk.notifications.title": "Google Cloud SDK"
   },
-  "messages/GdScriptBundle.properties": {
-    "inspections.whitespace.fix.indents.fix.name": "Fix indents"
-  },
   "messages/GitBundle.properties": {
     "abort.operation.indicator.text": "git {0} --abort{1}",
     "action.Git.Fixup.To.Commit.text": "Fixup…",
@@ -932,7 +951,7 @@
     "activity.name.stash": "Git stash",
     "activity.name.undo.commit": "Git undo commit",
     "activity.name.unstash": "Git unstash",
-    "errors.message.item": "\n{0}",
+    "errors.message.item": "\n   {0}",
     "git.add.to.exclude.file.action.text": ".git/info/exclude",
     "git.light.status.bar.text": "Git: {0}",
     "git4idea.vcs.name.with.mnemonic": "&Git",
@@ -1000,14 +1019,6 @@
     "inspection.message.golangci.lint": "golangci-lint ({0}): {1}"
   },
   "messages/GodotPluginBundle.properties": {
-    "editor.should.be.running": "Godot Editor should be running. <a>Start Godot Editor</a>",
-    "gdscript.editor.form.arguments.comment": "Some of those features require Godot 4.6. See <a href=https://github.com/godotengine/godot/pull/109637>pull request</a>",
-    "gdscript.editor.form.arguments.error.debugServer": "The 'debugServer' property must be an integer or a string containing an integer",
-    "gdscript.editor.form.arguments.error.invalid.json": "Invalid JSON. Please fix syntax (comments and trailing commas are allowed).",
-    "gdscript.editor.form.arguments.error.request": "The 'request' property must be a string with one of the following values: Launch, Attach",
-    "gdscript.editor.form.arguments.error.root.object": "Root value must be a JSON object",
-    "gdscript.editor.form.arguments.error.scene": "The 'scene' property must be a string",
-    "label.note.scene.debugging.requires.godot.see.pr": "Scene debugging requires Godot 4.6. See <a href=https://github.com/godotengine/godot/pull/109637>PR</a>",
     "notification.group.godot.lsp": "Godot LSP"
   },
   "messages/GraalVmBundle.properties": {
@@ -1160,7 +1171,7 @@
   },
   "messages/HuggingFaceProBundle.properties": {
     "group.HuggingFace.text": "Hugging Face",
-    "toolwindow.cacheToolWindow.title": "Hugging Face"
+    "toolwindow.stripe.HfCacheToolWindow": "Hugging Face"
   },
   "messages/HunspellBundle.properties": {
     "hunspell.type": "hunspell-jni"
@@ -1410,9 +1421,6 @@
     "node.js.inspection.group.name": "Node.js",
     "notification.group.linters": "JavaScript linter",
     "npm.rc.packageJson.label": "package.json(&P):",
-    "settings.javascript.runtime.configurable.name": "JavaScript Runtime",
-    "settings.javascript.runtime.preferred.runtime.context.help.description": "For running and debugging within a project. Language services, ESLint, and tests will still use Node.js",
-    "settings.javascript.runtime.preferred.runtime.label.name": "Preferred runtime:",
     "settings.nodejs.name": "Node.js",
     "typescript.compiler.configurable.options.version": "TypeScript:",
     "typescript.go.name": "TypeScript-Go",
@@ -1508,8 +1516,7 @@
     "microsoft.sql.server": "Microsoft SQL Server",
     "microsoft.sql.server.jtds": "Microsoft SQL Server (jtds)",
     "to.string": "toString()",
-    "transactional.read.only": "Transactional readOnly",
-    "unmapped.columns": "unmapped columns"
+    "transactional.read.only": "Transactional readOnly"
   },
   "messages/JpaQlBundle.properties": {
     "options.xml.display.name": "JPA QL"
@@ -1528,13 +1535,9 @@
     "notebook.collapsed.web.output.text": "Web: {0}x{1} px",
     "notebook.color.settings.title": "Jupyter Notebook",
     "notebook.save.svg.output.default.name": "output.svg",
-    "notifications.jupyter.settings.title": "Jupyter Notebook",
     "settings.jupyter.general.display.name": "Jupyter General",
     "settings.jupyter.vcs.display.name": "Jupyter VCS",
     "settings.markdown.scale.percentage.suffix": "%"
-  },
-  "messages/JupyterCustomCellsBundle.properties": {
-    "jupyter.custom.cell.dropdown.options.default": "value1,value2,value3"
   },
   "messages/JupyterKotlinBundle.properties": {
     "kotlin.jupyter.action.create.notebook.text": "Kotlin Notebook",
@@ -1621,6 +1624,9 @@
   "messages/KotlinDebuggerCoreBundle.properties": {
     "message.variables.property.get": "... get()"
   },
+  "messages/KotlinGradleCodeInsightCommonBundle.properties": {
+    "auto.configure.kotlin.documentation.gradle.url": "https://kotl.in/configure-kotlin-with-gradle"
+  },
   "messages/KotlinIdeaCompletionBundle.properties": {
     "find.usage.provider.0": "{0}",
     "find.usage.provider.0.of.1": "{0}/{1}",
@@ -1639,6 +1645,7 @@
     "presentable.name.kotlin.jvm": "Kotlin/JVM"
   },
   "messages/KotlinMavenBundle.properties": {
+    "auto.configure.kotlin.documentation.maven.url": "https://kotl.in/configure-kotlin-with-maven",
     "notification.text.kotlin.js.compiler.link": "https://kotl.in/jsir-move-to-gradle"
   },
   "messages/KotlinMultiplatformMobileBundle.properties": {
@@ -1682,7 +1689,6 @@
     "update.name.android.studio": "Android Studio"
   },
   "messages/KotlinProjectConfigurationBundle.properties": {
-    "auto.configure.kotlin.documentation.gradle.url": "https://kotl.in/configure-kotlin-with-gradle",
     "warning.failed.disable.default.compile.link": "https://kotl.in/maven/compile-kotlin-and-java-sources"
   },
   "messages/KtorStarterBundle.properties": {
@@ -1700,22 +1706,14 @@
     "KubernetesPodContent.shell.title": "Shell: {0}",
     "KubernetesPodMapper.podIpField.name": "Pod IP",
     "KubernetesResourceMapper.pod.cidrs.name": "Pod CIDR",
-    "KubernetesResourceMapper.resourceDisplayableName.template": "{0} ''{1}''",
+    "KubernetesResourceMapper.resourceDisplayableName.template": "''{1}'' {0}",
     "KubernetesViewConfigurable.podShellRow.title": "Pod Shell",
     "KustomizeVersion.V4.title": "4.x",
     "KustomizeVersion.V5.title": "5.x",
     "action.Kubernetes.HelmLint.text": "Helm Lint(&L)",
     "debug.in.kubernetes.survey.dialog.tools.item.3.label": "kubectl port-forward",
     "group.Kubernetes.HelmActions.text": "Helm(&H)",
-    "k8s.logs..pattern.matching.matching.count.text": "\t\t(matching = {0})",
-    "k8s.logs.all.existing.cronjobs": "All Existing CronJobs",
-    "k8s.logs.all.existing.daemonsets": "All Existing DaemonSets",
-    "k8s.logs.all.existing.deployments": "All Existing Deployments",
-    "k8s.logs.all.existing.jobs": "All Existing Jobs",
-    "k8s.logs.all.existing.pods": "All Existing Pods",
-    "k8s.logs.all.existing.replicasets": "All Existing ReplicaSets",
-    "k8s.logs.all.existing.statefulsets": "All Existing StatefulSets",
-    "k8s.logs.cluster.events": "Cluster Events"
+    "k8s.logs..pattern.matching.matching.count.text": "\t\t(matching = {0})"
   },
   "messages/LLMInstallerBundle.properties": {
     "ai.hub.tooltip.text": "JetBrains AI",
@@ -1742,6 +1740,13 @@
     "recap.progress.text.requesting.what.s.next": "Requesting what's next",
     "recap.progress.title.updating.recap": "Updating 'Recap'"
   },
+  "messages/LLMVcsDiffBundle.properties": {
+    "GroupedDiffToolWindow.toolwindow.name": "AI Diff",
+    "action.Vcs.GroupedDiffForLocalChangesAction.text": "Calculate AI Diff from Local Changes",
+    "action.Vcs.GroupedDiffForOtherAction.text": "Calculate AI Diff",
+    "action.Vcs.GroupedDiffForVcsLogAction.text": "Calculate AI Diff from VCS Log",
+    "cmg.prompt.customization.branch.reference.text": "$GIT_BRANCH_NAME"
+  },
   "messages/LangBundle.properties": {
     "build.event.message.with": "{0}，{1}",
     "executor.one.of.actions": "{0}/{1}: {2}",
@@ -1759,8 +1764,6 @@
     "notification.group.feature.trainer": "IDE Features Trainer"
   },
   "messages/LicenseBundle.properties": {
-    "auto.trial.extend.trial.description": "<p>Get an extended 45-day trial for your team.</p><p>Complete the request form, and once your organization is verified, you'll receive a free trial for your whole team.</p><p>When you receive the code, return here to activate it.</p>",
-    "button.continue.for.30.minutes": "Continue For 30 Minutes",
     "message.jetbrains.ide": "JETBRAINS IDE",
     "radio.button.jb.account": "JetBrains Account(&A)"
   },
@@ -1856,7 +1859,8 @@
     "mdn.documentation.section.compat.support_of_WOFF": "<code>WOFF</code>",
     "mdn.documentation.section.compat.support_of_WOFF_2": "<code>WOFF 2</code>",
     "mdn.documentation.section.compat.support_of_fit-content": "<code>fit-content()</code>",
-    "mdn.documentation.section.compat.support_of_fit-content_function": "<code>fit-content()</code>"
+    "mdn.documentation.section.compat.support_of_fit-content_function": "<code>fit-content()</code>",
+    "mdn.documentation.section.compat.support_of_scope": "<code>@scope</code>"
   },
   "messages/MesonBundle.properties": {
     "project.generation.panel.language.cpp": "C++"
@@ -1926,6 +1930,13 @@
   "messages/MobileBundle.properties": {
     "run.configuration.name": "Kotlin Mobile",
     "sdk.sync.missing.sdk.title": "Android SDK"
+  },
+  "messages/MonorepoDevkitBundle.properties": {
+    "configurable.name": "Monorepo Devkit"
+  },
+  "messages/NextEditsBundle.properties": {
+    "next.edit.settings.whitespace.only.suggestions.description": "Permit suggestions that only change indentation, spacing, or blank lines",
+    "next.edit.settings.whitespace.only.suggestions.enable": "Whitespace-only suggestions"
   },
   "messages/NextJsBundle.properties": {
     "create.next.app.name": "Next.js"
@@ -2133,6 +2144,12 @@
   "messages/ProtobufIdeBundle.properties": {
     "settings.project.display": "Protocol Buffers"
   },
+  "messages/ProvenanceBundle.properties": {
+    "provenance.authorship.indicator.human": "👤"
+  },
+  "messages/ProvenanceDevBundle.properties": {
+    "provenance.dev.presenter.llm.entry.parent.description": "ProvenancePresenterParent: id={0}, {1} {2}"
+  },
   "messages/PuppetBundle.properties": {
     "language.settings.code.style.sample": "service { 'sshd':\n  subscribe => File['sshdconfig'],\n}",
     "puppet.module.name": "{0} {1}",
@@ -2161,7 +2178,7 @@
     "remote.interpreter.default.interpreter.path": "/usr/bin/python",
     "remote.interpreter.wsl.default.interpreter.path": "/usr/bin/python",
     "runcfg.trial.display_name": "Twisted Trial",
-    "sdk.create.custom.existing.env.title": "{0} env use"
+    "sdk.rendering.detected.grey.text.venv": "virtual environment"
   },
   "messages/PyCharmCommunityCustomizationBundle.properties": {
     "action.PromoNewJupyterNotebook.text": "Jupyter Notebook",
@@ -2171,8 +2188,14 @@
     "python.add.sdk.panel.name.docker.compose": "Docker Compose",
     "remote.sdk.exception.message.with.cause": "{0}:\n{1}"
   },
+  "messages/PyExecBundle.properties": {
+    "py.exec.error.not.zero": "Exit code is not zero",
+    "py.exec.error.unexpected.output": "Unexpected output {0}"
+  },
+  "messages/PyExecPythonBundle.properties": {
+    "python.check.threading.fail": "Can not check for python threading model"
+  },
   "messages/PyHuggingFaceBundle.properties": {
-    "python.hugging.face.base.url": "https://huggingface.co",
     "python.hugging.face.tags.style": "<style>{0}</style>"
   },
   "messages/PyPsiBundle.properties": {
@@ -2181,8 +2204,17 @@
     "filetype.python.docstring.description": "Python docstring",
     "find.usages.unnamed": "<unnamed>"
   },
+  "messages/PySdkConfiguratorBundle.properties": {
+    "intellij.python.sdk.looking": "Looking for pythons"
+  },
   "messages/PySshInterpreterBundle.properties": {
     "ssh.connection.wizard.remote.interpreter.default.interpreter.path": "/usr/bin/python"
+  },
+  "messages/PySystemPythonBundle.properties": {
+    "py.system.python.service.python.is.not.system": "{0} is not a system python"
+  },
+  "messages/PyTablesBundle.properties": {
+    "popup.inspections.icons.issues.number": "{0, choice, 0#|1#1 dataset issue|2#{0,number,integer} dataset issues}"
   },
   "messages/PythonDapBundle.properties": {
     "pythonDap.run.configuration.name": "Python DAP"
@@ -2248,7 +2280,6 @@
     "rails.action.cable.gutter.title": "Action cable",
     "rails.application.api.generator.name": "Rails API",
     "rails.facet": "Ruby on Rails",
-    "rails.project.module.view.nodes.minitest.shoulda.presentable": "Minitest/Shoulda",
     "rake.action.title": "Rake ''{0}''",
     "refactoring.extract.module.context.static": "static (extend)(&E)",
     "remote.interpreter.default.interpreter.path": "/usr/bin/ruby",
@@ -2300,12 +2331,7 @@
     "webservices.file.templates.group.name": "JAX-RS"
   },
   "messages/RadBundle.properties": {
-    "action.RadMigrateLiveTemplatesAction.text": "Migrate Live Templates from CLion Classic to Nova",
-    "inspection.measure.resolve.description": "Measures time needed to resolve all references in the project",
-    "inspection.measure.resolve.title": "Measure references resolve",
-    "project.awaiter": "Awaits CLion backend activities",
-    "projectConfigurable.RiderInlayHintsCppOptions.displayName": "C/C++",
-    "projectConfigurable.TypeNameHints.displayName": "Type Name Hints"
+    "projectConfigurable.RiderInlayHintsCppOptions.displayName": "C/C++"
   },
   "messages/RbsBundle.properties": {
     "rbs.actions.run.anything.help.placeholder": "rbs <command>",
@@ -2320,14 +2346,9 @@
   },
   "messages/RdClientDotnetBundle.properties": {
     "action.MeasurePerformanceAndDump.text": "Measure Performance and Dump",
-    "action.RestartIdeWithAutoBackendProfiling.text": "Restart the IDE with Automatic Backend Profiling",
-    "action.RiderBackendAction-EncapsulateField.description": "Encapsulates field at caret",
     "action.RiderDumpComponentContainersCtorStepsToJsonAction.text": "Dump Component Containers Ctor Steps to Json",
     "action.wildcard.container.text": "Wildcard Container",
     "backend.notification.title": "{0} backend",
-    "dialog.self.profiling.auto.attach.options": "To enable automatic backend profiling, set the following VM options and restart the IDE:\n{0}",
-    "dialog.self.profiling.auto.attach.options2": "To enable automatic backend profiling, set the following VM options and restart the IDE:\n{0}\n{1}",
-    "dialog.self.profiling.auto.attach.title": "VM options required",
     "dialog.self.profiling.executable.global.tool": "Global tool",
     "dialog.self.profiling.executable.global.tool.install.modal.title": "Installing dotTrace global tool",
     "dialog.self.profiling.executable.global.tool.uninstall.button.with.ver.0": "Uninstall {0}",
@@ -2394,10 +2415,8 @@
   },
   "messages/RenderDocBundle.properties": {
     "notification.group.general": "Frame Viewer",
-    "renderdoc.open.frame.confirmation.message": "Opening a new snapshot will discard the selected event and terminate all active debug sessions.",
     "renderdoc.tool.previewer.texture.info": "{0} - {1}x{2}",
-    "renderdoc.tool.title": "Frame Viewer",
-    "shader.debug.startSessionFailure.message": "Failed to start the debug session: Snapshot {0} was closed."
+    "renderdoc.tool.title": "Frame Viewer"
   },
   "messages/ResinBundle.properties": {
     "RemoteRunConfigurationEditor.message.ping.operation-name": "Ping Resin",
@@ -2428,25 +2447,7 @@
     "group.CSharpInteractive.text": "C# Interactive"
   },
   "messages/RiderAndroidBundle.properties": {
-    "rider.android.native.cannot.find.android.runner.message": "Cannot find debug runner",
-    "rider.android.native.cannot.find.package.message": "Cannot find package on the device",
-    "rider.android.native.cannot.find.package.name.message": "Android package name is not set",
-    "rider.android.native.device.unavailable.message": "Android device is unavailable",
-    "rider.android.native.invalid.project.path.message": "Invalid project path",
-    "rider.android.native.launch.failed.message": "Failed to launch the game",
-    "rider.android.native.launch.profile.additional.parameters.text": "Additional UAT arguments",
-    "rider.android.native.launch.profile.name": "Android Deploy",
-    "rider.android.native.launch.profile.uat.parameter.text": "RunUAT path",
-    "rider.android.native.launch.view.invalid.uat.path": "Invalid UAT path",
-    "rider.android.native.no.android.device.message": "No android devices connected",
-    "rider.android.native.unreal.device.category": "Android devices",
-    "rider.android.native.unreal.device.name": "Android device",
-    "rider.android.native.unreal.no.devices": "No Android devices available",
-    "rider.android.native.wait.for.attach.message": "Waiting for the game to launch",
-    "rider.android.unknown.android.client.message": "<Unknown>",
-    "xamarin.androidPlugin.emptyAndroidSdkPath.message": "Install Android SDK and set its path in the settings",
-    "xamarin.androidPlugin.emptyAndroidSdkPath.title": "Android SDK path is not set",
-    "xamarin.androidPlugin.invalidAndroidSdkPath.message": "Android SDK is not found at ''{0}''"
+    "rider.android.unknown.android.client.message": "<Unknown>"
   },
   "messages/RiderBundle.properties": {
     "EntityFramework.toolWindow.title": "Entity Framework",
@@ -2463,8 +2464,7 @@
     "notification.group.entityframework": "Entity Framework",
     "notification.group.problemsview.notification": "ProblemsView notification",
     "publish.to.iis.option": "IIS…",
-    "settings.completion.ml.csharp.display.name": "C#",
-    "welcome.screen.banner.promotion.tech.insights.description": "Participate in remote interviews, surveys, and usability testing to help shape the future of JetBrains .NET products. Some studies come with prizes – just our way of saying thanks!"
+    "settings.completion.ml.csharp.display.name": "C#"
   },
   "messages/RiderCodeWithMeCoreBundle.properties": {
     "activate.code.with.me.dialog.title": "Code With Me"
@@ -2482,13 +2482,7 @@
     "unreal.json.local.inspection.tool.group.name": "Unreal Engine"
   },
   "messages/RiderCppCoreBundle.properties": {
-    "configurations.CppLanguage.name": "C/C++",
-    "cpp.ctd.action.step.backward.description": "Step backward",
-    "cpp.ctd.action.step.backward.text": "Step Backward",
-    "cpp.ctd.failed.compute.frames": "Failed to compute frames",
-    "cpp.ctd.failed.compute.locals": "Failed to compute locals",
-    "cpp.ctd.failed.evaluate.expression": "Failed to evaluate expression",
-    "cpp.ctd.outdated.session": "Session oudated"
+    "configurations.CppLanguage.name": "C/C++"
   },
   "messages/RiderCppCoreLanguagesBundle.properties": {
     "filetype.CppSourceFileType.name": "C/C++"
@@ -2524,9 +2518,7 @@
     "rider.javascript.debug.companion.tab.name": "{0} - JavaScript"
   },
   "messages/RiderMultiPlatformBundle.properties": {
-    "notification.group.riderandroid.sdk": "Android SDK",
-    "rider.ios.not.available.during.connection.message": "Not available during the connection to macOS Agent",
-    "rider.ios.session.is.not.available.message": "Connection to macOS is not available"
+    "notification.group.riderandroid.sdk": "Android SDK"
   },
   "messages/RiderNugetBundle.properties": {
     "RiderNuGetFeedTable.label.url": "URL:",
@@ -2538,6 +2530,8 @@
   },
   "messages/RiderProjectViewBundle.properties": {
     "NewProjectDialog.DockerSupport.row.label": "Docker:",
+    "NewProjectDialog.InstallNuGetPackageController.dialog.status.updating.text": "Updating…",
+    "NewProjectDialog.NuGetPackageComboBox.listSeparator.first.label": "Installed Package",
     "NewProjectDialog.workload.aspire.name": ".NET Aspire",
     "NewProjectDialog.workload.maui.name": ".NET MAUI",
     "RiderProjectTemplate.ReSharperProjectTemplate.CPlPl.name": "C++",
@@ -2554,12 +2548,8 @@
     "folding.header.dotnet": ".NET"
   },
   "messages/RiderRunBundle.properties": {
-    "DotNetCoreDebugProfile.incorrect.cli.notification": "Incorrect .NET CLI for target platform ({0}). <a href=''settings''>Configure</a>.",
     "IisExpressHost.notification.title.iis.express": "IIS Express",
     "RiderContextPublishAction.action.azure.name": "Azure…"
-  },
-  "messages/RiderRuntimeBundle.properties": {
-    "RuntimeDetectionResult.dialog.message.cant.run.net.core": ".NET CLI location is not specified in settings correctly and cannot be discovered automatically. Please check .NET CLI settings under File | Settings | Build, Execution, Deployment | Toolset and Build."
   },
   "messages/RiderSettingsBundle.properties": {
     "IisExpressOptionsPage.configurable.name.iis.express": "IIS Express",
@@ -2584,18 +2574,10 @@
   },
   "messages/RiderUnitTestingBundle.properties": {
     "RiderDiffLinkPrefix": "Compare(Rider) =",
-    "RiderUnitTestResultPanel.output.message.the.launch.log.has.reached.the.limit.and.was.truncated": "The launch log has reached the limit and was truncated.",
-    "RiderUnitTestResultPanel.output.message.the.output.has.reached.the.limit.and.was.truncated": "The output has reached the limit and was truncated.",
-    "RiderUnitTestResultPanel.output.message.to.view.the.full.launch.log.use.the._0_.action": "To view the full launch log, use the {0} action.",
-    "RiderUnitTestResultPanel.output.message.to.view.the.full.output.use.the._0_.action": "To view the full output, use the {0} action.",
-    "RiderUnitTestResultPanel.output.message.you.can.also.change.the.limit.in._0_": "You can also change the limit in {0}.",
     "action.RiderUnitTestSessionLaunchOptionActionGroupBase.text.toolbar": "{0}：{1}"
   },
   "messages/RiderWizardBundle.properties": {
     "plugin-installation.progress.text-with-details": "{0}/{1}",
-    "plugins.failed-to-install": "Failed to install",
-    "plugins.failure.could-not-load-plugins": "Could not load plugins",
-    "steps.featured-plugins.junie.description": "Your coding agent by JetBrains designed to handle tasks autonomously or in collaboration with a developer. Developers can fully delegate routine tasks to Junie or partner with it on more complex ones.",
     "steps.keymaps.groups.jetbrains-ide.name": "JetBrains IDE",
     "steps.keymaps.groups.vscode.name": "VS Code",
     "steps.keymaps.visual-assist.name": "Visual Assist",
@@ -2813,15 +2795,6 @@
     "title.settings.sync": "Backup and Sync",
     "ui.toolwindow.time.date": "{0} {1}"
   },
-  "messages/SettingsSyncJbaBundle.properties": {
-    "check.licenses.progress.text": "Loading license information…",
-    "confirm.logout.check.licenses.button": "Check Licenses",
-    "confirm.logout.checkbox.text": "<html>I confirm that I want to log out of the account<br>and disable the associated licenses.</html>",
-    "confirm.logout.licenses.text": "Logging out will disable paid plugins and themes<br>that require your current authorization.",
-    "confirm.logout.text": "You will be logged out of your JetBrains Account.",
-    "confirm.logout.title": "Confirm Log Out of JetBrains Account",
-    "manage.license.not.found.error.message": "Could not find any action for managing licenses"
-  },
   "messages/ShBundle.properties": {
     "sh.unnamed.element.presentable.name": "<unnamed>"
   },
@@ -2891,7 +2864,7 @@
     "create.spring.context.file.dtd.2.0": "Spring 2.x DTD",
     "create.spring.context.file.schema.2.0": "Spring XSD",
     "inspection.group.core": "Spring Core",
-    "spring.bean.with.unknown.name": "<anonymous bean>"
+    "spring.bean.with.unknown.name": "<unknown name>"
   },
   "messages/SpringBatchBundle.properties": {
     "framework.name": "Spring Batch",
@@ -2902,14 +2875,7 @@
     "icon.icons.SpringBoot_Overlay.tooltip": "Spring Boot",
     "spring.boot.configuration.key.value.quick.info": "“{0}”[{1}]",
     "spring.boot.intention.category": "Spring Boot",
-    "spring.boot.name": "Spring Boot",
-    "spring.data.no.driver.class.inspection.description": "Driver class {0} not found in dependencies",
-    "spring.data.no.driver.class.inspection.name": "Spring Data driver class availability"
-  },
-  "messages/SpringBootDataBundle.properties": {
-    "spring.boot.data.aot.goto.implementation": "Go to AOT implementation",
-    "spring.boot.data.aot.implementation": "AOT Implementation",
-    "spring.boot.data.aot.method.title": "Spring AOT repository methods"
+    "spring.boot.name": "Spring Boot"
   },
   "messages/SpringBootInitializrBundle.properties": {
     "icon.icons.SpringInitializr.tooltip": "Spring Initializr",
@@ -2917,7 +2883,9 @@
     "spring.initializr.project.starter.text": "Spring Boot"
   },
   "messages/SpringBootRunBundle.properties": {
-    "spring.boot.application.run.configuration.framework.section": "Spring Boot(&G)",
+    "spring.boot.application.run.configuration.framework.section": "Spring Boot(&G)"
+  },
+  "messages/SpringBootRunSharedBundle.properties": {
     "spring.boot.run.config.type.name": "Spring Boot"
   },
   "messages/SpringBundle.properties": {
@@ -2936,10 +2904,6 @@
     "data.inspection.group.name": "Spring Data",
     "named.query.type.title": "@NamedQuery",
     "notification.group.spring.dataJpa": "Spring Data JPA",
-    "spring.data.jdbc.entity.in.several.aggregates.inspection.description": "''{0}'' already belongs to a different aggregate root",
-    "spring.data.jdbc.entity.in.several.aggregates.inspection.name": "Spring Data JDBC aggregate roots",
-    "spring.data.jdbc.mapped.collection.key.column.inspection.description": "Missing 'keyColumn' attribute",
-    "spring.data.jdbc.mapped.collection.key.column.inspection.name": "Spring Data JDBC mapped collection key column",
     "spring.data.jdbc.orm.framework.name": "Spring Data JDBC",
     "spring.data.jpa": "Spring Data JPA",
     "spring.data.ql": "Spring Data QL",
@@ -2984,6 +2948,7 @@
     "spring.reactive.web.test.client.endpoints.view.title": "Spring WebTestClient",
     "spring.rest.client.endpoints.view.title": "Spring RestClient",
     "spring.rest.operations.endpoints.view.title": "Spring RestOperations",
+    "spring.rest.test.client.endpoints.view.title": "Spring RestTestClient",
     "spring.test.mock.mvc.endpoints.view.title": "Spring MockMvc",
     "spring.test.rest.template.endpoints.view.title": "Spring TestRestTemplate"
   },
@@ -3098,6 +3063,7 @@
     "project.settings.login.explore.url": "https://www.jetbrains.com/teamcity",
     "server.projects.trees.manager.download.progress.status": "{0}MB / {1}MB",
     "server.projects.trees.manager.download.progress.status.downloaded": "{0}MB",
+    "teamcity.toolwindow.id": "TeamCity.toolwindows.General",
     "toolwindow.server.state.unsupported.server.current.version": "TeamCity {0}"
   },
   "messages/TencentCosBundle.properties": {
@@ -3109,14 +3075,8 @@
     "label.content.type": "Content-Type",
     "settings.appid": "APPID:"
   },
-  "messages/TerminalBundle.properties": {
-    "action.Terminal.Completion.ShowFeedbackNotification.text": "Show Terminal Completion Feedback Notification",
-    "completion.feedback.dialog.description": "You’ve been using terminal command completion for a while, and we’d appreciate your feedback on the feature.",
-    "completion.feedback.dialog.experience.label": "Please tell us more about your experience with the terminal command completion:",
-    "completion.feedback.dialog.experience.placeholder": "For example, the relevance of suggestions, overall usability, shortcuts",
-    "completion.feedback.dialog.rating": "How satisfied are you with the terminal command completion? (1 = Very unsatisfied, 5 = Very satisfied)",
-    "completion.feedback.notification.text": "Please answer a few questions about your experience with the terminal command completion",
-    "settings.enable.cloud.completion.suggestions": "Enable inline AI completion suggestions"
+  "messages/TerraformNudgeBundle.properties": {
+    "help.url": "https://www.jetbrains.com/help/go/terraform.html"
   },
   "messages/TmsBundle.properties": {
     "tms.connection.url": "URL:",
@@ -3191,6 +3151,9 @@
   },
   "messages/VagrantBundle.properties": {
     "vagrant.add.box.url": "Box URL:"
+  },
+  "messages/VariablesJupyterCellsBundle.properties": {
+    "jupyter.custom.cell.dropdown.options.default": "value1,value2,value3"
   },
   "messages/VcsBundle.properties": {
     "before.commit.run.configuration.tests.failed": "''{0}'' - {1}",
@@ -3295,6 +3258,9 @@
     "template.group.title.version.9.x": "9.x",
     "weblogic.appc.name": "WebLogic APPC",
     "weblogic.ejbc.name": "WebLogic EJBC"
+  },
+  "messages/WebstormBundle.properties": {
+    "typescript.engine.widget.TSandTSX.label": "TypeScript (*.ts / *.tsx)"
   },
   "messages/WizardBundle.properties": {
     "bdide.project.wizard.jdk.label": "JDK:",

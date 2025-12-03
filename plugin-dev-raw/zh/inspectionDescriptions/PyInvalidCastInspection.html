@@ -1,13 +1,11 @@
 <html>
 <body>
-<p>Reports <code>typing.cast</code> calls where the source and target types are unrelated.</p>
-<p>An error is reported when neither the source type is a subtype of the target, nor the target type is a subtype of the source.
-  Such casts often indicate a logical error, as an instance of one type cannot be assumed to be an instance of the other,
-  and <code>typing.cast</code> does not dynamically validate the type.</p>
+<p>報告源類型和目標類型不相關的 <code>typing.cast</code> 呼叫。</p>
+<p>當源類型既不是目標類型的子類型，目標類型也不是源類型的子類型時，將報告錯誤。
+  此類別轉換通常指示邏輯錯誤，因為一種類型的實例不能被假定為另一種類型的實例，並且 <code>typing.cast</code> 不會動態驗證類型。</p>
 
-<p>This check applies even to types that could theoretically have a common descendant.
-  For example, it will flag a cast between two sibling classes <code>Left</code> and <code>Right</code> that both inherit from <code>Top</code>,
-  because there is no direct inheritance relationship between them.</p>
+<p>此檢查甚至適用於理論上可能具有共同後代的類型。
+  例如，它將標記兩個同級類別 <code>Left</code> 和 <code>Right</code> 之間的轉換，因為它們都繼承自 <code>Top</code>，但彼此之間沒有直接繼承關係。</p>
 
 <p><b>範例：</b></p>
 <pre><code>

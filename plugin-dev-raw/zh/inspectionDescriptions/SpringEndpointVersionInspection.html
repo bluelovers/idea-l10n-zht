@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>
+  報告版本為空或格式錯誤的端點。
+</p>
+<p>
+  如果未組態自訂版本解析器，版本應採用 <a href="https://semver.org/">SemVer</a> 格式：
+</p>
+<pre><code lang="java">
+  @RestController
+  class UsersController {
+
+    @GetMapping(
+            value = "/users",
+            version = "1.hello.world" // 將被報告為格式錯誤的版本
+    )
+    List&lt;String&gt; getUsers() {
+      // ...
+    }
+  }
+</code></pre>
+</body>
+</html>

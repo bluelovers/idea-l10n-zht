@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>當 <code>@PathVariable</code> 名稱宣告與參數名稱符合時，報告其冗餘。
+  該快速修復可以移除註解中的顯式名稱特性。</p>
+<p><b>範例：</b></p>
+<pre><code lang="java">
+  @GetMapping("/{orderId}")
+  public Order getOrder(@PathVariable("orderId") Long orderId)
+    return return orderRepository.findOne(orderId);
+  }
+</code></pre>
+<p>套用該快速修復後，結果將如下所示：</p>
+<pre><code lang="java">
+  @GetMapping("/{orderId}")
+  public Order getOrder(@PathVariable Long orderId)
+    return orderRepository.findOne(orderId);
+  }
+</code></pre>
+</body>
+</html>

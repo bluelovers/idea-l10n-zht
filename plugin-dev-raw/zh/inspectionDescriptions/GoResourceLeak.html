@@ -1,0 +1,22 @@
+<html>
+<body>
+報告潛在資源泄漏，例如未關閉的檔案、SQL 行、HTTP 響應正文，或其他實作 <code>io.Closer</code> 並需要顯式關閉的資源。
+<p>範例：</p>
+<pre><code>
+func readFile() ([]byte, error) {
+    f, err := os.Open("data.txt") // 資源泄漏：未在所有路徑上都關閉
+    if err != nil {
+        return nil, err
+    }
+
+    data, err := io.ReadAll(f)
+    if err != nil {
+        return nil, err // 'f' 在此處未關閉
+    }
+
+    f.Close()
+    return data, nil
+}
+</code></pre>
+</body>
+</html>
