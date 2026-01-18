@@ -39,7 +39,7 @@ export default Bluebird.resolve()
 				await updateRepoTag();
 			}
 
-			return updatePluginTag(__pluginVersion)
+			return updatePluginTag(__pluginVersion, true)
 		}
 
 		console.warn(`略過本次 git tag 更新`)
