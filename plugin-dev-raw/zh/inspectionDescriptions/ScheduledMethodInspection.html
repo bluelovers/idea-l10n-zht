@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>
+  報告不正確的 <code>@Scheduled</code> 方法宣告。
+</p>
+<p>
+  根據 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/Scheduled.html">Spring 文檔</a>，待排程的方法不能預期任何實參。
+</p>
+<p>
+  如果方法需要與來自 <code>Application Context</code> 的其他物件進行互動，應通過相依項注入提供物件。
+</p>
+</body>
+</html>

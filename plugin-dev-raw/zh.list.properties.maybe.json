@@ -354,6 +354,7 @@
     "macro.decapitalize.string": "decapitalize(String)",
     "macro.enum": "enum(...)",
     "macro.firstWord.string": "firstWord(String)",
+    "macro.groovy.script": "groovyScript(\"groovy code\")",
     "macro.spacesToUnderscores.string": "spacesToUnderscores(String)",
     "macro.underscoresToCamelCase.string": "underscoresToCamelCase(String)",
     "macro.underscoresToSpaces.string": "underscoresToSpaces(String)",
@@ -435,8 +436,10 @@
   },
   "messages/ComposeDesktopBundle.properties": {
     "action.org.jetbrains.compose.desktop.ide.hotreload.ComposeHotReloadAction.text": "Hot Reload Compose",
+    "compose.desktop.intention.family.name": "Compose Multiplatform",
     "compose.desktop.notification.group": "Compose Multiplatform",
     "compose.hotreload.settings.displayName": "Compose Hot Reload",
+    "compose.hotreload.status.action.title": "Hot Reload",
     "compose.hotreload.title": "Compose Hot Reload"
   },
   "messages/ComposeProjectWizardBundle.properties": {
@@ -769,6 +772,28 @@
   "messages/DotNetWatchBundle.properties": {
     "run.configuration.display.name": "dotnet-watch"
   },
+  "messages/DotUltimateBundle.properties": {
+    "dialog.feedback.blocks.description": "Thanks for your feedback!<br><br>Could you tell us what you found useful on this dotUltimate page? It helps us show more relevant information in the IDE.",
+    "dialog.feedback.blocks.helpful.improve": "What, if anything, would you improve?",
+    "dialog.feedback.blocks.problem.improve": "What would have made it more useful to you?",
+    "dialog.feedback.blocks.problems": "Thanks for letting us know.<br><br>We’d like to understand what didn’t work for you so we can improve how we present information in the IDE.",
+    "dialog.feedback.helpful.choice": "What did you find helpful about this page?",
+    "dialog.feedback.helpful.feature.descriptions": "I liked the feature descriptions",
+    "dialog.feedback.helpful.information": "The information about the dotUltimate trial was clear",
+    "dialog.feedback.helpful.nothing": "Nothing helpful",
+    "dialog.feedback.helpful.plan.to.try": "I plan to try dotUltimate soon",
+    "dialog.feedback.helpful.visual.design": "I liked the visual design",
+    "dialog.feedback.problems.choice": "Why didn’t you find this page useful?",
+    "dialog.feedback.problems.ignore": "I ignore promotional content",
+    "dialog.feedback.problems.interested": "I’m not interested in dotUltimate",
+    "dialog.feedback.problems.moment": "The message appeared at the wrong moment",
+    "dialog.feedback.problems.relevant": "It’s not relevant to what I’m working on",
+    "dialog.feedback.problems.space": "It takes up space in the editor",
+    "dialog.feedback.problems.tried": "I’ve already tried/used dotUltimate",
+    "dialog.feedback.problems.understand": "I don’t understand what dotUltimate includes",
+    "dialog.feedback.problems.useful": "It is actually useful",
+    "dialog.feedback.title": "DotUltimate trial page feedback"
+  },
   "messages/DownburstBundle.properties": {
     "docker.terminal.title": "Docker: {0}",
     "external.system.name": "Docker Compose",
@@ -826,7 +851,6 @@
     "jlink.gdb.server.displayname": "Segger JLink",
     "label.jlink.gdb.server": "Segger J-Link",
     "label.st.util.gdb.server": "st-util",
-    "label.type.error": "<error>",
     "label.uart": "UART:",
     "non.readable": "<Non-readable>",
     "pemicro.gdb.server.displayname": "PE Micro (OpenSDA)",
@@ -923,12 +947,17 @@
     "group.FullLineGroup.text": "Full Line"
   },
   "messages/GatewayBundle.properties": {
+    "advanced.setting.gateway.wsl.open.projects.natively": "Open WSL projects natively as local projects (without Remote Development)",
     "connector.cwm.dialog.title": "Code With Me",
+    "group.advanced.settings.gateway.wsl": "Gateway WSL",
     "install.google.cloud.title": "Google Cloud",
     "toolbox.promo.learn.more.link": "https://www.jetbrains.com/toolbox-app/",
     "toolbox.remdev.info.link.address": "https://www.jetbrains.com/toolbox-app/",
     "wsl-distribution-chooser.microsoft-store": "Microsoft Store",
-    "wsl.promo.learn.more.link": "https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html#create_project_for_wsl"
+    "wsl.promo.enable.native.mode": "Try Native Mode",
+    "wsl.promo.learn.more.link": "https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html#create_project_for_wsl",
+    "wsl.promo.text.native.enabled": "Projects open natively in your Linux distribution, without Remote Development. You can change this in Advanced Settings.",
+    "wsl.promo.text.v2": "Try native WSL integration. Create, open, or clone projects directly in your Linux environment, no Remote Development required.<br/><br/>Click 'Try Native Mode' to enable it. You can change this later in Advanced Settings."
   },
   "messages/GaugeBundle.properties": {
     "form.gauge.home": "GAUGE_HOME:",
@@ -1019,6 +1048,7 @@
     "inspection.message.golangci.lint": "golangci-lint ({0}): {1}"
   },
   "messages/GodotPluginBundle.properties": {
+    "build.automatically.text": "Build automatically: Helps Godot Editor show actual values in the Inspector. Configurable in Godot plugin settings.",
     "notification.group.godot.lsp": "Godot LSP"
   },
   "messages/GraalVmBundle.properties": {
@@ -1529,6 +1559,7 @@
     "Jupyter.managed.server.running": "{0}: {1}",
     "Jupyter.managed.server.settings.server.type.aws.sagemaker.name": "AWS SageMaker",
     "Jupyter.managed.server.settings.server.type.notebook.name": "Notebook/Lab",
+    "Jupyter.server.chooser.dropdown.entry.html": "<Html>{0} <Font Color=\"{1}\">{2}</Font></Html>",
     "action.NewJupyterNotebookAction.text": "Jupyter Notebook",
     "action.NotebookInsertRawCellAction.text": "Raw NBConvert",
     "jupyter.cell.type.raw": "Raw NBConvert",
@@ -1840,6 +1871,7 @@
     "maven.dependency.completion.presentable": "{0}:{1}"
   },
   "messages/MavenProjectBundle.properties": {
+    "exec.message.failed.to.find.maven.jdk": "Failed to find JDK for the configuration",
     "maven.before.build.of.count": "{2} ({1}/{0})",
     "maven.parent.label.none": "<none>"
   },
@@ -2114,6 +2146,9 @@
     "language.description": "TeamCity Pipelines YAML"
   },
   "messages/PlatformFrontendSplitBundle.properties": {
+    "notification.file.based.settings.sync.backup.title.backend": "Settings backup created on backend",
+    "notification.file.based.settings.sync.backup.title.frontend": "Settings backup created on frontend",
+    "progress.file.based.settings.sync.title": "Syncing settings",
     "project.title.cwm": "Code With Me – {0}",
     "status.bar.text.ping.label": "Ping: {0}",
     "status.bar.text.ping.value": "{0} (UI: {1})",
@@ -2148,6 +2183,7 @@
     "provenance.authorship.indicator.human": "👤"
   },
   "messages/ProvenanceDevBundle.properties": {
+    "provenance.dev.db.column.index": "#",
     "provenance.dev.presenter.llm.entry.parent.description": "ProvenancePresenterParent: id={0}, {1} {2}"
   },
   "messages/PuppetBundle.properties": {
@@ -2177,8 +2213,7 @@
     "python.toolwindow.packages.sdk.label.html": "<html>{0} <b>({1})</b></html>",
     "remote.interpreter.default.interpreter.path": "/usr/bin/python",
     "remote.interpreter.wsl.default.interpreter.path": "/usr/bin/python",
-    "runcfg.trial.display_name": "Twisted Trial",
-    "sdk.rendering.detected.grey.text.venv": "virtual environment"
+    "runcfg.trial.display_name": "Twisted Trial"
   },
   "messages/PyCharmCommunityCustomizationBundle.properties": {
     "action.PromoNewJupyterNotebook.text": "Jupyter Notebook",
@@ -2187,13 +2222,6 @@
   "messages/PyDockerBundle.properties": {
     "python.add.sdk.panel.name.docker.compose": "Docker Compose",
     "remote.sdk.exception.message.with.cause": "{0}:\n{1}"
-  },
-  "messages/PyExecBundle.properties": {
-    "py.exec.error.not.zero": "Exit code is not zero",
-    "py.exec.error.unexpected.output": "Unexpected output {0}"
-  },
-  "messages/PyExecPythonBundle.properties": {
-    "python.check.threading.fail": "Can not check for python threading model"
   },
   "messages/PyHuggingFaceBundle.properties": {
     "python.hugging.face.tags.style": "<style>{0}</style>"
@@ -2204,17 +2232,8 @@
     "filetype.python.docstring.description": "Python docstring",
     "find.usages.unnamed": "<unnamed>"
   },
-  "messages/PySdkConfiguratorBundle.properties": {
-    "intellij.python.sdk.looking": "Looking for pythons"
-  },
   "messages/PySshInterpreterBundle.properties": {
     "ssh.connection.wizard.remote.interpreter.default.interpreter.path": "/usr/bin/python"
-  },
-  "messages/PySystemPythonBundle.properties": {
-    "py.system.python.service.python.is.not.system": "{0} is not a system python"
-  },
-  "messages/PyTablesBundle.properties": {
-    "popup.inspections.icons.issues.number": "{0, choice, 0#|1#1 dataset issue|2#{0,number,integer} dataset issues}"
   },
   "messages/PythonDapBundle.properties": {
     "pythonDap.run.configuration.name": "Python DAP"
@@ -2447,6 +2466,7 @@
     "group.CSharpInteractive.text": "C# Interactive"
   },
   "messages/RiderAndroidBundle.properties": {
+    "rider.android.launch.step.tasks.unreal.determine.activity": "Determine Activity",
     "rider.android.unknown.android.client.message": "<Unknown>"
   },
   "messages/RiderBundle.properties": {
@@ -2531,7 +2551,6 @@
   "messages/RiderProjectViewBundle.properties": {
     "NewProjectDialog.DockerSupport.row.label": "Docker:",
     "NewProjectDialog.InstallNuGetPackageController.dialog.status.updating.text": "Updating…",
-    "NewProjectDialog.NuGetPackageComboBox.listSeparator.first.label": "Installed Package",
     "NewProjectDialog.workload.aspire.name": ".NET Aspire",
     "NewProjectDialog.workload.maui.name": ".NET MAUI",
     "RiderProjectTemplate.ReSharperProjectTemplate.CPlPl.name": "C++",
