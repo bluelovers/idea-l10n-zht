@@ -1,14 +1,13 @@
 <html>
 <body>
 <p>
-  Reports incorrect <code>@Scheduled</code> method declarations.
+  报告不正确的 <code>@Scheduled</code> 方法声明。
 </p>
 <p>
-  According to the <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/Scheduled.html">Spring Documentation</a>,
-  methods to be scheduled must not expect any arguments.
+  根据 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/Scheduled.html">Spring 文档</a>，待调度的方法不能预期任何实参。
 </p>
 <p>
-  If a method needs to interact with other objects from an <code>Application Context</code>, they should be provided through dependency injection.
+  如果方法需要与来自 <code>Application Context</code> 的其他对象进行交互，应通过依赖项注入提供对象。
 </p>
 </body>
 </html>
