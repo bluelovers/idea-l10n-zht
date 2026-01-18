@@ -9,6 +9,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🛠　Build System
 
+* **original:** update original source ( 253.30387.20 ) ([64849b1](https://github.com/bluelovers/idea-l10n-zht/commit/64849b1194662d88b64678ffc5c646f4881c4d34))
+* **release:** update build ( 253.30387.20 ) ([acb0707](https://github.com/bluelovers/idea-l10n-zht/commit/acb0707b10054060458a78746e9b0c6286d905ab))
+* **release:** updatePlugins.xml ([d0079b5](https://github.com/bluelovers/idea-l10n-zht/commit/d0079b509ec123f641e2484a809dc8641ce6da47))
+* **release:** update dev build files ( 253.30387.20 ) ([ac1bb7c](https://github.com/bluelovers/idea-l10n-zht/commit/ac1bb7c8a689b170628e13b6520d1b8e5da0ac7c))
+* **test:** update snapshots ( 253.30387.20 ) ([260f0be](https://github.com/bluelovers/idea-l10n-zht/commit/260f0bec3576508ed3f29b2d6547d4e5c37d37ba))
+* **test:** update snapshots ( 253.28294.251 ) ([e5b574d](https://github.com/bluelovers/idea-l10n-zht/commit/e5b574dcff93b01fdc5c74871bd935f31b756343))
+
+
+### ⚙️　Continuous Integration
+
+* **git:** add optional push parameter to updatePluginTag ([e5980e8](https://github.com/bluelovers/idea-l10n-zht/commit/e5980e8b0026d757f40b39197db8ec4c0d3fad08))
+
+
+
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2026-01-18)
+
+
+
+### 🛠　Build System
+
 * **original:** update original source ( 253.29346.240 ) ([8f2e8ea](https://github.com/bluelovers/idea-l10n-zht/commit/8f2e8ea592d9cca947113d7162666b26ee263d66))
 * **release:** update build ( 253.29346.240 ) ([b23b705](https://github.com/bluelovers/idea-l10n-zht/commit/b23b7053cb61b671ad7417b81f36157e8fb67c53))
 * **release:** updatePlugins.xml ([08b9b55](https://github.com/bluelovers/idea-l10n-zht/commit/08b9b55918d1c71732e4013cb01f981c957aa02b))
