@@ -1,0 +1,34 @@
+<html>
+<body>
+<p>報告在檔案根目錄下定義的共享相同標籤（名稱）的重複 Terragrunt 塊，例如 <code>dependency</code>、<code>feature</code>、<code>generate</code>、<code>include</code>、<code>stack</code> 或 <code>unit</code>。</p>
+
+<p>該檢查會醒目提示多個使用相同標籤的相同類型的塊。 僅檢查頂層塊。</p>
+
+<p>範例：</p>
+<pre><code>
+unit "vpc" {
+  source = "git::git@github.com:acme/infrastructure-catalog.git//units/vpc?ref=v0.0.1"
+  path   = "vpc"
+}
+
+# duplicate
+unit "vpc" {
+  source = "git::git@github.com:acme/infrastructure-catalog.git//units/database?ref=v0.0.1"
+  path   = "database"
+  values = {
+    engine   = "postgres"
+    version  = "13"
+    vpc_path = "../vpc"
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>可用的快速修復：</p>
+<ul>
+  <li>導覽到重複項</li>
+  <li>重新命名塊</li>
+  <li>顯示所有重複項</li>
+  <li>刪除塊</li>
+</ul>
+</body>
+</html>

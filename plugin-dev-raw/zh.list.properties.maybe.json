@@ -947,17 +947,13 @@
     "group.FullLineGroup.text": "Full Line"
   },
   "messages/GatewayBundle.properties": {
-    "advanced.setting.gateway.wsl.open.projects.natively": "Open WSL projects natively as local projects (without Remote Development)",
     "connector.cwm.dialog.title": "Code With Me",
     "group.advanced.settings.gateway.wsl": "Gateway WSL",
     "install.google.cloud.title": "Google Cloud",
     "toolbox.promo.learn.more.link": "https://www.jetbrains.com/toolbox-app/",
     "toolbox.remdev.info.link.address": "https://www.jetbrains.com/toolbox-app/",
     "wsl-distribution-chooser.microsoft-store": "Microsoft Store",
-    "wsl.promo.enable.native.mode": "Try Native Mode",
-    "wsl.promo.learn.more.link": "https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html#create_project_for_wsl",
-    "wsl.promo.text.native.enabled": "Projects open natively in your Linux distribution, without Remote Development. You can change this in Advanced Settings.",
-    "wsl.promo.text.v2": "Try native WSL integration. Create, open, or clone projects directly in your Linux environment, no Remote Development required.<br/><br/>Click 'Try Native Mode' to enable it. You can change this later in Advanced Settings."
+    "wsl.promo.learn.more.link": "https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html#create_project_for_wsl"
   },
   "messages/GaugeBundle.properties": {
     "form.gauge.home": "GAUGE_HOME:",
@@ -1058,6 +1054,11 @@
     "graalvm.runconfig.docker.process.shared.display.name": "{0, number, #}: {1}"
   },
   "messages/GradleBundle.properties": {
+    "gradle.build.issue.unresolved.dependency.for.owner.title": "Could Not Resolve {0} for {1}",
+    "gradle.build.quick.fix.artifact.declare.repository": "Declare repository providing the artifact, see the documentation at {0}",
+    "gradle.build.quick.fix.disable.offline.mode.rebuild": "<a href=\"{0}\">Disable offline mode and rerun the build</a>",
+    "gradle.build.quick.fix.disable.offline.mode.reload": "<a href=\"{0}\">Disable offline mode and reload the project</a>",
+    "gradle.build.quick.fix.gradle.jvm.or.newer": "Use Java {1} or newer as Gradle JVM: <a href=\"{0}\">Open Gradle settings</a>",
     "gradle.dsl.new.project.wizard": "Gradle DSL:",
     "gradle.filetype.display.name": "Groovy Gradle DSL",
     "gradle.notifications.daemon.toolchain.migration.info.url": "https://docs.gradle.org/current/userguide/gradle_daemon.html#daemon_jvm_criteria",
@@ -1097,6 +1098,7 @@
     "getter.kind.getter.0": "Getter {0}",
     "groovy.version.0": "Groovy {0}",
     "inspection.display.name.delegates.to": "@DelegatesTo",
+    "interface.abstract.methods.must.not.have.body": "Interface abstract methods must not have body",
     "label.groovy.sdk": "Groovy SDK:",
     "module.name.0.and.groovy.version.1": "{0} ({1})",
     "non.sealed.visibility.presentation": "non-sealed",
@@ -1570,6 +1572,11 @@
     "settings.jupyter.vcs.display.name": "Jupyter VCS",
     "settings.markdown.scale.percentage.suffix": "%"
   },
+  "messages/JupyterColabBundle.properties": {
+    "notification.group": "Google Colab",
+    "notification.title": "Google Colab",
+    "separator.colab.actions": "Google Colab {0}"
+  },
   "messages/JupyterKotlinBundle.properties": {
     "kotlin.jupyter.action.create.notebook.text": "Kotlin Notebook",
     "kotlin.jupyter.settings.title": "Kotlin Notebook",
@@ -1867,11 +1874,13 @@
     "maven.settings.testrun.env.variables": "<html><i>environmentVariables(&E)</i></html>",
     "maven.settings.testrun.system.property": "<html><i>systemPropertyVariables(&S)</i></html>"
   },
+  "messages/MavenDomBundle.properties": {
+    "inspection.new.model.version.in.old.schema": "Model version 4.1.0 requires 4.1.0 schema"
+  },
   "messages/MavenIndicesBundle.properties": {
     "maven.dependency.completion.presentable": "{0}:{1}"
   },
   "messages/MavenProjectBundle.properties": {
-    "exec.message.failed.to.find.maven.jdk": "Failed to find JDK for the configuration",
     "maven.before.build.of.count": "{2} ({1}/{0})",
     "maven.parent.label.none": "<none>"
   },
@@ -2146,9 +2155,10 @@
     "language.description": "TeamCity Pipelines YAML"
   },
   "messages/PlatformFrontendSplitBundle.properties": {
-    "notification.file.based.settings.sync.backup.title.backend": "Settings backup created on backend",
-    "notification.file.based.settings.sync.backup.title.frontend": "Settings backup created on frontend",
-    "progress.file.based.settings.sync.title": "Syncing settings",
+    "diff.file.based.settings.sync.title.local": "Frontend ({0}/{1})",
+    "diff.file.based.settings.sync.title.remote": "Backend ({0}/{1})",
+    "notification.file.based.settings.sync.conflict.content": "Resolve the conflict between frontend and backend settings to enable sync",
+    "notification.file.based.settings.sync.conflict.title": "Select which settings to apply",
     "project.title.cwm": "Code With Me – {0}",
     "status.bar.text.ping.label": "Ping: {0}",
     "status.bar.text.ping.value": "{0} (UI: {1})",
@@ -2999,6 +3009,9 @@
     "settings.code.style.table.create": "CREATE TABLE",
     "sql.inspections.group.name.mssql": "SQL Server"
   },
+  "messages/SqlJupyterCellBundle.properties": {
+    "jupyter.sql.data.source.selection.error.no.local.datasource": "No local Data Source for selected connection"
+  },
   "messages/SshBundle.properties": {
     "ide.service.view.local.port.forwarding.text": "{0} → {1}",
     "ide.service.view.remote.port.forwarding.text": "{0} ← {1}"
@@ -3077,12 +3090,12 @@
     "tc_server": "tc Server"
   },
   "messages/TeamCityBundle.properties": {
-    "component.builds.table.column.number": "#",
     "oauth.callback.handler.html.title": "OAuth 2.0 PKCE",
     "project.settings.login.explore.url": "https://www.jetbrains.com/teamcity",
     "server.projects.trees.manager.download.progress.status": "{0}MB / {1}MB",
     "server.projects.trees.manager.download.progress.status.downloaded": "{0}MB",
     "teamcity.toolwindow.id": "TeamCity.toolwindows.General",
+    "toolwindow.builds.page.info": "{0}–{1}/{2}",
     "toolwindow.server.state.unsupported.server.current.version": "TeamCity {0}"
   },
   "messages/TencentCosBundle.properties": {
