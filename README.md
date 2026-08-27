@@ -29,10 +29,10 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 1. 執行 `pnpm run ci:git:config`
 
-2. 請額外自行安裝 typescript@next jest ts-jest ts-node ynpx lerna yarn-tool  
+2. 請額外自行安裝 typescript@next jest ts-jest ts-node ynpx lerna yarn-tool
   或執行 `pnpm run ci:install`
 
-執行 `pnpm run ci:build` 可以自動進行打包與簡易測試，打包後檔案會在 `plugin-dev-out`
+執行 `pnpm run plugin:build` 可以自動進行打包與簡易測試，打包後檔案會在 `plugin-dev-out`
 
 ### 與官方簡體版差異
 
@@ -62,14 +62,14 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 此檔案放置分詞系統的字典庫
 
-請參考 
+請參考
 
 - https://github.com/bluelovers/ws-segment/blob/master/packages/%40novel-segment/postag/lib/postag/ids.ts
 - https://github.com/bluelovers/ws-segment/blob/master/packages/novel-segment/test/demo.cache.ts#L97
 
 #### [test/segment.spec.ts](test/segment.spec.ts)
 
-新增字典或轉換規則後，推薦編輯此檔案，來檢查是否正確轉換或者發生誤轉換  
+新增字典或轉換規則後，推薦編輯此檔案，來檢查是否正確轉換或者發生誤轉換
 盡量以容易發生誤轉換的文字來做為首選測試
 
 ![docs/img-segment-spec.png](docs/img-segment-spec.png)
@@ -78,8 +78,8 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 #### [test/segment-check.ts](test/segment-check.ts)
 
-在 [test/temp/*.txt](test/temp) 資料夾底下新增任何副檔名為 .txt 檔案後  
-執行此腳本 則可以查看分詞系統分詞後結果  
+在 [test/temp/*.txt](test/temp) 資料夾底下新增任何副檔名為 .txt 檔案後
+執行此腳本 則可以查看分詞系統分詞後結果
 來了解 為什麼沒有發生預期的轉換
 
 ![img.png](docs/img.png)
@@ -110,9 +110,9 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 ## 已知問題
 
 - `dot-properties-loader` 會將 `label.inactive.timeout.sec= 秒` 轉換為 `label.inactive.timeout.sec=秒` 對於 IDEA 的實際影響則不清楚，照一般來說等號後的空白應該是不會被當作內容值
-- 如果 git 發現詭異的檔案永遠都是變動狀態的話 請檢查是否存在與此 BUG 相同的問題  
+- 如果 git 發現詭異的檔案永遠都是變動狀態的話 請檢查是否存在與此 BUG 相同的問題
   https://youtrack.jetbrains.com/issue/IDEA-288057
-- 由於是跟隨官方簡體版更新，所以最新版的通常只支援最新版本或 EAP 版本的 IDE  
+- 由於是跟隨官方簡體版更新，所以最新版的通常只支援最新版本或 EAP 版本的 IDE
   如果有其他版本需要安裝請參考 README.md 內的 Other Releases
 
 ## 參考資料或其他
