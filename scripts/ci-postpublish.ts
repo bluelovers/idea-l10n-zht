@@ -1,5 +1,5 @@
 import { gitDiffFrom } from 'git-diff-from';
-import { __root } from '../test/__root';
+import { __ROOT } from '../__root';
 import { gitlog } from 'gitlog2';
 import Bluebird from 'bluebird';
 import micromatch, { not, match } from 'micromatch';
@@ -30,7 +30,7 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 
 		if (isMasterBranch)
 		{
-			await _lazyImportWithDelay('./jetbrains/create-jetbrains-update-plugins-xml', __dirname);
+			await _lazyImportWithDelay('./scripts/jetbrains/create-jetbrains-update-plugins-xml', __ROOT);
 
 			await lazyCommitFiles([
 				'./plugin-dev-out/updatePlugins.xml',
