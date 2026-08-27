@@ -30,7 +30,7 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 
 		if (isMasterBranch)
 		{
-			await _lazyImportWithDelay('./scripts/jetbrains/create-jetbrains-update-plugins-xml', __ROOT);
+			await _lazyImportWithDelay('./scripts/jetbrains/create-jetbrains-update-plugins-xml.ts', __ROOT);
 
 			await lazyCommitFiles([
 				'./plugin-dev-out/updatePlugins.xml',
@@ -57,7 +57,7 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 
 		return Bluebird.props({
 			info: gitDiffFrom(from, to, {
-				cwd: __root,
+				cwd: __ROOT,
 			}),
 			latestLog,
 		})
@@ -145,7 +145,7 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 
 			if (isMasterBranch)
 			{
-				await updateChangelogByCwd(__root, {
+				await updateChangelogByCwd(__ROOT, {
 					type: 'independent',
 				});
 			}
