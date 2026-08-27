@@ -19,33 +19,111 @@ export default Bluebird.resolve()
 
 		if (isMasterBranch && !series)
 		{
-			console.warn(`於 2024 版之後，JetBrains 不再更新獨立版語言包，改為內建語言包，所以需要手動提取語言包 Local/JetBrains/Toolbox/WebStorm/plugins/localization-zh/lib`);
+			console.warn(`於 2024 版之後，JetBrains 不再更新獨立版語言包，改為內建語言包，所以需要手動提取語言包`);
 
 			const cwd = join(__plugin_downloaded_dir, 'series');
 
 			let homeDir = homedir();
 			let ideDir: string;
-			let pluginFile = join('plugins/localization-zh/lib', 'localization-zh.jar');
+			let foundPluginFile: string | undefined;
 
-			for (let ide of [
-				'IntelliJ IDEA Ultimate',
-				'WebStorm',
-				'PyCharm Professional',
-			])
+			const jetBrainsDir = join(homeDir, 'AppData/Local', 'JetBrains');
+			const toolboxDir = join(jetBrainsDir, 'Toolbox');
+
+			const pluginCandidates = [
+				join('plugins/localization-zh/lib', 'localization-zh.jar'),
+			];
+
+			const ideMap = [
+				{ toolbox: 'IntelliJ IDEA Ultimate', base: 'IntelliJIdea', programs: 'IntelliJ IDEA' },
+				{ toolbox: 'WebStorm', base: 'WebStorm', programs: 'WebStorm' },
+				{ toolbox: 'PyCharm Professional', base: 'PyCharm', programs: 'PyCharm' },
+			];
+
+			for (let ide of ideMap)
 			{
-				let temp = join(homeDir, 'AppData/Local', 'JetBrains/Toolbox', ide);
-				if (existsSync(join(temp, pluginFile)))
+				let temp = join(toolboxDir, ide.toolbox);
+
+				for (let candidate of pluginCandidates)
 				{
-					ideDir = temp;
+					if (existsSync(join(temp, candidate)))
+					{
+						ideDir = temp;
+						foundPluginFile = candidate;
+						break;
+					}
+				}
+
+				if (ideDir)
+				{
 					break;
 				}
 			}
 
-			if (ideDir)
+			if (!ideDir)
+			{
+				const programsDir = join(homeDir, 'AppData/Local', 'Programs');
+
+				for (let ide of ideMap)
+				{
+					let temp = join(programsDir, ide.programs);
+
+					if (existsSync(join(temp, pluginCandidates[0])))
+					{
+						ideDir = temp;
+						foundPluginFile = pluginCandidates[0];
+						break;
+					}
+
+					if (!existsSync(temp))
+					{
+						continue;
+					}
+
+					const dirs = await FastGlob<string>([`${ide.programs}*`], {
+						cwd: programsDir,
+						onlyFiles: false,
+						suppressErrors: true,
+					});
+
+					for (let dir of dirs)
+					{
+						if (dir === ide.programs)
+						{
+							continue;
+						}
+
+						let temp2 = join(programsDir, dir);
+
+						for (let candidate of pluginCandidates)
+						{
+							if (existsSync(join(temp2, candidate)))
+							{
+								ideDir = temp2;
+								foundPluginFile = candidate;
+								break;
+							}
+						}
+
+						if (ideDir)
+						{
+							break;
+						}
+					}
+
+					if (ideDir)
+					{
+						break;
+					}
+				}
+			}
+
+			if (ideDir && foundPluginFile)
 			{
 				console.info(`ideDir:`, ideDir);
+				console.info(`foundPluginFile:`, foundPluginFile);
 
-				let src = join(ideDir, pluginFile);
+				let src = join(ideDir, foundPluginFile);
 
 				const info = await readFile(src)
 					.then(JSZip.loadAsync)

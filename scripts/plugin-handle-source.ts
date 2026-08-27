@@ -3,18 +3,20 @@
  */
 
 import Bluebird from 'bluebird';
-import { resolve } from 'upath2';
-import { _lazyImport, _lazyImportWithDelay } from '../lib/util/import';
+import { _lazyImportCore } from '../lib/util/import';
 
 export default Bluebird.mapSeries([
-	'./fetch-latest-version-of-zh-cn',
-	'./download-original-plugin',
-	'./unzip',
-	'./to-zht',
-	'./properties-replace',
+	'./fetch-latest-version-of-zh-cn.ts',
+	'./download-original-plugin.ts',
+	'./unzip.ts',
+	'./to-zht.ts',
+	'./properties-replace.ts',
 ] as const, lazyImport);
 
 function lazyImport(target: string)
 {
-	return _lazyImportWithDelay(target, __dirname)
+	const base = import.meta.url;
+	const final = new URL(target, base).href;
+
+	return _lazyImportCore(import(final))
 }
