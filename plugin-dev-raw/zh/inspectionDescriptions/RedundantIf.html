@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>報告可以簡化為單個語句的 <code>if</code> 語句。</p>
+<p>報告可被簡化為單個表達式的布爾 <code>if</code> 表達式和語句。</p>
 <p><b>範例：</b></p>
 <pre><code>
   fun test(): Boolean {
@@ -16,6 +16,18 @@
   fun test(): Boolean {
       return foo()
   }
+</code></pre>
+<p>該檢查還可以簡化其中一個分支為布爾常數的分支：</p>
+<pre><code>
+  val filterModified = if (condition) {
+      someBooleanExpression
+  } else {
+      false
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  val filterModified = condition &amp;&amp; someBooleanExpression
 </code></pre>
 </body>
 </html>

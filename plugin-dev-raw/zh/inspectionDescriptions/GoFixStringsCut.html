@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>報告使用 <code>strings.Index</code> 來尋找分隔符然後手動對字串進行切片的程式碼。</p>
+<p><code>strings.Cut</code> 在分隔符的第一個實例附近拆分字串，並返回前綴、後綴和指示是否找到分隔符的布林值。</p>
+<p><b>範例：</b></p>
+<pre><code>
+func SplitKV(s string) (key, value string, ok bool) {
+	i := strings.Index(s, "=")
+	if i < 0 {
+		return s, "", false
+	}
+	return s[:i], s[i+1:], true
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>使用 strings.Cut 簡化 strings.Index 呼叫</b>快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func SplitKV(s string) (key, value string, ok bool) {
+	before, after, ok0 := strings.Cut(s, "=")
+	if !ok0 {
+		return s, "", false
+	}
+	return before, after, true
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+檢測是否修改了某些 SSL 參數欄位，這些修改可能會限制後量子加密的合規性。
+
+<p>
+  某些修改可能會妨礙後量子加密的使用。 這包括以下欄位：
+</p>
+<ul>
+  <li><code>algorithmConstraints</code></li>
+  <li><code>applicationProtocols</code></li>
+  <li><code>cipherSuites</code></li>
+  <li><code>namedGroups</code></li>
+  <li><code>protocols</code></li>
+  <li><code>signatureSchemes</code></li>
+</ul>
+<p>
+  範例：
+</p>
+<pre><code>
+SSLParameters sslParameters = new SSLParameters();
+// 錯誤：永遠不會使用後量子簽名方案
+sslParameters.setSignatureSchemes(new String[] {"ed25519"})
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

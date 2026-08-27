@@ -1,0 +1,6 @@
+<html>
+<body>
+<p>报告使用 <code>@patch</code> 或 <code>@patch.object</code> 装饰的函数，其中形参数量与装饰器注入的模拟对象数量不匹配。</p>
+<p>每个没有显式 <code>new=</code> 实参的 <code>@patch</code> 装饰器都会注入一个额外的形参。 最内层的装饰器注入第一个形参（在 <code>self</code> 之后），最外层的装饰器则注入最后一个形参。</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<body>
+报告可能导致意外行为的配置错误的 <code>@defer</code> 块触发器。
+<p>
+  该检查发现以下问题：
+</p>
+<ul>
+  <li><code>immediate</code> 触发器会使其他触发器变得多余</li>
+  <li>使用 <code>immediate</code> 时，预提取触发器没有任何作用</li>
+  <li>预提取大于或等于主定时器延迟的定时器延迟</li>
+  <li>预提取触发器与主触发器匹配，没有任何优势</li>
+</ul>
+<p>
+  示例：
+</p>
+<pre><code>
+@defer (on immediate; on hover) {
+  &lt;!-- 'hover' 触发器冗余 --&gt;
+}
+
+@defer (on timer(1000); prefetch on timer(2000)) {
+  &lt;!-- 预提取不会在主触发器之前运行 --&gt;
+}
+
+@defer (on interaction(btn); prefetch on interaction(btn)) {
+  &lt;!-- 预提取没有任何优势 --&gt;
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

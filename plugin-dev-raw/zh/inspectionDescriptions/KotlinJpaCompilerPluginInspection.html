@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>
+新增推薦的 <code>kotlin-jpa</code> 編譯器延伸模組，以便更好地支持 Kotlin 中的 JPA 註解。
+</p>
+<p>
+它會為具有特定註解的類別生成額外的零實參建構函式。
+</p>
+<p>
+這樣，Java Persistence API (JPA) 便可實例化類別，儘管從 Kotlin 或 Java 的角度來看，該類並不具有零參數建構函式（參見下方的 kotlin-jpa 延伸模組說明）。
+</p>
+<p>
+實際上，kotlin-jpa 包裝在無實參編譯器延伸模組之上：
+該延伸模組會自動指定 <code>@Entity</code>、<code>@Embeddable</code> 和 <code>@MappedSuperclass</code> 無實參註解。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

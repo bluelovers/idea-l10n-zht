@@ -1,7 +1,7 @@
 <html>
 <body>
-报告可以替换为单一 <code>String.repeat()</code> 方法的循环（自 Java 11 起提供）。
-<p><b>示例：</b></p>
+报告可被替换为单一 <code>StringBuilder.repeat()</code> 方法（自 Java 21 起提供）或 <code>String.repeat()</code> 方法（自 Java 11 起提供）的循环。
+<p><b>示例 (Java 11)：</b></p>
 <pre><code>
   void append(StringBuilder sb, int count, Object obj) {
     for (int i = 0; i &lt; count; i++) {

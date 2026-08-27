@@ -1,0 +1,17 @@
+<html>
+<body>
+检测何时使用指定密码套件和/或协议的形参初始化 SSL 形参。
+
+<p>
+  如果使用的密码套件和协议不同于默认设置，则可能会妨碍后量子加密的使用。
+</p>
+<p>
+  示例：
+</p>
+<pre><code>
+// 错误：可能永远不会使用后量子密码套件/协议
+new SSLParameters(new String[] {"SSL_RSA_WITH_DES_CBC_SHA"}, new String[] {"TLSv1.2"});
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

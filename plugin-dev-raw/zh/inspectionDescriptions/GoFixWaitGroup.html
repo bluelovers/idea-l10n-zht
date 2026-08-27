@@ -1,0 +1,35 @@
+<html>
+<body>
+<p>報告常見的使用 <code>wg.Add(1)</code> 的 <code>WaitGroup</code> 模式，啟動 goroutine，並推遲 <code>wg.Done()</code>。</p>
+<p>在 Go 1.25 及更高版本中，<code>(*sync.WaitGroup).Go(func())</code> 將這些步驟合併為一個呼叫。 這會將 goroutine 啟動和 <code>WaitGroup</code> 計數結合在一起，並減少樣板程式碼。</p>
+<p><b>範例：</b></p>
+<pre><code>
+func Fanout(tasks []func()) {
+	var wg sync.WaitGroup
+	for _, task := range tasks {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			task()
+		}()
+	}
+	wg.Wait()
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>使用 WaitGroup.Go 進行簡化</b>快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func Fanout(tasks []func()) {
+	var wg sync.WaitGroup
+	for _, task := range tasks {
+		wg.Go(func() {
+			task()
+		})
+	}
+	wg.Wait()
+}
+</code></pre>
+</body>
+</html>

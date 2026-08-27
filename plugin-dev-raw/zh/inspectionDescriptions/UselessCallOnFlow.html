@@ -1,0 +1,26 @@
+<html>
+<body>
+報告對 <code>kotlinx.coroutines</code> 庫中 <code>Flow</code> 的冗餘呼叫。
+<p>此檢查會檢測兩種類型的冗餘：</p>
+<ul>
+    <li><b>對已篩選 <code>Flow</code> 的冗餘 <code>filter…</code> 呼叫</b>。
+        只有在類型不同於結果類型的接收者上調用時，<code>filterNotNull()</code> 或 <code>filterIsInstance</code> 這類函式才有意義。
+        在其他情況下，可以忽略此類別呼叫，因為結果將相同。</li>
+    <li><b>冗餘的 <code>mapNotNull</code> 呼叫</b>。
+        如果轉換結果已保證為非空類型，則 <code>mapNotNull</code> 冗餘。 在這種情況下，可以去掉 <code>NotNull</code> 後綴（例如 <code>mapNotNull</code> → <code>map</code>）。</li>
+</ul>
+<p>可以通過快速修復來省略冗餘呼叫，或將其取代為更簡單的替代方案。</p>
+<p>範例：</p>
+<pre><code>
+  fun test(flow: Flow&lt;String&gt;) {
+      val x = flow.filterNotNull() // 可被簡化為 'flow'
+      val y = flow.filterIsInstance&lt;String&gt;() // 可被簡化為 'flow'
+  }
+</code></pre>
+<pre><code>
+  fun test(flow: Flow&lt;Int&gt;) {
+      val x = flow.mapNotNull { it + 1 } // 可被取代為 'map'
+  }
+</code></pre>
+</body>
+</html>

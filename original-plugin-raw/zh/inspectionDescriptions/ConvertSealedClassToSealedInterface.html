@@ -1,0 +1,20 @@
+<html>
+<body>
+报告没有属性并且可被转换为 sealed 接口的 sealed 类。
+<p>
+    如果类型层次结构不需要共享状态，sealed 接口通常比 sealed 类更受欢迎，因为它们允许实现类以扩展其他类。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+sealed class Result&lt;out T : Any&gt;
+class Success&lt;T : Any&gt;(val result: T) : Result&lt;T&gt;()
+class Error(val throwable: Throwable) : Result&lt;Nothing&gt;()
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+sealed interface Result&lt;out T : Any&gt;
+class Success&lt;T : Any&gt;(val result: T) : Result&lt;T&gt;
+class Error(val throwable: Throwable) : Result&lt;Nothing&gt;
+</code></pre>
+</body>
+</html>

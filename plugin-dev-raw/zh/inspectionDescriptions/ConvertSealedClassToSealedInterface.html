@@ -1,0 +1,20 @@
+<html>
+<body>
+報告沒有屬性並且可被轉換為 sealed 接口的 sealed 類別。
+<p>
+    如果類型層次結構不需要共享狀態，sealed 接口通常比 sealed 類別更受歡迎，因為它們允許實作類別以擴展其他類別。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+sealed class Result&lt;out T : Any&gt;
+class Success&lt;T : Any&gt;(val result: T) : Result&lt;T&gt;()
+class Error(val throwable: Throwable) : Result&lt;Nothing&gt;()
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+sealed interface Result&lt;out T : Any&gt;
+class Success&lt;T : Any&gt;(val result: T) : Result&lt;T&gt;
+class Error(val throwable: Throwable) : Result&lt;Nothing&gt;
+</code></pre>
+</body>
+</html>

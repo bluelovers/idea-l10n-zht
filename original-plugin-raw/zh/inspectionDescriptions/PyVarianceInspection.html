@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>报告由于差异问题导致的 Python 类型变量不正确使用。
+</p>
+
+<p><b>差异不兼容</b></p>
+<pre><code class="language-python">
+from typing import TypeVar, Generic
+T = TypeVar("T", covariant=True)
+class C(Generic[T]):
+    def method(self, t: T): # 在 'T' 处：协变类型变量不能用于此逆变位置
+        pass
+</code></pre>
+
+</body>
+</html>

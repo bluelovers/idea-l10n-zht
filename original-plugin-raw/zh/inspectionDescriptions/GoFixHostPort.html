@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告使用 <code>fmt.Sprintf("%s:%d", host, port)</code> 或 <code>fmt.Sprintf("%s:%s", host, port)</code> 构建的地址。</p>
+
+<p>对于 IPv6 主机，这种模式会中断，因为 IPv6 地址必须用中括号括起来，如 <code>[host]:port</code>。 <code>net.JoinHostPort</code> 会为 IPv4 和 IPv6 正确设置地址格式。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+addr := fmt.Sprintf("%s:%d", host, port)
+return net.Dial("tcp", addr)
+</code></pre>
+
+<p>要修正代码，请使用<b>替换为 net.JoinHostPort</b> 快速修复。</p>
+
+<p><b>在应用快速修复后：</b></p>
+<pre><code>
+addr := net.JoinHostPort(host, fmt.Sprintf("%d", port))
+return net.Dial("tcp", addr)
+</code></pre>
+</body>
+</html>

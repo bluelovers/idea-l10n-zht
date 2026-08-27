@@ -1,18 +1,25 @@
 <html>
 <body>
-<p>報告 <code>@ConfigurationProperties</code> 註解中定義的無效前綴：</p>
+<p>報告 <code>@ConfigurationProperties</code> 註解中定義的無效前綴，以及 Spring 組件中通過建構函式進行的錯誤屬性綁定。
+</p>
+
 <ul>
+  報告的前綴問題包括：
   <li>缺少前綴</li>
   <li>空前綴</li>
-  <li>重複前綴</li>
-  <li>短橫線隔開式命名以外的表示法中的前綴</li>
+  <li>短橫線命名法以外的表示法中的前綴</li>
 </ul>
+
 <p>
-  檢查在使用 <code>@ConfigurationProperties</code> 註解且未通過 <code>@EnableConfigurationProperties</code> 註冊、標記為 Spring 組件或通過 <code>@ConfigurationPropertiesScan</code> 掃描的類別中觸發。</p>
+  如果帶有 <code>@ConfigurationProperties</code> 註解的 Spring 組件的建構函式中存在注入  Bean 以外的參數，則會報告屬性綁定錯誤。 在 Spring 組件中，建構函式不能用於屬性綁定，因為它在這種情況下用於 Bean 注入。 應改用通過 setter 進行的綁定。
+</p>
+
+<p>
+  該檢查還會報告帶有 <code>@ConfigurationProperties</code> 註解但未通過 <code>@EnableConfigurationProperties</code> 註冊、未標記為 Spring 組件或未通過 <code>@ConfigurationPropertiesScan</code> 掃描的類別。
+</p>
 <!-- tooltip end -->
 <p>
   當專案或模組的 Spring Boot 版本設定為 2.2.0 或更高版本時，此檢查僅在使用 <code>@ConfigurationProperties</code> 註解且未通過 <code>@ConfigurationPropertiesScan</code> 掃描的類別中觸發。
 </p>
-<p><small>2018.3 最新變化</small></p>
 </body>
 </html>

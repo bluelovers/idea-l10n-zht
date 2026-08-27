@@ -1,0 +1,28 @@
+<html>
+<body>
+報告可被轉換為顯式命名實參的隱式上下文實參。
+<p>上下文參數通過作用域內的上下文參數和接收者隱式解析。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  interface Logger { fun log(message: String) }
+
+  context(logger: Logger)
+  fun logWithTime(message: String) {
+      logger.log("${LocalDateTime.now()}: $message")
+  }
+
+  fun saveUser(user: User, logger: Logger) {
+      context(logger) {
+          logWithTime("saving user ${user.id}")
+      }
+  }
+</code></pre>
+<p>該快速修復可以將隱式上下文實參轉換為顯式上下文實參：</p>
+<pre><code>
+  fun saveUser(user: User, logger: Logger) {
+        logWithTime("saving user ${user.id}", logger = logger)
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

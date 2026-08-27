@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>報告 <code>//go:build</code> 和 <code>// +build</code> 註釋中的無效 Go 建置約束。</p>
+
+<p>該檢查會驗證建置約束是否放置正確，檔案是否最多有一個 <code>//go:build</code> 指令，以及 <code>//go:build</code> 表達式是否有效。</p>
+
+<p>對於舊版 <code>// +build</code> 註釋，該檢查會報告無效的約束標記，例如雙重否定或不受支援的字元。</p>
+
+<p>如果同時存在 <code>//go:build</code> 和 <code>// +build</code> 註釋，它們必須定義相同的建置約束。</p>
+
+<p>該檢查不提供自動快速修復。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+//go:build linux
+// +build darwin
+
+package buildtag
+
+//go:build amd64
+</code></pre>
+
+<p>程式碼包含不符合的 <code>//go:build</code> 和 <code>// +build</code> 約束，以及放置錯誤的 <code>//go:build</code> 指令。</p>
+</body>
+</html>

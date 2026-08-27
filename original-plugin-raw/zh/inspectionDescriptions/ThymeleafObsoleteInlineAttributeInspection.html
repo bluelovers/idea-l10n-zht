@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>报告 Thymeleaf 3 中不再需要的 <code>th:inline</code> 特性。</p>
+
+<p>从 Thymeleaf 3 开始，内联输出表达式 <code>[[…]]</code> 和 <code>[(…)]</code> 会在文本内容中评估，无需使用封闭 <code>th:inline</code> 特性。 该特性可以安全地移除。</p>
+
+<p>示例：</p>
+<pre><code lang="html">
+&lt;p <strong>th:inline="text"</strong>&gt;Hello, [[${name}]]!&lt;/p&gt;
+</code></pre>
+
+<p>应用该快速修复后：</p>
+<pre><code lang="html">
+&lt;p&gt;Hello, [[${name}]]!&lt;/p&gt;
+</code></pre>
+
+<p>该检查仅在项目目标为 Thymeleaf 3 时才会报告该特性。</p>
+</body>
+</html>

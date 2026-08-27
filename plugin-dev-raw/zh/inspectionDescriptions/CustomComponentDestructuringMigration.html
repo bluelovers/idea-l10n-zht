@@ -1,0 +1,26 @@
+<html>
+<body>
+報告基於位置的解構宣告，這些宣告使用自訂 <code>componentN</code> 函式，並且需要針對基於名稱的解構進行遷移。
+<p>
+    啟用新的基於名稱的解構後，圓括號 <code>(x, y)</code> 將用於基於名稱的解構，而方括號 <code>[x, y]</code> 則應當用於基於位置的解構。
+</p>
+<p>該檢查會在以下情況下發出警告：</p>
+<ul>
+    <li>解構非資料類別（所有組件都是自訂組件）</li>
+    <li>解構條目比主建構函式參數更多的資料類別（額外的組件為自訂組件）</li>
+</ul>
+<p><b>範例：</b></p>
+<pre><code>
+  val (x, y) = listOf(1, 2) // 警告：使用自訂 componentN
+  for ((key, value) in mapOf(1 to "one")) { } // 沒有警告：key 和 value 為 Map.Entry 屬性
+
+  data class Person(val name: String, val age: Int) {
+      operator fun component3(): String = name + age
+  }
+  val (name, age, rendered) = Person("John", 30) // 警告：component3 為自訂
+</code></pre>
+<p>
+    此檢查屬於基於名稱的解構的遷移計劃的一部分。
+</p>
+</body>
+</html>

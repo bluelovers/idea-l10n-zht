@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>報告使用了類型在編譯時已知的 <code>reflect.TypeOf</code>，如 <code>reflect.TypeOf(T{})</code> 和 <code>reflect.TypeOf((*T)(nil)).Elem()</code>。</p>
+
+<p>在 Go 1.22 及更高版本中，<code>reflect.TypeFor[T]()</code> 會返回相同的 <code>reflect.Type</code>，無需執行時值。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+var userType = reflect.TypeOf(User{})
+</code></pre>
+
+<p>要修正程式碼，請使用<b>將 TypeOf 取代為 TypeFor</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+var userType = reflect.TypeFor[User]()
+</code></pre>
+</body>
+</html>

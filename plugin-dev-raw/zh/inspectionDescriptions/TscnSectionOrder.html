@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>報告 TSCN 和 TRES 檔案中顯示順序錯誤的部分。</p>
+
+<p>Godot 要求各個部分按以下順序顯示：</p>
+<ol>
+  <li><code>[gd_scene]</code> 或 <code>[gd_resource]</code> - 檔案檔案描述子</li>
+  <li><code>[ext_resource]</code> - 外部資源</li>
+  <li><code>[sub_resource]</code> - 內部資源</li>
+  <li><code>[node]</code> - 節點</li>
+  <li><code>[connection]</code> - 連線</li>
+</ol>
+
+<p><b>錯誤</b>順序範例：</p>
+<pre>
+[gd_scene format=3]
+[node name="Root" type="Node"]
+[ext_resource path="res://script.gd" type="Script" id=1]  ; ERROR: ext_resource after node
+</pre>
+
+<p><b>正確</b>順序範例：</p>
+<pre>
+[gd_scene format=3]
+[ext_resource path="res://script.gd" type="Script" id=1]
+[node name="Root" type="Node"]
+</pre>
+
+</body>
+</html>

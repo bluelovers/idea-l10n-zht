@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>報告 <code>value?.hashCode() ?: 0</code>，並建議將其取代為 <code>value.hashCode()</code>。</p>
+<!-- tooltip end -->
+<p>自 Kotlin 1.3 以來，標準庫提供了 <code>Any?.hashCode()</code>，它會對 <code>null</code> 返回 <code>0</code>，在其他情況下，則委託給接收者的 <code>hashCode()</code>。</p>
+<pre><code>
+fun hash(value: String?): Int {
+    return value?.hashCode() ?: 0
+}
+</code></pre>
+<p>套用該快速修復後：</p>
+<pre><code>
+fun hash(value: String?): Int {
+    return value.hashCode()
+}
+</code></pre>
+</body>
+</html>

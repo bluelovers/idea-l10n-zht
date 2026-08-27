@@ -1,0 +1,26 @@
+<html>
+<body>
+報告當基於持續時間的多載可用時，對接受以毫秒/納秒為單位的 Long 值的時間相關函式的呼叫。
+
+<p>使用基於持續時間的 API 可以提供更好的類型安全性和可讀性：</p>
+
+<ul>
+  <li><code>delay()</code>、<code>withTimeout()</code>、<code>withTimeoutOrNull()</code> 等協程函式</li>
+  <li><code>debounce()</code>、<code>sample()</code> 等流運算符</li>
+</ul>
+
+<p><b>範例：</b></p>
+<pre><code>
+// 之前
+delay(1000)
+withTimeout(5000) { ... }
+
+// 之後
+delay(1000.milliseconds)
+withTimeout(5000.milliseconds) { ... }
+</code></pre>
+
+<!-- tooltip end -->
+<p>2025.3 最新變化</p>
+</body>
+</html>

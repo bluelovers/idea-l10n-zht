@@ -1,0 +1,21 @@
+<html>
+<body>
+報告映射接收器上的 <code>map { it.key }.toSet()</code> 呼叫鏈，這些呼叫鏈可被取代為 <code>keys</code>。
+<p>
+    <b>注意</b>：儘管此轉換有利於可讀性和性能，因為它可以避免不必要的中間集合，但它也可能會更改呼叫語意，因為 <code>keys</code> 返回的是映射的 <code>keys</code> 的唯讀檢視，而原始的呼叫鏈會建立 <code>keys</code> 的副本。</p>
+<p>該快速修復會將呼叫鏈取代為映射的 <code>keys</code> 屬性。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  fun test(steps: Map&lt;String, Int&gt;) {
+      steps.map { it.key }.toSet()
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun test(steps: Map&lt;String, Int&gt;) {
+      steps.keys
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

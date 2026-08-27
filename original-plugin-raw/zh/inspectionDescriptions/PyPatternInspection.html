@@ -1,0 +1,44 @@
+<html>
+<body>
+<p>报告 Python 类模式和 <code>__match_args__</code> 定义中结构模式匹配使用不正确或不明确的情况。
+</p>
+
+<p>该检查可以帮助您发现以下问题：</p>
+<ul>
+  <li>为未定义 <code>__match_args__</code> 的类使用位置模式。</li>
+  <li>提供的位置模式数量超出了该类通过 <code>__match_args__</code> 公开的实参数量。</li>
+  <li>在单个类模式中同时通过位置和关键字指定同一特性。</li>
+  <li>定义的 <code>__match_args__</code> 类型无效（必须为 <code>tuple[str, ...]</code>）。</li>
+</ul>
+
+<p>对于某些具有内置类的简单 <code>as</code> 模式，该检查还会建议用于简化模式的快速修复。</p>
+
+<pre><code class="language-python">
+# 位置模式过多
+match p:
+    case Point(x, y, z):  # 根据 __match_args__，预期仅为 2 个
+        ……
+
+# 位置 + 关键字冲突
+match p:
+    case Point(x, y, x=0):  # 'x' 已通过位置指定
+        ……
+
+# 类没有 __match_args__，但使用了位置模式
+class C:
+    def __init__(self, a, b):
+        self.a = a; self.b = b
+
+match obj:
+    case C(1, 2):  # C 不支持位置模式
+        ……
+
+# 无效的 __match_args__ 声明
+class D:
+    __match_args__ = ["a", 42]  # 必须为 tuple[str, ...]
+</code></pre>
+<!-- tooltip end -->
+
+<p>该检查会在可能的情况下提供快速修复，例如添加 <code>__match_args__</code>，移除冗余模式，或简化涉及内置类的某些 <code>as</code> 模式。</p>
+</body>
+</html>

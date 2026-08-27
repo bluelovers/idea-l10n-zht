@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>檢測 Gradle 腳本中重複的儲存庫宣告。</p>
+<p>提供導覽到重複項的意圖。</p>
+<p><b>檢查報告範例：</b></p>
+<pre><code lang="kotlin">
+repositories {
+    // 將報告以下兩個儲存庫
+    maven { url = uri("https://repo1.maven.org/maven2/") }
+    maven {
+        url = uri("https://repo1.maven.org/maven2/")
+        // 某些註釋
+    }
+    maven { url = uri("https://some.other.repo/") } // 將不會報告
+}
+</code></pre>
+</body>
+</html>

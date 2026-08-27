@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>報告將不可雜湊的表達式用作字典鍵、集合值或 <code>hash</code> 實參的情況。</p>
+<p><b>範例：</b></p>
+<pre><code>
+d = {[]: 3}  # 列表不可雜湊
+set().add({1: 2})  # 字典不可雜湊
+hash([])  # 列表不可雜湊
+</code></pre>
+</body>
+</html>

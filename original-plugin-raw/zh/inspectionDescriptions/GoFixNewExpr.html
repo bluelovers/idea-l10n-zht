@@ -1,0 +1,34 @@
+<html>
+<body>
+<p>报告对返回形参地址（例如 <code>IntPtr(x)</code> 会返回 <code>&amp;x</code>）且可被替换为 <code>new(...)</code> 的辅助函数的调用。</p>
+
+<p>在 Go 1.26 中，<code>new</code> 可以直接接收值。 这样便可在不使用包装器函数的情况下创建指向字面量和其他值的指针。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+type Config struct {
+    Retries *int
+    Label   *string
+}
+
+func Default() Config {
+    return Config{
+        Retries: IntPtr(3),
+        Label:   StringPtr("default"),
+    }
+}
+</code></pre>
+
+<p>要修正代码，请使用<b>将 foo(x) 简化为 new(x)</b> 快速修复。</p>
+
+<p><b>在应用快速修复后：</b></p>
+<pre><code>
+func Default() Config {
+    return Config{
+        Retries: new(3),
+        Label:   new("default"),
+    }
+}
+</code></pre>
+</body>
+</html>

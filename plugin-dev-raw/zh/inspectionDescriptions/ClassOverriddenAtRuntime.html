@@ -1,0 +1,17 @@
+<html>
+<body>
+報告將在<b>執行時</b>而不是編譯時解析為不同的類別的類別參照。
+<br><br>
+<b>範例：</b>
+<pre>
+  MainModule
+  ├── DepModule
+  │   └── Av1.jar  ← my.example.A（將在執行時使用！）
+  └── Av2.jar      ← my.example.A（在編譯時使用）
+</pre>
+該 IDE 從 <code>Av2</code> 中解析 <code>A</code>，但 JVM 從 <code>Av1</code> 載入它。
+呼叫僅在 <code>Av2</code> 中存在的方法會導致 <code>NoSuchMethodError</code>。
+<br><br>
+<b>修正</b>：將 <code>Av2</code> 移至 <code>DepModule</code> 之前，使編譯和執行時均使用相同的類別。
+</body>
+</html>

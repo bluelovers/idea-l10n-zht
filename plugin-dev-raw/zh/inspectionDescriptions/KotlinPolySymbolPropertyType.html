@@ -1,0 +1,17 @@
+<html>
+<body>
+報告帶有 <code>@PolySymbol.Property</code> 註解的 Kotlin 屬性和欄位，其中宣告的類型不能指定給預期的 PolySymbol 屬性類型。
+<p>
+  PolySymbol 屬性必須返回一個可指定給對應的 <code>PolySymbolProperty</code> 類別的類型參數的類型。
+</p>
+<p>
+  例如，如果 <code>JSPropertySignatureProperty</code> 應為 <code>PropertySignature</code>，那麼帶註解的屬性必須返回 <code>PropertySignature</code> 或其子類型。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+  @PolySymbol.Property(JSPropertySignatureProperty::class)
+  private val propertySignature: TypeScriptTypeMember // 錯誤：TypeScriptTypeMember 不可指定給 PropertySignature
+    get() = source
+</code></pre>
+</body>
+</html>

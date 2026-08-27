@@ -1,7 +1,12 @@
 <html>
 <body>
-<p>報告使用 <code>plus</code>/<code>minus</code> 以運算符形式（<code>a + b</code>、<code>a - b</code>）或一般呼叫形式（<code>a.plus(b)</code>，<code>a.minus(b)</code>）將 <code>java.nio.file.Path</code> 新增到/從 Kotlin 集合或序列中移除的呼叫。</p>
-<p>由於 <code>java.nio.file.Path</code> 實作了 <code>Iterable&lt;Path&gt;</code>，此類別呼叫解析為 <code>plus</code> 或 <code>minus</code> 函式的意外多載，這兩個函式接受元素的集合（這種情況下為 <code>Path</code> 的單個元素）。 但是，程式碼的意圖可能是新增或移除 <code>Path</code> 本身，而非單個元素。</p>
+<p>報告使用實參類型實作 `Iterable`，且接收者是具有相同元素類型的 Kotlin `Collection` 或 `Sequence` 的 `plus`/`minus`。
+</p>
+<p>如果實參類型實作了 `Iterable`，則會將其視為元素集合，而不是單個元素。
+    這可能會意外地新增或移除多個元素，而不是針對物件本身進行動作。</p>
+<p>一個常見的例子是 `java.nio.file.Path`，它實作了 `Iterable&lt;Path&gt;`（遍歷其名稱元素）。
+    因此，使用 `+` 或 `-` 將 `Path` 新增到 `Collection&lt;Path&gt;` 可能會作用於其組成部分，而不是整個 `Path` 實例。</p>
+<p>該檢查包括運算符語法（`a + b`、`a - b`）和顯式呼叫（`a.plus(b)`、`a.minus(b)`）兩種形式。</p>
 <p><b>範例：</b></p>
 <pre><code>
 // 運算符形式
@@ -11,6 +16,12 @@ val paths2 = setOf(path) - somePath
 // 一般呼叫形式
 val paths = listOf(path).plus(somePath)
 val paths2 = setOf(path).minus(somePath)
+
+// 序列
+val seq = sequenceOf(path) + somePath
+
+// 路徑 + 路徑（兩側都可迭代）
+val combined = path1 + path2  // 返回段列表，而不是組合路徑
 </code></pre>
 
 <p><b>快速修復：</b></p>
@@ -19,6 +30,7 @@ val paths2 = setOf(path).minus(somePath)
         <pre><code>
 val paths = listOf(path).plusElement(somePath)
 val paths2 = setOf(path).minusElement(somePath)
+val paths3 = sequenceOf(path).plusElement(somePath)
     </code></pre>
     </li>
     <li>將 <code>Path</code> 實參轉換為集合，以澄清意圖而不改變語意：

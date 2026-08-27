@@ -1,0 +1,20 @@
+<html>
+<body>
+报告没有属性并且可被转换为 sealed 类的 sealed 接口。
+<p>
+    当您希望确保单一继承层次结构或计划未来添加状态（属性）时，可以优先选择 sealed 类而非 sealed 接口。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+sealed interface Result&lt;out T : Any&gt;
+class Success&lt;T : Any&gt;(val result: T) : Result&lt;T&gt;
+class Error(val throwable: Throwable) : Result&lt;Nothing&gt;
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+sealed class Result&lt;out T : Any&gt;
+class Success&lt;T : Any&gt;(val result: T) : Result&lt;T&gt;()
+class Error(val throwable: Throwable) : Result&lt;Nothing&gt;()
+</code></pre>
+</body>
+</html>

@@ -1,7 +1,6 @@
 <html>
 <body>
-报告冗余局部变量类型。
-<p>这些类型可以从上下文中推断出来，因此替换为 <code>var</code>。</p>
+报告可以从上下文中推断出来并替换为 <code>var</code> 的局部变量类型。
 <p><b>示例：</b></p>
 <pre><code>
   void test(InputStream s) {
@@ -16,6 +15,12 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-
+使用<b>仅当变量类型可通过初始值设定项明确判断时报告</b>复选框，仅报告使用新表达式、类型转换或字面量初始化的变量类型。
+<p><b>示例：</b></p>
+<pre><code>
+  int codePointAt = "hello".codePointAt(1); // 不报告
+  Random random = new Random();           // 报告
+  String s = (String)object;         // 报告
+</code></pre>
 </body>
 </html>

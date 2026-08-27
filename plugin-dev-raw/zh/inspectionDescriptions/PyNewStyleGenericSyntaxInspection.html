@@ -15,17 +15,17 @@
   範例：
 </p>
 <pre><code>
-  from typing import Generic
+from typing import Generic
 
-  class Example[T](Generic[T]): ... # 具有類型參數列表的類別不應擴展 'Generic'
+class Example[T](Generic[T]): ... # 帶有類型參數列表的類別不應擴展 'Generic'
 </code></pre>
 
 <pre><code>
-  class Example[T: (list[S], str)]: ... # 在類型參數的約束和邊界內不允許使用泛型類型
+class Example[T: (list[S], str)]: ... # 在類型參數的約束和邊界內不允許使用泛型類型
 </code></pre>
 
 <pre><code>
-  from typing import TypeVar
+from typing import TypeVar
 
   K = TypeVar("K")
 

@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>報告對標有 <code>//go:fix inline</code> 的函式或常數的參照。</p>
+
+<p><code>//go:fix inline</code> 指令表示應覆寫呼叫方和參照，以使用宣告體。 這有助於您逐步淘汰已棄用的包裝器和別名，而無需手動掃描。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+// 已棄用：優先使用 Pow(x, 2)。
+//
+//go:fix inline
+func Square(x int) int { return Pow(x, 2) }
+
+func Areas(sides []int) []int {
+    out := make([]int, len(sides))
+    for i, s := range sides {
+        out[i] = Square(s)
+    }
+    return out
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>內聯呼叫 inline.Square</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func Areas(sides []int) []int {
+	out := make([]int, len(sides))
+	for i, s := range sides {
+		out[i] = Pow(s, 2)
+	}
+	return out
+}
+</code></pre>
+
+<p>可對常數使用相同的指令，以覆寫對常量值或別名目標的參照。</p>
+</body>
+</html>

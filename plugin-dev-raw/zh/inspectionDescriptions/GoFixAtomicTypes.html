@@ -1,0 +1,39 @@
+<html>
+<body>
+<p>報告使用了可被取代為類型化原子值的原始 <code>sync/atomic</code> 函式，例如 <code>atomic.AddInt64</code> 和 <code>atomic.LoadInt64</code>。</p>
+
+<p><code>atomic.Int64</code> 等類型化原子值使原子存取成為欄位類型的一部分。 這有助於防止對同一值進行非原子存取，並避免 32 位平台上出現對齊問題。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+type Counter struct {
+	hits int64
+}
+
+func (c *Counter) Bump() {
+	atomic.AddInt64(&amp;c.hits, 1)
+}
+
+func (c *Counter) Read() int64 {
+	return atomic.LoadInt64(&amp;c.hits)
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>將 int64 取代為 atomic.Int64</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+type Counter struct {
+	hits atomic.Int64
+}
+
+func (c *Counter) Bump() {
+	c.hits.Add(1)
+}
+
+func (c *Counter) Read() int64 {
+	return c.hits.Load()
+}
+</code></pre>
+</body>
+</html>

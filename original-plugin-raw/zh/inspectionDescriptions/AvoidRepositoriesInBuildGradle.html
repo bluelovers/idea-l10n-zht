@@ -1,0 +1,46 @@
+<html>
+<body>
+<p>检测 Gradle 构建脚本中的仓库声明。</p>
+<p>
+  建议在 Gradle 设置文件中声明所有仓库。
+</p>
+<p><b>示例：</b></p>
+<pre><code lang="kotlin">
+// build.gradle.kts
+buildscript { // 报告 'buildscript'，建议将其移至 `settings.gradle.kts`
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id("java")
+}
+
+repositories { // 报告“buildscript”，建议将其移至 `settings.gradle.kts`
+    mavenCentral()
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code lang="kotlin">
+// settings.gradle.kts
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode = RepositoriesMode.FAIL_ON_PROJECT_REPOS
+    repositories {
+        mavenCentral()
+    }
+}
+</code></pre>
+
+<p><a
+  href="https://docs.gradle.org/9.3.0/userguide/best_practices_dependencies.html#set_up_repositories_in_settings">此处</a>介绍了最佳做法。</p>
+</body>
+</html>

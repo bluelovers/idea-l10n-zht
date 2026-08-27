@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>報告枚舉值中未涵蓋所有枚舉成員的 <code>match</code> 語句。</p>
+<!-- tooltip end -->
+<p>提供一種快速修復，以通過 <code>pass</code> 主體新增缺失的分支。</p>
+<pre><code>
+enum Enum {A, B, C}
+var e := Enum.A
+
+match e: # 警告：缺少枚舉選項
+    Enum.A:
+        pass
+    Enum.B:
+        pass
+</code></pre>
+</body>
+</html>

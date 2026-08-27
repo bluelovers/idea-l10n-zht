@@ -1,0 +1,19 @@
+<html>
+<body>
+報告 Java 程式碼中對基於 Kotlin <code>data</code> 類別生成的 <code>componentN()</code> 方法的呼叫。
+<p>
+    Kotlin 資料類別會自動生成位置 <code>component1()</code>、<code>component2()</code> 以及類似方法，用於解構。 從 Java 中直接呼叫這些方法不穩定：索引與屬性之間的映射不直觀，且一旦屬性重新排序，這些呼叫會靜默中斷。 使用命名屬性 getter 更清晰，且重構時更安全。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+  String name = person.component1();
+  int age = person.component2();
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  String name = person.getName();
+  int age = person.getAge();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

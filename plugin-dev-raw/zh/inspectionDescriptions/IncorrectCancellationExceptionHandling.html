@@ -3,16 +3,20 @@
 報告 <code>ProcessCanceledException</code> 和 <code>CancellationException</code> 處理不正確的情況。
 
 <p>
-  不得以任何方式捕獲、吞下、記錄或處理 <code>ProcessCanceledException</code> 及其繼承者。
+  不得以任何方式捕獲、吞下、記錄*或處理 <code>ProcessCanceledException</code> 及其繼承者。
   相反，必須將其重新拋出，以便 IntelliJ Platform 基礎架構能夠對其進行正確處理。
 </p>
 <p>
-  在協程上下文中不得以任何方式捕獲、吞下、記錄或處理 <code>CancellationException</code>。
+  在協程上下文中不得以任何方式捕獲、吞下、記錄*或處理 <code>CancellationException</code>。
   相反，必須將其重新拋出，以便協程基礎架構能夠對其進行正確處理。
 </p>
 
 <p>
-  檢查會報告顯式的 <code>ProcessCanceledException</code>（包括繼承者）和 <code>CancellationException</code> 捕獲，以及對覆蓋取消異常的 <code>RuntimeException</code>、<code>Exception</code> 和 <code>Throwable</code> 的捕獲。
+  <i>*該檢查會報告在任何執行上下文中記錄這些異常。</i>
+</p>
+
+<p>
+  該檢查會報告顯式 <code>ProcessCanceledException</code>（包括繼承者）和 <code>CancellationException</code> 捕獲，以及對覆蓋取消異常的 <code>RuntimeException</code>、<code>Exception</code> 和 <code>Throwable</code> 的捕獲。
 </p>
 
 <h3>範例：</h3>
@@ -76,6 +80,9 @@ cs.launch {
 }
 </code></pre>
 
+<p>
+  如需了解詳情，請參閱 IntelliJ 平台延伸模組 SDK 文檔中的<a href="https://plugins.jetbrains.com/docs/intellij/background-processes.html#cancellation">背景程序取消</a>。
+</p>
 <p>
   <i>註：檢查在測試源中被停用。</i>
 </p>

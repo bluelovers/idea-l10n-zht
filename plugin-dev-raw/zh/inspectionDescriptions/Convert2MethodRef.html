@@ -1,6 +1,6 @@
 <html>
 <body>
-報告可以取代為方法參照的 lambda。 方法參照比 lambda 更容易理解和閱讀，儘管它們通常取決於您的喜好。
+報告可以取代為方法參照的 lambda。 雖然這取決於您的個人偏好，但方法參照比 lambda 表達式更清晰、更易讀。
 <p>範例：</p>
 <pre><code>
   Runnable r = () -> System.out.println();
@@ -12,7 +12,7 @@
 <!-- tooltip end -->
 <p>
   即使 lambda 不呼叫任何方法，該檢查也可能會建議方法參照，例如將 <code>obj -> obj != null</code> 取代為 <code>Objects::nonNull</code>。 
-  使用<a href="settings://preferences.sourceCode.Java?Lambda%20Body">設定 | 編輯器 | 程式碼樣式 | Java | 程式碼生成</a>設定來組態特殊方法參照。
+  使用<a href="settings://preferences.sourceCode.JAVA?Lambda%20Body">設定 | 編輯器 | 程式碼樣式 | Java | 程式碼生成</a>設定組態特殊方法參照。
 </p>
 </body>
 </html>

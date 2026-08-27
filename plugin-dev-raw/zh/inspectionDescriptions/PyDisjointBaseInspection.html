@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>
+  報告繼承自兩個基類別並且這兩個基類別具有不相容的<a href="https://peps.python.org/pep-0800/">不相交基 (PEP 800)</a> 的類別。
+</p>
+<p>
+  當一個類別帶有 <code>@typing.disjoint_base</code> 裝飾器或具有非空的 <code>__slots__</code> 特性（包括使用 <code>slots=True</code> 建立的資料類別）時，該類就是一個<em>不相交基</em>。 許多內建類型，例如 <code>int</code>、<code>str</code>、<code>float</code>、<code>tuple</code>、<code>list</code>、<code>dict</code> 等，都是不相交基。
+</p>
+<p>
+  如果兩個類別各自追溯到不同、不相關的不相交基，它們就不能共享一個公共子類別 — 由於記憶體布局不相容，Python 在執行時會引發 <code>TypeError</code>。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+class A:
+    __slots__ = ('x',)
+
+class B:
+    __slots__ = ('y',)
+
+class C(A, B):  # 錯誤：A 和 B 具有不相容的不相交基
+    pass
+</code></pre>
+<p>
+  共享公共不相交基上級的類別（例如，同一個槽類別的兩個子類別）不會被標記。
+</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>報告形式為 <code>for i := 0; i &lt; n; i++</code>，可被取代為 <code>for i := range n</code> 的三子句 <code>for</code> 迴圈（Go 1.22 或更高版本）。</p>
+<p>對整數使用 <code>range</code> 可以確保意圖清晰，並移除樣板迴圈控制程式碼。</p>
+<p><b>範例：</b></p>
+<pre><code>
+func Sum(n int) int {
+	total := 0
+	for i := 0; i < n; i++ {
+		total += i
+	}
+	return total
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>將 for 迴圈取代為 range n</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func Sum(n int) int {
+	total := 0
+	for i := range n {
+		total += i
+	}
+	return total
+}
+</code></pre>
+</body>
+</html>

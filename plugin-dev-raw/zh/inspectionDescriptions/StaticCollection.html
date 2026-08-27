@@ -8,6 +8,10 @@
 
   }
 </code></pre>
+<p>
+該檢查會忽略使用不可變、固定大小集合初始化的 <code>final</code> 欄位（例如 <code>Map.of()</code>、<code>List.of()</code>、<code>Collections.emptyList()</code>、<code>Collections.singletonMap()</code>）。
+這些集合無法擴展，因此不會導致記憶體泄漏。
+</p>
 <!-- tooltip end -->
 <p>
   組態檢查：

@@ -1,0 +1,11 @@
+<html>
+<body>
+报告在依赖项模块已在自身的 <code>package-info.java</code> 中为此拆分软件包声明了相同注解的情况下，在 <code>package-info.java</code> 声明 <code>@ApiStatus.Experimental</code> 或 <code>@ApiStatus.Internal</code> 注解的情况。
+<p>
+  由于依赖项模块的 <code>package-info.java</code> 已经带有注解，此模块中的重复声明冗余。
+</p>
+<p>
+  快速修复可以移除此 <code>package-info.java</code>。 只有在当前文件的每个不稳定注解也在依赖项模块的 <code>package-info.java</code> 中声明时，才会提供此修正。 软件包级别的 Javadoc（如果有）将会丢失。
+</p>
+</body>
+</html>

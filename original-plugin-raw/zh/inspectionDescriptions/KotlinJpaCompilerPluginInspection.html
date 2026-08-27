@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>
+添加推荐的 <code>kotlin-jpa</code> 编译器插件，以便更好地支持 Kotlin 中的 JPA 注解。
+</p>
+<p>
+它会为具有特定注解的类生成额外的零实参构造函数。
+</p>
+<p>
+这样，Java Persistence API (JPA) 便可实例化类，尽管从 Kotlin 或 Java 的角度来看，该类并不具有零形参构造函数（参见下方的 kotlin-jpa 插件说明）。
+</p>
+<p>
+实际上，kotlin-jpa 包装在无实参编译器插件之上：
+该插件会自动指定 <code>@Entity</code>、<code>@Embeddable</code> 和 <code>@MappedSuperclass</code> 无实参注解。
+</p>
+<!-- tooltip end -->
+</body>
+</html>

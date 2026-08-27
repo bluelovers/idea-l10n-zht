@@ -1,0 +1,21 @@
+<html>
+<body>
+報告對 <code>String.replaceAll()</code> 的呼叫，其中第一個實參為普通（非正則表達式）字串字面量，並且取代項也是普通字串字面量。 在這種情況下，使用 <code>String.replace()</code> 更清晰，並且可以避免正則表達式帶來的開銷。
+
+<p><b>範例：</b></p>
+<pre><code>
+  "a,b,c".replaceAll(",", ";");
+</code></pre>
+
+<p>在套用快速修復後：</p>
+<pre><code>
+  "a,b,c".replace(",", ";");
+</code></pre>
+
+<p>
+注意：該檢查僅在安全時建議取代，即當模式不包含正則表達式元字元，且取代項不包含正則表達式取代項使用的特殊字元（如 <code>$</code> 或 <code>\</code>）時。
+</p>
+<!-- tooltip end -->
+<p><small>2026.1 最新變化</small></p>
+</body>
+</html>

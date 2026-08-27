@@ -1,0 +1,26 @@
+<html>
+<body>
+报告基于位置的析构声明，这些声明使用自定义 <code>componentN</code> 函数，并且需要针对基于名称的析构进行迁移。
+<p>
+    启用新的基于名称的析构后，圆括号 <code>(x, y)</code> 将用于基于名称的析构，而方括号 <code>[x, y]</code> 则应当用于基于位置的析构。
+</p>
+<p>该检查会在以下情况下发出警告：</p>
+<ul>
+    <li>析构非数据类（所有组件都是自定义组件）</li>
+    <li>析构条目比主构造函数形参更多的数据类（额外的组件为自定义组件）</li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+  val (x, y) = listOf(1, 2) // 警告：使用自定义 componentN
+  for ((key, value) in mapOf(1 to "one")) { } // 没有警告：key 和 value 为 Map.Entry 属性
+
+  data class Person(val name: String, val age: Int) {
+      operator fun component3(): String = name + age
+  }
+  val (name, age, rendered) = Person("John", 30) // 警告：component3 为自定义
+</code></pre>
+<p>
+    此检查属于基于名称的析构的迁移计划的一部分。
+</p>
+</body>
+</html>

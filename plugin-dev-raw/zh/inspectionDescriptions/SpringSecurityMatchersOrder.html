@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>報告 <code>authorizeHttpRequests</code> / <code>authorizeRequests</code> 鏈中無法到達的請求匹配器，因為一個<b>更早且更通用的匹配器已覆蓋這些請求</b>。</p>
+
+<p>Spring Security 按宣告順序評估匹配器，<b>第一個符合的規則會生效</b>，因此，如果一個具體的規則位於一個更通用的規則之後，而且也與之相符合，則會靜默忽略該具體規則。 更具體的匹配器必須首先出現。</p>
+
+<p><b>不正確</b>（標記的規則會被忽略）：</p>
+<pre><code>
+  http.authorizeHttpRequests(auth -> auth
+    .requestMatchers("/", "/home").permitAll()
+    .requestMatchers(HttpMethod.POST, "/home").hasRole("USER")        // 由更早的“/home”覆蓋
+    .requestMatchers(HttpMethod.GET, "/test1/**").hasRole("USER")
+    .requestMatchers(HttpMethod.GET, "/test1/test2").hasRole("ADMIN") // 由更早的“/test1/**”覆蓋
+    .anyRequest().authenticated()
+  );
+</code></pre>
+
+<p><b>正確</b>（先排列最具體項）：</p>
+<pre><code>
+  http.authorizeHttpRequests(auth -> auth
+    .requestMatchers(HttpMethod.POST, "/home").hasRole("USER")
+    .requestMatchers("/", "/home").permitAll()
+    .requestMatchers(HttpMethod.GET, "/test1/test2").hasRole("ADMIN")
+    .requestMatchers(HttpMethod.GET, "/test1/**").hasRole("USER")
+    .anyRequest().authenticated()
+  );
+</code></pre>
+</body>
+</html>

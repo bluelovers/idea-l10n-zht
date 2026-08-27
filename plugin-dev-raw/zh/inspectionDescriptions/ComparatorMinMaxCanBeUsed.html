@@ -1,0 +1,19 @@
+<html>
+<body>
+報告帶有 <code>Comparator.compare()</code> 呼叫的 <code>if</code> 語句和三元表達式，該呼叫可被取代為 <code>Comparator.max()</code> 或 <code>Comparator.min()</code> 呼叫。
+
+<p><b>範例：</b></p>
+<pre><code>
+Comparator&lt;String&gt; comp = Comparator.naturalOrder();
+String result = comp.compare(a, b) > 0 ? a : b;
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+Comparator&lt;String&gt; comp = Comparator.naturalOrder();
+String result = comp.max(a, b);
+</code></pre>
+<!-- tooltip end -->
+
+<p><small>2026.1 最新變化</small></p>
+</body>
+</html>

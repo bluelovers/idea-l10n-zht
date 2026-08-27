@@ -1,0 +1,14 @@
+<html>
+<body>
+標記使用會更改表達式類型的集合字面量的鏈式表達式。
+<p>快速修復會將集合字面量取代為函式呼叫。</p>
+<p><b>範例：</b></p>
+<pre><code>
+    val mutableList = ["a", "b", "c"].toMutableList()
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+    val mutableList = mutableListOf("a", "b", "c")
+</code></pre>
+</body>
+</html>

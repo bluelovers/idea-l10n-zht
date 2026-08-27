@@ -1,7 +1,6 @@
 <html>
 <body>
-報告冗餘區域變數類型。
-<p>這些類型可以從上下文中推斷出來，因此取代為 <code>var</code>。</p>
+報告可以從上下文中推斷出來並取代為 <code>var</code> 的區域變數類型。
 <p><b>範例：</b></p>
 <pre><code>
   void test(InputStream s) {
@@ -16,6 +15,12 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-
+使用<b>僅當變數類型可通過初始設定式明確判斷時報告</b>複選框，僅報告使用新表達式、類型轉換或字面量初始化的變數類型。
+<p><b>範例：</b></p>
+<pre><code>
+  int codePointAt = "hello".codePointAt(1); // 不報告
+  Random random = new Random();           // 報告
+  String s = (String)object;         // 報告
+</code></pre>
 </body>
 </html>

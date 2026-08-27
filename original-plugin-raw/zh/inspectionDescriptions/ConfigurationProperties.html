@@ -1,18 +1,25 @@
 <html>
 <body>
-<p>报告 <code>@ConfigurationProperties</code> 注解中定义的无效前缀：</p>
+<p>报告 <code>@ConfigurationProperties</code> 注解中定义的无效前缀，以及 Spring 组件中通过构造函数进行的错误属性绑定。
+</p>
+
 <ul>
+  报告的前缀问题包括：
   <li>缺少前缀</li>
   <li>空前缀</li>
-  <li>重复前缀</li>
-  <li>短横线隔开式命名以外的表示法中的前缀</li>
+  <li>短横线命名法以外的表示法中的前缀</li>
 </ul>
+
 <p>
-  检查在使用 <code>@ConfigurationProperties</code> 注解且未通过 <code>@EnableConfigurationProperties</code> 注册、标记为 Spring 组件或通过 <code>@ConfigurationPropertiesScan</code> 扫描的类中触发。</p>
+  如果带有 <code>@ConfigurationProperties</code> 注解的 Spring 组件的构造函数中存在注入  Bean 以外的形参，则会报告属性绑定错误。 在 Spring 组件中，构造函数不能用于属性绑定，因为它在这种情况下用于 Bean 注入。 应改用通过 setter 进行的绑定。
+</p>
+
+<p>
+  该检查还会报告带有 <code>@ConfigurationProperties</code> 注解但未通过 <code>@EnableConfigurationProperties</code> 注册、未标记为 Spring 组件或未通过 <code>@ConfigurationPropertiesScan</code> 扫描的类。
+</p>
 <!-- tooltip end -->
 <p>
   当项目或模块的 Spring Boot 版本设置为 2.2.0 或更高版本时，此检查仅在使用 <code>@ConfigurationProperties</code> 注解且未通过 <code>@ConfigurationPropertiesScan</code> 扫描的类中触发。
 </p>
-<p><small>2018.3 最新变化</small></p>
 </body>
 </html>

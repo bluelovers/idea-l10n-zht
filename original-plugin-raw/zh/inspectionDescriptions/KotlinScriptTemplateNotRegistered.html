@@ -1,0 +1,22 @@
+<html>
+<body>
+报告带 <code>@KotlinScript</code> 注解的类，这些类未完全设置好，无法用作 Kotlin 脚本定义。
+<p>
+    带有 <code>@KotlinScript</code> 注解的类描述了一个脚本模板 — 与其模式匹配的文件（例如 <code>*.my.kts</code>）应使用其编译配置和依赖项。
+    有两件事可以使定义完全可用，而此检查会报告以下任意一项是否缺失：
+</p>
+<ol>
+    <li>
+        <b>在 Kotlin 脚本设置中注册</b>。如果在<em>设置 → 语言和框架 → Kotlin → Kotlin 脚本 → 要加载的脚本定义类</em>中没有条目，则您的 IDE 不会将匹配的 <code>.kts</code> 文件识别为此定义的脚本。 快速修复<em>在 Kotlin 脚本设置中注册定义</em>会将 FQN（以及所属模块的类路径）填充到设置中。
+    </li>
+    <li>
+        <b>位于 <code>META-INF/kotlin/script/templates/&lt;fqn&gt;.classname</code></b> 的标记文件，被打包进生成的 JAR 中。
+        基于库的发现 (<code>ScriptDefinitionsProvider</code>) 会扫描依赖关系 JAR，查找这个空的标记文件以发现可用模板；如果没有这个文件，您的库的使用者将不会自动发现此定义。
+        <em>创建标记文件以便下游自动发现</em>快速修复会在模块的第一个资源根下创建该文件。
+    </li>
+</ol>
+<p>
+    应用任何相关的快速修复 – 既适用于典型的库作者流程，也适用于仅在本地使用模板且从未发布模板时进行注册。
+</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>檢測 Gradle 建置腳本中重複的相依關係宣告。</p>
+<p>提供導覽到重複項的意圖，以及用於移除完全符合項的快速修復。</p>
+<p><b>檢查報告範例：</b></p>
+<pre><code lang="kotlin">
+dependencies {
+    implementation("com.google.guava:guava:32.1.2-jre") // 將報告此行，因為下方有一個完全重複的行
+    implementation("com.google.guava:guava:32.1.2-jre") // 將報告此行，因為上方有一個完全重複的行
+    api("com.google.guava:guava:32.1.2-jre") // 也將報告此行，因為可以通過另一個組態獲取此行
+}
+</code></pre>
+<p><b>移除完全重複項的快速修復範例：</b></p>
+<pre><code lang="kotlin">
+dependencies {
+    implementation("com.google.guava:guava:32.1.2-jre") // 將提供快速修復
+    implementation("com.google.guava:guava:32.1.2-jre") // 將提供快速修復
+    api("com.google.guava:guava:32.1.2-jre") // 將不提供快速修復
+}
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code lang="kotlin">
+dependencies {
+    implementation("com.google.guava:guava:32.1.2-jre")
+    api("com.google.guava:guava:32.1.2-jre")
+}
+</code></pre>
+
+<p><a
+  href="https://docs.gradle.org/9.3.0/userguide/best_practices_dependencies.html#avoid_duplicate_dependencies">此處</a>介紹了最佳做法。</p>
+</body>
+</html>

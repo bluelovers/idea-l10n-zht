@@ -1,0 +1,21 @@
+<html>
+<body>
+报告映射接收器上的 <code>map { it.key }.toSet()</code> 调用链，这些调用链可被替换为 <code>keys</code>。
+<p>
+    <b>注意</b>：尽管此转换有利于可读性和性能，因为它可以避免不必要的中间集合，但它也可能会更改调用语义，因为 <code>keys</code> 返回的是映射的 <code>keys</code> 的只读视图，而原始的调用链会创建 <code>keys</code> 的副本。</p>
+<p>该快速修复会将调用链替换为映射的 <code>keys</code> 属性。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun test(steps: Map&lt;String, Int&gt;) {
+      steps.map { it.key }.toSet()
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun test(steps: Map&lt;String, Int&gt;) {
+      steps.keys
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

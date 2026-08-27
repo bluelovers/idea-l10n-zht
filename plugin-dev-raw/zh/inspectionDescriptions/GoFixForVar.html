@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>報告 <code>for range</code> 迴圈內部的冗餘變數隱藏，例如 <code>x := x</code>，它之前被用於捕獲 Goroutine 或閉包的迴圈變數。</p>
+
+<p>從 Go 1.22 開始，每次 <code>for range</code> 迭代都使用一個新的迴圈變數。 因此，額外的 <code>x := x</code> 賦值不再改變行為，而且可以移除。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+for _, x := range xs {
+    x := x
+    go func() { done &lt;- x }()
+}
+</code></pre>
+
+<p>為了簡化程式碼，請使用<b>移除不必要的宣告</b>快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+for _, x := range xs {
+    go func() { done &lt;- x }()
+}
+</code></pre>
+</body>
+</html>

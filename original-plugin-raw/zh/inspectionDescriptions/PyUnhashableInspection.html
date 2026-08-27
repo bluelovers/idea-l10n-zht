@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>报告将不可哈希的表达式用作字典键、集合值或 <code>hash</code> 实参的情况。</p>
+<p><b>示例：</b></p>
+<pre><code>
+d = {[]: 3}  # 列表不可哈希
+set().add({1: 2})  # 字典不可哈希
+hash([])  # 列表不可哈希
+</code></pre>
+</body>
+</html>

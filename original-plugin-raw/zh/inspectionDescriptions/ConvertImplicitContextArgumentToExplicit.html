@@ -1,0 +1,28 @@
+<html>
+<body>
+报告可被转换为显式命名实参的隐式上下文实参。
+<p>上下文形参通过作用域内的上下文形参和接收者隐式解析。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  interface Logger { fun log(message: String) }
+
+  context(logger: Logger)
+  fun logWithTime(message: String) {
+      logger.log("${LocalDateTime.now()}: $message")
+  }
+
+  fun saveUser(user: User, logger: Logger) {
+      context(logger) {
+          logWithTime("saving user ${user.id}")
+      }
+  }
+</code></pre>
+<p>该快速修复可以将隐式上下文实参转换为显式上下文实参：</p>
+<pre><code>
+  fun saveUser(user: User, logger: Logger) {
+        logWithTime("saving user ${user.id}", logger = logger)
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

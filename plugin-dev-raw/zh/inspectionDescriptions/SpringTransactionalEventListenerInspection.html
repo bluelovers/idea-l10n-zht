@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>報告帶有普通
+ <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html">@Transactional</a> 註解的
+ <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/event/TransactionalEventListener.html">@TransactionalEventListener</a> 方法。</p>
+
+<p>一個事務事件偵聽器在原始事務的清理階段執行，該事務仍然有效，但處於未定義狀態。 因此，一般 <code>@Transactional</code> 在未定義的事務狀態下執行，並在執行時失敗。 只有當傳播為 <code>REQUIRES_NEW</code> 或 <code>NOT_SUPPORTED</code>，或者該方法同樣帶有 <code>@Async</code> 註解（它會在具有乾淨事務狀態的單獨執行緒上執行偵聽器）時，該組合才有效。</p>
+
+<p><b>範例：</b></p>
+<pre><code lang="java">
+  @Component
+  class MyListener {
+    @Transactional // 報告：在未定義的事務狀態下執行
+    @TransactionalEventListener
+    void on(MyEvent event) { ... }
+  }
+</code></pre>
+
+<p>在套用該快速修復後：</p>
+<pre><code lang="java">
+  @Component
+  class MyListener {
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    @TransactionalEventListener
+    void on(MyEvent event) { ... }
+  }
+</code></pre>
+
+</body>
+</html>

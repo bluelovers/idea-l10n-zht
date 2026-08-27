@@ -1,0 +1,20 @@
+<html>
+<body>
+檢測何時在加密類別工廠方法中指定提供程序。
+
+<p>
+  如果維護中斷，顯式指定加密提供程序可能會帶來長期的安全風險。 請改用預設的提供程序。
+</p>
+<p>
+  範例：
+</p>
+<pre><code>
+// 錯誤：指定了提供程序
+MessageDigest.getInstance("SHA-256", provider);
+
+// 正確：省略了提供程序
+MessageDigest.getInstance("SHA-256");
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

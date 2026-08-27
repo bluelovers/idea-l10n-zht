@@ -1,0 +1,13 @@
+<html lang="zh">
+<body>
+报告脚本标记上为空或仅包含空白字符的 <code>generics</code> 特性。
+<p>无效代码示例：</p>
+<pre><code>&lt;script lang="ts" generics=""&gt;
+  export let value;
+&lt;/script&gt;</code></pre>
+<p>有效代码示例：</p>
+<pre><code><script lang="ts" generics="T">
+  export let value: T;
+</script></code></pre>
+</body>
+</html>

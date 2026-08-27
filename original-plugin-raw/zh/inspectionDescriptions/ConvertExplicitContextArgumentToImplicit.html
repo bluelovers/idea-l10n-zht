@@ -1,0 +1,28 @@
+<html>
+<body>
+报告可通过将调用包装在 <code>context(...) { }</code> 块中的方式转换为隐式上下文实参的显式上下文实参。
+<p>上下文形参是隐式的：它们的值通过作用域内的上下文形参和隐式接收者确定。 将调用包装到 <code>context</code> 块中会将值添加到上下文中，从而使其可用于隐式解析。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  interface Logger { fun log(message: String) }
+
+  context(logger: Logger)
+  fun logWithTime(message: String) {
+      logger.log("${LocalDateTime.now()}: $message")
+  }
+
+  fun saveUser(user: User, logger: Logger) {
+      logWithTime("saving user ${user.id}", logger = logger)
+  }
+</code></pre>
+<p>快速修复会将调用包装在 <code>context</code> 块中：</p>
+<pre><code>
+  fun saveUser(user: User, logger: Logger) {
+      context(logger) {
+          logWithTime("saving user ${user.id}")
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

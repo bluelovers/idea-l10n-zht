@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>检测到为依赖项使用了命名实参表示法，而可以使用 GAV 字符串表示法，提供将其转换为后者的快速修复。</p>
+<p><b>示例：</b></p>
+<pre><code lang="kotlin">
+dependencies {
+  implementation(group = "org.gradle.api", name = "gradle", version = "1.0") // reports the argument list
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code lang="kotlin">
+dependencies {
+  implementation("org.gradle.api:gradle:1.0")
+}
+</code></pre>
+<p><a
+  href="https://docs.gradle.org/9.3.0/userguide/best_practices_dependencies.html#single-gav-string">此处</a>介绍了最佳做法。</p>
+</body>
+</html>

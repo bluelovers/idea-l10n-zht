@@ -1,0 +1,11 @@
+<html>
+<body>
+報告當同一個軟體套件包含可傳遞相依模組中的類別，而這些模組沒有自己的 <code>package-info.java</code> 時，<code>package-info.java</code> 上的 <code>@ApiStatus.Experimental</code> 或 <code>@ApiStatus.Internal</code> 註解。
+<p>
+  Java 軟體套件註解僅在宣告 <code>package-info.java</code> 的模組中可見，因此其他模組中的拆分軟體套件類別將靜默缺失該註解。
+</p>
+<p>
+  快速修復會在每個具有此軟體套件中的類別，但缺少 <code>package-info.java</code> 檔案的相依模組中建立一個帶有相同註解的該檔案。
+</p>
+</body>
+</html>

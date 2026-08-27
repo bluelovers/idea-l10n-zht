@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>報告在布爾上下文（if/while/三元運算符）中使用協程而未等待的情況。</p>
+<p>直接在布爾條件中使用協程物件將始終評估為 <code>True</code>， 這可能不是預期的行為。 必須等待協程，才能獲取其實際的布林值。</p>
+<p><b>範例：</b></p>
+<pre><code>
+async def check() -> bool:
+    return True
+
+
+async def main():
+    if check():  # 始終為 True - 協程物件具有真值
+        print("hi")
+</code></pre>
+<p>應為：</p>
+<pre><code>
+async def check() -> bool:
+    return True
+
+
+async def main():
+    if await check():  # 正確等待協程
+        print("hi")
+</code></pre>
+</body>
+</html>

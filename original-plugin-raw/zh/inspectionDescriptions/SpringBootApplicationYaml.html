@@ -35,15 +35,34 @@ new:
 </code></pre>
 
 <p>应用该快速修复后，以下内容将添加到 <code>META-INF/spring-additional-configuration-metadata.json</code> 中：</p>
-<pre><code>
+<pre><code lang="JSON">
 {
   "properties": [
     {
       "name": "new.key",
       "type": "java.lang.String",
       "description": "Description for new.key."
-  }
-] }
+    }
+  ]
+}
+</code></pre>
+
+<p>该检查还会报告列表或数组类型的属性被当作映射键来访问，而没有使用 YAML 序列表示法的情况。</p>
+<p><b>示例：</b></p>
+<pre><code>
+# 'items' 是 List&lt;Bean&gt; 类型
+my:
+  config:
+    items:           # 报告“属性 'items' 需要进行索引访问”
+      name: value
+</code></pre>
+
+<p>正确用法需要使用 YAML 序列表示法访问列表元素：</p>
+<pre><code>
+my:
+  config:
+    items:
+      - name: value
 </code></pre>
 <!-- tooltip end -->
 <p>

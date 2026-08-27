@@ -1,0 +1,21 @@
+<html>
+<body>
+报告使用 <code>JComponent.setToolTipText(String)</code> 的情况。
+<p>
+  传递原始字符串可能会导致意外注入 HTML，因为 IntelliJ 平台在呈现工具提示文本时会解析 HTML 标记。
+  应使用 <code>com.intellij.ide.HelpTooltipKt.setToolTipText(HtmlChunk)</code>，而非 <code>JComponent.setToolTipText(String)</code>。
+  使用 <code>HtmlChunk.text()</code> 来安全地转义文本，特别是在文本可能包含用户输入或项目内容（例如，文件名）的情况下。
+  或者，如果工具提示需要包含 HTML，则使用 <code>HtmlChunk.raw()</code>。
+</p>
+<p>
+  示例：
+</p>
+<pre><code lang="kotlin">
+// 错误 — 原始字符串可能包含 HTML 注入：
+component.setToolTipText(text)
+
+// 正确 — 文本已转义：
+component.setToolTipText(HtmlChunk.text(text))
+</code></pre>
+</body>
+</html>

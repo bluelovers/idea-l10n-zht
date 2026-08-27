@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>通过将每个元素与 <code>==</code> 进行比较来报告检查切片是否包含值的循环。</p>
+
+<p>对于可比较的元素类型，<code>slices.Contains</code> 会在一次调用中执行相同的检查。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+func HasInt(xs []int, target int) bool {
+	for _, x := range xs {
+		if x == target {
+			return true
+		}
+	}
+	return false
+}
+</code></pre>
+
+<p>要修正代码，请使用<b>通过调用 slices.Contains 替换循环</b>快速修复。</p>
+
+<p><b>在应用快速修复后：</b></p>
+<pre><code>
+func HasInt(xs []int, target int) bool {
+	return slices.Contains(xs, target)
+}
+</code></pre>
+</body>
+</html>

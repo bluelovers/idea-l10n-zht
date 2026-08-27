@@ -1,0 +1,26 @@
+<html>
+<body>
+检测到不使用委托而直接使用 <code>lazy { ... }</code> 的情况。
+<p><b>示例：</b></p>
+<pre><code>
+    private val x = lazy { "hello" }
+
+    fun test() {
+        printlin(x.value)
+    }
+</code></pre>
+如果 lazy 变量仅通过直接访问其值的方式来使用，则建议使用快速修复：
+<pre><code>
+  private val x by lazy { "hello" }
+
+  fun test() {
+        println(x)
+  }
+</code></pre>
+<p>不会报告具有显式 lazy 类型的构造，例如 </p>
+<pre><code>
+    private val x: Lazy&lt;String&gt; = lazy { "hello" }
+</code></pre>
+因为它们被认为是有意使用的。
+</body>
+</html>

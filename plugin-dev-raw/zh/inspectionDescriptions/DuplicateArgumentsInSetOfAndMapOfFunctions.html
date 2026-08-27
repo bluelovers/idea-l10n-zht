@@ -1,0 +1,75 @@
+<html>
+<body>
+報告 set 工廠函式中重複的常數元素，map 工廠函式中重複的常數鍵。
+<p>
+    set 工廠函式中的重複條目通常是無意的，可能表示存在錯誤或拼寫錯誤。
+    在 set 工廠函式中，重複的元素會被忽略，因為集合只能包含唯一元素。
+    在 map 工廠函式中，具有相同鍵的條目會覆蓋先前條目，並且僅保留與該鍵相關聯的最後一個值。
+</p>
+
+<p>
+    該檢查適用於以下 map 工廠函式：
+</p>
+<ul>
+    <li><code>mapOf()</code></li>
+    <li><code>mutableMapOf()</code></li>
+    <li><code>hashMapOf()</code></li>
+    <li><code>linkedMapOf()</code></li>
+    <li><code>sortedMapOf()</code></li>
+</ul>
+
+<p>
+    檢測到使用 <code>to</code> 運算符建立的條目的重複映射鍵。
+</p>
+
+<p>
+    該檢查適用於以下 set 工廠函式：
+</p>
+<ul>
+    <li><code>setOf()</code></li>
+    <li><code>mutableSetOf()</code></li>
+    <li><code>hashSetOf()</code></li>
+    <li><code>linkedSetOf()</code></li>
+    <li><code>sortedSetOf()</code></li>
+</ul>
+
+<p>
+    該檢查會報告其值可以求值為編譯時常量的實參，包括常數字面量和 <code>const val</code> 參照。
+</p>
+
+<p><b>範例：</b></p>
+
+<pre><code>
+val numbers = setOf(1, 1, 2)
+</code></pre>
+
+<p>
+    值 <code>1</code> 出現多次。
+</p>
+
+<pre><code>
+val mapping = mapOf(
+    1 to "first",
+    1 to "second",
+)
+</code></pre>
+
+<p>
+    兩個條目使用同一個鍵。
+</p>
+
+<p><b>具有 <code>const val</code> 的範例：</b></p>
+
+<pre><code>
+const val ID = 42
+
+val ids = setOf(ID, 42)
+</code></pre>
+
+<p>
+    兩個實參求值為同一個常量值。
+</p>
+
+<!-- tooltip end -->
+</body>
+</html>

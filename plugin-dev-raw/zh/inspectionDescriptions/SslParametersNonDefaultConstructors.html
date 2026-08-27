@@ -1,0 +1,17 @@
+<html>
+<body>
+檢測何時使用指定密碼套件和/或協議的參數初始化 SSL 參數。
+
+<p>
+  如果使用的密碼套件和協議不同於預設設定，則可能會妨礙後量子加密的使用。
+</p>
+<p>
+  範例：
+</p>
+<pre><code>
+// 錯誤：可能永遠不會使用後量子密碼套件/協議
+new SSLParameters(new String[] {"SSL_RSA_WITH_DES_CBC_SHA"}, new String[] {"TLSv1.2"});
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

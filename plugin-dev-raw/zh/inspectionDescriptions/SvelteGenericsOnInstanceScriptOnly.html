@@ -1,0 +1,14 @@
+<html lang="zh">
+<body>
+報告模組腳本 (<code>context="module"</code>) 上的 <code>generics</code> 特性。
+<p><code>generics</code> 特性僅允許用於實例腳本，不可用於模組腳本。</p>
+<p>無效程式碼範例：</p>
+<pre><code>&lt;script context="module" generics="T"&gt;
+  // 錯誤：不允許在模組腳本上使用 generics
+&lt;/script&gt;</code></pre>
+<p>有效程式碼範例：</p>
+<pre><code>&lt;script lang="ts" generics="T"&gt;
+  // 正確：實例腳本使用 generics
+&lt;/script&gt;</code></pre>
+</body>
+</html>

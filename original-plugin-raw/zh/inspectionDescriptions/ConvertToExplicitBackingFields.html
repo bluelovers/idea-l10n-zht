@@ -1,0 +1,16 @@
+<html>
+<body>
+检测带有后备字段的属性，并建议使用 <i>field</i> 关键字显式引入后备字段的重构。
+<p><b>示例：</b></p>
+<pre><code>
+  private val _items = mutableListOf<Item>()
+  val items: List<Item> get() = _items
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  val items: List<Item>
+    field = mutableListOf<Item>()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>检测 Gradle 脚本中重复的仓库声明。</p>
+<p>提供导航到重复项的意图。</p>
+<p><b>检查报告示例：</b></p>
+<pre><code lang="kotlin">
+repositories {
+    // 将报告以下两个仓库
+    maven { url = uri("https://repo1.maven.org/maven2/") }
+    maven {
+        url = uri("https://repo1.maven.org/maven2/")
+        // 某些注释
+    }
+    maven { url = uri("https://some.other.repo/") } // 将不会报告
+}
+</code></pre>
+</body>
+</html>

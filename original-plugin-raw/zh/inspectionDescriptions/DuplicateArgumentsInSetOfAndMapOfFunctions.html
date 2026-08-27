@@ -1,0 +1,75 @@
+<html>
+<body>
+报告 set 工厂函数中重复的常量元素，map 工厂函数中重复的常量键。
+<p>
+    set 工厂函数中的重复条目通常是无意的，可能表示存在错误或拼写错误。
+    在 set 工厂函数中，重复的元素会被忽略，因为集合只能包含唯一元素。
+    在 map 工厂函数中，具有相同键的条目会覆盖先前条目，并且仅保留与该键相关联的最后一个值。
+</p>
+
+<p>
+    该检查适用于以下 map 工厂函数：
+</p>
+<ul>
+    <li><code>mapOf()</code></li>
+    <li><code>mutableMapOf()</code></li>
+    <li><code>hashMapOf()</code></li>
+    <li><code>linkedMapOf()</code></li>
+    <li><code>sortedMapOf()</code></li>
+</ul>
+
+<p>
+    检测到使用 <code>to</code> 运算符创建的条目的重复映射键。
+</p>
+
+<p>
+    该检查适用于以下 set 工厂函数：
+</p>
+<ul>
+    <li><code>setOf()</code></li>
+    <li><code>mutableSetOf()</code></li>
+    <li><code>hashSetOf()</code></li>
+    <li><code>linkedSetOf()</code></li>
+    <li><code>sortedSetOf()</code></li>
+</ul>
+
+<p>
+    该检查会报告其值可以求值为编译时常量的实参，包括常量字面量和 <code>const val</code> 引用。
+</p>
+
+<p><b>示例：</b></p>
+
+<pre><code>
+val numbers = setOf(1, 1, 2)
+</code></pre>
+
+<p>
+    值 <code>1</code> 出现多次。
+</p>
+
+<pre><code>
+val mapping = mapOf(
+    1 to "first",
+    1 to "second",
+)
+</code></pre>
+
+<p>
+    两个条目使用同一个键。
+</p>
+
+<p><b>具有 <code>const val</code> 的示例：</b></p>
+
+<pre><code>
+const val ID = 42
+
+val ids = setOf(ID, 42)
+</code></pre>
+
+<p>
+    两个实参求值为同一个常量值。
+</p>
+
+<!-- tooltip end -->
+</body>
+</html>

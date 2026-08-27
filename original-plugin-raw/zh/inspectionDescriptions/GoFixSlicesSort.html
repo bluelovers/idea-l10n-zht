@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>报告对 <code>sort.Slice</code> 的调用，其中比较函数仅比较带有 <code>&lt;</code> 运算符的元素。</p>
+
+<p>在这些情况中，您可以将 <code>sort.Slice</code> 替换为 <code>slices.Sort</code>，后者会直接对切片进行排序，并移除基于索引的比较函数。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+func SortInts(xs []int) {
+	sort.Slice(xs, func(i, j int) bool { return xs[i] < xs[j] })
+}
+</code></pre>
+
+<p>要修正代码，请使用<b>将 sort.Slice 调用替换为 slices.Sort</b> 快速修复。</p>
+
+<p><b>在应用快速修复后：</b></p>
+<pre><code>
+func SortInts(xs []int) {
+	slices.Sort(xs)
+}
+</code></pre>
+<p>如果比较函数实现了自定义排序，请改用 <code>slices.SortFunc</code>。</p>
+</body>
+</html>

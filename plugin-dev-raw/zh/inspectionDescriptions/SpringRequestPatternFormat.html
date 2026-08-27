@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>報告 Spring Security 匹配器方法中與自 Spring Security 7.0 起預設使用的 <code>PathPatternParser</code> 不相容的請求模式。</p>
+
+<p>Spring Security 7.0 從使用 Ant 樣式路徑符合 (<code>AntPathMatcher</code>) 切換為 <code>PathPatternParser</code>，對萬用字元段實施更嚴格的規則。</p>
+
+<p>會標記以下模式：</p>
+<ul>
+  <li>萬用字元段（<code>**</code> 或 <code>{*variable}</code>）放在模式中間，而不是開頭或結尾處。</li>
+  <li>同一模式中有多個萬用字元段（<code>**</code> 或 <code>{*variable}</code>）。</li>
+</ul>
+
+<p><b>不正確模式範例：</b></p>
+<pre><code>
+  http.authorizeHttpRequests(auth -> auth
+    .requestMatchers("/api/**/admin").permitAll()   // '**' 在中間
+    .requestMatchers("/{*a}/{*b}").permitAll()      // 多個 {*...} 段
+  );
+</code></pre>
+
+<p><b>正確模式範例：</b></p>
+<pre><code>
+  http.authorizeHttpRequests(auth -> auth
+    .requestMatchers("/api/admin/**").permitAll()   // '**' 在結尾
+    .requestMatchers("/{*path}").permitAll()        // 單個 {*...} 段
+    .requestMatchers("/api/*/details").permitAll()  // 單個 '*' 可放在任何位置
+  );
+</code></pre>
+
+<p>該檢查僅在 Spring Security 7.0 或更高版本存在且 <code>spring.mvc.pathmatch.matching-strategy</code> 未設定為 <code>ant_path_matcher</code> 時才會啟用。</p>
+</body>
+</html>

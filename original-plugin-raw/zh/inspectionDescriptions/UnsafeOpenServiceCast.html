@@ -1,0 +1,28 @@
+<html>
+<body>
+报告将使用 <code>open="true"</code> 声明的服务转换为比服务接口更具体的类的代码。
+<p>
+  如果服务在其 <code>plugin.xml</code> 注册中被标记为 "open"，则可被其他插件使用不同的实现重写。 将此类服务转换为特定的实现类不安全，因为在运行时实际实例可能是不同的类，从而会导致 <code>ClassCastException</code>。
+</p>
+<p><b>示例：</b></p>
+<pre><code lang="xml">
+  &lt;!-- plugin.xml --&gt;
+  &lt;extensions defaultExtensionNs="com.intellij"&gt;
+    &lt;projectService serviceInterface="com.example.MyService"
+                    serviceImplementation="com.example.MyServiceImpl"
+                    open="true" /&gt;
+  &lt;/extensions&gt;
+</code></pre>
+<pre><code lang="java">
+  // 错误：将开放服务转换为特定实现
+  MyServiceImpl impl = (MyServiceImpl) project.getService(MyService.class);
+</code></pre>
+<p>
+  改为仅使用声明的服务接口：
+</p>
+<pre><code lang="java">
+  // 正确：使用服务接口
+  MyService service = project.getService(MyService.class);
+</code></pre>
+</body>
+</html>

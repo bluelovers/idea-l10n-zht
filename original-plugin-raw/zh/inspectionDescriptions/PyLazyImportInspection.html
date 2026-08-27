@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>报告对 <a href="https://peps.python.org/pep-0810/">PEP 810</a> 引入的 <code>lazy</code> import 的无效使用。</p>
+<p>标记了以下使用：</p>
+<ul>
+  <li>放置在函数、类或 <code>try</code> 主体中的 <code>lazy</code> import &mdash; <code>lazy</code> import 必须显示在模块级别；
+  </li>
+  <li><code>lazy from ... import *</code> &mdash; star import 不能为惰性；
+  </li>
+  <li><code>lazy from __future__ import ...</code> &mdash;
+    <code>__future__</code> import 不能为惰性。
+  </li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+def f():
+    lazy import os  # lazy import 必须显示在模块级别
+</code></pre>
+</body>
+</html>

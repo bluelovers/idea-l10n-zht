@@ -1,0 +1,11 @@
+<html>
+<body>
+報告在相依項模組已在自身的 <code>package-info.java</code> 中為此拆分軟體套件宣告了相同註解的情況下，在 <code>package-info.java</code> 宣告 <code>@ApiStatus.Experimental</code> 或 <code>@ApiStatus.Internal</code> 註解的情況。
+<p>
+  由於相依項模組的 <code>package-info.java</code> 已經帶有註解，此模組中的重複宣告冗餘。
+</p>
+<p>
+  快速修復可以移除此 <code>package-info.java</code>。 只有在當前檔案的每個不穩定註解也在相依項模組的 <code>package-info.java</code> 中宣告時，才會提供此修正。 軟體套件級別的 Javadoc（如果有）將會丟失。
+</p>
+</body>
+</html>

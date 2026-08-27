@@ -1,0 +1,28 @@
+<html>
+<body>
+報告將使用 <code>open="true"</code> 宣告的服務轉換為比服務接口更具體的類別的程式碼。
+<p>
+  如果服務在其 <code>plugin.xml</code> 註冊中被標記為 "open"，則可被其他延伸模組使用不同的實作覆寫。 將此類別服務轉換為特定的實作類別不安全，因為在執行時實際實例可能是不同的類別，從而會導致 <code>ClassCastException</code>。
+</p>
+<p><b>範例：</b></p>
+<pre><code lang="xml">
+  &lt;!-- plugin.xml --&gt;
+  &lt;extensions defaultExtensionNs="com.intellij"&gt;
+    &lt;projectService serviceInterface="com.example.MyService"
+                    serviceImplementation="com.example.MyServiceImpl"
+                    open="true" /&gt;
+  &lt;/extensions&gt;
+</code></pre>
+<pre><code lang="java">
+  // 錯誤：將開放服務轉換為特定實作
+  MyServiceImpl impl = (MyServiceImpl) project.getService(MyService.class);
+</code></pre>
+<p>
+  改為僅使用宣告的服務接口：
+</p>
+<pre><code lang="java">
+  // 正確：使用服務接口
+  MyService service = project.getService(MyService.class);
+</code></pre>
+</body>
+</html>

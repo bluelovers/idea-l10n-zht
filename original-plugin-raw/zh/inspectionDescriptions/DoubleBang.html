@@ -1,0 +1,19 @@
+<html>
+<body>
+报告可被替换为 elvis 运算符和 <code>error(...)</code> 的非 null 断言 (<code>!!</code>) 调用。
+<p>非 null 断言可能导致意想不到的 NPE (NullPointerException)。 将其替换为 <code>?: error(...)</code> 会使失败显现出来，并支持整个文件的检查清理。</p>
+<p><b>示例：</b></p>
+<pre><code>
+fun test(number: Int?) {
+    val x = number!!
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+fun test(number: Int?) {
+    val x = number ?: error("Expression 'number' must not be null")
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

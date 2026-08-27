@@ -1,0 +1,22 @@
+<html>
+<body>
+報告字串和位元組字面量中的無效轉義序列。
+
+<p>
+  從 Python 3.6 開始，未識別的轉義序列（例如 <code>\.</code>）將產生 <code>SyntaxWarning</code>。
+  在未來的 Python 版本中，它們將成為 <code>SyntaxError</code>。
+</p>
+<p>
+  要解決此問題，您可以轉義反斜杠（例如 <code>\\.</code>），或使用原始字串（例如 <code>r'\.'</code>）。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+# 警告：無效的轉義序列 '\.'
+print('\.')
+
+# Correct
+print(r'\.')
+print('\\.')
+</code></pre>
+</body>
+</html>

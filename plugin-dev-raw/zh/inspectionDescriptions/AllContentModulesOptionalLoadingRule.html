@@ -1,0 +1,9 @@
+<html>
+<body>
+檢查延伸模組檔案描述子中是否至少有一個內容模組指定了非 optional 的載入規則。
+<p>
+  如果所有內容模組都使用 <code>optional</code> 載入規則，那麼每個模組都可能由於缺少相依項而無法載入 – 延伸模組會在 UI 中載入，但不提供任何功能。
+  至少有一個模組應使用 <code>loading="required"</code>、<code>loading="embedded"</code> 或 <code>required-if-available</code>。
+</p>
+</body>
+</html>

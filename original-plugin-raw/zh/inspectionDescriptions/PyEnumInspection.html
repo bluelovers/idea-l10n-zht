@@ -19,19 +19,19 @@ class ExtendedShape(Shape):  # 枚举类 'Shape' 为 final，无法被子类化
     TRIANGLE = 3
 </code></pre>
 <pre><code>
-  from enum import Enum
+from enum import Enum
 
 
-  class Color(Enum):
+class Color(Enum):
     _value_: int
     RED = 1
-    GREEN = "green"  # 类型 'str' 不可赋值给已声明的类型 'int'
+    GREEN = "green"  # 类型 'str' 不可赋值给声明的类型 'int'
 </code></pre>
 <pre><code>
-  from enum import Enum
+from enum import Enum
 
 
-  class Pet(Enum):
+class Pet(Enum):
     CAT = 1
     DOG: int = 2  # 不允许为枚举成员使用类型注解
 </code></pre>

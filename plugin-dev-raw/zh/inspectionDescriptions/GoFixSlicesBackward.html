@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>報告可被取代為 <code>slices.Backward</code> 的對切片的反向索引迴圈。</p>
+
+<p>在 Go 1.23 及更高版本中，<code>slices.Backward</code> 會返回從最後一個元素到第一個元素對切片進行遍歷的迭代器。 這樣便無需手動進行索引處理，並有助於避免差一錯誤。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+func ReverseInPlace(s []int) []int {
+	out := make([]int, 0, len(s))
+	for i := len(s) - 1; i >= 0; i-- {
+		out = append(out, s[i])
+	}
+	return out
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>取代為 range slices.Backward(s)</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func ReverseInPlace(s []int) []int {
+	out := make([]int, 0, len(s))
+	for _, v := range slices.Backward(s) {
+		out = append(out, v)
+	}
+	return out
+}
+</code></pre>
+</body>
+</html>

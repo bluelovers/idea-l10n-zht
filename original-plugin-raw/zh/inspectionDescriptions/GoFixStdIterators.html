@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>报告对标准库类型进行基于索引的循环，其中循环体仅通过索引（如 <code>x.At(i)</code>）访问元素。</p>
+<p>一些标准库类型现在提供迭代器方法，使您能够直接遍历元素。 这样便无需进行索引算术运算，使循环意图更加明确。</p>
+<p><b>示例：</b></p>
+<pre><code>
+func TupleNames(t *types.Tuple) string {
+	var names []string
+	for i := 0; i < t.Len(); i++ {
+		names = append(names, t.At(i).Name())
+	}
+	return strings.Join(names, ",")
+}
+</code></pre>
+
+<p>要修正代码，请使用<b>将 Len/At 循环替换为 Tuple.Variables 迭代</b>快速修复。</p>
+
+<p><b>在应用快速修复后：</b></p>
+<pre><code>
+func TupleNames(t *types.Tuple) string {
+	var names []string
+	for v := range t.Variables() {
+		names = append(names, v.Name())
+	}
+	return strings.Join(names, ",")
+}
+</code></pre>
+</body>
+</html>

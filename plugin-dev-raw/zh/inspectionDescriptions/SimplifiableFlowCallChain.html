@@ -1,0 +1,20 @@
+<html>
+<body>
+報告 <code>kotlinx.coroutines</code> 庫中 <code>Flow</code> 類型的兩個呼叫鏈，這些呼叫鏈可被取代為一個呼叫。
+<p>它可以幫助您避免冗餘程式碼執行。</p>
+<p>該快速修復會將呼叫鏈取代為單個呼叫。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  fun main() {
+      flowOf("1", "2", "Oh").map { it.toIntOrNull() }.filterNotNull()
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun main() {
+      flowOf("1", "2", "Oh").mapNotNull { it.toIntOrNull() }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

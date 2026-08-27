@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>報告使用 <code>interface{}</code> 並且可以使用 <code>any</code> 簡化的類型宣告。</p>
+
+<p><code>any</code> 是 <code>interface{}</code> 的別名。 使用 <code>any</code> 讓通用程式碼和 API 更易於閱讀。</p>
+
+<p><b>範例：</b></p>
+<pre><code>type Box struct {
+	Value interface{}
+}
+
+func Identity(x interface{}) interface{} { return x }
+
+func Map() map[string]interface{} { return nil }
+</code></pre>
+
+<p>為了簡化程式碼，請使用<b>將 interface{} 取代為 any</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>type Box struct {
+	Value any
+}
+
+func Identity(x any) any { return x }
+
+func Map() map[string]any { return nil }
+</code></pre>
+</body>
+</html>

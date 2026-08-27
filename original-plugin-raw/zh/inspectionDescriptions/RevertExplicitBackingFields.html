@@ -1,0 +1,17 @@
+<html>
+<body>
+检测显式后备字段。
+<p>快速修复会将显式后备字段替换为 private 属性和 getter。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  val items: Set&lt;Int&gt;
+    field = mutableSetOf&lt;Int&gt;()
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  private val _items = mutableSetOf&lt;Int&gt;()
+  val items: Set&lt;Int&gt;
+    get() = _items
+</code></pre>
+</body>
+</html>

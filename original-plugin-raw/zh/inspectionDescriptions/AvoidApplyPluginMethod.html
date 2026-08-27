@@ -1,0 +1,43 @@
+<html>
+<body>
+<p>检测 Gradle 构建脚本中旧版 <code>apply</code> 插件方法的用法。</p>
+<p>
+  如果插件是核心插件，或来源于 <code>gradlePluginPortal</code>，则提供一个快速修复，将旧版语法转换为首选的 <code>plugins</code> 块语法。
+  <code>buildscript</code> 块将被自动修改，以移除冗余的依赖项，如果该块为空，也会被移除。
+</p>
+<p><b>核心插件示例：</b></p>
+<pre><code lang="kotlin">
+apply(plugin = "java") // 高亮显示此行
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code lang="kotlin">
+plugins {
+    id("java")
+}
+</code></pre>
+
+<p><b>外部插件示例：</b></p>
+<pre><code lang="kotlin">
+buildscript {
+    repositories {
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        classpath("com.google.protobuf:com.google.protobuf.gradle.plugin:0.9.4")
+    }
+}
+
+apply(plugin = "com.google.protobuf") // 报告此行
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code lang="kotlin">
+plugins {
+    id("com.google.protobuf").version("0.9.4")
+}
+</code></pre>
+
+<p><a
+  href="https://docs.gradle.org/9.3.0/userguide/best_practices_general.html#use_the_plugins_block">此处</a>介绍了最佳做法。</p>
+</body>
+</html>

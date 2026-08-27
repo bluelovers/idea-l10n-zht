@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>檢測未向其指定描述的任務註冊。
+  建議用於新增描述欄位的快速修復。
+</p>
+<p><b>範例：</b></p>
+<pre><code lang="kotlin">
+tasks.register("generateDocs") { // 報告方法 'register'
+    // 建置生成文檔的邏輯
+}
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code lang="kotlin">
+tasks.register("generateDocs") {
+    description = "&lt;caret&gt;"
+    // 建置生成文檔的邏輯
+}
+</code></pre>
+
+<p><a
+  href="https://docs.gradle.org/9.3.0/userguide/best_practices_tasks.html#group_describe_tasks">此處</a>介紹了最佳做法。</p>
+</body>
+</html>

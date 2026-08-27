@@ -3,16 +3,20 @@
 报告 <code>ProcessCanceledException</code> 和 <code>CancellationException</code> 处理不正确的情况。
 
 <p>
-  不得以任何方式捕获、吞下、记录或处理 <code>ProcessCanceledException</code> 及其继承者。
+  不得以任何方式捕获、吞下、记录*或处理 <code>ProcessCanceledException</code> 及其继承者。
   相反，必须将其重新抛出，以便 IntelliJ Platform 基础架构能够对其进行正确处理。
 </p>
 <p>
-  在协程上下文中不得以任何方式捕获、吞下、记录或处理 <code>CancellationException</code>。
+  在协程上下文中不得以任何方式捕获、吞下、记录*或处理 <code>CancellationException</code>。
   相反，必须将其重新抛出，以便协程基础架构能够对其进行正确处理。
 </p>
 
 <p>
-  检查会报告显式的 <code>ProcessCanceledException</code>（包括继承者）和 <code>CancellationException</code> 捕获，以及对覆盖取消异常的 <code>RuntimeException</code>、<code>Exception</code> 和 <code>Throwable</code> 的捕获。
+  <i>*该检查会报告在任何执行上下文中记录这些异常。</i>
+</p>
+
+<p>
+  该检查会报告显式 <code>ProcessCanceledException</code>（包括继承者）和 <code>CancellationException</code> 捕获，以及对覆盖取消异常的 <code>RuntimeException</code>、<code>Exception</code> 和 <code>Throwable</code> 的捕获。
 </p>
 
 <h3>示例：</h3>
@@ -76,6 +80,9 @@ cs.launch {
 }
 </code></pre>
 
+<p>
+  如需了解详情，请参阅 IntelliJ 平台插件 SDK 文档中的<a href="https://plugins.jetbrains.com/docs/intellij/background-processes.html#cancellation">后台进程取消</a>。
+</p>
 <p>
   <i>注：检查在测试源中被禁用。</i>
 </p>

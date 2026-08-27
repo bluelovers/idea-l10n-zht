@@ -1,0 +1,20 @@
+<html>
+<body>
+检测何时在加密类工厂方法中指定提供程序。
+
+<p>
+  如果维护中断，显式指定加密提供程序可能会带来长期的安全风险。 请改用默认的提供程序。
+</p>
+<p>
+  示例：
+</p>
+<pre><code>
+// 错误：指定了提供程序
+MessageDigest.getInstance("SHA-256", provider)
+
+// 正确：省略了提供程序
+MessageDigest.getInstance("SHA-256")
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

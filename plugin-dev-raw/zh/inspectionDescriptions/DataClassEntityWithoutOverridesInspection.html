@@ -1,0 +1,33 @@
+<html>
+<body>
+報告用作 JPA 實體，但沒有覆寫的 equals、hashCode 和 toString 的資料類別。
+<p>
+  不建議為 JPA 實體使用 equals、hashCode 和 toString 的預設資料類別實作。
+  它們不會考慮可能的代理，並且可能會破壞實體特性的延遲初始化。
+  這可能會導致正確性和性能方面的問題，例如基於雜湊的集合中出現重複條目​​以及從資料庫中搶佔式預取。
+</p>
+<p>
+  範例：
+</p>
+<pre><code>
+@Entity
+data class Employee(
+    @Id @GeneratedValue
+    var id: Long? = null,
+    var name: String = "",
+    var department: String = ""
+)
+</code></pre>
+套用該快速修復後：
+<pre><code>
+@Entity
+class Employee(
+    @Id @GeneratedValue
+    var id: Long? = null,
+    var name: String = "",
+    var department: String = ""
+)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

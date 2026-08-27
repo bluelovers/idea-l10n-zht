@@ -1,0 +1,43 @@
+<html>
+<body>
+<p>檢測 Gradle 建置腳本中舊版 <code>apply</code> 延伸模組方法的用法。</p>
+<p>
+  如果延伸模組是核心延伸模組，或來源於 <code>gradlePluginPortal</code>，則提供一個快速修復，將舊版語法轉換為首選的 <code>plugins</code> 塊語法。
+  <code>buildscript</code> 塊將被自動修改，以移除冗餘的相依項，如果該塊為空，也會被移除。
+</p>
+<p><b>核心延伸模組範例：</b></p>
+<pre><code lang="kotlin">
+apply(plugin = "java") // 醒目提示顯示此行
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code lang="kotlin">
+plugins {
+    id("java")
+}
+</code></pre>
+
+<p><b>外部延伸模組範例：</b></p>
+<pre><code lang="kotlin">
+buildscript {
+    repositories {
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        classpath("com.google.protobuf:com.google.protobuf.gradle.plugin:0.9.4")
+    }
+}
+
+apply(plugin = "com.google.protobuf") // 報告此行
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code lang="kotlin">
+plugins {
+    id("com.google.protobuf").version("0.9.4")
+}
+</code></pre>
+
+<p><a
+  href="https://docs.gradle.org/9.3.0/userguide/best_practices_general.html#use_the_plugins_block">此處</a>介紹了最佳做法。</p>
+</body>
+</html>

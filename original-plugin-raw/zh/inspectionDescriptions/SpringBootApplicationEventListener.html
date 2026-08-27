@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>报告处理在<b>创建 <code>ApplicationContext</code> 之前</b>发布的 Spring Boot 应用程序事件的 <code>@EventListener</code> 方法。 此类事件永远无法传递给 Bean 注册的侦听器，因此带注解的方法永远不会静默运行。</p>
+
+<p>受影响的事件有：</p>
+<ul>
+  <li><code>ApplicationStartingEvent</code></li>
+  <li><code>ApplicationEnvironmentPreparedEvent</code></li>
+  <li><code>ApplicationContextInitializedEvent</code></li>
+  <li><code>ApplicationPreparedEvent</code></li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code lang="java">
+  @Component
+  class MyListener {
+    @EventListener // 报告：此事件在上下文存在之前发布
+    void on(ApplicationStartingEvent event) { ... }
+  }
+</code></pre>
+
+<p>要侦听这些早期事件，请通过 <code>META-INF/spring.factories</code> (<code>org.springframework.context.ApplicationListener</code>) 或 <code>SpringApplication.addListeners(...)</code> 注册侦听器，而不是依赖于 Bean。</p>
+<!-- tooltip end -->
+</body>
+</html>

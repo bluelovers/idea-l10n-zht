@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>通過將每個元素與 <code>==</code> 進行比較來報告檢查切片是否包含值的迴圈。</p>
+
+<p>對於可比較的元素類型，<code>slices.Contains</code> 會在一次呼叫中執行相同的檢查。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+func HasInt(xs []int, target int) bool {
+	for _, x := range xs {
+		if x == target {
+			return true
+		}
+	}
+	return false
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>通過呼叫 slices.Contains 取代迴圈</b>快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func HasInt(xs []int, target int) bool {
+	return slices.Contains(xs, target)
+}
+</code></pre>
+</body>
+</html>

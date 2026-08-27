@@ -1,0 +1,19 @@
+<html>
+<body>
+報告類型為 <code>java.lang.LazyConstant</code> 且未被宣告為 <code>final</code> 的欄位。
+<p>另外，報告使用 <code>List.ofLazy()</code> 或 <code>Map.ofLazy()</code> 初始化且被未宣告為 <code>final</code> 的欄位，因為這些集合在內部使用惰性常數。</p>
+<p>
+  根據 <a href="https://openjdk.org/jeps/526">JEP 526: Lazy Constants</a>，惰性常數必須存儲在 <code>final</code> 欄位中，以便 JVM 可以進行常數折疊最佳化。
+</p>
+<p>正確用法：</p>
+<pre><code>
+  private final LazyConstant&lt;Logger&gt; logger = LazyConstant.of(() -&gt; Logger.create(OrderController.class));
+</code></pre>
+<p>用法不正確（將被報告）：</p>
+<pre><code>
+  private LazyConstant&lt;String&gt; x = LazyConstant.of(() -&gt; "expensive string");
+</code></pre>
+
+<p><small>2026.1 最新變化</small></p>
+</body>
+</html>

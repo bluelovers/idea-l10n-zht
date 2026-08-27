@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>报告对标有 <code>//go:fix inline</code> 的函数或常量的引用。</p>
+
+<p><code>//go:fix inline</code> 指令表示应重写调用方和引用，以使用声明体。 这有助于您逐步淘汰已弃用的包装器和别名，而无需手动扫描。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+// 已弃用：优先使用 Pow(x, 2)。
+//
+//go:fix inline
+func Square(x int) int { return Pow(x, 2) }
+
+func Areas(sides []int) []int {
+    out := make([]int, len(sides))
+    for i, s := range sides {
+        out[i] = Square(s)
+    }
+    return out
+}
+</code></pre>
+
+<p>要修正代码，请使用<b>内联调用 inline.Square</b> 快速修复。</p>
+
+<p><b>在应用快速修复后：</b></p>
+<pre><code>
+func Areas(sides []int) []int {
+	out := make([]int, len(sides))
+	for i, s := range sides {
+		out[i] = Pow(s, 2)
+	}
+	return out
+}
+</code></pre>
+
+<p>可对常量使用相同的指令，以重写对常量值或别名目标的引用。</p>
+</body>
+</html>

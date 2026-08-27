@@ -30,21 +30,34 @@ new.key=value #報告 '無法解析組態屬性 'new.key''
 </code></pre>
 
 <p>套用該快速修復後，以下內容將新增到 <code>META-INF/spring-additional-configuration-metadata.json</code> 中：</p>
-<pre><code>
+<pre><code lang="JSON">
 {
   "properties": [
     {
       "name": "new.key",
       "type": "java.lang.String",
       "description": "Description for new.key."
-  }
-] }
+    }
+  ]
+}
 </code></pre>
 
 <p>該檢查還會醒目提示列表和映射組態鍵中的索引表示法錯誤。</p>
 <p><b>範例：</b></p>
 <pre><code>
 spring.datasource.schema[]=${schema} #報告 '缺少索引值'
+</code></pre>
+
+<p>該檢查還會報告在路徑中使用列表或陣列類型的屬性時未提供索引的情況。</p>
+<p><b>範例：</b></p>
+<pre><code>
+# 'items' 是 List&lt;Bean&gt; 類型
+my.config.items.name=value #報告“屬性 'items' 需要進行索引存取”
+</code></pre>
+
+<p>正確的用法需要使用索引註解來訪問特定的列表元素：</p>
+<pre><code>
+my.config.items[0].name=value
 </code></pre>
 <!-- tooltip end -->
 

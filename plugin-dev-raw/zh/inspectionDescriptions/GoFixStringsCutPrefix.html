@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>報告使用 <code>strings.HasPrefix</code> 檢查前綴，隨後又使用 <code>strings.TrimPrefix</code> 移除該前綴的程式碼。</p>
+<p>此模式會對前綴進行兩次掃描。 <code>strings.CutPrefix</code> 會用一步移除前綴，並返回更新後的字串以及一個用於報告該前綴是否存在的布林值。</p>
+<p><b>範例：</b></p>
+<pre><code>
+func Strip(s string) (string, bool) {
+	if strings.HasPrefix(s, "v") {
+		return strings.TrimPrefix(s, "v"), true
+	}
+	return s, false
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>將 HasPrefix/TrimPrefix 取代為 CutPrefix</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func Strip(s string) (string, bool) {
+	if after, ok := strings.CutPrefix(s, "v"); ok {
+		return after, true
+	}
+	return s, false
+}
+</code></pre>
+</body>
+</html>

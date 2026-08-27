@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>检测未向其指定描述的任务注册。
+  建议用于添加描述字段的快速修复。
+</p>
+<p><b>示例：</b></p>
+<pre><code lang="kotlin">
+tasks.register("generateDocs") { // 报告方法 'register'
+    // 构建生成文档的逻辑
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code lang="kotlin">
+tasks.register("generateDocs") {
+    description = "&lt;caret&gt;"
+    // 构建生成文档的逻辑
+}
+</code></pre>
+
+<p><a
+  href="https://docs.gradle.org/9.3.0/userguide/best_practices_tasks.html#group_describe_tasks">此处</a>介绍了最佳做法。</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>检测 Gradle 构建脚本中重复的依赖关系声明。</p>
+<p>提供导航到重复项的意图，以及用于移除完全匹配项的快速修复。</p>
+<p><b>检查报告示例：</b></p>
+<pre><code lang="kotlin">
+dependencies {
+    implementation("com.google.guava:guava:32.1.2-jre") // 将报告此行，因为下方有一个完全重复的行
+    implementation("com.google.guava:guava:32.1.2-jre") // 将报告此行，因为上方有一个完全重复的行
+    api("com.google.guava:guava:32.1.2-jre") // 也将报告此行，因为可以通过另一个配置获取此行
+}
+</code></pre>
+<p><b>移除完全重复项的快速修复示例：</b></p>
+<pre><code lang="kotlin">
+dependencies {
+    implementation("com.google.guava:guava:32.1.2-jre") // 将提供快速修复
+    implementation("com.google.guava:guava:32.1.2-jre") // 将提供快速修复
+    api("com.google.guava:guava:32.1.2-jre") // 将不提供快速修复
+}
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code lang="kotlin">
+dependencies {
+    implementation("com.google.guava:guava:32.1.2-jre")
+    api("com.google.guava:guava:32.1.2-jre")
+}
+</code></pre>
+
+<p><a
+  href="https://docs.gradle.org/9.3.0/userguide/best_practices_dependencies.html#avoid_duplicate_dependencies">此处</a>介绍了最佳做法。</p>
+</body>
+</html>

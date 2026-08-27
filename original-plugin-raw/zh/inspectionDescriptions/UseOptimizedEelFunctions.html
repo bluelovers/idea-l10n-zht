@@ -1,0 +1,18 @@
+<html>
+<body>
+报告使用了在远程 Eel 环境下可能效率较低的标准 Java I/O 操作的情况。
+
+<p>
+  在进行远程开发时，由于网络通信开销较大，像 Files.readAllBytes() 这样的标准 Java I/O 操作可能效率较低。 此检查建议使用专为远程开发场景设计的优化版 Eel API 替代方案。
+</p>
+
+<p>示例：</p>
+<pre><code>
+// 对于远程开发效率较低：
+byte[] data = Files.readAllBytes(path);
+
+// 优化版 Eel API：
+byte[] data = EelFiles.readAllBytes(path);
+</code></pre>
+</body>
+</html>

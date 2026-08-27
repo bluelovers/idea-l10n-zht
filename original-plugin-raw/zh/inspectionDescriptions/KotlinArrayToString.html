@@ -1,0 +1,53 @@
+<html>
+<body>
+<p>对数组调用 <code>toString()</code> 返回的是对象在内存中的地址，而不是数组内容的字符串表示。 这几乎从来不是您希望得到的结果。</p>
+<p>要正确获取数组的字符串表示，请使用：</p>
+<ul>
+  <li><code>contentToString()</code>（用于线性数组）</li>
+  <li><code>contentDeepToString()</code>（用于多维数组）</li>
+</ul>
+<p><b>示例（显式 toString）：</b></p>
+<pre><code>
+  fun main() {
+      val a = arrayOf(1, 2, 3)
+      val s = a.toString() // 错误
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun main() {
+      val a = arrayOf(1, 2, 3)
+      val s = a.contentToString() // 正确
+  }
+</code></pre>
+<p><b>示例（字符串模板中的隐式 toString）：</b></p>
+<pre><code>
+  fun main() {
+      val a = arrayOf(1, 2, 3)
+      println("Array: $a") // 错误 - 打印地址
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun main() {
+      val a = arrayOf(1, 2, 3)
+      println("Array: ${a.contentToString()}") // 正确 - 打印 [1, 2, 3]
+  }
+</code></pre>
+<p><b>示例（多维数组）：</b></p>
+<pre><code>
+  fun main() {
+      val a2d = arrayOf(arrayOf(1, 2), arrayOf(3, 4))
+      val s = a2d.toString() // 错误
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun main() {
+      val a2d = arrayOf(arrayOf(1, 2), arrayOf(3, 4))
+      val s = a2d.contentDeepToString() // 正确 - 打印 [[1, 2], [3, 4]]
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

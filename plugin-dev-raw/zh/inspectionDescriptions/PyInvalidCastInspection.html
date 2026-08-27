@@ -16,19 +16,32 @@ from typing import cast
 <b>cast(list[int], ["a"])</b>  # 'list[str]' -> 'list[int]'
 
 # 推薦的顯式逃生艙口是使用“雙重轉換”
-cast(int, <b>cast(object, "a")</b>)  # 正常
+cast(int, <b>cast(object, "a")</b>)  # 正確
 
 # 合法的重疊情況
 cast(int, object())    # 有效的向下轉換
 cast(object, 1)        # 有效的向上轉換
 
-# 但以下是無效轉換，因為 <code>list</code> 不可變。 當前不受此檢查支援
+# 預設情況下，會忽略泛型類型實參的變體，因此，儘管 <code>list</code> 是不變的，
+# 也不會報告以下情況
 int_list = [1, 2, 3]
-cast(list[object], int_list)
+cast(list[object], int_list)  # 正確
 </code></pre>
 <!-- tooltip end -->
-<p>該檢查依賴於靜態類型資訊；當類型未知時，不會報告警告。
+<p>該檢查依賴於靜態類型資訊；當類型未知時，不會報告警告。</p>
 
-  尚未考慮泛型類型的差異。</p>
+<p>使用<b>忽略泛型類型實參的差異</b>選項可控制是否考慮泛型類型實參。 啟用後（預設設定），僅會按基類別比較參數化類型，因此允許進行 <code>cast(list[object], int_list)</code> 之類的轉換。 停用此選項還會報告只有其（不變）類型實參不同的轉換。</p>
+
+<p>使用<b>忽略 TypedDict 結構(將 TypedDict 視為 dict)</b>選項來控制是否將 <code>TypedDict</code> 視為普通字典。 啟用後（預設設定），允許將 <code>dict</code> 轉換為 <code>TypedDict</code>（或反向轉換），因為 <code>TypedDict</code> 在執行時為 <code>dict</code>：</p>
+<pre><code>
+from typing import TypedDict, cast
+
+class TD(TypedDict):
+    x: int
+
+data: dict[str, object]
+cast(TD, data)  # ok
+</code></pre>
+<p>停用此選項可在字典結構與 <code>TypedDict</code> 不符合時報告此類別轉換。</p>
 </body>
 </html>

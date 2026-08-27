@@ -1,0 +1,55 @@
+<html>
+<body>
+<p>報告遍歷 <code>strings.Split</code> 或 <code>strings.Fields</code> 的迴圈。</p>
+<p>這些函式會分配一個僅用於迭代的子字串切片。 在 Go 1.24 及更高版本中，<code>strings.SplitSeq</code> 和 <code>strings.FieldsSeq</code> 返回的迭代器可以直接生成每個片段，而無需分配中間切片。</p>
+<p><b>範例：</b></p>
+<pre><code>
+func CountCSV(s string) int {
+	n := 0
+	for p := range strings.SplitSeq(s, ",") {
+		if p != "" {
+			n++
+		}
+	}
+	return n
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>將 Split 取代為 SplitSeq</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func CountWords(s string) int {
+	n := 0
+	for _, w := range strings.Fields(s) {
+		_ = w
+		n++
+	}
+	return n
+}
+</code></pre>
+
+<p><b>範例：</b></p>
+<pre><code>
+func CountWords(s string) int {
+	n := 0
+	for w := range strings.FieldsSeq(s) {
+		_ = w
+		n++
+	}
+	return n
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>將 Fields 取代 FieldsSeq</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+n := 0
+for w := range strings.FieldsSeq(s) {
+    _ = w
+    n++
+}
+</code></pre>
+</body>
+</html>

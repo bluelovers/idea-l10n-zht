@@ -1,0 +1,20 @@
+<html>
+<body>
+报告 <code>kotlinx.coroutines</code> 库中 <code>Flow</code> 类型的两个调用链，这些调用链可被替换为一个调用。
+<p>它可以帮助您避免冗余代码执行。</p>
+<p>该快速修复会将调用链替换为单个调用。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun main() {
+      flowOf("1", "2", "Oh").map { it.toIntOrNull() }.filterNotNull()
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun main() {
+      flowOf("1", "2", "Oh").mapNotNull { it.toIntOrNull() }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

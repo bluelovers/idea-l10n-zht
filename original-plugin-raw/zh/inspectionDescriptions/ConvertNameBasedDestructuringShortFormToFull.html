@@ -1,0 +1,15 @@
+<html>
+<body>
+报告使用短形式的析构声明，并建议将它们转换为具有显式属性名称的完整形式。 适用于数据类。
+<p><b>示例：</b></p>
+<pre><code>
+  data class Person(val firstName: String, val lastName: String)
+  val (first, lastName) = person
+</code></pre>
+<p>该快速修复用于转换为完整形式的析构：</p>
+<pre><code>
+  (val first = firstName, val lastName) = person
+</code></pre>
+<p>这种形式可以明确变量与属性之间的映射关系。</p>
+</body>
+</html>

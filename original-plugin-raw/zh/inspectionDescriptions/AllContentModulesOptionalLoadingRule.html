@@ -1,0 +1,9 @@
+<html>
+<body>
+检查插件描述符中是否至少有一个内容模块指定了非 optional 的加载规则。
+<p>
+  如果所有内容模块都使用 <code>optional</code> 加载规则，那么每个模块都可能由于缺少依赖项而无法加载 – 插件会在 UI 中加载，但不提供任何功能。
+  至少有一个模块应使用 <code>loading="required"</code>、<code>loading="embedded"</code> 或 <code>required-if-available</code>。
+</p>
+</body>
+</html>

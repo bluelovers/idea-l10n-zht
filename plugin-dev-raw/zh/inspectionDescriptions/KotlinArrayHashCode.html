@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>對陣列呼叫 <code>hashCode()</code> 會返回身份雜湊程式碼，而不是基於陣列內容的雜湊。 這幾乎從來不是您希望得到的結果。</p>
+<p>要正確計算陣列的雜湊程式碼，請使用：</p>
+<ul>
+  <li><code>contentHashCode()</code>（用於線性陣列）</li>
+  <li><code>contentDeepHashCode()</code>（用於多維陣列）</li>
+</ul>
+<p><b>範例：</b></p>
+<pre><code>
+  fun main() {
+      val a1 = arrayOf&lt;Any&gt;()
+      val hashcode = a1.hashCode() // 錯誤
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun main() {
+      val a1 = arrayOf&lt;Any&gt;()
+      val hashcode = a1.contentHashCode() // 正確
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>当未定义 <code>__str__</code>、<code>__repr__</code> 或 <code>__format__</code> 的类型转换为字符串时，进行报告。 默认的字符串表示形式可能不适用于调试或显示目的。</p>
+<p><b>示例：</b></p>
+<pre><code>
+class A:
+    pass
+
+str(A())  # 结果：“&lt;__main__.A object at 0x...&gt;”
+</code></pre>
+<p>请考虑定义下列一种方法，以提供有意义的字符串表示：</p>
+<pre><code>
+class A:
+    def __str__(self):
+        return "A instance"
+    
+    def __repr__(self):
+        return "A()"
+</code></pre>
+</body>
+</html>

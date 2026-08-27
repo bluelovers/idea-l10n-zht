@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>報告使用 <code>context.WithCancel(context.Background())</code> 建立可取消上下文並立即推遲 <code>cancel()</code>的測試程式碼。</p>
+
+<p>在 Go 1.24 及更高版本中，<code>t.Context()</code> 會返回一個在測試結束時自動取消的上下文。 這樣一來，手動 <code>WithCancel</code> 和 <code>defer cancel()</code> 對就變得冗餘。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+func TestSomething(t *testing.T) {
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+
+	if err := work(ctx); err != nil {
+		t.Fatal(err)
+	}
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>將 context.WithCancel 取代為 t.Context</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func TestSomething(t *testing.T) {
+	ctx := t.Context()
+
+	if err := work(ctx); err != nil {
+		t.Fatal(err)
+	}
+}
+</code></pre>
+</body>
+</html>

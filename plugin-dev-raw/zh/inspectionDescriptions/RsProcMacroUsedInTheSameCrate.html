@@ -1,0 +1,19 @@
+<html>
+<body>
+報告過程巨集在其定義所在的同一個 crate 中被呼叫。
+
+<p>
+    過程巨集（<code>#[proc_macro]</code>、<code>#[proc_macro_attribute]</code> 和 <code>#[proc_macro_derive]</code>）必須先進行編譯才能展開。
+    因此，過程巨集無法用於宣告它們的 crate 中，且必須從依賴於定義該 crate 的單獨 crate 中呼叫。
+</p>
+
+<pre><code lang="rust">
+#[proc_macro]
+pub fn my_macro(input: TokenStream) -> TokenStream { input }
+
+my_macro!(); // 錯誤：無法從定義過程巨集的同一個 crate 中使用該過程巨集
+</code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>

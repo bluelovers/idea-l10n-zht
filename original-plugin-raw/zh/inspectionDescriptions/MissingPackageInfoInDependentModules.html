@@ -1,0 +1,11 @@
+<html>
+<body>
+报告当同一个软件包包含可传递依赖模块中的类，而这些模块没有自己的 <code>package-info.java</code> 时，<code>package-info.java</code> 上的 <code>@ApiStatus.Experimental</code> 或 <code>@ApiStatus.Internal</code> 注解。
+<p>
+  Java 软件包注解仅在声明 <code>package-info.java</code> 的模块中可见，因此其他模块中的拆分软件包类将静默缺失该注解。
+</p>
+<p>
+  快速修复会在每个具有此软件包中的类，但缺少 <code>package-info.java</code> 文件的依赖模块中创建一个带有相同注解的该文件。
+</p>
+</body>
+</html>

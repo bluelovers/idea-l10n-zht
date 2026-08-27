@@ -1,0 +1,34 @@
+<html>
+<body>
+<p>报告通过嵌入式结构体字面量初始化提升字段的复合字面量。</p>
+
+<p>在 Go 1.27 及更高版本中，可以在外部复合字面量中直接初始化从嵌入式结构体提升的字段。 这样便无需使用嵌套的嵌入式结构体层，并将所有字段值保留在一个字面量中。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+type Coord struct {
+	X, Y int
+}
+
+type Marker struct {
+	Coord
+	Label string
+}
+
+var Origin = Marker{
+	Coord: Coord{X: 0, Y: 0},
+	Label: "origin",
+}
+</code></pre>
+
+<p>要修正代码，请使用<b>移除嵌入式字段类型 Coord</b> 快速修复。</p>
+
+<p><b>在应用快速修复后：</b></p>
+<pre><code>
+var Origin = Marker{
+	X: 0, Y: 0,
+	Label: "origin",
+}
+</code></pre>
+</body>
+</html>

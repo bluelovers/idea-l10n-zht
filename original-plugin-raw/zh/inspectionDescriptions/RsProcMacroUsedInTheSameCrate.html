@@ -1,0 +1,19 @@
+<html>
+<body>
+报告过程宏在其定义所在的同一个 crate 中被调用。
+
+<p>
+    过程宏（<code>#[proc_macro]</code>、<code>#[proc_macro_attribute]</code> 和 <code>#[proc_macro_derive]</code>）必须先进行编译才能展开。
+    因此，过程宏无法用于声明它们的 crate 中，且必须从依赖于定义该 crate 的单独 crate 中调用。
+</p>
+
+<pre><code lang="rust">
+#[proc_macro]
+pub fn my_macro(input: TokenStream) -> TokenStream { input }
+
+my_macro!(); // 错误：无法从定义过程宏的同一个 crate 中使用该过程宏
+</code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>

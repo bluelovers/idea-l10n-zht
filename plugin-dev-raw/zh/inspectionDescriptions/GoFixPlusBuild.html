@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>報告由於檔案已包含符合 <code>//go:build</code> 指令而不再需要的 <code>// +build</code> 行。</p>
+
+<p>從 Go 1.18 開始，<code>//go:build</code> 是主要的建置約束語法。 在 <code>//go:build</code> 行後面的舊版 <code>// +build</code> 行冗餘，可以移除。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+//go:build linux || darwin
+// +build linux darwin
+
+package plusbuild
+</code></pre>
+
+<p>要修正程式碼，請使用<b>移除過時的 +build 行</b>快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+//go:build linux || darwin
+
+package plusbuild
+</code></pre>
+</body>
+</html>

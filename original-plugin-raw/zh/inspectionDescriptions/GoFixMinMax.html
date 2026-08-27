@@ -1,0 +1,57 @@
+<html>
+<body>
+<b>语法更新：将条件赋值替换为 <code>min</code> 或 <code>max</code>。</b>
+
+<p>报告将两个值之一赋给同一变量，并且可被替换为内置 <code>min</code> 或 <code>max</code> 函数（Go 1.21 或更高版本）的 <code>if</code> 语句。</p>
+
+<p>使用 <code>min</code> 和 <code>max</code> 可以明确意图并减少分支代码。</p>
+
+<p><b>使用 <code>max</code> 的示例：</b></p>
+<pre><code>
+func MaxInt(a, b int) int {
+	var m int
+	if a > b {
+		m = a
+	} else {
+		m = b
+	}
+	return m
+}
+</code></pre>
+
+<p>要修正代码，请使用<b>将 if 语句替换为 max</b> 快速修复。</p>
+
+<p><b>在应用快速修复后：</b></p>
+<pre><code>
+func MaxInt(a, b int) int {
+	var m int
+	m = max(a, b)
+	return m
+}
+</code></pre>
+
+<p><b>使用 <code>min</code> 的示例：</b></p>
+<pre><code>
+func ClampHigh(x, hi int) int {
+	var out int
+	if x > hi {
+		out = hi
+	} else {
+		out = x
+	}
+	return out
+}
+</code></pre>
+
+<p>要修正代码，请使用<b>将 if 语句替换为 min</b> 快速修复。</p>
+
+<p><b>在应用快速修复后：</b></p>
+<pre><code>
+func ClampHigh(x, hi int) int {
+	var out int
+	out = min(x, hi)
+	return out
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>報告對標準庫類型進行基於索引的迴圈，其中循環體僅通過索引（如 <code>x.At(i)</code>）存取元素。</p>
+<p>一些標準庫類型現在提供迭代器方法，使您能夠直接遍歷元素。 這樣便無需進行索引算術運算，使迴圈意圖更加明確。</p>
+<p><b>範例：</b></p>
+<pre><code>
+func TupleNames(t *types.Tuple) string {
+	var names []string
+	for i := 0; i < t.Len(); i++ {
+		names = append(names, t.At(i).Name())
+	}
+	return strings.Join(names, ",")
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>將 Len/At 迴圈取代為 Tuple.Variables 迭代</b>快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func TupleNames(t *types.Tuple) string {
+	var names []string
+	for v := range t.Variables() {
+		names = append(names, v.Name())
+	}
+	return strings.Join(names, ",")
+}
+</code></pre>
+</body>
+</html>

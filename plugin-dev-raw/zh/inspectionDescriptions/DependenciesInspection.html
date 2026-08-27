@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>
+  報告已在相依項檔案（例如，<code>requirements.txt</code> 或 <code>pyproject.toml</code> 的 <code>[project].dependencies</code> 部分）中宣告，但未在有效解釋器中安裝或已過期的軟體套件。
+</p>
+<p>
+  提供的快速修復可以安裝或更新受影響的軟體套件，並一次安裝或更新所有標記的軟體套件。
+</p>
+<p>
+  其他含有相依項的 TOML 段 &mdash; <code>[build-system]</code>、<code>[project.optional-dependencies]</code>、<code>[dependency-groups]</code> 和 <code>[tool.uv.dev-dependencies]</code> / <code>[tool.hatch.envs.*]</code> &mdash; 被有意忽略，因為在有效解釋器中不安裝這些段的條目也是正常的。
+</p>
+</body>
+</html>

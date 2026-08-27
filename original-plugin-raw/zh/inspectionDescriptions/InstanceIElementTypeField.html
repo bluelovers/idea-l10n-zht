@@ -1,0 +1,57 @@
+<html>
+<body>
+报告使用 <code>IElementType</code> 或其子类型初始化的实例字段。
+<p>
+  <code>IElementType</code> 实例代表 IntelliJ 平台的词法分析器/解析器基础架构中的令牌类型，应定义为 static 常量以确保它们为单例。
+  定义为实例字段时，会为每个类实例创建一个新的 <code>IElementType</code> 实例。
+  所有此类实例都会注册到 IElementType 内部存储中，并保留在那里，直到应用关闭。
+  目前，该基础架构仅允许存储约 16000 种元素类型，并不是很多。
+</p>
+<p>
+  该检查建议在 Java 中将实例字段转换为 static 常量，或者在 Kotlin 中将它们移至伴生对象。
+</p>
+<p>错误模式 (Java)：</p>
+<pre><code lang="java">
+class MyTokens {
+  // 为每个 MyTokens 实例创建的新 IElementType
+  IElementType myToken = new IElementType("MY_TOKEN");
+}
+</code></pre>
+<p>正确模式 (Java)：</p>
+<pre><code lang="java">
+class MyTokens {
+  // 跨所有实例共享的单例 IElementType
+  static final IElementType MY_TOKEN = new IElementType("MY_TOKEN");
+}
+</code></pre>
+<p>错误模式 (Kotlin)：</p>
+<pre><code lang="kotlin">
+class MyTokens {
+  // 为每个 MyTokens 实例创建的新 IElementType
+  val myToken = IElementType("MY_TOKEN")
+}
+</code></pre>
+<p>正确模式 (Kotlin)：</p>
+<pre><code lang="kotlin">
+class MyTokens {
+  companion object {
+    // 跨所有实例共享的单例 IElementType
+    val MY_TOKEN = IElementType("MY_TOKEN")
+  }
+}
+</code></pre>
+<p>
+  或者在 Kotlin 中，令牌类型可以定义为顶层声明或对象声明：
+</p>
+<pre><code lang="kotlin">
+// 顶层常量
+private val MY_TOKEN = IElementType("MY_TOKEN")
+
+// 或者在对象中
+object MyTokens {
+  val MY_TOKEN = IElementType("MY_TOKEN")
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

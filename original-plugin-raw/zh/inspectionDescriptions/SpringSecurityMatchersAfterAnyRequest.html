@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>报告在 <code>authorizeHttpRequests</code> / <code>authorizeRequests</code> 块中 <code>anyRequest()</code> <b>之后</b>链接的请求匹配器注册（<code>requestMatchers</code>、<code>mvcMatchers</code>、<code>antMatchers</code>、<code>regexMatchers</code>）。</p>
+
+<p><code>anyRequest()</code> 必须为授权链中的最后一个匹配器。 在它之后配置另一个匹配器会导致 Spring Security 在启动时失败，并出现 <code>Can't configure requestMatchers after anyRequest</code>。</p>
+
+<p><b>不正确：</b></p>
+<pre><code>
+  http.authorizeHttpRequests(auth -> auth
+    .requestMatchers("/", "/home").permitAll()
+    .anyRequest().authenticated()
+    .requestMatchers("/admin/**").hasRole("ADMIN")   // 报告：在 anyRequest() 之后配置
+  );
+</code></pre>
+
+<p><b>正确</b>（将 <code>anyRequest()</code> 移至结尾）：</p>
+<pre><code>
+  http.authorizeHttpRequests(auth -> auth
+    .requestMatchers("/", "/home").permitAll()
+    .requestMatchers("/admin/**").hasRole("ADMIN")
+    .anyRequest().authenticated()
+  );
+</code></pre>
+</body>
+</html>

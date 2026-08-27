@@ -1,0 +1,53 @@
+<html>
+<body>
+<p>對陣列呼叫 <code>toString()</code> 返回的是物件在記憶體中的地址，而不是陣列內容的字串表示。 這幾乎從來不是您希望得到的結果。</p>
+<p>要正確獲取陣列的字串表示，請使用：</p>
+<ul>
+  <li><code>contentToString()</code>（用於線性陣列）</li>
+  <li><code>contentDeepToString()</code>（用於多維陣列）</li>
+</ul>
+<p><b>範例（顯式 toString）：</b></p>
+<pre><code>
+  fun main() {
+      val a = arrayOf(1, 2, 3)
+      val s = a.toString() // 錯誤
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun main() {
+      val a = arrayOf(1, 2, 3)
+      val s = a.contentToString() // 正確
+  }
+</code></pre>
+<p><b>範例（字串模板中的隱式 toString）：</b></p>
+<pre><code>
+  fun main() {
+      val a = arrayOf(1, 2, 3)
+      println("Array: $a") // 錯誤 - 列印地址
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun main() {
+      val a = arrayOf(1, 2, 3)
+      println("Array: ${a.contentToString()}") // 正確 - 列印 [1, 2, 3]
+  }
+</code></pre>
+<p><b>範例（多維陣列）：</b></p>
+<pre><code>
+  fun main() {
+      val a2d = arrayOf(arrayOf(1, 2), arrayOf(3, 4))
+      val s = a2d.toString() // 錯誤
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun main() {
+      val a2d = arrayOf(arrayOf(1, 2), arrayOf(3, 4))
+      val s = a2d.contentDeepToString() // 正確 - 列印 [[1, 2], [3, 4]]
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

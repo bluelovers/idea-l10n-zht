@@ -1,0 +1,22 @@
+<html>
+<body>
+報告帶 <code>@KotlinScript</code> 註解的類別，這些類別未完全設定好，無法用作 Kotlin 腳本定義。
+<p>
+    帶有 <code>@KotlinScript</code> 註解的類別描述了一個腳本模板 — 與其模式符合的檔案（例如 <code>*.my.kts</code>）應使用其編譯組態和相依項。
+    有兩件事可以使定義完全可用，而此檢查會報告以下任意一項是否缺失：
+</p>
+<ol>
+    <li>
+        <b>在 Kotlin 腳本設定中註冊</b>。如果在<em>設定 → 語言和框架 → Kotlin → Kotlin 腳本 → 要載入的腳本定義類別</em>中沒有條目，則您的 IDE 不會將符合的 <code>.kts</code> 檔案識別為此定義的腳本。 快速修復<em>在 Kotlin 腳本設定中註冊定義</em>會將 FQN（以及所屬模組的類別路徑）填充到設定中。
+    </li>
+    <li>
+        <b>位於 <code>META-INF/kotlin/script/templates/&lt;fqn&gt;.classname</code></b> 的標記檔案，被打包進生成的 JAR 中。
+        基於庫的發現 (<code>ScriptDefinitionsProvider</code>) 會掃描相依關係 JAR，尋找這個空的標記檔案以發現可用模板；如果沒有這個檔案，您的庫的使用者將不會自動發現此定義。
+        <em>建立標記檔案以便下游自動發現</em>快速修復會在模組的第一個資源根下建立該檔案。
+    </li>
+</ol>
+<p>
+    套用任何相關的快速修復 – 既適用於典型的庫作者流程，也適用於僅在本地使用模板且從未發佈模板時進行註冊。
+</p>
+</body>
+</html>

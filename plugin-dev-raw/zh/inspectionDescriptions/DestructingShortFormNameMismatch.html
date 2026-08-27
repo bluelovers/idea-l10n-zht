@@ -1,0 +1,17 @@
+<html>
+<body>
+報告變數名稱與資料類別的原始屬性名稱不符合的解構宣告。
+<p><b>範例：</b></p>
+<pre><code>
+  data class Product(val id: String, val productName: String)
+  val (id, name) = product // 關於“name”的警告
+</code></pre>
+<p>以下是可用的快速修復：</p>
+<ul>
+<li><b>重新命名變數以符合解構屬性名稱</b>：<code>val (id, productName) = product</code></li>
+<li><b>使用帶方括號的位置解構</b>：<code>val [id, name] = product</code></li>
+</ul>
+<p>對於像 <code>Pair</code>、 <code>Triple</code> 和 <code>IndexedValue</code> 這樣的標準庫類別，該檢查會建議使用位置解構語法，因為這些類型是為位置存取而不是基於名稱的符合設計的。</p>
+<p>此檢查為即將推出的 Kotlin 語言功能更改做好程式碼準備，在此更改中，<code>val (x, y) = e</code> 語法將從基於位置的解構轉換為基於名稱的解構。</p>
+</body>
+</html>

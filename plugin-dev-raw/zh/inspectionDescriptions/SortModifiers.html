@@ -1,6 +1,7 @@
 <html>
 <body>
 報告未遵循<a href="https://kotlinlang.org/docs/coding-conventions.html#modifiers-order">樣式指南</a>中所建議順序的修飾符。
+如果存在註解和/或上下文參數，則證明修飾符位於它們後面，並且註解位於上下文參數前面。
 <p><b>對修飾符排序</b>快速修復可用於自動修正程式碼。</p>
 <p>範例：</p>
 <pre><code>
@@ -8,5 +9,17 @@
 
   infix private fun Int.wrongOrder(expr: Int) {} // &lt;== 順序錯誤，快速修復會將修飾符修正為 "private infix"
 </code></pre>
+
+<pre><code>
+    @Deprecated("message")
+    context(str: String)
+    private fun doThis() { } // <== Ok
+
+
+    context(str: String)
+    @Deprecated("message")
+    fun doThis() { } // <== wrong order, quick-fix moves the annotation to the top
+</code></pre>
+
 </body>
 </html>

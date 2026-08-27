@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>
+  报告已在依赖项文件（例如，<code>requirements.txt</code> 或 <code>pyproject.toml</code> 的 <code>[project].dependencies</code> 部分）中声明，但未在有效解释器中安装或已过期的软件包。
+</p>
+<p>
+  提供的快速修复可以安装或更新受影响的软件包，并一次安装或更新所有标记的软件包。
+</p>
+<p>
+  其他含有依赖项的 TOML 段 &mdash; <code>[build-system]</code>、<code>[project.optional-dependencies]</code>、<code>[dependency-groups]</code> 和 <code>[tool.uv.dev-dependencies]</code> / <code>[tool.hatch.envs.*]</code> &mdash; 被有意忽略，因为在有效解释器中不安装这些段的条目也是正常的。
+</p>
+</body>
+</html>

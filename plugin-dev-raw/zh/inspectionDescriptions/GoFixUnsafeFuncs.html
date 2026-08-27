@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>報告將 <code>unsafe.Pointer</code> 轉換為 <code>uintptr</code>、加上偏移量，然後將結果轉換回 <code>unsafe.Pointer</code> 的指針算術運算。</p>
+
+<p>這種模式可能不安全，因為 <code>uintptr</code> 值在轉換和下次指針使用之間可能會被垃圾收集器觀察到。 在 Go 1.17 及更高版本中，<code>unsafe.Add</code> 直接表示相同的動作。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+func Offset(p unsafe.Pointer, n int) unsafe.Pointer {
+	return unsafe.Pointer(uintptr(p) + uintptr(n))
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>使用 unsafe.Add 簡化指針加法</b>快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func Offset(p unsafe.Pointer, n int) unsafe.Pointer {
+	return unsafe.Add(p, n)
+}
+</code></pre>
+</body>
+</html>

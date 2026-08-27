@@ -1,0 +1,18 @@
+<html>
+<body>
+報告對可被取代為集合字面量語法的集合工廠函式的呼叫。
+<p>
+    當 <code>-Xcollection-literals</code> 編譯器標誌啟用時，<code>listOf()</code>、<code>setOf()</code>、<code>arrayOf()</code> 等集合建立函式及類似的函式可以使用更簡潔的集合字面語法 <code>[...]</code> 來表示。
+</p>
+<p>範例：</p>
+<pre><code>
+val list = listOf("a", "b", "c")
+</code></pre>
+<p>套用該修正後：</p>
+<pre><code>
+val list: List&lt;String&gt; = ["a", "b", "c"]
+</code></pre>
+<!-- tooltip end -->
+<p>此檢查需要啟用 <code>-Xcollection-literals</code> 編譯器標誌。</p>
+</body>
+</html>

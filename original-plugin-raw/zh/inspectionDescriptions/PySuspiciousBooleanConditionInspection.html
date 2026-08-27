@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>报告在布尔上下文（if/while/三元运算符）中使用协程而未等待的情况。</p>
+<p>直接在布尔条件中使用协程对象将始终评估为 <code>True</code>， 这可能不是预期的行为。 必须等待协程，才能获取其实际的布尔值。</p>
+<p><b>示例：</b></p>
+<pre><code>
+async def check() -> bool:
+    return True
+
+
+async def main():
+    if check():  # 始终为 True - 协程对象具有真值
+        print("hi")
+</code></pre>
+<p>应为：</p>
+<pre><code>
+async def check() -> bool:
+    return True
+
+
+async def main():
+    if await check():  # 正确等待协程
+        print("hi")
+</code></pre>
+</body>
+</html>

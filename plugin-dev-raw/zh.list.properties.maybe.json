@@ -10,9 +10,19 @@
     "configurable.ai.playground.display.name": "AI Playground",
     "label.top.p": "Top-p:"
   },
+  "messages/AIReviewAgentsBundle.properties": {
+    "aiReview.agent.display.name.claude.code": "Claude Code"
+  },
+  "messages/AIReviewBundle.properties": {
+    "aiReview.export.action.text": "Export Results as Markdown",
+    "aiReview.problems.tab.welcome.text": "AI Review checks your changes. Perform checks in {0} or {1} tool windows."
+  },
+  "messages/AIToolkitUIBundle.properties": {
+    "configurable.ai.toolkit.display.name": "AI Agents Debugger",
+    "provider.gemini": "Google Gemini"
+  },
   "messages/ActionsBundle.properties": {
     "action.Actions.ActionsPlugin.GenerateToString.text": "to_String()",
-    "action.DumpGroupActions.text": "DumpGroupActions…",
     "action.Floating.CodeToolbar.SurroundWithTryCatch.text": "try / catch",
     "action.Floating.CodeToolbar.SurroundWithTryCatchFinally.text": "try / catch / finally",
     "action.GenerateCreateUI.text": "createUI(…)",
@@ -23,24 +33,370 @@
     "group.Internal.UI.text": "UI(&U)",
     "group.VcsGroups.text": "Git(_G)"
   },
+  "messages/AgentChatBundle.properties": {
+    "notification.group.agent.workbench.chat": "Agent Workbench"
+  },
+  "messages/AgentLaunchBundle.properties": {
+    "provisioning.accept.and.install": "Accept and Install",
+    "provisioning.consent.gui.preferred": "Try the new Chat experience for {0}. {1} apply.",
+    "provisioning.consent.install": "Install {0} to use it in Chat. {1} apply.",
+    "provisioning.consent.terms": "Terms and conditions",
+    "provisioning.install.failed": "Could not install {0}.",
+    "provisioning.install.required": "{0} still needs to be installed before this preset can start a session.",
+    "provisioning.installing.step": "Installing {0}: {1}",
+    "provisioning.installing.step.percent": "Installing {0}: {1} {2}%",
+    "provisioning.registry.unavailable": "Cannot verify {0}: the agent catalog is unavailable. Check your internet connection and retry.",
+    "provisioning.session.consent.install": "Install {0} to reconnect this session. {1} apply.",
+    "provisioning.session.install.required": "{0} still needs to be installed before this session can reconnect."
+  },
+  "messages/AgentPromptBundle.properties": {
+    "intention.category.air": "Agent Workbench",
+    "popup.context.overflow": "+{0}",
+    "popup.generation.model.group.claude.code": "Claude Code",
+    "popup.generation.reasoning.ultra": "Effort Ultra",
+    "popup.generation.summary.three.parts": "{0} · {1} · {2}",
+    "popup.generation.summary.two.parts": "{0} · {1}",
+    "popup.profile.manage.agents.discovery.failed": "Agent installed, but its launch profile is not available yet.",
+    "popup.profile.manage.agents.executable.path.accessible.name": "Resolved executable path for {0}",
+    "popup.profile.manage.agents.refresh.failed": "Agent changes were applied, but launch profiles could not be refreshed.",
+    "popup.profile.manage.agents.retry.update": "Retry update",
+    "popup.profile.manage.agents.retry.update.to": "Retry update to v{0}",
+    "popup.profile.manage.agents.row.comment.with.detail": "{0}<br>{1}",
+    "popup.profile.manage.agents.update.to": "Update to v{0}",
+    "popup.profile.manage.nav.agent.clis": "Agent CLIs",
+    "popup.profile.manage.nav.agents.one.update": "1 update",
+    "popup.profile.manage.nav.agents.updates": "{0} updates",
+    "popup.profile.selected": "{0}",
+    "popup.profile.ui.custom": "{0}",
+    "popup.time.unknown": "—"
+  },
+  "messages/AgentSessionsBundle.properties": {
+    "advanced.settings.agent.workbench": "Agent Workbench",
+    "settings.agent.workbench.name": "Agent Workbench",
+    "toolwindow.action.new.session.ui.custom": "{0}",
+    "toolwindow.activity.popup.row": "{0}  ·  {1}  ·  {2}  ·  {3}",
+    "toolwindow.provider.cli.claude": "Claude Code",
+    "toolwindow.time.unknown": "—"
+  },
+  "messages/AgentThreadViewBundle.properties": {
+    "action.AgentThreads.ThreadOutline.CopyText.description": "Copy the text of the selected session outline entry to the clipboard",
+    "action.AgentThreads.ThreadOutline.ShowFullText.description": "Show the complete text of the selected session outline entry",
+    "action.AgentThreads.ThreadOutline.ShowFullText.text": "Show Full Text",
+    "notification.group.air.thread.view": "Agent Workbench",
+    "notification.group.air.threads": "Agent Workbench sessions",
+    "thread.view.application.close.running.action.exit": "Close Agents and Exit",
+    "thread.view.application.close.running.action.keep": "Keep IDE Open",
+    "thread.view.application.close.running.action.restart": "Close Agents and Restart",
+    "thread.view.application.close.running.session.message": "1 Agent Session is still running:\n\n{0}\n\nClosing the agent can interrupt the live session.",
+    "thread.view.application.close.running.sessions.message": "{0} Agent Sessions are still running:\n\n{1}\n\nClosing the agents can interrupt the live sessions.",
+    "thread.view.application.exit.running.session.title": "Exit IDE with Running Agent Session?",
+    "thread.view.application.exit.running.sessions.title": "Exit IDE with Running Agent Sessions?",
+    "thread.view.application.restart.running.session.title": "Restart IDE with Running Agent Session?",
+    "thread.view.application.restart.running.sessions.title": "Restart IDE with Running Agent Sessions?",
+    "thread.view.initial.prompt.delivery.failed.action.copy": "Copy prompt",
+    "thread.view.initial.prompt.delivery.failed.action.retry": "Send again",
+    "thread.view.initial.prompt.delivery.failed.body": "The prompt for ''{0}'' could not be delivered to the agent: {1}\nThe prompt was kept, so you can retry or copy it.",
+    "thread.view.initial.prompt.delivery.failed.body.no.reason": "The prompt for ''{0}'' could not be delivered to the agent.\nThe prompt was kept, so you can retry or copy it.",
+    "thread.view.initial.prompt.delivery.failed.copied.body": "The undelivered prompt is now in the clipboard.",
+    "thread.view.initial.prompt.delivery.failed.copied.title": "Prompt copied",
+    "thread.view.initial.prompt.delivery.failed.retry.rejected.body": "This session moved on since the prompt failed. Copy the prompt and send it in the session instead.",
+    "thread.view.initial.prompt.delivery.failed.retry.rejected.title": "Prompt was not sent again",
+    "thread.view.initial.prompt.not.delivered.body": "The initial prompt for ''{0}'' could not be delivered to the agent.",
+    "thread.view.notification.archive.body.multiple": "Marked {0} sessions done.",
+    "thread.view.notification.archive.body.partial": "Marked {0} of {1} sessions done.",
+    "thread.view.notification.archive.body.single.generic": "Marked 1 session done.",
+    "thread.view.notification.archive.title.multiple": "Sessions marked done",
+    "thread.view.notification.archive.title.single": "Session marked done",
+    "thread.view.notification.archive.undo.with.shortcut": "Undo ({0})",
+    "thread.view.restore.validation.content.provider": "no {0} view is available for this session",
+    "thread.view.switch.failed": "Couldn''t switch this session to {0}",
+    "thread.view.thread.outline.full.text.popup.title": "Full Text",
+    "thread.view.thread.outline.kind.plan.step": "Plan step",
+    "thread.view.thread.outline.off.active.path": "Not on the active conversation branch"
+  },
+  "messages/AgentThreadsBundle.properties": {
+    "access.mode.accept.edits": "Auto-Accept Edits",
+    "access.mode.accept.edits.description": "The agent applies edits inside the project without asking. Other actions still require approval.",
+    "access.mode.accept.edits.summary": "Edits without asking; other actions still ask",
+    "access.mode.agent.wording": "{0} calls this mode \"{1}\".",
+    "access.mode.agent.wording.unnamed": "This agent calls the mode \"{0}\".",
+    "access.mode.full.access.description": "The agent can edit files outside the project and use the network without asking for approval. Use with caution.",
+    "access.mode.full.access.summary": "No approval prompts",
+    "access.mode.read.only.description": "The agent can read files in the project. Editing files, running commands, and network access all require approval.",
+    "access.mode.read.only.summary": "Reads files, never edits",
+    "access.mode.standard": "Standard Access",
+    "access.mode.standard.description": "The agent can read, edit, and run commands inside the project. Touching files outside the project or using the network requires approval.",
+    "access.mode.standard.summary": "Edits in the project; asks to go outside",
+    "action.AgentThreads.ArchiveThreadFromEditorTab.text": "Mark Session Done",
+    "action.AgentThreads.ChangedFilesViewOptions.GroupByDirectory.description": "Group changed files by their tree-relative directories",
+    "action.AgentThreads.ChangedFilesViewOptions.ShowPath.description": "Show the tree-relative parent path next to each changed file",
+    "action.AgentThreads.CommitChanges.description": "Commit the selected Agent Sessions changes",
+    "action.AgentThreads.MainToolbar.NewThread.default.missing.description": "Choose a preset or set a default preset for quick start",
+    "action.AgentThreads.MainToolbar.NewThread.profile.description": "Start preset {0} ({1}) in {2}",
+    "action.AgentThreads.MainToolbar.NewThread.profile.section.builtin": "Built-in Presets",
+    "action.AgentThreads.MainToolbar.NewThread.profile.section.user": "User Presets",
+    "action.AgentThreads.ResetChangedFileAssignments.description": "Discard manual file assignments and rebuild them from agent logs",
+    "action.AgentThreads.ResetChangedFileAssignments.text": "Reset Changed File Assignments",
+    "action.AgentThreads.RevertChanges.description": "Revert the selected versioned Agent Sessions changes",
+    "action.AgentThreads.ReviewChanges.description": "Review the selected Agent Sessions changes with AI",
+    "action.AgentThreads.ShowArchivedThreads.description": "Show done agent sessions",
+    "action.AgentThreads.ShowArchivedThreads.text": "Show Done Sessions",
+    "action.AgentThreads.TreePopup.Archive.description": "Mark selected sessions done",
+    "action.AgentThreads.TreePopup.MarkSessionFolderDone.description": "Mark assigned sessions and this folder done",
+    "action.AgentThreads.TreePopup.Unarchive.description": "Reopen selected sessions",
+    "action.AgentThreads.TreePopup.Undo.description": "Undo the most recent Done action or session folder deletion",
+    "action.AgentThreads.TreeRow.Done.description": "Mark session done",
+    "action.AgentThreads.TreeRow.Done.selected.count": "Done ({0})",
+    "agent.threads.changes.no.current.changes": "None of the selected files currently has VCS changes",
+    "agent.threads.changes.no.current.versioned.changes": "No selected file currently has a versioned VCS change",
+    "agent.threads.changes.project.not.open": "Open the source project or worktree to use this action",
+    "group.AgentThreads.ChangedFilesViewOptions.description": "Configure how changed files are shown in Agent Sessions",
+    "group.AgentThreads.ChangedFilesViewOptions.text": "Changed Files View Options",
+    "notification.caps.lock.indicator.access.denied": "Allow this IDE or JetBrains Client in macOS Privacy & Security > Input Monitoring, then disable and re-enable the Caps Lock activity indicator to recheck access.",
+    "notification.caps.lock.indicator.access.granted": "Input Monitoring access was granted. The indicator will start after Agent activity finishes loading.",
+    "notification.caps.lock.indicator.active": "The Caps Lock activity indicator is ready.",
+    "notification.caps.lock.indicator.native.unavailable": "The Caps Lock activity indicator is unavailable in this IDE environment.",
+    "notification.caps.lock.indicator.no.compatible.led": "No compatible Caps Lock LED was found. Reconnect the keyboard, then disable and re-enable the indicator to retry.",
+    "notification.group.air.session.activity": "Agent Session Activity",
+    "settings.air.caps.lock.activity.indicator": "Use the Caps Lock LED for Agent activity",
+    "settings.air.caps.lock.activity.indicator.description": "On macOS, Agent Workbench asks the host IDE or JetBrains Client for Input Monitoring access and uses it only to control a compatible Caps Lock LED. This feature does not read typed text or change logical Caps Lock state, and you can disable it at any time.",
+    "settings.air.name": "Agent Workbench",
+    "settings.air.thread.view.pin.new.session.tabs": "Pin new session tabs",
+    "settings.air.thread.view.pin.new.session.tabs.description": "When enabled, new Agent Session View tabs are pinned in the source project's frame, keeping them first and protecting them from Close All Other Tabs.",
+    "settings.air.use.last.used.preset.for.new.sessions": "Use the last-used preset for new sessions",
+    "settings.air.use.last.used.preset.for.new.sessions.description": "Standard new-session actions use the last successfully used preset; when disabled, they use the configured default. Resolve with Agent and Session Folder remember their own presets.",
+    "toolwindow.action.archive.selected.count": "Done ({0})",
+    "toolwindow.action.more": "Show more…",
+    "toolwindow.action.new.thread.claude.full.access": "Claude (Full Access)",
+    "toolwindow.action.new.thread.codex.full.access": "Codex (Full Access)",
+    "toolwindow.action.new.thread.junie.full.access": "Junie (Full Access)",
+    "toolwindow.action.unarchive.selected.count": "Reopen ({0})",
+    "toolwindow.activity.popup.row": "{0}  ·  {1}  ·  {2}  ·  {3}",
+    "toolwindow.archive.notification.multiple": "Marked {0} sessions done.",
+    "toolwindow.archive.notification.partial": "Marked {0} of {1} sessions done.",
+    "toolwindow.archive.notification.single": "Marked 1 session done.",
+    "toolwindow.archive.notification.single.named": "Marked \"{0}\" done.",
+    "toolwindow.archive.notification.undo.with.shortcut": "Undo ({0})",
+    "toolwindow.empty.archived": "No done sessions.",
+    "toolwindow.empty.archived.current.project": "No done sessions in the current project.",
+    "toolwindow.loading.archived": "Loading done sessions…",
+    "toolwindow.notification.attention.title": "Agent task needs attention",
+    "toolwindow.notification.done.title": "Agent task completed",
+    "toolwindow.notification.open.session.action": "Open session",
+    "toolwindow.progress.archiving.thread": "Marking agent session done…",
+    "toolwindow.progress.archiving.thread.step": "Marking agent session done ({0} of {1})…",
+    "toolwindow.progress.archiving.threads": "Marking agent sessions done…",
+    "toolwindow.search.error": "Session search failed.",
+    "toolwindow.search.loading": "Searching sessions…",
+    "toolwindow.search.projectUnavailable": "The source project is no longer available.",
+    "toolwindow.search.results.accessibleName": "Session search results",
+    "toolwindow.search.results.count": "{0,choice,1#1 search result|1<{0} search results}",
+    "toolwindow.search.role.assistant": "Assistant reply",
+    "toolwindow.search.role.summary": "Compact summary",
+    "toolwindow.search.sessions.placeholder": "Search sessions",
+    "toolwindow.search.status.incompleteSources": "Some session sources could not be loaded.",
+    "toolwindow.search.status.partial": "Searched {0} sessions; skipped {1}; failed {2}.",
+    "toolwindow.search.status.partial.short": "Partial results",
+    "toolwindow.search.status.progress": "Searching sessions… {0}/{1}",
+    "toolwindow.search.status.timedOut": "Search timed out. Partial results are shown.",
+    "toolwindow.search.status.truncated": "Showing the newest 200 matching sessions.",
+    "toolwindow.session.folder.notification.deleted.multiple": "{0} session folders deleted.",
+    "toolwindow.session.folder.notification.deleted.single": "Session folder \"{0}\" deleted.",
+    "toolwindow.system.notification.done.text": "\"{0}\" in {1} has completed.",
+    "toolwindow.system.notification.done.title": "Agent Task Completed",
+    "toolwindow.thread.changes.dnd.invalid.target": "Drop onto another session or Other changes in the same worktree",
+    "toolwindow.thread.changes.lines.additions": "+{0}",
+    "toolwindow.thread.changes.lines.deletions": "−{0}",
+    "toolwindow.thread.outgoing.commits.accessible.error.details": "{0}。{1}",
+    "toolwindow.thread.preparing.failed.unsupported.mode": "The selected launch mode is not supported by this agent.",
+    "toolwindow.threadview.header.archived.range.tooltip": "Done range: {0}",
+    "toolwindow.threadview.header.archived.tooltip": "Showing done sessions",
+    "toolwindow.time.unknown": "—",
+    "toolwindow.undo.archive": "Undo Mark Done"
+  },
+  "messages/AgentVcsMergeBundle.properties": {
+    "merge.agent.resolve.no.agents": "No agent is configured. Enable an agent in the Manage Presets dialog to use this action."
+  },
+  "messages/AgentWorkbenchAcpBundle.properties": {
+    "settings.acp.registry.version": "v{0}",
+    "settings.acp.registry.version.update": "{0} → {1}"
+  },
+  "messages/AiCodeReviewBundle.properties": {
+    "aiCodeReview.prompt.default": "Run an AI code review.\n Session id: {0}."
+  },
+  "messages/AiCodeReviewCliBundle.properties": {
+    "aiCodeReview.cli.claude.displayName": "Claude Code"
+  },
+  "messages/AiCodeReviewSpaceBundle.properties": {
+    "action.AiCodeReviewPostDraftToSpaceAction.description": "Post selected AI Code Review findings as draft discussions on Space",
+    "aiReview.space.post.confirm.message": "Post {0, choice, 1#1 finding|1<{0} findings} as draft discussions on Space?",
+    "aiReview.space.post.progress": "Posting {0, choice, 1#1 finding|1<{0} findings} as draft discussions..."
+  },
+  "messages/AiCodeReviewUiBundle.properties": {
+    "action.AiCodeReview.Problems.Export.description": "Exports AI Code Review findings to a Markdown file",
+    "action.AiCodeReview.Problems.Export.text": "Export Results as Markdown",
+    "aiCodeReview.editor.entry.title": "{0}: {1}",
+    "aiCodeReview.editor.nav.tooltipWithShortcut": "{0} ({1})",
+    "aiCodeReview.filterBy.dimensionWithValues": "{0}: {1}",
+    "aiCodeReview.filterBy.noneAvailable": "<no filters available>",
+    "aiCodeReview.problems.export.found.findings": "Found {0} {0,choice,1#finding|2#findings}",
+    "aiCodeReview.problems.export.noFindings": "No findings found",
+    "aiCodeReview.problems.export.results": "AI Code Review Results",
+    "aiCodeReview.problems.tab.close.stopFailed": "Could not stop the AI code review for ''{0}''. The review tab was kept open; try closing it again."
+  },
+  "messages/AiCodeReviewVcsBundle.properties": {
+    "scope.commit.container": "{0}"
+  },
+  "messages/AiDebuggerCommonBundle.properties": {
+    "aitoolkit.debugger.langgraph.requirementsNotMet.title": "AI Agents Debugger",
+    "aitoolkit.debugger.licenseRequirementsNotMet.upgradeLink": "https://jb.gg/pycharmprofromaidebugger",
+    "aitoolkit.debugger.reportIssue.url": "https://youtrack.jetbrains.com/newIssue?project=AIT&c=Subsystem+Debugger"
+  },
   "messages/AiPlaygroundBundle.properties": {
     "action.OpenAiPlaygroundAction.text": "AI Playground",
     "editor.title.default": "AI Playground"
   },
+  "messages/AirAcpDebugBundle.properties": {
+    "action.Air.Acp.Debug.DumpBundle.description": "Write a self-contained ACP debug bundle (zip) for the current chat.",
+    "action.Air.Acp.Debug.OpenConfiguration.description": "Open ~/.jetbrains/acp.json to register a custom ACP agent for testing.",
+    "action.Air.Acp.Debug.OpenConfiguration.text": "Add Custom ACP Agent",
+    "action.Air.Acp.Debug.ResetClientState.description": "Stop running agent processes and clear installed agents, cached binaries/icons/runtimes and in-memory caches (does not touch ~/.jetbrains/acp.json).",
+    "action.Air.Acp.Debug.ResetClientState.text": "Reset ACP Client State",
+    "action.Air.Acp.Debug.ShowAgentInstallationState.description": "Inspect managed ACP artifacts, download consent, and CLI executable availability.",
+    "action.Air.Acp.Debug.ShowAgentInstallationState.text": "Show ACP/CLI Agent State",
+    "agent.state.button.delete.adapter": "Delete Adapter",
+    "agent.state.button.delete.runtime": "Delete Runtime",
+    "agent.state.button.revoke.consent": "Revoke ToS Consent",
+    "agent.state.column.cli.key": "CLI key",
+    "agent.state.column.consent": "Download ToS",
+    "agent.state.column.installed.version": "Installed metadata",
+    "agent.state.column.registry.version": "Registry version",
+    "agent.state.confirm.delete.adapter": "Delete the downloaded adapter files and cached archives for {0} in this execution environment? Installation metadata is preserved.",
+    "agent.state.confirm.delete.runtime": "Delete the managed {0} runtime from this execution environment? This runtime is shared by: {1}.",
+    "agent.state.confirm.revoke.consent": "Remove the stored download-terms acceptance for {0}? Installation metadata is preserved, but consent is acceptance-keyed, so the consent step surfaces again and further downloads are blocked until the terms are accepted.",
+    "agent.state.confirm.title": "ACP Agent State",
+    "agent.state.consent.not.accepted": "not accepted",
+    "agent.state.dialog.title": "ACP/CLI Agent State",
+    "agent.state.environment": "Execution environment: {0}",
+    "agent.state.loaded": "Loaded {0} ACP agents and {1} CLI agents.",
+    "agent.state.loading": "Loading agent state…",
+    "agent.state.operation.changed": "Operation completed.",
+    "agent.state.operation.failed": "The operation failed. Review agent state and retry.",
+    "agent.state.operation.not.applicable": "The operation no longer applies to the selected agent.",
+    "agent.state.operation.running": "Applying operation…",
+    "agent.state.operation.stale": "Agent state changed before the operation. Review agent state and retry.",
+    "agent.state.operation.unchanged": "Nothing needed to be removed.",
+    "agent.state.operation.with.details": "{0} Details: {1}",
+    "agent.state.section.acp": "Managed ACP agents",
+    "agent.state.section.cli": "CLI agents",
+    "agent.state.snapshot.failed": "Failed to load agent state. Use Refresh to retry.",
+    "button.startRecording": "Start recording",
+    "button.stopRecording": "Stop recording",
+    "client.state.baseDir": "Base dir: {0}",
+    "client.state.binaries": "Binaries: {0}",
+    "client.state.cached": "Cached: {0}",
+    "client.state.column.acceptedToS": "Accepted ToS",
+    "client.state.column.disabledId": "Disabled id",
+    "client.state.column.installedAt": "Installed at",
+    "client.state.column.selectedOptions": "Selected option ids",
+    "client.state.column.skippedVer": "Skipped ver.",
+    "client.state.containerMode": "Container mode: {0}",
+    "client.state.copyReport": "Copy report",
+    "client.state.disabledAgents": "Disabled agents: {0}",
+    "client.state.disabledBundled": "Disabled bundled: {0}",
+    "client.state.disabledFeatures": "Disabled features: {0}",
+    "client.state.noReportYet": "No report yet — press Refresh.",
+    "client.state.none": "<none>",
+    "client.state.notLoaded": "<not loaded>",
+    "client.state.section.agentEnablement": "Agent enablement (AgentSessionProviderSettings)",
+    "client.state.section.customAgents": "Custom agents (~/.jetbrains/acp.json)",
+    "client.state.section.diskCache": "On-disk cache (acp-agents/, local host)",
+    "client.state.section.iconCache": "Icon cache (in-memory)",
+    "client.state.section.installed": "Installed agents (installed.json)",
+    "client.state.section.registry": "Registry (in-memory)",
+    "client.state.section.uiPreferences": "UI launch preferences (AgentSessionUiPreferencesState, non-roamable)",
+    "client.state.sessionProfile": "Session-folder profile: {0}",
+    "client.state.snapshot.failed": "Failed to build snapshot.",
+    "client.state.userInstalled": "User-installed: {0}",
+    "dialog.message.reset.acp.client.state": "This will stop all running ACP agent processes and delete client-side state: installed agents (installed.json), the cached registry, downloaded agent binaries, runtimes and icons. Custom agents in ~/.jetbrains/acp.json are kept.\n\nContinue?",
+    "dialog.title.acp.configuration": "ACP Configuration",
+    "dialog.title.reset.acp.client.state": "Reset ACP Client State",
+    "engine.events.column.index": "#",
+    "engine.events.truncated": "… [truncated: {0} of {1} entries omitted to keep the view responsive]",
+    "error.failed.to.open.acp.configuration": "Failed to open ACP configuration: {0}",
+    "label.lastSeq": "LastSeq:",
+    "pool.autoRefresh": "Auto-refresh",
+    "pool.details.header": "Pooled ACP client",
+    "pool.help": "How the pool deduplicates agents\n----------------------------------------\nThe pool keeps at most one live agent process per identity key. Two acquires whose\nkey matches on ALL of the following reuse the same process (a shared client);\nany difference forks a separate process:\n  • agentId             — the resolved registry id of the agent\n  • startConfig         — fingerprint of command / baseArgs / args / env / workingDir\n  • cwd                 — the project working directory (exact path, no canonicalization)\n  • eelDescriptor       — the execution environment (local, WSL, Docker, …)\n  • policyDiscriminator — null for Shared; the threadId for DedicatedClientPerThread\n\nEach chat thread that uses a client holds a lease; the process is stopped when the\nlast lease is released. Select a client on the left to see its state, pid, uptime\nand the exact key that identifies it.",
+    "pool.node.agent": "{0} ({1})",
+    "pool.node.cwd": "{0} ({1})",
+    "pool.summary": "Clients: {0} · Sessions: {1}",
+    "pool.tree.root": "Agent pool",
+    "presentation.status": "Input: {0} · Rendered: {1} · Hidden: {2} · New: {3} · Gaps: {4} · Dropped: {5} · Memory: {6} bytes / {7} rows · Backlog: {8} bytes",
+    "replay.button.loadNextPage": "Load next page",
+    "replay.label.progress": "{0} / {1}",
+    "replay.status.fileTooLarge": "ACP recording is too large (maximum {0} MB)",
+    "replay.status.importing": "Importing: {0}",
+    "replay.status.openFailed": "Failed to open ACP recording",
+    "replay.status.page": "Loaded {0} of {1} recording entries",
+    "replay.status.playing": "Playing…",
+    "replay.status.restarted": "Restarted from the beginning",
+    "replay.status.stepped": "{0} / {1}",
+    "replay.step.cell": "#{0} · {1}",
+    "replay.step.userPrompt": "user prompt",
+    "tab.agent.pool": "Agent Pool",
+    "tab.client.state": "Client State",
+    "transport.capture.status": "Writer backlog: {0} bytes · Capture dropped: {1} · Capture: {2}",
+    "transport.copy.truncated": "… [truncated: {0} of {1} rows omitted]",
+    "transport.detail.truncated": "… [truncated: {0} of {1} chars omitted to keep the view responsive]",
+    "transport.new.events": "{0} new events",
+    "transport.new.events.accessible": "Show new transport events at the bottom of the table",
+    "transport.status.empty": "Nothing to save: no transport entries captured yet",
+    "transport.status.noRecording": "No recording is active",
+    "transport.status.recordingUnavailable": "Recording is unavailable or already active",
+    "transport.status.saved": "Saved recording: {0}",
+    "transport.table.column.deltaT": "Δt",
+    "ui.dump.tree.depth.limit": "Load more (depth limit reached)",
+    "ui.dump.tree.node.limit": "Load more (node limit reached)",
+    "ui.dump.truncated": "\n… [truncated: {0} of {1} chars omitted to keep the view responsive]"
+  },
+  "messages/AirAcpFrontendBundle.properties": {
+    "acp.install.progress.downloading.agent": "Downloading agent",
+    "acp.install.progress.preparing.runtime": "Preparing Node.js",
+    "settings.acp.registry.accept.and.update": "Accept and Update",
+    "settings.acp.registry.catalog.accessible.name": "ACP agents catalog",
+    "settings.acp.registry.consent.required": "Downloading {0} requires accepting its download terms.",
+    "settings.acp.registry.install.failed": "Failed to install {0}. Try again.",
+    "settings.acp.registry.installing.step": "Installing: {0}",
+    "settings.acp.registry.installing.step.percent": "Installing: {0} {1}%",
+    "settings.acp.registry.loading": "Loading agents…",
+    "settings.acp.registry.uninstall.failed": "Failed to uninstall {0}. Try again.",
+    "settings.acp.registry.uninstall.succeeded": "{0} uninstalled.",
+    "settings.acp.registry.update.failed": "Failed to update {0}. Try again.",
+    "settings.acp.registry.updating.step.percent": "Updating: {0} {1}%",
+    "settings.acp.registry.version": "v{0}",
+    "settings.acp.registry.version.update": "{0} → {1}"
+  },
   "messages/AmperBundle.properties": {
     "amper.new.module.ios": "iOS App",
-    "completion.root.module.name": "<root module>",
-    "inspections.module.dependency.with.overridden.version.dependency.location": "，",
-    "jvm.app.module.yaml.template.group.name": "module.yaml"
-  },
-  "messages/AmperHotReloadBundle.properties": {
-    "amper.compose.hot.reload.run.configuration.type.name": "Amper Compose Hot Reload"
+    "color.settings.name": "Kotlin Toolchain YAML",
+    "execution.command.amper.group.name": "Kotlin CLI",
+    "execution.native.platform.picker.empty": "<default platform>",
+    "execution.native.variant.picker.empty": "<default variant>",
+    "execution.run.anything.help.command.placeholder": "kotlin [<options>] <command> [<args>]",
+    "execution.run.anything.help.group.title": "Kotlin CLI",
+    "execution.run.configuration.display.name": "Kotlin CLI",
+    "execution.test.platforms.all": "<all platforms>",
+    "inspections.module.dependency.with.overridden.version.dependency.location": "，"
   },
   "messages/AnalysisBundle.properties": {
     "inspection.export.results.annotation.type": "@interface"
   },
   "messages/AndroidBundle.properties": {
     "android.9patch.file.type.description": "Android 9-Patch",
+    "android.ddms.actions.layoutinspector.notification.group": "Layout Inspector",
+    "android.ddms.actions.layoutinspector.notification.title": "Layout Inspector",
+    "android.ddms.actions.layoutinspector.title": "Layout Inspector",
     "android.ddms.nodevices": "[none]",
     "android.extended.device.chooser.avd.label": "Android Virtual Device(&A):",
     "android.sdk.presentable.name": "Android SDK",
@@ -115,6 +471,9 @@
     "run.configuration.options.developmentTeam.entry": "{0} ({1})",
     "sdk.type.name": "Apple SDK"
   },
+  "messages/AppCodeKMMBundle.properties": {
+    "xcode.kmm.settings.at_project": "{0}"
+  },
   "messages/AppEngineBundle.properties": {
     "app-engine": "Google App Engine",
     "app-engine-python": "Google App Engine (Python)",
@@ -132,6 +491,8 @@
     "combobox.crlf.windows": "Windows (\\r\\n)",
     "editorsearch.current.cursor.position": "{0}/{1}",
     "editorsearch.toomuch": "{0}+",
+    "ml.completion.advise.aia.name": "JetBrains AI Assistant",
+    "ml.completion.advise.full.line.name": "Full Line Code Completion",
     "settings.hints.group.code.vision": "Code Vision",
     "settings.hints.new.group.code.vision": "Code Vision",
     "wrapping.try.resources": "'try-with-resources'"
@@ -163,6 +524,12 @@
   "messages/AzureBundle.properties": {
     "auth.select.dialog.oauth.label": "OAuth 2.0",
     "custom.bucket.text.empty": "container/folder,container2/folder/subfolder2,…"
+  },
+  "messages/AzureDevOpsBundle.properties": {
+    "clone.auth.type.cli": "Azure CLI",
+    "group.IntelliJ.AzureDevOps.Main.Group.text": "Azure DevOps",
+    "group.IntelliJ.AzureDevOps.Open.In.Browser.EditorTabPopup.text": "Azure DevOps",
+    "settings.display.name": "Azure DevOps"
   },
   "messages/BVBundle.properties": {
     "label.unknown": "@unknown"
@@ -197,7 +564,6 @@
     "kerberos.settings.principal.empty": "user@EXAMPLE.COM",
     "metainfo.info.label.etag": "ETag:",
     "notification.title.bdt": "Big Data Tools",
-    "progress.title.to": "{0} {1}，{2}",
     "rfs.copy.process.text": "({0}/{1}) {2}->{3}",
     "rfs.copy.process.text.fast": "{0}->{1}",
     "rfs.pane.spark.submit": "Spark Submit",
@@ -237,6 +603,9 @@
     "activate.clion.switch.dialog.toNova.title": "CLion Nova",
     "switch.dialog.topic.url": "https://www.jetbrains.com/help/clion/clion-nova-introduction.html"
   },
+  "messages/CLionLessonsBundle.properties": {
+    "clion.inline.completion.help.link": "Full Line Code Completion"
+  },
   "messages/CLionProfilingBundle.properties": {
     "sanitizers.llvmSymbolizer.notification.title": "Google Sanitizers"
   },
@@ -244,6 +613,7 @@
     "west.run.configuration.display.name": "Zephyr West"
   },
   "messages/CMakeBundle.properties": {
+    "cmake.build.error.with.fix": "{0} <a href=\"fix\">{1}</a>",
     "cmake.settings.cmake.options.link.latest.address": "https://cmake.org/cmake/help/latest/manual/cmake.1.html#options",
     "cmake.settings.cmake.options.link.versioned.address": "https://cmake.org/cmake/help/v{0}.{1}/manual/cmake.1.html#options"
   },
@@ -282,6 +652,9 @@
     "llvm.cov.binary.row.title": "llvm-cov:",
     "llvm.profdata.binary.row.title": "llvm-profdata:"
   },
+  "messages/CidrDapBundle.properties": {
+    "debugProfile.debugger.communication.stdio": "stdin/stdout"
+  },
   "messages/CidrDebuggerBundle.properties": {
     "action.CIDR.Debugger.ApplyFix.fixedExpr": "{0}",
     "debug.address.breakpoint": "{0}",
@@ -301,6 +674,9 @@
     "debug.symbolic.breakpoint.emptySymbolName.title": "<Empty>",
     "debug.symbolic.breakpoint.moduleAndSymbol.title": "{0}: {1}",
     "opencv.image.title": "OpenCV: {0}"
+  },
+  "messages/CidrDockerBundle.properties": {
+    "rosetta.debugProfile.name": "Rosetta GDB"
   },
   "messages/CidrDoctestBundle.properties": {
     "doctest.test.noname": "<Anonymous>"
@@ -328,8 +704,14 @@
     "language.cpp.clang-tidy.configurable.name": "Clang-Tidy",
     "language.cpp.clangd.quick.fix": "Clangd fix-it"
   },
+  "messages/ClaudeLLMBundle.properties": {
+    "claude.agent.name": "Claude Agent"
+  },
   "messages/ClionEmbeddedPlatformioBundle.properties": {
     "task.home": "PlatformIO Home"
+  },
+  "messages/ClionExternalSystemBundle.properties": {
+    "external.project.reload.progress.collect.compiler.info.iteration": "{0,number}/{1,number}"
   },
   "messages/CloudBundle.properties": {
     "editor.pane.text.empty.text": "<html><head>{0}<style>body '{'text-align: center; white-space: normal;background: #{1};color: #{2};'}'</style></head><body>{3}</body></html>",
@@ -354,7 +736,6 @@
     "macro.decapitalize.string": "decapitalize(String)",
     "macro.enum": "enum(...)",
     "macro.firstWord.string": "firstWord(String)",
-    "macro.groovy.script": "groovyScript(\"groovy code\")",
     "macro.spacesToUnderscores.string": "spacesToUnderscores(String)",
     "macro.underscoresToCamelCase.string": "underscoresToCamelCase(String)",
     "macro.underscoresToSpaces.string": "underscoresToSpaces(String)",
@@ -416,6 +797,12 @@
   "messages/CodeWithMePluginBundle.properties": {
     "backend.control.center.heap": "MiB -Xmx"
   },
+  "messages/CodexPromptSuggestionsBundle.properties": {
+    "advanced.settings.agent.workbench": "Agent Workbench"
+  },
+  "messages/CodexSessionsBundle.properties": {
+    "advanced.settings.agent.workbench": "Agent Workbench"
+  },
   "messages/CollaborationToolsBundle.properties": {
     "review.details.branch.checkout.remote.ad.label": "{0} ← {1}"
   },
@@ -423,7 +810,8 @@
     "ui.what.if.tab": "What-If"
   },
   "messages/CompDBBundle.properties": {
-    "compdb.url": "http://clang.llvm.org/docs/JSONCompilationDatabase.html"
+    "compdb.url": "http://clang.llvm.org/docs/JSONCompilationDatabase.html",
+    "project.resolver.progress.resolve.commands.iteration": "{0,number}/{1,number}"
   },
   "messages/CompilationChartsBundle.properties": {
     "charts.cpu.unit": "%"
@@ -435,19 +823,15 @@
     "group.advanced.settings.federatedCompute": "Federated Compute"
   },
   "messages/ComposeDesktopBundle.properties": {
-    "action.org.jetbrains.compose.desktop.ide.hotreload.ComposeHotReloadAction.text": "Hot Reload Compose",
     "compose.desktop.intention.family.name": "Compose Multiplatform",
     "compose.desktop.notification.group": "Compose Multiplatform",
     "compose.hotreload.settings.displayName": "Compose Hot Reload",
-    "compose.hotreload.status.action.title": "Hot Reload",
     "compose.hotreload.title": "Compose Hot Reload"
   },
   "messages/ComposeProjectWizardBundle.properties": {
     "module.presentation.name": "Compose Multiplatform"
   },
   "messages/CoreBundle.properties": {
-    "plugin.loading.error.k1.mode": "\"K1\"",
-    "plugin.loading.error.k2.mode": "\"K2\"",
     "plugin.name.and.vendor": "{0} ({1})"
   },
   "messages/CoreDataWranglerBundle.properties": {
@@ -499,6 +883,11 @@
   "messages/DaemonBundle.properties": {
     "import.popup.text": "{0}?"
   },
+  "messages/DaemonFrontendSplitBundle.properties": {
+    "host.is.down.error": "The IDE is not running on {0}",
+    "start.backend.action": "Start the IDE",
+    "unknown.error": "Connection status: {0}"
+  },
   "messages/DartBundle.properties": {
     "action.Dart.build.text": "Webdev Build…",
     "action.Dart.pub.cache.repair.text": "Pub Cache Repair…",
@@ -533,6 +922,7 @@
     "count.rows.action.of.text": "/{0}",
     "csv.format.settings.quotation.policy.escape.duplicate": "<duplicate>",
     "excel.xlsx": "Excel (xlsx)",
+    "python.pandas.dataframe": "Python (pandas.DataFrame)",
     "separator.order.by": "ORDER BY"
   },
   "messages/DataSpellBundle.properties": {
@@ -543,6 +933,10 @@
   "messages/DataSpellIdeImplBundle.properties": {
     "welcome.screen.action.aiAssistant": "AI Assistant",
     "welcome.screen.action.jupyterNotebook": "Jupyter\nNotebook"
+  },
+  "messages/DatabaseAiToolsBundle.properties": {
+    "ai.consent.dialog.message.context.datasource": "<strong>{0}</strong>",
+    "ai.consent.dialog.message.context.schema": "<strong>{0}</strong>"
   },
   "messages/DatabaseBundle.properties": {
     "ChangeDialectToolbarAction.action.dialect.text": "<dialect>",
@@ -555,6 +949,7 @@
     "MongoDB.auth.SCRAM.SHA.1": "SCRAM-SHA-1",
     "MongoDB.auth.SCRAM.SHA.256": "SCRAM-SHA-256",
     "MongoDB.auth.kerberos": "GSSAPI (Kerberos)",
+    "MongoDB.auth.oidc": "OIDC/OAuth",
     "MongoDB.auth.x.509": "X.509",
     "SqlResolveConfigurable.label.all": "<All>",
     "SqlResolveConfigurable.label.all.excluding": "<All exc.>",
@@ -569,6 +964,7 @@
     "action.Console.Jdbc.ExplainPlan.Raw.text": "Explain Plan (Raw)",
     "action.Console.Jdbc.ExplainPlan.description": "Explain Plan",
     "action.Console.Jdbc.ExplainPlan.text": "Explain Plan",
+    "action.Console.TableResult.SetSqlExpression.NOW.text": "NOW()",
     "action.tx.text": "Tx: {0}",
     "azure.active.directory.interactive": "Azure Active Directory Interactive",
     "azure.active.directory.msi": "Azure Active Directory MSI",
@@ -585,7 +981,6 @@
     "deactivate.data.source.notification.title": "{0} [{1}]",
     "dialog.message.ssh": "SSH: {0}",
     "do.not.set": "<Do not set>",
-    "feedback.survey.url": "https://surveys.jetbrains.com/s3/DataGrip-UX-Survey-2i",
     "group.Console.Jdbc.ExplainGroup.text": "Explain Plan",
     "group.PlanViewGroup.text": "Explain Plan",
     "label.auto.detect": "<auto detect>",
@@ -597,6 +992,7 @@
     "notification.content.missing.error.message": "<missing error message>",
     "notification.content.oracle.home.should.be.defined.action": "<a href='$ACTION0'>Set ORACLE_HOME</a>",
     "progress.title.anonymous": "<Anonymous>",
+    "property.JsonPath.title": "JSON Path",
     "property.NullsNotDistinct.title": "Nulls Not Distinct",
     "quickDoc.schema.lastIntrospection.atTime": "{0}",
     "scriptGen.option.RestrictDeleteTriggers.text": "RESTRICT WHEN DELETE TRIGGERS",
@@ -604,8 +1000,9 @@
     "unknown.in.angleBraces": "<unknown>",
     "value": "<value>"
   },
-  "messages/DatabaseInspectorBundle.properties": {
-    "export.notification.success.message.reveal": "<a href=reveal>{0}</a>"
+  "messages/DatabaseMcpBundle.properties": {
+    "mcp.consent.dialog.message.context.datasource": "<strong>{0}</strong>",
+    "mcp.consent.dialog.message.context.schema": "<strong>{0}</strong>"
   },
   "messages/DatabricksBundle.properties": {
     "auth.type.azure": "Azure CLI",
@@ -654,6 +1051,10 @@
   "messages/DevKitWorkspaceModelBundle.properties": {
     "inspections.group.path": "Plugin DevKit"
   },
+  "messages/DevOpsBundle.properties": {
+    "azure.auth.type.cli": "Azure CLI",
+    "settings.display.name": "Azure DevOps"
+  },
   "messages/DeviceExplorerBundle.properties": {
     "configurable.name.android.device.file.explorer": "Android Device File Explorer",
     "configurable.name.device.file.explorer": "Device File Explorer"
@@ -670,9 +1071,48 @@
     "configurable.name.android.device.file.explorer": "Android Device File Explorer",
     "configurable.name.device.file.explorer": "Device File Explorer"
   },
-  "messages/DevkitComposeBundle.properties": {
-    "compose.preview.build": "— <Build project>",
-    "compose.preview.refresh": "— <Refresh>"
+  "messages/DevkitUiDslBundle.properties": {
+    "demo.basics.row2.label": "Row2:",
+    "demo.basics.row3.label": "Row3:",
+    "demo.basics.row4.label": "Row4:",
+    "demo.binding.int.text.field": "intTextField(0..100):",
+    "demo.binding.is.modified": "isModified: {0}",
+    "demo.binding.radio.button": "radioButton:",
+    "demo.binding.slider": "slider:",
+    "demo.binding.spinner": "spinner:",
+    "demo.binding.text.field": "textField:",
+    "demo.component.labels.row1": "Row1:",
+    "demo.component.labels.row2": "Row2:",
+    "demo.components.action.button": "actionButton:",
+    "demo.components.actions.button": "actionsButton:",
+    "demo.components.browser.link": "browserLink:",
+    "demo.components.browser.link.text": "jetbrains.com",
+    "demo.components.combo.box": "comboBox:",
+    "demo.components.context.help": "contextHelp:",
+    "demo.components.drop.down.link": "dropDownLink:",
+    "demo.components.expandable.text.field": "expandableTextField:",
+    "demo.components.extendable.text.field": "extendableTextField:",
+    "demo.components.int.text.field": "intTextField(0..100):",
+    "demo.components.password.field": "passwordField:",
+    "demo.components.segmented.button": "segmentedButton:",
+    "demo.components.slider": "slider(0, 10, 1, 5):",
+    "demo.components.spinner.double": "spinner(0.0..100.0, 0.01):",
+    "demo.components.spinner.int": "spinner(0..100):",
+    "demo.components.tabbed.pane.header": "tabbedPaneHeader:",
+    "demo.components.text.area": "textArea:",
+    "demo.components.text.field": "textField:",
+    "demo.components.text.field.with.browse": "textFieldWithBrowseButton:",
+    "demo.examples.buttons.group.bind.comment": "'buttonsGroup.bind'",
+    "demo.examples.enabled.if.comment": "'enabledIf'",
+    "demo.examples.selected.true.comment": "'selected(true)'",
+    "demo.examples.value.1": "Value = 1",
+    "demo.examples.value.2": "Value = 2",
+    "demo.examples.width.group.comment": "'widthGroup'",
+    "demo.gaps.group.indent": "Panel.indent",
+    "demo.groups.button.group.title": "Panel.buttonGroup:",
+    "demo.groups.collapsible.title": "Panel.collapsible&Group",
+    "demo.groups.group.rows.range.title": "Panel.groupRowsRange",
+    "demo.groups.group.title": "Panel.group"
   },
   "messages/DiagnosticBundle.properties": {
     "error.list.message.index.count": "{0}/{1}"
@@ -748,13 +1188,15 @@
     "DockerWslConnectionConfigurator.label": "WSL:",
     "RegistryRuntimeTask.current.of.total": "{0}/{1}",
     "action.Docker.FilterDevContainers.text": "Dev Container",
-    "advanced.settings.dev.containers": "Dev Container",
-    "devcontainer.promo.panel.help": "https://www.jetbrains.com/help/idea/connect-to-devcontainer.html"
+    "advanced.settings.dev.containers": "Dev Container"
   },
   "messages/DockerComposeBundle.properties": {
     "ComposeFileRunLineMarkerProvider.AllServicesLineMarkerInfo.tooltip": "docker-compose up",
     "ComposeFileRunLineMarkerProvider.ServiceLineMarkerInfo.restart.tooltip": "docker-compose restart {0}",
-    "ComposeFileRunLineMarkerProvider.ServiceLineMarkerInfo.up.tooltip": "docker-compose up {0}"
+    "ComposeFileRunLineMarkerProvider.ServiceLineMarkerInfo.up.tooltip": "docker-compose up {0}",
+    "configurable.ComposeServiceCompletionConfigurable.display.name": "Docker Compose",
+    "docker.compose.file.type.display.name": "Docker Compose YAML",
+    "notification.group.docker.compose": "Docker Compose"
   },
   "messages/DockerGatewayBundle.properties": {
     "DockerGateway.devcontainer": "Dev Container",
@@ -762,37 +1204,17 @@
     "DockerGatewayRecentConnections.title": "Dev Container",
     "advanced.settings.dev.containers": "Dev Container",
     "devcontainer.add.settings.intention.family.name": "Dev Container",
-    "devcontainer.inspection.group": "Dev Container",
     "group.Dev.Container.Actions.text": "Dev Container",
     "group.Tools.Services.DevContainers.text": "Dev Container"
   },
-  "messages/DotNetReporterBundle.properties": {
-    "action.break.patch.engine.text": "Break Patch Engine"
+  "messages/DockerGatewayJsonBundle.properties": {
+    "devcontainer.inspection.group": "Dev Container"
   },
   "messages/DotNetWatchBundle.properties": {
     "run.configuration.display.name": "dotnet-watch"
   },
-  "messages/DotUltimateBundle.properties": {
-    "dialog.feedback.blocks.description": "Thanks for your feedback!<br><br>Could you tell us what you found useful on this dotUltimate page? It helps us show more relevant information in the IDE.",
-    "dialog.feedback.blocks.helpful.improve": "What, if anything, would you improve?",
-    "dialog.feedback.blocks.problem.improve": "What would have made it more useful to you?",
-    "dialog.feedback.blocks.problems": "Thanks for letting us know.<br><br>We’d like to understand what didn’t work for you so we can improve how we present information in the IDE.",
-    "dialog.feedback.helpful.choice": "What did you find helpful about this page?",
-    "dialog.feedback.helpful.feature.descriptions": "I liked the feature descriptions",
-    "dialog.feedback.helpful.information": "The information about the dotUltimate trial was clear",
-    "dialog.feedback.helpful.nothing": "Nothing helpful",
-    "dialog.feedback.helpful.plan.to.try": "I plan to try dotUltimate soon",
-    "dialog.feedback.helpful.visual.design": "I liked the visual design",
-    "dialog.feedback.problems.choice": "Why didn’t you find this page useful?",
-    "dialog.feedback.problems.ignore": "I ignore promotional content",
-    "dialog.feedback.problems.interested": "I’m not interested in dotUltimate",
-    "dialog.feedback.problems.moment": "The message appeared at the wrong moment",
-    "dialog.feedback.problems.relevant": "It’s not relevant to what I’m working on",
-    "dialog.feedback.problems.space": "It takes up space in the editor",
-    "dialog.feedback.problems.tried": "I’ve already tried/used dotUltimate",
-    "dialog.feedback.problems.understand": "I don’t understand what dotUltimate includes",
-    "dialog.feedback.problems.useful": "It is actually useful",
-    "dialog.feedback.title": "DotUltimate trial page feedback"
+  "messages/DotProfilerMcpBundle.properties": {
+    "report.col.rank": "#"
   },
   "messages/DownburstBundle.properties": {
     "docker.terminal.title": "Docker: {0}",
@@ -808,9 +1230,6 @@
     "inspection.group.name": "Apache Dubbo",
     "label.boot.version": "Spring Boot:",
     "label.dubbo.version": "Apache Dubbo:"
-  },
-  "messages/DuplicatesBundle.properties": {
-    "duplicates.inspection.description": "Reports duplicated blocks of code from the selected scope: the same file{0,choice, 0#, same module, dependent modules|1#} or the entire project.<!-- tooltip end --> <p>The inspection features quick-fixes that help you to set the size of detected duplicates, navigate to repetitive code fragments, and compare them in a tool window.{0,choice, 0#When possible, the inspection provides a quick-fix to extract a method from the duplicated code.|1#}<p>The inspection options allow you to select the scope of the reported duplicated fragments and set the initial size for the duplicated language constructs.{1,choice, 0#'<'p>You can also configure the constructs that you want to anonymize in '<'a href=\"settings://duplicates.index\"> {2} '|' Editor '|' Duplicates'<'/a>.|1#}"
   },
   "messages/DvcsBundle.properties": {
     "clone.repository.url.label": "URL:",
@@ -843,9 +1262,16 @@
     "action.GenerateServletAction.text": "Servlet(&S)…",
     "label.edit.relationship.ejb": "EJB:"
   },
+  "messages/EmbarkBundle.properties": {
+    "embark.cli.notification.group": "EmbArk CLI",
+    "embark.display.name.staging": "EmbArk (stgn)",
+    "embark.environment.staging.suffix": "(stgn)"
+  },
   "messages/EmbeddedBundle.properties": {
     "debug.targets.edit.debugger.extended.remote.hint": "target extended-remote",
     "debug.targets.edit.debugger.remote.hint": "target remote",
+    "debugProfile.espIdf.name": "ESP-IDF",
+    "debugProfile.jlink.name": "SEGGER J-Link",
     "esp.idf": "ESP-IDF",
     "freertos.task.table.id.column": "TCB №",
     "jlink.gdb.server.displayname": "Segger JLink",
@@ -858,7 +1284,6 @@
     "reset.strategy.under_reset": "Init-Under-Reset",
     "rtos.azure.display.name": "Azure RTOS ThreadX",
     "segger.jlink": "SEGGER J-Link",
-    "stlink.groupname": "ST-LINK",
     "stutil.displayname": "st-util",
     "svd.write.only": "<Write-Only>"
   },
@@ -871,8 +1296,13 @@
     "step.info.log.stdout": "Stdout:",
     "step.info.log.syslog": "Syslog:"
   },
-  "messages/EvaluationPluginBundle.properties": {
-    "evaluation.settings.filters.static.title": "static:"
+  "messages/EngineBundle.properties": {
+    "acp.screen.plan.item": "{0} - {1}",
+    "acp.screen.row.status": "{0} - {1}",
+    "acp.screen.tool.status.withApproval": "{0} - {1}"
+  },
+  "messages/EvaluationBundle.properties": {
+    "eval.config.settings.name": "AI Agents Debugger"
   },
   "messages/ExecutionBundle.properties": {
     "combo.java.version.1.4": "JDK 1.4.x",
@@ -885,6 +1315,12 @@
     "run.toolbar.started": "{0}: {1}",
     "targets.details.action.new.target.of.type.text": "{0}…",
     "wsl.folding.placeholder": "{0}: {1}"
+  },
+  "messages/ExposedBundle.properties": {
+    "live.template.context.exposed.v1.core": "Exposed Core",
+    "live.template.context.exposed.v1.dao": "Exposed DAO",
+    "live.template.context.exposed.v1.jdbc": "Exposed JDBC",
+    "live.template.context.exposed.v1.r2dbc": "Exposed R2DBC"
   },
   "messages/ExternalSystemBundle.properties": {
     "external.system.dependency.analyzer.editor.tab.name": "Dependency Analyzer",
@@ -907,7 +1343,8 @@
     "group.advanced.settings.federatedCompute": "Federated Compute"
   },
   "messages/FederatedComputePlatformBundle.properties": {
-    "group.advanced.settings.federatedCompute": "Federated Compute"
+    "group.advanced.settings.federatedCompute": "Federated Compute",
+    "notification.group.federatedCompute": "Federated Compute"
   },
   "messages/FeedbackBundle.properties": {
     "dialog.previous.ide.2": "IntelliJ Ultimate",
@@ -916,6 +1353,64 @@
     "dialog.previous.language.4": "JavaScript/TypeScript",
     "dialog.previous.language.5": "C/C++",
     "dialog.previous.language.6": "C#"
+  },
+  "messages/FigmaBundle.properties": {
+    "action.Figma.ResetSetupWizardState.description": "Clears the persisted flag so the Figma Connect tool window shows the setup wizard again after a project reload",
+    "action.Figma.ResetSetupWizardState.text": "Figma: Reset Setup Wizard State",
+    "figma.action.add.to.context.disabled.body": "Enable the plugin or ask your admin to allow AI features",
+    "figma.action.add.to.context.disabled.title": "AI Assistant is unavailable",
+    "figma.action.copy.figma.url": "Copy Figma {0,choice,1#URL|2#URLs}",
+    "figma.action.copy.node.id": "Copy Node {0,choice,1#ID|2#IDs}",
+    "figma.action.copy.png": "Copy PNG",
+    "figma.action.copy.svg": "Copy SVG",
+    "figma.error.already.initialized": "Already initialized",
+    "figma.error.connection.rejected": "Connection rejected",
+    "figma.error.connection.timed.out": "Connection approval timed out",
+    "figma.error.internal": "Request handling failed",
+    "figma.error.invalid.params": "Invalid request parameters",
+    "figma.error.invalid.request": "Invalid request",
+    "figma.error.method.not.found": "Unknown method: {0}",
+    "figma.error.protocol.mismatch": "Protocol version mismatch: expected {0}, got {1}",
+    "figma.internal.reset.wizard.message": "Cleared. Reload the project (or restart the IDE) for the Figma Connect tool window to show the setup wizard again.",
+    "figma.internal.reset.wizard.title": "Figma Setup Wizard State Reset",
+    "figma.mcp.banner.failure.message": "MCP is disabled in Figma Desktop. Enable it to allow AI features",
+    "figma.mcp.banner.how.to.enable.action": "How to Enable",
+    "figma.selection.empty": "Select a frame, component, or layer in Figma to add it to your AI chat.<br>Or pick one from the Layers list above.",
+    "figma.wizard.allow.body": "No design is shared until you allow it.",
+    "figma.wizard.allow.ignored": "Request ignored. To connect, press Connect in the JetBrains Connect plugin in Figma again.",
+    "figma.wizard.allow.title": "Allow the connection",
+    "figma.wizard.assistant.body": "AI Assistant powers the Figma Desktop MCP integration and the AI chat this wizard connects to.",
+    "figma.wizard.assistant.failed": "Couldn't install AI Assistant. Try again, or install it manually via Settings → Plugins.",
+    "figma.wizard.assistant.hint": "Or install/enable manually via <a href=\"settings\">Settings → Plugins</a>",
+    "figma.wizard.assistant.installing": "Installing AI Assistant…",
+    "figma.wizard.assistant.restart.required": "AI Assistant is installed and will start after the IDE restarts. Restart now, or finish the wizard first.",
+    "figma.wizard.enable.action": "It's Enabled",
+    "figma.wizard.enable.gif.placeholder": "Illustration coming soon",
+    "figma.wizard.enable.instructions": "<ol style=\"margin:0;padding-left:16px;\"><li>In Figma Desktop, switch to Dev Mode.</li><li>Press <b>Enable desktop MCP server</b> in the Inspect panel. Alternatively, press <code>{0} + /</code>, type <b>Enable desktop MCP server</b>, and press <code>Enter</code>.</li></ol>",
+    "figma.wizard.enable.title": "Enable MCP server in Figma Desktop",
+    "figma.wizard.get.body": "Pairing runs through the desktop app; a Figma Dev seat is required.",
+    "figma.wizard.get.download.card.name": "Figma Desktop",
+    "figma.wizard.get.have.app.action": "I Have the App",
+    "figma.wizard.get.title": "Get Figma Desktop",
+    "figma.wizard.intro.documentation": "<a href=\"learn\">Documentation<icon src=\"AllIcons.Ide.External_link_arrow\"></a>",
+    "figma.wizard.intro.requirement": "Requires Figma Desktop and a Figma Dev or Full seat",
+    "figma.wizard.intro.setup.action": "Set Up…",
+    "figma.wizard.intro.value.prop": "Access Figma layers in your IDE and feed them straight to AI Chat to build UI faster.",
+    "figma.wizard.mcp.body": "Figma Desktop MCP server gets context from your designs. The skill helps AI Assistant transform designs into code properly.",
+    "figma.wizard.mcp.configure.global.action": "Configure Globally",
+    "figma.wizard.mcp.configure.project.action": "Configure per Project",
+    "figma.wizard.mcp.connecting": "Configuring Figma Desktop MCP…",
+    "figma.wizard.mcp.failed": "Couldn't configure the Figma Desktop MCP server. Make sure Figma Desktop is running, then try again.",
+    "figma.wizard.mcp.have.it.action": "I Have It",
+    "figma.wizard.mcp.hint": "Or configure manually via <a href=\"settings\">Settings → Tools → AI Assistant → Model Context Protocol (MCP)</a>",
+    "figma.wizard.mcp.install.globally.action": "Install Globally",
+    "figma.wizard.mcp.success.countdown": "Figma Desktop MCP configured. Going next in {0}…",
+    "figma.wizard.mcp.title": "Configure Figma Desktop MCP and skill in AI Assistant",
+    "figma.wizard.open.action": "Open JetBrains Connect…",
+    "figma.wizard.open.body": "In Figma Desktop, install the JetBrains Connect plugin. Then, in an open design file, go to the Plugins tab, select JetBrains Connect, and press Connect in it.",
+    "figma.wizard.open.title": "Run JetBrains Connect plugin in Figma",
+    "figma.wizard.open.waiting": "Waiting for Figma…",
+    "figma.wizard.step.progress": "{0}/{1}"
   },
   "messages/FindBundle.properties": {
     "emptyText.used.option": "{0}",
@@ -944,6 +1439,7 @@
     "full.line.configurable.name": "Full Line Code Completion",
     "full.line.name": "Full Line Code Completion",
     "full.line.notifications.feedback.title": "Full Line Code Completion",
+    "full.line.settings.header.warning.icon": "<icon src='AllIcons.General.Warning'>",
     "group.FullLineGroup.text": "Full Line"
   },
   "messages/GatewayBundle.properties": {
@@ -962,6 +1458,11 @@
   "messages/GcloudBundle.properties": {
     "install.sdk.title": "GCloud SDK",
     "managedsdk.notifications.title": "Google Cloud SDK"
+  },
+  "messages/GdScriptBundle.properties": {
+    "notification.group.godot.lsp": "Godot LSP",
+    "settings.highlighter.base.type": "BaseType (Vector3、Node3D)",
+    "settings.highlighter.engine.type": "EngineType (Vector3、Node3D)"
   },
   "messages/GitBundle.properties": {
     "abort.operation.indicator.text": "git {0} --abort{1}",
@@ -1026,6 +1527,7 @@
     "action.GoEditSettingsAction.text.os.specific": "Go {0}…",
     "action.com.goide.vgo.actions.VgoTidyAction.text": "Go Mod Tidy",
     "action.com.goide.vgo.actions.VgoVendorAction.text": "Go Mod Vendor",
+    "action.go.welcome.screen.left.tab.new.terraform.resource.text": "Terraform Resource",
     "go.app.engine.wizard.name": "App Engine",
     "go.debugger.thread.dump.n.goroutines": "{0} {0,choice,0#goroutines|1#goroutine|2#goroutine}",
     "go.execution.remote.run.configuration.description": "Go Remote",
@@ -1034,18 +1536,40 @@
     "go.libraries.configurable.path.source.prefix.gopath": "[GOPATH]",
     "go.quick.doc.keyword.resource.effective.go.label": "Effective Go",
     "go.run.target.gopath.label": "GOPATH: ",
+    "go.syntax.update.tool.window.problems.count.long.format": "{0}, {1}: {2}",
+    "go.syntax.update.tool.window.problems.count.long.format.no.files": "{0}: {1}",
+    "go.syntax.update.tool.window.problems.count.short.format": "{0}, {1} {2}",
     "go.wizard.name": "Go (GOPATH)",
     "vgo.inspection.dependency-deprecated-retracted.tooltip-template": "<html><body>{0}。<p><span style=\"color:{3}\">{1}:</span> {2}</body></html>"
+  },
+  "messages/GoFixBundle.properties": {
+    "go.fix.inspection.group.name": "Go fix"
   },
   "messages/GoLessonsBundle.properties": {
     "go.new.features.flight.recorder.title": "Flight Recorder"
   },
+  "messages/GoLineProfilerBundle.properties": {
+    "percent.of.parent": " /{0}"
+  },
   "messages/GoLinterBundle.properties": {
     "inspection.message.golangci.lint": "golangci-lint ({0}): {1}"
   },
+  "messages/GoPerformanceBundle.properties": {
+    "go.escape.analysis.editor.filter.and.more": "{0} + {1}",
+    "go.escape.analysis.results.group.and.more": "{0} + {1}",
+    "go.profiler.pprof.unit.GGCU": "G*GCU",
+    "go.profiler.pprof.unit.MGCU": "M*GCU",
+    "go.profiler.pprof.unit.PGCU": "P*GCU",
+    "go.profiler.pprof.unit.TGCU": "T*GCU",
+    "go.profiler.pprof.unit.kGCU": "k*GCU",
+    "go.profiler.pprof.unit.mGCU": "m*GCU",
+    "go.profiler.pprof.unit.nGCU": "n*GCU",
+    "go.profiler.pprof.unit.uGCU": "u*GCU",
+    "go.struct.optimization.results.breadcrumb": "{0} > type {1} struct",
+    "percent.of.parent": " /{0}"
+  },
   "messages/GodotPluginBundle.properties": {
-    "build.automatically.text": "Build automatically: Helps Godot Editor show actual values in the Inspector. Configurable in Godot plugin settings.",
-    "notification.group.godot.lsp": "Godot LSP"
+    "configurable.name.godot.engine": "Godot.NET"
   },
   "messages/GraalVmBundle.properties": {
     "debugger.display.gdb.name": "GDB/GraalVM",
@@ -1054,11 +1578,6 @@
     "graalvm.runconfig.docker.process.shared.display.name": "{0, number, #}: {1}"
   },
   "messages/GradleBundle.properties": {
-    "gradle.build.issue.unresolved.dependency.for.owner.title": "Could Not Resolve {0} for {1}",
-    "gradle.build.quick.fix.artifact.declare.repository": "Declare repository providing the artifact, see the documentation at {0}",
-    "gradle.build.quick.fix.disable.offline.mode.rebuild": "<a href=\"{0}\">Disable offline mode and rerun the build</a>",
-    "gradle.build.quick.fix.disable.offline.mode.reload": "<a href=\"{0}\">Disable offline mode and reload the project</a>",
-    "gradle.build.quick.fix.gradle.jvm.or.newer": "Use Java {1} or newer as Gradle JVM: <a href=\"{0}\">Open Gradle settings</a>",
     "gradle.dsl.new.project.wizard": "Gradle DSL:",
     "gradle.filetype.display.name": "Groovy Gradle DSL",
     "gradle.notifications.daemon.toolchain.migration.info.url": "https://docs.gradle.org/current/userguide/gradle_daemon.html#daemon_jvm_criteria",
@@ -1098,7 +1617,6 @@
     "getter.kind.getter.0": "Getter {0}",
     "groovy.version.0": "Groovy {0}",
     "inspection.display.name.delegates.to": "@DelegatesTo",
-    "interface.abstract.methods.must.not.have.body": "Interface abstract methods must not have body",
     "label.groovy.sdk": "Groovy SDK:",
     "module.name.0.and.groovy.version.1": "{0} ({1})",
     "non.sealed.visibility.presentation": "non-sealed",
@@ -1212,7 +1730,6 @@
     "readonly.sources.configuration.url.label": "URL:"
   },
   "messages/IdeBundle.properties": {
-    "about.box.jcef": "JCEF {0}.{1}.{2}",
     "about.box.vm": "VM: {0}，{1}",
     "accessibility.filter.label": "{0}: {1}",
     "action.reopen.project.display.name.with.branch": "{0}  [{1}]",
@@ -1251,6 +1768,10 @@
   "messages/IdeologBundle.properties": {
     "help.link.settings.ideolog": "settings.ideolog"
   },
+  "messages/IjentImplBundle.properties": {
+    "label.ijent.dashboard.info.gid": "GID:",
+    "label.ijent.dashboard.info.uid": "UID:"
+  },
   "messages/ImagesBundle.properties": {
     "icon.dimensions": "{0,number}x{1,number}x{2,number}",
     "image.description": "{0}×{1}，{2}bpp",
@@ -1262,9 +1783,16 @@
     "plugin-installation.progress.text-with-details": "{0} / {1}",
     "transfer.error.no-error-message": "<no error message>"
   },
+  "messages/InlineCompletionMessageBundle.properties": {
+    "inline.completion.frontend.tooltip.provider.name.addition": "{0}"
+  },
+  "messages/InsightsBundle.properties": {
+    "diagnostics.cache.item.file.id": "({0})"
+  },
   "messages/InspectionGadgetsBundle.properties": {
+    "ambiguous.field.access.hides.field.problem.descriptor": "Access of field <code>#ref</code> from superclass ''{0}'' looks like access of field from surrounding class",
     "static.import.display.name": "static import",
-    "static.import.problem.descriptor": "static import <code>#ref</code>  #loc"
+    "static.import.problem.descriptor": "static import <code>#ref</code>"
   },
   "messages/InspectionJSBundle.properties": {
     "add.require.amd.module.group.name": "Node.js"
@@ -1279,6 +1807,7 @@
     "group.names.language.level.specific.issues.and.migration.aids21": "Java 21",
     "group.names.language.level.specific.issues.and.migration.aids23": "Java 23",
     "group.names.language.level.specific.issues.and.migration.aids25": "Java 25",
+    "group.names.language.level.specific.issues.and.migration.aids26": "Java 26",
     "group.names.language.level.specific.issues.and.migration.aids5": "Java 5",
     "group.names.language.level.specific.issues.and.migration.aids7": "Java 7",
     "group.names.language.level.specific.issues.and.migration.aids8": "Java 8",
@@ -1300,12 +1829,16 @@
     "javascript.debugger.settings.url": "URL(&U):",
     "js.scripts.source.tree.root.label": "<root>"
   },
+  "messages/JSHintBundle.properties": {
+    "jshint.inspection.message.prefix": "JSHint:",
+    "jshint.option.esnext.description.short": "EcmaScript.next",
+    "jshint.option.wsh.description.short": "Windows Script Host"
+  },
   "messages/JUnitBundle.properties": {
     "default.junit.config.name.category": "@Category({0})"
   },
   "messages/JadeBundle.properties": {
     "color.settings.name": "Pug/Jade",
-    "pug.code.style.configurable.name": "Pug/Jade",
     "pug.inspections.group.name": "Pug/Jade",
     "pug.template.context.name": "Pug/Jade"
   },
@@ -1346,6 +1879,7 @@
     "macro.iterable.component.type": "iterableComponentType(ArrayOrIterable)",
     "macro.iterable.variable": "iterableVariable()",
     "macro.variable.of.type": "variableOfType(Type)",
+    "node.hierarchy.locationPath": " ({0})",
     "null.check.surrounder.description": "if (expr != null) {…}",
     "surround.with.dowhile.template": "do / while",
     "surround.with.ifelse.expression.template": "if (expr) {...} else {...}",
@@ -1369,7 +1903,6 @@
     "error.jdk.module.names.overflow.element.ellipsis": "…"
   },
   "messages/JavaDebuggerBundle.properties": {
-    "evaluation.error.exception.collected": "<Cause unknown as the exception has been collected>",
     "exception.breakpoint.console.message.location.info": "{0}:{1,number,#}",
     "instances.window.show.history": "InstancesWindow.ShowHistory",
     "label.debugger.launching.configurable.socket": "&Socket ",
@@ -1378,6 +1911,9 @@
     "memory.view.constructor.tracker.name": "MemoryViewConstructorTracker: {0}",
     "message.node.toString": "… toString()",
     "surround.with.runtime.type.template": "((RuntimeType)expr)"
+  },
+  "messages/JavaDevBundle.properties": {
+    "inspections.group.path": "Plugin DevKit"
   },
   "messages/JavaFXBundle.properties": {
     "javafx.edit.certificates.dialog.keypass": "Keypass(&E):",
@@ -1410,6 +1946,7 @@
     "action.QUnitGenerateSetupAction.text": "QUnit Setup",
     "action.QUnitGenerateTearDownAction.text": "QUnit TearDown",
     "activity.key.node.js.name": "Node.js",
+    "add.require.amd.module.group.name": "Node.js",
     "es6.auto.import.options.title": "TypeScript / JavaScript",
     "fetch.client.generator.title": "JavaScript Fetch",
     "filetype.yarn.lock.description": "Yarn lock",
@@ -1435,10 +1972,6 @@
     "javascript.surround.with.try.catch.finally": "try / catch / finally",
     "javascript.surround.with.try.finally": "try / finally",
     "javascript.template.context.type": "JavaScript(&R)",
-    "jshint.inspection.message.prefix": "JSHint:",
-    "jshint.option.esnext.description.short": "EcmaScript.next",
-    "jshint.option.wsh.description.short": "Windows Script Host",
-    "jshint.progress.title": "JSHint {0}",
     "jsx.html.context.type": "JSX HTML",
     "live.template.props.description": "this.props.",
     "live.template.state.description": "this.state.",
@@ -1492,7 +2025,10 @@
     "feature.stream.gatherers": "Stream Gatherer",
     "feature.try.with.resources": "Try-with-resources",
     "feature.with.initial": "ThreadLocal.withInitial()",
-    "jdk.24.language.level.description": "24 - Stream Gatherers"
+    "jdk.1.7.language.level.description": "7 - Diamonds, try-with-resources, multi-catch, strings in switch, etc.",
+    "jdk.25.preview.language.level.description": "25 (Preview) - Primitive types in patterns, instanceof, and switch (3rd preview)",
+    "jdk.26.preview.language.level.description": "26 (Preview) - Primitive types in patterns, instanceof, and switch (4th preview)",
+    "jdk.27.preview.language.level.description": "27 (Preview) - Primitive types in patterns, instanceof, and switch (5th preview)"
   },
   "messages/JavaUiBundle.properties": {
     "checkbox.javadocs": "JavaDoc(&D)",
@@ -1510,7 +2046,7 @@
     "project.structure.sdk": "SDK:",
     "repository.library.type.maven.description": "Maven: {0}"
   },
-  "messages/JavaeeJspBaseBundle.properties": {
+  "messages/JavaeeJspSharedBundle.properties": {
     "dialog.edit.template.checkbox.jsp": "JSP (&P)"
   },
   "messages/JdlBundle.properties": {
@@ -1557,6 +2093,9 @@
     "schema.widget.prefix.json.files": "JSON:",
     "unnamed.desc": "<unnamed>"
   },
+  "messages/JunieAgentBundle.properties": {
+    "junie.full.name": "Junie (JetBrains)"
+  },
   "messages/JupyterBundle.properties": {
     "Jupyter.managed.server.running": "{0}: {1}",
     "Jupyter.managed.server.settings.server.type.aws.sagemaker.name": "AWS SageMaker",
@@ -1565,14 +2104,33 @@
     "action.NewJupyterNotebookAction.text": "Jupyter Notebook",
     "action.NotebookInsertRawCellAction.text": "Raw NBConvert",
     "jupyter.cell.type.raw": "Raw NBConvert",
+    "jupyter.variables.memory.details": "{0}/{1}",
     "notebook.collapsed.web.output.text": "Web: {0}x{1} px",
     "notebook.color.settings.title": "Jupyter Notebook",
     "notebook.save.svg.output.default.name": "output.svg",
     "settings.jupyter.general.display.name": "Jupyter General",
     "settings.jupyter.vcs.display.name": "Jupyter VCS",
-    "settings.markdown.scale.percentage.suffix": "%"
+    "settings.markdown.scale.percentage.suffix": "%",
+    "settings.matplotlib.styles.seaborn": "seaborn-v0_8",
+    "settings.matplotlib.styles.seaborn.bright": "seaborn-v0_8-bright",
+    "settings.matplotlib.styles.seaborn.colorblind": "seaborn-v0_8-colorblind",
+    "settings.matplotlib.styles.seaborn.dark": "seaborn-v0_8-dark",
+    "settings.matplotlib.styles.seaborn.dark.grid": "seaborn-v0_8-darkgrid",
+    "settings.matplotlib.styles.seaborn.dark.palette": "seaborn-v0_8-dark-palette",
+    "settings.matplotlib.styles.seaborn.deep": "seaborn-v0_8-deep",
+    "settings.matplotlib.styles.seaborn.muted": "seaborn-v0_8-muted",
+    "settings.matplotlib.styles.seaborn.notebook": "seaborn-v0_8-notebook",
+    "settings.matplotlib.styles.seaborn.paper": "seaborn-v0_8-paper",
+    "settings.matplotlib.styles.seaborn.pastel": "seaborn-v0_8-pastel",
+    "settings.matplotlib.styles.seaborn.poster": "seaborn-v0_8-poster",
+    "settings.matplotlib.styles.seaborn.talk": "seaborn-v0_8-talk",
+    "settings.matplotlib.styles.seaborn.ticks": "seaborn-v0_8-ticks",
+    "settings.matplotlib.styles.seaborn.white": "seaborn-v0_8-white",
+    "settings.matplotlib.styles.seaborn.white.grid": "seaborn-v0_8-whitegrid",
+    "settings.matplotlib.styles.tableau.colorblind": "tableau-colorblind10"
   },
   "messages/JupyterColabBundle.properties": {
+    "group.ColabNotebookActionGroup.text": "Google Colab",
     "notification.group": "Google Colab",
     "notification.title": "Google Colab",
     "separator.colab.actions": "Google Colab {0}"
@@ -1602,7 +2160,6 @@
     "kerberos.settings.principal.empty": "user@EXAMPLE.COM",
     "notification.title.bdt": "Big Data Tools",
     "producer.asks": "ACK:",
-    "progress.title.to": "{0} {1}，{2}",
     "rfs.copy.process.text": "({0}/{1}) {2}->{3}",
     "rfs.copy.process.text.fast": "{0}->{1}",
     "schema.info.arn": "ARN:",
@@ -1614,7 +2171,8 @@
     "tool.window.title": "Big Data Tools"
   },
   "messages/KeyMapBundle.properties": {
-    "dialog.mouse.pad.shortcut.text": "<html><center> <br>{0}<br><br>"
+    "dialog.mouse.pad.shortcut.text": "<html><center> <br>{0}<br><br>",
+    "shortcuts.tiny.info": "…"
   },
   "messages/KmmBundle.properties": {
     "wizard.project.documentationUrl": "https://kotlinlang.org/lp/mobile/?utm_medium=link&utm_source=product&utm_campaign=ASKMMW&utm_content={0}",
@@ -1623,6 +2181,32 @@
     "wizard.project.podDocUrl": "https://kotlinlang.org/docs/native-cocoapods.html#install-the-cocoapods-dependency-manager-and-plugin",
     "wizard.project.podIntegrationUrl": "https://kotlinlang.org/docs/native-cocoapods.html#use-a-kotlin-gradle-project-as-a-cocoapods-dependency",
     "wizard.project.regularFrameworkIntegrationUrl": "https://kotlinlang.org/docs/mobile/discover-kmm-project.html#ios-application"
+  },
+  "messages/KmpSettingsBundle.properties": {
+    "kmp.settings.group.name": "Kotlin Multiplatform (KMP)"
+  },
+  "messages/KmpStatisticsBundle.properties": {
+    "statistics.teamcity.onboarding.benefits.agents": "Per-minute macOS build agents",
+    "statistics.teamcity.onboarding.benefits.pipeline": "A ready-made pipeline for your KMP project",
+    "statistics.teamcity.onboarding.benefits.publishing": "Automatic publishing to TestFlight",
+    "statistics.teamcity.onboarding.benefits.reports": "Detailed build and test reports in the IDE",
+    "statistics.teamcity.onboarding.benefits.title": "What you will get",
+    "statistics.teamcity.onboarding.help.tooltip": "TeamCity documentation",
+    "statistics.teamcity.onboarding.notification.action.text": "Configure CI",
+    "statistics.teamcity.onboarding.notification.text": "Build your iOS app on CI – no Mac setup required.\nTeamCity can create a pipeline for this KMP project.",
+    "statistics.teamcity.onboarding.notification.title": "Changes committed successfully",
+    "statistics.teamcity.onboarding.promo.description": "Build and test your iOS app on cloud macOS machines, then publish it to TestFlight - no Mac or CI experience needed.",
+    "statistics.teamcity.onboarding.promo.free": "Free - upgrade anytime",
+    "statistics.teamcity.onboarding.promo.install": "Install TeamCity plugin",
+    "statistics.teamcity.onboarding.promo.start.setup": "Start Setup",
+    "statistics.teamcity.onboarding.reminder.action.text": "Configure now",
+    "statistics.teamcity.onboarding.reminder.dismiss.action.text": "Don't remind me again",
+    "statistics.teamcity.onboarding.reminder.text": "We will remind you on your next push.",
+    "statistics.teamcity.onboarding.reminder.title": "CI/CD setup saved for later",
+    "statistics.teamcity.onboarding.toolwindow.title": "TeamCity CI/CD",
+    "statistics.teamcity.plugin.installation.content": "Installing and enabling the TeamCity plugin...",
+    "statistics.teamcity.plugin.installation.notification.group": "KMP TeamCity integration",
+    "statistics.teamcity.plugin.installation.title": "Initializing TeamCity"
   },
   "messages/KotlinBaseCodeInsightBundle.properties": {
     "declaration.name.0.of.1": "{0}/{1}"
@@ -1634,29 +2218,41 @@
   "messages/KotlinBaseProjectStructureBundle.properties": {
     "sdk.0": "<sdk {0}>"
   },
+  "messages/KotlinBaseScriptingBundle.properties": {
+    "kotlin.script.in.beta.stage.link": "https://kotlinlang.org/docs/components-stability.html#stability-levels-explained",
+    "kotlin.script.in.project.sources.link": "https://youtrack.jetbrains.com/issue/KT-52735"
+  },
   "messages/KotlinBundle.properties": {
     "action.KotlinGenerateToString.text": "toString()",
+    "advanced.setting.kotlin.enable.autoconfiguration": "Enable Kotlin autoconfiguration",
     "column.name.val.var": "Val/Var",
+    "fix.add.explicit.context.argument.for": "''{0}''",
+    "formatter.title.after.context.parameter.list.in.function.type": "After context parameter list in function type",
+    "formatter.title.use.continuation.indent.in.context.parameters": "Use continuation indent in context parameters",
     "highlighter.name.dsl": "Dsl//",
     "hints.ranges.greaterOrEqual": "≥",
     "hints.ranges.less": "<",
     "hints.ranges.lessOrEqual": "≤",
     "hints.title.codevision": "Code Vision",
+    "inspection.convert.implicit.context.argument.to.explicit.fix.single": "''{0}''",
     "inspection.runblocking.analysis.found.runblocking": "--> runBlocking",
-    "kotlin.script.in.beta.stage.link": "https://kotlinlang.org/docs/components-stability.html#stability-levels-explained",
     "kotlin.script.in.project.sources.link": "https://youtrack.jetbrains.com/issue/KT-52735",
-    "member.info.abstract.0": "abstract {0}",
     "notification.text.kotlin.js.compiler.link": "https://kotl.in/jsirstable",
     "presentation.text.paren": "({0})",
     "presentation.text.paren.no.brackets": "{0}",
+    "type.provider.declared.type": "<b>{0}</b>",
     "usage.provider.text.property.of.0": "{0}/{1}",
     "version": "{version}"
   },
   "messages/KotlinCodeInsightBundle.properties": {
+    "surround.with.do.while.template": "do / while",
     "surround.with.try.catch.finally.template": "try / catch / finally",
     "surround.with.try.catch.template": "try / catch"
   },
-  "messages/KotlinDataFrameBundle.properties": {
+  "messages/KotlinCompletionImplK2Bundle.properties": {
+    "presentation.tail.for.0": "，{0}"
+  },
+  "messages/KotlinDataFrameDebuggerBundle.properties": {
     "dialog.title.dataframe": "DataFrame: {0}"
   },
   "messages/KotlinDebuggerCoreBundle.properties": {
@@ -1675,12 +2271,17 @@
     "display.name.kotlin.multiplatform": "Kotlin/Multiplatform",
     "framework.support.provider.kotlin.jvm.display.name": "Kotlin/JVM"
   },
+  "messages/KotlinJavaGradleBundle.properties": {
+    "settings.run.configuration.compose.jvm.main.class.group": "Compose Desktop"
+  },
   "messages/KotlinJavascriptBundle.properties": {
     "configuration.type.description.protractor.kotlin": "Protractor (Kotlin)"
   },
   "messages/KotlinJvmBundle.properties": {
+    "list.item.no.jdk": "<no JDK>",
     "presentable.name.kotlin.js": "Kotlin/​JS",
-    "presentable.name.kotlin.jvm": "Kotlin/JVM"
+    "presentable.name.kotlin.jvm": "Kotlin/JVM",
+    "scratch.jdk.combobox": "JDK:"
   },
   "messages/KotlinMavenBundle.properties": {
     "auto.configure.kotlin.documentation.maven.url": "https://kotl.in/configure-kotlin-with-maven",
@@ -1712,7 +2313,7 @@
     "generator.title": "Kotlin Multiplatform"
   },
   "messages/KotlinNotebookBundle.properties": {
-    "action.NewKotlinNotebookAction.text": "Kotlin Notebook",
+    "NewKotlinNotebookAction.text": "Kotlin Notebook",
     "kotlin.jupyter.settings.k2.title": "Kotlin Notebook K2",
     "kotlin.jupyter.settings.title": "Kotlin Notebook",
     "kotlin.notebook.file.type.in.chooser": "Kotlin Notebook",
@@ -1743,15 +2344,25 @@
     "KubernetesNodeMapper.podCIDRField.name": "Pod CIDR",
     "KubernetesPodContent.shell.title": "Shell: {0}",
     "KubernetesPodMapper.podIpField.name": "Pod IP",
+    "KubernetesPodShellSettingsPanel.shellCommandLabel.text": "Pod shell:",
     "KubernetesResourceMapper.pod.cidrs.name": "Pod CIDR",
     "KubernetesResourceMapper.resourceDisplayableName.template": "''{1}'' {0}",
     "KubernetesViewConfigurable.podShellRow.title": "Pod Shell",
     "KustomizeVersion.V4.title": "4.x",
     "KustomizeVersion.V5.title": "5.x",
+    "action.Kubernetes.AddContext.noClustersFound.bullet1Prefix": "— ",
+    "action.Kubernetes.AddContext.noClustersFound.bullet2Prefix": "— ",
+    "action.Kubernetes.AddContext.noClustersFound.dockerDesktop": "Docker Desktop",
+    "action.Kubernetes.AddContext.noClustersFound.introEnd": ".",
+    "action.Kubernetes.AddContext.noClustersFound.or": "or ",
     "action.Kubernetes.HelmLint.text": "Helm Lint(&L)",
     "debug.in.kubernetes.survey.dialog.tools.item.3.label": "kubectl port-forward",
     "group.Kubernetes.HelmActions.text": "Helm(&H)",
     "k8s.logs..pattern.matching.matching.count.text": "\t\t(matching = {0})"
+  },
+  "messages/KubernetesFrontendBundle.properties": {
+    "floating.toolbar.current.cluster.is.name.tooltip": "Current Cluster: {0}",
+    "floating.toolbar.current.namespace.is.name.tooltip": "Current Namespace: {0}"
   },
   "messages/LLMInstallerBundle.properties": {
     "ai.hub.tooltip.text": "JetBrains AI",
@@ -1763,26 +2374,16 @@
     "intention.category.large.language.models": "AI Assistant",
     "promo.configurable.ai": "AI Assistant"
   },
+  "messages/LLMRecapBundle.properties": {
+    "notification.group.ijnext.notifications": "IJ Next"
+  },
   "messages/LLMRiderNextBundle.properties": {
-    "action.recap.DumpRecapAction.text": "Dump Recap",
-    "action.recap.GenerateRecapAction.text": "Update Recap",
-    "action.recap.Title.text": "Recap AI",
-    "recap.popup.last.updates": "Last updates",
-    "recap.popup.no.recent.changes": "No recent changes detected",
-    "recap.popup.not.ready": "AI Assistant is not ready, please update Recap manually",
-    "recap.popup.recap.ai": "Recap AI",
-    "recap.popup.whats.next": "What's next",
-    "recap.progress.text.collecting.changes": "Collecting changes",
-    "recap.progress.text.generate.diff": "Generate diff",
-    "recap.progress.text.requesting.summary": "Requesting summary",
-    "recap.progress.text.requesting.what.s.next": "Requesting what's next",
-    "recap.progress.title.updating.recap": "Updating 'Recap'"
+    "notification.group.ijnext.notifications": "IJ Next"
+  },
+  "messages/LLMVcsAgentWorkbenchBundle.properties": {
+    "promptlibrary.custom.instructions.group.name": "Agent Workbench"
   },
   "messages/LLMVcsDiffBundle.properties": {
-    "GroupedDiffToolWindow.toolwindow.name": "AI Diff",
-    "action.Vcs.GroupedDiffForLocalChangesAction.text": "Calculate AI Diff from Local Changes",
-    "action.Vcs.GroupedDiffForOtherAction.text": "Calculate AI Diff",
-    "action.Vcs.GroupedDiffForVcsLogAction.text": "Calculate AI Diff from VCS Log",
     "cmg.prompt.customization.branch.reference.text": "$GIT_BRANCH_NAME"
   },
   "messages/LangBundle.properties": {
@@ -1796,6 +2397,9 @@
   },
   "messages/LanguageAndRegionBundle.properties": {
     "language.ko": "Korean 한국어"
+  },
+  "messages/LayoutInspectorBundle.properties": {
+    "layout.inspector": "Layout Inspector"
   },
   "messages/LearnBundle.properties": {
     "learn.options.panel.name": "Features Trainer",
@@ -1842,6 +2446,9 @@
     "inspection.redundant.slf.4.j.definition.display.name": "@Slf4j",
     "intention.category.lombok": "Java/Lombok"
   },
+  "messages/LspBundle.properties": {
+    "codeLens.LspCodeVisionProvider.name": "LSP CodeLens"
+  },
   "messages/MLInlineCompletionBundle.properties": {
     "ml.completion.advise.aia.name": "JetBrains AI Assistant",
     "ml.completion.advise.full.line.name": "Full Line Code Completion"
@@ -1856,7 +2463,7 @@
     "action.run.target.description": "make {0}",
     "action.run.target.text": "make {0}",
     "filetype.makefile.description": "GNU Makefile",
-    "run.configuration.editor.filename.label": "&Makefile:"
+    "run.configuration.editor.filename.label": "Makefile(&M):"
   },
   "messages/MarkdownBundle.properties": {
     "markdown.header.level.popup.heading.action.secondary.text": "(H{0})"
@@ -1874,9 +2481,6 @@
     "maven.settings.testrun.env.variables": "<html><i>environmentVariables(&E)</i></html>",
     "maven.settings.testrun.system.property": "<html><i>systemPropertyVariables(&S)</i></html>"
   },
-  "messages/MavenDomBundle.properties": {
-    "inspection.new.model.version.in.old.schema": "Model version 4.1.0 requires 4.1.0 schema"
-  },
   "messages/MavenIndicesBundle.properties": {
     "maven.dependency.completion.presentable": "{0}:{1}"
   },
@@ -1888,6 +2492,11 @@
     "maven.new.project.wizard.archetype.catalog.central.name": "Maven Central",
     "maven.new.project.wizard.archetype.generator.name": "Maven Archetype",
     "maven.new.project.wizard.archetype.label": "Archetype:"
+  },
+  "messages/McpServerBundle.properties": {
+    "copy.config.stream": "HTTP Stream",
+    "mcp.service.view.root.name": "JetBrains MCP Server",
+    "settings.explanation.when.server.disabled": "{0} <a href=\"{1}\">{2}</a><br/><br/>{3}<br/>{4}"
   },
   "messages/MdnBundle.properties": {
     "mdn.documentation.section.compat.support_of_-webkit-resizer": "<code>::-webkit-resizer</code>",
@@ -1975,10 +2584,6 @@
   "messages/MonorepoDevkitBundle.properties": {
     "configurable.name": "Monorepo Devkit"
   },
-  "messages/NextEditsBundle.properties": {
-    "next.edit.settings.whitespace.only.suggestions.description": "Permit suggestions that only change indentation, spacing, or blank lines",
-    "next.edit.settings.whitespace.only.suggestions.enable": "Whitespace-only suggestions"
-  },
   "messages/NextJsBundle.properties": {
     "create.next.app.name": "Next.js"
   },
@@ -2047,7 +2652,8 @@
     "change.list.decoration": " - Perforce #{0}",
     "group.PerforceDirect.Menu.text": "Perforce(_P)",
     "perforce.name.with.mnemonic": "Perforce(_P)",
-    "progress.text2.p4.status": "p4 {0}"
+    "progress.text2.p4.status": "p4 {0}",
+    "settings.port.placeholder": "<perforce_server>:1666"
   },
   "messages/PerformanceTestingBundle.properties": {
     "summary.link": "https://intellij-support.jetbrains.com/anonymous_requests/new",
@@ -2089,6 +2695,7 @@
     "filetype.phar.display.name": "Php Phar",
     "fluent.setters": "Fluent setter",
     "folding.checkbox.collapse.heredocs.and.nowdocs": "heredoc/nowdoc",
+    "inspection.php.group.per.3": "PER-CS 3.0",
     "inspection.php.group.psr.12": "PSR-12",
     "inspection.php.illegal.array.key.type.description": "{0} {1}",
     "inspection.php.separate.else.if.inspection.display.name": "Else if",
@@ -2096,6 +2703,7 @@
     "label.lt.no.server": "<no server>",
     "label.server.document.root": "$_SERVER['DOCUMENT_ROOT']",
     "php.codestyle.per.2.title": "PER-CS 2.0.0",
+    "php.codestyle.per.3.title": "PER-CS 3.0.0",
     "php.framework.laravel.plugin": "Laravel Idea",
     "php.run.label.https": "HTTPS:",
     "php.run.label.url": "URL:",
@@ -2141,9 +2749,10 @@
   },
   "messages/PipelinesBundle.properties": {
     "dialog.select.create.pipeline.pipelines.browser.title": "TeamCity Pipelines",
+    "yaml.run.configuration.editor.error.action.failed": "Could not load TeamCity projects: {0}",
     "yaml.run.configuration.editor.pipelines.browser.dialog.title": "TeamCity Pipelines",
     "yaml.run.configuration.editor.section.label": "TeamCity Pipelines",
-    "yaml.run.configuration.editor.yaml.path.label": "Pipelines YAML (&Y):",
+    "yaml.run.configuration.editor.yaml.path.label": "Pipelines YAML(&Y):",
     "yaml.run.configuration.name": "TeamCity Pipelines [{0}]",
     "yaml.run.configuration.name.default": "TeamCity Pipelines",
     "yaml.run.configuration.run.create.pipeline.step.select.dialog.title": "TeamCity Pipelines",
@@ -2155,10 +2764,6 @@
     "language.description": "TeamCity Pipelines YAML"
   },
   "messages/PlatformFrontendSplitBundle.properties": {
-    "diff.file.based.settings.sync.title.local": "Frontend ({0}/{1})",
-    "diff.file.based.settings.sync.title.remote": "Backend ({0}/{1})",
-    "notification.file.based.settings.sync.conflict.content": "Resolve the conflict between frontend and backend settings to enable sync",
-    "notification.file.based.settings.sync.conflict.title": "Select which settings to apply",
     "project.title.cwm": "Code With Me – {0}",
     "status.bar.text.ping.label": "Ping: {0}",
     "status.bar.text.ping.value": "{0} (UI: {1})",
@@ -2168,7 +2773,9 @@
     "metrics.cpu.label": "CPU {0}%",
     "metrics.jvm.ram.label": "JVM RAM {0}%",
     "metrics.server.ram.label": "RAM {0}%",
-    "product.name": "Code With Me",
+    "product.name": "Code With Me"
+  },
+  "messages/PlatformSplitConnectionBundle.properties": {
     "wire.stats.status.bar.text": "({0}) ↑{1}/s / ↓{2}/s"
   },
   "messages/PlayBundle.properties": {
@@ -2177,6 +2784,9 @@
   "messages/PrettierBundle.properties": {
     "prettier.automatic.configuration.tooltip.help": "{0} {1}<br/><br/>{2}",
     "prettier.formatter.hint.0": "Prettier: {0}"
+  },
+  "messages/PrismaBundle.properties": {
+    "prisma.config.error.editor.title": "Prisma: {0}"
   },
   "messages/ProjectBundle.properties": {
     "dialog.sdk.download.message.with.reason": "{0}\n\n{1}",
@@ -2190,11 +2800,13 @@
     "settings.project.display": "Protocol Buffers"
   },
   "messages/ProvenanceBundle.properties": {
+    "provenance.activation.configurable.title": "Code Provenance",
     "provenance.authorship.indicator.human": "👤"
   },
   "messages/ProvenanceDevBundle.properties": {
     "provenance.dev.db.column.index": "#",
-    "provenance.dev.presenter.llm.entry.parent.description": "ProvenancePresenterParent: id={0}, {1} {2}"
+    "provenance.dev.presenter.llm.entry.parent.description": "ProvenancePresenterParent: id={0}, {1} {2}",
+    "provenance.dev.tool.window.id": "Code Provenance"
   },
   "messages/PuppetBundle.properties": {
     "language.settings.code.style.sample": "service { 'sshd':\n  subscribe => File['sshdconfig'],\n}",
@@ -2204,49 +2816,59 @@
   "messages/PyBDDBundle.properties": {
     "com.intellij.python.gherkin.inspections.parameters.unnamed_param": "<unnamed param>"
   },
+  "messages/PyBlackBundle.properties": {
+    "black.format.fragment.inline.error": "Black: {0}"
+  },
   "messages/PyBundle.properties": {
+    "INLAY.requirements.installed.version": "✓ {0}",
     "QFIX.bold.html.text": "<b>{0}</b>",
     "action.PoetryLockAction.text": "Poetry Lock",
-    "action.PoetryUpdateAction.text": "Poetry Update",
     "configurable.PythonSdkEditorTab.display.name": "Python SDK",
     "debugger.cython.extension.gcc.not.found": "x86_64-linux-gnu-gcc",
     "debugger.cython.extension.install.python.command": "<code>sudo apt-get install python{0}-dev</code>",
     "debugger.dataviewer.header.filter.hint": "{0}: {1}",
     "debugger.progress.title.stackframe.processing": "StackFrame processing",
+    "filetype.py.typed.display.name": "py.typed",
     "framework.support.python.sdk.combobox.label": "Python SDK:",
+    "hatch.run.configuration.type.display.name": "hatch run",
     "live.template.main.description": "if __name__ == '__main__'",
     "pandas.completion.type.text": "DataFrame: {0}",
     "python.console.command.queue.got.it.tooltip.id": "python.console.command.queue.show",
     "python.packaging.dialog.description.attempt.to.uninstall.for.several.dependent.packages.single.package.description": "{0} -> {1}",
     "python.sdk.configurable.name": "Python SDK",
-    "python.sdk.environment.yml.label": "environment.yml",
     "python.toolwindow.packages.sdk.label.html": "<html>{0} <b>({1})</b></html>",
     "remote.interpreter.default.interpreter.path": "/usr/bin/python",
     "remote.interpreter.wsl.default.interpreter.path": "/usr/bin/python",
-    "runcfg.trial.display_name": "Twisted Trial"
+    "runcfg.trial.display_name": "Twisted Trial",
+    "sdk.create.python.versions.help.url": "https://www.jetbrains.com/help/pycharm/python.html#support"
   },
   "messages/PyCharmCommunityCustomizationBundle.properties": {
     "action.PromoNewJupyterNotebook.text": "Jupyter Notebook",
     "action.PromoPreviewJupyterNotebook.text": "Jupyter Notebook"
   },
   "messages/PyDockerBundle.properties": {
-    "python.add.sdk.panel.name.docker.compose": "Docker Compose",
-    "remote.sdk.exception.message.with.cause": "{0}:\n{1}"
+    "python.add.sdk.panel.name.docker.compose": "Docker Compose"
   },
   "messages/PyHuggingFaceBundle.properties": {
     "python.hugging.face.tags.style": "<style>{0}</style>"
   },
+  "messages/PyProjectTomlBundle.properties": {
+    "pyproject.preview.poetry.content": "[tool.poetry.dependencies]\nmy-lib = { path = \"../my-lib\", develop = true }",
+    "pyproject.preview.uv.independent.content": "[project]\ndependencies = [\"my-lib\"]\n\n[tool.uv.sources]\nmy-lib = { path = \"../my-lib\" }",
+    "pyproject.preview.uv.workspaces.content": "[tool.uv.workspace]\nmembers = [\"packages/*\"]\n\n[project]\ndependencies = [\"my-lib\"]\n\n[tool.uv.sources]\nmy-lib = { workspace = true }"
+  },
   "messages/PyPsiBundle.properties": {
     "INSP.NAME.assert.type": "typing.assert_type",
     "element.presentation.location.string.module": "({0})",
-    "filetype.python.docstring.description": "Python docstring",
+    "filetype.python.docstring.description": "Python doctest",
     "find.usages.unnamed": "<unnamed>"
   },
   "messages/PySshInterpreterBundle.properties": {
     "ssh.connection.wizard.remote.interpreter.default.interpreter.path": "/usr/bin/python"
   },
   "messages/PythonDapBundle.properties": {
-    "pythonDap.run.configuration.name": "Python DAP"
+    "debugger.dap.attach.justMyCode.scope.all.code": "all code",
+    "debugger.dap.attach.justMyCode.scope.my.code": "my code"
   },
   "messages/PythonProBundle.properties": {
     "celery.run.app.config.name": "Celery {0}",
@@ -2258,7 +2880,10 @@
   "messages/QodanaBundle.properties": {
     "action.open.qodana.cloud.open.in.ide.report.action": "Qodana Cloud {0}",
     "cli.coverage.percent": "%",
+    "exit.package.checker.headless.failure": "Vulnerability search service is unavailable, analysis has been cancelled, reported results are partial. Details: {0}",
     "notification.title.qodana.cloud": "Qodana Cloud",
+    "progress.code.analysis.no.files": "No files found for analysis",
+    "progress.code.analysis.started": "Code analysis started ...",
     "qodana.add.to.ci.azure.pipelines": "Azure Pipelines",
     "qodana.add.to.ci.bitbucket": "Bitbucket Cloud",
     "qodana.add.to.ci.github.actions": "GitHub Actions",
@@ -2285,7 +2910,6 @@
     "action.rspec.LetIntroduce.text": "RSpec 'let'",
     "border.title.ruby.i18n": "Ruby i18n",
     "class.anonymous": "<anonymous>",
-    "cucumber.jruby.run.configuration.type.name": "Cucumber JRuby",
     "cucumber.run.configuration.prefix": "Cucumber: {0}",
     "cucumber.run.configuration.type.name": "Cucumber Ruby",
     "dialog.generate.common.checkBox.git.text": "Git(&G)",
@@ -2295,9 +2919,7 @@
     "dialog.generate.cucumber.tframework.spec": "RSpec(&R)",
     "dialog.generate.cucumber.tframework.testunit": "Test::Unit(&T)",
     "dialog.rails.i18n.create.property.translation.example": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "gem.build.options.dialog.title": "{0} Gem {1}",
     "group.BUNDLER_ACTIONS.text": "Bundler(&B)",
-    "group.GEM_BUILD_ACTION.text": "Gem (&G)",
     "irb.console": "IRB: {0}",
     "jrails.facet": "JRuby on Rails",
     "let.bang": "let!",
@@ -2325,10 +2947,6 @@
     "run.anything.select.rbenv.shell.completion.group": "rbenv shell",
     "run.configuration.messages.runner.version": "''{0}'' gem:",
     "run.configuration.tests.display.name": "Test::Unit/Shoulda/Minitest",
-    "spork.run.settings.cucumber": "Cucumber(&C)",
-    "spork.run.settings.rspec": "RSpec(&S)",
-    "spork.run.settings.testunit": "TestUnit/Shoulda/Minitest(&U)",
-    "spork.server.run.configuration.type.name": "Spork DRb",
     "subject.bang": "subject!",
     "test.frameworks.names.testunit": "Test::Unit"
   },
@@ -2371,11 +2989,13 @@
     "steep.actions.run.anything.help.placeholder": "steep <command>"
   },
   "messages/RdClientBundle.properties": {
+    "editor.auto.import.caption_0.shortcut_color_1.shortcut_suffix_2": "{0}\\&nbsp;\\&nbsp;\\&nbsp;<span style=\"color:#{1}\">{2}</span>",
     "frontendbulbrenderer.0": "FrontendBulbRenderer {0}"
   },
   "messages/RdClientDotnetBundle.properties": {
     "action.MeasurePerformanceAndDump.text": "Measure Performance and Dump",
     "action.RiderDumpComponentContainersCtorStepsToJsonAction.text": "Dump Component Containers Ctor Steps to Json",
+    "action.break.patch.engine.text": "Break Patch Engine",
     "action.wildcard.container.text": "Wildcard Container",
     "backend.notification.title": "{0} backend",
     "dialog.self.profiling.executable.global.tool": "Global tool",
@@ -2469,19 +3089,16 @@
     "action.DebugItselfAction.text": "Debug Debugger Worker from Start",
     "action.DecompileAndShowIlViewerAction.text": "IL Viewer",
     "action.ReSharperSelectContainingDeclaration.description": "Selecting Containing Declarations",
-    "action.Rider.Debugger.Popup.OpenStackTrace.text": "Stack Trace Explorer",
     "action.RiderShowIlViewerAction.text": "IL Viewer",
     "action.RiderShowResxEditorAction.text": "Localization Manager",
     "group.BackendEntityFrameworkActionGroup.text": "Entity Framework",
     "group.CSharpInteractive.text": "C# Interactive"
   },
   "messages/RiderAndroidBundle.properties": {
-    "rider.android.launch.step.tasks.unreal.determine.activity": "Determine Activity",
     "rider.android.unknown.android.client.message": "<Unknown>"
   },
   "messages/RiderBundle.properties": {
     "EntityFramework.toolWindow.title": "Entity Framework",
-    "PushToHint.widget.action.push.to.hint.text": "Push-to-Hint",
     "StacktraceToolWindowFactory.tab.title.stacktrace": "Stack Trace Explorer",
     "action.EntityFrameworkActionBase.text": "Entity Framework:",
     "action.dump.backend.delegating.actions.text": "Dump Backend Delegating Actions",
@@ -2490,10 +3107,16 @@
     "configurable.group.inlay.hints.RiderInlayHintsCSharpConfigurableGroup.settings.display.name": "C#",
     "configurable.group.inlay.hints.RiderInlayHintsVBConfigurableGroup.settings.display.name": "VB.NET",
     "endpoints.framework.asp.net.core.minimal.api": "ASP.NET Core Minimal API",
+    "notification.group.azure.functions": "Azure Functions",
     "notification.group.collect.backend.threaddump": "Collect backend threadDump",
     "notification.group.entityframework": "Entity Framework",
     "notification.group.problemsview.notification": "ProblemsView notification",
     "publish.to.iis.option": "IIS…",
+    "rider.azureFunctions.inspection.group": "Azure Functions",
+    "rider.azureFunctions.settings.display.name": "Azure Functions",
+    "rider.azureFunctions.settings.file.templates.csharp.key": "Azure Functions (C#)",
+    "rider.azureFunctions.settings.file.templates.fsharp.key": "Azure Functions (F#)",
+    "rider.azureFunctions.settings.key": "Azure Functions",
     "settings.completion.ml.csharp.display.name": "C#"
   },
   "messages/RiderCodeWithMeCoreBundle.properties": {
@@ -2523,6 +3146,9 @@
     "MsNetAttachDebugger.display.short.name": ".NET",
     "RemoteDebugConfigurableUi.label.os": "OS:",
     "debugger.action.link.force.refresh": "Force Refresh"
+  },
+  "messages/RiderDebuggerSharedBundle.properties": {
+    "action.Rider.Debugger.Popup.OpenStackTrace.text": "Stack Trace Explorer"
   },
   "messages/RiderDesignersBundle.properties": {
     "ResxEditor.editor.name.localization.manager": "Localization Manager",
@@ -2558,11 +3184,17 @@
   "messages/RiderPencilsBundle.properties": {
     "CodeVisionFilter.display.name.code.vision": "Code Vision"
   },
+  "messages/RiderProblemsViewBundle.properties": {
+    "problems.view.safeCode.nuget.license.license.expression.license.0.1.with.exception.2.3": "<a class=\"\" href=\"{1}\">{0}</a> WITH <a class=\"\" href=\"{3}\">{2}</a>"
+  },
   "messages/RiderProjectViewBundle.properties": {
+    "NewProjectDialog.AzureFunctionsProjectTemplateType.name": "Azure Functions",
     "NewProjectDialog.DockerSupport.row.label": "Docker:",
-    "NewProjectDialog.InstallNuGetPackageController.dialog.status.updating.text": "Updating…",
+    "NewProjectDialog.PredefinedProjectTemplateType.group.name": ".NET",
+    "NewProjectDialog.nuget.azure.functions.name": "Azure Functions",
     "NewProjectDialog.workload.aspire.name": ".NET Aspire",
     "NewProjectDialog.workload.maui.name": ".NET MAUI",
+    "RiderProjectTemplate.ReSharperProjectTemplate.AzureFunctions.name": "Azure Functions",
     "RiderProjectTemplate.ReSharperProjectTemplate.CPlPl.name": "C++",
     "RiderProjectTemplate.ReSharperProjectTemplate.NET.NETCore.name": ".NET/.NET Core",
     "RiderProjectTemplate.ReSharperProjectTemplate.NETFramework.name": ".NET Framework"
@@ -2611,6 +3243,11 @@
     "steps.keymaps.groups.vscode.name": "VS Code",
     "steps.keymaps.visual-assist.name": "Visual Assist",
     "steps.keymaps.visual-studio.name": "Visual Studio"
+  },
+  "messages/RmlBundle.properties": {
+    "dfa.message.console.input.default.confirm": "{0} [y/n]",
+    "dfa.message.console.message": "RML>{0}",
+    "dfa.message.domain.info.line": "{0}:\tlen = {1};\tattrs = {2}"
   },
   "messages/RubyBundle.properties": {
     "live.template.am.description": "alias method",
@@ -2810,6 +3447,11 @@
     "type.0.label": "Type={0}",
     "xml_html.category": "XML/HTML"
   },
+  "messages/SarifViewerBundle.properties": {
+    "notification.group.sarif.viewer": "SARIF Viewer",
+    "plugin.name": "SARIF Viewer",
+    "sarif.tree.secondary.count": "({0})"
+  },
   "messages/SeleniumSharedBundle.properties": {
     "page.object.items.add.by.type": "{0}"
   },
@@ -2878,6 +3520,15 @@
     "settings.dependencies.jars": "Jar:",
     "settings.url.gcs.name": "GC Storage"
   },
+  "messages/SpecBundle.properties": {
+    "AgentResultDialog.current.change.sample": "88/88",
+    "AgentResultDialog.current.change.text": "{0}/{1}",
+    "action.llm.sandbox.spec.AgentRunner.agent.selection.option": "{0}: {1}",
+    "action.llm.sandbox.spec.ShowCurrentFileTodoCodeNotesDebug.report.none": "<none>",
+    "agent.tasks.new.file.base.name": "new-task",
+    "agent.tasks.new.instruction.base.name": "new-instruction",
+    "agent.tasks.new.template.base.name": "new-template"
+  },
   "messages/SpellCheckerBundle.properties": {
     "0.in.quotes": "''{0}''"
   },
@@ -2892,8 +3543,7 @@
     "create.spring.context.file.dtd.1.0": "Spring 1.x DTD",
     "create.spring.context.file.dtd.2.0": "Spring 2.x DTD",
     "create.spring.context.file.schema.2.0": "Spring XSD",
-    "inspection.group.core": "Spring Core",
-    "spring.bean.with.unknown.name": "<unknown name>"
+    "inspection.group.core": "Spring Core"
   },
   "messages/SpringBatchBundle.properties": {
     "framework.name": "Spring Batch",
@@ -2902,6 +3552,7 @@
   "messages/SpringBootApiBundle.properties": {
     "icon.icons.SpringBoot.tooltip": "Spring Boot",
     "icon.icons.SpringBoot_Overlay.tooltip": "Spring Boot",
+    "spring.boot.application.event.listener.cannot.be.received.before.refresh": "This application event is published before the ApplicationContext is refreshed and bean @EventListener methods are registered, and therefore cannot be received by a bean @EventListener; register the listener via META-INF/spring.factories or SpringApplication.addListeners() instead",
     "spring.boot.configuration.key.value.quick.info": "“{0}”[{1}]",
     "spring.boot.intention.category": "Spring Boot",
     "spring.boot.name": "Spring Boot"
@@ -2945,6 +3596,7 @@
     "config.property.actual.in.context": "{0} ({1})",
     "debug.session": "​{0}",
     "property.name": "[{0}]",
+    "security.inlay.tooltip.entry": "{0}: {1}",
     "spring.debugger.bean.renderer.name": "Spring Bean"
   },
   "messages/SpringELBundle.properties": {
@@ -3009,12 +3661,19 @@
     "settings.code.style.table.create": "CREATE TABLE",
     "sql.inspections.group.name.mssql": "SQL Server"
   },
-  "messages/SqlJupyterCellBundle.properties": {
-    "jupyter.sql.data.source.selection.error.no.local.datasource": "No local Data Source for selected connection"
-  },
   "messages/SshBundle.properties": {
     "ide.service.view.local.port.forwarding.text": "{0} → {1}",
     "ide.service.view.remote.port.forwarding.text": "{0} ← {1}"
+  },
+  "messages/StarlarkBundle.properties": {
+    "bzlmod.notification.bcr.title": "Bazel Central Registry"
+  },
+  "messages/Stm32Bundle.properties": {
+    "cube.install.terminal.tab.name": "STM32 Cube CLI - {0}",
+    "cube.product.name": "STM32 Cube CLI",
+    "debugProfile.stlink.name": "ST-LINK",
+    "group.STM32CubeWrapper.MainMenu.text": "STM32 Cube CLI",
+    "stlink.groupname": "ST-LINK"
   },
   "messages/Struts2Bundle.properties": {
     "dom.extendable.class.converter.type.spring": "Spring Bean",
@@ -3076,11 +3735,17 @@
     "of": "/{0}"
   },
   "messages/TailwindCssBundle.properties": {
+    "action.RestartTailwindCssServiceAction.description": "Stop the running Tailwind CSS service and restart it as needed",
+    "action.RestartTailwindCssServiceAction.text": "Restart Tailwind CSS Service",
     "notification.group.tailwind": "Tailwind CSS",
     "settings.page.tailwind": "Tailwind CSS"
   },
   "messages/TaskBundle.properties": {
     "jira.default.query": "assignee = currentUser() and resolution = Unresolved order by updated"
+  },
+  "messages/TcConfigVisualizerBundle.properties": {
+    "item.artifact.out.prefix": "[out] ",
+    "item.vcs.prefix": "vcs: "
   },
   "messages/TcServerBundle.properties": {
     "additionalDeploymentSettings.editorTitle": "Spring tc Server",
@@ -3090,13 +3755,191 @@
     "tc_server": "tc Server"
   },
   "messages/TeamCityBundle.properties": {
+    "failedBuildHandoff.actions.analyseWithAi.tooltip": "Open AI Assistant with this failed TeamCity run context",
+    "failedBuildHandoff.actions.copyPrompt.tooltip": "Copy the failed TeamCity run prompt to the clipboard for use with any AI agent",
+    "failedBuildHandoff.ai.notReady.content": "AI Assistant is not ready yet. Complete installation, authorization, license, token, or privacy setup, then click Fix with AI again.",
+    "failedBuildHandoff.ai.notReady.title": "AI Assistant is not ready",
+    "failedBuildHandoff.ai.unavailable.content": "Install or enable AI Assistant, then click Fix with AI again.",
+    "failedBuildHandoff.ai.unavailable.title": "AI Assistant unavailable",
+    "failedBuildHandoff.analyse.error.content": "Could not prepare the failed build context for AI Assistant.",
+    "failedBuildHandoff.analyse.progress.title": "Preparing TeamCity build context for AI",
+    "failedBuildHandoff.copyPrompt.error.content": "Could not prepare the failed build prompt.",
+    "failedBuildHandoff.copyPrompt.progress.title": "Preparing TeamCity build prompt",
+    "failedBuildHandoff.copyPrompt.success.content": "The prompt was copied to the clipboard.",
+    "failedBuildHandoff.copyPrompt.success.title": "Prompt copied",
+    "failedBuildHandoff.error.title": "TeamCity build handoff failed",
+    "failedBuildHandoff.restart.commitMessage": "Rerun failed TeamCity build from IDE",
+    "failedBuildHandoff.restart.error.content": "Could not rerun the TeamCity pipeline.",
+    "failedBuildHandoff.restart.noSources.content": "Could not collect project sources for the TeamCity rerun.",
+    "failedBuildHandoff.restart.noTarget.content": "Could not find a TeamCity build configuration or pipeline head build type to rerun.",
+    "failedBuildHandoff.restart.progress.title": "Preparing TeamCity rerun",
+    "failedBuildHandoff.stop.comment": "Stopped from IntelliJ IDEA",
+    "failedBuildHandoff.stop.error.content": "Could not stop the TeamCity build.",
+    "failedBuildHandoff.stop.progress.title": "Stopping TeamCity build",
+    "favorite.builds.manager.notification.action.retry.testflight": "Set up TestFlight again",
     "oauth.callback.handler.html.title": "OAuth 2.0 PKCE",
     "project.settings.login.explore.url": "https://www.jetbrains.com/teamcity",
+    "repositoryAuth.callback.handler.html.error.text": "Failed to authorize the repository with TeamCity",
+    "repositoryAuth.callback.handler.html.success.text": "Successfully authorized the repository with TeamCity",
+    "repositoryAuth.callback.handler.html.title": "Repository Authorization",
     "server.projects.trees.manager.download.progress.status": "{0}MB / {1}MB",
     "server.projects.trees.manager.download.progress.status.downloaded": "{0}MB",
     "teamcity.toolwindow.id": "TeamCity.toolwindows.General",
+    "toml.parse.error.content": "{0}: {1}",
+    "toml.parse.error.title": "teamcity.toml is invalid",
+    "toolwindow.appleCredentialsSetup.description": "To publish to TestFlight, TeamCity needs access to your App Store Connect account. Generate an API key in {0}, then choose the Apple Distribution .p12 certificate exported with its private key.",
+    "toolwindow.appleCredentialsSetup.description.accessibleName": "To publish to TestFlight, TeamCity needs access to your App Store Connect account. Generate an API key in App Store Connect -> Users and Access -> Keys, then choose the Apple Distribution .p12 certificate exported with its private key.",
+    "toolwindow.appleCredentialsSetup.description.link": "App Store Connect -> Users and Access -> Keys",
+    "toolwindow.appleCredentialsSetup.issuerId": "Issuer ID:",
+    "toolwindow.appleCredentialsSetup.keyId": "Key ID:",
+    "toolwindow.appleCredentialsSetup.privateKey.accessibleName": "App Store Connect private key",
+    "toolwindow.appleCredentialsSetup.privateKey.choose": "Choose App Store Connect Private Key",
+    "toolwindow.appleCredentialsSetup.step": "TestFlight deployment",
+    "toolwindow.appleCredentialsSetup.title": "Add Apple signing credentials",
+    "toolwindow.appleCredentialsSetup.validation.issuer.id": "Enter the App Store Connect issuer ID.",
+    "toolwindow.appleCredentialsSetup.validation.key.id": "Enter the App Store Connect key ID.",
+    "toolwindow.appleCredentialsSetup.validation.privateKey": "Choose an existing App Store Connect .p8 private key file.",
+    "toolwindow.appleSigningSetup.bundle.id": "Bundle ID:",
+    "toolwindow.appleSigningSetup.certificate.source.file": ".p12 file",
+    "toolwindow.appleSigningSetup.certificate.source.keychain": "macOS Keychain",
+    "toolwindow.appleSigningSetup.certificate.source.keychain.unavailable": "Automatic Keychain export is not available in this MVP. Export the signing certificate to a .p12 file and choose the .p12 file source.",
+    "toolwindow.appleSigningSetup.code.sign.identity": "Code sign identity:",
+    "toolwindow.appleSigningSetup.description": "Provide the signing certificate and Xcode build settings for the TeamCity pipeline.",
+    "toolwindow.appleSigningSetup.export.method": "Export method:",
+    "toolwindow.appleSigningSetup.keychain.export.confirm.message": "Export \"{0}\" from the local macOS Keychain as a password-protected .p12 file and upload it to TeamCity project password parameters?",
+    "toolwindow.appleSigningSetup.keychain.export.confirm.title": "Export Signing Identity",
+    "toolwindow.appleSigningSetup.keychain.export.unavailable": "Automatic Keychain export is not available in this MVP. Export the signing certificate to a .p12 file and choose the .p12 file source.",
+    "toolwindow.appleSigningSetup.keychain.export.unsupported.selected.identity": "The macOS Keychain command-line tool cannot safely export only the selected signing identity unless it is the only available identity. Choose the .p12 file certificate source and provide the exported signing certificate manually.",
+    "toolwindow.appleSigningSetup.keychain.identity": "Keychain identity:",
+    "toolwindow.appleSigningSetup.keychain.identity.choose.message": "Choose the Apple code signing identity to export.",
+    "toolwindow.appleSigningSetup.keychain.identity.detect": "Detect...",
+    "toolwindow.appleSigningSetup.keychain.identity.empty": "No Apple code signing identities were found in the local Keychain.",
+    "toolwindow.appleSigningSetup.p12.password": ".p12 password:",
+    "toolwindow.appleSigningSetup.p12.path.accessibleName": "Apple Distribution .p12 signing certificate",
+    "toolwindow.appleSigningSetup.p12.path.choose": "Choose signing certificate",
+    "toolwindow.appleSigningSetup.step": "TestFlight deployment",
+    "toolwindow.appleSigningSetup.team.id": "Team ID:",
+    "toolwindow.appleSigningSetup.title": "Configure Apple signing",
+    "toolwindow.appleSigningSetup.validation.bundle.id": "Enter the app bundle ID.",
+    "toolwindow.appleSigningSetup.validation.code.sign.identity": "Enter the code signing identity.",
+    "toolwindow.appleSigningSetup.validation.export.method": "Choose an export method.",
+    "toolwindow.appleSigningSetup.validation.keychain.identity": "Enter or detect a Keychain signing identity.",
+    "toolwindow.appleSigningSetup.validation.p12": "Choose an existing .p12 signing certificate file.",
+    "toolwindow.appleSigningSetup.validation.p12.password": "Enter the .p12 password.",
+    "toolwindow.appleSigningSetup.validation.parent.project": "Choose a TeamCity parent project before configuring Apple signing.",
+    "toolwindow.appleSigningSetup.validation.team.id": "Enter the Apple team ID.",
+    "toolwindow.appleSigningSetup.validation.testflight.code.sign.identity": "Upload to TestFlight requires an Apple Distribution signing certificate.",
+    "toolwindow.appleSigningSetup.validation.testflight.export.method": "Upload to TestFlight requires the app-store export method.",
+    "toolwindow.appleSigningSetup.validation.xcode.project": "Enter the Xcode project path.",
+    "toolwindow.appleSigningSetup.validation.xcode.scheme": "Enter the Xcode scheme.",
+    "toolwindow.builds.actions.rerun.description": "Rerun selected TeamCity build with current project sources",
+    "toolwindow.builds.actions.rerun.inProgress.description": "Preparing TeamCity rerun",
+    "toolwindow.builds.actions.stop.description": "Stop selected TeamCity build",
+    "toolwindow.builds.actions.stop.inProgress.description": "Stopping selected TeamCity build",
     "toolwindow.builds.page.info": "{0}–{1}/{2}",
-    "toolwindow.server.state.unsupported.server.current.version": "TeamCity {0}"
+    "toolwindow.cloudAccountSetup.acceptTerms": "I confirm that I have read and accept",
+    "toolwindow.cloudAccountSetup.acceptTerms.accessibleName": "I confirm that I have read and accept TeamCity Cloud Terms of Service",
+    "toolwindow.cloudAccountSetup.description": "Your pipeline files are ready. To run builds on hosted macOS agents, TeamCity\n needs a cloud workspace for this project.",
+    "toolwindow.cloudAccountSetup.fusConsent": "I agree to send anonymous usage statistics to JetBrains",
+    "toolwindow.cloudAccountSetup.signup.error.title": "Could not create TeamCity Cloud account",
+    "toolwindow.cloudAccountSetup.step": "Step 2 of 2",
+    "toolwindow.cloudAccountSetup.termsOfService.accessibleName": "TeamCity Cloud Terms of Service",
+    "toolwindow.cloudAccountSetup.title": "Create your CI workspace",
+    "toolwindow.connectRepositoryBanner.accessibleName": "Connect repository suggestion",
+    "toolwindow.connectRepositoryBanner.connect": "Connect repository",
+    "toolwindow.connectRepositoryBanner.error.noServer": "Link a TeamCity server before connecting the repository.",
+    "toolwindow.connectRepositoryBanner.message": "Your app is live on TestFlight. Connect your repository to trigger builds and publishing automatically on every push.",
+    "toolwindow.connectRepositoryBanner.result.authorised": "{0} is authorized.",
+    "toolwindow.connectRepositoryBanner.result.error": "Could not connect {0}. Please try again.",
+    "toolwindow.connectRepositoryBanner.result.failed": "Authorization of {0} was not completed. Please try connecting again.",
+    "toolwindow.connectRepositoryBanner.result.forbidden": "Your TeamCity user lacks permission for this project.",
+    "toolwindow.connectRepositoryBanner.result.noRepoAccess": "The authorized account cannot access {0}. Switch accounts and try connecting again.",
+    "toolwindow.connectRepositoryBanner.result.pending": "Waiting for authorization of {0} to complete. Try connecting again if it does not finish.",
+    "toolwindow.connectRepositoryBanner.result.pipelineAttachFailed": "Could not add {0} to the pipeline, so pushes won''t trigger builds automatically. Please try again.",
+    "toolwindow.connectRepositoryBanner.result.pipelineAttachSkipped": "{0} is authorized. The pipeline already has a repository, skipped adding {0}.",
+    "toolwindow.connectRepositoryBanner.result.pipelineAttached": "{0} is added to the pipeline. Builds will run automatically on every push.",
+    "toolwindow.connectRepositoryBanner.result.unsupported": "Automatic repository connection is not available for this repository yet.",
+    "toolwindow.connectRepositoryBanner.title": "Connect repository",
+    "toolwindow.initialization.action.stop": "Stop TeamCity initialization",
+    "toolwindow.initialization.description.active": "Here's what we'll help you with...",
+    "toolwindow.initialization.description.creditsExpired": "Log in again to continue using TeamCity from the IDE.",
+    "toolwindow.initialization.description.failure": "Check the configured server or retry the connection.",
+    "toolwindow.initialization.description.iosBuild": "Build your iOS app automatically on every push...",
+    "toolwindow.initialization.description.login": "Log in to TeamCity to see builds, run remote checks, and link build configurations to this project.",
+    "toolwindow.initialization.description.pipeline": "Help prepare your pipeline...",
+    "toolwindow.initialization.description.testFlight": "Publish to TestFlight with one click...",
+    "toolwindow.initialization.description.unsupported": "Connect a supported TeamCity server or update your server/plugin version.",
+    "toolwindow.initialization.progress.accessibleName": "TeamCity initialization progress",
+    "toolwindow.initialization.title": "Initializing TeamCity...",
+    "toolwindow.initialization.unsupported.details": "Your server version is TeamCity {0}. TeamCity {1} or newer is required.",
+    "toolwindow.paginator.page.info": "{0}–{1}/{2}",
+    "toolwindow.pipelineSetup.addToProject.command": "Add TeamCity pipeline scripts",
+    "toolwindow.pipelineSetup.addToProject.error": "Could not add TeamCity pipeline scripts to the project.",
+    "toolwindow.pipelineSetup.addToProject.noIosApp": "Could not find an \"iosApp\" folder in the project. Create one and try again.",
+    "toolwindow.pipelineSetup.addToProject.noProjectDir": "Could not find the project root.",
+    "toolwindow.pipelineSetup.addToProject.overwrite.message": "The following generated file(s) already exist in the project root: {0}. Replace them?",
+    "toolwindow.pipelineSetup.apple.signing.error.credentials.read": "Could not read the selected Apple signing credentials. Check the certificate and API key files, then try again.",
+    "toolwindow.pipelineSetup.apple.signing.error.fastfile.invalid.fragment": "Could not update the existing Fastfile because the bundled TestFlight fragment has an unexpected format.",
+    "toolwindow.pipelineSetup.apple.signing.error.fastfile.unbalanced": "Could not update the existing Fastfile because a `{0}` block is missing its matching `end`.",
+    "toolwindow.pipelineSetup.apple.signing.error.generic": "Could not set up Apple signing. Please try again.",
+    "toolwindow.pipelineSetup.apple.signing.error.no.server": "Link the project to a TeamCity server before setting up Apple signing.",
+    "toolwindow.pipelineSetup.apple.signing.error.p12.no.distribution": "Upload to TestFlight requires a .p12 with an Apple Distribution certificate/private key. Found identities: {0}",
+    "toolwindow.pipelineSetup.apple.signing.error.p12.no.identities": "The selected .p12 does not contain a usable Apple code signing certificate/private key. Export the Apple signing certificate together with its private key and choose that .p12.",
+    "toolwindow.pipelineSetup.apple.signing.error.p12.password": "The selected .p12 certificate could not be opened with this password. Check the .p12 password and try again.",
+    "toolwindow.pipelineSetup.apple.signing.error.pipeline.not.found": "Could not find existing TeamCity pipeline {0} in project {1}. Check the pipeline name or choose the TeamCity project that owns it.",
+    "toolwindow.pipelineSetup.apple.signing.error.pipeline.not.runnable": "Existing TeamCity pipeline {0} in project {1} cannot be started because TeamCity did not return a runnable head build type.",
+    "toolwindow.pipelineSetup.apple.signing.error.pipeline.start": "Could not start existing TeamCity pipeline {0}.",
+    "toolwindow.pipelineSetup.apple.signing.error.project.edit.permission": "The IDE authorization for this TeamCity server cannot edit project {0}. Reconnect the TeamCity server in IDE Settings so the IDE can request project edit access, or use an access token that can edit this project.",
+    "toolwindow.pipelineSetup.apple.signing.error.project.write.access.check": "The IDE could not write a temporary password parameter to TeamCity project {0}, so certificates were not uploaded. Reconnect the TeamCity server in IDE Settings so the IDE can request project edit access, or use an access token that can edit this project.",
+    "toolwindow.pipelineSetup.apple.signing.error.title": "Could not set up Apple signing",
+    "toolwindow.pipelineSetup.apple.signing.error.yaml.invalid.job": "Could not update the existing TeamCity pipeline YAML because the generated {0} job has an unexpected format.",
+    "toolwindow.pipelineSetup.apple.signing.error.yaml.no.jobs": "Could not update the existing TeamCity pipeline YAML because it has no top-level jobs block.",
+    "toolwindow.pipelineSetup.apple.signing.progress.title": "Setting up and starting Apple signing pipeline",
+    "toolwindow.pipelineSetup.apple.signing.success.content": "Apple signing password parameters were uploaded and existing pipeline {0} was started.",
+    "toolwindow.pipelineSetup.apple.signing.success.title": "TeamCity pipeline started",
+    "toolwindow.pipelineSetup.askAboutStep": "Ask about this step",
+    "toolwindow.pipelineSetup.description": "TeamCity has generated pipeline configuration files.\nYou can now build and test your Fastlane iOS app. Edited files stay local,\nyou can commit them manually at any time in the future.",
+    "toolwindow.pipelineSetup.dialog.title": "TeamCity Pipeline",
+    "toolwindow.pipelineSetup.download.dialog.description": "Choose where to save the generated TeamCity pipeline.",
+    "toolwindow.pipelineSetup.download.dialog.title": "Download TeamCity Pipeline Scripts",
+    "toolwindow.pipelineSetup.download.directory.dialog.description": "Choose where to save the generated TeamCity pipeline scripts.",
+    "toolwindow.pipelineSetup.download.error": "Could not download TeamCity pipeline scripts.",
+    "toolwindow.pipelineSetup.files.size": "{0} files, {1}",
+    "toolwindow.pipelineSetup.generatedFiles": "Generated files:",
+    "toolwindow.pipelineSetup.localFiles.error.title": "Could not prepare TeamCity pipeline files",
+    "toolwindow.pipelineSetup.runPipeline.failed.message": "TeamCity could not create and run the initial pipeline. Please try again later.",
+    "toolwindow.pipelineSetup.runPipeline.failed.title": "Could not run TeamCity pipeline",
+    "toolwindow.pipelineSetup.runPipeline.uploadPatch.failed.message": "Could not upload the patch to TeamCity. Retry?",
+    "toolwindow.pipelineSetup.runPipeline.uploadPatch.failed.title": "Run First Pipeline",
+    "toolwindow.pipelineSetup.step": "Step 1 of 2",
+    "toolwindow.pipelineSetup.supportingFiles": "{0,choice,1#1 supporting file|1<{0} supporting files}",
+    "toolwindow.pipelineSetup.title": "Pipeline is ready",
+    "toolwindow.pipelineSetup.updateForTestFlight.command": "Update TeamCity pipeline for TestFlight",
+    "toolwindow.pipelineSetup.updateForTestFlight.error": "Could not update TeamCity pipeline scripts for TestFlight.",
+    "toolwindow.pipelineSetup.updateForTestFlight.missingFiles": "Could not find teamcity.yaml or iosApp/fastlane/Fastfile in the project. Add the pipeline scripts first.",
+    "toolwindow.server.state.unsupported.server.current.version": "TeamCity {0}",
+    "toolwindow.setup.preparingBuild.description": "Your TeamCity workspace is created successfully! We're kicking off the first build, it will take just a moment.",
+    "toolwindow.summary.askAi.html": "<a href=\"{0}\">{1}</a> - {2}",
+    "toolwindow.summary.askAi.text": "in the IDE, ask about pipeline status, modify pipelines with AI, analyze problems (TeamCity is already connected)",
+    "toolwindow.summary.backToOverview": "Back to Overview",
+    "toolwindow.summary.description": "{0} is now connected to TeamCity. Every push will automatically build, sign, and publish a new version to TestFlight — no manual steps required.",
+    "toolwindow.summary.free": "TeamCity is free for you - 1GB storage, 15000 build credits/month, 10000 committers included, no credit card required",
+    "toolwindow.summary.goDeeper.html": "<a href=\"{0}\">{1}</a><icon src=\"com.intellij.teamcity.icons.TeamcityIcons.ExternalLink\"/> - {2}",
+    "toolwindow.summary.goDeeper.link": "Go deeper in TeamCity",
+    "toolwindow.summary.goDeeper.text": "open the TeamCity web UI to customize pipeline steps or connect more projects",
+    "toolwindow.summary.title": "Your iOS pipeline is fully configured!",
+    "toolwindow.tab.pipelineSetup": "Pipeline Setup",
+    "toolwindow.testFlight.close": "Close TestFlight setup",
+    "toolwindow.testFlightBanner.accessibleName": "TestFlight publishing suggestion",
+    "toolwindow.testFlightBanner.message": "iOS build succeeded! Set up TestFlight to start sharing with your team.",
+    "toolwindow.testFlightBanner.publish": "Publish to TestFlight",
+    "toolwindow.testFlightDeploy.deploy": "Deploy to TestFlight",
+    "toolwindow.testFlightDeploy.description": "Your pipeline now includes signing and a deploy step.\nIt will rerun from the start so a signed build can be published to TestFlight.\nThe updated files stay local — nothing is committed.",
+    "toolwindow.testFlightDeploy.fastfile.note": "(generated during build)",
+    "toolwindow.testFlightDeploy.step": "TestFlight deployment",
+    "toolwindow.testFlightDeploy.title": "Deploy your iOS app to TestFlight",
+    "toolwindow.testFlightDeploy.updatedFiles": "Updated files:",
+    "toolwindow.testFlightDeploy.yaml.note": "(added deploy step)"
   },
   "messages/TencentCosBundle.properties": {
     "create.bucket.error.no.appid.title": "Tencent COS",
@@ -3107,8 +3950,52 @@
     "label.content.type": "Content-Type",
     "settings.appid": "APPID:"
   },
+  "messages/TerminalBundle.properties": {
+    "action.Terminal.PageDown.text": "Page Down",
+    "action.Terminal.PageUp.text": "Page Up",
+    "terminal.aiAgents.claudeCode.displayName": "Claude Code"
+  },
   "messages/TerraformNudgeBundle.properties": {
     "help.url": "https://www.jetbrains.com/help/go/terraform.html"
+  },
+  "messages/ThreadGuiBundle.properties": {
+    "thread.gui.diff.file": "{0} (+{1}/-{2})",
+    "thread.gui.input.awaitingProvisioning": "Install the agent above to start this session",
+    "thread.gui.plan.item": "{0} - {1}",
+    "thread.gui.row.elicitation": "FORM: {0}",
+    "thread.gui.row.mcp": "MCP: {0}",
+    "thread.gui.row.status": "{0} - {1}",
+    "thread.gui.session.accessible.name": "ACP session {0}"
+  },
+  "messages/ThreadGuiInterfaceBundle.properties": {
+    "chat.input.selector.mode.question": "Access and mode",
+    "chat.input.selector.requested.unavailable": "Requested ''{0}'' is not available for this session",
+    "chat.input.selector.requested.unavailable.effective": "Requested ''{0}'' is not available for this session; using ''{1}''",
+    "chat.search.matches.count": "{0}/{1}",
+    "chrome.header.title.with.version": "{0} (v{1})",
+    "elicitation.card.option.position": "Option {0} of {1}",
+    "elicitation.card.step": "{0}/{1}",
+    "elicitation.error.invalid.date": "Enter a valid date.",
+    "elicitation.error.invalid.date.time": "Enter a valid date and time.",
+    "elicitation.error.invalid.format": "Enter a valid value.",
+    "elicitation.error.pattern": "Enter a value in the requested format.",
+    "elicitation.error.required": "This question is required.",
+    "elicitation.error.too.few": "Select at least {0} options.",
+    "elicitation.error.too.large": "Enter a value less than or equal to {0}.",
+    "elicitation.error.too.long": "Enter no more than {0} characters.",
+    "elicitation.error.too.many": "Select no more than {0} options.",
+    "elicitation.error.too.small": "Enter a value greater than or equal to {0}.",
+    "elicitation.summary.expired": "Not answered because the session ended.",
+    "goal.panel.accessible.name": "{0}: {1}",
+    "voice.input.notification.microphone.permission.denied": "Microphone access is blocked. Allow microphone access for this IDE in system settings, then try again.",
+    "voice.input.notification.microphone.unavailable": "Microphone is not available for voice input. Check that a microphone is connected and allowed for this IDE, then try again.",
+    "voice.input.notification.open.sound.settings": "Open sound settings"
+  },
+  "messages/ThreadUiBundle.properties": {
+    "thread.ui.diff.file": "{0} (+{1}/-{2})",
+    "thread.ui.plan.item": "{0} - {1}",
+    "thread.ui.row.mcp": "MCP: {0}",
+    "thread.ui.row.status": "{0} - {1}"
   },
   "messages/TmsBundle.properties": {
     "tms.connection.url": "URL:",
@@ -3124,6 +4011,9 @@
     "mingw64": "MinGW-w64",
     "msvc": "Visual Studio"
   },
+  "messages/ToolchainsDebuggerBundle.properties": {
+    "configurable.dap.debugger.communication.stdio": "stdin/stdout"
+  },
   "messages/TraceBundle.properties": {
     "configuration.name": "Spy-js",
     "configuration.node.name": "Spy-js for Node.js",
@@ -3137,7 +4027,8 @@
     "tslint.notification.content": "TSLint: {0}"
   },
   "messages/UIBundle.properties": {
-    "memory.usage.panel.message.text": "{0,number,####}/{1,number,####}M"
+    "memory.usage.panel.message.text": "{0,number,####}/{1,number,####}M",
+    "toolbar.split.button.accessible.description.with.prefix": "{0}. {1}"
   },
   "messages/UIDesignerBundle.properties": {
     "bind.to.bean.getdata.checkbox": "getData()",
@@ -3146,7 +4037,9 @@
     "resize.feedback": "{0}: {1} R x {2} C"
   },
   "messages/UiDfaBundle.properties": {
-    "ui.dfa.show.trace.panel.node.step.label": "{0}",
+    "ui.dfa.show.trace.panel.node.step.label": "{0}"
+  },
+  "messages/UiDfaJavaBundle.properties": {
     "ui.security.analysis.documentation.plugin.url": "https://www.jetbrains.com/help/qodana/taint-analysis.html"
   },
   "messages/UltimateProfilerBundle.properties": {
@@ -3174,6 +4067,13 @@
   "messages/UnityPluginExplorerBundle.properties": {
     "git.url": "Git URL: {0}"
   },
+  "messages/UnityUIBundle.properties": {
+    "gutter.popup.label.cpu": "CPU: {0} ({1})",
+    "unity.profiler.toolwindow.column.name.frame.percentage": "%"
+  },
+  "messages/UnrealIosBundle.properties": {
+    "rider.ios.native.unreal.attach.session.name.format": "{0} ({1}, PID: {2})"
+  },
   "messages/UnrealLinkBundle.properties": {
     "configurable.UnrealLink.settings.title": "Unreal Engine"
   },
@@ -3196,6 +4096,7 @@
     "label.multi.author.modified.code": "{0} +{1} *",
     "label.multi.author.not.modified.code": "{0} +{1}",
     "label.single.author.modified.code": "{0} *",
+    "multiple.file.iterative.merge.files.resolved.changes.count": "{0}/{1}",
     "sequence.concatenation.separator": ", ",
     "status.text.vcs.toolwindow.emptyPrefix": "—",
     "vcs.common.labels.url": "URL:",
@@ -3215,8 +4116,7 @@
     "vue.create.single.file.component.template.options.api": "Options API",
     "vue.project.generator.name": "Vue.js",
     "vue.project.generator.nuxt.presentable.package.name": "Nuxt CLI(&C)",
-    "vue.project.generator.presentable.package.name": "Vue CLI(&C)",
-    "vue.symbol.presentation": "Vue {0} {1}"
+    "vue.project.generator.presentable.package.name": "Vue CLI(&C)"
   },
   "messages/W3ValidatorsBundle.properties": {
     "inspection.message.w3c": "W3C: {0}"
@@ -3303,6 +4203,9 @@
   "messages/WordPressBundle.properties": {
     "wp.cli.title": "WP-CLI"
   },
+  "messages/WysiwygBundle.properties": {
+    "diagnostics.filter.tx.id": "Tx-id:"
+  },
   "messages/XDebuggerBundle.properties": {
     "action.Anonymous.text.breakpointdialog.gotosource": "BreakpointDialog.GoToSource",
     "action.Anonymous.text.breakpointdialog.showsource": "BreakpointDialog.ShowSource",
@@ -3311,16 +4214,20 @@
     "xbreakpoints.dialog.double.breakpoint.title": "{0}，{1}",
     "xdebugger.attach.pid": "pid {0,number,#}"
   },
+  "messages/XLogpointFrontendBundle.properties": {
+    "xdebugger.logpoints.undo.redo.confirmation": "{0}?"
+  },
   "messages/XPathBundle.properties": {
     "dialog.title.xslt": "XSLT - {0}",
     "label.uri": "URI(&U):",
     "label.xpath": "XPath:",
     "tab.title.xpath": "XPath ''{0}''"
   },
+  "messages/XcodeCoreBundle.properties": {
+    "kmm.checks.xcode.compatibility.xcode.supported.link": "KMT project"
+  },
   "messages/XmlBundle.properties": {
     "configurable.name.html.css": "HTML/CSS",
-    "dialog.edit.template.checkbox.html": "HTML (&H)",
-    "dialog.edit.template.checkbox.xml": "XML (&X)",
     "web.editor.configuration.title": "HTML/CSS",
     "xml.editor.options.misc.title": "XML/HTML",
     "xml.external.resource.label.uri": "URI:",
@@ -3329,6 +4236,8 @@
     "xml.schemas.radio.button.html.5": "HTML 5"
   },
   "messages/XmlUiBundle.properties": {
+    "dialog.edit.template.checkbox.html": "HTML (&H)",
+    "dialog.edit.template.checkbox.xml": "XML (&X)",
     "label.lines": "[label.lines / messages/XmlCoreBundle]"
   },
   "messages/YAMLBundle.properties": {

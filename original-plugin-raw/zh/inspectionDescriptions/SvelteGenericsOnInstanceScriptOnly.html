@@ -1,0 +1,14 @@
+<html lang="zh">
+<body>
+报告模块脚本 (<code>context="module"</code>) 上的 <code>generics</code> 特性。
+<p><code>generics</code> 特性仅允许用于实例脚本，不可用于模块脚本。</p>
+<p>无效代码示例：</p>
+<pre><code>&lt;script context="module" generics="T"&gt;
+  // 错误：不允许在模块脚本上使用 generics
+&lt;/script&gt;</code></pre>
+<p>有效代码示例：</p>
+<pre><code>&lt;script lang="ts" generics="T"&gt;
+  // 正确：实例脚本使用 generics
+&lt;/script&gt;</code></pre>
+</body>
+</html>

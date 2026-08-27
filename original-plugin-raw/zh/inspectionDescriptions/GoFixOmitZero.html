@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>报告在结构体型字段中使用 <code>,omitempty</code> 的 JSON 结构体标记。</p>
+<p>对于结构体值，<code>,omitempty</code> 不会省略该字段，因为结构体值绝不会为 <code>nil</code>。</p>
+<p>在 Go 1.24 及更高版本中，当结构体值为零值时，<code>,omitzero</code> 会省略该字段。</p>
+<p><b>注意</b>：将 <code>,omitempty</code> 替换为 <code>,omitzero</code> 是一种行为改变。 如果该字段以前一直存在，则可以省略该字段。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+type Event struct {
+    CreatedAt time.Time `json:"created_at,omitempty"`
+    Source    Source    `json:"source,omitempty"`
+}
+</code></pre>
+
+<p>要修正代码，请执行以下操作之一：</p>
+<ul>
+  <li>使用<b>移除冗余的 omitempty 标记</b>快速修复以保持当前 JSON 输出。</li>
+  <li>使用<b>将 omitempty 替换为 omitzero(行为改变)</b> 快速修复以在结构体值为零时省略该字段。</li>
+</ul>
+
+<p><b>在移除标记的快速修复之后：</b></p>
+<pre><code>
+type Event struct {
+    CreatedAt time.Time `json:"created_at"`
+    Source    Source    `json:"source"`
+}
+</code></pre>
+
+<p><b>在改变行为的快速修复之后：</b></p>
+<pre><code>
+type Event struct {
+    CreatedAt time.Time `json:"created_at,omitzero"`
+    Source    Source    `json:"source,omitzero"`
+}
+</code></pre>
+</body>
+</html>

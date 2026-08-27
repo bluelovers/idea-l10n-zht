@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>
+  需要 Compose 编译器插件 (<code>org.jetbrains.kotlin.plugin.compose</code>) 才能编译 Composable 函数。
+</p>
+<p>
+  要解决此问题，请将 Compose 编译器插件添加到 <code>build.gradle.kts</code>：
+</p>
+<pre><code>
+plugins {
+    id("org.jetbrains.kotlin.plugin.compose")
+}
+</code></pre>
+<p>
+  或者，使用提供的快速修复自动将插件添加到您的构建脚本中。
+</p>
+</body>
+</html>

@@ -43,15 +43,15 @@ class Triangle(Figure):
 Triangle()
 </code></pre>
 
-如果在元类不是 <code>abc.ABCMeta</code> 的类中使用 <code>abc.abstractmethod</code>，它也会发出警告：
-<code><pre>
+如果 <code>abc.abstractmethod</code> 用于元类不是 <code>abc.ABCMeta</code> 的类中，还会发出警告：
+<pre><code>
 from abc import abstractmethod
 
 
 class MyClass:
     @abstractmethod  # 'MyClass' 不是抽象类
     def foo(self):
-        ...
+        ……
 </code></pre>
 </body>
 </html>

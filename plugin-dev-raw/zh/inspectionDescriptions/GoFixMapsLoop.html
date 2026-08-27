@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>報告複製映射或者收集其鍵或值，並且可被取代為 <code>maps.Copy</code>、<code>maps.Keys</code> 或 <code>maps.Values</code> 的迴圈。</p>
+
+<p>這些輔助函式會直接表達意圖，並減少樣板程式碼。</p>
+
+<p><b>使用 <code>copy</code> 的範例：</b></p>
+<pre><code>
+func Copy(dst, src map[string]int) {
+	for k, v := range src {
+		dst[k] = v
+	}
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>將 m[k]=v loop 取代為 maps.Copy</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func Copy(dst, src map[string]int) {
+	maps.Copy(dst, src)
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+報告等同於 <code>Math.clamp()</code> 的 <code>Math.max()</code> 和 <code>Math.min()</code> 組合。
+
+<p>
+  範例：
+</p>
+<pre><code>
+int min = 5, max = 10;
+/*之前*/ input = Math.max(Math.min(max, input), min);
+/*之後*/  input = Math.clamp(input, min, max);
+</code></pre>
+<!-- tooltip end -->
+
+<p>
+  預設情況下，僅當可以靜態證明 <code>min</code> 小於或等於 <code>max</code> 時，才會顯示該檢查。
+  這樣做是為了避免因語意更改而導致的任何 <code>IllegalArgumentException</code>。
+  如果您仍希望顯示檢查，可以啟用<b>即使下限可能高於上限也發出警告</b>選項。
+</p>
+
+<p><small>2026.1 最新變化</small></p>
+</body>
+</html>

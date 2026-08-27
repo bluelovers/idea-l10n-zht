@@ -1,6 +1,26 @@
 <html>
 <body>
-报告可以用局部变量替换的冗余类字段。
-<p>如果一个字段的所有局部用法都紧跟对该字段的赋值，则可以删除该字段，并且可以将其用法替换为局部变量。</p>
+报告冗余且可被替换为局部变量的 <code>private</code> 字段。
+<p>如果一个字段的所有局部用法都紧跟对该字段的赋值，则可以将该字段替换为一个或多个局部变量。</p>
+<p><b>示例：</b></p>
+<pre><code>
+  class DeskLamp {
+    private boolean on = false;
+
+    boolean pressButton() {
+      on = true;
+      return on;
+    }
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  class DeskLamp {
+    boolean pressButton() {
+      boolean on = true;
+      return on;
+    }
+  }
+</code></pre>
 </body>
 </html>

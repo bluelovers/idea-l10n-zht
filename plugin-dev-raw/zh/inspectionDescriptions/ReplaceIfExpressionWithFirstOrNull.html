@@ -1,0 +1,24 @@
+<html>
+<body>
+報告檢查列表、陣列或字串是否不為空後返回第一個元素或 <code>null</code> 的 <code>if</code> 表達式。
+<p>使用 <code>firstOrNull()</code> 可以使程式碼更簡潔、更符合慣用法。</p>
+<p>該快速修復會將整個 <code>if</code> 表達式取代為 <code>firstOrNull()</code>。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  fun firstChild(children: List&lt;String&gt;): String？ {
+      return if (children.isNotEmpty()) {
+          children[0]
+      } else {
+          null
+      }
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun firstChild(children: List&lt;String&gt;): String？ {
+      return children.firstOrNull()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

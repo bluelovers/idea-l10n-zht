@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>报告 <code>//go:build</code> 和 <code>// +build</code> 注释中的无效 Go 构建约束。</p>
+
+<p>该检查会验证构建约束是否放置正确，文件是否最多有一个 <code>//go:build</code> 指令，以及 <code>//go:build</code> 表达式是否有效。</p>
+
+<p>对于旧版 <code>// +build</code> 注释，该检查会报告无效的约束标记，例如双重否定或不受支持的字符。</p>
+
+<p>如果同时存在 <code>//go:build</code> 和 <code>// +build</code> 注释，它们必须定义相同的构建约束。</p>
+
+<p>该检查不提供自动快速修复。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+//go:build linux
+// +build darwin
+
+package buildtag
+
+//go:build amd64
+</code></pre>
+
+<p>代码包含不匹配的 <code>//go:build</code> 和 <code>// +build</code> 约束，以及放置错误的 <code>//go:build</code> 指令。</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<body>
+報告用作可呼叫參照的 <code>kotlin.jvm.javaClass</code> 擴展的可疑情況。
+<p>
+    使用 <code>::javaClass</code> 語法並不會像有人可能預期的那樣生成 <code>Class&lt;T&gt;</code> 實例。
+    <br>相反，它會建立 <code>KProperty0&lt;Class&lt;T&gt;&gt;</code> 類型的屬性參照，在任何時候，這都是錯誤的，而且會導致意想不到的行為和難以檢測的錯誤。
+</p>
+<p>
+    提供一種修正，以改用直接 <code>.javaClass</code> 呼叫或 <code>::class.java</code> 語法。
+</p>
+<p><b>範例 1：表達式接收器</b></p>
+
+<p>當 <code>::javaClass</code> 用於表達式時，該快速修復會將其取代為一般 <code>.javaClass</code> 呼叫：</p>
+
+<pre><code>
+  fun test(a: String) {
+      val classRef = a::javaClass  // KProperty0&lt;Class&lt;String&gt;&gt;
+      println(classRef)            // 列印“property javaClass”，而非“class java.lang.String”
+  }
+</code></pre>
+
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun test(a: String) {
+      val classRef = a.javaClass  // Class&lt;String&gt;
+      println(classRef)           // 列印“java.lang.String”
+  }
+</code></pre>
+
+<p><b>範例 2：類型接收器</b></p>
+
+<p>對類型使用 <code>::javaClass</code> 時，該快速修復會將其取代為 <code>::class.java</code>：</p>
+<pre><code>
+  fun test() {
+      val classRef = String::javaClass  // KProperty1&lt;String, Class&lt;String&gt;&gt;
+      println(classRef)                 // 列印“property javaClass”，而非“class java.lang.String”
+  }
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+  fun test() {
+      val classRef = String::class.java  // Class&lt;Any&gt;
+      println(classRef)                  // 列印“class java.lang.String”
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+检测集合字面量。
+<p>快速修复会将集合字面量替换为相应的集合工厂函数。</p>
+<p><b>示例：</b></p>
+<pre><code>
+    val list: List&lt;String&gt; = ["a", "b", "c"]
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+    val list: List&lt;String&gt; = listOf("a", "b", "c")
+</code></pre>
+</body>
+</html>

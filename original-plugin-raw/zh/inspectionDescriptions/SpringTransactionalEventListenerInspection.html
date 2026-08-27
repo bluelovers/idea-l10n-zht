@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>报告带有普通
+ <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html">@Transactional</a> 注解的
+ <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/event/TransactionalEventListener.html">@TransactionalEventListener</a> 方法。</p>
+
+<p>一个事务事件侦听器在原始事务的清理阶段运行，该事务仍然有效，但处于未定义状态。 因此，常规 <code>@Transactional</code> 在未定义的事务状态下执行，并在运行时失败。 只有当传播为 <code>REQUIRES_NEW</code> 或 <code>NOT_SUPPORTED</code>，或者该方法同样带有 <code>@Async</code> 注解（它会在具有干净事务状态的单独线程上运行侦听器）时，该组合才有效。</p>
+
+<p><b>示例：</b></p>
+<pre><code lang="java">
+  @Component
+  class MyListener {
+    @Transactional // 报告：在未定义的事务状态下运行
+    @TransactionalEventListener
+    void on(MyEvent event) { ... }
+  }
+</code></pre>
+
+<p>在应用该快速修复后：</p>
+<pre><code lang="java">
+  @Component
+  class MyListener {
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    @TransactionalEventListener
+    void on(MyEvent event) { ... }
+  }
+</code></pre>
+
+</body>
+</html>

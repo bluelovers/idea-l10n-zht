@@ -1,0 +1,28 @@
+<html>
+<body>
+報告可通過將呼叫包裝在 <code>context(...) { }</code> 塊中的方式轉換為隱式上下文實參的顯式上下文實參。
+<p>上下文參數是隱式的：它們的值通過作用域內的上下文參數和隱式接收者確定。 將呼叫包裝到 <code>context</code> 塊中會將值新增到上下文中，從而使其可用於隱式解析。</p>
+<p><b>範例：</b></p>
+<pre><code>
+  interface Logger { fun log(message: String) }
+
+  context(logger: Logger)
+  fun logWithTime(message: String) {
+      logger.log("${LocalDateTime.now()}: $message")
+  }
+
+  fun saveUser(user: User, logger: Logger) {
+      logWithTime("saving user ${user.id}", logger = logger)
+  }
+</code></pre>
+<p>快速修復會將呼叫包裝在 <code>context</code> 塊中：</p>
+<pre><code>
+  fun saveUser(user: User, logger: Logger) {
+      context(logger) {
+          logWithTime("saving user ${user.id}")
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

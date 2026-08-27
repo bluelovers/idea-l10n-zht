@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>报告 <code>for range</code> 循环内部的冗余变量隐藏，例如 <code>x := x</code>，它之前被用于捕获 Goroutine 或闭包的循环变量。</p>
+
+<p>从 Go 1.22 开始，每次 <code>for range</code> 迭代都使用一个新的循环变量。 因此，额外的 <code>x := x</code> 赋值不再改变行为，而且可以移除。</p>
+
+<p><b>示例：</b></p>
+<pre><code>
+for _, x := range xs {
+    x := x
+    go func() { done &lt;- x }()
+}
+</code></pre>
+
+<p>为了简化代码，请使用<b>移除不必要的声明</b>快速修复。</p>
+
+<p><b>在应用快速修复后：</b></p>
+<pre><code>
+for _, x := range xs {
+    go func() { done &lt;- x }()
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<body>
+報告 Kotlin 對可被取代為 <code>enumEntries<T>()</code> 的 <code>enumValues<T>()</code> 方法的呼叫。
+<p>
+    使用 <code>enumEntries<T>()</code> 可能會提高程式碼的性能。
+</p>
+<p>
+    該快速修復會將 <code>enumValues<T>()</code> 取代為 <code>enumEntries<T>()</code>。
+</p>
+<p>
+    <b>更多詳細資訊</b>：<a href="https://youtrack.jetbrains.com/issue/KT-61120/Consider-deprecating-or-decommisioning-enumValues-intrinsic-in-the-favor-of-enumEntries">KT-61120 為 Enum.values() 提供了現代且高效的替代</a>
+</p>
+<p>
+    <b>注意</b>：<code>enumEntries<T>()</code> 的返回值類型與 <code>enumValues<T>()</code> 的返回值類型不同（<code>EnumEntries&lt;T&gt;</code> 繼承自 <code>List&lt;T&gt;</code>，而不是 <code>Array&lt;T&gt;</code>）。
+    因此，在某些情況下，快速修復會插入額外的 <code>.toTypedArray()</code> 轉換，以避免破壞程式碼，但在大多數情況下，取代將在沒有該轉換的情況下完成（例如，在 <code>for</code> 迴圈中）。
+</p>
+<p><b>範例：</b></p>
+<pre><code>
+    enum class Version {
+        V1, V2
+    }
+
+    <b>enumValues</b><Version>().values().forEach { /* .. */ }
+    val firstVersion = <b>enumValues</b><Version>()[0]
+    functionExpectingArray(<b>enumValues</b><Version>())
+</code></pre>
+<p>在套用快速修復後：</p>
+<pre><code>
+    enum class Version {
+        V1, V2
+    }
+
+    <b>enumEntries</b><Version>().forEach { /* .. */ }
+    val firstVersion = <b>enumEntries</b><Version>()[0]
+    functionExpectingArray(<b>enumEntries<Version>().toTypedArray()</b>)
+</code></pre>
+</body>
+</html>

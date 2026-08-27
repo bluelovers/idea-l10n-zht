@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>报告使用 <b>===</b> 或 <b>!==</b> 比较字符串的代码。</p>
+<p>
+  这些运算符确定引用相等，而不是比较内容。
+  在大多数情况下，应使用 <code>==</code> 或 <code>!=</code> 比较字符串，这样，当字符串是不同的对象时，就会逐个字符进行比较。
+</p>
+<p><b>示例：</b></p>
+<pre><code>
+  fun foo(s: String, t: String) {
+    val b = t === s
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun foo(s: String, t: String) {
+    val b = t == s
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+報告 <code>val</code> 屬性被用作 JPA 實體特性。
+
+不建議使用 <code>val</code>，原因如下：
+<ul>
+  <li>
+    僅當通過原始碼存取物件時，屬性的不可變性才能保證。
+    持久性提供程序仍然能夠通過反射更新屬性。
+    這可能導致 Kotlin 數據流分析不正確，從而引發執行時錯誤。
+  </li>
+  <li>
+    缺少 setter 和/或最終備用欄位可能會導致某些功能（如 Spring Data JPA Auditing）無法正常執行。
+  </li>
+</ul>
+</body>
+</html>

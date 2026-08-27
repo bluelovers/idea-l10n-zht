@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>对数组调用 <code>hashCode()</code> 会返回身份哈希代码，而不是基于数组内容的哈希。 这几乎从来不是您希望得到的结果。</p>
+<p>要正确计算数组的哈希代码，请使用：</p>
+<ul>
+  <li><code>contentHashCode()</code>（用于线性数组）</li>
+  <li><code>contentDeepHashCode()</code>（用于多维数组）</li>
+</ul>
+<p><b>示例：</b></p>
+<pre><code>
+  fun main() {
+      val a1 = arrayOf&lt;Any&gt;()
+      val hashcode = a1.hashCode() // 错误
+  }
+</code></pre>
+<p>在应用快速修复后：</p>
+<pre><code>
+  fun main() {
+      val a1 = arrayOf&lt;Any&gt;()
+      val hashcode = a1.contentHashCode() // 正确
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

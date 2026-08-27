@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>報告可被取代為 <code>errors.AsType</code> 的對 <code>errors.As</code> 的呼叫。</p>
+
+<p>在 Go 1.26 及更高版本中，<code>errors.AsType[T]</code> 會直接返回符合的錯誤值。 這將移除單獨宣告的變數和傳遞給 <code>errors.As</code> 的指針。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+func Describe(err error) string {
+	var pe *PathError
+	if errors.As(err, &amp;pe) {
+		return fmt.Sprintf("path error during %s", pe.Op)
+	}
+	return "other"
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>將 errors.As 取代為 AsType[*PathError]</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+func Describe(err error) string {
+	if pe, ok := errors.AsType[*PathError](err); ok {
+		return fmt.Sprintf("path error during %s", pe.Op)
+	}
+	return "other"
+}
+</code></pre>
+</body>
+</html>

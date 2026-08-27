@@ -1,8 +1,12 @@
 <html>
 <body>
 报告可以设置为 <code>static</code> 的内部类。
-<p><code>static</code> 内部类不保留对其封闭实例的隐式引用。
-  使用 Java 17 或更低版本时，这可以防止常见的内存泄漏，减少类的每个实例使用的内存。</p>
+<p>
+在 Java 17 及更早版本中，非 static 内部类包含对其封闭实例的隐式引用。
+static 嵌套类没有此类引用。
+因此，将内部类设为 <code>static</code> 可以避免出现常见的内存泄漏原因，并略微减少该类的每个实例使用的内存。
+<p>
+Java 18 中<a href="https://www.oracle.com/java/technologies/javase/18-relnote-issues.html#JDK-8271623">移除</a>了对非 Serializable 内部类的隐式引用。
 <p><b>示例：</b></p>
 <pre><code>
   <b>public class</b> Outer {

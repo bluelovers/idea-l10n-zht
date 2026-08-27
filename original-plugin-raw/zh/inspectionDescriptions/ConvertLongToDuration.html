@@ -1,0 +1,26 @@
+<html>
+<body>
+报告当基于持续时间的重载可用时，对接受以毫秒/纳秒为单位的 Long 值的时间相关函数的调用。
+
+<p>使用基于持续时间的 API 可以提供更好的类型安全性和可读性：</p>
+
+<ul>
+  <li><code>delay()</code>、<code>withTimeout()</code>、<code>withTimeoutOrNull()</code> 等协程函数</li>
+  <li><code>debounce()</code>、<code>sample()</code> 等流运算符</li>
+</ul>
+
+<p><b>示例：</b></p>
+<pre><code>
+// 之前
+delay(1000)
+withTimeout(5000) { ... }
+
+// 之后
+delay(1000.milliseconds)
+withTimeout(5000.milliseconds) { ... }
+</code></pre>
+
+<!-- tooltip end -->
+<p>2025.3 最新变化</p>
+</body>
+</html>

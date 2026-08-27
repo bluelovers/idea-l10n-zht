@@ -1,0 +1,34 @@
+<html>
+<body>
+<p>報告通過嵌入式結構體字面量初始化提升欄位的複合字面量。</p>
+
+<p>在 Go 1.27 及更高版本中，可以在外部複合字面量中直接初始化從嵌入式結構體提升的欄位。 這樣便無需使用嵌套的嵌入式結構體層，並將所有欄位值保留在一個字面量中。</p>
+
+<p><b>範例：</b></p>
+<pre><code>
+type Coord struct {
+	X, Y int
+}
+
+type Marker struct {
+	Coord
+	Label string
+}
+
+var Origin = Marker{
+	Coord: Coord{X: 0, Y: 0},
+	Label: "origin",
+}
+</code></pre>
+
+<p>要修正程式碼，請使用<b>移除嵌入式欄位類型 Coord</b> 快速修復。</p>
+
+<p><b>在套用快速修復後：</b></p>
+<pre><code>
+var Origin = Marker{
+	X: 0, Y: 0,
+	Label: "origin",
+}
+</code></pre>
+</body>
+</html>

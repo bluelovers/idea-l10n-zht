@@ -1,6 +1,9 @@
 <html>
 <body>
-<p>报告块中的未知属性</p>
+<p>报告块中的未知属性。</p>
+<p>
+  该检查仅在 Terraform 或 OpenTofu 目录已初始化（即已运行 <code>terraform init</code> 或 <code>tofu init</code>）的情况下才可用，以便 IDE 可以获取提供程序元数据。
+</p>
 <p>问题示例：</p>
 <pre><code>
 resource "awscc_appflow_flow" "aws_flow1" {
@@ -11,7 +14,6 @@ resource "awscc_appflow_flow" "aws_flow1" {
   tasks {}
   test = ""
 }
-
 </code></pre>
 <p>
   在此示例中，块中的 <code>test</code> 属性未知。
@@ -25,7 +27,6 @@ resource "awscc_appflow_flow" "aws_flow1" {
   destination_flow_config_list {}
   tasks {}
 }
-
 </code></pre>
 </body>
 </html>

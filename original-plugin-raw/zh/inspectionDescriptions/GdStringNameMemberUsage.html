@@ -1,0 +1,17 @@
+<html>
+<body>
+报告使用基于旧版字符串的 API 的情况，其中一个字符串被用于引用信号或方法名称。
+在 Godot 4 中，建议使用信号引用或基于 <code>Callable</code> 的语法，以提高效率和静态类型的安全性。
+<!-- tooltip end -->
+<p>示例：</p>
+<pre><code>
+# 效率较低
+call_deferred("my_method", 123)
+emit_signal("my_signal", 123)
+
+# 推荐
+my_method.call_deferred(123)
+my_signal.emit(123)
+</code></pre>
+</body>
+</html>

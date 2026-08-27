@@ -1,0 +1,31 @@
+<html>
+<body>
+報告可能導致意外行為的組態錯誤的 <code>@defer</code> 塊觸發器。
+<p>
+  該檢查發現以下問題：
+</p>
+<ul>
+  <li><code>immediate</code> 觸發器會使其他觸發器變得多餘</li>
+  <li>使用 <code>immediate</code> 時，預提取觸發器沒有任何作用</li>
+  <li>預提取大於或等於主定時器延遲的定時器延遲</li>
+  <li>預提取觸發器與主觸發器符合，沒有任何優勢</li>
+</ul>
+<p>
+  範例：
+</p>
+<pre><code>
+@defer (on immediate; on hover) {
+  &lt;!-- 'hover' 觸發器冗餘 --&gt;
+}
+
+@defer (on timer(1000); prefetch on timer(2000)) {
+  &lt;!-- 預提取不會在主觸發器之前執行 --&gt;
+}
+
+@defer (on interaction(btn); prefetch on interaction(btn)) {
+  &lt;!-- 預提取沒有任何優勢 --&gt;
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

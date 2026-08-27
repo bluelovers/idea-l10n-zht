@@ -1,0 +1,17 @@
+<html>
+<body>
+报告将在<b>运行时</b>而不是编译时解析为不同的类的类引用。
+<br><br>
+<b>示例：</b>
+<pre>
+  MainModule
+  ├── DepModule
+  │   └── Av1.jar  ← my.example.A（将在运行时使用！）
+  └── Av2.jar      ← my.example.A（在编译时使用）
+</pre>
+该 IDE 从 <code>Av2</code> 中解析 <code>A</code>，但 JVM 从 <code>Av1</code> 加载它。
+调用仅在 <code>Av2</code> 中存在的方法会导致 <code>NoSuchMethodError</code>。
+<br><br>
+<b>修正</b>：将 <code>Av2</code> 移至 <code>DepModule</code> 之前，使编译和运行时均使用相同的类。
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+報告使用基於舊版字串的 API 的情況，其中一個字串被用於參照信號或方法名稱。
+在 Godot 4 中，建議使用信號參照或基於 <code>Callable</code> 的語法，以提高效率和靜態類型的安全性。
+<!-- tooltip end -->
+<p>範例：</p>
+<pre><code>
+# 效率較低
+call_deferred("my_method", 123)
+emit_signal("my_signal", 123)
+
+# 推薦
+my_method.call_deferred(123)
+my_signal.emit(123)
+</code></pre>
+</body>
+</html>

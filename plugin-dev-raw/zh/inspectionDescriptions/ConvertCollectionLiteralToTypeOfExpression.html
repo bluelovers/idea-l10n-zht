@@ -1,0 +1,18 @@
+<html>
+<body>
+報告可被取代為顯式 <code>Type.of(...)</code> 呼叫的集合字面量。
+
+<p>範例：</p>
+<pre><code>
+class MyCustomList&lt;T&gt; {
+    companion object { operator fun &lt;T&gt; of(vararg elements: T): MyCustomList&lt;T&gt; = TODO() }
+}
+
+val nums: MyCustomList&lt;Int&gt; = [1, 2, 3]
+</code></pre>
+<p>套用修正後：</p>
+<pre><code>
+val nums = MyCustomList.of(1, 2, 3)
+</code></pre>
+</body>
+</html>

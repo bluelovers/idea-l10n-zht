@@ -1,0 +1,17 @@
+<html>
+<body>
+报告变量名称与数据类的原始属性名称不匹配的析构声明。
+<p><b>示例：</b></p>
+<pre><code>
+  data class Product(val id: String, val productName: String)
+  val (id, name) = product // 关于“name”的警告
+</code></pre>
+<p>以下是可用的快速修复：</p>
+<ul>
+<li><b>重命名变量以匹配析构属性名称</b>：<code>val (id, productName) = product</code></li>
+<li><b>使用带方括号的位置析构</b>：<code>val [id, name] = product</code></li>
+</ul>
+<p>对于像 <code>Pair</code>、 <code>Triple</code> 和 <code>IndexedValue</code> 这样的标准库类，该检查会建议使用位置析构语法，因为这些类型是为位置访问而不是基于名称的匹配设计的。</p>
+<p>此检查为即将推出的 Kotlin 语言功能更改做好代码准备，在此更改中，<code>val (x, y) = e</code> 语法将从基于位置的析构转换为基于名称的析构。</p>
+</body>
+</html>

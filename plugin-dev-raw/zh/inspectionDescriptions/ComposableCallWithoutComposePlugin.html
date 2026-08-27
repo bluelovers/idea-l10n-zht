@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>
+  需要 Compose 編譯器延伸模組 (<code>org.jetbrains.kotlin.plugin.compose</code>) 才能編譯 Composable 函式。
+</p>
+<p>
+  要解決此問題，請將 Compose 編譯器延伸模組新增到 <code>build.gradle.kts</code>：
+</p>
+<pre><code>
+plugins {
+    id("org.jetbrains.kotlin.plugin.compose")
+}
+</code></pre>
+<p>
+  或者，使用提供的快速修復自動將延伸模組新增到您的建置腳本中。
+</p>
+</body>
+</html>
