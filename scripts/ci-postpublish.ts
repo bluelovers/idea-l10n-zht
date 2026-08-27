@@ -14,7 +14,19 @@ import { LF } from 'crlf-normalize';
 import { getSourceInfoSync } from '../lib/build/get-source-info';
 import { getBranchInfo } from '../lib/git/branch-info';
 import { updatePublishTags } from '../lib/git/update-publish-tags';
-import { _lazyImportWithDelay } from '../lib/util/import';
+import { _lazyImportCore, _lazyImportWithDelay } from '../lib/util/import';
+import { join } from 'path';
+import { pathToFileURL } from 'url';
+
+function lazyImport(target: string)
+{
+	// @ts-ignore
+	const final = new URL(target, import.meta.url).href;
+
+	console.log(`import: ${final}`);
+
+	return _lazyImportCore(import(final))
+}
 
 export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 	.then(async (from) =>
@@ -30,7 +42,7 @@ export default Bluebird.resolve((process.env as any).GITHUB_SHA as string)
 
 		if (isMasterBranch)
 		{
-			await _lazyImportWithDelay('./scripts/jetbrains/create-jetbrains-update-plugins-xml.ts', __ROOT);
+			await lazyImport('./jetbrains/create-jetbrains-update-plugins-xml.ts');
 
 			await lazyCommitFiles([
 				'./plugin-dev-out/updatePlugins.xml',

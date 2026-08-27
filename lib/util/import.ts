@@ -16,8 +16,14 @@ export function _lazyImportCore<T extends any>(module:Promise<Awaited<T>>): Blue
 
 export function _lazyImport<T>(target: string, dir = __root): Bluebird<T>
 {
-	const base = pathToFileURL(dir).href;
+	const base = pathToFileURL(dir).href + '/';
 	const final = new URL(target, base).href;
+
+	console.dir({
+		base,
+		target,
+		final
+	});
 
 	return _lazyImportCore(import(final))
 }

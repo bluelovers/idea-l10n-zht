@@ -5,6 +5,7 @@ import { opts } from './_config';
 import Bluebird from 'bluebird';
 import { join } from 'upath2';
 import { crossSpawnGitAsync } from '@git-lazy/spawn';
+import { pathToFileURL } from 'node:url';
 
 export function updatePluginTag(version: string, push?: boolean)
 {
@@ -40,7 +41,7 @@ export function updatePluginTag(version: string, push?: boolean)
 export function updateRepoTag()
 {
 	return Bluebird
-		.resolve(import(join(__root, 'package.json')))
+		.resolve(import(pathToFileURL(join(__root, 'package.json')).href))
 		.then(({
 			name, version,
 		}) => gitTag(`${name}@${version}`, {

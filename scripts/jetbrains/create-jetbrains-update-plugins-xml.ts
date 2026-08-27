@@ -3,6 +3,7 @@ import { outputFile, readJSON } from 'fs-extra';
 import { join } from 'upath2';
 import { __root } from '../../test/__root';
 import { LF } from 'crlf-normalize';
+import { pathToFileURL } from 'node:url';
 import { _getVersionInfoBySeries, _getVersionInfoByVersion } from '../../lib/util/version-map';
 import { array_unique, array_unique_overwrite } from 'array-hyper-unique';
 import { __file_publish_tags_json } from '../../lib/const';
@@ -32,7 +33,7 @@ export default Bluebird.resolve()
 
 		const { __plugin_zh_cn_version } = await import('../../lib/const/link-of-zh-cn');
 
-		const pkg = await import(join(__root, 'package.json'));
+		const pkg = await import(pathToFileURL(join(__root, 'package.json')).href);
 
 		const lines: string[] = [];
 
