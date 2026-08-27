@@ -17,7 +17,7 @@
 <li>install from <a href="https://plugins.jetbrains.com/plugin/18365-chinese-traditional-language-pack-----">jetbrains:com.intellij.zh-tw</a> or <a href="https://plugins.jetbrains.com/plugin/18574-chinese-traditional-language-pack-----">jetbrains:sc.plugin.com.intellij.zh-tw</a></li>
 </ul>
 <blockquote>
-<p>注意：請先移除或禁用<a href="https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----">官方簡體中文語言包</a></p>
+<p>注意：在新版中已支援與官方簡體中文語言包共存，可從系統介面內選擇語言，無須刻意禁用語言包。若使用舊版則請先移除或禁用<a href="https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----">官方簡體中文語言包</a></p>
 </blockquote>
 <h3>其他發行版</h3>
 <ul>
@@ -40,6 +40,7 @@
 或執行 <code>pnpm run ci:install</code></p>
 </li>
 </ol>
+<p>執行 <code>pnpm run plugin:build</code> 可以自動進行打包與簡易測試，打包後檔案會在 <code>plugin-dev-out</code></p>
 <h3>與官方簡體版差異</h3>
 <ul>
 <li>以分詞系統與轉繁來基於官方簡體版自動打包製作</li>
