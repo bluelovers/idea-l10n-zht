@@ -35,7 +35,8 @@
     "build:tsdx": "ynpx @bluelovers/tsdx build --target node --name index",
     "postbuild": "pnpm run test && tsx ./scripts/jetbrains/create-jetbrains-update-plugins-xml.ts",
     "ci:test": "pnpm run test",
-    "ci:install": "pnpm install --frozen-lockfile && pnpm add -w typescript@6.0.0-dev.20260204 jest ts-jest@next ts-node@10.0 ynpx lerna@6 yarn-tool @bluelovers/jest-config tsx",
+    "ci:install": "pnpm install --frozen-lockfile",
+    "ci:install:old": "pnpm install --frozen-lockfile && pnpm add -w typescript@6.0.0-dev.20260204 jest ts-jest@next ts-node@10.0 ynpx lerna@6 yarn-tool @bluelovers/jest-config tsx",
     "ci:build": "pnpm run plugin:build && pnpm run build:commit",
     "ci:build:sub": "pnpm run plugin:build:core && pnpm run build:commit && pnpm run ci:postpublish",
     "ci:postpublish": "tsx scripts/ci-postpublish.ts && pnpm run postpublish:git:tag && echo ci:postpublish",
@@ -156,6 +157,7 @@
     "git-diff-from": "^1.1.40",
     "gitlog2": "^5.0.35",
     "jest": "^29.7.0",
-    "ts-jest": "^29.4.12"
+    "ts-jest": "^29.4.12",
+    "typescript": "6.0.3"
   }
 }
