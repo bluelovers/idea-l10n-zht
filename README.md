@@ -13,7 +13,7 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 - install from [GitHub](https://github.com/bluelovers/idea-l10n-zht/raw/master/plugin-dev-out/zh.jar) (推薦安裝此版本來得到最新版本)
 - install from [jetbrains:com.intellij.zh-tw](https://plugins.jetbrains.com/plugin/18365-chinese-traditional-language-pack-----) or [jetbrains:sc.plugin.com.intellij.zh-tw](https://plugins.jetbrains.com/plugin/18574-chinese-traditional-language-pack-----)
 
-> 注意：請先移除或禁用[官方簡體中文語言包](https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----)
+> 注意：在新版中已支援與官方簡體中文語言包共存，可從系統介面內選擇語言，無須刻意禁用語言包。若使用舊版則請先移除或禁用[官方簡體中文語言包](https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----)
 
 ### 其他發行版
 
@@ -31,6 +31,8 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 2. 請額外自行安裝 typescript@next jest ts-jest ts-node ynpx lerna yarn-tool  
   或執行 `pnpm run ci:install`
+
+執行 `pnpm run ci:build` 可以自動進行打包與簡易測試，打包後檔案會在 `plugin-dev-out`
 
 ### 與官方簡體版差異
 
