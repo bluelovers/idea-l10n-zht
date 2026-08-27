@@ -3,6 +3,94 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2026-08-27)
+
+
+
+### 🐛　Bug Fixes
+
+* **util:** 優化動態導入路徑處理與 ESM 相容性 ([cd15c27](https://github.com/bluelovers/idea-l10n-zht/commit/cd15c272a8c973bf8289b7ea756d8a4596c4b0a9))
+
+
+### ✨　Features
+
+* **core:** 新增中央化路徑管理機制 ([e55199a](https://github.com/bluelovers/idea-l10n-zht/commit/e55199af454a0c62876928d9ee3ecde9211d97e1))
+
+
+### 📦　Code Refactoring
+
+* **build:** 優化插件下載與解壓縮流程並更新版本標記 ([e4a0136](https://github.com/bluelovers/idea-l10n-zht/commit/e4a01366ec2c90f9d7ab45f578c257527d42e7c6))
+* **ci:** 更新發佈腳本中的路徑引用方式 ([c67ee7b](https://github.com/bluelovers/idea-l10n-zht/commit/c67ee7be77d593c497ee90c9068e2917fc786ba7))
+
+
+### 📚　Documentation
+
+* 更新 README.md 中的安裝說明與語言包相容性資訊 ([064d432](https://github.com/bluelovers/idea-l10n-zht/commit/064d4323ea29f213dfc0bf296bc50bd0dfb7513c))
+* **readme:** 更新開發指令與修正文件格式 ([d12d487](https://github.com/bluelovers/idea-l10n-zht/commit/d12d48728fdb1e1f2416b50d8615414336fcec17))
+
+
+### 🛠　Build System
+
+* 將套件管理工具從 yarn 遷移至 pnpm 並更新開發環境配置 ([1b1ab7a](https://github.com/bluelovers/idea-l10n-zht/commit/1b1ab7a1aba9608776fa038b87e8b5b1631e6891))
+* **cache:** update version-map ([c43f134](https://github.com/bluelovers/idea-l10n-zht/commit/c43f134e2ed9edbb8f95a6bf01346c8b5ddcf567))
+* **ci:** 修改安裝指令以包含 tsx 依賴 ([70988c1](https://github.com/bluelovers/idea-l10n-zht/commit/70988c1b495b2dc2513653791b90d6f2379941d9))
+* **deps:** 更新 typescript 版本並重構 CI 安裝指令 ([01d6430](https://github.com/bluelovers/idea-l10n-zht/commit/01d643008ff1a9051f5da6e8506aea0c0110cfd4))
+* **original:** update original source ( 262.9437.145 ) ([c32f78a](https://github.com/bluelovers/idea-l10n-zht/commit/c32f78ab4dbf2b39bc27c171e6afd886fb2f04e2))
+* **release:** update build ( 262.9437.145 ) ([7e0cbbc](https://github.com/bluelovers/idea-l10n-zht/commit/7e0cbbc003476a641d402cceba4b5e09ab35dd1d))
+* **release:** update dev build files ( 262.9437.145 ) ([96ed19a](https://github.com/bluelovers/idea-l10n-zht/commit/96ed19aa1d71fd74b51e9f70dceb2af130109574))
+* **release:** updatePlugins.xml ([9ce6d4c](https://github.com/bluelovers/idea-l10n-zht/commit/9ce6d4c376994fcd854ad7c6bc51e3754d884adb))
+* **test:** update snapshots ( 253.30387.20 ) ([4694c1b](https://github.com/bluelovers/idea-l10n-zht/commit/4694c1bd990ca9f00675ab73548fb96984a20b19))
+
+
+### ♻️　Chores
+
+* **config:** 允許 esbuild 進行構建 ([5b4c65c](https://github.com/bluelovers/idea-l10n-zht/commit/5b4c65cb2e8c10a4a92de66f91ee2f6341af5eb6))
+* **deps:** 更新中文語言包資源檔案 ([7da8481](https://github.com/bluelovers/idea-l10n-zht/commit/7da8481e0ee5fe65349f19f8150d7acdb2c23dec))
+
+
+### 🔖　Miscellaneous
+
+* . ([7b42b01](https://github.com/bluelovers/idea-l10n-zht/commit/7b42b016ff6c33b4a1126ab8504afc76cff06edf))
+* . ([2ec283c](https://github.com/bluelovers/idea-l10n-zht/commit/2ec283cd81d00c134e4ac27f9c6d0ff4dbacada3))
+* . ([a578f91](https://github.com/bluelovers/idea-l10n-zht/commit/a578f91a801c4cea4e90cddc935143aa55337170))
+* Update package.json ([2a4ec29](https://github.com/bluelovers/idea-l10n-zht/commit/2a4ec29a49287386a67b55febdb709fd63c3b33f))
+
+## 253.30387.20 "🛠　Build System" (2026-01-18)
+
+
+
+### 🛠　Build System
+
+* **cache:** update publish tags ([ca4fb58](https://github.com/bluelovers/idea-l10n-zht/commit/ca4fb584fdee966fea3264864df82db257b68b87))
+* **changelog:** update CHANGELOG ( 253.30387.20 ) ([ba376d2](https://github.com/bluelovers/idea-l10n-zht/commit/ba376d2de8c6cd633fe022da2d4601aac1df5c68))
+* **original:** update original source ( 253.30387.20 ) ([64849b1](https://github.com/bluelovers/idea-l10n-zht/commit/64849b1194662d88b64678ffc5c646f4881c4d34))
+* **release:** update build ( 253.30387.20 ) ([acb0707](https://github.com/bluelovers/idea-l10n-zht/commit/acb0707b10054060458a78746e9b0c6286d905ab))
+* **release:** updatePlugins.xml ([d0079b5](https://github.com/bluelovers/idea-l10n-zht/commit/d0079b509ec123f641e2484a809dc8641ce6da47))
+* **release:** update dev build files ( 253.30387.20 ) ([ac1bb7c](https://github.com/bluelovers/idea-l10n-zht/commit/ac1bb7c8a689b170628e13b6520d1b8e5da0ac7c))
+* **test:** update snapshots ( 253.30387.20 ) ([260f0be](https://github.com/bluelovers/idea-l10n-zht/commit/260f0bec3576508ed3f29b2d6547d4e5c37d37ba))
+
+
+### ⚙️　Continuous Integration
+
+* **git:** add optional push parameter to updatePluginTag ([e5980e8](https://github.com/bluelovers/idea-l10n-zht/commit/e5980e8b0026d757f40b39197db8ec4c0d3fad08))
+
+## 253.29346.240 "🛠　Build System" (2026-01-18)
+
+
+
+### 🛠　Build System
+
+* **cache:** update publish tags ([f5b94b2](https://github.com/bluelovers/idea-l10n-zht/commit/f5b94b2988dd725ed9251b34b14c52ee6c7e1e4a))
+* **changelog:** update CHANGELOG ( 253.29346.240 ) ([675f080](https://github.com/bluelovers/idea-l10n-zht/commit/675f08080e775e4c2830da3e4b65bcdf3f88942b))
+* **original:** update original source ( 253.29346.240 ) ([8f2e8ea](https://github.com/bluelovers/idea-l10n-zht/commit/8f2e8ea592d9cca947113d7162666b26ee263d66))
+* **release:** update build ( 253.29346.240 ) ([b23b705](https://github.com/bluelovers/idea-l10n-zht/commit/b23b7053cb61b671ad7417b81f36157e8fb67c53))
+* **release:** updatePlugins.xml ([08b9b55](https://github.com/bluelovers/idea-l10n-zht/commit/08b9b55918d1c71732e4013cb01f981c957aa02b))
+* **release:** update dev build files ( 253.29346.240 ) ([b16de12](https://github.com/bluelovers/idea-l10n-zht/commit/b16de1261c8fc789b25bc8b4cea0f7618eaed418))
+* **test:** update snapshots ( 253.29346.240 ) ([3d690d6](https://github.com/bluelovers/idea-l10n-zht/commit/3d690d6a45f324416866eb9c91f1d8b646269767))
+* **test:** update snapshots ( 253.28294.251 ) ([e5b574d](https://github.com/bluelovers/idea-l10n-zht/commit/e5b574dcff93b01fdc5c74871bd935f31b756343))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2026-01-18)
 
 
