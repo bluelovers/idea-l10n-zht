@@ -1,6 +1,7 @@
 import Bluebird from 'bluebird';
 import { resolve } from 'upath2';
 import { __root } from '../../test/__root';
+import { pathToFileURL, fileURLToPath } from 'node:url';
 
 type IUnpack<T extends any> = Awaited<T extends PromiseLike<infer D> ? D : T>
 
@@ -15,7 +16,10 @@ export function _lazyImportCore<T extends any>(module:Promise<Awaited<T>>): Blue
 
 export function _lazyImport<T>(target: string, dir = __root): Bluebird<T>
 {
-	return _lazyImportCore(import(resolve(dir, target)))
+	const base = pathToFileURL(dir).href;
+	const final = new URL(target, base).href;
+
+	return _lazyImportCore(import(final))
 }
 
 export function _lazyImportWithDelay<T>(target: string, dir = __root, delay?: number): Bluebird<T>

@@ -19,7 +19,7 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 - [GitHub Tags](https://github.com/bluelovers/idea-l10n-zht/tags)
 
-- 或執行 `yarn run plugin:series:build` 即可以最新版的打包程式來自行選擇要打包哪一個版本系列
+- 或執行 `pnpm run plugin:series:build` 即可以最新版的打包程式來自行選擇要打包哪一個版本系列
 
 ![img-001.png](docs/img-001.png)
 
@@ -27,10 +27,10 @@ The Chinese Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, Dat
 
 ## dev
 
-1. 執行 `yarn run ci:git:config`
+1. 執行 `pnpm run ci:git:config`
 
 2. 請額外自行安裝 typescript@next jest ts-jest ts-node ynpx lerna yarn-tool  
-  或執行 `yarn run ci:install`
+  或執行 `pnpm run ci:install`
 
 ### 與官方簡體版差異
 

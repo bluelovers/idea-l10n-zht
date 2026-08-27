@@ -3,7 +3,7 @@ import isInteractive from 'is-interactive';
 
 export function parseArgvDownload()
 {
-	return yargs
+	return yargs()
 		.version(false)
 		.option('series', {
 			alias: ['s'],

@@ -37,27 +37,12 @@ jobs:
       - uses: actions/checkout@master
         with:
           fetch-depth: 20
-      - uses: actions/setup-node@master
+      - name: Set up Node.js + pnpm
+        uses: pnpm/setup@v1
         with:
-          node-version: 20
-      - name: get yarn cache dir
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: set cache id
-        id: id-cache
-        run: echo "::set-output name=id::${GITHUB_SHA}"
-      - name: echo var
-        run: |
-          echo ${{ steps.yarn-cache.outputs.dir }}
-          echo ${{ steps.id-cache.outputs.id }}
-          echo ${GITHUB_SHA}
-      - name: yarn cache
-        uses: bluelovers/github-actions-cache@2020011001
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ steps.id-cache.outputs.id }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          version: next-12
+          runtime: node@26
+          cache: true
       - name: setup git config
         run: |
           git config --local user.email "action@github.com"
@@ -72,19 +57,18 @@ jobs:
           git fetch origin 'refs/tags/*:refs/tags/*' --depth=20
       - name: install deps
         run: |
-          yarn config set ignore-engines true
-          yarn install --frozen-lockfile
-          yarn run ci:install
+          pnpm install --frozen-lockfile
+          pnpm run ci:install
       - name: run ci:build
         if: success()
 #        env:
         run: |
-          yarn run ci:build
+          pnpm run ci:build
       - name: run ci:postpublish
         if: success()
 #        env:
         run: |
-          yarn run ci:postpublish
+          pnpm run ci:postpublish
       - name: Push changes
         if: success()
         uses: ad-m/github-push-action@master

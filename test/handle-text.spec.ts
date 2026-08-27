@@ -1,3 +1,5 @@
+/// <reference types="jest" />
+
 import { join } from 'upath2';
 import { __plugin_dev_raw_dir, __plugin_downloaded_dir_unzip } from '../lib/const';
 import { array_unique_overwrite } from 'array-hyper-unique';

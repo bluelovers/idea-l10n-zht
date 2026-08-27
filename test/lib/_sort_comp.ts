@@ -1,4 +1,5 @@
 import { ITSValueOrArrayMaybeReadonly } from 'ts-type/lib/type/base';
+// @ts-ignore
 import { getCjkName, zhDictCompare } from '@novel-segment/util';
 
 const _map = new Map<string, string>();
