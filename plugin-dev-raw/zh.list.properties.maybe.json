@@ -3,6 +3,10 @@
     "action.preview.pagination.page.range": "{0} - {1}/{2}",
     "action.preview.pagination.page.total.pages": "/{0}"
   },
+  "messages/AIAAgentsFrontendBundle.properties": {
+    "aia.agents.tests.status.summary.multiple": "{0}，{1}",
+    "aia.agents.unknown.agent.name": "AI Assistant"
+  },
   "messages/AIPlaygroundPythonBundle.properties": {
     "intention.category.name": "AI playground"
   },
@@ -20,6 +24,15 @@
   "messages/AIToolkitUIBundle.properties": {
     "configurable.ai.toolkit.display.name": "AI Agents Debugger",
     "provider.gemini": "Google Gemini"
+  },
+  "messages/AcpBundle.properties": {
+    "acp.agent.auth.option.vertexAdc": "Vertex AI ADC",
+    "acp.elicitation.shortcut.enter": "↵",
+    "acp.elicitation.step.of.total": "{0}/{1}",
+    "acp.settings.agent.auth.option.jetbrains": "JetBrains AI",
+    "progress.text.download.progress": "{0} KB / {1} KB",
+    "settings.acp.agents.version": "v{0}",
+    "settings.acp.agents.version.update": "{0} → {1}"
   },
   "messages/ActionsBundle.properties": {
     "action.Actions.ActionsPlugin.GenerateToString.text": "to_String()",
@@ -77,6 +90,9 @@
     "toolwindow.activity.popup.row": "{0}  ·  {1}  ·  {2}  ·  {3}",
     "toolwindow.provider.cli.claude": "Claude Code",
     "toolwindow.time.unknown": "—"
+  },
+  "messages/AgentSkillsBundle.properties": {
+    "skills.settings.open.tooltip.path": "{0}"
   },
   "messages/AgentThreadViewBundle.properties": {
     "action.AgentThreads.ThreadOutline.CopyText.description": "Copy the text of the selected session outline entry to the clipboard",
@@ -220,6 +236,9 @@
   "messages/AgentWorkbenchAcpBundle.properties": {
     "settings.acp.registry.version": "v{0}",
     "settings.acp.registry.version.update": "{0} → {1}"
+  },
+  "messages/AgentsNextEditBundle.properties": {
+    "next.edit.providers.configurable.mistral.url": "API URL:"
   },
   "messages/AiCodeReviewBundle.properties": {
     "aiCodeReview.prompt.default": "Run an AI code review.\n Session id: {0}."
@@ -534,6 +553,27 @@
   "messages/BVBundle.properties": {
     "label.unknown": "@unknown"
   },
+  "messages/BackendNextEditBundle.properties": {
+    "next.edit.acp.diagnostics.badge.request.bytes": "↑ {0}",
+    "next.edit.acp.diagnostics.badge.response.bytes": "↓ {0}",
+    "next.edit.acp.diagnostics.session.lifetime": "{0}",
+    "next.edit.acp.diagnostics.session.payload.received": "rx {0}",
+    "next.edit.acp.diagnostics.session.payload.sent": "tx {0}",
+    "next.edit.diagnostics.context.collection.time": "Context collection time: {0}ms",
+    "next.edit.diagnostics.semantic.collector": "{0} [{1}]: requested {2}, collected {3}, {4}, {5}ms",
+    "next.edit.diagnostics.semantic.collector.kind.recent.file.chunks": "Recent file chunks",
+    "next.edit.diagnostics.semantic.purpose.both": "served+shadow",
+    "next.edit.diagnostics.semantic.raw.omitted.equal": "Raw collected snapshot matched the served snapshot and was omitted",
+    "next.edit.diagnostics.semantic.raw.present": "Raw collected snapshot is available for this session",
+    "next.edit.diagnostics.semantic.sampled": "Semantic experiment sampling is enabled for this session",
+    "next.edit.diagnostics.semantic.status.global.timeout": "global timeout",
+    "next.edit.diagnostics.semantic.summary.complete": "Semantic context: {0}/{1} collectors finished in {2}ms (collector timeout {3}ms, total timeout {4}ms)",
+    "next.edit.diagnostics.semantic.summary.timeout": "Semantic context: {0}/{1} collectors finished in {2}ms before total timeout (collector timeout {3}ms, total timeout {4}ms)",
+    "next.edit.settings.stub.method.detection": "Stub method detection",
+    "next.edit.settings.stub.method.detection.description": "Detect stub or empty method bodies as triggers for AI-generated suggestions",
+    "next.edit.settings.stub.method.generation.eager": "Eager method generation",
+    "next.edit.settings.stub.method.generation.eager.description": "Start generation immediately when a stub method is detected, without waiting for an explicit action"
+  },
   "messages/BackgroundTaskBundle.properties": {
     "actions.on.save.page.checkbox.file.watcher.0": "File Watcher: {0}",
     "actions.on.save.page.label.file.watcher": "File Watcher",
@@ -797,6 +837,9 @@
   "messages/CodeWithMePluginBundle.properties": {
     "backend.control.center.heap": "MiB -Xmx"
   },
+  "messages/CodexLLMBundle.properties": {
+    "codex.appserver.agent.name": "Codex (appserver)"
+  },
   "messages/CodexPromptSuggestionsBundle.properties": {
     "advanced.settings.agent.workbench": "Agent Workbench"
   },
@@ -805,6 +848,9 @@
   },
   "messages/CollaborationToolsBundle.properties": {
     "review.details.branch.checkout.remote.ad.label": "{0} ← {1}"
+  },
+  "messages/CommonNextEditBundle.properties": {
+    "next.edit.provider.name.jetbrains.dev": "JetBrains Dev"
   },
   "messages/CommonProfilerBundle.properties": {
     "ui.what.if.tab": "What-If"
@@ -1134,6 +1180,9 @@
     "blank.diff.recent.content.summary.text.date": "{0} ({1})",
     "diff.utf.charset.name.bom.suffix": "{0} BOM"
   },
+  "messages/DiffInsightsBundle.properties": {
+    "feedback.dialog.upload.open": "uploads.jetbrains.com"
+  },
   "messages/DjangoBundle.properties": {
     "constance.add.missing.fieldsets.option": "{0}",
     "django.manage.console.name": "manage.py@{0}",
@@ -1435,6 +1484,11 @@
     "framework.zend2.name.zend.tool.framework": "Zend Framework 2 Tool",
     "symfony.component.version.2": "2.*.*"
   },
+  "messages/FrontendNextEditBundle.properties": {
+    "next.edit.status.widget.popup.status.summary": "{0} · {1}",
+    "next.edit.status.widget.popup.status.tooltip": "{0}. {1}",
+    "next.edit.status.widget.tooltip.summary": "{0} · {1}"
+  },
   "messages/FullLineBundle.properties": {
     "full.line.configurable.name": "Full Line Code Completion",
     "full.line.name": "Full Line Code Completion",
@@ -1496,6 +1550,9 @@
   "messages/GitLabBundle.properties": {
     "action.GitLab.Share.Vcs.Toolbar.Widget.text": "GitLab…",
     "merge.request.on.branch": "!{0}，{1}"
+  },
+  "messages/GithubAIBundle.properties": {
+    "github.aiReview.comment.assistant.name": "{0}"
   },
   "messages/GithubBundle.properties": {
     "action.Github.Share.Vcs.Toolbar.Widget.text": "GitHub…",
@@ -1570,6 +1627,9 @@
   },
   "messages/GodotPluginBundle.properties": {
     "configurable.name.godot.engine": "Godot.NET"
+  },
+  "messages/GoogleBundle.properties": {
+    "name.vertexai.provider": "Google Vertex AI"
   },
   "messages/GraalVmBundle.properties": {
     "debugger.display.gdb.name": "GDB/GraalVM",
@@ -2030,6 +2090,18 @@
     "jdk.26.preview.language.level.description": "26 (Preview) - Primitive types in patterns, instanceof, and switch (4th preview)",
     "jdk.27.preview.language.level.description": "27 (Preview) - Primitive types in patterns, instanceof, and switch (5th preview)"
   },
+  "messages/JavaToKotlinBundle.properties": {
+    "j2k.llm.settings.model.anthropic.sonnet4": "Anthropic Claude Sonnet 4",
+    "j2k.llm.settings.model.google.pro25": "Google Gemini 2.5 Pro",
+    "j2k.llm.settings.model.group.jbai": "JetBrains AI",
+    "j2k.llm.settings.model.openai.gpt41": "OpenAI GPT-4.1",
+    "j2k.llm.settings.model.openai.gpt4o": "OpenAI GPT-4o",
+    "j2k.llm.settings.model.openai.gpt5": "OpenAI GPT-5",
+    "j2k.llm.skill.DAGGER_HILT.name": "Dagger / Hilt",
+    "j2k.llm.skill.HIBERNATE.name": "Hibernate / JPA",
+    "j2k.llm.skill.JUNIT.name": "JUnit / TestNG",
+    "j2k.llm.skill.RETROFIT.name": "Retrofit / OkHttp"
+  },
   "messages/JavaUiBundle.properties": {
     "checkbox.javadocs": "JavaDoc(&D)",
     "class.file.decompiled.sdk.version.text": "(Java {0})",
@@ -2364,6 +2436,38 @@
     "floating.toolbar.current.cluster.is.name.tooltip": "Current Cluster: {0}",
     "floating.toolbar.current.namespace.is.name.tooltip": "Current Namespace: {0}"
   },
+  "messages/LLMBundle.properties": {
+    "action.AIAssistant.Chat.SendActions.Send.description": "⏎",
+    "ai.hub.agent.selector.license.prefix": "JetBrains AI",
+    "ai.hub.tooltip.text": "JetBrains AI",
+    "byok.settings.title": "JetBrains AI",
+    "changes.ai.generated": "AI Assistant",
+    "chat.model.chooser.custom.models.by.provider": "{0}",
+    "chat.new.agent.selector.activated.with.adc": "ADC {0}",
+    "chat.new.agent.selector.activated.with.jetbrains.ai": "JetBrains AI Account",
+    "chat.new.agent.selector.activated.with.third.party.provider": "BYOK {0}",
+    "chat.new.agent.selector.provider.vertex.pretty.name": "Google Vertex AI",
+    "file.convert.name": "({0})",
+    "intention.category.large.language.models": "AI Assistant",
+    "intentions.apply.custom.edit.dialog.title.ai.assistant": "{0}",
+    "keymap.group.aia": "JetBrains AI Assistant",
+    "name.assistant": "{0}",
+    "notification.group.name": "AI Assistant",
+    "panel.claude.agent.button": "Claude Agent",
+    "panel.copilot.button": "GitHub Copilot",
+    "panel.gemini.auth.button": "Gemini CLI",
+    "panel.license.chooser.license.radio.aif": "JetBrains AI Free",
+    "panel.license.chooser.license.radio.pro": "JetBrains AI Pro",
+    "panel.license.chooser.license.radio.pro.ultimate": "JetBrains AI Pro Ultimate",
+    "popup.title.ai.assistant": "AI Assistant",
+    "settings.configurable.display.name": "AI Assistant",
+    "statusbar.balloon.title": "{0}",
+    "statusbar.widget.toolTipText": "{0}",
+    "toolwindow.stripe.AIAssistant": "AI Assistant"
+  },
+  "messages/LLMCppBundle.properties": {
+    "llm.cpp.writeDocumentation.customInstructions.title": "C++"
+  },
   "messages/LLMInstallerBundle.properties": {
     "ai.hub.tooltip.text": "JetBrains AI",
     "ai.promo.window.cloud.title": "AI Cloud",
@@ -2380,11 +2484,24 @@
   "messages/LLMRiderNextBundle.properties": {
     "notification.group.ijnext.notifications": "IJ Next"
   },
+  "messages/LLMUITestGenerationBundle.properties": {
+    "action.AIAssistant.WebInspector.Generate.Popup.Section.Framework": "{0}",
+    "action.AIAssistant.WebInspector.Generate.Popup.Section.Framework.Language": "{0}"
+  },
   "messages/LLMVcsAgentWorkbenchBundle.properties": {
     "promptlibrary.custom.instructions.group.name": "Agent Workbench"
   },
+  "messages/LLMVcsBundle.properties": {
+    "GroupedDiffToolWindow.toolwindow.name": "AI Diff",
+    "action.Vcs.GroupedDiffForOtherAction.text": "AI Diff",
+    "cmg.prompt.customization.branch.reference.text": "$GIT_BRANCH_NAME"
+  },
   "messages/LLMVcsDiffBundle.properties": {
     "cmg.prompt.customization.branch.reference.text": "$GIT_BRANCH_NAME"
+  },
+  "messages/LMStudioBundle.properties": {
+    "settings.lmstudio.url.text.field.accessible.name": "LM Studio URL",
+    "settings.lmstudio.url.text.field.title": "URL:"
   },
   "messages/LangBundle.properties": {
     "build.event.message.with": "{0}，{1}",
@@ -2625,6 +2742,11 @@
   "messages/OCInspectionsBundle.properties": {
     "intentions.group.objc": "Objective-C"
   },
+  "messages/OpenAIBundle.properties": {
+    "settings.openai.http.version.http1_1": "HTTP/1.1",
+    "settings.openai.http.version.http2": "HTTP/2",
+    "settings.openai.url.text.field.title": "URL:"
+  },
   "messages/OpenRewriteBundle.properties": {
     "open.rewrite.recipe.local.history.label": "OpenRewrite: {0}"
   },
@@ -2654,6 +2776,9 @@
     "perforce.name.with.mnemonic": "Perforce(_P)",
     "progress.text2.p4.status": "p4 {0}",
     "settings.port.placeholder": "<perforce_server>:1666"
+  },
+  "messages/PerforceMcpBundle.properties": {
+    "configurable.name.perforce.mcp": "Perforce MCP"
   },
   "messages/PerformanceTestingBundle.properties": {
     "summary.link": "https://intellij-support.jetbrains.com/anonymous_requests/new",
@@ -2906,6 +3031,9 @@
     "dev.ui.editor.tab.title": "Quarkus Dev UI",
     "quarkus.starter.version.label": "Quarkus:"
   },
+  "messages/QuickFixVerifierBundle.properties": {
+    "panel.file.location": "{0}:{1}"
+  },
   "messages/RBundle.properties": {
     "action.rspec.LetIntroduce.text": "RSpec 'let'",
     "border.title.ruby.i18n": "Ruby i18n",
@@ -3122,6 +3250,11 @@
   "messages/RiderCodeWithMeCoreBundle.properties": {
     "activate.code.with.me.dialog.title": "Code With Me"
   },
+  "messages/RiderContribBundle.properties": {
+    "skills.settings.section.microsoft.aspire.title": "Microsoft / Aspire",
+    "skills.settings.section.microsoft.azure.title": "Microsoft / Azure",
+    "skills.settings.section.microsoft.dotnet.title": "Microsoft / .NET"
+  },
   "messages/RiderCppBundle.properties": {
     "advanced.settings.unreal": "Unreal Engine",
     "applicationConfigurable.CppClangTidyOptionsId.displayName": "Clang-Tidy",
@@ -3172,6 +3305,13 @@
   },
   "messages/RiderJavaScriptBundle.properties": {
     "rider.javascript.debug.companion.tab.name": "{0} - JavaScript"
+  },
+  "messages/RiderLLMBaseBundle.properties": {
+    "llm.cpp.writeDocumentation.customInstructions.title": "C++"
+  },
+  "messages/RiderLLMBundle.properties": {
+    "llm.cSharp.writeDocumentation.customInstructions.title": "C#",
+    "llm.fSharp.writeDocumentation.customInstructions.title": "F#"
   },
   "messages/RiderMultiPlatformBundle.properties": {
     "notification.group.riderandroid.sdk": "Android SDK"
