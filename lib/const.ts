@@ -35,6 +35,17 @@ export const __plugin_downloaded_dir_unzip = join(__root, 'original-plugin-raw')
 export const __plugin_other_plugins_dir = join(__plugin_downloaded_dir, 'other-plugins');
 
 /**
+ * original-plugin/other-plugins/ml-llm.jar
+ *
+ * ml-llm 插件 JAR 檔案路徑
+ * ml-llm plugin JAR file path
+ *
+ * 從 IDE 安裝目錄提取的 JetBrains AI 輔助插件，其內含 localization/zh/messages/ 目錄
+ * JetBrains AI assistant plugin extracted from IDE installation directory, containing localization/zh/messages/
+ */
+export const __ml_llm_jar = join(__plugin_other_plugins_dir, 'ml-llm.jar');
+
+/**
  * plugin-dev-raw
  *
  * 開發用原始外掛素材目錄（未經翻譯修改的原始檔案）
