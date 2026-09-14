@@ -17,14 +17,13 @@ import Bluebird from 'bluebird';
 import { getBranchInfo } from '../lib/git/branch-info';
 import { async as FastGlob } from '@bluelovers/fast-glob/bluebird';
 import { basename, join } from 'upath2';
-import { __plugin_downloaded_dir } from '../lib/const';
+import { __plugin_downloaded_dir, __plugin_other_plugins_dir } from '../lib/const';
 import JSZip from 'jszip';
 import { copySync, outputFile, readFile } from 'fs-extra';
 import { fixedJSZipDate } from 'jszip-fixed-date';
 import { chalkByConsole, console } from 'debug-color2';
-import { homedir } from 'os';
-import { existsSync } from 'node:fs';
-import { PluginXml } from '../lib/util/xml/plugin-xml';
+import { searchIdePluginFile } from '../lib/util/ide-search';
+import { readPluginInfoFromZip, copyPluginZipAndExtractFile } from '../lib/util/zip';
 
 export default Bluebird.resolve()
 	.then(async () =>
@@ -41,142 +40,75 @@ export default Bluebird.resolve()
 
 			const cwd = join(__plugin_downloaded_dir, 'series');
 
-			let homeDir = homedir();
-			let ideDir: string;
-			let foundPluginFile: string | undefined;
-
-			const jetBrainsDir = join(homeDir, 'AppData/Local', 'JetBrains');
-			const toolboxDir = join(jetBrainsDir, 'Toolbox');
-
 			/**
-			 * 語言包 JAR 在 IDE 安裝目錄中的相對路徑候選
-			 * Relative path candidates for the language pack JAR in the IDE installation directory
+			 * 使用共用搜尋函式在 IDE 安裝目錄中查找語言包
+			 * Use shared search function to find language pack in IDE installation directories
+			 *
+			 * 搜尋策略（三階段）：
+			 * 1. JetBrains Toolbox 安裝目錄
+			 * 2. Programs 基礎目錄
+			 * 3. Programs 版本目錄（如 WebStorm2026.2）
+			 *
+			 * Search strategy (three phases):
+			 * 1. JetBrains Toolbox installation directories
+			 * 2. Programs base directories
+			 * 3. Programs versioned directories (e.g., WebStorm2026.2)
 			 */
-			const pluginCandidates = [
+			const langPackSearchResult = await searchIdePluginFile(
 				join('plugins/localization-zh/lib', 'localization-zh.jar'),
-			];
-
-			/**
-			 * JetBrains IDE 對照表：Toolbox 安裝路徑、基礎目錄名、 Programs 安裝路徑
-			 * JetBrains IDE mapping: Toolbox install path, base directory name, Programs install path
-			 */
-			const ideMap = [
-				{ toolbox: 'IntelliJ IDEA Ultimate', base: 'IntelliJIdea', programs: 'IntelliJ IDEA' },
-				{ toolbox: 'WebStorm', base: 'WebStorm', programs: 'WebStorm' },
-				{ toolbox: 'PyCharm Professional', base: 'PyCharm', programs: 'PyCharm' },
-			];
-
-			/**
-			 * 第一輪搜尋：在 JetBrains Toolbox 安裝目錄中查找語言包
-			 * First search: look for language pack in JetBrains Toolbox install directories
-			 */
-			for (let ide of ideMap)
-			{
-				let temp = join(toolboxDir, ide.toolbox);
-
-				for (let candidate of pluginCandidates)
-				{
-					if (existsSync(join(temp, candidate)))
-					{
-						ideDir = temp;
-						foundPluginFile = candidate;
-						break;
-					}
-				}
-
-				if (ideDir)
-				{
-					break;
-				}
-			}
-
-			/**
-			 * 第二輪搜尋：在 Programs 目錄中查找（包含版本後綴的目錄）
-			 * Second search: look in Programs directories (including version-suffixed directories)
-			 */
-			if (!ideDir)
-			{
-				const programsDir = join(homeDir, 'AppData/Local', 'Programs');
-
-				for (let ide of ideMap)
-				{
-					let temp = join(programsDir, ide.programs);
-
-					if (existsSync(join(temp, pluginCandidates[0])))
-					{
-						ideDir = temp;
-						foundPluginFile = pluginCandidates[0];
-						break;
-					}
-
-					if (!existsSync(temp))
-					{
-						continue;
-					}
-
-					/** 搜尋可能帶有版本後綴的目錄（如 WebStorm-2024.1）/ Search for directories with version suffixes (e.g. WebStorm-2024.1) */
-					const dirs = await FastGlob<string>([`${ide.programs}*`], {
-						cwd: programsDir,
-						onlyFiles: false,
-						suppressErrors: true,
-					});
-
-					for (let dir of dirs)
-					{
-						if (dir === ide.programs)
-						{
-							continue;
-						}
-
-						let temp2 = join(programsDir, dir);
-
-						for (let candidate of pluginCandidates)
-						{
-							if (existsSync(join(temp2, candidate)))
-							{
-								ideDir = temp2;
-								foundPluginFile = candidate;
-								break;
-							}
-						}
-
-						if (ideDir)
-						{
-							break;
-						}
-					}
-
-					if (ideDir)
-					{
-						break;
-					}
-				}
-			}
+			);
 
 			/**
 			 * 找到語言包後，讀取其 plugin.xml 取得版本號並複製到工作目錄
 			 * After finding the language pack, read its plugin.xml to get the version and copy to working directory
 			 */
-			if (ideDir && foundPluginFile)
+			if (langPackSearchResult)
 			{
+				const { ideDir, pluginFilePath } = langPackSearchResult;
+
 				console.info(`ideDir:`, ideDir);
-				console.info(`foundPluginFile:`, foundPluginFile);
+				console.info(`foundPluginFile:`, pluginFilePath);
 
-				let src = join(ideDir, foundPluginFile);
+				const src = join(ideDir, pluginFilePath);
 
-				const info = await readFile(src)
-					.then(JSZip.loadAsync)
-					.then(zip =>
-					{
-						return zip.file('META-INF/plugin.xml').async('nodebuffer')
-					})
-					.then(buf =>
-					{
-						return new PluginXml(buf);
-					})
-				;
+				/** 從 ZIP 中讀取插件版本資訊 / Read plugin version info from ZIP */
+				const info = await readPluginInfoFromZip(src);
 
 				copySync(src, join(cwd, `localization-zh-${info.version}.jar`))
+			}
+
+			/**
+			 * 使用相同的三階段搜尋邏輯找 ml-llm.zip，提取 ml-llm.jar 到 other-plugins 目錄
+			 * Use the same three-phase search logic to find ml-llm.zip, extract ml-llm.jar to other-plugins directory
+			 *
+			 * 設計邏輯：
+			 * - 與語言包共用相同的搜尋邏輯（searchIdePluginFile），
+			 *   只是目標相對路徑不同（plugins/ml-llm.zip）
+			 * - ml-llm.zip 位於 IDE 安裝目錄的 plugins/ 下，
+			 *   搜尋時自動遍歷 {idename}{version} 格式的目錄（如 WebStorm2026.2）
+			 *
+			 * Design logic:
+			 * - Shares the same search logic as the language pack (searchIdePluginFile),
+			 *   only the target relative path differs (plugins/ml-llm.zip)
+			 * - ml-llm.zip is under the IDE installation's plugins/ directory,
+			 *   automatically traversing {idename}{version} format directories (e.g., WebStorm2026.2)
+			 */
+			const mlLlmSearchResult = await searchIdePluginFile(
+				'plugins/ml-llm.zip',
+			);
+
+			if (mlLlmSearchResult)
+			{
+				await copyPluginZipAndExtractFile(
+					join(mlLlmSearchResult.ideDir, mlLlmSearchResult.pluginFilePath),
+					join(__plugin_downloaded_dir, 'ml-llm.zip'),
+					'ml-llm/lib/ml-llm.jar',
+					join(__plugin_other_plugins_dir, 'ml-llm.jar'),
+				);
+			}
+			else
+			{
+				console.warn(`未找到 ml-llm.zip，已跳過 ml-llm 插件提取`);
 			}
 
 			/**
@@ -193,6 +125,7 @@ export default Bluebird.resolve()
 				})
 					.then(ls =>
 					{
+						// @ts-ignore
 						return ls.sort().at(-1);
 					})
 			;

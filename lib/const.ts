@@ -24,6 +24,17 @@ export const __plugin_downloaded_dir = join(__root, 'original-plugin');
 export const __plugin_downloaded_dir_unzip = join(__root, 'original-plugin-raw');
 
 /**
+ * original-plugin/other-plugins
+ *
+ * 非語言包插件存放目錄（如 ml-llm 等內建插件）
+ * Directory for non-language-pack plugins (e.g., ml-llm and other built-in plugins)
+ *
+ * 從 IDE 安裝目錄提取的非語言包插件 JAR 檔案存放於此
+ * Stores non-language-pack plugin JAR files extracted from IDE installation directories
+ */
+export const __plugin_other_plugins_dir = join(__plugin_downloaded_dir, 'other-plugins');
+
+/**
  * plugin-dev-raw
  *
  * 開發用原始外掛素材目錄（未經翻譯修改的原始檔案）
