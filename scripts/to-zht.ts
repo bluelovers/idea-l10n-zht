@@ -2,6 +2,15 @@
  * Created by user on 2022/1/9.
  */
 
+/**
+ * 將簡體中文語系檔轉換為繁體中文
+ * Convert simplified Chinese locale files to traditional Chinese
+ *
+ * 使用 convertLang 函式處理 zh（中文）語系的簡繁轉換，
+ * 包含分詞處理、文字轉換等步驟。
+ * Uses the convertLang function to handle zh (Chinese) locale conversion,
+ * including word segmentation, text conversion, and other steps.
+ */
 import { async as FastGlob } from '@bluelovers/fast-glob/bluebird';
 import { __plugin_dev_raw_dir, __plugin_downloaded_dir_unzip } from '../lib/const';
 import { outputFile, outputJSON, pathExists, readFile, readJSON, unlink } from 'fs-extra';

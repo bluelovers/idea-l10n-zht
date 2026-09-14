@@ -1,3 +1,12 @@
+/**
+ * 打包插件安裝 JAR 檔案
+ * Build plugin installation JAR file
+ *
+ * 使用 packPluginJar 將轉換後的繁體中文語系檔打包為 IntelliJ 插件 JAR，
+ * 供使用者下載安裝。
+ * Uses packPluginJar to package converted traditional Chinese locale files
+ * into an IntelliJ plugin JAR for user download and installation.
+ */
 import { async as FastGlob } from '@bluelovers/fast-glob/bluebird';
 import {
 	__plugin_dev_output_dir,
