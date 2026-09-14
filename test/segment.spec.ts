@@ -507,6 +507,16 @@ describe(`should include`, () => {
 			`二元运算符合并由逗号分隔的条件`
 		],
 
+		[
+			`開始使用`,
+			`action.OnlineDocAction.text=入门指南(_G)`
+		],
+
+		[
+			`開始使用`,
+			`action.WelcomeScreen.Quickstart.AppCode.text=快速入门指南`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
