@@ -63,12 +63,13 @@ jobs:
         if: success()
 #        env:
         run: |
-          pnpm run ci:build
+          pnpm run test
+          echo pnpm run ci:build
       - name: run ci:postpublish
         if: success()
 #        env:
         run: |
-          pnpm run ci:postpublish
+          echo pnpm run ci:postpublish
       - name: Push changes
         if: success()
         uses: ad-m/github-push-action@master
