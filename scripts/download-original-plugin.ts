@@ -78,23 +78,26 @@ export default Bluebird.resolve()
 			}
 
 			/**
-			 * 使用相同的三階段搜尋邏輯找 ml-llm.zip，提取 ml-llm.jar 到 other-plugins 目錄
-			 * Use the same three-phase search logic to find ml-llm.zip, extract ml-llm.jar to other-plugins directory
+			 * 使用四階段搜尋邏輯找 ml-llm.zip，提取 ml-llm.jar 到 other-plugins 目錄
+			 * Use the four-phase search logic to find ml-llm.zip, extract ml-llm.jar to other-plugins directory
 			 *
 			 * 設計邏輯：
 			 * - 與語言包共用相同的搜尋邏輯（searchIdePluginFile），
 			 *   只是目標相對路徑不同（plugins/ml-llm.zip）
-			 * - ml-llm.zip 位於 IDE 安裝目錄的 plugins/ 下，
-			 *   搜尋時自動遍歷 {idename}{version} 格式的目錄（如 WebStorm2026.2）
+			 * - ml-llm.zip 位於 JetBrains 共用目錄的 plugins/ 下（如 WebStorm2026.2/plugins/），
+			 *   由搜尋函式的第四階段命中
 			 *
 			 * Design logic:
 			 * - Shares the same search logic as the language pack (searchIdePluginFile),
 			 *   only the target relative path differs (plugins/ml-llm.zip)
-			 * - ml-llm.zip is under the IDE installation's plugins/ directory,
-			 *   automatically traversing {idename}{version} format directories (e.g., WebStorm2026.2)
+			 * - ml-llm.zip is under the JetBrains shared directory's plugins/ (e.g., WebStorm2026.2/plugins/),
+			 *   found by Phase 4 of the search function
 			 */
 			const mlLlmSearchResult = await searchIdePluginFile(
 				'plugins/ml-llm.zip',
+				{
+					searchJetBrainsDir: true,
+				},
 			);
 
 			if (mlLlmSearchResult)

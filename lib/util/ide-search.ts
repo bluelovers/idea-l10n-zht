@@ -2,9 +2,9 @@
  * JetBrains IDE 安裝目錄搜尋工具
  * JetBrains IDE installation directory search utility
  *
- * 提供跨 Toolbox / Programs / 版本目錄的 IDE 搜尋功能，
+ * 提供跨 Toolbox / Programs / JetBrains 共用目錄 / 版本目錄的 IDE 搜尋功能，
  * 避免在多個腳本中重複實作相同的目錄搜尋邏輯。
- * Provides cross-Toolbox / Programs / versioned directory IDE search functionality,
+ * Provides cross-Toolbox / Programs / JetBrains shared directory / versioned directory IDE search functionality,
  * avoiding duplication of directory search logic across multiple scripts.
  */
 import { join } from 'upath2';
@@ -52,6 +52,18 @@ export interface ISearchIdePluginFileOptions
 	 * When not provided, uses default list (IntelliJ IDEA, WebStorm, PyCharm)
 	 */
 	ideMap?: IIdeInstallInfo[];
+
+	/**
+	 * 是否搜尋 JetBrains 共用目錄（AppData/Local/JetBrains/）
+	 * Whether to search JetBrains shared directory (AppData/Local/JetBrains/)
+	 *
+	 * 預設為 false，僅在需要搜尋 JetBrains 共用目錄下的插件時啟用
+	 * （如 ml-llm.zip 位於 WebStorm2026.2/plugins/ 下）
+	 *
+	 * Defaults to false; enable only when searching for plugins under
+	 * the JetBrains shared directory (e.g., ml-llm.zip under WebStorm2026.2/plugins/)
+	 */
+	searchJetBrainsDir?: boolean;
 }
 
 /**
@@ -69,24 +81,27 @@ const DEFAULT_IDE_MAP: IIdeInstallInfo[] = [
  * Search for a specified plugin file in JetBrains installation directories
  *
  * 設計邏輯：
- * - 此函式封裝了 IDE 目錄搜尋的複雜度，支援三階段搜尋：
+ * - 此函式封裝了 IDE 目錄搜尋的複雜度，支援四階段搜尋：
  *   1. Toolbox 安裝目錄
  *   2. Programs 基礎目錄（不含版本後綴）
  *   3. Programs 版本目錄（含版本後綴，如 WebStorm2024.1）
+ *   4. JetBrains 共用目錄（如 AppData/Local/JetBrains/WebStorm2026.2）
  * - 透過選項物件 `{ ideMap? }` 支援未來擴充參數
  * - 回傳結構化的搜尋結果，呼叫端可決定如何使用
  *
  * Design logic:
- * - This function encapsulates IDE directory search complexity, supporting three-phase search:
+ * - This function encapsulates IDE directory search complexity, supporting four-phase search:
  *   1. Toolbox installation directory
  *   2. Programs base directory (without version suffix)
  *   3. Programs versioned directory (with version suffix, e.g., WebStorm2024.1)
+ *   4. JetBrains shared directory (e.g., AppData/Local/JetBrains/WebStorm2026.2)
  * - Uses options object `{ ideMap? }` to support future parameter extensions
  * - Returns structured search result for caller to decide how to use
  *
  * @param pluginRelativePath - 插件檔案相對路徑（如 'plugins/localization-zh/lib/localization-zh.jar'）/ Plugin file relative path
  * @param options - 搜尋選項物件 / Search options object
  * @param options.ideMap - IDE 清單（可選，預設包含 IntelliJ IDEA / WebStorm / PyCharm）/ IDE list (optional, defaults to IntelliJ IDEA / WebStorm / PyCharm)
+ * @param options.searchJetBrainsDir - 是否搜尋 JetBrains 共用目錄（預設 false）/ Whether to search JetBrains shared directory (default false)
  * @returns 搜尋結果，未找到時回傳 null / Search result, or null if not found
  */
 export async function searchIdePluginFile(
@@ -163,6 +178,38 @@ export async function searchIdePluginFile(
 			if (existsSync(join(temp, pluginRelativePath)))
 			{
 				return { ideDir: temp, pluginFilePath: pluginRelativePath };
+			}
+		}
+	}
+
+	/**
+	 * 第四階段：搜尋 JetBrains 共用目錄（如 AppData/Local/JetBrains/WebStorm2026.2）
+	 * Phase 4: Search JetBrains shared directory (e.g., AppData/Local/JetBrains/WebStorm2026.2)
+	 *
+	 * 需設定 searchJetBrainsDir: true 才會執行，
+	 * 因為此目錄為非標準安裝路徑，僅特定插件（如 ml-llm）位於此處。
+	 *
+	 * Only executes when searchJetBrainsDir: true is set,
+	 * as this is a non-standard install path; only certain plugins (e.g., ml-llm) are located here.
+	 */
+	if (options.searchJetBrainsDir)
+	{
+		for (const ide of ideMap)
+		{
+			const dirs = await FastGlob<string>([`${ide.base}*`], {
+				cwd: jetBrainsDir,
+				onlyFiles: false,
+				suppressErrors: true,
+			});
+
+			for (const dir of dirs)
+			{
+				const temp = join(jetBrainsDir, dir);
+
+				if (existsSync(join(temp, pluginRelativePath)))
+				{
+					return { ideDir: temp, pluginFilePath: pluginRelativePath };
+				}
 			}
 		}
 	}
