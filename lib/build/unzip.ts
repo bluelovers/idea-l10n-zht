@@ -50,7 +50,7 @@ export function unzipLang(lang: string | 'zh')
 				{
 					const fullpath = join(cwd, file.name);
 					await outputFile(fullpath, await file.async('nodebuffer'))
-						.then(async () =>
+						.catch(async () =>
 						{
 							await remove(fullpath);
 
