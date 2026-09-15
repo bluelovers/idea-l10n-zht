@@ -538,6 +538,36 @@ describe(`should include`, () => {
 
 })
 
+describe(`should not include`, () => {
+
+	(<ITestList>[
+
+		[
+			'新增新',
+			'android.project.system.gradle.action.new.module.description=添加新模块',
+		],
+
+	]).sort((a, b) => {
+		return _comp(a[0], b[0])
+	}).forEach(text => {
+
+		test(_handleTitles(text), async () => {
+			const expected = [text[0]].flat();
+
+			let actual = await processIdeaSegmentText(text[1]);
+
+			assertTestExpected(expected);
+
+			lazyMatchSynonym001Not(actual, expected);
+			//expect(actual).toContain(text[0])
+			expect(actual).toMatchSnapshot();
+
+		});
+
+	});
+
+})
+
 function _handleTitles(actual: [ITSValueOrArrayMaybeReadonly<string>, string]) {
 	let arr = actual.slice();
 	arr[0] = [arr[0]].flat().join('／');
