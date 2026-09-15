@@ -3,6 +3,69 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2026-09-15)
+
+
+
+### 🐛　Bug Fixes
+
+* **dict:** { 新增新 => 新增 } [#84](https://github.com/bluelovers/idea-l10n-zht/issues/84) ([32bcf35](https://github.com/bluelovers/idea-l10n-zht/commit/32bcf35dbbd289805809e24ffd083c936b2380a9))
+* **dict:** { 入門指南 => 開始使用 } [#104](https://github.com/bluelovers/idea-l10n-zht/issues/104) ([76880ba](https://github.com/bluelovers/idea-l10n-zht/commit/76880ba3617d6b235f6530fecdfb3c34cbc2c8db))
+
+
+### 🛠　Build System
+
+* **release:** update build ( 262.9437.145 ) ([d3aa73e](https://github.com/bluelovers/idea-l10n-zht/commit/d3aa73e1b6693041d1e56f35c5ef5737c172c078))
+* **release:** update dev build files ( 262.9437.145 ) ([929871a](https://github.com/bluelovers/idea-l10n-zht/commit/929871a10e149eb68ed21ed5285aff15d1a0d6e1))
+* **test:** update snapshots ( 262.9437.145 ) ([a01d76c](https://github.com/bluelovers/idea-l10n-zht/commit/a01d76ce1305642ab57f43ebb945bb4925392c79))
+
+
+### ⚙️　Continuous Integration
+
+* **workflow:** 啟用建置與發佈流程中的自動化指令 ([cf52b15](https://github.com/bluelovers/idea-l10n-zht/commit/cf52b15d72bc0a14eed3de92d6028468751a78a3))
+
+
+### ♻️　Chores
+
+* **plugin:** 更新 ml-llm.jar 並調整 .gitignore 排除規則 ([3324d72](https://github.com/bluelovers/idea-l10n-zht/commit/3324d723fff61b4b09746dc5b0e44d91b215323f))
+
+## 262.9437.145 "⚙️　Continuous Integration" (2026-09-14)
+
+
+
+### ✨　Features
+
+* **lib:** 新增 IDE 搜尋與 ZIP 操作工具類並重構下載腳本 ([d0a0741](https://github.com/bluelovers/idea-l10n-zht/commit/d0a07410d1f2ff1e6b7a8037e21d1874941bcbee))
+* **util:** 擴充 IDE 搜尋範圍以支援 JetBrains 共用目錄 ([03d483f](https://github.com/bluelovers/idea-l10n-zht/commit/03d483f9710071a06b562b3b9d125fd3fe6bf4d1))
+
+
+### 📦　Code Refactoring
+
+* **build:** 將 unzipLang 中的錯誤處理從 then 改為 catch ([bd0d567](https://github.com/bluelovers/idea-l10n-zht/commit/bd0d567037788be00950f34ee30b824aa398e1c5))
+* **lib:** 優化解壓縮流程並整合 ml-llm 資源提取 ([85e40fc](https://github.com/bluelovers/idea-l10n-zht/commit/85e40fc0d8b7d6823fff8c9373bf10340ba6bdc3))
+
+
+### 📚　Documentation
+
+* **lib:** 為核心模組與腳本新增詳細的 JSDoc 註釋 ([ac2618e](https://github.com/bluelovers/idea-l10n-zht/commit/ac2618e69d5fbf34473f346ec49e922c4a3d4d26))
+
+
+### 🛠　Build System
+
+* **deps:** 更新專案依賴套件版本並新增 plugin:jar:download 指令 ([36a1ebf](https://github.com/bluelovers/idea-l10n-zht/commit/36a1ebfac20d19a088a2da52f3afbcc2b7756013))
+* **original:** update original source ( 262.9437.145 ) ([ae59fb8](https://github.com/bluelovers/idea-l10n-zht/commit/ae59fb84ebab5cfc5538e0316ca5b76b56b85336))
+* **original:** update original source ( 262.9437.145 ) ([5862179](https://github.com/bluelovers/idea-l10n-zht/commit/586217982ef0b4a35f99b71d75fa287192bf53e8))
+* **release:** update build ( 262.9437.145 ) ([71d4f1e](https://github.com/bluelovers/idea-l10n-zht/commit/71d4f1edeeb292b0176130c960c4482def50b9e1))
+* **release:** update dev build files ( 262.9437.145 ) ([38cb0aa](https://github.com/bluelovers/idea-l10n-zht/commit/38cb0aa20b4cb1d7c6f997d177e1584af94588d1))
+* **release:** update dev build files ( 262.9437.145 ) ([33840c4](https://github.com/bluelovers/idea-l10n-zht/commit/33840c4129f5ea9d8d3a2f26deabb284b2883bd4))
+
+
+### ⚙️　Continuous Integration
+
+* **workflow:** 調整 GitHub Actions 建置流程以執行測試 ([063b0f6](https://github.com/bluelovers/idea-l10n-zht/commit/063b0f660c85e4357e5864647819263e3443f018))
+
+
+
 # [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2026-08-27)
 
 
