@@ -9,6 +9,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛　Bug Fixes
 
+* **dict:** { 更改 => 變更 } ([a762718](https://github.com/bluelovers/idea-l10n-zht/commit/a762718932b465375c40cc7a04658d2e16524624))
+
+
+### 🛠　Build System
+
+* **release:** update build ( 262.9437.145 ) ([cebe94a](https://github.com/bluelovers/idea-l10n-zht/commit/cebe94a1a9da91fa44ece0ea9ed91df5a41a9e51))
+* **release:** update dev build files ( 262.9437.145 ) ([880a14d](https://github.com/bluelovers/idea-l10n-zht/commit/880a14d41d022875d80faa760d68d3a71ddbb12b))
+* **test:** update snapshots ( 262.9437.145 ) ([0e2d036](https://github.com/bluelovers/idea-l10n-zht/commit/0e2d03695ccfb6aa383699ae4ae3c4c9f1a3b030))
+
+
+
+# [1.0.0](https://github.com/bluelovers/idea-l10n-zht/compare/idea-l10n-zht@1.0.0...idea-l10n-zht@1.0.0) (2026-09-15)
+
+
+
+### 🐛　Bug Fixes
+
 * **dict:** { 新增新 => 新增 } [#84](https://github.com/bluelovers/idea-l10n-zht/issues/84) ([32bcf35](https://github.com/bluelovers/idea-l10n-zht/commit/32bcf35dbbd289805809e24ffd083c936b2380a9))
 * **dict:** { 入門指南 => 開始使用 } [#104](https://github.com/bluelovers/idea-l10n-zht/issues/104) ([76880ba](https://github.com/bluelovers/idea-l10n-zht/commit/76880ba3617d6b235f6530fecdfb3c34cbc2c8db))
 
