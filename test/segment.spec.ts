@@ -517,6 +517,11 @@ describe(`should include`, () => {
 			`action.WelcomeScreen.Quickstart.AppCode.text=快速入门指南`
 		],
 
+		[
+			`變更`,
+			`action.GitLab.Merge.Request.Timeline.ShowEvents.description=显示数据更改事件，如状态或被指派者更改`
+		],
+
 	]).sort((a, b) => {
 		return _comp(a[0], b[0])
 	}).forEach(text => {
