@@ -35,7 +35,7 @@ private static final UniqueVFilePathBuilder DUMMY_BUILDER = new UniqueVFilePathB
 <ul>
   <li>這讓呼叫點更加清楚地表明，它可以涉及載入服務，這樣的開銷可能並不小。</li>
   <li>載入服務可能會引發異常，與由屬性存取引起的異常相比，由方法呼叫引發的異常並不令人意外。</li>
-  <li>（過度）使用屬性可能容易出錯，因為它可能會意外地更改為具有初始設定式的屬性，而不是具有 getter 的正確（但更詳細）的屬性，而且這種更改很容易被忽略。</li>
+  <li>（過度）使用屬性可能容易出錯，因為它可能會意外地更改為具有初始設定式的屬性，而不是具有 getter 的正確（但更詳細）的屬性，而且這種變更很容易被忽略。</li>
   <li>在 Kotlin 和 Java 中使用時，使用方法而不是屬性可以保持 <code>MyApplicationService.getInstance()</code> 呼叫的一致性。</li>
   <li>在宣告和呼叫點上，使用該方法可使 <code>MyApplicationService.getInstance()</code> 與 <code>MyProjectService.getInstance(project)</code> 保持一致。</li>
 </ul>

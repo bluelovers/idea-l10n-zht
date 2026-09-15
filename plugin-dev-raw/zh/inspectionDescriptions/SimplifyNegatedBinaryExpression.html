@@ -14,7 +14,7 @@
         0 != 1
     }
 </code></pre>
-<p>請注意，如果涉及 IEEE-754 NaN 值，此動作可能會更改程式碼語意：</p>
+<p>請注意，如果涉及 IEEE-754 NaN 值，此動作可能會變更程式碼語意：</p>
 <pre><code>
     fun main() {
         println(!(Double.NaN &gt;= 0)) // true
